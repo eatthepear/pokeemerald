@@ -243,8 +243,6 @@ struct Evolution
     u16 targetSpecies;
 };
 
-#define EVOS_PER_LINE 6
-
 extern u8 gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];
 extern u8 gEnemyPartyCount;
