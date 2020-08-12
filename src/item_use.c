@@ -32,6 +32,7 @@
 #include "party_menu.h"
 #include "pokeblock.h"
 #include "pokemon.h"
+#include "region_map.h"
 #include "script.h"
 #include "sound.h"
 #include "strings.h"
@@ -97,6 +98,8 @@ static const struct YesNoFuncTable sUseTMHMYesNoFuncTable =
 };
 
 static const u8 textCantThrowPokeBallNuzlocke[] = _("You have already used your encounter\nfor this area!{PAUSE_UNTIL_PRESS}");
+
+static const u8 textCantThrowPokeBallSpeciesClause[] = _("You have already caught a POKéMON\nin this evolution line!{PAUSE_UNTIL_PRESS}");
 
 // .text
 
@@ -971,6 +974,10 @@ void ItemUseInBattle_PokeBall(u8 taskId)
     else if (IsCaptureBlockedByNuzlocke == 1)
     {
         DisplayCannotUseItemMessage(taskId, FALSE, textCantThrowPokeBallNuzlocke);
+    }
+    else if (IsSpeciesClauseActive == 1)
+    {
+        DisplayCannotUseItemMessage(taskId, FALSE, textCantThrowPokeBallSpeciesClause);
     }
     else if (IsPlayerPartyAndPokemonStorageFull() == FALSE) // have room for mon?
     {
