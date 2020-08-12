@@ -7278,9 +7278,9 @@ void DeleteFaintedPartyPokemon(void)
     {
         pokemon = &gPlayerParty[i];
         if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES, NULL) && !GetMonData(pokemon, MON_DATA_IS_EGG, NULL))
-        {
-            if (GetMonData(pokemon, MON_DATA_HP) == 0)
-                DeletePartyMon(i);
-        }
+            {
+                if (GetMonData(pokemon, MON_DATA_HP, NULL) == 0)
+                    DeletePartyMon(i);
+            }
     }
 }
