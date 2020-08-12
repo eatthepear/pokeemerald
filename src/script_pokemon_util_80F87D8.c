@@ -31,6 +31,8 @@
 #include "constants/species.h"
 #include "constants/tv.h"
 #include "constants/battle_frontier.h"
+#include "event_data.h"
+#include "constants/region_map_sections.h"
 
 extern const u16 gObjectEventPalette8[];
 extern const u16 gObjectEventPalette17[];
