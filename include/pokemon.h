@@ -2,6 +2,7 @@
 #define GUARD_POKEMON_H
 
 #include "constants/pokemon.h"
+#include "constants/species.h"
 #include "sprite.h"
 
 struct PokemonSubstruct0
@@ -242,6 +243,8 @@ struct Evolution
     u16 targetSpecies;
 };
 
+#define EVOS_PER_LINE 6
+
 extern u8 gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];
 extern u8 gEnemyPartyCount;
@@ -263,6 +266,7 @@ extern const u8 gStatStageRatios[][2];
 extern const u16 gLinkPlayerFacilityClasses[];
 extern const struct SpriteTemplate gUnknown_08329D98[];
 extern const s8 gNatureStatTable[][5];
+extern const u16 gEvolutionLines[NUM_SPECIES][EVOS_PER_LINE];
 
 void ZeroBoxMonData(struct BoxPokemon *boxMon);
 void ZeroMonData(struct Pokemon *mon);
@@ -421,5 +425,7 @@ bool8 HasTwoFramesAnimation(u16 species);
 struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1);
 void sub_806F47C(u8 id);
 u8 *sub_806F4F8(u8 id, u8 arg1);
+void DeletePartyMon(u8 position);
+void DeleteFaintedPartyPokemon(void);
 
 #endif // GUARD_POKEMON_H

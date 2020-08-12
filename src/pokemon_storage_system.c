@@ -670,7 +670,6 @@ static void sub_80CD444(u8 cursorArea, u8 cursorPosition, u16 *x, u16 *y);
 static void SetShiftedMonData(u8 boxId, u8 position);
 static void SetMovedMonData(u8 boxId, u8 position);
 static void SetPlacedMonData(u8 boxId, u8 position);
-static void PurgeMonOrBoxMon(u8 boxId, u8 position);
 static void SetCursorMonData(void *pokemon, u8 mode);
 static bool32 AtLeastThreeUsableMons(void);
 static u8 InBoxInput_Normal(void);
@@ -6330,7 +6329,7 @@ static void SetPlacedMonData(u8 boxId, u8 position)
     }
 }
 
-static void PurgeMonOrBoxMon(u8 boxId, u8 position)
+void PurgeMonOrBoxMon(u8 boxId, u8 position)
 {
     if (boxId == TOTAL_BOXES_COUNT)
         ZeroMonData(&gPlayerParty[position]);
