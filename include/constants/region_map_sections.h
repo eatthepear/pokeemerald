@@ -215,6 +215,10 @@
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
 #define MAPSEC_NONE                         0xD5
+#define MAPSEC_SAFARI_ZONE_AREA1            0xD6
+#define MAPSEC_SAFARI_ZONE_AREA2            0xD7
+#define MAPSEC_SAFARI_ZONE_AREA3            0xD8
+#define MAPSEC_SAFARI_ZONE_AREA4            0xD9
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
@@ -223,5 +227,7 @@
 #define KANTO_MAPSEC_START  MAPSEC_PALLET_TOWN
 #define KANTO_MAPSEC_END    MAPSEC_SPECIAL_AREA
 #define KANTO_MAPSEC_COUNT (KANTO_MAPSEC_END - KANTO_MAPSEC_START + 1)
+
+#define GLOBAL_NUZLOCKE_SWITCH              0x100
 
 #endif //GUARD_REGIONMAPSEC_H

@@ -28,6 +28,7 @@
 #include "main.h"
 #include "malloc.h"
 #include "m4a.h"
+#include "overworld.h"
 #include "palette.h"
 #include "party_menu.h"
 #include "pokeball.h"
@@ -56,6 +57,7 @@
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/region_map_sections.h"
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -4831,6 +4833,25 @@ static void HandleEndTurn_FinishBattle(void)
             sub_80EE184();
         }
 
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_DOUBLE
+                                  | BATTLE_TYPE_LINK
+                                  | BATTLE_TYPE_TRAINER
+                                  | BATTLE_TYPE_FIRST_BATTLE
+                                  | BATTLE_TYPE_20
+                                  | BATTLE_TYPE_MULTI
+                                  | BATTLE_TYPE_BATTLE_TOWER
+                                  | BATTLE_TYPE_WALLY_TUTORIAL
+                                  | BATTLE_TYPE_LEGENDARY
+                                  | BATTLE_TYPE_REGI
+                                  | BATTLE_TYPE_TWO_OPPONENTS
+                                  | BATTLE_TYPE_INGAME_PARTNER
+                                  | BATTLE_TYPE_x800000
+                                  | BATTLE_TYPE_x2000000)))
+        {
+            if (NuzlockeFlagGet(GetCurrentRegionMapSectionId()) == 0)
+                NuzlockeFlagSet(GetCurrentRegionMapSectionId());
+        }
+        
         sub_8186444();
         BeginFastPaletteFade(3);
         FadeOutMapMusic(5);

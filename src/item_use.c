@@ -2,6 +2,7 @@
 #include "item_use.h"
 #include "battle.h"
 #include "battle_anim.h"
+#include "battle_setup.h"
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
 #include "berry.h"
@@ -94,6 +95,8 @@ static const struct YesNoFuncTable sUseTMHMYesNoFuncTable =
     .yesFunc = UseTMHM,
     .noFunc = BagMenu_InitListsMenu,
 };
+
+static const u8 textCantThrowPokeBallNuzlocke[] = _("You have already used your encounter\nfor this area!{PAUSE_UNTIL_PRESS}");
 
 // .text
 
@@ -964,6 +967,10 @@ void ItemUseInBattle_PokeBall(u8 taskId)
             DisplayItemMessage(taskId, 1, textCantThrowPokeBall, BagMenu_InitListsMenu);
         else
             DisplayItemMessageInBattlePyramid(taskId, textCantThrowPokeBall, Task_CloseBattlePyramidBagMessage);
+    }
+    else if (IsCaptureBlockedByNuzlocke == 1)
+    {
+        DisplayCannotUseItemMessage(taskId, FALSE, textCantThrowPokeBallNuzlocke);
     }
     else if (IsPlayerPartyAndPokemonStorageFull() == FALSE) // have room for mon?
     {
