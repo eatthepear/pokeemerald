@@ -462,7 +462,6 @@ void BattleSetup_StartWildBattle(void)
         {
             if (IsMonShiny(&gEnemyParty[0]))
             {
-                IsSpeciesClauseActive = 0;
                 IsCaptureBlockedByNuzlocke = 0;
             }
             else if (NuzlockeFlagGet(GetCurrentRegionMapSectionId()) == 0)
@@ -471,9 +470,9 @@ void BattleSetup_StartWildBattle(void)
                 IsCaptureBlockedByNuzlocke = 1;
         }
         else
-            IsCaptureBlockedByNuzlocke = 1;
-        else
-            IsCaptureBlockedByNuzlocke = 1;
+        {
+            IsCaptureBlockedByNuzlocke = 0;
+        }
         DoStandardWildBattle(FALSE);
 }
 
