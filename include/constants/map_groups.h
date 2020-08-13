@@ -554,6 +554,7 @@
 // Map Group 27
 #define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))
 #define MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP (1 | (27 << 8))
+#define MAP_ENTRANCE                                    (2 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))
