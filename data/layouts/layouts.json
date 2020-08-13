@@ -4416,8 +4416,8 @@
       "name": "Entrance_Layout",
       "width": 15,
       "height": 15,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattlePyramid",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Entrance/border.bin",
       "blockdata_filepath": "data/layouts/Entrance/map.bin"
     }
