@@ -12,7 +12,7 @@ Entrance_EventScript_Intro:
 	applymovement 1, Common_ExclamationMark
 	waitmovement 1
 	applymovement 1, Entrance_Movement_Quentin_WalkDown
-	applymovement OBJECT_EVENT_ID_PLAYER
+	applymovement OBJECT_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 1
 	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
 	end
