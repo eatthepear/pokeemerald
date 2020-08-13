@@ -624,7 +624,7 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
                     //    struct Pokemon mon1 = gEnemyParty[0];
                     //    TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, WILD_CHECK_KEEN_EYE);
                     //    gEnemyParty[1] = mon1;
-                    ..    BattleSetup_StartDoubleWildBattle();
+                    //..    BattleSetup_StartDoubleWildBattle();
                     //}
                     //else
                     {
