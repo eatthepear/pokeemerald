@@ -253,6 +253,8 @@ Entrance_Movement_Player_SecondShop:
 	face_up
 	delay_16
 	delay_16
+	delay_16
+	delay_16
 	face_right
 	walk_right
 	walk_right
@@ -286,6 +288,8 @@ Entrance_Movement_Quentin_ThirdShop:
 
 Entrance_Movement_Player_ThirdShop:
 	face_up
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	face_left
@@ -349,7 +353,9 @@ Entrance_Movement_Quentin_BackMid:
 	step_end
 
 Entrance_Movement_Player_BackMid:
-	face_up
+	delay_16
+	delay_16
+	delay_16
 	walk_up
 	walk_left
 	walk_left
