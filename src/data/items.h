@@ -4036,6 +4036,7 @@ const struct Item gItems[] =
 
 // TMs/HMs
 
+    
     [ITEM_TM01_FOCUS_PUNCH] =
     {
         .name = _("TM01"),
@@ -4046,8 +4047,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM02_DRAGON_CLAW] =
     {
         .name = _("TM02"),
@@ -4058,8 +4060,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM03_WATER_PULSE] =
     {
         .name = _("TM03"),
@@ -4070,8 +4073,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM04_CALM_MIND] =
     {
         .name = _("TM04"),
@@ -4082,8 +4086,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM05_ROAR] =
     {
         .name = _("TM05"),
@@ -4094,8 +4099,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM06_TOXIC] =
     {
         .name = _("TM06"),
@@ -4106,8 +4112,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM07_HAIL] =
     {
         .name = _("TM07"),
@@ -4118,8 +4125,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM08_BULK_UP] =
     {
         .name = _("TM08"),
@@ -4130,8 +4138,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM09_BULLET_SEED] =
     {
         .name = _("TM09"),
@@ -4142,8 +4151,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM10_HIDDEN_POWER] =
     {
         .name = _("TM10"),
@@ -4154,8 +4164,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM11_SUNNY_DAY] =
     {
         .name = _("TM11"),
@@ -4166,8 +4177,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM12_TAUNT] =
     {
         .name = _("TM12"),
@@ -4178,8 +4190,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM13_ICE_BEAM] =
     {
         .name = _("TM13"),
@@ -4190,8 +4203,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM14_BLIZZARD] =
     {
         .name = _("TM14"),
@@ -4202,8 +4216,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM15_HYPER_BEAM] =
     {
         .name = _("TM15"),
@@ -4214,8 +4229,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM16_LIGHT_SCREEN] =
     {
         .name = _("TM16"),
@@ -4226,8 +4242,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM17_PROTECT] =
     {
         .name = _("TM17"),
@@ -4238,8 +4255,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM18_RAIN_DANCE] =
     {
         .name = _("TM18"),
@@ -4250,8 +4268,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM19_GIGA_DRAIN] =
     {
         .name = _("TM19"),
@@ -4262,8 +4281,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM20_SAFEGUARD] =
     {
         .name = _("TM20"),
@@ -4274,8 +4294,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM21_FRUSTRATION] =
     {
         .name = _("TM21"),
@@ -4286,8 +4307,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM22_SOLARBEAM] =
     {
         .name = _("TM22"),
@@ -4298,8 +4320,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM23_IRON_TAIL] =
     {
         .name = _("TM23"),
@@ -4310,8 +4333,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM24_THUNDERBOLT] =
     {
         .name = _("TM24"),
@@ -4322,8 +4346,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM25_THUNDER] =
     {
         .name = _("TM25"),
@@ -4334,8 +4359,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM26_EARTHQUAKE] =
     {
         .name = _("TM26"),
@@ -4346,8 +4372,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM27_RETURN] =
     {
         .name = _("TM27"),
@@ -4358,8 +4385,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM28_DIG] =
     {
         .name = _("TM28"),
@@ -4370,8 +4398,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM29_PSYCHIC] =
     {
         .name = _("TM29"),
@@ -4382,8 +4411,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM30_SHADOW_BALL] =
     {
         .name = _("TM30"),
@@ -4394,8 +4424,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM31_BRICK_BREAK] =
     {
         .name = _("TM31"),
@@ -4406,8 +4437,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM32_DOUBLE_TEAM] =
     {
         .name = _("TM32"),
@@ -4418,8 +4450,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM33_REFLECT] =
     {
         .name = _("TM33"),
@@ -4430,8 +4463,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM34_SHOCK_WAVE] =
     {
         .name = _("TM34"),
@@ -4442,8 +4476,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM35_FLAMETHROWER] =
     {
         .name = _("TM35"),
@@ -4454,8 +4489,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM36_SLUDGE_BOMB] =
     {
         .name = _("TM36"),
@@ -4466,8 +4502,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM37_SANDSTORM] =
     {
         .name = _("TM37"),
@@ -4478,8 +4515,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM38_FIRE_BLAST] =
     {
         .name = _("TM38"),
@@ -4490,8 +4528,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM39_ROCK_TOMB] =
     {
         .name = _("TM39"),
@@ -4502,8 +4541,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM40_AERIAL_ACE] =
     {
         .name = _("TM40"),
@@ -4514,8 +4554,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM41_TORMENT] =
     {
         .name = _("TM41"),
@@ -4526,8 +4567,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM42_FACADE] =
     {
         .name = _("TM42"),
@@ -4538,8 +4580,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM43_SECRET_POWER] =
     {
         .name = _("TM43"),
@@ -4550,8 +4593,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM44_REST] =
     {
         .name = _("TM44"),
@@ -4562,8 +4606,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM45_ATTRACT] =
     {
         .name = _("TM45"),
@@ -4574,8 +4619,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM46_THIEF] =
     {
         .name = _("TM46"),
@@ -4586,8 +4632,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM47_STEEL_WING] =
     {
         .name = _("TM47"),
@@ -4598,8 +4645,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM48_SKILL_SWAP] =
     {
         .name = _("TM48"),
@@ -4610,8 +4658,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM49_SNATCH] =
     {
         .name = _("TM49"),
@@ -4622,8 +4671,9 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
-
+    
     [ITEM_TM50_OVERHEAT] =
     {
         .name = _("TM50"),
@@ -4634,6 +4684,7 @@ const struct Item gItems[] =
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = 0,
+        .importance = 1,
     },
 
     [ITEM_HM01_CUT] =
