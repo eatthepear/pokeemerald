@@ -9,7 +9,7 @@ Entrance_OnFrame:
 Entrance_EventScript_Intro:
 	lockall
 	setflag FLAG_SYS_B_DASH
-	applymovement 1, Common_ExclamationMark
+	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement 1, Entrance_Movement_Quentin_WalkDown
 	applymovement OBJECT_EVENT_ID_PLAYER, Common_Movement_FaceUp
