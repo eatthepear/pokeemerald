@@ -9,19 +9,18 @@ Entrance_OnFrame:
 Entrance_EventScript_Intro:
 	lockall
 	setflag FLAG_SYS_B_DASH
+	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_WalkUp
 	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 1
-	applymovement 1, Entrance_Movement_Quentin_WalkDown
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 1
+	waitmovement 0
 	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
+	setvar VAR_TUTORIAL, 1
 	end
 
-Entrance_Movement_Quentin_WalkDown:
-	walk_down
-	walk_down
-	walk_down
-	walk_down	
+Entrance_Movement_Player_WalkUp:
+	walk_up
+	walk_uo
+	walk_up
+	walk_up	
 	step_end
 
 Entrance_Text_Quentin_Welcome:

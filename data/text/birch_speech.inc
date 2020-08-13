@@ -18,9 +18,9 @@ gText_Birch_Pokemon:: @ 82C89FB
 	.string "$"
 
 gText_Birch_MainSpeech:: @ 82C8A1F
-	.string "As this is a simulated environment,\n"
-	.string "Quentin can access it from the real\l"
-	.string "world. Look for a man in blue.\p"
+	.string "As the Battle Labyrinth is a\n"
+	.string "simulated environment, Quentin here\l"
+	.string "can access it from the real world.\p”
 	.string "Quentin will provide the details\n"
 	.string "you need to achieve success.\p"
 	.string "In addition, we also need some\n"
@@ -28,7 +28,7 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "This information is confidential.$"
+	.string "It will be confidential.$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
 	.string "Please input your gender.$"
