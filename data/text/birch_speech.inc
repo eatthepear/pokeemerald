@@ -26,7 +26,7 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "In addition, we also need some\n"
 	.string registration from you.\p"
 	.string "$"
-
+@yeet
 gText_Birch_AndYouAre:: @ 82C8BD0
 	.string "This information is confidential.$"
 
