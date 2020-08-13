@@ -44,7 +44,7 @@ Entrance_EventScript_Intro:
 Entrance_Text_Quentin_Welcome:
 	.string "Hello there!$"
 
-Entrance_Movement_Quentin_WalkDown
+Entrance_Movement_Quentin_WalkDown:
 	walk_down
 	walk_down
 	walk_down
