@@ -20,7 +20,7 @@ gText_Birch_Pokemon:: @ 82C89FB
 gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "As the Battle Labyrinth is a\n"
 	.string "simulated environment, Quentin here\l"
-	.string "can access it from the real world.\p”
+	.string "can access it from the real world.\p"
 	.string "Quentin will provide the details\n"
 	.string "you need to achieve success.\p"
 	.string "In addition, we also need some\n"
