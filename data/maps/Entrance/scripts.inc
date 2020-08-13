@@ -22,8 +22,11 @@ Entrance_EventScript_Intro:
 	msgbox Entrance_Text_Quentin_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Entrance_Text_Quentin_VanillaNuzlocke, MSGBOX_AUTOCLOSE
+	delay 48
 	msgbox Entrance_Text_Quentin_NuzlockeExplained, MSGBOX_AUTOCLOSE
+	delay 48
 	msgbox Entrance_Text_Quentin_VanillaExplained, MSGBOX_AUTOCLOSE
+	delay 96
 	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq Entrance_EventScript_Vanilla
@@ -37,36 +40,45 @@ Entrance_EventScript_Vanilla:
 	
 Entrance_EventScript_Nuzlocke:
 	callnative GlobalNuzlockeSet
+	setflag FLAG_NUZLOCKE_ON
 	msgbox Entrance_Text_Quentin_NuzlockeMode, MSGBOX_AUTOCLOSE
 	goto Entrance_EventScript_Tour
 	end
 	
 Entrance_EventScript_Tour:
-	msgbox Entrance_Text_Quentin_StartTour, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_StartTour, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FirstShop
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_General, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_SecondShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_SecondShop
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_Item, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_ThirdShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_ThirdShop
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_Services, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_FourthShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FourthShop
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_Healing, MSGBOX_AUTOCLOSE
+	call_if_set FLAG_NUZLOCKE_ON, Entrance_EventScript_NuzlockeDialog
+	msgbox Entrance_Text_Quentin_PC, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_BackMid
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_Welcome, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_TourDone, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 0
 	setvar VAR_TUTORIAL, 1
 	end
+
+Entrance_EventScript_NuzlockeDialog:
+	delay 48
+	msgbox Entrance_Text_Quentin_NuzlockeHealing, MSGBOX_AUTOCLOSE
+	delay 48
+	return
 
 Entrance_Text_Quentin_Hello:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
@@ -141,6 +153,59 @@ Entrance_Text_Quentin_StartTour:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ALLOW ME TO SHOW YOU EACH\n"
 	.string "OF THE SHOPS.$"
 
+Entrance_Text_Quentin_General:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP LEFT SHOP IS\n"
+	.string "THE GENERAL PURPOSE SHOP.\p"
+	.string "HEALING SUPPLIES, BASIC POKEBALLS,\n"
+	.string "REPELS, AND X ITEMS ARE SOLD HERE.\p"
+	.string "MORE ITEMS WILL GRADUALLY BE\n"
+	.string "UNLOCKED AS YOU PROGRESS THROUGH\l"
+	.string "MORE ZONES.$"
+
+Entrance_Text_Quentin_Item:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP RIGHT SHOP IS\n"
+	.string "THE UNIQUE ITEM SHOP.\p"
+	.string "THEY SELL POKEBALL VARIATIONS,\n"
+	.string "BERRIES, EVOLUTION ITEMS, AND\l"
+	.string "HELD ITEMS.\p"
+	.string "MORE ITEMS WILL GRADUALLY BE\n"
+	.string "UNLOCKED AS YOU PROGRESS THROUGH\l"
+	.string "MORE ZONES.$"
+
+Entrance_Text_Quentin_Services:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM LEFT SHOP IS\n"
+	.string "THE SPECIAL SERVICES SHOP.\p"
+	.string "HERE YOU CAN PAY MONEY FOR\n"
+	.string "EXPERIENCE TRAINING, EV TRAINING,\l"
+	.string "MOVE TUTORS, AND OTHER SERVICES.\p"
+	.string "MORE SERVICES WILL GRADUALLY BE\n"
+	.string "UNLOCKED AS YOU PROGRESS THROUGH\l"
+	.string "MORE ZONES.$"
+
+Entrance_Text_Quentin_Healing:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM RIGHT SHOP IS\n"
+	.string "THE HEALING SHOP.\p"
+	.string "THEY WILL HEAL YOUR ENTIRE PARTY\n"
+	.string "FOR ¥500.$"
+
+Entrance_Text_Quentin_NuzlockeHealing:
+	.string "THEY WILL ALSO TAKE AWAY YOUR DEAD\n"
+	.string "POKEMON BEFORE HEALING YOUR\l"
+	.string "SURVIVING PARTY.$"
+
+Entrance_Text_Quentin_PC:
+	.string "YOU CAN ACCESS THE POKEMON STORAGE\n"
+	.string "SYSTEM FROM HERE AFTER HEALING YOUR\l"
+	.string "POKEMON.$"
+
+Entrance_Text_Quentin_TourDone:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: OUR TOUR HAS FINISHED.\p"
+	.string "THESE FOUR SHOPS WILL BE AVAILABLE\n"
+	.string "BEFORE EACH NEW ZONE. ONCE YOU\l"
+	.string "ENTER THE ZONE, YOU WILL NOT BE\l"
+	.string "ABLE TO ACCESS THESE SHOPS UNTIL\l"
+	.string "YOU EXIT THAT ZONE.$"
+
 Entrance_Text_Quentin_Welcome:
 	.string "Hello there!$"
 
@@ -161,7 +226,7 @@ Entrance_Movement_Quentin_FirstShop:
 	step_end
 
 Entrance_Movement_Player_FirstShop:
-	delay_16
+	delay_32
 	walk_left
 	walk_left
 	walk_left
@@ -185,8 +250,9 @@ Entrance_Movement_Quentin_SecondShop:
 
 Entrance_Movement_Player_SecondShop:
 	face_up
-	delay_16
+	delay_32
 	face_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -218,7 +284,7 @@ Entrance_Movement_Quentin_ThirdShop:
 
 Entrance_Movement_Player_ThirdShop:
 	face_up
-	delay_16
+	delay_32
 	face_left
 	walk_left
 	walk_left
@@ -252,7 +318,7 @@ Entrance_Movement_Quentin_FourthShop:
 
 Entrance_Movement_Player_FourthShop:
 	face_up
-	delay_16
+	delay_32
 	face_right
 	walk_right
 	walk_right

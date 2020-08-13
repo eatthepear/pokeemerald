@@ -41,15 +41,9 @@ gText_Birch_SoItsPlayer:: @ 82C8C1C
 
 gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "Thank you very much.\p"
-	.string "Finally, the Battle Labyrinth comes\n"
-	.string "with two modes:\l"
-	.string "Vanilla and Nuzlocke.\p"
-	.string "Vanilla plays similarly to a\n"
-	.string "typical Pokémon game,\l"
-	.string "while Nuzlocke comes equipped with\l"
-	.string "completely built-in death and\l"
-	.string "encounter rules, as well as\l"
-	.string "Species Clause and Shiny Clause.\p"
+	.string "Please check the documentation if\n"
+	.string "you have any questions or issues.\p"
+	.string "This rom hack is by eatthepear.\p
 	.string "$"
 
 gText_Birch_AreYouReady:: @ 82C8C7A
