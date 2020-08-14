@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Entrance/border.bin",
       "blockdata_filepath": "data/layouts/Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENTRANCE_SHOPS",
+      "name": "EntranceShops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/EntranceShops/border.bin",
+      "blockdata_filepath": "data/layouts/EntranceShops/map.bin"
     }
   ]
 }

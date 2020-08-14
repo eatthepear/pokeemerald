@@ -9,6 +9,8 @@ Entrance_OnFrame:
 Entrance_EventScript_Intro:
 	lockall
 	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_POKEMON_GET
+	special SetUnlockedPokedexFlags
 	call Entrance_EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
@@ -30,7 +32,7 @@ Entrance_EventScript_Intro:
 	msgbox Entrance_Text_Quentin_VanillaExplained, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_AUTOCLOSE
-	multichoice 0, 0, MULTI_VANILLA_NUZLOCKE, 1
+	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
 	case 0, Entrance_EventScript_Vanilla
 	case 1, Entrance_EventScript_Nuzlocke
@@ -483,10 +485,8 @@ Entrance_Text_Quentin_NiceChoice:
 	.string "POKEMON FROM THE PARTY MENU.$"
 
 Entrance_Text_Quentin_Freebies:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THIS IS ZONE ZERO.\n"
-	.string "YOU WILL BE ENTERING ZONE ONE.\p"
-	.string "HERE ARE SOME STARTING ITEMS,\n"
-	.string "AS WELL AS STARTING CASH.$"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: HERE ARE SOME STARTING\n"
+	.string "ITEMS AND CASH.$"
 
 Entrance_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
@@ -494,7 +494,8 @@ Entrance_Text_ReceivedMoney:
 Entrance_Text_Quentin_WhenUReady:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
 	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
-	.string "WILL GUIDE YOU ON YOUR WAY.$"
+	.string "WILL GUIDE YOU ON YOUR WAY.\p"
+	.string "YOU WILL BE ENTERING ZONE ONE.$"
 
 Entrance_Movement_Quentin_WalkDown:
 	walk_down
