@@ -72,7 +72,7 @@ Entrance_EventScript_Tour:
 	delay 96
 	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
 	scrollingmultichoice 0, 0, 0, 4, FALSE
-	compare gSpecialVar_Result, 0
+	compare VAR_RESULT, 0
 	call_if_eq Entrance_EventScript_Bulbasaur
 	playfanfare MUS_FANFA4
 	message Entrance_Text_ReceivedStarter
