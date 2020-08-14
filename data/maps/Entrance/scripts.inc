@@ -9,6 +9,12 @@ Entrance_OnFrame:
 Entrance_EventScript_Intro:
 	lockall
 	setflag FLAG_SYS_B_DASH
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	special RemoveCameraObject
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -251,9 +257,14 @@ Entrance_EventScript_Quentin_EndIntro:
 	waitfanfare
 	closemessage
 	delay 96
-	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement OBJ_EVENT_ID_CAMERA
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
+	special RemoveCameraObject
 	setvar VAR_TUTORIAL, 1
 	end
 
@@ -329,7 +340,7 @@ Entrance_Text_Quentin_VanillaMode:
 	.string "{COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED. GOOD LUCK.$"
 
 Entrance_Text_Quentin_NuzlockeMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE MODE ENABLED.\n"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE ENABLED.\n"
 	.string "GOOD LUCK.$"
 
 Entrance_Text_Quentin_StartTour:
