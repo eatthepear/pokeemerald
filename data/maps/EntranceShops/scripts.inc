@@ -33,7 +33,7 @@ EntranceShops_Shop_General:
 	end
 
 EntranceShops_Text_Tim_Welcome:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Welcome to Tim’s.\n"
+	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Welcome to Tim's.\n"
 	.string "Can I get you anything?$"
 
 EntranceShops_Text_Tim_Leave:
