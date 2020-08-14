@@ -348,11 +348,11 @@ Entrance_Text_Quentin_LookLikeBirch:
 	.string "IN THIS REALM SO I CAN BE MORE\l"
 	.string "COMMUNICATIVE WITH CHALLENGERS\l"
 	.string "WHO MIGHT ATTEMPT TO BRAVE\l"
-	.string "THE BATTLE LABYRINTH.$"
+	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.$"
 
 Entrance_Text_Quentin_Rules:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ALLOW ME TO GO OVER THE\n"
-	.string "RULES. IN THE BATTLE LABYRINTH,\l"
+	.string "RULES. IN THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY},\l"
 	.string "THERE ARE A NUMBER OF ZONES IN\l"
 	.string "WHICH YOU MUST FIND THE EXIT.\p"
 	.string "IN THESE ZONES, YOU MIGHT ENCOUNTER\n"
@@ -412,7 +412,7 @@ Entrance_Text_Quentin_StartTour:
 
 Entrance_Text_Quentin_General:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP LEFT SHOP IS\n"
-	.string "THE GENERAL PURPOSE SHOP.\p"
+	.string "THE {COLOR RED}GENERAL PURPOSE SHOP{COLOR DARK_GREY}.\p"
 	.string "HEALING SUPPLIES, BASIC POKEBALLS,\n"
 	.string "REPELS, AND X ITEMS ARE SOLD HERE.\p"
 	.string "MORE ITEMS WILL GRADUALLY BE\n"
@@ -421,7 +421,7 @@ Entrance_Text_Quentin_General:
 
 Entrance_Text_Quentin_Item:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP RIGHT SHOP IS\n"
-	.string "THE UNIQUE ITEM SHOP.\p"
+	.string "THE {COLOR RED}UNIQUE ITEM SHOP{COLOR DARK_GREY}.\p"
 	.string "THEY SELL POKEBALL VARIATIONS,\n"
 	.string "BERRIES, EVOLUTION ITEMS, AND\l"
 	.string "HELD ITEMS.\p"
@@ -431,7 +431,7 @@ Entrance_Text_Quentin_Item:
 
 Entrance_Text_Quentin_Services:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM LEFT SHOP IS\n"
-	.string "THE SPECIAL SERVICES SHOP.\p"
+	.string "THE {COLOR RED}SPECIAL SERVICES SHOP{COLOR DARK_GREY}.\p"
 	.string "HERE YOU CAN PAY MONEY FOR\n"
 	.string "EXPERIENCE TRAINING, EV TRAINING,\l"
 	.string "MOVE TUTORS, AND OTHER SERVICES.\p"
@@ -441,7 +441,7 @@ Entrance_Text_Quentin_Services:
 
 Entrance_Text_Quentin_Healing:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM RIGHT SHOP IS\n"
-	.string "THE HEALING SHOP.\p"
+	.string "THE {COLOR RED}HEALING SHOP{COLOR DARK_GREY}.\p"
 	.string "THEY WILL HEAL YOUR ENTIRE PARTY\n"
 	.string "FOR ¥500.$"
 
@@ -495,7 +495,7 @@ Entrance_Text_Quentin_WhenUReady:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
 	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
 	.string "WILL GUIDE YOU ON YOUR WAY.\p"
-	.string "YOU WILL BE ENTERING ZONE ONE.$"
+	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
 
 Entrance_Movement_Quentin_WalkDown:
 	walk_down
