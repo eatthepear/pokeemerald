@@ -286,6 +286,7 @@ Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	setvar VAR_TUTORIAL, 1
+	releaseall
 	end
 
 Entrance_EventScript_MoveCameraUp:
@@ -311,7 +312,7 @@ Entrance_EventScript_GeneralSign::
 	end
 
 Entrance_Text_GeneralSign:
-	.string "General Purpose Shop\n"
+	.string "Tim's General Purpose Shop\n"
 	.string "Sponsored by Pokémart Inc.$"
 
 Entrance_EventScript_ItemSign::
@@ -319,7 +320,7 @@ Entrance_EventScript_ItemSign::
 	end
 
 Entrance_Text_ItemSign:
-	.string "Unique Item Shop\n"
+	.string "Silph Unique Item Shop\n"
 	.string "Need something? We probably got it!$"
 
 Entrance_EventScript_ServicesSign::
@@ -327,7 +328,7 @@ Entrance_EventScript_ServicesSign::
 	end
 
 Entrance_Text_ServicesSign:
-	.string "Special Services Shop\n"
+	.string "Lelouch's Special Services Shop\n"
 	.string "Anything for the right price...$"
 
 Entrance_EventScript_HealingSign::
@@ -335,7 +336,7 @@ Entrance_EventScript_HealingSign::
 	end
 
 Entrance_Text_HealingSign:
-	.string "Healing Shop\n"
+	.string "Joy's Healing Shop\n"
 	.string "Health care costs money!$"
 
 Entrance_Text_Quentin_Hello:
@@ -413,7 +414,7 @@ Entrance_Text_Quentin_StartTour:
 
 Entrance_Text_Quentin_General:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP LEFT SHOP IS\n"
-	.string "THE {COLOR RED}GENERAL PURPOSE SHOP{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}TIM'S GENERAL PURPOSE SHOP{COLOR DARK_GREY}.\p"
 	.string "HEALING SUPPLIES, BASIC POKEBALLS,\n"
 	.string "REPELS, AND X ITEMS ARE SOLD HERE.\p"
 	.string "MORE ITEMS WILL GRADUALLY BE\n"
@@ -422,7 +423,7 @@ Entrance_Text_Quentin_General:
 
 Entrance_Text_Quentin_Item:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP RIGHT SHOP IS\n"
-	.string "THE {COLOR RED}UNIQUE ITEM SHOP{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}SILPH UNIQUE ITEM SHOP{COLOR DARK_GREY}.\p"
 	.string "THEY SELL POKEBALL VARIATIONS,\n"
 	.string "BERRIES, EVOLUTION ITEMS, AND\l"
 	.string "HELD ITEMS.\p"
@@ -432,7 +433,7 @@ Entrance_Text_Quentin_Item:
 
 Entrance_Text_Quentin_Services:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM LEFT SHOP IS\n"
-	.string "THE {COLOR RED}SPECIAL SERVICES SHOP{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}LELOUCH'S SPECIAL SERVICES SHOP{COLOR DARK_GREY}.\p"
 	.string "HERE YOU CAN PAY MONEY FOR\n"
 	.string "EXPERIENCE TRAINING, EV TRAINING,\l"
 	.string "MOVE TUTORS, AND OTHER SERVICES.\p"
@@ -442,7 +443,7 @@ Entrance_Text_Quentin_Services:
 
 Entrance_Text_Quentin_Healing:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM RIGHT SHOP IS\n"
-	.string "THE {COLOR RED}HEALING SHOP{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}JOY'S HEALING SHOP{COLOR DARK_GREY}.\p"
 	.string "THEY WILL HEAL YOUR ENTIRE PARTY\n"
 	.string "FOR ¥500.$"
 
