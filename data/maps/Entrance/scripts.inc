@@ -140,6 +140,16 @@ Entrance_EventScript_SQUIRTLE:
 	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
 	return
 
+Entrance_EventScript_PIKACHU:
+	bufferspeciesname 0, SPECIES_PIKACHU
+	givemon SPECIES_PIKACHU, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_EEVEE:
+	bufferspeciesname 0, SPECIES_EEVEE
+	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	return
+
 Entrance_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
 	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
