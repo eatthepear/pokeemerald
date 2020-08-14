@@ -37,7 +37,7 @@ EntranceShops_Text_Tim_Welcome:
 	.string "Can I get you anything?$"
 
 EntranceShops_Text_Tim_Leave:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Have a nice day.$"'
+	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Have a nice day.$"
 
 EntranceShops_EventScript_Shop_Unique::
 	lock
@@ -61,5 +61,5 @@ EntranceShops_Text_Varrick_Welcome:
 	.string "Welcome to Silph Unique Item Store!$"
 
 EntranceShops_Text_Varrick_Leave:
-	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: A big thank you from Silph!$"'
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: A big thank you from Silph!$"
 
