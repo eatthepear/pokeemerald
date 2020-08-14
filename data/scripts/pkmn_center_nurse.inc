@@ -140,7 +140,7 @@ EventScript_Joy_Welcome::
 	call_if_set FLAG_NUZLOCKE_ON, EventScript_Joy_Nuzlocke
 	showmoneybox 0, 0, 0
 	msgbox gText_Joy_WouldYouLikeToHeal, MSGBOX_YESNO
-	compare VAR_RESULT, 0
+	compare VAR_RESULT, 1
 	goto_if_eq EventScript_Joy_CheckMoney
 	closemessage
 	hidemoneybox

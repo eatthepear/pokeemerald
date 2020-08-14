@@ -285,6 +285,7 @@ Entrance_EventScript_Quentin_EndIntro:
 	delay 96
 	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
+	waitmovement 1
 	setvar VAR_TUTORIAL, 1
 	releaseall
 	end
