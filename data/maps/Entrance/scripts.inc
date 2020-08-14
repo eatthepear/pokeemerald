@@ -81,7 +81,10 @@ Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POTION, 5
 	giveitem ITEM_POKE_BALL, 10
+	playfanfare MUS_FANFA4
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 0
 	setvar VAR_TUTORIAL, 1
