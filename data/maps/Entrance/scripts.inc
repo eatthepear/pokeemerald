@@ -9,17 +9,13 @@ Entrance_OnFrame:
 Entrance_EventScript_Intro:
 	lockall
 	setflag FLAG_SYS_B_DASH
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	special RemoveCameraObject
+	call Entrance_EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox Entrance_Text_Quentin_Hello, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_WalkDown
+	call Entrance_EventScript_MoveCameraDown
 	waitmovement 0
 	msgbox Entrance_Text_Quentin_LookLikeBirch, MSGBOX_AUTOCLOSE
 	delay 96
@@ -33,18 +29,21 @@ Entrance_EventScript_Intro:
 	delay 48
 	msgbox Entrance_Text_Quentin_VanillaExplained, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_eq Entrance_EventScript_Vanilla
-	goto Entrance_EventScript_Nuzlocke
+	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_AUTOCLOSE
+	multichoice 0, 0, MULTI_VANILLA_NUZLOCKE, 1
+	switch VAR_RESULT
+	case 0, Entrance_EventScript_Vanilla
+	case 1, Entrance_EventScript_Nuzlocke
 	end
 	
 Entrance_EventScript_Vanilla:
+	closemessage
 	msgbox Entrance_Text_Quentin_VanillaMode, MSGBOX_AUTOCLOSE
 	goto Entrance_EventScript_Tour
 	end
 	
 Entrance_EventScript_Nuzlocke:
+	closemessage
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Entrance_Text_Quentin_NuzlockeMode, MSGBOX_AUTOCLOSE
@@ -56,19 +55,27 @@ Entrance_EventScript_Tour:
 	applymovement 1, Entrance_Movement_Quentin_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FirstShop
 	waitmovement 0
+	call Entrance_EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_General, MSGBOX_AUTOCLOSE
+	call Entrance_EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_SecondShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_SecondShop
 	waitmovement 0
+	call Entrance_EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Item, MSGBOX_AUTOCLOSE
+	call Entrance_EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_ThirdShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_ThirdShop
 	waitmovement 0
+	call Entrance_EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Services, MSGBOX_AUTOCLOSE
+	call Entrance_EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_FourthShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FourthShop
 	waitmovement 0
+	call Entrance_EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Healing, MSGBOX_AUTOCLOSE
+	call Entrance_EventScript_MoveCameraDown
 	call_if_set FLAG_NUZLOCKE_ON, Entrance_EventScript_NuzlockeDialog
 	msgbox Entrance_Text_Quentin_PC, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackMid
@@ -275,14 +282,26 @@ Entrance_EventScript_Quentin_EndIntro:
 	delay 96
 	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
+	setvar VAR_TUTORIAL, 1
+	end
+
+Entrance_EventScript_MoveCameraUp:
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+Entrance_EventScript_MoveCameraDown:
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	waitmovement OBJ_EVENT_ID_CAMERA
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
 	special RemoveCameraObject
-	setvar VAR_TUTORIAL, 1
-	end
+	return
 
 Entrance_EventScript_GeneralSign::
 	msgbox Entrance_Text_GeneralSign, MSGBOX_SIGN
@@ -339,6 +358,7 @@ Entrance_Text_Quentin_Rules:
 	.string "TOUGH TRAINERS, AND MORE.\p"
 	.string "AT THE END OF EACH ZONE AND BEFORE\n"
 	.string "THE NEXT BEGINS, YOU WILL FIND\l"
+	.string "A SAFE AREA, LIKE THIS ONE, WITH\l"
 	.string "SHOPS TO PURCHASE SUPPLIES, HEAL\l"
 	.string "YOUR POKEMON, AND OTHER BENEFITS.\p"
 	.string "ONCE YOU ENTER A NEW ZONE,\n"
@@ -348,7 +368,7 @@ Entrance_Text_Quentin_Rules:
 Entrance_Text_Quentin_DontLose:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: YOU MUST PROGRESS THROUGH\n"
 	.string "ALL ZONES WITHOUT LOSING A BATTLE,\l"
-	.string "WHICH WILL MEAN AN AUTOMATIC\l"
+	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
 	.string "RESTART OF THE SIMULATION.$"
 
 Entrance_Text_Quentin_VanillaNuzlocke:
@@ -374,8 +394,7 @@ Entrance_Text_Quentin_VanillaExplained:
 	.string "QUESTS OR FIND THEM AS LOOT.$"
 
 Entrance_Text_Quentin_PickMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WOULD YOU LIKE TO PLAY ON\n"
-	.string "{COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE?$"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHICH MODE DO YOU WANT?$"
 
 Entrance_Text_Quentin_VanillaMode:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE DISABLED.\p"
