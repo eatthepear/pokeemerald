@@ -130,82 +130,82 @@ Entrance_EventScript_BULBASAUR:
 	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_CHARMANDER
+Entrance_EventScript_CHARMANDER:
 	bufferspeciesname 0, SPECIES_CHARMANDER
 	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_SQUIRTLE
+Entrance_EventScript_SQUIRTLE:
 	bufferspeciesname 0, SPECIES_SQUIRTLE
 	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_CHIKORITA
+Entrance_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
 	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_CYNDAQUIL
+Entrance_EventScript_CYNDAQUIL:
 	bufferspeciesname 0, SPECIES_CYNDAQUIL
 	givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_TOTODILE
+Entrance_EventScript_TOTODILE:
 	bufferspeciesname 0, SPECIES_TOTODILE
 	givemon SPECIES_TOTODILE, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_TREECKO
+Entrance_EventScript_TREECKO:
 	bufferspeciesname 0, SPECIES_TREECKO
 	givemon SPECIES_TREECKO, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_TORCHIC
+Entrance_EventScript_TORCHIC:
 	bufferspeciesname 0, SPECIES_TORCHIC
 	givemon SPECIES_TORCHIC, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_MUDKIP
+Entrance_EventScript_MUDKIP:
 	bufferspeciesname 0, SPECIES_MUDKIP
 	givemon SPECIES_MUDKIP, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_TURTWIG
+Entrance_EventScript_TURTWIG:
 	bufferspeciesname 0, SPECIES_TURTWIG
 	givemon SPECIES_TURTWIG, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_CHIMCHAR
+Entrance_EventScript_CHIMCHAR:
 	bufferspeciesname 0, SPECIES_CHIMCHAR
 	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_PIPLUP
+Entrance_EventScript_PIPLUP:
 	bufferspeciesname 0, SPECIES_PIPLUP
 	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_SNIVY
+Entrance_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
 	givemon SPECIES_SNIVY, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_TEPIG
+Entrance_EventScript_TEPIG:
 	bufferspeciesname 0, SPECIES_TEPIG
 	givemon SPECIES_TEPIG, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_OSHAWOTT
+Entrance_EventScript_OSHAWOTT:
 	bufferspeciesname 0, SPECIES_OSHAWOTT
 	givemon SPECIES_OSHAWOTT, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_CHESPIN
+Entrance_EventScript_CHESPIN:
 	bufferspeciesname 0, SPECIES_CHESPIN
 	givemon SPECIES_CHESPIN, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_FENNEKIN
+Entrance_EventScript_FENNEKIN:
 	bufferspeciesname 0, SPECIES_FENNEKIN
 	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	return
@@ -215,17 +215,17 @@ Entrance_EventScript_FROAKIE
 	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_ROWLET
+Entrance_EventScript_ROWLET:
 	bufferspeciesname 0, SPECIES_ROWLET
 	givemon SPECIES_ROWLET, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_LITTEN
+Entrance_EventScript_LITTEN:
 	bufferspeciesname 0, SPECIES_LITTEN
 	givemon SPECIES_LITTEN, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_POPPLIO
+Entrance_EventScript_POPPLIO:
 	bufferspeciesname 0, SPECIES_POPPLIO
 	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
