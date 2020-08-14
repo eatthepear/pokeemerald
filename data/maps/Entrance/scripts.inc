@@ -85,6 +85,8 @@ Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
+	delay 96
+	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_DEFAULT
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 0
 	setvar VAR_TUTORIAL, 1
@@ -133,10 +135,10 @@ Entrance_Text_Quentin_DontLose:
 
 Entrance_Text_Quentin_VanillaNuzlocke:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
-	.string "MODES: VANILLA AND NUZLOCKE.$"
+	.string "MODES: {COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
 
 Entrance_Text_Quentin_NuzlockeExplained:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: NUZLOCKE MODE HAS\n"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE HAS\n"
 	.string "IMPLEMENTED PERMADEATH. EACH ZONE\l"
 	.string "YOU CAN CAPTURE ONE POKEMON,\l"
 	.string "EXCLUDING GIFT POKEMON.\p"
@@ -144,7 +146,7 @@ Entrance_Text_Quentin_NuzlockeExplained:
 	.string "AS IS SHINY CLAUSE.$"
 
 Entrance_Text_Quentin_VanillaExplained:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: VANILLA MEANS ALL NUZLOCKE\n"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MEANS ALL NUZLOCKE\n"
 	.string "RULES ARE DISABLED. YOU WILL PLAY\l"
 	.string "WITHOUT PERMADEATH OR POKEMON\l"
 	.string "CAPTURE LIMITATIONS.\p"
@@ -155,14 +157,14 @@ Entrance_Text_Quentin_VanillaExplained:
 
 Entrance_Text_Quentin_PickMode:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WOULD YOU LIKE TO PLAY ON\n"
-	.string "NUZLOCKE MODE?$"
+	.string "{COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE?$"
 
 Entrance_Text_Quentin_VanillaMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: NUZLOCKE MODE DISABLED.\p"
-	.string "VANILLA MODE ENABLED. GOOD LUCK.$"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE DISABLED.\p"
+	.string "{COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED. GOOD LUCK.$"
 
 Entrance_Text_Quentin_NuzlockeMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: NUZLOCKE MODE ENABLED.\n"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE MODE ENABLED.\n"
 	.string "GOOD LUCK.$"
 
 Entrance_Text_Quentin_StartTour:
@@ -244,6 +246,11 @@ Entrance_Text_Quentin_Freebies:
 
 Entrance_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
+
+Entrance_Text_Quentin_WhenUReady:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
+	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
+	.string "WILL GUIDE YOU ON YOUR WAY.$"
 
 Entrance_Movement_Quentin_WalkDown:
 	walk_down
