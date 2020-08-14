@@ -874,7 +874,7 @@ void ScriptMenu_ScrollingMultichoice(void)
     int maxShowed = gSpecialVar_0x8007;
     
     for (i = 0; i < sScrollingSets[setId].count; i++)
-        width = display_text_and_get_width(sScrollingSets[setId].set[i].name, width);
+        width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
     
     width = ConvertPixelWidthToTileWidth(width);
     left = ScriptMenu_AdjustLeftCoordFromWidth(left, width);
