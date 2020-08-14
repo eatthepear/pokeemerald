@@ -454,6 +454,10 @@ Entrance_Text_Quentin_Starters:
 Entrance_Text_ReceivedStarter:
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
+Entrance_Text_Quentin_HowBoutNickname:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: HOW ABOUT A NICKNAME\n"
+	.string "FOR THIS WONDERFUL POKEMON?$"
+
 Entrance_Text_Quentin_NiceChoice:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
 	.string "YOU CAN ALSO RE-NICKNAME YOUR\n"
