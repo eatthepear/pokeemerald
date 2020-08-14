@@ -72,10 +72,10 @@ Entrance_EventScript_Tour:
 	delay 96
 	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
 	@ multichoice stuff here
-	goto Entrance_EventScript_Quentin_Intro
+	goto Entrance_EventScript_Quentin_EndIntro
 	end
 
-Entrance_EventScript_Quentin_Intro
+Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_NiceChoice, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
