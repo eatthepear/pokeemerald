@@ -37,7 +37,7 @@ gText_Birch_WhatsYourName:: @ 82C8BFF
 	.string "Please input your name.$"
 
 gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "Your name is {PLAYER}{KUN}?$"
+	.string "Your name is {COLOR BLUE}{PLAYER}{KUN}{COLOR DARK_GREY}?$"
 
 gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "Thank you very much.\p"

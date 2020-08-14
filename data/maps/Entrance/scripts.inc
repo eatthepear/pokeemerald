@@ -8,6 +8,7 @@ Entrance_OnFrame:
 
 Entrance_EventScript_Intro:
 	lockall
+	clearflag FLAG_NUZLOCKE_ON
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	special SetUnlockedPokedexFlags
@@ -31,7 +32,7 @@ Entrance_EventScript_Intro:
 	delay 48
 	msgbox Entrance_Text_Quentin_VanillaExplained, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
 	case 0, Entrance_EventScript_Vanilla
@@ -77,9 +78,9 @@ Entrance_EventScript_Tour:
 	waitmovement 0
 	call Entrance_EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Healing, MSGBOX_AUTOCLOSE
-	call Entrance_EventScript_MoveCameraDown
 	call_if_set FLAG_NUZLOCKE_ON, Entrance_EventScript_NuzlockeDialog
 	msgbox Entrance_Text_Quentin_PC, MSGBOX_AUTOCLOSE
+	call Entrance_EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_BackMid
 	waitmovement 0
@@ -343,7 +344,7 @@ Entrance_Text_Quentin_Hello:
 Entrance_Text_Quentin_LookLikeBirch:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: I KNOW YOU MIGHT BE\n"
 	.string "CONFUSED. AS I AM A PORYGON,\l"
-	.string "YET I APPEAR AS PROFESSOR BIRCH.\p"
+	.string "YET I APPEAR AS {COLOR BLUE}PROFESSOR BIRCH{COLOR DARK_GREY}.\p"
 	.string "I HAVE TAKEN ON A HUMAN FORM\n"
 	.string "IN THIS REALM SO I CAN BE MORE\l"
 	.string "COMMUNICATIVE WITH CHALLENGERS\l"
