@@ -803,7 +803,22 @@ static const u8 sText_Eevee[] = _("Eevee");
 static const u8 sText_Chikorita[] = _("Chikorita");
 static const u8 sText_Cyndaquil[] = _("Cyndaquil");
 static const u8 sText_Totodile[] = _("Totodile");
-static const u8 sText_Example9[] = _("Example 9");
+static const u8 sText_Treecko[] = _("Treecko");
+static const u8 sText_Torchic[] = _("Torchic");
+static const u8 sText_Mudkip[] = _("Mudkip");
+static const u8 sText_Turtwig[] = _("Turtwig");
+static const u8 sText_Chimchar[] = _("Chimchar");
+static const u8 sText_Piplup[] = _("Piplup");
+static const u8 sText_Snivy[] = _("Snivy");
+static const u8 sText_Tepig[] = _("Tepig");
+static const u8 sText_Oshawott[] = _("Oshawott");
+static const u8 sText_Chespin[] = _("Chespin");
+static const u8 sText_Fennekin[] = _("Fennekin");
+static const u8 sText_Froakie[] = _("Froakie");
+static const u8 sText_Rowlet[] = _("Rowlet");
+static const u8 sText_Litten[] = _("Litten");
+static const u8 sText_Popplio[] = _("Popplio");
+static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
 static const struct ListMenuItem Starters[] =
@@ -816,6 +831,21 @@ static const struct ListMenuItem Starters[] =
     {sText_Chikorita, 5},
     {sText_Cyndaquil, 6},
     {sText_Totodile, 7},
+    {sText_Treecko, 8},
+    {sText_Torchic, 9},
+    {sText_Mudkip, 10},
+    {sText_Turtwig, 11},
+    {sText_Chimchar, 12},
+    {sText_Piplup, 13},
+    {sText_Snivy, 14},
+    {sText_Tepig, 15},
+    {sText_Oshawott, 16},
+    {sText_Chespin, 17},
+    {sText_Fennekin, 18},
+    {sText_Froakie, 19},
+    {sText_Rowlet, 20},
+    {sText_Litten, 21},
+    {sText_Popplio, 22},
 };
 /*
 static const struct ListMenuItem sSet2[] =

@@ -73,7 +73,51 @@ Entrance_EventScript_Tour:
 	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
 	scrollingmultichoice 0, 0, 0, 4, FALSE
 	compare VAR_RESULT, 0
-	call_if_eq Entrance_EventScript_Bulbasaur
+	call_if_eq Entrance_EventScript_BULBASAUR
+	compare VAR_RESULT, 1
+	call_if_eq Entrance_EventScript_CHARMANDER
+	compare VAR_RESULT, 2
+	call_if_eq Entrance_EventScript_SQUIRTLE
+	compare VAR_RESULT, 3
+	call_if_eq Entrance_EventScript_PIKACHU
+	compare VAR_RESULT, 4
+	call_if_eq Entrance_EventScript_EEVEE
+	compare VAR_RESULT, 5
+	call_if_eq Entrance_EventScript_CHIKORITA
+	compare VAR_RESULT, 6
+	call_if_eq Entrance_EventScript_CYNDAQUIL
+	compare VAR_RESULT, 7
+	call_if_eq Entrance_EventScript_TOTODILE
+	compare VAR_RESULT, 8
+	call_if_eq Entrance_EventScript_TREECKO
+	compare VAR_RESULT, 9
+	call_if_eq Entrance_EventScript_TORCHIC
+	compare VAR_RESULT, 10
+	call_if_eq Entrance_EventScript_MUDKIP
+	compare VAR_RESULT, 11
+	call_if_eq Entrance_EventScript_TURTWIG
+	compare VAR_RESULT, 12
+	call_if_eq Entrance_EventScript_CHIMCHAR
+	compare VAR_RESULT, 13
+	call_if_eq Entrance_EventScript_PIPLUP
+	compare VAR_RESULT, 14
+	call_if_eq Entrance_EventScript_SNIVY
+	compare VAR_RESULT, 15
+	call_if_eq Entrance_EventScript_TEPIG
+	compare VAR_RESULT, 16
+	call_if_eq Entrance_EventScript_OSHAWOTT
+	compare VAR_RESULT, 17
+	call_if_eq Entrance_EventScript_CHESPIN
+	compare VAR_RESULT, 18
+	call_if_eq Entrance_EventScript_FENNEKIN
+	compare VAR_RESULT, 19
+	call_if_eq Entrance_EventScript_FROAKIE
+	compare VAR_RESULT, 20
+	call_if_eq Entrance_EventScript_ROWLET
+	compare VAR_RESULT, 21
+	call_if_eq Entrance_EventScript_LITTEN
+	compare VAR_RESULT, 22
+	call_if_eq Entrance_EventScript_POPPLIO
 	playfanfare MUS_FANFA4
 	message Entrance_Text_ReceivedStarter
 	waitmessage
@@ -81,9 +125,109 @@ Entrance_EventScript_Tour:
 	goto Entrance_EventScript_Quentin_EndIntro
 	end
 
-Entrance_EventScript_Bulbasaur:
+Entrance_EventScript_BULBASAUR:
 	bufferspeciesname 0, SPECIES_BULBASAUR
 	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_CHARMANDER
+	bufferspeciesname 0, SPECIES_CHARMANDER
+	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_SQUIRTLE
+	bufferspeciesname 0, SPECIES_SQUIRTLE
+	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_CHIKORITA
+	bufferspeciesname 0, SPECIES_CHIKORITA
+	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_CYNDAQUIL
+	bufferspeciesname 0, SPECIES_CYNDAQUIL
+	givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_TOTODILE
+	bufferspeciesname 0, SPECIES_TOTODILE
+	givemon SPECIES_TOTODILE, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_TREECKO
+	bufferspeciesname 0, SPECIES_TREECKO
+	givemon SPECIES_TREECKO, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_TORCHIC
+	bufferspeciesname 0, SPECIES_TORCHIC
+	givemon SPECIES_TORCHIC, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_MUDKIP
+	bufferspeciesname 0, SPECIES_MUDKIP
+	givemon SPECIES_MUDKIP, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_TURTWIG
+	bufferspeciesname 0, SPECIES_TURTWIG
+	givemon SPECIES_TURTWIG, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_CHIMCHAR
+	bufferspeciesname 0, SPECIES_CHIMCHAR
+	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_PIPLUP
+	bufferspeciesname 0, SPECIES_PIPLUP
+	givemon SPECIES_PIPLUP, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_SNIVY
+	bufferspeciesname 0, SPECIES_SNIVY
+	givemon SPECIES_SNIVY, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_TEPIG
+	bufferspeciesname 0, SPECIES_TEPIG
+	givemon SPECIES_TEPIG, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_OSHAWOTT
+	bufferspeciesname 0, SPECIES_OSHAWOTT
+	givemon SPECIES_OSHAWOTT, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_CHESPIN
+	bufferspeciesname 0, SPECIES_CHESPIN
+	givemon SPECIES_CHESPIN, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_FENNEKIN
+	bufferspeciesname 0, SPECIES_FENNEKIN
+	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_FROAKIE
+	bufferspeciesname 0, SPECIES_FROAKIE
+	givemon SPECIES_FROAKIE, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_ROWLET
+	bufferspeciesname 0, SPECIES_ROWLET
+	givemon SPECIES_ROWLET, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_LITTEN
+	bufferspeciesname 0, SPECIES_LITTEN
+	givemon SPECIES_LITTEN, 5, ITEM_NONE
+	return
+
+Entrance_EventScript_POPPLIO
+	bufferspeciesname 0, SPECIES_POPPLIO
+	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_Quentin_EndIntro:
