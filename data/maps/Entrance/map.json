@@ -68,7 +68,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Entrance_EventScript_GeneralSign"
     },
     {
       "type": "sign",
@@ -76,7 +76,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Entrance_EventScript_ItemSign"
     },
     {
       "type": "sign",
@@ -84,7 +84,7 @@
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Entrance_EventScript_ServicesSign"
     },
     {
       "type": "sign",
@@ -92,7 +92,7 @@
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Entrance_EventScript_HealingSign"
     }
   ]
 }

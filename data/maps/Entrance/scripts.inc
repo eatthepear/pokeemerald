@@ -128,6 +128,16 @@ Entrance_EventScript_Tour:
 	message Entrance_Text_ReceivedStarter
 	waitmessage
 	waitfanfare
+	msgbox Entrance_Text_Quentin_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Entrance_EventScript_NicknameStarter
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_Quentin_EndIntro
+	end
+
+Entrance_EventScript_NicknameStarter:
+	setvar VAR_0x8004, 0
+	call Common_EventScript_NameReceivedPartyMon
 	goto Entrance_EventScript_Quentin_EndIntro
 	end
 
@@ -246,6 +256,12 @@ Entrance_EventScript_POPPLIO:
 	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
 
+Entrance_EventScript_NuzlockeDialog:
+	delay 24
+	msgbox Entrance_Text_Quentin_NuzlockeHealing, MSGBOX_AUTOCLOSE
+	delay 24
+	return
+
 Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_NiceChoice, MSGBOX_AUTOCLOSE
 	delay 96
@@ -268,11 +284,37 @@ Entrance_EventScript_Quentin_EndIntro:
 	setvar VAR_TUTORIAL, 1
 	end
 
-Entrance_EventScript_NuzlockeDialog:
-	delay 24
-	msgbox Entrance_Text_Quentin_NuzlockeHealing, MSGBOX_AUTOCLOSE
-	delay 24
-	return
+Entrance_EventScript_GeneralSign::
+	msgbox Entrance_Text_GeneralSign, MSGBOX_SIGN
+	end
+
+Entrance_Text_GeneralSign:
+	.string "General Purpose Shop\n"
+	.string "Sponsored by Pokémart Inc.$"
+
+Entrance_EventScript_ItemSign::
+	msgbox Entrance_Text_ItemSign, MSGBOX_SIGN
+	end
+
+Entrance_Text_ItemSign:
+	.string "Unique Item Shop\n"
+	.string "Need something? We probably got it!$"
+
+Entrance_EventScript_ServicesSign::
+	msgbox Entrance_Text_ServicesSign, MSGBOX_SIGN
+	end
+
+Entrance_Text_ServicesSign:
+	.string "Special Services Shop\n"
+	.string "Anything for the right price...$"
+
+Entrance_EventScript_HealingSign::
+	msgbox Entrance_Text_HealingSign, MSGBOX_SIGN
+	end
+
+Entrance_Text_HealingSign:
+	.string "Healing Shop\n"
+	.string "Health care costs money!$"
 
 Entrance_Text_Quentin_Hello:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
@@ -414,8 +456,8 @@ Entrance_Text_ReceivedStarter:
 
 Entrance_Text_Quentin_NiceChoice:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
-	.string "YOU CAN NICKNAME YOUR POKEMON FROM\n"
-	.string "THE PARTY MENU IF YOU WOULD LIKE.$"
+	.string "YOU CAN ALSO RE-NICKNAME YOUR\n"
+	.string "POKEMON FROM THE PARTY MENU.$"
 
 Entrance_Text_Quentin_Freebies:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THIS IS ZONE ZERO.\n"
