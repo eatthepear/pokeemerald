@@ -71,9 +71,20 @@ Entrance_EventScript_Tour:
 	msgbox Entrance_Text_Quentin_TourDone, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
-	@ multichoice stuff here
+	scrollingmultichoice 0, 0, 0, 4, FALSE
+	compare gSpecialVar_Result, 0
+	call_if_eq Entrance_EventScript_Bulbasaur
+	playfanfare MUS_FANFA4
+	message Entrance_Text_ReceivedStarter
+	waitmessage
+	waitfanfare
 	goto Entrance_EventScript_Quentin_EndIntro
 	end
+
+Entrance_EventScript_Bulbasaur:
+	bufferspeciesname 0, SPECIES_BULBASAUR
+	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
+	return
 
 Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_NiceChoice, MSGBOX_AUTOCLOSE
@@ -232,6 +243,9 @@ Entrance_Text_Quentin_Starters:
 	.string "WELL AS PIKACHU AND EEVEE.\p"
 	.string "CHOOSE CAREFULLY AS THESE POKEMON\n"
 	.string "ARE VERY RARE.$"
+
+Entrance_Text_ReceivedStarter:
+	.string "{PLAYER} received the {STR_VAR_1}!$"
 
 Entrance_Text_Quentin_NiceChoice:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
