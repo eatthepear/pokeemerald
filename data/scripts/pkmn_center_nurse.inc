@@ -141,7 +141,7 @@ EventScript_Joy_Welcome::
 	showmoneybox 0, 0, 0
 	msgbox gText_Joy_WouldYouLikeToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, 0
-	goto_if_eq EventScript_Joy_Heal
+	goto_if_eq EventScript_Joy_CheckMoney
 	closemessage
 	hidemoneybox
 	msgbox gText_Joy_WonderfulDay, MSGBOX_AUTOCLOSE
@@ -152,9 +152,23 @@ EventScript_Joy_Nuzlocke:
 	msgbox gText_Joy_Nuzlocke, MSGBOX_AUTOCLOSE
 	return
 
+EventScript_Joy_CheckMoney:
+	checkmoney 500, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Joy_NotEnough
+	goto EventScript_Joy_Heal
+	end
+
+EventScript_Joy_NotEnough:
+	msgbox gText_Joy_NotEnough, MSGBOX_AUTOCLOSE
+	hidemoneybox
+	msgbox gText_Joy_WonderfulDay, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
 EventScript_Joy_Heal:
 	removemoney 500, 0
-	updatemoneybox, 0, 0
+	updatemoneybox 0, 0
 	msgbox gText_Joy_ThankYou, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_ME_ASA
