@@ -1076,8 +1076,10 @@ void CB2_InitCopyrightScreenAfterBootup(void)
             Sav2_ClearSetDefault();
         SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
         InitHeap(gHeap, HEAP_SIZE);
-        if ((FlagGet(FLAG_SYS_POKEDEX_GET)) && (!(FlagGet(FLAG_DEFEATED_METEOR_FALLS_STEVEN))))
+        if (FlagGet(FLAG_NUZLOCKE_ON))
             NuzlockeFlagSet(GLOBAL_NUZLOCKE_SWITCH);
+        else
+            NuzlockeFlagClear(GLOBAL_NUZLOCKE_SWITCH);
     }
 }
 
