@@ -175,7 +175,7 @@ EventScript_Joy_Heal:
 	waitfanfare
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
-	setflag FLAG_HEALING_SHOP_USED
+	setvar VAR_HEAL_SHOP_USED, 1
 	msgbox gText_Joy_PartyHealed, MSGBOX_AUTOCLOSE
 	closemessage
 	hidemoneybox
