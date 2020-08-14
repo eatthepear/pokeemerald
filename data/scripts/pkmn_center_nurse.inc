@@ -138,7 +138,7 @@ EventScript_Joy_Welcome::
 	lockall
 	msgbox gText_Joy_Welcome, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, EventScript_Joy_Nuzlocke
-	showmoneybox, 0, 0, 0
+	showmoneybox 0, 0, 0
 	msgbox gText_Joy_WouldYouLikeToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Joy_Heal
@@ -154,7 +154,7 @@ EventScript_Joy_Nuzlocke:
 
 EventScript_Joy_Heal:
 	removemoney 500, 0
-	updatemoneybox
+	updatemoneybox, 0, 0
 	msgbox gText_Joy_ThankYou, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_ME_ASA
