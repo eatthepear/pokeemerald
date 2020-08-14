@@ -69,15 +69,28 @@ Entrance_EventScript_Tour:
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_BackMid
 	waitmovement 0
 	msgbox Entrance_Text_Quentin_TourDone, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
+	@ multichoice stuff here
+	goto Entrance_EventScript_Quentin_Intro
+	end
+
+Entrance_EventScript_Quentin_Intro
+	msgbox Entrance_Text_Quentin_NiceChoice, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
+	giveitem ITEM_POTION, 5
+	giveitem ITEM_POKE_BALL, 10
+	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 0
 	setvar VAR_TUTORIAL, 1
 	end
 
 Entrance_EventScript_NuzlockeDialog:
-	delay 48
+	delay 24
 	msgbox Entrance_Text_Quentin_NuzlockeHealing, MSGBOX_AUTOCLOSE
-	delay 48
+	delay 24
 	return
 
 Entrance_Text_Quentin_Hello:
@@ -206,8 +219,28 @@ Entrance_Text_Quentin_TourDone:
 	.string "ABLE TO ACCESS THESE SHOPS UNTIL\l"
 	.string "YOU EXIT THAT ZONE.$"
 
-Entrance_Text_Quentin_Welcome:
-	.string "Hello there!$"
+Entrance_Text_Quentin_Starters:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: AS A NEW CHALLENGER,\n"
+	.string "YOU WILL RECEIVE A STARTER POKEMON.\p"
+	.string "YOU CAN HAVE YOUR CHOICE OF ANY OF\n"
+	.string "THE GEN 1-7 STARTER POKEMON, AS\l"
+	.string "WELL AS PIKACHU AND EEVEE.\p"
+	.string "CHOOSE CAREFULLY AS THESE POKEMON\n"
+	.string "ARE VERY RARE.$"
+
+Entrance_Text_Quentin_NiceChoice:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
+	.string "YOU CAN NICKNAME YOUR POKEMON FROM\n"
+	.string "THE PARTY MENU IF YOU WOULD LIKE.$"
+
+Entrance_Text_Quentin_Freebies:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THIS IS ZONE ZERO.\n"
+	.string "YOU WILL BE ENTERING ZONE ONE.\p"
+	.string "HERE ARE SOME STARTING ITEMS,\n"
+	.string "AS WELL AS STARTING CASH.$"
+
+Entrance_Text_ReceivedMoney:
+	.string "Received ¥5000!$"
 
 Entrance_Movement_Quentin_WalkDown:
 	walk_down
@@ -254,8 +287,8 @@ Entrance_Movement_Player_SecondShop:
 	delay_16
 	delay_16
 	delay_16
-	delay_16
 	face_right
+	delay_16
 	walk_right
 	walk_right
 	walk_right
@@ -291,8 +324,8 @@ Entrance_Movement_Player_ThirdShop:
 	delay_16
 	delay_16
 	delay_16
-	delay_16
 	face_left
+	delay_16
 	walk_left
 	walk_left
 	walk_left
@@ -327,7 +360,9 @@ Entrance_Movement_Player_FourthShop:
 	face_up
 	delay_16
 	delay_16
+	delay_16
 	face_right
+	delay_16
 	walk_right
 	walk_right
 	walk_right
@@ -353,7 +388,6 @@ Entrance_Movement_Quentin_BackMid:
 	step_end
 
 Entrance_Movement_Player_BackMid:
-	delay_16
 	delay_16
 	delay_16
 	walk_up
