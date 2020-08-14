@@ -210,7 +210,7 @@ Entrance_EventScript_FENNEKIN:
 	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	return
 
-Entrance_EventScript_FROAKIE
+Entrance_EventScript_FROAKIE:
 	bufferspeciesname 0, SPECIES_FROAKIE
 	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 	return
