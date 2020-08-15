@@ -95,8 +95,8 @@ EntranceShops_EventScripts_Shop_Services:
 
 EntranceShops_Text_Lelouch_Intro1:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You... What is your name?\p"
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: (PLAYER)? Now that’s a name...\n"
-	.string "I haven’t heard in...$"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: (PLAYER)? Now that's a name...\n"
+	.string "I haven't heard in...$"
 
 EntranceShops_Text_Lelouch_Intro2:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You may call me Lelouch.\p"
@@ -126,5 +126,5 @@ EntranceShops_Text_Joy_Intro:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: I used to work at the\n"
 	.string "Pokémon Center, but they gave\l"
 	.string "terrible pay.\p"
-	.string "So I’ve started my own shop,\n"
-	.string "Joy’s Healing Shop!$"
+	.string "So I've started my own shop,\n"
+	.string "Joy's Healing Shop!$"
