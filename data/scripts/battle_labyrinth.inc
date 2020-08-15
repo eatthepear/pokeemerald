@@ -24,7 +24,7 @@ EventScript_Joy_DenyPC::
 	releaseall
 	end
 
-EventScript_Joy_Welcome::
+EventScript_Joy_Welcome:
 	lockall
 	msgbox gText_Joy_Welcome, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, EventScript_Joy_Nuzlocke

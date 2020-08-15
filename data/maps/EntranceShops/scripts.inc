@@ -19,7 +19,7 @@ EntranceShops_Text_Tim_Intro:
 	.string "You can find all sorts of general\l"
 	.string "supplies for your travels.$"
 
-EntranceShops_EventScript_Shop_General::
+EntranceShops_EventScript_Shop_General:
 	message gText_Tim_Welcome
 	waitmessage
 	pokemart EntranceShops_Shop_General
@@ -63,7 +63,7 @@ EntranceShops_Text_Varrick_Intro:
 	.string "you've never seen!\p"
 	.string "Please, enjoy my shop!$"
 
-EntranceShops_EventScript_Shop_Unique::
+EntranceShops_EventScript_Shop_Unique:
 	message gText_Varrick_Welcome
 	waitmessage
 	pokemart EntranceShops_Shop_Unique
