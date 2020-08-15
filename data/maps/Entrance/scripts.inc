@@ -22,9 +22,9 @@ Entrance_EventScript_Intro:
 	waitmovement 0
 	msgbox Entrance_Text_Quentin_LookLikeBirch, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Entrance_Text_Quentin_Rules, MSGBOX_AUTOCLOSE
+	msgbox gText_Quentin_Rules, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Entrance_Text_Quentin_DontLose, MSGBOX_AUTOCLOSE
+	msgbox gText_Quentin_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Entrance_Text_Quentin_VanillaNuzlocke, MSGBOX_AUTOCLOSE
 	delay 48
@@ -319,41 +319,9 @@ Entrance_EventScript_NextZone::
 	end
 
 Entrance_EventScript_Leave:
-	msgbox Entrance_Text_Quentin_Onwards, MSGBOX_AUTOCLOSE
+	msgbox gText_Quentin_Onwards, MSGBOX_AUTOCLOSE
 	end
 	@ add stuff here
-
-Entrance_EventScript_GeneralSign::
-	msgbox Entrance_Text_GeneralSign, MSGBOX_SIGN
-	end
-
-Entrance_Text_GeneralSign:
-	.string "Tim's General Purpose Shop\n"
-	.string "Sponsored by Pokémart Inc.$"
-
-Entrance_EventScript_ItemSign::
-	msgbox Entrance_Text_ItemSign, MSGBOX_SIGN
-	end
-
-Entrance_Text_ItemSign:
-	.string "Silph Unique Item Shop\n"
-	.string "Need something? We probably got it!$"
-
-Entrance_EventScript_ServicesSign::
-	msgbox Entrance_Text_ServicesSign, MSGBOX_SIGN
-	end
-
-Entrance_Text_ServicesSign:
-	.string "Lelouch's Special Services Shop\n"
-	.string "Anything for the right price...$"
-
-Entrance_EventScript_HealingSign::
-	msgbox Entrance_Text_HealingSign, MSGBOX_SIGN
-	end
-
-Entrance_Text_HealingSign:
-	.string "Joy's Healing Shop\n"
-	.string "Health care costs money!$"
 
 Entrance_Text_Quentin_Hello:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
@@ -367,29 +335,6 @@ Entrance_Text_Quentin_LookLikeBirch:
 	.string "COMMUNICATIVE WITH CHALLENGERS\l"
 	.string "WHO MIGHT ATTEMPT TO BRAVE\l"
 	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.$"
-
-Entrance_Text_Quentin_Rules:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ALLOW ME TO GO OVER THE\n"
-	.string "RULES. IN THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY},\l"
-	.string "THERE ARE A NUMBER OF ZONES IN\l"
-	.string "WHICH YOU MUST FIND THE EXIT.\p"
-	.string "IN THESE ZONES, YOU MIGHT ENCOUNTER\n"
-	.string "WILD POKEMON, GREAT TREASURES,\l"
-	.string "TOUGH TRAINERS, AND MORE.\p"
-	.string "AT THE END OF EACH ZONE AND BEFORE\n"
-	.string "THE NEXT BEGINS, YOU WILL FIND\l"
-	.string "A SAFE AREA, LIKE THIS ONE, WITH\l"
-	.string "SHOPS TO PURCHASE SUPPLIES, HEAL\l"
-	.string "YOUR POKEMON, AND OTHER BENEFITS.\p"
-	.string "ONCE YOU ENTER A NEW ZONE,\n"
-	.string "YOU WILL NOT BE ABLE TO RETURN TO\l"
-	.string "THE SHOP AREA, NOR ANY PRIOR ZONES.$"
-
-Entrance_Text_Quentin_DontLose:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: YOU MUST PROGRESS THROUGH\n"
-	.string "ALL ZONES WITHOUT LOSING A BATTLE,\l"
-	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
-	.string "RESTART OF THE SIMULATION.$"
 
 Entrance_Text_Quentin_VanillaNuzlocke:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
@@ -518,9 +463,6 @@ Entrance_Text_Quentin_WhenUReady:
 Entrance_Text_Quentin_ReadyToLeave:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
-
-Entrance_Text_Quentin_Onwards:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
 
 Entrance_Movement_Quentin_WalkDown:
 	walk_down
