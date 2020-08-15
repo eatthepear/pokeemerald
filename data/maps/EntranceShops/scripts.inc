@@ -54,7 +54,7 @@ EntranceShops_Text_Varrick_Intro:
 	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: I pitched this idea to\n"
 	.string "Silph a couple years back,\l"
 	.string "and now it's become a reality!\p"
-	.string "All the random items you can’t find\n"
+	.string "All the random items you can't find\n"
 	.string "in the world, you'll find here!\p"
 	.string "Fantastic evolution stones!\p"
 	.string "Countless Pokéball variations!\p"
