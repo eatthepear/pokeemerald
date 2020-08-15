@@ -308,6 +308,21 @@ Entrance_EventScript_MoveCameraDown:
 	special RemoveCameraObject
 	return
 
+Entrance_EventScript_NextZone::
+	lock
+	faceplayer
+	msgbox Entrance_Text_Quentin_ReadyToLeave, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto Entrance_EventScript_Leave
+	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Entrance_EventScript_Leave:
+	msgbox Entrance_Text_Quentin_Onwards, MSGBOX_AUTOCLOSE
+	end
+	@ add stuff here
+
 Entrance_EventScript_GeneralSign::
 	msgbox Entrance_Text_GeneralSign, MSGBOX_SIGN
 	end
@@ -499,6 +514,13 @@ Entrance_Text_Quentin_WhenUReady:
 	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
 	.string "WILL GUIDE YOU ON YOUR WAY.\p"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
+
+Entrance_Text_Quentin_ReadyToLeave:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
+	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
+
+Entrance_Text_Quentin_Onwards:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
 
 Entrance_Movement_Quentin_WalkDown:
 	walk_down
