@@ -4,10 +4,10 @@ EntranceShops_MapScripts::
 EntranceShops_EventScript_Shop_TimIntroCheck::
 	lock
 	faceplayer
-	goto_if_set FLAG_TIM_INTRO, EntranceShops_EventScripts_Shop_General
+	goto_if_set FLAG_TIM_INTRO, EntranceShops_EventScript_Shop_General
 	setflag FLAG_TIM_INTRO
 	msgbox EntranceShops_Text_Tim_Intro, MSGBOX_AUTOCLOSE
-	goto EntranceShops_EventScripts_Shop_General
+	goto EntranceShops_EventScript_Shop_General
 	release
 	end
 
@@ -40,10 +40,10 @@ EntranceShops_Shop_General:
 EntranceShops_EventScript_Shop_VarrickIntroCheck::
 	lock
 	faceplayer
-	goto_if_set FLAG_VARRICK_INTRO, EntranceShops_EventScripts_Shop_Unique
+	goto_if_set FLAG_VARRICK_INTRO, EntranceShops_EventScript_Shop_Unique
 	setflag FLAG_VARRICK_INTRO
 	msgbox EntranceShops_Text_Varrick_Intro, MSGBOX_AUTOCLOSE
-	goto EntranceShops_EventScripts_Shop_Unique
+	goto EntranceShops_EventScript_Shop_Unique
 	release
 	end
 
@@ -80,15 +80,15 @@ EntranceShops_Shop_Unique:
 
 EntranceShops_EventScript_Shop_LelouchIntroCheck::
 	lock
-	goto_if_set FLAG_LELOUCH_INTRO, EntranceShops_EventScripts_Shop_Services
+	goto_if_set FLAG_LELOUCH_INTRO, EntranceShops_EventScript_Shop_Services
 	setflag FLAG_LELOUCH_INTRO
 	msgbox EntranceShops_Text_Lelouch_Intro1, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox EntranceShops_Text_Lelouch_Intro2, MSGBOX_AUTOCLOSE
-	goto EntranceShops_EventScripts_Shop_Services
+	goto EntranceShops_EventScript_Shop_Services
 	end
 
-EntranceShops_EventScripts_Shop_Services:
+EntranceShops_EventScript_Shop_Services:
 	msgbox EntranceShops_Text_Lelouch_NoPoints, MSGBOX_AUTOCLOSE
 	release
 	end
