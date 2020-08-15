@@ -21,6 +21,8 @@ gText_Quentin_DontLose:
 	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
 	.string "RESTART OF THE SIMULATION.$"
 
+gText_Joy_Welcome:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: You can't use that without paying!$"
 
 gText_Joy_Welcome:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Welcome to Joy's Healing Shop.\p"

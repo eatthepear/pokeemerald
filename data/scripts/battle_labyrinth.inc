@@ -1,19 +1,19 @@
 
 
 EventScript_GeneralSign::
-	msgbox Entrance_Text_GeneralSign, MSGBOX_SIGN
+	msgbox gText_GeneralSign, MSGBOX_SIGN
 	end
 
 EventScript_ItemSign::
-	msgbox Entrance_Text_ItemSign, MSGBOX_SIGN
+	msgbox gText_ItemSign, MSGBOX_SIGN
 	end
 
 EventScript_ServicesSign::
-	msgbox Entrance_Text_ServicesSign, MSGBOX_SIGN
+	msgbox gText_ServicesSign, MSGBOX_SIGN
 	end
 
 EventScript_HealingSign::
-	msgbox Entrance_Text_HealingSign, MSGBOX_SIGN
+	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
 
 EventScript_Joy_DenyPC::
