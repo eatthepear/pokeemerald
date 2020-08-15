@@ -101,7 +101,7 @@ EntranceShops_Text_Lelouch_Intro1:
 EntranceShops_Text_Lelouch_Intro2:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You may call me Lelouch.\p"
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I provide a variety of\n"
-	.string "services to improve one’s Pokémon.\p"
+	.string "services to improve one's Pokémon.\p"
 	.string "But I demand a special price, one\n"
 	.string "that I see you cannot pay.$"
 
