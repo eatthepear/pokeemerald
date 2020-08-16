@@ -24,16 +24,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Mariam[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Oscar[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
+    .lvl = 3,
+    .species = SPECIES_PHANPY,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 4,
+    .species = SPECIES_LILLIPUP,
     }
 };
 

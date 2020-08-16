@@ -27,4 +27,19 @@ Zone1A_Text_MariamDefeat:
 	.string "Sheesh!$"
 
 Zone1A_Text_MariamPostBattle:
-	.string "Maybe I'll catch more Pokémon.$"
+	.string "Maybe I need more Pokémon.$"
+
+Zone1A_EventScript_Oscar::
+	trainerbattle_single TRAINER_OSCAR, Zone1A_Text_OscarIntro, Zone1A_Text_OscarDefeat
+	msgbox Zone1A_Text_OscarPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone1A_Text_OscarIntro:
+	.string "Fear my might!$"
+
+Zone1A_Text_OscarDefeat:
+	.string "Beaten! Disgrace!$"
+
+Zone1A_Text_OscarPostBattle:
+	.string "I must reclaim my honor...$"
+

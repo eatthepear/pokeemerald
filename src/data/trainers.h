@@ -41,18 +41,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Mariam},
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_2] =
+    [TRAINER_OSCAR] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Oscar"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntAquaHideout2),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout2},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Oscar),
+        .party = {.NoItemDefaultMoves = sParty_Oscar},
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_3] =

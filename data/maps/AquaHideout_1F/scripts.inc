@@ -94,16 +94,3 @@ AquaHideout_1F_Text_BossIsInSlateportCity: @ 8233884
 	.string "Why did he go?\p"
 	.string "Wahaha! Do you really think I'd tell\n"
 	.string "you something that crucial?$"
-
-AquaHideout_1F_Text_Grunt1Intro: @ 823393D
-	.string "Ayiyiyi!\n"
-	.string "Suspicious character spotted!$"
-
-AquaHideout_1F_Text_Grunt1Defeat: @ 8233964
-	.string "Grrrrr…\n"
-	.string "I lost it!$"
-
-AquaHideout_1F_Text_Grunt1PostBattle: @ 8233977
-	.string "I took the loss for the TEAM,\n"
-	.string "but I did my job…$"
-
