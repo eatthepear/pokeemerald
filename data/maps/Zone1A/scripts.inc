@@ -10,7 +10,7 @@ Zone1A_Text_CoreyIntro:
 	.string "Hey, you! Let's battle!$"
 
 Zone1A_Text_CoreyDefeat:
-	string "Aww... Come on!$"
+	.string "Aww... Come on!$"
 
 Zone1A_Text_CoreyPostBattle:
 	.string "I always lose...$"
