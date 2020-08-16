@@ -14,3 +14,17 @@ Zone1A_Text_CoreyDefeat:
 
 Zone1A_Text_CoreyPostBattle:
 	.string "I always lose...$"
+
+Zone1A_EventScript_Mariam::
+	trainerbattle_single TRAINER_MARIAM, Zone1A_Text_MariamIntro, Zone1A_Text_MariamDefeat
+	msgbox Zone1A_Text_MariamPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone1A_Text_MariamIntro:
+	.string "Be careful, I'm tough!$"
+
+Zone1A_Text_MariamDefeat:
+	.string "Sheesh!$"
+
+Zone1A_Text_MariamPostBattle:
+	.string "Maybe I'll catch more Pokémon.$"
