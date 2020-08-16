@@ -23,9 +23,13 @@ Entrance_EventScript_Intro:
 	msgbox Entrance_Text_Quentin_LookLikeBirch, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox gText_Quentin_Rules, MSGBOX_AUTOCLOSE
-	delay 96
+	delay 48
 	msgbox gText_Quentin_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
+	goto Entrance_EventScript_PickMode
+	end
+
+Entrance_EventScript_PickMode:
 	msgbox Entrance_Text_Quentin_VanillaNuzlocke, MSGBOX_AUTOCLOSE
 	delay 48
 	msgbox Entrance_Text_Quentin_NuzlockeExplained, MSGBOX_AUTOCLOSE
@@ -41,12 +45,26 @@ Entrance_EventScript_Intro:
 	
 Entrance_EventScript_Vanilla:
 	closemessage
+	msgbox Entrance_Text_Quentin_VanillaSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Entrance_EventScript_SetVanilla
+	goto Entrance_EventScript_PickMode
+	end
+
+Entrance_EventScript_SetVanilla:
 	msgbox Entrance_Text_Quentin_VanillaMode, MSGBOX_AUTOCLOSE
 	goto Entrance_EventScript_Tour
 	end
 	
 Entrance_EventScript_Nuzlocke:
 	closemessage
+	msgbox Entrance_Text_Quentin_NuzlockeSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Entrance_EventScript_SetNuzlocke
+	goto Entrance_EventScript_PickMode
+	end
+
+Entrance_EventScript_SetNuzlocke:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Entrance_Text_Quentin_NuzlockeMode, MSGBOX_AUTOCLOSE
@@ -366,6 +384,14 @@ Entrance_Text_Quentin_VanillaExplained:
 
 Entrance_Text_Quentin_PickMode:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHICH MODE DO YOU WANT?$"
+
+Entrance_Text_Quentin_VanillaSure:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE?\n"
+	.string "ARE YOU CERTAIN?$"
+
+Entrance_Text_Quentin_NuzlockeSure:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE?\n"
+	.string "ARE YOU CERTAIN?$"
 
 Entrance_Text_Quentin_VanillaMode:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE DISABLED.\p"
