@@ -320,8 +320,14 @@ Entrance_EventScript_NextZone::
 
 Entrance_EventScript_Leave:
 	msgbox gText_Quentin_Onwards, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	warp 255, 16, 28
 	end
-	@ add stuff here
 
 Entrance_Text_Quentin_Hello:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
