@@ -172,7 +172,7 @@ Entrance_EventScript_NicknameStarter:
 	goto Entrance_EventScript_Quentin_EndIntro
 	end
 
-Entrance_EventScript_CheckWantStarter
+Entrance_EventScript_CheckWantStarter:
 	msgbox Entrance_Text_Quentin_YouSureStarter, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
