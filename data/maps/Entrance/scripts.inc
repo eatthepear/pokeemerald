@@ -107,6 +107,7 @@ Entrance_EventScript_Tour:
 	goto Entrance_EventScript_PickStarter
 
 Entrance_EventScript_PickStarter:
+	hidemonpic
 	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
 	scrollingmultichoice 0, 0, 0, 4, FALSE
 	compare VAR_RESULT, 0
@@ -155,6 +156,7 @@ Entrance_EventScript_PickStarter:
 	call_if_eq Entrance_EventScript_LITTEN
 	compare VAR_RESULT, 22
 	call_if_eq Entrance_EventScript_POPPLIO
+	hidemonpic
 	playfanfare MUS_FANFA4
 	message Entrance_Text_ReceivedStarter
 	waitmessage
