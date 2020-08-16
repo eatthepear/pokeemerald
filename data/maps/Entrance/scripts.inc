@@ -313,7 +313,7 @@ Entrance_EventScript_NextZone::
 	faceplayer
 	msgbox Entrance_Text_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto Entrance_EventScript_Leave
+	goto_if_eq Entrance_EventScript_Leave
 	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end

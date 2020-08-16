@@ -18,9 +18,11 @@ EventScript_HealingSign::
 
 EventScript_Joy_DenyPC::
 	lockall
+	applymovement 4, Common_Movement_FaceRight
 	msgbox gText_Joy_CantUse, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
+	applymovement 4, Common_Movement_FaceDown
 	releaseall
 	end
 
