@@ -104,6 +104,9 @@ Entrance_EventScript_Tour:
 	waitmovement 0
 	msgbox Entrance_Text_Quentin_TourDone, MSGBOX_AUTOCLOSE
 	delay 96
+	goto Entrance_EventScript_PickStarter
+
+Entrance_EventScript_PickStarter:
 	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
 	scrollingmultichoice 0, 0, 0, 4, FALSE
 	compare VAR_RESULT, 0
@@ -169,118 +172,151 @@ Entrance_EventScript_NicknameStarter:
 	goto Entrance_EventScript_Quentin_EndIntro
 	end
 
+Entrance_EventScript_CheckWantStarter
+	msgbox Entrance_Text_Quentin_YouSureStarter, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
+	return
+
+Entrance_Text_Quentin_YouSureStarter:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{STR_VAR_1}?$"
+
 Entrance_EventScript_BULBASAUR:
 	bufferspeciesname 0, SPECIES_BULBASAUR
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_CHARMANDER:
 	bufferspeciesname 0, SPECIES_CHARMANDER
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_SQUIRTLE:
 	bufferspeciesname 0, SPECIES_SQUIRTLE
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_PIKACHU:
 	bufferspeciesname 0, SPECIES_PIKACHU
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_PIKACHU, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_EEVEE:
 	bufferspeciesname 0, SPECIES_EEVEE
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_CYNDAQUIL:
 	bufferspeciesname 0, SPECIES_CYNDAQUIL
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_TOTODILE:
 	bufferspeciesname 0, SPECIES_TOTODILE
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_TOTODILE, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_TREECKO:
 	bufferspeciesname 0, SPECIES_TREECKO
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_TREECKO, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_TORCHIC:
 	bufferspeciesname 0, SPECIES_TORCHIC
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_TORCHIC, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_MUDKIP:
 	bufferspeciesname 0, SPECIES_MUDKIP
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_MUDKIP, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_TURTWIG:
 	bufferspeciesname 0, SPECIES_TURTWIG
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_TURTWIG, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_CHIMCHAR:
 	bufferspeciesname 0, SPECIES_CHIMCHAR
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_PIPLUP:
 	bufferspeciesname 0, SPECIES_PIPLUP
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_SNIVY, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_TEPIG:
 	bufferspeciesname 0, SPECIES_TEPIG
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_TEPIG, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_OSHAWOTT:
 	bufferspeciesname 0, SPECIES_OSHAWOTT
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_OSHAWOTT, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_CHESPIN:
 	bufferspeciesname 0, SPECIES_CHESPIN
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_CHESPIN, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_FENNEKIN:
 	bufferspeciesname 0, SPECIES_FENNEKIN
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_FROAKIE:
 	bufferspeciesname 0, SPECIES_FROAKIE
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_ROWLET:
 	bufferspeciesname 0, SPECIES_ROWLET
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_ROWLET, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_LITTEN:
 	bufferspeciesname 0, SPECIES_LITTEN
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_LITTEN, 5, ITEM_NONE
 	return
 
 Entrance_EventScript_POPPLIO:
 	bufferspeciesname 0, SPECIES_POPPLIO
+	call Entrance_EventScript_CheckWantStarter
 	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
 
