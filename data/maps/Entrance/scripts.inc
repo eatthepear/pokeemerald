@@ -326,7 +326,7 @@ Entrance_EventScript_Leave:
 	applymovement 1, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	warp Zone1A, 255, 16, 28
+	warp MAP_ZONE1A, 255, 16, 28
 	end
 
 Entrance_Text_Quentin_Hello:
