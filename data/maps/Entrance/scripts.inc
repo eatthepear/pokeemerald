@@ -172,153 +172,350 @@ Entrance_EventScript_NicknameStarter:
 	goto Entrance_EventScript_Quentin_EndIntro
 	end
 
-Entrance_EventScript_CheckWantStarter:
-	msgbox Entrance_Text_Quentin_YouSureStarter, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Entrance_EventScript_PickStarter
-	return
-
-Entrance_Text_Quentin_YouSureStarter:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "{STR_VAR_1}?$"
-
 Entrance_EventScript_BULBASAUR:
 	bufferspeciesname 0, SPECIES_BULBASAUR
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_BULBASAUR, 10, 3
+	playmoncry SPECIES_BULBASAUR, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterBULBASAUR, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterBULBASAUR:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "BULBASAUR?$"
+
 Entrance_EventScript_CHARMANDER:
 	bufferspeciesname 0, SPECIES_CHARMANDER
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_CHARMANDER, 10, 3
+	playmoncry SPECIES_CHARMANDER, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterCHARMANDER, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterCHARMANDER:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "CHARMANDER?$"
+
 Entrance_EventScript_SQUIRTLE:
 	bufferspeciesname 0, SPECIES_SQUIRTLE
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_SQUIRTLE, 10, 3
+	playmoncry SPECIES_SQUIRTLE, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterSQUIRTLE, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterSQUIRTLE:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "SQUIRTLE?$"
+
 Entrance_EventScript_PIKACHU:
 	bufferspeciesname 0, SPECIES_PIKACHU
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_PIKACHU, 10, 3
+	playmoncry SPECIES_PIKACHU, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterPIKACHU, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_PIKACHU, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterPIKACHU:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "PIKACHU?$"
+
 Entrance_EventScript_EEVEE:
 	bufferspeciesname 0, SPECIES_EEVEE
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_EEVEE, 10, 3
+	playmoncry SPECIES_EEVEE, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterEEVEE, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterEEVEE:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "EEVEE?$"
+
 Entrance_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_CHIKORITA, 10, 3
+	playmoncry SPECIES_CHIKORITA, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterCHIKORITA, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterCHIKORITA:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "CHIKORITA?$"
+
 Entrance_EventScript_CYNDAQUIL:
 	bufferspeciesname 0, SPECIES_CYNDAQUIL
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_CYNDAQUIL, 10, 3
+	playmoncry SPECIES_CYNDAQUIL, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterCYNDAQUIL, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterCYNDAQUIL:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "CYNDAQUIL?$"
+
 Entrance_EventScript_TOTODILE:
 	bufferspeciesname 0, SPECIES_TOTODILE
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_TOTODILE, 10, 3
+	playmoncry SPECIES_TOTODILE, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterTOTODILE, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TOTODILE, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterTOTODILE:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "TOTODILE?$"
+
 Entrance_EventScript_TREECKO:
 	bufferspeciesname 0, SPECIES_TREECKO
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_TREECKO, 10, 3
+	playmoncry SPECIES_TREECKO, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterTREECKO, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TREECKO, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterTREECKO:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "TREECKO?$"
+
 Entrance_EventScript_TORCHIC:
 	bufferspeciesname 0, SPECIES_TORCHIC
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_TORCHIC, 10, 3
+	playmoncry SPECIES_TORCHIC, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterTORCHIC, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TORCHIC, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterTORCHIC:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "TORCHIC?$"
+
 Entrance_EventScript_MUDKIP:
 	bufferspeciesname 0, SPECIES_MUDKIP
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_MUDKIP, 10, 3
+	playmoncry SPECIES_MUDKIP, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterMUDKIP, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_MUDKIP, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterMUDKIP:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "MUDKIP?$"
+
 Entrance_EventScript_TURTWIG:
 	bufferspeciesname 0, SPECIES_TURTWIG
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_TURTWIG, 10, 3
+	playmoncry SPECIES_TURTWIG, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterTURTWIG, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TURTWIG, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterTURTWIG:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "TURTWIG?$"
+
 Entrance_EventScript_CHIMCHAR:
 	bufferspeciesname 0, SPECIES_CHIMCHAR
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_CHIMCHAR, 10, 3
+	playmoncry SPECIES_CHIMCHAR, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterCHIMCHAR, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterCHIMCHAR:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "CHIMCHAR?$"
+
 Entrance_EventScript_PIPLUP:
 	bufferspeciesname 0, SPECIES_PIPLUP
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_PIPLUP, 10, 3
+	playmoncry SPECIES_PIPLUP, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterPIPLUP, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterPIPLUP:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "PIPLUP?$"
+
 Entrance_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_SNIVY, 10, 3
+	playmoncry SPECIES_SNIVY, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterSNIVY, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_SNIVY, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterSNIVY:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "SNIVY?$"
+
 Entrance_EventScript_TEPIG:
 	bufferspeciesname 0, SPECIES_TEPIG
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_TEPIG, 10, 3
+	playmoncry SPECIES_TEPIG, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterTEPIG, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TEPIG, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterTEPIG:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "TEPIG?$"
+
 Entrance_EventScript_OSHAWOTT:
 	bufferspeciesname 0, SPECIES_OSHAWOTT
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_OSHAWOTT, 10, 3
+	playmoncry SPECIES_OSHAWOTT, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterOSHAWOTT, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_OSHAWOTT, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterOSHAWOTT:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "OSHAWOTT?$"
+
 Entrance_EventScript_CHESPIN:
 	bufferspeciesname 0, SPECIES_CHESPIN
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_CHESPIN, 10, 3
+	playmoncry SPECIES_CHESPIN, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterCHESPIN, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHESPIN, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterCHESPIN:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "CHESPIN?$"
+
 Entrance_EventScript_FENNEKIN:
 	bufferspeciesname 0, SPECIES_FENNEKIN
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_FENNEKIN, 10, 3
+	playmoncry SPECIES_FENNEKIN, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterFENNEKIN, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterFENNEKIN:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "FENNEKIN?$"
+
 Entrance_EventScript_FROAKIE:
 	bufferspeciesname 0, SPECIES_FROAKIE
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_FROAKIE, 10, 3
+	playmoncry SPECIES_FROAKIE, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterFROAKIE, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterFROAKIE:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "FROAKIE?$"
+
 Entrance_EventScript_ROWLET:
 	bufferspeciesname 0, SPECIES_ROWLET
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_ROWLET, 10, 3
+	playmoncry SPECIES_ROWLET, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterROWLET, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_ROWLET, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterROWLET:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "ROWLET?$"
+
 Entrance_EventScript_LITTEN:
 	bufferspeciesname 0, SPECIES_LITTEN
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_LITTEN, 10, 3
+	playmoncry SPECIES_LITTEN, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterLITTEN, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_LITTEN, 5, ITEM_NONE
 	return
 
+Entrance_Text_Quentin_YouSureStarterLITTEN:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "LITTEN?$"
+
 Entrance_EventScript_POPPLIO:
 	bufferspeciesname 0, SPECIES_POPPLIO
-	call Entrance_EventScript_CheckWantStarter
+	showmonpic SPECIES_POPPLIO, 10, 3
+	playmoncry SPECIES_POPPLIO, 0
+	msgbox Entrance_Text_Quentin_YouSureStarterPOPPLIO, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
+
+Entrance_Text_Quentin_YouSureStarterPOPPLIO:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "POPPLIO?$"
 
 Entrance_EventScript_NuzlockeDialog:
 	delay 24
