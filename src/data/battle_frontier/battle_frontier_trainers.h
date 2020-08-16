@@ -2328,14 +2328,6 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .speechLose = {EC_WORD_I, EC_WORD_NEED, EC_WORD_TO, EC_WORD_NAP, EC_WORD_AFTER, EC_WORD_THAT},
         .monSet = gBattleFrontierTrainerMons_Dev
     },
-    [FRONTIER_TRAINER_COREY] = {
-        .facilityClass = FACILITY_CLASS_HIKER,
-        .trainerName = _("COREY"),
-        .speechBefore = {EC_WORD_LET_S, EC_WORD_TEACH, EC_WORD_YOU, EC_WORD_HOW, EC_WORD_TOUGH, EC_WORD_I_AM},
-        .speechWin = {EC_WORD_LOOK, EC_WORD_AT, EC_WORD_ME, EC_WORD_MAKE, EC_WORD_A, EC_MOVE(BRICK_BREAK)},
-        .speechLose = {EC_WORD_MY, EC_MOVE2(FRUSTRATION), EC_WORD_IS, EC_WORD_CLOSE, EC_WORD_TO, EC_MOVE2(ERUPTION)},
-        .monSet = gBattleFrontierTrainerMons_Corey
-    },
     [FRONTIER_TRAINER_ANDRE] = {
         .facilityClass = FACILITY_CLASS_KINDLER,
         .trainerName = _("ANDRE"),

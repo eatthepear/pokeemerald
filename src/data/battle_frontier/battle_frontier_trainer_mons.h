@@ -7323,11 +7323,6 @@ const u16 gBattleFrontierTrainerMons_Dev[] =
     FRONTIER_MONS_HIKER_3
 };
 
-const u16 gBattleFrontierTrainerMons_Corey[] = 
-{
-    FRONTIER_MONS_HIKER_3
-};
-
 const u16 gBattleFrontierTrainerMons_Andre[] = 
 {
     FRONTIER_MONS_KINDLER_3

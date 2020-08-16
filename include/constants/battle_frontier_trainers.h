@@ -292,17 +292,16 @@
 #define FRONTIER_TRAINER_OMAR           288
 #define FRONTIER_TRAINER_PETER          289
 #define FRONTIER_TRAINER_DEV            290
-#define FRONTIER_TRAINER_COREY          291
-#define FRONTIER_TRAINER_ANDRE          292
-#define FRONTIER_TRAINER_FERRIS         293
-#define FRONTIER_TRAINER_ALIVIA         294
-#define FRONTIER_TRAINER_PAIGE          295
-#define FRONTIER_TRAINER_ANYA           296
-#define FRONTIER_TRAINER_DAWN           297
-#define FRONTIER_TRAINER_ABBY           298
-#define FRONTIER_TRAINER_GRETEL         299
+#define FRONTIER_TRAINER_ANDRE          291
+#define FRONTIER_TRAINER_FERRIS         292
+#define FRONTIER_TRAINER_ALIVIA         293
+#define FRONTIER_TRAINER_PAIGE          294
+#define FRONTIER_TRAINER_ANYA           295
+#define FRONTIER_TRAINER_DAWN           296
+#define FRONTIER_TRAINER_ABBY           297
+#define FRONTIER_TRAINER_GRETEL         298
 
-#define FRONTIER_TRAINERS_COUNT         300
+#define FRONTIER_TRAINERS_COUNT         299
 
 // special trainer IDs begin at 300, see constants/trainers.h
 

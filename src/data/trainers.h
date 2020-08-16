@@ -13,18 +13,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = NULL},
     },
 
-    [TRAINER_SAWYER_1] =
+    [TRAINER_COREY] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_HIKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
-        .trainerName = _("SAWYER"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Corey"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Sawyer1),
-        .party = {.NoItemDefaultMoves = sParty_Sawyer1},
+        .partySize = ARRAY_COUNT(sParty_Corey),
+        .party = {.NoItemDefaultMoves = sParty_Corey},
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_1] =
@@ -11703,7 +11703,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Fernando5},
     },
 
-    [TRAINER_SAWYER_2] =
+    /*[TRAINER_SAWYER_2] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -11758,7 +11758,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_Sawyer5),
         .party = {.NoItemDefaultMoves = sParty_Sawyer5},
     },
-
+     */
     [TRAINER_GABRIELLE_2] =
     {
         .partyFlags = 0,

@@ -437,7 +437,7 @@
 #define FLAG_REMATCH_HALEY                   0x198
 #define FLAG_REMATCH_JAMES                   0x199
 #define FLAG_REMATCH_TRENT                   0x19A
-#define FLAG_REMATCH_SAWYER                  0x19B
+#define FLAG_UNUSED_REMATCH_SAWYER           0x19B
 #define FLAG_REMATCH_KIRA_AND_DAN            0x19C
 #define FLAG_REMATCH_WALLY                   0x19D
 #define FLAG_REMATCH_ROXANNE                 0x19E

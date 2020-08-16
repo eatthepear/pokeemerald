@@ -23,6 +23,7 @@ EventScript_Joy_DenyPC::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
+	waitmovement 0
 	releaseall
 	end
 

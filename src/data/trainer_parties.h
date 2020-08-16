@@ -1,8 +1,13 @@
-static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Corey[] = {
     {
     .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_GEODUDE,
+    .lvl = 3,
+    .species = SPECIES_SENTRET,
+    },
+    {
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_WURMPLE,
     }
 };
 
@@ -12108,7 +12113,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Fernando5[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer2[] = {
+/*static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer2[] = {
     {
     .iv = 10,
     .lvl = 26,
@@ -12174,7 +12179,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer5[] = {
     .species = SPECIES_GOLEM,
     }
 };
-
+*/
 static const struct TrainerMonNoItemDefaultMoves sParty_Gabrielle2[] = {
     {
     .iv = 10,
