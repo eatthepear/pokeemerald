@@ -43,3 +43,10 @@ Zone1A_Text_OscarDefeat:
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
 
+Zone1A_EventScript_ItemPotion::
+	finditem ITEM_POTION
+	end
+
+Zone1A_EventScript_ItemQuickClaw::
+	finditem ITEM_QUICK_CLAW
+	end
