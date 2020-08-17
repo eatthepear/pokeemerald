@@ -19,12 +19,12 @@ EventScript_HealingSign::
 
 EventScript_Shop_LelouchIntroCheck::
 	lock
-	goto_if_set FLAG_LELOUCH_INTRO, EntranceShops_EventScript_Shop_ServicesDenied
+	goto_if_set FLAG_LELOUCH_INTRO, EventScript_Shop_ServicesDenied
 	setflag FLAG_LELOUCH_INTRO
-	msgbox EntranceShops_Text_Lelouch_Intro1, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_Intro1, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox EntranceShops_Text_Lelouch_Intro2, MSGBOX_AUTOCLOSE
-	goto EntranceShops_EventScript_Shop_ServicesDenied
+	msgbox gText_Lelouch_Intro2, MSGBOX_AUTOCLOSE
+	goto EventScript_Shop_ServicesDenied
 	end
 
 EventScript_Shop_ServicesDenied:
