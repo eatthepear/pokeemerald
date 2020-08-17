@@ -28,7 +28,7 @@ EventScript_Shop_LelouchIntroCheck::
 	end
 
 EventScript_Shop_ServicesDenied:
-	msgbox EntranceShops_Text_Lelouch_NoPoints, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_NoPoints, MSGBOX_AUTOCLOSE
 	release
 	end
 
