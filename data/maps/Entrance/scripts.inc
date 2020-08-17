@@ -31,10 +31,10 @@ Entrance_EventScript_Intro:
 
 Entrance_EventScript_PickMode:
 	msgbox Entrance_Text_Quentin_VanillaNuzlocke, MSGBOX_AUTOCLOSE
-	delay 48
-	msgbox Entrance_Text_Quentin_NuzlockeExplained, MSGBOX_AUTOCLOSE
-	delay 48
+	delay 16
 	msgbox Entrance_Text_Quentin_VanillaExplained, MSGBOX_AUTOCLOSE
+	delay 16
+	msgbox Entrance_Text_Quentin_NuzlockeExplained, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
@@ -575,32 +575,30 @@ Entrance_Text_Quentin_LookLikeBirch:
 	.string "IN THIS REALM SO I CAN BE MORE\l"
 	.string "COMMUNICATIVE WITH CHALLENGERS\l"
 	.string "WHO MIGHT ATTEMPT TO BRAVE\l"
-	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.$"
+	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.\p"
+	.string "ALLOW ME TO GO OVER THE RULES.$"
 
 Entrance_Text_Quentin_VanillaNuzlocke:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
 	.string "MODES: {COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
 
-Entrance_Text_Quentin_NuzlockeExplained:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE HAS\n"
-	.string "IMPLEMENTED PERMADEATH. EACH ZONE\l"
-	.string "YOU CAN CAPTURE ONE POKEMON,\l"
-	.string "EXCLUDING GIFT POKEMON.\p"
-	.string "SPECIES CLAUSE IS ENABLED,\n"
-	.string "AS IS SHINY CLAUSE.$"
 
 Entrance_Text_Quentin_VanillaExplained:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MEANS ALL NUZLOCKE\n"
-	.string "RULES ARE DISABLED. YOU WILL PLAY\l"
-	.string "WITHOUT PERMADEATH OR POKEMON\l"
-	.string "CAPTURE LIMITATIONS.\p"
-	.string "WHILE YOU WILL NOT BE ABLE TO\n"
-	.string "PURCHASE REVIVES, YOU MIGHT BE ABLE\l"
-	.string "TO RECEIVE THEM AS REWARDS FOR\l"
-	.string "QUESTS OR FIND THEM AS LOOT.$"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: VANILLA MODE DOES NOT ADD\n"
+	.string "ANY EXTRA MODIFICATIONS.\p"
+	.string "IT WILL BE A NORMAL PLAYTHROUGH\n"
+	.string "WITH NO ADDED RULES.$"
+
+Entrance_Text_Quentin_NuzlockeExplained:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: NUZLOCKE MODE IS THE \n"
+	.string "INTENDED DIFFICULTY.\p"
+	.string "ALL STANDARD NUZLOCKE RULES ARE\n"
+	.string "COMPLETELY IMPLEMENTED, AS WELL AS\l"
+	.string "SPECIES CLAUSE AND SHINY CLAUSE.$"
 
 Entrance_Text_Quentin_PickMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHICH MODE DO YOU WANT?$"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHICH GAME MODE WOULD\n"
+	.string "YOU LIKE TO PLAY ON?$"
 
 Entrance_Text_Quentin_VanillaSure:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE?\n"
@@ -611,8 +609,8 @@ Entrance_Text_Quentin_NuzlockeSure:
 	.string "ARE YOU CERTAIN?$"
 
 Entrance_Text_Quentin_VanillaMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE DISABLED.\p"
-	.string "{COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED. GOOD LUCK.$"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED.\n"
+	.string "GOOD LUCK.$"
 
 Entrance_Text_Quentin_NuzlockeMode:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE ENABLED.\n"

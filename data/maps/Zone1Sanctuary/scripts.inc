@@ -8,12 +8,28 @@ Zone1Sanctuary_OnFrame:
 
 Zone1Sanctuary_EventScript_Intro:
 	lockall
+	setvar VAR_HEAL_SHOP_USED, 0
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
-	msgbox gText_Quentin_ReachedZone, MSGBOX_AUTOCLOSE
+	playfanfare MUS_ME_BACHI
+	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
+	waitfanfare
+	msgbox gText_Quentin_NextZoneAwaits, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Quentin_WalkUp
+	waitmovement 0
 	setvar VAR_TUTORIAL, 3
+	releaseall
 	end
+
+Zone1Sanctuary_Text_Quentin_ReachedZone:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: CONGRATULATIONS.\n"
+	.string "YOU HAVE CLEARED {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
+
+Zone1Sanctuary_Text_Quentin_NextZoneAwaits:
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
+	.string "ENTER {COLOR RED}ZONE TWO{COLOR DARK_GREY},\l"
+	.string "COME TALK TO ME.$"	

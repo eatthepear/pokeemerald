@@ -6,10 +6,8 @@ gText_Birch_Welcome:: @ 82C897B
 	.string "{COLOR RED}Battle Labyrinth{COLOR DARK_GREY}, a simulated\l"
 	.string "environment designed to test your\l"
 	.string "abilities as a Trainer.\p"
-	.string "The rules are simple.\p"
-	.string "You must clear all the Zones, by\n"
-	.string "any means necessary, in order to\l"
-	.string "complete the {COLOR RED}Battle Labyrinth{COLOR DARK_GREY}.\p"
+	.string "In order to make it through the\n"
+	.string "{COLOR RED}Battle Labyrinth{COLOR DARK_GREY}, you'll need help.\p"
 	.string "$"
 
 gText_Birch_Pokemon:: @ 82C89FB
@@ -24,7 +22,7 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY} will provide the details\n"
 	.string "you need to achieve success.\p"
 	.string "In addition, we also need some\n"
-	.string "registration from you.\p"
+	.string "registration information from you.\p"
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0

@@ -1,19 +1,17 @@
 gText_Quentin_Rules:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ALLOW ME TO GO OVER THE\n"
-	.string "RULES. IN THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY},\l"
-	.string "THERE ARE A NUMBER OF ZONES IN\l"
-	.string "WHICH YOU MUST FIND THE EXIT.\p"
+	.string "THE BATTLE LABYRINTH IS COMPRISED\n"
+	.string "OF MANY ZONES YOU MUST TRAVERSE.\p"
 	.string "IN THESE ZONES, YOU MIGHT ENCOUNTER\n"
 	.string "WILD POKEMON, GREAT TREASURES,\l"
 	.string "TOUGH TRAINERS, AND MORE.\p"
 	.string "AT THE END OF EACH ZONE AND BEFORE\n"
 	.string "THE NEXT BEGINS, YOU WILL FIND\l"
-	.string "A SAFE AREA, LIKE THIS ONE, WITH\l"
+	.string "A SANCTUARY, LIKE THIS ONE, WITH\l"
 	.string "SHOPS TO PURCHASE SUPPLIES, HEAL\l"
 	.string "YOUR POKEMON, AND OTHER BENEFITS.\p"
 	.string "ONCE YOU ENTER A NEW ZONE,\n"
 	.string "YOU WILL NOT BE ABLE TO RETURN TO\l"
-	.string "THE SHOP AREA, NOR ANY PRIOR ZONES.$"
+	.string "THE SANCTUARY, NOR ANY PRIOR ZONES.$"
 
 gText_Quentin_DontLose:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: YOU MUST PROGRESS THROUGH\n"
@@ -108,7 +106,3 @@ gText_ServicesSign:
 gText_HealingSign:
 	.string "Joy's Healing Shop\n"
 	.string "Health care costs money!$"
-
-gText_Quentin_ReachedZone:
-	.string "Nice job.$"
-
