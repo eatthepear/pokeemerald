@@ -4,7 +4,7 @@ Zone1A_MapScripts::
 Zone1A_EventScript_Exit::
 	lockall
 	setvar VAR_TUTORIAL, 2
-	warp MAP_ZONE1Sanctuary, 255, 7, 7
+	warp MAP_ZONE1SANCTUARY, 255, 7, 7
 	releaseall
 	end
 
