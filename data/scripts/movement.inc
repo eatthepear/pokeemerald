@@ -110,3 +110,18 @@ Common_Movement_WalkUp2:: @ 82725CB
 	walk_up
 	walk_up
 	step_end
+
+Common_Movement_Quentin_WalkDown:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Common_Movement_Quentin_WalkUp:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_down
+	step_end

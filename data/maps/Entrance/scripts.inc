@@ -12,13 +12,13 @@ Entrance_EventScript_Intro:
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	special SetUnlockedPokedexFlags
-	call Entrance_EventScript_MoveCameraUp
+	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox Entrance_Text_Quentin_Hello, MSGBOX_AUTOCLOSE
-	applymovement 1, Entrance_Movement_Quentin_WalkDown
-	call Entrance_EventScript_MoveCameraDown
+	applymovement 1, Common_Movement_Quentin_WalkDown
+	call EventScript_MoveCameraDown
 	waitmovement 0
 	msgbox Entrance_Text_Quentin_LookLikeBirch, MSGBOX_AUTOCLOSE
 	delay 96
@@ -76,29 +76,29 @@ Entrance_EventScript_Tour:
 	applymovement 1, Entrance_Movement_Quentin_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FirstShop
 	waitmovement 0
-	call Entrance_EventScript_MoveCameraUp
+	call EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_General, MSGBOX_AUTOCLOSE
-	call Entrance_EventScript_MoveCameraDown
+	call EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_SecondShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_SecondShop
 	waitmovement 0
-	call Entrance_EventScript_MoveCameraUp
+	call EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Item, MSGBOX_AUTOCLOSE
-	call Entrance_EventScript_MoveCameraDown
+	call EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_ThirdShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_ThirdShop
 	waitmovement 0
-	call Entrance_EventScript_MoveCameraUp
+	call EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Services, MSGBOX_AUTOCLOSE
-	call Entrance_EventScript_MoveCameraDown
+	call EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_FourthShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FourthShop
 	waitmovement 0
-	call Entrance_EventScript_MoveCameraUp
+	call EventScript_MoveCameraUp
 	msgbox Entrance_Text_Quentin_Healing, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, Entrance_EventScript_NuzlockeDialog
 	msgbox Entrance_Text_Quentin_PC, MSGBOX_AUTOCLOSE
-	call Entrance_EventScript_MoveCameraDown
+	call EventScript_MoveCameraDown
 	applymovement 1, Entrance_Movement_Quentin_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_BackMid
 	waitmovement 0
@@ -543,24 +543,6 @@ Entrance_EventScript_Quentin_EndIntro:
 	releaseall
 	end
 
-Entrance_EventScript_MoveCameraUp:
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	special RemoveCameraObject
-	return
-
-Entrance_EventScript_MoveCameraDown:
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
-	waitmovement OBJ_EVENT_ID_CAMERA
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
-	waitmovement 0
-	special RemoveCameraObject
-	return
-
 Entrance_EventScript_NextZone::
 	lock
 	faceplayer
@@ -730,13 +712,6 @@ Entrance_Text_Quentin_WhenUReady:
 Entrance_Text_Quentin_ReadyToLeave:
 	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
-
-Entrance_Movement_Quentin_WalkDown:
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
 
 Entrance_Movement_Quentin_FirstShop:
 	walk_left

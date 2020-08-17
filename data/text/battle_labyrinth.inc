@@ -109,3 +109,6 @@ gText_HealingSign:
 	.string "Joy's Healing Shop\n"
 	.string "Health care costs money!$"
 
+gText_Quentin_ReachedZon:
+	.string "Nice job.$"
+

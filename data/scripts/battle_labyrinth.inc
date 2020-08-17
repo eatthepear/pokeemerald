@@ -1,4 +1,20 @@
+EventScript_MoveCameraUp:
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	special RemoveCameraObject
+	return
 
+EventScript_MoveCameraDown:
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
+	return
 
 EventScript_GeneralSign::
 	msgbox gText_GeneralSign, MSGBOX_SIGN
@@ -15,7 +31,6 @@ EventScript_ServicesSign::
 EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
-
 
 EventScript_Shop_LelouchIntroCheck::
 	lock
