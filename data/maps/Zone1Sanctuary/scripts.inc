@@ -16,7 +16,7 @@ Zone1Sanctuary_EventScript_Intro:
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
 	playfanfare MUS_ME_BACHI
-	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
+	msgbox Zone1Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox gText_Quentin_NextZoneAwaits, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
