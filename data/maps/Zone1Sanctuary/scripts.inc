@@ -17,4 +17,3 @@ Zone1Sanctuary_EventScript_Intro:
 	msgbox gText_Quentin_ReachedZone, MSGBOX_AUTOCLOSE
 	setvar VAR_TUTORIAL, 3
 	end
-	
