@@ -1,17 +1,17 @@
-EntranceShops_MapScripts::
+Zone1Shops_MapScripts::
 	.byte 0
 
-EntranceShops_EventScript_Shop_TimIntroCheck::
+Zone1Shops_EventScript_Shop_TimIntroCheck::
 	lock
 	faceplayer
-	goto_if_set FLAG_TIM_INTRO, EntranceShops_EventScript_Shop_General
+	goto_if_set FLAG_TIM_INTRO, Zone1Shops_EventScript_Shop_General
 	setflag FLAG_TIM_INTRO
-	msgbox EntranceShops_Text_Tim_Intro, MSGBOX_AUTOCLOSE
-	goto EntranceShops_EventScript_Shop_General
+	msgbox Zone1Shops_Text_Tim_Intro, MSGBOX_AUTOCLOSE
+	goto Zone1Shops_EventScript_Shop_General
 	release
 	end
 
-EntranceShops_Text_Tim_Intro:
+Zone1Shops_Text_Tim_Intro:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: New challenger, huh?\n"
 	.string "The name's Tim Johnson.\p"
 	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: I run this store, sponsored by\n"
@@ -19,16 +19,16 @@ EntranceShops_Text_Tim_Intro:
 	.string "You can find all sorts of general\l"
 	.string "supplies for your travels.$"
 
-EntranceShops_EventScript_Shop_General:
+Zone1Shops_EventScript_Shop_General:
 	message gText_Tim_Welcome
 	waitmessage
-	pokemart EntranceShops_Shop_General
+	pokemart Zone1Shops_Shop_General
 	msgbox gText_Tim_Leave, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-EntranceShops_Shop_General:
+Zone1Shops_Shop_General:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
@@ -37,17 +37,17 @@ EntranceShops_Shop_General:
 	release
 	end
 
-EntranceShops_EventScript_Shop_VarrickIntroCheck::
+Zone1Shops_EventScript_Shop_VarrickIntroCheck::
 	lock
 	faceplayer
-	goto_if_set FLAG_VARRICK_INTRO, EntranceShops_EventScript_Shop_Unique
+	goto_if_set FLAG_VARRICK_INTRO, Zone1Shops_EventScript_Shop_Unique
 	setflag FLAG_VARRICK_INTRO
-	msgbox EntranceShops_Text_Varrick_Intro, MSGBOX_AUTOCLOSE
-	goto EntranceShops_EventScript_Shop_Unique
+	msgbox Zone1Shops_Text_Varrick_Intro, MSGBOX_AUTOCLOSE
+	goto Zone1Shops_EventScript_Shop_Unique
 	release
 	end
 
-EntranceShops_Text_Varrick_Intro:
+Zone1Shops_Text_Varrick_Intro:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Wowza! Yeetastic! Blamo!\p"
 	.string "My name is Varrick,\n"
 	.string "entrepreneur extraordinaire!\p"
@@ -63,17 +63,18 @@ EntranceShops_Text_Varrick_Intro:
 	.string "you've never seen!\p"
 	.string "Please, enjoy my shop!$"
 
-EntranceShops_EventScript_Shop_Unique:
+Zone1Shops_EventScript_Shop_Unique:
 	message gText_Varrick_Welcome
 	waitmessage
-	pokemart EntranceShops_Shop_Unique
+	pokemart Zone1Shops_Shop_Unique
 	msgbox gText_Varrick_Leave, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-EntranceShops_Shop_Unique:
+Zone1Shops_Shop_Unique:
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NONE
 	release
 	end
+

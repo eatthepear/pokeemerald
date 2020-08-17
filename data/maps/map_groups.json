@@ -591,7 +591,9 @@
     "Route104_PrototypePrettyPetalFlowerShop",
     "Entrance",
     "EntranceShops",
-    "Zone1A"
+    "Zone1A",
+    "Zone1Sanctuary",
+    "Zone1Shops"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"

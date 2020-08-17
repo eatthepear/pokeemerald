@@ -1,6 +1,13 @@
 Zone1A_MapScripts::
 	.byte 0
 
+Zone1A_EventScript_Exit::
+	lockall
+	setvar VAR_TUTORIAL, 2
+	warp MAP_ZONE1A, 255, 7, 7
+	releaseall
+	end
+
 Zone1A_EventScript_Corey::
 	trainerbattle_single TRAINER_COREY, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
 	msgbox Zone1A_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE

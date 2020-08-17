@@ -81,16 +81,18 @@
     }
   ],
   "warp_events": [
+
+  ],
+  "coord_events": [
     {
+      "type": "trigger",
       "x": 15,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ZONE1A",
-      "dest_warp_id": 0
+      "var": "VAR_TUTORIAL",
+      "var_value": "1",
+      "script": "Zone1A_EventScript_Exit"
     }
-  ],
-  "coord_events": [
-
   ],
   "bg_events": [
 

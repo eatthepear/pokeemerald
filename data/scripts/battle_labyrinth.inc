@@ -16,6 +16,22 @@ EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
 
+
+EventScript_Shop_LelouchIntroCheck::
+	lock
+	goto_if_set FLAG_LELOUCH_INTRO, EntranceShops_EventScript_Shop_ServicesDenied
+	setflag FLAG_LELOUCH_INTRO
+	msgbox EntranceShops_Text_Lelouch_Intro1, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox EntranceShops_Text_Lelouch_Intro2, MSGBOX_AUTOCLOSE
+	goto EntranceShops_EventScript_Shop_ServicesDenied
+	end
+
+EventScript_Shop_ServicesDenied:
+	msgbox EntranceShops_Text_Lelouch_NoPoints, MSGBOX_AUTOCLOSE
+	release
+	end
+
 EventScript_Joy_DenyPC::
 	lockall
 	applymovement 4, Common_Movement_FaceRight
@@ -25,6 +41,16 @@ EventScript_Joy_DenyPC::
 	applymovement 4, Common_Movement_FaceDown
 	waitmovement 0
 	releaseall
+	end
+
+EventScript_Shop_JoyIntroCheck::
+	lock
+	faceplayer
+	goto_if_set FLAG_JOY_INTRO, EventScript_Joy_Welcome
+	setflag FLAG_JOY_INTRO
+	msgbox gText_Joy_Intro, MSGBOX_AUTOCLOSE
+	goto EventScript_Joy_Welcome
+	release
 	end
 
 EventScript_Joy_Welcome:

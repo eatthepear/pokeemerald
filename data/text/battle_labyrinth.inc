@@ -24,6 +24,16 @@ gText_Quentin_DontLose:
 gText_Joy_CantUse:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: You can't use that without paying!$"
 
+gText_Joy_Intro:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Welcome to the Pokémon…\n"
+	.string "Ugh. Never mind.\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: My name is Joy. Just Joy.\p"
+	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: I used to work at the\n"
+	.string "Pokémon Center, but they gave\l"
+	.string "terrible pay.\p"
+	.string "So I've started my own shop,\n"
+	.string "Joy's Healing Shop!$"
+
 gText_Joy_Welcome:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Welcome to Joy's Healing Shop.\p"
 	.string "We heal your Pokemon for a flat\n"
@@ -74,6 +84,22 @@ gText_Varrick_Welcome:
 
 gText_Varrick_Leave:
 	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: A big thank you from Silph!$"
+
+gText_Lelouch_Intro1:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You... What is your name?\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: {PLAYER}? Now that's a name...\n"
+	.string "I haven't heard in...$"
+
+gText_Lelouch_Intro2:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You may call me Lelouch.\p"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I provide a variety of\n"
+	.string "services to improve one's Pokémon.\p"
+	.string "But I demand a special price, one\n"
+	.string "that I see you cannot pay.$"
+
+gText_Lelouch_NoPoints:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You have nothing of value\n"
+	.string "to me. Leave.$"
 
 gText_ServicesSign:
 	.string "Lelouch's Special Services Shop\n"

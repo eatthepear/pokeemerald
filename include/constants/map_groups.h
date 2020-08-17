@@ -557,6 +557,8 @@
 #define MAP_ENTRANCE                                    (2 | (27 << 8))
 #define MAP_ENTRANCE_SHOPS                              (3 | (27 << 8))
 #define MAP_ZONE1A                                      (4 | (27 << 8))
+#define MAP_ZONE1SANCTUARY                              (5 | (27 << 8))
+#define MAP_ZONE1SHOPS                                  (6 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))
