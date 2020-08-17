@@ -116,3 +116,32 @@ EventScript_Joy_Heal:
 	msgbox gText_Joy_WonderfulDay, MSGBOX_AUTOCLOSE
 	releaseall
 	end
+
+EventScript_ExitSign::
+	msgbox gText_ExitSign, MSGBOX_SIGN
+	end
+
+
+EventScript_LeaveLeft:
+	applymovement 1, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceLeft
+	waitmovement 0
+	return
+
+EventScript_LeaveMiddle:
+	applymovement 1, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceRight
+	waitmovement 0
+	return
+
+EventScript_LeaveRight:
+	applymovement 1, Common_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceRight
+	waitmovement 0
+	return

@@ -106,3 +106,7 @@ gText_ServicesSign:
 gText_HealingSign:
 	.string "Joy's Healing Shop\n"
 	.string "Health care costs money!$"
+
+gText_ExitSign:
+	.string "Exit!\n"
+	.string "If you leave, you can't come back.$"

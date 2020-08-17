@@ -555,10 +555,13 @@ Entrance_EventScript_NextZone::
 
 Entrance_EventScript_Leave:
 	msgbox gText_Quentin_Onwards, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_WalkLeft
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement 1, Common_Movement_FaceRight
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 6
+	call_if_eq EventScript_LeaveLeft
+	compare VAR_TEMP_0, 7
+	call_if_eq EventScript_LeaveMiddle
+	compare VAR_TEMP_0, 8
+	call_if_eq EventScript_LeaveRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	warp MAP_ZONE1A, 255, 16, 28
