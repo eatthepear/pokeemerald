@@ -60,5 +60,5 @@ Zone1Sanctuary_Text_Quentin_WhenUReady:
 	.string "COME TALK TO ME.$"
 
 Zone1Sanctuary_Text_Quentin_ReadyToLeave:
-	.string ""{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
+	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE TWO{COLOR DARK_GREY}.$"
