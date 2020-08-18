@@ -13,6 +13,7 @@ Zone1Sanctuary_EventScript_Intro:
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
 	playfanfare MUS_ME_BACHI
