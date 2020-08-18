@@ -97,7 +97,7 @@ static const struct YesNoFuncTable sUseTMHMYesNoFuncTable =
     .noFunc = BagMenu_InitListsMenu,
 };
 
-static const u8 textCantThrowPokeBallNuzlocke[] = _("You have already used your encounter\nfor this area!{PAUSE_UNTIL_PRESS}");
+static const u8 textCantThrowPokeBallNuzlocke[] = _("You have already used your encounter\nfor this Zone!{PAUSE_UNTIL_PRESS}");
 
 static const u8 textCantThrowPokeBallSpeciesClause[] = _("You have already caught a POKéMON\nin this evolution line!{PAUSE_UNTIL_PRESS}");
 
