@@ -2,7 +2,7 @@
   "id": "MAP_ZONE1SANCTUARY",
   "name": "Zone1Sanctuary",
   "layout": "LAYOUT_ZONE1SANCTUARY",
-  "music": "MUS_AJITO",
+  "music": "MUS_RUNECITY",
   "region_map_section": "MAPSEC_ZONE_1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,7 +10,7 @@
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone1Sanctuary_EventScript_NextZone",
       "flag": "0"
     }
   ],
@@ -54,8 +54,8 @@
       "x": 11,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ZONE1SANCTUARY",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ZONE1SHOPS",
+      "dest_warp_id": 7
     }
   ],
   "coord_events": [
