@@ -4460,6 +4460,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone1Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone1Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE2A",
+      "name": "Zone2A_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Unused1",
+      "border_filepath": "data/layouts/Zone2A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone2A/map.bin"
     }
   ]
 }
