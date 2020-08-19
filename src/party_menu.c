@@ -4906,7 +4906,6 @@ static void DisplayPartyMenuForgotMoveMessage(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 move = GetMonData(mon, MON_DATA_MOVE1 + GetMoveSlotToReplace());
-    u16 oldmovepp = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
 
     GetMonNickname(mon, gStringVar1);
     StringCopy(gStringVar2, gMoveNames[move]);
@@ -4918,7 +4917,8 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
 {
     struct Pokemon *mon;
     u16 move;
-    u16 oldmovepp;
+    u8 arg[4];
+    arg[0] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
     
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
@@ -4926,8 +4926,8 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
         RemoveMonPPBonus(mon, GetMoveSlotToReplace());
         move = gPartyMenu.data1;
         SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
-        if ((GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace())) > oldmovepp){
-        SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), oldmovepp);
+        if ((GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace())) > arg){
+        SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), arg);
         }
         Task_LearnedMove(taskId);
     }
