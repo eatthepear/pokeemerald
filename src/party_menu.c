@@ -4917,8 +4917,8 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
 {
     struct Pokemon *mon;
     u16 move;
-    u8 arg[2];
-    arg[0] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
+    u8 arg[4];
+    arg[0] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace() - 1);
     
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
@@ -4929,7 +4929,7 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
         //arg[1] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
         //if (arg[1] > arg[0]){
         //    arg[1] = arg[0];
-            SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), arg);
+        SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace() - 1, arg);
         //}
         Task_LearnedMove(taskId);
     }
