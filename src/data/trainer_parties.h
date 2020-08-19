@@ -14,12 +14,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Corey[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Mariam[] = {
     {
         .iv = 0,
-        .lvl = 3,
+        .lvl = 4,
         .species = SPECIES_PIDGEY,
     },
     {
         .iv = 0,
-        .lvl = 3,
+        .lvl = 4,
         .species = SPECIES_SHINX,
     }
 };
@@ -27,12 +27,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Mariam[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Oscar[] = {
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 4,
     .species = SPECIES_PHANPY,
     },
     {
     .iv = 0,
-    .lvl = 4,
+    .lvl = 5,
     .species = SPECIES_LILLIPUP,
     }
 };
