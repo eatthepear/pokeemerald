@@ -4918,18 +4918,44 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
     struct Pokemon *mon;
     u16 move;
     u8 arg[4];
-    arg[0] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace() - 1);
-    
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
-        mon = &gPlayerParty[gPartyMenu.slotId];
-        RemoveMonPPBonus(mon, GetMoveSlotToReplace());
-        move = gPartyMenu.data1;
-        SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
+        switch (GetMoveSlotToReplace())
+        {
+            case 1:
+                arg[0] = GetMonData(mon, MON_DATA_PP1);
+                mon = &gPlayerParty[gPartyMenu.slotId];
+                RemoveMonPPBonus(mon, 1);
+                move = gPartyMenu.data1;
+                SetMonMoveSlot(mon, move, 1);
+                SetMonData(mon, MON_DATA_PP1, arg);
+            case 2:
+                arg[0] = GetMonData(mon, MON_DATA_PP2);
+                mon = &gPlayerParty[gPartyMenu.slotId];
+                RemoveMonPPBonus(mon, 2);
+                move = gPartyMenu.data1;
+                SetMonMoveSlot(mon, move, 2);
+                SetMonData(mon, MON_DATA_PP2, arg);
+            case 3:
+                arg[0] = GetMonData(mon, MON_DATA_PP3);
+                mon = &gPlayerParty[gPartyMenu.slotId];
+                RemoveMonPPBonus(mon, 3);
+                move = gPartyMenu.data1;
+                SetMonMoveSlot(mon, move, 3);
+                SetMonData(mon, MON_DATA_PP3, arg);
+            case 4:
+                arg[0] = GetMonData(mon, MON_DATA_PP4);
+                mon = &gPlayerParty[gPartyMenu.slotId];
+                RemoveMonPPBonus(mon, 4);
+                move = gPartyMenu.data1;
+                SetMonMoveSlot(mon, move, 4);
+                SetMonData(mon, MON_DATA_PP4, arg);
+        }
+        
         //arg[1] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
         //if (arg[1] > arg[0]){
         //    arg[1] = arg[0];
-        SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace() - 1, arg);
+        //SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace() - 1, arg);
         //}
         Task_LearnedMove(taskId);
     }
