@@ -47,7 +47,7 @@ Zone1Sanctuary_EventScript_Leave:
 	call_if_eq EventScript_LeaveRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	warp MAP_ZONE2A, 255, 16, 28
+	warp MAP_ZONE2A, 255, 4, 3
 	end
 
 Zone1Sanctuary_Text_Quentin_ReachedZone:
