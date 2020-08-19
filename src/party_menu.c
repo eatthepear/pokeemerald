@@ -4917,51 +4917,13 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
 {
     struct Pokemon *mon;
     u16 move;
-    u8 arg[4];
-    u8 ppBonuses;
+    
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
-        switch (GetMoveSlotToReplace())
-        {
-            case 1:
-                arg[0] = CalculatePPWithBonus(GetMonData(mon, move), ppBonuses, 1);
-                mon = &gPlayerParty[gPartyMenu.slotId];
-                RemoveMonPPBonus(mon, 1);
-                move = gPartyMenu.data1;
-                SetMonMoveSlot(mon, move, 1);
-                SetMonData(mon, MON_DATA_PP1, arg);
-                return;
-            case 2:
-                arg[0] = CalculatePPWithBonus(GetMonData(mon, move), ppBonuses, 2);
-                mon = &gPlayerParty[gPartyMenu.slotId];
-                RemoveMonPPBonus(mon, 2);
-                move = gPartyMenu.data1;
-                SetMonMoveSlot(mon, move, 2);
-                SetMonData(mon, MON_DATA_PP2, arg);
-                return;
-            case 3:
-                arg[0] = CalculatePPWithBonus(GetMonData(mon, move), ppBonuses, 3);
-                mon = &gPlayerParty[gPartyMenu.slotId];
-                RemoveMonPPBonus(mon, 3);
-                move = gPartyMenu.data1;
-                SetMonMoveSlot(mon, move, 3);
-                SetMonData(mon, MON_DATA_PP3, arg);
-                return;
-            case 4:
-                arg[0] = CalculatePPWithBonus(GetMonData(mon, move), ppBonuses, 4);
-                mon = &gPlayerParty[gPartyMenu.slotId];
-                RemoveMonPPBonus(mon, 4);
-                move = gPartyMenu.data1;
-                SetMonMoveSlot(mon, move, 4);
-                SetMonData(mon, MON_DATA_PP4, arg);
-                return;
-        }
-        
-        //arg[1] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
-        //if (arg[1] > arg[0]){
-        //    arg[1] = arg[0];
-        //SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace() - 1, arg);
-        //}
+        mon = &gPlayerParty[gPartyMenu.slotId];
+        RemoveMonPPBonus(mon, GetMoveSlotToReplace());
+        move = gPartyMenu.data1;
+        SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
         Task_LearnedMove(taskId);
     }
 }

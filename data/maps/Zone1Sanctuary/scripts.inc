@@ -22,7 +22,6 @@ Zone1Sanctuary_EventScript_Intro:
 	msgbox Zone1Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
 	waitmovement 0
-	giveitem ITEM_TM27 @testing PP scripts
 	setvar VAR_TUTORIAL, 3
 	releaseall
 	end
