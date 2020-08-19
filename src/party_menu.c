@@ -4926,9 +4926,8 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
         RemoveMonPPBonus(mon, GetMoveSlotToReplace());
         move = gPartyMenu.data1;
         SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
-        u8 pp0[4];
-        pp0[0] = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
-        if (pp0 > arg){
+        
+        if (20 > arg){
             SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), arg);
         }
         Task_LearnedMove(taskId);
