@@ -16,7 +16,7 @@ Zone2B_Text_JeremiahPostBattle:
 	.string "Hope you have some Antidotes!$"
 
 Zone2B_EventScript_Arthur::
-	trainerbattle_single TRAINER_Arthur, Zone2B_Text_ArthurIntro, Zone2B_Text_ArthurDefeat
+	trainerbattle_single TRAINER_ARTHUR, Zone2B_Text_ArthurIntro, Zone2B_Text_ArthurDefeat
 	msgbox Zone2B_Text_ArthurPostBattle, MSGBOX_AUTOCLOSE
 	end
 
