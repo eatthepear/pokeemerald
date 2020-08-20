@@ -5,10 +5,10 @@
 #define TRAINER_COREY                         1
 #define TRAINER_MARIAM                        2
 #define TRAINER_OSCAR                         3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
+#define TRAINER_ARNOLD                        4
+#define TRAINER_DEXTER                        5
+#define TRAINER_JEREMIAH                      6
+#define TRAINER_ARTHUR                        7
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
 #define TRAINER_GABRIELLE_1                   9
 #define TRAINER_GRUNT_PETALBURG_WOODS        10

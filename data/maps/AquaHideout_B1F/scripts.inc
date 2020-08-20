@@ -81,15 +81,6 @@ AquaHideout_B1F_EventScript_DefeatedElectrode2:: @ 8233A7C
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-AquaHideout_B1F_EventScript_Grunt3:: @ 8233AB0
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_3, AquaHideout_B1F_Text_Grunt3Intro, AquaHideout_B1F_Text_Grunt3Defeat, AquaHideout_B1F_EventScript_Grunt3Defeated
-	msgbox AquaHideout_B1F_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-AquaHideout_B1F_EventScript_Grunt3Defeated:: @ 8233ACB
-	msgbox AquaHideout_B1F_Text_Grunt3PostBattle, MSGBOX_DEFAULT
-	release
-	end
 
 AquaHideout_B1F_EventScript_Grunt5:: @ 8233AD5
 	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_5, AquaHideout_B1F_Text_Grunt5Intro, AquaHideout_B1F_Text_Grunt5Defeat
@@ -100,20 +91,6 @@ AquaHideout_B1F_EventScript_Grunt7:: @ 8233AEC
 	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_7, AquaHideout_B1F_Text_Grunt7Intro, AquaHideout_B1F_Text_Grunt7Defeat
 	msgbox AquaHideout_B1F_Text_Grunt7PostBattle, MSGBOX_AUTOCLOSE
 	end
-
-AquaHideout_B1F_Text_Grunt3Intro: @ 8233BC5
-	.string "Fuel supply loaded A-OK!\n"
-	.string "In-cruise snacks loaded A-OK!\p"
-	.string "Nothing left to do but KO a pesky\n"
-	.string "meddler!$"
-
-AquaHideout_B1F_Text_Grunt3Defeat: @ 8233C27
-	.string "I took a serious licking!$"
-
-AquaHideout_B1F_Text_Grunt3PostBattle: @ 8233C41
-	.string "Humph!\n"
-	.string "This was supposed to happen!\p"
-	.string "My mission was to just hold you up!$"
 
 AquaHideout_B1F_Text_Grunt5Intro: @ 8233C89
 	.string "Yawn… Keeping watch over the\n"
