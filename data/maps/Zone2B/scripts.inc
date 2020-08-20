@@ -28,3 +28,7 @@ Zone2B_Text_ArthurDefeat:
 
 Zone2B_Text_ArthurPostBattle:
 	.string "Sorry about earlier.$"
+
+Zone2B_EventScript_ItemEther::
+	finditem ITEM_ETHER
+	end

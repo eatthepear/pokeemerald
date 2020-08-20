@@ -39,6 +39,19 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Zone2B_EventScript_Arthur",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 19,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone2B_EventScript_ItemEther",
+      "flag": "FLAG_ITEM_ZONE2B_ETHER"
     }
   ],
   "warp_events": [
@@ -56,6 +69,21 @@
     }
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 13,
+      "elevation": 3,
+      "item": "ITEM_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE2B_POTION"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 2,
+      "elevation": 3,
+      "item": "ITEM_POKE_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE2B_POKE_BALL"
+    }
   ]
 }

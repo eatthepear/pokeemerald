@@ -24,26 +24,16 @@
       "map": "MAP_ROUTE124"
     }
   ],
-  "object_events": [],
-  "warp_events": [],
-  "coord_events": [],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 42,
-      "y": 51,
-      "elevation": 0,
-      "item": "ITEM_CARBOS",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_1_CARBOS"
-    },
-    {
-      "type": "hidden_item",
-      "x": 14,
-      "y": 40,
-      "elevation": 0,
-      "item": "ITEM_GREEN_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_1_GREEN_SHARD"
-    },
     {
       "type": "hidden_item",
       "x": 66,
