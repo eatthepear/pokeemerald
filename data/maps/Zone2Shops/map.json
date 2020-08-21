@@ -2,7 +2,7 @@
   "id": "MAP_ZONE2SHOPS",
   "name": "Zone2Shops",
   "layout": "LAYOUT_ZONE2SHOPS",
-  "music": "MUS_AJITO",
+  "music": "MUS_RUNECITY",
   "region_map_section": "MAPSEC_ZONE_2",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
