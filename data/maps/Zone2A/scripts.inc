@@ -1,12 +1,6 @@
 Zone2A_MapScripts::
 	.byte 0
 
-Zone2A_EventScript_Exit::
-	lockall
-	warp MAP_ZONE2B, 255, 1, 3
-	releaseall
-	end
-
 Zone2A_EventScript_ItemPokeball::
 	finditem ITEM_POKE_BALL
 	end

@@ -55,18 +55,16 @@
     }
   ],
   "warp_events": [
-
-  ],
-  "coord_events": [
     {
-      "type": "trigger",
       "x": 8,
       "y": 11,
       "elevation": 0,
-      "var": "VAR_TUTORIAL",
-      "var_value": "3",
-      "script": "Zone2A_EventScript_Exit"
+      "dest_map": "MAP_ZONE2B",
+      "dest_warp_id": 0
     }
+  ],
+  "coord_events": [
+
   ],
   "bg_events": [
 
