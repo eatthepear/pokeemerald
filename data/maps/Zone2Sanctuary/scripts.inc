@@ -65,13 +65,13 @@ Zone2Sanctuary_Text_Quentin_ExplainBossTrainers:
 
 Zone2Sanctuary_Text_Quentin_ReachedZone:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
-	.string "YOU HAVE CLEARED {COLOR RED}ZONE TWO{COLOR DARK_GREY}.$"
+	.string "YOU HAVE CLEARED {COLOR RED}ZONE 2{COLOR DARK_GREY}.$"
 
 Zone2Sanctuary_Text_Quentin_WhenUReady:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
-	.string "ENTER {COLOR RED}ZONE THREE{COLOR DARK_GREY},\l"
+	.string "ENTER {COLOR RED}ZONE 3{COLOR DARK_GREY},\l"
 	.string "COME TALK TO ME.$"
 
 Zone2Sanctuary_Text_Quentin_ReadyToLeave:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE THREE{COLOR DARK_GREY}.$"
+	.string "YOU WILL BE ENTERING {COLOR RED}ZONE 3{COLOR DARK_GREY}.$"

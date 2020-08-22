@@ -708,11 +708,11 @@ Entrance_Text_Quentin_WhenUReady:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
 	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
 	.string "WILL GUIDE YOU ON YOUR WAY.\p"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
+	.string "YOU WILL BE ENTERING {COLOR RED}ZONE 1{COLOR DARK_GREY}.$"
 
 Entrance_Text_Quentin_ReadyToLeave:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
+	.string "YOU WILL BE ENTERING {COLOR RED}ZONE 1{COLOR DARK_GREY}.$"
 
 Entrance_Movement_Quentin_FirstShop:
 	walk_left
