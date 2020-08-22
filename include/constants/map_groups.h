@@ -552,18 +552,17 @@
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 
 // Map Group 27
-#define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))
-#define MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP (1 | (27 << 8))
-#define MAP_ENTRANCE                                    (2 | (27 << 8))
-#define MAP_ENTRANCE_SHOPS                              (3 | (27 << 8))
-#define MAP_ZONE1A                                      (4 | (27 << 8))
-#define MAP_ZONE1SANCTUARY                              (5 | (27 << 8))
-#define MAP_ZONE1SHOPS                                  (6 | (27 << 8))
-#define MAP_ZONE2A                                      (7 | (27 << 8))
-#define MAP_ZONE2B                                      (8 | (27 << 8))
-#define MAP_ZONE2SANCTUARY                              (9 | (27 << 8))
-#define MAP_ZONE2SHOPS                                  (10 | (27 << 8))
-#define MAP_ZONE3A                                      (11 | (27 << 8))
+#define MAP_ENTRANCE       (0 | (27 << 8))
+#define MAP_ENTRANCE_SHOPS (1 | (27 << 8))
+#define MAP_ZONE1A         (2 | (27 << 8))
+#define MAP_ZONE1SANCTUARY (3 | (27 << 8))
+#define MAP_ZONE1SHOPS     (4 | (27 << 8))
+#define MAP_ZONE2A         (5 | (27 << 8))
+#define MAP_ZONE2B         (6 | (27 << 8))
+#define MAP_ZONE2SANCTUARY (7 | (27 << 8))
+#define MAP_ZONE2SHOPS     (8 | (27 << 8))
+#define MAP_ZONE3A         (9 | (27 << 8))
+#define MAP_ZONE3SANCTUARY (10 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))
@@ -595,7 +594,9 @@
 #define MAP_ROUTE119_HOUSE                (2 | (32 << 8))
 
 // Map Group 33
-#define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
+#define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE      (0 | (33 << 8))
+#define MAP_ROUTE104_PROTOTYPE                          (1 | (33 << 8))
+#define MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP (2 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
 

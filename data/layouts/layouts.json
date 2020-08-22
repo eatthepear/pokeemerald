@@ -4510,6 +4510,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Zone3A/border.bin",
       "blockdata_filepath": "data/layouts/Zone3A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE3SANCTUARY",
+      "name": "Zone3Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone3Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone3Sanctuary/map.bin"
     }
   ]
 }
