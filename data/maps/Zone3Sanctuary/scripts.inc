@@ -19,6 +19,7 @@ Zone3Sanctuary_EventScript_Intro:
 	playfanfare MUS_ME_BACHI
 	msgbox Zone3Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
+	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_FANFA4
 	msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
 	waitfanfare
