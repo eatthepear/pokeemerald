@@ -1,25 +1,10 @@
 Zone1Shops_MapScripts::
 	.byte 0
 
-Zone1Shops_EventScript_Shop_TimIntroCheck::
+Zone1Shops_EventScript_Shop_General::
 	lock
 	faceplayer
-	goto_if_set FLAG_TIM_INTRO, Zone1Shops_EventScript_Shop_General
-	setflag FLAG_TIM_INTRO
-	msgbox Zone1Shops_Text_Tim_Intro, MSGBOX_AUTOCLOSE
-	goto Zone1Shops_EventScript_Shop_General
-	release
-	end
-
-Zone1Shops_Text_Tim_Intro:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: New challenger, huh?\n"
-	.string "The name's Tim Johnson.\p"
-	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: I run this store, sponsored by\n"
-	.string "Pokémart Incorporated.\l"
-	.string "You can find all sorts of general\l"
-	.string "supplies for your travels.$"
-
-Zone1Shops_EventScript_Shop_General:
+	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntroCheck
 	message gText_Tim_Welcome
 	waitmessage
 	pokemart Zone1Shops_Shop_General
@@ -37,33 +22,10 @@ Zone1Shops_Shop_General:
 	release
 	end
 
-Zone1Shops_EventScript_Shop_VarrickIntroCheck::
+Zone1Shops_EventScript_Shop_Unique::
 	lock
 	faceplayer
-	goto_if_set FLAG_VARRICK_INTRO, Zone1Shops_EventScript_Shop_Unique
-	setflag FLAG_VARRICK_INTRO
-	msgbox Zone1Shops_Text_Varrick_Intro, MSGBOX_AUTOCLOSE
-	goto Zone1Shops_EventScript_Shop_Unique
-	release
-	end
-
-Zone1Shops_Text_Varrick_Intro:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Wowza! Yeetastic! Blamo!\p"
-	.string "My name is Varrick,\n"
-	.string "entrepreneur extraordinaire!\p"
-	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: I pitched this idea to\n"
-	.string "Silph a couple years back,\l"
-	.string "and now it's become a reality!\p"
-	.string "All the random items you can't find\n"
-	.string "in the world, you'll find here!\p"
-	.string "Fantastic evolution stones!\p"
-	.string "Countless Pokéball variations!\p"
-	.string "Delicious Berries!\p"
-	.string "The greatest held item collection\n"
-	.string "you've never seen!\p"
-	.string "Please, enjoy my shop!$"
-
-Zone1Shops_EventScript_Shop_Unique:
+	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntroCheck
 	message gText_Varrick_Welcome
 	waitmessage
 	pokemart Zone1Shops_Shop_Unique

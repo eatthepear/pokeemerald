@@ -20,8 +20,8 @@ EventScript_GeneralSign::
 	msgbox gText_GeneralSign, MSGBOX_SIGN
 	end
 
-EventScript_ItemSign::
-	msgbox gText_ItemSign, MSGBOX_SIGN
+EventScript_UniqueSign::
+	msgbox gText_UniqueSign, MSGBOX_SIGN
 	end
 
 EventScript_ServicesSign::
@@ -32,8 +32,19 @@ EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
 
+EventScript_Shop_TimIntroCheck:
+	msgbox gText_Tim_Intro, MSGBOX_AUTOCLOSE
+	setflag FLAG_TIM_INTRO
+	return
+
+EventScript_Shop_VarrickIntroCheck:
+	msgbox gText_Varrick_Intro, MSGBOX_AUTOCLOSE
+	setflag FLAG_VARRICK_INTRO
+	return
+
 EventScript_Shop_LelouchIntroCheck::
 	lock
+	faceplayer
 	goto_if_set FLAG_LELOUCH_INTRO, EventScript_Shop_ServicesDenied
 	setflag FLAG_LELOUCH_INTRO
 	msgbox gText_Lelouch_Intro1, MSGBOX_AUTOCLOSE
@@ -120,7 +131,6 @@ EventScript_Joy_Heal:
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
-
 
 EventScript_LeaveLeft:
 	applymovement 1, Common_Movement_WalkRight

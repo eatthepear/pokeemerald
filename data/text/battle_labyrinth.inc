@@ -19,6 +19,79 @@ gText_Quentin_DontLose:
 	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
 	.string "RESTART OF THE SIMULATION.$"
 
+gText_Quentin_Onwards:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
+
+gText_GeneralSign:
+	.string "Tim's General Purpose Shop\n"
+	.string "Sponsored by Pokémart Inc.$"
+
+gText_Tim_Intro:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: New challenger, huh?\n"
+	.string "The name's Tim Johnson.\p"
+	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: I run this store, sponsored by\n"
+	.string "Pokémart Incorporated.\l"
+	.string "You can find all sorts of general\l"
+	.string "supplies for your travels.$"
+
+gText_Tim_Welcome:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Welcome to Tim's.\n"
+	.string "Can I get you anything?$"
+
+gText_Tim_Leave:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Have a nice day.$"
+
+gText_UniqueSign:
+	.string "Silph Unique Item Shop\n"
+	.string "Need something? We probably got it!$"
+
+gText_Varrick_Intro:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Wowza! Yeetastic! Blamo!\p"
+	.string "My name is Varrick,\n"
+	.string "entrepreneur extraordinaire!\p"
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: I pitched this idea to\n"
+	.string "Silph a couple years back,\l"
+	.string "and now it's become a reality!\p"
+	.string "All the random items you can't find\n"
+	.string "in the world, you'll find here!\p"
+	.string "Fantastic evolution stones!\p"
+	.string "Countless Pokéball variations!\p"
+	.string "Delicious Berries!\p"
+	.string "The greatest held item collection\n"
+	.string "you've never seen!\p"
+	.string "Please, enjoy my shop!$"
+
+gText_Varrick_Welcome:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Greetings and salutations!\n"
+	.string "Welcome to Silph Unique Item Store!$"
+
+gText_Varrick_Leave:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: A big thank you from Silph!$"
+
+gText_ServicesSign:
+	.string "Lelouch's Special Services Shop\n"
+	.string "Anything for the right price...$"
+
+gText_Lelouch_Intro1:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You... What is your name?\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: {PLAYER}? Now that's a name...\n"
+	.string "I haven't heard in...$"
+
+gText_Lelouch_Intro2:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You may call me Lelouch.\p"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I provide a variety of\n"
+	.string "services to improve one's Pokémon.\p"
+	.string "But I demand a special price, one\n"
+	.string "that I see you cannot pay.$"
+
+gText_Lelouch_NoPoints:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You have nothing of value\n"
+	.string "to me. Leave.$"
+
+gText_HealingSign:
+	.string "Joy's Healing Shop\n"
+	.string "Health care costs money!$"
+
 gText_Joy_CantUse:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: You can't use that without paying!$"
 
@@ -58,55 +131,6 @@ gText_Joy_PartyHealed:
 gText_Joy_WonderfulDay:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Have a wonderful day!$"
 
-gText_Quentin_Onwards:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
-
-gText_GeneralSign:
-	.string "Tim's General Purpose Shop\n"
-	.string "Sponsored by Pokémart Inc.$"
-
-gText_Tim_Welcome:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Welcome to Tim's.\n"
-	.string "Can I get you anything?$"
-
-gText_Tim_Leave:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GREY}: Have a nice day.$"
-
-gText_ItemSign:
-	.string "Silph Unique Item Shop\n"
-	.string "Need something? We probably got it!$"
-
-gText_Varrick_Welcome:
-	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Greetings and salutations!\n"
-	.string "Welcome to Silph Unique Item Store!$"
-
-gText_Varrick_Leave:
-	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: A big thank you from Silph!$"
-
-gText_Lelouch_Intro1:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You... What is your name?\p"
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: {PLAYER}? Now that's a name...\n"
-	.string "I haven't heard in...$"
-
-gText_Lelouch_Intro2:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You may call me Lelouch.\p"
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I provide a variety of\n"
-	.string "services to improve one's Pokémon.\p"
-	.string "But I demand a special price, one\n"
-	.string "that I see you cannot pay.$"
-
-gText_Lelouch_NoPoints:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You have nothing of value\n"
-	.string "to me. Leave.$"
-
-gText_ServicesSign:
-	.string "Lelouch's Special Services Shop\n"
-	.string "Anything for the right price...$"
-
-gText_HealingSign:
-	.string "Joy's Healing Shop\n"
-	.string "Health care costs money!$"
-
 gText_ExitSign:
-	.string "Exit!\n"
+	.string "This is the exit!\n"
 	.string "If you leave, you can't come back.$"
