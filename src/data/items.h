@@ -3148,7 +3148,7 @@ const struct Item gItems[] =
     {
         .name = _("Miracle Seed"),
         .itemId = ITEM_MIRACLE_SEED,
-        .price = 100,
+        .price = 2500,
         .holdEffect = HOLD_EFFECT_GRASS_POWER,
         .holdEffectParam = 10,
         .description = sMiracleSeedDesc,
@@ -3204,7 +3204,7 @@ const struct Item gItems[] =
     {
         .name = _("Mystic Water"),
         .itemId = ITEM_MYSTIC_WATER,
-        .price = 100,
+        .price = 2500,
         .holdEffect = HOLD_EFFECT_WATER_POWER,
         .holdEffectParam = 10,
         .description = sMysticWaterDesc,
@@ -3288,7 +3288,7 @@ const struct Item gItems[] =
     {
         .name = _("Charcoal"),
         .itemId = ITEM_CHARCOAL,
-        .price = 9800,
+        .price = 2500,
         .holdEffect = HOLD_EFFECT_FIRE_POWER,
         .holdEffectParam = 10,
         .description = sCharcoalDesc,
