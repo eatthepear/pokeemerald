@@ -49,7 +49,7 @@ Zone2Sanctuary_EventScript_Leave:
 	call_if_eq EventScript_LeaveRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	warp MAP_ZONE2A, 255, 4, 3
+	warp MAP_ZONE3A, 255, 4, 3
 	end
 
 Zone2Sanctuary_Text_Quentin_ExplainBossTrainers:

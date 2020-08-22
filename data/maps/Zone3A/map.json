@@ -20,7 +20,15 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_TUTORIAL",
+      "var_value": "4",
+      "script": "Zone3A_EventScript_Exit"
+    }
   ],
   "bg_events": [
 
