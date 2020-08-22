@@ -22,6 +22,21 @@ gText_Quentin_DontLose:
 gText_Quentin_Onwards:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
 
+gText_Quentin_UnlockedGeneral:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: BECAUSE OF YOUR PROGRESS,\n"
+	.string "MORE ITEMS ARE AVAILABLE AT\l"
+	.string "TIM'S GENERAL PURPOSE SHOP.$"
+
+gText_Quentin_UnlockedUnique:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: BECAUSE OF YOUR PROGRESS,\n"
+	.string "MORE ITEMS ARE AVAILABLE AT\l"
+	.string "SILPH UNIQUE ITEM SHOP.$"
+
+gText_Quentin_UnlockedServices:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: BECAUSE OF YOUR PROGRESS,\n"
+	.string "MORE SERVICES ARE UNLOCKED AT\l"
+	.string "LELOUCH'S SPECIAL SERVICES SHOP.$"
+
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
 	.string "Sponsored by Pokémart Inc.$"

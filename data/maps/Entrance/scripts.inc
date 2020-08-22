@@ -568,7 +568,7 @@ Entrance_EventScript_Leave:
 	end
 
 Entrance_Text_Quentin_Hello:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS Quentin.$"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
 
 Entrance_Text_Quentin_LookLikeBirch:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: I KNOW YOU MIGHT BE\n"
