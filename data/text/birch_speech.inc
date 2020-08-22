@@ -39,7 +39,8 @@ gText_Birch_SoItsPlayer:: @ 82C8C1C
 
 gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "Thank you very much.\p"
-	.string "This rom hack is by eatthepear.\p"
+	.string "The architect of this simulation is\n"
+	.string "the legendary {COLOR BLUE}eatthepear{COLOR DARK_GREY}.\p"
 	.string "Please check the documentation if\n"
 	.string "you have any questions or issues.\p"
 	.string "$"
