@@ -1,4 +1,4 @@
-const u8 gTrainerClassNames[][14] = {
+const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_PKMN_TRAINER_1] = _("{PKMN} Trainer"),
     [TRAINER_CLASS_PKMN_TRAINER_2] = _("{PKMN} Trainer"),
     [TRAINER_CLASS_HIKER] = _("Hiker"),
@@ -31,7 +31,7 @@ const u8 gTrainerClassNames[][14] = {
     [TRAINER_CLASS_PSYCHIC] = _("Psychic"),
     [TRAINER_CLASS_GENTLEMAN] = _("Gentleman"),
     [TRAINER_CLASS_ELITE_FOUR] = _("Elite Four"),
-    [TRAINER_CLASS_LEADER] = _("Labyrinth Boss"),
+    [TRAINER_CLASS_LEADER] = _("Leviathan"),
     [TRAINER_CLASS_SCHOOL_KID] = _("School Kid"),
     [TRAINER_CLASS_SR_AND_JR] = _("Sr. and Jr."),
     [TRAINER_CLASS_WINSTRATE] = _("Winstrate"),
