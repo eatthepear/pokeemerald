@@ -19,7 +19,7 @@ Zone2Sanctuary_EventScript_Intro:
 	playfanfare MUS_ME_BACHI
 	msgbox Zone2Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	msgbox Zone2Sanctuary_Text_Quentin_ExplainBossTrainers, MSGBOX_AUTOCLOSE
+	msgbox Zone2Sanctuary_Text_Quentin_ExplainLeviathans, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Zone2Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
@@ -52,16 +52,15 @@ Zone2Sanctuary_EventScript_Leave:
 	warp MAP_ZONE3A, 255, 4, 3
 	end
 
-Zone2Sanctuary_Text_Quentin_ExplainBossTrainers:
+Zone2Sanctuary_Text_Quentin_ExplainLeviathans:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE NEXT ZONE WILL CONTAIN\n"
-	.string "A LABYRINTH BOSS.\p"
-	.string "LABYRINTH BOSSES ARE ESPECIALLY\n"
-	.string "DIFFICULT OPPONENTS THAT GIVE\l"
-	.string "SIGNIFICANT REWARDS.\p"
-	.string "SOME LABYRINTH BOSSES ARE OPTIONAL\n"
-	.string "WHILE OTHERS ARE NOT.\p"
+	.string "A {COLOR RED}LEVIATHAN{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}LEVIATHANS{COLOR DARK_GREY} ARE DIFFICULT BOSSES\n"
+	.string "THAT APPEAR IN SOME ZONES.\p"
 	.string "TYPICALLY YOU WILL NOT BE WARNED OF\n"
-	.string "LABYRINTH BOSSES IN ADVANCE.$"
+	.string "LABYRINTH BOSSES IN ADVANCE.\p"
+	.string "DEFEATING A {COLOR RED}LEVIATHAN{COLOR DARK_GREY} GIFTS YOU\n"
+	.string "GREAT REWARDS.$"
 
 Zone2Sanctuary_Text_Quentin_ReachedZone:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
