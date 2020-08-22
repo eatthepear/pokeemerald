@@ -587,8 +587,6 @@
     "TrainerHill_Elevator"
   ],
   "gMapGroup27": [
-    "Route104_Prototype",
-    "Route104_PrototypePrettyPetalFlowerShop",
     "Entrance",
     "EntranceShops",
     "Zone1A",
@@ -630,6 +628,8 @@
     "Route119_House"
   ],
   "gMapGroup33": [
-    "Route124_DivingTreasureHuntersHouse"
+    "Route124_DivingTreasureHuntersHouse",
+    "Route104_Prototype",
+    "Route104_PrototypePrettyPetalFlowerShop"
   ]
 }
