@@ -33,29 +33,29 @@
       "x": 3,
       "y": 5,
       "elevation": 0,
-      "dest_map": "",
+      "dest_map": "MAP_ZONE3SHOPS",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ZONE3SANCTUARY",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ZONE3SHOPS",
+      "dest_warp_id": 3
     },
     {
       "x": 3,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ZONE3SANCTUARY",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ZONE3SHOPS",
+      "dest_warp_id": 4
     },
     {
       "x": 11,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ZONE3SANCTUARY",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ZONE3SHOPS",
+      "dest_warp_id": 7
     }
   ],
   "coord_events": [
