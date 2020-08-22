@@ -14,7 +14,7 @@ gText_Quentin_Rules:
 	.string "THE SANCTUARY, NOR ANY PRIOR ZONES.$"
 
 gText_Quentin_DontLose:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: YOU MUST PROGRESS THROUGH\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: YOU MUST PROGRESS THROUGH\n"
 	.string "ALL ZONES WITHOUT LOSING A BATTLE,\l"
 	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
 	.string "RESTART OF THE SIMULATION.$"
@@ -59,7 +59,7 @@ gText_Joy_WonderfulDay:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Have a wonderful day!$"
 
 gText_Quentin_Onwards:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"

@@ -186,7 +186,7 @@ Entrance_EventScript_BULBASAUR:
 	return
 
 Entrance_Text_Quentin_YouSureStarterBULBASAUR:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "BULBASAUR?$"
 
 Entrance_EventScript_CHARMANDER:
@@ -201,7 +201,7 @@ Entrance_EventScript_CHARMANDER:
 	return
 
 Entrance_Text_Quentin_YouSureStarterCHARMANDER:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHARMANDER?$"
 
 Entrance_EventScript_SQUIRTLE:
@@ -216,7 +216,7 @@ Entrance_EventScript_SQUIRTLE:
 	return
 
 Entrance_Text_Quentin_YouSureStarterSQUIRTLE:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "SQUIRTLE?$"
 
 Entrance_EventScript_PIKACHU:
@@ -231,7 +231,7 @@ Entrance_EventScript_PIKACHU:
 	return
 
 Entrance_Text_Quentin_YouSureStarterPIKACHU:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "PIKACHU?$"
 
 Entrance_EventScript_EEVEE:
@@ -246,7 +246,7 @@ Entrance_EventScript_EEVEE:
 	return
 
 Entrance_Text_Quentin_YouSureStarterEEVEE:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "EEVEE?$"
 
 Entrance_EventScript_CHIKORITA:
@@ -261,7 +261,7 @@ Entrance_EventScript_CHIKORITA:
 	return
 
 Entrance_Text_Quentin_YouSureStarterCHIKORITA:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHIKORITA?$"
 
 Entrance_EventScript_CYNDAQUIL:
@@ -276,7 +276,7 @@ Entrance_EventScript_CYNDAQUIL:
 	return
 
 Entrance_Text_Quentin_YouSureStarterCYNDAQUIL:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CYNDAQUIL?$"
 
 Entrance_EventScript_TOTODILE:
@@ -291,7 +291,7 @@ Entrance_EventScript_TOTODILE:
 	return
 
 Entrance_Text_Quentin_YouSureStarterTOTODILE:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TOTODILE?$"
 
 Entrance_EventScript_TREECKO:
@@ -306,7 +306,7 @@ Entrance_EventScript_TREECKO:
 	return
 
 Entrance_Text_Quentin_YouSureStarterTREECKO:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TREECKO?$"
 
 Entrance_EventScript_TORCHIC:
@@ -321,7 +321,7 @@ Entrance_EventScript_TORCHIC:
 	return
 
 Entrance_Text_Quentin_YouSureStarterTORCHIC:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TORCHIC?$"
 
 Entrance_EventScript_MUDKIP:
@@ -336,7 +336,7 @@ Entrance_EventScript_MUDKIP:
 	return
 
 Entrance_Text_Quentin_YouSureStarterMUDKIP:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "MUDKIP?$"
 
 Entrance_EventScript_TURTWIG:
@@ -351,7 +351,7 @@ Entrance_EventScript_TURTWIG:
 	return
 
 Entrance_Text_Quentin_YouSureStarterTURTWIG:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TURTWIG?$"
 
 Entrance_EventScript_CHIMCHAR:
@@ -366,7 +366,7 @@ Entrance_EventScript_CHIMCHAR:
 	return
 
 Entrance_Text_Quentin_YouSureStarterCHIMCHAR:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHIMCHAR?$"
 
 Entrance_EventScript_PIPLUP:
@@ -381,7 +381,7 @@ Entrance_EventScript_PIPLUP:
 	return
 
 Entrance_Text_Quentin_YouSureStarterPIPLUP:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "PIPLUP?$"
 
 Entrance_EventScript_SNIVY:
@@ -396,7 +396,7 @@ Entrance_EventScript_SNIVY:
 	return
 
 Entrance_Text_Quentin_YouSureStarterSNIVY:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "SNIVY?$"
 
 Entrance_EventScript_TEPIG:
@@ -411,7 +411,7 @@ Entrance_EventScript_TEPIG:
 	return
 
 Entrance_Text_Quentin_YouSureStarterTEPIG:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TEPIG?$"
 
 Entrance_EventScript_OSHAWOTT:
@@ -426,7 +426,7 @@ Entrance_EventScript_OSHAWOTT:
 	return
 
 Entrance_Text_Quentin_YouSureStarterOSHAWOTT:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "OSHAWOTT?$"
 
 Entrance_EventScript_CHESPIN:
@@ -441,7 +441,7 @@ Entrance_EventScript_CHESPIN:
 	return
 
 Entrance_Text_Quentin_YouSureStarterCHESPIN:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHESPIN?$"
 
 Entrance_EventScript_FENNEKIN:
@@ -456,7 +456,7 @@ Entrance_EventScript_FENNEKIN:
 	return
 
 Entrance_Text_Quentin_YouSureStarterFENNEKIN:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "FENNEKIN?$"
 
 Entrance_EventScript_FROAKIE:
@@ -471,7 +471,7 @@ Entrance_EventScript_FROAKIE:
 	return
 
 Entrance_Text_Quentin_YouSureStarterFROAKIE:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "FROAKIE?$"
 
 Entrance_EventScript_ROWLET:
@@ -486,7 +486,7 @@ Entrance_EventScript_ROWLET:
 	return
 
 Entrance_Text_Quentin_YouSureStarterROWLET:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "ROWLET?$"
 
 Entrance_EventScript_LITTEN:
@@ -501,7 +501,7 @@ Entrance_EventScript_LITTEN:
 	return
 
 Entrance_Text_Quentin_YouSureStarterLITTEN:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "LITTEN?$"
 
 Entrance_EventScript_POPPLIO:
@@ -516,7 +516,7 @@ Entrance_EventScript_POPPLIO:
 	return
 
 Entrance_Text_Quentin_YouSureStarterPOPPLIO:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "POPPLIO?$"
 
 Entrance_EventScript_NuzlockeDialog:
@@ -568,10 +568,10 @@ Entrance_EventScript_Leave:
 	end
 
 Entrance_Text_Quentin_Hello:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS Quentin.$"
 
 Entrance_Text_Quentin_LookLikeBirch:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: I KNOW YOU MIGHT BE\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: I KNOW YOU MIGHT BE\n"
 	.string "CONFUSED. AS I AM A PORYGON,\l"
 	.string "YET I APPEAR AS {COLOR BLUE}PROFESSOR BIRCH{COLOR DARK_GREY}.\p"
 	.string "I HAVE TAKEN ON A HUMAN FORM\n"
@@ -582,49 +582,49 @@ Entrance_Text_Quentin_LookLikeBirch:
 	.string "ALLOW ME TO GO OVER THE RULES.$"
 
 Entrance_Text_Quentin_VanillaNuzlocke:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
 	.string "MODES: {COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
 
 
 Entrance_Text_Quentin_VanillaExplained:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: VANILLA MODE DOES NOT ADD\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: VANILLA MODE DOES NOT ADD\n"
 	.string "ANY EXTRA MODIFICATIONS.\p"
 	.string "IT WILL BE A NORMAL PLAYTHROUGH\n"
 	.string "WITH NO ADDED RULES.$"
 
 Entrance_Text_Quentin_NuzlockeExplained:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: NUZLOCKE MODE IS THE \n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: NUZLOCKE MODE IS THE \n"
 	.string "INTENDED DIFFICULTY.\p"
 	.string "ALL STANDARD NUZLOCKE RULES ARE\n"
 	.string "COMPLETELY IMPLEMENTED, AS WELL AS\l"
 	.string "SPECIES CLAUSE AND SHINY CLAUSE.$"
 
 Entrance_Text_Quentin_PickMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHICH GAME MODE WOULD\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHICH GAME MODE WOULD\n"
 	.string "YOU LIKE TO PLAY ON?$"
 
 Entrance_Text_Quentin_VanillaSure:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE?\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE?\n"
 	.string "ARE YOU CERTAIN?$"
 
 Entrance_Text_Quentin_NuzlockeSure:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE?\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE?\n"
 	.string "ARE YOU CERTAIN?$"
 
 Entrance_Text_Quentin_VanillaMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED.\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED.\n"
 	.string "GOOD LUCK.$"
 
 Entrance_Text_Quentin_NuzlockeMode:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE ENABLED.\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE ENABLED.\n"
 	.string "GOOD LUCK.$"
 
 Entrance_Text_Quentin_StartTour:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ALLOW ME TO SHOW YOU EACH\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ALLOW ME TO SHOW YOU EACH\n"
 	.string "OF THE SHOPS.$"
 
 Entrance_Text_Quentin_General:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP LEFT SHOP IS\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE TOP LEFT SHOP IS\n"
 	.string "{COLOR RED}TIM'S GENERAL PURPOSE SHOP{COLOR DARK_GREY}.\p"
 	.string "HEALING SUPPLIES, BASIC POKEBALLS,\n"
 	.string "REPELS, AND X ITEMS ARE SOLD HERE.\p"
@@ -633,7 +633,7 @@ Entrance_Text_Quentin_General:
 	.string "MORE ZONES.$"
 
 Entrance_Text_Quentin_Item:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE TOP RIGHT SHOP IS\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE TOP RIGHT SHOP IS\n"
 	.string "{COLOR RED}SILPH UNIQUE ITEM SHOP{COLOR DARK_GREY}.\p"
 	.string "THEY SELL POKEBALL VARIATIONS,\n"
 	.string "BERRIES, EVOLUTION ITEMS, AND\l"
@@ -643,7 +643,7 @@ Entrance_Text_Quentin_Item:
 	.string "MORE ZONES.$"
 
 Entrance_Text_Quentin_Services:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM LEFT SHOP IS\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE BOTTOM LEFT SHOP IS\n"
 	.string "{COLOR RED}LELOUCH'S SPECIAL SERVICES SHOP{COLOR DARK_GREY}.\p"
 	.string "HERE YOU CAN PAY MONEY FOR\n"
 	.string "EXPERIENCE TRAINING, EV TRAINING,\l"
@@ -653,7 +653,7 @@ Entrance_Text_Quentin_Services:
 	.string "MORE ZONES.$"
 
 Entrance_Text_Quentin_Healing:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: THE BOTTOM RIGHT SHOP IS\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE BOTTOM RIGHT SHOP IS\n"
 	.string "{COLOR RED}JOY'S HEALING SHOP{COLOR DARK_GREY}.\p"
 	.string "THEY WILL HEAL YOUR ENTIRE PARTY\n"
 	.string "FOR ¥500.$"
@@ -669,7 +669,7 @@ Entrance_Text_Quentin_PC:
 	.string "POKEMON.$"
 
 Entrance_Text_Quentin_TourDone:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: OUR TOUR HAS FINISHED.\p"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: OUR TOUR HAS FINISHED.\p"
 	.string "THESE FOUR SHOPS WILL BE AVAILABLE\n"
 	.string "BEFORE EACH NEW ZONE. ONCE YOU\l"
 	.string "ENTER THE ZONE, YOU WILL NOT BE\l"
@@ -677,7 +677,7 @@ Entrance_Text_Quentin_TourDone:
 	.string "YOU EXIT THAT ZONE.$"
 
 Entrance_Text_Quentin_Starters:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: AS A NEW CHALLENGER,\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: AS A NEW CHALLENGER,\n"
 	.string "YOU WILL RECEIVE A STARTER POKEMON.\p"
 	.string "YOU CAN HAVE YOUR CHOICE OF ANY OF\n"
 	.string "THE GEN 1-7 STARTER POKEMON, AS\l"
@@ -689,29 +689,29 @@ Entrance_Text_ReceivedStarter:
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
 Entrance_Text_Quentin_HowBoutNickname:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: HOW ABOUT A NICKNAME\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: HOW ABOUT A NICKNAME\n"
 	.string "FOR THIS WONDERFUL POKEMON?$"
 
 Entrance_Text_Quentin_NiceChoice:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
 	.string "YOU CAN ALSO RE-NICKNAME YOUR\n"
 	.string "POKEMON FROM THE PARTY MENU.$"
 
 Entrance_Text_Quentin_Freebies:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: HERE ARE SOME STARTING\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: HERE ARE SOME STARTING\n"
 	.string "ITEMS AND CASH.$"
 
 Entrance_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
 
 Entrance_Text_Quentin_WhenUReady:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
 	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
 	.string "WILL GUIDE YOU ON YOUR WAY.\p"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
 
 Entrance_Text_Quentin_ReadyToLeave:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
 
 Entrance_Movement_Quentin_FirstShop:

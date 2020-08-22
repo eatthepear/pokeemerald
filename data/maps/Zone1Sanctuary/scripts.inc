@@ -51,14 +51,14 @@ Zone1Sanctuary_EventScript_Leave:
 	end
 
 Zone1Sanctuary_Text_Quentin_ReachedZone:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: CONGRATULATIONS.\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
 	.string "YOU HAVE CLEARED {COLOR RED}ZONE ONE{COLOR DARK_GREY}.$"
 
 Zone1Sanctuary_Text_Quentin_WhenUReady:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
 	.string "ENTER {COLOR RED}ZONE TWO{COLOR DARK_GREY},\l"
 	.string "COME TALK TO ME.$"
 
 Zone1Sanctuary_Text_Quentin_ReadyToLeave:
-	.string "{COLOR BLUE}QUENTIN{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
 	.string "YOU WILL BE ENTERING {COLOR RED}ZONE TWO{COLOR DARK_GREY}.$"
