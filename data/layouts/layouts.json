@@ -4500,6 +4500,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone2Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone2Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE3A",
+      "name": "Zone3A_Layout",
+      "width": 45,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Zone3A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone3A/map.bin"
     }
   ]
 }
