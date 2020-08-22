@@ -4522,14 +4522,14 @@
       "blockdata_filepath": "data/layouts/Zone3Sanctuary/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE3SHOP",
-      "name": "Zone3Shop_Layout",
+      "id": "LAYOUT_ZONE3SHOPS",
+      "name": "Zone3Shops_Layout",
       "width": 23,
       "height": 23,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone3Shop/border.bin",
-      "blockdata_filepath": "data/layouts/Zone3Shop/map.bin"
+      "border_filepath": "data/layouts/Zone3Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone3Shops/map.bin"
     }
   ]
 }
