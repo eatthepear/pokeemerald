@@ -48,3 +48,15 @@ Zone3A_Text_AnnabelleDefeat:
 
 Zone3A_Text_AnnabellePostBattle:
 	.string "I hope you have some Antidotes!$"
+
+Zone3A_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
+Zone3A_EventScript_ItemAwakening::
+	finditem ITEM_AWAKENING
+	end
+
+Zone3A_EventScript_ItemBurnHeal::
+	finditem ITEM_BURN_HEAL
+	end

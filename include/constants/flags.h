@@ -540,9 +540,9 @@
 #define FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET                  (FLAG_HIDDEN_ITEMS_START + 0x01)
 #define FLAG_HIDDEN_ITEM_ZONE2B_POKE_BALL                    (FLAG_HIDDEN_ITEMS_START + 0x08)
 #define FLAG_HIDDEN_ITEM_ZONE2B_POTION                       (FLAG_HIDDEN_ITEMS_START + 0x09)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x0A)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 0x0B)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_1          (FLAG_HIDDEN_ITEMS_START + 0x0D)
+#define FLAG_HIDDEN_ITEM_ZONE3A_POTION                       (FLAG_HIDDEN_ITEMS_START + 0x0A)
+#define FLAG_HIDDEN_ITEM_ZONE3A_PARALYZE_HEAL                (FLAG_HIDDEN_ITEMS_START + 0x0B)
+#define FLAG_HIDDEN_ITEM_ZONE3A_HEAL_BALL                    (FLAG_HIDDEN_ITEMS_START + 0x0D)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_CALCIUM                (FLAG_HIDDEN_ITEMS_START + 0x24)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_2          (FLAG_HIDDEN_ITEMS_START + 0x26)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_HEART_SCALE            (FLAG_HIDDEN_ITEMS_START + 0x0E)
@@ -1048,9 +1048,9 @@
 #define FLAG_ITEM_ZONE1A_QUICK_CLAW                                 0x3E9
 #define FLAG_ITEM_ZONE2A_POKE_BALL                                  0x3EA
 #define FLAG_ITEM_ZONE2B_ETHER                                      0x3EB
-#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
-#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
-#define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
+#define FLAG_ITEM_ZONE3A_SUPER_POTION                               0x3EC
+#define FLAG_ITEM_ZONE3A_AWAKENING                                  0x3ED
+#define FLAG_ITEM_ZONE3A_BURN_HEAL                                  0x3EE
 #define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
 #define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0
 #define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1
