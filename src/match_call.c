@@ -620,15 +620,6 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
         .differentRouteMatchCallTextId = TEXT_ID(2, 5),
     },
     {
-        .trainerId = TRAINER_GABRIELLE_1,
-        .unused = 0,
-        .battleTopicTextIds = { TEXT_ID(1, 8), TEXT_ID(2, 8), TEXT_ID(3, 8) },
-        .generalTextId = TEXT_ID(1, 2),
-        .battleFrontierRecordStreakTextIndex = 8,
-        .sameRouteMatchCallTextId = TEXT_ID(1, 8),
-        .differentRouteMatchCallTextId = TEXT_ID(2, 8),
-    },
-    {
         .trainerId = TRAINER_CATHERINE_1,
         .unused = 0,
         .battleTopicTextIds = { TEXT_ID(1, 9), TEXT_ID(2, 9), TEXT_ID(3, 9) },
