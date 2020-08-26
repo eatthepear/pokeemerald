@@ -93,7 +93,7 @@
 #define MAPSEC_ZONE_1                       0x59
 #define MAPSEC_ZONE_2                       0x5A
 #define MAPSEC_ZONE_3                       0x5B
-#define MAPSEC_LAVENDER_TOWN                0x5C
+#define MAPSEC_ZONE_4                       0x5C
 #define MAPSEC_VERMILION_CITY               0x5D
 #define MAPSEC_CELADON_CITY                 0x5E
 #define MAPSEC_FUCHSIA_CITY                 0x5F
