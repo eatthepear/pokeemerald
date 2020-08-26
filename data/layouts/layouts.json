@@ -4504,7 +4504,7 @@
     {
       "id": "LAYOUT_ZONE3A",
       "name": "Zone3A_Layout",
-      "width": 45,
+      "width": 40,
       "height": 35,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
@@ -4530,6 +4530,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone3Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone3Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE3UNUSED",
+      "name": "Zone3Unused_Layout",
+      "width": 45,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Zone3Unused/border.bin",
+      "blockdata_filepath": "data/layouts/Zone3Unused/map.bin"
     }
   ]
 }

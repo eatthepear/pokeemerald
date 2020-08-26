@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ZONE3A",
-  "name": "Zone3A",
-  "layout": "LAYOUT_ZONE3A",
+  "id": "MAP_ZONE3UNUSED",
+  "name": "Zone3Unused",
+  "layout": "LAYOUT_ZONE3UNUSED",
   "music": "MUS_AJITO",
   "region_map_section": "MAPSEC_ZONE_3",
   "requires_flash": false,
@@ -20,15 +20,7 @@
 
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 29,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TUTORIAL",
-      "var_value": "4",
-      "script": "Zone3A_EventScript_Exit"
-    }
+
   ],
   "bg_events": [
 
