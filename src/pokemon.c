@@ -3591,12 +3591,12 @@ void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
     }
 }
 
-u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
+u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove, bool8 isEvolving)
 {
     u32 retVal = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u8 level = GetMonData(mon, MON_DATA_LEVEL, NULL);
-
+    
     // since you can learn more than one move per level
     // the game needs to know whether you decided to
     // learn it or keep the old set to avoid asking
@@ -3604,7 +3604,17 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
     if (firstMove)
     {
         sLearningMoveTableID = 0;
-
+    }
+    // Added evolution moves; Pokemon will learn moves listed at level zero upon evolution
+    if(isEvolving && (gLevelUpLearnsets[species][sLearningMoveTableID].level == 0))
+    {
+        gMoveToLearn = gLevelUpLearnsets[species][sLearningMoveTableID].move;
+        retVal = GiveMoveToMon(mon, gMoveToLearn);
+        sLearningMoveTableID++;
+        return retVal;
+    }
+    if(isEvolving && (gLevelUpLearnsets[species][sLearningMoveTableID].level > 0))
+    {
         while (gLevelUpLearnsets[species][sLearningMoveTableID].level != level)
         {
             sLearningMoveTableID++;
@@ -3612,14 +3622,22 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
                 return 0;
         }
     }
-
+    
+    if (firstMove)
+    {
+        while (gLevelUpLearnsets[species][sLearningMoveTableID].level != level)
+        {
+            sLearningMoveTableID++;
+            if (gLevelUpLearnsets[species][sLearningMoveTableID].move == LEVEL_UP_END)
+                return 0;
+        }
+    }
     if (gLevelUpLearnsets[species][sLearningMoveTableID].level == level)
     {
         gMoveToLearn = gLevelUpLearnsets[species][sLearningMoveTableID].move;
         sLearningMoveTableID++;
         retVal = GiveMoveToMon(mon, gMoveToLearn);
     }
-
     return retVal;
 }
 
