@@ -4540,6 +4540,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Zone3Unused/border.bin",
       "blockdata_filepath": "data/layouts/Zone3Unused/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4A",
+      "name": "Zone4A_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SecretBaseShrub",
+      "border_filepath": "data/layouts/Zone4A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4A/map.bin"
     }
   ]
 }

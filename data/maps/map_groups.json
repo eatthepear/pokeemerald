@@ -599,7 +599,8 @@
     "Zone3A",
     "Zone3Sanctuary",
     "Zone3Shops",
-    "Zone3Unused"
+    "Zone3Unused",
+    "Zone4A"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"
