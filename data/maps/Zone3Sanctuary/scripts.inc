@@ -26,9 +26,9 @@ Zone3Sanctuary_EventScript_Intro:
 	playfanfare MUS_FANFA4
 	msgbox gText_Quentin_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare
-	playfanfare MUS_FANFA4
-	msgbox gText_Quentin_UnlockedServices, MSGBOX_DEFAULT
-	waitfanfare
+	@ playfanfare MUS_FANFA4
+	@ msgbox gText_Quentin_UnlockedServices, MSGBOX_DEFAULT
+	@ waitfanfare
 	msgbox Zone3Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
 	waitmovement 0
