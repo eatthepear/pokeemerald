@@ -13,8 +13,8 @@
 #define TRAINER_BORIS                         9
 #define TRAINER_ANNABELLE                    10
 #define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
+#define TRAINER_LEVIATHAN1                   12
+#define TRAINER_YEET                         13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16
