@@ -3,9 +3,11 @@ Zone3A_MapScripts::
 
 Zone3A_EventScript_Exit::
 	lockall
-	fadenewbgm MUS_DUMMY
+	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
+	delay 96
+	addobject 4
 	clearflag FLAG_HIDE_LEVIATHAN1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	applymovement 4, Common_Movement_WalkDown
@@ -39,6 +41,8 @@ Zone3A_Text_Leviathan1Defeat:
 	.string "You have defeated me.$"
 
 Zone3A_EventScript_Jemma::
+	setflag FLAG_HIDE_LEVIATHAN1
+	removeobject 4
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat
 	msgbox Zone3A_Text_JemmaPostBattle, MSGBOX_AUTOCLOSE
 	end
