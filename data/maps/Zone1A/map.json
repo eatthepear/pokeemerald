@@ -89,7 +89,7 @@
       "x": 15,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_TUTORIAL",
+      "var": "VAR_ZONE",
       "var_value": "1",
       "script": "Zone1A_EventScript_Exit"
     }

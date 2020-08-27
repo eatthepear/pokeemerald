@@ -3,7 +3,7 @@ Entrance_MapScripts::
 	.byte 0
 
 Entrance_OnFrame:
-	map_script_2 VAR_TUTORIAL, 0, Entrance_EventScript_Intro
+	map_script_2 VAR_ZONE, 0, Entrance_EventScript_Intro
 	.2byte 0
 
 Entrance_EventScript_Intro:
@@ -537,19 +537,21 @@ Entrance_EventScript_Quentin_EndIntro:
 	closemessage
 	delay 96
 	setvar VAR_ZONE, 1
+	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 1
-	setvar VAR_TUTORIAL, 1
 	releaseall
 	end
 
 Entrance_EventScript_NextZone::
 	lock
 	faceplayer
+	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_Leave
+	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -585,7 +587,6 @@ Entrance_Text_Quentin_LookLikeBirch:
 Entrance_Text_Quentin_VanillaNuzlocke:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
 	.string "MODES: {COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
-
 
 Entrance_Text_Quentin_VanillaExplained:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: VANILLA MODE DOES NOT ADD\n"

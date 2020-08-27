@@ -25,7 +25,6 @@ Zone3A_EventScript_LeviathanDefeated:
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_EXP_SHARE, 1
 	closemessage
-	setvar VAR_TUTORIAL, 5
 	applymovement 4, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
@@ -62,7 +61,7 @@ Zone3A_Text_JemmaDefeat:
 	.string "Uh... You can go for free!$"
 
 Zone3A_Text_JemmaPostBattle:
-	.string "I was scamming so well too...$"
+	.string "I was scamming people so well too...$"
 
 Zone3A_EventScript_Boris::
 	trainerbattle_single TRAINER_BORIS, Zone3A_Text_BorisIntro, Zone3A_Text_BorisDefeat

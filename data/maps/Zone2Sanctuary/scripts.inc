@@ -3,7 +3,7 @@ Zone2Sanctuary_MapScripts::
 	.byte 0
 
 Zone2Sanctuary_OnFrame:
-	map_script_2 VAR_TUTORIAL, 3, Zone2Sanctuary_EventScript_Intro
+	map_script_2 VAR_ZONE, 2, Zone2Sanctuary_EventScript_Intro
 	.2byte 0
 
 Zone2Sanctuary_EventScript_Intro:
@@ -17,26 +17,40 @@ Zone2Sanctuary_EventScript_Intro:
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
 	playfanfare MUS_ME_BACHI
-	msgbox Zone2Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
+	showmoneybox 0, 0, 0
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
+	addmoney 1000, 0
+	playfanfare MUS_FANFA4
+	updatemoneybox 0, 0
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_ReceivedMoney, MSGBOX_DEFAULT
+	waitfanfare
+	hidemoneybox
+	setvar VAR_ZONE, 3
 	setflag FLAG_HIDE_LEVIATHAN1
 	removeobject 4, MAP_ZONE3A
 	msgbox Zone2Sanctuary_Text_Quentin_ExplainLeviathans, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Zone2Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
 	waitmovement 0
-	setvar VAR_TUTORIAL, 4
 	releaseall
 	end
 
 Zone2Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
-	msgbox Zone2Sanctuary_Text_Quentin_ReadyToLeave, MSGBOX_YESNO
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone2Sanctuary_EventScript_Leave
-	msgbox Zone2Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -63,16 +77,3 @@ Zone2Sanctuary_Text_Quentin_ExplainLeviathans:
 	.string "LABYRINTH BOSSES IN ADVANCE.\p"
 	.string "DEFEATING A {COLOR RED}LEVIATHAN{COLOR DARK_GREY} GIFTS YOU\n"
 	.string "GREAT REWARDS.$"
-
-Zone2Sanctuary_Text_Quentin_ReachedZone:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
-	.string "YOU HAVE CLEARED {COLOR RED}ZONE 2{COLOR DARK_GREY}.$"
-
-Zone2Sanctuary_Text_Quentin_WhenUReady:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
-	.string "ENTER {COLOR RED}ZONE 3{COLOR DARK_GREY},\l"
-	.string "COME TALK TO ME.$"
-
-Zone2Sanctuary_Text_Quentin_ReadyToLeave:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE 3{COLOR DARK_GREY}.$"

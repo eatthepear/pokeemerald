@@ -115,8 +115,8 @@
       "x": 29,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_TUTORIAL",
-      "var_value": "4",
+      "var": "VAR_ZONE",
+      "var_value": "3",
       "script": "Zone3A_EventScript_Exit"
     }
   ],

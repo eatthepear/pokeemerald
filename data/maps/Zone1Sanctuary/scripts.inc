@@ -3,7 +3,7 @@ Zone1Sanctuary_MapScripts::
 	.byte 0
 
 Zone1Sanctuary_OnFrame:
-	map_script_2 VAR_TUTORIAL, 2, Zone1Sanctuary_EventScript_Intro
+	map_script_2 VAR_ZONE, 1, Zone1Sanctuary_EventScript_Intro
 	.2byte 0
 
 Zone1Sanctuary_EventScript_Intro:
@@ -31,19 +31,21 @@ Zone1Sanctuary_EventScript_Intro:
 	waitfanfare
 	hidemoneybox
 	setvar VAR_ZONE, 2
+	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
 	waitmovement 0
-	setvar VAR_TUTORIAL, 3
 	releaseall
 	end
 
 Zone1Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
+	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone1Sanctuary_EventScript_Leave
+	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
