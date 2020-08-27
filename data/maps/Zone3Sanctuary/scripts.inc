@@ -3,7 +3,7 @@ Zone3Sanctuary_MapScripts::
 	.byte 0
 
 Zone3Sanctuary_OnFrame:
-	map_script_2 VAR_TUTORIAL, 4, Zone3Sanctuary_EventScript_Intro
+	map_script_2 VAR_TUTORIAL, 5, Zone3Sanctuary_EventScript_Intro
 	.2byte 0
 
 Zone3Sanctuary_EventScript_Intro:
@@ -32,11 +32,18 @@ Zone3Sanctuary_EventScript_Intro:
 	msgbox Zone3Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
 	waitmovement 0
-	setvar VAR_TUTORIAL, 5
+	setvar VAR_TUTORIAL, 6
 	releaseall
 	end
 
 Zone3Sanctuary_EventScript_NextZone::
+	lock
+	faceplayer
+	msgbox gText_Quentin_EndofDemo, MSGBOX_AUTOCLOSE
+	release
+	end
+	
+Zone3Sanctuary_EventScript_NextZonedummy::
 	lock
 	faceplayer
 	msgbox Zone3Sanctuary_Text_Quentin_ReadyToLeave, MSGBOX_YESNO

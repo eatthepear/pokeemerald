@@ -7,12 +7,11 @@ Zone3A_EventScript_Exit::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 96
-	addobject 4
-	clearflag FLAG_HIDE_LEVIATHAN1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	applymovement 4, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	addobject 4
+	clearflag FLAG_HIDE_LEVIATHAN1
 	applymovement 4, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -25,6 +24,7 @@ Zone3A_EventScript_Exit::
 Zone3A_EventScript_LeviathanDefeated:
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_EXP_SHARE, 1
+	closemessage
 	setvar VAR_TUTORIAL, 5
 	applymovement 4, Common_Movement_WalkRight
 	waitmovement 0
@@ -43,7 +43,7 @@ Zone3A_Text_Leviathan1Intro:
 	.string "I am Leviathan Remi, all powerful!$"
 
 Zone3A_Text_Leviathan1Defeat:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: A terrible day indeed...$"
+	.string "Remi: A terrible day indeed...$"
 
 Zone3A_Text_Leviathan1Reward:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You have bested me.\n"
