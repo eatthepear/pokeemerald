@@ -536,6 +536,7 @@ Entrance_EventScript_Quentin_EndIntro:
 	waitfanfare
 	closemessage
 	delay 96
+	setvar VAR_ZONE, 1
 	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 1

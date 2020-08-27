@@ -19,12 +19,27 @@ Zone1Sanctuary_EventScript_Intro:
 	playfanfare MUS_ME_BACHI
 	msgbox Zone1Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
+	buffernumberstring 0, VAR_ZONE
+	msgbox Zone1Sanctuary_Text_RewardClear, MSGBOX_AUTOCLOSE
+	showmoneybox 0, 0, 0
+	addmoney 1000
+	playfanfare MUS_FANFA4
+	updatemoneybox 0, 0
+	msgbox Zone1Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
+	waitfanfare
+	hidemoneybox
 	msgbox Zone1Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp
 	waitmovement 0
 	setvar VAR_TUTORIAL, 3
 	releaseall
 	end
+
+Zone1Sanctuary_Text_RewardClear:
+	.string "filler$"
+
+Zone1Sanctuary_Text_ReceivedMoney:
+	.string "Received ¥{STR_VAR_1}000!$"
 
 Zone1Sanctuary_EventScript_NextZone::
 	lock
