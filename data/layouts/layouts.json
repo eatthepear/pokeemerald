@@ -4547,9 +4547,49 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SecretBaseShrub",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Zone4A/border.bin",
       "blockdata_filepath": "data/layouts/Zone4A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4B",
+      "name": "Zone4B_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Zone4B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4C",
+      "name": "Zone4C_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Zone4C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4D",
+      "name": "Zone4D_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Zone4D/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4E",
+      "name": "Zone4E_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Zone4E/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4E/map.bin"
     }
   ]
 }

@@ -566,6 +566,10 @@
 #define MAP_ZONE3SHOPS     (11 | (27 << 8))
 #define MAP_ZONE3UNUSED    (12 | (27 << 8))
 #define MAP_ZONE4A         (13 | (27 << 8))
+#define MAP_ZONE4B         (14 | (27 << 8))
+#define MAP_ZONE4C         (15 | (27 << 8))
+#define MAP_ZONE4D         (16 | (27 << 8))
+#define MAP_ZONE4E         (17 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

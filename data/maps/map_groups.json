@@ -600,7 +600,11 @@
     "Zone3Sanctuary",
     "Zone3Shops",
     "Zone3Unused",
-    "Zone4A"
+    "Zone4A",
+    "Zone4B",
+    "Zone4C",
+    "Zone4D",
+    "Zone4E"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"
