@@ -29,6 +29,25 @@ gText_Quentin_DontLose:
 	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
 	.string "RESTART OF THE SIMULATION.$"
 
+gText_Quentin_ReachedZone:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
+	.string "YOU HAVE CLEARED {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY}.$"
+
+gText_RewardClear:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: FOR CLEARING {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY},$"
+
+gText_ReceivedMoney:
+	.string "YOU HAVE EARNED ¥{STR_VAR_1}000.$"
+
+gText_Quentin_WhenUReady:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
+	.string "ENTER {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY},\l"
+	.string "COME SPEAK TO ME.$"
+
+gText_Quentin_ReadyToLeave:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
+	.string "YOU WILL BE ENTERING {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY}.$"
+
 gText_Quentin_Onwards:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
 

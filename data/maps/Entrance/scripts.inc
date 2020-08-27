@@ -537,7 +537,7 @@ Entrance_EventScript_Quentin_EndIntro:
 	closemessage
 	delay 96
 	setvar VAR_ZONE, 1
-	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Entrance_Movement_Quentin_BackTop
 	waitmovement 1
 	setvar VAR_TUTORIAL, 1
@@ -547,7 +547,7 @@ Entrance_EventScript_Quentin_EndIntro:
 Entrance_EventScript_NextZone::
 	lock
 	faceplayer
-	msgbox Entrance_Text_Quentin_ReadyToLeave, MSGBOX_YESNO
+	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_Leave
 	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
@@ -704,16 +704,6 @@ Entrance_Text_Quentin_Freebies:
 
 Entrance_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
-
-Entrance_Text_Quentin_WhenUReady:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE READY TO\n"
-	.string "LEAVE, TALK TO ME ONCE MORE AND I\l"
-	.string "WILL GUIDE YOU ON YOUR WAY.\p"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE 1{COLOR DARK_GREY}.$"
-
-Entrance_Text_Quentin_ReadyToLeave:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE 1{COLOR DARK_GREY}.$"
 
 Entrance_Movement_Quentin_FirstShop:
 	walk_left
