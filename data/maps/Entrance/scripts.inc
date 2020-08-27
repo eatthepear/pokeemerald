@@ -550,7 +550,7 @@ Entrance_EventScript_NextZone::
 	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_Leave
-	msgbox Entrance_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
