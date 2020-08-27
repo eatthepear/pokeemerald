@@ -22,7 +22,7 @@ Zone1Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox Zone1Sanctuary_Text_RewardClear, MSGBOX_AUTOCLOSE
 	showmoneybox 0, 0, 0
-	addmoney 1000
+	addmoney 1000, 0
 	playfanfare MUS_FANFA4
 	updatemoneybox 0, 0
 	msgbox Zone1Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
