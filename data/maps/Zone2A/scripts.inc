@@ -1,8 +1,8 @@
 Zone2A_MapScripts::
 	.byte 0
 
-Zone2A_EventScript_ItemPokeball::
-	finditem ITEM_POKE_BALL
+Zone2A_EventScript_ItemAntidote::
+	finditem ITEM_ANTIDOTE
 	end
 
 Zone2A_EventScript_Arnold::

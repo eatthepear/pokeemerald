@@ -667,7 +667,10 @@ Entrance_Text_Quentin_TourDone:
 	.string "BEFORE EACH NEW ZONE. ONCE YOU\l"
 	.string "ENTER THE ZONE, YOU WILL NOT BE\l"
 	.string "ABLE TO ACCESS THESE SHOPS UNTIL\l"
-	.string "YOU EXIT THAT ZONE.$"
+	.string "YOU EXIT THAT ZONE.\p"
+	.string "IT IS HIGHLY RECOMMENDED YOU STOCK\n"
+	.string "UP ON ANY SUPPLIES BEFORE ENTERING\l"
+	.string "THE NEXT ZONE.$"
 
 Entrance_Text_Quentin_Starters:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: AS A NEW CHALLENGER,\n"

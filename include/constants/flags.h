@@ -1046,7 +1046,7 @@
 // Item Ball Flags
 #define FLAG_ITEM_ZONE1A_POTION                                     0x3E8
 #define FLAG_ITEM_ZONE1A_QUICK_CLAW                                 0x3E9
-#define FLAG_ITEM_ZONE2A_POKE_BALL                                  0x3EA
+#define FLAG_ITEM_ZONE2A_ANTIDOTE                                   0x3EA
 #define FLAG_ITEM_ZONE2B_ETHER                                      0x3EB
 #define FLAG_ITEM_ZONE3A_SUPER_POTION                               0x3EC
 #define FLAG_ITEM_ZONE3A_AWAKENING                                  0x3ED
