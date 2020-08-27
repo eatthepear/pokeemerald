@@ -19,6 +19,8 @@ Zone2Sanctuary_EventScript_Intro:
 	playfanfare MUS_ME_BACHI
 	msgbox Zone2Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
+	setflag FLAG_HIDE_LEVIATHAN1
+	removeobject 4, MAP_ZONE3A
 	msgbox Zone2Sanctuary_Text_Quentin_ExplainLeviathans, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Zone2Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE

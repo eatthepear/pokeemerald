@@ -41,8 +41,6 @@ Zone3A_Text_Leviathan1Defeat:
 	.string "You have defeated me.$"
 
 Zone3A_EventScript_Jemma::
-	setflag FLAG_HIDE_LEVIATHAN1
-	removeobject 4
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat
 	msgbox Zone3A_Text_JemmaPostBattle, MSGBOX_AUTOCLOSE
 	end
