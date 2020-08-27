@@ -23,9 +23,12 @@ Zone3A_EventScript_Exit::
 	end
 
 Zone3A_EventScript_LeviathanDefeated:
-	setflag FLAG_HIDE_LEVIATHAN1
-	removeobject 4
+	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_EXP_SHARE, 1
 	setvar VAR_TUTORIAL, 5
+	applymovement 4, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 4, Common_Movement_FaceDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -35,10 +38,17 @@ Zone3A_EventScript_LeviathanDefeated:
 	end
 
 Zone3A_Text_Leviathan1Intro:
-	.string "Prepare to be crushed.$"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You! How dare you intrude on\n"
+	.string "my house, my home! Begone!\l"
+	.string "I am Leviathan Remi, all powerful!$"
 
 Zone3A_Text_Leviathan1Defeat:
-	.string "You have defeated me.$"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: A terrible day indeed...$"
+
+Zone3A_Text_Leviathan1Reward:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You have bested me.\n"
+	.string "I grant you the Experience Share,\l"
+	.string "a powerful tool to train Pokémon.$"
 
 Zone3A_EventScript_Jemma::
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat
@@ -46,13 +56,13 @@ Zone3A_EventScript_Jemma::
 	end
 
 Zone3A_Text_JemmaIntro:
-	.string "Beware the power of Poison Sting!$"
+	.string "Hey! You have to pay to cross!$"
 
 Zone3A_Text_JemmaDefeat:
-	.string "30% is basically 100%!$"
+	.string "Uh... You can go for free!$"
 
 Zone3A_Text_JemmaPostBattle:
-	.string "I hope you have some Antidotes!$"
+	.string "I was scamming so well too...$"
 
 Zone3A_EventScript_Boris::
 	trainerbattle_single TRAINER_BORIS, Zone3A_Text_BorisIntro, Zone3A_Text_BorisDefeat
@@ -60,13 +70,13 @@ Zone3A_EventScript_Boris::
 	end
 
 Zone3A_Text_BorisIntro:
-	.string "Beware the power of Poison Sting!$"
+	.string "Never give up, never surrender!$"
 
 Zone3A_Text_BorisDefeat:
-	.string "30% is basically 100%!$"
+	.string "I surrender!$"
 
 Zone3A_Text_BorisPostBattle:
-	.string "I hope you have some Antidotes!$"
+	.string "I'm a hypocrite, I know.$"
 
 Zone3A_EventScript_Annabelle::
 	trainerbattle_single TRAINER_ANNABELLE, Zone3A_Text_AnnabelleIntro, Zone3A_Text_AnnabelleDefeat
@@ -74,13 +84,13 @@ Zone3A_EventScript_Annabelle::
 	end
 
 Zone3A_Text_AnnabelleIntro:
-	.string "Beware the power of Poison Sting!$"
+	.string "I wonder what day it is...$"
 
 Zone3A_Text_AnnabelleDefeat:
-	.string "30% is basically 100%!$"
+	.string "Apparently it's defeat day!$"
 
 Zone3A_Text_AnnabellePostBattle:
-	.string "I hope you have some Antidotes!$"
+	.string "Tomorrow will be another day.$"
 
 Zone3A_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
