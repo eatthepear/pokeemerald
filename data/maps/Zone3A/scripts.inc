@@ -16,10 +16,7 @@ Zone3A_EventScript_Exit::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	@ msgbox Zone3A_Text_Leviathan1Talk, MSGBOX_AUTOCLOSE
-	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Intro, Zone3A_Text_Leviathan1Defeat, Zone3A_EventScript_WarpOut
-	end
-
-Zone3A_EventScript_WarpOut:
+	trainerbattle_single TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Intro, Zone3A_Text_Leviathan1Defeat
 	setflag FLAG_HIDE_LEVIATHAN1
 	setvar VAR_TUTORIAL, 5
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
