@@ -11827,7 +11827,7 @@
           "map": "MAP_ZONE4A",
           "base_label": "gZone4A",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 6,
@@ -11896,7 +11896,7 @@
           "map": "MAP_ZONE4B",
           "base_label": "gZone4B",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 6,
@@ -11965,7 +11965,7 @@
           "map": "MAP_ZONE4C",
           "base_label": "gZone4C",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 6,
@@ -12034,7 +12034,7 @@
           "map": "MAP_ZONE4D",
           "base_label": "gZone4D",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 6,
@@ -12103,7 +12103,7 @@
           "map": "MAP_ZONE4E",
           "base_label": "gZone4E",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 6,

@@ -136,7 +136,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ralph[] = {
     {
     .iv = 0,
     .lvl = 8,
-    .species = SPECIES_NIDORAN_F,
+    .species = SPECIES_HOOTHOOT,
     },
     {
     .iv = 0,
