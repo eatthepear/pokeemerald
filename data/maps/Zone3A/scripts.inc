@@ -39,10 +39,10 @@ Zone3A_EventScript_LeviathanDefeated:
 Zone3A_Text_Leviathan1Intro:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You! How dare you intrude on\n"
 	.string "my house, my home! Begone!\l"
-	.string "I am Leviathan Remi, all powerful!$"
+	.string "I am {COLOR BLUE}Leviathan Remi{COLOR DARK_GREY}, all powerful!$"
 
 Zone3A_Text_Leviathan1Defeat:
-	.string "Remi: A terrible day indeed...$"
+	.string "Remi: Do a Marill roll!$"
 
 Zone3A_Text_Leviathan1Reward:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You have bested me.\n"

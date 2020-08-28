@@ -131,8 +131,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 24,
-      "y": 18,
+      "x": 23,
+      "y": 17,
       "elevation": 3,
       "item": "ITEM_PARALYZE_HEAL",
       "flag": "FLAG_HIDDEN_ITEM_ZONE3A_PARALYZE_HEAL"
