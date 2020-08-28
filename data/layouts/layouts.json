@@ -4590,6 +4590,26 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Zone4E/border.bin",
       "blockdata_filepath": "data/layouts/Zone4E/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4SANCTUARY",
+      "name": "Zone4Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone4Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE4SHOPS",
+      "name": "Zone4Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone4Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone4Shops/map.bin"
     }
   ]
 }

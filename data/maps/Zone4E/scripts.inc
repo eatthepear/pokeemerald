@@ -18,3 +18,7 @@ Zone4E_Text_DeclanPostBattle:
 Zone4E_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
+
+Zone4E_EventScript_Exit::
+	warp MAP_ZONE3SANCTUARY, 255, 7, 7
+	end
