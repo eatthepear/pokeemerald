@@ -191,8 +191,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_ChloeandKaya),
-        .party = {.NoItemDefaultMoves = sParty_ChloeandKaya},
+        .partySize = ARRAY_COUNT(sParty_ChloeAndKaya),
+        .party = {.NoItemDefaultMoves = sParty_ChloeAndKaya},
     },
 
     [TRAINER_LUCIA] =
