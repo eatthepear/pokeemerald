@@ -365,7 +365,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
-      "script": "Route121_EventScript_Marcel",
+      "script": "NULL",
       "flag": "0"
     },
     {

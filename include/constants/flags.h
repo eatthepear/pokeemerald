@@ -543,11 +543,11 @@
 #define FLAG_HIDDEN_ITEM_ZONE3A_POTION                       (FLAG_HIDDEN_ITEMS_START + 0x0A)
 #define FLAG_HIDDEN_ITEM_ZONE3A_PARALYZE_HEAL                (FLAG_HIDDEN_ITEMS_START + 0x0B)
 #define FLAG_HIDDEN_ITEM_ZONE3A_HEAL_BALL                    (FLAG_HIDDEN_ITEMS_START + 0x0D)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_CALCIUM                (FLAG_HIDDEN_ITEMS_START + 0x24)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_2          (FLAG_HIDDEN_ITEMS_START + 0x26)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_HEART_SCALE            (FLAG_HIDDEN_ITEMS_START + 0x0E)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_ULTRA_BALL             (FLAG_HIDDEN_ITEMS_START + 0x0F)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_STARDUST               (FLAG_HIDDEN_ITEMS_START + 0x10)
+#define FLAG_HIDDEN_ITEM_ZONE4A_ANTIDOTE                     (FLAG_HIDDEN_ITEMS_START + 0x24)
+#define FLAG_HIDDEN_ITEM_ZONE4A_POTION                       (FLAG_HIDDEN_ITEMS_START + 0x26)
+#define FLAG_HIDDEN_ITEM_ZONE4C_POKE_BALL                    (FLAG_HIDDEN_ITEMS_START + 0x0E)
+#define FLAG_HIDDEN_ITEM_ZONE4C_PARALYZE_HEAL                (FLAG_HIDDEN_ITEMS_START + 0x0F)
+#define FLAG_HIDDEN_ITEM_ZONE4E_AWAKENING                    (FLAG_HIDDEN_ITEMS_START + 0x10)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x11)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_IRON                   (FLAG_HIDDEN_ITEMS_START + 0x13)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_YELLOW_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x12)
@@ -1051,11 +1051,11 @@
 #define FLAG_ITEM_ZONE3A_SUPER_POTION                               0x3EC
 #define FLAG_ITEM_ZONE3A_AWAKENING                                  0x3ED
 #define FLAG_ITEM_ZONE3A_BURN_HEAL                                  0x3EE
-#define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
-#define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0
-#define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1
-#define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
-#define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
+#define FLAG_ITEM_ZONE4A_SUPER_POTION                               0x3EF
+#define FLAG_ITEM_ZONE4B_SILK_SCARF                                 0x3F0
+#define FLAG_ITEM_ZONE4C_ETHER                                      0x3F1
+#define FLAG_ITEM_ZONE4D_REPEL                                      0x3F2
+#define FLAG_ITEM_ZONE4E_RARE_CANDY                                 0x3F3
 #define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4
 #define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
 #define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6

@@ -176,3 +176,7 @@ gText_Joy_WonderfulDay:
 gText_ExitSign:
 	.string "This is the exit!\n"
 	.string "If you leave, you can't come back.$"
+
+gText_NotEnoughMons:
+	.string "You need at least two Pokémon to\n"
+	.string "Double Battle.$"
