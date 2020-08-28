@@ -20,5 +20,7 @@ Zone4E_EventScript_ItemRareCandy::
 	end
 
 Zone4E_EventScript_Exit::
-	warp MAP_ZONE3SANCTUARY, 255, 7, 7
+	lockall
+	warp MAP_ZONE4SANCTUARY, 255, 7, 7
+	releaseall
 	end
