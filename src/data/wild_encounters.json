@@ -11822,6 +11822,351 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE4A",
+          "base_label": "gZone4A",
+          "land_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_ALOLAN_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SCATTERBUG"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE4B",
+          "base_label": "gZone4B",
+          "land_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_ALOLAN_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SCATTERBUG"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE4C",
+          "base_label": "gZone4C",
+          "land_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_ALOLAN_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SCATTERBUG"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE4D",
+          "base_label": "gZone4D",
+          "land_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_ALOLAN_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SCATTERBUG"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE4E",
+          "base_label": "gZone4E",
+          "land_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_ALOLAN_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SCATTERBUG"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_WYNAUT"
+              }
+            ]
+          }
         }
       ]
     },
