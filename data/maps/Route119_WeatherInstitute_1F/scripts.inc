@@ -1,2 +1,2 @@
-Route119_WeatherInstitute_1F_MapScripts:: @ 826FA86
+Route119_WeatherInstitute_1F_MapScripts::
 	.byte 0
