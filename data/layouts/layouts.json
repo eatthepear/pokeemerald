@@ -4610,6 +4610,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone4Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone4Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE5A",
+      "name": "Zone5A_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Zone5A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone5A/map.bin"
     }
   ]
 }
