@@ -4620,6 +4620,26 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Zone5A/border.bin",
       "blockdata_filepath": "data/layouts/Zone5A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE5SANCTUARY",
+      "name": "Zone5Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone5Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone5Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE5SHOPS",
+      "name": "Zone5Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone5Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone5Shops/map.bin"
     }
   ]
 }

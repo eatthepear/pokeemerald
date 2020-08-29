@@ -573,6 +573,8 @@
 #define MAP_ZONE4SANCTUARY (18 | (27 << 8))
 #define MAP_ZONE4SHOPS     (19 | (27 << 8))
 #define MAP_ZONE5A         (20 | (27 << 8))
+#define MAP_ZONE5SANCTUARY (21 | (27 << 8))
+#define MAP_ZONE5SHOPS     (22 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

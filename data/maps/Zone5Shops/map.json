@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ZONE4SHOPS",
-  "name": "Zone4Shops",
-  "layout": "LAYOUT_ZONE4SHOPS",
+  "id": "MAP_ZONE5SHOPS",
+  "name": "Zone5Shops",
+  "layout": "LAYOUT_ZONE5SHOPS",
   "music": "MUS_RUNECITY",
-  "region_map_section": "MAPSEC_ZONE_4",
+  "region_map_section": "MAPSEC_ZONE_5",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone4Shops_EventScript_Shop_General",
+      "script": "NULL",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone4Shops_EventScript_Shop_Unique",
+      "script": "NULL",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Shop_LelouchIntroCheck",
+      "script": "NULL",
       "flag": "0"
     },
     {
@@ -72,56 +72,56 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 0
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 0
     },
     {
       "x": 18,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 1
     },
     {
       "x": 19,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 1
     },
     {
       "x": 3,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 2
     },
     {
       "x": 4,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 2
     },
     {
       "x": 18,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 3
     },
     {
       "x": 19,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4SANCTUARY",
+      "dest_map": "MAP_ZONE5SANCTUARY",
       "dest_warp_id": 3
     }
   ],

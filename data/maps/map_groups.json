@@ -607,7 +607,9 @@
     "Zone4E",
     "Zone4Sanctuary",
     "Zone4Shops",
-    "Zone5A"
+    "Zone5A",
+    "Zone5Sanctuary",
+    "Zone5Shops"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"

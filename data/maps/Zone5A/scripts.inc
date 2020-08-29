@@ -71,7 +71,7 @@ Zone5A_EventScript_Leviathan2Defeated:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	warp MAP_ZONE4SANCTUARY, 255, 7, 7
+	warp MAP_ZONE5SANCTUARY, 255, 7, 7
 	releaseall
 	end
 
