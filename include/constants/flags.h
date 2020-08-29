@@ -1056,7 +1056,7 @@
 #define FLAG_ITEM_ZONE4C_ETHER                                      0x3F1
 #define FLAG_ITEM_ZONE4D_REPEL                                      0x3F2
 #define FLAG_ITEM_ZONE4E_RARE_CANDY                                 0x3F3
-#define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4
+#define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
 #define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
 #define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6
 #define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7

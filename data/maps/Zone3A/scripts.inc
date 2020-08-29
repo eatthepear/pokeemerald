@@ -5,8 +5,9 @@ Zone3A_EventScript_Exit::
 	lockall
 	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
-	delay 96
+	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
@@ -18,10 +19,10 @@ Zone3A_EventScript_Exit::
 	waitmovement 0
 	msgbox Zone3A_Text_Leviathan1Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Defeat
-	goto Zone3A_EventScript_LeviathanDefeated
+	goto Zone3A_EventScript_Leviathan1Defeated
 	end
 
-Zone3A_EventScript_LeviathanDefeated:
+Zone3A_EventScript_Leviathan1Defeated:
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_EXP_SHARE, 1
 	closemessage

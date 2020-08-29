@@ -199,55 +199,62 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Fred[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Rebecca[] = {
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_SNUBBULL,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_LEDYBA,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_ABRA,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Caitlyn[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .species = SPECIES_KRICKETUNE,
+    .species = SPECIES_SEEDOT,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_FLETCHLING,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Ryan[] = {
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_ZUBAT,
+    .lvl = 10,
+    .species = SPECIES_BUIZEL,
     },
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 10,
+    .species = SPECIES_PATRAT,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .iv = 255,
+    .lvl = 11,
+    .species = SPECIES_BUTTERFREE,
+    .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER}
     },
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_CARVANHA,
+    .iv = 255,
+    .lvl = 11,
+    .species = SPECIES_BEEDRILL,
+    .moves = {MOVE_TWINEEDLE, MOVE_FURY_ATTACK, MOVE_POISON_TAIL, MOVE_RAGE}
     }
 };
 
