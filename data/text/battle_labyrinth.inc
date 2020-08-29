@@ -122,13 +122,12 @@ gText_Lelouch_Intro1:
 gText_Lelouch_Intro2:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: You may call me Lelouch.\p"
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I provide a variety of\n"
-	.string "services to improve one's Pokémon.\p"
-	.string "But I demand a special price, one\n"
-	.string "that I see you cannot pay.$"
+	.string "services to improve one's Pokémon.$"
 
 gText_Lelouch_NoPoints:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You have nothing of value\n"
-	.string "to me. Leave.$"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I demand a special price\n"
+	.string "for my services, one that I see you\l"
+	.string "cannot pay. Leave.$"
 
 gText_HealingSign:
 	.string "Joy's Healing Shop\n"
@@ -151,7 +150,7 @@ gText_Joy_Welcome:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Welcome to Joy's Healing Shop.\p"
 	.string "We heal your Pokemon for a flat\n"
 	.string "¥500 fee, which also comes with\l"
-	.string "access to the PC.$"
+	.string "complimentary access to the PC.$"
 
 gText_Joy_Nuzlocke:
 	.string "I will also remove any fallen\n"
@@ -168,7 +167,7 @@ gText_Joy_ThankYou:
 
 gText_Joy_PartyHealed:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Your party has been restored.\n"
-	.string "You can also now use the PC.$"
+	.string "You also now have access to the PC.$"
 
 gText_Joy_WonderfulDay:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Have a wonderful day!$"
@@ -179,4 +178,4 @@ gText_ExitSign:
 
 gText_NotEnoughMons:
 	.string "You need at least two Pokémon to\n"
-	.string "Double Battle.$"
+	.string "initiate a Double Battle.$"

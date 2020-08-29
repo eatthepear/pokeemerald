@@ -32,15 +32,15 @@ Zone5Sanctuary_EventScript_Intro:
 	hidemoneybox
 	setvar VAR_ZONE, 6
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
-	playfanfare MUS_FANFA4
-	msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
-	waitfanfare
+	@ playfanfare MUS_FANFA4
+	@ msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
+	@ waitfanfare
 	playfanfare MUS_FANFA4
 	msgbox gText_Quentin_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare
-	@ playfanfare MUS_FANFA4
-	@ msgbox gText_Quentin_UnlockedServices, MSGBOX_DEFAULT
-	@ waitfanfare
+	playfanfare MUS_FANFA4
+	msgbox gText_Quentin_UnlockedServices, MSGBOX_DEFAULT
+	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Quentin_WalkUp

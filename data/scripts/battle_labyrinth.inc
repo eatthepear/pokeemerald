@@ -45,19 +45,18 @@ EventScript_Shop_VarrickIntroCheck:
 EventScript_Shop_LelouchIntroCheck::
 	lock
 	faceplayer
-	goto_if_set FLAG_LELOUCH_INTRO, EventScript_Shop_ServicesDenied
-	setflag FLAG_LELOUCH_INTRO
-	msgbox gText_Lelouch_Intro1, MSGBOX_AUTOCLOSE
-	delay 96
-	msgbox gText_Lelouch_Intro2, MSGBOX_AUTOCLOSE
-	goto EventScript_Shop_ServicesDenied
-	end
-
-EventScript_Shop_ServicesDenied:
+	call_if_unset FLAG_LELOUCH_INTRO, EventScript_Shop_LelouchIntro
 	msgbox gText_Lelouch_NoPoints, MSGBOX_AUTOCLOSE
 	release
 	end
 
+EventScript_Shop_LelouchIntro:
+	msgbox gText_Lelouch_Intro1, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox gText_Lelouch_Intro2, MSGBOX_AUTOCLOSE
+	setflag FLAG_LELOUCH_INTRO
+	return
+	
 EventScript_Joy_DenyPC::
 	lockall
 	applymovement 4, Common_Movement_FaceRight
