@@ -243,7 +243,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ryan[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Declan[] = {
     {
     .iv = 255,
     .lvl = 11,
