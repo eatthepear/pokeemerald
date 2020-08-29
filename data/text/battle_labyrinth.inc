@@ -56,13 +56,13 @@ gText_Quentin_Unlocked:
 	.string "THE FOLLOWING SHOPS ARE UPGRADED:$"
 
 gText_Quentin_UnlockedGeneral:
-	.string "TIM'S GENERAL PURPOSE SHOP.$"
+	.string "{COLOR RED}TIM'S GENERAL PURPOSE SHOP{COLOR DARK_GREY}.$"
 
 gText_Quentin_UnlockedUnique:
-	.string "SILPH UNIQUE ITEM SHOP.$"
+	.string "{COLOR RED}SILPH UNIQUE ITEM SHOP{COLOR DARK_GREY}.$"
 
 gText_Quentin_UnlockedServices:
-	.string "LELOUCH'S SPECIAL SERVICES SHOP.$"
+	.string "{COLOR RED}LELOUCH'S SPECIAL SERVICES SHOP{COLOR DARK_GREY}.$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
