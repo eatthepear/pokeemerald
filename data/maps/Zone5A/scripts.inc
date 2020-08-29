@@ -50,7 +50,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	lock
 	fadeoutbgm 1
 	msgbox Zone5A_Text_Leviathan2Intro1, MSGBOX_AUTOCLOSE
-	applymovement 4, CommonMovement_ExclamationMark
+	applymovement 4, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
