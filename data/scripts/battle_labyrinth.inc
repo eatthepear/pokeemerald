@@ -32,12 +32,12 @@ EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
 
-EventScript_Shop_TimIntroCheck:
+EventScript_Shop_TimIntro:
 	msgbox gText_Tim_Intro, MSGBOX_AUTOCLOSE
 	setflag FLAG_TIM_INTRO
 	return
 
-EventScript_Shop_VarrickIntroCheck:
+EventScript_Shop_VarrickIntro:
 	msgbox gText_Varrick_Intro, MSGBOX_AUTOCLOSE
 	setflag FLAG_VARRICK_INTRO
 	return

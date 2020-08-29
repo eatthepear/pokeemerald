@@ -4,7 +4,7 @@ Zone1Shops_MapScripts::
 Zone1Shops_EventScript_Shop_General::
 	lock
 	faceplayer
-	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntroCheck
+	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntro
 	message gText_Tim_Welcome
 	waitmessage
 	pokemart Zone1Shops_Shop_General
@@ -25,7 +25,7 @@ Zone1Shops_Shop_General:
 Zone1Shops_EventScript_Shop_Unique::
 	lock
 	faceplayer
-	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntroCheck
+	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntro
 	message gText_Varrick_Welcome
 	waitmessage
 	pokemart Zone1Shops_Shop_Unique

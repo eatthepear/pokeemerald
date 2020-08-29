@@ -4,7 +4,7 @@ Zone5Shops_MapScripts::
 Zone5Shops_EventScript_Shop_General::
 	lock
 	faceplayer
-	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntroCheck
+	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntro
 	message gText_Tim_Welcome
 	waitmessage
 	pokemart Zone5Shops_Shop_General
@@ -32,7 +32,7 @@ Zone5Shops_Shop_General:
 Zone5Shops_EventScript_Shop_Unique::
 	lock
 	faceplayer
-	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntroCheck
+	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntro
 	message gText_Varrick_Welcome
 	waitmessage
 	pokemart Zone5Shops_Shop_Unique
@@ -43,9 +43,23 @@ Zone5Shops_EventScript_Shop_Unique::
 	.align 2
 Zone5Shops_Shop_Unique:
 	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_SILK_SCARF
 	.2byte ITEM_MIRACLE_SEED
 	.2byte ITEM_CHARCOAL
 	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_MAGNET
+	.2byte ITEM_SILVER_POWDER
 	.2byte ITEM_NONE
+	release
+	end
+
+Zone5Shops_EventScript_Shop_Services::
+	lock
+	faceplayer
+	call_if_unset FLAG_LELOUCH_INTRO, EventScript_Shop_LelouchIntro
 	release
 	end
