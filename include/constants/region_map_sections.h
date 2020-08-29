@@ -94,7 +94,7 @@
 #define MAPSEC_ZONE_2                       0x5A
 #define MAPSEC_ZONE_3                       0x5B
 #define MAPSEC_ZONE_4                       0x5C
-#define MAPSEC_VERMILION_CITY               0x5D
+#define MAPSEC_ZONE_5                       0x5D
 #define MAPSEC_CELADON_CITY                 0x5E
 #define MAPSEC_FUCHSIA_CITY                 0x5F
 #define MAPSEC_CINNABAR_ISLAND              0x60
