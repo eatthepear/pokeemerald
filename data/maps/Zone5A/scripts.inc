@@ -101,12 +101,12 @@ Zone3A_Text_Leviathan2Reward:
 	.string "have to join my club. \p"
 	.string "A reward?\n"
 	.string "...\l"
-	.string "Look, I don’t go around giving out\l"
+	.string "Look, I don't go around giving out\l"
 	.string "sweet rewards to non-club members.\l"
 	.string "...\l"
 	.string "...\p"
 	.string "You can have these Shards I found.\n"
-	.string "They’re no use for my fabulous\l"
+	.string "They're no use for my fabulous\l"
 	.string "Bug Pokémon anyways.$"
 
 Zone5A_EventScript_ItemQuickBall::
