@@ -99,11 +99,11 @@ EventScript_Shop_LelouchTraining1:
 EventScript_Shop_LelouchExp1:
 	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq EventScript_Shop_LelouchTraining1
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
-	trainerbattle_no_intro TRAINER_TRAINER_LEVIATHAN2, gText_LelouchDefeated
+	trainerbattle_no_intro TRAINER_LEVIATHAN2, gText_LelouchDefeated
 	release
 	end
 

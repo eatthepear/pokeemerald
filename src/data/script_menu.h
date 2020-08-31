@@ -324,9 +324,9 @@ static const struct MenuAction MultichoiceList_Floors[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_ShardsR[] =
+static const struct MenuAction MultichoiceList_LelouchTraining1[] =
 {
-    {gText_RedShard},
+    {gText_ExpTraining1},
     {gText_Exit},
 };
 
@@ -857,7 +857,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_TMS]            = MULTICHOICE(MultichoiceList_GameCornerTMs),
     [MULTI_SSTIDAL_SLATEPORT_NO_BF]    = MULTICHOICE(MultichoiceList_SSTidalSlateportNoBF),
     [MULTI_FLOORS]                     = MULTICHOICE(MultichoiceList_Floors),
-    [MULTI_SHARDS_R]                   = MULTICHOICE(MultichoiceList_ShardsR),
+    [MULTI_LELOUCH_TRAINING1]          = MULTICHOICE(MultichoiceList_LelouchTraining1),
     [MULTI_SHARDS_Y]                   = MULTICHOICE(MultichoiceList_ShardsY),
     [MULTI_SHARDS_RY]                  = MULTICHOICE(MultichoiceList_ShardsRY),
     [MULTI_SHARDS_B]                   = MULTICHOICE(MultichoiceList_ShardsB),

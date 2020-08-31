@@ -2974,4 +2974,6 @@ extern const u8 gText_MoveReminderService[];
 extern const u8 gText_MoveTutorService[];
 extern const u8 gText_OtherService[];
 
+extern const u8 gText_ExpTraining1[];
+
 #endif // GUARD_STRINGS_H

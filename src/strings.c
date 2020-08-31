@@ -1824,3 +1824,4 @@ const u8 gText_TrainingService[] = _("Training - Red");
 const u8 gText_MoveReminderService[] = _("Move Reminder - Blue");
 const u8 gText_MoveTutorService[] = _("Move Tutor - Green");
 const u8 gText_OtherService[] = _("Other - Yellow");
+const u8 gText_ExpTraining1[] =_("Experience Training 1");
