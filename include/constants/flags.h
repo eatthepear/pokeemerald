@@ -41,12 +41,12 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_TIM_INTRO       0x20 // Unused Flag
-#define FLAG_VARRICK_INTRO   0x21 // Unused Flag
-#define FLAG_LELOUCH_INTRO   0x22 // Unused Flag
-#define FLAG_JOY_INTRO       0x23 // Unused Flag
-#define FLAG_HIDE_LEVIATHAN1 0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_TIM_INTRO       0x20 // First time intro for Tim
+#define FLAG_VARRICK_INTRO   0x21 // First time intro for Varrick
+#define FLAG_LELOUCH_INTRO   0x22 // First time intro for Lelouch
+#define FLAG_JOY_INTRO       0x23 // First time intro for Joy
+#define FLAG_HIDE_LEVIATHAN1 0x24 // Used to hide Leviathan 1 from vision
+#define FLAG_LELOUCH_SHARDS  0x25 // First time talking to Lelouch with shards
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag

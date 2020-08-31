@@ -777,6 +777,15 @@ static const struct MenuAction MultichoiceList_VanillaNuzlocke[] =
     {gText_Nuzlocke},
 };
 
+static const struct MenuAction MultichoiceList_LelouchOptions[] =
+{
+    {gText_TrainingService},
+    {gText_MoveReminderService},
+    {gText_MoveTutorService},
+    {gText_OtherService},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -800,7 +809,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_VANILLA_NUZLOCKE]           = MULTICHOICE(MultichoiceList_VanillaNuzlocke),
-    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_LELOUCH_OPTIONS]            = MULTICHOICE(MultichoiceList_LelouchOptions),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),

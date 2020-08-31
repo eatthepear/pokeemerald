@@ -62,7 +62,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 
 Zone5A_EventScript_Leviathan2Defeated:
 	msgbox Zone3A_Text_Leviathan2Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_YELLOW_SHARD, 5
+	giveitem ITEM_RED_SHARD, 5
 	closemessage
 	applymovement 4, Common_Movement_WalkRight
 	waitmovement 0

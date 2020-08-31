@@ -2969,4 +2969,9 @@ extern const u8 gText_Beauty3[];
 extern const u8 gText_Vanilla[];
 extern const u8 gText_Nuzlocke[];
 
+extern const u8 gText_TrainingService[];
+extern const u8 gText_MoveReminderService[];
+extern const u8 gText_MoveTutorService[];
+extern const u8 gText_OtherService[];
+
 #endif // GUARD_STRINGS_H

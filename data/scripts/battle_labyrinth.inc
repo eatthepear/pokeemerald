@@ -57,6 +57,35 @@ EventScript_Shop_LelouchIntro:
 	setflag FLAG_LELOUCH_INTRO
 	return
 	
+EventScript_Shop_LelouchCheckDeny:
+	checkitem 1, ITEM_RED_SHARD
+	compare VAR_RESULT, FALSE
+	goto EventScript_Shop_LelouchDeny
+	checkitem 1, ITEM_BLUE_SHARD
+	compare VAR_RESULT, FALSE
+	goto EventScript_Shop_LelouchDeny
+	checkitem 1, ITEM_YELLOW_SHARD
+	compare VAR_RESULT, FALSE
+	goto EventScript_Shop_LelouchDeny
+	checkitem 1, ITEM_GREEN_SHARD
+	compare VAR_RESULT, FALSE
+	goto EventScript_Shop_LelouchDeny
+	return
+
+EventScript_Shop_LelouchDeny:
+	msgbox gText_Lelouch_NoShards, MSGBOX_AUTOCLOSE
+	release
+	end
+
+EventScript_Shop_LelouchExplainShards:
+	msgbox gText_Lelouch_ExplainShards, MSGBOX_AUTOCLOSE
+	return
+
+EventScript_Shop_LelouchNotEnoughColor:
+	msgbox gText_Lelouch_NotEnoughColor, MSGBOX_AUTOCLOSE
+	release
+	end
+
 EventScript_Joy_DenyPC::
 	lockall
 	applymovement 4, Common_Movement_FaceRight

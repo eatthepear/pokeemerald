@@ -124,10 +124,33 @@ gText_Lelouch_Intro2:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I provide a variety of\n"
 	.string "services to improve one's Pokémon.$"
 
-gText_Lelouch_NoPoints:
+gText_Lelouch_NoShards:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I demand a special price\n"
 	.string "for my services, one that I see you\l"
 	.string "cannot pay. Leave.$"
+
+gText_Lelouch_ExplainShards:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I sense...\n"
+	.string "Ah. You've brought them.\l"
+	.string "Shards.\p"
+	.string "There are four types of Shards:\n"
+	.string "Red, Blue, Green, and Yellow,\l"
+	.string "ranked by least to most rare.\p"
+	.string "Each can be exchanged for a certain\n"
+	.string "type of service I provide.\p"
+	.string "Training services cost Red Shards.\p"
+	.string "Move Reminder services cost Blue Shards.\p"
+	.string "Move Tutor services cost Green Shards.\p"
+	.string "Other services cost Yellow Shards.\p"
+	.string "I hope they serve you well...$"
+
+gText_Lelouch_Welcome:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: For the right price...\n"
+	.string "Welcome to Lelouch's Special Services.$"
+
+gText_Lelouch_NotEnoughColor:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You don't have any Shards\n"
+	.string "of that color.$"
 
 gText_HealingSign:
 	.string "Joy's Healing Shop\n"

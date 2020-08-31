@@ -61,5 +61,14 @@ Zone5Shops_EventScript_Shop_Services::
 	lock
 	faceplayer
 	call_if_unset FLAG_LELOUCH_INTRO, EventScript_Shop_LelouchIntro
+	call_if_unset FLAG_LELOUCH_SHARDS, EventScript_Shop_LelouchCheckDeny	
+	call_if_unset FLAG_LELOUCH_SHARDS, EventScript_Shop_LelouchExplainShards
+	msgbox gText_Lelouch_Welcome, MSGBOX_DEFAULT
+	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchNotEnoughColor
+	case 1, EventScript_Shop_LelouchNotEnoughColor
+	case 2, EventScript_Shop_LelouchNotEnoughColor
+	case 3, EventScript_Shop_LelouchNotEnoughColor
 	release
 	end
