@@ -76,6 +76,7 @@ EventScript_Shop_LelouchTraining1:
 	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING1, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1

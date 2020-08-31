@@ -248,13 +248,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_Declan[] = {
     .iv = 255,
     .lvl = 11,
     .species = SPECIES_BUTTERFREE,
-    .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER}
+    .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_POISON_POWDER}
     },
     {
     .iv = 255,
     .lvl = 11,
     .species = SPECIES_BEEDRILL,
-    .moves = {MOVE_TWINEEDLE, MOVE_FURY_ATTACK, MOVE_POISON_TAIL, MOVE_RAGE}
+    .moves = {MOVE_TWINEEDLE, MOVE_FURY_ATTACK, MOVE_RAGE, MOVE_NONE}
     }
 };
 

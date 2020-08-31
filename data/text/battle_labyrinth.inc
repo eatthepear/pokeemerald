@@ -151,6 +151,10 @@ gText_Lelouch_NotEnoughColor:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You don't have any Shards\n"
 	.string "of that color.$"
 
+gText_Lelouch_CostsRedShards:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Each training session\n"
+	.string "costs one Red Shard.$"
+
 gText_Lelouch_Exp1:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Experience Training 1\n"
 	.string "costs one Red Shard, are you sure?$"
