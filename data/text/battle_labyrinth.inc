@@ -137,9 +137,9 @@ gText_Lelouch_ExplainShards:
 	.string "ranked by least to most rare.\p"
 	.string "Each can be exchanged for a certain\n"
 	.string "type of service I provide.\p"
-	.string "Training services cost Red Shards.\p"
-	.string "Move Reminder services cost Blue Shards.\p"
-	.string "Move Tutor services cost Green Shards.\p"
+	.string "Pokémon training costs Red Shards.\p"
+	.string "Move Relearning costs Blue Shards.\p"
+	.string "Move Tutoring costs Green Shards.\p"
 	.string "Other services cost Yellow Shards.\p"
 	.string "I hope they serve you well...$"
 
