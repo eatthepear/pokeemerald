@@ -56,21 +56,6 @@ EventScript_Shop_LelouchIntro:
 	msgbox gText_Lelouch_Intro2, MSGBOX_AUTOCLOSE
 	setflag FLAG_LELOUCH_INTRO
 	return
-	
-EventScript_Shop_LelouchCheckDeny:
-	checkitem 1, ITEM_RED_SHARD
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchDeny
-	checkitem 1, ITEM_BLUE_SHARD
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchDeny
-	checkitem 1, ITEM_YELLOW_SHARD
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchDeny
-	checkitem 1, ITEM_GREEN_SHARD
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchDeny
-	return
 
 EventScript_Shop_LelouchDeny:
 	msgbox gText_Lelouch_NoShards, MSGBOX_AUTOCLOSE

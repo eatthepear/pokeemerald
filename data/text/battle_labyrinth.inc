@@ -131,8 +131,7 @@ gText_Lelouch_NoShards:
 
 gText_Lelouch_ExplainShards:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I sense...\n"
-	.string "Ah. You've brought them.\l"
-	.string "Shards.\p"
+	.string "The aura of Shards.\p"
 	.string "There are four types of Shards:\n"
 	.string "Red, Blue, Green, and Yellow,\l"
 	.string "ranked by least to most rare.\p"
