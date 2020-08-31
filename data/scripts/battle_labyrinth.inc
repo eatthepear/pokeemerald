@@ -64,6 +64,7 @@ EventScript_Shop_LelouchDeny:
 
 EventScript_Shop_LelouchExplainShards:
 	msgbox gText_Lelouch_ExplainShards, MSGBOX_AUTOCLOSE
+	setflag FLAG_LELOUCH_SHARDS
 	return
 
 EventScript_Shop_LelouchNotEnoughColor:
@@ -72,7 +73,7 @@ EventScript_Shop_LelouchNotEnoughColor:
 	end
 
 EventScript_Shop_LelouchTraining1:
-	checkitem 1, ITEM_RED_SHARD
+	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING1, 0

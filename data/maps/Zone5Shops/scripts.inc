@@ -69,5 +69,5 @@ Zone5Shops_EventScript_Shop_Services::
 	case 1, EventScript_Shop_LelouchNotEnoughColor
 	case 2, EventScript_Shop_LelouchNotEnoughColor
 	case 3, EventScript_Shop_LelouchNotEnoughColor
-	release
+	goto EventScript_Shop_LelouchLeave
 	end

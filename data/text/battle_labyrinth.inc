@@ -163,7 +163,7 @@ gText_LelouchDefeated:
 	.string "Your Pokémon have grown stronger.$"
 
 gText_Lelouch_Leave:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Farewell.\p"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Farewell.$"
 
 gText_HealingSign:
 	.string "Joy's Healing Shop\n"
