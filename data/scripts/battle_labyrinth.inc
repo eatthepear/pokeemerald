@@ -79,7 +79,7 @@ EventScript_Shop_LelouchTraining1:
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING1, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
-	release
+	goto EventScript_Shop_LelouchLeave
 	end
 
 EventScript_Shop_LelouchExp1:
@@ -89,7 +89,7 @@ EventScript_Shop_LelouchExp1:
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
-	trainerbattle_no_intro TRAINER_LEVIATHAN2, gText_LelouchDefeated
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
 	release
 	end
 

@@ -8,14 +8,14 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Corey[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Mariam[] = {
     {
-        .iv = 0,
-        .lvl = 3,
-        .species = SPECIES_PIDGEY,
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_PIDGEY,
     },
     {
-        .iv = 0,
-        .lvl = 4,
-        .species = SPECIES_SHINX,
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_SHINX,
     }
 };
 
@@ -258,11 +258,24 @@ static const struct TrainerMonNoItemCustomMoves sParty_Declan[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_LelouchExp1[] = {
     {
     .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
+    .lvl = 10,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
     }
 };
 
