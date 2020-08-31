@@ -46,7 +46,7 @@ EventScript_Shop_LelouchIntroCheck::
 	lock
 	faceplayer
 	call_if_unset FLAG_LELOUCH_INTRO, EventScript_Shop_LelouchIntro
-	msgbox gText_Lelouch_NoPoints, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_NoShards, MSGBOX_AUTOCLOSE
 	release
 	end
 
