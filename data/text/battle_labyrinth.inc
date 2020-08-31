@@ -152,6 +152,20 @@ gText_Lelouch_NotEnoughColor:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You don't have any Shards\n"
 	.string "of that color.$"
 
+gText_Lelouch_Exp1:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Experience Training 1\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_PayRed:
+	.string "{PLAYER} handed over 1 Red Shard.$"
+
+gText_LelouchDefeated:
+	.string "Excellent work.\n"
+	.string "Your Pokémon have grown stronger.$"
+
+gText_Lelouch_Leave:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Farewell.\p"
+
 gText_HealingSign:
 	.string "Joy's Healing Shop\n"
 	.string "Health care costs money!$"

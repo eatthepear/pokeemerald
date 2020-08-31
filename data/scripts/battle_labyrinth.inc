@@ -60,16 +60,16 @@ EventScript_Shop_LelouchIntro:
 EventScript_Shop_LelouchCheckDeny:
 	checkitem 1, ITEM_RED_SHARD
 	compare VAR_RESULT, FALSE
-	goto EventScript_Shop_LelouchDeny
+	goto_if_eq EventScript_Shop_LelouchDeny
 	checkitem 1, ITEM_BLUE_SHARD
 	compare VAR_RESULT, FALSE
-	goto EventScript_Shop_LelouchDeny
+	goto_if_eq EventScript_Shop_LelouchDeny
 	checkitem 1, ITEM_YELLOW_SHARD
 	compare VAR_RESULT, FALSE
-	goto EventScript_Shop_LelouchDeny
+	goto_if_eq EventScript_Shop_LelouchDeny
 	checkitem 1, ITEM_GREEN_SHARD
 	compare VAR_RESULT, FALSE
-	goto EventScript_Shop_LelouchDeny
+	goto_if_eq EventScript_Shop_LelouchDeny
 	return
 
 EventScript_Shop_LelouchDeny:
@@ -83,6 +83,32 @@ EventScript_Shop_LelouchExplainShards:
 
 EventScript_Shop_LelouchNotEnoughColor:
 	msgbox gText_Lelouch_NotEnoughColor, MSGBOX_AUTOCLOSE
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchTraining1:
+	checkitem 1, ITEM_RED_SHARD
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	multichoice 0, 0, MULTI_LELOUCH_TRAINING1, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchExp1
+	release
+	end
+
+EventScript_Shop_LelouchExp1:
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_TRAINER_LEVIATHAN2, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchLeave:
+	msgbox gText_Lelouch_Leave, MSGBOX_AUTOCLOSE
 	release
 	end
 
