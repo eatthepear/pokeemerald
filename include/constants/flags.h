@@ -548,12 +548,12 @@
 #define FLAG_HIDDEN_ITEM_ZONE4C_POKE_BALL                    (FLAG_HIDDEN_ITEMS_START + 0x0E)
 #define FLAG_HIDDEN_ITEM_ZONE4C_PARALYZE_HEAL                (FLAG_HIDDEN_ITEMS_START + 0x0F)
 #define FLAG_HIDDEN_ITEM_ZONE4E_AWAKENING                    (FLAG_HIDDEN_ITEMS_START + 0x10)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x11)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_IRON                   (FLAG_HIDDEN_ITEMS_START + 0x13)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_YELLOW_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x12)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 0x14)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD             (FLAG_HIDDEN_ITEMS_START + 0x0C)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_3_STAR_PIECE             (FLAG_HIDDEN_ITEMS_START + 0x15)
+#define FLAG_HIDDEN_ITEM_ZONE6A_REPEL                        (FLAG_HIDDEN_ITEMS_START + 0x11)
+#define FLAG_HIDDEN_ITEM_ZONE6A_SUPER_POTION                 (FLAG_HIDDEN_ITEMS_START + 0x13)
+#define FLAG_HIDDEN_ITEM_ZONE6A_POKE_BALL                    (FLAG_HIDDEN_ITEMS_START + 0x12)
+#define FLAG_HIDDEN_ITEM_ZONE6A_BURN_HEAL                    (FLAG_HIDDEN_ITEMS_START + 0x14)
+#define FLAG_HIDDEN_ITEM_ZONE6A_ANTIDOTE                     (FLAG_HIDDEN_ITEMS_START + 0x0C)
+#define FLAG_HIDDEN_ITEM_ZONE6A_GREAT_BALL                   (FLAG_HIDDEN_ITEMS_START + 0x15)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_3_HP_UP                  (FLAG_HIDDEN_ITEMS_START + 0x16)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_3_HEART_SCALE            (FLAG_HIDDEN_ITEMS_START + 0x17)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_3_RED_SHARD              (FLAG_HIDDEN_ITEMS_START + 0x18)
@@ -1057,9 +1057,9 @@
 #define FLAG_ITEM_ZONE4D_REPEL                                      0x3F2
 #define FLAG_ITEM_ZONE4E_RARE_CANDY                                 0x3F3
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
-#define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
-#define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6
-#define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7
+#define FLAG_ITEM_Zone6A_NET_BALL                                   0x3F5
+#define FLAG_ITEM_ZONE6A_1000                                       0x3F6
+#define FLAG_ITEM_ZONE6A_NEST_BALL                                  0x3F7
 #define FLAG_ITEM_ROUTE_115_SUPER_POTION                            0x3F8
 #define FLAG_ITEM_ROUTE_115_TM_01                                   0x3F9
 #define FLAG_ITEM_ROUTE_115_IRON                                    0x3FA

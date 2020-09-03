@@ -22,11 +22,11 @@
 #define TRAINER_RYAN                         18
 #define TRAINER_LEVIATHAN2                   19
 #define TRAINER_LELOUCHEXP1                  20
-#define TRAINER_GRUNT_MUSEUM_2               21
-#define TRAINER_GRUNT_SPACE_CENTER_1         22
-#define TRAINER_GRUNT_MT_PYRE_1              23
-#define TRAINER_GRUNT_MT_PYRE_2              24
-#define TRAINER_GRUNT_MT_PYRE_3              25
+#define TRAINER_FRANK                        21
+#define TRAINER_MELANIE                      22
+#define TRAINER_CONSTANCE                    23
+#define TRAINER_RONAN                        24
+#define TRAINER_RITA                         25
 #define TRAINER_GRUNT_WEATHER_INST_4         26
 #define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28

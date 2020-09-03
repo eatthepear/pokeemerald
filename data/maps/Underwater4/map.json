@@ -24,7 +24,9 @@
       "map": "MAP_ROUTE128"
     }
   ],
-  "object_events": [],
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 38,
@@ -34,23 +36,10 @@
       "dest_warp_id": 0
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 38,
-      "y": 19,
-      "elevation": 3,
-      "item": "ITEM_PROTEIN",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_4_PROTEIN"
-    },
-    {
-      "type": "hidden_item",
-      "x": 69,
-      "y": 18,
-      "elevation": 3,
-      "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_4_PEARL"
-    }
+
   ]
 }

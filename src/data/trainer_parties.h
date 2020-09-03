@@ -279,53 +279,65 @@ static const struct TrainerMonNoItemCustomMoves sParty_LelouchExp1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Frank[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .lvl = 10,
+    .species = SPECIES_BUNNELBY,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .lvl = 10,
+    .species = SPECIES_GRUBBIN,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Melanie[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
+    .lvl = 10,
+    .species = SPECIES_AUDINO,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Constance[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 11,
+    .species = SPECIES_STARLY,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Ronan[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre3[] = {
+    .lvl = 11,
+    .species = SPECIES_IGGLYBUFF,
+    },
     {
     .iv = 0,
-    .lvl = 30,
+    .lvl = 11,
+    .species = SPECIES_RALTS,
+    },
+    {
+    .iv = 0,
+    .lvl = 11,
     .species = SPECIES_POOCHYENA,
+    }
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_Rita[] = {
+    {
+    .iv = 255,
+    .lvl = 12,
+    .species = SPECIES_ROSELIA,
+    .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_POISON_POWDER}
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_CARVANHA,
+    .iv = 255,
+    .lvl = 12,
+    .species = SPECIES_JIGGLYPUFF,
+    .moves = {MOVE_TWINEEDLE, MOVE_FURY_ATTACK, MOVE_RAGE, MOVE_NONE}
     }
 };
 
