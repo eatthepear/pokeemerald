@@ -41,11 +41,11 @@ Zone6Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
+	msgbox Zone6Sanctuary_Text_Quentin_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone6Sanctuary_EventScript_Leave
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox Zone6Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -65,3 +65,7 @@ Zone6Sanctuary_Text_Quentin_WhenUReady:
 	.string "ENTER {COLOR RED}ZONE 7{COLOR DARK_GREY} AND  {COLOR RED}ZONE 8{COLOR DARK_GREY},\l"
 	.string "COME TALK TO ME.$"
 
+Zone6Sanctuary_Text_Quentin_ReadyToLeave:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
+	.string "YOU WILL BE ENTERING\l"
+	.string "{COLOR RED}ZONE 7{COLOR DARK_GREY} and {COLOR RED}ZONE 8{COLOR DARK_GREY}.$"
