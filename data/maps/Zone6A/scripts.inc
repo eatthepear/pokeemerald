@@ -22,6 +22,7 @@ Zone6A_EventScript_Intro:
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
+	setvar VAR_ZONE, 7
 	releaseall
 	end
 
