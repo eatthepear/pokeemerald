@@ -4660,6 +4660,16 @@
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Zone6Sanctuary/border.bin",
       "blockdata_filepath": "data/layouts/Zone6Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE6SHOPS",
+      "name": "Zone6Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone6Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone6Shops/map.bin"
     }
   ]
 }
