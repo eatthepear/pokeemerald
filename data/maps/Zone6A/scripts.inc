@@ -26,6 +26,13 @@ Zone6A_EventScript_Intro:
 	releaseall
 	end
 
+Zone6A_EventScript_Exit::
+	lockall
+	setvar VAR_ZONE, 6
+	warp MAP_ZONE6SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone6A_EventScript_Rita::
 	lock
 	faceplayer

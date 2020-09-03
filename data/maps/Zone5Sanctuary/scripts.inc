@@ -47,15 +47,8 @@ Zone5Sanctuary_EventScript_Intro:
 	waitmovement 0
 	releaseall
 	end
-	
-Zone5Sanctuary_EventScript_NextZone::
-	lock
-	faceplayer
-	msgbox gText_Quentin_EndofDemo, MSGBOX_AUTOCLOSE
-	release
-	end
 
-Zone5Sanctuary_EventScript_NextZonedummy::
+Zone5Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	buffernumberstring 0, VAR_ZONE
@@ -69,5 +62,5 @@ Zone5Sanctuary_EventScript_NextZonedummy::
 
 Zone5Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
-	warp MAP_ZONE4A, 255, 4, 3
+	warp MAP_ZONE6A, 255, 7, 6
 	end
