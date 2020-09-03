@@ -26,7 +26,7 @@
 #define TRAINER_MELANIE                      22
 #define TRAINER_CONSTANCE                    23
 #define TRAINER_RONAN                        24
-#define TRAINER_RITA                         25
+#define TRAINER_LEVIATHAN3                   25
 #define TRAINER_GRUNT_WEATHER_INST_4         26
 #define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28

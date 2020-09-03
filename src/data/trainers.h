@@ -349,7 +349,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Ronan},
     },
 
-    [TRAINER_RITA] =
+    [TRAINER_LEVIATHAN3] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_LEADER,

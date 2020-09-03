@@ -1,5 +1,66 @@
 Zone6A_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone6A_OnFrame
 	.byte 0
+
+Zone6A_OnFrame:
+	map_script_2 VAR_ZONE, 6, Zone6A_EventScript_Intro
+	.2byte 0
+
+Zone6A_EventScript_Intro:
+	lockall
+	applymovement 1, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkLeft
+	waitmovement 0
+	msgbox Zone6A_Text_Rita_Intro, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceDown
+	waitmovement 0
+	releaseall
+	end
+
+Zone6A_EventScript_Rita::
+	lock
+	faceplayer
+	goto_if_not_defeated TRAINER_FRANK, Zone6A_EventScript_RitaSaysNo
+	goto_if_not_defeated TRAINER_MELANIE, Zone6A_EventScript_RitaSaysNo
+	goto_if_not_defeated TRAINER_CONSTANCE, Zone6A_EventScript_RitaSaysNo
+	goto_if_not_defeated TRAINER_RONAN, Zone6A_EventScript_RitaSaysNo
+	goto_if_not_defeated TRAINER_LEVIATHAN3, Zone6A_EventScript_RitaAlreadyDefeated
+	msgbox Zone6A_Text_Rita_ReadyToBattle, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone6A_EventScript_RitaBattle
+	msgbox Zone6A_Text_Rita_IWait, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone6A_EventScript_RitaSaysNo:
+	msgbox Zone6A_Text_Rita_HaventDefeatedEveryone, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone6A_EventScript_RitaBattle:
+	msgbox Zone6A_Text_Rita_IWillWin, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
+	goto Zone6A_EventScript_Leviathan3Defeated
+	end
+
+Zone6A_EventScript_Leviathan3Defeated:
+	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_SOOTHE_BELL, 1
+	release
+	end
+
+Zone6A_EventScript_RitaAlreadyDefeated:
+	msgbox Zone6A_Text_Rita_GoodLuck, MSGBOX_AUTOCLOSE
+	release
+	end
 
 Zone6A_EventScript_Frank::
 	trainerbattle_single TRAINER_FRANK, Zone6A_Text_FrankIntro, Zone6A_Text_FrankDefeat
@@ -78,3 +139,40 @@ Zone6A_Text_Found1000:
 Zone6A_EventScript_ItemNestBall::
 	finditem ITEM_NEST_BALL
 	end
+
+Zone6A_Text_Rita_Intro:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Hey. I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GREY}.\n"
+	.string "Welcome to Zone 6.\p"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: You can challenge me, if you\n"
+	.string "want. I'm pretty tough.\l"
+	.string "But you have to show your strength.\p"
+	.string "Beat all the other Trainers in the\n"
+	.string "Zone, then come back here.$"
+
+Zone6A_Text_Rita_HaventDefeatedEveryone:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: You haven't beaten everyone.\n"
+	.string "Come on, where's your spirit?$"
+
+Zone6A_Text_Rita_ReadyToBattle:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Wow, you beat everyone.\n"
+	.string "Want to challenge me now?$"
+
+Zone6A_Text_Rita_IWait:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: I'll wait for your challenge.$"
+
+Zone6A_Text_Rita_IWillWin:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: I will defeat you using the\n"
+	.string "power of Friendship and Happiness!$"
+
+Zone6A_Text_Leviathan3Defeat:
+	.string "Happiness and Friendship are\n"
+	.string "one and the same!$"
+
+Zone6A_Text_Rita_HereReward:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: For your victory, have a\n"
+	.string "Soothe Bell, so you can also be\l"
+	.string "friends with your Pokémon partners.$"
+
+Zone6A_Text_Rita_GoodLuck:
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Best of luck in the rest of\n"
+	.string "your travels.$"
