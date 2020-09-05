@@ -51,7 +51,7 @@ Zone6Sanctuary_EventScript_NextZone::
 
 Zone6Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
-	warp MAP_ZONE6A, 255, 7, 6
+	warp MAP_ZONE7A, 255, 5, 34
 	end
 
 Zone6Sanctuary_Text_Quentin_WhenUReady:
