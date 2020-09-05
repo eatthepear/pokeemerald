@@ -96,8 +96,8 @@
 #define MAPSEC_ZONE_4                       0x5C
 #define MAPSEC_ZONE_5                       0x5D
 #define MAPSEC_ZONE_6                       0x5E
-#define MAPSEC_FUCHSIA_CITY                 0x5F
-#define MAPSEC_CINNABAR_ISLAND              0x60
+#define MAPSEC_ZONE_7                       0x5F
+#define MAPSEC_ZONE_8                       0x60
 #define MAPSEC_INDIGO_PLATEAU               0x61
 #define MAPSEC_SAFFRON_CITY                 0x62
 #define MAPSEC_ROUTE_4_FLYDUP               0x63
