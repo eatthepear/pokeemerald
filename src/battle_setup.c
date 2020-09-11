@@ -578,7 +578,7 @@ void BattleSetup_StartLegendaryBattle(void)
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
     case SPECIES_COBALION:
-        CreateBattleStartTask(B_TRANSITION_GRID_BLUR, MUS_BATTLE32);
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_BATTLE32);
         break;
     }
 
