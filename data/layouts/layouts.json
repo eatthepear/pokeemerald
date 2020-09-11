@@ -4680,6 +4680,16 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone7A/border.bin",
       "blockdata_filepath": "data/layouts/Zone7A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE8A",
+      "name": "Zone8A_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone8A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone8A/map.bin"
     }
   ]
 }

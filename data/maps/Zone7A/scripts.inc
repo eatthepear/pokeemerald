@@ -41,10 +41,7 @@ Zone8D_EventScript_DefeatedCobalion2:: @ 823977C
 	end
 
 Zone8D_EventScript_RanFromCobalion2:: @ 8239785
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject VAR_LAST_TALKED
-	fadescreenswapbuffers FADE_FROM_BLACK
 	bufferspeciesname 0, VAR_0x8004
-	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	msgbox gText_LeviathanChallengesYou, MSGBOX_DEFAULT
 	releaseall
 	end
