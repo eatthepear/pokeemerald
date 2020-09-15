@@ -2,7 +2,7 @@
   "id": "MAP_ZONE8C",
   "name": "Zone8C",
   "layout": "LAYOUT_ZONE8C",
-  "music": "MUS_AJITO",
+  "music": "MUS_MABOROSI",
   "region_map_section": "MAPSEC_ZONE_8",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,7 +17,27 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 9,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE7A",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 40,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE7A",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 38,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE8B",
+      "dest_warp_id": 2
+    }
   ],
   "coord_events": [
 
