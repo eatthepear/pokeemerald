@@ -1,7 +1,6 @@
 Zone8D_MapScripts::
 	.byte 0
 
-
 Zone8D_EventScript_Regirock::
 	lockall
 	waitse
@@ -30,7 +29,6 @@ Zone8D_EventScript_DefeatedRegirock:: @ 8239768
 	end
 
 Zone8D_EventScript_RanFromRegirock:: @ 8239771
-	setvar VAR_0x8004, SPECIES_REGIROCK
 	goto Zone8D_EventScript_RanFromRegirock2
 	end
 

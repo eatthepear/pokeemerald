@@ -37,11 +37,6 @@ MtPyre_2F_EventScript_Leah:: @ 8231175
 	msgbox MtPyre_2F_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MtPyre_2F_EventScript_Zander:: @ 823118C
-	trainerbattle_single TRAINER_ZANDER, MtPyre_2F_Text_ZanderIntro, MtPyre_2F_Text_ZanderDefeat
-	msgbox MtPyre_2F_Text_ZanderPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 MtPyre_2F_Text_MemoriesOfSkitty: @ 82311A3
 	.string "Memories of my darling SKITTY…\n"
 	.string "My eyes overflow thinking about it.$"

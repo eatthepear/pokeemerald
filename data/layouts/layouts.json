@@ -4720,6 +4720,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone8D/border.bin",
       "blockdata_filepath": "data/layouts/Zone8D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE7B",
+      "name": "Zone7B_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Zone7B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone7B/map.bin"
     }
   ]
 }

@@ -81,28 +81,10 @@ AquaHideout_B1F_EventScript_DefeatedElectrode2:: @ 8233A7C
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-
-AquaHideout_B1F_EventScript_Grunt5:: @ 8233AD5
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_5, AquaHideout_B1F_Text_Grunt5Intro, AquaHideout_B1F_Text_Grunt5Defeat
-	msgbox AquaHideout_B1F_Text_Grunt5PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 AquaHideout_B1F_EventScript_Grunt7:: @ 8233AEC
 	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_7, AquaHideout_B1F_Text_Grunt7Intro, AquaHideout_B1F_Text_Grunt7Defeat
 	msgbox AquaHideout_B1F_Text_Grunt7PostBattle, MSGBOX_AUTOCLOSE
 	end
-
-AquaHideout_B1F_Text_Grunt5Intro: @ 8233C89
-	.string "Yawn… Keeping watch over the\n"
-	.string "HIDEOUT bores me. I'll take you on.$"
-
-AquaHideout_B1F_Text_Grunt5Defeat: @ 8233CCA
-	.string "Yawn…\n"
-	.string "Oh, I lost…$"
-
-AquaHideout_B1F_Text_Grunt5PostBattle: @ 8233CDC
-	.string "If you scurry too much, other TEAM\n"
-	.string "AQUA members might get you.$"
 
 AquaHideout_B1F_Text_Grunt7Intro: @ 8233D1B
 	.string "Hey!\n"
