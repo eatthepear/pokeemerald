@@ -41,19 +41,6 @@
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_B2F_SUBMARINE_SHADOW"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 7,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "AquaHideout_B2F_EventScript_Grunt6",
-      "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 13,
       "y": 5,
