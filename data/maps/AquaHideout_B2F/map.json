@@ -153,24 +153,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 28,
-      "y": 17,
-      "elevation": 3,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "AquaHideout_B2F_EventScript_MattNoticePlayer"
-    },
-    {
-      "type": "trigger",
-      "x": 28,
-      "y": 16,
-      "elevation": 3,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "AquaHideout_B2F_EventScript_MattNoticePlayer"
-    }
+
   ],
   "bg_events": [
 
