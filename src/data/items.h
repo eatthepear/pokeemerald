@@ -4795,7 +4795,7 @@ const struct Item gItems[] =
 
     [ITEM_BOULDER_BREAKER] =
     {
-        .name = _("Boulder Breaker"),
+        .name = _("BouldrBreakr"),
         .itemId = ITEM_BOULDER_BREAKER,
         .price = 0,
         .description = sBoulderBreakerDesc,
