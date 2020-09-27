@@ -20,16 +20,11 @@ Zone2Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	showmoneybox 0, 0, 0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	addmoney 2000, 0
-	playfanfare MUS_FANFA4
-	updatemoneybox 0, 0
-	buffernumberstring 0, VAR_ZONE
-	msgbox gText_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	msgbox Zone2Sanctuary_Text_ReceivedExpShare, MSGBOX_AUTOCLOSE
+	giveitem ITEM_EXP_SHARE, 1
+	closemessage
 	setvar VAR_ZONE, 3
 	setflag FLAG_HIDE_LEVIATHAN1
 	removeobject 4, MAP_ZONE3A
@@ -68,3 +63,6 @@ Zone2Sanctuary_Text_Quentin_ExplainLeviathans:
 	.string "LABYRINTH BOSSES IN ADVANCE.\p"
 	.string "DEFEATING A {COLOR RED}LEVIATHAN{COLOR DARK_GREY} GIFTS YOU\n"
 	.string "GREAT REWARDS.$"
+
+Zone2Sanctuary_Text_ReceivedExpShare:
+	.string "YOU HAVE EARNED THE EXP. SHARE.$"

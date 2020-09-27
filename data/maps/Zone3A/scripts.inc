@@ -24,7 +24,7 @@ Zone3A_EventScript_Exit::
 
 Zone3A_EventScript_Leviathan1Defeated:
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_EXP_SHARE, 1
+	giveitem ITEM_OLD_ROD, 1
 	closemessage
 	applymovement 4, Common_Movement_WalkRight
 	waitmovement 0
@@ -47,8 +47,8 @@ Zone3A_Text_Leviathan1Defeat:
 
 Zone3A_Text_Leviathan1Reward:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You have bested me.\n"
-	.string "I grant you the Experience Share,\l"
-	.string "a powerful tool to train Pokémon.$"
+	.string "I grant you the Old Rod,\l"
+	.string "a way to fish for Water Pokémon.$"
 
 Zone3A_EventScript_Jemma::
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat

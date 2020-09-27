@@ -26,8 +26,7 @@ Zone1Sanctuary_EventScript_Intro:
 	addmoney 1000, 0
 	playfanfare MUS_FANFA4
 	updatemoneybox 0, 0
-	buffernumberstring 0, VAR_ZONE
-	msgbox gText_ReceivedMoney, MSGBOX_DEFAULT
+	msgbox Zone1Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	hidemoneybox
 	setvar VAR_ZONE, 2
@@ -54,3 +53,6 @@ Zone1Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	warp MAP_ZONE2A, 255, 4, 3
 	end
+
+Zone1Sanctuary_Text_ReceivedMoney:
+	.string ".string "YOU HAVE EARNED 1{STR_VAR_1}000.$"
