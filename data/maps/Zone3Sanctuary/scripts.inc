@@ -20,16 +20,10 @@ Zone3Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	showmoneybox 0, 0, 0
-	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	addmoney 3000, 0
-	playfanfare MUS_FANFA4
-	updatemoneybox 0, 0
-	buffernumberstring 0, VAR_ZONE
-	msgbox gText_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	msgbox Zone3Sanctuary_Text_ReceivedBoulderBreaker, MSGBOX_AUTOCLOSE
+	giveitem ITEM_BOULDER_BREAKER, 1
+	closemessage
 	setvar VAR_ZONE, 4
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_FANFA4
@@ -64,3 +58,7 @@ Zone3Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	warp MAP_ZONE4A, 255, 4, 3
 	end
+
+Zone3Sanctuary_Text_ReceivedBoulderBreaker:
+	.string "YOU HAVE EARNED THE\n"
+	.string "BOULDER BREAKER.$"

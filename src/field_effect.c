@@ -31,6 +31,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "item_icon.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -2464,19 +2465,19 @@ bool8 FldEff_FieldMoveShowMon(void)
     {
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
-    gTasks[taskId].data[15] = sub_80B8C60(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    gTasks[taskId].data[15] = sub_80B8C60(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
 bool8 FldEff_FieldMoveShowMonInit(void)
 {
-    struct Pokemon *pokemon;
-    u32 flag = gFieldEffectArguments[0] & 0x80000000;
-    pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
-    gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
-    gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_OT_ID);
-    gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
-    gFieldEffectArguments[0] |= flag;
+    //struct Pokemon *pokemon;
+    u32 flag = gSaveBlock2Ptr->ItemArg & 0x80000000;
+    /*pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
+     gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
+     gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_OT_ID);
+     gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);*/
+    gSaveBlock2Ptr->ItemArg |= flag;
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;
@@ -2806,7 +2807,9 @@ static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2)
     struct Sprite *sprite;
     v0 = (a0 & 0x80000000) >> 16;
     a0 &= 0x7fffffff;
-    monSprite = CreateMonSprite_FieldMove(a0, a1, a2, 0x140, 0x50, 0);
+    monSprite = AddItemIconSprite(2110,2110,a0);
+    gSprites[monSprite].pos1.y = 0x50;
+    gSprites[monSprite].pos1.x = 0x140;
     sprite = &gSprites[monSprite];
     sprite->callback = SpriteCallbackDummy;
     sprite->oam.priority = 0;
@@ -2822,14 +2825,7 @@ static void sub_80B8CC0(struct Sprite *sprite)
         sprite->pos1.x = 0x78;
         sprite->data[1] = 30;
         sprite->callback = sub_80B8D04;
-        if (sprite->data[6])
-        {
-            PlayCry2(sprite->data[0], 0, 0x7d, 0xa);
-        }
-        else
-        {
-            PlayCry1(sprite->data[0], 0);
-        }
+        PlaySE(SE_SEIKAI);
     }
 }
 

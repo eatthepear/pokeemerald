@@ -4793,13 +4793,13 @@ const struct Item gItems[] =
 
 // FireRed/LeafGreen key items
 
-    [ITEM_OAKS_PARCEL] =
+    [ITEM_BOULDER_BREAKER] =
     {
-        .name = _("Oak's Parcel"),
-        .itemId = ITEM_OAKS_PARCEL,
+        .name = _("Boulder Breaker"),
+        .itemId = ITEM_BOULDER_BREAKER,
         .price = 0,
-        .description = sOaksParcelDesc,
-        .importance = 2,
+        .description = sBoulderBreakerDesc,
+        .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
