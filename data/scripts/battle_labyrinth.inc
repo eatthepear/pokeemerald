@@ -160,6 +160,7 @@ EventScript_Joy_Heal:
 	playfanfare MUS_ME_ASA
 	waitfanfare
 	special HealPlayerParty
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_HEAL_SHOP_USED, 1
 	msgbox gText_Joy_PartyHealed, MSGBOX_AUTOCLOSE
@@ -168,6 +169,10 @@ EventScript_Joy_Heal:
 	msgbox gText_Joy_WonderfulDay, MSGBOX_AUTOCLOSE
 	releaseall
 	end
+
+EventScript_DeleteFaintedPartyPokemon:
+	callnative DeleteFaintedPartyPokemon
+	return
 
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
