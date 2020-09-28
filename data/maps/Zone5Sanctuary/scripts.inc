@@ -60,5 +60,5 @@ Zone5Sanctuary_EventScript_Leave:
 	warp MAP_ZONE6A, 255, 7, 6
 	end
 
-Zone5Sanctuary_Text_ReceivedExpShare:
+Zone5Sanctuary_Text_ReceivedReturn:
 	.string "YOU HAVE EARNED TM01 RETURN.$"
