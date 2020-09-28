@@ -5,7 +5,7 @@ Zone7B_EventScript_Lady::
 	lock
 	faceplayer
 	goto_if_set FLAG_ZONE7_HEAL_USED, Zone7B_EventScript_AlreadyHealed
-	msgbox Zone7B_Text_WantToHeal, YESNO
+	msgbox Zone7B_Text_WantToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone7B_EventScript_Heal
 	msgbox Zone7B_Text_ComeBack, MSGBOX_AUTOCLOSE
@@ -41,3 +41,6 @@ Zone7B_Text_RestWell:
 
 Zone7B_Text_GoodLuck:
 	.string "Best of luck on your journey, child.$"
+
+Zone7B_Text_ComeBack:
+	.string "Come back when you need to rest, child.$"
