@@ -147,48 +147,48 @@
       "x": 18,
       "y": 17,
       "elevation": 3,
-      "item": "ITEM_REPEL",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_REPEL"
+      "item": "ITEM_ORAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_ORAN_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 5,
       "y": 11,
       "elevation": 3,
-      "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_SUPER_POTION"
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHERI_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 20,
       "y": 28,
       "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_POKE_BALL"
+      "item": "ITEM_PECHA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_PECHA_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 16,
       "y": 35,
       "elevation": 3,
-      "item": "ITEM_BURN_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_BURN_HEAL"
+      "item": "ITEM_RAWST_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_RAWST_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 12,
       "y": 30,
       "elevation": 3,
-      "item": "ITEM_ANTIDOTE",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_ANTIDOTE"
+      "item": "ITEM_PERSIM_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_PERSIM_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 17,
       "y": 5,
       "elevation": 3,
-      "item": "ITEM_GREAT_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_GREAT_BALL"
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHESTO_BERRY"
     }
   ]
 }
