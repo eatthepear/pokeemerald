@@ -46,4 +46,34 @@ Zone7A_Text_JamalPostBattle:
 	.string "I'm all out of energy...\n"
 	.string "Snack time!$"
 
+Zone7A_EventScript_ItemSharpBeak::
+	finditem ITEM_SHARP_BEAK
+	end
 
+Zone7A_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
+Zone7A_EventScript_ItemTwistedSpoon::
+	finditem ITEM_TWISTED_SPOON
+	end
+
+Zone7A_EventScript_ItemGreatBall::
+	finditem ITEM_GREAT_BALL
+	end
+
+Zone7A_EventScript_ItemShellBell::
+	finditem ITEM_SHELL_BELL
+	end
+
+Zone7A_EventScript_ItemPoisonBarb::
+	finditem ITEM_POISON_BARB
+	end
+
+Zone7A_EventScript_ItemLuxuryBall::
+	finditem ITEM_LUXURY_BALL
+	end
+
+Zone7A_EventScript_ItemSilverPowder::
+	finditem ITEM_SILVER_POWDER
+	end

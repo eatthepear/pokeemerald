@@ -28,3 +28,15 @@ Zone8A_Text_MarcusDefeat:
 
 Zone8A_Text_MarcusPostBattle:
 	.string "The lady says we can only heal once.$"
+
+Zone8A_EventScript_ItemMagnet::
+	finditem ITEM_MAGNET
+	end
+
+Zone8A_EventScript_ItemSmokeBall::
+	finditem ITEM_SMOKE_BALL
+	end
+
+Zone8A_EventScript_ItemSoftSand::
+	finditem ITEM_SOFT_SAND
+	end

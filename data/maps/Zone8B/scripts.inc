@@ -31,3 +31,15 @@ Zone8B_Text_AnitaDefeat:
 
 Zone8B_Text_AnitaPostBattle:
 	.string "It's my destiny to wander this cave forever...$"
+
+Zone8B_EventScript_ItemDuskBall::
+	finditem ITEM_DUSK_BALL
+	end
+
+Zone8B_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
+	end
+
+Zone8B_EventScript_ItemHardStone::
+	finditem ITEM_HARD_STONE
+	end

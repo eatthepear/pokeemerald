@@ -41,7 +41,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 7,
       "y": 34,
       "elevation": 3,
@@ -50,11 +50,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone8A_EventScript_ItemMagnet",
+      "flag": "FLAG_ITEM_ZONE8A_MAGNET"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 24,
       "y": 6,
       "elevation": 3,
@@ -63,11 +63,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone8A_EventScript_ItemSmokeBall",
+      "flag": "FLAG_ITEM_ZONE8A_SMOKE_BALL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 46,
       "y": 19,
       "elevation": 3,
@@ -76,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone8A_EventScript_ItemSoftSand",
+      "flag": "FLAG_ITEM_ZONE8A_SOFT_SAND"
     }
   ],
   "warp_events": [

@@ -15,3 +15,15 @@ Zone8C_Text_NeilDefeat:
 Zone8C_Text_NeilPostBattle:
 	.string "Maybe it's on the other side\n"
 	.string "of the mountain?$"
+
+Zone8C_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
+Zone8C_EventScript_ItemNestBall::
+	finditem ITEM_NEST_BALL
+	end
+
+Zone8C_EventScript_ItemEther::
+	finditem ITEM_ETHER
+	end

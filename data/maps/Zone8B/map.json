@@ -41,7 +41,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 45,
       "y": 31,
       "elevation": 3,
@@ -50,11 +50,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone8B_EventScript_ItemDuskBall",
+      "flag": "FLAG_ITEM_ZONE8B_DUSK_BALL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 30,
       "y": 23,
       "elevation": 3,
@@ -63,11 +63,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone8B_EventScript_ItemFullHeal",
+      "flag": "FLAG_ITEM_ZONE8B_FULL_HEAL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 5,
       "elevation": 3,
@@ -76,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone8B_EventScript_ItemHardStone",
+      "flag": "FLAG_ITEM_ZONE8B_HARD_STONE"
     }
   ],
   "warp_events": [
