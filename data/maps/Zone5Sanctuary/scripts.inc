@@ -23,7 +23,7 @@ Zone5Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone5Sanctuary_Text_ReceivedReturn, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM, 1
+	giveitem ITEM_TM01
 	closemessage
 	setvar VAR_ZONE, 6
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
