@@ -55,4 +55,4 @@ Zone4Sanctuary_EventScript_Leave:
 	end
 
 Zone4Sanctuary_Text_ReceivedMoney:
-	.string "YOU HAVE EARNED 2000.$"
+	.string "YOU HAVE EARNED ¥2000.$"

@@ -23,11 +23,10 @@ Zone6Sanctuary_EventScript_Intro:
 	showmoneybox 0, 0, 0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	addmoney 6000, 0
+	addmoney 3000, 0
 	playfanfare MUS_FANFA4
 	updatemoneybox 0, 0
-	buffernumberstring 0, VAR_ZONE
-	msgbox gText_ReceivedMoney, MSGBOX_DEFAULT
+	msgbox Zone6Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	hidemoneybox
 	setvar VAR_ZONE, 7
@@ -69,3 +68,6 @@ Zone6Sanctuary_Text_Quentin_ReadyToLeave:
 	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
 	.string "YOU WILL BE ENTERING\l"
 	.string "{COLOR RED}ZONE 7{COLOR DARK_GREY} and {COLOR RED}ZONE 8{COLOR DARK_GREY}.$"
+
+Zone6Sanctuary_Text_ReceivedMoney:
+	.string "YOU HAVE EARNED ¥3000.$"
