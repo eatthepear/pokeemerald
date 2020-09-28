@@ -61,8 +61,8 @@
       "x": 12,
       "y": 13,
       "elevation": 3,
-      "item": "ITEM_AWAKENING",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE4E_AWAKENING"
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE4E_CHERI_BERRY"
     },
     {
       "type": "sign",

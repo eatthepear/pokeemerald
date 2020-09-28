@@ -20,16 +20,11 @@ Zone5Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	showmoneybox 0, 0, 0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	addmoney 5000, 0
-	playfanfare MUS_FANFA4
-	updatemoneybox 0, 0
-	buffernumberstring 0, VAR_ZONE
-	msgbox gText_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	msgbox Zone5Sanctuary_Text_ReceivedReturn, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM, 1
+	closemessage
 	setvar VAR_ZONE, 6
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
 	@ playfanfare MUS_FANFA4
@@ -64,3 +59,6 @@ Zone5Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	warp MAP_ZONE6A, 255, 7, 6
 	end
+
+Zone5Sanctuary_Text_ReceivedExpShare:
+	.string "YOU HAVE EARNED TM01 RETURN.$"

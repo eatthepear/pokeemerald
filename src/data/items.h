@@ -4037,10 +4037,10 @@ const struct Item gItems[] =
 // TMs/HMs
 
     
-    [ITEM_TM01_FOCUS_PUNCH] =
+    [ITEM_TM01_RETURN] =
     {
         .name = _("TM01"),
-        .itemId = ITEM_TM01_FOCUS_PUNCH,
+        .itemId = ITEM_TM01_RETURN,
         .price = 3000,
         .description = sTM01Desc,
         .pocket = POCKET_TM_HM,
