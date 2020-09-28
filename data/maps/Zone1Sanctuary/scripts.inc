@@ -55,4 +55,4 @@ Zone1Sanctuary_EventScript_Leave:
 	end
 
 Zone1Sanctuary_Text_ReceivedMoney:
-	.string ".string "YOU HAVE EARNED 1{STR_VAR_1}000.$"
+	.string "YOU HAVE EARNED 1000.$"
