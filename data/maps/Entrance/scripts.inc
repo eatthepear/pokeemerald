@@ -530,7 +530,7 @@ Entrance_EventScript_Quentin_EndIntro:
 	delay 96
 	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POTION, 5
-	giveitem ITEM_POKE_BALL, 10
+	giveitem ITEM_POKE_BALL, 30
 	playfanfare MUS_FANFA4
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
