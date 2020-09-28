@@ -4684,8 +4684,8 @@
     {
       "id": "LAYOUT_ZONE8A",
       "name": "Zone8A_Layout",
-      "width": 50,
-      "height": 50,
+      "width": 47,
+      "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone8A/border.bin",
@@ -4694,8 +4694,8 @@
     {
       "id": "LAYOUT_ZONE8B",
       "name": "Zone8B_Layout",
-      "width": 50,
-      "height": 40,
+      "width": 48,
+      "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone8B/border.bin",
@@ -4704,8 +4704,8 @@
     {
       "id": "LAYOUT_ZONE8C",
       "name": "Zone8C_Layout",
-      "width": 50,
-      "height": 30,
+      "width": 43,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone8C/border.bin",

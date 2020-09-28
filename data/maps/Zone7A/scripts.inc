@@ -77,3 +77,14 @@ Zone7A_EventScript_ItemLuxuryBall::
 Zone7A_EventScript_ItemSilverPowder::
 	finditem ITEM_SILVER_POWDER
 	end
+
+Zone7A_EventScript_ItemSilverPowder::
+	finditem ITEM_SILVER_POWDER
+	end
+
+Zone7A_EventScript_HealSign::
+	msgbox Zone7A_Text_HealSign, MSGBOX_SIGN
+	end
+
+Zone7A_Text_HealSign:
+	.string "A stop for weary travelers.$"

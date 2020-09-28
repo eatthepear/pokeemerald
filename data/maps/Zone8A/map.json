@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 26,
+      "x": 23,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 10,
+      "x": 7,
       "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 7,
+      "x": 4,
       "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 24,
+      "x": 21,
       "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 46,
+      "x": 43,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -82,35 +82,35 @@
   ],
   "warp_events": [
     {
-      "x": 8,
+      "x": 5,
       "y": 44,
       "elevation": 0,
       "dest_map": "MAP_ZONE7A",
       "dest_warp_id": 0
     },
     {
-      "x": 24,
+      "x": 21,
       "y": 32,
       "elevation": 0,
       "dest_map": "MAP_ZONE7A",
       "dest_warp_id": 1
     },
     {
-      "x": 9,
+      "x": 6,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ZONE8B",
       "dest_warp_id": 3
     },
     {
-      "x": 36,
+      "x": 33,
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ZONE8B",
       "dest_warp_id": 4
     },
     {
-      "x": 38,
+      "x": 35,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_ZONE8B",
@@ -123,7 +123,7 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 17,
+      "x": 14,
       "y": 7,
       "elevation": 3,
       "item": "ITEM_ICE_GEM",
@@ -131,7 +131,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 11,
+      "x": 8,
       "y": 28,
       "elevation": 3,
       "item": "ITEM_BUG_GEM",
@@ -139,7 +139,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 27,
+      "x": 24,
       "y": 21,
       "elevation": 3,
       "item": "ITEM_POISON_GEM",
@@ -147,7 +147,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 38,
+      "x": 35,
       "y": 18,
       "elevation": 3,
       "item": "ITEM_FIRE_GEM",
@@ -155,7 +155,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 33,
+      "x": 30,
       "y": 13,
       "elevation": 3,
       "item": "ITEM_NORMAL_GEM",
@@ -163,7 +163,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 39,
+      "x": 36,
       "y": 42,
       "elevation": 3,
       "item": "ITEM_ELECTRIC_GEM",
