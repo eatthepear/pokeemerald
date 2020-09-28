@@ -29,7 +29,20 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 2,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE7A",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE7A",
+      "dest_warp_id": 6
+    }
   ],
   "coord_events": [
 

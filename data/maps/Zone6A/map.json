@@ -144,24 +144,24 @@
     },
     {
       "type": "hidden_item",
-      "x": 18,
-      "y": 17,
+      "x": 14,
+      "y": 29,
       "elevation": 3,
       "item": "ITEM_ORAN_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_ORAN_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 5,
-      "y": 11,
+      "x": 19,
+      "y": 33,
       "elevation": 3,
       "item": "ITEM_CHERI_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHERI_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 20,
-      "y": 28,
+      "x": 14,
+      "y": 36,
       "elevation": 3,
       "item": "ITEM_PECHA_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_PECHA_BERRY"
@@ -185,7 +185,7 @@
     {
       "type": "hidden_item",
       "x": 17,
-      "y": 5,
+      "y": 33,
       "elevation": 3,
       "item": "ITEM_CHESTO_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHESTO_BERRY"

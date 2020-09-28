@@ -1075,7 +1075,7 @@
 #define FLAG_ITEM_ZONE8B_FULL_HEAL                                  0x404
 #define FLAG_ITEM_ZONE8B_HARD_STONE                                 0x405
 #define FLAG_ITEM_ZONE8C_SUPER_POTION                               0x406
-#define FLAG_ITEM_ZONE8C_NEST_BALL                                  0x407
+#define FLAG_ITEM_ZONE8C_GREAT_BALL                                  0x407
 #define FLAG_ITEM_ZONE8C_ETHER                                      0x408
 #define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A

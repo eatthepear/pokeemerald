@@ -7,7 +7,7 @@ Zone7A_EventScript_Millie::
 	end
 
 Zone7A_Text_MillieIntro:
-	.string "At the base of this mountain,"
+	.string "At the base of this mountain,\n"
 	.string "is a perfect spot for battle!$"
 
 Zone7A_Text_MillieDefeat:
