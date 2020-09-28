@@ -489,7 +489,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Anita[] = {
     .iv = 0,
     .lvl = 14,
     .species = SPECIES_BIDOOF,
-    }
+    },
     {
     .iv = 0,
     .lvl = 14,
