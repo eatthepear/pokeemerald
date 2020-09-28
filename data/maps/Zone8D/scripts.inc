@@ -4,6 +4,7 @@ Zone8D_MapScripts::
 Zone8D_EventScript_Regirock::
 	lockall
 	waitse
+	setflag FLAG_DISABLE_CATCHING
 	playmoncry SPECIES_REGIROCK, 2
 	delay 40
 	waitmoncry
@@ -36,11 +37,13 @@ Zone8D_EventScript_DefeatedRegirock2:: @ 823977C
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag FLAG_DISABLE_CATCHING
 	releaseall
 	end
 
 Zone8D_EventScript_RanFromRegirock2:: @ 8239785
 	msgbox Zone8D_Text_StillThere, MSGBOX_DEFAULT
+	clearflag FLAG_DISABLE_CATCHING
 	releaseall
 	end
 
