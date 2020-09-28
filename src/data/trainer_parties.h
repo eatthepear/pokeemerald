@@ -53,7 +53,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dexter[] = {
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_BUNEARY,
     }
 };
@@ -74,7 +74,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jeremiah[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Arthur[] = {
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 6,
     .species = SPECIES_PIKIPEK,
     },
     {
@@ -105,7 +105,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Boris[] = {
     },
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 8,
     .species = SPECIES_AZURILL,
     }
 };
@@ -124,6 +124,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Annabelle[] = {
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_Remi[] = {
+    {
+    .iv = 255,
+    .lvl = 9,
+    .species = SPECIES_OSHAWOTT,
+    .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_WATER_GUN, MOVE_FOCUS_ENERGY}
+    },
     {
     .iv = 255,
     .lvl = 9,
