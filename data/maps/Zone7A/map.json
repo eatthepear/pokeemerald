@@ -211,32 +211,32 @@
       "x": 26,
       "y": 34,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_ASPEAR_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_ASPEAR_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 59,
       "y": 31,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_CHESTO_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 67,
       "y": 35,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_CHERI_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 29,
       "y": 32,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_SITRUS_BERRY"
     }
   ]
 }

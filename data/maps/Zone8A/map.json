@@ -126,40 +126,40 @@
       "x": 17,
       "y": 7,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_ICE_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8A_ICE_GEM"
     },
     {
       "type": "hidden_item",
       "x": 11,
       "y": 28,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_BUG_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8A_BUG_GEM"
     },
     {
       "type": "hidden_item",
       "x": 27,
       "y": 21,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_POISON_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8A_POISON_GEM"
     },
     {
       "type": "hidden_item",
       "x": 38,
       "y": 18,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_FIRE_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8A_FIRE_GEM"
     },
     {
       "type": "hidden_item",
       "x": 33,
       "y": 13,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_NORMAL_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8A_NORMAL_GEM"
     },
     {
       "type": "hidden_item",

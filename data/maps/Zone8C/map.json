@@ -99,32 +99,32 @@
       "x": 14,
       "y": 10,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_ROCK_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_ROCK_GEM"
     },
     {
       "type": "hidden_item",
       "x": 29,
       "y": 9,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_FLYING_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_FLYING_GEM"
     },
     {
       "type": "hidden_item",
       "x": 42,
       "y": 15,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_DARK_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_DARK_GEM"
     },
     {
       "type": "hidden_item",
       "x": 41,
       "y": 22,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_DRAGON_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_DRAGON_GEM"
     }
   ]
 }
