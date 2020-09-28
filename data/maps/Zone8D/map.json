@@ -41,6 +41,37 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_SYS_POKEMON_GET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 5,
+      "elevation": 3,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_SYS_POKEMON_GET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 9,
+      "elevation": 3,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_SYS_POKEMON_GET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 9,
+      "elevation": 3,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_SYS_POKEMON_GET"
+    }
   ]
 }

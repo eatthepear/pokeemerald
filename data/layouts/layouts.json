@@ -4724,8 +4724,8 @@
     {
       "id": "LAYOUT_ZONE7B",
       "name": "Zone7B_Layout",
-      "width": 15,
-      "height": 15,
+      "width": 11,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Zone7B/border.bin",
