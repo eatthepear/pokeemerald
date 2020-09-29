@@ -38,6 +38,11 @@ Zone8D_EventScript_DefeatedRegirock2:: @ 823977C
 	removeobject VAR_LAST_TALKED
 	fadescreenswapbuffers FADE_FROM_BLACK
 	clearflag FLAG_DISABLE_CATCHING
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	warp MAP_ZONE8SANCTUARY, 255, 7, 7
 	releaseall
 	end
 

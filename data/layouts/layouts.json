@@ -4730,6 +4730,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Zone7B/border.bin",
       "blockdata_filepath": "data/layouts/Zone7B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE8SANCTUARY",
+      "name": "Zone8Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone8Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone8Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE8SHOPS",
+      "name": "Zone8Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone8Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone8Shops/map.bin"
     }
   ]
 }
