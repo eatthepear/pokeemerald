@@ -818,6 +818,16 @@ static const u8 sText_Froakie[] = _("Froakie");
 static const u8 sText_Rowlet[] = _("Rowlet");
 static const u8 sText_Litten[] = _("Litten");
 static const u8 sText_Popplio[] = _("Popplio");
+static const u8 sText_FireStone[] = _("Fire Stone");
+static const u8 sText_WaterStone[] = _("WaterStone");
+static const u8 sText_ThunderStone[] = _("Thunder Stone");
+static const u8 sText_LeafStone[] = _("Leaf Stone");
+static const u8 sText_MoonStone[] = _("Moon Stone");
+static const u8 sText_SunStone[] = _("Sun Stone");
+static const u8 sText_ShinyStone[] = _("Shiny Stone");
+static const u8 sText_DuskStone[] = _("Dusk Stone");
+static const u8 sText_DawnStone[] = _("Dawn Stone");
+static const u8 sText_IceStone[] = _("Ice Stone");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -847,20 +857,21 @@ static const struct ListMenuItem Starters[] =
     {sText_Litten, 21},
     {sText_Popplio, 22},
 };
-/*
-static const struct ListMenuItem sSet2[] =
+
+static const struct ListMenuItem EvolutionaryStones[] =
 {
-    {sText_Example9, 0},
-    {sText_Example8, 1},
-    {sText_Example7, 2},
-    {sText_Example6, 3},
-    {sText_Example5, 4},
-    {sText_Example4, 5},
-    {sText_Example3, 6},
-    {sText_Example2, 7},
-    {sText_Example1, 8},
+    {sText_FireStone, 0},
+    {sText_WaterStone, 1},
+    {sText_ThunderStone, 2},
+    {sText_LeafStone, 3},
+    {sText_MoonStone, 4},
+    {sText_SunStone, 5},
+    {sText_ShinyStone, 6},
+    {sText_DuskStone, 7},
+    {sText_DawnStone, 8},
+    {sText_IceStone, 9},
 };
-*/
+
 // Table of your multichoice sets.
 struct
 {
@@ -869,7 +880,7 @@ struct
 } static const sScrollingSets[] =
 {
     {Starters, ARRAY_COUNT(Starters)},
-    //{sSet2, ARRAY_COUNT(sSet2)},
+    {EvolutionaryStones, ARRAY_COUNT(EvolutionaryStones)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);

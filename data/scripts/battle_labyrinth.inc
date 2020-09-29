@@ -214,3 +214,67 @@ EventScript_LeavingSetup:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	return
+
+EventScript_StonesMultichoice:
+	scrollingmultichoice 1, 0, 0, 4, FALSE
+	compare VAR_RESULT, 0
+	call_if_eq EventScript_FireStone
+	compare VAR_RESULT, 1
+	call_if_eq EventScript_WaterStone
+	compare VAR_RESULT, 2
+	call_if_eq EventScript_ThunderStone
+	compare VAR_RESULT, 3
+	call_if_eq EventScript_LeafStone
+	compare VAR_RESULT, 4
+	call_if_eq EventScript_MoonStone
+	compare VAR_RESULT, 5
+	call_if_eq EventScript_SunStone
+	compare VAR_RESULT, 6
+	call_if_eq EventScript_ShinyStone
+	compare VAR_RESULT, 7
+	call_if_eq EventScript_DuskStone
+	compare VAR_RESULT, 8
+	call_if_eq EventScript_DawnStone
+	compare VAR_RESULT, 9
+	call_if_eq EventScript_IceStone
+	return
+
+EventScript_FireStone:
+	giveitem ITEM_FIRE_STONE
+	return
+
+EventScript_WaterStone:
+	giveitem ITEM_WATER_STONE
+	return
+
+EventScript_ThunderStone:
+	giveitem ITEM_THUNDER_STONE
+	return
+
+EventScript_LeafStone:
+	giveitem ITEM_LEAF_STONE
+	return
+
+EventScript_MoonStone:
+	giveitem ITEM_MOON_STONE
+	return
+
+EventScript_SunStone:
+	giveitem ITEM_SUN_STONE
+	return
+
+EventScript_ShinyStone:
+	giveitem ITEM_SHINY_STONE
+	return
+
+EventScript_DuskStone:
+	giveitem ITEM_DUSK_STONE
+	return
+
+EventScript_DawnStone:
+	giveitem ITEM_DAWN_STONE
+	return
+
+EventScript_IceStone:
+	giveitem ITEM_ICE_STONE
+	return
