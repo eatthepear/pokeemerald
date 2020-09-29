@@ -298,7 +298,7 @@ static void SpriteCb_MoveSelector(struct Sprite *sprite);
 static void DestroyMoveSelectorSprites(u8 firstArrayId);
 static void SetMainMoveSelectorColor(u8 whichColor);
 static void KeepMoveSelectorVisible(u8 firstSpriteId);
-static void BufferIvOrEvStats(u8 mode);
+static void BufferIvOrEvStats(u16 mode);
 
 // const rom data
 #include "data/text/move_descriptions.h"
@@ -3448,7 +3448,7 @@ static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n)
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
 }
 
-static void BufferIvOrEvStats(u8 mode)
+static void BufferIvOrEvStats(u16 mode)
 {
     u8 hp, hp2, atk, def, spA, spD, spe;
     u8 *currHPString = Alloc(20);
