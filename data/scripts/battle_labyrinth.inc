@@ -240,41 +240,41 @@ EventScript_StonesMultichoice:
 	return
 
 EventScript_FireStone:
-	giveitem ITEM_FIRE_STONE
+	finditem ITEM_FIRE_STONE
 	return
 
 EventScript_WaterStone:
-	giveitem ITEM_WATER_STONE
+	finditem ITEM_WATER_STONE
 	return
 
 EventScript_ThunderStone:
-	giveitem ITEM_THUNDER_STONE
+	finditem ITEM_THUNDER_STONE
 	return
 
 EventScript_LeafStone:
-	giveitem ITEM_LEAF_STONE
+	finditem ITEM_LEAF_STONE
 	return
 
 EventScript_MoonStone:
-	giveitem ITEM_MOON_STONE
+	finditem ITEM_MOON_STONE
 	return
 
 EventScript_SunStone:
-	giveitem ITEM_SUN_STONE
+	finditem ITEM_SUN_STONE
 	return
 
 EventScript_ShinyStone:
-	giveitem ITEM_SHINY_STONE
+	finditem ITEM_SHINY_STONE
 	return
 
 EventScript_DuskStone:
-	giveitem ITEM_DUSK_STONE
+	finditem ITEM_DUSK_STONE
 	return
 
 EventScript_DawnStone:
-	giveitem ITEM_DAWN_STONE
+	finditem ITEM_DAWN_STONE
 	return
 
 EventScript_IceStone:
-	giveitem ITEM_ICE_STONE
+	finditem ITEM_ICE_STONE
 	return
