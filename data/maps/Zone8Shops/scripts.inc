@@ -83,7 +83,7 @@ Zone8Shops_EventScript_Shop_Services::
 	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchTraining1
-	case 1, EventScript_Shop_LelouchNotEnoughColor
+	case 1, EventScript_Shop_LelouchCheckReminder
 	case 2, EventScript_Shop_LelouchNotEnoughColor
 	case 3, EventScript_Shop_LelouchNotEnoughColor
 	goto EventScript_Shop_LelouchLeave

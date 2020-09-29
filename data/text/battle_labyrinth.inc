@@ -166,6 +166,30 @@ gText_LelouchDefeated:
 	.string "Excellent work.\n"
 	.string "Your Pokémon have grown stronger.$"
 
+gText_Lelouch_CostsBlueShards:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Move Reminder services\n"
+	.string "cost one Blue Shard.\p"
+	.string "Would you like me to teach a\n"
+	.string "forgotten move to your Pokémon?$"
+
+gText_Lelouch_RemindWhichMon:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Which Pokémon should\n"
+	.string "relearn a move?$"
+
+gText_Lelouch_RemindWhichMove:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Which move should it\n"
+	.string "relearn?$"
+
+gText_Lelouch_CantRemindMon:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: That Pokémon cannot\n"
+	.string "relearn any moves.$"
+
+gText_Lelouch_PayBlue:
+	.string "{PLAYER} handed over 1 Blue Shard.$"
+
+gText_Lelouch_CantRemindEgg:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: That is an Egg.$"
+
 gText_Lelouch_Leave:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Farewell.$"
 

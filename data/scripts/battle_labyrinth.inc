@@ -94,6 +94,51 @@ EventScript_Shop_LelouchExp1:
 	release
 	end
 
+EventScript_Shop_LelouchCheckReminder:
+	checkitem ITEM_BLUE_SHARD, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	msgbox gText_Lelouch_CostsBlueShards, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq EventScript_Shop_LelouchReminderChooseMon
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchReminderChooseMon:
+	msgbox gText_Lelouch_RemindWhichMon, MSGBOX_DEFAULT
+	special ChooseMonForMoveRelearner
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq EventScript_Shop_LelouchLeave
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq EventScript_Shop_LelouchCantRemindEgg
+	compare VAR_0x8005, 0
+	goto_if_eq EventScript_Shop_LelouchNoMoveToRemindMon
+	goto EventScript_Shop_LelouchReminderChooseMove
+	end
+
+EventScript_Shop_LelouchReminderChooseMove:
+	msgbox gText_Lelouch_RemindWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	compare VAR_0x8004, 0
+	goto_if_eq EventScript_Shop_LelouchReminderChooseMon
+	msgbox gText_Lelouch_PayBlue, MSGBOX_AUTOCLOSE
+	removeitem ITEM_BLUE_SHARD
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchNoMoveToRemindMon:
+	msgbox gText_Lelouch_CantRemindMon, MSGBOX_DEFAULT
+	goto EventScript_Shop_LelouchReminderChooseMon
+	end
+
+EventScript_Shop_LelouchCantRemindEgg:
+	msgbox gText_Lelouch_CantRemindEgg, MSGBOX_DEFAULT
+	goto EventScript_Shop_LelouchReminderChooseMon
+	end
+
 EventScript_Shop_LelouchLeave:
 	msgbox gText_Lelouch_Leave, MSGBOX_AUTOCLOSE
 	release
