@@ -21,10 +21,10 @@ Zone8Sanctuary_EventScript_Intro:
 	waitfanfare
 	msgbox Zone8Sanctuary_Text_RewardClear7, MSGBOX_AUTOCLOSE
 	msgbox Zone8Sanctuary_Text_ReceivedBlueShards, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BLUE_SHARD, 5
+	giveitem ITEM_BLUE_SHARD, 3
 	msgbox Zone8Sanctuary_Text_RewardClear8, MSGBOX_AUTOCLOSE
 	msgbox Zone8Sanctuary_Text_ReceivedRockTomb, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM01
+	giveitem ITEM_TM02
 	closemessage
 	setvar VAR_ZONE, 9
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE

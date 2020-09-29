@@ -20,7 +20,6 @@ Zone8D_EventScript_Regirock::
 	goto_if_eq Zone8D_EventScript_RanFromRegirock
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq Zone8D_EventScript_RanFromRegirock
-	setflag FLAG_BEATLEVIATHAN4
 	releaseall
 	end
 
@@ -36,6 +35,7 @@ Zone8D_EventScript_RanFromRegirock:: @ 8239771
 Zone8D_EventScript_DefeatedRegirock2:: @ 823977C
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
+	setflag FLAG_BEATLEVIATHAN4
 	fadescreenswapbuffers FADE_FROM_BLACK
 	clearflag FLAG_DISABLE_CATCHING
 	msgbox Zone8D_Text_RegirockDisappeared, MSGBOX_AUTOCLOSE
