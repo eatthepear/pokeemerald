@@ -1197,7 +1197,7 @@ static const u8 *const sUnused_StatStrings[] =
 static const u16 sTMHMMoves[] =
 {
     MOVE_RETURN,
-    MOVE_DRAGON_CLAW,
+    MOVE_ROCK_TOMB,
     MOVE_WATER_PULSE,
     MOVE_CALM_MIND,
     MOVE_ROAR,
@@ -1234,7 +1234,7 @@ static const u16 sTMHMMoves[] =
     MOVE_SLUDGE_BOMB,
     MOVE_SANDSTORM,
     MOVE_FIRE_BLAST,
-    MOVE_ROCK_TOMB,
+    MOVE_DRAGON_CLAW,
     MOVE_AERIAL_ACE,
     MOVE_TORMENT,
     MOVE_FACADE,

@@ -4050,10 +4050,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM02_DRAGON_CLAW] =
+    [ITEM_TM02_ROCK_TOMB] =
     {
         .name = _("TM02"),
-        .itemId = ITEM_TM02_DRAGON_CLAW,
+        .itemId = ITEM_TM02_ROCK_TOMB,
         .price = 3000,
         .description = sTM02Desc,
         .pocket = POCKET_TM_HM,

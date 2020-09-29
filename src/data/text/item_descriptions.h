@@ -1516,9 +1516,9 @@ static const u8 sTM01Desc[] = _(
     "powerful this move.");
 
 static const u8 sTM02Desc[] = _(
-    "Hooks and slashes\n"
-    "the foe with long,\n"
-    "sharp claws.");
+    "Stops the foe from\n"
+    "moving with rocks.\n"
+    "May lower Speed.");
 
 static const u8 sTM03Desc[] = _(
     "Generates an\n"
@@ -1701,9 +1701,9 @@ static const u8 sTM38Desc[] = _(
     "burn the foe.");
 
 static const u8 sTM39Desc[] = _(
-    "Stops the foe from\n"
-    "moving with rocks.\n"
-    "May lower Speed.");
+    "Hooks and slashes\n"
+    "the foe with long,\n"
+    "sharp claws.");
 
 static const u8 sTM40Desc[] = _(
     "An extremely fast\n"
