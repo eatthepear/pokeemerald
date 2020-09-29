@@ -19,15 +19,18 @@ Zone8Sanctuary_EventScript_Intro:
 	playfanfare MUS_ME_BACHI
 	msgbox Zone8Sanctuary_Text_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	msgbox Zone8Sanctuary_Text_RewardClear, MSGBOX_AUTOCLOSE
+	msgbox Zone8Sanctuary_Text_RewardClear7, MSGBOX_AUTOCLOSE
+	msgbox Zone8Sanctuary_Text_ReceivedBlueShards, MSGBOX_AUTOCLOSE
+	giveitem ITEM_BLUE_SHARD, 3
+	msgbox Zone8Sanctuary_Text_RewardClear8, MSGBOX_AUTOCLOSE
 	msgbox Zone8Sanctuary_Text_ReceivedRockTomb, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM01
 	closemessage
-	setvar VAR_ZONE, 6
+	setvar VAR_ZONE, 9
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
-	@ playfanfare MUS_FANFA4
-	@ msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
-	@ waitfanfare
+	playfanfare MUS_FANFA4
+	msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
+	waitfanfare
 	playfanfare MUS_FANFA4
 	msgbox gText_Quentin_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare
@@ -41,10 +44,35 @@ Zone8Sanctuary_EventScript_Intro:
 	releaseall
 	end
 
-Zone8Sanctuary_Text_Quentin_ReachedZone:
-	
+Zone8Sanctuary_EventScript_NextZone::
+	lock
+	faceplayer
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone8Sanctuary_EventScript_Leave
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	release
+	end
 
-Zone8Sanctuary_Text_RewardClear:
+Zone8Sanctuary_EventScript_Leave:
+	call EventScript_LeavingSetup
+	warp MAP_ZONE7A, 255, 7, 6
+	end
+
+Zone8Sanctuary_Text_Quentin_ReachedZone:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
+	.string "YOU HAVE CLEARED {COLOR RED}ZONE 7 AND ZONE 8{COLOR DARK_GREY}.$"
+
+Zone8Sanctuary_Text_RewardClear7:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: FOR CLEARING {COLOR RED}ZONE 7{COLOR DARK_GREY},$"
+
+Zone8Sanctuary_Text_ReceivedBlueShards:
+	.string "YOU HAVE EARNED 3 BLUE SHARDS.$"
+
+Zone8Sanctuary_Text_RewardClear8:
+	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: FOR CLEARING {COLOR RED}ZONE 8{COLOR DARK_GREY},$"
 
 Zone8Sanctuary_Text_ReceivedRockTomb:
-
+	.string "YOU HAVE EARNED TM02 ROCK TOMB.$"
