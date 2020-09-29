@@ -2,7 +2,7 @@
   "id": "MAP_ZONE8SHOPS",
   "name": "Zone8Shops",
   "layout": "LAYOUT_ZONE8SHOPS",
-  "music": "MUS_AJITO",
+  "music": "MUS_RUNECITY",
   "region_map_section": "MAPSEC_ZONE_8",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,7 +10,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone8Shops_EventScript_Shop_General",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone8Shops_EventScript_Shop_Unique",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone8Shops_EventScript_Shop_Services",
       "flag": "0"
     },
     {
