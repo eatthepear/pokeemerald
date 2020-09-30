@@ -244,7 +244,7 @@ static void Task_NewGameBirchSpeech_Cleanup(u8);
 static void SpriteCB_Null();
 static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8);
 static void MainMenu_FormatSavegamePlayer(void);
-static void MainMenu_FormatSavegamePokedex(void);
+static void MainMenu_FormatSavegameZone(void);
 static void MainMenu_FormatSavegameTime(void);
 static void MainMenu_FormatSavegameMode(void);
 static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8, u8, u8, u8, u8, u8);
@@ -2138,7 +2138,7 @@ static void CreateMainMenuErrorWindow(const u8* str)
 static void MainMenu_FormatSavegameText(void)
 {
     MainMenu_FormatSavegamePlayer();
-    MainMenu_FormatSavegamePokedex();
+    MainMenu_FormatSavegameZone();
     MainMenu_FormatSavegameTime();
     MainMenu_FormatSavegameMode();
 }
@@ -2163,22 +2163,14 @@ static void MainMenu_FormatSavegameTime(void)
     AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 0xD0), 17, sTextColor_MenuInfo, -1, str);
 }
 
-static void MainMenu_FormatSavegamePokedex(void)
+static void MainMenu_FormatSavegameZone(void)
 {
     u8 str[0x20];
-    u16 dexCount;
 
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
-        if (IsNationalPokedexEnabled())
-            dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
-        else
-            dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
-        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
-        AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
-        ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
-        AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
-    }
+    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuZone);
+    AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
+    ConvertIntToDecimalStringN(str, VAR_ZONE, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
 }
 
 static void MainMenu_FormatSavegameMode(void)

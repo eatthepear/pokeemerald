@@ -1820,6 +1820,7 @@ const u8 gText_Berries[] = _("Berries");
 const u8 gText_Nickname[] = _("Nickname");
 const u8 gText_Vanilla[] = _("{COLOR RED}Vanilla");
 const u8 gText_Nuzlocke[] = _("{COLOR RED}Nuzlocke");
+const u8 gText_ContinueMenuZone[] = _("Zone");
 const u8 gText_ContinueMenuVanillaMode[] =_("Mode: Vanilla");
 const u8 gText_ContinueMenuNuzlockeMode[] =_("Mode: Nuzlocke");
 const u8 gText_TrainingService[] = _("Training - Red");
