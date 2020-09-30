@@ -2166,10 +2166,13 @@ static void MainMenu_FormatSavegameTime(void)
 static void MainMenu_FormatSavegameZone(void)
 {
     u8 str[0x20];
+    u16 whichZone;
+    
+    whichZone = VarGet(VAR_ZONE);
 
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuZone);
     AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
-    ConvertIntToDecimalStringN(str, VAR_ZONE, STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(str, whichZone, STR_CONV_MODE_LEFT_ALIGN, 3);
     AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
 }
 
