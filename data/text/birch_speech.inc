@@ -31,7 +31,7 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "This information is confidential.$"
+	.string "It will be confidential.$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
 	.string "Please enter your gender.$"
