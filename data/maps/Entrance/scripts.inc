@@ -531,27 +531,6 @@ Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POKE_BALL, 20
 	giveitem ITEM_POTION, 5
-	additem ITEM_GREAT_BALL, 1
-	additem ITEM_ULTRA_BALL, 1
-	additem ITEM_MASTER_BALL, 1
-	additem ITEM_NET_BALL, 1
-	additem ITEM_DIVE_BALL, 1
-	additem ITEM_NEST_BALL, 1
-	additem ITEM_REPEAT_BALL, 1
-	additem ITEM_TIMER_BALL, 1
-	additem ITEM_LUXURY_BALL, 1
-	additem ITEM_DUSK_BALL, 1
-	additem ITEM_HEAL_BALL, 1
-	additem ITEM_QUICK_BALL, 1
-	additem ITEM_CHERISH_BALL, 1
-	additem ITEM_FAST_BALL, 1
-	additem ITEM_LEVEL_BALL, 1
-	additem ITEM_LURE_BALL, 1
-	additem ITEM_HEAVY_BALL, 1
-	additem ITEM_LOVE_BALL, 1
-	additem ITEM_FRIEND_BALL, 1
-	additem ITEM_MOON_BALL, 1
-	additem ITEM_PREMIER_BALL, 1
 	additem ITEM_ANTIDOTE, 1
 	additem ITEM_BURN_HEAL, 1
 	additem ITEM_ICE_HEAL, 1
@@ -566,6 +545,17 @@ Entrance_EventScript_Quentin_EndIntro:
 	additem ITEM_MAX_REVIVE, 1
 	additem ITEM_FRESH_WATER, 1
 	additem ITEM_SODA_POP, 1
+	additem ITEM_LEMONADE, 1
+	additem ITEM_MOOMOO_MILK, 1
+	additem ITEM_ENERGY_POWDER, 1
+	additem ITEM_ENERGY_ROOT, 1
+	additem ITEM_HEAL_POWDER, 1
+	additem ITEM_REVIVAL_HERB, 1
+	additem ITEM_ETHER, 1
+	additem ITEM_MAX_ETHER, 1
+	additem ITEM_ELIXIR, 1
+	additem ITEM_MAX_ELIXIR, 1
+	additem ITEM_LAVA_COOKIE, 1
 	playfanfare MUS_FANFA4
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
