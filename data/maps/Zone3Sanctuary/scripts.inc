@@ -21,8 +21,8 @@ Zone3Sanctuary_EventScript_Intro:
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone3Sanctuary_Text_ReceivedBoulderBreaker, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BOULDER_BREAKER, 1
+	msgbox Zone3Sanctuary_Text_ReceivedSledgehammer, MSGBOX_AUTOCLOSE
+	giveitem ITEM_SLEDGEHAMMER, 1
 	closemessage
 	setvar VAR_ZONE, 4
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
@@ -59,6 +59,6 @@ Zone3Sanctuary_EventScript_Leave:
 	warp MAP_ZONE4A, 255, 4, 3
 	end
 
-Zone3Sanctuary_Text_ReceivedBoulderBreaker:
+Zone3Sanctuary_Text_ReceivedSledgehammer:
 	.string "YOU HAVE EARNED THE\n"
-	.string "BOULDER BREAKER.$"
+	.string "SLEDGEHAMMER.$"

@@ -60,10 +60,10 @@ Text_CantCut: @ 829077D
 
 EventScript_RockSmash:: @ 82907A6
 	lockall
-	checkitem ITEM_BOULDER_BREAKER, 1
+	checkitem ITEM_SLEDGEHAMMER, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
-	setitemarg ITEM_BOULDER_BREAKER
+	setitemarg ITEM_SLEDGEHAMMER
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
 	goto EventScript_SmashRock
