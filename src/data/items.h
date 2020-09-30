@@ -4793,12 +4793,12 @@ const struct Item gItems[] =
 
 // FireRed/LeafGreen key items
 
-    [ITEM_BOULDER_BREAKER] =
+    [ITEM_SLEDGEHAMMER] =
     {
-        .name = _("BouldrBreakr"),
-        .itemId = ITEM_BOULDER_BREAKER,
+        .name = _("Sledgehammer"),
+        .itemId = ITEM_SLEDGEHAMMER,
         .price = 0,
-        .description = sBoulderBreakerDesc,
+        .description = sSledgehammerDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,

@@ -1802,8 +1802,8 @@ static const u8 sHM08Desc[] = _(
     "attacks next turn.");
 
 // FireRed/LeafGreen key items
-static const u8 sBoulderBreakerDesc[] = _(
-    "A high tech tool\n"
+static const u8 sSledgehammerDesc[] = _(
+    "A blunt tool\n"
     "used to clear\n"
     "fallen boulders.");
 
