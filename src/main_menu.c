@@ -2187,12 +2187,12 @@ static void MainMenu_FormatSavegameMode(void)
     
     if (FlagGet(FLAG_NUZLOCKE_ON) == TRUE)
     {
-        StringExpandPlaceholders(gStringVar4, ContinueMenuVanillaMode);
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuVanillaMode);
         AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
     }
     else
     {
-        StringExpandPlaceholders(gStringVar4, ContinueMenuNuzlockeMode);
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuNuzlockeMode);
         AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
     }
 }
