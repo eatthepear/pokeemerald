@@ -531,46 +531,6 @@ Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POKE_BALL, 20
 	giveitem ITEM_POTION, 5
-	additem ITEM_ANTIDOTE, 1
-	additem ITEM_BURN_HEAL, 1
-	additem ITEM_ICE_HEAL, 1
-	additem ITEM_AWAKENING, 1
-	additem ITEM_PARALYZE_HEAL, 1
-	additem ITEM_FULL_RESTORE, 1
-	additem ITEM_MAX_POTION, 1
-	additem ITEM_HYPER_POTION, 1
-	additem ITEM_SUPER_POTION, 1
-	additem ITEM_FULL_HEAL, 1
-	additem ITEM_REVIVE, 1
-	additem ITEM_MAX_REVIVE, 1
-	additem ITEM_FRESH_WATER, 1
-	additem ITEM_SODA_POP, 1
-	additem ITEM_LEMONADE, 1
-	additem ITEM_MOOMOO_MILK, 1
-	additem ITEM_ENERGY_POWDER, 1
-	additem ITEM_ENERGY_ROOT, 1
-	additem ITEM_HEAL_POWDER, 1
-	additem ITEM_REVIVAL_HERB, 1
-	additem ITEM_ETHER, 1
-	additem ITEM_MAX_ETHER, 1
-	additem ITEM_ELIXIR, 1
-	additem ITEM_MAX_ELIXIR, 1
-	additem ITEM_LAVA_COOKIE, 1
-	additem ITEM_BLUE_FLUTE, 1
-	additem ITEM_YELLOW_FLUTE, 1
-	additem ITEM_RED_FLUTE, 1
-	additem ITEM_BLACK_FLUTE, 1
-	additem ITEM_WHITE_FLUTE, 1
-	additem ITEM_BERRY_JUICE, 1
-	additem ITEM_SWEET_HEART, 1
-	additem ITEM_BIG_MALASADA, 1
-	additem ITEM_OLD_GATEAU, 1
-	additem ITEM_SACRED_ASH, 1
-	additem ITEM_SHOAL_SALT, 1
-	additem ITEM_SHOAL_SHELL, 1
-	additem ITEM_RED_SHARD, 1
-	additem ITEM_BLUE_SHARD, 1
-	additem ITEM_YELLOW_SHARD, 1
 	playfanfare MUS_FANFA4
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
