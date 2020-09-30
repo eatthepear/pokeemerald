@@ -246,7 +246,7 @@ static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8);
 static void MainMenu_FormatSavegamePlayer(void);
 static void MainMenu_FormatSavegamePokedex(void);
 static void MainMenu_FormatSavegameTime(void);
-static void MainMenu_FormatSavegameBadges(void);
+static void MainMenu_FormatSavegameMode(void);
 static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8, u8, u8, u8, u8, u8);
 
 // .rodata
@@ -2140,7 +2140,7 @@ static void MainMenu_FormatSavegameText(void)
     MainMenu_FormatSavegamePlayer();
     MainMenu_FormatSavegamePokedex();
     MainMenu_FormatSavegameTime();
-    MainMenu_FormatSavegameBadges();
+    MainMenu_FormatSavegameMode();
 }
 
 static void MainMenu_FormatSavegamePlayer(void)
@@ -2181,21 +2181,20 @@ static void MainMenu_FormatSavegamePokedex(void)
     }
 }
 
-static void MainMenu_FormatSavegameBadges(void)
+static void MainMenu_FormatSavegameMode(void)
 {
     u8 str[0x20];
-    u8 badgeCount = 0;
-    u32 i;
-
-    for (i = FLAG_BADGE01_GET; i < FLAG_BADGE01_GET + NUM_BADGES; i++)
+    
+    if (FlagGet(FLAG_NUZLOCKE_ON) == TRUE)
     {
-        if (FlagGet(i))
-            badgeCount++;
+        StringExpandPlaceholders(gStringVar4, ContinueMenuVanillaMode);
+        AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
     }
-    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
-    AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
-    ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
-    AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 0xD0), 33, sTextColor_MenuInfo, -1, str);
+    else
+    {
+        StringExpandPlaceholders(gStringVar4, ContinueMenuNuzlockeMode);
+        AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+    }
 }
 
 static void LoadMainMenuWindowFrameTiles(u8 bgId, u16 tileOffset)
