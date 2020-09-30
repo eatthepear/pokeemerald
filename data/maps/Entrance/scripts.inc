@@ -556,6 +556,21 @@ Entrance_EventScript_Quentin_EndIntro:
 	additem ITEM_ELIXIR, 1
 	additem ITEM_MAX_ELIXIR, 1
 	additem ITEM_LAVA_COOKIE, 1
+	additem ITEM_BLUE_FLUTE, 1
+	additem ITEM_YELLOW_FLUTE, 1
+	additem ITEM_RED_FLUTE, 1
+	additem ITEM_BLACK_FLUTE, 1
+	additem ITEM_WHITE_FLUTE, 1
+	additem ITEM_BERRY_JUICE, 1
+	additem ITEM_SWEET_HEART, 1
+	additem ITEM_BIG_MALASADA, 1
+	additem ITEM_OLD_GATEAU, 1
+	additem ITEM_SACRED_ASH, 1
+	additem ITEM_SHOAL_SALT, 1
+	additem ITEM_SHOAL_SHELL, 1
+	additem ITEM_RED_SHARD, 1
+	additem ITEM_BLUE_SHARD, 1
+	additem ITEM_YELLOW_SHARD, 1
 	playfanfare MUS_FANFA4
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
