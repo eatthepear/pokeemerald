@@ -371,3 +371,5 @@ const u32 gObjectEventPic_Lugia[] = INCBIN_U32("graphics/object_events/pics/poke
 const u16 gObjectEventPalette32[] = INCBIN_U16("graphics/object_events/palettes/32.gbapal");
 const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokemon/ho_oh.4bpp");
 const u16 gObjectEventPalette31[] = INCBIN_U16("graphics/object_events/palettes/31.gbapal");
+const u32 gObjectEventPic_Colress[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/colress.4bpp");
+const u16 gObjectEventPalette_Colress[] = INCBIN_U16("graphics/object_events/pics/people/frontier_brains/colress.gbapal");
