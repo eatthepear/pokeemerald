@@ -55,14 +55,14 @@ Zone2Sanctuary_EventScript_Leave:
 	end
 
 Zone2Sanctuary_Text_Colress_ExplainLeviathans:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: THE NEXT ZONE WILL CONTAIN\n"
-	.string "A {COLOR RED}LEVIATHAN{COLOR DARK_GREY}.\p"
-	.string "{COLOR RED}LEVIATHANS{COLOR DARK_GREY} ARE DIFFICULT BOSSES\n"
-	.string "THAT APPEAR IN SOME ZONES.\p"
-	.string "TYPICALLY YOU WILL NOT BE WARNED OF\n"
-	.string "LABYRINTH BOSSES IN ADVANCE.\p"
-	.string "DEFEATING A {COLOR RED}LEVIATHAN{COLOR DARK_GREY} GIFTS YOU\n"
-	.string "GREAT REWARDS.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The next Zone will contain\n"
+	.string "a {COLOR RED}Leviathan{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}Leviathans{COLOR DARK_GREY} are difficult bosses\n"
+	.string "that appear in some Zones.\p"
+	.string "Defeating a Leviathan yields\n"
+	.string "great rewards.\p"
+	.string "However, typically you will not be\n"
+	.string "warned of them in advance.$"
 
 Zone2Sanctuary_Text_Reward:
 	.string "The Exp. Share!$"
