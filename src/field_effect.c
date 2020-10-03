@@ -2936,7 +2936,7 @@ static void SpriteCB_FieldMoveMonSlideOnscreen(struct Sprite *sprite)
         sprite->pos1.x = DISPLAY_WIDTH / 2;
         sprite->sOnscreenTimer = 30;
         sprite->callback = SpriteCB_FieldMoveMonWaitAfterCry;
-        PlaySE(SE_SEIKAI);
+        PlaySE(SE_SUCCESS);
     }
 }
 
