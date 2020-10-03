@@ -24,7 +24,6 @@ Zone5Shops_Shop_General:
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_ICE_HEAL
 	.2byte ITEM_REPEL
-	.2byte ITEM_X_ATTACK
 	.2byte ITEM_NONE
 	release
 	end
