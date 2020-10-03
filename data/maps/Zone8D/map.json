@@ -2,7 +2,7 @@
   "id": "MAP_ZONE8D",
   "name": "Zone8D",
   "layout": "LAYOUT_ZONE8D",
-  "music": "MUS_MABOROSI",
+  "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_ZONE_8",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_ZONE4E",
   "name": "Zone4E",
   "layout": "LAYOUT_ZONE4E",
-  "music": "MUS_RG_T_MORI",
+  "music": "MUS_RG_SEVII_123",
   "region_map_section": "MAPSEC_ZONE_4",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

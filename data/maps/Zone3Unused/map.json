@@ -2,7 +2,7 @@
   "id": "MAP_ZONE3UNUSED",
   "name": "Zone3Unused",
   "layout": "LAYOUT_ZONE3UNUSED",
-  "music": "MUS_AJITO",
+  "music": "MUS_ROUTE101",
   "region_map_section": "MAPSEC_ZONE_3",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
