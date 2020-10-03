@@ -345,17 +345,17 @@ static const u16 sBadgeFlags[NUM_BADGES] =
 
 const u8 NuzlockeLUT[] =
 {
-    [MAPSEC_ZONE_0] = 0x0,
-    [MAPSEC_ZONE_1] = 0x1,
-    [MAPSEC_ZONE_2] = 0x2,
-    [MAPSEC_ZONE_3] = 0x3,
-    [MAPSEC_ZONE_4] = 0x4,
-    [MAPSEC_ZONE_5] = 0x5,
-    [MAPSEC_ZONE_6] = 0x6,
-    [MAPSEC_ZONE_7] = 0x7,
-    [MAPSEC_ZONE_8] = 0x8,
-    [MAPSEC_ZONE_9] = 0x9,
-    [MAPSEC_ZONE_8] = 0xA,
+    [MAPSEC_ZONE_0]  = 0x0,
+    [MAPSEC_ZONE_1]  = 0x1,
+    [MAPSEC_ZONE_2]  = 0x2,
+    [MAPSEC_ZONE_3]  = 0x3,
+    [MAPSEC_ZONE_4]  = 0x4,
+    [MAPSEC_ZONE_5]  = 0x5,
+    [MAPSEC_ZONE_6]  = 0x6,
+    [MAPSEC_ZONE_7]  = 0x7,
+    [MAPSEC_ZONE_8]  = 0x8,
+    [MAPSEC_ZONE_9]  = 0x9,
+    [MAPSEC_ZONE_10] = 0xA,
     [GLOBAL_NUZLOCKE_SWITCH] = 0x47
 };
 
