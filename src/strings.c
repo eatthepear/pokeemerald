@@ -1387,13 +1387,8 @@ const u8 gText_SpaceTimes3[] = _(" time(s)");
 const u8 gText_PkmnJumpRecords[] = _("Pokémon Jump records");
 const u8 gText_JumpsInARow[] = _("Jumps in a row:");
 const u8 gText_BestScore2[] = _("Best score:");
-<<<<<<< HEAD
-const u8 gText_ExcellentsInARow[] = _("Excellents in a row:");
-const u8 gText_AwesomeWonF701F700[] = _("Awesome score! You've\nwon {SPECIAL_F7 0x01} {SPECIAL_F7 0x00}!");
-=======
 const u8 gText_ExcellentsInARow[] = _("EXCELLENTS in a row:");
 const u8 gText_AwesomeWonF701F700[] = _("Awesome score! You've\nwon {DYNAMIC 1} {DYNAMIC 0}!");
->>>>>>> 97d06431103d78022db970aeed70179d63190939
 const u8 gText_FilledStorageSpace2[] = _("It filled its storage space.");
 const u8 gText_CantHoldMore[] = _("You can't hold any more!");
 const u8 gText_WantToPlayAgain2[] = _("Want to play again?");
