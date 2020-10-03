@@ -133,7 +133,7 @@ Zone6A_EventScript_ItemNetBall::
 
 Zone6A_EventScript_Item1000::
 	lock
-	playfanfare MUS_FANFA4 
+	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone6A_Text_Found1000, MSGBOX_DEFAULT
 	waitfanfare
 	setflag FLAG_ITEM_ZONE6A_1000
