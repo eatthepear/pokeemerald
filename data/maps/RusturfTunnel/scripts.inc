@@ -316,7 +316,7 @@ RusturfTunnel_EventScript_Peeko:: @ 822D0AF
 RusturfTunnel_EventScript_Grunt:: @ 822D0C2
 	lock
 	faceplayer
-	playbgm MUS_AQA_0, 0
+	playbgm MUS_ENCOUNTER_AQUA, 0
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
 	giveitem ITEM_DEVON_GOODS

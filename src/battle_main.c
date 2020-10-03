@@ -1350,9 +1350,9 @@ static void CB2_PreInitMultiBattle(void)
         {
             gBattleCommunication[MULTIUSE_STATE]++;
             if (gWirelessCommType)
-                sub_800ADF8();
+                SetLinkStandbyCallback();
             else
-                sub_800AC34();
+                SetCloseLinkCallback();
         }
         break;
     case 3:
@@ -1720,7 +1720,7 @@ void BattleMainCB2(void)
     UpdatePaletteFade();
     RunTasks();
 
-    if (gMain.heldKeys & B_BUTTON && gBattleTypeFlags & BATTLE_TYPE_RECORDED && sub_8186450())
+    if (JOY_HELD(B_BUTTON) && gBattleTypeFlags & BATTLE_TYPE_RECORDED && sub_8186450())
     {
         gSpecialVar_Result = gBattleOutcome = B_OUTCOME_PLAYER_TELEPORTED;
         ResetPaletteFadeControl();
@@ -1735,7 +1735,7 @@ static void FreeRestoreBattleData(void)
     gScanlineEffect.state = 3;
     gMain.inBattle = 0;
     ZeroEnemyPartyMons();
-    m4aSongNumStop(SE_HINSI);
+    m4aSongNumStop(SE_LOW_HEALTH);
     FreeMonSpritesGfx();
     FreeBattleSpritesData();
     FreeBattleResources();
@@ -1974,7 +1974,7 @@ void sub_8038B74(struct Sprite *sprite)
 {
     StartSpriteAffineAnim(sprite, 1);
     sprite->callback = sub_8038B04;
-    PlaySE(SE_BT_START);
+    PlaySE(SE_MUGSHOT);
 }
 
 static void sub_8038B94(u8 taskId)
@@ -2228,7 +2228,7 @@ static void sub_8038F34(void)
     case 6:
         if (IsLinkTaskFinished() == TRUE)
         {
-            sub_800ADF8();
+            SetLinkStandbyCallback();
             BattlePutTextOnWindow(gText_LinkStandby3, 0);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -2242,7 +2242,7 @@ static void sub_8038F34(void)
         break;
     case 8:
         if (!gWirelessCommType)
-            sub_800AC34();
+            SetCloseLinkCallback();
         gBattleCommunication[MULTIUSE_STATE]++;
         break;
     case 9:
@@ -2370,7 +2370,7 @@ static void sub_803939C(void)
         }
         break;
     case 5:
-        if (gMain.newKeys & DPAD_UP)
+        if (JOY_NEW(DPAD_UP))
         {
             if (gBattleCommunication[CURSOR_POSITION] != 0)
             {
@@ -2380,7 +2380,7 @@ static void sub_803939C(void)
                 BattleCreateYesNoCursorAt(0);
             }
         }
-        else if (gMain.newKeys & DPAD_DOWN)
+        else if (JOY_NEW(DPAD_DOWN))
         {
             if (gBattleCommunication[CURSOR_POSITION] == 0)
             {
@@ -2390,7 +2390,7 @@ static void sub_803939C(void)
                 BattleCreateYesNoCursorAt(1);
             }
         }
-        else if (gMain.newKeys & A_BUTTON)
+        else if (JOY_NEW(A_BUTTON))
         {
             PlaySE(SE_SELECT);
             if (gBattleCommunication[CURSOR_POSITION] == 0)
@@ -2404,7 +2404,7 @@ static void sub_803939C(void)
                 gBattleCommunication[MULTIUSE_STATE]++;
             }
         }
-        else if (gMain.newKeys & B_BUTTON)
+        else if (JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
             gBattleCommunication[MULTIUSE_STATE]++;
@@ -2416,7 +2416,7 @@ static void sub_803939C(void)
             HandleBattleWindow(0x18, 8, 0x1D, 0xD, WINDOW_CLEAR);
             if (gMain.field_439_x4)
             {
-                sub_800ADF8();
+                SetLinkStandbyCallback();
                 BattlePutTextOnWindow(gText_LinkStandby3, 0);
             }
             gBattleCommunication[MULTIUSE_STATE]++;
@@ -2426,7 +2426,7 @@ static void sub_803939C(void)
         if (--gBattleCommunication[1] == 0)
         {
             if (gMain.field_439_x4 && !gWirelessCommType)
-                sub_800AC34();
+                SetCloseLinkCallback();
             gBattleCommunication[MULTIUSE_STATE]++;
         }
         break;
@@ -2465,7 +2465,7 @@ static void sub_803939C(void)
         {
             if (gMain.field_439_x4)
             {
-                sub_800ADF8();
+                SetLinkStandbyCallback();
                 BattlePutTextOnWindow(gText_LinkStandby3, 0);
             }
             gBattleCommunication[MULTIUSE_STATE]++;
@@ -2831,7 +2831,7 @@ void sub_8039E60(struct Sprite *sprite)
         sprite->callback = SpriteCallbackDummy_3;
 }
 
-void sub_8039E84(struct Sprite *sprite)
+void SpriteCB_TrainerThrowObject(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
     sprite->callback = sub_8039E60;
@@ -2971,7 +2971,7 @@ void SwitchInClearSetData(void)
     if (gBattleMoves[gCurrentMove].effect != EFFECT_BATON_PASS)
     {
         for (i = 0; i < NUM_BATTLE_STATS; i++)
-            gBattleMons[gActiveBattler].statStages[i] = 6;
+            gBattleMons[gActiveBattler].statStages[i] = DEFAULT_STAT_STAGE;
         for (i = 0; i < gBattlersCount; i++)
         {
             if ((gBattleMons[i].status2 & STATUS2_ESCAPE_PREVENTION) && gDisableStructs[i].battlerPreventingEscape == gActiveBattler)
@@ -3070,7 +3070,7 @@ void FaintClearSetData(void)
     s32 i;
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
-        gBattleMons[gActiveBattler].statStages[i] = 6;
+        gBattleMons[gActiveBattler].statStages[i] = DEFAULT_STAT_STAGE;
 
     gBattleMons[gActiveBattler].status2 = 0;
     gStatuses3[gActiveBattler] = 0;
@@ -4472,40 +4472,38 @@ static void SetActionsAndBattlersTurnOrder(void)
             gBattleStruct->mega.battlerId = 0;
             return;
         }
-        else
+        for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
         {
-            for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
+            if (gChosenActionByBattler[gActiveBattler] == B_ACTION_USE_ITEM || gChosenActionByBattler[gActiveBattler] == B_ACTION_SWITCH)
             {
-                if (gChosenActionByBattler[gActiveBattler] == B_ACTION_USE_ITEM || gChosenActionByBattler[gActiveBattler] == B_ACTION_SWITCH)
-                {
-                    gActionsByTurnOrder[turnOrderId] = gChosenActionByBattler[gActiveBattler];
-                    gBattlerByTurnOrder[turnOrderId] = gActiveBattler;
-                    turnOrderId++;
-                }
+                gActionsByTurnOrder[turnOrderId] = gChosenActionByBattler[gActiveBattler];
+                gBattlerByTurnOrder[turnOrderId] = gActiveBattler;
+                turnOrderId++;
             }
-            for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
+        }
+        for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
+        {
+            if (gChosenActionByBattler[gActiveBattler] != B_ACTION_USE_ITEM && gChosenActionByBattler[gActiveBattler] != B_ACTION_SWITCH)
             {
-                if (gChosenActionByBattler[gActiveBattler] != B_ACTION_USE_ITEM && gChosenActionByBattler[gActiveBattler] != B_ACTION_SWITCH)
-                {
-                    gActionsByTurnOrder[turnOrderId] = gChosenActionByBattler[gActiveBattler];
-                    gBattlerByTurnOrder[turnOrderId] = gActiveBattler;
-                    turnOrderId++;
-                }
+                gActionsByTurnOrder[turnOrderId] = gChosenActionByBattler[gActiveBattler];
+                gBattlerByTurnOrder[turnOrderId] = gActiveBattler;
+                turnOrderId++;
             }
-            for (i = 0; i < gBattlersCount - 1; i++)
+        }
+        for (i = 0; i < gBattlersCount - 1; i++)
+        {
+            for (j = i + 1; j < gBattlersCount; j++)
             {
-                for (j = i + 1; j < gBattlersCount; j++)
+                u8 battler1 = gBattlerByTurnOrder[i];
+                u8 battler2 = gBattlerByTurnOrder[j];
+
+                if (gActionsByTurnOrder[i] != B_ACTION_USE_ITEM
+                    && gActionsByTurnOrder[j] != B_ACTION_USE_ITEM
+                    && gActionsByTurnOrder[i] != B_ACTION_SWITCH
+                    && gActionsByTurnOrder[j] != B_ACTION_SWITCH)
                 {
-                    u8 battler1 = gBattlerByTurnOrder[i];
-                    u8 battler2 = gBattlerByTurnOrder[j];
-                    if (gActionsByTurnOrder[i] != B_ACTION_USE_ITEM
-                        && gActionsByTurnOrder[j] != B_ACTION_USE_ITEM
-                        && gActionsByTurnOrder[i] != B_ACTION_SWITCH
-                        && gActionsByTurnOrder[j] != B_ACTION_SWITCH)
-                    {
-                        if (GetWhoStrikesFirst(battler1, battler2, FALSE))
-                            SwapTurnOrder(i, j);
-                    }
+                    if (GetWhoStrikesFirst(battler1, battler2, FALSE))
+                        SwapTurnOrder(i, j);
                 }
             }
         }
@@ -4631,13 +4629,10 @@ static void RunTurnActionsFunctions(void)
         gHitMarker &= ~(HITMARKER_x100000);
         gBattleMainFunc = sEndTurnFuncsTable[gBattleOutcome & 0x7F];
     }
-    else
+    else if (gBattleStruct->savedTurnActionNumber != gCurrentTurnActionNumber) // action turn has been done, clear hitmarker bits for another battlerId
     {
-        if (gBattleStruct->savedTurnActionNumber != gCurrentTurnActionNumber) // action turn has been done, clear hitmarker bits for another battlerId
-        {
-            gHitMarker &= ~(HITMARKER_NO_ATTACKSTRING);
-            gHitMarker &= ~(HITMARKER_UNABLE_TO_USE_MOVE);
-        }
+        gHitMarker &= ~(HITMARKER_NO_ATTACKSTRING);
+        gHitMarker &= ~(HITMARKER_UNABLE_TO_USE_MOVE);
     }
 }
 
@@ -4660,9 +4655,9 @@ static void HandleEndTurn_BattleWon(void)
         gBattlescriptCurrInstr = BattleScript_FrontierTrainerBattleWon;
 
         if (gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN)
-            PlayBGM(MUS_KACHI3);
+            PlayBGM(MUS_VICTORY_GYM_LEADER);
         else
-            PlayBGM(MUS_KACHI1);
+            PlayBGM(MUS_VICTORY_TRAINER);
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {
@@ -4673,7 +4668,7 @@ static void HandleEndTurn_BattleWon(void)
         {
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_CHAMPION:
-            PlayBGM(MUS_KACHI5);
+            PlayBGM(MUS_VICTORY_LEAGUE);
             break;
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
@@ -4681,13 +4676,13 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_ADMIN:
         case TRAINER_CLASS_MAGMA_LEADER:
-            PlayBGM(MUS_KACHI4);
+            PlayBGM(MUS_VICTORY_AQUA_MAGMA);
             break;
         case TRAINER_CLASS_LEADER:
-            PlayBGM(MUS_KACHI3);
+            PlayBGM(MUS_VICTORY_GYM_LEADER);
             break;
         default:
-            PlayBGM(MUS_KACHI1);
+            PlayBGM(MUS_VICTORY_TRAINER);
             break;
         }
     }
@@ -4953,7 +4948,7 @@ static void ReturnFromBattleToOverworld(void)
             SetRoamerInactive();
     }
 
-    m4aSongNumStop(SE_HINSI);
+    m4aSongNumStop(SE_LOW_HEALTH);
     SetMainCallback2(gMain.savedCallback);
 }
 
@@ -5659,7 +5654,7 @@ static void HandleAction_GoNear(void)
 static void HandleAction_SafariZoneRun(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
-    PlaySE(SE_NIGERU);
+    PlaySE(SE_FLEE);
     gCurrentTurnActionNumber = gBattlersCount;
     gBattleOutcome = B_OUTCOME_RAN;
 }

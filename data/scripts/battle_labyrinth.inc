@@ -204,8 +204,8 @@ EventScript_Joy_Heal:
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_ME_ASA
 	waitfanfare
-	special HealPlayerParty
 	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_HEAL_SHOP_USED, 1
 	msgbox gText_Joy_PartyHealed, MSGBOX_AUTOCLOSE
