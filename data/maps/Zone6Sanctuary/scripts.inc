@@ -20,9 +20,9 @@ Zone6Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	showmoneybox 0, 0, 0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
+	showmoneybox 0, 0, 0
 	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	addmoney 3000, 0
 	playfanfare MUS_OBTAIN_ITEM
