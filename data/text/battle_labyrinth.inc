@@ -52,13 +52,13 @@ gText_Colress_Unlocked:
 	.string "the following shops are upgraded:$"
 
 gText_Colress_UnlockedGeneral:
-	.string "{COLOR RED}Tim’s General Purpose Shop{COLOR DARK_GREY}!$"
+	.string "{COLOR RED}Tim's General Purpose Shop{COLOR DARK_GREY}!$"
 
 gText_Colress_UnlockedUnique:
 	.string "{COLOR RED}Silph Unique Item Shop{COLOR DARK_GREY}!$"
 
 gText_Colress_UnlockedServices:
-	.string "{COLOR RED}Lelouch’s Special Services Shop{COLOR DARK_GREY}!$"
+	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GREY}!$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
