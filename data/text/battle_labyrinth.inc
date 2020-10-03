@@ -1,5 +1,5 @@
-gText_Quentin_EndofDemo:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THIS IS THE END OF THE\n"
+gText_Colress_EndofDemo:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: THIS IS THE END OF THE\n"
 	.string "DEMO. THE ARCHITECT, {COLOR BLUE}EATTHEPEAR{COLOR DARK_GREY}, IS\l"
 	.string "STILL WORKING ON THE REMAINDER OF\l"
 	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.\p"
@@ -8,61 +8,57 @@ gText_Quentin_EndofDemo:
 	.string "SAVE FILE TO THE NEXT VERSION\l"
 	.string "WHEN IT COMES OUT.$"
 
-gText_Quentin_Rules:
-	.string "THE BATTLE LABYRINTH IS COMPRISED\n"
-	.string "OF MANY ZONES YOU MUST TRAVERSE.\p"
-	.string "IN THESE ZONES, YOU MIGHT ENCOUNTER\n"
-	.string "WILD POKEMON, GREAT TREASURES,\l"
-	.string "TOUGH TRAINERS, AND MORE.\p"
-	.string "AT THE END OF EACH ZONE AND BEFORE\n"
-	.string "THE NEXT BEGINS, YOU WILL FIND\l"
-	.string "A SANCTUARY, LIKE THIS ONE, WITH\l"
-	.string "SHOPS TO PURCHASE SUPPLIES, HEAL\l"
-	.string "YOUR POKEMON, AND OTHER BENEFITS.\p"
-	.string "ONCE YOU ENTER A NEW ZONE,\n"
-	.string "YOU WILL NOT BE ABLE TO RETURN TO\l"
-	.string "THE SANCTUARY, NOR ANY PRIOR ZONES.$"
+gText_Colress_Rules:
+	.string "The Battle Labyrinth is comprised\n"
+	.string "of many Zones you must traverse.\p"
+	.string "In these Zones, you might encounter\n"
+	.string "wild Pokémon, great treasures,\l"
+	.string "tough trainers, and more.\p"
+	.string "At the end of each Zone and before\n"
+	.string "the next Zone begins, you will find\l"
+	.string "a Sanctuary, like this one, with\l"
+	.string "shops to purchase supplies, heal\l"
+	.string "your Pokémon, and other benefits.\p"
+	.string "Once you enter a new Zone, you will\n"
+	.string "not be able to access a Sanctuary\l"
+	.string "until you exit that Zone.$"
 
-gText_Quentin_DontLose:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: YOU MUST PROGRESS THROUGH\n"
-	.string "ALL ZONES WITHOUT LOSING A BATTLE,\l"
-	.string "WHICH WOULD RESULT IN AN AUTOMATIC\l"
-	.string "RESTART OF THE SIMULATION.$"
+gText_Colress_DontLose:
+	.string "You must progress through all Zones\n"
+	.string "without losing a battle, which\l"
+	.string "would result in an automatic\l"
+	.string "reset of the simulation.$"
 
-gText_Quentin_ReachedZone:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: CONGRATULATIONS.\n"
-	.string "YOU HAVE CLEARED {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY}.$"
+gText_Colress_ReachedZone:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Congratulations.\n"
+	.string "You have cleared {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}.$"
 
 gText_RewardClear:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: FOR CLEARING {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY},$"
+	.string "Your reward for clearing {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY} is...$"
 
-gText_ReceivedMoney:
-	.string "YOU HAVE EARNED ¥{STR_VAR_1}000.$"
+gText_Colress_WhenUReady:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are prepared to\n"
+	.string "enter {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}, come speak to me.$"
 
-gText_Quentin_WhenUReady:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
-	.string "ENTER {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY},\l"
-	.string "COME SPEAK TO ME.$"
+gText_Colress_ReadyToLeave:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you ready to leave?\n"
+	.string "You will be entering {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}.$"
 
-gText_Quentin_ReadyToLeave:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
-	.string "YOU WILL BE ENTERING {COLOR RED}ZONE {STR_VAR_1}{COLOR DARK_GREY}.$"
+gText_Colress_Empower:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Bring out the strength of your Pokémon!$"
 
-gText_Quentin_Onwards:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ONWARDS, TO VICTORY!$"
+gText_Colress_Unlocked:
+	.string "Because of your progress,\p"
+	.string "the following shops are upgraded:$"
 
-gText_Quentin_Unlocked:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: BECAUSE OF YOUR PROGRESS,\p"
-	.string "THE FOLLOWING SHOPS ARE UPGRADED:$"
+gText_Colress_UnlockedGeneral:
+	.string "{COLOR RED}Tim’s General Purpose Shop{COLOR DARK_GREY}!$"
 
-gText_Quentin_UnlockedGeneral:
-	.string "{COLOR RED}TIM'S GENERAL PURPOSE SHOP{COLOR DARK_GREY}.$"
+gText_Colress_UnlockedUnique:
+	.string "{COLOR RED}Silph Unique Item Shop{COLOR DARK_GREY}!$"
 
-gText_Quentin_UnlockedUnique:
-	.string "{COLOR RED}SILPH UNIQUE ITEM SHOP{COLOR DARK_GREY}.$"
-
-gText_Quentin_UnlockedServices:
-	.string "{COLOR RED}LELOUCH'S SPECIAL SERVICES SHOP{COLOR DARK_GREY}.$"
+gText_Colress_UnlockedServices:
+	.string "{COLOR RED}Lelouch’s Special Services Shop{COLOR DARK_GREY}!$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"

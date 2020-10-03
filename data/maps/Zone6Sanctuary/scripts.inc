@@ -14,15 +14,16 @@ Zone6Sanctuary_EventScript_Intro:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Quentin_WalkDown
+	applymovement 1, Common_Movement_Colress_WalkDown
 	waitmovement 0
 	playfanfare MUS_OBTAIN_BADGE
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
+	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	showmoneybox 0, 0, 0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
+	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	addmoney 3000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	updatemoneybox 0, 0
@@ -30,8 +31,8 @@ Zone6Sanctuary_EventScript_Intro:
 	waitfanfare
 	hidemoneybox
 	setvar VAR_ZONE, 7
-	msgbox Zone6Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_Quentin_WalkUp
+	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
@@ -40,11 +41,11 @@ Zone6Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	buffernumberstring 0, VAR_ZONE
-	msgbox Zone6Sanctuary_Text_Quentin_ReadyToLeave, MSGBOX_YESNO
+	msgbox Zone6Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone6Sanctuary_EventScript_Leave
 	buffernumberstring 0, VAR_ZONE
-	msgbox Zone6Sanctuary_Text_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -53,21 +54,23 @@ Zone6Sanctuary_EventScript_Leave:
 	warp MAP_ZONE7A, 255, 5, 34
 	end
 
-Zone6Sanctuary_Text_Quentin_WhenUReady:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE NEXT TWO ZONES,\n"
-	.string "{COLOR RED}ZONE 7{COLOR DARK_GREY} AND {COLOR RED}ZONE 8{COLOR DARK_GREY}, ARE COMBINED.\p"
-	.string "YOU WILL NOT BE ABLE TO ACCESS A\n"
-	.string "SANCTUARY IN BETWEEN THE ZONES.\p"
-	.string "HOWEVER, THERE WILL BE A SINGLE USE\n"
-	.string "HEALING STOP AVAILABLE.\p"
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHEN YOU ARE PREPARED TO\n"
-	.string "ENTER {COLOR RED}ZONE 7{COLOR DARK_GREY} AND  {COLOR RED}ZONE 8{COLOR DARK_GREY},\l"
-	.string "COME TALK TO ME.$"
+Zone6Sanctuary_Text_Colress_WhenUReady:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The next two zones,\n"
+	.string "{COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}, are combined.\p"
+	.string "You will not be able to access a\n"
+	.string "Sanctuary in between the Zones.\p"
+	.string "However, there will be a single use\n"
+	.string "healing stop available.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are prepared to\n"
+	.string "enter {COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}, come speak to me.$"
 
-Zone6Sanctuary_Text_Quentin_ReadyToLeave:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU READY TO LEAVE?\n"
-	.string "YOU WILL BE ENTERING\l"
-	.string "{COLOR RED}ZONE 7{COLOR DARK_GREY} and {COLOR RED}ZONE 8{COLOR DARK_GREY}.$"
+Zone6Sanctuary_Text_Colress_ReadyToLeave:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you ready to leave?\n"
+	.string "You will be entering\l"
+	.string "{COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}.$"
+
+Zone6Sanctuary_Text_Reward:
+	.string "¥3000!$"
 
 Zone6Sanctuary_Text_ReceivedMoney:
-	.string "YOU HAVE EARNED ¥3000.$"
+	.string "Received ¥3000!$"

@@ -248,7 +248,7 @@ EventScript_LeaveRight:
 	return
 
 EventScript_LeavingSetup:
-	msgbox gText_Quentin_Onwards, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_Empower, MSGBOX_AUTOCLOSE
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 6
 	call_if_eq EventScript_LeaveLeft

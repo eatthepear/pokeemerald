@@ -14,15 +14,16 @@ Zone1Sanctuary_EventScript_Intro:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Quentin_WalkDown
+	applymovement 1, Common_Movement_Colress_WalkDown
 	waitmovement 0
 	playfanfare MUS_OBTAIN_BADGE
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
+	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	showmoneybox 0, 0, 0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
+	msgbox Zone1Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	addmoney 1000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	updatemoneybox 0, 0
@@ -31,8 +32,8 @@ Zone1Sanctuary_EventScript_Intro:
 	hidemoneybox
 	setvar VAR_ZONE, 2
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_Quentin_WalkUp
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
@@ -41,11 +42,11 @@ Zone1Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
+	msgbox gText_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone1Sanctuary_EventScript_Leave
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -54,5 +55,8 @@ Zone1Sanctuary_EventScript_Leave:
 	warp MAP_ZONE2A, 255, 4, 3
 	end
 
+Zone1Sanctuary_Text_Reward:
+	.string "¥1000!$"
+
 Zone1Sanctuary_Text_ReceivedMoney:
-	.string "YOU HAVE EARNED ¥1000.$"
+	.string "Received ¥1000!$"

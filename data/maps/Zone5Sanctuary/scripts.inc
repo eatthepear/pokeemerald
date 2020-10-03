@@ -22,7 +22,7 @@ Zone5Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone5Sanctuary_Text_ReceivedReturn, MSGBOX_AUTOCLOSE
+	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM01
 	closemessage
 	setvar VAR_ZONE, 6
@@ -60,5 +60,5 @@ Zone5Sanctuary_EventScript_Leave:
 	warp MAP_ZONE6A, 255, 7, 6
 	end
 
-Zone5Sanctuary_Text_ReceivedReturn:
-	.string "YOU HAVE EARNED TM01 RETURN.$"
+Zone5Sanctuary_Text_Reward:
+	.string "TM01 - Return.$"

@@ -14,30 +14,30 @@ Zone3Sanctuary_EventScript_Intro:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Quentin_WalkDown
+	applymovement 1, Common_Movement_Colress_WalkDown
 	waitmovement 0
 	playfanfare MUS_OBTAIN_BADGE
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
+	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone3Sanctuary_Text_ReceivedSledgehammer, MSGBOX_AUTOCLOSE
+	msgbox Zone3Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_SLEDGEHAMMER, 1
 	closemessage
 	setvar VAR_ZONE, 4
-	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
+	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
 	waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Quentin_UnlockedUnique, MSGBOX_DEFAULT
+	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare
 	@ playfanfare MUS_OBTAIN_ITEM
-	@ msgbox gText_Quentin_UnlockedServices, MSGBOX_DEFAULT
+	@ msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	@ waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_Quentin_WalkUp
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
@@ -46,11 +46,11 @@ Zone3Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
+	msgbox gText_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone3Sanctuary_EventScript_Leave
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -59,6 +59,5 @@ Zone3Sanctuary_EventScript_Leave:
 	warp MAP_ZONE4A, 255, 4, 3
 	end
 
-Zone3Sanctuary_Text_ReceivedSledgehammer:
-	.string "YOU HAVE EARNED THE\n"
-	.string "SLEDGEHAMMER.$"
+Zone3Sanctuary_Text_Reward:
+	.string "The Sledgehammer.$"

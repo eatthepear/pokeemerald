@@ -16,27 +16,27 @@ Entrance_EventScript_Intro:
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	msgbox Entrance_Text_Quentin_Hello, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_Quentin_WalkDown
+	msgbox Entrance_Text_Colress_Hello, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Colress_WalkDown
 	call EventScript_MoveCameraDown
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_LookLikeBirch, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_Welcome, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox gText_Quentin_Rules, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
 	delay 48
-	msgbox gText_Quentin_DontLose, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
 	goto Entrance_EventScript_PickMode
 	end
 
 Entrance_EventScript_PickMode:
-	msgbox Entrance_Text_Quentin_VanillaNuzlocke, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_VanillaNuzlocke, MSGBOX_AUTOCLOSE
 	delay 16
-	msgbox Entrance_Text_Quentin_VanillaExplained, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_VanillaExplained, MSGBOX_AUTOCLOSE
 	delay 16
-	msgbox Entrance_Text_Quentin_NuzlockeExplained, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Entrance_Text_Quentin_PickMode, MSGBOX_DEFAULT
+	msgbox Entrance_Text_Colress_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
 	case 0, Entrance_EventScript_Vanilla
@@ -45,20 +45,20 @@ Entrance_EventScript_PickMode:
 	
 Entrance_EventScript_Vanilla:
 	closemessage
-	msgbox Entrance_Text_Quentin_VanillaSure, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_VanillaSure, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_SetVanilla
 	goto Entrance_EventScript_PickMode
 	end
 
 Entrance_EventScript_SetVanilla:
-	msgbox Entrance_Text_Quentin_VanillaMode, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
 	goto Entrance_EventScript_Tour
 	end
 	
 Entrance_EventScript_Nuzlocke:
 	closemessage
-	msgbox Entrance_Text_Quentin_NuzlockeSure, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_NuzlockeSure, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_SetNuzlocke
 	goto Entrance_EventScript_PickMode
@@ -67,48 +67,47 @@ Entrance_EventScript_Nuzlocke:
 Entrance_EventScript_SetNuzlocke:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
-	msgbox Entrance_Text_Quentin_NuzlockeMode, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
 	goto Entrance_EventScript_Tour
 	end
 	
 Entrance_EventScript_Tour:
-	msgbox Entrance_Text_Quentin_StartTour, MSGBOX_AUTOCLOSE
-	applymovement 1, Entrance_Movement_Quentin_FirstShop
+	msgbox Entrance_Text_Colress_StartTour, MSGBOX_AUTOCLOSE
+	applymovement 1, Entrance_Movement_Colress_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FirstShop
 	waitmovement 0
 	call EventScript_MoveCameraUp
-	msgbox Entrance_Text_Quentin_General, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_General, MSGBOX_AUTOCLOSE
 	call EventScript_MoveCameraDown
-	applymovement 1, Entrance_Movement_Quentin_SecondShop
+	applymovement 1, Entrance_Movement_Colress_SecondShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_SecondShop
 	waitmovement 0
 	call EventScript_MoveCameraUp
-	msgbox Entrance_Text_Quentin_Item, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_Item, MSGBOX_AUTOCLOSE
 	call EventScript_MoveCameraDown
-	applymovement 1, Entrance_Movement_Quentin_ThirdShop
+	applymovement 1, Entrance_Movement_Colress_ThirdShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_ThirdShop
 	waitmovement 0
 	call EventScript_MoveCameraUp
-	msgbox Entrance_Text_Quentin_Services, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_Services, MSGBOX_AUTOCLOSE
 	call EventScript_MoveCameraDown
-	applymovement 1, Entrance_Movement_Quentin_FourthShop
+	applymovement 1, Entrance_Movement_Colress_FourthShop
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_FourthShop
 	waitmovement 0
 	call EventScript_MoveCameraUp
-	msgbox Entrance_Text_Quentin_Healing, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_Healing, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, Entrance_EventScript_NuzlockeDialog
-	msgbox Entrance_Text_Quentin_PC, MSGBOX_AUTOCLOSE
 	call EventScript_MoveCameraDown
-	applymovement 1, Entrance_Movement_Quentin_BackMid
+	applymovement 1, Entrance_Movement_Colress_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Entrance_Movement_Player_BackMid
 	waitmovement 0
-	msgbox Entrance_Text_Quentin_TourDone, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_TourDone, MSGBOX_AUTOCLOSE
 	delay 96
 	goto Entrance_EventScript_PickStarter
 
 Entrance_EventScript_PickStarter:
 	hidemonpic
-	msgbox Entrance_Text_Quentin_Starters, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	scrollingmultichoice 0, 0, 0, 4, FALSE
 	compare VAR_RESULT, 0
 	call_if_eq Entrance_EventScript_BULBASAUR
@@ -161,374 +160,374 @@ Entrance_EventScript_PickStarter:
 	message Entrance_Text_ReceivedStarter
 	waitmessage
 	waitfanfare
-	msgbox Entrance_Text_Quentin_HowBoutNickname, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_HowBoutNickname, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
-	goto_if_eq Entrance_EventScript_Quentin_EndIntro
+	goto_if_eq Entrance_EventScript_Colress_EndIntro
 	end
 
 Entrance_EventScript_NicknameStarter:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Entrance_EventScript_Quentin_EndIntro
+	goto Entrance_EventScript_Colress_EndIntro
 	end
 
 Entrance_EventScript_BULBASAUR:
 	bufferspeciesname 0, SPECIES_BULBASAUR
 	showmonpic SPECIES_BULBASAUR, 10, 3
 	playmoncry SPECIES_BULBASAUR, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterBULBASAUR, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterBULBASAUR, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterBULBASAUR:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterBULBASAUR:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "BULBASAUR?$"
 
 Entrance_EventScript_CHARMANDER:
 	bufferspeciesname 0, SPECIES_CHARMANDER
 	showmonpic SPECIES_CHARMANDER, 10, 3
 	playmoncry SPECIES_CHARMANDER, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterCHARMANDER, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterCHARMANDER, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterCHARMANDER:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterCHARMANDER:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHARMANDER?$"
 
 Entrance_EventScript_SQUIRTLE:
 	bufferspeciesname 0, SPECIES_SQUIRTLE
 	showmonpic SPECIES_SQUIRTLE, 10, 3
 	playmoncry SPECIES_SQUIRTLE, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterSQUIRTLE, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterSQUIRTLE, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterSQUIRTLE:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterSQUIRTLE:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "SQUIRTLE?$"
 
 Entrance_EventScript_PIKACHU:
 	bufferspeciesname 0, SPECIES_PIKACHU
 	showmonpic SPECIES_PIKACHU, 10, 3
 	playmoncry SPECIES_PIKACHU, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterPIKACHU, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterPIKACHU, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_PIKACHU, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterPIKACHU:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterPIKACHU:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "PIKACHU?$"
 
 Entrance_EventScript_EEVEE:
 	bufferspeciesname 0, SPECIES_EEVEE
 	showmonpic SPECIES_EEVEE, 10, 3
 	playmoncry SPECIES_EEVEE, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterEEVEE, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterEEVEE, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterEEVEE:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterEEVEE:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "EEVEE?$"
 
 Entrance_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
 	showmonpic SPECIES_CHIKORITA, 10, 3
 	playmoncry SPECIES_CHIKORITA, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterCHIKORITA, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterCHIKORITA, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterCHIKORITA:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterCHIKORITA:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHIKORITA?$"
 
 Entrance_EventScript_CYNDAQUIL:
 	bufferspeciesname 0, SPECIES_CYNDAQUIL
 	showmonpic SPECIES_CYNDAQUIL, 10, 3
 	playmoncry SPECIES_CYNDAQUIL, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterCYNDAQUIL, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterCYNDAQUIL, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterCYNDAQUIL:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterCYNDAQUIL:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CYNDAQUIL?$"
 
 Entrance_EventScript_TOTODILE:
 	bufferspeciesname 0, SPECIES_TOTODILE
 	showmonpic SPECIES_TOTODILE, 10, 3
 	playmoncry SPECIES_TOTODILE, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterTOTODILE, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterTOTODILE, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TOTODILE, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterTOTODILE:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterTOTODILE:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TOTODILE?$"
 
 Entrance_EventScript_TREECKO:
 	bufferspeciesname 0, SPECIES_TREECKO
 	showmonpic SPECIES_TREECKO, 10, 3
 	playmoncry SPECIES_TREECKO, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterTREECKO, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterTREECKO, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TREECKO, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterTREECKO:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterTREECKO:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TREECKO?$"
 
 Entrance_EventScript_TORCHIC:
 	bufferspeciesname 0, SPECIES_TORCHIC
 	showmonpic SPECIES_TORCHIC, 10, 3
 	playmoncry SPECIES_TORCHIC, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterTORCHIC, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterTORCHIC, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TORCHIC, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterTORCHIC:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterTORCHIC:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TORCHIC?$"
 
 Entrance_EventScript_MUDKIP:
 	bufferspeciesname 0, SPECIES_MUDKIP
 	showmonpic SPECIES_MUDKIP, 10, 3
 	playmoncry SPECIES_MUDKIP, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterMUDKIP, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterMUDKIP, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_MUDKIP, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterMUDKIP:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterMUDKIP:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "MUDKIP?$"
 
 Entrance_EventScript_TURTWIG:
 	bufferspeciesname 0, SPECIES_TURTWIG
 	showmonpic SPECIES_TURTWIG, 10, 3
 	playmoncry SPECIES_TURTWIG, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterTURTWIG, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterTURTWIG, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TURTWIG, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterTURTWIG:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterTURTWIG:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TURTWIG?$"
 
 Entrance_EventScript_CHIMCHAR:
 	bufferspeciesname 0, SPECIES_CHIMCHAR
 	showmonpic SPECIES_CHIMCHAR, 10, 3
 	playmoncry SPECIES_CHIMCHAR, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterCHIMCHAR, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterCHIMCHAR, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterCHIMCHAR:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterCHIMCHAR:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHIMCHAR?$"
 
 Entrance_EventScript_PIPLUP:
 	bufferspeciesname 0, SPECIES_PIPLUP
 	showmonpic SPECIES_PIPLUP, 10, 3
 	playmoncry SPECIES_PIPLUP, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterPIPLUP, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterPIPLUP, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterPIPLUP:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterPIPLUP:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "PIPLUP?$"
 
 Entrance_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
 	showmonpic SPECIES_SNIVY, 10, 3
 	playmoncry SPECIES_SNIVY, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterSNIVY, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterSNIVY, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_SNIVY, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterSNIVY:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterSNIVY:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "SNIVY?$"
 
 Entrance_EventScript_TEPIG:
 	bufferspeciesname 0, SPECIES_TEPIG
 	showmonpic SPECIES_TEPIG, 10, 3
 	playmoncry SPECIES_TEPIG, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterTEPIG, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterTEPIG, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_TEPIG, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterTEPIG:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterTEPIG:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "TEPIG?$"
 
 Entrance_EventScript_OSHAWOTT:
 	bufferspeciesname 0, SPECIES_OSHAWOTT
 	showmonpic SPECIES_OSHAWOTT, 10, 3
 	playmoncry SPECIES_OSHAWOTT, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterOSHAWOTT, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterOSHAWOTT, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_OSHAWOTT, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterOSHAWOTT:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterOSHAWOTT:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "OSHAWOTT?$"
 
 Entrance_EventScript_CHESPIN:
 	bufferspeciesname 0, SPECIES_CHESPIN
 	showmonpic SPECIES_CHESPIN, 10, 3
 	playmoncry SPECIES_CHESPIN, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterCHESPIN, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterCHESPIN, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_CHESPIN, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterCHESPIN:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterCHESPIN:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "CHESPIN?$"
 
 Entrance_EventScript_FENNEKIN:
 	bufferspeciesname 0, SPECIES_FENNEKIN
 	showmonpic SPECIES_FENNEKIN, 10, 3
 	playmoncry SPECIES_FENNEKIN, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterFENNEKIN, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterFENNEKIN, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterFENNEKIN:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterFENNEKIN:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "FENNEKIN?$"
 
 Entrance_EventScript_FROAKIE:
 	bufferspeciesname 0, SPECIES_FROAKIE
 	showmonpic SPECIES_FROAKIE, 10, 3
 	playmoncry SPECIES_FROAKIE, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterFROAKIE, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterFROAKIE, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterFROAKIE:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterFROAKIE:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "FROAKIE?$"
 
 Entrance_EventScript_ROWLET:
 	bufferspeciesname 0, SPECIES_ROWLET
 	showmonpic SPECIES_ROWLET, 10, 3
 	playmoncry SPECIES_ROWLET, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterROWLET, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterROWLET, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_ROWLET, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterROWLET:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterROWLET:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "ROWLET?$"
 
 Entrance_EventScript_LITTEN:
 	bufferspeciesname 0, SPECIES_LITTEN
 	showmonpic SPECIES_LITTEN, 10, 3
 	playmoncry SPECIES_LITTEN, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterLITTEN, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterLITTEN, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_LITTEN, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterLITTEN:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterLITTEN:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "LITTEN?$"
 
 Entrance_EventScript_POPPLIO:
 	bufferspeciesname 0, SPECIES_POPPLIO
 	showmonpic SPECIES_POPPLIO, 10, 3
 	playmoncry SPECIES_POPPLIO, 0
-	msgbox Entrance_Text_Quentin_YouSureStarterPOPPLIO, MSGBOX_YESNO
+	msgbox Entrance_Text_Colress_YouSureStarterPOPPLIO, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Entrance_EventScript_PickStarter
 	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
 
-Entrance_Text_Quentin_YouSureStarterPOPPLIO:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
+Entrance_Text_Colress_YouSureStarterPOPPLIO:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
 	.string "POPPLIO?$"
 
 Entrance_EventScript_NuzlockeDialog:
 	delay 24
-	msgbox Entrance_Text_Quentin_NuzlockeHealing, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_NuzlockeHealing, MSGBOX_AUTOCLOSE
 	delay 24
 	return
 
-Entrance_EventScript_Quentin_EndIntro:
-	msgbox Entrance_Text_Quentin_NiceChoice, MSGBOX_AUTOCLOSE
+Entrance_EventScript_Colress_EndIntro:
+	msgbox Entrance_Text_Colress_NiceChoice, MSGBOX_AUTOCLOSE
 	delay 96
-	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
+	msgbox Entrance_Text_Colress_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POKE_BALL, 20
 	giveitem ITEM_POTION, 5
 	playfanfare MUS_OBTAIN_ITEM
@@ -538,8 +537,8 @@ Entrance_EventScript_Quentin_EndIntro:
 	delay 96
 	setvar VAR_ZONE, 1
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
-	applymovement 1, Entrance_Movement_Quentin_BackTop
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	applymovement 1, Entrance_Movement_Colress_BackTop
 	waitmovement 1
 	releaseall
 	end
@@ -548,11 +547,11 @@ Entrance_EventScript_NextZone::
 	lock
 	faceplayer
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_ReadyToLeave, MSGBOX_YESNO
+	msgbox gText_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_Leave
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Quentin_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -561,146 +560,130 @@ Entrance_EventScript_Leave:
 	warp MAP_ZONE1A, 255, 16, 28
 	end
 
-Entrance_Text_Quentin_Hello:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: HELLO. MY NAME IS QUENTIN.$"
+Entrance_Text_Colress_Hello:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Ah. Welcome, trainer.$"
 
-Entrance_Text_Quentin_LookLikeBirch:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: I KNOW YOU MIGHT BE\n"
-	.string "CONFUSED. AS I AM A PORYGON,\l"
-	.string "YET I APPEAR AS {COLOR BLUE}PROFESSOR BIRCH{COLOR DARK_GREY}.\p"
-	.string "I HAVE TAKEN ON A HUMAN FORM\n"
-	.string "IN THIS REALM SO I CAN BE MORE\l"
-	.string "COMMUNICATIVE WITH CHALLENGERS\l"
-	.string "WHO MIGHT ATTEMPT TO BRAVE\l"
-	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.\p"
-	.string "ALLOW ME TO GO OVER THE RULES.$"
+Entrance_Text_Colress_Welcome:
+	.string "Welcome to the\n"
+	.string "{COLOR RED}Pokémon Battle Labyrinth!{COLOR DARK_GREY}.\p"
+	.string "I am here to aid challengers who\n"
+	.string "might attempt to brave the\l"
+	.string "trials ahead.\p"
+	.string "Allow me to go over the rules.$"
 
-Entrance_Text_Quentin_VanillaNuzlocke:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THERE ARE TWO DIFFICULTY\n"
-	.string "MODES: {COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
+Entrance_Text_Colress_VanillaNuzlocke:
+	.string "There are two game modes:\n"
+	.string "{COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
 
-Entrance_Text_Quentin_VanillaExplained:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: VANILLA MODE DOES NOT ADD\n"
-	.string "ANY EXTRA MODIFICATIONS.\p"
-	.string "IT WILL BE A NORMAL PLAYTHROUGH\n"
-	.string "WITH NO ADDED RULES.$"
+Entrance_Text_Colress_VanillaExplained:
+	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode does not add any extra\n"
+	.string "modifications. It will be a normal\l"
+	.string "playthrough with no added rules.$"
 
-Entrance_Text_Quentin_NuzlockeExplained:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: NUZLOCKE MODE IS THE \n"
-	.string "INTENDED DIFFICULTY.\p"
-	.string "ALL STANDARD NUZLOCKE RULES ARE\n"
-	.string "COMPLETELY IMPLEMENTED, AS WELL AS\l"
-	.string "SPECIES CLAUSE AND SHINY CLAUSE.$"
+Entrance_Text_Colress_NuzlockeExplained:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GREY} mode completely implements\n"
+	.string "all standard Nuzlocke rules, such\l"
+	.string "as permanent death and capture\l"
+	.string "restrictions, and comes with\l"
+	.string "Species Clause and Shiny Clause.\p"
+	.string "It is not recommended to play\n"
+	.string "Nuzlocke mode unless you are\l"
+	.string "familiar with Nuzlockes already.$"
 
-Entrance_Text_Quentin_PickMode:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: WHICH GAME MODE WOULD\n"
-	.string "YOU LIKE TO PLAY ON?$"
+Entrance_Text_Colress_PickMode:
+	.string "Which game mode would you like to\n"
+	.string "play on?$"
 
-Entrance_Text_Quentin_VanillaSure:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE?\n"
-	.string "ARE YOU CERTAIN?$"
+Entrance_Text_Colress_VanillaSure:
+	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode? Are you sure?\n"
+	.string "You won't be able to switch later.$"
 
-Entrance_Text_Quentin_NuzlockeSure:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE?\n"
-	.string "ARE YOU CERTAIN?$"
+Entrance_Text_Colress_NuzlockeSure:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GREY} mode? Are you sure?\n"
+	.string "You won't be able to switch later.$"
 
-Entrance_Text_Quentin_VanillaMode:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}VANILLA{COLOR DARK_GREY} MODE ENABLED.\n"
-	.string "GOOD LUCK.$"
+Entrance_Text_Colress_VanillaMode:
+	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode enabled. Good luck.$"
 
-Entrance_Text_Quentin_NuzlockeMode:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: {COLOR RED}NUZLOCKE{COLOR DARK_GREY} MODE ENABLED.\n"
-	.string "GOOD LUCK.$"
+Entrance_Text_Colress_NuzlockeMode:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GREY} mode enabled. Good luck.$"
 
-Entrance_Text_Quentin_StartTour:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: ALLOW ME TO SHOW YOU EACH\n"
-	.string "OF THE SHOPS.$"
+Entrance_Text_Colress_StartTour:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Allow me to show you each\n"
+	.string "of the shops.$"
 
-Entrance_Text_Quentin_General:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE TOP LEFT SHOP IS\n"
-	.string "{COLOR RED}TIM'S GENERAL PURPOSE SHOP{COLOR DARK_GREY}.\p"
-	.string "HEALING SUPPLIES, BASIC POKEBALLS,\n"
-	.string "REPELS, AND X ITEMS ARE SOLD HERE.\p"
-	.string "MORE ITEMS WILL GRADUALLY BE\n"
-	.string "UNLOCKED AS YOU PROGRESS THROUGH\l"
-	.string "MORE ZONES.$"
+Entrance_Text_Colress_General:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The top left shop is\n"
+	.string "{COLOR RED}Tim’s General Purpose Shop{COLOR DARK_GREY}.\p"
+	.string "Healing supplies, basic Pokéballs,\n"
+	.string "Repels, and X items are sold here.$"
 
-Entrance_Text_Quentin_Item:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE TOP RIGHT SHOP IS\n"
-	.string "{COLOR RED}SILPH UNIQUE ITEM SHOP{COLOR DARK_GREY}.\p"
-	.string "THEY SELL POKEBALL VARIATIONS,\n"
-	.string "BERRIES, EVOLUTION ITEMS, AND\l"
-	.string "HELD ITEMS.\p"
-	.string "MORE ITEMS WILL GRADUALLY BE\n"
-	.string "UNLOCKED AS YOU PROGRESS THROUGH\l"
-	.string "MORE ZONES.$"
+Entrance_Text_Colress_Item:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The top right shop is \n"
+	.string "{COLOR RED}Silph Unique Item Shop{COLOR DARK_GREY}.\p"
+	.string "They sell Pokéball variations,\n"
+	.string "Evolution items, held items,\l"
+	.string "and other various trinkets.$"
 
-Entrance_Text_Quentin_Services:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE BOTTOM LEFT SHOP IS\n"
-	.string "{COLOR RED}LELOUCH'S SPECIAL SERVICES SHOP{COLOR DARK_GREY}.\p"
-	.string "HERE YOU CAN PAY MONEY FOR\n"
-	.string "EXPERIENCE TRAINING, EV TRAINING,\l"
-	.string "MOVE TUTORS, AND OTHER SERVICES.\p"
-	.string "MORE SERVICES WILL GRADUALLY BE\n"
-	.string "UNLOCKED AS YOU PROGRESS THROUGH\l"
-	.string "MORE ZONES.$"
+Entrance_Text_Colress_Services:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom left shop is\n"
+	.string "{COLOR RED}Lelouch’s Special Services Shop{COLOR DARK_GREY}.\p"
+	.string "They offer a variety of Pokémon\n"
+	.string "services, but only to customers who\l"
+	.string "can pay the right price.$"
 
-Entrance_Text_Quentin_Healing:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: THE BOTTOM RIGHT SHOP IS\n"
-	.string "{COLOR RED}JOY'S HEALING SHOP{COLOR DARK_GREY}.\p"
-	.string "THEY WILL HEAL YOUR ENTIRE PARTY\n"
-	.string "FOR ¥500.$"
+Entrance_Text_Colress_Healing:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom right shop is\n"
+	.string "{COLOR RED}Joy’s Healing Shop{COLOR DARK_GREY}.\p"
+	.string "For ¥500, they will heal your\n"
+	.string "entire party and also grant.\l"
+	.string "complimentary access to the\l"
+	.string "Pokémon Storage System.$"
 
-Entrance_Text_Quentin_NuzlockeHealing:
-	.string "THEY WILL ALSO TAKE AWAY YOUR DEAD\n"
-	.string "POKEMON BEFORE HEALING YOUR\l"
-	.string "SURVIVING PARTY.$"
+Entrance_Text_Colress_NuzlockeHealing:
+	.string "They will also take away your\n"
+	.string "fallen Pokémon before healing your\l"
+	.string "surviving party.$"
 
-Entrance_Text_Quentin_PC:
-	.string "YOU CAN ACCESS THE POKEMON STORAGE\n"
-	.string "SYSTEM FROM HERE AFTER HEALING YOUR\l"
-	.string "POKEMON.$"
+Entrance_Text_Colress_TourDone:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Our tour has finished.\p"
+	.string "These four shops will be available\n"
+	.string "at every Sanctuary.\p"
+	.string "As you progress through more Zones,\n"
+	.string "more items and services will unlock.\p"
+	.string "It is highly recommended you stock\n"
+	.string "up on any supplies before entering\l"
+	.string "the next Zone.$"
 
-Entrance_Text_Quentin_TourDone:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: OUR TOUR HAS FINISHED.\p"
-	.string "THESE FOUR SHOPS WILL BE AVAILABLE\n"
-	.string "BEFORE EACH NEW ZONE. ONCE YOU\l"
-	.string "ENTER THE ZONE, YOU WILL NOT BE\l"
-	.string "ABLE TO ACCESS THESE SHOPS UNTIL\l"
-	.string "YOU EXIT THAT ZONE.\p"
-	.string "IT IS HIGHLY RECOMMENDED YOU STOCK\n"
-	.string "UP ON ANY SUPPLIES BEFORE ENTERING\l"
-	.string "THE NEXT ZONE.$"
-
-Entrance_Text_Quentin_Starters:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: AS A NEW CHALLENGER,\n"
-	.string "YOU WILL RECEIVE A STARTER POKEMON.\p"
-	.string "YOU CAN HAVE YOUR CHOICE OF ANY OF\n"
-	.string "THE GEN 1-7 STARTER POKEMON, AS\l"
-	.string "WELL AS PIKACHU AND EEVEE.\p"
-	.string "CHOOSE CAREFULLY AS THESE POKEMON\n"
-	.string "ARE VERY RARE.$"
+Entrance_Text_Colress_Starters:
+	.string "As a new challenger, you will\n"
+	.string "receive a starter Pokémon.\p"
+	.string "You may have your choice of any of\n"
+	.string "the generation 1-7 starter Pokémon,\l"
+	.string "as well as Pikachu and Eevee.\p"
+	.string "Choose carefully as these Pokémon\n"
+	.string "are very rare.$"
 
 Entrance_Text_ReceivedStarter:
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
-Entrance_Text_Quentin_HowBoutNickname:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: HOW ABOUT A NICKNAME\n"
-	.string "FOR THIS WONDERFUL POKEMON?$"
+Entrance_Text_Colress_HowBoutNickname:
+	.string "How about a nickname for this\n"
+	.string "wonderful Pokémon?$"
 
-Entrance_Text_Quentin_NiceChoice:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: EXCELLENT CHOICE.\p"
-	.string "YOU CAN ALSO RE-NICKNAME YOUR\n"
-	.string "POKEMON FROM THE PARTY MENU.$"
+Entrance_Text_Colress_NiceChoice:
+	.string "Excellent choice.\p"
+	.string "You can also re-nickname your\n"
+	.string "Pokémon from the party menu.$"
 
-Entrance_Text_Quentin_Freebies:
-	.string "{COLOR BLUE}Quentin{COLOR DARK_GREY}: HERE ARE SOME STARTING\n"
-	.string "ITEMS AND CASH.$"
+Entrance_Text_Colress_Freebies:
+	.string "I also have a beginner's kit with\n"
+	.string "items and cash to get you started.$"
 
 Entrance_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
 
-Entrance_Movement_Quentin_FirstShop:
+Entrance_Movement_Colress_FirstShop:
 	walk_left
 	walk_down
 	walk_left
@@ -719,7 +702,7 @@ Entrance_Movement_Player_FirstShop:
 	face_up
 	step_end
 
-Entrance_Movement_Quentin_SecondShop:
+Entrance_Movement_Colress_SecondShop:
 	walk_up
 	walk_right
 	walk_right
@@ -750,7 +733,7 @@ Entrance_Movement_Player_SecondShop:
 	face_up
 	step_end
 
-Entrance_Movement_Quentin_ThirdShop:
+Entrance_Movement_Colress_ThirdShop:
 	walk_up
 	walk_left
 	walk_left
@@ -793,7 +776,7 @@ Entrance_Movement_Player_ThirdShop:
 	face_up
 	step_end
 
-Entrance_Movement_Quentin_FourthShop:
+Entrance_Movement_Colress_FourthShop:
 	walk_up
 	walk_right
 	walk_right
@@ -824,7 +807,7 @@ Entrance_Movement_Player_FourthShop:
 	face_up
 	step_end
 
-Entrance_Movement_Quentin_BackMid:
+Entrance_Movement_Colress_BackMid:
 	walk_up
 	walk_left
 	walk_left
@@ -851,7 +834,7 @@ Entrance_Movement_Player_BackMid:
 	walk_up
 	step_end
 
-Entrance_Movement_Quentin_BackTop:
+Entrance_Movement_Colress_BackTop:
 	walk_up
 	walk_up
 	walk_up
