@@ -60,6 +60,7 @@ Zone6A_EventScript_RitaBattle:
 	end
 
 Zone6A_EventScript_Leviathan3Defeated:
+	setflag FLAG_BEATLEVIATHAN3
 	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_SOOTHE_BELL, 1
 	release

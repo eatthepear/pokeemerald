@@ -23,6 +23,7 @@ Zone3A_EventScript_Exit::
 	end
 
 Zone3A_EventScript_Leviathan1Defeated:
+	setflag FLAG_BEATLEVIATHAN1
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_OLD_ROD, 1
 	closemessage

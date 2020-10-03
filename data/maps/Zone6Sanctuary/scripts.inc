@@ -8,6 +8,7 @@ Zone6Sanctuary_OnFrame:
 
 Zone6Sanctuary_EventScript_Intro:
 	lockall
+	call_if_unset FLAG_BEATLEVIATHAN3, Zone6Sanctuary_EventScript_SetSoftLevelCap
 	setvar VAR_HEAL_SHOP_USED, 0
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
@@ -36,6 +37,10 @@ Zone6Sanctuary_EventScript_Intro:
 	waitmovement 0
 	releaseall
 	end
+
+Zone6Sanctuary_EventScript_SetSoftLevelCap:
+	setflag FLAG_BEATLEVIATHAN3
+	return
 
 Zone6Sanctuary_EventScript_NextZone::
 	lock

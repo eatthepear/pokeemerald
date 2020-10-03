@@ -47,8 +47,8 @@
 #define FLAG_JOY_INTRO       0x23 // First time intro for Joy
 #define FLAG_HIDE_LEVIATHAN1 0x24 // Used to hide Leviathan 1 from vision
 #define FLAG_LELOUCH_SHARDS  0x25 // First time talking to Lelouch with shards
-#define FLAG_BEATLEVIATHAN4  0x26 // Defeated Leviathan 4 (Cobalion)
-#define FLAG_ZONE7_HEAL_USED 0x27 // Unused Flag
+#define FLAG_ZONE7_HEAL_USED 0x26 // Single use heal lady in Zone 7
+#define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
@@ -100,10 +100,10 @@
 #define FLAG_DISABLE_CATCHING                0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
-#define FLAG_MET_RIVAL_MOM                   0x57
-#define FLAG_BIRCH_AIDE_MET                  0x58
-#define FLAG_DECLINED_BIKE                   0x59
-#define FLAG_RECEIVED_BIKE                   0x5A
+#define FLAG_BEATLEVIATHAN1                  0x57
+#define FLAG_BEATLEVIATHAN2                  0x58
+#define FLAG_BEATLEVIATHAN3                  0x59
+#define FLAG_BEATLEVIATHAN4                  0x5A
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.

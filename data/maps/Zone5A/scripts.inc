@@ -61,6 +61,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	end
 
 Zone5A_EventScript_Leviathan2Defeated:
+	setflag FLAG_BEATLEVIATHAN2
 	msgbox Zone3A_Text_Leviathan2Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_RED_SHARD, 5
 	closemessage
