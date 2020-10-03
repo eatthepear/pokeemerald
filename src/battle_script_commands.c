@@ -347,12 +347,7 @@ const u16 sLevelCaps[NUM_SOFT_CAPS] = { 9, 11, 12, 15 };
 const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
 const double sRelativePartyScaling[27] =
 {
-    3.00, 2.75, 2.50, 2.33, 2.25,
-    2.00, 1.80, 1.70, 1.60, 1.50,
-    1.40, 1.30, 1.20, 1.10, 1.00,
-    0.90, 0.80, 0.75, 0.66, 0.50,
-    0.40, 0.33, 0.25, 0.20, 0.15,
-    0.10, 0.05,
+    3.00, 2.75, 2.50, 2.33, 2.25, 2.00, 1.80, 1.70, 1.60, 1.50, 1.40, 1.30, 1.20, 1.10, 1.00, 0.90, 0.80, 0.75, 0.66, 0.50, 0.40, 0.33, 0.25, 0.20, 0.15, 0.10, 0.05,
 };
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -3584,7 +3579,8 @@ static void Cmd_getexp(void)
 
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP))
                 {
-                    double expMultiplier = GetPkmnExpMultiplier(gPlayerParty[gBattleStruct->expGetterMonId].level);
+                    GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL)
+                    double expMultiplier = GetPkmnExpMultiplier(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL));
                     if (gBattleStruct->sentInPokes & 1)
                         gBattleMoveDamage = *exp * expMultiplier;
                     else
