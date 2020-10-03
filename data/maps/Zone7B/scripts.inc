@@ -20,7 +20,7 @@ Zone7B_EventScript_AlreadyHealed:
 Zone7B_EventScript_Heal:
 	msgbox Zone7B_Text_RestWell, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
-	playfanfare MUS_ME_ASA
+	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
