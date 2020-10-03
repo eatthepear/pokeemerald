@@ -614,7 +614,7 @@ Entrance_Text_Colress_StartTour:
 
 Entrance_Text_Colress_General:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The top left shop is\n"
-	.string "{COLOR RED}Tim’s General Purpose Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}Tim's General Purpose Shop{COLOR DARK_GREY}.\p"
 	.string "Healing supplies, basic Pokéballs,\n"
 	.string "Repels, and X items are sold here.$"
 
@@ -627,14 +627,14 @@ Entrance_Text_Colress_Item:
 
 Entrance_Text_Colress_Services:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom left shop is\n"
-	.string "{COLOR RED}Lelouch’s Special Services Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GREY}.\p"
 	.string "They offer a variety of Pokémon\n"
 	.string "services, but only to customers who\l"
 	.string "can pay the right price.$"
 
 Entrance_Text_Colress_Healing:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom right shop is\n"
-	.string "{COLOR RED}Joy’s Healing Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GREY}.\p"
 	.string "For ¥500, they will heal your\n"
 	.string "entire party and also grant.\l"
 	.string "complimentary access to the\l"
