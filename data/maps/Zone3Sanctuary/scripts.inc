@@ -16,7 +16,7 @@ Zone3Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
-	playfanfare MUS_ME_BACHI
+	playfanfare MUS_OBTAIN_BADGE
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
@@ -26,13 +26,13 @@ Zone3Sanctuary_EventScript_Intro:
 	closemessage
 	setvar VAR_ZONE, 4
 	msgbox gText_Quentin_Unlocked, MSGBOX_AUTOCLOSE
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Quentin_UnlockedGeneral, MSGBOX_DEFAULT
 	waitfanfare
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Quentin_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare
-	@ playfanfare MUS_FANFA4
+	@ playfanfare MUS_OBTAIN_ITEM
 	@ msgbox gText_Quentin_UnlockedServices, MSGBOX_DEFAULT
 	@ waitfanfare
 	buffernumberstring 0, VAR_ZONE

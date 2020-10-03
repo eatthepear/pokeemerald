@@ -157,7 +157,7 @@ Entrance_EventScript_PickStarter:
 	compare VAR_RESULT, 22
 	call_if_eq Entrance_EventScript_POPPLIO
 	hidemonpic
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message Entrance_Text_ReceivedStarter
 	waitmessage
 	waitfanfare
@@ -531,7 +531,7 @@ Entrance_EventScript_Quentin_EndIntro:
 	msgbox Entrance_Text_Quentin_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POKE_BALL, 20
 	giveitem ITEM_POTION, 5
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	msgbox Entrance_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage

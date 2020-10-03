@@ -2,7 +2,7 @@
   "id": "MAP_ZONE5A",
   "name": "Zone5A",
   "layout": "LAYOUT_ZONE5A",
-  "music": "MUS_DOORO1",
+  "music": "MUS_RG_ROUTE1",
   "region_map_section": "MAPSEC_ZONE_5",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -16,7 +16,7 @@ Zone1Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
-	playfanfare MUS_ME_BACHI
+	playfanfare MUS_OBTAIN_BADGE
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
@@ -24,7 +24,7 @@ Zone1Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	addmoney 1000, 0
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	updatemoneybox 0, 0
 	msgbox Zone1Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare

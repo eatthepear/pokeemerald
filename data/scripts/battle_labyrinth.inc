@@ -202,7 +202,7 @@ EventScript_Joy_Heal:
 	updatemoneybox 0, 0
 	msgbox gText_Joy_ThankYou, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
-	playfanfare MUS_ME_ASA
+	playfanfare MUS_HEAL
 	waitfanfare
 	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty

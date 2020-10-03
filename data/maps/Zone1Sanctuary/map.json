@@ -2,7 +2,7 @@
   "id": "MAP_ZONE1SANCTUARY",
   "name": "Zone1Sanctuary",
   "layout": "LAYOUT_ZONE1SANCTUARY",
-  "music": "MUS_RUNECITY",
+  "music": "MUS_SOOTOPOLIS",
   "region_map_section": "MAPSEC_ZONE_1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

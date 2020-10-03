@@ -16,7 +16,7 @@ Zone2Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Quentin_WalkDown
 	waitmovement 0
-	playfanfare MUS_ME_BACHI
+	playfanfare MUS_OBTAIN_BADGE
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Quentin_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
