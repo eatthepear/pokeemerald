@@ -10,13 +10,13 @@ gText_Colress_EndofDemo:
 
 gText_Colress_Rules:
 	.string "The Battle Labyrinth is comprised\n"
-	.string "of many Zones you must traverse.\p"
+	.string "of many {COLOR RED}Zones{COLOR DARK_GREY} you must traverse.\p"
 	.string "In these Zones, you might encounter\n"
 	.string "wild Pokémon, great treasures,\l"
 	.string "tough trainers, and more.\p"
 	.string "At the end of each Zone and before\n"
 	.string "the next Zone begins, you will find\l"
-	.string "a Sanctuary, like this one, with\l"
+	.string "a {COLOR RED}Sanctuary{COLOR DARK_GREY}, like this one, with\l"
 	.string "shops to purchase supplies, heal\l"
 	.string "your Pokémon, and other benefits.\p"
 	.string "Once you enter a new Zone, you will\n"
@@ -45,7 +45,8 @@ gText_Colress_ReadyToLeave:
 	.string "You will be entering {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}.$"
 
 gText_Colress_Empower:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Bring out the strength of your Pokémon!$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Bring out the strength of you\n"
+	.string "and your Pokémon!$"
 
 gText_Colress_Unlocked:
 	.string "Because of your progress,\p"

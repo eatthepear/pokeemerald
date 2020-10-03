@@ -185,8 +185,8 @@ Entrance_EventScript_BULBASAUR:
 	return
 
 Entrance_Text_Colress_YouSureStarterBULBASAUR:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "BULBASAUR?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Bulbasaur?$"
 
 Entrance_EventScript_CHARMANDER:
 	bufferspeciesname 0, SPECIES_CHARMANDER
@@ -200,8 +200,8 @@ Entrance_EventScript_CHARMANDER:
 	return
 
 Entrance_Text_Colress_YouSureStarterCHARMANDER:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "CHARMANDER?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Charmander?$"
 
 Entrance_EventScript_SQUIRTLE:
 	bufferspeciesname 0, SPECIES_SQUIRTLE
@@ -215,8 +215,8 @@ Entrance_EventScript_SQUIRTLE:
 	return
 
 Entrance_Text_Colress_YouSureStarterSQUIRTLE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "SQUIRTLE?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Squirtle?$"
 
 Entrance_EventScript_PIKACHU:
 	bufferspeciesname 0, SPECIES_PIKACHU
@@ -230,8 +230,8 @@ Entrance_EventScript_PIKACHU:
 	return
 
 Entrance_Text_Colress_YouSureStarterPIKACHU:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "PIKACHU?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Pikachu?$"
 
 Entrance_EventScript_EEVEE:
 	bufferspeciesname 0, SPECIES_EEVEE
@@ -245,8 +245,8 @@ Entrance_EventScript_EEVEE:
 	return
 
 Entrance_Text_Colress_YouSureStarterEEVEE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "EEVEE?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Eevee?$"
 
 Entrance_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
@@ -260,8 +260,8 @@ Entrance_EventScript_CHIKORITA:
 	return
 
 Entrance_Text_Colress_YouSureStarterCHIKORITA:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "CHIKORITA?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Chikorita?$"
 
 Entrance_EventScript_CYNDAQUIL:
 	bufferspeciesname 0, SPECIES_CYNDAQUIL
@@ -275,8 +275,8 @@ Entrance_EventScript_CYNDAQUIL:
 	return
 
 Entrance_Text_Colress_YouSureStarterCYNDAQUIL:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "CYNDAQUIL?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Cyndaquil?$"
 
 Entrance_EventScript_TOTODILE:
 	bufferspeciesname 0, SPECIES_TOTODILE
@@ -290,8 +290,8 @@ Entrance_EventScript_TOTODILE:
 	return
 
 Entrance_Text_Colress_YouSureStarterTOTODILE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "TOTODILE?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Totodile?$"
 
 Entrance_EventScript_TREECKO:
 	bufferspeciesname 0, SPECIES_TREECKO
@@ -305,8 +305,8 @@ Entrance_EventScript_TREECKO:
 	return
 
 Entrance_Text_Colress_YouSureStarterTREECKO:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "TREECKO?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Treecko?$"
 
 Entrance_EventScript_TORCHIC:
 	bufferspeciesname 0, SPECIES_TORCHIC
@@ -320,8 +320,8 @@ Entrance_EventScript_TORCHIC:
 	return
 
 Entrance_Text_Colress_YouSureStarterTORCHIC:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "TORCHIC?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Torchic?$"
 
 Entrance_EventScript_MUDKIP:
 	bufferspeciesname 0, SPECIES_MUDKIP
@@ -335,8 +335,8 @@ Entrance_EventScript_MUDKIP:
 	return
 
 Entrance_Text_Colress_YouSureStarterMUDKIP:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "MUDKIP?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Mudkip?$"
 
 Entrance_EventScript_TURTWIG:
 	bufferspeciesname 0, SPECIES_TURTWIG
@@ -350,8 +350,8 @@ Entrance_EventScript_TURTWIG:
 	return
 
 Entrance_Text_Colress_YouSureStarterTURTWIG:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "TURTWIG?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Turtwig?$"
 
 Entrance_EventScript_CHIMCHAR:
 	bufferspeciesname 0, SPECIES_CHIMCHAR
@@ -365,8 +365,8 @@ Entrance_EventScript_CHIMCHAR:
 	return
 
 Entrance_Text_Colress_YouSureStarterCHIMCHAR:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "CHIMCHAR?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Chimchar?$"
 
 Entrance_EventScript_PIPLUP:
 	bufferspeciesname 0, SPECIES_PIPLUP
@@ -380,8 +380,8 @@ Entrance_EventScript_PIPLUP:
 	return
 
 Entrance_Text_Colress_YouSureStarterPIPLUP:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "PIPLUP?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Piplup?$"
 
 Entrance_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
@@ -395,8 +395,8 @@ Entrance_EventScript_SNIVY:
 	return
 
 Entrance_Text_Colress_YouSureStarterSNIVY:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "SNIVY?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Snivy?$"
 
 Entrance_EventScript_TEPIG:
 	bufferspeciesname 0, SPECIES_TEPIG
@@ -410,8 +410,8 @@ Entrance_EventScript_TEPIG:
 	return
 
 Entrance_Text_Colress_YouSureStarterTEPIG:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "TEPIG?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Tepig?$"
 
 Entrance_EventScript_OSHAWOTT:
 	bufferspeciesname 0, SPECIES_OSHAWOTT
@@ -425,8 +425,8 @@ Entrance_EventScript_OSHAWOTT:
 	return
 
 Entrance_Text_Colress_YouSureStarterOSHAWOTT:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "OSHAWOTT?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Oshawott?$"
 
 Entrance_EventScript_CHESPIN:
 	bufferspeciesname 0, SPECIES_CHESPIN
@@ -440,8 +440,8 @@ Entrance_EventScript_CHESPIN:
 	return
 
 Entrance_Text_Colress_YouSureStarterCHESPIN:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "CHESPIN?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Chespin?$"
 
 Entrance_EventScript_FENNEKIN:
 	bufferspeciesname 0, SPECIES_FENNEKIN
@@ -455,8 +455,8 @@ Entrance_EventScript_FENNEKIN:
 	return
 
 Entrance_Text_Colress_YouSureStarterFENNEKIN:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "FENNEKIN?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Fennekin?$"
 
 Entrance_EventScript_FROAKIE:
 	bufferspeciesname 0, SPECIES_FROAKIE
@@ -470,8 +470,8 @@ Entrance_EventScript_FROAKIE:
 	return
 
 Entrance_Text_Colress_YouSureStarterFROAKIE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "FROAKIE?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Froakie?$"
 
 Entrance_EventScript_ROWLET:
 	bufferspeciesname 0, SPECIES_ROWLET
@@ -485,8 +485,8 @@ Entrance_EventScript_ROWLET:
 	return
 
 Entrance_Text_Colress_YouSureStarterROWLET:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "ROWLET?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Rowlet?$"
 
 Entrance_EventScript_LITTEN:
 	bufferspeciesname 0, SPECIES_LITTEN
@@ -500,8 +500,8 @@ Entrance_EventScript_LITTEN:
 	return
 
 Entrance_Text_Colress_YouSureStarterLITTEN:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "LITTEN?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Litten?$"
 
 Entrance_EventScript_POPPLIO:
 	bufferspeciesname 0, SPECIES_POPPLIO
@@ -515,8 +515,8 @@ Entrance_EventScript_POPPLIO:
 	return
 
 Entrance_Text_Colress_YouSureStarterPOPPLIO:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: ARE YOU SURE YOU WANT\n"
-	.string "POPPLIO?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Popplio?$"
 
 Entrance_EventScript_NuzlockeDialog:
 	delay 24
@@ -565,7 +565,7 @@ Entrance_Text_Colress_Hello:
 
 Entrance_Text_Colress_Welcome:
 	.string "Welcome to the\n"
-	.string "{COLOR RED}Pokémon Battle Labyrinth!{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GREY}!\p"
 	.string "I am here to aid challengers who\n"
 	.string "might attempt to brave the\l"
 	.string "trials ahead.\p"
@@ -573,7 +573,7 @@ Entrance_Text_Colress_Welcome:
 
 Entrance_Text_Colress_VanillaNuzlocke:
 	.string "There are two game modes:\n"
-	.string "{COLOR RED}VANILLA{COLOR DARK_GREY} AND {COLOR RED}NUZLOCKE{COLOR DARK_GREY}.$"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} and {COLOR RED}Nuzlocke{COLOR DARK_GREY}.$"
 
 Entrance_Text_Colress_VanillaExplained:
 	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode does not add any extra\n"
@@ -636,7 +636,7 @@ Entrance_Text_Colress_Healing:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom right shop is\n"
 	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GREY}.\p"
 	.string "For ¥500, they will heal your\n"
-	.string "entire party and also grant.\l"
+	.string "entire party and also grant\l"
 	.string "complimentary access to the\l"
 	.string "Pokémon Storage System.$"
 
@@ -651,9 +651,9 @@ Entrance_Text_Colress_TourDone:
 	.string "at every Sanctuary.\p"
 	.string "As you progress through more Zones,\n"
 	.string "more items and services will unlock.\p"
-	.string "It is highly recommended you stock\n"
-	.string "up on any supplies before entering\l"
-	.string "the next Zone.$"
+	.string "Also, it is highly recommended you\n"
+	.string "stock up on any supplies before\l"
+	.string "entering the next Zone.$"
 
 Entrance_Text_Colress_Starters:
 	.string "As a new challenger, you will\n"
@@ -668,8 +668,8 @@ Entrance_Text_ReceivedStarter:
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
 Entrance_Text_Colress_HowBoutNickname:
-	.string "How about a nickname for this\n"
-	.string "wonderful Pokémon?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: How about a nickname\n"
+	.string "for this wonderful Pokémon?$"
 
 Entrance_Text_Colress_NiceChoice:
 	.string "Excellent choice.\p"
