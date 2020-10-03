@@ -3579,7 +3579,6 @@ static void Cmd_getexp(void)
 
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP))
                 {
-                    GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL)
                     double expMultiplier = GetPkmnExpMultiplier(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL));
                     if (gBattleStruct->sentInPokes & 1)
                         gBattleMoveDamage = *exp * expMultiplier;
