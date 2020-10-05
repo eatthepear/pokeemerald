@@ -58,7 +58,7 @@ Zone8Sanctuary_EventScript_NextZone::
 
 Zone8Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
-	warp MAP_ZONE7A, 255, 7, 6
+	warp MAP_ZONE9A, 255, 7, 6
 	end
 
 Zone8Sanctuary_Text_Colress_ReachedZone:
