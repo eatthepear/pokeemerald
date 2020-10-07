@@ -4614,7 +4614,7 @@
     {
       "id": "LAYOUT_ZONE5A",
       "name": "Zone5A_Layout",
-      "width": 20,
+      "width": 60,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
@@ -4644,10 +4644,10 @@
     {
       "id": "LAYOUT_ZONE6A",
       "name": "Zone6A_Layout",
-      "width": 30,
+      "width": 45,
       "height": 45,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Unused1",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Zone6A/border.bin",
       "blockdata_filepath": "data/layouts/Zone6A/map.bin"
     },

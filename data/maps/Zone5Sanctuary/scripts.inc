@@ -57,7 +57,7 @@ Zone5Sanctuary_EventScript_NextZone::
 
 Zone5Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
-	warp MAP_ZONE6A, 255, 7, 6
+	warp MAP_ZONE6A, 255, 21, 25
 	end
 
 Zone5Sanctuary_Text_Reward:
