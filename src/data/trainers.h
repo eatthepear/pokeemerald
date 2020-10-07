@@ -100,9 +100,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_ARTHUR] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
         .trainerName = _("Arthur"),
         .items = {},
         .doubleBattle = FALSE,

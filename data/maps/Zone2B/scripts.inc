@@ -13,13 +13,14 @@ Zone2B_EventScript_Jeremiah::
 	end
 
 Zone2B_Text_JeremiahIntro:
-	.string "Beware the power of Poison Sting!$"
+	.string "My friends call me the free Exp guy,\n"
+	.string "but I'll prove them wrong!$"
 
 Zone2B_Text_JeremiahDefeat:
-	.string "30% is basically 100%!$"
+	.string "Oops, guess not...$"
 
 Zone2B_Text_JeremiahPostBattle:
-	.string "I hope you have some Antidotes!$"
+	.string "I guess I am the free Exp guy...$"
 
 Zone2B_EventScript_Arthur::
 	trainerbattle_single TRAINER_ARTHUR, Zone2B_Text_ArthurIntro, Zone2B_Text_ArthurDefeat
