@@ -247,6 +247,20 @@ EventScript_LeaveRight:
 	waitmovement 0
 	return
 
+EventScript_WhenUReady:
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	release
+	end
+
+EventScript_Advice:
+	release
+	end
+
+EventScript_Rules:
+	release
+	end
+
 EventScript_LeavingSetup:
 	msgbox gText_Colress_Empower, MSGBOX_AUTOCLOSE
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1

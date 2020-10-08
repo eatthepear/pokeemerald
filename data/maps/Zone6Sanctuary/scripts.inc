@@ -45,10 +45,25 @@ Zone6Sanctuary_EventScript_SetSoftLevelCap:
 Zone6Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
+	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
+	multichoice 15, 0, MULTI_COLRESS_MENU, 0
+	switch VAR_RESULT
+	case 0, Zone6Sanctuary_EventScript_NextZoneCheck
+	case 1, EventScript_Advice
+	case 2, EventScript_Rules
+	case 3, Zone6Sanctuary_EventScript_WhenUReady
+	case MULTI_B_PRESSED, Zone6Sanctuary_EventScript_WhenUReady
+	end
+
+Zone6Sanctuary_EventScript_NextZoneCheck:
 	buffernumberstring 0, VAR_ZONE
 	msgbox Zone6Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone6Sanctuary_EventScript_Leave
+	goto Zone6Sanctuary_EventScript_WhenUReady
+	end
+
+Zone6Sanctuary_EventScript_WhenUReady:
 	buffernumberstring 0, VAR_ZONE
 	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release

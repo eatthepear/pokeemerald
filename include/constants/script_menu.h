@@ -18,8 +18,8 @@
 #define MULTI_REGISTER_MENU                7
 #define MULTI_SSTIDAL_LILYCOVE             8 // Exit only, populated by CreateLilycoveSSTidalMultichoice
 #define MULTI_VANILLA_NUZLOCKE             9
-#define MULTI_LELOUCH_OPTIONS              10
-#define MULTI_FRONTIER_PASS_INFO           11
+#define MULTI_COLRESS_MENU                 10
+#define MULTI_LELOUCH_OPTIONS              11
 #define MULTI_BIKE                         12
 #define MULTI_STATUS_INFO                  13
 #define MULTI_BRINEY_OFF_DEWFORD           14

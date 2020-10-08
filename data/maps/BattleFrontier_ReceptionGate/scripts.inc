@@ -269,7 +269,7 @@ BattleFrontier_ReceptionGate_EventScript_FrontierPassGuide:: @ 82664F4
 BattleFrontier_ReceptionGate_EventScript_ChooseFrontierPassInfoToLearnAbout:: @ 8266504
 	message BattleFrontier_ReceptionGate_Text_LearnAboutWhich1
 	waitmessage
-	multichoice 16, 4, MULTI_FRONTIER_PASS_INFO, 0
+	multichoice 16, 4, MULTI_PC, 0
 	switch VAR_RESULT
 	case 0, BattleFrontier_ReceptionGate_EventScript_Symbols
 	case 1, BattleFrontier_ReceptionGate_EventScript_RecordBattle

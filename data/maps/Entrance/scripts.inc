@@ -546,13 +546,22 @@ Entrance_EventScript_Colress_EndIntro:
 Entrance_EventScript_NextZone::
 	lock
 	faceplayer
+	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
+	multichoice 15, 0, MULTI_COLRESS_MENU, 0
+	switch VAR_RESULT
+	case 0, Entrance_EventScript_NextZoneCheck
+	case 1, EventScript_Advice
+	case 2, EventScript_Rules
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
+	end
+
+Entrance_EventScript_NextZoneCheck:
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_ReadyToLeave, MSGBOX_YESNO
+	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Entrance_EventScript_Leave
-	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_WhenUReady
 	end
 
 Entrance_EventScript_Leave:

@@ -621,14 +621,6 @@ static const struct MenuAction MultichoiceList_FrontierRules[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_FrontierPassInfo[] =
-{
-    {gText_Symbols2},
-    {gText_Record3},
-    {gText_BattlePts},
-    {gText_Exit},
-};
-
 static const struct MenuAction MultichoiceList_BattleArenaRules[] =
 {
     {gText_BattleRules},
@@ -777,6 +769,14 @@ static const struct MenuAction MultichoiceList_VanillaNuzlocke[] =
     {gText_Nuzlocke},
 };
 
+static const struct MenuAction MultichoiceList_ColressMenu[] =
+{
+    {gText_NextZone},
+    {gText_Advice},
+    {gText_Rules},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_LelouchOptions[] =
 {
     {gText_TrainingService},
@@ -809,8 +809,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_VANILLA_NUZLOCKE]           = MULTICHOICE(MultichoiceList_VanillaNuzlocke),
+    [MULTI_COLRESS_MENU]               = MULTICHOICE(MultichoiceList_ColressMenu),
     [MULTI_LELOUCH_OPTIONS]            = MULTICHOICE(MultichoiceList_LelouchOptions),
-    [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),
     [MULTI_BRINEY_OFF_DEWFORD]         = MULTICHOICE(MultichoiceList_BrineyOffDewford),

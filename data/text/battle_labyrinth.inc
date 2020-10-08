@@ -40,8 +40,12 @@ gText_Colress_WhenUReady:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are prepared to\n"
 	.string "enter {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}, come speak to me.$"
 
-gText_Colress_ReadyToLeave:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you ready to leave?\n"
+gText_Colress_Greetings:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Greetings, {PLAYER}.\n"
+	.string "What can I help you with?$"
+
+gText_Colress_SureReadyToLeave:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you're ready?\n"
 	.string "You will be entering {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}.$"
 
 gText_Colress_Empower:
