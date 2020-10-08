@@ -23,7 +23,7 @@ Zone5Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM01
+	giveitem ITEM_TM02
 	closemessage
 	setvar VAR_ZONE, 6
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
@@ -70,4 +70,4 @@ Zone5Sanctuary_EventScript_Leave:
 	end
 
 Zone5Sanctuary_Text_Reward:
-	.string "TM01 - Return.$"
+	.string "TM02 - Return.$"

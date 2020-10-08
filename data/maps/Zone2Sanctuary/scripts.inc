@@ -23,7 +23,7 @@ Zone2Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone2Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_EXP_SHARE, 1
+	giveitem ITEM_TM01
 	closemessage
 	setvar VAR_ZONE, 3
 	setflag FLAG_HIDE_LEVIATHAN1
@@ -74,4 +74,4 @@ Zone2Sanctuary_Text_Colress_ExplainLeviathans:
 	.string "warned of them in advance.$"
 
 Zone2Sanctuary_Text_Reward:
-	.string "The Exp. Share!$"
+	.string "TM01 - Protect!$"
