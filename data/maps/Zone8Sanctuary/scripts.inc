@@ -48,7 +48,7 @@ Zone8Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
-	multichoice 15, 0, MULTI_COLRESS_MENU, 0
+	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
 	case 0, Zone8Sanctuary_EventScript_NextZoneCheck
 	case 1, EventScript_Advice
