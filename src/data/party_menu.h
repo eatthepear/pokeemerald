@@ -1196,9 +1196,9 @@ static const u8 *const sUnused_StatStrings[] =
 
 static const u16 sTMHMMoves[] =
 {
+    MOVE_PROTECT,
     MOVE_RETURN,
     MOVE_ROCK_TOMB,
-    MOVE_WATER_PULSE,
     MOVE_CALM_MIND,
     MOVE_ROAR,
     MOVE_TOXIC,
@@ -1212,7 +1212,7 @@ static const u16 sTMHMMoves[] =
     MOVE_BLIZZARD,
     MOVE_HYPER_BEAM,
     MOVE_LIGHT_SCREEN,
-    MOVE_PROTECT,
+    MOVE_ICE_PUNCH,
     MOVE_RAIN_DANCE,
     MOVE_GIGA_DRAIN,
     MOVE_SAFEGUARD,

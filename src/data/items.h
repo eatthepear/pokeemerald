@@ -4037,10 +4037,10 @@ const struct Item gItems[] =
 // TMs/HMs
 
     
-    [ITEM_TM01_RETURN] =
+    [ITEM_TM01_PROTECT] =
     {
         .name = _("TM01"),
-        .itemId = ITEM_TM01_RETURN,
+        .itemId = ITEM_TM01_PROTECT,
         .price = 3000,
         .description = sTM01Desc,
         .pocket = POCKET_TM_HM,
@@ -4050,10 +4050,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM02_ROCK_TOMB] =
+    [ITEM_TM02_RETURN] =
     {
         .name = _("TM02"),
-        .itemId = ITEM_TM02_ROCK_TOMB,
+        .itemId = ITEM_TM02_RETURN,
         .price = 3000,
         .description = sTM02Desc,
         .pocket = POCKET_TM_HM,
@@ -4063,10 +4063,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM03_WATER_PULSE] =
+    [ITEM_TM03_ROCK_TOMB] =
     {
         .name = _("TM03"),
-        .itemId = ITEM_TM03_WATER_PULSE,
+        .itemId = ITEM_TM03_ROCK_TOMB,
         .price = 3000,
         .description = sTM03Desc,
         .pocket = POCKET_TM_HM,

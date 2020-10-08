@@ -1511,19 +1511,19 @@ static const u8 sDevonScopeDesc[] = _(
 
 // TMs/HMs
 static const u8 sTM01Desc[] = _(
+    "Negates all damage,\n"
+    "but may fail if used\n"
+    "in succession.");
+
+static const u8 sTM02Desc[] = _(
     "The more the user\n"
     "likes you, the more\n"
     "powerful this move.");
 
-static const u8 sTM02Desc[] = _(
+static const u8 sTM03Desc[] = _(
     "Stops the foe from\n"
     "moving with rocks.\n"
     "May lower Speed.");
-
-static const u8 sTM03Desc[] = _(
-    "Generates an\n"
-    "ultrasonic wave\n"
-    "that may confuse.");
 
 static const u8 sTM04Desc[] = _(
     "Raises Sp. Atk and\n"
