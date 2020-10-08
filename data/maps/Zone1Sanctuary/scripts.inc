@@ -24,9 +24,6 @@ Zone1Sanctuary_EventScript_Intro:
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone1Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_EXP_SHARE, 1
-	closemessage
-	waitfanfare
-	hidemoneybox
 	setvar VAR_ZONE, 2
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE

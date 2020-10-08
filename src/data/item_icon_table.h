@@ -253,9 +253,9 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_CLAW_FOSSIL] = {gItemIcon_ClawFossil, gItemIconPalette_HoennFossil},
     [ITEM_DEVON_SCOPE] = {gItemIcon_DevonScope, gItemIconPalette_DevonScope},
     // TMs / HMs
-    [ITEM_TM01] = {gItemIcon_TM, gItemIconPalette_FightingTMHM},
-    [ITEM_TM02] = {gItemIcon_TM, gItemIconPalette_DragonTMHM},
-    [ITEM_TM03] = {gItemIcon_TM, gItemIconPalette_WaterTMHM},
+    [ITEM_TM01] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},
+    [ITEM_TM02] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},
+    [ITEM_TM03] = {gItemIcon_TM, gItemIconPalette_RockTMHM},
     [ITEM_TM04] = {gItemIcon_TM, gItemIconPalette_PsychicTMHM},
     [ITEM_TM05] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},
     [ITEM_TM06] = {gItemIcon_TM, gItemIconPalette_PoisonTMHM},
