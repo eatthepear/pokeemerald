@@ -8,6 +8,10 @@ gText_Colress_EndofDemo:
 	.string "SAVE FILE TO THE NEXT VERSION\l"
 	.string "WHEN IT COMES OUT.$"
 
+gText_Colress_RulesReminder:
+	.string "You need a reminder of the rules?\n"
+	.string "Of course.$"
+
 gText_Colress_Rules:
 	.string "The Battle Labyrinth is comprised\n"
 	.string "of many {COLOR RED}Zones{COLOR DARK_GREY} you must traverse.\p"
