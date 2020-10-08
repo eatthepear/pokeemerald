@@ -254,11 +254,97 @@ EventScript_WhenUReady:
 	end
 
 EventScript_Advice:
+	msgbox gText_Colress_HeresAPieceofAdvice, MSGBOX_AUTOCLOSE
+	random 10
+	switch VAR_RESULT
+	case 0, EventScript_Advice0
+	case 1, EventScript_Advice1
+	case 2, EventScript_Advice2
+	case 3, EventScript_Advice3
+	case 4, EventScript_Advice4
+	case 5, EventScript_Advice5
+	case 6, EventScript_Advice6
+	case 7, EventScript_Advice7
+	case 8, EventScript_Advice8
+	case 9, EventScript_Advice9
+	case 10, EventScript_Advice10
 	release
 	end
 
+EventScript_Advice0:
+	msgbox gText_Advice0, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice1:
+	msgbox gText_Advice1, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice2:
+	msgbox gText_Advice2, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice3:
+	msgbox gText_Advice3, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice4:
+	msgbox gText_Advice4, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice5:
+	msgbox gText_Advice5, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice6:
+	msgbox gText_Advice6, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice7:
+	msgbox gText_Advice7, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice8:
+	msgbox gText_Advice8, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice9:
+	msgbox gText_Advice9, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_Advice10:
+	msgbox gText_Advice10, MSGBOX_AUTOCLOSE
+	goto EventScript_AdviceAgain
+	end
+
+EventScript_AdviceAgain:
+	msgbox gText_Colress_WantMoreAdvice, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Advice
+	compare VAR_ZONE, 7
+	goto_if_eq Zone6Sanctuary_EventScript_WhenUReady
+	goto EventScript_WhenUReady
+	end
+
 EventScript_Rules:
-	release
+	msgbox gText_Colress_RulesReminder, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
+	delay 96
+	compare VAR_ZONE, 7
+	goto_if_eq Zone6Sanctuary_EventScript_WhenUReady
+	goto EventScript_WhenUReady
 	end
 
 EventScript_LeavingSetup:

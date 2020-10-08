@@ -65,6 +65,77 @@ gText_Colress_UnlockedUnique:
 gText_Colress_UnlockedServices:
 	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GREY}!$"
 
+gText_Colress_HeresAPieceofAdvice:
+	.string "Here's a piece of advice.$"
+
+gText_Colress_WantMoreAdvice:
+	.string "Do you want more advice?$"
+
+gText_Advice0:
+	.string "While you are on the Pokémon stats\n"
+	.string "screen, you can press the L button\l"
+	.string "to show the Pokémon's IVs,\l"
+	.string "the R button to show the\l"
+	.string "Pokémon's EVs, and the\l"
+	.string "Start button to show the\l"
+	.string "Pokémon's stats again.$"
+
+gText_Advice1:
+	.string "You can press the Start button\n"
+	.string "while in the Bag to sort items.$"
+
+gText_Advice2:
+	.string "Though it costs money,\n"
+	.string "Joy's Healing Shop is often the\l"
+	.string "most cost-effective means to heal\l"
+	.string "your Pokémon.$"
+
+gText_Advice3:
+	.string "Remember to stock up on supplies at\n"
+	.string "Tim's General Purpose Shop before\l"
+	.string "heading out into the next Zone.\p"
+	.string "You do not want to be unable to\n"
+	.string "heal your Pokémon.$"
+
+gText_Advice4:
+	.string "Antidotes are crucial for curing\n"
+	.string "Poison, as your Pokémon can faint\l"
+	.string "from it in the overworld.$"
+
+gText_Advice5:
+	.string "Defeating other Trainers is the\n"
+	.string "best way to make money.\p"
+	.string "Try to battle as many as you can so\n"
+	.string "you will have money to spend.$"
+
+gText_Advice6:
+	.string "Silph Unique Item Shop hosts a huge\n"
+	.string "variety of items, but they are\l"
+	.string "often overpriced. Make sure to\l"
+	.string "spend your money carefully.$"
+
+gText_Advice7:
+	.string "Lelouch's Special Services Shop\n"
+	.string "is a powerful resource,\l"
+	.string "but be sure to use it sparingly.$"
+
+gText_Advice8:
+	.string "If you're unsure, you can always\n"
+	.string "check the documentation for\l"
+	.string "information on nearly everything.$"
+
+gText_Advice9:
+	.string "Don't save the game in the middle\n"
+	.string "of a Zone. If you find you cannot\l"
+	.string "pass through that Zone with your\l"
+	.string "current party, you may get\l"
+	.string "soft-locked.$"
+
+gText_Advice10:
+	.string "It is more advantageous to have a\n"
+	.string "full party of well trained Pokémon\l"
+	.string "than a few higher leveled Pokémon.$"
+
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
 	.string "Sponsored by Pokémart Inc.$"
