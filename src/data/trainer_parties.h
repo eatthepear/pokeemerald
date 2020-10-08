@@ -140,7 +140,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Annabelle[] = {
 
 static const struct TrainerMonNoItemCustomMoves sParty_Remi[] = {
     {
-    .iv = 255,
+    .iv = 100,
     .lvl = 9,
     .species = SPECIES_MARILL,
     .moves = {MOVE_AQUA_JET, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_TAIL_WHIP}
@@ -265,13 +265,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ryan[] = {
 
 static const struct TrainerMonNoItemCustomMoves sParty_Declan[] = {
     {
-    .iv = 255,
+    .iv = 100,
     .lvl = 11,
     .species = SPECIES_BUTTERFREE,
     .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_POISON_POWDER}
     },
     {
-    .iv = 255,
+    .iv = 100,
     .lvl = 11,
     .species = SPECIES_BEEDRILL,
     .moves = {MOVE_TWINEEDLE, MOVE_FURY_ATTACK, MOVE_RAGE, MOVE_IRON_DEFENSE}
@@ -373,13 +373,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ronan[] = {
 
 static const struct TrainerMonNoItemCustomMoves sParty_Rita[] = {
     {
-    .iv = 255,
+    .iv = 100,
     .lvl = 13,
     .species = SPECIES_ROSELIA,
     .moves = {MOVE_MEGA_DRAIN, MOVE_VENOSHOCK, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
-    .iv = 255,
+    .iv = 100,
     .lvl = 13,
     .species = SPECIES_PIKACHU,
     .moves = {MOVE_ELECTRO_BALL, MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_KICK}
