@@ -2,11 +2,11 @@
   "id": "MAP_ZONE9A",
   "name": "Zone9A",
   "layout": "LAYOUT_ZONE9A",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FORTREE",
   "region_map_section": "MAPSEC_ZONE_9",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_ROUTE",
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_NONE",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -17,10 +17,59 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 29,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE9C",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 21,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE9B",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE9A",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE9E",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 21,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE9F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 31,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE9G",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ZONE",
+      "var_value": "9",
+      "script": "NULL"
+    }
   ],
   "bg_events": [
 

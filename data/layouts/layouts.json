@@ -4754,12 +4754,72 @@
     {
       "id": "LAYOUT_ZONE9A",
       "name": "Zone9A_Layout",
-      "width": 30,
+      "width": 34,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Unused1",
+      "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone9A/border.bin",
       "blockdata_filepath": "data/layouts/Zone9A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9B",
+      "name": "Zone9B_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9C",
+      "name": "Zone9C_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9D",
+      "name": "Zone9D_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9D/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9E",
+      "name": "Zone9E_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9E/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9E/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9F",
+      "name": "Zone9F_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9F/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9G",
+      "name": "Zone9G_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9G/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9G/map.bin"
     }
   ]
 }
