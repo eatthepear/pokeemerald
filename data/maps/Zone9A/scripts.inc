@@ -161,7 +161,7 @@ Zone9A_Text_CassandraPostBattle:
 
 Zone9A_Text_DominicIntro:
 	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: Guess what time it is?\n"
-	.string "It’s time to take out the trash!$"
+	.string "It's time to take out the trash!$"
 
 Zone9A_Text_DominicDefeat:
 	.string "Sorry, sorry!\n"
