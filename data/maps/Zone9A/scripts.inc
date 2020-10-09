@@ -165,7 +165,7 @@ Zone9A_Text_DominicIntro:
 
 Zone9A_Text_DominicDefeat:
 	.string "Sorry, sorry!\n"
-	.string "I didn’t realize you were so strong!$"
+	.string "I didn't realize you were so strong!$"
 
 Zone9A_Text_DominicPostBattle:
 	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: Kids!\n"
