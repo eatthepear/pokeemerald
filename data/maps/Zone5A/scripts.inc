@@ -37,7 +37,7 @@ Zone5A_EventScript_Ryan::
 	end
 
 Zone5A_Text_RyanIntro:
-	.string "I'm the third member of the Fearsome Foursome!\n"
+	.string "Fearsome Foursome, number three!\n"
 	.string "Be careful, I'm strong!$"
 
 Zone5A_Text_RyanDefeat:
