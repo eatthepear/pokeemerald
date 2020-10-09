@@ -82,7 +82,7 @@ Zone6Sanctuary_Text_Colress_WhenUReady:
 	.string "However, there will be a single use\n"
 	.string "healing stop available.\p"
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are prepared to\n"
-	.string "enter {COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}, come speak to me.$"
+	.string "enter {COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}, speak to me.$"
 
 Zone6Sanctuary_Text_Colress_ReadyToLeave:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you ready to leave?\n"

@@ -132,7 +132,7 @@ Zone9A_Text_AriDefeat:
 	.string "You're tougher than I thought!$"
 
 Zone9A_Text_AriPostBattle:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GREY}Hey, everyone!\n"
+	.string "{COLOR BLUE}Ari{COLOR DARK_GREY}: Hey, everyone!\n"
 	.string "I've found a pretty strong Trainer!$"
 
 Zone9A_Text_BerthaIntro:

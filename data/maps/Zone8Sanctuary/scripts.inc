@@ -84,4 +84,4 @@ Zone8Sanctuary_Text_RewardClear8:
 	.string "Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GREY} is...$"
 
 Zone8Sanctuary_Text_8Reward:
-	.string "TM03 - ROCK TOMB.$"
+	.string "TM03 - Rock Tomb.$"

@@ -22,6 +22,7 @@ Zone7B_EventScript_Heal:
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_HEAL
 	waitfanfare
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_ZONE7_HEAL_USED
