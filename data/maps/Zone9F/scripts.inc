@@ -1,2 +1,103 @@
 Zone9F_MapScripts::
 	.byte 0
+
+Zone9F_EventScript_Ari::
+	lock
+	faceplayer
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	msgbox Zone9F_Text_Ari, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_Text_Ari:
+	.string "{COLOR BLUE}Ari{COLOR DARK_GREY}: I miss my cousin Victoria.\n"
+	.string "She lives in the Hoenn region.$"
+
+Zone9F_EventScript_Bertha::
+	lock
+	faceplayer
+	msgbox Zone9F_Text_Bertha, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_Text_Bertha:
+	.string "{COLOR BLUE}Bertha{COLOR DARK_GREY}: Why did Mom buy this house?\n"
+	.string "It’s so small for the five of us...$"
+
+Zone9F_EventScript_Cassandra::
+	lock
+	faceplayer
+	msgbox Zone9F_Text_Cassandra, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_Text_Cassandra:
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GREY}: All my kids do is\n"
+	.string "complain, complain, then complain\l"
+	.string "some more.$"
+
+Zone9F_EventScript_Dominic::
+	lock
+	faceplayer
+	msgbox Zone9F_Text_Dominic, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_Text_Dominic:
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: I wonder what’s for dinner...$"
+
+Zone9F_EventScript_Erica::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZONE9A_ZORUA, Zone9F_EventScript_SafeTravels
+	msgbox Zone9F_Text_Erica_Request, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone9F_EventScript_NoZorua
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq Zone9F_EventScript_NoRoom
+	msgbox Zone9A_Text_ThankYou, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_ZONE9A_ZORUA
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 1
+	goto Zone9F_EventScript_SafeTravels
+	end
+
+Zone9F_EventScript_NoZorua:
+	msgbox Zone9F_Text_NoZorua, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_EventScript_NoRoom:
+	msgbox Zone9F_Text_NoRoom, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_EventScript_SafeTravels:
+	msgbox Zone9F_Text_Erica, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9F_Text_Erica_Request:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: {PLAYER}, is it?\n"
+	.string "I have a request for you.\p"
+	.string "About two weeks ago, I found an\n"
+	.string "abandoned Pokémon in the forest.\p"
+	.string "It is an unusual color for its\n"
+	.string "species and therefore an outcast.\p"
+	.string "I have been searching for a Trainer\n"
+	.string "strong enough to take care of it.\l"
+	.string "Will you accept the responsibility?$"
+
+Zone9F_Text_Erica:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: May your travels be safe.$"
+
+Zone9F_Text_NoZorua:
+	.string "Ah. That is... unfortunate.\n"
+	.string "Come back if you change your mind.$"
+
+Zone9F_Text_NoRoom:
+	.string "You have no space in your party.\n"
+	.string "Come back when you have made space.$"
+
+Zone9A_Text_ThankYou:
+	.string "Thank you, kind Trainer.$"
