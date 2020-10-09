@@ -22,7 +22,7 @@ Zone9F_EventScript_Bertha::
 
 Zone9F_Text_Bertha:
 	.string "{COLOR BLUE}Bertha{COLOR DARK_GREY}: Why did Mom buy this house?\n"
-	.string "It’s so small for the five of us...$"
+	.string "It's so small for the five of us...$"
 
 Zone9F_EventScript_Cassandra::
 	lock
