@@ -1900,4 +1900,3 @@
 	setvar VAR_0x8000, \id,
 	callnative ScrCmd_SetItemArg
 	.endm
-    
