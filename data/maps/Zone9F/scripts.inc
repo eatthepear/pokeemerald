@@ -4,7 +4,6 @@ Zone9F_MapScripts::
 Zone9F_EventScript_Ari::
 	lock
 	faceplayer
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	msgbox Zone9F_Text_Ari, MSGBOX_AUTOCLOSE
 	release
 	end
