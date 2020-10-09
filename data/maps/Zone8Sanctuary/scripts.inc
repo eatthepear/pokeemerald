@@ -72,7 +72,7 @@ Zone8Sanctuary_EventScript_Leave:
 
 Zone8Sanctuary_Text_Colress_ReachedZone:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Congratulations.\n"
-	.string "You have cleared {COLOR RED}Zone 7 and Zone 8{COLOR DARK_GREY}.$"
+	.string "You have cleared {COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}.$"
 
 Zone8Sanctuary_Text_RewardClear7:
 	.string "Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GREY} is...$"
