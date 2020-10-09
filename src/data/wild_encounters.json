@@ -12175,6 +12175,16 @@
             "encounter_rate": 30,
             "mons": [
               {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
                 "min_level": 7,
                 "max_level": 9,
                 "species": "SPECIES_SURSKIT"
@@ -12185,44 +12195,34 @@
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "min_level": 7,
+                "max_level": 9,
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POLIWAG"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               }
             ]
           },
@@ -12299,6 +12299,16 @@
             "encounter_rate": 30,
             "mons": [
               {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
                 "min_level": 8,
                 "max_level": 10,
                 "species": "SPECIES_TYMPOLE"
@@ -12309,44 +12319,34 @@
                 "species": "SPECIES_WISHIWASHI"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_WISHIWASHI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POLIWAG"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_NONE"
               }
             ]
           },

@@ -3733,7 +3733,7 @@ const struct Item gItems[] =
 
     [ITEM_GOOD_ROD] =
     {
-        .name = _("Good Rod"),
+        .name = _("Fishing Rod"),
         .itemId = ITEM_GOOD_ROD,
         .price = 0,
         .description = sGoodRodDesc,

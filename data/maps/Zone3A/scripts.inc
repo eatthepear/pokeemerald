@@ -25,7 +25,7 @@ Zone3A_EventScript_Exit::
 Zone3A_EventScript_Leviathan1Defeated:
 	setflag FLAG_BEATLEVIATHAN1
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_OLD_ROD, 1
+	giveitem ITEM_GOOD_ROD, 1
 	closemessage
 	applymovement 4, Common_Movement_WalkRight
 	waitmovement 0
@@ -48,7 +48,7 @@ Zone3A_Text_Leviathan1Defeat:
 
 Zone3A_Text_Leviathan1Reward:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You have bested me.\n"
-	.string "I grant you the Old Rod,\l"
+	.string "I grant you the Fishing Rod,\l"
 	.string "a way to fish for Water Pokémon.$"
 
 Zone3A_EventScript_Jemma::
