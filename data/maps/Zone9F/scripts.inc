@@ -44,7 +44,7 @@ Zone9F_EventScript_Dominic::
 	end
 
 Zone9F_Text_Dominic:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: I wonder what’s for dinner...$"
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: I wonder what's for dinner...$"
 
 Zone9F_EventScript_Erica::
 	lock
