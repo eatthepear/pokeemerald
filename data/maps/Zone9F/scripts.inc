@@ -59,7 +59,7 @@ Zone9F_EventScript_Erica::
 	msgbox Zone9F_Text_ThankYou, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_ZONE9F_ZORUA
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone9F_Text_ReceivedTheEgg
+	message Zone9F_Text_ReceivedZorua
 	waitfanfare
 	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
 	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
@@ -117,3 +117,6 @@ Zone9F_Text_ThankYou:
 Zone9F_Text_HowBoutNickname:
 	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: Would you like to give a\n"
 	.string "nickname to Zorua?$"
+
+Zone9F_Text_ReceivedZorua:
+	.string "Received Zorua!$"
