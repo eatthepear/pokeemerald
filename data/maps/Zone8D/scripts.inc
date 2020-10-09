@@ -39,7 +39,7 @@ Zone8D_EventScript_DefeatedRegirock2:: @ 823977C
 	fadescreenswapbuffers FADE_FROM_BLACK
 	clearflag FLAG_DISABLE_CATCHING
 	msgbox Zone8D_Text_RegirockDisappeared, MSGBOX_AUTOCLOSE
-	call EventScript_StonesMultichoice
+	finditem ITEM_EVIOLITE, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -59,5 +59,4 @@ Zone8D_Text_StillThere:
 
 Zone8D_Text_RegirockDisappeared:
 	.string "Regirock disappeared. There's something\n"
-	.string "colorful on the ground, a stone!\l"
-	.string "What type of stone is it?$"
+	.string "colorful on the ground, a stone!$"

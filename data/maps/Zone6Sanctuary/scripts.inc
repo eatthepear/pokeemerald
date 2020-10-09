@@ -25,7 +25,7 @@ Zone6Sanctuary_EventScript_Intro:
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	showmoneybox 0, 0, 0
 	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	addmoney 2000, 0
+	addmoney 4000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	updatemoneybox 0, 0
 	msgbox Zone6Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
@@ -90,7 +90,7 @@ Zone6Sanctuary_Text_Colress_ReadyToLeave:
 	.string "{COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}.$"
 
 Zone6Sanctuary_Text_Reward:
-	.string "¥2000!$"
+	.string "¥4000!$"
 
 Zone6Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥2000!$"
+	.string "Received ¥4000!$"

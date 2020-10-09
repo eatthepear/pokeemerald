@@ -24,7 +24,7 @@ Zone4Sanctuary_EventScript_Intro:
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	showmoneybox 0, 0, 0
 	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	addmoney 1000, 0
+	addmoney 2000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	updatemoneybox 0, 0
 	msgbox Zone4Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
@@ -65,7 +65,7 @@ Zone4Sanctuary_EventScript_Leave:
 	end
 
 Zone4Sanctuary_Text_Reward:
-	.string "¥1000!$"
+	.string "¥2000!$"
 
 Zone4Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥1000!$"
+	.string "Received ¥2000!$"
