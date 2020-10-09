@@ -4,7 +4,6 @@ Zone9F_MapScripts::
 Zone9F_EventScript_Ari::
 	lock
 	faceplayer
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	msgbox Zone9F_Text_Ari, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -49,16 +48,28 @@ Zone9F_Text_Dominic:
 Zone9F_EventScript_Erica::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_ZONE9A_ZORUA, Zone9F_EventScript_SafeTravels
+	goto_if_set FLAG_RECEIVED_ZONE9F_ZORUA, Zone9F_EventScript_SafeTravels
 	msgbox Zone9F_Text_Erica_Request, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone9F_EventScript_NoZorua
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq Zone9F_EventScript_NoRoom
-	msgbox Zone9A_Text_ThankYou, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_ZONE9A_ZORUA
+	msgbox Zone9F_Text_ThankYou, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_ZONE9F_ZORUA
+	playfanfare MUS_OBTAIN_ITEM
+	message Zone9F_Text_ReceivedTheEgg
+	waitfanfare
 	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
+	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone9F_EventScript_NicknameStarter
+	goto Zone9F_EventScript_SafeTravels
+	end
+
+Zone9F_EventScript_NicknameStarter:
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
 	goto Zone9F_EventScript_SafeTravels
 	end
 
@@ -99,5 +110,9 @@ Zone9F_Text_NoRoom:
 	.string "You have no space in your party.\n"
 	.string "Come back when you have made space.$"
 
-Zone9A_Text_ThankYou:
+Zone9F_Text_ThankYou:
 	.string "Thank you, kind Trainer.$"
+
+Zone9F_Text_HowBoutNickname:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: Would you like to give a\n"
+	.string "nickname to Zorua?$"
