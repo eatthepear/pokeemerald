@@ -58,7 +58,7 @@ Zone9F_EventScript_Erica::
 	goto_if_eq Zone9F_EventScript_NoRoom
 	msgbox Zone9A_Text_ThankYou, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_ZONE9A_ZORUA
-	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, TRUE
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
 	goto Zone9F_EventScript_SafeTravels
 	end
 
