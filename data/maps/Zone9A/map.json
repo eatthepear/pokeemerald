@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Zone9A_EventScript_Ari",
+      "flag": "FLAG_HIDE_ZONE9A_ARI_WINSTRATE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
@@ -77,7 +77,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ZONE9A_ERICA_WINSTRATE"
     }
   ],
   "warp_events": [

@@ -558,7 +558,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dominic[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_ORANGARU,
+    .species = SPECIES_ORANGURU,
     }
 };
 

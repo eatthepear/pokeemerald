@@ -48,11 +48,11 @@
 #define FLAG_HIDE_LEVIATHAN1 0x24 // Used to hide Leviathan 1 from vision
 #define FLAG_LELOUCH_SHARDS  0x25 // First time talking to Lelouch with shards
 #define FLAG_ZONE7_HEAL_USED 0x26 // Single use heal lady in Zone 7
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE       0x27 // Hide Ari
+#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE    0x28 // Hide Bertha
+#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x29 // Hide Cassandra
+#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2A // Hide Dominic
+#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2B // Hide Erica
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
