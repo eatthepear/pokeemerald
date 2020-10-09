@@ -157,7 +157,7 @@ Zone9A_Text_CassandraDefeat:
 	.string "It was you who shined instead!$"
 
 Zone9A_Text_CassandraPostBattle:
-	.string "{COLOR BLUE}Cassandra{COLOR DARK_GREY}: It’s all you, baby!$"
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GREY}: It's all you, baby!$"
 
 Zone9A_Text_DominicIntro:
 	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: Guess what time it is?\n"
