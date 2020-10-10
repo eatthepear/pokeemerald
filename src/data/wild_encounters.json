@@ -12185,17 +12185,17 @@
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 7,
+                "min_level": 6,
                 "max_level": 9,
                 "species": "SPECIES_SURSKIT"
               },
               {
-                "min_level": 7,
+                "min_level": 6,
                 "max_level": 9,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 7,
+                "min_level": 6,
                 "max_level": 9,
                 "species": "SPECIES_MAGIKARP"
               },
