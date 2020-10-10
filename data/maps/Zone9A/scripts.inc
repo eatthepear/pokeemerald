@@ -25,6 +25,10 @@ Zone9A_EventScript_SetWinstratesNotDefeated:
 	cleartrainerflag TRAINER_DOMINIC
 	end
 
+Zone9A_EventScript_MiracleSeed::
+	finditem ITEM_MIRACLE_SEED
+	end
+
 Zone9A_EventScript_Man::
 	lock
 	faceplayer
