@@ -4754,7 +4754,7 @@
     {
       "id": "LAYOUT_ZONE9A",
       "name": "Zone9A_Layout",
-      "width": 34,
+      "width": 36,
       "height": 35,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",

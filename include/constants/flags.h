@@ -53,8 +53,8 @@
 #define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x29 // Hide Cassandra
 #define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2A // Hide Dominic
 #define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2B // Hide Erica
-#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
+#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2C // gift Shiny Zorua from Erica
+#define FLAG_HIDE_ZONE9A_MAN    0x2D // Man blocks exit
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag

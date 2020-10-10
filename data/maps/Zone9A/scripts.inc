@@ -4,9 +4,16 @@ Zone9A_MapScripts::
 
 Zone9A_OnTransition:
 	goto_if_not_defeated TRAINER_ERICA, Zone9A_EventScript_SetWinstratesNotDefeated
+	goto_if_defeated TRAINER_ERICA, Zone9A_EventScript_SetWinstratesDefeated
+	end
+
+Zone9A_EventScript_SetWinstratesDefeated:
+	setflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
+	setflag FLAG_HIDE_ZONE9A_MAN
 	end
 
 Zone9A_EventScript_SetWinstratesNotDefeated:
+	clearflag FLAG_HIDE_ZONE9A_MAN
 	clearflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
 	setflag FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE
 	setflag FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE
@@ -17,6 +24,19 @@ Zone9A_EventScript_SetWinstratesNotDefeated:
 	cleartrainerflag TRAINER_CASSANDRA
 	cleartrainerflag TRAINER_DOMINIC
 	end
+
+Zone9A_EventScript_Man::
+	lock
+	faceplayer
+	msgbox Zone9A_Text_ShouldChallenge, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9A_Text_ShouldChallenge:
+	.string "Hey there, champ!\p"
+	.string "In our modest Zone 9, there is\n"
+	.string "a family of strong Trainers.\l"
+	.string "Why don't you go spar with them?$"
 
 Zone9A_EventScript_Ari::
 	lock
