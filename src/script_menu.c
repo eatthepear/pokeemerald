@@ -809,6 +809,8 @@ static const u8 sText_Mudkip[] = _("Mudkip");
 static const u8 sText_Turtwig[] = _("Turtwig");
 static const u8 sText_Chimchar[] = _("Chimchar");
 static const u8 sText_Piplup[] = _("Piplup");
+static const u8 sText_Munchlax[] = _("Munchlax");
+static const u8 sText_Riolu[] = _("Riolu");
 static const u8 sText_Snivy[] = _("Snivy");
 static const u8 sText_Tepig[] = _("Tepig");
 static const u8 sText_Oshawott[] = _("Oshawott");
@@ -847,15 +849,17 @@ static const struct ListMenuItem Starters[] =
     {sText_Turtwig, 11},
     {sText_Chimchar, 12},
     {sText_Piplup, 13},
-    {sText_Snivy, 14},
-    {sText_Tepig, 15},
-    {sText_Oshawott, 16},
-    {sText_Chespin, 17},
-    {sText_Fennekin, 18},
-    {sText_Froakie, 19},
-    {sText_Rowlet, 20},
-    {sText_Litten, 21},
-    {sText_Popplio, 22},
+    {sText_Munchlax, 14},
+    {sText_Riolu, 15},
+    {sText_Snivy, 16},
+    {sText_Tepig, 17},
+    {sText_Oshawott, 18},
+    {sText_Chespin, 19},
+    {sText_Fennekin, 20},
+    {sText_Froakie, 21},
+    {sText_Rowlet, 22},
+    {sText_Litten, 23},
+    {sText_Popplio, 24},
 };
 
 static const struct ListMenuItem EvolutionaryStones[] =

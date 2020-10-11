@@ -136,24 +136,28 @@ Entrance_EventScript_PickStarter:
 	compare VAR_RESULT, 12
 	call_if_eq Entrance_EventScript_CHIMCHAR
 	compare VAR_RESULT, 13
-	call_if_eq Entrance_EventScript_PIPLUP
+	call_if_eq Entrance_EventScript_MUNCHLAX
 	compare VAR_RESULT, 14
-	call_if_eq Entrance_EventScript_SNIVY
+	call_if_eq Entrance_EventScript_RIOLU
 	compare VAR_RESULT, 15
-	call_if_eq Entrance_EventScript_TEPIG
+	call_if_eq Entrance_EventScript_PIPLUP
 	compare VAR_RESULT, 16
-	call_if_eq Entrance_EventScript_OSHAWOTT
+	call_if_eq Entrance_EventScript_SNIVY
 	compare VAR_RESULT, 17
-	call_if_eq Entrance_EventScript_CHESPIN
+	call_if_eq Entrance_EventScript_TEPIG
 	compare VAR_RESULT, 18
-	call_if_eq Entrance_EventScript_FENNEKIN
+	call_if_eq Entrance_EventScript_OSHAWOTT
 	compare VAR_RESULT, 19
-	call_if_eq Entrance_EventScript_FROAKIE
+	call_if_eq Entrance_EventScript_CHESPIN
 	compare VAR_RESULT, 20
-	call_if_eq Entrance_EventScript_ROWLET
+	call_if_eq Entrance_EventScript_FENNEKIN
 	compare VAR_RESULT, 21
-	call_if_eq Entrance_EventScript_LITTEN
+	call_if_eq Entrance_EventScript_FROAKIE
 	compare VAR_RESULT, 22
+	call_if_eq Entrance_EventScript_ROWLET
+	compare VAR_RESULT, 23
+	call_if_eq Entrance_EventScript_LITTEN
+	compare VAR_RESULT, 24
 	call_if_eq Entrance_EventScript_POPPLIO
 	hidemonpic
 	playfanfare MUS_OBTAIN_ITEM
@@ -382,6 +386,36 @@ Entrance_EventScript_PIPLUP:
 Entrance_Text_Colress_YouSureStarterPIPLUP:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
 	.string "Piplup?$"
+
+Entrance_EventScript_MUNCHLAX:
+	bufferspeciesname 0, SPECIES_MUNCHLAX
+	showmonpic SPECIES_MUNCHLAX, 10, 3
+	playmoncry SPECIES_MUNCHLAX, 0
+	msgbox Entrance_Text_Colress_YouSureStarterMUNCHLAX, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
+	givemon SPECIES_MUNCHLAX, 5, ITEM_NONE
+	return
+
+Entrance_Text_Colress_YouSureStarterMUNCHLAX:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Munchlax?$"
+
+Entrance_EventScript_RIOLU:
+	bufferspeciesname 0, SPECIES_RIOLU
+	showmonpic SPECIES_RIOLU, 10, 3
+	playmoncry SPECIES_RIOLU, 0
+	msgbox Entrance_Text_Colress_YouSureStarterRIOLU, MSGBOX_YESNO
+	waitmoncry
+	compare VAR_RESULT, NO
+	goto_if_eq Entrance_EventScript_PickStarter
+	givemon SPECIES_RIOLU, 5, ITEM_NONE
+	return
+
+Entrance_Text_Colress_YouSureStarterRIOLU:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "Riolu?$"
 
 Entrance_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
