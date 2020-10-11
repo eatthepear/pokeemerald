@@ -20,7 +20,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Mariam[] = {
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_MAREEP,
+    .species = SPECIES_NIDORAN_F,
     }
 };
 
@@ -28,7 +28,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Oscar[] = {
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_NIDORAN_F,
+    .species = SPECIES_MAREEP,
     },
     {
     .iv = 0,
