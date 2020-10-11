@@ -6,30 +6,13 @@ Zone9C_EventScript_Man::
 	faceplayer
 	message Zone9C_Text_Man_Welcome
 	waitmessage
-	goto_if_set FLAG_NUZLOCKE_ON, Zone9C_EventScript_ManNuzlocke
-	pokemart Zone9C_Shop_HerbalVanilla
+	pokemart Zone9C_Shop_Herbal
 	msgbox Zone9C_Text_Man_Leave, MSGBOX_DEFAULT
-	release
-	end
-
-Zone9C_EventScript_ManNuzlocke:
-	pokemart Zone9C_Shop_HerbalNuzlocke
-	msgbox Zone9C_Text_Man_Leave, MSGBOX_DEFAULT
-	release
-	end
-
-	.align 2
-Zone9C_Shop_HerbalVanilla:
-	.2byte ITEM_HEAL_POWDER
-	.2byte ITEM_ENERGY_POWDER
-	.2byte ITEM_ENERGY_ROOT
-	.2byte ITEM_REVIVAL_HERB
-	.2byte ITEM_NONE
 	release
 	end
 	
 	.align 2
-Zone9C_Shop_HerbalNuzlocke:
+Zone9C_Shop_Herbal:
 	.2byte ITEM_HEAL_POWDER
 	.2byte ITEM_ENERGY_POWDER
 	.2byte ITEM_ENERGY_ROOT

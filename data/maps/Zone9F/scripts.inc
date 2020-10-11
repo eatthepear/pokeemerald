@@ -52,34 +52,57 @@ Zone9F_EventScript_Erica::
 	msgbox Zone9F_Text_Erica_Request, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone9F_EventScript_NoZorua
+	msgbox Zone9F_Text_ThankYou, MSGBOX_DEFAULT
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq Zone9F_EventScript_NoRoom
-	msgbox Zone9F_Text_ThankYou, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_ZONE9F_ZORUA
-	playfanfare MUS_OBTAIN_ITEM
-	message Zone9F_Text_ReceivedZorua
-	waitfanfare
-	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
-	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone9F_EventScript_NicknameStarter
-	goto Zone9F_EventScript_SafeTravels
+	goto_if_eq Zone9F_EventScript_SendZoruaPC
+	goto Zone9F_EventScript_SendZoruaParty
 	end
 
-Zone9F_EventScript_NicknameStarter:
+Zone9F_EventScript_SendZoruaParty::
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
+	setvar VAR_TEMP_1, SPECIES_ZORUA
+	call Zone9F_EventScript_ReceivedZoruaFanfare
+	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone9F_EventScript_ReceivedZorua
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto Zone9F_EventScript_ReceivedZorua
+	end
+
+Zone9F_EventScript_SendZoruaPC::
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
+	setvar VAR_TEMP_1, SPECIES_ZORUA
+	call Zone9F_EventScript_ReceivedZoruaFanfare
+	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone9F_EventScript_ZoruaTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Zone9F_EventScript_ZoruaTransferredToPC
+	end
+
+Zone9F_EventScript_ZoruaTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Zone9F_EventScript_ReceivedZorua
+	end
+
+Zone9F_EventScript_ReceivedZoruaFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message Zone9F_Text_ReceivedZorua
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_ZORUA
+	return
+
+Zone9F_EventScript_ReceivedZorua::
+	setflag FLAG_RECEIVED_ZONE9F_ZORUA
 	goto Zone9F_EventScript_SafeTravels
+	releaseall
 	end
 
 Zone9F_EventScript_NoZorua:
 	msgbox Zone9F_Text_NoZorua, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone9F_EventScript_NoRoom:
-	msgbox Zone9F_Text_NoRoom, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -105,10 +128,6 @@ Zone9F_Text_Erica:
 Zone9F_Text_NoZorua:
 	.string "Ah. That is... unfortunate.\n"
 	.string "Come back if you change your mind.$"
-
-Zone9F_Text_NoRoom:
-	.string "You have no space in your party.\n"
-	.string "Come back when you have made space.$"
 
 Zone9F_Text_ThankYou:
 	.string "Thank you, kind Trainer.$"

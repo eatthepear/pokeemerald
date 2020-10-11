@@ -1,7 +1,7 @@
 Zone9B_MapScripts::
 	.byte 0
 
-Zone9B_EventScript_Woman:
+Zone9B_EventScript_Woman::
 	lock
 	faceplayer
 	msgbox Zone9B_Text_Woman, MSGBOX_AUTOCLOSE

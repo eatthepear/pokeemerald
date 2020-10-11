@@ -1,7 +1,7 @@
 Zone9D_MapScripts::
 	.byte 0
 
-Zone9D_EventScript_Man:
+Zone9D_EventScript_Man::
 	lock
 	faceplayer
 	msgbox Zone9D_Text_Man, MSGBOX_AUTOCLOSE
@@ -13,7 +13,7 @@ Zone9D_Text_Man:
 	.string "from, we give Gracidea flowers as a\l"
 	.string "gesture of gratitude.$"
 
-Zone9D_EventScript_Girl:
+Zone9D_EventScript_Girl::
 	lock
 	faceplayer
 	msgbox Zone9D_Text_Girl, MSGBOX_AUTOCLOSE
