@@ -129,7 +129,7 @@
       "y": 22,
       "elevation": 0,
       "var": "VAR_ZONE",
-      "var_value": "7",
+      "var_value": "6",
       "script": "Zone6A_EventScript_Exit"
     }
   ],
