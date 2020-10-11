@@ -136,11 +136,11 @@ Entrance_EventScript_PickStarter:
 	compare VAR_RESULT, 12
 	call_if_eq Entrance_EventScript_CHIMCHAR
 	compare VAR_RESULT, 13
-	call_if_eq Entrance_EventScript_MUNCHLAX
-	compare VAR_RESULT, 14
-	call_if_eq Entrance_EventScript_RIOLU
-	compare VAR_RESULT, 15
 	call_if_eq Entrance_EventScript_PIPLUP
+	compare VAR_RESULT, 14
+	call_if_eq Entrance_EventScript_MUNCHLAX
+	compare VAR_RESULT, 15
+	call_if_eq Entrance_EventScript_RIOLU
 	compare VAR_RESULT, 16
 	call_if_eq Entrance_EventScript_SNIVY
 	compare VAR_RESULT, 17
@@ -180,8 +180,10 @@ Entrance_EventScript_NicknameStarter:
 	end
 
 Entrance_EventScript_RandomStarter:
+	playse SE_CONTEST_PLACE
 	message Entrance_Text_Colress_RandomStarter
 	delay 96
+	waitse
 	waitmessage
 	random 24
 	compare VAR_RESULT, 0
@@ -211,11 +213,11 @@ Entrance_EventScript_RandomStarter:
 	compare VAR_RESULT, 12
 	call_if_eq Entrance_EventScript_CHIMCHAR
 	compare VAR_RESULT, 13
-	call_if_eq Entrance_EventScript_MUNCHLAX
-	compare VAR_RESULT, 14
-	call_if_eq Entrance_EventScript_RIOLU
-	compare VAR_RESULT, 15
 	call_if_eq Entrance_EventScript_PIPLUP
+	compare VAR_RESULT, 14
+	call_if_eq Entrance_EventScript_MUNCHLAX
+	compare VAR_RESULT, 15
+	call_if_eq Entrance_EventScript_RIOLU
 	compare VAR_RESULT, 16
 	call_if_eq Entrance_EventScript_SNIVY
 	compare VAR_RESULT, 17
@@ -765,7 +767,8 @@ Entrance_Text_Colress_Starters:
 	.string "receive a starter Pokémon.\p"
 	.string "You may have your choice of any of\n"
 	.string "the generation 1-7 starter Pokémon,\l"
-	.string "as well as Pikachu and Eevee.\p"
+	.string "as well as Pikachu, Eevee,\l"
+	.string "Munchlax, and Riolu.\p"
 	.string "Choose carefully as these Pokémon\n"
 	.string "are very rare.$"
 
