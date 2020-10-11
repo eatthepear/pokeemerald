@@ -6720,10 +6720,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_DUSTOX] =
     {
         .baseHP        = 80,
-        .baseAttack    = 50,
+        .baseAttack    = 30,
         .baseDefense   = 80,
         .baseSpeed     = 75,
-        .baseSpAttack  = 50,
+        .baseSpAttack  = 70,
         .baseSpDefense = 100,
         .type1 = TYPE_BUG,
         .type2 = TYPE_POISON,

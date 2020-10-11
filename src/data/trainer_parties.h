@@ -273,8 +273,9 @@ static const struct TrainerMonNoItemCustomMoves sParty_Declan[] = {
     {
     .iv = 100,
     .lvl = 11,
-    .species = SPECIES_BEEDRILL,
-    .moves = {MOVE_TWINEEDLE, MOVE_FURY_ATTACK, MOVE_RAGE, MOVE_IRON_DEFENSE}
+    .species = SPECIES_DUSTOX,
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST
+    }
     }
 };
 
