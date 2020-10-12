@@ -4820,6 +4820,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Zone9G/border.bin",
       "blockdata_filepath": "data/layouts/Zone9G/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9SANCTUARY",
+      "name": "Zone9Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone9Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9SHOPS",
+      "name": "Zone9Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone9Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9Shops/map.bin"
     }
   ]
 }

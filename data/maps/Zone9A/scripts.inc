@@ -25,6 +25,12 @@ Zone9A_EventScript_SetWinstratesNotDefeated:
 	cleartrainerflag TRAINER_DOMINIC
 	end
 
+Zone9A_EventScript_Exit::
+	lockall
+	warp MAP_ZONE9SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone9A_EventScript_MiracleSeed::
 	finditem ITEM_MIRACLE_SEED
 	end

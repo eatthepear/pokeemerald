@@ -627,7 +627,9 @@
     "Zone9D",
     "Zone9E",
     "Zone9F",
-    "Zone9G"
+    "Zone9G",
+    "Zone9Sanctuary",
+    "Zone9Shops"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"
