@@ -83,9 +83,7 @@ EventScript_SmashRock:: @ 82907FB
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	specialvar VAR_RESULT, TryUpdateRusturfTunnelState
-	compare VAR_RESULT, TRUE
-	goto_if_eq EventScript_EndSmash
+	call EventScript_SmashItems
 	special RockSmashWildEncounter
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_EndSmash
@@ -96,6 +94,159 @@ EventScript_SmashRock:: @ 82907FB
 EventScript_EndSmash:: @ 8290829
 	releaseall
 	end
+
+EventScript_SmashItems:
+	random 25
+	compare VAR_RESULT, 0
+	call_if_eq EventScript_SmashBUGGem
+	compare VAR_RESULT, 1
+	call_if_eq EventScript_SmashDARKGem
+	compare VAR_RESULT, 2
+	call_if_eq EventScript_SmashDRAGONGem
+	compare VAR_RESULT, 3
+	call_if_eq EventScript_SmashELECTRICGem
+	compare VAR_RESULT, 4
+	call_if_eq EventScript_SmashFAIRYGem
+	compare VAR_RESULT, 5
+	call_if_eq EventScript_SmashFIGHTINGGem
+	compare VAR_RESULT, 6
+	call_if_eq EventScript_SmashFIREGem
+	compare VAR_RESULT, 7
+	call_if_eq EventScript_SmashFLYINGGem
+	compare VAR_RESULT, 8
+	call_if_eq EventScript_SmashGHOSTGem
+	compare VAR_RESULT, 9
+	call_if_eq EventScript_SmashGRASSGem
+	compare VAR_RESULT, 10
+	call_if_eq EventScript_SmashGROUNDGem
+	compare VAR_RESULT, 11
+	call_if_eq EventScript_SmashICEGem
+	compare VAR_RESULT, 12
+	call_if_eq EventScript_SmashNORMALGem
+	compare VAR_RESULT, 13
+	call_if_eq EventScript_SmashPOISONGem
+	compare VAR_RESULT, 14
+	call_if_eq EventScript_SmashPSYCHICGem
+	compare VAR_RESULT, 15
+	call_if_eq EventScript_SmashROCKGem
+	compare VAR_RESULT, 16
+	call_if_eq EventScript_SmashSTEELGem
+	compare VAR_RESULT, 17
+	call_if_eq EventScript_SmashWATERGem
+	compare VAR_RESULT, 18
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 19
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 20
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 21
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 22
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 23
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 24
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 25
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 26
+	call_if_eq EventScript_SmashGREENShard
+	compare VAR_RESULT, 27
+	call_if_eq EventScript_SmashGREENShard
+	compare VAR_RESULT, 28
+	call_if_eq EventScript_SmashYELLOWShard
+	return
+	
+EventScript_SmashYELLOWShard:
+	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
+	finditem ITEM_YELLOW_SHARD, 1
+	return
+	
+EventScript_SmashGREENShard:
+	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
+	finditem ITEM_GREEN_SHARD, 1
+	return
+	
+EventScript_SmashBLUEShard:
+	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
+	finditem ITEM_BLUE_SHARD, 1
+	return
+	
+EventScript_SmashREDShard:
+	finditem ITEM_RED_SHARD, 1
+	return
+	
+EventScript_SmashWATERGem:
+	finditem ITEM_WATER_GEM, 1
+	return
+	
+EventScript_SmashSTEELGem:
+	finditem ITEM_STEEL_GEM, 1
+	return
+	
+EventScript_SmashROCKGem:
+	finditem ITEM_ROCK_GEM, 1
+	return
+	
+EventScript_SmashPSYCHICGem:
+	finditem ITEM_PSYCHIC_GEM, 1
+	return
+	
+EventScript_SmashPOISONGem:
+	finditem ITEM_POISON_GEM, 1
+	return
+	
+EventScript_SmashNORMALGem:
+	finditem ITEM_NORMAL_GEM, 1
+	return
+	
+EventScript_SmashICEGem:
+	finditem ITEM_ICE_GEM, 1
+	return
+	
+EventScript_SmashGROUNDGem:
+	finditem ITEM_GROUND_GEM, 1
+	return
+	
+EventScript_SmashGRASSGem:
+	finditem ITEM_GRASS_GEM, 1
+	return
+	
+EventScript_SmashGHOSTGem:
+	finditem ITEM_GHOST_GEM, 1
+	return
+	
+EventScript_SmashFLYINGGem:
+	finditem ITEM_FLYING_GEM, 1
+	return
+	
+EventScript_SmashFIREGem:
+	finditem ITEM_FIRE_GEM, 1
+	return
+	
+EventScript_SmashFIGHTINGGem:
+	finditem ITEM_FIGHTING_GEM, 1
+	return
+	
+EventScript_SmashFAIRYGem:
+	finditem ITEM_FAIRY_GEM, 1
+	return
+	
+EventScript_SmashELECTRICGem:
+	finditem ITEM_ELECTRIC_GEM, 1
+	return
+	
+EventScript_SmashDRAGONGem:
+	finditem ITEM_DRAGON_GEM, 1
+	return
+	
+EventScript_SmashDARKGem:
+	finditem ITEM_DARK_GEM, 1
+	return
+	
+EventScript_SmashBUGGem:
+	finditem ITEM_BUG_GEM, 1
+	return
 
 Movement_SmashRock: @ 829082B
 	rock_smash_break
