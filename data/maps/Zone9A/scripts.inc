@@ -36,8 +36,8 @@ Zone9A_EventScript_HerbalSign::
 	end
 
 Zone9A_Text_HerbalSign:
-	.string "Herbal Shop\n"
-	.string "All traditional remedies!$"
+	.string "Herbal Shop and\n"
+	.string "Incense Shop$"
 
 Zone9A_EventScript_MiracleSeed::
 	finditem ITEM_MIRACLE_SEED
