@@ -24,7 +24,7 @@ Zone9D_EventScript_ManFarewell:
 
 Zone9D_Text_Man_Listen:
 	.string "Hello, traveler. Will you take some\n"
-	.string "time to listen to this poor man’s story?$"
+	.string "time to listen to this poor man's story?$"
 
 Zone9D_Text_Man_Story:
 	.string "When I was seventeen years old,\n"
