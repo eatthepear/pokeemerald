@@ -31,6 +31,14 @@ Zone9A_EventScript_Exit::
 	releaseall
 	end
 
+Zone9A_EventScript_HerbalSign::
+	msgbox Zone9A_Text_HerbalSign, MSGBOX_SIGN
+	end
+
+Zone9A_Text_HerbalSign:
+	.string "Herbal Shop\n"
+	.string "All traditional remedies!$"
+
 Zone9A_EventScript_MiracleSeed::
 	finditem ITEM_MIRACLE_SEED
 	end
