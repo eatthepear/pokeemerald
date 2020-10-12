@@ -510,7 +510,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ari[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_SQUIRTLE,
+    .species = SPECIES_DROWZEE,
     }
 };
 
@@ -536,12 +536,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cassandra[] = {
     {
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_TREECKO,
+    .species = SPECIES_AIPOM,
     },
     {
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_DROWZEE,
+    .species = SPECIES_SQUIRTLE,
     }
 };
 
