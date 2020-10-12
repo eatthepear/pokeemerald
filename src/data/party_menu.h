@@ -1202,7 +1202,7 @@ static const u16 sTMHMMoves[] =
     MOVE_PROTECT,
     MOVE_RETURN,
     MOVE_ROCK_TOMB,
-    MOVE_CALM_MIND,
+    MOVE_THIEF,
     MOVE_ROAR,
     MOVE_TOXIC,
     MOVE_HAIL,

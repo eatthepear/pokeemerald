@@ -273,7 +273,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WEEDLE]      = TMHM_LEARNSET(0),
@@ -300,7 +300,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PIDGEY]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -318,7 +318,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PIDGEOTTO]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -336,7 +336,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PIDGEOT]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -355,7 +355,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_RATTATA]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -378,7 +378,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -408,7 +408,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -428,7 +428,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FEAROW]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -446,7 +446,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_EKANS]       = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -468,7 +468,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -492,7 +492,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -541,7 +541,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -567,7 +567,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SANDSLASH]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -592,7 +592,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_NIDORAN_F]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -617,7 +617,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -644,7 +644,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -682,7 +682,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -709,7 +709,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -735,7 +735,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -772,7 +772,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -781,7 +781,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CLEFAIRY]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -815,7 +815,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CLEFABLE]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -868,7 +868,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_NINETALES]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -972,7 +972,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -996,7 +996,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -1081,7 +1081,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PARASECT]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1107,7 +1107,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_VENONAT]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1127,7 +1127,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_VENOMOTH]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1149,7 +1149,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DIGLETT]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1170,7 +1170,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DUGTRIO]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1192,7 +1192,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MEOWTH]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1215,7 +1215,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -1243,7 +1243,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -1253,7 +1253,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -1281,7 +1281,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -1328,7 +1328,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -1356,7 +1356,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -1382,7 +1382,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ARCANINE]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1408,7 +1408,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_POLIWAG]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1428,7 +1428,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM02_RETURN)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -1453,7 +1453,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -1481,12 +1481,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
     [SPECIES_ABRA]        = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -1508,12 +1508,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_KADABRA]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1536,12 +1536,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ALAKAZAM]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1565,7 +1565,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -1590,7 +1590,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MACHOKE]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1614,7 +1614,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MACHAMP]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1639,7 +1639,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_BELLSPROUT]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1659,7 +1659,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WEEPINBELL]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1679,7 +1679,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_VICTREEBEL]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1700,7 +1700,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TENTACOOL]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -1723,7 +1723,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -1748,7 +1748,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -1858,7 +1858,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SLOWPOKE]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -1892,7 +1892,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -1977,7 +1977,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DODUO]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -1994,7 +1994,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DODRIO]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -2013,7 +2013,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -2035,7 +2035,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -2058,7 +2058,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -2083,7 +2083,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2113,7 +2113,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2175,7 +2175,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2199,7 +2199,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2227,7 +2227,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2257,7 +2257,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DROWZEE]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -2277,13 +2277,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_HYPNO]       = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -2304,7 +2304,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -2329,7 +2329,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_KINGLER]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -2354,7 +2354,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_VOLTORB]     = TMHM_LEARNSET(TMHM(TM32_DOUBLE_TEAM)
@@ -2371,7 +2371,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2392,7 +2392,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2418,7 +2418,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_EXEGGUTOR]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -2442,7 +2442,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CUBONE]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -2468,7 +2468,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MAROWAK]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -2495,7 +2495,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_HITMONLEE]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -2515,7 +2515,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_HITMONCHAN]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -2535,7 +2535,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LICKITUNG]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -2567,7 +2567,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -2590,7 +2590,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2615,7 +2615,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2645,7 +2645,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -2678,7 +2678,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -2686,7 +2686,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CHANSEY]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -2742,7 +2742,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_KANGASKHAN]  = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -2778,7 +2778,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -2910,7 +2910,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_MR_MIME]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -2933,7 +2933,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -2958,13 +2958,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_JYNX]        = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -2984,7 +2984,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -3008,7 +3008,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -3032,7 +3032,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PINSIR]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -3055,7 +3055,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TAUROS]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -3268,7 +3268,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -3292,7 +3292,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -3316,7 +3316,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -3341,7 +3341,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -3370,7 +3370,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -3401,7 +3401,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -3612,7 +3612,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -3657,7 +3657,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
 											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
@@ -3701,7 +3701,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -3950,7 +3950,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
@@ -3979,7 +3979,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -4002,7 +4002,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_NOCTOWL]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -4024,7 +4024,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LEDYBA]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -4046,7 +4046,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LEDIAN]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -4071,7 +4071,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SPINARAK]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -4090,7 +4090,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ARIADOS]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -4110,7 +4110,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CROBAT]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -4133,7 +4133,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -4305,7 +4305,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_NATU]        = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -4325,12 +4325,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_XATU]        = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -4352,7 +4352,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MAREEP]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -4491,7 +4491,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SUDOWOODO]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -4508,7 +4508,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -4534,7 +4534,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -4616,7 +4616,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -4679,7 +4679,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WOOPER]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -4735,12 +4735,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
     [SPECIES_ESPEON]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -4788,7 +4788,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_MURKROW]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM02_FLY)
@@ -4805,14 +4805,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SLOWKING]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -4845,7 +4845,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_MISDREAVUS]  = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -4863,7 +4863,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -4874,7 +4874,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_WOBBUFFET]   = TMHM_LEARNSET(TMHM(TM20_SAFEGUARD)),
 
     [SPECIES_GIRAFARIG]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4896,7 +4896,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -4948,7 +4948,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DUNSPARCE]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -4971,7 +4971,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -5000,7 +5000,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5055,7 +5055,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -5091,7 +5091,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -5140,7 +5140,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SHUCKLE]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -5186,14 +5186,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SNEASEL]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -5216,7 +5216,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5242,7 +5242,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5269,7 +5269,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5367,7 +5367,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_CORSOLA]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -5414,7 +5414,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -5439,7 +5439,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -5459,7 +5459,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM44_REST)
 											| TMHM(TM02_RETURN)
 											| TMHM(TM43_SECRET_POWER)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MANTINE]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -5505,7 +5505,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5530,7 +5530,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5557,7 +5557,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -5639,13 +5639,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_STANTLER]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -5667,7 +5667,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -5690,7 +5690,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_HITMONTOP]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -5712,12 +5712,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SMOOCHUM]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -5735,7 +5735,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM48_SKILL_SWAP)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ELEKID]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -5754,7 +5754,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -5776,7 +5776,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MILTANK]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -5811,7 +5811,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_BLISSEY]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -5846,7 +5846,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_RAIKOU]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_RAIKOU]      = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -5874,7 +5874,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_ENTEI]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_ENTEI]       = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -5903,7 +5903,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SUICUNE]     = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(HM08_DIVE)
@@ -6014,7 +6014,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_LUGIA]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -6053,7 +6053,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM07_WATERFALL)),
 
     [SPECIES_HO_OH]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -6089,7 +6089,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CELEBI]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -6358,7 +6358,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -6382,7 +6382,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -6406,7 +6406,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -6434,7 +6434,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -6461,7 +6461,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CASCOON]     = TMHM_LEARNSET(0),
@@ -6485,7 +6485,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LOTAD]       = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -6507,7 +6507,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LOMBRE]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -6533,7 +6533,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -6561,7 +6561,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -6606,7 +6606,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -6633,7 +6633,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -6651,7 +6651,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SWELLOW]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -6669,7 +6669,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WINGULL]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -6689,7 +6689,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM47_STEEL_WING)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PELIPPER]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -6711,11 +6711,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_RALTS]       = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -6736,13 +6736,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_KIRLIA]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -6763,13 +6763,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GARDEVOIR]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -6791,7 +6791,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
@@ -6813,7 +6813,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MASQUERAIN]  = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -6835,7 +6835,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SHROOMISH]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -7016,7 +7016,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SHEDINJA]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -7037,7 +7037,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WHISMUR]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -7207,7 +7207,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SKITTY]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -7232,7 +7232,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DELCATTY]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -7261,7 +7261,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_SABLEYE]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -7282,7 +7282,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -7401,7 +7401,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_MEDITITE]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -7425,7 +7425,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_MEDICHAM]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -7464,7 +7464,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -7488,7 +7488,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -7548,7 +7548,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -7572,7 +7572,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -7661,7 +7661,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
@@ -7688,7 +7688,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
@@ -7809,7 +7809,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SPOINK]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -7830,13 +7830,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GRUMPIG]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -7858,13 +7858,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SPINDA]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -7886,7 +7886,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TRAPINCH]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -8018,7 +8018,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ALTARIA]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -8046,7 +8046,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ZANGOOSE]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -8077,7 +8077,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -8103,11 +8103,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LUNATONE]    = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -8131,7 +8131,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_SOLROCK]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_SOLROCK]     = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -8257,7 +8257,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
-    [SPECIES_BALTOY]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_BALTOY]      = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -8283,7 +8283,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_CLAYDOL]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_CLAYDOL]     = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -8459,7 +8459,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -8493,13 +8493,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SHUPPET]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -8517,14 +8517,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_BANETTE]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -8543,7 +8543,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -8551,7 +8551,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DUSKULL]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -8569,14 +8569,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DUSCLOPS]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -8599,7 +8599,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -8630,7 +8630,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CHIMECHO]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -8657,7 +8657,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_ABSOL]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -8684,7 +8684,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -8869,7 +8869,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_RELICANTH]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -9114,7 +9114,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_LATIAS]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -9151,7 +9151,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_LATIOS]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -9188,7 +9188,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_KYOGRE]      = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -9286,7 +9286,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM07_WATERFALL)),
 
     [SPECIES_JIRACHI]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -9313,7 +9313,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DEOXYS]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -9475,7 +9475,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -9593,7 +9593,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_STARAVIA]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -9610,7 +9610,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_STARAPTOR]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -9628,7 +9628,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_BIDOOF]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -9651,7 +9651,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -9680,7 +9680,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)
@@ -9725,7 +9725,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -9746,7 +9746,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -9768,7 +9768,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -9838,7 +9838,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -9871,7 +9871,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -9960,7 +9960,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MOTHIM]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -9983,7 +9983,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_COMBEE]      = TMHM_LEARNSET(0),
@@ -10004,7 +10004,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PACHIRISU]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -10184,13 +10184,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DRIFLOON]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -10207,13 +10207,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DRIFBLIM]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -10232,7 +10232,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -10287,7 +10287,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_MISMAGIUS]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -10306,7 +10306,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -10314,7 +10314,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_HONCHKROW]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM02_FLY)
@@ -10332,7 +10332,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10356,7 +10356,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -10384,14 +10384,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CHINGLING]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -10437,7 +10437,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10465,11 +10465,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_BRONZOR]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_BRONZOR]     = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -10493,7 +10493,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_BRONZONG]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_BRONZONG]    = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -10522,7 +10522,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_BONSLY]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -10535,12 +10535,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MIMEJR]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -10562,7 +10562,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -10606,12 +10606,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SPIRITOMB]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -10630,7 +10630,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10771,7 +10771,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LUCARIO]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -10858,7 +10858,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10888,7 +10888,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10914,7 +10914,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10942,7 +10942,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -10963,7 +10963,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FINNEON]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -11083,7 +11083,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -11107,7 +11107,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -11159,7 +11159,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -11192,7 +11192,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -11222,7 +11222,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ELECTIVIRE]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -11249,7 +11249,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -11278,7 +11278,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
@@ -11330,7 +11330,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LEAFEON]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -11406,7 +11406,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -11455,7 +11455,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -11464,7 +11464,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -11491,7 +11491,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
@@ -11522,7 +11522,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DUSKNOIR]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -11545,7 +11545,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -11592,12 +11592,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_UXIE]        = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_UXIE]        = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -11626,7 +11626,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MESPRIT]     = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -11653,7 +11653,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_AZELF]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_AZELF]       = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -11800,7 +11800,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GIRATINA]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
@@ -11830,7 +11830,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CRESSELIA]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -11872,7 +11872,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM07_WATERFALL)),
 
     [SPECIES_MANAPHY]     = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -11900,7 +11900,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DARKRAI]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -11924,7 +11924,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -11952,7 +11952,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -12026,7 +12026,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SNIVY]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -12051,7 +12051,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SERVINE]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -12076,7 +12076,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SERPERIOR]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -12379,7 +12379,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12402,7 +12402,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12426,7 +12426,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12451,7 +12451,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12475,7 +12475,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12501,7 +12501,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12526,7 +12526,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
@@ -12554,13 +12554,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
     [SPECIES_MUNNA]       = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -12583,7 +12583,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MUSHARNA]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -12749,7 +12749,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_WOOBAT]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -12771,13 +12771,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SWOOBAT]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -12800,7 +12800,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -12849,7 +12849,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_AUDINO]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13038,7 +13038,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SEWADDLE]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13057,7 +13057,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SWADLOON]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13077,7 +13077,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_LEAVANNY]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13187,7 +13187,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PETILIL]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -13264,7 +13264,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -13290,7 +13290,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -13320,7 +13320,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -13346,7 +13346,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DARMANITAN]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -13375,7 +13375,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -13487,13 +13487,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SIGILYPH]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13516,11 +13516,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM47_STEEL_WING)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_YAMASK]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13537,11 +13537,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_COFAGRIGUS]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13559,7 +13559,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TIRTOUGA]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -13674,7 +13674,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GARBODOR]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -13693,13 +13693,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ZORUA]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -13716,13 +13716,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ZOROARK]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -13743,12 +13743,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MINCCINO]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13763,13 +13763,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CINCCINO]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13786,13 +13786,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GOTHITA]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13813,13 +13813,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GOTHORITA]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13840,14 +13840,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GOTHITELLE]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13869,13 +13869,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SOLOSIS]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13899,7 +13899,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DUOSION]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -13923,7 +13923,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_REUNICLUS]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -14224,7 +14224,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_ALOMOMOLA]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM08_DIVE)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -14260,7 +14260,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM02_RETURN)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
@@ -14280,7 +14280,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM02_RETURN)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -14420,7 +14420,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ELGYEM]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -14441,12 +14441,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM47_STEEL_WING)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_BEHEEYEM]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -14468,12 +14468,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM47_STEEL_WING)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LITWICK]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -14493,11 +14493,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LAMPENT]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -14517,11 +14517,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CHANDELURE]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -14542,7 +14542,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_AXEW]        = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -14746,7 +14746,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -14769,7 +14769,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -14840,7 +14840,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GOLURK]      = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
@@ -14866,7 +14866,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
@@ -14889,7 +14889,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -14913,7 +14913,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15001,7 +15001,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15026,7 +15026,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15053,7 +15053,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DURANT]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -15090,7 +15090,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15110,7 +15110,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15140,11 +15140,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_LARVESTA]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_LARVESTA]    = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -15165,7 +15165,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_VOLCARONA]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -15188,7 +15188,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_COBALION]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -15209,7 +15209,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TERRAKION]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -15232,7 +15232,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_VIRIZION]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -15277,7 +15277,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15302,7 +15302,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -15367,7 +15367,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LANDORUS]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -15418,7 +15418,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_KELDEO]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -15441,7 +15441,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MELOETTA]    = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -15599,7 +15599,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_BRAIXEN]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -15625,11 +15625,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DELPHOX]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -15654,7 +15654,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FROAKIE]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -15679,7 +15679,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -15705,7 +15705,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -15732,7 +15732,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)
 											| TMHM(HM07_WATERFALL)),
 
@@ -15757,7 +15757,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15784,7 +15784,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -15804,7 +15804,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FLETCHINDER] = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -15825,7 +15825,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TALONFLAME]  = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -15849,7 +15849,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SCATTERBUG]  = TMHM_LEARNSET(0),
@@ -15858,7 +15858,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_VIVILLON]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -15876,7 +15876,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_LITLEO]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -15901,7 +15901,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PYROAR]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -15927,11 +15927,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FLABEBE]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -15950,7 +15950,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FLOETTE]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -15969,7 +15969,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_FLORGES]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -16091,7 +16091,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -16115,7 +16115,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ESPURR]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -16141,7 +16141,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MEOWSTIC]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -16227,7 +16227,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SPRITZEE]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -16248,7 +16248,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_AROMATISSE]  = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -16271,7 +16271,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SWIRLIX]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM35_FLAMETHROWER)
@@ -16288,12 +16288,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SLURPUFF]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM35_FLAMETHROWER)
@@ -16311,13 +16311,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_INKAY]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -16336,14 +16336,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MALAMAR]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -16363,7 +16363,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
@@ -16393,7 +16393,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -16425,7 +16425,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM04_STRENGTH)
 											| TMHM(HM03_SURF)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -16609,7 +16609,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_AMAURA]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -16636,7 +16636,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_AURORUS]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -16665,7 +16665,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_SYLVEON]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -16730,12 +16730,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_CARBINK]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_CARBINK]     = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -16820,7 +16820,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_KLEFKI]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -16837,7 +16837,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM20_SAFEGUARD)
 											| TMHM(TM43_SECRET_POWER)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -16862,11 +16862,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TREVENANT]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -16889,7 +16889,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(HM04_STRENGTH)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_PUMPKABOO]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -16915,7 +16915,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_GOURGEIST]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -16942,7 +16942,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_BERGMITE]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -17011,7 +17011,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -17039,11 +17039,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_XERNEAS]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_XERNEAS]     = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -17085,7 +17085,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -17110,7 +17110,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_DIANCIE]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_DIANCIE]     = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -17133,7 +17133,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_HOOPA]       = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -17155,7 +17155,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
@@ -17360,7 +17360,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TRUMBEAK]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -17377,7 +17377,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TOUCANNON]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -17395,7 +17395,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_YUNGOOS]     = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -17412,7 +17412,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -17431,7 +17431,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM37_SANDSTORM)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -17498,7 +17498,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM03_ROCK_TOMB)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_CRABOMINABLE]= TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -17519,12 +17519,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(TM03_ROCK_TOMB)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ORICORIO]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM02_FLY)
@@ -17541,7 +17541,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_CUTIEFLY]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -17555,12 +17555,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM20_SAFEGUARD)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_RIBOMBEE]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -17575,7 +17575,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ROCKRUFF]    = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -17804,7 +17804,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -17824,7 +17824,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
@@ -17913,7 +17913,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_COMFEY]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -17928,11 +17928,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ORANGURU]    = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -17976,7 +17976,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WIMPOD]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -18104,7 +18104,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MINIOR]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18126,7 +18126,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_KOMALA]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18172,7 +18172,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM44_REST)
 											| TMHM(TM02_RETURN)
 											| TMHM(TM34_SHOCK_WAVE)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -18194,7 +18194,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM49_SNATCH)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
@@ -18203,7 +18203,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -18227,7 +18227,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DRAMPA]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -18274,7 +18274,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM22_SOLARBEAM)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(HM03_SURF)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_JANGMO_O]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -18344,7 +18344,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TAPU_KOKO]   = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM02_FLY)
@@ -18361,13 +18361,13 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_TAPU_LELE]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_TAPU_LELE]   = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -18383,7 +18383,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM41_TORMENT)
@@ -18391,7 +18391,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_TAPU_BULU]   = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -18411,7 +18411,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_TAPU_FINI]   = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -18435,7 +18435,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_COSMOEM]     = TMHM_LEARNSET(0),
 
-    [SPECIES_SOLGALEO]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_SOLGALEO]    = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18463,7 +18463,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_LUNALA]      = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM02_FLY)
@@ -18535,7 +18535,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_XURKITREE]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_XURKITREE]   = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -18573,7 +18573,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_KARTANA]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM21_FRUSTRATION)
@@ -18601,12 +18601,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM36_SLUDGE_BOMB)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_NECROZMA]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18622,11 +18622,11 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM22_SOLARBEAM)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MAGEARNA]    = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM21_FRUSTRATION)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -18643,7 +18643,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_MARSHADOW]   = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -18654,7 +18654,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM49_SNATCH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_POIPOLE]     = TMHM_LEARNSET(TMHM(TM42_FACADE)
@@ -18685,7 +18685,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM34_SHOCK_WAVE)
 											| TMHM(TM36_SLUDGE_BOMB)
 											| TMHM(TM49_SNATCH)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM06_TOXIC)),
 
@@ -18704,7 +18704,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_BLACEPHALON] = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+    [SPECIES_BLACEPHALON] = TMHM_LEARNSET(TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -18721,14 +18721,14 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM12_TAUNT)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ZERAORA]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM21_FRUSTRATION)
@@ -18775,7 +18775,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_WORMADAM_TRASH]= TMHM_LEARNSET(TMHM(TM45_ATTRACT)
@@ -18795,7 +18795,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM48_SKILL_SWAP)
 											| TMHM(TM11_SUNNY_DAY)
-											| TMHM(TM46_THIEF)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ROTOM_HEAT]  = TMHM_LEARNSET(TMHM(TM50_OVERHEAT)),
@@ -18865,7 +18865,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_MEOWSTIC_F]= TMHM_LEARNSET(TMHM(TM45_ATTRACT)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(HM01_CUT)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
@@ -18922,7 +18922,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ALOLAN_RAICHU]      = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM42_FACADE)
 											| TMHM(HM05_FLASH)
@@ -18979,7 +18979,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_ALOLAN_NINETALES]   = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(TM04_CALM_MIND)
+											| TMHM(TM46_THIEF) //calm mind
 											| TMHM(TM28_DIG)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM15_HYPER_BEAM)

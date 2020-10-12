@@ -1526,9 +1526,9 @@ static const u8 sTM03Desc[] = _(
     "May lower Speed.");
 
 static const u8 sTM04Desc[] = _(
-    "Raises Sp. Atk and\n"
-    "Sp. Def by focusing\n"
-    "the mind.");
+    "While attacking,\n"
+    "it may steal the\n"
+    "foe's held item.");
 
 static const u8 sTM05Desc[] = _(
     "A savage roar that\n"
@@ -1736,9 +1736,9 @@ static const u8 sTM45Desc[] = _(
     "opposite gender.");
 
 static const u8 sTM46Desc[] = _(
-    "While attacking,\n"
-    "it may steal the\n"
-    "foe's held item.");
+    "Raises Sp. Atk and\n"
+    "Sp. Def by focusing\n"
+    "the mind.");
 
 static const u8 sTM47Desc[] = _(
     "Spreads hard-\n"
