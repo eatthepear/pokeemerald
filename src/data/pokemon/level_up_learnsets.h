@@ -8203,7 +8203,7 @@ static const struct LevelUpMove sBibarelLevelUpLearnset[] = {
 static const struct LevelUpMove sKricketotLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_GROWL),
 	LEVEL_UP_MOVE( 1, MOVE_BIDE),
-	LEVEL_UP_MOVE( 5, MOVE_STRUGGLE_BUG),
+	LEVEL_UP_MOVE( 6, MOVE_STRUGGLE_BUG),
 	LEVEL_UP_MOVE( 9, MOVE_BUG_BITE),
 	LEVEL_UP_END
 };
