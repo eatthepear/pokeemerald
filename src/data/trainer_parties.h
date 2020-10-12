@@ -528,17 +528,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Bertha[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_TREECKO,
+    .species = SPECIES_PANSAGE,
     },
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_PURRLOIN,
+    .species = SPECIES_PANSEAR,
     },
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_AIPOM,
+    .species = SPECIES_PANPOUR,
     }
 };
 
@@ -546,12 +546,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cassandra[] = {
     {
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_LEDYBA,
+    .species = SPECIES_TREECKO,
     },
     {
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_EXEGGCUTE,
+    .species = SPECIES_DROWZEE,
     }
 };
 
