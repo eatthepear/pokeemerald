@@ -185,7 +185,7 @@ Entrance_EventScript_RandomStarter:
 	delay 96
 	waitse
 	waitmessage
-	random 24
+	random 25
 	compare VAR_RESULT, 0
 	call_if_eq Entrance_EventScript_BULBASAUR
 	compare VAR_RESULT, 1
