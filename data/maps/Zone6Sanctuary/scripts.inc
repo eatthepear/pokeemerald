@@ -23,14 +23,9 @@ Zone6Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	showmoneybox 0, 0, 0
-	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	addmoney 4000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox 0, 0
-	msgbox Zone6Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM02
+	closemessage
 	setvar VAR_ZONE, 7
 	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
@@ -89,8 +84,7 @@ Zone6Sanctuary_Text_Colress_ReadyToLeave:
 	.string "You will be entering\l"
 	.string "{COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}.$"
 
-Zone6Sanctuary_Text_Reward:
-	.string "¥4000!$"
 
-Zone6Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥4000!$"
+Zone6Sanctuary_Text_Reward:
+	.string "TM02 - Return.$"
+

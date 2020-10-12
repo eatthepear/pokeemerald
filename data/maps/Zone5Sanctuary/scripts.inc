@@ -22,9 +22,14 @@ Zone5Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM02
-	closemessage
+	showmoneybox 0, 0, 0
+	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	addmoney 3000, 0
+	playfanfare MUS_OBTAIN_ITEM
+	updatemoneybox 0, 0
+	msgbox Zone6Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
+	waitfanfare
+	hidemoneybox
 	setvar VAR_ZONE, 6
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	@ playfanfare MUS_OBTAIN_ITEM
@@ -70,4 +75,7 @@ Zone5Sanctuary_EventScript_Leave:
 	end
 
 Zone5Sanctuary_Text_Reward:
-	.string "TM02 - Return.$"
+	.string "¥3000!$"
+
+Zone5Sanctuary_Text_ReceivedMoney:
+	.string "Received ¥3000!$"
