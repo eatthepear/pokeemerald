@@ -23,7 +23,7 @@ Zone6Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM02
 	closemessage
 	setvar VAR_ZONE, 7
