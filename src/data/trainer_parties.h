@@ -50,16 +50,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Arnold[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Dexter[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Dexter[] = {
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_PIDGEY,
+    .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_SHROOMISH,
+    .moves = {MOVE_TACKLE, MOVE_STUN_SPORE, MOVE_NONE, MOVE_NONE}
     }
 };
 

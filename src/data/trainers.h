@@ -71,7 +71,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DEXTER] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_YOUNGSTER,
@@ -80,7 +80,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Dexter),
-        .party = {.NoItemDefaultMoves = sParty_Dexter},
+        .party = {.NoItemCustomMoves = sParty_Dexter},
     },
 
     [TRAINER_JEREMIAH] =
