@@ -96,7 +96,7 @@ EventScript_EndSmash:: @ 8290829
 	end
 
 EventScript_SmashItems:
-	random 50
+	random 100
 	compare VAR_RESULT, 0
 	call_if_eq EventScript_SmashBUGGem
 	compare VAR_RESULT, 1
@@ -144,16 +144,38 @@ EventScript_SmashItems:
 	compare VAR_RESULT, 22
 	call_if_eq EventScript_SmashREDShard
 	compare VAR_RESULT, 23
-	call_if_eq EventScript_SmashBLUEShard
+	call_if_eq EventScript_SmashREDShard
 	compare VAR_RESULT, 24
-	call_if_eq EventScript_SmashBLUEShard
+	call_if_eq EventScript_SmashREDShard
 	compare VAR_RESULT, 25
-	call_if_eq EventScript_SmashBLUEShard
+	call_if_eq EventScript_SmashREDShard
 	compare VAR_RESULT, 26
-	call_if_eq EventScript_SmashGREENShard
+	call_if_eq EventScript_SmashREDShard
 	compare VAR_RESULT, 27
-	call_if_eq EventScript_SmashGREENShard
+	call_if_eq EventScript_SmashREDShard
 	compare VAR_RESULT, 28
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 29
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 30
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 31
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 32
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 33
+	call_if_eq EventScript_SmashBLUEShard
+	compare VAR_RESULT, 34
+	call_if_eq EventScript_SmashGREENShard
+	compare VAR_RESULT, 35
+	call_if_eq EventScript_SmashGREENShard
+	compare VAR_RESULT, 36
+	call_if_eq EventScript_SmashGREENShard
+	compare VAR_RESULT, 37
+	call_if_eq EventScript_SmashGREENShard
+	compare VAR_RESULT, 38
+	call_if_eq EventScript_SmashYELLOWShard
+	compare VAR_RESULT, 39
 	call_if_eq EventScript_SmashYELLOWShard
 	return
 	
