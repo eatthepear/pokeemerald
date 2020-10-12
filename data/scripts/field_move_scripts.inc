@@ -96,7 +96,7 @@ EventScript_EndSmash:: @ 8290829
 	end
 
 EventScript_SmashItems:
-	random 25
+	random 50
 	compare VAR_RESULT, 0
 	call_if_eq EventScript_SmashBUGGem
 	compare VAR_RESULT, 1
