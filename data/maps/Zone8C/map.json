@@ -96,35 +96,11 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 9,
-      "y": 8,
-      "elevation": 3,
-      "item": "ITEM_ROCK_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_ROCK_GEM"
-    },
-    {
-      "type": "hidden_item",
       "x": 24,
       "y": 7,
       "elevation": 3,
-      "item": "ITEM_FLYING_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_FLYING_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 37,
-      "y": 13,
-      "elevation": 3,
-      "item": "ITEM_DARK_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_DARK_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 36,
-      "y": 20,
-      "elevation": 3,
-      "item": "ITEM_DRAGON_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_DRAGON_GEM"
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8C_RED_SHARD"
     }
   ]
 }

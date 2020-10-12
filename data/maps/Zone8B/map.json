@@ -137,35 +137,11 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 11,
-      "elevation": 3,
-      "item": "ITEM_GHOST_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8B_GHOST_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 26,
-      "y": 8,
-      "elevation": 3,
-      "item": "ITEM_STEEL_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8B_STEEL_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 39,
-      "y": 9,
-      "elevation": 3,
-      "item": "ITEM_PSYCHIC_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8B_PSYCHIC_GEM"
-    },
-    {
-      "type": "hidden_item",
       "x": 10,
       "y": 19,
       "elevation": 3,
-      "item": "ITEM_FAIRY_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8B_FAIRY_GEM"
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE8B_RED_SHARD"
     },
     {
       "type": "sign",

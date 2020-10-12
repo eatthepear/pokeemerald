@@ -41,37 +41,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 5,
-      "y": 5,
-      "elevation": 3,
-      "item": "ITEM_FIGHTING_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8D_FIGHTING_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 9,
-      "y": 5,
-      "elevation": 3,
-      "item": "ITEM_GRASS_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8D_GRASS_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 9,
-      "y": 9,
-      "elevation": 3,
-      "item": "ITEM_GROUND_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8D_GROUND_GEM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 5,
-      "y": 9,
-      "elevation": 3,
-      "item": "ITEM_WATER_GEM",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE8D_WATER_GEM"
-    }
+
   ]
 }

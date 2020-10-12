@@ -167,8 +167,8 @@
       "x": 16,
       "y": 13,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_SYS_POKEMON_GET"
+      "item": "ITEM_LEPPA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE9A_LEPPA_BERRY"
     },
     {
       "type": "sign",
