@@ -336,17 +336,18 @@ void TryRunOnWarpIntoMapScript(void)
 
 u32 CalculateRamScriptChecksum(void)
 {
-    return CalcCRC16WithTable((u8*)(&gSaveBlock1Ptr->ramScript.data), sizeof(gSaveBlock1Ptr->ramScript.data));
+    //return CalcCRC16WithTable((u8*)(&gSaveBlock1Ptr->ramScript.data), sizeof(gSaveBlock1Ptr->ramScript.data));
+    return 0;
 }
 
 void ClearRamScript(void)
 {
-    CpuFill32(0, &gSaveBlock1Ptr->ramScript, sizeof(struct RamScript));
+    //CpuFill32(0, &gSaveBlock1Ptr->ramScript, sizeof(struct RamScript));
 }
 
 bool8 InitRamScript(const u8 *script, u16 scriptSize, u8 mapGroup, u8 mapNum, u8 objectId)
 {
-    struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
+    /*struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
 
     ClearRamScript();
 
@@ -359,12 +360,13 @@ bool8 InitRamScript(const u8 *script, u16 scriptSize, u8 mapGroup, u8 mapNum, u8
     scriptData->objectId = objectId;
     memcpy(scriptData->script, script, scriptSize);
     gSaveBlock1Ptr->ramScript.checksum = CalculateRamScriptChecksum();
-    return TRUE;
+    return TRUE;*/
+    return FALSE;
 }
 
 const u8 *GetRamScript(u8 objectId, const u8 *script)
 {
-    struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
+    /*struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
     gUnknown_020375C0 = NULL;
     if (scriptData->magic != RAM_SCRIPT_MAGIC)
         return script;
@@ -383,12 +385,13 @@ const u8 *GetRamScript(u8 objectId, const u8 *script)
     {
         gUnknown_020375C0 = script;
         return scriptData->script;
-    }
+    }*/
+    return script;
 }
 
 bool32 ValidateSavedRamScript(void)
 {
-    struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
+    /*struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
     if (scriptData->magic != RAM_SCRIPT_MAGIC)
         return FALSE;
     if (scriptData->mapGroup != 0xFF)
@@ -399,12 +402,13 @@ bool32 ValidateSavedRamScript(void)
         return FALSE;
     if (CalculateRamScriptChecksum() != gSaveBlock1Ptr->ramScript.checksum)
         return FALSE;
-    return TRUE;
+    return TRUE;*/
+    return FALSE;
 }
 
 u8 *GetSavedRamScriptIfValid(void)
 {
-    struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
+    /*struct RamScriptData *scriptData = &gSaveBlock1Ptr->ramScript.data;
     if (!ValidateReceivedWonderCard())
         return NULL;
     if (scriptData->magic != RAM_SCRIPT_MAGIC)
@@ -423,12 +427,13 @@ u8 *GetSavedRamScriptIfValid(void)
     else
     {
         return scriptData->script;
-    }
+    }*/
+    return NULL;
 }
 
 void InitRamScript_NoObjectEvent(u8 *script, u16 scriptSize)
 {
-    if (scriptSize > sizeof(gSaveBlock1Ptr->ramScript.data.script))
+    /*if (scriptSize > sizeof(gSaveBlock1Ptr->ramScript.data.script))
         scriptSize = sizeof(gSaveBlock1Ptr->ramScript.data.script);
-    InitRamScript(script, scriptSize, 0xFF, 0xFF, 0xFF);
+    InitRamScript(script, scriptSize, 0xFF, 0xFF, 0xFF);*/
 }
