@@ -304,17 +304,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Frank[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .species = SPECIES_PATRAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 10,
     .species = SPECIES_WISHIWASHI,
     },
     {
     .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_BUDEW,
+    }
+    {
+    .iv = 0,
     .lvl = 11,
-    .species = SPECIES_GIRAFARIG,
+    .species = SPECIES_AUDINO,
     }
 };
 
@@ -358,17 +358,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ronan[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .species = SPECIES_SPRITZEE,
-    },
-    {
-    .iv = 0,
-    .lvl = 10,
-    .species = SPECIES_BUDEW,
-    },
-    {
-    .iv = 0,
-    .lvl = 11,
-    .species = SPECIES_AUDINO,
+    .species = SPECIES_GIRAFARIG,
     }
 };
 
