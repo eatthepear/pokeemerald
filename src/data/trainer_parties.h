@@ -310,7 +310,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Frank[] = {
     .iv = 0,
     .lvl = 10,
     .species = SPECIES_BUDEW,
-    }
+    },
     {
     .iv = 0,
     .lvl = 11,
