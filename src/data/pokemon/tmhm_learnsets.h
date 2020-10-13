@@ -18895,7 +18895,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_ALOLAN_RATTATA] = TMHM_LEARNSET(TMHM(TM01_PROTECT)
 											| TMHM(TM02_RETURN)
-											| TMHM(TM28_DIG)
+											| TMHM(TM04_THIEF)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM13_ICE_BEAM)
 											| TMHM(TM23_IRON_TAIL)
