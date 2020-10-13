@@ -49,6 +49,9 @@ Zone10A_Text_CrushYou:
 	.string "to earn my respect!\l"
 	.string "I'm gonna crush you!$"
 
+Zone10A_Text_Leviathan5Defeat:
+	.string "Adamina: Fine. A win is a win.$"
+
 Zone10A_EventScript_Leviathan5Defeated:
 	setflag FLAG_BEATLEVIATHAN5
 	msgbox Zone10A_Text_HeadInside, MSGBOX_AUTOCLOSE
@@ -65,8 +68,7 @@ Zone10A_EventScript_Leviathan5Defeated:
 	end
 
 Zone10A_Text_HeadInside:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Fine. A win is a win.\n"
-	.string "Go on, head inside.\l"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Go on, head inside.\n"
 	.string "I've got nothing for you.$"
 
 Zone10A_EventScript_Pearlie::
