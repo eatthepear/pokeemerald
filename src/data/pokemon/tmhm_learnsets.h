@@ -18893,13 +18893,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_ALOLAN_RATTATA] = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
-											| TMHM(HM01_CUT)
+    [SPECIES_ALOLAN_RATTATA] = TMHM_LEARNSET(TMHM(TM01_PROTECT)
+											| TMHM(TM02_RETURN)
 											| TMHM(TM28_DIG)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM13_ICE_BEAM)
 											| TMHM(TM23_IRON_TAIL)
-											| TMHM(TM01_PROTECT)
 											| TMHM(TM44_REST)
 											| TMHM(TM30_SHADOW_BALL)
 											| TMHM(TM36_SLUDGE_BOMB)
@@ -19036,13 +19035,12 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM06_TOXIC)),
 
-    [SPECIES_ALOLAN_GEODUDE]     = TMHM_LEARNSET(TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM28_DIG)
-											| TMHM(TM42_FACADE)
+    [SPECIES_ALOLAN_GEODUDE]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
+											| TMHM(TM02_RETURN)
+											| TMHM(TM03_ROCK_TOMB)
 											| TMHM(TM38_FIRE_BLAST)
 											| TMHM(TM35_FLAMETHROWER)
 											| TMHM(TM26_EARTHQUAKE)
-											| TMHM(TM01_PROTECT)
 											| TMHM(TM44_REST)
 											| TMHM(HM06_ROCK_SMASH)
 											| TMHM(HM04_STRENGTH)
