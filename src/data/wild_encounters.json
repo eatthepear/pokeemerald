@@ -11703,7 +11703,7 @@
           "map": "MAP_ZONE3A",
           "base_label": "gZone3A",
           "fishing_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 30,
             "mons": [
               {
                 "min_level": 5,
