@@ -112,12 +112,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Boris[] = {
     },
     {
     .iv = 0,
-    .lvl = 8,
+    .lvl = 7,
     .species = SPECIES_PIDOVE,
     },
     {
     .iv = 0,
-    .lvl = 8,
+    .lvl = 7,
     .species = SPECIES_BIDOOF,
     }
 };
@@ -125,7 +125,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Boris[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Annabelle[] = {
     {
     .iv = 0,
-    .lvl = 8,
+    .lvl = 7,
     .species = SPECIES_ZIGZAGOON,
     },
     {
