@@ -47,7 +47,7 @@ Zone10A_Text_CrushYou:
 	.string "found some scraps? No way.\p"
 	.string "You'll have to beat me in a battle\n"
 	.string "to earn my respect!\l"
-	.string "I’m gonna crush you!$"
+	.string "I'm gonna crush you!$"
 
 Zone10A_EventScript_Leviathan5Defeated:
 	setflag FLAG_BEATLEVIATHAN5
