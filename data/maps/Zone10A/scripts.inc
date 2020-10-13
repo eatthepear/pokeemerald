@@ -4,6 +4,9 @@ Zone10A_MapScripts::
 Zone10A_EventScript_Adamina::
 	lock
 	faceplayer
+	checkitem ITEM_YELLOW_SHARD, 3
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10A_EventScript_InitiateLeviathanBattle
 	msgbox Zone10A_Text_NoChance, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -24,6 +27,47 @@ Zone10A_Text_NoChance:
 	.string "Yellow Shards.\p"
 	.string "Find them and bring them to me.\n"
 	.string "Then we'll see.$"
+
+Zone10A_EventScript_InitiateLeviathanBattle:
+	fadeoutbgm 1
+	msgbox Zone10A_Text_FoundEm, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox Zone10A_Text_CrushYou, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
+	goto Zone10A_EventScript_Leviathan5Defeated
+	end
+
+Zone10A_Text_FoundEm:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Oh, wow, you actually\n"
+	.string "found them? What a surprise.$"
+
+Zone10A_Text_CrushYou:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Oh, you were expecting me\n"
+	.string "to let you in just because you\l"
+	.string "found some scraps? No way.\p"
+	.string "You'll have to beat me in a battle\n"
+	.string "to earn my respect!\l"
+	.string "I’m gonna crush you!$"
+
+Zone10A_EventScript_Leviathan5Defeated:
+	setflag FLAG_BEATLEVIATHAN5
+	msgbox Zone10A_Text_HeadInside, MSGBOX_AUTOCLOSE
+	applymovement 6, Common_Movement_FaceUp
+	waitmovement 0
+	opendoor 47, 27
+	waitdooranim
+	applymovement 6, Common_Movement_WalkUp
+	waitmovement 0
+	setflag FLAG_HIDE_LEVIATHAN5
+	closedoor 47, 27
+	waitdooranim
+	releaseall
+	end
+
+Zone10A_Text_HeadInside:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Fine. A win is a win.\n"
+	.string "Go on, head inside.\l"
+	.string "I've got nothing for you.$"
 
 Zone10A_EventScript_Pearlie::
 	trainerbattle_single TRAINER_PEARLIE, Zone10A_Text_PearlieIntro, Zone10A_Text_PearlieDefeat
