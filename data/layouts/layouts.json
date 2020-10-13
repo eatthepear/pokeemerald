@@ -4840,6 +4840,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone9Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone9Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE10A",
+      "name": "Zone10A_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Zone10A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone10A/map.bin"
     }
   ]
 }
