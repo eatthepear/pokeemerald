@@ -4647,7 +4647,7 @@
       "width": 45,
       "height": 45,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone6A/border.bin",
       "blockdata_filepath": "data/layouts/Zone6A/map.bin"
     },
