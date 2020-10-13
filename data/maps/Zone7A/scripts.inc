@@ -62,8 +62,8 @@ Zone7A_EventScript_ItemGreatBall::
 	finditem ITEM_GREAT_BALL
 	end
 
-Zone7A_EventScript_ItemShellBell::
-	finditem ITEM_SHELL_BELL
+Zone7A_EventScript_ItemRockyHelmet::
+	finditem ITEM_ROCKY_HELMET
 	end
 
 Zone7A_EventScript_ItemPoisonBarb::

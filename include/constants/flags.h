@@ -1055,7 +1055,7 @@
 #define FLAG_ITEM_ZONE4B_SILK_SCARF                                 0x3F0
 #define FLAG_ITEM_ZONE4C_ETHER                                      0x3F1
 #define FLAG_ITEM_ZONE4D_REPEL                                      0x3F2
-#define FLAG_ITEM_ZONE4E_RARE_CANDY                                 0x3F3
+#define FLAG_ITEM_ZONE4E_SHELL_BELL                                 0x3F3
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
 #define FLAG_ITEM_Zone6A_NET_BALL                                   0x3F5
 #define FLAG_ITEM_ZONE6A_1000                                       0x3F6
@@ -1064,7 +1064,7 @@
 #define FLAG_ITEM_ZONE7A_SUPER_POTION                               0x3F9
 #define FLAG_ITEM_ZONE7A_TWISTED_SPOON                              0x3FA
 #define FLAG_ITEM_ZONE7A_GREAT_BALL                                 0x3FB
-#define FLAG_ITEM_ZONE7A_SHELL_BELL                                 0x3FC
+#define FLAG_ITEM_ZONE7A_ROCKY_HELMET                               0x3FC
 #define FLAG_ITEM_ZONE7A_POISON_BARB                                0x3FD
 #define FLAG_ITEM_ZONE7A_LUXURY_BALL                                0x3FE
 #define FLAG_ITEM_ZONE7A_SILVER_POWDER                              0x3FF

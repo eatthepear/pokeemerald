@@ -1,8 +1,8 @@
 Zone4E_MapScripts::
 	.byte 0
 
-Zone4E_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+Zone4E_EventScript_ItemShellBell::
+	finditem ITEM_SHELL_BELL
 	end
 
 Zone4E_EventScript_Exit::
