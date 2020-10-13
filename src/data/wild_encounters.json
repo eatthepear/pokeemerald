@@ -11716,19 +11716,19 @@
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 4,
+                "max_level": 6,
+                "species": "SPECIES_LOTAD"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 4,
+                "max_level": 6,
+                "species": "SPECIES_POLIWAG"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 4,
+                "max_level": 6,
+                "species": "SPECIES_POLIWAG"
               },
               {
                 "min_level": 5,

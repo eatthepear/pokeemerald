@@ -3,6 +3,7 @@ Zone3A_MapScripts::
 
 Zone3A_EventScript_Exit::
 	lockall
+	goto_if_set FLAG_BEATLEVIATHAN1, Zone3A_EventScript_Warp
 	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -30,10 +31,22 @@ Zone3A_EventScript_Leviathan1Defeated:
 	applymovement 4, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
+	release
+	end
+
+Zone3A_EventScript_Leviathan1::
+	lock
+	faceplayer
+	msgbox Zone3A_Text_Leviathan1Text, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone3A_Text_Leviathan1Text:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: That's the only Fishing Rod\n"
+	.string "in the game. Don’t lose it!$"
+
+Zone3A_EventScript_Warp:
 	warp MAP_ZONE3SANCTUARY, 255, 7, 7
 	releaseall
 	end
