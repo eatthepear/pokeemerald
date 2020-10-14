@@ -5617,7 +5617,5 @@ u16 GetCaughtSpeciesCount(void)
             count++;
         break;
     }
-    if (count > 14)
-        FlagSet(FLAG_CAUGHT_15_MONS);
-    return count;
+    gSpecialVar_Result = count;
 }

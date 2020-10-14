@@ -56,7 +56,7 @@
 #define FLAG_RECEIVED_ZONE9F_ZORUA    0x2C // gift Shiny Zorua from Erica
 #define FLAG_HIDE_ZONE9A_MAN    0x2D // Man blocks exit
 #define FLAG_HIDE_LEVIATHAN5    0x2E // Unused Flag
-#define FLAG_CAUGHT_15_MONS  0x2F // Unused Flag
+#define FLAG_UNUSED  0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
