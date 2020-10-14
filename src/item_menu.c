@@ -1197,11 +1197,34 @@ void Task_BagMenu_HandleInput(u8 taskId)
                             BagMenu_SwapItems(taskId);
                         }
                     }
-                    return;
                 }
-                break;
+                return;
         }
-        
+        return;
+    }
+    else if (JOY_NEW(START_BUTTON))
+    {
+        if ((gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1) <= 1) //can't sort with 0 or 1 item in bag
+                {
+                    static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+                    PlaySE(SE_SELECT);
+                    DisplayItemMessage(taskId, 1, sText_NothingToSort, sub_81AD350);
+                    break;
+                }
+        data[1] = GetItemListPosition(gBagPositionStruct.pocket);
+        data[2] = BagGetQuantityByPocketPosition(gBagPositionStruct.pocket + 1, data[1]);
+        if (gBagPositionStruct.cursorPosition[gBagPositionStruct.pocket] == gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1)
+            break;
+        else{
+            gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPositionStruct.pocket + 1, data[1]);}
+        PlaySE(SE_SELECT);
+        BagDestroyPocketScrollArrowPair();
+        BagMenu_PrintCursor_(data[0], 2);
+        ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
+        gTasks[taskId].func = Task_LoadBagSortOptions;
+    }
+    else
+    {
         listPosition = ListMenu_ProcessInput(data[0]);
         ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
         switch (listPosition)
@@ -1211,9 +1234,7 @@ void Task_BagMenu_HandleInput(u8 taskId)
             case LIST_CANCEL:
                 if (gBagPositionStruct.location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH)
                 {
-                    static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
-                    PlaySE(SE_SELECT);
-                    DisplayItemMessage(taskId, 1, sText_NothingToSort, sub_81AD350);
+                    PlaySE(SE_FAILURE);
                     break;
                 }
                 PlaySE(SE_SELECT);
@@ -1231,6 +1252,7 @@ void Task_BagMenu_HandleInput(u8 taskId)
                 break;
         }
     }
+    break;
 }
 
 
