@@ -4370,3 +4370,17 @@ u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
 }
+
+u16 GetCaughtSpeciesCount(void)
+{
+    u16 count = 0;
+    u16 i;
+    
+    for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    {
+        if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+            count++;
+        break;
+    }
+    return count;
+}
