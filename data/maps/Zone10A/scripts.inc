@@ -149,3 +149,27 @@ Zone10A_Text_ConradDefeat:
 Zone10A_Text_ConradPostBattle:
 	.string "Not a great first impression,\n"
 	.string "if I'm being honest.$"
+
+Zone10A_EventScript_BlackGlasses::
+	finditem ITEM_BLACK_GLASSES
+	end
+
+Zone10A_EventScript_BlackBelt::
+	finditem ITEM_BLACK_BELT
+	end
+
+Zone10A_EventScript_TimerBall::
+	finditem ITEM_TIMER_BALL
+	end
+
+Zone10A_EventScript_SuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
+Zone10A_EventScript_Ether::
+	finditem ITEM_ETHER
+	end
+
+Zone10A_EventScript_SuperRepel::
+	finditem ITEM_SUPER_REPEL
+	end

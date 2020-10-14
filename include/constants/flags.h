@@ -562,11 +562,11 @@
 #define FLAG_HIDDEN_ITEM_ZONE8B_RED_SHARD                    (FLAG_HIDDEN_ITEMS_START + 0x1C)
 #define FLAG_HIDDEN_ITEM_ZONE8C_RED_SHARD                    (FLAG_HIDDEN_ITEMS_START + 0x00)
 #define FLAG_HIDDEN_ITEM_ZONE9A_LEPPA_BERRY                  (FLAG_HIDDEN_ITEMS_START + 0x1F)
-#define FLAG_HIDDEN_ITEM_ZONE8A_ELECTRIC_GEM                 (FLAG_HIDDEN_ITEMS_START + 0x20)
-#define FLAG_HIDDEN_ITEM_ZONE8A_NORMAL_GEM                   (FLAG_HIDDEN_ITEMS_START + 0x21)
-#define FLAG_HIDDEN_ITEM_ZONE8B_GHOST_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x22)
-#define FLAG_HIDDEN_ITEM_ZONE8B_STEEL_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x65)
-#define FLAG_HIDDEN_ITEM_ZONE8B_PSYCHIC_GEM                  (FLAG_HIDDEN_ITEMS_START + 0x66)
+#define FLAG_HIDDEN_ITEM_ZONE10A_RED_SHARD                   (FLAG_HIDDEN_ITEMS_START + 0x20)
+#define FLAG_HIDDEN_ITEM_ZONE10A_BLUE_SHARD                  (FLAG_HIDDEN_ITEMS_START + 0x21)
+#define FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1               (FLAG_HIDDEN_ITEMS_START + 0x22)
+#define FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2               (FLAG_HIDDEN_ITEMS_START + 0x65)
+#define FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3               (FLAG_HIDDEN_ITEMS_START + 0x66)
 #define FLAG_HIDDEN_ITEM_ZONE8B_FAIRY_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x67)
 #define FLAG_HIDDEN_ITEM_ZONE8C_ROCK_GEM                     (FLAG_HIDDEN_ITEMS_START + 0x68)
 #define FLAG_HIDDEN_ITEM_ZONE8C_FLYING_GEM                   (FLAG_HIDDEN_ITEMS_START + 0x30)
@@ -1080,12 +1080,12 @@
 #define FLAG_ITEM_ZONE9A_MIRACLE_SEED                               0x409
 #define FLAG_ITEM_ZONE9D_MYSTIC_WATER                               0x40A
 #define FLAG_ITEM_ZONE9G_CHARCOAL                                   0x40B
-#define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
-#define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D
-#define FLAG_ITEM_ROUTE_133_STAR_PIECE                              0x40E
-#define FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE                         0x40F
-#define FLAG_ITEM_PETALBURG_CITY_ETHER                              0x410
-#define FLAG_ITEM_RUSTBORO_CITY_X_DEFEND                            0x411
+#define FLAG_ITEM_ZONE10A_BLACK_GLASSES                             0x40C
+#define FLAG_ITEM_ZONE10A_BLACK_BELT                                0x40D
+#define FLAG_ITEM_ZONE10A_TIMER_BALL                                0x40E
+#define FLAG_ITEM_ZONE10A_SUPER_POTION                              0x40F
+#define FLAG_ITEM_ZONE10A_ETHER                                     0x410
+#define FLAG_ITEM_ZONE10A_SUPER_REPEL                               0x411
 #define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
 #define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_23                          0x414
