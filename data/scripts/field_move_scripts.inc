@@ -65,6 +65,9 @@ EventScript_RockSmash:: @ 82907A6
 	checkitem ITEM_SLEDGEHAMMER, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
+	msgbox Text_WantToSmash, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_EndSmash
 	setitemarg ITEM_SLEDGEHAMMER
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
@@ -286,7 +289,7 @@ EventScript_CancelSmash:: @ 8290837
 
 Text_WantToSmash: @ 829083A
 	.string "This rock appears to be breakable.\n"
-	.string "Would you like to use ROCK SMASH?$"
+	.string "Use the Sledgehammer to smash it?$"
 
 Text_CantSmash: @ 829087F
 	.string "It's a rugged rock, but a POKéMON\n"
