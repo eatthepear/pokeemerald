@@ -5605,3 +5605,17 @@ static void ClearSearchParameterBoxText(void)
 {
     ClearSearchMenuRect(144, 8, 96, 96);
 }
+
+u16 GetCaughtSpeciesCount(void)
+{
+    u16 count = 0;
+    u16 i;
+    
+    for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    {
+        if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+            count++;
+        break;
+    }
+    return count;
+}

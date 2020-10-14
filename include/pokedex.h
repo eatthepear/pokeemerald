@@ -42,5 +42,6 @@ bool16 HasAllHoennMons(void);
 void ResetPokedexScrollPositions(void);
 bool16 HasAllMons(void);
 void CB2_OpenPokedex(void);
+u16 GetCaughtSpeciesCount(void);
 
 #endif // GUARD_POKEDEX_H

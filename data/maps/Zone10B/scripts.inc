@@ -4,11 +4,11 @@ Zone10B_MapScripts::
 Zone10B_EventScript_SideQuestLuckyEgg::
 	lock
 	faceplayer
-	callnative GetNationalPokedexCount(FLAG_GET_CAUGHT)
+	callnative GetCaughtSpeciesCount
 	compare VAR_RESULT, 15
 	goto_if_gt Zone10B_EventScript_GiveLuckyEgg @go to if greater than
 	applymovement 3, Common_Movement_FaceRight
-	waitmovement
+	waitmovement 0
 	release
 	end
 
