@@ -26,6 +26,7 @@
 #include "menu.h"
 #include "overworld.h"
 #include "party_menu.h"
+#include "pokedex.h"
 #include "pokeblock.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
