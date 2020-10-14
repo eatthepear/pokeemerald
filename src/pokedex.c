@@ -5617,5 +5617,5 @@ u16 GetCaughtSpeciesCount(void)
             count++;
         break;
     }
-    gSpecialVar_Result = count;
+    return count;
 }
