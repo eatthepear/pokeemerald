@@ -15,6 +15,6 @@ Zone10B_EventScript_SideQuestLuckyEgg::
 Zone10B_EventScript_GiveLuckyEgg:
 	giveitem ITEM_LUCKY_EGG, 1
 	applymovement 3, Common_Movement_FaceRight
-	waitmovement
+	waitmovement 0
 	release
 	end
