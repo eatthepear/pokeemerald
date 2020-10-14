@@ -7,7 +7,8 @@ Zone10B_EventScript_SideQuestLuckyEgg::
 	callnative GetCaughtSpeciesCount
 	compare VAR_RESULT, 14
 	goto_if_gt Zone10B_EventScript_GiveLuckyEgg @go to if greater than
-	giveitem ITEM_RARE_CANDY, 20
+	giveitem ITEM_RARE_CANDY, 5
+	goto_if_set FLAG_CAUGHT_15_MONS, Zone10B_EventScript_GiveLuckyEgg
 	applymovement 3, Common_Movement_FaceRight
 	waitmovement 0
 	release
