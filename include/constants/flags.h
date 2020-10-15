@@ -57,7 +57,7 @@
 #define FLAG_HIDE_ZONE9A_MAN    0x2D // Man blocks exit
 #define FLAG_HIDE_LEVIATHAN5    0x2E // Unused Flag
 #define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
+#define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
