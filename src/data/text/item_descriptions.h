@@ -1531,9 +1531,9 @@ static const u8 sTM04Desc[] = _(
     "foe's held item.");
 
 static const u8 sTM05Desc[] = _(
-    "A savage roar that\n"
-    "makes the foe flee \n"
-    "to end the battle.");
+    "1/4 of the user's\n"
+    "maximum HP is used\n"
+    "to make a decoy.");
 
 static const u8 sTM06Desc[] = _(
     "Poisons the foe\n"

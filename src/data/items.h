@@ -4089,10 +4089,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM05_ROAR] =
+    [ITEM_TM05_SUBSTITUTE] =
     {
         .name = _("TM05"),
-        .itemId = ITEM_TM05_ROAR,
+        .itemId = ITEM_TM05_SUBSTITUTE,
         .price = 1000,
         .description = sTM05Desc,
         .pocket = POCKET_TM_HM,
