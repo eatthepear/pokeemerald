@@ -265,3 +265,53 @@ Zone10B_EventScript_BerryEnd:
 	waitmovement 0
 	release
 	end
+
+Zone10B_EventScript_WaterMerchant::
+	lock
+	faceplayer
+	showmoneybox 0, 0, 0
+	msgbox Zone10B_Text_WaterOffer, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone10B_EventScript_WaterCheckMoney
+	closemessage
+	hidemoneybox
+	msgbox Zone10B_Text_NoWater, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone10B_Text_WaterOffer:
+	.string "In the desert, it's supply and\n"
+	.string "demand. And the demand is water.\p"
+	.string "For you only: 500 for one Fresh\n"
+	.string "Water. Want it or not?$"
+
+Zone10B_Text_NoWater:
+	.string "Ah, fine.$"
+
+Zone10B_EventScript_WaterCheckMoney:
+	checkmoney 500, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_WaterNotEnough
+	goto Zone10B_EventScript_BuyWater
+	end
+
+Zone10B_EventScript_WaterNotEnough:
+	msgbox Zone10B_Text_NotEnough, MSGBOX_AUTOCLOSE
+	hidemoneybox
+	releaseall
+	end
+
+Zone10B_Text_NotEnough:
+	.string "You don't have enough money.$"
+
+Zone10B_EventScript_BuyWater:
+	removemoney 500, 0
+	updatemoneybox 0, 0
+	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
+	giveitem ITEM_FRESH_WATER, 1
+	hidemoneybox
+	release
+	end
+
+Zone10B_Text_GiveWater:
+	.string "Here you go.$"
