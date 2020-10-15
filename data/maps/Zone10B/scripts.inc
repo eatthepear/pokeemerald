@@ -266,6 +266,19 @@ Zone10B_EventScript_BerryEnd:
 	release
 	end
 
+Zone10B_EventScript_FossilScientist::
+	lock
+	faceplayer
+	msgbox Zone10B_Text_Fossils, MSGBOX_AUTOCLOSE
+	applymovement 6, Common_Movement_FaceLeft
+	waitmovement 0
+	release
+	end
+
+Zone10B_Text_Fossils:
+	.string "You got fossils?\n"
+	.string "No? Ok, back to my drink.$"
+
 Zone10B_EventScript_WaterMerchant::
 	lock
 	faceplayer
