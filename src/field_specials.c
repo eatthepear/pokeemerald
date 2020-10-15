@@ -136,6 +136,7 @@ static u8 DidPlayerGetFirstFans(void);
 static void SetInitialFansOfPlayer(void);
 static u16 PlayerGainRandomTrainerFan(void);
 static void BufferFanClubTrainerName_(struct LinkBattleRecords *linkRecords, u8 a, u8 b);
+u16 GetCaughtSpeciesCount(void);
 
 void Special_ShowDiploma(void)
 {
