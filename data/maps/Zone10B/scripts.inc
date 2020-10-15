@@ -99,13 +99,13 @@ Zone10B_Text_GiveSubstitute:
 	.string "Here is the TM05 - Substitute.$"
 
 Zone10B_EventScript_NoSubstitute:
-	msgbox Zone10B_EventScript_NoSubstitute, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_Text_NoSubstitute, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	release
 	end
 
-Zone10B_EventScript_NoSubstitute:
+Zone10B_Text_NoSubstitute:
 	.string "You still have trainers to defeat.$"
 
 Zone10B_EventScript_GaveSubstitute:
