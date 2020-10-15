@@ -123,14 +123,23 @@ Zone10B_Text_SubstituteExplain:
 Zone10B_EventScript_BerryExchange::
 	lock
 	faceplayer
-	msgbox Zone10B_Text_BerriesOffer, MSGBOX_YESNO
+	goto_if_set FLAG_NUZLOCKE_ON, Zone10B_EventScript_BerryExchangeNuzlocke
+	msgbox Zone10B_Text_BerriesOfferVanilla, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone10B_EventScript_BerryCheck
 	msgbox Zone10B_Text_BerriesTooBad, MSGBOX_AUTOCLOSE
 	goto Zone10B_EventScript_BerryEnd
 	end
 
-Zone10B_Text_BerriesOffer:
+Zone10B_EventScript_BerryExchangeNuzlocke:
+	msgbox Zone10B_Text_BerriesOfferNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone10B_EventScript_BerryCheck
+	msgbox Zone10B_Text_BerriesTooBad, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+
+Zone10B_Text_BerriesOfferVanilla:
 	.string "That smell...\n"
 	.string "The delicious aroma of Berries!\p"
 	.string "Listen, you know how some berries\n"
@@ -138,6 +147,14 @@ Zone10B_Text_BerriesOffer:
 	.string "Well, if I have 10 of each of those\n"
 	.string "Berries, I can craft them into\l"
 	.string "5 Revives. How about it?$"
+
+Zone10B_Text_BerriesOfferNuzlocke:
+	.string "That smell...\n"
+	.string "The delicious aroma of Berries!\p"
+	.string "Listen, you know how some berries\n"
+	.string "can treat status conditions?\p"
+	.string "I'll pay you ¥7500 for 10 of each\n"
+	.string "of those Berries. How about it?$"
 
 Zone10B_Text_BerriesTooBad:
 	.string "Aw, that's too bad.\n"
@@ -164,15 +181,36 @@ Zone10B_EventScript_BerryCheck:
 	removeitem ITEM_PECHA_BERRY, 10
 	removeitem ITEM_RAWST_BERRY, 10
 	removeitem ITEM_ASPEAR_BERRY, 10
-	msgbox Zone10B_Text_BerryCrafting, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_NUZLOCKE_ON, Zone10B_EventScript_BerryNuzlockeMoney
+	msgbox Zone10B_Text_BerryCraftingVanilla, MSGBOX_AUTOCLOSE
 	giveitem ITEM_REVIVE, 5
 	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
 	goto Zone10B_EventScript_BerryEnd
 	end
 	
-Zone10B_Text_BerryCrafting:
-	.string "Alright... Here we go...{DELAY_96}\n"
+Zone10B_EventScript_BerryNuzlockeMoney:
+	showmoneybox 0, 0, 0
+	msgbox Zone10B_Text_BerryCraftingNuzlocke, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_Text_Received7500, MSGBOX_AUTOCLOSE
+	addmoney 7500, 0
+	playfanfare MUS_OBTAIN_ITEM
+	updatemoneybox 0, 0
+	msgbox Zone4Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
+	waitfanfare
+	hidemoneybox
+	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+
+Zone10B_Text_BerryCraftingVanilla:
+	.string "Alright... Here we go...\n"
 	.string "And bam! 5 Revives!$"
+
+Zone10B_Text_BerryCraftingNuzlocke:
+	.string "Thank you, and here is your ¥7500.$"
+
+Zone10B_Text_Received7500:
+	.string "Received ¥7500!$"
 
 Zone10B_Text_GoodDay:
 	.string "Good day.$"
