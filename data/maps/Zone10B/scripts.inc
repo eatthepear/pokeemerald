@@ -119,3 +119,111 @@ Zone10B_Text_SubstituteExplain:
 	.string "The move Substitute is a unique\n"
 	.string "move with many applications.\l"
 	.string "Use it cleverly, young one.$"
+
+Zone10B_EventScript_BerryExchange::
+	lock
+	faceplayer
+	msgbox Zone10B_Text_BerriesOffer, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone10B_EventScript_BerryCheck
+	msgbox Zone10B_Text_BerriesTooBad, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+
+Zone10B_Text_BerriesOffer:
+	.string "That smell...\n"
+	.string "The delicious aroma of Berries!\p"
+	.string "Listen, you know how some berries\n"
+	.string "can treat status conditions?\p"
+	.string "Well, if I have 10 of each of those\n"
+	.string "Berries, I can craft them into\l"
+	.string "5 Revives. How about it?$"
+
+Zone10B_Text_BerriesTooBad:
+	.string "Aw, that's too bad.\n"
+	.string "It's a good offer though!"
+
+Zone10B_EventScript_BerryCheck:
+	checkitem ITEM_CHERI_BERRY, 10
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_NotEnoughCheri
+	checkitem ITEM_CHESTO_BERRY, 10
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_NotEnoughChesto
+	checkitem ITEM_PECHA_BERRY, 10
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_NotEnoughPecha
+	checkitem ITEM_RAWST_BERRY, 10
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_NotEnoughRawst
+	checkitem ITEM_ASPEAR_BERRY, 10
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_NotEnoughAspear
+	removeitem ITEM_CHERI_BERRY, 10
+	removeitem ITEM_CHESTO_BERRY, 10
+	removeitem ITEM_PECHA_BERRY, 10
+	removeitem ITEM_RAWST_BERRY, 10
+	removeitem ITEM_ASPEAR_BERRY, 10
+	msgbox Zone10B_Text_BerryCrafting, MSGBOX_AUTOCLOSE
+	giveitem ITEM_REVIVE, 5
+	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+	
+Zone10B_Text_BerryCrafting:
+	.string "Alright... Here we go...{DELAY_96}\n"
+	.string "And bam! 5 Revives!$"
+
+Zone10B_Text_GoodDay:
+	.string "Good day.$"
+
+Zone10B_EventScript_NotEnoughAspear:
+	msgbox Zone10B_Text_NotEnoughAspear, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+	
+Zone10B_Text_NotEnoughAspear:
+	.string "It looks like you don't have enough\n"
+	.string "Aspear Berries.$"
+
+Zone10B_EventScript_NotEnoughRawst:
+	msgbox Zone10B_Text_NotEnoughRawst, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+	
+Zone10B_Text_NotEnoughRawst:
+	.string "It looks like you don't have enough\n"
+	.string "Rawst Berries.$"
+
+Zone10B_EventScript_NotEnoughPecha:
+	msgbox Zone10B_Text_NotEnoughPecha, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+	
+Zone10B_Text_NotEnoughPecha:
+	.string "It looks like you don't have enough\n"
+	.string "Pecha Berries.$"
+
+Zone10B_EventScript_NotEnoughChesto:
+	msgbox Zone10B_Text_NotEnoughChesto, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+	
+Zone10B_Text_NotEnoughChesto:
+	.string "It looks like you don't have enough\n"
+	.string "Chesto Berries.$"
+
+Zone10B_EventScript_NotEnoughCheri:
+	msgbox Zone10B_Text_NotEnoughCheri, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_BerryEnd
+	end
+	
+Zone10B_Text_NotEnoughCheri:
+	.string "It looks like you don't have enough\n"
+	.string "Cheri Berries.$"
+
+Zone10B_EventScript_BerryEnd:
+	applymovement 5, Common_Movement_FaceLeft
+	waitmovement 0
+	release
+	end
