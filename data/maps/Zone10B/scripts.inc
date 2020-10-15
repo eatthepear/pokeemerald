@@ -109,7 +109,7 @@ Zone10B_Text_NoSubstitute:
 	.string "You still have trainers to defeat.$"
 
 Zone10B_EventScript_GaveSubstitute:
-	msgbox Zone10B_Text_SubstituteExplain, MSGOBOX_AUTOCLOSE
+	msgbox Zone10B_Text_SubstituteExplain, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	release
