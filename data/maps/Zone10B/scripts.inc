@@ -81,7 +81,7 @@ Zone10B_EventScript_SideQuestSubstitute::
 	goto_if_not_defeated TRAINER_CONRAD, Zone10B_EventScript_NoSubstitute
 	setflag FLAG_RECEIVED_ZONE10B_SUBSTITUTE
 	msgbox Zone10B_Text_GiveSubstitute, MSGBOX_AUTOCLOSE
-	giveitem TM05
+	giveitem ITEM_TM05
 	goto Zone10B_EventScript_GaveSubstitute
 	end
 
