@@ -4382,7 +4382,6 @@ u16 GetCaughtSpeciesCount(void)
     {
         if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             count++;
-        break;
     }
     return count;
 }
