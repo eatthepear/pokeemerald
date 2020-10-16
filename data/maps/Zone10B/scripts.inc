@@ -82,6 +82,9 @@ Zone10B_EventScript_AdaminaLeave:
 Zone10B_Text_Adamina_AreYouLeaving:
 	.string "Adamina: Are you leaving the Zone?$"
 
+Zone10B_Text_Adamina_WhenReady:
+	.string "Come speak to me when you're ready.$"
+
 Zone10B_EventScript_Exit:
 	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
 	delay 96
