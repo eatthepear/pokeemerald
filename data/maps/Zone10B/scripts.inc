@@ -1,6 +1,103 @@
 Zone10B_MapScripts::
 	.byte 0
 
+Zone10B_EventScript_Adamina::
+	lockall
+	faceplayer
+	checkitem ITEM_RUBY, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_AdaminaIntro
+	goto Zone10B_EventScript_AdaminaLeave
+	end
+
+Zone10B_EventScript_Kirlia::
+	lockall
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 6
+	call_if_eq Zone10B_EventScript_Down
+	compare VAR_TEMP_0, 7
+	call_if_eq Zone10B_EventScript_Right
+	checkitem ITEM_RUBY, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_AdaminaIntro
+	goto Zone10B_EventScript_AdaminaLeave
+	end
+	
+Zone10B_EventScript_Down:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	return
+
+Zone10B_EventScript_Right:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	call Zone10B_EventScript_Down
+	return
+
+Zone10B_EventScript_AdaminaIntro:
+	msgbox Zone10B_Text_Adamina_Sorry, MSGBOX_AUTOCLOSE
+	giveitem ITEM_RUBY
+	msgbox Zone10B_Text_Adamina_SafeSpace, MSGBOX_DEFAULT
+	delay 96
+	msgbox Zone10B_Text_Adamina_TellYouWhat, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone10B_Text_Adamina_Sorry:
+	.string "You...\n"
+	.string "...\p"
+	.string "Look.\n"
+	.string "I said some harsh words earlier.\l"
+	.string "Consider this part of my apology.$"
+
+Zone10B_Text_Adamina_SafeSpace:
+	.string "Adamina: This is my tavern.\n"
+	.string "It's my safe space.\p"
+	.string "All the people from around here\n"
+	.string "gather for shelter from the\l"
+	.string "sandstorm.\p"
+	.string "I just... feel defensive around\n"
+	.string "outsiders. Because it feels like\l"
+	.string "family here, you know?$"
+
+Zone10B_Text_Adamina_TellYouWhat:
+	.string "Adamina: Tell you what, you can\n"
+	.string "stay as long as you like to chat\l"
+	.string "with the people here.\p"
+	.string "When you're ready to leave this\n"
+	.string "Zone, come speak to me.$"
+
+Zone10B_EventScript_AdaminaLeave:
+	msgbox Zone10B_Text_Adamina_AreYouLeaving, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone10B_EventScript_Exit
+	msgbox Zone10B_Text_Adamina_WhenReady, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone10B_Text_Adamina_AreYouLeaving:
+	.string "Adamina: Are you leaving the Zone?$"
+
+Zone10B_EventScript_Exit:
+	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
+	delay 96
+	playmoncry SPECIES_KIRLIA, 0
+	msgbox Zone10B_Text_Adamina_UseTeleport, MSGBOX_AUTOCLOSE
+	waitmoncry
+	warpteleport MAP_ZONE9SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
+Zone10B_Text_Adamina_UseWell:
+	.string "Okay. Use that Waystone well.$"
+
+Zone10B_Text_Adamina_UseTeleport:
+	.string "Kirlia, use Teleport!$"
+
 Zone10B_EventScript_SideQuestLuckyEgg::
 	lock
 	faceplayer
