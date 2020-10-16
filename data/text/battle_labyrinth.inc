@@ -201,7 +201,7 @@ gText_Varrick_ZhuLiIntro3:
 	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Alright, we don't have all\n"
 	.string "day, Zhu Li! Talk to her if you\l"
 	.string "want to buy Pokéballs or Evolution\l"
-	.string "items, while I’ll handle all of the\l"
+	.string "items, while I'll handle all of the\l"
 	.string "other important items!$"
 
 gText_Varrick_Welcome:
