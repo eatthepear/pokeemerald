@@ -242,14 +242,14 @@ gText_Lelouch_ExplainShards:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: I sense...\n"
 	.string "The aura of Shards.\p"
 	.string "There are four types of Shards:\n"
-	.string "Red, Blue, Green, and Yellow,\l"
+	.string "Red, Blue, Yellow, and Green,\l"
 	.string "ranked by least to most rare.\p"
 	.string "Each can be exchanged for a certain\n"
 	.string "type of service I provide.\p"
 	.string "Pokémon training costs Red Shards.\p"
 	.string "Move Relearning costs Blue Shards.\p"
-	.string "Move Tutoring costs Green Shards.\p"
-	.string "Other services cost Yellow Shards.\p"
+	.string "Move Tutoring costs Yellow Shards.\p"
+	.string "Other services cost Green Shards.\p"
 	.string "I hope they serve you well...$"
 
 gText_Lelouch_Welcome:
