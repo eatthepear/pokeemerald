@@ -1,5 +1,4 @@
-#define TMHM_LEARNSET(TMHM(TM05_SUBSTITUTE)
-                                            | moves) {(u32)(moves), ((u64)(moves) >> 32)}
+#define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
 #define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_PROTECT))
 
 // This table determines which TMs and HMs a species is capable of learning.
