@@ -177,7 +177,6 @@ EventScript_Shop_LelouchCantRemindEgg:
 	goto EventScript_Shop_LelouchReminderChooseMon
 	end
 
-
 EventScript_Shop_LelouchCheckTutor:
 	checkitem ITEM_YELLOW_SHARD, 1
 	compare VAR_RESULT, FALSE
