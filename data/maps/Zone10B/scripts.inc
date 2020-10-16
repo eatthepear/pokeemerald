@@ -258,7 +258,7 @@ Zone10B_Text_BerriesOfferNuzlocke:
 
 Zone10B_Text_BerriesTooBad:
 	.string "Aw, that's too bad.\n"
-	.string "It's a good offer though!"
+	.string "It's a good offer though!$"
 
 Zone10B_EventScript_BerryCheck:
 	checkitem ITEM_CHERI_BERRY, 10
