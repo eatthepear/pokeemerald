@@ -11,13 +11,13 @@
 #define AILMENT_FNT   7
 
 #define TUTOR_MOVE_COVET           0
-#define TUTOR_MOVE_SWORDS_DANCE    1
-#define TUTOR_MOVE_MEGA_KICK       2
-#define TUTOR_MOVE_BODY_SLAM       3
-#define TUTOR_MOVE_DOUBLE_EDGE     4
-#define TUTOR_MOVE_COUNTER         5
-#define TUTOR_MOVE_SEISMIC_TOSS    6
-#define TUTOR_MOVE_MIMIC           7
+#define TUTOR_MOVE_LOW_KICK        1
+#define TUTOR_MOVE_ICY_WIND        2
+#define TUTOR_MOVE_KNOCK_OFF       3
+#define TUTOR_MOVE_ENCORE          4
+#define TUTOR_MOVE_HEAL_BELL       5
+#define TUTOR_MOVE_STEALTH_ROCK    6
+#define TUTOR_MOVE_TAUNT           7
 #define TUTOR_MOVE_METRONOME       8
 #define TUTOR_MOVE_SOFT_BOILED     9
 #define TUTOR_MOVE_DREAM_EATER     10
@@ -29,7 +29,7 @@
 #define TUTOR_MOVE_ROLLOUT         16
 #define TUTOR_MOVE_PSYCH_UP        17
 #define TUTOR_MOVE_SNORE           18
-#define TUTOR_MOVE_ICY_WIND        19
+#define TUTOR_MOVE_MEGA_KICK       19
 #define TUTOR_MOVE_ENDURE          20
 #define TUTOR_MOVE_MUD_SLAP        21
 #define TUTOR_MOVE_ICE_PUNCH       22

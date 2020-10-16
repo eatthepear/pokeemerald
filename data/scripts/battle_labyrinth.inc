@@ -182,9 +182,16 @@ EventScript_Shop_LelouchCheckTutor:
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
 	msgbox gText_Lelouch_CostsYellowShards, MSGBOX_DEFAULT
-	scrollingmultichoice 2, 0, 0, 4, TRUE
+	scrollingmultichoice 2, 0, 0, 5, TRUE
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchMoveTutorCovet
+	case 1, EventScript_Shop_LelouchMoveTutorLowKick
+	case 2, EventScript_Shop_LelouchMoveTutorIcyWind
+	case 3, EventScript_Shop_LelouchMoveTutorKnockOff
+	case 4, EventScript_Shop_LelouchMoveTutorEncore
+	case 5, EventScript_Shop_LelouchMoveTutorHealBell
+	case 6, EventScript_Shop_LelouchMoveTutorStealthRock
+	case 7, EventScript_Shop_LelouchMoveTutorTaunt
 	case MULTI_B_PRESSED, EventScript_Shop_LelouchLeave
 	end
 
@@ -195,6 +202,98 @@ EventScript_Shop_LelouchMoveTutorCovet:
 	goto_if_eq EventScript_Shop_LelouchCheckTutor
 	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
 	setvar VAR_0x8005, TUTOR_MOVE_COVET
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorLowKick:
+	buffermovename 0, MOVE_LOW_KICK
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorIcyWind:
+	buffermovename 0, MOVE_ICY_WIND
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_ICY_WIND
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorKnockOff:
+	buffermovename 0, MOVE_KNOCK_OFF
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorEncore:
+	buffermovename 0, MOVE_ENCORE
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_ENCORE
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorHealBell:
+	buffermovename 0, MOVE_HEAL_BELL
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_HEAL_BELL
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+
+EventScript_Shop_LelouchMoveTutorStealthRock:
+	buffermovename 0, MOVE_STEALTH_ROCK
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_STEALTH_ROCK
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorTaunt:
+	buffermovename 0, MOVE_TAUNT
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_TAUNT
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Shop_LelouchLeave
