@@ -42,7 +42,7 @@ EventScript_Shop_VarrickIntro:
 	setflag FLAG_VARRICK_INTRO
 	return
 
-EventScript_Shop_ZhuLiIntro:
+EventScript_Shop_ZhuLiIntro::
 	lockall
 	applymovement 2, Common_Movement_ExclamationMark
 	waitmovement 0
