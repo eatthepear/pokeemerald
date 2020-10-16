@@ -42,6 +42,43 @@ EventScript_Shop_VarrickIntro:
 	setflag FLAG_VARRICK_INTRO
 	return
 
+EventScript_Shop_ZhuLiIntro:
+	lockall
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 18
+	call_if_eq EventScript_Shop_ZhuLiIntroMoveUp
+	compare VAR_TEMP_0, 19
+	call_if_eq EventScript_Shop_ZhuLiIntroMoveUp
+	compare VAR_TEMP_0, 20
+	call_if_eq EventScript_Shop_ZhuLiIntroMoveUpLeft
+	msgbox gText_Varrick_ZhuLiIntro1, MSGBOX_AUTOCLOSE
+	msgbox gText_ZhuLi_ZhuLiIntro1, MSGBOX_AUTOCLOSE
+	playse SE_APPLAUSE
+	waitse
+	msgbox gText_Varrick_ZhuLiIntro2, MSGBOX_AUTOCLOSE
+	msgbox gText_ZhuLi_ZhuLiIntro2, MSGBOX_AUTOCLOSE
+	msgbox gText_Varrick_ZhuLiIntro3, MSGBOX_AUTOCLOSE
+	setvar VAR_ZHULI_INTRO, 1
+	releaseall
+	end
+
+EventScript_Shop_ZhuLiIntroMoveUp:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	return
+
+EventScript_Shop_ZhuLiIntroMoveUpLeft:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	call EventScript_Shop_ZhuLiIntroMoveUp
+	return
+
 EventScript_Shop_LelouchIntroCheck::
 	lock
 	faceplayer

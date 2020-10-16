@@ -153,7 +153,7 @@
       "x": 18,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ZHULI_INTRO",
       "var_value": "0",
       "script": "NULL"
     },
@@ -162,7 +162,7 @@
       "x": 19,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ZHULI_INTRO",
       "var_value": "0",
       "script": "NULL"
     },
@@ -171,7 +171,7 @@
       "x": 20,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ZHULI_INTRO",
       "var_value": "0",
       "script": "NULL"
     }

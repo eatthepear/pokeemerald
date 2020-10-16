@@ -179,6 +179,31 @@ gText_Varrick_Intro:
 	.string "you've never seen!\p"
 	.string "Please, enjoy my shop!$"
 
+gText_Varrick_ZhuLiIntro1:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Fantastic! You've arrived!\n"
+	.string "Zhu Li, do the thing!$"
+
+gText_ZhuLi_ZhuLiIntro1:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GREY}: Yes, sir.$"
+
+gText_Varrick_ZhuLiIntro2:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Zhu Li is my assistant!\p"
+	.string "Silph gave me so many items to sell\n"
+	.string "that I practically begged them for\l"
+	.string "some extra help!\p"
+	.string "Zhu Li, introduce yourself!$"
+
+gText_ZhuLi_ZhuLiIntro2:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GREY}: Yes, sir.\p"
+	.string "Pleased to meet you, {PLAYER}. I'm-$"
+
+gText_Varrick_ZhuLiIntro3:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Alright, we don't have all\n"
+	.string "day, Zhu Li! Talk to her if you\l"
+	.string "want to buy Pokéballs or Evolution\l"
+	.string "items, while I’ll handle all of the\l"
+	.string "other important items!$"
+
 gText_Varrick_Welcome:
 	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: Greetings and salutations!\n"
 	.string "Welcome to Silph Unique Item Store!$"
