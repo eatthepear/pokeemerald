@@ -13,8 +13,8 @@
 #define TUTOR_MOVE_ICY_WIND        0
 #define TUTOR_MOVE_LOW_KICK        1
 #define TUTOR_MOVE_KNOCK_OFF       2
-#define TUTOR_MOVE_ENCORE          3
-#define TUTOR_MOVE_HEAL_BELL       4
+#define TUTOR_MOVE_HEAL_BELL       3
+#define TUTOR_MOVE_SLEEP_TALK      4
 #define TUTOR_MOVE_STEALTH_ROCK    5
 #define TUTOR_MOVE_TAUNT           6
 #define TUTOR_MOVE_NATURAL_GIFT    7
@@ -34,7 +34,7 @@
 #define TUTOR_MOVE_MUD_SLAP        21
 #define TUTOR_MOVE_ICE_PUNCH       22
 #define TUTOR_MOVE_SWAGGER         23
-#define TUTOR_MOVE_SLEEP_TALK      24
+#define TUTOR_MOVE_SPACIAL_REND    24
 #define TUTOR_MOVE_SWIFT           25
 #define TUTOR_MOVE_DEFENSE_CURL    26
 #define TUTOR_MOVE_THUNDER_PUNCH   27
