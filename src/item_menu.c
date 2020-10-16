@@ -2040,7 +2040,7 @@ void Task_ItemContext_Sell(u8 taskId)
 {
     s16* data = gTasks[taskId].data;
 
-    if (ItemId_GetPrice(gSpecialVar_ItemId) == 0)
+    if ((ItemId_GetPrice(gSpecialVar_ItemId) == 0) || gBagPositionStruct.pocket == TMHM_POCKET)
     {
         CopyItemName(gSpecialVar_ItemId, gStringVar2);
         StringExpandPlaceholders(gStringVar4, gText_CantBuyKeyItem);
