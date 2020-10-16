@@ -11,8 +11,8 @@
 #define AILMENT_FNT   7
 
 #define TUTOR_MOVE_COVET           0
-#define TUTOR_MOVE_LOW_KICK        1
-#define TUTOR_MOVE_ICY_WIND        2
+#define TUTOR_MOVE_ICY_WIND        1
+#define TUTOR_MOVE_LOW_KICK        2
 #define TUTOR_MOVE_KNOCK_OFF       3
 #define TUTOR_MOVE_ENCORE          4
 #define TUTOR_MOVE_HEAL_BELL       5

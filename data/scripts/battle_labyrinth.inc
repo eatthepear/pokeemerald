@@ -185,8 +185,8 @@ EventScript_Shop_LelouchCheckTutor:
 	scrollingmultichoice 2, 0, 0, 5, TRUE
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchMoveTutorCovet
-	case 1, EventScript_Shop_LelouchMoveTutorLowKick
-	case 2, EventScript_Shop_LelouchMoveTutorIcyWind
+	case 1, EventScript_Shop_LelouchMoveTutorIcyWind
+	case 2, EventScript_Shop_LelouchMoveTutorLowKick
 	case 3, EventScript_Shop_LelouchMoveTutorKnockOff
 	case 4, EventScript_Shop_LelouchMoveTutorEncore
 	case 5, EventScript_Shop_LelouchMoveTutorHealBell
@@ -208,19 +208,6 @@ EventScript_Shop_LelouchMoveTutorCovet:
 	goto EventScript_Shop_LelouchMoveTaught1
 	end
 
-EventScript_Shop_LelouchMoveTutorLowKick:
-	buffermovename 0, MOVE_LOW_KICK
-	msgbox gText_TutorMove, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchCheckTutor
-	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
-	call MoveTutor_EventScript_OpenPartyMenu
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto EventScript_Shop_LelouchMoveTaught1
-	end
-
 EventScript_Shop_LelouchMoveTutorIcyWind:
 	buffermovename 0, MOVE_ICY_WIND
 	msgbox gText_TutorMove, MSGBOX_YESNO
@@ -228,6 +215,19 @@ EventScript_Shop_LelouchMoveTutorIcyWind:
 	goto_if_eq EventScript_Shop_LelouchCheckTutor
 	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
 	setvar VAR_0x8005, TUTOR_MOVE_ICY_WIND
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorLowKick:
+	buffermovename 0, MOVE_LOW_KICK
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Shop_LelouchLeave
