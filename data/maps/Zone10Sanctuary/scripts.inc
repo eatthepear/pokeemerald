@@ -89,7 +89,7 @@ Zone10Sanctuary_EventScript_Leave:
 Zone10Sanctuary_Text_Reward:
 	.string "3 Revives!$"
 
-Zone5Sanctuary_Text_RewardNuzlocke:
+Zone10Sanctuary_Text_RewardNuzlocke:
 	.string "¥4500!$"
 
 Zone10Sanctuary_Text_ReceivedMoney:
