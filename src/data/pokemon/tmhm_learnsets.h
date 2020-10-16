@@ -257,7 +257,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_CATERPIE]    = TMHM_LEARNSET(0),
 
-    [SPECIES_METAPOD]     = TMHM_LEARNSET(),
+    [SPECIES_METAPOD]     = TMHM_LEARNSET(0),
 
     [SPECIES_BUTTERFREE]  = TMHM_LEARNSET(TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
