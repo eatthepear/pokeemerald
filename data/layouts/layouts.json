@@ -4422,7 +4422,7 @@
       "blockdata_filepath": "data/layouts/Zone0Sanctuary/map.bin"
     },
     {
-      "id": "LAYOUT_ZON0SHOPS",
+      "id": "LAYOUT_ZONE0SHOPS",
       "name": "Zone0Shops_Layout",
       "width": 23,
       "height": 23,
