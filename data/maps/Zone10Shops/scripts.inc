@@ -37,23 +37,18 @@ Zone10Shops_Shop_General:
 	release
 	end
 
-Zone10Shops_EventScript_Shop_Unique::
+Zone10Shops_EventScript_Shop_VarrickUnique::
 	lock
 	faceplayer
-	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntro
 	message gText_Varrick_Welcome
 	waitmessage
-	pokemart Zone10Shops_Shop_Unique
+	pokemart Zone10Shops_Shop_VarrickUnique
 	msgbox gText_Varrick_Leave, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-Zone10Shops_Shop_Unique:
-	.2byte ITEM_HEAL_BALL
-	.2byte ITEM_NET_BALL
-	.2byte ITEM_NEST_BALL
-	.2byte ITEM_LUXURY_BALL
+Zone10Shops_Shop_VarrickUnique:
 	.2byte ITEM_SILK_SCARF
 	.2byte ITEM_MIRACLE_SEED
 	.2byte ITEM_CHARCOAL
@@ -70,6 +65,29 @@ Zone10Shops_Shop_Unique:
 	.2byte ITEM_SPELL_TAG
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_NONE
+	release
+	end
+
+Zone10Shops_EventScript_Shop_ZhuLiUnique::
+	lock
+	faceplayer
+	message gText_ZhuLi_Welcome
+	waitmessage
+	pokemart Zone10Shops_Shop_ZhuLiUnique
+	msgbox gText_ZhuLi_Leave, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Zone10Shops_Shop_ZhuLiUnique:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_TIMER_BALL
+	.2byte ITEM_LUXURY_BALL
 	.2byte ITEM_NONE
 	release
 	end

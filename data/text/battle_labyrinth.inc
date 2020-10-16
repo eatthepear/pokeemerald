@@ -211,6 +211,14 @@ gText_Varrick_Welcome:
 gText_Varrick_Leave:
 	.string "{COLOR BLUE}Varrick{COLOR DARK_GREY}: A big thank you from Silph!$"
 
+gText_ZhuLi_Welcome:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GREY}: Welcome to Silph Unique\n"
+	.string "Item Store. Care to buy anything?$"
+
+gText_ZhuLi_Leave:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GREY}: We thank you for your\n"
+	.string "business, loyal customer.
+
 gText_ServicesSign:
 	.string "Lelouch's Special Services Shop\n"
 	.string "Anything for the right price...$"

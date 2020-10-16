@@ -45,6 +45,7 @@ EventScript_Shop_VarrickIntro:
 EventScript_Shop_ZhuLiIntro::
 	lockall
 	applymovement 2, Common_Movement_ExclamationMark
+	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 18
