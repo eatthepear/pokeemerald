@@ -10,14 +10,14 @@
 #define AILMENT_PKRS  6
 #define AILMENT_FNT   7
 
-#define TUTOR_MOVE_COVET           0
-#define TUTOR_MOVE_ICY_WIND        1
-#define TUTOR_MOVE_LOW_KICK        2
-#define TUTOR_MOVE_KNOCK_OFF       3
-#define TUTOR_MOVE_ENCORE          4
-#define TUTOR_MOVE_HEAL_BELL       5
-#define TUTOR_MOVE_STEALTH_ROCK    6
-#define TUTOR_MOVE_TAUNT           7
+#define TUTOR_MOVE_ICY_WIND        0
+#define TUTOR_MOVE_LOW_KICK        1
+#define TUTOR_MOVE_KNOCK_OFF       2
+#define TUTOR_MOVE_ENCORE          3
+#define TUTOR_MOVE_HEAL_BELL       4
+#define TUTOR_MOVE_STEALTH_ROCK    5
+#define TUTOR_MOVE_TAUNT           6
+#define TUTOR_MOVE_NATURAL_GIFT    7
 #define TUTOR_MOVE_METRONOME       8
 #define TUTOR_MOVE_SOFT_BOILED     9
 #define TUTOR_MOVE_DREAM_EATER     10

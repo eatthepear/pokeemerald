@@ -831,7 +831,6 @@ static const u8 sText_ShinyStone[] = _("Shiny Stone");
 static const u8 sText_DuskStone[] = _("Dusk Stone");
 static const u8 sText_DawnStone[] = _("Dawn Stone");
 static const u8 sText_IceStone[] = _("Ice Stone");
-static const u8 sText_MoveTutorCovet[] = _("Covet");
 static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
 static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
 static const u8 sText_MoveTutorLowKick[] = _("Low Kick");
@@ -888,14 +887,13 @@ static const struct ListMenuItem EvolutionaryStones[] =
 
 static const struct ListMenuItem MoveTutorLevel1[] =
 {
-    {sText_MoveTutorCovet, 0},
-    {sText_MoveTutorIcyWind, 1},
-    {sText_MoveTutorLowKick, 2},
-    {sText_MoveTutorKnockOff, 3},
-    {sText_MoveTutorEncore, 4},
-    {sText_MoveTutorHealBell, 5},
-    {sText_MoveTutorStealthRock, 6},
-    {sText_MoveTutorTaunt, 7},
+    {sText_MoveTutorIcyWind, 0},
+    {sText_MoveTutorLowKick, 1},
+    {sText_MoveTutorKnockOff, 2},
+    {sText_MoveTutorEncore, 3},
+    {sText_MoveTutorHealBell, 4},
+    {sText_MoveTutorStealthRock, 5},
+    {sText_MoveTutorTaunt, 6},
 };
 
 // Table of your multichoice sets.
