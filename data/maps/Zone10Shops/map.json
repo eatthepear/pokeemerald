@@ -155,7 +155,7 @@
       "elevation": 0,
       "var": "VAR_ZHULI_INTRO",
       "var_value": "0",
-      "script": "NULL"
+      "script": "EventScript_Shop_ZhuLiIntro"
     },
     {
       "type": "trigger",
@@ -164,7 +164,7 @@
       "elevation": 0,
       "var": "VAR_ZHULI_INTRO",
       "var_value": "0",
-      "script": "NULL"
+      "script": "EventScript_Shop_ZhuLiIntro"
     },
     {
       "type": "trigger",
@@ -173,7 +173,7 @@
       "elevation": 0,
       "var": "VAR_ZHULI_INTRO",
       "var_value": "0",
-      "script": "NULL"
+      "script": "EventScript_Shop_ZhuLiIntro"
     }
   ],
   "bg_events": [
