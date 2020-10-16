@@ -831,6 +831,14 @@ static const u8 sText_ShinyStone[] = _("Shiny Stone");
 static const u8 sText_DuskStone[] = _("Dusk Stone");
 static const u8 sText_DawnStone[] = _("Dawn Stone");
 static const u8 sText_IceStone[] = _("Ice Stone");
+static const u8 sText_MoveTutorCovet[] = _("Covet");
+static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
+static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
+static const u8 sText_MoveTutorLowKick[] = _("Low Kick");
+static const u8 sText_MoveTutorEncore[] = _("Encore");
+static const u8 sText_MoveTutorHealBell[] = _("Heal Bell");
+static const u8 sText_MoveTutorStealthRock[] = _("Stealth Rock");
+static const u8 sText_MoveTutorTaunt[] = _("Taunt");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -878,6 +886,18 @@ static const struct ListMenuItem EvolutionaryStones[] =
     {sText_IceStone, 9},
 };
 
+static const struct ListMenuItem MoveTutorLevel1[] =
+{
+    {sText_MoveTutorCovet, 0},
+    {sText_MoveTutorIcyWind, 1},
+    {sText_MoveTutorLowKick, 2},
+    {sText_MoveTutorKnockOff, 3},
+    {sText_MoveTutorEncore, 4},
+    {sText_MoveTutorHealBell, 5},
+    {sText_MoveTutorStealthRock, 6},
+    {sText_MoveTutorTaunt, 7},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -887,6 +907,7 @@ struct
 {
     {Starters, ARRAY_COUNT(Starters)},
     {EvolutionaryStones, ARRAY_COUNT(EvolutionaryStones)},
+    {MoveTutorLevel1, ARRAY_COUNT(MoveTutorLevel1)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);

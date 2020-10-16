@@ -299,6 +299,22 @@ gText_Lelouch_PayBlue:
 gText_Lelouch_CantRemindEgg:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: That is an Egg.$"
 
+gText_Lelouch_CostsYellowShards:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Move Tutor services cost\n"
+	.string "Yellow Shards. Which move would you\l"
+	.string "like to tutor?$"
+
+gText_TutorMove:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: You want to teach the move\n"
+	.string "{STR_VAR_1}?$"
+
+gText_TutorWhichMon:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Which Pokemon should learn\n"
+	.string "{STR_VAR_1}?$"
+
+gText_Lelouch_PayYellow1:
+	.string "{PLAYER} handed over 1 Yellow Shard.$"
+
 gText_Lelouch_Leave:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GREY}: Farewell.$"
 
