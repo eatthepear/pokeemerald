@@ -217,7 +217,7 @@ gText_ZhuLi_Welcome:
 
 gText_ZhuLi_Leave:
 	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GREY}: We thank you for your\n"
-	.string "business, loyal customer.
+	.string "business, loyal customer.$"
 
 gText_ServicesSign:
 	.string "Lelouch's Special Services Shop\n"
