@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ENTRANCE",
-  "name": "Entrance",
-  "layout": "LAYOUT_ENTRANCE",
+  "id": "MAP_ZONE0SANCTUARY",
+  "name": "Zone0Sanctuary",
+  "layout": "LAYOUT_ZONE0SANCTUARY",
   "music": "MUS_SOOTOPOLIS",
   "region_map_section": "MAPSEC_ZONE_0",
   "requires_flash": false,
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Entrance_EventScript_NextZone",
+      "script": "Zone0Sanctuary_EventScript_NextZone",
       "flag": "0"
     }
   ],
@@ -33,28 +33,28 @@
       "x": 3,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE_SHOPS",
+      "dest_map": "MAP_ZONE0SHOPS",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE_SHOPS",
+      "dest_map": "MAP_ZONE0SHOPS",
       "dest_warp_id": 3
     },
     {
       "x": 3,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE_SHOPS",
+      "dest_map": "MAP_ZONE0SHOPS",
       "dest_warp_id": 4
     },
     {
       "x": 11,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE_SHOPS",
+      "dest_map": "MAP_ZONE0SHOPS",
       "dest_warp_id": 6
     }
   ],

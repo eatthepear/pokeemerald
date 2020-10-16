@@ -556,8 +556,8 @@
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 
 // Map Group 27
-#define MAP_ENTRANCE        (0 | (27 << 8))
-#define MAP_ENTRANCE_SHOPS  (1 | (27 << 8))
+#define MAP_ZONE0SANCTUARY  (0 | (27 << 8))
+#define MAP_ZONE0SHOPS      (1 | (27 << 8))
 #define MAP_ZONE1A          (2 | (27 << 8))
 #define MAP_ZONE1SANCTUARY  (3 | (27 << 8))
 #define MAP_ZONE1SHOPS      (4 | (27 << 8))

@@ -1,19 +1,19 @@
-EntranceShops_MapScripts::
+Zone0Shops_MapScripts::
 	.byte 0
 
-EntranceShops_EventScript_Shop_General::
+Zone0Shops_EventScript_Shop_General::
 	lock
 	faceplayer
 	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntro
 	message gText_Tim_Welcome
 	waitmessage
-	pokemart EntranceShops_Shop_General
+	pokemart Zone0Shops_Shop_General
 	msgbox gText_Tim_Leave, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-EntranceShops_Shop_General:
+Zone0Shops_Shop_General:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
@@ -22,19 +22,19 @@ EntranceShops_Shop_General:
 	release
 	end
 
-EntranceShops_EventScript_Shop_Unique::
+Zone0Shops_EventScript_Shop_Unique::
 	lock
 	faceplayer
 	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntro
 	message gText_Varrick_Welcome
 	waitmessage
-	pokemart EntranceShops_Shop_Unique
+	pokemart Zone0Shops_Shop_Unique
 	msgbox gText_Varrick_Leave, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-EntranceShops_Shop_Unique:
+Zone0Shops_Shop_Unique:
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NONE
 	release

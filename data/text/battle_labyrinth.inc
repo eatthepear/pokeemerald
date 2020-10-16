@@ -1,12 +1,12 @@
 gText_Colress_EndofDemo:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: THIS IS THE END OF THE\n"
-	.string "DEMO. THE ARCHITECT, {COLOR BLUE}EATTHEPEAR{COLOR DARK_GREY}, IS\l"
-	.string "STILL WORKING ON THE REMAINDER OF\l"
-	.string "THE {COLOR RED}BATTLE LABYRINTH{COLOR DARK_GREY}.\p"
-	.string "PLEASE SAVE YOUR GAME USING THE IN\n"
-	.string "GAME SAVE SO YOU CAN TRANSFER YOUR\l"
-	.string "SAVE FILE TO THE NEXT VERSION\l"
-	.string "WHEN IT COMES OUT.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: This is the end of the\n"
+	.string "demo. Our engineers are still\l"
+	.string "working on the remainder of the\l"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GREY}.\p"
+	.string "Please save your game using the in\n"
+	.string "game save so you might be able to\l"
+	.string "transfer your save file to the next\l"
+	.string "version when it comes out.$"
 
 gText_Colress_RulesReminder:
 	.string "You need a reminder of the rules?\n"

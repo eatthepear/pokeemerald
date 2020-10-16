@@ -82,9 +82,12 @@ Zone10Sanctuary_EventScript_NextZoneCheck:
 	end
 
 Zone10Sanctuary_EventScript_Leave:
-	call EventScript_LeavingSetup
-	warp MAP_ZONE10A, 255, 42, 51
+	msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
+	release
 	end
+	@ call EventScript_LeavingSetup
+	@ warp MAP_ZONE10A, 255, 42, 51
+	@ end
 
 Zone10Sanctuary_Text_Reward:
 	.string "3 Revives!$"

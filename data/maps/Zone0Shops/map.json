@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ENTRANCE_SHOPS",
-  "name": "EntranceShops",
-  "layout": "LAYOUT_ENTRANCE_SHOPS",
+  "id": "MAP_ZONE0SHOPS",
+  "name": "Zone0Shops",
+  "layout": "LAYOUT_ZONE0SHOPS",
   "music": "MUS_SOOTOPOLIS",
   "region_map_section": "MAPSEC_ZONE_0",
   "requires_flash": false,
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EntranceShops_EventScript_Shop_Unique",
+      "script": "Zone0Shops_EventScript_Shop_Unique",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EntranceShops_EventScript_Shop_General",
+      "script": "Zone0Shops_EventScript_Shop_General",
       "flag": "0"
     },
     {
@@ -72,56 +72,56 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 0
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 0
     },
     {
       "x": 18,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 1
     },
     {
       "x": 19,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 1
     },
     {
       "x": 3,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 2
     },
     {
       "x": 4,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 2
     },
     {
       "x": 18,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 3
     },
     {
       "x": 19,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_ZONE0SANCTUARY",
       "dest_warp_id": 3
     }
   ],
