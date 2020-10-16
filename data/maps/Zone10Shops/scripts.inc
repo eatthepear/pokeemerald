@@ -102,7 +102,7 @@ Zone10Shops_EventScript_Shop_Services::
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchTraining1
 	case 1, EventScript_Shop_LelouchCheckReminder
-	case 2, EventScript_Shop_LelouchNotEnoughColor
+	case 2, EventScript_Shop_LelouchEventScript_Shop_LelouchCheckTutor
 	case 3, EventScript_Shop_LelouchNotEnoughColor
 	goto EventScript_Shop_LelouchLeave
 	end

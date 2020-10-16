@@ -177,6 +177,40 @@ EventScript_Shop_LelouchCantRemindEgg:
 	goto EventScript_Shop_LelouchReminderChooseMon
 	end
 
+
+EventScript_Shop_LelouchCheckTutor:
+	checkitem ITEM_YELLOW_SHARD, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	@ msgbox gText_Lelouch_CostsYellowShards, 
+	msgbox MoveTutor_Text_SwaggerTeach, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MoveTutor_EventScript_SwaggerDeclined
+	msgbox MoveTutor_Text_SwaggerWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_COVET
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_SwaggerDeclined
+	setflag FLAG_MOVE_TUTOR_TAUGHT_SWAGGER
+	goto EventScript_Shop_SwaggerTaught
+	end
+
+EventScript_Shop_SwaggerDeclined:: @ 82C7F6A
+	msgbox MoveTutor_Text_SwaggerDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+EventScript_Shop_SwaggerTaught:: @ 82C7F74
+	msgbox MoveTutor_Text_SwaggerTaught, MSGBOX_DEFAULT
+	release
+	end
+
+
+
+
+
+
+
 EventScript_Shop_LelouchLeave:
 	msgbox gText_Lelouch_Leave, MSGBOX_AUTOCLOSE
 	release
