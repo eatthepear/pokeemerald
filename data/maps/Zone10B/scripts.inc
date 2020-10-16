@@ -55,7 +55,7 @@ Zone10B_Text_Adamina_Sorry:
 	.string "Consider this part of my apology.$"
 
 Zone10B_Text_Adamina_SafeSpace:
-	.string "Adamina: This is my tavern.\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}This is my tavern.\n"
 	.string "It's my safe space.\p"
 	.string "All the people from around here\n"
 	.string "gather for shelter from the\l"
@@ -65,7 +65,7 @@ Zone10B_Text_Adamina_SafeSpace:
 	.string "family here, you know?$"
 
 Zone10B_Text_Adamina_TellYouWhat:
-	.string "Adamina: Tell you what, you can\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}Tell you what, you can\n"
 	.string "stay as long as you like to chat\l"
 	.string "with the people here.\p"
 	.string "When you're ready to leave this\n"
@@ -80,7 +80,7 @@ Zone10B_EventScript_AdaminaLeave:
 	end
 
 Zone10B_Text_Adamina_AreYouLeaving:
-	.string "Adamina: Are you leaving the Zone?$"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}Are you leaving the Zone?$"
 
 Zone10B_Text_Adamina_WhenReady:
 	.string "Come speak to me when you're ready.$"
