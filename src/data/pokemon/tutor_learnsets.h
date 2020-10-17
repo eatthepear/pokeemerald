@@ -96,13 +96,15 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_PIDGEOT]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_RATTATA]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_RATICATE]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
-											| TUTOR(MOVE_THUNDER_WAVE)),
+                                             | TUTOR(MOVE_TAUNT)
+                                             | TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SPEAROW]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
@@ -141,7 +143,8 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_NIDOQUEEN]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
-                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                             | TUTOR(MOVE_TAUNT)
+                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -153,7 +156,8 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_NIDOKING]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
-                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                             | TUTOR(MOVE_TAUNT)
+                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -204,9 +208,11 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_ZUBAT]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_ZUBAT]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_GOLBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_GOLBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_ODDISH]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
@@ -234,11 +240,13 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MEOWTH]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_PERSIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_PSYDUCK]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_SLEEP_TALK)
@@ -251,6 +259,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MANKEY]        = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -258,6 +267,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_PRIMEAPE]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -281,6 +291,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ABRA]          = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -288,6 +299,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_KADABRA]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -295,6 +307,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ALAKAZAM]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -392,7 +405,8 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_DODRIO]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SEEL]          = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)),
@@ -401,6 +415,7 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_GRIMER]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -408,6 +423,7 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_MUK]           = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -425,6 +441,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GASTLY]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -433,6 +450,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_HAUNTER]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -441,6 +459,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GENGAR]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -448,11 +467,13 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ONIX]          = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_DROWZEE]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -460,6 +481,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_HYPNO]         = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -476,10 +498,12 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_VOLTORB]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_ELECTRODE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -530,9 +554,11 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_KOFFING]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_WEEZING]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_RHYHORN]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -594,6 +620,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MR_MIME]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -605,10 +632,12 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_JYNX]          = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)),
 
     [SPECIES_ELECTABUZZ]    = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -616,6 +645,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MAGMAR]        = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
@@ -632,6 +662,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_GYARADOS]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_LAPRAS]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -685,6 +716,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_AERODACTYL]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SNORLAX]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -724,6 +756,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -736,6 +769,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -808,7 +842,8 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ARIADOS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
-    [SPECIES_CROBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_CROBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_CHINCHOU]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
@@ -881,6 +916,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SUDOWOODO]     = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -900,6 +936,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_AIPOM]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -924,10 +961,12 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_UMBREON]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_MURKROW]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SLOWKING]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -938,6 +977,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_MISDREAVUS]    = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_UNOWN]         = TUTOR_LEARNSET(0),
@@ -965,16 +1005,19 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GLIGAR]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_STEELIX]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SNUBBULL]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -983,6 +1026,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GRANBULL]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -991,6 +1035,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_QWILFISH]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -1011,9 +1056,11 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)),
 
     [SPECIES_TEDDIURSA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1021,6 +1068,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_URSARING]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1067,13 +1115,16 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SKARMORY]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
-    [SPECIES_HOUNDOUR]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_HOUNDOUR]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_HOUNDOOM]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_HOUNDOOM]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_KINGDRA]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)),
@@ -1152,15 +1203,18 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_LARVITAR]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_PUPITAR]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_TYRANITAR]     = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1230,9 +1284,11 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
-    [SPECIES_POOCHYENA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_POOCHYENA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_MIGHTYENA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_MIGHTYENA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_ZIGZAGOON]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
@@ -1297,23 +1353,26 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_RALTS]         = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                            | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_KIRLIA]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                            | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
+                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_GARDEVOIR]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                              | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
@@ -1340,6 +1399,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_VIGOROTH]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1348,6 +1408,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SLAKING]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1403,6 +1464,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_NOSEPASS]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -1424,6 +1486,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -1432,6 +1495,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -1448,6 +1512,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1507,10 +1572,12 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_CARVANHA]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SHARPEDO]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_WAILMER]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)),
@@ -1535,12 +1602,14 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SPOINK]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_GRUMPIG]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                              | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
@@ -1582,6 +1651,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1589,7 +1659,8 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SEVIPER]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_LUNATONE]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
@@ -1612,11 +1683,13 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_CORPHISH]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_CRAWDAUNT]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_BALTOY]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -1672,19 +1745,23 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SHUPPET]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_BANETTE]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_DUSKULL]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_DUSCLOPS]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                            | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
+                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -1695,6 +1772,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_ABSOL]         = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -1710,6 +1788,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_GLALIE]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_SPHEAL]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -1832,6 +1911,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -1851,12 +1931,14 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_CHIMCHAR]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_MONFERNO]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -1864,6 +1946,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_INFERNAPE]     = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -1891,18 +1974,21 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_BIDOOF]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_BIBAREL]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_KRICKETOT]     = TUTOR_LEARNSET(0),
 
     [SPECIES_KRICKETUNE]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_HEAL_BELL)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SHINX]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
 											| TUTOR(MOVE_THUNDER_WAVE)),
@@ -1931,10 +2017,12 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_SHIELDON]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_BASTIODON]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_BURMY]         = TUTOR_LEARNSET(0),
@@ -1958,6 +2046,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_FLOATZEL]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)),
 
     [SPECIES_CHERUBI]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
@@ -1974,6 +2063,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_AMBIPOM]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -2010,28 +2100,35 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_MISMAGIUS]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_HONCHKROW]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_GLAMEOW]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_PURUGLY]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_CHINGLING]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_STUNKY]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_SKUNTANK]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_BRONZOR]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -2051,6 +2148,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MIMEJR]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_HAPPINY]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -2058,10 +2156,12 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_SLEEP_TALK)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_CHATOT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_CHATOT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SPIRITOMB]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_GIBLE]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
@@ -2103,16 +2203,19 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SKORUPI]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_DRAPION]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_CROAGUNK]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -2121,6 +2224,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -2151,6 +2255,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)),
 
     [SPECIES_MAGNEZONE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -2181,6 +2286,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ELECTIVIRE]    = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2189,6 +2295,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MAGMORTAR]     = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -2210,6 +2317,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GLISCOR]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_MAMOSWINE]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -2225,6 +2333,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GALLADE]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2233,6 +2342,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_PROBOPASS]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -2241,14 +2351,16 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_DUSKNOIR]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_FROSLASS]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -2277,6 +2389,7 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
@@ -2294,6 +2407,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_HEATRAN]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
@@ -2331,6 +2445,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_DARKRAI]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -2344,44 +2459,54 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_VICTINI]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SNIVY]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SERVINE]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SERPERIOR]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_TEPIG]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_TEPIG]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_PIGNITE]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_EMBOAR]        = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_OSHAWOTT]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_DEWOTT]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
-											| TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SAMUROTT]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_PATRAT]        = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)),
@@ -2405,29 +2530,35 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_PURRLOIN]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_LIEPARD]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_PANSAGE]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_SIMISAGE]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_PANSEAR]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)),
 
     [SPECIES_SIMISEAR]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
@@ -2435,12 +2566,14 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)),
 
     [SPECIES_SIMIPOUR]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
@@ -2454,11 +2587,14 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_PIDOVE]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_PIDOVE]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_TRANQUILL]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_TRANQUILL]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_UNFEZANT]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_UNFEZANT]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_BLITZLE]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
@@ -2485,10 +2621,12 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_WOOBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SWOOBAT]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_DRILBUR]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -2512,6 +2650,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_TIMBURR]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2520,6 +2659,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_GURDURR]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2528,6 +2668,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_CONKELDURR]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2551,6 +2692,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_THROH]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2559,6 +2701,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SAWK]          = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2580,10 +2723,12 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_COTTONEE]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_WHIMSICOTT]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_PETILIL]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)),
@@ -2592,29 +2737,35 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_BASCULIN]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SANDILE]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_KROKOROK]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_KROOKODILE]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_DARUMAKA]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_DARMANITAN]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
@@ -2634,6 +2785,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SCRAGGY]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2642,6 +2794,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_SCRAFTY]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -2673,11 +2826,13 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_ARCHEN]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_ARCHEOPS]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_TRUBBISH]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -2687,11 +2842,13 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_ZORUA]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_ZOROARK]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_MINCCINO]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
@@ -2703,16 +2860,19 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_GOTHITA]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_GOTHORITA]     = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_GOTHITELLE]    = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -2743,14 +2903,17 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_VANILLITE]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_VANILLISH]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_VANILLUXE]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_DEERLING]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -2761,23 +2924,27 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_EMOLGA]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_KARRABLAST]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_ESCAVALIER]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_FOONGUS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_AMOONGUSS]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_FRILLISH]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_JELLICENT]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_ALOMOMOLA]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
@@ -2831,19 +2998,25 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_LITWICK]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_LITWICK]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_LAMPENT]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_LAMPENT]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_CHANDELURE]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_CHANDELURE]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_AXEW]          = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_AXEW]          = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_FRAXURE]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_HAXORUS]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_CUBCHOO]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -2854,6 +3027,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_BEARTIC]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
@@ -2875,15 +3049,18 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_MIENFOO]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_MIENSHAO]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_DRUDDIGON]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -2910,15 +3087,18 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_BISHARP]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_BOUFFALANT]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_RUFFLET]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -2928,14 +3108,17 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_VULLABY]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_MANDIBUZZ]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_HEATMOR]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
@@ -2944,12 +3127,15 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_DEINO]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_ZWEILOUS]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_HYDREIGON]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -2959,29 +3145,36 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_COBALION]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_TERRAKION]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
-    [SPECIES_VIRIZION]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_VIRIZION]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_TORNADUS]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_TORNADUS_THERIAN]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                                      | TUTOR(MOVE_KNOCK_OFF)
-                                                     | TUTOR(MOVE_SLEEP_TALK)),
+                                                     | TUTOR(MOVE_SLEEP_TALK)
+                                                     | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_THUNDURUS]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_THUNDURUS_THERIAN]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                                      | TUTOR(MOVE_SLEEP_TALK)
+                                                     | TUTOR(MOVE_TAUNT)
                                              | TUTOR(MOVE_THUNDER_PUNCH)
                                              | TUTOR(MOVE_THUNDER_WAVE)),
     
@@ -3011,7 +3204,8 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_KELDEO]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
-											| TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_MELOETTA]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
@@ -3037,16 +3231,19 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_CHESPIN]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_QUILLADIN]     = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_CHESNAUGHT]    = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
@@ -3064,17 +3261,20 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_FROAKIE]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_FROGADIER]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_GRENINJA]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
@@ -3089,11 +3289,14 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
-    [SPECIES_FLETCHLING]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_FLETCHLING]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_FLETCHINDER]   = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_FLETCHINDER]   = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_TALONFLAME]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_TALONFLAME]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SCATTERBUG]    = TUTOR_LEARNSET(0),
 
@@ -3101,9 +3304,11 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_VIVILLON]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
-    [SPECIES_LITLEO]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_LITLEO]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_PYROAR]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_PYROAR]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_FLABEBE]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)),
@@ -3123,6 +3328,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_PANCHAM]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -3131,6 +3337,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_PANGORO]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -3170,21 +3377,25 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_INKAY]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_MALAMAR]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_BINACLE]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_BARBARACLE]    = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
+                                             | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
-											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SKRELP]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
@@ -3237,6 +3448,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_HAWLUCHA]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -3286,9 +3498,11 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
-    [SPECIES_NOIBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_NOIBAT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_NOIVERN]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_NOIVERN]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_XERNEAS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ROCK_SLIDE)
@@ -3296,6 +3510,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_YVELTAL]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_ZYGARDE]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -3308,6 +3523,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_HOOPA]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -3323,13 +3539,16 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_DECIDUEYE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
-    [SPECIES_LITTEN]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_LITTEN]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
-    [SPECIES_TORRACAT]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_TORRACAT]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_INCINEROAR]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
@@ -3351,9 +3570,11 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_TOUCANNON]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)),
 
-    [SPECIES_YUNGOOS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_YUNGOOS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_GUMSHOOS]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -3379,7 +3600,8 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_ORICORIO]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_SLEEP_TALK)),
+											| TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_CUTIEFLY]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
@@ -3387,10 +3609,12 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ROCKRUFF]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_LYCANROC]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_WISHIWASHI]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
@@ -3431,18 +3655,22 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SALANDIT]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_SALAZZLE]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_STUFFUL]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_BEWEAR]        = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
@@ -3454,24 +3682,30 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_TSAREENA]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_COMFEY]        = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_ORANGURU]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_PASSIMIAN]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
-    [SPECIES_WIMPOD]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_WIMPOD]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_GOLISOPOD]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SANDYGAST]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
@@ -3482,7 +3716,8 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_STEALTH_ROCK)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
-    [SPECIES_PYUKUMUKU]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_PYUKUMUKU]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_TYPE_NULL]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
@@ -3505,15 +3740,18 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_TURTONATOR]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_TOGEDEMARU]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_MIMIKYU]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_BRUXISH]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_BRUXISH]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_DRAMPA]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
 											| TUTOR(MOVE_SLEEP_TALK)
@@ -3526,32 +3764,39 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_JANGMO_O]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_HAKAMO_O]      = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_KOMMO_O]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_STEALTH_ROCK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_TAPU_KOKO]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_TAPU_LELE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_TAPU_LELE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_TAPU_BULU]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_TAPU_FINI]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)),
 
     [SPECIES_COSMOG]        = TUTOR_LEARNSET(0),
@@ -3573,13 +3818,15 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_BUZZWOLE]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_ROCK_SLIDE)
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_PHEROMOSA]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                              | TUTOR(MOVE_LOW_KICK)
-											| TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
 
     [SPECIES_XURKITREE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
 											| TUTOR(MOVE_THUNDER_PUNCH)
@@ -3624,20 +3871,24 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_BLACEPHALON]   = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_EXPLOSION)),
 
     [SPECIES_ZERAORA]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
 											| TUTOR(MOVE_THUNDER_PUNCH)
 											| TUTOR(MOVE_THUNDER_WAVE)),
     
     [SPECIES_ALOLAN_RATTATA] = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                              | TUTOR(MOVE_SLEEP_TALK)),
+                                              | TUTOR(MOVE_SLEEP_TALK)
+                                              | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_ALOLAN_RATICATE] = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                               | TUTOR(MOVE_SLEEP_TALK)),
+                                               | TUTOR(MOVE_SLEEP_TALK)
+                                               | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_ALOLAN_RAICHU] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)),
@@ -3657,10 +3908,12 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_ALOLAN_DUGTRIO] = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
     
     [SPECIES_ALOLAN_MEOWTH] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_ALOLAN_PERSIAN] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                              | TUTOR(MOVE_SLEEP_TALK)),
+                                              | TUTOR(MOVE_SLEEP_TALK)
+                                              | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_ALOLAN_GEODUDE] = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                               | TUTOR(MOVE_STEALTH_ROCK)),
@@ -3672,10 +3925,12 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_STEALTH_ROCK)),
     
     [SPECIES_ALOLAN_GRIMER] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                             | TUTOR(MOVE_SLEEP_TALK)),
+                                             | TUTOR(MOVE_SLEEP_TALK)
+                                             | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_ALOLAN_MUK] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                          | TUTOR(MOVE_SLEEP_TALK)),
+                                          | TUTOR(MOVE_SLEEP_TALK)
+                                          | TUTOR(MOVE_TAUNT)),
     
     [SPECIES_ALOLAN_EXEGGUTOR] = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
                                                 | TUTOR(MOVE_KNOCK_OFF)
