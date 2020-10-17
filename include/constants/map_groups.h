@@ -600,6 +600,9 @@
 #define MAP_ZONE10SANCTUARY (45 | (27 << 8))
 #define MAP_ZONE10SHOPS     (46 | (27 << 8))
 #define MAP_ZONE0A          (47 | (27 << 8))
+#define MAP_ZONE0B          (48 | (27 << 8))
+#define MAP_ZONE0C          (49 | (27 << 8))
+#define MAP_ZONE0D          (50 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

@@ -634,7 +634,10 @@
     "Zone10B",
     "Zone10Sanctuary",
     "Zone10Shops",
-    "Zone0A"
+    "Zone0A",
+    "Zone0B",
+    "Zone0C",
+    "Zone0D"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"

@@ -4885,11 +4885,41 @@
       "id": "LAYOUT_ZONE0A",
       "name": "Zone0A_Layout",
       "width": 50,
-      "height": 50,
+      "height": 15,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Unused1",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone0A/border.bin",
       "blockdata_filepath": "data/layouts/Zone0A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE0B",
+      "name": "Zone0B_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Zone0B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone0B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE0C",
+      "name": "Zone0C_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonDayCare",
+      "border_filepath": "data/layouts/Zone0C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone0C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE0D",
+      "name": "Zone0D_Layout",
+      "width": 49,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Zone0D/border.bin",
+      "blockdata_filepath": "data/layouts/Zone0D/map.bin"
     }
   ]
 }
