@@ -64,15 +64,15 @@ static const u32 sTutorLearnsets[] =
 											| TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_SQUIRTLE]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-											| TUTOR(MOVE_ICY_PUNCH)
+											| TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_WARTORTLE]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                             | TUTOR(MOVE_ICY_PUNCH)
+                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_BLASTOISE]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                             | TUTOR(MOVE_ICY_PUNCH)
+                                             | TUTOR(MOVE_ICE_PUNCH)
 											| TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
