@@ -3,7 +3,7 @@ Zone6A_MapScripts::
 	.byte 0
 
 Zone6A_OnFrame:
-	map_script_2 VAR_GENERIC, 0, Zone6A_EventScript_Intro
+	map_script_2 VAR_ZONE6A_STATE, 0, Zone6A_EventScript_Intro
 	.2byte 0
 
 Zone6A_EventScript_Intro:
@@ -22,7 +22,7 @@ Zone6A_EventScript_Intro:
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	setvar VAR_GENERIC, 1
+	setvar VAR_ZONE6A_STATE, 1
 	releaseall
 	end
 
