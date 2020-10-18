@@ -40,7 +40,6 @@ Zone0D_EventScript_Intro:
 	msgbox Zone0D_Text_Intro3, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
-	setvar VAR_GENERIC, 0
 	setvar VAR_ZONE0_WARPS, 2
 	setvar VAR_WARP_ZONES_1_TO_10, 1
 	releaseall
