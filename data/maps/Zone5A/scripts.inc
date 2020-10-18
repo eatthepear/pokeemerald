@@ -1,5 +1,14 @@
 Zone5A_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone5A_OnTransition
 	.byte 0
+
+Zone5A_OnTransition:
+	goto_if_set FLAG_BEATLEVIATHAN2 Zone5A_EventScript_MoveLeviathan
+	end
+
+Zone5A_EventScript_MoveLeviathan:
+	setobjectxyperm 4, 28, 8
+	end
 
 Zone5A_EventScript_Rebecca::
 	trainerbattle_single TRAINER_REBECCA, Zone5A_Text_RebeccaIntro, Zone5A_Text_RebeccaDefeat
@@ -48,6 +57,7 @@ Zone5A_Text_RyanPostBattle:
 
 Zone5A_EventScript_InitiateLeviathanBattle::
 	lock
+	goto_if_set FLAG_BEATLEVIATHAN2, Zone5A_EventScript_DontTalk
 	fadeoutbgm 1
 	msgbox Zone5A_Text_Leviathan2Intro1, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_ExclamationMark
@@ -62,7 +72,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 
 Zone5A_EventScript_Leviathan2Defeated:
 	setflag FLAG_BEATLEVIATHAN2
-	msgbox Zone3A_Text_Leviathan2Reward, MSGBOX_AUTOCLOSE
+	msgbox Zone5A_Text_Leviathan2Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_RED_SHARD, 5
 	closemessage
 	applymovement 4, Common_Movement_WalkRight
@@ -75,6 +85,15 @@ Zone5A_EventScript_Leviathan2Defeated:
 	warp MAP_ZONE5SANCTUARY, 255, 7, 7
 	releaseall
 	end
+
+Zone5A_EventScript_DontTalk:
+	msgbox Zone5A_Text_Leviathan2Defeated, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone5A_Text_Leviathan2Defeated:
+	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: Don't talk to me!\n"
+	.string "I'm brooding.$"
 
 Zone5A_Text_Leviathan2Intro1:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: ...\n"
@@ -97,7 +116,7 @@ Zone5A_Text_Leviathan2Intro2:
 Zone5A_Text_Leviathan2Defeat:
 	.string "Declan: But how?! My Bugs!$"
 
-Zone3A_Text_Leviathan2Reward:
+Zone5A_Text_Leviathan2Reward:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: Fine. You got me. You don't\n"
 	.string "have to join my club. \p"
 	.string "A reward?\n"

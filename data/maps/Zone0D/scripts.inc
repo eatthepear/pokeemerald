@@ -34,12 +34,15 @@ Zone0D_EventScript_Intro:
 	msgbox Zone0D_Text_Intro2, MSGBOX_AUTOCLOSE
 	removeitem ITEM_RUBY
 	msgbox Zone0D_Text_HandedOverWarpstone, MSGBOX_DEFAULT
+	closemessage
 	applymovement 1, Zone0D_Movement_Warpstone1
 	waitmovement 0
 	msgbox Zone0D_Text_Intro3, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
+	setvar VAR_GENERIC, 0
 	setvar VAR_ZONE0_WARPS, 2
+	setvar VAR_WARP_ZONES_1_TO_10, 1
 	releaseall
 	end
 
@@ -71,18 +74,18 @@ Zone0D_Movement_Warpstone1:
 	walk_down
 	walk_left
 	face_up
-	delay 16
-	delay 16
-	delay 16
-	delay 16
-	delay 16
-	jump_in_place_down
-	jump_in_place_down
-	delay 16
-	delay 16
-	delay 16
-	delay 16
-	delay 16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	jump_in_place_up
+	jump_in_place_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
 	walk_right
 	walk_up
 	walk_right
@@ -105,6 +108,8 @@ Zone0D_Text_Intro3:
 
 Zone0D_Movement_PostIntro:
 	walk_right
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	face_down
@@ -155,6 +160,11 @@ Zone0D_EventScript_WarpSanctuary10:
 	warpteleport MAP_ZONE10SANCTUARY, 255, 7, 7
 	end
 
+EventScript_WarpZone0::
+	lockall
+	warpteleport MAP_ZONE0D, 255, 2, 25
+	end
+
 Zone0D_EventScript_WarpZONE1::
 	lockall
 	warpteleport MAP_ZONE1A, 255, 16, 28
@@ -162,45 +172,45 @@ Zone0D_EventScript_WarpZONE1::
 
 Zone0D_EventScript_WarpZONE2::
 	lockall
-	warpteleport MAP_ZONE2A, 255, 16, 28
+	warpteleport MAP_ZONE2A, 255, 4, 3
 	end
 
 Zone0D_EventScript_WarpZONE3::
 	lockall
-	warpteleport MAP_ZONE3A, 255, 16, 28
+	warpteleport MAP_ZONE3A, 255, 38, 25
 	end
 
 Zone0D_EventScript_WarpZONE4::
 	lockall
-	warpteleport MAP_ZONE4A, 255, 16, 28
+	warpteleport MAP_ZONE4A, 255, 4, 3
 	end
 
 Zone0D_EventScript_WarpZONE5::
 	lockall
-	warpteleport MAP_ZONE5A, 255, 16, 28
+	warpteleport MAP_ZONE5A, 255, 41, 33
 	end
 
 Zone0D_EventScript_WarpZONE6::
 	lockall
-	warpteleport MAP_ZONE6A, 255, 16, 28
+	warpteleport MAP_ZONE6A, 255, 21, 25
 	end
 
 Zone0D_EventScript_WarpZONE7::
 	lockall
-	warpteleport MAP_ZONE7A, 255, 16, 28
+	warpteleport MAP_ZONE7A, 255, 5, 34
 	end
 
 Zone0D_EventScript_WarpZONE8::
 	lockall
-	warpteleport MAP_ZONE8A, 255, 16, 28
+	warpteleport MAP_ZONE8A, 255, 33, 9
 	end
 
 Zone0D_EventScript_WarpZONE9::
 	lockall
-	warpteleport MAP_ZONE9A, 255, 16, 28
+	warpteleport MAP_ZONE9A, 255, 23, 13
 	end
 
 Zone0D_EventScript_WarpZONE10::
 	lockall
-	warpteleport MAP_ZONE10A, 255, 16, 28
+	warpteleport MAP_ZONE10A, 255, 42, 51
 	end

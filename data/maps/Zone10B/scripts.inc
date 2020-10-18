@@ -4,9 +4,7 @@ Zone10B_MapScripts::
 Zone10B_EventScript_Adamina::
 	lockall
 	faceplayer
-	checkitem ITEM_RUBY, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_AdaminaIntro
+	call Zone10B_EventScript_CheckIntro
 	goto Zone10B_EventScript_AdaminaLeave
 	end
 
@@ -17,12 +15,18 @@ Zone10B_EventScript_Kirlia::
 	call_if_eq Zone10B_EventScript_Down
 	compare VAR_TEMP_0, 7
 	call_if_eq Zone10B_EventScript_Right
-	checkitem ITEM_RUBY, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_AdaminaIntro
+	call Zone10B_EventScript_CheckIntro
 	goto Zone10B_EventScript_AdaminaLeave
 	end
 	
+Zone10B_EventScript_CheckIntro:
+	compare VAR_ZONE0_WARPS, 0
+	goto_if_ne Zone10B_EventScript_AdaminaLeave
+	checkitem ITEM_RUBY, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_AdaminaIntro
+	return
+
 Zone10B_EventScript_Down:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
@@ -86,6 +90,8 @@ Zone10B_Text_Adamina_WhenReady:
 	.string "Come speak to me when you're ready.$"
 
 Zone10B_EventScript_Exit:
+	compare VAR_ZONE0_WARPS, 0
+	goto_if_ne EventScript_WarpZone0
 	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0

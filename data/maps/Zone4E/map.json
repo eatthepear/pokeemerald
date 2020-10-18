@@ -53,6 +53,15 @@
       "var": "VAR_ZONE",
       "var_value": "4",
       "script": "Zone4E_EventScript_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_WARP_ZONES_1_TO_10",
+      "var_value": "1",
+      "script": "EventScript_WarpZone0"
     }
   ],
   "bg_events": [

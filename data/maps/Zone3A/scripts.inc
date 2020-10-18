@@ -1,5 +1,14 @@
 Zone3A_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone3A_OnTransition
 	.byte 0
+
+Zone3A_OnTransition:
+	goto_if_set FLAG_BEATLEVIATHAN1 Zone3A_EventScript_MoveLeviathan
+	end
+
+Zone3A_EventScript_MoveLeviathan:
+	setobjectxyperm 4, 28, 6
+	end
 
 Zone3A_EventScript_Exit::
 	lockall
