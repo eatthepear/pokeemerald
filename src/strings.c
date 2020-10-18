@@ -1824,6 +1824,7 @@ const u8 gText_ContinueMenuZone[] = _("Zone");
 const u8 gText_ContinueMenuVanillaMode[] =_("Mode: Vanilla");
 const u8 gText_ContinueMenuNuzlockeMode[] =_("Mode: Nuzlocke");
 const u8 gText_NextZone[] =_("Next Zone");
+const u8 gText_Zone0[] =_("Zone 0");
 const u8 gText_Advice[] =_("Advice");
 const u8 gText_Rules[] =_("Rules");
 const u8 gText_TrainingService[] = _("Training - Red");

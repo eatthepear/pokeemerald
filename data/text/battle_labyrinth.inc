@@ -69,6 +69,9 @@ gText_Colress_UnlockedUnique:
 gText_Colress_UnlockedServices:
 	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GREY}!$"
 
+gText_Colress_SendToZone0:
+	.string "Sending you to Zone 0 now...$"
+
 gText_Colress_HeresAPieceofAdvice:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}Here's a piece of advice.$"
 

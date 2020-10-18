@@ -52,6 +52,7 @@ Zone10Sanctuary_EventScript_Unlocked:
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
+	msgbox Zone10Sanctuary_Text_Colress_Zone0Unlocked, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE, 11
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -64,12 +65,13 @@ Zone10Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
-	multichoice 20, 0, MULTI_COLRESS_MENU, 0
+	multichoice 20, 0, MULTI_COLRESS_MENU_2, 0
 	switch VAR_RESULT
 	case 0, Zone10Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Advice
-	case 2, EventScript_Rules
-	case 3, EventScript_WhenUReady
+	case 1, EventScript_WarpToZone0
+	case 2, EventScript_Advice
+	case 3, EventScript_Rules
+	case 4, EventScript_WhenUReady
 	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
@@ -97,3 +99,11 @@ Zone10Sanctuary_Text_RewardNuzlocke:
 
 Zone10Sanctuary_Text_ReceivedMoney:
 	.string "Received ¥4500!$"
+
+Zone10Sanctuary_Text_Colress_Zone0Unlocked:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: In addition, by clearing\n"
+	.string "10 Zones, you have unlocked {COLOR RED}Zone 0{COLOR DARK_GREY}.\l"
+	.string "I highly recommend checking it out.\p"
+	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GREY},\n"
+	.string "you can access it from any\l"
+	.string "Sanctuary by talking to me.$"

@@ -405,6 +405,11 @@ EventScript_WhenUReady:
 	release
 	end
 
+EventScript_WarpToZone0:
+	msgbox gText_Colress_SendToZone0, MSGBOX_AUTOCLOSE
+	warpteleport MAP_ZONE0A, 255, 22, 10
+	end
+
 EventScript_Advice:
 	msgbox gText_Colress_HeresAPieceofAdvice, MSGBOX_AUTOCLOSE
 	random 10

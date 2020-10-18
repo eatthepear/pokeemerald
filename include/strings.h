@@ -2992,6 +2992,7 @@ extern const u8 gText_ContinueMenuVanillaMode[];
 extern const u8 gText_ContinueMenuNuzlockeMode[];
 
 extern const u8 gText_NextZone[];
+extern const u8 gText_Zone0[];
 extern const u8 gText_Advice[];
 extern const u8 gText_Rules[];
 
