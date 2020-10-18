@@ -35,7 +35,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone0A_EventScript_DaycareMan",
       "flag": "0"
     }
   ],
@@ -44,7 +44,7 @@
       "x": 26,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ZONE0A",
+      "dest_map": "MAP_ZONE0C",
       "dest_warp_id": 0
     },
     {
