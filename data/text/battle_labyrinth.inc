@@ -73,10 +73,10 @@ gText_Colress_SendToZone0:
 	.string "Sending you to Zone 0 now...$"
 
 gText_Colress_HeresAPieceofAdvice:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}Here's a piece of advice.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Here's a piece of advice.$"
 
 gText_Colress_WantMoreAdvice:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}Do you want more advice?$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Do you want more advice?$"
 
 gText_Advice0:
 	.string "While you are on the Pokémon stats\n"
