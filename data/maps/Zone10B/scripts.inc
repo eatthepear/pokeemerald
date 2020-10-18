@@ -96,7 +96,7 @@ Zone10B_EventScript_Exit:
 	end
 
 Zone10B_Text_Adamina_UseWell:
-	.string "Okay. Use that Waystone well.$"
+	.string "Okay. Use that Warpstone well.$"
 
 Zone10B_Text_Adamina_UseTeleport:
 	.string "Kirlia, use Teleport!$"

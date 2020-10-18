@@ -59,4 +59,4 @@ Zone9D_Text_Girl:
 	.string "Before Momma left, she gave me a\n"
 	.string "special necklace.\p"
 	.string "She called the stone inside a\n"
-	.string "Waystone. I wonder what it does.$"
+	.string "Warpstone. I wonder what it does.$"

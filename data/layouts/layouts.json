@@ -4914,7 +4914,7 @@
     {
       "id": "LAYOUT_ZONE0D",
       "name": "Zone0D_Layout",
-      "width": 49,
+      "width": 54,
       "height": 30,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",

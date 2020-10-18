@@ -5224,7 +5224,7 @@ const struct Item gItems[] =
 
     [ITEM_RUBY] =
     {
-        .name = _("Ruby"),
+        .name = _("Warpstone"),
         .itemId = ITEM_RUBY,
         .price = 0,
         .description = sRubyDesc,

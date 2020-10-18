@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
-      "x": 5,
+      "x": 10,
       "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -24,20 +24,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone0D_EventScript_MiddleDeny",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 4,
+      "x": 9,
       "y": 28,
       "elevation": 0,
       "dest_map": "MAP_ZONE0A",
       "dest_warp_id": 1
     },
     {
-      "x": 5,
+      "x": 10,
       "y": 28,
       "elevation": 0,
       "dest_map": "MAP_ZONE0A",
@@ -47,93 +47,120 @@
   "coord_events": [
     {
       "type": "trigger",
+      "x": 15,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE1"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE2"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE3"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE4"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE5"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE6"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE7"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE8"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE9"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0D_EventScript_WarpZONE10"
+    },
+    {
+      "type": "trigger",
       "x": 10,
-      "y": 25,
+      "y": 23,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ZONE0_WARPS",
+      "var_value": "2",
+      "script": "Zone0D_EventScript_LeftDeny"
     },
     {
       "type": "trigger",
-      "x": 14,
-      "y": 25,
+      "x": 12,
+      "y": 23,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ZONE0_WARPS",
+      "var_value": "2",
+      "script": "Zone0D_EventScript_RightDeny"
     },
     {
       "type": "trigger",
-      "x": 18,
+      "x": 2,
       "y": 25,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 22,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 26,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 30,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 34,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 38,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 42,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 46,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "script": "Zone0D_EventScript_WarpBack"
     }
   ],
   "bg_events": [
