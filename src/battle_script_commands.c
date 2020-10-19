@@ -340,10 +340,10 @@ static void Cmd_metalburstdamagecalculator(void);
 
 const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 {
-    FLAG_BEATLEVIATHAN1, FLAG_BEATLEVIATHAN2, FLAG_BEATLEVIATHAN4,
+    FLAG_BEATLEVIATHAN2, FLAG_BEATLEVIATHAN5,
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 9, 11, 15 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 11, 16 };
 const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
 const double sRelativePartyScaling[27] =
 {
