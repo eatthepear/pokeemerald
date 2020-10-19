@@ -667,40 +667,35 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Conrad[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Adamina[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Adamina[] = {
     {
     .iv = 100,
     .lvl = 15,
     .species = SPECIES_DWEBBLE,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_ROCK_BLAST, MOVE_FURY_CUTTER, MOVE_ROCK_POLISH, MOVE_STEALTH_ROCK}
     },
     {
     .iv = 100,
     .lvl = 15,
     .species = SPECIES_FURRET,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_SLAM, MOVE_AGILITY, MOVE_COIL, MOVE_THIEF}
     },
     {
     .iv = 100,
     .lvl = 15,
     .species = SPECIES_LOMBRE,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_MEGA_DRAIN, MOVE_BUBBLE_BEAM, MOVE_FAKE_OUT, MOVE_MIST}
     },
     {
     .iv = 100,
     .lvl = 15,
     .species = SPECIES_RIOLU,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_FORCE_PALM, MOVE_VACUUM_WAVE, MOVE_BULLET_PUNCH, MOVE_COUNTER}
     },
     {
     .iv = 150,
-    .lvl = 16,
+    .lvl = 15,
     .species = SPECIES_PACHIRISU,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SPARK, MOVE_COVET, MOVE_CHARM, MOVE_NUZZLE}
     }
 };
