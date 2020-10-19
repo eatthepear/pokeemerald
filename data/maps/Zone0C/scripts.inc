@@ -1,9 +1,38 @@
 Zone0C_MapScripts::
 	.byte 0
 
+Zone0C_EventScript_Jaya::
+	lock
+	faceplayer
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	compare VAR_TEMP_0, 1
+	goto_if_eq Zone0C_EventScript_JayaIntro
+	msgbox Zone0C_EventScript_Jaya_Sorry, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 2, Common_Movement_FaceDown
+	waitmovement 0
+	setvar VAR_TEMP_0, 1
+	release
+	end
+
+Zone0C_EventScript_JayaIntro:
+	setflag FLAG_SYS_PC_LANETTE
+	msgbox Zone0C_Text_Jaya_Intro, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone0C_EventScript_Jaya_Sorry:
+	.string "Oops, sorry! You can use the PC now.$"
+
+Zone0C_Text_Jaya_Intro:
+	.string "I'm Jaya. I worked on the Pokémon\n"
+	.string "Storage System.$"
+
 Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
 	goto_if_eq Zone0C_PokemonDayCare_EventScript_EggWaiting
