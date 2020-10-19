@@ -29,6 +29,8 @@ Zone0A_EventScript_Intro:
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	msgbox Zone0A_Text_Intro, MSGBOX_AUTOCLOSE
+	giveitem ITEM_WAILMER_PAIL
+	msgbox Zone0A_Text_End, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkUp
@@ -47,10 +49,14 @@ Zone0A_Text_Intro:
 	.string "challenges to face. Everything is\l"
 	.string "meant to help you on your journey.\p"
 	.string "Zone 0 has three main attractions:\n"
-	.string "The Pokémon Day Care, which I run;\l"
-	.string "the purple building, or the TPI,\l"
+	.string "The {COLOR RED}Pokémon Day Care{COLOR DARK_GREY}, which I run;\l"
+	.string "the purple building, or the {COLOR RED}TPI{COLOR DARK_GREY},\l"
 	.string "which gives access to warp\l"
-	.string "technology; and the Berry fields.\p"
+	.string "technology; and the {COLOR RED}Berry fields{COLOR DARK_GREY}.\p"
+	.string "For the Berry fields, you'll want\n"
+	.string "to have this.$"
+
+Zone0A_Text_End:
 	.string "I definitely suggest exploring as\n"
 	.string "this Zone was built to help\l"
 	.string "challengers such as yourself.$"
