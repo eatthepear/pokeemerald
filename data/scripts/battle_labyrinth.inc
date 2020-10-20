@@ -423,7 +423,6 @@ EventScript_Advice:
 	case 7, EventScript_Advice7
 	case 8, EventScript_Advice8
 	case 9, EventScript_Advice9
-	case 10, EventScript_Advice10
 	release
 	end
 
@@ -483,12 +482,6 @@ EventScript_Advice8:
 
 EventScript_Advice9:
 	msgbox gText_Advice9, MSGBOX_AUTOCLOSE
-	setvar VAR_ADVICE, 10
-	goto EventScript_AdviceAgain
-	end
-
-EventScript_Advice10:
-	msgbox gText_Advice10, MSGBOX_AUTOCLOSE
 	setvar VAR_ADVICE, 0
 	goto EventScript_AdviceAgain
 	end

@@ -135,13 +135,6 @@ gText_Advice8:
 	.string "information on nearly everything.$"
 
 gText_Advice9:
-	.string "Don't save the game in the middle\n"
-	.string "of a Zone. If you find you cannot\l"
-	.string "pass through that Zone with your\l"
-	.string "current party, you may get\l"
-	.string "soft-locked.$"
-
-gText_Advice10:
 	.string "It is more advantageous to have a\n"
 	.string "full party of well trained Pokémon\l"
 	.string "than a few higher leveled Pokémon.$"
