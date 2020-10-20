@@ -869,8 +869,8 @@ static const u32 sTutorLearnsets[] =
                                              | TUTOR(MOVE_SLEEP_TALK)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_TOGEPI]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
-                                             | TUTOR(MOVE_HEAL_BELL)
+    [SPECIES_TOGEPI]        = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                             | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_SOFT_BOILED)
 											| TUTOR(MOVE_THUNDER_WAVE)),
 
@@ -1157,7 +1157,6 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ROCK_SLIDE)),
 
     [SPECIES_SMOOCHUM]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
-                                             | TUTOR(MOVE_LOW_KICK)
                                              | TUTOR(MOVE_HEAL_BELL)
                                              | TUTOR(MOVE_SLEEP_TALK)),
 
@@ -3909,11 +3908,13 @@ static const u32 sTutorLearnsets[] =
     
     [SPECIES_ALOLAN_DUGTRIO] = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
     
-    [SPECIES_ALOLAN_MEOWTH] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+    [SPECIES_ALOLAN_MEOWTH] = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                             | TUTOR(MOVE_KNOCK_OFF)
                                              | TUTOR(MOVE_SLEEP_TALK)
                                              | TUTOR(MOVE_TAUNT)),
     
-    [SPECIES_ALOLAN_PERSIAN] = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+    [SPECIES_ALOLAN_PERSIAN] = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                              | TUTOR(MOVE_KNOCK_OFF)
                                               | TUTOR(MOVE_SLEEP_TALK)
                                               | TUTOR(MOVE_TAUNT)),
     
