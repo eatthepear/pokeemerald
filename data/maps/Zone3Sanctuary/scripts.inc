@@ -9,6 +9,7 @@ Zone3Sanctuary_OnFrame:
 Zone3Sanctuary_EventScript_Intro:
 	lockall
 	setvar VAR_HEAL_SHOP_USED, 0
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -65,6 +66,7 @@ Zone3Sanctuary_EventScript_NextZoneCheck:
 
 Zone3Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE4A, 255, 4, 3
 	end
 

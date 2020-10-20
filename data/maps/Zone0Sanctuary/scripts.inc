@@ -9,6 +9,7 @@ Zone0Sanctuary_OnFrame:
 Zone0Sanctuary_EventScript_Intro:
 	lockall
 	clearflag FLAG_NUZLOCKE_ON
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	special SetUnlockedPokedexFlags
@@ -672,6 +673,7 @@ Zone0Sanctuary_EventScript_NextZoneCheck:
 
 Zone0Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE1A, 255, 16, 28
 	end
 
