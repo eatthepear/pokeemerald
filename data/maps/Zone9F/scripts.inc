@@ -72,7 +72,7 @@ Zone9F_EventScript_SendZoruaParty::
 	end
 
 Zone9F_EventScript_SendZoruaPC::
-	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NATURE_NAIVE, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, MOVE_FAINT_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, TRUE
 	setvar VAR_TEMP_1, SPECIES_ZORUA
 	call Zone9F_EventScript_ReceivedZoruaFanfare
 	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
