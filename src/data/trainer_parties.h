@@ -687,12 +687,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_Adamina[] = {
     .moves = {MOVE_MEGA_DRAIN, MOVE_BUBBLE_BEAM, MOVE_FAKE_OUT, MOVE_MIST}
     },
     {
-    .iv = 100,
-    .lvl = 15,
-    .species = SPECIES_RIOLU,
-    .moves = {MOVE_FORCE_PALM, MOVE_VACUUM_WAVE, MOVE_BULLET_PUNCH, MOVE_COUNTER}
-    },
-    {
     .iv = 150,
     .lvl = 15,
     .species = SPECIES_PACHIRISU,
