@@ -12829,6 +12829,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE0A",
+          "base_label": "gZone0A",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_HAPPINY"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_ALOLAN_MEOWTH"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_SKITTY"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_SMOOCHUM"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_ELEKID"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_DITTO"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_TOGEPI"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_DITTO"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
+                "species": "SPECIES_TOGEPI"
+              }
+            ]
+          }
         }
       ]
     },
