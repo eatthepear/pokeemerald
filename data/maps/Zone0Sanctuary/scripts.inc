@@ -109,6 +109,7 @@ Zone0Sanctuary_EventScript_Tour:
 Zone0Sanctuary_EventScript_PickStarter:
 	hidemonpic
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_ChooseAStarter, MSGBOX_DEFAULT
 	scrollingmultichoice 0, 0, 0, 5, FALSE
 	compare VAR_RESULT, 0
 	call_if_eq Zone0Sanctuary_EventScript_BULBASAUR
@@ -173,6 +174,9 @@ Zone0Sanctuary_EventScript_PickStarter:
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_Colress_EndIntro
 	end
+
+Zone0Sanctuary_Text_ChooseAStarter:
+	.string "Choose a starter Pokémon.$"
 
 Zone0Sanctuary_EventScript_NicknameStarter:
 	setvar VAR_0x8004, 0
