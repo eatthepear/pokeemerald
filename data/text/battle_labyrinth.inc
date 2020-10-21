@@ -82,13 +82,10 @@ gText_Colress_WantMoreAdvice:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Do you want more advice?$"
 
 gText_Advice0:
-	.string "While you are on the Pokémon stats\n"
-	.string "screen, you can press the L button\l"
-	.string "to show the Pokémon's IVs,\l"
-	.string "the R button to show the\l"
-	.string "Pokémon's EVs, and the\l"
-	.string "Start button to show the\l"
-	.string "Pokémon's stats again.$"
+	.string "This is version 1.0.0 of the\n"
+	.string "Pokémon Battle Labyrinth.\p"
+	.string "Make sure you're reading the\n"
+	.string "right documentation!$"
 
 gText_Advice1:
 	.string "You can press the Start button\n"
@@ -138,6 +135,15 @@ gText_Advice9:
 	.string "It is more advantageous to have a\n"
 	.string "full party of well trained Pokémon\l"
 	.string "than a few higher leveled Pokémon.$"
+
+gText_Advice10:
+	.string "While you are on the Pokémon stats\n"
+	.string "screen, you can press the L button\l"
+	.string "to show the Pokémon's IVs,\l"
+	.string "the R button to show the\l"
+	.string "Pokémon's EVs, and the\l"
+	.string "Start button to show the\l"
+	.string "Pokémon's stats again.$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
