@@ -37,7 +37,7 @@ Zone3A_EventScript_Leviathan1Defeated:
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_GOOD_ROD, 1
 	closemessage
-	applymovement 4, Common_Movement_WalkRight
+	applymovement 4, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
 	waitmovement 0

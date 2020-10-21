@@ -166,3 +166,19 @@ Zone0A_Text_YourMonsAreDoingFine:
 Zone0A_Text_IWillKeepDoYouWantIt:
 	.string "I really will keep it.\n"
 	.string "You do want this, yes?$"
+
+Zone0A_EventScript_DayCareSign::
+	msgbox Zone0A_Text_DayCareSign, MSGBOX_SIGN
+	end
+
+Zone0A_EventScript_TPISign::
+	msgbox Zone0A_Text_TPISign, MSGBOX_SIGN
+	end
+
+Zone0A_Text_DayCareSign:
+	.string "Pokémon Day Care\n"
+	.string "8 Generations and counting!$"
+
+Zone0A_Text_TPISign:
+	.string "Teleport Institue\n"
+	.string "Getting around, easy peasy.$"

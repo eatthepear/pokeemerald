@@ -23,16 +23,16 @@ Zone8D_EventScript_Regirock::
 	releaseall
 	end
 
-Zone8D_EventScript_DefeatedRegirock:: @ 8239768
+Zone8D_EventScript_DefeatedRegirock::
 	setflag FLAG_BEATLEVIATHAN4
 	goto Zone8D_EventScript_DefeatedRegirock2
 	end
 
-Zone8D_EventScript_RanFromRegirock:: @ 8239771
+Zone8D_EventScript_RanFromRegirock::
 	goto Zone8D_EventScript_RanFromRegirock2
 	end
 
-Zone8D_EventScript_DefeatedRegirock2:: @ 823977C
+Zone8D_EventScript_DefeatedRegirock2::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	setflag FLAG_BEATLEVIATHAN4
@@ -48,7 +48,7 @@ Zone8D_EventScript_DefeatedRegirock2:: @ 823977C
 	releaseall
 	end
 
-Zone8D_EventScript_RanFromRegirock2:: @ 8239785
+Zone8D_EventScript_RanFromRegirock2::
 	msgbox Zone8D_Text_StillThere, MSGBOX_DEFAULT
 	clearflag FLAG_DISABLE_CATCHING
 	releaseall

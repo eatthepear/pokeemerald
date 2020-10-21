@@ -30,7 +30,8 @@ Zone8B_Text_AnitaDefeat:
 	.string "Wahhhhh!!!$"
 
 Zone8B_Text_AnitaPostBattle:
-	.string "It's my destiny to wander this cave forever...$"
+	.string "It's my destiny to wander this cave\n"
+	.string "forever...$"
 
 Zone8B_EventScript_ItemDuskBall::
 	finditem ITEM_DUSK_BALL

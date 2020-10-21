@@ -28,6 +28,14 @@ Zone0D_EventScript_Intro:
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
 	msgbox Zone0D_Text_Intro1, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_JumpUpDown
 	waitmovement 0
@@ -151,6 +159,7 @@ Zone0D_Text_NoWarpstone:
 
 Zone0D_EventScript_WarpBack::
 	lockall
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	switch VAR_ZONE
 	case 11, Zone0D_EventScript_WarpSanctuary10
 	end

@@ -407,7 +407,8 @@ EventScript_WhenUReady:
 
 EventScript_WarpToZone0:
 	msgbox gText_Colress_SendToZone0, MSGBOX_AUTOCLOSE
-	warpteleport MAP_ZONE0A, 255, 22, 10
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
+	warpteleport MAP_ZONE0A, 255, 17, 10
 	end
 
 EventScript_Advice:

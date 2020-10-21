@@ -109,7 +109,7 @@ Zone0Sanctuary_EventScript_Tour:
 Zone0Sanctuary_EventScript_PickStarter:
 	hidemonpic
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	scrollingmultichoice 0, 0, 0, 4, FALSE
+	scrollingmultichoice 0, 0, 0, 5, FALSE
 	compare VAR_RESULT, 0
 	call_if_eq Zone0Sanctuary_EventScript_BULBASAUR
 	compare VAR_RESULT, 1

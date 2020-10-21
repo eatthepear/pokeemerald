@@ -75,7 +75,7 @@ Zone5A_EventScript_Leviathan2Defeated:
 	msgbox Zone5A_Text_Leviathan2Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_RED_SHARD, 5
 	closemessage
-	applymovement 4, Common_Movement_WalkRight
+	applymovement 4, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp

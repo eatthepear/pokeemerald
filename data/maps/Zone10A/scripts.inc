@@ -61,6 +61,7 @@ Zone10A_EventScript_Leviathan5Defeated:
 	waitdooranim
 	applymovement 6, Common_Movement_WalkUp
 	waitmovement 0
+	removeobject VAR_LAST_TALKED
 	setflag FLAG_HIDE_LEVIATHAN5
 	closedoor 47, 27
 	waitdooranim
