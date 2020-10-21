@@ -4920,6 +4920,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Zone0D/border.bin",
       "blockdata_filepath": "data/layouts/Zone0D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE11A",
+      "name": "Zone11A_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Unused1",
+      "border_filepath": "data/layouts/Zone11A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone11A/map.bin"
     }
   ]
 }
