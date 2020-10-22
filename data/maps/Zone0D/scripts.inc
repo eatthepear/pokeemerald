@@ -28,8 +28,6 @@ Zone0D_EventScript_Intro:
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 1, Common_Movement_WalkDown
-	waitmovement 0
 	applymovement 1, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown
