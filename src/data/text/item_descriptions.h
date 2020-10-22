@@ -722,7 +722,7 @@ static const u8 sLumBerryDesc[] = _(
 
 static const u8 sSitrusBerryDesc[] = _(
     "A hold item that\n"
-    "restores 30 HP in\n"
+    "restores 1/4 HP in\n"
     "battle.");
 
 static const u8 sFigyBerryDesc[] = _(

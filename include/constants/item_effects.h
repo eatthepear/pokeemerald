@@ -51,6 +51,12 @@
 
 // fields 6 - 9 are item-specific arguments
 
+// Special HP recovery amounts for ITEM4_HEAL_HP
+#define ITEM6_HEAL_FULL   ((u8) -1)
+#define ITEM6_HEAL_HALF   ((u8) -2)
+#define ITEM6_HEAL_QUARTER ((u8) -3)
+#define ITEM6_HEAL_LVL_UP ((u8) -4)
+
 #define ITEM10_IS_VITAMIN       0x1
 
 // Used for GetItemEffectType.
