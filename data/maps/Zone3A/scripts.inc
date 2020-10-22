@@ -41,6 +41,7 @@ Zone3A_EventScript_Leviathan1Defeated:
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
 	waitmovement 0
+	setobjectxyperm 4, 28, 6
 	release
 	end
 
