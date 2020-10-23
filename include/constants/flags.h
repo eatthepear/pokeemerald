@@ -55,10 +55,10 @@
 #define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2B // Hide Erica
 #define FLAG_RECEIVED_ZONE9F_ZORUA    0x2C // gift Shiny Zorua from Erica
 #define FLAG_HIDE_ZONE9A_MAN    0x2D // Man blocks exit
-#define FLAG_HIDE_LEVIATHAN5    0x2E // Unused Flag
-#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x2F // Unused Flag
-#define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_HIDE_LEVIATHAN5 0x2E // HideLeviathan5
+#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x2F // LuckyEgg Sidequest
+#define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x30 // Substitute Sidequest
+#define FLAG_HIDE_LEVIATHAN6 0x31 // Hide Leviathan 6
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
@@ -105,7 +105,7 @@
 #define FLAG_BEATLEVIATHAN3                  0x59
 #define FLAG_BEATLEVIATHAN4                  0x5A
 #define FLAG_BEATLEVIATHAN5                  0x5B
-#define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
+#define FLAG_BEATLEVIATHAN6                  0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
 #define FLAG_RECEIVED_WAILMER_PAIL           0x5E
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F

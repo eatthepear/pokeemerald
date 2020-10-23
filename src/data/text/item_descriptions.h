@@ -1807,10 +1807,10 @@ static const u8 sSledgehammerDesc[] = _(
     "used to clear\n"
     "fallen boulders.");
 
-static const u8 sPokeFluteDesc[] = _(
-    "A sweet-sounding\n"
-    "flute that awakens\n"
-    "Pokémon.");
+static const u8 sMacheteDesc[] = _(
+    "A broad knife used\n"
+    "to cut through\n"
+    "vegetation.");
 
 static const u8 sSecretKeyDesc[] = _(
     "The key to the\n"

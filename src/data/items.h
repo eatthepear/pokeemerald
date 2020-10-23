@@ -4806,12 +4806,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_POKE_FLUTE] =
+    [ITEM_MACHETE] =
     {
-        .name = _("Poké Flute"),
-        .itemId = ITEM_POKE_FLUTE,
+        .name = _("Machete"),
+        .itemId = ITEM_MACHETE,
         .price = 0,
-        .description = sPokeFluteDesc,
+        .description = sMacheteDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
