@@ -4930,6 +4930,26 @@
       "secondary_tileset": "gTileset_Unused1",
       "border_filepath": "data/layouts/Zone11A/border.bin",
       "blockdata_filepath": "data/layouts/Zone11A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE11SANCTUARY",
+      "name": "Zone11Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone11Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone11Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE11SHOPS",
+      "name": "Zone11Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone11Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone11Shops/map.bin"
     }
   ]
 }

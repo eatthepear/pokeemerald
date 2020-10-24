@@ -196,6 +196,15 @@
       "var": "VAR_ZONE11A_STATE",
       "var_value": "0",
       "script": "Zone11A_EventScript_LeviathanIntro"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ZONE",
+      "var_value": "11",
+      "script": "Zone11A_EventScript_Exit"
     }
   ],
   "bg_events": [

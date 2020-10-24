@@ -1308,7 +1308,7 @@ const struct Item gItems[] =
     {
         .name = _("Sun Stone"),
         .itemId = ITEM_SUN_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sSunStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1320,7 +1320,7 @@ const struct Item gItems[] =
     {
         .name = _("Moon Stone"),
         .itemId = ITEM_MOON_STONE,
-        .price = 0,
+        .price = 5000,
         .description = sMoonStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1332,7 +1332,7 @@ const struct Item gItems[] =
     {
         .name = _("Fire Stone"),
         .itemId = ITEM_FIRE_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sFireStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1344,7 +1344,7 @@ const struct Item gItems[] =
     {
         .name = _("ThunderStone"),
         .itemId = ITEM_THUNDER_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sThunderStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1356,7 +1356,7 @@ const struct Item gItems[] =
     {
         .name = _("Water Stone"),
         .itemId = ITEM_WATER_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sWaterStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1368,7 +1368,7 @@ const struct Item gItems[] =
     {
         .name = _("Leaf Stone"),
         .itemId = ITEM_LEAF_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sLeafStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1380,7 +1380,7 @@ const struct Item gItems[] =
     {
         .name = _("Dawn Stone"),
         .itemId = ITEM_DAWN_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sDawnStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1392,7 +1392,7 @@ const struct Item gItems[] =
     {
         .name = _("Dusk Stone"),
         .itemId = ITEM_DUSK_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sDuskStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1404,7 +1404,7 @@ const struct Item gItems[] =
     {
         .name = _("Shiny Stone"),
         .itemId = ITEM_SHINY_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sShinyStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1416,7 +1416,7 @@ const struct Item gItems[] =
     {
         .name = _("Ice Stone"),
         .itemId = ITEM_ICE_STONE,
-        .price = 2100,
+        .price = 5000,
         .description = sIceStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -3083,7 +3083,7 @@ const struct Item gItems[] =
     {
         .name = _("WhippedDream"),
         .itemId = ITEM_WHIPPED_DREAM,
-        .price = 2000,
+        .price = 5000,
         .description = sWhippedDreamDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
@@ -3095,7 +3095,7 @@ const struct Item gItems[] =
     {
         .name = _("Sachet"),
         .itemId = ITEM_SACHET,
-        .price = 2000,
+        .price = 5000,
         .description = sSachetDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,

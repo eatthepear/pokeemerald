@@ -1,6 +1,12 @@
 Zone11A_MapScripts::
 	.byte 0
 
+Zone11A_EventScript_Exit::
+	lockall
+	warp MAP_ZONE11SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone11A_EventScript_LeviathanIntro::
 	lockall
 	applymovement 6, Common_Movement_ExclamationMark
