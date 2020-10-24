@@ -1,18 +1,13 @@
 @ Interact with cuttable tree
 EventScript_CutTree:: @ 82906BB
 	lockall
-	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
-	compare VAR_RESULT, PARTY_SIZE
+	checkitem ITEM_MACHETE, 1
+	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CheckTreeCantCut
-	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick 0, VAR_RESULT
-	buffermovename 1, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_CancelCut
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
+	setitemarg ITEM_MACHETE
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
@@ -48,16 +43,14 @@ EventScript_CancelCut:: @ 829072B
 	end
 
 Text_WantToCut: @ 829072E
-	.string "This tree looks like it can be\n"
-	.string "CUT down!\p"
-	.string "Would you like to CUT it?$"
+	.string "This shrub is blocking the way.\n"
+	.string "Use the Machete to remove it?$"
 
 Text_MonUsedFieldMove: @ 8290771
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
 Text_CantCut: @ 829077D
-	.string "This tree looks like it can be\n"
-	.string "CUT down!$"
+	.string "This shrub is blocking the way.$"
 
 @ Interact with smashable rock
 EventScript_RockSmash:: @ 82907A6
@@ -292,8 +285,7 @@ Text_WantToSmash: @ 829083A
 	.string "Use the Sledgehammer to smash it?$"
 
 Text_CantSmash: @ 829087F
-	.string "It's a rugged rock, but a POKéMON\n"
-	.string "may be able to smash it.$"
+	.string "It's a rugged rock.$"
 
 EventScript_StrengthBoulder:: @ 82908BA
 	lockall
