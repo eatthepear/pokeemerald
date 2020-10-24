@@ -111,3 +111,19 @@ Zone11A_Text_JoelDefeat:
 
 Zone11A_Text_JoelPostBattle:
 	.string "You had the element of surprise.$"
+
+Zone11A_EventScript_SpellTag::
+	finditem ITEM_SPELL_TAG
+	end
+
+Zone11A_EventScript_WideLens::
+	finditem ITEM_WIDE_LENS
+	end
+
+Zone11A_EventScript_SuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
+Zone11A_EventScript_FullHeal::
+	finditem ITEM_FULL_HEAL
+	end

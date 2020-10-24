@@ -567,10 +567,10 @@
 #define FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1               (FLAG_HIDDEN_ITEMS_START + 0x22)
 #define FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2               (FLAG_HIDDEN_ITEMS_START + 0x65)
 #define FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3               (FLAG_HIDDEN_ITEMS_START + 0x66)
-#define FLAG_HIDDEN_ITEM_ZONE8B_FAIRY_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x67)
-#define FLAG_HIDDEN_ITEM_ZONE8C_ROCK_GEM                     (FLAG_HIDDEN_ITEMS_START + 0x68)
-#define FLAG_HIDDEN_ITEM_ZONE8C_FLYING_GEM                   (FLAG_HIDDEN_ITEMS_START + 0x30)
-#define FLAG_HIDDEN_ITEM_ZONE8C_DARK_GEM                     (FLAG_HIDDEN_ITEMS_START + 0x31)
+#define FLAG_HIDDEN_ITEM_ZONE11A_SITRUS_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x67)
+#define FLAG_HIDDEN_ITEM_ZONE11A_CHERI_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x68)
+#define FLAG_HIDDEN_ITEM_ZONE11A_RAWST_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x30)
+#define FLAG_HIDDEN_ITEM_ZONE11A_PECHA_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x31)
 #define FLAG_HIDDEN_ITEM_ZONE8C_DRAGON_GEM                   (FLAG_HIDDEN_ITEMS_START + 0x4C)
 #define FLAG_HIDDEN_ITEM_ZONE8D_FIGHTING_GEM                 (FLAG_HIDDEN_ITEMS_START + 0x4D)
 #define FLAG_HIDDEN_ITEM_ZONE8D_GRASS_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x1B)
@@ -1086,12 +1086,12 @@
 #define FLAG_ITEM_ZONE10A_SUPER_POTION                              0x40F
 #define FLAG_ITEM_ZONE10A_ETHER                                     0x410
 #define FLAG_ITEM_ZONE10A_SUPER_REPEL                               0x411
-#define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
-#define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_23                          0x414
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL                      0x415
+#define FLAG_ITEM_ZONE11A_SPELL_TAG                                 0x412
+#define FLAG_ITEM_ZONE11A_WIDE_LENS                                 0x413
+#define FLAG_ITEM_ZONE11A_SUPER_POTION                              0x414
+#define FLAG_ITEM_ZONE11A_FULL_HEAL                                 0x415
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417
+#define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417//start here
 #define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
 #define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
 #define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
