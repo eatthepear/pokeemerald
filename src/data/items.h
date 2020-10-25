@@ -4102,10 +4102,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM06_TOXIC] =
+    [ITEM_TM06_COVET] =
     {
         .name = _("TM06"),
-        .itemId = ITEM_TM06_TOXIC,
+        .itemId = ITEM_TM06_COVET,
         .price = 3000,
         .description = sTM06Desc,
         .pocket = POCKET_TM_HM,

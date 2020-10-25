@@ -1521,14 +1521,14 @@ static const u8 sTM02Desc[] = _(
     "powerful this move.");
 
 static const u8 sTM03Desc[] = _(
-    "Stops the foe from\n"
-    "moving with rocks.\n"
-    "May lower Speed.");
+    "Hurls boulders to\n"
+    "deal damage and lower\n"
+    "the foe's Speed.");
 
 static const u8 sTM04Desc[] = _(
-    "While attacking,\n"
-    "it may steal the\n"
-    "foe's held item.");
+    "Attacks and steals\n"
+    "the target's held\n"
+    "item simultaneously.");
 
 static const u8 sTM05Desc[] = _(
     "1/4 of the user's\n"
@@ -1536,9 +1536,9 @@ static const u8 sTM05Desc[] = _(
     "to make a decoy.");
 
 static const u8 sTM06Desc[] = _(
-    "Poisons the foe\n"
-    "with a toxin that\n"
-    "gradually worsens.");
+    "Approaches cutely,\n"
+    "then steals the\n"
+    "foe's held item.");
 
 static const u8 sTM07Desc[] = _(
     "Creates a hailstorm\n"
