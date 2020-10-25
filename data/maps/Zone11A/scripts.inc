@@ -17,6 +17,30 @@ Zone11A_EventScript_LeviathanIntro::
 	waitmovement 0
 	applymovement 6, Common_Movement_WalkRight
 	waitmovement 0
+	msgbox Zone11A_Text_LeviathanWalkAway, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone11A_EventScript_BeginLeviathanBattle
+	msgbox Zone11A_Text_LeviathanIThoughtSo, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement 6, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_FaceRight
+	waitmovement 0
+	releaseall
+	end
+
+Zone11A_Text_LeviathanWalkAway:
+	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: Walk away, kid.$"
+
+Zone11A_Text_LeviathanIThoughtSo:
+	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: That's what I thought.$"
+
+Zone11A_EventScript_BeginLeviathanBattle:
+	fadeoutbgm 1
 	msgbox Zone11A_Text_LeviathanIntro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_LEVIATHAN6, Zone11A_Text_Leviathan6Defeat
 	goto Zone11A_EventScript_Leviathan6Defeated
