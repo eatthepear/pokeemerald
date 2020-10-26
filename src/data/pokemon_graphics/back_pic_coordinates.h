@@ -3598,7 +3598,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_HOOPA] =
     {
         .size = 0x87,
-        .y_offset = 7,
+        .y_offset = 8,
     },
     [SPECIES_VOLCANION] =
     {
@@ -4623,5 +4623,20 @@ const struct MonCoords gMonBackPicCoords[] =
     {
         .size = 0x88,
         .y_offset = 4,
+    },
+    [SPECIES_DEOXYS_ATTACK] =
+    {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_DEOXYS_DEFENSE] =
+    {
+        .size = 0x87,
+        .y_offset = 9,
+    },
+    [SPECIES_DEOXYS_SPEED] =
+    {
+        .size = 0x87,
+        .y_offset = 6,
     },
 };
