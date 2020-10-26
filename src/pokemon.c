@@ -5931,10 +5931,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 }
                 break;
-            case EVO_TRADE_SPECIFIC_MON:
-                if (gEvolutionTable[species][i].param == tradePartnerSpecies)
-                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                break;
             }
         }
         break;
