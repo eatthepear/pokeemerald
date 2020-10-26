@@ -16,7 +16,6 @@
 #include "util.h"
 #include "gpu_regs.h"
 #include "battle_message.h"
-#include "constants/species.h"
 #include "pokedex.h"
 #include "palette.h"
 #include "international_string_util.h"
@@ -2957,7 +2956,7 @@ void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle)
     const s16 (*coords)[2];
     u8 spriteId1, spriteId2, battlerPosition, taskId;
 
-    if (B_ABILITY_POP_UP < GEN_5)
+    if (!B_ABILITY_POP_UP)
         return;
 
     if (!gBattleStruct->activeAbilityPopUps)

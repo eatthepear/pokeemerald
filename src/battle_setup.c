@@ -45,7 +45,6 @@
 #include "constants/songs.h"
 #include "constants/map_types.h"
 #include "constants/maps.h"
-#include "constants/species.h"
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
 #include "pokedex.h"

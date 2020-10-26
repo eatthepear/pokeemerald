@@ -47,7 +47,6 @@
 #include "constants/moves.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
-#include "constants/species.h"
 #include "constants/trainers.h"
 #include "constants/weather.h"
 
@@ -73,7 +72,7 @@ EWRAM_DATA u8 gEnemyPartyCount = 0;
 EWRAM_DATA struct Pokemon gPlayerParty[PARTY_SIZE] = {0};
 EWRAM_DATA struct Pokemon gEnemyParty[PARTY_SIZE] = {0};
 EWRAM_DATA struct SpriteTemplate gMultiuseSpriteTemplate = {0};
-EWRAM_DATA struct Unknown_806F160_Struct *gUnknown_020249B4[2] = {NULL};
+EWRAM_DATA struct Unknown_806F160_Struct *gUnknown_020249B4[2] = {NULL, NULL};
 
 // const rom data
 #include "data/battle_moves.h"
@@ -3475,6 +3474,8 @@ void CalculateMonStats(struct Pokemon *mon)
         if (currentHP == 0 && oldMaxHP == 0)
             currentHP = newMaxHP;
         else if (currentHP != 0)
+            // BUG: currentHP is unintentionally able to become <= 0 after the instruction below. This causes the pomeg berry glitch.
+            // To fix that set currentHP = 1 if currentHP <= 0.
             currentHP += newMaxHP - oldMaxHP;
         else
             return;
@@ -3727,7 +3728,6 @@ u8 CountAliveMonsInBattle(u8 caseId)
 
     return retVal;
 }
-
 
 u8 GetDefaultMoveTarget(u8 battlerId)
 {
@@ -5280,8 +5280,8 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                                 break;
                             }
                         }
-                            
-                            // Get amount of HP to restore
+
+                        // Get amount of HP to restore
                         dataUnsigned = itemEffect[var_3C++];
                         switch (dataUnsigned)
                         {
@@ -6196,25 +6196,29 @@ u8 GetTrainerEncounterMusicId(u16 trainerOpponentId)
 
 u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex)
 {
+    u16 retVal;
     // Dont modify HP, Accuracy, or Evasion by nature
     if (statIndex <= STAT_HP || statIndex > NUM_NATURE_STATS)
     {
-        // Should just be "return n", but it wouldn't match without this.
-        u16 retVal = n;
-        retVal++;
-        retVal--;
-        return retVal;
+        return n;
     }
 
     switch (gNatureStatTable[nature][statIndex - 1])
     {
     case 1:
-        return (u16)(n * 110) / 100; // NOTE: will overflow for n > 595 because the intermediate value is cast to u16 before the division. Fix by removing (u16) cast
+        retVal = n * 110;
+        retVal /= 100;
+        break;
     case -1:
-        return (u16)(n * 90) / 100;  // NOTE: will overflow for n > 728, see above
+        retVal = n * 90;
+        retVal /= 100;
+        break;
+    default:
+        retVal = n;
+        break;
     }
 
-    return n;
+    return retVal;
 }
 
 #define IS_LEAGUE_BATTLE                                                                \
@@ -6287,6 +6291,24 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
     u16 heldItem;
     u8 holdEffect;
     int i, multiplier;
+    u8 stat;
+    u8 bonus;
+
+    heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
+    if (heldItem == ITEM_ENIGMA_BERRY)
+    {
+        if (gMain.inBattle)
+            holdEffect = gEnigmaBerries[0].holdEffect;
+        else
+            holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
+    }
+    else
+    {
+        holdEffect = ItemId_GetHoldEffect(heldItem);
+    }
+
+    stat = ItemId_GetSecondaryId(heldItem);
+    bonus = ItemId_GetHoldEffectParam(heldItem);
 
     for (i = 0; i < NUM_STATS; i++)
     {
@@ -6307,36 +6329,41 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
         switch (i)
         {
         case STAT_HP:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier;
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP)
+                evIncrease = (gBaseStats[defeatedSpecies].evYield_HP + bonus) * multiplier;
+            else
+                evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier;
             break;
         case STAT_ATK:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier;
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_ATK)
+                evIncrease = (gBaseStats[defeatedSpecies].evYield_Attack + bonus) * multiplier;
+            else
+                evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier;
             break;
         case STAT_DEF:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier;
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_DEF)
+                evIncrease = (gBaseStats[defeatedSpecies].evYield_Defense + bonus) * multiplier;
+            else
+                evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier;
             break;
         case STAT_SPEED:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier;
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPEED)
+                evIncrease = (gBaseStats[defeatedSpecies].evYield_Speed + bonus) * multiplier;
+            else
+                evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier;
             break;
         case STAT_SPATK:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier;
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPATK)
+                evIncrease = (gBaseStats[defeatedSpecies].evYield_SpAttack + bonus) * multiplier;
+            else
+                evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier;
             break;
         case STAT_SPDEF:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier;
-            break;
-        }
-
-        heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
-        if (heldItem == ITEM_ENIGMA_BERRY)
-        {
-            if (gMain.inBattle)
-                holdEffect = gEnigmaBerries[0].holdEffect;
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPDEF)
+                evIncrease = (gBaseStats[defeatedSpecies].evYield_SpDefense + bonus) * multiplier;
             else
-                holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
-        }
-        else
-        {
-            holdEffect = ItemId_GetHoldEffect(heldItem);
+                evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier;
+            break;
         }
 
         if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
@@ -7265,19 +7292,16 @@ static bool8 ShouldSkipFriendshipChange(void)
     return FALSE;
 }
 
-#define FORCE_SIGNED(x)(-(x * (-1)))
+#define MAGIC_NUMBER 0xA3
 
 static void sub_806F160(struct Unknown_806F160_Struct* structPtr)
 {
     u16 i, j;
-    for (i = 0; i < FORCE_SIGNED(structPtr->field_0_0); i++)
+    for (i = 0; i < structPtr->field_0_0; i++)
     {
         structPtr->templates[i] = gUnknown_08329D98[i];
         for (j = 0; j < structPtr->field_1; j++)
         {
-            #ifndef NONMATCHING
-                asm("");
-            #endif
             structPtr->frameImages[i * structPtr->field_1 + j].data = &structPtr->byteArrays[i][j * 0x800];
         }
         structPtr->templates[i].images = &structPtr->frameImages[i * structPtr->field_1];
@@ -7287,7 +7311,7 @@ static void sub_806F160(struct Unknown_806F160_Struct* structPtr)
 static void sub_806F1FC(struct Unknown_806F160_Struct* structPtr)
 {
     u16 i, j;
-    for (i = 0; i < FORCE_SIGNED(structPtr->field_0_0); i++)
+    for (i = 0; i < structPtr->field_0_0; i++)
     {
         structPtr->templates[i] = gUnknown_08329F28;
         for (j = 0; j < structPtr->field_1; j++)
@@ -7318,7 +7342,7 @@ struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1)
         structPtr->field_0_0 = 7;
         structPtr->field_0_1 = 7;
         structPtr->field_1 = 4;
-        structPtr->field_3_0 = 1;
+        structPtr->size = 1;
         structPtr->field_3_1 = 2;
         break;
     case 0:
@@ -7326,12 +7350,12 @@ struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1)
         structPtr->field_0_0 = 4;
         structPtr->field_0_1 = 4;
         structPtr->field_1 = 4;
-        structPtr->field_3_0 = 1;
+        structPtr->size = 1;
         structPtr->field_3_1 = 0;
         break;
     }
 
-    structPtr->bytes = AllocZeroed(structPtr->field_3_0 * 0x800 * 4 * structPtr->field_0_0);
+    structPtr->bytes = AllocZeroed(structPtr->size * 0x800 * 4 * structPtr->field_0_0);
     structPtr->byteArrays = AllocZeroed(structPtr->field_0_0 * 32);
     if (structPtr->bytes == NULL || structPtr->byteArrays == NULL)
     {
@@ -7339,8 +7363,8 @@ struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1)
     }
     else
     {
-        for (i = 0; i < FORCE_SIGNED(structPtr->field_0_0); i++)
-            structPtr->byteArrays[i] = structPtr->bytes + (structPtr->field_3_0 * (i << 0xD));
+        for (i = 0; i < structPtr->field_0_0; i++)
+            structPtr->byteArrays[i] = structPtr->bytes + (structPtr->size * (i << 0xD));
     }
 
     structPtr->templates = AllocZeroed(sizeof(struct SpriteTemplate) * structPtr->field_0_0);
@@ -7359,8 +7383,8 @@ struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1)
         case 2:
             sub_806F1FC(structPtr);
             break;
-        case 0:
         case 1:
+        case 0:
         default:
             sub_806F160(structPtr);
             break;
@@ -7389,7 +7413,7 @@ struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1)
     }
     else
     {
-        structPtr->magic = 0xA3;
+        structPtr->magic = MAGIC_NUMBER;
         gUnknown_020249B4[id] = structPtr;
     }
 
@@ -7400,12 +7424,12 @@ void sub_806F47C(u8 id)
 {
     struct Unknown_806F160_Struct *structPtr;
 
-    id %= 2;
+    id &= 1;
     structPtr = gUnknown_020249B4[id];
     if (structPtr == NULL)
         return;
 
-    if (structPtr->magic != 0xA3)
+    if (structPtr->magic != MAGIC_NUMBER)
     {
         memset(structPtr, 0, sizeof(struct Unknown_806F160_Struct));
     }
@@ -7429,17 +7453,15 @@ void sub_806F47C(u8 id)
 u8 *sub_806F4F8(u8 id, u8 arg1)
 {
     struct Unknown_806F160_Struct *structPtr = gUnknown_020249B4[id % 2];
-    if (structPtr->magic != 0xA3)
+    if (structPtr->magic != MAGIC_NUMBER)
     {
         return NULL;
     }
-    else
-    {
-        if (arg1 >= FORCE_SIGNED(structPtr->field_0_0))
-            arg1 = 0;
+    
+    if (arg1 >= structPtr->field_0_0)
+        arg1 = 0;
 
-        return structPtr->byteArrays[arg1];
-    }
+    return structPtr->byteArrays[arg1];
 }
 
 void DeletePartyMon(u8 position)
