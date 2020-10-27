@@ -4927,7 +4927,7 @@
       "width": 50,
       "height": 50,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Unused1",
+      "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone11A/border.bin",
       "blockdata_filepath": "data/layouts/Zone11A/map.bin"
     },
