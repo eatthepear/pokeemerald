@@ -10,7 +10,7 @@ Zone8D_EventScript_Regirock::
 	waitmoncry
 	setwildbattle SPECIES_REGIROCK, 15, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special BattleSetup_StartLegendaryBattle
+	special StartRegiBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome

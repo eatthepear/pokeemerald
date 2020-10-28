@@ -76,6 +76,72 @@ Zone11A_Text_Goodbye:
 	.string "will be distant memories.\p"
 	.string "I'll be seeing you around.$"
 
+Zone11A_EventScript_CelebiIntro::
+	lockall
+	goto_if_set FLAG_ZONE11A_CELEBI, Zone11A_EventScript_NoCelebi
+	msgbox Zone11A_Text_WouldYouLikePray, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone11A_EventScript_InitiateCelebiBattle
+	releaseall
+	end
+
+Zone11A_EventScript_NoCelebi:
+	msgbox Zone11A_Text_SacredTree, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone11A_Text_SacredTree:
+	.string "This appears to be a sacred tree.$"
+
+Zone11A_Text_WouldYouLikePray:
+	.string "This appears to be a sacred tree.\p"
+	.string "Would you like to respectfully\n"
+	.string "kneel and pray?$"
+
+Zone11A_EventScript_InitiateCelebiBattle:
+	setflag FLAG_ZONE11A_CELEBI
+	msgbox Zone11A_Text_PlayerPrayed, MSGBOX_DEFAULT
+	delay 256
+	fadeoutbgm 1
+	msgbox Zone11A_Text_BrightLight, MSGBOX_DEFAULT
+	playmoncry SPECIES_CELEBI, 2
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_CELEBI, 20, ITEM_NONE
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Zone11A_EventScript_DefeatedCelebi
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Zone11A_EventScript_RanFromCelebi
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Zone11A_EventScript_RanFromCelebi
+	releaseall
+	end
+
+Zone11A_EventScript_DefeatedCelebi::
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	releaseall
+	end
+
+Zone11A_EventScript_RanFromCelebi::
+	setvar VAR_0x8004, SPECIES_CELEBI
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+Zone11A_Text_PlayerPrayed:
+	.string "{PLAYER} knelt and prayed for good\n"
+	.string "fortune.$"
+
+Zone11A_Text_BrightLight:
+	.string "...\p"
+	.string "A bright light!$"
+
 Zone11A_EventScript_Jeanette::
 	trainerbattle_single TRAINER_JEANETTE, Zone11A_Text_JeanetteIntro, Zone11A_Text_JeanetteDefeat
 	msgbox Zone11A_Text_JeanettePostBattle, MSGBOX_AUTOCLOSE

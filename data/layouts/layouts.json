@@ -4925,7 +4925,7 @@
       "id": "LAYOUT_ZONE11A",
       "name": "Zone11A_Layout",
       "width": 50,
-      "height": 50,
+      "height": 62,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone11A/border.bin",

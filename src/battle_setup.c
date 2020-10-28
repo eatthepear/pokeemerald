@@ -546,7 +546,7 @@ void BattleSetup_StartLatiBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
-void BattleSetup_StartLegendaryBattle(void)
+void BattleSetup_StartLegendaryBattle(void) //only capturable legendaries
 {
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
@@ -577,6 +577,12 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_MEW:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
+    case SPECIES_CELEBI:
+        CreateBattleStartTask(B_TRANSITION_WHITEFADE, MUS_C_VS_LEGEND_BEAST);
+        break;
+    case SPECIES_REGIROCK:
+        CreateBattleStartTask(B_TRANSITION_REGIROCK, MUS_VS_REGI);
+        break;
     }
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
@@ -602,7 +608,7 @@ void StartGroudonKyogreBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
-void StartRegiBattle(void)
+void StartRegiBattle(void) //now used to start leviathan battle
 {
     u8 transitionId;
     u16 species;
