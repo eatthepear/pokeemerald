@@ -768,11 +768,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Joel[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Jake[] = {
     {
-    .iv = 150,
+    .iv = 200,
     .lvl = 17,
     .species = SPECIES_FARFETCHD,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_AERIAL_ACE, MOVE_KNOCK_OFF, MOVE_REVENGE, MOVE_LEER}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_AERIAL_ACE, MOVE_KNOCK_OFF, MOVE_REVENGE, MOVE_SWORDS_DANCE}
     }
 };
 

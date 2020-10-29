@@ -182,7 +182,7 @@ Zone11A_EventScript_EmmaandLeo::
 
 Zone11A_Text_EmmaandLeoIntro:
 	.string "Leo: I'm gonna show my girlfriend\n"
-	.string "that I'm brave!$"
+	.string "that I'm brave!\p"
 	.string "Emma: Ugh. Enforcing gender norms,\n"
 	.string "am I right?$"
 
