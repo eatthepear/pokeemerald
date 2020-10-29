@@ -528,6 +528,16 @@ EventScript_LeavingSetup:
 	waitmovement 0
 	return
 
+EventScript_RemoveSledgehammer:
+	removeitem ITEM_UNUSABLE_A
+	additem ITEM_SLEDGEHAMMER
+	return
+
+EventScript_RemoveWarpstone:
+	removeitem ITEM_UNUSABLE_B
+	additem ITEM_RUBY
+	return
+
 EventScript_StonesMultichoice:
 	scrollingmultichoice 1, 0, 0, 4, FALSE
 	compare VAR_RESULT, 0

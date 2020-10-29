@@ -2829,3 +2829,7 @@ static const u8 sOvalCharmDesc[] = _(
     "of finding eggs\n"
     "at the daycare.");
 
+static const u8 sUnusableDesc[] = _(
+    "Talk to Colress\n"
+    "to replace with the\n"
+    "correct item.");

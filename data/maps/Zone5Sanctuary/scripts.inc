@@ -52,6 +52,9 @@ Zone5Sanctuary_EventScript_Intro:
 Zone5Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
+	checkitem ITEM_UNUSABLE_A, 1
+	compare VAR_RESULT, TRUE
+	call_if_eq EventScript_RemoveSledgehammer
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
