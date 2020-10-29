@@ -160,10 +160,16 @@ Zone0D_EventScript_WarpBack::
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	switch VAR_ZONE
 	case 11, Zone0D_EventScript_WarpSanctuary10
+	switch VAR_ZONE
+	case 12, Zone0D_EventScript_WarpSanctuary11
 	end
 
 Zone0D_EventScript_WarpSanctuary10:
 	warpteleport MAP_ZONE10SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary11:
+	warpteleport MAP_ZONE11SANCTUARY, 255, 7, 7
 	end
 
 EventScript_WarpZone0::
