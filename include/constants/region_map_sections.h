@@ -101,10 +101,10 @@
 #define MAPSEC_ZONE_9                       0x61
 #define MAPSEC_ZONE_10                      0x62
 #define MAPSEC_ZONE_11                      0x63
-#define MAPSEC_ROUTE_10_FLYDUP              0x64
-#define MAPSEC_ROUTE_1                      0x65
-#define MAPSEC_ROUTE_2                      0x66
-#define MAPSEC_ROUTE_3                      0x67
+#define MAPSEC_ZONE_12                      0x64
+#define MAPSEC_ZONE_13                      0x65
+#define MAPSEC_ZONE_14                      0x66
+#define MAPSEC_ZONE_15                      0x67
 #define MAPSEC_ROUTE_4                      0x68
 #define MAPSEC_ROUTE_5                      0x69
 #define MAPSEC_ROUTE_6                      0x6A
