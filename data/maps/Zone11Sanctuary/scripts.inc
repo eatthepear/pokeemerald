@@ -61,12 +61,12 @@ Zone11Sanctuary_EventScript_NextZoneCheck:
 	end
 
 Zone11Sanctuary_EventScript_Leave:
-	msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
-	release
+	call EventScript_LeavingSetup
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
+	warp MAP_ZONE12A, 255, 10, 18
 	end
-	@ call EventScript_LeavingSetup
-	@ setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	@ warp MAP_ZONE11A, 255, 42, 51
+	@ msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
+	@ release
 	@ end
 
 Zone11Sanctuary_Text_Reward:
