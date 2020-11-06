@@ -91,3 +91,23 @@ Zone12A_Text_KinleyDefeat:
 
 Zone12A_Text_KinleyPostBattle:
 	.string "Errr... Never mind.$"
+
+Zone12A_EventScript_ExpertBelt::
+	finditem ITEM_EXPERT_BELT
+	end
+
+Zone12A_EventScript_Metronome::
+	finditem ITEM_METRONOME
+	end
+
+Zone12A_EventScript_OvalStone::
+	finditem ITEM_OVAL_STONE
+	end
+
+Zone12A_EventScript_GripClaw::
+	finditem ITEM_GRIP_CLAW
+	end
+
+Zone12A_EventScript_BlackSludge::
+	finditem ITEM_BLACK_SLUDGE
+	end

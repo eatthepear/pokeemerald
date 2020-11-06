@@ -571,10 +571,10 @@
 #define FLAG_HIDDEN_ITEM_ZONE11A_CHERI_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x68)
 #define FLAG_HIDDEN_ITEM_ZONE11A_RAWST_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x30)
 #define FLAG_HIDDEN_ITEM_ZONE11A_PECHA_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x31)
-#define FLAG_HIDDEN_ITEM_ZONE8C_DRAGON_GEM                   (FLAG_HIDDEN_ITEMS_START + 0x4C)
-#define FLAG_HIDDEN_ITEM_ZONE8D_FIGHTING_GEM                 (FLAG_HIDDEN_ITEMS_START + 0x4D)
-#define FLAG_HIDDEN_ITEM_ZONE8D_GRASS_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x1B)
-#define FLAG_HIDDEN_ITEM_ZONE8D_GROUND_GEM                   (FLAG_HIDDEN_ITEMS_START + 0x2B)
+#define FLAG_HIDDEN_ITEM_ZONE12A_LEPPA_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x4C)
+#define FLAG_HIDDEN_ITEM_ZONE12A_LUM_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x4D)
+#define FLAG_HIDDEN_ITEM_ZONE12A_RED_SHARD                   (FLAG_HIDDEN_ITEMS_START + 0x1B)
+#define FLAG_HIDDEN_ITEM_ZONE12A_BLUE_SHARD                  (FLAG_HIDDEN_ITEMS_START + 0x2B)
 #define FLAG_HIDDEN_ITEM_ZONE8D_WATER_GEM                    (FLAG_HIDDEN_ITEMS_START + 0x4B)
 #define FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL         (FLAG_HIDDEN_ITEMS_START + 0x1D)
 #define FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_MAX_ETHER          (FLAG_HIDDEN_ITEMS_START + 0x4E)
@@ -1090,12 +1090,12 @@
 #define FLAG_ITEM_ZONE11A_WIDE_LENS                                 0x413
 #define FLAG_ITEM_ZONE11A_SUPER_POTION                              0x414
 #define FLAG_ITEM_ZONE11A_FULL_HEAL                                 0x415
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417//start here
-#define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
-#define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
-#define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
-#define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
+#define FLAG_ITEM_ZONE12A_EXPERT_BELT                               0x416
+#define FLAG_ITEM_ZONE12A_METRONOME                                 0x417
+#define FLAG_ITEM_ZONE12A_OVAL_STONE                                0x418
+#define FLAG_ITEM_ZONE12A_GRIP_CLAW                                 0x419
+#define FLAG_ITEM_ZONE12A_BLACK_SLUDGE                              0x41A
+#define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B//start here
 #define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
 #define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D
 #define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E
