@@ -1,6 +1,12 @@
 Zone12A_MapScripts::
 	.byte 0
 
+Zone12A_EventScript_Exit::
+	lockall
+	warp MAP_ZONE12SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone12A_EventScript_Dolores::
 	trainerbattle_single TRAINER_DOLORES, Zone12A_Text_DoloresIntro, Zone12A_Text_DoloresDefeat
 	msgbox Zone12A_Text_DoloresPostBattle, MSGBOX_AUTOCLOSE

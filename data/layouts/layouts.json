@@ -4960,6 +4960,26 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone12A/border.bin",
       "blockdata_filepath": "data/layouts/Zone12A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE12SANCTUARY",
+      "name": "Zone12Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone12Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone12Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE12SHOPS",
+      "name": "Zone12Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone12Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone12Shops/map.bin"
     }
   ]
 }

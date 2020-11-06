@@ -1,6 +1,10 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
+//
+// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
+//
+
 // Map Group 0
 #define MAP_PETALBURG_CITY      (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY      (1 | (0 << 8))
@@ -607,6 +611,8 @@
 #define MAP_ZONE11SANCTUARY (52 | (27 << 8))
 #define MAP_ZONE11SHOPS     (53 | (27 << 8))
 #define MAP_ZONE12A         (54 | (27 << 8))
+#define MAP_ZONE12SANCTUARY (55 | (27 << 8))
+#define MAP_ZONE12SHOPS     (56 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

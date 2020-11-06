@@ -1566,9 +1566,9 @@ static const u8 sTM06Desc[] = _(
     "foe's held item.");
 
 static const u8 sTM07Desc[] = _(
-    "Creates a hailstorm\n"
-    "that damages all\n"
-    "types except Ice.");
+    "The user sleeps for\n"
+    "2 turns to restore\n"
+    "health and status.");
 
 static const u8 sTM08Desc[] = _(
     "Bulks up the body\n"
@@ -1751,9 +1751,9 @@ static const u8 sTM43Desc[] = _(
     "on the location.");
 
 static const u8 sTM44Desc[] = _(
-    "The user sleeps for\n"
-    "2 turns to restore\n"
-    "health and status.");
+    "Creates a hailstorm\n"
+    "that damages all\n"
+    "types except Ice.");
 
 static const u8 sTM45Desc[] = _(
     "Makes it tough to\n"
