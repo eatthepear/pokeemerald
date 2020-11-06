@@ -60,7 +60,7 @@
 #define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x30 // Substitute Sidequest
 #define FLAG_HIDE_LEVIATHAN6 0x31 // Hide Leviathan 6
 #define FLAG_ZONE11A_CELEBI  0x32 // Fought Celebi in Zone 11
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
+#define FLAG_RECEIVED_ZONE12A_WYNAUT_EGG  0x33 // Received Wynaut egg in Zone 12A
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag

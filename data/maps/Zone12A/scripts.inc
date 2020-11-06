@@ -7,6 +7,64 @@ Zone12A_EventScript_Exit::
 	releaseall
 	end
 
+Zone12A_EventScript_EggWoman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZONE12A_WYNAUT_EGG, Zone12A_EventScript_ReceivedEgg
+	msgbox Zone12A_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone12A_EventScript_DeclineEgg
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq Zone12A_EventScript_NoRoomForEgg
+	msgbox Zone12A_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_ZONE12A_WYNAUT_EGG
+	playfanfare MUS_OBTAIN_ITEM
+	message Zone12A_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_WYNAUT
+	release
+	end
+
+Zone12A_EventScript_ReceivedEgg:
+	msgbox Zone12A_Text_EverySoOftenEggFoundAtDayCare, MSGBOX_DEFAULT
+	release
+	end
+
+Zone12A_EventScript_NoRoomForEgg:
+	msgbox Zone12A_Text_NoRoomForThisEgg, MSGBOX_DEFAULT
+	release
+	end
+
+Zone12A_EventScript_DeclineEgg:
+	msgbox Zone12A_Text_AsYouWishThen, MSGBOX_DEFAULT
+	release
+	end
+
+Zone12A_Text_HaveEggWillYouTakeIt:
+	.string "Hello. In my possession, I have\n"
+	.string "a Pokémon Egg of an incredibly\l"
+	.string "powerful Pokémon.\p"
+	.string "Will you take the burden of\n"
+	.string "hatching and raising it?$"
+
+Zone12A_Text_HopeYoullWalkPlentyWithEgg:
+	.string "Excellent. Take good care of it.$"
+
+Zone12A_Text_ReceivedTheEgg:
+	.string "{PLAYER} received the Egg.$"
+
+Zone12A_Text_NoRoomForThisEgg:
+	.string "You need an empty spot in\n"
+	.string "your party for this Egg.$"
+
+Zone12A_Text_AsYouWishThen:
+	.string "As you wish, then...$"
+
+Zone12A_Text_EverySoOftenEggFoundAtDayCare:
+	.string "People sometimes ask why Pokémon\n"
+	.string "breed. I say, why not?$"
+
 Zone12A_EventScript_Dolores::
 	trainerbattle_single TRAINER_DOLORES, Zone12A_Text_DoloresIntro, Zone12A_Text_DoloresDefeat
 	msgbox Zone12A_Text_DoloresPostBattle, MSGBOX_AUTOCLOSE
