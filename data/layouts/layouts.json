@@ -4990,6 +4990,16 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone13A/border.bin",
       "blockdata_filepath": "data/layouts/Zone13A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE13B",
+      "name": "Zone13B_Layout",
+      "width": 27,
+      "height": 21,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Zone13B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone13B/map.bin"
     }
   ]
 }
