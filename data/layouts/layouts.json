@@ -5000,6 +5000,16 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/Zone13B/border.bin",
       "blockdata_filepath": "data/layouts/Zone13B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE13C",
+      "name": "Zone13C_Layout",
+      "width": 22,
+      "height": 19,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Zone13C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone13C/map.bin"
     }
   ]
 }

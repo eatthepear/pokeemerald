@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ZONE13B",
-  "name": "Zone13B",
-  "layout": "LAYOUT_ZONE13B",
+  "id": "MAP_ZONE13C",
+  "name": "Zone13C",
+  "layout": "LAYOUT_ZONE13C",
   "music": "MUS_RG_POKE_MANSION",
   "region_map_section": "MAPSEC_ZONE_13",
   "requires_flash": false,
@@ -18,25 +18,11 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 20,
-      "elevation": 0,
-      "dest_map": "MAP_ZONE13A",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 7,
-      "y": 20,
-      "elevation": 0,
-      "dest_map": "MAP_ZONE13A",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 19,
+      "x": 14,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ZONE13C",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ZONE13B",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [
