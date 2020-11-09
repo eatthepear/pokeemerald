@@ -82,10 +82,10 @@ gText_Colress_WantMoreAdvice:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Do you want more advice?$"
 
 gText_Advice0:
-	.string "This is version 1.0.0 of the\n"
+	.string "This is version 1.2.0 of the\n"
 	.string "Pokémon Battle Labyrinth.\p"
-	.string "Make sure you're reading the\n"
-	.string "right documentation!$"
+	.string "Make sure you're playing the\n"
+	.string "most up to date version!$"
 
 gText_Advice1:
 	.string "You can press the Start button\n"
@@ -144,6 +144,11 @@ gText_Advice10:
 	.string "Pokémon's EVs, and the\l"
 	.string "Start button to show the\l"
 	.string "Pokémon's stats again.$"
+
+gText_Advice11:
+	.string "Press the R key to enable\n"
+	.string "or disable Auto Run.\l"
+	.string "Trust me, it's a lifesaver!$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
