@@ -783,88 +783,88 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Kinley},
     },
 
-    [TRAINER_GABBY_AND_TY_6] =
+    [TRAINER_JAN_AND_ERIN] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_YOUNG_COUPLE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_YOUNG_COUPLE,
+        .trainerName = _("Jan & Erin"),
+        .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_JanAndErin),
+        .party = {.NoItemDefaultMoves = sParty_JanAndErin},
+    },
+
+    [TRAINER_AMBER_AND_KIM] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_INTERVIEWER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTERVIEWER,
-        .trainerPic = TRAINER_PIC_INTERVIEWER,
-        .trainerName = _("GABBY & TY"),
+        .trainerClass = TRAINER_CLASS_TWINS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_TWINS,
+        .trainerName = _("Amber&Kim"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GabbyAndTy6),
-        .party = {.NoItemCustomMoves = sParty_GabbyAndTy6},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_AmberAndKim),
+        .party = {.NoItemCustomMoves = sParty_AmberAndKim},
     },
 
-    [TRAINER_LOLA_1] =
+    [TRAINER_ALINTA] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
-        .items = {},
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_MAGMA_ADMIN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_ADMIN,
+        .trainerName = _("Alinta"),
+        .items = {ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lola1),
-        .party = {.NoItemDefaultMoves = sParty_Lola1},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Alinta),
+        .party = {.ItemCustomMoves = sParty_Alinta},
     },
 
-    [TRAINER_AUSTINA] =
+    [TRAINER_BART] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("AUSTINA"),
+        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
+        .trainerName = _("Bart"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Austina),
-        .party = {.NoItemDefaultMoves = sParty_Austina},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Bart),
+        .party = {.NoItemDefaultMoves = sParty_Bart},
     },
 
-    [TRAINER_GWEN] =
+    [TRAINER_LOLA] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("GWEN"),
+        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_F,
+        .trainerName = _("Lola"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Gwen),
-        .party = {.NoItemDefaultMoves = sParty_Gwen},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Lola),
+        .party = {.NoItemDefaultMoves = sParty_Lola},
     },
 
-    [TRAINER_LOLA_2] =
+    [TRAINER_TODD] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
+        .trainerName = _("Todd"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lola2),
-        .party = {.NoItemDefaultMoves = sParty_Lola2},
-    },
-
-    [TRAINER_LOLA_3] =
-    {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lola3),
-        .party = {.NoItemDefaultMoves = sParty_Lola3},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Todd),
+        .party = {.NoItemDefaultMoves = sParty_Todd},
     },
 
     [TRAINER_LOLA_4] =
