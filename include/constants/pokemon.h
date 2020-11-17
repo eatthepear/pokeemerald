@@ -295,6 +295,7 @@
 
 // Evolution types
 #define EVO_MEGA_EVOLUTION   0xffff // Not an actual evolution, used to temporarily mega evolve in battle.
+#define EVO_MOVE_MEGA_EVOLUTION 0xfffe // Mega Evolution that checks for a move instead of held item.
 #define EVO_FRIENDSHIP       1 // Pokémon levels up with friendship ≥ 220
 #define EVO_LEVEL            2 // Pokémon reaches the specified level
 #define EVO_TRADE            3 // Pokémon is traded

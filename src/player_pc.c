@@ -326,7 +326,7 @@ void PlayerPC(void)
 
 static void InitPlayerPCMenu(u8 taskId)
 {
-    s16 *data;
+    u16 *data;
     struct WindowTemplate windowTemplate;
 
     data = gTasks[taskId].data;
@@ -345,7 +345,7 @@ static void InitPlayerPCMenu(u8 taskId)
 
 static void PlayerPCProcessMenuInput(u8 taskId)
 {
-    s16 *data;
+    u16 *data;
     s8 inputOptionId;
 
     data = gTasks[taskId].data;
@@ -434,7 +434,7 @@ static void PlayerPC_TurnOff(u8 taskId)
 
 static void InitItemStorageMenu(u8 taskId, u8 var)
 {
-    s16 *data;
+    u16 *data;
     struct WindowTemplate windowTemplate;
 
     data = gTasks[taskId].data;
@@ -547,7 +547,7 @@ static void ItemStorage_Toss(u8 taskId)
 
 static void ItemStorage_WithdrawToss_Helper(u8 taskId, bool8 toss)
 {
-    s16 *data = gTasks[taskId].data;
+    u16 *data = gTasks[taskId].data;
 
     data[3] = toss;
     sub_816B4DC(taskId);
@@ -580,9 +580,9 @@ static void ItemStorage_SetItemAndMailCount(u8 taskId)
 
 static void sub_816B4DC(u8 taskId)
 {
-    u16 *data = (u16 *)gTasks[taskId].data;
+    u16 *data = gTasks[taskId].data;
 
-    ClearStdWindowAndFrameToTransparent((u8)data[4], FALSE);
+    ClearStdWindowAndFrameToTransparent(data[4], FALSE);
     ClearWindowTilemap(data[4]);
     RemoveWindow(data[4]);
     ScheduleBgCopyTilemapToVram(0);
@@ -1379,7 +1379,7 @@ static void ItemStorage_DoItemToss(u8 taskId)
 
     data = gTasks[taskId].data;
     b = (playerPCItemPageInfo.cursorPos + playerPCItemPageInfo.itemsAbove);
-    if (ItemId_GetImportance(gSaveBlock1Ptr->pcItems[b].itemId) == 0)
+    if (!ItemId_GetImportance(gSaveBlock1Ptr->pcItems[b].itemId))
     {
         CopyItemName(gSaveBlock1Ptr->pcItems[b].itemId, gStringVar1);
         ConvertIntToDecimalStringN(gStringVar2, data[2], STR_CONV_MODE_LEFT_ALIGN, 3);
