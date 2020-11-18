@@ -3598,10 +3598,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_WEAK_ARMOR,
-        #endif
+        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_WEAK_ARMOR},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -3625,10 +3622,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_WEAK_ARMOR,
-        #endif
+        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_WEAK_ARMOR},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -3653,9 +3647,6 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_BATTLE_ARMOR},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_WEAK_ARMOR,
-        #endif
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -3680,9 +3671,6 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_BATTLE_ARMOR},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_WEAK_ARMOR,
-        #endif
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -3706,10 +3694,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
-        .abilities = {ABILITY_ROCK_HEAD, ABILITY_PRESSURE},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_UNNERVE,
-        #endif
+        .abilities = {ABILITY_ROCK_HEAD, ABILITY_UNNERVE},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -8980,10 +8965,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_3,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_SUCTION_CUPS, ABILITY_NONE},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_STORM_DRAIN,
-        #endif
+        .abilities = {ABILITY_STORM_DRAIN, ABILITY_SUCTION_CUPS},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -9008,10 +8990,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_3,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_SUCTION_CUPS, ABILITY_NONE},
-        #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_STORM_DRAIN,
-        #endif
+        .abilities = {ABILITY_STORM_DRAIN, ABILITY_SUCTION_CUPS},
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
@@ -9035,8 +9014,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_3,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_NONE},
-        .abilityHidden = ABILITY_SWIFT_SWIM,
+        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_BATTLE_ARMOR},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
@@ -9046,8 +9024,8 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 75,
         .baseAttack    = 125,
         .baseDefense   = 100,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 70,
+        .baseSpeed     = 65,
+        .baseSpAttack  = 50,
         .baseSpDefense = 80,
         .type1 = TYPE_ROCK,
         .type2 = TYPE_BUG,
@@ -9060,8 +9038,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_3,
         .eggGroup2 = EGG_GROUP_WATER_3,
-        .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_NONE},
-        .abilityHidden = ABILITY_SWIFT_SWIM,
+        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_BATTLE_ARMOR},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
@@ -14778,9 +14755,9 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 74,
         .baseAttack    = 118,
         .baseDefense   = 123,
-        .baseSpeed     = 32,
+        .baseSpeed     = 52,
         .baseSpAttack  = 63,
-        .baseSpDefense = 85,
+        .baseSpDefense = 75,
         .type1 = TYPE_WATER,
         .type2 = TYPE_ROCK,
         .catchRate = 45,
