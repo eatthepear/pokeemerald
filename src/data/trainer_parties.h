@@ -315,7 +315,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Frank[] = {
     {
     .iv = 0,
     .lvl = 11,
-    .species = SPECIES_ALOLAN_RATTATA,
+    .species = SPECIES_RATTATA_ALOLAN,
     }
 };
 
@@ -477,7 +477,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jayden[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_ALOLAN_GEODUDE,
+    .species = SPECIES_GEODUDE_ALOLAN,
     },
     {
     .iv = 0,
@@ -713,7 +713,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jeanette[] = {
     {
     .iv = 50,
     .lvl = 15,
-    .species = SPECIES_ALOLAN_MEOWTH,
+    .species = SPECIES_MEOWTH_ALOLAN,
     }
 };
 
@@ -990,7 +990,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Bart[] = {
     {
     .iv = 50,
     .lvl = 18,
-    .species = SPECIES_ALOLAN_RATTATA,
+    .species = SPECIES_RATTATA_ALOLAN,
     },
     {
     .iv = 50,

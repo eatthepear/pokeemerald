@@ -12376,7 +12376,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_ALOLAN_RATTATA"
+                "species": "SPECIES_RATTATA_ALOLAN"
               },
               {
                 "min_level": 8,
@@ -12499,7 +12499,7 @@
               {
                 "min_level": 10,
                 "max_level": 12,
-                "species": "SPECIES_ALOLAN_GEODUDE"
+                "species": "SPECIES_GEODUDE_ALOLAN"
               },
               {
                 "min_level": 10,
@@ -12568,7 +12568,7 @@
               {
                 "min_level": 10,
                 "max_level": 12,
-                "species": "SPECIES_ALOLAN_GEODUDE"
+                "species": "SPECIES_GEODUDE_ALOLAN"
               },
               {
                 "min_level": 10,
@@ -12637,7 +12637,7 @@
               {
                 "min_level": 10,
                 "max_level": 12,
-                "species": "SPECIES_ALOLAN_GEODUDE"
+                "species": "SPECIES_GEODUDE_ALOLAN"
               },
               {
                 "min_level": 10,
@@ -12844,7 +12844,7 @@
               {
                 "min_level": 1,
                 "max_level": 3,
-                "species": "SPECIES_ALOLAN_MEOWTH"
+                "species": "SPECIES_MEOWTH_ALOLAN"
               },
               {
                 "min_level": 1,
