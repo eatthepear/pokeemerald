@@ -888,8 +888,8 @@ static const struct ListMenuItem EvolutionaryStones[] =
 static const struct ListMenuItem MoveTutorLevel1[] =
 {
     {sText_MoveTutorIcyWind, 0},
-    {sText_MoveTutorLowKick, 1},
-    {sText_MoveTutorKnockOff, 2},
+    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorLowKick, 2},
     {sText_MoveTutorHealBell, 3},
     {sText_MoveTutorSleepTalk, 4},
     {sText_MoveTutorStealthRock, 5},
