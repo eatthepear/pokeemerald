@@ -12,7 +12,6 @@ Zone0Sanctuary_EventScript_Intro:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
-	special SetUnlockedPokedexFlags
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 1
@@ -21,13 +20,52 @@ Zone0Sanctuary_EventScript_Intro:
 	applymovement 1, Common_Movement_Colress_WalkDown
 	call EventScript_MoveCameraDown
 	waitmovement 0
-	msgbox Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_ModeSkipTutorial
 	delay 96
 	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
 	delay 48
 	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
 	goto Zone0Sanctuary_EventScript_PickMode
+	end
+
+Zone0Sanctuary_EventScript_ModeSkipTutorial:
+	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
+	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
+	switch VAR_RESULT
+	case 0, Zone0Sanctuary_EventScript_VanillaSkip
+	case 1, Zone0Sanctuary_EventScript_NuzlockeSkip
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+
+Zone0Sanctuary_EventScript_VanillaSkip:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_VanillaSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_SetVanillaSkip
+	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_SetVanillaSkip:
+	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+	
+Zone0Sanctuary_EventScript_NuzlockeSkip:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_SetNuzlockeSkip
+	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_SetNuzlockeSkip:
+	callnative GlobalNuzlockeSet
+	setflag FLAG_NUZLOCKE_ON
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
 	end
 
 Zone0Sanctuary_EventScript_PickMode:
@@ -637,6 +675,14 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	msgbox Zone0Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone0Sanctuary_Text_ReceivedPokedex, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
+	special SetUnlockedPokedexFlags
 	delay 96
 	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, MALE
@@ -689,8 +735,8 @@ Zone0Sanctuary_Text_Colress_Welcome:
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GREY}!\p"
 	.string "I am here to aid challengers who\n"
 	.string "might attempt to brave the\l"
-	.string "trials ahead.\p"
-	.string "Allow me to go over the rules.$"
+	.string "trials ahead. Would you like to\l"
+	.string "skip the tutorial?$"
 
 Zone0Sanctuary_Text_Colress_VanillaNuzlocke:
 	.string "There are two game modes:\n"
@@ -804,6 +850,9 @@ Zone0Sanctuary_Text_Colress_Freebies:
 
 Zone0Sanctuary_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
+
+Zone0Sanctuary_Text_ReceivedPokedex:
+	.string "Received the Pokédex!$"
 
 Zone0Sanctuary_Movement_Colress_FirstShop:
 	walk_left
