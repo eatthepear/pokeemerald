@@ -692,7 +692,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	setvar VAR_ZONE, 1
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
-	applymovement 1, Zone0Sanctuary_Movement_Colress_BackTop
+	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 1
 	releaseall
 	end
@@ -989,6 +989,7 @@ Zone0Sanctuary_Movement_Colress_BackMid:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
 	face_down
 	step_end
 
@@ -1003,13 +1004,5 @@ Zone0Sanctuary_Movement_Player_BackMid:
 	walk_up
 	walk_up
 	walk_up
-	step_end
-
-Zone0Sanctuary_Movement_Colress_BackTop:
 	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	face_down
 	step_end
