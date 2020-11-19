@@ -164,7 +164,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Remi),
-        .party = {.NoItemCustomMoves = sParty_Remi},
+        .party = {.ItemCustomMoves = sParty_Remi},
     },
 
     [TRAINER_RALPH] =
