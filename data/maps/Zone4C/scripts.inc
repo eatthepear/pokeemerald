@@ -1,6 +1,25 @@
 Zone4C_MapScripts::
 	.byte 0
 
+Zone4C_EventScript_Patrick::
+	trainerbattle_single TRAINER_PATRICK, Zone4C_Text_PatrickIntro, Zone4C_Text_PatrickDefeat
+	msgbox Zone4C_Text_PatrickPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone4C_Text_PatrickIntro:
+	.string "In these enchanted woods,\n"
+	.string "there's only one thing that\l"
+	.string "will get you through:\l"
+	.string "Bug Pokémon!$"
+
+Zone4C_Text_PatrickDefeat:
+	.string "How did I lose?\n"
+	.string "My bugs were doing so well!$"
+
+Zone4C_Text_PatrickPostBattle:
+	.string "I still stand by my\n"
+	.string "prior statements.$"
+
 Zone4C_EventScript_ChloeandKaya::
 	trainerbattle_double TRAINER_CHLOE_AND_KAYA, Zone4C_Text_ChloeandKayaIntro, Zone4C_Text_ChloeandKayaDefeat, gText_NotEnoughMons
 	msgbox Zone4C_Text_ChloeandKayaPostBattle, MSGBOX_DEFAULT
