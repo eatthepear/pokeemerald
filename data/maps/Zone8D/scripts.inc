@@ -1,6 +1,21 @@
 Zone8D_MapScripts::
 	.byte 0
 
+Zone8D_EventScript_Neil::
+	trainerbattle_single TRAINER_KADEEM, Zone8D_Text_NeilIntro, Zone8D_Text_NeilDefeat
+	msgbox Zone8D_Text_NeilPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone8D_Text_NeilIntro:
+	.string "I'm looking for another path down...$"
+
+Zone8D_Text_NeilDefeat:
+	.string "But all I found is you.$"
+
+Zone8D_Text_NeilPostBattle:
+	.string "Maybe it's on the other side\n"
+	.string "of the mountain?$"
+
 Zone8D_EventScript_Regirock::
 	lockall
 	waitse
