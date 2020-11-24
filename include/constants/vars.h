@@ -113,8 +113,8 @@
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E
 #define VAR_WARP_ZONES_1_TO_10               0x405F // custom Var
 #define VAR_ROUTE101_STATE                   0x4060
-#define VAR_ZONE11A_STATE                    0x4061 // Unused Var
-#define VAR_ROUTE103_STATE                   0x4062 // Unused Var
+#define VAR_ZONE8D_STATE                     0x4061 // custom Var
+#define VAR_ZONE11A_STATE                    0x4062 // custom Var
 #define VAR_ROUTE104_STATE                   0x4063
 #define VAR_ROUTE105_STATE                   0x4064 // Unused Var
 #define VAR_ROUTE106_STATE                   0x4065 // Unused Var

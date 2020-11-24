@@ -616,11 +616,54 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Neil[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Kadeem[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Zone8DShadow[] = {
     {
     .iv = 150,
-    .lvl = 20,
-    .species = SPECIES_REGIROCK,
+    .lvl = 15,
+    .species = SPECIES_STARAVIA,
+    .moves = {MOVE_AERIAL_ACE, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR, MOVE_GROWL}
+    },
+    {
+    .iv = 150,
+    .lvl = 16,
+    .species = SPECIES_CORSOLA,
+    .moves = {MOVE_ANCIENT_POWER, MOVE_BUBBLE_BEAM, MOVE_RECOVER, MOVE_REFRESH}
+    },
+    {
+    .iv = 150,
+    .lvl = 15,
+    .species = SPECIES_LUXIO,
+    .moves = {MOVE_SPARK, MOVE_BITE, MOVE_CHARGE, MOVE_HOWL}
+    },
+    {
+    .iv = 150,
+    .lvl = 16,
+    .species = SPECIES_CHARMELEON,
+    .moves = {MOVE_FIRE_FANG, MOVE_BITE, MOVE_METAL_CLAW, MOVE_GROWL}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Zone8DWally[] = {
+    {
+    .iv = 150,
+    .lvl = 16,
+    .species = SPECIES_RALTS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CONFUSION, MOVE_MAGICAL_LEAF, MOVE_DRAINING_KISS, MOVE_PROTECT}
+    },
+    {
+    .iv = 150,
+    .lvl = 16,
+    .species = SPECIES_FLETCHLING,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_WING_ATTACK, MOVE_ROOST, MOVE_FLAIL, MOVE_PROTECT}
+    },
+    {
+    .iv = 150,
+    .lvl = 16,
+    .species = SPECIES_MARILL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_COVET, MOVE_HELPING_HAND, MOVE_PROTECT}
     }
 };
 
@@ -1149,15 +1192,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Todd[] = {
     .iv = 50,
     .lvl = 18,
     .species = SPECIES_MIGHTYENA,
-    }
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky1[] = {
-    {
-    .iv = 10,
-    .lvl = 13,
-    .species = SPECIES_ZIGZAGOON,
-    .moves = {MOVE_SAND_ATTACK, MOVE_HEADBUTT, MOVE_TAIL_WHIP, MOVE_SURF}
     }
 };
 

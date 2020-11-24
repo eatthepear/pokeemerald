@@ -378,3 +378,7 @@ gText_ExitSign:
 gText_NotEnoughMons:
 	.string "You need at least two Pokémon to\n"
 	.string "initiate a Double Battle.$"
+
+gText_PleasePick3Mons:
+	.string "Please select three Pokémon to\n"
+	.string "participate in the tag battle.$"

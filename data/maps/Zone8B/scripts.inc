@@ -7,16 +7,14 @@ Zone8B_EventScript_Jayden::
 	end
 
 Zone8B_Text_JaydenIntro:
-	.string "There's a statue in the room ahead.\n"
-	.string "If you beat me, I'll tell you about it!$"
+	.string "I'm an explorer, a spelunkerer,\n"
+	.string "an adventurer, a Hiker!$"
 
 Zone8B_Text_JaydenDefeat:
-	.string "Okay, okay, here's the information...$"
+	.string "Also a bit of a sore loser...$"
 
 Zone8B_Text_JaydenPostBattle:
-	.string "That statue is rumored to be a\n"
-	.string "Pokémon, actually.\l"
-	.string "But Pokéballs don't do anything...$"
+	.string "Next time, I'll be a winner too!$"
 
 Zone8B_EventScript_Anita::
 	trainerbattle_single TRAINER_ANITA, Zone8B_Text_AnitaIntro, Zone8B_Text_AnitaDefeat
