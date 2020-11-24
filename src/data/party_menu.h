@@ -33,7 +33,7 @@ enum
 {
     PARTY_BOX_LEFT_COLUMN,
     PARTY_BOX_RIGHT_COLUMN,
-    PARTY_BOX_EQUAL_COLUMN
+    PARTY_BOX_EQUAL_COLUMN //Custom party menu
 };
 
 static const struct PartyMenuBoxInfoRects sPartyBoxInfoRects[] =
@@ -68,12 +68,12 @@ static const struct PartyMenuBoxInfoRects sPartyBoxInfoRects[] =
     },
     [PARTY_BOX_EQUAL_COLUMN] = //Custom party menu
     {
-        BlitBitmapToPartyWindow_Equal,
+        BlitBitmapToPartyWindow_Equal, 
         {
             //The below are the x, y, width, and height for each of the following info
             33,  2, 40, 13, // Nickname
-            3, 25, 32,  8, // Level 85,  1, 32,  8,
-            100,  1,  8,  8, // Gender 79,  1,  8,  8,
+             3, 25, 32,  8, // Level 85,  1, 32,  8,
+           100,  1,  8,  8, // Gender 79,  1,  8,  8, 
             48, 23, 24,  8, // HP
             63, 23, 24,  8, // Max HP
             48, 18, 56,  3  // HP bar
@@ -482,6 +482,16 @@ static const struct WindowTemplate sCancelButtonWindowTemplate =
     .paletteNum = 3,
     .baseBlock = 0x207, //0x1C7,  //Custom party menu
 };
+static const struct WindowTemplate sCancelButtonWindowTemplate_equal =
+{
+    .bg = 0,
+    .tilemapLeft = 24,
+    .tilemapTop = 17,
+    .width = 6,
+    .height = 2,
+    .paletteNum = 3,
+    .baseBlock = 0x207, //0x1C7,  //Custom party menu
+};
 
 static const struct WindowTemplate sMultiCancelButtonWindowTemplate =
 {
@@ -495,6 +505,16 @@ static const struct WindowTemplate sMultiCancelButtonWindowTemplate =
 };
 
 static const struct WindowTemplate sConfirmButtonWindowTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 24,
+    .tilemapTop = 16,
+    .width = 6,
+    .height = 2,
+    .paletteNum = 3,
+    .baseBlock = 0x213, //0x1D3,  //Custom party menu
+};
+static const struct WindowTemplate sConfirmButtonWindowTemplate_equal =
 {
     .bg = 0,
     .tilemapLeft = 24,
@@ -677,24 +697,25 @@ static const u8 sEmptySlotTileNums[] = {21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 
                                         30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31,
                                         37, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 39};
 
-//Custom party menu
+
+ //Custom party menu
 static const u8 sEqualMainSlotTileNums[] =      {43, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45,
-    49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
-    49, 33, 33, 33, 52, 53, 51, 51, 51, 51, 51, 51, 51, 54,
-    49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
-    55, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57};
+                                                 49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
+                                                 49, 33, 33, 33, 52, 53, 51, 51, 51, 51, 51, 51, 51, 54,
+                                                 49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
+                                                 55, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57};
 
 static const u8 sEqualMainSlotTileNums_Egg[] =  {43, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45,
-    49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
-    49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
-    49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
-    55, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57};
+                                                 49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
+                                                 49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
+                                                 49, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 50,
+                                                 55, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57};
 
 static const u8 sEqualEmptySlotTileNums[] = {21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23,
-    30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 31,
-    30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 31,
-    30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 31,
-    37, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 39};
+                                             30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 31,
+                                             30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 31,
+                                             30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 31,
+                                             37, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 39};
 //
 // Palette offsets
 static const u8 sGenderPalOffsets[] = {11, 12};

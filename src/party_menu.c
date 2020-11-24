@@ -74,6 +74,7 @@
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/species.h"
 
 #define PARTY_PAL_SELECTED     (1 << 0)
 #define PARTY_PAL_FAINTED      (1 << 1)
@@ -1521,66 +1522,66 @@ static void UpdatePartySelectionSingleLayout(s8 *slotPtr, s8 movementDir)
     {// PARTY_SIZE + 1 is Cancel, PARTY_SIZE is Confirm
         switch (movementDir)
         {
-            case MENU_DIR_UP:
-                if (*slotPtr == 0)
-                {
-                    *slotPtr = PARTY_SIZE + 1;
-                }
-                else if (*slotPtr == PARTY_SIZE)
-                {
+        case MENU_DIR_UP:
+            if (*slotPtr == 0)
+            {
+                *slotPtr = PARTY_SIZE + 1;
+            }
+            else if (*slotPtr == PARTY_SIZE)
+            {
+                *slotPtr = gPlayerPartyCount - 1;
+            }
+            else if (*slotPtr == PARTY_SIZE + 1)
+            {
+                if (sPartyMenuInternal->chooseHalf)
+                    *slotPtr = PARTY_SIZE;
+                else
                     *slotPtr = gPlayerPartyCount - 1;
-                }
-                else if (*slotPtr == PARTY_SIZE + 1)
+            }
+            else if (*slotPtr-2 >= 0)
+            {
+                *slotPtr -= 2; //(*slotPtr)--;
+            }
+            break;
+        case MENU_DIR_DOWN:
+            if (*slotPtr == PARTY_SIZE + 1)
+            {
+                *slotPtr = 0;
+            }
+            else
+            {
+                if (*slotPtr == gPlayerPartyCount - 1)
                 {
                     if (sPartyMenuInternal->chooseHalf)
                         *slotPtr = PARTY_SIZE;
                     else
-                        *slotPtr = gPlayerPartyCount - 1;
+                        *slotPtr = PARTY_SIZE + 1;
                 }
-                else if (*slotPtr-2 >= 0)
+                else if(*slotPtr+2 < gPlayerPartyCount)
                 {
-                    *slotPtr -= 2; //(*slotPtr)--;
-                }
-                break;
-            case MENU_DIR_DOWN:
-                if (*slotPtr == PARTY_SIZE + 1)
-                {
-                    *slotPtr = 0;
-                }
-                else
-                {
-                    if (*slotPtr == gPlayerPartyCount - 1)
-                    {
-                        if (sPartyMenuInternal->chooseHalf)
-                            *slotPtr = PARTY_SIZE;
-                        else
-                            *slotPtr = PARTY_SIZE + 1;
-                    }
-                    else if(*slotPtr+2 < gPlayerPartyCount)
-                    {
-                        *slotPtr += 2;//(*slotPtr)++;
-                    }else
-                        (*slotPtr)++;
-                }
-                break;
-            case MENU_DIR_RIGHT:
-                if (gPlayerPartyCount != 1 && *slotPtr%2 == 0)
-                {
-                    if (*slotPtr+1 < gPlayerPartyCount)
-                        (*slotPtr)++;
-                    // else
-                    //     *slotPtr = sPartyMenuInternal->lastSelectedSlot;
-                }
-                break;
-            case MENU_DIR_LEFT:
-                if (*slotPtr != 0 && *slotPtr != PARTY_SIZE && *slotPtr != PARTY_SIZE + 1)
-                {
-                    if (*slotPtr-1 >= 0 && *slotPtr%2 == 1)
-                        (*slotPtr)--;
-                    // sPartyMenuInternal->lastSelectedSlot = *slotPtr;
-                    // *slotPtr = 0;
-                }
-                break;
+                    *slotPtr += 2;//(*slotPtr)++;
+                }else
+                    (*slotPtr)++;
+            }
+            break;
+        case MENU_DIR_RIGHT:
+            if (gPlayerPartyCount != 1 && *slotPtr%2 == 0)
+            {
+                if (*slotPtr+1 < gPlayerPartyCount)
+                    (*slotPtr)++;
+                // else
+                //     *slotPtr = sPartyMenuInternal->lastSelectedSlot;
+            }
+            break;
+        case MENU_DIR_LEFT:
+            if (*slotPtr != 0 && *slotPtr != PARTY_SIZE && *slotPtr != PARTY_SIZE + 1)
+            {
+                if (*slotPtr-1 >= 0 && *slotPtr%2 == 1)
+                    (*slotPtr)--;
+                // sPartyMenuInternal->lastSelectedSlot = *slotPtr;
+                // *slotPtr = 0;
+            }
+            break;
         }
     }//
 }
@@ -2080,7 +2081,7 @@ static void InitPartyMenuWindows(u8 layout)
     switch (layout)
     {
     case PARTY_LAYOUT_SINGLE:
-        InitWindows(sSinglePartyMenuWindowTemplate_Equal); //sSinglePartyMenuWindowTemplate);
+        InitWindows(sSinglePartyMenuWindowTemplate_Equal); //sSinglePartyMenuWindowTemplate
         break;
     case PARTY_LAYOUT_DOUBLE:
         InitWindows(sDoublePartyMenuWindowTemplate);
@@ -2111,7 +2112,10 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
     {
         if (chooseHalf == TRUE)
         {
-            confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
+            if (gPartyMenu.layout == PARTY_LAYOUT_SINGLE)
+                confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate_equal);
+            else
+                confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
             FillWindowPixelBuffer(confirmWindowId, PIXEL_FILL(0));
             mainOffset = GetStringCenterAlignXOffset(0, gMenuText_Confirm, 48);
             AddTextPrinterParameterized4(confirmWindowId, 0, mainOffset, 1, 0, 0, sFontColorTable[0], -1, gMenuText_Confirm);
@@ -2119,6 +2123,11 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
             CopyWindowToVram(confirmWindowId, 2);
             cancelWindowId = AddWindow(&sMultiCancelButtonWindowTemplate);
             offset = 0;
+        }
+        else if (gPartyMenu.layout == PARTY_LAYOUT_SINGLE)
+        {
+            cancelWindowId = AddWindow(&sCancelButtonWindowTemplate_equal);
+            offset = 3;
         }
         else
         {
@@ -2197,7 +2206,7 @@ static void DrawEmptySlot(u8 windowId)
     if (gPartyMenu.layout == PARTY_LAYOUT_SINGLE) //Custom party menu
         BlitBitmapToPartyWindow(windowId, sEqualEmptySlotTileNums, 14, 0, 0, 14, 5);//
     else
-        BlitBitmapToPartyWindow(windowId, sEmptySlotTileNums, 18, 0, 0, 18, 3);
+    BlitBitmapToPartyWindow(windowId, sEmptySlotTileNums, 18, 0, 0, 18, 3);
 }
 
 //Custom party menu
