@@ -82,12 +82,15 @@ Zone8D_Text_DontGoAlone:
 
 Zone8D_EventScript_InitiateLeviathan4:
 	msgbox Zone8D_Text_Wally_WhatYourName, MSGBOX_AUTOCLOSE
-	applymovement 4, Zone8D_Movement_Camera_GoUp
-	applymovement OBJ_EVENT_ID_PLAYER, Zone8D_Movement_Camera_GoUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 6
+	call_if_eq Zone8D_EventScript_Left
+	compare VAR_TEMP_0, 7
+	call_if_eq Zone8D_EventScript_Middle
+	compare VAR_TEMP_0, 8
+	call_if_eq Zone8D_EventScript_Right
+	applymovement 4, Zone8D_Movement_Wally_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Zone8D_Movement_Player_WalkUp
 	waitmovement 0
 	msgbox Zone8D_Text_Wally_WontLet, MSGBOX_AUTOCLOSE
 	playse SE_PIN
@@ -106,12 +109,81 @@ Zone8D_EventScript_InitiateLeviathan4:
 	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone8D_Text_Shadow2_AtOnce, MSGBOX_AUTOCLOSE
-	applymovement 3, Common_Movement_FaceUp
+	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
 	call EventScript_PrepareCustomBattle
 	multi_2_vs_1 TRAINER_LEVIATHAN4, Zone8D_Text_ShadowDefeat, TRAINER_ZONE8D_WALLY, TRAINER_BACK_PIC_WALLY
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Zone8D_EventScript_PlayerLost
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Zone8D_EventScript_PlayerWon
 	release
 	end
+
+Zone8D_EventScript_PlayerLost:
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	release
+	end
+
+Zone8D_EventScript_PlayerWon:
+	applymovement 3, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Zone8D_Text_Shadow2_DefeatedByTwo, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Zone8D_Text_Shadow1_NoMatter, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone8D_Text_Shadow1_YoullRegret, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone8D_EventScript_Left:
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	return
+
+Zone8D_EventScript_Right:
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	return
+
+Zone8D_EventScript_Middle:
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_1, 8
+	call_if_eq Zone8D_EventScript_MiddleUp
+	compare VAR_TEMP_1, 10
+	call_if_eq Zone8D_EventScript_MiddleDown
+	return
+
+Zone8D_EventScript_MiddleUp:
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	return
+
+Zone8D_EventScript_MiddleDown:
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	return
 
 Zone8D_Text_Wally_WhatYourName:
 	.string "Thank you. What's your name?\p"
@@ -133,6 +205,15 @@ Zone8D_Text_Shadow2_AtOnce:
 
 Zone8D_Text_ShadowDefeat:
 	.string "...$"
+
+Zone8D_Text_Shadow2_DefeatedByTwo:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Defeated by two children...$"
+
+Zone8D_Text_Shadow1_NoMatter:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: No matter. It's done.$"
+
+Zone8D_Text_Shadow1_YoullRegret:
+	.string "You'll regret getting in our way.$"
 
 Zone8D_EventScript_Regirock::
 	lockall
@@ -208,4 +289,18 @@ Zone8D_Movement_Camera_GoDown:
 	walk_down
 	walk_down
 	walk_down
+	step_end
+
+Zone8D_Movement_Wally_WalkUp:
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Zone8D_Movement_Player_WalkUp:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
 	step_end
