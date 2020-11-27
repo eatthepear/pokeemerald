@@ -544,7 +544,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Emiliano[] = {
     },
     {
     .iv = 0,
-    .lvl = 13,
+    .lvl = 12,
     .species = SPECIES_GEODUDE,
     }
 };
@@ -601,17 +601,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Anita[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Neil[] = {
     {
     .iv = 0,
-    .lvl = 13,
+    .lvl = 12,
     .species = SPECIES_ONIX,
     },
     {
     .iv = 0,
-    .lvl = 13,
+    .lvl = 12,
     .species = SPECIES_BELDUM,
     },
     {
     .iv = 0,
-    .lvl = 13,
+    .lvl = 12,
     .species = SPECIES_MAKUHITA,
     }
 };
@@ -619,13 +619,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Neil[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_Zone8DShadow[] = {
     {
     .iv = 150,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_STARAVIA,
     .moves = {MOVE_AERIAL_ACE, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR, MOVE_GROWL}
     },
     {
     .iv = 150,
-    .lvl = 16,
+    .lvl = 14,
     .species = SPECIES_CORSOLA,
     .moves = {MOVE_ANCIENT_POWER, MOVE_BUBBLE_BEAM, MOVE_RECOVER, MOVE_REFRESH}
     },

@@ -266,9 +266,9 @@ Zone8D_EventScript_Conclusion:
 	waitmovement 0
 	msgbox Zone8D_Text_Wally_Goodbye, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_WalkUp
+	waitmovement 0
 	setflag FLAG_HIDE_ZONE8D_WALLY
 	removeobject 4
-	waitmovement 0
 	setvar VAR_ZONE8D_STATE, 2
 	releaseall
 	end
