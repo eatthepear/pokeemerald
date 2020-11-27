@@ -2162,8 +2162,6 @@ void DoSpecialTrainerBattle(void)
         else
             BattleTransition_StartOnField(GetTrainerBattleTransition());
 
-        if (gSpecialVar_0x8005 & MULTI_BATTLE_CHOOSE_MONS) // Skip mons restoring(done in the script)
-            gBattleScripting.specialTrainerBattleType = 0xFF;
         break;
     }
 }

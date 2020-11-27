@@ -111,22 +111,38 @@ Zone8D_EventScript_InitiateLeviathan4:
 	msgbox Zone8D_Text_Shadow2_AtOnce, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
-	call EventScript_PrepareCustomBattle
-	multi_2_vs_1 TRAINER_LEVIATHAN4, Zone8D_Text_ShadowDefeat, TRAINER_ZONE8D_WALLY, TRAINER_BACK_PIC_WALLY
-	waitstate
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq Zone8D_EventScript_PlayerLost
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Zone8D_EventScript_PlayerWon
+	goto Zone8D_EventScript_BattleSetup
+	release
+	end
+	
+Zone8D_EventScript_BattleSetup:
+	msgbox gText_PleasePick3Mons, MSGBOX_AUTOCLOSE
+	special SavePlayerParty
+	choose_mons
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_ShadowDefeat
+	compare VAR_RESULT, 0
+	goto_if_ne Zone8D_EventScript_LeviathanBattle
+	special LoadPlayerParty
+	goto Zone8D_EventScript_BattleSetup
 	release
 	end
 
-Zone8D_EventScript_PlayerLost:
+Zone8D_EventScript_LeviathanBattle:
+	special ReducePlayerPartyToSelectedMons
+	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
+	setvar VAR_0x8004, SPECIAL_BATTLE_MULTI
+	setvar VAR_0x8005, MULTI_BATTLE_2_VS_1
+	setvar VAR_0x8006, TRAINER_ZONE8D_WALLY
+	setvar VAR_0x8007, TRAINER_BACK_PIC_WALLY
+	special DoSpecialTrainerBattle
+	waitstate
+	frontier_saveparty
+	special LoadPlayerParty
+	switch VAR_RESULT
+	case 1, Zone8D_EventScript_PlayerWon
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	release
-	end
+	waitstate
 
 Zone8D_EventScript_PlayerWon:
 	applymovement 3, Common_Movement_FaceLeft

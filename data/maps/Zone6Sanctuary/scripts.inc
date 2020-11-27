@@ -66,7 +66,7 @@ Zone6Sanctuary_EventScript_WhenUReady:
 Zone6Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE7A, 255, 5, 34
+	warp MAP_ZONE8B, 255, 39, 4
 	end
 
 Zone6Sanctuary_Text_Colress_WhenUReady:

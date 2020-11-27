@@ -545,20 +545,6 @@ EventScript_RemoveWarpstone:
 	additem ITEM_RUBY
 	return
 
-EventScript_PrepareCustomBattle:
-	msgbox gText_PleasePick3Mons, MSGBOX_AUTOCLOSE
-	choose_mons
-	compare VAR_RESULT, 0
-	call_if_eq EventScript_NeedToChoose3ValidMons
-	return
-
-EventScript_NeedToChoose3ValidMons:
-	msgbox gText_PleasePick3Mons, MSGBOX_AUTOCLOSE
-	choose_mons
-	compare VAR_RESULT, 0
-	call_if_eq EventScript_PrepareCustomBattle
-	return
-
 EventScript_StonesMultichoice:
 	scrollingmultichoice 1, 0, 0, 4, FALSE
 	compare VAR_RESULT, 0
