@@ -48,21 +48,21 @@
 #define FLAG_HIDE_LEVIATHAN1 0x24 // Used to hide Leviathan 1 from vision
 #define FLAG_LELOUCH_SHARDS  0x25 // First time talking to Lelouch with shards
 #define FLAG_ZONE7_HEAL_USED 0x26 // Single use heal lady in Zone 7
-#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE       0x27 // Hide Ari
-#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE    0x28 // Hide Bertha
-#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x29 // Hide Cassandra
-#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2A // Hide Dominic
-#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2B // Hide Erica
-#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2C // gift Shiny Zorua from Erica
-#define FLAG_HIDE_ZONE9A_MAN    0x2D // Man blocks exit
-#define FLAG_HIDE_LEVIATHAN5 0x2E // HideLeviathan5
-#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x2F // LuckyEgg Sidequest
-#define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x30 // Substitute Sidequest
-#define FLAG_HIDE_LEVIATHAN6 0x31 // Hide Leviathan 6
-#define FLAG_ZONE11A_CELEBI  0x32 // Fought Celebi in Zone 11
-#define FLAG_RECEIVED_ZONE12A_WYNAUT_EGG  0x33 // Received Wynaut egg in Zone 12A
-#define FLAG_DEFEATED_ALINTA_ZONE_13  0x34 // Defeat Alinta in Zone 13
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
+#define FLAG_HIDE_ZONE8D_WALLY    0x27 // HideWally Zone 8
+#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE       0x28 // Hide Ari
+#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE    0x29 // Hide Bertha
+#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x2A // Hide Cassandra
+#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2B // Hide Dominic
+#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2C // Hide Erica
+#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2D // gift Shiny Zorua from Erica
+#define FLAG_HIDE_ZONE9A_MAN    0x2E // Man blocks exit
+#define FLAG_HIDE_LEVIATHAN5 0x2F // HideLeviathan5
+#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x30 // LuckyEgg Sidequest
+#define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x31 // Substitute Sidequest
+#define FLAG_HIDE_LEVIATHAN6 0x32 // Hide Leviathan 6
+#define FLAG_ZONE11A_CELEBI  0x33 // Fought Celebi in Zone 11
+#define FLAG_RECEIVED_ZONE12A_WYNAUT_EGG  0x34 // Received Wynaut egg in Zone 12A
+#define FLAG_DEFEATED_ALINTA_ZONE_13  0x35 // Defeat Alinta in Zone 13
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag

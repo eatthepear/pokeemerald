@@ -70,6 +70,7 @@ Zone8D_Text_Wally_Preparations:
 
 Zone8D_EventScript_GoWithWally::
 	lockall
+	giveitem ITEM_RARE_CANDY, 10
 	msgbox Zone8D_Text_DontGoAlone, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
@@ -154,6 +155,16 @@ Zone8D_EventScript_PlayerWon:
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone8D_Text_Shadow1_YoullRegret, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	playmoncry SPECIES_REGIROCK, 2
+	delay 40
+	waitmoncry
+	removeobject 1
+	removeobject 2
+	removeobject 3
+	setflag FLAG_BEATLEVIATHAN4
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto Zone8D_EventScript_Conclusion
 	release
 	end
 
@@ -206,7 +217,7 @@ Zone8D_Text_Wally_WhatYourName:
 	.string "{PLAYER}. I'll remember that.$"
 
 Zone8D_Text_Wally_WontLet:
-	.string "Wally: I won't let you hurt Regirock!$"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: I won't let you hurt Regirock!$"
 
 Zone8D_Text_Shadow2_BackAgain:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: The child is back again.\n"
@@ -231,65 +242,62 @@ Zone8D_Text_Shadow1_NoMatter:
 Zone8D_Text_Shadow1_YoullRegret:
 	.string "You'll regret getting in our way.$"
 
-Zone8D_EventScript_Regirock::
+Zone8D_EventScript_Conclusion:
+	applymovement 4, Common_Movement_WalkUp
+	msgbox Zone8D_Text_Wally_WhereTheyGo, MSGBOX_AUTOCLOSE
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 4, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Zone8D_Text_Wally_LooksLike, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox Zone8D_Text_Wally_HaveThis, MSGBOX_AUTOCLOSE
+	giveitem ITEM_EVIOLITE, 1
+	msgbox Zone8D_Text_Wally_NotFlashiest, MSGBOX_AUTOCLOSE
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement 4, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone8D_Text_Wally_Goodbye, MSGBOX_AUTOCLOSE
+	applymovement 4, Common_Movement_WalkUp
+	setflag FLAG_HIDE_ZONE8D_WALLY
+	removeobject 4
+	waitmovement 0
+	setvar VAR_ZONE8D_STATE, 2
+	releaseall
+	end
+	
+Zone8D_Text_Wally_WhereTheyGo:
+	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Where did they go?$"
+
+Zone8D_Text_Wally_LooksLike:
+	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Looks like they took\n"
+	.string "Regirock with them...\p"
+	.string "What could they have planned?$"
+
+Zone8D_Text_Wally_HaveThis:
+	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Thanks for your help.\n"
+	.string "Um... I want you to have this.$"
+
+Zone8D_Text_Wally_NotFlashiest:
+	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: It's not... the flashiest\n"
+	.string "item, but I'm sure it'll be useful.$"
+
+Zone8D_Text_Wally_Goodbye:
+	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: I hope we meet again.\p"
+	.string "Goodbye, {PLAYER}.$"
+
+Zone8A_EventScript_Exit::
 	lockall
-	waitse
-	setflag FLAG_DISABLE_CATCHING
-	playmoncry SPECIES_REGIROCK, 2
-	delay 40
-	waitmoncry
-	setwildbattle SPECIES_REGIROCK, 15, ITEM_NONE
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special StartRegiBattle
-	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Zone8D_EventScript_DefeatedRegirock
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq Zone8D_EventScript_RanFromRegirock
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq Zone8D_EventScript_RanFromRegirock
+	warp MAP_ZONE8SANCTUARY, 255, 7, 7
 	releaseall
 	end
-
-Zone8D_EventScript_DefeatedRegirock::
-	setflag FLAG_BEATLEVIATHAN4
-	goto Zone8D_EventScript_DefeatedRegirock2
-	end
-
-Zone8D_EventScript_RanFromRegirock::
-	goto Zone8D_EventScript_RanFromRegirock2
-	end
-
-Zone8D_EventScript_DefeatedRegirock2::
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject VAR_LAST_TALKED
-	setflag FLAG_BEATLEVIATHAN4
-	fadescreenswapbuffers FADE_FROM_BLACK
-	clearflag FLAG_DISABLE_CATCHING
-	msgbox Zone8D_Text_RegirockDisappeared, MSGBOX_AUTOCLOSE
-	finditem ITEM_EVIOLITE, 1
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
-	warp MAP_ZONE8D, 255, 7, 7
-	releaseall
-	end
-
-Zone8D_EventScript_RanFromRegirock2::
-	msgbox Zone8D_Text_StillThere, MSGBOX_DEFAULT
-	clearflag FLAG_DISABLE_CATCHING
-	releaseall
-	end
-
-Zone8D_Text_StillThere:
-	.string "It's still there, motionless.$"
-
-Zone8D_Text_RegirockDisappeared:
-	.string "Regirock disappeared. There's something\n"
-	.string "colorful on the ground, a stone!$"
 
 Zone8D_Movement_Camera_GoUp:
 	walk_up
