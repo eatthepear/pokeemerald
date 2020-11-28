@@ -1785,36 +1785,26 @@ static bool8 Fishing_InitDots(struct Task *task)
 static bool8 Fishing_ShowDots(struct Task *task)
 {
     const u8 dot[] = _("·");
-
+    
     AlignFishingAnimationFrames();
     task->tFrameCounter++;
-    if (JOY_NEW(A_BUTTON))
+    if (task->tFrameCounter >= 20)
     {
-        task->tStep = FISHING_NO_BITE;
-        if (task->tRoundsPlayed != 0)
-            task->tStep = FISHING_GOT_AWAY;
-        return TRUE;
-    }
-    else
-    {
-        if (task->tFrameCounter >= 20)
+        task->tFrameCounter = 0;
+        if (task->tNumDots >= task->tDotsRequired)
         {
-            task->tFrameCounter = 0;
-            if (task->tNumDots >= task->tDotsRequired)
-            {
+            task->tStep++;
+            if (task->tRoundsPlayed != 0)
                 task->tStep++;
-                if (task->tRoundsPlayed != 0)
-                    task->tStep++;
-                task->tRoundsPlayed++;
-            }
-            else
-            {
-                AddTextPrinterParameterized(0, 1, dot, task->tNumDots * 8, 1, 0, NULL);
-                task->tNumDots++;
-            }
+            task->tRoundsPlayed++;
         }
-        return FALSE;
+        else
+        {
+            AddTextPrinterParameterized(0, 1, dot, task->tNumDots * 8, 1, 0, NULL);
+            task->tNumDots++;
+        }
     }
+    return FALSE;
 }
 
 static bool8 Fishing_CheckForBite(struct Task *task)
@@ -1857,10 +1847,7 @@ static bool8 Fishing_CheckForBite(struct Task *task)
 
 static bool8 Fishing_GotBite(struct Task *task)
 {
-    AlignFishingAnimationFrames();
-    AddTextPrinterParameterized(0, 1, gText_OhABite, 0, 17, 0, NULL);
-    task->tStep++;
-    task->tFrameCounter = 0;
+    task->tStep += 3;
     return FALSE;
 }
 
