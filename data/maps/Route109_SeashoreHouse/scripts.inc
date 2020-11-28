@@ -83,15 +83,9 @@ Route109_SeashoreHouse_EventScript_Johanna:: @ 82694FD
 	msgbox Route109_SeashoreHouse_Text_JohannaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route109_SeashoreHouse_EventScript_Simon:: @ 8269518
-	trainerbattle_single TRAINER_SIMON, Route109_SeashoreHouse_Text_SimonIntro, Route109_SeashoreHouse_Text_SimonDefeated, Route109_SeashoreHouse_EventScript_CheckTrainersCompletion
-	msgbox Route109_SeashoreHouse_Text_SimonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route109_SeashoreHouse_EventScript_CheckTrainersCompletion:: @ 8269533
 	goto_if_not_defeated TRAINER_DWAYNE, Route109_SeashoreHouse_EventScript_TrainersNotCompleted
 	goto_if_not_defeated TRAINER_JOHANNA, Route109_SeashoreHouse_EventScript_TrainersNotCompleted
-	goto_if_not_defeated TRAINER_SIMON, Route109_SeashoreHouse_EventScript_TrainersNotCompleted
 	setflag FLAG_DEFEATED_SEASHORE_HOUSE
 	release
 	end
@@ -166,16 +160,3 @@ Route109_SeashoreHouse_Text_JohannaDefeated: @ 8269947
 Route109_SeashoreHouse_Text_JohannaPostBattle: @ 8269953
 	.string "Whew, I'm all thirsty.\n"
 	.string "Maybe I'll have a SODA POP.$"
-
-Route109_SeashoreHouse_Text_SimonIntro: @ 8269986
-	.string "I'm going to show you how great\n"
-	.string "my POKéMON are, but don't cry!$"
-
-Route109_SeashoreHouse_Text_SimonDefeated: @ 82699C5
-	.string "…I lost, but I won't cry…$"
-
-Route109_SeashoreHouse_Text_SimonPostBattle: @ 82699DF
-	.string "If one of my POKéMON knew the move\n"
-	.string "for carrying me across water on its\l"
-	.string "back, I could get rid of this inner tube.$"
-

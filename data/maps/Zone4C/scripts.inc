@@ -7,18 +7,13 @@ Zone4C_EventScript_Patrick::
 	end
 
 Zone4C_Text_PatrickIntro:
-	.string "In these enchanted woods,\n"
-	.string "there's only one thing that\l"
-	.string "will get you through:\l"
-	.string "Bug Pokémon!$"
+	.string "Just... One... More... Level...$"
 
 Zone4C_Text_PatrickDefeat:
-	.string "How did I lose?\n"
-	.string "My bugs were doing so well!$"
+	.string "Oh... Come on!$"
 
 Zone4C_Text_PatrickPostBattle:
-	.string "I still stand by my\n"
-	.string "prior statements.$"
+	.string "Just wait till my Bugs are all evolved!$"
 
 Zone4C_EventScript_ChloeandKaya::
 	trainerbattle_double TRAINER_CHLOE_AND_KAYA, Zone4C_Text_ChloeandKayaIntro, Zone4C_Text_ChloeandKayaDefeat, gText_NotEnoughMons

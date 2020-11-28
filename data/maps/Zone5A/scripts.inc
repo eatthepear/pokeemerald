@@ -10,6 +10,26 @@ Zone5A_EventScript_MoveLeviathan:
 	setobjectxyperm 4, 28, 8
 	end
 
+Zone5A_EventScript_AnneAndJune::
+	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons
+	msgbox Zone5A_Text_AnneAndJunePostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+Zone5A_Text_AnneAndJuneIntro:
+	.string "Anne: We're teammates!\p"
+	.string "June: No, I'm the Senior and\n"
+	.string "you're the Junior!$"
+
+Zone5A_Text_AnneAndJuneDefeat:
+	.string "Anne: I guess you were right...\p"
+	.string "June: We still lost though...$"
+
+Zone5A_Text_AnneAndJunePostBattle:
+	.string "Anne: Maybe we needed better...\p"
+	.string "June: Coordination?\p"
+	.string "Anne: Yeah, exactly that!$"
+
 Zone5A_EventScript_Rebecca::
 	trainerbattle_single TRAINER_REBECCA, Zone5A_Text_RebeccaIntro, Zone5A_Text_RebeccaDefeat
 	msgbox Zone5A_Text_RebeccaPostBattle, MSGBOX_AUTOCLOSE

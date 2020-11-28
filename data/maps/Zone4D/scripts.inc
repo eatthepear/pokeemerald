@@ -21,13 +21,18 @@ Zone4D_EventScript_Fred::
 	end
 
 Zone4D_Text_FredIntro:
-	.string "Just... One... More... Level...$"
+	.string "In these enchanted woods,\n"
+	.string "there's only one thing that\l"
+	.string "will get you through:\l"
+	.string "Bug Pokémon!$"
 
 Zone4D_Text_FredDefeat:
-	.string "Oh... Come on!$"
+	.string "How did I lose?\n"
+	.string "My bugs were doing so well!$"
 
 Zone4D_Text_FredPostBattle:
-	.string "Just wait till my Bugs are all evolved!$"
+	.string "I still stand by my\n"
+	.string "prior statements.$"
 
 Zone4D_EventScript_ItemRepel::
 	finditem ITEM_REPEL
