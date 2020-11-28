@@ -669,8 +669,8 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	msgbox Zone0Sanctuary_Text_Colress_NiceChoice, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Zone0Sanctuary_Text_Colress_Freebies, MSGBOX_AUTOCLOSE
-	giveitem ITEM_POKE_BALL, 20
-	giveitem ITEM_POTION, 5
+	giveitem ITEM_POKE_BALL, 30
+	giveitem ITEM_POTION, 10
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone0Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
