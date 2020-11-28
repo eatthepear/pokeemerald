@@ -852,7 +852,7 @@ Zone0Sanctuary_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
 
 Zone0Sanctuary_Text_ReceivedPokedex:
-	.string "Received the Pokédex!$"
+	.string "Received the {COLOR RED}Pokédex{COLOR DARK_GREY}!$"
 
 Zone0Sanctuary_Movement_Colress_FirstShop:
 	walk_left

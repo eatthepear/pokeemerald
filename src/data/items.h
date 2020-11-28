@@ -7640,30 +7640,4 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
-    
-    [ITEM_UNUSABLE_A] =
-    {
-        .name = _("Unusable"),
-        .itemId = ITEM_UNUSABLE_A,
-        .price = 0,
-        .importance = 1,
-        .description = sUnusableDesc,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
-    },
-    
-    [ITEM_UNUSABLE_B] =
-    {
-        .name = _("Unusable"),
-        .itemId = ITEM_UNUSABLE_B,
-        .price = 0,
-        .importance = 1,
-        .description = sUnusableDesc,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
-    },
 };
