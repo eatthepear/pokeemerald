@@ -828,8 +828,6 @@ static const u8 sText_LeafStone[] = _("Leaf Stone");
 static const u8 sText_MoonStone[] = _("Moon Stone");
 static const u8 sText_SunStone[] = _("Sun Stone");
 static const u8 sText_ShinyStone[] = _("Shiny Stone");
-static const u8 sText_DuskStone[] = _("Dusk Stone");
-static const u8 sText_DawnStone[] = _("Dawn Stone");
 static const u8 sText_IceStone[] = _("Ice Stone");
 static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
 static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
@@ -880,9 +878,7 @@ static const struct ListMenuItem EvolutionaryStones[] =
     {sText_MoonStone, 4},
     {sText_SunStone, 5},
     {sText_ShinyStone, 6},
-    {sText_DuskStone, 7},
-    {sText_DawnStone, 8},
-    {sText_IceStone, 9},
+    {sText_IceStone, 7},
 };
 
 static const struct ListMenuItem MoveTutorLevel1[] =

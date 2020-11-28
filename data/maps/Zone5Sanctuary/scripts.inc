@@ -23,14 +23,7 @@ Zone5Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	showmoneybox 0, 0, 0
-	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	addmoney 3000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox 0, 0
-	msgbox Zone5Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	call Zone5Sanctuary_EventScript_StonesMultichoice
 	setvar VAR_ZONE, 6
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	@ playfanfare MUS_OBTAIN_ITEM
@@ -48,6 +41,59 @@ Zone5Sanctuary_EventScript_Intro:
 	waitmovement 0
 	releaseall
 	end
+
+Zone5Sanctuary_EventScript_StonesMultichoice:
+	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_DEFAULT
+	scrollingmultichoice 1, 0, 0, 4, FALSE
+	compare VAR_RESULT, 0
+	call_if_eq Zone5Sanctuary_EventScript_FireStone
+	compare VAR_RESULT, 1
+	call_if_eq Zone5Sanctuary_EventScript_WaterStone
+	compare VAR_RESULT, 2
+	call_if_eq Zone5Sanctuary_EventScript_ThunderStone
+	compare VAR_RESULT, 3
+	call_if_eq Zone5Sanctuary_EventScript_LeafStone
+	compare VAR_RESULT, 4
+	call_if_eq Zone5Sanctuary_EventScript_MoonStone
+	compare VAR_RESULT, 5
+	call_if_eq Zone5Sanctuary_EventScript_SunStone
+	compare VAR_RESULT, 6
+	call_if_eq Zone5Sanctuary_EventScript_ShinyStone
+	compare VAR_RESULT, 7
+	call_if_eq Zone5Sanctuary_EventScript_IceStone
+	return
+
+Zone5Sanctuary_EventScript_FireStone:
+	giveitem ITEM_FIRE_STONE
+	return
+
+Zone5Sanctuary_EventScript_WaterStone:
+	giveitem ITEM_WATER_STONE
+	return
+
+Zone5Sanctuary_EventScript_ThunderStone:
+	giveitem ITEM_THUNDER_STONE
+	return
+
+Zone5Sanctuary_EventScript_LeafStone:
+	giveitem ITEM_LEAF_STONE
+	return
+
+Zone5Sanctuary_EventScript_MoonStone:
+	giveitem ITEM_MOON_STONE
+	return
+
+Zone5Sanctuary_EventScript_SunStone:
+	giveitem ITEM_SUN_STONE
+	return
+
+Zone5Sanctuary_EventScript_ShinyStone:
+	giveitem ITEM_SHINY_STONE
+	return
+
+Zone5Sanctuary_EventScript_IceStone:
+	giveitem ITEM_ICE_STONE
+	return
 
 Zone5Sanctuary_EventScript_NextZone::
 	lock
@@ -77,7 +123,5 @@ Zone5Sanctuary_EventScript_Leave:
 	end
 
 Zone5Sanctuary_Text_Reward:
-	.string "¥3000!$"
-
-Zone5Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥3000!$"
+	.string "An Evolutionary Stone!\n"
+	.string "Choose whichever one you'd like!$"

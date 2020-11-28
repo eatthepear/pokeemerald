@@ -58,10 +58,6 @@ Zone7A_EventScript_ItemTwistedSpoon::
 	finditem ITEM_TWISTED_SPOON
 	end
 
-Zone7A_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
-	end
-
 Zone7A_EventScript_ItemRockyHelmet::
 	finditem ITEM_ROCKY_HELMET
 	end

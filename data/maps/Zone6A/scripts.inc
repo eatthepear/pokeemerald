@@ -131,18 +131,22 @@ Zone6A_EventScript_ItemNetBall::
 	finditem ITEM_NET_BALL
 	end
 
-Zone6A_EventScript_Item1000::
+Zone6A_EventScript_Item2000::
 	lock
+	showmoneybox 0, 0, 0
+	addmoney 2000, 0
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone6A_Text_Found1000, MSGBOX_DEFAULT
+	msgbox Zone6A_Text_Found2000, MSGBOX_DEFAULT
+	updatemoneybox 0, 0
 	waitfanfare
-	setflag FLAG_ITEM_ZONE6A_1000
+	hidemoneybox
+	setflag FLAG_ITEM_ZONE6A_2000
 	removeobject 7
 	release
 	end
 
-Zone6A_Text_Found1000:
-	.string "Found ¥1000!$"
+Zone6A_Text_Found2000:
+	.string "Found ¥2000!$"
 
 Zone6A_EventScript_ItemNestBall::
 	finditem ITEM_NEST_BALL

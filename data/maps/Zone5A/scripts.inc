@@ -132,3 +132,20 @@ Zone5A_Text_Leviathan2Reward:
 Zone5A_EventScript_ItemQuickBall::
 	finditem ITEM_QUICK_BALL
 	end
+
+Zone5A_EventScript_Item1000::
+	lock
+	showmoneybox 0, 0, 0
+	addmoney 1000, 0
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone5A_Text_Found1000, MSGBOX_DEFAULT
+	updatemoneybox 0, 0
+	waitfanfare
+	hidemoneybox
+	setflag FLAG_ITEM_ZONE5A_1000
+	removeobject 7
+	release
+	end
+
+Zone5A_Text_Found1000:
+	.string "Found ¥1000!$"
