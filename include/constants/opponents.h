@@ -51,7 +51,7 @@
 #define TRAINER_CONRAD                           47
 #define TRAINER_LEVIATHAN5                       48
 #define TRAINER_JEANETTE                         49
-#define TRAINER_REGINALD                         50
+#define TRAINER_REGINA                           50
 #define TRAINER_EMMA_AND_LEO                     51
 #define TRAINER_JOEL                             52
 #define TRAINER_LEVIATHAN6                       53

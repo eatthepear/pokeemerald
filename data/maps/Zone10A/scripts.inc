@@ -4,12 +4,19 @@ Zone10A_MapScripts::
 Zone10A_EventScript_Adamina::
 	lock
 	faceplayer
+	call_if_set FLAG_ADAMINA_INTRO, Zone10A_EventScript_AdaminaIntro
+	msgbox Zone10A_Text_Explain, MSGBOX_AUTOCLOSE
 	checkitem ITEM_YELLOW_SHARD, 3
 	compare VAR_RESULT, TRUE
 	goto_if_eq Zone10A_EventScript_InitiateLeviathanBattle
 	msgbox Zone10A_Text_NoChance, MSGBOX_AUTOCLOSE
 	release
 	end
+
+Zone10A_EventScript_AdaminaIntro:
+	msgbox Zone10A_Text_NoChance, MSGBOX_AUTOCLOSE
+	setflag FLAG_ADAMINA_INTRO
+	return
 
 Zone10A_Text_NoChance:
 	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Nope.\n"
@@ -20,7 +27,9 @@ Zone10A_Text_NoChance:
 	.string "...\l"
 	.string "...\l"
 	.string "...\l"
-	.string "Fine.\p"
+	.string "Fine.$"
+
+Zone10A_Text_Explain:
 	.string "If you really want to get in,\n"
 	.string "you have to earn your place.\p"
 	.string "In the desert, there are 3 hidden\n"

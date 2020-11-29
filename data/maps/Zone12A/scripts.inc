@@ -7,6 +7,24 @@ Zone12A_EventScript_Exit::
 	releaseall
 	end
 
+Zone12A_EventScript_WallyDitto::
+	lock
+	faceplayer
+	playmoncry SPECIES_DITTO, 2
+	msgbox Zone12A_Text_Ditto, MSGBOX_AUTOCLOSE
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_DITTO, 15, ITEM_NONE
+	dowildbattle
+	removeobject 13
+	setflag FLAG_HIDE_ZONE12A_WALLYDITTO
+	release
+	end
+
+Zone12A_Text_Ditto:
+	.string "...\n"
+	.string "...Ditto?$"
+
 Zone12A_EventScript_EggWoman::
 	lock
 	faceplayer

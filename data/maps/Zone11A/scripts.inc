@@ -159,18 +159,18 @@ Zone11A_Text_JeanetteDefeat:
 Zone11A_Text_JeanettePostBattle:
 	.string "I'll see you another day.$"
 
-Zone11A_EventScript_Reginald::
-	trainerbattle_single TRAINER_REGINALD, Zone11A_Text_ReginaldIntro, Zone11A_Text_ReginaldDefeat
-	msgbox Zone11A_Text_ReginaldPostBattle, MSGBOX_AUTOCLOSE
+Zone11A_EventScript_Regina::
+	trainerbattle_single TRAINER_REGINA, Zone11A_Text_ReginaIntro, Zone11A_Text_ReginaDefeat
+	msgbox Zone11A_Text_ReginaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone11A_Text_ReginaldIntro:
+Zone11A_Text_ReginaIntro:
 	.string "Do you hear the call?$"
 
-Zone11A_Text_ReginaldDefeat:
+Zone11A_Text_ReginaDefeat:
 	.string "The spirits... I can hear their voices!$"
 
-Zone11A_Text_ReginaldPostBattle:
+Zone11A_Text_ReginaPostBattle:
 	.string "It might just be the wind whistling,\n"
 	.string "but I'm sure the voices are from the\l"
 	.string "beyond.$"

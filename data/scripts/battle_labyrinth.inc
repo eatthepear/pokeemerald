@@ -411,6 +411,11 @@ EventScript_WarpToZone0:
 	warpteleport MAP_ZONE0A, 255, 17, 10
 	end
 
+EventScript_WarpZone0::
+	lockall
+	warpteleport MAP_ZONE0D, 255, 2, 25
+	end
+
 EventScript_Advice:
 	msgbox gText_Colress_HeresAPieceofAdvice, MSGBOX_AUTOCLOSE
 	switch VAR_ADVICE

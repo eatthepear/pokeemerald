@@ -63,8 +63,8 @@
 #define FLAG_ZONE11A_CELEBI  0x33 // Fought Celebi in Zone 11
 #define FLAG_RECEIVED_ZONE12A_WYNAUT_EGG  0x34 // Received Wynaut egg in Zone 12A
 #define FLAG_DEFEATED_ALINTA_ZONE_13  0x35 // Defeat Alinta in Zone 13
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_ADAMINA_INTRO    0x36 // Unused Flag
+#define FLAG_HIDE_ZONE12A_WALLYDITTO    0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag

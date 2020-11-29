@@ -162,6 +162,8 @@ Zone0D_EventScript_WarpBack::
 	case 11, Zone0D_EventScript_WarpSanctuary10
 	switch VAR_ZONE
 	case 12, Zone0D_EventScript_WarpSanctuary11
+	switch VAR_ZONE
+	case 13, Zone0D_EventScript_WarpSanctuary12
 	end
 
 Zone0D_EventScript_WarpSanctuary10:
@@ -172,13 +174,32 @@ Zone0D_EventScript_WarpSanctuary11:
 	warpteleport MAP_ZONE11SANCTUARY, 255, 7, 7
 	end
 
-EventScript_WarpZone0::
-	lockall
-	warpteleport MAP_ZONE0D, 255, 2, 25
+Zone0D_EventScript_WarpSanctuary12:
+	warpteleport MAP_ZONE12SANCTUARY, 255, 7, 7
 	end
+
+Zone0D_EventScript_VerifyDestination:
+	msgbox Zone0D_Text_AreYouSure, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0D_EventScript_DecidedNot
+	return
+
+Zone0D_EventScript_DecidedNot:
+	msgbox Zone0D_Text_DecidedNot, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone0D_Text_AreYouSure:
+	.string "Are you sure you want to go to\n"
+	.string "{COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}?$"
+
+Zone0D_Text_DecidedNot:
+	.string "Decided not to warp.$"
 
 Zone0D_EventScript_WarpZONE1::
 	lockall
+	buffernumberstring 0, 1
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE1A, 255, 16, 28
 	end
 
