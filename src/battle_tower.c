@@ -1988,13 +1988,13 @@ static void HandleSpecialTrainerBattleEnd(void)
     case SPECIAL_BATTLE_EREADER:
         CopyEReaderTrainerFarewellMessage();
         break;
-    case SPECIAL_BATTLE_MULTI:
+    /*case SPECIAL_BATTLE_MULTI:
         for (i = 0; i < 3; i++)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES))
                 gSaveBlock1Ptr->playerParty[i] = gPlayerParty[i];
         }
-        break;
+        break;*/
     }
 
     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);

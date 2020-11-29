@@ -119,7 +119,9 @@ Zone8D_EventScript_InitiateLeviathan4:
 Zone8D_EventScript_BattleSetup:
 	msgbox gText_PleasePick3Mons, MSGBOX_AUTOCLOSE
 	special SavePlayerParty
-	choose_mons
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	waitstate
 	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_ShadowDefeat
 	compare VAR_RESULT, 0
 	goto_if_ne Zone8D_EventScript_LeviathanBattle
@@ -132,7 +134,7 @@ Zone8D_EventScript_LeviathanBattle:
 	special ReducePlayerPartyToSelectedMons
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
 	setvar VAR_0x8004, SPECIAL_BATTLE_MULTI
-	setvar VAR_0x8005, MULTI_BATTLE_2_VS_1
+	setvar VAR_0x8005, MULTI_BATTLE_2_VS_1 | MULTI_BATTLE_CHOOSE_MONS
 	setvar VAR_0x8006, TRAINER_ZONE8D_WALLY
 	setvar VAR_0x8007, TRAINER_BACK_PIC_WALLY
 	special DoSpecialTrainerBattle

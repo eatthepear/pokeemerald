@@ -163,7 +163,7 @@ Zone5A_EventScript_Item1000::
 	waitfanfare
 	hidemoneybox
 	setflag FLAG_ITEM_ZONE5A_1000
-	removeobject 7
+	removeobject 6
 	release
 	end
 
