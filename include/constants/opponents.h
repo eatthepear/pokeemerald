@@ -63,11 +63,11 @@
 #define TRAINER_KINLEY                           59
 #define TRAINER_JAN_AND_ERIN                     60
 #define TRAINER_AMBER_AND_KIM                    61
-#define TRAINER_ALINTA                           62
-#define TRAINER_BART                             63
-#define TRAINER_LOLA                             64
-#define TRAINER_TODD                             65
-#define TRAINER_CHARLIE                      66
+#define TRAINER_BART                             62
+#define TRAINER_LOLA                             63
+#define TRAINER_TODD                             64
+#define TRAINER_CHARLIE                          65
+#define TRAINER_LEVIATHAN7                       66
 #define TRAINER_RICKY_2                      67
 #define TRAINER_RICKY_3                      68
 #define TRAINER_RICKY_4                      69
