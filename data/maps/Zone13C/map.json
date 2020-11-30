@@ -2,7 +2,7 @@
   "id": "MAP_ZONE13C",
   "name": "Zone13C",
   "layout": "LAYOUT_ZONE13C",
-  "music": "MUS_RG_POKE_MANSION",
+  "music": "MUS_OCEANIC_MUSEUM",
   "region_map_section": "MAPSEC_ZONE_13",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

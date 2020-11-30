@@ -4984,8 +4984,8 @@
     {
       "id": "LAYOUT_ZONE13A",
       "name": "Zone13A_Layout",
-      "width": 60,
-      "height": 46,
+      "width": 40,
+      "height": 43,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone13A/border.bin",
@@ -5010,6 +5010,36 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/Zone13C/border.bin",
       "blockdata_filepath": "data/layouts/Zone13C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE14A",
+      "name": "Zone14A_Layout",
+      "width": 30,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone14A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone14A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE14B",
+      "name": "Zone14B_Layout",
+      "width": 40,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone14B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone14B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE14C",
+      "name": "Zone14C_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone14C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone14C/map.bin"
     }
   ]
 }

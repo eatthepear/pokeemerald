@@ -12,56 +12,12 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "direction": "down",
-      "offset": 0,
-      "map": "MAP_ZONE13A"
-    },
-    {
-      "direction": "left",
-      "offset": 23,
-      "map": "MAP_ZONE13A"
-    },
-    {
-      "direction": "up",
-      "offset": 0,
-      "map": "MAP_ZONE13A"
-    },
-    {
-      "direction": "right",
-      "offset": 23,
-      "map": "MAP_ZONE13A"
-    },
-    {
-      "direction": "left",
-      "offset": -23,
-      "map": "MAP_ZONE13A"
-    },
-    {
-      "direction": "right",
-      "offset": -23,
-      "map": "MAP_ZONE13A"
-    }
-  ],
+  "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
-      "x": 28,
-      "y": 19,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone13A_EventScript_Alinta",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "x": 6,
-      "y": 8,
+      "x": 10,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -73,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 7,
-      "y": 8,
+      "x": 11,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -86,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 40,
-      "y": 36,
+      "x": 27,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -99,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 41,
-      "y": 36,
+      "x": 28,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -113,8 +69,8 @@
   ],
   "warp_events": [
     {
-      "x": 29,
-      "y": 18,
+      "x": 23,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ZONE13B",
       "dest_warp_id": 0

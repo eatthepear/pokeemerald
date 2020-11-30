@@ -957,17 +957,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_EmmaAndLeo[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Joel[] = {
     {
     .iv = 50,
-    .lvl = 16,
+    .lvl = 15,
     .species = SPECIES_MEOWTH,
     },
     {
     .iv = 50,
-    .lvl = 16,
+    .lvl = 15,
     .species = SPECIES_COTTONEE,
     },
     {
     .iv = 50,
-    .lvl = 16,
+    .lvl = 15,
     .species = SPECIES_SPINARAK,
     },
     {
