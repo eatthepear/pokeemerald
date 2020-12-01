@@ -262,6 +262,7 @@ Zone8D_EventScript_Conclusion:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement 4, Common_Movement_WalkUp
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown

@@ -65,8 +65,8 @@
 #define FLAG_DEFEATED_ALINTA_ZONE_13  0x35 // Defeat Alinta in Zone 13
 #define FLAG_ADAMINA_INTRO    0x36 // Unused Flag
 #define FLAG_HIDE_ZONE12A_WALLYDITTO    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
+#define FLAG_ZONE13B_RECEIVED_FLASHLIGHT    0x38 // Unused Flag
+#define FLAG_NUZLOCKE_FOSSIL_RECEIVED    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
@@ -106,7 +106,7 @@
 #define FLAG_BEATLEVIATHAN4                  0x5A
 #define FLAG_BEATLEVIATHAN5                  0x5B
 #define FLAG_BEATLEVIATHAN6                  0x5C
-#define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
+#define FLAG_BEATLEVIATHAN7                  0x5D
 #define FLAG_RECEIVED_WAILMER_PAIL           0x5E
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
@@ -1564,7 +1564,7 @@
 // These flags are cleared once per day
 // The start and end are byte-aligned because the flags are cleared in byte increments
 #define DAILY_FLAGS_START                           (FLAG_UNUSED_0x91F + (8 - FLAG_UNUSED_0x91F % 8))
-#define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
+#define FLAG_DAILY_FOSSIL_RECEIVED                  (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
 #define FLAG_UNUSED_0x923                           (DAILY_FLAGS_START + 0x3)  // Unused Flag
