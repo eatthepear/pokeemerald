@@ -372,18 +372,331 @@ Zone10B_EventScript_BerryEnd:
 	release
 	end
 
+
+
+
 Zone10B_EventScript_FossilScientist::
 	lock
 	faceplayer
-	msgbox Zone10B_Text_Fossils, MSGBOX_AUTOCLOSE
+	setvar VAR_TEMP_2, 0
+	checkitem ITEM_HELIX_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveOmanyte
+	checkitem ITEM_DOME_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveKabuto
+	checkitem ITEM_OLD_AMBER, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveAerodactyl
+	checkitem ITEM_ROOT_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveLileep
+	checkitem ITEM_CLAW_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveAnorith
+	checkitem ITEM_SKULL_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveCranidos
+	checkitem ITEM_ARMOR_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveShieldon
+	checkitem ITEM_COVER_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveTirtouga
+	checkitem ITEM_PLUME_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveArchen
+	checkitem ITEM_JAW_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveTyrunt
+	checkitem ITEM_SAIL_FOSSIL, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_GiveAmaura
+	msgbox Zone10B_Text_NoFossils, MSGBOX_AUTOCLOSE
+	goto Zone10B_EventScript_FossilDone
+	end
+
+Zone10B_EventScript_GiveOmanyte:
+	bufferitemname 0, ITEM_HELIX_FOSSIL
+	bufferspeciesname 1, SPECIES_OMANYTE
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_HELIX_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_OMANYTE, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_OMANYTE
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveKabuto:
+	bufferitemname 0, ITEM_DOME_FOSSIL
+	bufferspeciesname 1, SPECIES_KABUTO
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_DOME_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_KABUTO, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_KABUTO
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveAerodactyl:
+	bufferitemname 0, ITEM_OLD_AMBER
+	bufferspeciesname 1, SPECIES_AERODACTYL
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_OLD_AMBER
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_AERODACTYL, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_AERODACTYL
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveLileep:
+	bufferitemname 0, ITEM_ROOT_FOSSIL
+	bufferspeciesname 1, SPECIES_LILEEP
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_ROOT_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_LILEEP, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_LILEEP
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveAnorith:
+	bufferitemname 0, ITEM_CLAW_FOSSIL
+	bufferspeciesname 1, SPECIES_ANORITH
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_CLAW_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_ANORITH, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_ANORITH
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveCranidos:
+	bufferitemname 0, ITEM_SKULL_FOSSIL
+	bufferspeciesname 1, SPECIES_CRANIDOS
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_SKULL_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_CRANIDOS, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_CRANIDOS
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveShieldon:
+	bufferitemname 0, ITEM_ARMOR_FOSSIL
+	bufferspeciesname 1, SPECIES_SHIELDON
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_ARMOR_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_SHIELDON, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_SHIELDON
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveTirtouga:
+	bufferitemname 0, ITEM_COVER_FOSSIL
+	bufferspeciesname 1, SPECIES_TIRTOUGA
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_COVER_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_TIRTOUGA, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_TIRTOUGA
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveArchen:
+	bufferitemname 0, ITEM_PLUME_FOSSIL
+	bufferspeciesname 1, SPECIES_ARCHEN
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_PLUME_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_ARCHEN, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_ARCHEN
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveTyrunt:
+	bufferitemname 0, ITEM_JAW_FOSSIL
+	bufferspeciesname 1, SPECIES_TYRUNT
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_JAW_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_TYRUNT, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_TYRUNT
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_GiveAmaura:
+	bufferitemname 0, ITEM_SAIL_FOSSIL
+	bufferspeciesname 1, SPECIES_AMAURA
+	call Zone10B_EventScript_CommonFossilIntro
+	removeitem ITEM_SAIL_FOSSIL
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	call_if_eq Zone10B_EventScript_SetupPC
+	compare VAR_TEMP_2, 0
+	call_if_eq Zone10B_EventScript_SetupParty
+	givemon SPECIES_AMAURA, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_AMAURA
+	call Zone10B_EventScript_ReceivedFossilMonFanfare
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_SendFossilMonParty
+	end
+
+Zone10B_EventScript_SetupPC:
+	setvar VAR_TEMP_2, 1
+	return
+
+Zone10B_EventScript_SetupParty:
+	setvar VAR_TEMP_2, 2
+	return
+
+Zone10B_EventScript_SendFossilMonParty:
+	msgbox Zone10B_Text_GiveNickname, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone10B_EventScript_FossilDone
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Zone10B_EventScript_FossilDone
+	end
+
+Zone10B_EventScript_SendFossilMonPC:
+	msgbox Zone10B_Text_GiveNickname, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone10B_EventScript_FossilMonTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Zone10B_EventScript_FossilMonTransferredToPC
+	end
+
+Zone10B_EventScript_FossilMonTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Zone10B_EventScript_FossilDone
+	end
+
+Zone10B_EventScript_ReceivedFossilMonFanfare:
+	playfanfare MUS_OBTAIN_ITEM
+	message Zone10B_Text_ReceivedFossilMon
+	waitmessage
+	waitfanfare
+	return
+
+Zone10B_Text_ReceivedFossilMon:
+	.string "Received the Fossil Pokémon {STR_VAR_2}!$"
+
+Zone10B_Text_GiveNickname:
+	.string "You want to give it a nickname?$"
+
+Zone10B_EventScript_CommonFossilIntro:
+	applymovement 6, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	msgbox Zone10B_Text_WantReviveFossil, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone10B_EventScript_FossilDone
+	msgbox Zone10B_Text_GimmeMoment, MSGBOX_AUTOCLOSE
+	applymovement 6, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 192
+	faceplayer
+	msgbox Zone10B_Text_HerePokemon, MSGBOX_AUTOCLOSE
+	return
+
+Zone10B_Text_GimmeMoment:
+	.string "Alright. Gimme a moment...$"
+
+Zone10B_Text_HerePokemon:
+	.string "There. Here's your Pokémon.$"
+
+Zone10B_Text_WantReviveFossil:
+	.string "Hmm? What do you want?\p"
+	.string "Oh, gotcha.\p"
+	.string "You want me to turn that\n"
+	.string "{STR_VAR_1} back into a Pokémon?$"
+
+Zone10B_Text_NoFossils:
+	.string "You got fossils? No?$"
+	
+Zone10B_Text_BackToDrink:
+	.string "Ok, back to my drink.$"
+
+Zone10B_EventScript_FossilDone:
+	msgbox Zone10B_Text_BackToDrink, MSGBOX_AUTOCLOSE
 	applymovement 6, Common_Movement_FaceLeft
 	waitmovement 0
 	release
 	end
-
-Zone10B_Text_Fossils:
-	.string "You got fossils?\n"
-	.string "No? Ok, back to my drink.$"
 
 Zone10B_EventScript_WaterMerchant::
 	lock
@@ -401,14 +714,14 @@ Zone10B_EventScript_WaterMerchant::
 Zone10B_Text_WaterOffer:
 	.string "In the desert, it's supply and\n"
 	.string "demand. And the demand is water.\p"
-	.string "For you only: 500 for one Fresh\n"
+	.string "For you only: 200 for one Fresh\n"
 	.string "Water. Want it or not?$"
 
 Zone10B_Text_NoWater:
 	.string "Ah, fine.$"
 
 Zone10B_EventScript_WaterCheckMoney:
-	checkmoney 500, 0
+	checkmoney 200, 0
 	compare VAR_RESULT, FALSE
 	goto_if_eq Zone10B_EventScript_WaterNotEnough
 	goto Zone10B_EventScript_BuyWater
@@ -424,7 +737,7 @@ Zone10B_Text_NotEnough:
 	.string "You don't have enough money.$"
 
 Zone10B_EventScript_BuyWater:
-	removemoney 500, 0
+	removemoney 200, 0
 	updatemoneybox 0, 0
 	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FRESH_WATER, 1
