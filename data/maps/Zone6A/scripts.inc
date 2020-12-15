@@ -187,5 +187,7 @@ Zone6A_Text_Rita_HereReward:
 	.string "friends with your Pokémon partners.$"
 
 Zone6A_Text_Rita_GoodLuck:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Best of luck in the rest of\n"
-	.string "your travels.$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Did you know Pokémon\n"
+	.string "no longer evolve by Friendship?\p"
+	.string "That's right, no need to walk around\n"
+	.string "for ages just to evolve them.$"
