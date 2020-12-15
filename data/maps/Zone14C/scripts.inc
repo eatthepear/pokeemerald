@@ -58,6 +58,7 @@ Zone14C_EventScript_RightMost::
 	end
 
 Zone14C_EventScript_InitiateLeviathanBattle:
+	call EventScript_BeforeLeviathanHeal
 	msgbox Zone14C_Text_Shadow_Registeel, MSGBOX_AUTOCLOSE
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark

@@ -348,7 +348,7 @@ gText_Joy_Intro:
 gText_Joy_Welcome:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Welcome to Joy's Healing Shop.\p"
 	.string "We heal your Pokemon for a flat\n"
-	.string "¥500 fee, which also comes with\l"
+	.string "¥1000 fee, which also comes with\l"
 	.string "complimentary access to the PC.$"
 
 gText_Joy_Nuzlocke:
@@ -362,7 +362,7 @@ gText_Joy_NotEnough:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: You don't have enough money.$"
 
 gText_Joy_ThankYou:
-	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: That will be ¥500, thank you…$"
+	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: That will be ¥1000, thank you…$"
 
 gText_Joy_PartyHealed:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GREY}: Your party has been restored.\n"
@@ -374,6 +374,10 @@ gText_Joy_WonderfulDay:
 gText_ExitSign:
 	.string "This is the exit!\n"
 	.string "If you leave, you can't come back.$"
+
+gText_SoothingLight:
+	.string "A soothing light washes over your party,\n"
+	.string "healing them.$"
 
 gText_NotEnoughMons:
 	.string "You need at least two Pokémon to\n"

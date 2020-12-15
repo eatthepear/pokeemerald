@@ -42,6 +42,7 @@ Zone11A_Text_LeviathanIThoughtSo:
 
 Zone11A_EventScript_BeginLeviathanBattle:
 	fadeoutbgm 1
+	call EventScript_BeforeLeviathanHeal
 	msgbox Zone11A_Text_LeviathanIntro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_LEVIATHAN6, Zone11A_Text_Leviathan6Defeat
 	goto Zone11A_EventScript_Leviathan6Defeated

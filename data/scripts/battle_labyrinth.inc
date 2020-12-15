@@ -336,7 +336,7 @@ EventScript_Joy_Nuzlocke:
 	return
 
 EventScript_Joy_CheckMoney:
-	checkmoney 500, 0
+	checkmoney 1000, 0
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Joy_NotEnough
 	goto EventScript_Joy_Heal
@@ -350,7 +350,7 @@ EventScript_Joy_NotEnough:
 	end
 
 EventScript_Joy_Heal:
-	removemoney 500, 0
+	removemoney 1000, 0
 	updatemoneybox 0, 0
 	msgbox gText_Joy_ThankYou, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
@@ -374,6 +374,14 @@ EventScript_DeleteFaintedPartyPokemon:
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
+
+EventScript_BeforeLeviathanHeal:
+	fadescreen FADE_TO_WHITE
+	msgbox gText_SoothingLight, MSGBOX_AUTOCLOSE
+	fadescreen FADE_FROM_WHITE
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
+	return
 
 EventScript_LeaveLeft:
 	applymovement 1, Common_Movement_WalkRight

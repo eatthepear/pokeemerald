@@ -802,7 +802,7 @@ Zone0Sanctuary_Text_Colress_Services:
 Zone0Sanctuary_Text_Colress_Healing:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom right shop is\n"
 	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GREY}.\p"
-	.string "For ¥500, they will heal your\n"
+	.string "For ¥1000, they will heal your\n"
 	.string "entire party and also grant\l"
 	.string "complimentary access to the\l"
 	.string "Pokémon Storage System.$"

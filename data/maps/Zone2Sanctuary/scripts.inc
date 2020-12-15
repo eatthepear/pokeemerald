@@ -73,7 +73,9 @@ Zone2Sanctuary_Text_Colress_ExplainLeviathans:
 	.string "Defeating a Leviathan yields\n"
 	.string "great rewards.\p"
 	.string "However, typically you will not be\n"
-	.string "warned of them in advance.$"
+	.string "warned of them in advance.p"
+	.string "Before each Leviathan fight,\n"
+	.string "your party will be fully healed.$"
 
 Zone2Sanctuary_Text_Reward:
 	.string "TM01 - Protect!$"

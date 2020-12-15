@@ -53,6 +53,7 @@ Zone6A_EventScript_RitaSaysNo:
 	end
 
 Zone6A_EventScript_RitaBattle:
+	call EventScript_BeforeLeviathanHeal
 	msgbox Zone6A_Text_Rita_IWillWin, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
 	goto Zone6A_EventScript_Leviathan3Defeated
