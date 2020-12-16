@@ -649,7 +649,10 @@
     "Zone13C",
     "Zone14A",
     "Zone14B",
-    "Zone14C"
+    "Zone14C",
+    "Zone14Sanctuary",
+    "Zone14Shops",
+    "Zone15A"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"
