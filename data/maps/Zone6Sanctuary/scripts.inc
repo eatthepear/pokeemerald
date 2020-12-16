@@ -81,7 +81,6 @@ Zone6Sanctuary_Text_Colress_ReadyToLeave:
 	.string "You will be entering\l"
 	.string "{COLOR RED}Zone 7{COLOR DARK_GREY} and {COLOR RED}Zone 8{COLOR DARK_GREY}.$"
 
-
 Zone6Sanctuary_Text_Reward:
 	.string "TM02 - Return.$"
 
