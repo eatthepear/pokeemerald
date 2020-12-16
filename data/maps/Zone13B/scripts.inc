@@ -15,7 +15,7 @@ Zone13B_EventScript_GiveFlash::
 	faceplayer
 	goto_if_set FLAG_ZONE13B_RECEIVED_FLASHLIGHT, Zone13B_EventScript_UseFlash
 	msgbox Zone13B_Text_NeedFlashlight, MSGBOX_AUTOCLOSE
-	@ giveitem ITEM_FLASHLIGHT
+	giveitem ITEM_FLASHLIGHT
 	setflag FLAG_ZONE13B_RECEIVED_FLASHLIGHT
 	applymovement 1, Common_Movement_WalkLeft
 	waitmovement 0

@@ -1837,10 +1837,10 @@ static const u8 sMacheteDesc[] = _(
     "to cut through\n"
     "vegetation.");
 
-static const u8 sSecretKeyDesc[] = _(
-    "The key to the\n"
-    "CINNABAR ISLAND\n"
-    "GYM's entrance.");
+static const u8 sFlashlightDesc[] = _(
+    "An electric device\n"
+    "that lights up\n"
+    "dark places.");
 
 static const u8 sBikeVoucherDesc[] = _(
     "A voucher for\n"

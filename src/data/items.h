@@ -4897,12 +4897,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_SECRET_KEY] =
+    [ITEM_FLASHLIGHT] =
     {
-        .name = _("Secret Key"),
-        .itemId = ITEM_SECRET_KEY,
+        .name = _("Flashlight"),
+        .itemId = ITEM_FLASHLIGHT,
         .price = 0,
-        .description = sSecretKeyDesc,
+        .description = sFlashlightDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
