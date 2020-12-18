@@ -17,7 +17,18 @@ Zone13B_EventScript_GiveFlash::
 	msgbox Zone13B_Text_NeedFlashlight, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FLASHLIGHT
 	setflag FLAG_ZONE13B_RECEIVED_FLASHLIGHT
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 18
+	goto_if_eq Zone13B_EventScript_FlashWalkRight
 	applymovement 1, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+Zone13B_EventScript_FlashWalkRight:
+	applymovement 1, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0

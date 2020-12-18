@@ -135,12 +135,11 @@ Zone13C_Text_KeizanPsychic_LikeHome:
 
 Zone13C_EventScript_Fossil_Scientist::
 	lock
+	faceplayer
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_VanillaReceived
-	delay 48
-	applymovement 1, Common_Movement_ExclamationMark
+	applymovement 3, Common_Movement_ExclamationMark
 	waitmovement 0
-	faceplayer
 	msgbox Zone13C_Text_Fossil_YouGetAFossil, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_SetNuzlockeFossilFlag
 	setflag FLAG_DAILY_FOSSIL_RECEIVED
@@ -181,7 +180,6 @@ Zone13C_Text_Fossil_YouGetAFossil:
 	.string "Everybody gets a Fossil!$"
 
 Zone13C_EventScript_Fossil_VanillaReceived:
-	faceplayer
 	msgbox Zone13C_Text_Fossil_VanillaReceived, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -191,7 +189,6 @@ Zone13C_Text_Fossil_VanillaReceived:
 	.string "Come back tomorrow for another!$"
 
 Zone13C_EventScript_Fossil_NuzlockeReceived:
-	faceplayer
 	msgbox Zone13C_Text_Fossil_NuzlockeReceived, MSGBOX_AUTOCLOSE
 	release
 	end
