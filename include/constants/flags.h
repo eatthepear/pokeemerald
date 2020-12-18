@@ -67,8 +67,8 @@
 #define FLAG_HIDE_ZONE12A_WALLYDITTO    0x37 // Unused Flag
 #define FLAG_ZONE13B_RECEIVED_FLASHLIGHT    0x38 // Unused Flag
 #define FLAG_NUZLOCKE_FOSSIL_RECEIVED    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
+#define FLAG_HIDE_LEVIATHAN7    0x3A // Unused Flag
+#define FLAG_HIDE_LEVIATHAN8    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
@@ -107,7 +107,7 @@
 #define FLAG_BEATLEVIATHAN5                  0x5B
 #define FLAG_BEATLEVIATHAN6                  0x5C
 #define FLAG_BEATLEVIATHAN7                  0x5D
-#define FLAG_RECEIVED_WAILMER_PAIL           0x5E
+#define FLAG_BEATLEVIATHAN8                  0x5E
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61

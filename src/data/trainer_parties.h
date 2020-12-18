@@ -859,7 +859,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Conrad[] = {
     {
     .iv = 0,
     .lvl = 14,
-    .species = SPECIES_SAWK,
+    .species = SPECIES_THROH,
     },
     {
     .iv = 0,
@@ -1007,16 +1007,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dolores[] = {
     .iv = 50,
     .lvl = 17,
     .species = SPECIES_MAGBY,
-    },
-    {
-    .iv = 50,
-    .lvl = 17,
-    .species = SPECIES_CHIKORITA,
-    },
-    {
-    .iv = 50,
-    .lvl = 17,
-    .species = SPECIES_BULBASAUR,
     }
 };
 
@@ -1080,7 +1070,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Hilda[] = {
     {
     .iv = 50,
     .lvl = 17,
-    .species = SPECIES_ZORUA,
+    .species = SPECIES_WISHIWASHI,
     },
     {
     .iv = 50,
@@ -1168,6 +1158,54 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AmberAndKim[] = {
     .iv = 50,
     .lvl = 18,
     .species = SPECIES_CORPHISH,
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_KaizenBulkUp[] = {
+    {
+    .iv = 200,
+    .lvl = 19,
+    .species = SPECIES_SNUBBULL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BULK_UP, MOVE_COVET, MOVE_ROAR, MOVE_BITE}
+    },
+    {
+    .iv = 200,
+    .lvl = 19,
+    .species = SPECIES_VIGOROTH,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BULK_UP, MOVE_SLASH, MOVE_UPROAR, MOVE_FURY_SWIPES}
+    },
+    {
+    .iv = 200,
+    .lvl = 19,
+    .species = SPECIES_SAWK,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BULK_UP, MOVE_COUNTER, MOVE_BRICK_BREAK, MOVE_ROCK_TOMB}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_KaizenCalmMind[] = {
+    {
+    .iv = 200,
+    .lvl = 19,
+    .species = SPECIES_ZORUA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CALM_MIND, MOVE_SNARL, MOVE_SCRATCH, MOVE_TAUNT}
+    },
+    {
+    .iv = 200,
+    .lvl = 19,
+    .species = SPECIES_FLOETTE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CALM_MIND, MOVE_DRAINING_KISS, MOVE_MEGA_DRAIN, MOVE_LUCKY_CHANT}
+    },
+    {
+    .iv = 200,
+    .lvl = 19,
+    .species = SPECIES_CHIMECHO,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CALM_MIND, MOVE_CONFUSION, MOVE_RECOVER, MOVE_YAWN}
     }
 };
 
@@ -1264,49 +1302,31 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Charlie[] = {
 static const struct TrainerMonItemCustomMoves sParty_Zone14CShadow[] = {
     {
     .iv = 200,
-    .lvl = 20,
+    .lvl = 21,
     .species = SPECIES_VULPIX,
-    .heldItem = ITEM_HEAT_ROCK,
+    .heldItem = ITEM_CHARCOAL,
     .moves = {MOVE_INCINERATE, MOVE_DISARMING_VOICE, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY}
-    },
-    {
-    .iv = 200,
-    .lvl = 20,
-    .species = SPECIES_CASTFORM,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_WEATHER_BALL, MOVE_HEADBUTT, MOVE_SUNNY_DAY, MOVE_TACKLE}
-    },
-    {
-    .iv = 200,
-    .lvl = 20,
-    .species = SPECIES_HELIOPTILE,
-    .heldItem = ITEM_MAGNET,
-    .moves = {MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_GRASS_KNOT, MOVE_SUNNY_DAY}
     },
     {
     .iv = 200,
     .lvl = 21,
     .species = SPECIES_SUNFLORA,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_MEGA_DRAIN, MOVE_GROWTH, MOVE_LEECH_SEED, MOVE_SUNNY_DAY}
-    }
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky2[] = {
+    .moves = {MOVE_MEGA_DRAIN, MOVE_GROWTH, MOVE_SUNNY_DAY, MOVE_PROTECT}
+    },
     {
-    .iv = 10,
-    .lvl = 27,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
-    }
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky3[] = {
+    .iv = 200,
+    .lvl = 21,
+    .species = SPECIES_HELIOPTILE,
+    .heldItem = ITEM_MAGNET,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_SUNNY_DAY, MOVE_PROTECT}
+    },
     {
-    .iv = 20,
-    .lvl = 30,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
+    .iv = 200,
+    .lvl = 21,
+    .species = SPECIES_CASTFORM,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_WEATHER_BALL, MOVE_HEADBUTT, MOVE_SUNNY_DAY, MOVE_PROTECT}
     }
 };
 
