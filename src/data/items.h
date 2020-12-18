@@ -4219,10 +4219,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM09_BULLET_SEED] =
+    [ITEM_TM09_CALM_MIND] =
     {
         .name = _("TM09"),
-        .itemId = ITEM_TM09_BULLET_SEED,
+        .itemId = ITEM_TM09_CALM_MIND,
         .price = 3000,
         .description = sTM09Desc,
         .pocket = POCKET_TM_HM,

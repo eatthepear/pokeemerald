@@ -21,7 +21,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -39,7 +38,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -57,7 +55,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -634,7 +631,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -663,7 +660,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -708,7 +705,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -823,7 +820,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -839,7 +835,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -855,7 +850,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -876,7 +870,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -897,7 +890,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1035,7 +1027,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1056,7 +1048,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1222,7 +1214,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -1243,7 +1235,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1265,7 +1257,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -1352,7 +1344,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -1369,7 +1360,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -1386,7 +1376,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -1531,7 +1520,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -1560,7 +1549,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -1861,7 +1850,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -1883,7 +1872,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -1975,7 +1964,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -1995,7 +1983,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -2216,7 +2203,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -2247,7 +2234,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -2404,7 +2390,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -2451,7 +2437,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -2978,7 +2964,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -3015,8 +3001,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
@@ -3052,7 +3037,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3069,7 +3053,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3086,7 +3069,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -3544,7 +3526,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3567,7 +3549,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3638,7 +3620,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3698,7 +3679,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -3735,7 +3716,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3751,7 +3731,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3767,7 +3746,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3805,7 +3783,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3822,7 +3799,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -3903,7 +3879,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -3943,7 +3919,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -3962,7 +3938,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -3990,7 +3966,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -4014,7 +3990,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4077,7 +4053,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -4249,7 +4225,6 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -4269,7 +4244,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -4409,7 +4384,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -4435,7 +4410,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -4456,7 +4430,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -4496,7 +4469,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4633,7 +4605,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4697,7 +4669,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -4779,7 +4751,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4807,7 +4779,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_RAIKOU]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -4827,7 +4799,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_ENTEI]       = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -4848,7 +4820,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -4933,7 +4905,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4962,7 +4934,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -4990,7 +4962,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -5016,7 +4988,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5035,7 +5006,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5054,7 +5024,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
@@ -5309,7 +5278,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -5330,7 +5298,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -5351,7 +5318,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -5370,7 +5336,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5389,7 +5354,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5410,7 +5374,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5495,7 +5458,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -5517,7 +5480,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -5539,7 +5502,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -5599,7 +5562,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -5619,7 +5581,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -5902,7 +5863,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5924,7 +5885,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -5949,7 +5910,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -6054,7 +6015,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -6074,7 +6035,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -6199,7 +6160,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -6216,7 +6176,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -6235,7 +6194,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -6382,7 +6340,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -6404,7 +6362,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -6428,7 +6386,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -6508,7 +6466,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -6524,7 +6481,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -6627,7 +6583,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -6649,7 +6605,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -6751,7 +6707,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -6775,7 +6731,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -6801,7 +6757,6 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -6818,7 +6773,6 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -6955,7 +6909,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -6975,7 +6929,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -6997,7 +6951,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -7019,7 +6973,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -7040,7 +6994,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -7058,7 +7011,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -7082,7 +7035,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -7249,7 +7202,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -7448,7 +7401,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -7477,7 +7430,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -7507,7 +7460,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -7579,7 +7532,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -7604,7 +7557,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -7629,7 +7582,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -7646,7 +7598,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -7664,7 +7615,6 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -7726,7 +7676,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -7959,7 +7909,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -7977,7 +7926,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -8092,7 +8040,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -8206,7 +8153,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -8221,7 +8167,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -8297,7 +8242,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8316,7 +8261,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8376,7 +8321,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8398,7 +8343,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8457,7 +8402,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8516,7 +8461,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -8538,7 +8483,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -8565,7 +8510,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -8582,7 +8527,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8643,7 +8588,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -8771,7 +8716,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -8904,7 +8849,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -8971,7 +8915,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -8993,7 +8936,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -9018,7 +8960,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -9113,7 +9055,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -9222,7 +9163,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -9328,7 +9268,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -9372,7 +9312,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -9431,7 +9371,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_UXIE]        = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -9456,7 +9396,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -9479,7 +9419,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_AZELF]       = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -9593,7 +9533,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -9615,7 +9555,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -9654,7 +9594,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -9680,7 +9620,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -9701,7 +9641,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
-                                            | TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -9721,8 +9660,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -9777,7 +9715,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -9796,7 +9734,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -9815,7 +9753,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -9943,7 +9881,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -10075,7 +10012,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -10188,7 +10124,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -10207,7 +10143,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -10343,7 +10279,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -10365,7 +10301,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -10423,7 +10359,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -10583,7 +10519,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -10599,7 +10535,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -10616,7 +10552,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -10860,7 +10796,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -10951,7 +10886,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -10974,7 +10909,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -10992,7 +10927,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11119,7 +11054,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -11138,7 +11073,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -11159,7 +11094,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -11177,8 +11112,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -11200,7 +11134,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11223,7 +11157,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11247,7 +11181,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11269,7 +11203,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11290,7 +11224,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11311,7 +11245,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11562,7 +11496,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -11612,7 +11546,6 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_FERROSEED]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -11720,7 +11653,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11743,7 +11676,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -11766,7 +11699,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -11785,7 +11718,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -11804,7 +11737,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -11985,7 +11918,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -12004,7 +11937,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -12285,7 +12218,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LARVESTA]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -12304,7 +12237,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -12324,7 +12257,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -12340,7 +12273,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -12356,7 +12289,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -12457,7 +12390,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -12498,7 +12431,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -12516,7 +12449,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -12666,7 +12599,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -12846,7 +12779,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -12903,7 +12836,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -12921,7 +12854,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -12939,7 +12872,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -13058,7 +12991,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -13079,7 +13012,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13148,7 +13081,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -13167,7 +13100,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -13189,7 +13122,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM35_FLAMETHROWER)
@@ -13210,7 +13143,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM35_FLAMETHROWER)
@@ -13232,7 +13165,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM35_FLAMETHROWER)
@@ -13253,7 +13186,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM35_FLAMETHROWER)
@@ -13462,7 +13395,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -13484,7 +13417,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -13508,7 +13441,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -13565,7 +13498,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -13638,7 +13571,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -13677,7 +13610,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -13700,7 +13633,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -13723,7 +13655,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -13822,7 +13753,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_XERNEAS]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -13877,7 +13808,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -13899,7 +13830,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -14095,7 +14026,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM10_HIDDEN_POWER)
 											| TMHM(TM07_REST)
@@ -14110,7 +14040,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM10_HIDDEN_POWER)
 											| TMHM(TM07_REST)
@@ -14125,7 +14054,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM10_HIDDEN_POWER)
 											| TMHM(TM07_REST)
@@ -14249,7 +14177,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -14266,7 +14194,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -14286,7 +14214,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -14623,7 +14551,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -14641,7 +14569,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -14802,7 +14730,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -14823,7 +14751,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -14894,7 +14822,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -14914,7 +14842,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -15019,7 +14947,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15037,7 +14965,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15059,7 +14987,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15075,7 +15003,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15097,7 +15025,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -15121,7 +15049,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15186,7 +15114,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_XURKITREE]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15221,7 +15149,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM19_GIGA_DRAIN)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15253,7 +15181,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -15270,7 +15198,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM10_HIDDEN_POWER)
 											| TMHM(TM15_HYPER_BEAM)
@@ -15288,7 +15216,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15345,7 +15273,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
-                                            | TMHM(TM46_THIEF) //calm mind
+                                            | TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -15365,7 +15293,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -15419,7 +15347,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM15_HYPER_BEAM)
@@ -15476,7 +15404,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM14_BLIZZARD)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM15_HYPER_BEAM)
@@ -15981,7 +15909,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -16008,7 +15936,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -16035,7 +15963,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -16166,7 +16094,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16188,7 +16116,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
-                                            | TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -16208,8 +16135,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16244,8 +16170,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16280,8 +16205,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16316,8 +16240,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16352,8 +16275,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16388,8 +16310,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16424,8 +16345,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16460,8 +16380,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16496,8 +16415,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16532,8 +16450,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16568,8 +16485,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16604,8 +16520,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16640,8 +16555,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16676,8 +16590,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16712,8 +16625,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16748,8 +16660,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16784,8 +16695,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM14_BLIZZARD)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM09_BULLET_SEED)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM27_RETURN) //dragon claw
 											| TMHM(TM26_EARTHQUAKE)
@@ -16976,7 +16886,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM45_ATTRACT)
 											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM08_BULK_UP)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
@@ -17040,7 +16950,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM44_HAIL)
@@ -17163,7 +17073,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17184,7 +17094,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17205,7 +17115,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17226,7 +17136,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17247,7 +17157,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17268,7 +17178,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17289,7 +17199,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17310,7 +17220,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17331,7 +17241,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17352,7 +17262,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17373,7 +17283,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17394,7 +17304,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17415,7 +17325,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17436,7 +17346,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17457,7 +17367,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17478,7 +17388,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17499,7 +17409,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17520,7 +17430,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17541,7 +17451,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17561,7 +17471,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17579,7 +17489,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17597,7 +17507,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17615,7 +17525,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17633,7 +17543,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17651,7 +17561,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17669,7 +17579,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17687,7 +17597,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17705,7 +17615,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17723,7 +17633,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17743,7 +17653,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17763,7 +17673,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17783,7 +17693,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM19_GIGA_DRAIN)
@@ -17929,7 +17839,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM28_DIG)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
@@ -17953,7 +17863,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -17976,7 +17885,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -17999,7 +17907,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -18022,7 +17929,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -18046,7 +17952,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -18070,7 +17975,6 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM09_BULLET_SEED)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM38_FIRE_BLAST)
@@ -18159,7 +18063,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -18183,7 +18087,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -18199,7 +18103,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -18215,7 +18119,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM42_FACADE)
 											| TMHM(TM10_HIDDEN_POWER)
@@ -18644,7 +18548,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18664,7 +18568,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18684,7 +18588,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18704,7 +18608,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18724,7 +18628,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18744,7 +18648,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18764,7 +18668,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM45_ATTRACT)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18786,7 +18690,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18806,7 +18710,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM40_AERIAL_ACE)
 											| TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM26_EARTHQUAKE)
 											| TMHM(TM42_FACADE)
@@ -18823,7 +18727,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM31_BRICK_BREAK)
-											| TMHM(TM46_THIEF) //calm mind
+											| TMHM(TM09_CALM_MIND)
 											| TMHM(TM32_DOUBLE_TEAM)
 											| TMHM(TM10_HIDDEN_POWER)
 											| TMHM(TM15_HYPER_BEAM)

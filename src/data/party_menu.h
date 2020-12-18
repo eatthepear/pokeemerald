@@ -1329,7 +1329,7 @@ static const u16 sTMHMMoves[] =
     MOVE_COVET,
     MOVE_REST,
     MOVE_BULK_UP,
-    MOVE_BULLET_SEED,
+    MOVE_CALM_MIND,
     MOVE_HIDDEN_POWER,
     MOVE_SUNNY_DAY,
     MOVE_TAUNT,
