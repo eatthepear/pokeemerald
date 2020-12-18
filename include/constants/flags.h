@@ -108,7 +108,7 @@
 #define FLAG_BEATLEVIATHAN6                  0x5C
 #define FLAG_BEATLEVIATHAN7                  0x5D
 #define FLAG_BEATLEVIATHAN8                  0x5E
-#define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
+#define FLAG_BEATLEVIATHAN9                  0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61
 #define FLAG_TV_EXPLAINED                    0x62

@@ -58,7 +58,6 @@ Zone14C_EventScript_RightMost::
 	end
 
 Zone14C_EventScript_InitiateLeviathanBattle:
-	call EventScript_BeforeLeviathanHeal
 	msgbox Zone14C_Text_Shadow_Registeel, MSGBOX_AUTOCLOSE
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -66,9 +65,11 @@ Zone14C_EventScript_InitiateLeviathanBattle:
 	waitse
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone14C_Text_Shadow_Begone, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_LEVIATHAN7, Zone14C_Text_Leviathan7Defeat
-	goto Zone14C_EventScript_Leviathan7Defeated
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq Zone14C_EventScript_DontHaveEnoughMons
+	call EventScript_BeforeLeviathanHeal
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC, TRAINER_LEVIATHAN9, 0, Zone14C_Text_Shadow_Begone, Zone14C_Text_Leviathan9Defeat, gText_NotEnoughMons, Zone14C_EventScript_Leviathan9Defeated
 	end
 
 Zone14C_Text_Shadow_Registeel:
@@ -79,17 +80,47 @@ Zone14C_Text_Shadow_Begone:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Another child to crush.\p"
 	.string "Begone!$"
 
-Zone14C_Text_Leviathan7Defeat:
+Zone14C_Text_Leviathan9Defeat:
 	.string "...$"
 
-Zone14C_EventScript_Leviathan7Defeated:
+Zone14C_EventScript_DontHaveEnoughMons:
+	msgbox Zone14C_Text_Shadow_NotEnoughMons, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	setvar VAR_ZONE14C_STATE, 0
+	releaseall
+	end
+
+Zone14C_Text_Shadow_NotEnoughMons:
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Another child to crush.\p"
+	.string "Oh. You only have a single Pokémon.\n"
+	.string "You are no threat to me.$"
+
+Zone14C_EventScript_Leviathan9Defeated:
 	msgbox Zone14C_Text_Shadow_Mistaken, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone14C_Text_Shadow_Command, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	playmoncry SPECIES_REGISTEEL, 2
+	delay 40
+	waitmoncry
 	removeobject 1
 	removeobject 2
-	setflag FLAG_BEATLEVIATHAN7
+	setflag FLAG_BEATLEVIATHAN9
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox Zone14C_Text_FoundBag, MSGBOX_AUTOCLOSE
+	giveitem ITEM_RED_SHARD, 20
 	releaseall
 	end
 
@@ -100,3 +131,7 @@ Zone14C_Text_Shadow_Mistaken:
 Zone14C_Text_Shadow_Command:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Command, Registeel is secure.\n"
 	.string "Requesting immediate evac.$"
+
+Zone14C_Text_FoundBag:
+	.string "It looks like a bag was left behind!\p"
+	.string "Inside are... Shards?$"
