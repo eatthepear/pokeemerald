@@ -1,5 +1,14 @@
 Zone14B_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone14B_OnTransition
 	.byte 0
+
+Zone14B_OnTransition: @ 81FC642
+	call Zone14B_EventScript_SetFlashRadius
+	end
+
+Zone14B_EventScript_SetFlashRadius:
+	setflashradius 4
+	return
 
 Zone14B_EventScript_Todd::
 	trainerbattle_single TRAINER_TODD, Zone14B_Text_ToddIntro, Zone14B_Text_ToddDefeat
