@@ -191,6 +191,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     }
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
+    
+    if (input->pressedRButton && EnableAutoRun())
+        return TRUE;
 
     if (input->pressedRButton && EnableAutoRun())
         return TRUE;
@@ -1031,3 +1034,4 @@ static bool8 EnableAutoRun(void)
     
     return TRUE;
 }
+
