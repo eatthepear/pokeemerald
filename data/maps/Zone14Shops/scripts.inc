@@ -67,6 +67,13 @@ Zone14Shops_Shop_VarrickUnique:
 	.2byte ITEM_SPELL_TAG
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_SCOPE_LENS
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_ZOOM_LENS
+	.2byte ITEM_SHELL_BELL
+	.2byte ITEM_METRONOME
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_NONE
 	release
 	end

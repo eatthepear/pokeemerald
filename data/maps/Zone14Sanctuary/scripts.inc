@@ -3,7 +3,7 @@ Zone14Sanctuary_MapScripts::
 	.byte 0
 
 Zone14Sanctuary_OnFrame:
-	map_script_2 VAR_ZONE, 7, Zone14Sanctuary_EventScript_Intro
+	map_script_2 VAR_ZONE, 14, Zone14Sanctuary_EventScript_Intro
 	.2byte 0
 
 Zone14Sanctuary_EventScript_Intro:
@@ -22,21 +22,15 @@ Zone14Sanctuary_EventScript_Intro:
 	waitfanfare
 	msgbox Zone14Sanctuary_Text_RewardClear13, MSGBOX_AUTOCLOSE
 	msgbox Zone14Sanctuary_Text_13Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BLUE_SHARD, 3
+	giveitem ITEM_MACH_BIKE
 	msgbox Zone14Sanctuary_Text_RewardClear14, MSGBOX_AUTOCLOSE
 	msgbox Zone14Sanctuary_Text_14Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM03
+	giveitem ITEM_TM10
 	closemessage
 	setvar VAR_ZONE, 15
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -52,9 +46,10 @@ Zone14Sanctuary_EventScript_NextZone::
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
 	case 0, Zone14Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Advice
-	case 2, EventScript_Rules
-	case 3, EventScript_WhenUReady
+	case 1, EventScript_WarpToZone0
+	case 2, EventScript_Advice
+	case 3, EventScript_Rules
+	case 4, EventScript_WhenUReady
 	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
@@ -69,7 +64,7 @@ Zone14Sanctuary_EventScript_NextZoneCheck:
 Zone14Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE9A, 255, 23, 13
+	warp MAP_ZONE15A, 255, 23, 13
 	end
 
 Zone14Sanctuary_Text_Colress_ReachedZone:
@@ -80,10 +75,10 @@ Zone14Sanctuary_Text_RewardClear13:
 	.string "Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GREY} is...$"
 
 Zone14Sanctuary_Text_13Reward:
-	.string "3 Blue Shards!$"
+	.string "The Mach Bike.$"
 
 Zone14Sanctuary_Text_RewardClear14:
 	.string "Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GREY} is...$"
 
 Zone14Sanctuary_Text_14Reward:
-	.string "TM03 - Rock Tomb.$"
+	.string "TM10 - Hidden Power.$"
