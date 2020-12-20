@@ -5064,12 +5064,22 @@
     {
       "id": "LAYOUT_ZONE15A",
       "name": "Zone15A_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 80,
+      "height": 61,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone15A/border.bin",
       "blockdata_filepath": "data/layouts/Zone15A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE15B",
+      "name": "Zone15B_Layout",
+      "width": 80,
+      "height": 61,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone15B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone15B/map.bin"
     }
   ]
 }
