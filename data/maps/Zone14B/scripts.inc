@@ -40,3 +40,15 @@ Zone14B_Text_CharlieDefeat:
 Zone14B_Text_CharliePostBattle:
 	.string "Sigh. I wish NPCs got phones.\n"
 	.string "Then I could just text her.$"
+
+Zone14B_EventScript_MuscleBand::
+	finditem ITEM_MUSCLE_BAND
+	end
+
+Zone14B_EventScript_QuickBall::
+	finditem ITEM_QUICK_BALL
+	end
+
+Zone14B_EventScript_WiseGlasses::
+	finditem ITEM_WISE_GLASSES
+	end

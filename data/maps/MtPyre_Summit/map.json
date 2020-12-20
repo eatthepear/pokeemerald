@@ -160,21 +160,6 @@
     }
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 9,
-      "y": 25,
-      "elevation": 0,
-      "item": "ITEM_ZINC",
-      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_ZINC"
-    },
-    {
-      "type": "hidden_item",
-      "x": 37,
-      "y": 7,
-      "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY"
-    }
+
   ]
 }

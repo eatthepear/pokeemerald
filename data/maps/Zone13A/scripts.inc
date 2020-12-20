@@ -40,3 +40,7 @@ Zone13A_Text_AmberandKimPostBattle:
 	.string "Amber: Kim, next time, hit em with\n"
 	.string "the one-two, okay?$"
 	.string "Kim: Okay, sister!$"
+
+Zone13A_EventScript_SuperPotion::
+	finditem ITEM_SUPER_POTION
+	end

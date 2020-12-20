@@ -43,3 +43,7 @@ Zone14A_Text_LolaDefeat:
 
 Zone14A_Text_LolaPostBattle:
 	.string "That stupid, stupid boy!$"
+
+Zone14A_EventScript_GreatBall::
+	finditem ITEM_GREAT_BALL
+	end
