@@ -145,27 +145,27 @@ Zone13C_EventScript_Fossil_Scientist::
 	setflag FLAG_DAILY_FOSSIL_RECEIVED
 	random 11
 	compare VAR_RESULT, 0
-	call_if_eq Zone13C_EventScript_Fossil_GiveDome
+	goto_if_eq Zone13C_EventScript_Fossil_GiveDome
 	compare VAR_RESULT, 1
-	call_if_eq Zone13C_EventScript_Fossil_GiveHelix
+	goto_if_eq Zone13C_EventScript_Fossil_GiveHelix
 	compare VAR_RESULT, 2
-	call_if_eq Zone13C_EventScript_Fossil_GiveOldAmber
+	goto_if_eq Zone13C_EventScript_Fossil_GiveOldAmber
 	compare VAR_RESULT, 3
-	call_if_eq Zone13C_EventScript_Fossil_GiveRoot
+	goto_if_eq Zone13C_EventScript_Fossil_GiveRoot
 	compare VAR_RESULT, 4
-	call_if_eq Zone13C_EventScript_Fossil_GiveClaw
+	goto_if_eq Zone13C_EventScript_Fossil_GiveClaw
 	compare VAR_RESULT, 5
-	call_if_eq Zone13C_EventScript_Fossil_GiveSkull
+	goto_if_eq Zone13C_EventScript_Fossil_GiveSkull
 	compare VAR_RESULT, 6
-	call_if_eq Zone13C_EventScript_Fossil_GiveArmor
+	goto_if_eq Zone13C_EventScript_Fossil_GiveArmor
 	compare VAR_RESULT, 7
-	call_if_eq Zone13C_EventScript_Fossil_GiveCover
+	goto_if_eq Zone13C_EventScript_Fossil_GiveCover
 	compare VAR_RESULT, 8
-	call_if_eq Zone13C_EventScript_Fossil_GivePlume
+	goto_if_eq Zone13C_EventScript_Fossil_GivePlume
 	compare VAR_RESULT, 9
-	call_if_eq Zone13C_EventScript_Fossil_GiveJaw
+	goto_if_eq Zone13C_EventScript_Fossil_GiveJaw
 	compare VAR_RESULT, 10
-	call_if_eq Zone13C_EventScript_Fossil_GiveSail
+	goto_if_eq Zone13C_EventScript_Fossil_GiveSail
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto Zone13C_EventScript_Fossil_VanillaReceived
 	end
@@ -198,47 +198,58 @@ Zone13C_Text_Fossil_NuzlockeReceived:
 
 Zone13C_EventScript_Fossil_GiveDome:
 	giveitem ITEM_DOME_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveHelix:
 	giveitem ITEM_HELIX_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveOldAmber:
 	giveitem ITEM_OLD_AMBER, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveRoot:
 	giveitem ITEM_ROOT_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveClaw:
 	giveitem ITEM_CLAW_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveSkull:
 	giveitem ITEM_SKULL_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveArmor:
 	giveitem ITEM_ARMOR_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveCover:
 	giveitem ITEM_COVER_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GivePlume:
 	giveitem ITEM_PLUME_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveJaw:
 	giveitem ITEM_JAW_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Fossil_GiveSail:
 	giveitem ITEM_SAIL_FOSSIL, 1
-	return
+	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_VanillaReceived
 
 Zone13C_EventScript_Scientist1::
 	lock

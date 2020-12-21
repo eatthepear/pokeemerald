@@ -76,8 +76,7 @@ Zone12Sanctuary_Text_Colress_ReadyToLeave:
 Zone12Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	@ warp MAP_ZONE13A, 255, 18, 10
-	warp MAP_ZONE15A, 255, 4, 4
+	warp MAP_ZONE13A, 255, 18, 10
 	end
 	@ msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
 	@ release
