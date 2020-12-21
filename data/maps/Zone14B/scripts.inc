@@ -41,14 +41,27 @@ Zone14B_Text_CharliePostBattle:
 	.string "Sigh. I wish NPCs got phones.\n"
 	.string "Then I could just text her.$"
 
-Zone14B_EventScript_MuscleBand::
-	finditem ITEM_MUSCLE_BAND
+Zone14B_EventScript_Item2000::
+	lock
+	showmoneybox 0, 0, 0
+	addmoney 3000, 0
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone14B_Text_Found3000, MSGBOX_DEFAULT
+	updatemoneybox 0, 0
+	waitfanfare
+	hidemoneybox
+	setflag FLAG_ITEM_ZONE14B_3000
+	removeobject 3
+	release
 	end
+
+Zone14B_Text_Found3000:
+	.string "Found ¥3000!$"
 
 Zone14B_EventScript_QuickBall::
 	finditem ITEM_QUICK_BALL
 	end
 
-Zone14B_EventScript_WiseGlasses::
-	finditem ITEM_WISE_GLASSES
+Zone14B_EventScript_FullHeal::
+	finditem ITEM_FULL_HEAL
 	end

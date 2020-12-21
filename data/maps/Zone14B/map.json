@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone14B_EventScript_MuscleBand",
-      "flag": "FLAG_ITEM_ZONE14B_MUSCLE_BAND"
+      "script": "Zone14B_EventScript_Item2000",
+      "flag": "FLAG_ITEM_ZONE14B_3000"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -76,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone14B_EventScript_WiseGlasses",
-      "flag": "FLAG_ITEM_ZONE14B_WISE_GLASSES"
+      "script": "Zone14B_EventScript_FullHeal",
+      "flag": "FLAG_ITEM_ZONE14B_FULL_HEAL"
     }
   ],
   "warp_events": [

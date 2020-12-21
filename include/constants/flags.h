@@ -1098,22 +1098,22 @@
 #define FLAG_ITEM_ZONE13A_SUPER_POTION                              0x41B
 #define FLAG_ITEM_ZONE14A_GREAT_BALL                                0x41C
 #define FLAG_ITEM_ZONE14B_QUICK_BALL                                0x41D
-#define FLAG_ITEM_ZONE14B_MUSCLE_BAND                               0x41E
-#define FLAG_ITEM_ZONE14B_WISE_GLASSES                              0x41F
-#define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
-#define FLAG_ITEM_ROUTE_104_POKE_BALL                               0x421
-#define FLAG_ITEM_PETALBURG_WOODS_ETHER                             0x422//start here
-#define FLAG_ITEM_MAGMA_HIDEOUT_3F_3R_ECAPE_ROPE                    0x423
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_ORANGE_MAIL                  0x424
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_HARBOR_MAIL                  0x425
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_WAVE_MAIL                    0x426
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_SHADOW_MAIL                  0x427
+#define FLAG_ITEM_ZONE14B_3000                                      0x41E
+#define FLAG_ITEM_ZONE14B_FULL_HEAL                                 0x41F
+#define FLAG_ITEM_ZONE15A_TM11                                      0x420
+#define FLAG_ITEM_ZONE15A_ULTRA_BALL                                0x421
+#define FLAG_ITEM_ZONE15A_DUSK_BALL                                 0x422
+#define FLAG_ITEM_ZONE15A_HYPER_POTION                              0x423
+#define FLAG_ITEM_ZONE15A_MUSCLE_BAND                               0x424
+#define FLAG_ITEM_ZONE15A_WISE_GLASSES                              0x425
+#define FLAG_ITEM_ZONE15A_WIDE_LENS                                 0x426
+#define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_WOOD_MAIL                    0x428
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL                    0x429
 #define FLAG_ITEM_ROUTE_124_YELLOW_SHARD                            0x42A
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_6_GLITTER_MAIL                 0x42B
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_TROPIC_MAIL                  0x42C
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_8_BEAD_MAIL                    0x42D
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_8_BEAD_MAIL                    0x42D//start here
 #define FLAG_ITEM_JAGGED_PASS_BURN_HEAL                             0x42E
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_MAX_ELIXIR                       0x42F
 #define FLAG_ITEM_AQUA_HIDEOUT_B2F_NEST_BALL                        0x430
