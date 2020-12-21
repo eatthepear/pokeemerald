@@ -13,7 +13,9 @@ Zone3Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Colress_WalkDown
 	waitmovement 0

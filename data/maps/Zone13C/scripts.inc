@@ -26,8 +26,8 @@ Zone13C_EventScript_KeizanBlackBelt::
 	msgbox Zone13C_Text_KeizanBlackBelt_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone13C_EventScript_Keizan_ISee
+	fadeoutbgm 1
 	msgbox Zone13C_Text_KeizanBlackBelt_LetsGetStarted, MSGBOX_AUTOCLOSE
-	call EventScript_BeforeLeviathanHeal
 	trainerbattle_no_intro TRAINER_LEVIATHAN7, Zone13C_Text_Leviathan7Defeat
 	goto Zone13C_EventScript_Leviathan7Defeated
 	end
@@ -85,8 +85,8 @@ Zone13C_EventScript_KeizanPsychic::
 	msgbox Zone13C_Text_KeizanPsychic_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone13C_EventScript_Keizan_ISee
+	fadeoutbgm 1
 	msgbox Zone13C_Text_KeizanPsychic_FairBetter, MSGBOX_AUTOCLOSE
-	call EventScript_BeforeLeviathanHeal
 	trainerbattle_no_intro TRAINER_LEVIATHAN8, Zone13C_Text_Leviathan8Defeat
 	goto Zone13C_EventScript_Leviathan8Defeated
 	end
@@ -139,7 +139,9 @@ Zone13C_EventScript_Fossil_Scientist::
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_VanillaReceived
 	applymovement 3, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	msgbox Zone13C_Text_Fossil_YouGetAFossil, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_SetNuzlockeFossilFlag
 	setflag FLAG_DAILY_FOSSIL_RECEIVED

@@ -14,7 +14,9 @@ Zone0Sanctuary_EventScript_Intro:
 	setflag FLAG_SYS_POKEMON_GET
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 1
+	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox Zone0Sanctuary_Text_Colress_Hello, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkDown

@@ -41,7 +41,6 @@ Zone10A_EventScript_InitiateLeviathanBattle:
 	fadeoutbgm 1
 	msgbox Zone10A_Text_FoundEm, MSGBOX_AUTOCLOSE
 	delay 96
-	call EventScript_BeforeLeviathanHeal
 	msgbox Zone10A_Text_CrushYou, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
 	goto Zone10A_EventScript_Leviathan5Defeated

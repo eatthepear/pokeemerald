@@ -14,7 +14,6 @@ Zone3A_EventScript_Exit::
 	lockall
 	goto_if_set FLAG_BEATLEVIATHAN1, Zone3A_EventScript_Warp
 	fadeoutbgm 1
-	call EventScript_BeforeLeviathanHeal
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0

@@ -79,7 +79,6 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	lock
 	goto_if_set FLAG_BEATLEVIATHAN2, Zone5A_EventScript_DontTalk
 	fadeoutbgm 1
-	call EventScript_BeforeLeviathanHeal
 	msgbox Zone5A_Text_Leviathan2Intro1, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_ExclamationMark
 	playse SE_PIN

@@ -13,7 +13,9 @@ Zone2Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Colress_WalkDown
 	waitmovement 0
@@ -73,9 +75,7 @@ Zone2Sanctuary_Text_Colress_ExplainLeviathans:
 	.string "Defeating a Leviathan yields\n"
 	.string "great rewards.\p"
 	.string "However, typically you will not be\n"
-	.string "warned of them in advance.p"
-	.string "Before each Leviathan fight,\n"
-	.string "your party will be fully healed.$"
+	.string "warned of them in advance.$"
 
 Zone2Sanctuary_Text_Reward:
 	.string "TM01 - Protect!$"

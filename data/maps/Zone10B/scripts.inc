@@ -659,7 +659,9 @@ Zone10B_Text_GiveNickname:
 
 Zone10B_EventScript_CommonFossilIntro:
 	applymovement 6, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	applymovement 6, Common_Movement_Delay48
 	waitmovement 0
 	msgbox Zone10B_Text_WantReviveFossil, MSGBOX_YESNO

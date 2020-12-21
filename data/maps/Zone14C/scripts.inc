@@ -59,8 +59,8 @@ Zone14C_EventScript_RightMost::
 
 Zone14C_EventScript_InitiateLeviathanBattle:
 	msgbox Zone14C_Text_Shadow_Registeel, MSGBOX_AUTOCLOSE
-	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
 	waitse
 	applymovement 2, Common_Movement_FaceDown
@@ -68,7 +68,6 @@ Zone14C_EventScript_InitiateLeviathanBattle:
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_eq Zone14C_EventScript_DontHaveEnoughMons
-	call EventScript_BeforeLeviathanHeal
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC, TRAINER_LEVIATHAN9, 0, Zone14C_Text_Shadow_Begone, Zone14C_Text_Leviathan9Defeat, gText_NotEnoughMons, Zone14C_EventScript_Leviathan9Defeated
 	end
 

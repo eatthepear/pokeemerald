@@ -23,7 +23,9 @@ Zone0D_EventScript_Intro:
 	lockall
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown

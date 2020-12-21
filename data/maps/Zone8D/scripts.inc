@@ -10,9 +10,10 @@ Zone8D_EventScript_WallyIntro:
 	lockall
 	applymovement 4, Common_Movement_FaceDown
 	waitmovement 0
-	playse SE_PIN
 	applymovement 4, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -70,7 +71,6 @@ Zone8D_Text_Wally_Preparations:
 
 Zone8D_EventScript_GoWithWally::
 	lockall
-	giveitem ITEM_RARE_CANDY, 10
 	msgbox Zone8D_Text_DontGoAlone, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
@@ -83,7 +83,6 @@ Zone8D_Text_DontGoAlone:
 
 Zone8D_EventScript_InitiateLeviathan4:
 	msgbox Zone8D_Text_Wally_WhatYourName, MSGBOX_AUTOCLOSE
-	call EventScript_BeforeLeviathanHeal
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 6
 	call_if_eq Zone8D_EventScript_Left
@@ -95,13 +94,14 @@ Zone8D_EventScript_InitiateLeviathan4:
 	applymovement OBJ_EVENT_ID_PLAYER, Zone8D_Movement_Player_WalkUp
 	waitmovement 0
 	msgbox Zone8D_Text_Wally_WontLet, MSGBOX_AUTOCLOSE
-	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
 	applymovement 3, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
 	applymovement 2, Common_Movement_FaceDown
 	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
+	fadeoutbgm 1
 	delay 96
 	applymovement 2, Common_Movement_FaceRight
 	applymovement 3, Common_Movement_FaceLeft

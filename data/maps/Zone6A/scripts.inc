@@ -10,7 +10,9 @@ Zone6A_EventScript_Intro:
 	lockall
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	applymovement 1, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkLeft
@@ -53,7 +55,7 @@ Zone6A_EventScript_RitaSaysNo:
 	end
 
 Zone6A_EventScript_RitaBattle:
-	call EventScript_BeforeLeviathanHeal
+	fadeoutbgm 1
 	msgbox Zone6A_Text_Rita_IWillWin, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
 	goto Zone6A_EventScript_Leviathan3Defeated

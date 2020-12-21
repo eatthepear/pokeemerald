@@ -46,7 +46,9 @@ EventScript_Shop_ZhuLiIntro::
 	lockall
 	applymovement 2, Common_Movement_ExclamationMark
 	applymovement 5, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 18
 	call_if_eq EventScript_Shop_ZhuLiIntroMoveUp

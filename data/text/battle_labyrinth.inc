@@ -376,8 +376,8 @@ gText_ExitSign:
 	.string "If you leave, you can't come back.$"
 
 gText_SoothingLight:
-	.string "A soothing light washes over your party,\n"
-	.string "healing them.$"
+	.string "A soothing light washes over\n"
+	.string "your party, healing them.$"
 
 gText_NotEnoughMons:
 	.string "You need at least two Pokémon to\n"
