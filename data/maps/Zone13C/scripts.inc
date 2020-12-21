@@ -239,3 +239,82 @@ Zone13C_EventScript_Fossil_GiveJaw:
 Zone13C_EventScript_Fossil_GiveSail:
 	giveitem ITEM_SAIL_FOSSIL, 1
 	return
+
+Zone13C_EventScript_Scientist1::
+	lock
+	msgbox Zone13C_Text_Scientist1, MSGBOX_SIGN
+	release
+	end
+
+Zone13C_Text_Scientist1:
+	.string "He's so focused on his work,\n"
+	.string "he doesn't even notice you.$"
+
+Zone13C_EventScript_Scientist2::
+	lock
+	faceplayer
+	msgbox Zone13C_Text_Scientist2_WhyMale, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox Zone13C_Text_Scientist2_GenderRoles, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone13C_Text_Scientist2_WhyMale:
+	.string "Why are all the scientists male,\n"
+	.string "you ask?$"
+
+Zone13C_Text_Scientist2_GenderRoles:
+	.string "Um... Game Freak existed a while\n"
+	.string "ago and helped perpetuate\l"
+	.string "traditional gender roles in\l"
+	.string "society?\p"
+	.string "Never mind. Google it.$"
+
+Zone13C_EventScript_Scientist3::
+	lock
+	msgbox Zone13C_Text_Scientist3, MSGBOX_SIGN
+	release
+	end
+
+Zone13C_Text_Scientist3:
+	.string "He's sound asleep.\n"
+	.string "Better not wake him.$"
+
+Zone13C_EventScript_Scientist4::
+	lock
+	faceplayer
+	goto_if_set FLAG_ZONE13C_RECEIVED_SCOPE_LENS, Zone13C_EventScript_GaveScopeLens
+	msgbox Zone13C_Text_Scientist4_GiveScopeLens, MSGBOX_AUTOCLOSE
+	giveitem ITEM_SCOPE_LENS	
+	setflag FLAG_ZONE13C_RECEIVED_SCOPE_LENS
+	goto Zone13C_EventScript_GaveScopeLens
+	end
+
+Zone13C_EventScript_GaveScopeLens:
+	msgbox Zone13C_Text_Scientist4_GaveScopeLens, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone13C_Text_Scientist4_GiveScopeLens:
+	.string "Your moves always miss?\n"
+	.string "No problem! Here you go!$"
+
+Zone13C_Text_Scientist4_GaveScopeLens:
+	.string "What do you mean it only\n"
+	.string "increases the critical hit ratio?\p"
+	.string "It has the word Lens in it!$"
+
+Zone13C_EventScript_DeveloperEatthepear::
+	lock
+	faceplayer
+	msgbox Zone13C_Text_Eatthepear, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone13C_Text_Eatthepear:
+	.string "Hello there. It's {COLOR BLUE}eatthepear{COLOR DARK_GREY}, the\n"
+	.string "developer of this ROM hack!\p"
+	.string "Thanks for playing and I hope\n"
+	.string "you're enjoying your time.\p"
+	.string "When you beat the game, come back\n"
+	.string "here and let's have a battle!$"

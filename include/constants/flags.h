@@ -69,7 +69,7 @@
 #define FLAG_NUZLOCKE_FOSSIL_RECEIVED    0x39 // Unused Flag
 #define FLAG_HIDE_LEVIATHAN7    0x3A // Unused Flag
 #define FLAG_HIDE_LEVIATHAN8    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
@@ -1567,7 +1567,7 @@
 #define FLAG_DAILY_FOSSIL_RECEIVED                  (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_UNUSED_0x923                           (DAILY_FLAGS_START + 0x3)  // Unused Flag
+#define FLAG_DAILY_ZONE13B_POKEBALL_RECEIVED        (DAILY_FLAGS_START + 0x3)  // Unused Flag
 #define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
 #define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
