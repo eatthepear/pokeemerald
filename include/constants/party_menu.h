@@ -14,10 +14,10 @@
 #define TUTOR_MOVE_LOW_KICK        1
 #define TUTOR_MOVE_KNOCK_OFF       2
 #define TUTOR_MOVE_HEAL_BELL       3
-#define TUTOR_MOVE_SLEEP_TALK      4
-#define TUTOR_MOVE_STEALTH_ROCK    5
-#define TUTOR_MOVE_TAUNT           6
-#define TUTOR_MOVE_NATURAL_GIFT    7
+#define TUTOR_MOVE_HELPING_HAND    4
+#define TUTOR_MOVE_SLEEP_TALK      5
+#define TUTOR_MOVE_STEALTH_ROCK    6
+#define TUTOR_MOVE_TAUNT           7
 #define TUTOR_MOVE_METRONOME       8
 #define TUTOR_MOVE_SOFT_BOILED     9
 #define TUTOR_MOVE_DREAM_EATER     10

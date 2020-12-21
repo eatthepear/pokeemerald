@@ -190,9 +190,10 @@ EventScript_Shop_LelouchCheckTutor:
 	case 1, EventScript_Shop_LelouchMoveTutorKnockOff
 	case 2, EventScript_Shop_LelouchMoveTutorLowKick
 	case 3, EventScript_Shop_LelouchMoveTutorHealBell
-	case 4, EventScript_Shop_LelouchMoveTutorSleepTalk
-	case 5, EventScript_Shop_LelouchMoveTutorStealthRock
-	case 6, EventScript_Shop_LelouchMoveTutorTaunt
+	case 4, EventScript_Shop_LelouchMoveTutorHelpingHand
+	case 5, EventScript_Shop_LelouchMoveTutorSleepTalk
+	case 6, EventScript_Shop_LelouchMoveTutorStealthRock
+	case 7, EventScript_Shop_LelouchMoveTutorTaunt
 	case MULTI_B_PRESSED, EventScript_Shop_LelouchLeave
 	end
 
@@ -242,6 +243,19 @@ EventScript_Shop_LelouchMoveTutorHealBell:
 	goto_if_eq EventScript_Shop_LelouchCheckTutor
 	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
 	setvar VAR_0x8005, TUTOR_MOVE_HEAL_BELL
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorHelpingHand:
+	buffermovename 0, MOVE_HELPING_HAND
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_HELPING_HAND
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Shop_LelouchLeave

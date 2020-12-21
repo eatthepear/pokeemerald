@@ -833,6 +833,7 @@ static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
 static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
 static const u8 sText_MoveTutorLowKick[] = _("Low Kick");
 static const u8 sText_MoveTutorHealBell[] = _("Heal Bell");
+static const u8 sText_MoveTutorHelpingHand[] = _("Helping Hand");
 static const u8 sText_MoveTutorSleepTalk[] = _("Sleep Talk");
 static const u8 sText_MoveTutorStealthRock[] = _("Stealth Rock");
 static const u8 sText_MoveTutorTaunt[] = _("Taunt");
@@ -887,9 +888,10 @@ static const struct ListMenuItem MoveTutorLevel1[] =
     {sText_MoveTutorKnockOff, 1},
     {sText_MoveTutorLowKick, 2},
     {sText_MoveTutorHealBell, 3},
-    {sText_MoveTutorSleepTalk, 4},
-    {sText_MoveTutorStealthRock, 5},
-    {sText_MoveTutorTaunt, 6},
+    {sText_MoveTutorHelpingHand, 4},
+    {sText_MoveTutorSleepTalk, 5},
+    {sText_MoveTutorStealthRock, 6},
+    {sText_MoveTutorTaunt, 7},
 };
 
 // Table of your multichoice sets.
