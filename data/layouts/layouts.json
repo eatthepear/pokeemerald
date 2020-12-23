@@ -5080,6 +5080,26 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone15B/border.bin",
       "blockdata_filepath": "data/layouts/Zone15B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE15SANCTUARY",
+      "name": "Zone15Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone15Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone15Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE15SHOPS",
+      "name": "Zone15Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone15Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone15Shops/map.bin"
     }
   ]
 }
