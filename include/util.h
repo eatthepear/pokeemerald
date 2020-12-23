@@ -2,7 +2,7 @@
 #define GUARD_UTIL_H
 
 
-#define NUM_SOFT_CAPS 4
+#define NUM_SOFT_CAPS 7
 
 #include "sprite.h"
 
