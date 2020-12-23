@@ -579,7 +579,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Marcus[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_THROH,
+    .species = SPECIES_LEDYBA,
     }
 };
 
@@ -899,7 +899,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jeanette[] = {
     {
     .iv = 50,
     .lvl = 15,
-    .species = SPECIES_SANDSHREW,
+    .species = SPECIES_BULBASAUR,
     },
     {
     .iv = 50,
@@ -980,7 +980,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Joel[] = {
 static const struct TrainerMonItemCustomMoves sParty_Jake[] = {
     {
     .iv = 200,
-    .lvl = 18,
+    .lvl = 20,
     .species = SPECIES_FARFETCHD,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_AERIAL_ACE, MOVE_KNOCK_OFF, MOVE_REVENGE, MOVE_SWORDS_DANCE}

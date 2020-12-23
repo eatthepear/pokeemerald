@@ -69,6 +69,7 @@ Zone15B_EventScript_Leviathan10Defeated:
 	msgbox Zone15B_Text_Colress_TooLate, MSGBOX_AUTOCLOSE
 	giveitem ITEM_ABILITY_CAPSULE
 	msgbox Zone15B_Text_Colress_Sanctuary, MSGBOX_AUTOCLOSE
+	warp MAP_ZONE15SANCTUARY, 255, 7, 7
 	releaseall
 	end
 
