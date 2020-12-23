@@ -12185,6 +12185,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE15A",
+          "base_label": "gZone15A",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SANDSHREW_ALOLAN"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_VULPIX_ALOLAN"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_VANILLITE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_CARBINK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_DELIBIRD"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SNEASEL"
+              }
+            ]
+          }
         }
       ]
     },
