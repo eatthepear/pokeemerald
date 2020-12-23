@@ -1586,14 +1586,14 @@ static const u8 sTM10Desc[] = _(
     "different Pokémon.");
 
 static const u8 sTM11Desc[] = _(
-    "Raises the power of\n"
-    "Fire-type moves\n"
-    "for 5 turns.");
+    "Creates a hailstorm\n"
+    "that damages all\n"
+    "types except Ice.");
 
 static const u8 sTM12Desc[] = _(
-    "Enrages the foe so\n"
-    "it can only use\n"
-    "attack moves.");
+    "Weakens enemy attacks,\n"
+    "but can only be used\n"
+    "in a hailstorm.");
 
 static const u8 sTM13Desc[] = _(
     "Fires an icy cold\n"
@@ -1776,9 +1776,9 @@ static const u8 sTM48Desc[] = _(
     "turn this is used.");
 
 static const u8 sTM49Desc[] = _(
-    "Steals the effects\n"
-    "of the move the foe\n"
-    "is trying to use.");
+    "Raises the power of\n"
+    "Fire-type moves\n"
+    "for 5 turns.");
 
 static const u8 sTM50Desc[] = _(
     "Enables full-power\n"

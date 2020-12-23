@@ -4245,10 +4245,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM11_SUNNY_DAY] =
+    [ITEM_TM11_HAIL] =
     {
         .name = _("TM11"),
-        .itemId = ITEM_TM11_SUNNY_DAY,
+        .itemId = ITEM_TM11_HAIL,
         .price = 2000,
         .description = sTM11Desc,
         .pocket = POCKET_TM_HM,
@@ -4258,10 +4258,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM12_TAUNT] =
+    [ITEM_TM12_AURORA_VEIL] =
     {
         .name = _("TM12"),
-        .itemId = ITEM_TM12_TAUNT,
+        .itemId = ITEM_TM12_AURORA_VEIL,
         .price = 3000,
         .description = sTM12Desc,
         .pocket = POCKET_TM_HM,

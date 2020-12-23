@@ -12,8 +12,8 @@ Zone15A_EventScript_TM11::
 	finditem ITEM_TM11
 	end
 
-Zone15A_EventScript_UltraBall::
-	finditem ITEM_ULTRA_BALL
+Zone15A_EventScript_TM12::
+	finditem ITEM_TM12
 	end
 
 Zone15A_EventScript_DuskBall::

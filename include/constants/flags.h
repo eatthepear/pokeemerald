@@ -1101,7 +1101,7 @@
 #define FLAG_ITEM_ZONE14B_3000                                      0x41E
 #define FLAG_ITEM_ZONE14B_FULL_HEAL                                 0x41F
 #define FLAG_ITEM_ZONE15A_TM11                                      0x420
-#define FLAG_ITEM_ZONE15A_ULTRA_BALL                                0x421
+#define FLAG_ITEM_ZONE15A_TM12                                      0x421
 #define FLAG_ITEM_ZONE15A_DUSK_BALL                                 0x422
 #define FLAG_ITEM_ZONE15A_HYPER_POTION                              0x423
 #define FLAG_ITEM_ZONE15A_MUSCLE_BAND                               0x424
