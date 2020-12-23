@@ -70,7 +70,7 @@
 #define TRAINER_TODD                             66
 #define TRAINER_CHARLIE                          67
 #define TRAINER_LEVIATHAN9                       68
-#define TRAINER_RICKY_4                      69
+#define TRAINER_LEVIATHAN10                      69
 #define TRAINER_RICKY_5                      70
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72

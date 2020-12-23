@@ -1,6 +1,13 @@
 Zone15A_MapScripts::
 	.byte 0
 
+Zone15A_EventScript_WarpTo15B::
+	lockall
+	setflag FLAG_HIDE_ZONE15B_COLRESS
+	warp MAP_ZONE15B, 255, 7, 72
+	releaseall
+	end
+
 Zone15A_EventScript_TM11::
 	finditem ITEM_TM11
 	end

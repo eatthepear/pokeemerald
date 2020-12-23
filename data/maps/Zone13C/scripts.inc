@@ -22,6 +22,7 @@ Zone13C_EventScript_HideLeviathan8:
 Zone13C_EventScript_KeizanBlackBelt::
 	lock
 	faceplayer
+	warp MAP_ZONE15B, 255, 7, 72
 	goto_if_set FLAG_BEATLEVIATHAN7 Zone13C_EventScript_KeizanBlackBelt_ComeBack
 	msgbox Zone13C_Text_KeizanBlackBelt_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO

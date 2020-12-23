@@ -162,7 +162,15 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_ZONE",
+      "var_value": "15",
+      "script": "NULL"
+    }
   ],
   "bg_events": [
     {
