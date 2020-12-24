@@ -3,7 +3,7 @@ Zone15B_MapScripts::
 	.byte 0
 
 Zone15B_OnFrame:
-	map_script_2 VAR_ZONE, 13, Zone15B_EventScript_Intro
+	map_script_2 VAR_ZONE15B_STATE, 0, Zone15B_EventScript_Intro
 	.2byte 0
 
 Zone15B_EventScript_Intro:
@@ -69,6 +69,7 @@ Zone15B_EventScript_Leviathan10Defeated:
 	msgbox Zone15B_Text_Colress_TooLate, MSGBOX_AUTOCLOSE
 	giveitem ITEM_ABILITY_CAPSULE
 	msgbox Zone15B_Text_Colress_Sanctuary, MSGBOX_AUTOCLOSE
+	setvar VAR_ZONE15B_STATE, 1
 	warp MAP_ZONE15SANCTUARY, 255, 7, 7
 	releaseall
 	end

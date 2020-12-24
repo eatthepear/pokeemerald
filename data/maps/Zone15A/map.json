@@ -169,7 +169,7 @@
       "elevation": 0,
       "var": "VAR_ZONE",
       "var_value": "15",
-      "script": "NULL"
+      "script": "Zone15A_EventScript_WarpTo15B"
     }
   ],
   "bg_events": [

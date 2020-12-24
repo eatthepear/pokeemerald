@@ -3,7 +3,7 @@ Zone15Sanctuary_MapScripts::
 	.byte 0
 
 Zone15Sanctuary_OnFrame:
-	map_script_2 VAR_ZONE, 11, Zone15Sanctuary_EventScript_Intro
+	map_script_2 VAR_ZONE, 15, Zone15Sanctuary_EventScript_Intro
 	.2byte 0
 
 Zone15Sanctuary_EventScript_Intro:

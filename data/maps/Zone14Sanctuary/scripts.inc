@@ -3,7 +3,7 @@ Zone14Sanctuary_MapScripts::
 	.byte 0
 
 Zone14Sanctuary_OnFrame:
-	map_script_2 VAR_ZONE, 14, Zone14Sanctuary_EventScript_Intro
+	map_script_2 VAR_ZONE, 13, Zone14Sanctuary_EventScript_Intro
 	.2byte 0
 
 Zone14Sanctuary_EventScript_Intro:
@@ -45,7 +45,7 @@ Zone14Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
-	multichoice 20, 0, MULTI_COLRESS_MENU, 0
+	multichoice 20, 0, MULTI_COLRESS_MENU_2, 0
 	switch VAR_RESULT
 	case 0, Zone14Sanctuary_EventScript_NextZoneCheck
 	case 1, EventScript_WarpToZone0
@@ -66,7 +66,7 @@ Zone14Sanctuary_EventScript_NextZoneCheck:
 Zone14Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE15A, 255, 23, 13
+	warp MAP_ZONE15A, 255, 4, 4
 	end
 
 Zone14Sanctuary_Text_Colress_ReachedZone:
