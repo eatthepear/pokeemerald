@@ -837,6 +837,14 @@ static const u8 sText_MoveTutorHelpingHand[] = _("Helping Hand");
 static const u8 sText_MoveTutorSleepTalk[] = _("Sleep Talk");
 static const u8 sText_MoveTutorStealthRock[] = _("Stealth Rock");
 static const u8 sText_MoveTutorTaunt[] = _("Taunt");
+static const u8 sText_MoveTutorFirePunch[] = _("Fire Punch");
+static const u8 sText_MoveTutorIcePunch[] = _("Ice Punch");
+static const u8 sText_MoveTutorThunderPunch[] = _("Thunder Punch");
+static const u8 sText_MoveTutorUTurn[] = _("U-Turn");
+static const u8 sText_MoveTutorVoltSwitch[] = _("Volt Switch");
+static const u8 sText_MoveTutorMagicCoat[] = _("Magic Coat");
+static const u8 sText_MoveTutorPainSplit[] = _("Pain Split");
+static const u8 sText_MoveTutorTrick[] = _("Trick");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -894,6 +902,26 @@ static const struct ListMenuItem MoveTutorLevel1[] =
     {sText_MoveTutorTaunt, 7},
 };
 
+static const struct ListMenuItem MoveTutorLevel2[] =
+{
+    {sText_MoveTutorIcyWind, 0},
+    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorLowKick, 2},
+    {sText_MoveTutorHealBell, 3},
+    {sText_MoveTutorHelpingHand, 4},
+    {sText_MoveTutorSleepTalk, 5},
+    {sText_MoveTutorStealthRock, 6},
+    {sText_MoveTutorTaunt, 7},
+    {sText_MoveTutorFirePunch, 8},
+    {sText_MoveTutorIcePunch, 9},
+    {sText_MoveTutorThunderPunch, 10},
+    {sText_MoveTutorUTurn, 11},
+    {sText_MoveTutorVoltSwitch, 12},
+    {sText_MoveTutorMagicCoat, 13},
+    {sText_MoveTutorPainSplit, 14},
+    {sText_MoveTutorTrick, 15},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -904,6 +932,7 @@ struct
     {Starters, ARRAY_COUNT(Starters)},
     {EvolutionaryStones, ARRAY_COUNT(EvolutionaryStones)},
     {MoveTutorLevel1, ARRAY_COUNT(MoveTutorLevel1)},
+    {MoveTutorLevel2, ARRAY_COUNT(MoveTutorLevel2)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);
