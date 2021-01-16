@@ -2040,19 +2040,17 @@ static u8 CanMonLearnTMTutor(struct Pokemon *mon, u16 item, u8 tutor)
 
     if (item >= ITEM_TM01_PROTECT)
     {
-        if (CanMonLearnTMHM(mon, item - ITEM_TM01_PROTECT))
-            move = ItemIdToBattleMoveId(item);
-        else
+        if (!CanMonLearnTMHM(mon, item - ITEM_TM01_PROTECT))
             return CANNOT_LEARN_MOVE;
-        do {} while (0); // :morphon:
-    }
-    else if (CanLearnTutorMove(GetMonData(mon, MON_DATA_SPECIES), tutor) == FALSE)
-    {
-        return CANNOT_LEARN_MOVE;
+        else
+            move = ItemIdToBattleMoveId(item);
     }
     else
     {
-        move = GetTutorMove(tutor);
+        if (!CanLearnTutorMove(GetMonData(mon, MON_DATA_SPECIES), tutor))
+            return CANNOT_LEARN_MOVE;
+        else
+            move = GetTutorMove(tutor);
     }
 
     if (MonKnowsMove(mon, move) == TRUE)
@@ -5423,7 +5421,11 @@ u8 GetItemEffectType(u16 item)
     else
         itemEffect = gItemEffectTable[item - ITEM_POTION];
 
+#ifndef ITEM_EXPANSION
     if ((itemEffect[0] & (ITEM0_DIRE_HIT | ITEM0_X_ATTACK)) || itemEffect[1] || itemEffect[2] || (itemEffect[3] & ITEM3_GUARD_SPEC))
+#else
+    if ((itemEffect[0] & ITEM0_DIRE_HIT) || itemEffect[1] || (itemEffect[3] & ITEM3_GUARD_SPEC))
+#endif
         return ITEM_EFFECT_X_ITEM;
     else if (itemEffect[0] & ITEM0_SACRED_ASH)
         return ITEM_EFFECT_SACRED_ASH;
