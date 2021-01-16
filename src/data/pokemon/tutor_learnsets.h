@@ -1108,8 +1108,6 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_THUNDER_PUNCH)
-                                            | TUTOR(MOVE_U_TURN)
-                                            | TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_SUNKERN]       = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)),
@@ -1830,9 +1828,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_ILLUMISE]      = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)
                                             | TUTOR(MOVE_U_TURN)
-                                            | TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_ROSELIA]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
@@ -2424,8 +2420,6 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)
-                                            | TUTOR(MOVE_U_TURN)
                                             | TUTOR(MOVE_THUNDER_WAVE)),
 
     [SPECIES_DRIFLOON]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
