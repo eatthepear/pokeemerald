@@ -14,7 +14,7 @@ const u16 gTutorMoves[] =
     [TUTOR_MOVE_U_TURN] = MOVE_U_TURN,
     [TUTOR_MOVE_VOLT_SWITCH] = MOVE_VOLT_SWITCH,
     [TUTOR_MOVE_MAGIC_COAT] = MOVE_MAGIC_COAT,
-    [TUTOR_MOVE_PAIN_SPLIT] = MOVE_PAIN_SPLIT,//this is the next one to dooooooooo
+    [TUTOR_MOVE_PAIN_SPLIT] = MOVE_PAIN_SPLIT,
     [TUTOR_MOVE_TRICK] = MOVE_TRICK,
     [TUTOR_MOVE_ROLLOUT] = MOVE_ROLLOUT,
     [TUTOR_MOVE_PSYCH_UP] = MOVE_PSYCH_UP,
@@ -1107,7 +1107,7 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)),
 
     [SPECIES_SUNKERN]       = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)),
@@ -1828,7 +1828,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_ILLUMISE]      = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_U_TURN)),
 
     [SPECIES_ROSELIA]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 

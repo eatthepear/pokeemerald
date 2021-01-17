@@ -11987,7 +11987,7 @@ static void Cmd_handleballthrow(void)
 
         
         #ifdef POKEMON_EXPANSION
-        if (IS_ULTRA_BEAST(gBattleMons[gBattlerTarget].species))
+        if (gBaseStats[gBattleMons[gBattlerTarget].species].flags & F_ULTRA_BEAST)
         {
             if (gLastUsedItem == ITEM_BEAST_BALL)
                 ballMultiplier = 50;
@@ -11997,6 +11997,7 @@ static void Cmd_handleballthrow(void)
         else
         {
         #endif
+
 
         if (gLastUsedItem > ITEM_SAFARI_BALL)
         {

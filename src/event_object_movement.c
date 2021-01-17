@@ -438,8 +438,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_LUGIA                   0x1121
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
-#define OBJ_EVENT_PAL_COLRESS                     0x1124
-#define OBJ_EVENT_PAL_SHADOW                      0x1125
+#define OBJ_EVENT_PAL_TAG_COLRESS                 0x1124
+#define OBJ_EVENT_PAL_TAG_SHADOW                  0x1125
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -486,8 +486,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-    {gObjectEventPalette_Colress, OBJ_EVENT_PAL_COLRESS},
-    {gObjectEventPalette_Shadow, OBJ_EVENT_PAL_SHADOW},
+    {gObjectEventPalette_Colress,           OBJ_EVENT_PAL_TAG_COLRESS},
+    {gObjectEventPalette_Shadow,            OBJ_EVENT_PAL_TAG_SHADOW},
     {NULL,                                  0x0000},
 };
 
@@ -1800,7 +1800,7 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
     sprite->pos1.x += 8;
     sprite->pos1.y += 16 + sprite->centerToCornerVecY;
     
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(graphicsInfo->paletteTag1)); //not paletteSlot in case of dynamic ow pals
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(graphicsInfo->paletteTag)); //not paletteSlot in case of dynamic ow pals
     if (objectEvent->trackedByCamera)
     {
         CameraObjectReset1();
@@ -2031,21 +2031,6 @@ static u8 FindObjectEventPaletteIndexByTag(u16 tag)
         }
     }
     return 0xFF;
-}
-
-bool8 IsObjectEventPaletteIndex(u8 paletteIndex)
-{
-    #if DYNAMIC_OW_PALS
-        if (FindObjectEventPaletteIndexByTag(GetSpritePaletteTagByPaletteNum(paletteIndex - 16)) != 0xFF)
-            return TRUE;
-    #else
-        if ((paletteIndex - 16) > 10)
-            return FALSE;   //don't mess with the weather pal itself
-        else if (FindObjectEventPaletteIndexByTag(GetSpritePaletteTagByPaletteNum(paletteIndex)) != 0xFF)
-            return TRUE;
-    #endif
-    
-    return FALSE;
 }
 
 void LoadPlayerObjectReflectionPalette(u16 tag, u8 slot)
