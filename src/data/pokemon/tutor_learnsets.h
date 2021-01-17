@@ -14,7 +14,7 @@ const u16 gTutorMoves[] =
     [TUTOR_MOVE_U_TURN] = MOVE_U_TURN,
     [TUTOR_MOVE_VOLT_SWITCH] = MOVE_VOLT_SWITCH,
     [TUTOR_MOVE_MAGIC_COAT] = MOVE_MAGIC_COAT,
-    [TUTOR_MOVE_PAIN_SPLIT] = MOVE_PAIN_SPLIT,
+    [TUTOR_MOVE_PAIN_SPLIT] = MOVE_PAIN_SPLIT,//this is the next one to dooooooooo
     [TUTOR_MOVE_TRICK] = MOVE_TRICK,
     [TUTOR_MOVE_ROLLOUT] = MOVE_ROLLOUT,
     [TUTOR_MOVE_PSYCH_UP] = MOVE_PSYCH_UP,
@@ -3840,19 +3840,6 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_TRICK)
                                             | TUTOR(MOVE_THUNDER_WAVE)),
 
-    [SPECIES_MELOETTA_PIROUETTE]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
-                                            | TUTOR(MOVE_LOW_KICK)
-                                            | TUTOR(MOVE_HEAL_BELL)
-                                            | TUTOR(MOVE_HELPING_HAND)
-                                            | TUTOR(MOVE_SLEEP_TALK)
-                                            | TUTOR(MOVE_FIRE_PUNCH)
-                                            | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)
-                                            | TUTOR(MOVE_U_TURN)
-                                            | TUTOR(MOVE_MAGIC_COAT)
-                                            | TUTOR(MOVE_TRICK)
-                                            | TUTOR(MOVE_THUNDER_WAVE)),
-    
     [SPECIES_GENESECT]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_U_TURN)
                                             | TUTOR(MOVE_MAGIC_COAT)
@@ -4693,6 +4680,396 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_VOLT_SWITCH)
                                             | TUTOR(MOVE_THUNDER_WAVE)),
 
+    [SPECIES_GROOKEY]       = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_THWACKEY]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_RILLABOOM]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_SCORBUNNY]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_RABOOT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_CINDERACE]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_SOBBLE]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_DRIZZILE]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_INTELEON]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_SKWOVET]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_GREEDENT]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_ROOKIDEE]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_CORVISQUIRE]   = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_CORVIKNIGHT]   = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_BLIPBUG]       = TUTOR_LEARNSET(0),
+
+    [SPECIES_DOTTLER]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_ORBEETLE]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_NICKIT]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)),
+
+    [SPECIES_THIEVUL]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_TAUNT)),
+
+    [SPECIES_GOSSIFLEUR]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_ELDEGOSS]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_WOOLOO]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_DUBWOOL]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_CHEWTLE]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_DREDNAW]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_YAMPER]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)
+                                            | TUTOR(MOVE_VOLT_SWITCH)),
+
+    [SPECIES_BOLTUND]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)
+                                            | TUTOR(MOVE_VOLT_SWITCH)),
+
+    [SPECIES_ROLYCOLY]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_EXPLOSION)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_CARKOL]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_COALOSSAL]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_APPLIN]        = TUTOR_LEARNSET(0),
+
+    [SPECIES_FLAPPLE]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_APPLETUN]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_SILICOBRA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_SANDACONDA]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_CRAMORANT]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_ARROKUDA]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_BARRASKEWDA]   = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_TOXEL]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_TOXTRICITY]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_VOLT_SWITCH)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_SIZZLIPEDE]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_CENTISKORCH]   = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_CLOBBOPUS]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_PAIN_SPLIT)),
+
+    [SPECIES_GRAPPLOCT]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_PAIN_SPLIT)),
+
+    [SPECIES_SINISTEA]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_POLTEAGEIST]   = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_HATENNA]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_HATTREM]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_HATTERENE]     = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_IMPIDIMP]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_MORGREM]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_GRIMMSNARL]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_OBSTAGOON]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_PERRSERKER]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_CURSOLA]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_SIRFETCHD]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_MR_RIME]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_RUNERIGUS]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_MILCERY]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_FALINKS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_PINCURCHIN]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_SNOM]          = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_FROSMOTH]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_STONJOURNER]   = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_EISCUE]        = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_ICE_PUNCH)),
+
+    [SPECIES_INDEEDEE]      = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_MORPEKO]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_VOLT_SWITCH)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_CUFANT]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_COPPERAJAH]    = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_DRACOZOLT]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_WAVE)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_ARCTOZOLT]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_WAVE)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_DRACOVISH]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_ARCTOVISH]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_DURALUDON]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_DREEPY]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_DRAKLOAK]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_DRAGAPULT]     = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_ZACIAN]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_ZAMAZENTA]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_ETERNATUS]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_KUBFU]         = TUTOR_LEARNSET(TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_URSHIFU]       = TUTOR_LEARNSET(TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_ZARUDE]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_REGIELEKI]     = TUTOR_LEARNSET(TUTOR(MOVE_EXPLOSION)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_VOLT_SWITCH)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_REGIDRAGO]     = TUTOR_LEARNSET(TUTOR(MOVE_EXPLOSION)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_GLASTRIER]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)),
+
+    [SPECIES_SPECTRIER]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)),
+
+    [SPECIES_CALYREX]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+
     [SPECIES_RATTATA_ALOLAN] = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TAUNT)
@@ -4780,6 +5157,110 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_STEALTH_ROCK)
                                             | TUTOR(MOVE_PAIN_SPLIT)),
+
+    [SPECIES_MEOWTH_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_PONYTA_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_RAPIDASH_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_SLOWPOKE_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_SLOWBRO_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_FARFETCHD_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
+
+    [SPECIES_WEEZING_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_EXPLOSION)),
+
+    [SPECIES_MR_MIME_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_ARTICUNO_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_ZAPDOS_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_MOLTRES_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_SLOWKING_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_CORSOLA_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_ZIGZAGOON_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_LINOONE_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_DARUMAKA_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_DARMANITAN_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_YAMASK_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_STUNFISK_GALARIAN]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_STEALTH_ROCK)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
     
     [SPECIES_BURMY_SANDY_CLOAK]   = TUTOR_LEARNSET(0),
 
@@ -4836,4 +5317,71 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_TRICK)
                                             | TUTOR(MOVE_THUNDER_WAVE)),
 
+    [SPECIES_TOXTRICITY_LOW_KEY]= TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_VOLT_SWITCH)
+                                            | TUTOR(MOVE_THUNDER_WAVE)),
+
+    [SPECIES_SINISTEA_ANTIQUE]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_POLTEAGEIST_ANTIQUE]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_ALCREMIE_RUBY_CREAM]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_MATCHA_CREAM]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_MINT_CREAM]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_LEMON_CREAM]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_SALTED_CREAM]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_RUBY_SWIRL]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_CARAMEL_SWIRL]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_ALCREMIE_RAINBOW_SWIRL]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)),
+
+    [SPECIES_INDEEDEE_FEMALE]= TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_MAGIC_COAT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_URSHIFU_RAPID_STRIKE_STYLE]= TUTOR_LEARNSET(TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_ZARUDE_DADA]   = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ROCK_SLIDE)
+                                            | TUTOR(MOVE_U_TURN)),
+
+    [SPECIES_CALYREX_ICE_RIDER]= TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_TRICK)),
+
+    [SPECIES_CALYREX_SHADOW_RIDER]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_TRICK)),
 };

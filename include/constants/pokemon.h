@@ -293,6 +293,7 @@
 #define F_SUMMARY_SCREEN_FLIP_SPRITE 0x80
 
 // Evolution types
+
 #define EVO_MEGA_EVOLUTION   0xffff // Not an actual evolution, used to temporarily mega evolve in battle.
 #define EVO_MOVE_MEGA_EVOLUTION 0xfffe // Mega Evolution that checks for a move instead of held item.
 #define EVO_FRIENDSHIP       1 // Pokémon levels up with friendship ≥ 220
@@ -316,14 +317,15 @@
 #define EVO_ITEM_HOLD        19 // Pokémon levels up, holds specified item at day
 #define EVO_MOVE             20 // Pokémon levels up, knows specified move
 #define EVO_MOVE_TYPE        21 // Pokémon levels up, knows move with specified type
-#define EVO_MAP              22 // Pokémon levels up on specified map
+#define EVO_SPECIFIC_MAP     22 // Pokémon levels up on specified map
 #define EVO_ITEM_MALE        23 // specified item is used on a male Pokémon
 #define EVO_ITEM_FEMALE      24 // specified item is used on a female Pokémon
 #define EVO_LEVEL_RAIN       25 // Pokémon reaches the specified level while it's raining
 #define EVO_SPECIFIC_MON_IN_PARTY  26 // Pokémon levels up with a specified Pokémon in party
 #define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  27 // Pokémon reaches the specified level with a Dark Type Pokémon in party
+#define EVO_MAPSEC                        28     // Pokémon levels up on specified mapsec
 
-#define EVOS_PER_MON 8
+#define EVOS_PER_MON 10
 #define EVOS_PER_LINE 16
 
 #define NUM_MALE_LINK_FACILITY_CLASSES   8
