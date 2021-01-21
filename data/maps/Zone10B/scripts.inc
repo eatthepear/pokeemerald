@@ -156,7 +156,7 @@ Zone10B_EventScript_SideQuestSubstitute::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_ZONE10B_SUBSTITUTE, Zone10B_EventScript_GaveSubstitute
 	msgbox Zone10B_Text_SubstituteIntro, MSGBOX_AUTOCLOSE
-	goto_if_not_defeated TRAINER_ARNOLD, Zone10B_EventScript_NoSubstitute
+	goto_if_not_defeated TRAINER_HARPER, Zone10B_EventScript_NoSubstitute
 	goto_if_not_defeated TRAINER_DEXTER, Zone10B_EventScript_NoSubstitute
 	goto_if_not_defeated TRAINER_JEREMIAH, Zone10B_EventScript_NoSubstitute
 	goto_if_not_defeated TRAINER_ARTHUR, Zone10B_EventScript_NoSubstitute

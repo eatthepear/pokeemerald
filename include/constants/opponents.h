@@ -5,7 +5,7 @@
 #define TRAINER_COREY                             1
 #define TRAINER_MARIAM                            2
 #define TRAINER_OSCAR                             3
-#define TRAINER_ARNOLD                            4
+#define TRAINER_HARPER                            4
 #define TRAINER_DEXTER                            5
 #define TRAINER_JEREMIAH                          6
 #define TRAINER_ARTHUR                            7
