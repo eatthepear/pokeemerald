@@ -26,11 +26,11 @@ Zone15Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone15Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM06
+	@ giveitem ITEM_SURFBOARD
 	closemessage
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
+	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
 	setvar VAR_ZONE, 16
 	buffernumberstring 0, VAR_ZONE
@@ -47,7 +47,7 @@ Zone15Sanctuary_EventScript_NextZone::
 	multichoice 20, 0, MULTI_COLRESS_MENU_2, 0
 	switch VAR_RESULT
 	case 0, Zone15Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_WarpToZone0
+	case 1, EventScript_WarpToZone15
 	case 2, EventScript_Advice
 	case 3, EventScript_Rules
 	case 4, EventScript_WhenUReady
@@ -68,4 +68,4 @@ Zone15Sanctuary_EventScript_Leave:
 	end
 
 Zone15Sanctuary_Text_Reward:
-	.string "TM06 - Covet.$"
+	.string "A Surfboard!$"

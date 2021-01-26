@@ -820,6 +820,9 @@ static const u8 sText_Froakie[] = _("Froakie");
 static const u8 sText_Rowlet[] = _("Rowlet");
 static const u8 sText_Litten[] = _("Litten");
 static const u8 sText_Popplio[] = _("Popplio");
+static const u8 sText_Grookey[] = _("Grookey");
+static const u8 sText_Scorbunny[] = _("Scorbunny");
+static const u8 sText_Sobble[] = _("Sobble");
 static const u8 sText_Random[] = _("Random");
 static const u8 sText_FireStone[] = _("Fire Stone");
 static const u8 sText_WaterStone[] = _("Water Stone");
@@ -875,7 +878,10 @@ static const struct ListMenuItem Starters[] =
     {sText_Rowlet, 22},
     {sText_Litten, 23},
     {sText_Popplio, 24},
-    {sText_Random, 25},
+    {sText_Grookey, 25},
+    {sText_Scorbunny, 26},
+    {sText_Sobble, 27},
+    {sText_Random, 28},
 };
 
 static const struct ListMenuItem EvolutionaryStones[] =
