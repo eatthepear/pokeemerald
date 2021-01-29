@@ -4910,12 +4910,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_BIKE_VOUCHER] =
+    [ITEM_SURFBOARD] =
     {
-        .name = _("Bike Voucher"),
-        .itemId = ITEM_BIKE_VOUCHER,
+        .name = _("Surfboard"),
+        .itemId = ITEM_SURFBOARD,
         .price = 0,
-        .description = sBikeVoucherDesc,
+        .description = sSurfboardDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,

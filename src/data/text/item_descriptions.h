@@ -1842,10 +1842,10 @@ static const u8 sFlashlightDesc[] = _(
     "that lights up\n"
     "dark places.");
 
-static const u8 sBikeVoucherDesc[] = _(
-    "A voucher for\n"
-    "obtaining a bicycle\n"
-    "from the BIKE SHOP.");
+static const u8 sSurfboardDesc[] = _(
+    "A battery-operated\n"
+    "device used to travel\n"
+    "across open water.");
 
 static const u8 sGoldTeethDesc[] = _(
     "Gold dentures lost\n"
