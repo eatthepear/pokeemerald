@@ -81,7 +81,8 @@ Zone11A_Text_Goodbye:
 
 Zone11A_EventScript_CelebiIntro::
 	lockall
-	goto_if_set FLAG_ZONE11A_CELEBI, Zone11A_EventScript_NoCelebi
+	goto Zone11A_EventScript_NoCelebi
+	@ goto_if_set FLAG_ZONE11A_CELEBI, Zone11A_EventScript_NoCelebi
 	msgbox Zone11A_Text_WouldYouLikePray, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone11A_EventScript_InitiateCelebiBattle

@@ -1108,8 +1108,8 @@
 #define FLAG_ITEM_ZONE15A_WISE_GLASSES                              0x425
 #define FLAG_ITEM_ZONE15A_WIDE_LENS                                 0x426
 #define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_WOOD_MAIL                    0x428
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL                    0x429
+#define FLAG_ITEM_ZONE3A_HYPER_POTION                    0x428
+#define FLAG_ITEM_ZONE5A_FULL_HEAL                    0x429
 #define FLAG_ITEM_ROUTE_124_YELLOW_SHARD                            0x42A
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_6_GLITTER_MAIL                 0x42B
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_TROPIC_MAIL                  0x42C

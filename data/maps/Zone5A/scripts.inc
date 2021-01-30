@@ -7,7 +7,7 @@ Zone5A_OnTransition:
 	end
 
 Zone5A_EventScript_MoveLeviathan:
-	setobjectxyperm 4, 28, 8
+	setobjectxyperm 4, 28, 9
 	end
 
 Zone5A_EventScript_AnneAndJune::
@@ -169,3 +169,7 @@ Zone5A_EventScript_Item1000::
 
 Zone5A_Text_Found1000:
 	.string "Found ¥1000!$"
+
+Zone5A_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
+	end

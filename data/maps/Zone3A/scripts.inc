@@ -127,3 +127,7 @@ Zone3A_EventScript_ItemAwakening::
 Zone3A_EventScript_ItemBurnHeal::
 	finditem ITEM_BURN_HEAL
 	end
+
+Zone3A_EventScript_ItemHyperPotion::
+	finditem ITEM_HYPER_POTION
+	end
