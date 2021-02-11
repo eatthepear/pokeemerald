@@ -988,8 +988,6 @@ static void SerialCB_CopyrightScreen(void)
 
 static u8 SetUpCopyrightScreen(void)
 {
-    u16 ime;
-
     switch (gMain.state)
     {
     case 0:
@@ -1308,7 +1306,6 @@ static void Task_IntroStartBikeRide(u8 taskId)
 
 static void Task_IntroHandleBikeAndFlygonMovement(u8 taskId)
 {
-    s16 a;
     u16 offset;
 
     if (gIntroFrameCounter == 1856)

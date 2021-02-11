@@ -1255,7 +1255,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Lola[] = {
     {
     .iv = 50,
     .lvl = 18,
-    .species = SPECIES_MIMEJR,
+    .species = SPECIES_MIME_JR,
     },
     {
     .iv = 50,

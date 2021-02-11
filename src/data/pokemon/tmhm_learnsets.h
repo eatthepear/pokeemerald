@@ -8462,7 +8462,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM49_SNATCH) //sunny day
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
-    [SPECIES_MIMEJR]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
+    [SPECIES_MIME_JR]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
@@ -17971,7 +17971,7 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
-    [SPECIES_ORICORIO_PA_U]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
+    [SPECIES_ORICORIO_PAU]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
