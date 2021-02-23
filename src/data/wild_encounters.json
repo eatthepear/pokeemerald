@@ -11637,7 +11637,7 @@
               {
                 "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_GOLDEEN"
               },
               {
                 "min_level": 16,
@@ -11672,7 +11672,7 @@
               {
                 "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_PATRAT"
               },
               {
                 "min_level": 4,
@@ -12245,22 +12245,22 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_PSYDUCK"
               },
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_LUVDISC"
+                "species": "SPECIES_CORPHISH"
               },
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_ARROKUDA"
+                "species": "SPECIES_DEWPIDER"
               },
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_CORSOLA"
+                "species": "SPECIES_FEEBAS"
               },
               {
                 "min_level": 16,
@@ -12764,7 +12764,7 @@
               {
                 "min_level": 11,
                 "max_level": 13,
-                "species": "SPECIES_PATRAT"
+                "species": "SPECIES_CACNEA"
               },
               {
                 "min_level": 11,
@@ -12774,7 +12774,7 @@
               {
                 "min_level": 11,
                 "max_level": 13,
-                "species": "SPECIES_SCRAGGY"
+                "species": "SPECIES_HIPPOPOTAS"
               },
               {
                 "min_level": 11,
@@ -12927,7 +12927,7 @@
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_DUSKULL"
+                "species": "SPECIES_CHERUBI"
               },
               {
                 "min_level": 12,
@@ -12991,12 +12991,12 @@
               {
                 "min_level": 13,
                 "max_level": 16,
-                "species": "SPECIES_GOLDEEN"
+                "species": "SPECIES_BASCULIN"
               },
               {
                 "min_level": 13,
                 "max_level": 16,
-                "species": "SPECIES_DEWPIDER"
+                "species": "SPECIES_ARROKUDA"
               },
               {
                 "min_level": 13,
@@ -13006,7 +13006,7 @@
               {
                 "min_level": 13,
                 "max_level": 16,
-                "species": "SPECIES_FEEBAS"
+                "species": "SPECIES_CARVANHA"
               },
               {
                 "min_level": 16,
@@ -13110,7 +13110,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_CORPHISH"
+                "species": "SPECIES_BARBOACH"
               },
               {
                 "min_level": 15,
@@ -13190,17 +13190,17 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_PORYGON"
+                "species": "SPECIES_ESPURR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_ESPURR"
               },
               {
                 "min_level": 15,
                 "max_level": 17,
                 "species": "SPECIES_CASTFORM"
-              },
-              {
-                "min_level": 15,
-                "max_level": 17,
-                "species": "SPECIES_SMEARGLE"
               },
               {
                 "min_level": 15,
@@ -13234,7 +13234,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_JOLTIK"
+                "species": "SPECIES_TIMBURR"
               },
               {
                 "min_level": 15,
