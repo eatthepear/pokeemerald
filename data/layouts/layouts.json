@@ -5064,7 +5064,7 @@
     {
       "id": "LAYOUT_ZONE15A",
       "name": "Zone15A_Layout",
-      "width": 80,
+      "width": 82,
       "height": 61,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
