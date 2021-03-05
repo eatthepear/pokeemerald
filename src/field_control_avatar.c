@@ -233,7 +233,7 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
     if (script == NULL)
         return FALSE;
 
-    // Don't play interaction sound for certain scripts.
+    /*// Don't play interaction sound for certain scripts.
     if (script != LittlerootTown_BrendansHouse_2F_EventScript_PC
      && script != LittlerootTown_MaysHouse_2F_EventScript_PC
      && script != SecretBase_EventScript_PC
@@ -241,7 +241,7 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
      && script != SecretBase_EventScript_DollInteract
      && script != SecretBase_EventScript_CushionInteract
      && script != EventScript_PC)
-        PlaySE(SE_SELECT);
+        PlaySE(SE_SELECT);*/
 
     ScriptContext1_SetupScript(script);
     return TRUE;
