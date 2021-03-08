@@ -561,7 +561,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 };
 
 const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 12, 16, 18, 20, 23, 25, 25};
-const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
+const double sLevelCapReduction[7] = { .5, .4, .3, .2, .1, .05, .02 };
 const double sRelativePartyScaling[27] =
 {
     1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
