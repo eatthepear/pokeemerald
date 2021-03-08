@@ -632,7 +632,7 @@ static const struct TrainerMon sParty_Neil[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone8DShadow[] = {
+static const struct TrainerMon sParty_Zone8DMirage[] = {
     {
     .iv = 150,
     .lvl = 14,
@@ -1320,7 +1320,7 @@ static const struct TrainerMon sParty_Charlie[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone14CShadow[] = {
+static const struct TrainerMon sParty_Zone14CMirage[] = {
     {
     .iv = 200,
     .lvl = 23,
@@ -1351,7 +1351,7 @@ static const struct TrainerMon sParty_Zone14CShadow[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone15BShadow[] = {
+static const struct TrainerMon sParty_Zone15BMirage[] = {
     {
     .iv = 200,
     .lvl = 24,

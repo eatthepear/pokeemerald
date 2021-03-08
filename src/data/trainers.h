@@ -472,12 +472,12 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Shadow"),
+        .trainerName = _("Mirage"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone8DShadow),
-        .party = {.TrainerMon = sParty_Zone8DShadow},
+        .partySize = ARRAY_COUNT(sParty_Zone8DMirage),
+        .party = {.TrainerMon = sParty_Zone8DMirage},
     },
     
     [TRAINER_ZONE8D_WALLY] =
@@ -888,12 +888,12 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Shadow"),
+        .trainerName = _("Mirage"),
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone14CShadow),
-        .party = {.TrainerMon = sParty_Zone14CShadow},
+        .partySize = ARRAY_COUNT(sParty_Zone14CMirage),
+        .party = {.TrainerMon = sParty_Zone14CMirage},
     },
 
     [TRAINER_LEVIATHAN10] =
@@ -901,12 +901,12 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Shadow"),
+        .trainerName = _("Mirage"),
         .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone15BShadow),
-        .party = {.TrainerMon = sParty_Zone15BShadow},
+        .partySize = ARRAY_COUNT(sParty_Zone15BMirage),
+        .party = {.TrainerMon = sParty_Zone15BMirage},
     },
 
     [TRAINER_RICKY_5] =

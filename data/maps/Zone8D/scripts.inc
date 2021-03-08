@@ -106,11 +106,11 @@ Zone8D_EventScript_InitiateLeviathan4:
 	applymovement 2, Common_Movement_FaceRight
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone8D_Text_Shadow2_BackAgain, MSGBOX_AUTOCLOSE
-	msgbox Zone8D_Text_Shadow1_Entertaining, MSGBOX_AUTOCLOSE
+	msgbox Zone8D_Text_Mirage2_BackAgain, MSGBOX_AUTOCLOSE
+	msgbox Zone8D_Text_Mirage1_Entertaining, MSGBOX_AUTOCLOSE
 	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone8D_Text_Shadow2_AtOnce, MSGBOX_AUTOCLOSE
+	msgbox Zone8D_Text_Mirage2_AtOnce, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
 	goto Zone8D_EventScript_BattleSetup
@@ -123,7 +123,7 @@ Zone8D_EventScript_BattleSetup:
 	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_ShadowDefeat
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_MirageDefeat
 	compare VAR_RESULT, 0
 	goto_if_ne Zone8D_EventScript_LeviathanBattle
 	special LoadPlayerParty
@@ -151,13 +151,13 @@ Zone8D_EventScript_LeviathanBattle:
 Zone8D_EventScript_PlayerWon:
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone8D_Text_Shadow2_DefeatedByTwo, MSGBOX_AUTOCLOSE
+	msgbox Zone8D_Text_Mirage2_DefeatedByTwo, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone8D_Text_Shadow1_NoMatter, MSGBOX_AUTOCLOSE
+	msgbox Zone8D_Text_Mirage1_NoMatter, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone8D_Text_Shadow1_YoullRegret, MSGBOX_AUTOCLOSE
+	msgbox Zone8D_Text_Mirage1_YoullRegret, MSGBOX_AUTOCLOSE
 	fadescreenswapbuffers FADE_TO_BLACK
 	playmoncry SPECIES_REGIROCK, 2
 	delay 40
@@ -222,27 +222,27 @@ Zone8D_Text_Wally_WhatYourName:
 Zone8D_Text_Wally_WontLet:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: I won't let you hurt Regirock!$"
 
-Zone8D_Text_Shadow2_BackAgain:
+Zone8D_Text_Mirage2_BackAgain:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: The child is back again.\n"
 	.string "With a friend this time.$"
 
-Zone8D_Text_Shadow1_Entertaining:
+Zone8D_Text_Mirage1_Entertaining:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: This should be... entertaining.\n"
 	.string "Deal with them.$"
 
-Zone8D_Text_Shadow2_AtOnce:
+Zone8D_Text_Mirage2_AtOnce:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: At once.$"
 
-Zone8D_Text_ShadowDefeat:
+Zone8D_Text_MirageDefeat:
 	.string "...$"
 
-Zone8D_Text_Shadow2_DefeatedByTwo:
+Zone8D_Text_Mirage2_DefeatedByTwo:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Defeated by two children...$"
 
-Zone8D_Text_Shadow1_NoMatter:
+Zone8D_Text_Mirage1_NoMatter:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: No matter. It's done.$"
 
-Zone8D_Text_Shadow1_YoullRegret:
+Zone8D_Text_Mirage1_YoullRegret:
 	.string "You'll regret getting in our way.$"
 
 Zone8D_EventScript_Conclusion:
