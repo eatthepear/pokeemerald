@@ -794,8 +794,9 @@ Zone0Sanctuary_Text_Colress_Welcome:
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GREY}!\p"
 	.string "I am here to aid challengers who\n"
 	.string "might attempt to brave the\l"
-	.string "trials ahead. Would you like to\l"
-	.string "skip the tutorial?$"
+	.string "trials ahead.\p"
+	.string "Would you like to skip the\n"
+	.string "tutorial?$"
 
 Zone0Sanctuary_Text_Colress_VanillaNuzlocke:
 	.string "There are two game modes:\n"
@@ -885,7 +886,7 @@ Zone0Sanctuary_Text_Colress_Starters:
 	.string "As a new challenger, you will\n"
 	.string "receive a starter Pokémon.\p"
 	.string "You may have your choice of any of\n"
-	.string "the generation 1-7 starter Pokémon,\l"
+	.string "the generation 1-8 starter Pokémon,\l"
 	.string "as well as Pikachu, Eevee,\l"
 	.string "Munchlax, and Riolu.\p"
 	.string "Choose carefully as these Pokémon\n"

@@ -209,9 +209,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_FRED] =
     {
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerPic = TRAINER_PIC_CAMPER,
         .trainerName = _("Fred"),
         .items = {},
         .doubleBattle = FALSE,
@@ -235,9 +235,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_REBECCA] =
     {
-        .trainerClass = TRAINER_CLASS_LASS,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_LASS,
+        .trainerClass = TRAINER_CLASS_LADY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LADY,
         .trainerName = _("Rebecca"),
         .items = {},
         .doubleBattle = FALSE,
@@ -261,9 +261,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_RYAN] =
     {
-        .trainerClass = TRAINER_CLASS_CAMPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_POKEFAN_M,
         .trainerName = _("Ryan"),
         .items = {},
         .doubleBattle = FALSE,
@@ -729,9 +729,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_RANDOLPH] =
     {
-        .trainerClass = TRAINER_CLASS_POKEMANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_POKEMANIAC,
+        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_POKEFAN_M,
         .trainerName = _("Randolph"),
         .items = {},
         .doubleBattle = FALSE,

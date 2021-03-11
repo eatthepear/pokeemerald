@@ -24,15 +24,14 @@ Zone4D_Text_FredIntro:
 	.string "In these enchanted woods,\n"
 	.string "there's only one thing that\l"
 	.string "will get you through:\l"
-	.string "Bug Pokémon!$"
+	.string "Perseverance!$"
 
 Zone4D_Text_FredDefeat:
-	.string "How did I lose?\n"
-	.string "My bugs were doing so well!$"
+	.string "I can make it through anything!$"
 
 Zone4D_Text_FredPostBattle:
-	.string "I still stand by my\n"
-	.string "prior statements.$"
+	.string "Just keep swimming,\n"
+	.string "just keep swimming.$"
 
 Zone4D_EventScript_ItemRepel::
 	finditem ITEM_REPEL
