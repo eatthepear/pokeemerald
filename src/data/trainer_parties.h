@@ -358,13 +358,13 @@ static const struct TrainerMon sParty_Ryan[] = {
 
 static const struct TrainerMon sParty_Declan[] = {
     {
-        .iv = 255,
-        .lvl = 11,
-        .nature = NATURE_BOLD,
-        .ability = ABILITY_SLOT_2,
-        .species = SPECIES_DUSTOX,
-        .heldItem = ITEM_ORAN_BERRY,
-        .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST}
+    .iv = 255,
+    .lvl = 11,
+    .nature = NATURE_BOLD,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_DUSTOX,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST}
     },
     {
     .iv = 255,
