@@ -13338,7 +13338,7 @@
               {
                 "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_ZIGZAGOON"
+                "species": "SPECIES_MEDITITE"
               },
               {
                 "min_level": 4,
@@ -13892,7 +13892,7 @@
               {
                 "min_level": 6,
                 "max_level": 9,
-                "species": "SPECIES_MEDITITE"
+                "species": "SPECIES_DEERLING"
               },
               {
                 "min_level": 6,
