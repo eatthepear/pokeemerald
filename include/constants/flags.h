@@ -71,7 +71,7 @@
 #define FLAG_HIDE_LEVIATHAN8    0x3B // Unused Flag
 #define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x3C // Unused Flag
 #define FLAG_HIDE_ZONE15B_COLRESS    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
+#define FLAG_HIDE_ZONE10B_BERRYMAN    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
