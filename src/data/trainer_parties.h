@@ -628,7 +628,7 @@ static const struct TrainerMon sParty_Neil[] = {
 
 static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
     {
-    .iv = 255,
+    .iv = 255, //Starts with aura +1 Speed
     .lvl = 17,
     .nature = NATURE_NAIVE,
     .ability = ABILITY_SLOT_1, //Intimidate
@@ -637,7 +637,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
     .moves = {MOVE_STOMP, MOVE_DOUBLE_KICK, MOVE_HYPNOSIS, MOVE_ME_FIRST}
     },
     {
-    .iv = 255,
+    .iv = 255, //Starts with aura +1 Attack
     .lvl = 17,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Intimidate
