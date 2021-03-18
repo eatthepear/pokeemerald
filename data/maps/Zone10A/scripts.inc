@@ -4,12 +4,11 @@ Zone10A_MapScripts::
 Zone10A_EventScript_Adamina::
 	lock
 	faceplayer
-	call_if_set FLAG_ADAMINA_INTRO, Zone10A_EventScript_AdaminaIntro
+	call_if_unset FLAG_ADAMINA_INTRO, Zone10A_EventScript_AdaminaIntro
 	msgbox Zone10A_Text_Explain, MSGBOX_AUTOCLOSE
 	checkitem ITEM_YELLOW_SHARD, 3
 	compare VAR_RESULT, TRUE
 	goto_if_eq Zone10A_EventScript_InitiateLeviathanBattle
-	msgbox Zone10A_Text_NoChance, MSGBOX_AUTOCLOSE
 	release
 	end
 
