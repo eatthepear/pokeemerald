@@ -2130,6 +2130,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
     s32 flagCount;
     u8 *endOfString;
     u8 *string = dest;
+    int zone;
 
     *(string++) = EXT_CTRL_CODE_BEGIN;
     *(string++) = EXT_CTRL_CODE_COLOR;
@@ -2164,8 +2165,9 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
                 if (FlagGet(curFlag))
                     flagCount++;
             }*/
-            *string = VarGet(VAR_ZONE) + CHAR_0;
-            *endOfString = EOS;
+            zone = VarGet(VAR_ZONE);
+            string = ConvertIntToDecimalStringN(string, zone, STR_CONV_MODE_LEFT_ALIGN, 3);
+            *string = EOS;
             break;
     }
 }
