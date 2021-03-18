@@ -246,21 +246,20 @@ Zone10B_EventScript_BerryExchangeNuzlocke:
 	end
 
 Zone10B_Text_BerriesOfferVanilla:
-	.string "That smell...\n"
-	.string "The delicious aroma of Berries!\p"
 	.string "Listen, you know how some berries\n"
 	.string "can treat status conditions?\p"
-	.string "Well, if I have 10 of each of those\n"
-	.string "Berries, I can craft them into\l"
-	.string "5 Revives. How about it?$"
+	.string "Well, I'm looking to start a Berry\n"
+	.string "farm. If you have 10 of each of\l"
+	.string "those Berries, I'll trade them\l"
+	.string "for 5 Revives. How about it?$"
 
 Zone10B_Text_BerriesOfferNuzlocke:
-	.string "That smell...\n"
-	.string "The delicious aroma of Berries!\p"
 	.string "Listen, you know how some berries\n"
 	.string "can treat status conditions?\p"
-	.string "I'll pay you ¥7500 for 10 of each\n"
-	.string "of those Berries. How about it?$"
+	.string "Well, I'm looking to start a Berry\n"
+	.string "farm. If you have 10 of each of\l"
+	.string "those Berries, I'll pay you ¥7500\l"
+	.string "for them. How about it?$"
 
 Zone10B_Text_BerriesTooBad:
 	.string "Aw, that's too bad.\n"
@@ -305,7 +304,11 @@ Zone10B_EventScript_BerryNuzlockeMoney:
 	waitfanfare
 	hidemoneybox
 	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject 5
+	setflag FLAG_HIDE_ZONE10B_BERRYMAN
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
 	end
 
 Zone10B_Text_BerryCraftingVanilla:
@@ -319,7 +322,8 @@ Zone10B_Text_Received7500:
 	.string "Received ¥7500!$"
 
 Zone10B_Text_GoodDay:
-	.string "Good day.$"
+	.string "Thank you.\n"
+	.string "I'll be seeing you around!$"
 
 Zone10B_EventScript_NotEnoughAspear:
 	msgbox Zone10B_Text_NotEnoughAspear, MSGBOX_AUTOCLOSE
