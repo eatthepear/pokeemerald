@@ -560,7 +560,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
     FLAG_BEATLEVIATHAN1, FLAG_BEATLEVIATHAN2, FLAG_BEATLEVIATHAN4, FLAG_BEATLEVIATHAN5, FLAG_BEATLEVIATHAN6, FLAG_BEATLEVIATHAN9, FLAG_BEATLEVIATHAN10, FLAG_BEATLEVIATHAN11
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 12, 16, 18, 20, 23, 25, 25};
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 12, 16, 18, 19, 24, 25, 25};
 const double sLevelCapReduction[7] = { .5, .05, .04, .03, .02, .01, .005 };
 const double sRelativePartyScaling[27] =
 {
