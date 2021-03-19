@@ -72,7 +72,7 @@
 #define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x3C // Unused Flag
 #define FLAG_HIDE_ZONE15B_COLRESS    0x3D // Unused Flag
 #define FLAG_HIDE_ZONE10B_BERRYMAN    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
+#define FLAG_HIDE_ZONE15B_MIRAGE    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
@@ -1225,8 +1225,8 @@
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_BEATLEVIATHAN10                                           0x49C // Unused Flag
-#define FLAG_BEATLEVIATHAN11                                           0x49D // Unused Flag
+#define FLAG_BEATLEVIATHAN10                                        0x49C // Unused Flag
+#define FLAG_BEATLEVIATHAN11                                        0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
