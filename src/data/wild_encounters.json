@@ -15026,22 +15026,22 @@
               {
                 "min_level": 15,
                 "max_level": 17,
+                "species": "SPECIES_MAGNEMITE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_MAGNEMITE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
                 "species": "SPECIES_GOTHITA"
               },
               {
                 "min_level": 15,
                 "max_level": 17,
                 "species": "SPECIES_SOLOSIS"
-              },
-              {
-                "min_level": 15,
-                "max_level": 17,
-                "species": "SPECIES_CASTFORM"
-              },
-              {
-                "min_level": 15,
-                "max_level": 17,
-                "species": "SPECIES_SNIVY"
               }
             ]
           },
