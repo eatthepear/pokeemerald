@@ -21,28 +21,26 @@ Zone15B_EventScript_Intro:
 	waitse
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	fadeoutbgm 1
 	msgbox Zone15B_Text_Mirage_AnotherAI, MSGBOX_AUTOCLOSE
+	delay 48
 	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
-
-
-
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone15B_Text_Mirage_Command, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone15B_Text_Mirage_LuckyDay, MSGBOX_AUTOCLOSE
+	delay 48
 	fadescreenswapbuffers FADE_TO_BLACK
 	playmoncry SPECIES_REGICE, 2
 	delay 40
 	waitmoncry
 	removeobject 1
 	removeobject 2
-	setflag FLAG_BEATLEVIATHAN10
+	setflag FLAG_HIDE_ZONE15B_MIRAGE
 	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 48
 	clearflag FLAG_HIDE_ZONE15B_COLRESS
@@ -64,7 +62,14 @@ Zone15B_EventScript_Intro:
 	delay 48
 	msgbox Zone15B_Text_Colress_Sanctuary, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE15B_STATE, 1
-	warp MAP_ZONE15SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
+Zone15B_EventScript_Colress::
+	lockall
+	faceplayer
+	msgbox Zone15B_Text_Colress_OnTo, MSGBOX_AUTOCLOSE
+	warpteleport MAP_ZONE15SANCTUARY, 255, 7, 7
 	releaseall
 	end
 
@@ -80,9 +85,9 @@ Zone15B_Text_Mirage_Command:
 	.string "I'll prepare for extraction.$"
 
 Zone15B_Text_Mirage_LuckyDay:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: It’s your lucky day, AI.\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: It's your lucky day, AI.\p"
 	.string "Your master rushes to save you.\n"
-	.string "And so, I’ll be taking my leave.$"
+	.string "And so, I'll be taking my leave.$"
 
 Zone15B_Text_Colress_TooLate:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: It appears I am just a\n"
@@ -95,4 +100,8 @@ Zone15B_Text_Colress_TooLate:
 	.string "will be taken care of.$"
 
 Zone15B_Text_Colress_Sanctuary:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are ready to go\n"
+	.string "to the Sanctuary, speak to me.$"
+
+Zone15B_Text_Colress_OnTo:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Now, on to the Sanctuary.$"
