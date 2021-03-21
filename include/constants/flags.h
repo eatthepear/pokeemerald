@@ -41,38 +41,39 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
+//Scripts
 #define FLAG_TIM_INTRO       0x20 // First time intro for Tim
 #define FLAG_VARRICK_INTRO   0x21 // First time intro for Varrick
 #define FLAG_LELOUCH_INTRO   0x22 // First time intro for Lelouch
 #define FLAG_JOY_INTRO       0x23 // First time intro for Joy
-#define FLAG_HIDE_LEVIATHAN1 0x24 // Used to hide Leviathan 1 from vision
+#define FLAG_HIDE_LEVIATHAN1 0x24
 #define FLAG_LELOUCH_SHARDS  0x25 // First time talking to Lelouch with shards
-#define FLAG_ZONE7_HEAL_USED 0x26 // Single use heal lady in Zone 7
-#define FLAG_HIDE_ZONE8D_WALLY    0x27 // HideWally Zone 8
-#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE       0x28 // Hide Ari
-#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE    0x29 // Hide Bertha
-#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x2A // Hide Cassandra
-#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2B // Hide Dominic
-#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2C // Hide Erica
+#define FLAG_ZONE7_HEAL_USED 0x26
+#define FLAG_HIDE_ZONE8D_WALLY    0x27
+#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE       0x28
+#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE    0x29
+#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x2A
+#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2B
+#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2C
 #define FLAG_RECEIVED_ZONE9F_ZORUA    0x2D // gift Shiny Zorua from Erica
 #define FLAG_HIDE_ZONE9A_MAN    0x2E // Man blocks exit
-#define FLAG_HIDE_LEVIATHAN5 0x2F // HideLeviathan5
-#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x30 // LuckyEgg Sidequest
+#define FLAG_HIDE_LEVIATHAN5 0x2F
+#define FLAG_ADAMINA_INTRO  0x30
 #define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x31 // Substitute Sidequest
-#define FLAG_HIDE_LEVIATHAN6 0x32 // Hide Leviathan 6
-#define FLAG_ZONE11A_CELEBI  0x33 // Fought Celebi in Zone 11
-#define FLAG_RECEIVED_ZONE12A_WYNAUT_EGG  0x34 // Received Wynaut egg in Zone 12A
-#define FLAG_DEFEATED_ALINTA_ZONE_13  0x35 // Defeat Alinta in Zone 13
-#define FLAG_ADAMINA_INTRO    0x36 // Unused Flag
-#define FLAG_HIDE_ZONE12A_WALLYDITTO    0x37 // Unused Flag
-#define FLAG_ZONE13B_RECEIVED_FLASHLIGHT    0x38 // Unused Flag
-#define FLAG_NUZLOCKE_FOSSIL_RECEIVED    0x39 // Unused Flag
-#define FLAG_HIDE_LEVIATHAN7    0x3A // Unused Flag
-#define FLAG_HIDE_LEVIATHAN8    0x3B // Unused Flag
-#define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x3C // Unused Flag
-#define FLAG_HIDE_ZONE15B_COLRESS    0x3D // Unused Flag
-#define FLAG_HIDE_ZONE10B_BERRYMAN    0x3E // Unused Flag
-#define FLAG_HIDE_ZONE15B_MIRAGE    0x3F // Unused Flag
+#define FLAG_HIDE_ZONE10B_BERRYMAN 0x32 // Status Berry Exchange Sidequest
+#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x33 // Lucky Egg Sidequest
+#define FLAG_HIDE_LEVIATHAN6  0x34
+#define FLAG_ZONE13B_RECEIVED_FLASHLIGHT  0x35
+#define FLAG_NUZLOCKE_FOSSIL_RECEIVED    0x36
+#define FLAG_HIDE_LEVIATHAN7    0x37
+#define FLAG_HIDE_LEVIATHAN8    0x38
+#define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x39
+#define FLAG_HIDE_ZONE15B_COLRESS    0x3A
+#define FLAG_HIDE_ZONE15B_MIRAGE    0x3B
+#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
+#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
+#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
@@ -89,26 +90,24 @@
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
 #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
 #define FLAG_UNUSED_0x04F    0x4F // Unused Flag
-
-// Scripts
 #define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
 #define FLAG_SET_WALL_CLOCK                  0x51
 #define FLAG_RESCUED_BIRCH                   0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
 
-#define FLAG_NUZLOCKE_ON                     0x54  // Unused Flag
-#define FLAG_DISABLE_CATCHING                0x55  // Unused Flag
+#define FLAG_                     0x54  // Unused Flag
+#define FLAG                0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
-#define FLAG_BEATLEVIATHAN1                  0x57
-#define FLAG_BEATLEVIATHAN2                  0x58
-#define FLAG_BEATLEVIATHAN3                  0x59
-#define FLAG_BEATLEVIATHAN4                  0x5A
-#define FLAG_BEATLEVIATHAN5                  0x5B
-#define FLAG_BEATLEVIATHAN6                  0x5C
-#define FLAG_BEATLEVIATHAN7                  0x5D
-#define FLAG_BEATLEVIATHAN8                  0x5E
-#define FLAG_BEATLEVIATHAN9                  0x5F
+#define FLAG_UNUSEDLEVI1                     0x57
+#define FLAG_UNUSEDLEVI2                     0x58
+#define FLAG_UNUSEDLEVI3                     0x59
+#define FLAG_UNUSEDLEVI4                     0x5A
+#define FLAG_UNUSEDLEVI5                     0x5B
+#define FLAG_UNUSEDLEVI6                     0x5C
+#define FLAG_UNUSEDLEVI7                     0x5D
+#define FLAG_UNUSEDLEVI8                     0x5E
+#define FLAG_UNUSEDLEVI9                     0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61
 #define FLAG_TV_EXPLAINED                    0x62
@@ -1216,15 +1215,15 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
+#define FLAG_BEATLEVIATHAN1                                           0x493 // Unused Flag
+#define FLAG_BEATLEVIATHAN2                                           0x494 // Unused Flag
+#define FLAG_BEATLEVIATHAN3                                           0x495 // Unused Flag
+#define FLAG_BEATLEVIATHAN4                                           0x496 // Unused Flag
+#define FLAG_BEATLEVIATHAN5                                           0x497 // Unused Flag
+#define FLAG_BEATLEVIATHAN6                                           0x498 // Unused Flag
+#define FLAG_BEATLEVIATHAN7                                           0x499 // Unused Flag
+#define FLAG_BEATLEVIATHAN8                                         0x49A // Unused Flag
+#define FLAG_BEATLEVIATHAN9                                         0x49B // Unused Flag
 #define FLAG_BEATLEVIATHAN10                                        0x49C // Unused Flag
 #define FLAG_BEATLEVIATHAN11                                        0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
@@ -1306,8 +1305,8 @@
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
+#define FLAG_NUZLOCKE_ON                                            0x4ED // Unused Flag
+#define FLAG_DISABLE_CATCHING                                       0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
