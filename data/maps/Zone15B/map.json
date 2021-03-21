@@ -2,7 +2,7 @@
   "id": "MAP_ZONE15B",
   "name": "Zone15B",
   "layout": "LAYOUT_ZONE15B",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_RG_SEVII_CAVE",
   "region_map_section": "MAPSEC_ZONE_15",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_BEATLEVIATHAN10"
+      "flag": "FLAG_HIDE_ZONE15B_MIRAGE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_REGICE",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_BEATLEVIATHAN10"
+      "flag": "FLAG_HIDE_ZONE15B_MIRAGE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COLRESS",
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Zone15B_EventScript_Colress",
       "flag": "FLAG_HIDE_ZONE15B_COLRESS"
     }
   ],

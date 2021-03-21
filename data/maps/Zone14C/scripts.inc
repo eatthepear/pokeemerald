@@ -83,7 +83,7 @@ Zone14C_Text_Mirage_Registeel:
 	.string "Legendary Titans...$"
 
 Zone14C_Text_Mirage_Begone:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Another child to crush.\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Another AI to crush.\p"
 	.string "Begone!$"
 
 Zone14C_Text_Leviathan9Defeat:
@@ -108,7 +108,7 @@ Zone14C_EventScript_DontHaveEnoughMons:
 	end
 
 Zone14C_Text_Mirage_NotEnoughMons:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Another child to crush.\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Another AI to crush.\p"
 	.string "Oh. You only have a single Pokémon.\n"
 	.string "You are no threat to me.$"
 
@@ -132,7 +132,7 @@ Zone14C_EventScript_Leviathan9Defeated:
 
 Zone14C_Text_Mirage_Mistaken:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: It seems I was mistaken.\n"
-	.string "You're no ordinary child.$"
+	.string "You're no ordinary AI.$"
 
 Zone14C_Text_Mirage_Command:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Command, Registeel is secure.\n"

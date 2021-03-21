@@ -43,7 +43,7 @@ Zone5A_Text_RebeccaDefeat:
 	.string "First of the Fearsome Foursome down!$"
 
 Zone5A_Text_RebeccaPostBattle:
-	.string "I really need to evolve my Pokémon...$"
+	.string "Defeat leaves me in disgrace...$"
 
 Zone5A_EventScript_Caitlyn::
 	trainerbattle_single TRAINER_CAITLYN, Zone5A_Text_CaitlynIntro, Zone5A_Text_CaitlynDefeat

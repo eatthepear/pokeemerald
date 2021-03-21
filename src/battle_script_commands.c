@@ -560,8 +560,8 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
     FLAG_BEATLEVIATHAN1, FLAG_BEATLEVIATHAN2, FLAG_BEATLEVIATHAN4, FLAG_BEATLEVIATHAN5, FLAG_BEATLEVIATHAN6, FLAG_BEATLEVIATHAN9, FLAG_BEATLEVIATHAN10, FLAG_BEATLEVIATHAN11
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 12, 16, 18, 20, 23, 25, 25};
-const double sLevelCapReduction[7] = { .5, .4, .3, .2, .1, .05, .02 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 12, 16, 18, 19, 24, 25, 25};
+const double sLevelCapReduction[7] = { .5, .05, .04, .03, .02, .01, .005 };
 const double sRelativePartyScaling[27] =
 {
     1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
@@ -3814,7 +3814,7 @@ static void Cmd_getexp(void)
 
                     // only give exp share bonus in later gens if the mon wasn't sent out
                     if ((holdEffect == HOLD_EFFECT_EXP_SHARE) && ((gBattleMoveDamage == 0) || (B_SPLIT_EXP < GEN_6)))
-                        gBattleMoveDamage += gExpShareExp;
+                        gBattleMoveDamage += gExpShareExp * expMultiplier;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && B_TRAINER_EXP_MULTIPLIER <= GEN_7)

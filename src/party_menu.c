@@ -321,17 +321,25 @@ static void SetSelectedMoveForPPItem(u8);
 static void TryUsePPItem(u8);
 static void Task_LearnedMove(u8);
 static void Task_ReplaceMoveYesNo(u8);
+static void Task_ReplaceMoveYesNoTMHM(u8);
 static void Task_DoLearnedMoveFanfareAfterText(u8);
 static void Task_LearnNextMoveOrClosePartyMenu(u8);
 static void Task_TryLearningNextMove(u8);
 static void Task_HandleReplaceMoveYesNoInput(u8);
+static void Task_HandleReplaceMoveYesNoInputTMHM(u8);
 static void Task_ShowSummaryScreenToForgetMove(u8);
+static void Task_ShowSummaryScreenToForgetMoveTMHM(u8);
 static void StopLearningMovePrompt(u8);
 static void CB2_ShowSummaryScreenToForgetMove(void);
+static void CB2_ShowSummaryScreenToForgetMoveTMHM(void);
 static void CB2_ReturnToPartyMenuWhileLearningMove(void);
+static void CB2_ReturnToPartyMenuWhileLearningMoveTMHM(void);
 static void Task_ReturnToPartyMenuWhileLearningMove(u8);
+static void Task_ReturnToPartyMenuWhileLearningMoveTMHM(u8);
 static void DisplayPartyMenuForgotMoveMessage(u8);
+static void DisplayPartyMenuForgotMoveMessageTMHM(u8);
 static void Task_PartyMenuReplaceMove(u8);
+static void Task_PartyMenuReplaceMoveTMHM(u8);
 static void Task_StopLearningMoveYesNo(u8);
 static void Task_HandleStopLearningMoveYesNoInput(u8);
 static void Task_TryLearningNextMoveAfterText(u8);
@@ -2640,8 +2648,6 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
-    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_NICKNAME);
-
     // Add field moves to action list
     /*for (i = 0; i < MAX_MON_MOVES; i++)
     {
@@ -2664,6 +2670,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         else
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
     }
+    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_NICKNAME);
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_CANCEL1);
 }
 
@@ -4919,7 +4926,7 @@ void ItemUseCB_TMHM(u8 taskId, TaskFunc task)
     else
     {
         DisplayLearnMoveMessage(gText_PkmnNeedsToReplaceMove);
-        gTasks[taskId].func = Task_ReplaceMoveYesNo;
+        gTasks[taskId].func = Task_ReplaceMoveYesNoTMHM;
     }
 }
 
@@ -4976,6 +4983,15 @@ static void Task_ReplaceMoveYesNo(u8 taskId)
     }
 }
 
+static void Task_ReplaceMoveYesNoTMHM(u8 taskId)
+{
+    if (IsPartyMenuTextPrinterActive() != TRUE)
+    {
+        PartyMenuDisplayYesNoMenu();
+        gTasks[taskId].func = Task_HandleReplaceMoveYesNoInputTMHM;
+    }
+}
+
 static void Task_HandleReplaceMoveYesNoInput(u8 taskId)
 {
     switch (Menu_ProcessInputNoWrapClearOnChoose())
@@ -4993,6 +5009,23 @@ static void Task_HandleReplaceMoveYesNoInput(u8 taskId)
     }
 }
 
+static void Task_HandleReplaceMoveYesNoInputTMHM(u8 taskId)
+{
+    switch (Menu_ProcessInputNoWrapClearOnChoose())
+    {
+        case 0:
+            DisplayPartyMenuMessage(gText_WhichMoveToForget, TRUE);
+            gTasks[taskId].func = Task_ShowSummaryScreenToForgetMoveTMHM;
+            break;
+        case MENU_B_PRESSED:
+            PlaySE(SE_SELECT);
+            // fallthrough
+        case 1:
+            StopLearningMovePrompt(taskId);
+            break;
+    }
+}
+
 static void Task_ShowSummaryScreenToForgetMove(u8 taskId)
 {
     if (IsPartyMenuTextPrinterActive() != TRUE)
@@ -5002,14 +5035,33 @@ static void Task_ShowSummaryScreenToForgetMove(u8 taskId)
     }
 }
 
+static void Task_ShowSummaryScreenToForgetMoveTMHM(u8 taskId)
+{
+    if (IsPartyMenuTextPrinterActive() != TRUE)
+    {
+        sPartyMenuInternal->exitCallback = CB2_ShowSummaryScreenToForgetMoveTMHM;
+        Task_ClosePartyMenu(taskId);
+    }
+}
+
 static void CB2_ShowSummaryScreenToForgetMove(void)
 {
     ShowSelectMovePokemonSummaryScreen(gPlayerParty, gPartyMenu.slotId, gPlayerPartyCount - 1, CB2_ReturnToPartyMenuWhileLearningMove, gPartyMenu.data1);
 }
 
+static void CB2_ShowSummaryScreenToForgetMoveTMHM(void)
+{
+    ShowSelectMovePokemonSummaryScreen(gPlayerParty, gPartyMenu.slotId, gPlayerPartyCount - 1, CB2_ReturnToPartyMenuWhileLearningMoveTMHM, gPartyMenu.data1);
+}
+
 static void CB2_ReturnToPartyMenuWhileLearningMove(void)
 {
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
+}
+
+static void CB2_ReturnToPartyMenuWhileLearningMoveTMHM(void)
+{
+    InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMoveTMHM, gPartyMenu.exitCallback);
 }
 
 static void Task_ReturnToPartyMenuWhileLearningMove(u8 taskId)
@@ -5018,6 +5070,17 @@ static void Task_ReturnToPartyMenuWhileLearningMove(u8 taskId)
     {
         if (GetMoveSlotToReplace() != MAX_MON_MOVES)
             DisplayPartyMenuForgotMoveMessage(taskId);
+        else
+            StopLearningMovePrompt(taskId);
+    }
+}
+
+static void Task_ReturnToPartyMenuWhileLearningMoveTMHM(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        if (GetMoveSlotToReplace() != MAX_MON_MOVES)
+            DisplayPartyMenuForgotMoveMessageTMHM(taskId);
         else
             StopLearningMovePrompt(taskId);
     }
@@ -5034,6 +5097,17 @@ static void DisplayPartyMenuForgotMoveMessage(u8 taskId)
     gTasks[taskId].func = Task_PartyMenuReplaceMove;
 }
 
+static void DisplayPartyMenuForgotMoveMessageTMHM(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 move = GetMonData(mon, MON_DATA_MOVE1 + GetMoveSlotToReplace());
+    
+    GetMonNickname(mon, gStringVar1);
+    StringCopy(gStringVar2, gMoveNames[move]);
+    DisplayLearnMoveMessage(gText_12PoofForgotMove);
+    gTasks[taskId].func = Task_PartyMenuReplaceMoveTMHM;
+}
+
 static void Task_PartyMenuReplaceMove(u8 taskId)
 {
     struct Pokemon *mon;
@@ -5045,6 +5119,29 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
         RemoveMonPPBonus(mon, GetMoveSlotToReplace());
         move = gPartyMenu.data1;
         SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
+        Task_LearnedMove(taskId);
+    }
+}
+
+static void Task_PartyMenuReplaceMoveTMHM(u8 taskId)
+{
+    struct Pokemon *mon;
+    u16 move;
+    int pp1;
+    int pp2;
+    
+    if (IsPartyMenuTextPrinterActive() != TRUE)
+    {
+        mon = &gPlayerParty[gPartyMenu.slotId];
+        pp1 = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
+        RemoveMonPPBonus(mon, GetMoveSlotToReplace());
+        move = gPartyMenu.data1;
+        SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
+        pp2 = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace());
+        if (pp1 < pp2) {
+            SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), &pp1);
+        }
+        
         Task_LearnedMove(taskId);
     }
 }
