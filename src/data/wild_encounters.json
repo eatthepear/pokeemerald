@@ -15437,6 +15437,105 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE16A",
+          "base_label": "gZone16A",
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_CLAUNCHER"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_CLAUNCHER"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_BRUXISH"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_CORSOLA_GALARIAN"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PYUKUMUKU"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PYUKUMUKU"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PINCURCHIN"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_PINCURCHIN"
+              }
+            ]
+          }
         }
       ]
     },
