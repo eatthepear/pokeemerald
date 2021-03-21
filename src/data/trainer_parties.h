@@ -1314,155 +1314,175 @@ static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9
     }
 };
 
-static const struct TrainerMon sParty_Zone15BMirage[] = {
+static const struct TrainerMon sParty_Angus[] = {
     {
-    .iv = 200,
-    .lvl = 24,
-    .species = SPECIES_KADABRA,
-    .moves = {MOVE_PSYBEAM, MOVE_MIRACLE_EYE, MOVE_TELEPORT, MOVE_DISABLE}
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_MAREANIE,
     },
     {
-    .iv = 200,
-    .lvl = 24,
-    .species = SPECIES_DELIBIRD,
-    .moves = {MOVE_PRESENT, MOVE_SPIKES, MOVE_FREEZE_DRY, MOVE_ICE_SHARD}
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_CLAUNCHER,
     },
     {
-    .iv = 200,
-    .lvl = 24,
-    .species = SPECIES_HARIYAMA,
-    .moves = {MOVE_VITAL_THROW, MOVE_COUNTER, MOVE_FAKE_OUT, MOVE_BULLET_PUNCH}
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_CLOBBOPUS,
+    }
+};
+
+static const struct TrainerMon sParty_Homer[] = {
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_CHEWTLE,
     },
     {
-    .iv = 200,
-    .lvl = 24,
-    .species = SPECIES_ARIADOS,
-    .moves = {MOVE_SWORDS_DANCE, MOVE_SPIDER_WEB, MOVE_BUG_BITE, MOVE_SHADOW_SNEAK}
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_DUCKLETT,
     },
     {
-    .iv = 200,
-    .lvl = 24,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_CRUSH_CLAW, MOVE_MAGNITUDE, MOVE_ROCK_TOMB, MOVE_METAL_CLAW}
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_PYUKUMUKU,
+    }
+};
+
+static const struct TrainerMon sParty_Iona[] = {
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_STARYU,
     },
     {
-    .iv = 200,
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_HORSEA,
+    },
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_SPHEAL,
+    }
+};
+
+static const struct TrainerMon sParty_Tanisha[] = {
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_PIPLUP,
+    },
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_SOBBLE,
+    },
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_FROAKIE,
+    }
+};
+
+static const struct TrainerMon sParty_Rafael[] = {
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_TYMPOLE,
+    },
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_TOTODILE,
+    },
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_SQUIRTLE,
+    }
+};
+
+static const struct TrainerMon sParty_Otis[] = {
+    {
+    .iv = 85,
+    .lvl = 20,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 85,
+    .lvl = 21,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 85,
+    .lvl = 23,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 85,
+    .lvl = 24,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 85,
     .lvl = 25,
-    .species = SPECIES_WISHIWASHI,
-    .moves = {MOVE_TEARFUL_LOOK, MOVE_BRINE, MOVE_DIVE, MOVE_AQUA_RING}
-    }
-};
-
-static const struct TrainerMon sParty_Ricky5[] = {
-    {
-    .iv = 40,
-    .lvl = 36,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
-    }
-};
-
-static const struct TrainerMon sParty_Randall[] = {
-    {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_SWELLOW,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_AGILITY, MOVE_WING_ATTACK, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_Parker[] = {
-    {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_SPINDA,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_TEETER_DANCE, MOVE_DIZZY_PUNCH, MOVE_FOCUS_PUNCH, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_George[] = {
-    {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_SLAKOTH,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SLACK_OFF, MOVE_COUNTER, MOVE_SHADOW_BALL, MOVE_NONE}
+    .species = SPECIES_MAGIKARP,
     }
 };
 
 static const struct TrainerMon sParty_Berke[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_VIGOROTH,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_SLASH, MOVE_NONE, MOVE_NONE}
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_SEEL,
+    },
+    {
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_BARBOACH,
+    },
+    {
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_PRINPLUP,
     }
 };
 
-static const struct TrainerMon sParty_Braxton[] = {
+static const struct TrainerMon sParty_Georgina[] = {
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SWELLOW,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_QUAGSIRE,
     },
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_TRAPINCH,
-    .moves = {MOVE_BITE, MOVE_DIG, MOVE_FEINT_ATTACK, MOVE_SAND_TOMB}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_WAILMER,
-    .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_MAGNETON,
-    .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SHIFTRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_FEINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_WISHIWASHI,
     }
 };
 
-static const struct TrainerMon sParty_Vincent[] = {
+static const struct TrainerMon sParty_Russell[] = {
     {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_SABLEYE,
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_BRUXISH,
     },
     {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_MEDICHAM,
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_CORSOLA,
     },
     {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_SHARPEDO,
-    }
-};
-
-static const struct TrainerMon sParty_Leroy[] = {
-    {
-    .iv = 100,
-    .lvl = 46,
-    .species = SPECIES_MAWILE,
-    },
-    {
-    .iv = 100,
-    .lvl = 46,
-    .species = SPECIES_STARMIE,
+    .iv = 85,
+    .lvl = 22,
+    .species = SPECIES_DRIZZILE,
     }
 };
 

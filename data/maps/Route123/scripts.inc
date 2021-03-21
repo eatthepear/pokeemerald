@@ -49,11 +49,6 @@ Route123_EventScript_Wendy:: @ 81F61C5
 	msgbox Route123_Text_WendyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route123_EventScript_Braxton:: @ 81F61DC
-	trainerbattle_single TRAINER_BRAXTON, Route123_Text_BraxtonIntro, Route123_Text_BraxtonDefeat
-	msgbox Route123_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route123_EventScript_Cameron:: @ 81F620A
 	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
 	specialvar VAR_RESULT, ShouldTryRematchBattle
