@@ -188,9 +188,24 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 65,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_ZONE",
+      "var_value": "16",
+      "script": "Zone16A_EventScript_Exit"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 64,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_ExitSign"
+    }
   ]
 }

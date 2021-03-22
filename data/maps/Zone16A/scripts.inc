@@ -1,6 +1,12 @@
 Zone16A_MapScripts::
 	.byte 0
 
+Zone16A_EventScript_Exit::
+	lockall
+	warp MAP_ZONE16SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone16A_EventScript_Angus::
 	trainerbattle_single TRAINER_ANGUS, Zone16A_Text_AngusIntro, Zone16A_Text_AngusDefeat
 	msgbox Zone16A_Text_AngusPostBattle, MSGBOX_AUTOCLOSE
