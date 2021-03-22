@@ -3976,10 +3976,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM13_ICE_BEAM] =
+    [ITEM_TM13_AERIAL_ACE] =
     {
         .name = _("TM13"),
-        .itemId = ITEM_TM13_ICE_BEAM,
+        .itemId = ITEM_TM13_AERIAL_ACE,
         .price = 3000,
         .description = sTM13Desc,
         .pocket = POCKET_TM_HM,
@@ -4300,10 +4300,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM40_AERIAL_ACE] =
+    [ITEM_TM40_ICE_BEAM] =
     {
         .name = _("TM40"),
-        .itemId = ITEM_TM40_AERIAL_ACE,
+        .itemId = ITEM_TM40_ICE_BEAM,
         .price = 3000,
         .description = sTM40Desc,
         .pocket = POCKET_TM_HM,

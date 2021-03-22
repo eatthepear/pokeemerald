@@ -1596,9 +1596,9 @@ static const u8 sTM12Desc[] = _(
     "in a hailstorm.");
 
 static const u8 sTM13Desc[] = _(
-    "Fires an icy cold\n"
-    "beam that may\n"
-    "freeze the foe.");
+    "An extremely fast\n"
+    "attack that can't\n"
+    "be avoided.");
 
 static const u8 sTM14Desc[] = _(
     "A brutal snow-and-\n"
@@ -1731,9 +1731,9 @@ static const u8 sTM39Desc[] = _(
     "sharp claws.");
 
 static const u8 sTM40Desc[] = _(
-    "An extremely fast\n"
-    "attack that can't\n"
-    "be avoided.");
+    "Fires an icy cold\n"
+    "beam that may\n"
+    "freeze the foe.");
 
 static const u8 sTM41Desc[] = _(
     "Prevents the foe\n"

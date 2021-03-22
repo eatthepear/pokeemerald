@@ -143,3 +143,19 @@ Zone16A_Text_RussellDefeat:
 
 Zone16A_Text_RussellPostBattle:
 	.string "I'll sea you another time.$"
+
+Zone16A_EventScript_DiveBall::
+	finditem ITEM_DIVE_BALL
+	end
+
+Zone16A_EventScript_WaterStone::
+	finditem ITEM_WATER_STONE
+	end
+
+Zone16A_EventScript_FullHeal::
+	finditem ITEM_FULL_HEAL
+	end
+
+Zone16A_EventScript_TM13::
+	finditem ITEM_TM13
+	end
