@@ -7,6 +7,14 @@ Zone16A_EventScript_Exit::
 	releaseall
 	end
 
+Zone16A_EventScript_Sign::
+	msgbox Zone16A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone16A_Text_Sign:
+	.string "The sea is teeming with life.\n"
+	.string "Don't litter!$"
+
 Zone16A_EventScript_Angus::
 	trainerbattle_single TRAINER_ANGUS, Zone16A_Text_AngusIntro, Zone16A_Text_AngusDefeat
 	msgbox Zone16A_Text_AngusPostBattle, MSGBOX_AUTOCLOSE
