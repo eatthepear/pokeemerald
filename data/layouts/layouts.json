@@ -5110,6 +5110,26 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Zone16A/border.bin",
       "blockdata_filepath": "data/layouts/Zone16A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE16SANCTUARY",
+      "name": "Zone16Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone16Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone16Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE16SHOPS",
+      "name": "Zone16Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone16Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone16Shops/map.bin"
     }
   ]
 }
