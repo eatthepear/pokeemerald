@@ -354,7 +354,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan 2
     .ability = ABILITY_SLOT_1, //Compound Eyes
     .species = SPECIES_BUTTERFREE,
     .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_POISON_POWDER}
-    }
+    },
     {
     .iv = 255,
     .lvl = 13,
