@@ -144,7 +144,21 @@ Zone0Sanctuary_EventScript_Tour:
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_TourDone, MSGBOX_AUTOCLOSE
 	delay 96
+	goto Zone0Sanctuary_EventScript_Zone0Available
+	end
+
+Zone0Sanctuary_EventScript_Zone0Available:
+	msgbox Zone0Sanctuary_Text_Colress_Zone0Unlocked, MSGBOX_AUTOCLOSE
+	delay 96
 	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+	
+Zone0Sanctuary_Text_Colress_Zone0Unlocked:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: In addition, you will\n"
+	.string "have access to {COLOR RED}Zone 0{COLOR DARK_GREY}.\p"
+	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GREY},\n"
+	.string "you can access it from any\l"
+	.string "Sanctuary by talking to me.$"
 
 Zone0Sanctuary_EventScript_PickStarter:
 	hidemonpic
@@ -763,12 +777,13 @@ Zone0Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
-	multichoice 20, 0, MULTI_COLRESS_MENU, 0
+	multichoice 20, 0, MULTI_COLRESS_MENU_2, 0
 	switch VAR_RESULT
 	case 0, Zone0Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Advice
-	case 2, EventScript_Rules
-	case 3, EventScript_WhenUReady
+	case 1, EventScript_WarpToZone0
+	case 2, EventScript_Advice
+	case 3, EventScript_Rules
+	case 4, EventScript_WhenUReady
 	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 

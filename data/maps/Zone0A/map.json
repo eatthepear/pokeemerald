@@ -15,7 +15,7 @@
   "connections": [
     {
       "direction": "down",
-      "offset": 46,
+      "offset": 0,
       "map": "MAP_ZONE0B"
     },
     {

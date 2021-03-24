@@ -12,11 +12,11 @@ Zone0D_OnTransition:
 	end
 
 Zone0D_EventScript_TryMoveScientist::
-	call_if_set FLAG_BEATLEVIATHAN5, Zone0D_EventScript_MoveScientist1
+	@ call_if_set FLAG_BEATLEVIATHAN10, Zone0D_EventScript_MoveScientist1
 	return
 
 Zone0D_EventScript_MoveScientist1:
-	setobjectxyperm 1, 11, 23
+	@ setobjectxyperm 1, 11, 23
 	return
 
 Zone0D_EventScript_Intro:
@@ -37,6 +37,9 @@ Zone0D_EventScript_Intro:
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	msgbox Zone0D_Text_Intro1, MSGBOX_AUTOCLOSE
+	checkitem ITEM_RUBY, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone0D_EventScript_NoWarpstone
 	applymovement 1, Zone0D_Movement_JumpUpDown
 	waitmovement 0
 	msgbox Zone0D_Text_Intro2, MSGBOX_AUTOCLOSE
@@ -122,6 +125,15 @@ Zone0D_Movement_PostIntro:
 	face_down
 	step_end
 
+Zone0D_EventScript_NoWarpstone:
+	msgbox Zone0D_Text_NoWarpstoneGetOut, MSGBOX_AUTOCLOSE
+	goto Zone0D_EventScript_WarpBack
+	end
+
+Zone0D_Text_NoWarpstoneGetOut:
+	.string "You don't have one???\p"
+	.string "Then get out!$"
+
 Zone0D_EventScript_LeftDeny::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
@@ -161,15 +173,56 @@ Zone0D_EventScript_WarpBack::
 	lockall
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	switch VAR_ZONE
+	case 1, Zone0D_EventScript_WarpSanctuary0
+	case 2, Zone0D_EventScript_WarpSanctuary1
+	case 3, Zone0D_EventScript_WarpSanctuary2
+	case 4, Zone0D_EventScript_WarpSanctuary3
+	case 5, Zone0D_EventScript_WarpSanctuary4
+	case 6, Zone0D_EventScript_WarpSanctuary5
+	case 7, Zone0D_EventScript_WarpSanctuary6
+	case 9, Zone0D_EventScript_WarpSanctuary8
+	case 10, Zone0D_EventScript_WarpSanctuary9
 	case 11, Zone0D_EventScript_WarpSanctuary10
-	switch VAR_ZONE
 	case 12, Zone0D_EventScript_WarpSanctuary11
-	switch VAR_ZONE
 	case 13, Zone0D_EventScript_WarpSanctuary12
-	switch VAR_ZONE
 	case 15, Zone0D_EventScript_WarpSanctuary14
-	switch VAR_ZONE
 	case 16, Zone0D_EventScript_WarpSanctuary15
+	end
+
+Zone0D_EventScript_WarpSanctuary0:
+	warpteleport MAP_ZONE0SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary1:
+	warpteleport MAP_ZONE1SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary2:
+	warpteleport MAP_ZONE2SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary3:
+	warpteleport MAP_ZONE3SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary4:
+	warpteleport MAP_ZONE4SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary5:
+	warpteleport MAP_ZONE5SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary6:
+	warpteleport MAP_ZONE6SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary8:
+	warpteleport MAP_ZONE8SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary9:
+	warpteleport MAP_ZONE9SANCTUARY, 255, 7, 7
 	end
 
 Zone0D_EventScript_WarpSanctuary10:
