@@ -170,7 +170,6 @@ static const struct TrainerMon sParty_Remi[] = {//Leviathan 1
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_MARILL,
-    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_AQUA_JET, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_TAIL_WHIP}
     }
 };
@@ -351,20 +350,18 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan 2
     {
     .iv = 255,
     .lvl = 11,
-    .nature = NATURE_BOLD,
-    .ability = ABILITY_SLOT_2, //Shield Dust
-    .species = SPECIES_DUSTOX,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST}
-    },
-    {
-    .iv = 255,
-    .lvl = 13,
     .nature = NATURE_TIMID,
     .ability = ABILITY_SLOT_1, //Compound Eyes
     .species = SPECIES_BUTTERFREE,
-    .heldItem = ITEM_CHERI_BERRY,
     .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_POISON_POWDER}
+    }
+    {
+    .iv = 255,
+    .lvl = 13,
+    .nature = NATURE_BOLD,
+    .ability = ABILITY_SLOT_2, //Shield Dust
+    .species = SPECIES_DUSTOX,
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST}
     }
 };
 
