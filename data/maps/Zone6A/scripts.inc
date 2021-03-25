@@ -99,7 +99,8 @@ Zone6A_Text_MelanieDefeat:
 	.string "Sorry I yelled at you...$"
 
 Zone6A_Text_MelaniePostBattle:
-	.string "I also need to be careful about where I'm going.$"
+	.string "I also need to be careful about\n"
+	.string "where I'm going.$"
 
 Zone6A_EventScript_Constance::
 	trainerbattle_single TRAINER_CONSTANCE, Zone6A_Text_ConstanceIntro, Zone6A_Text_ConstanceDefeat
