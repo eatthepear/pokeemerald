@@ -2028,9 +2028,9 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_FARFETCHD] =
     {
         .baseHP        = 52,
-        .baseAttack    = 110,
+        .baseAttack    = 90,
         .baseDefense   = 65,
-        .baseSpeed     = 90,
+        .baseSpeed     = 80,
         .baseSpAttack  = 78,
         .baseSpDefense = 62,
         .type1 = TYPE_NORMAL,

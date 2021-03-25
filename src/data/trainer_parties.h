@@ -476,7 +476,6 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3
     .nature = NATURE_TIMID,
     .ability = ABILITY_SLOT_2, //Poison Point
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_CHERI_BERRY,
     .moves = {MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
@@ -485,7 +484,6 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_2, //Cloud Nine
     .species = SPECIES_PSYDUCK,
-    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_CONFUSION, MOVE_TAIL_WHIP, MOVE_FURY_SWIPES}
     },
     {
@@ -494,7 +492,6 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3
     .nature = NATURE_BOLD,
     .ability = ABILITY_SLOT_1, //Triage
     .species = SPECIES_COMFEY,
-    .heldItem = ITEM_PECHA_BERRY,
     .moves = {MOVE_DRAINING_KISS, MOVE_FLOWER_SHIELD, MOVE_LEECH_SEED, MOVE_GROWTH}
     }
 };
@@ -650,7 +647,6 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
     .nature = NATURE_NAIVE,
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_STANTLER,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_STOMP, MOVE_DOUBLE_KICK, MOVE_HYPNOSIS, MOVE_ME_FIRST}
     },
     {
@@ -659,7 +655,6 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_MAWILE,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_ICE_FANG, MOVE_FIRE_FANG}
     }
 };
@@ -667,30 +662,30 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
 static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     {
     .iv = 255,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_TIMID,
     .ability = ABILITY_SLOT_2, //Synchronize
     .species = SPECIES_RALTS,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_CONFUSION, MOVE_GROWL, MOVE_LUCKY_CHANT, MOVE_PROTECT}
     },
     {
     .iv = 255,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Gale Wings
     .species = SPECIES_FLETCHLING,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_FLAIL, MOVE_PROTECT}
     },
     {
     .iv = 255,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_MARILL,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_AQUA_JET, MOVE_DEFENSE_CURL, MOVE_TAIL_WHIP, MOVE_PROTECT}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TAIL_WHIP, MOVE_PROTECT}
     }
 };
 
@@ -871,7 +866,6 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     .nature = NATURE_IMPISH,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_DWEBBLE,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_ROCK_BLAST, MOVE_BUG_BITE, MOVE_ROCK_POLISH, MOVE_FEINT_ATTACK}
     },
     {
@@ -880,7 +874,6 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Blaze
     .species = SPECIES_BRAIXEN,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FLAME_CHARGE, MOVE_HOWL}
     },
     {
@@ -889,7 +882,6 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_2, //Mold Breaker
     .species = SPECIES_SAWK,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_LOW_SWEEP, MOVE_COUNTER, MOVE_POWER_UP_PUNCH, MOVE_ROCK_TOMB}
     },
     {
@@ -898,7 +890,6 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     .nature = NATURE_JOLLY,
     .ability = ABILITY_SLOT_2, //Guts
     .species = SPECIES_LUXIO,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SPARK, MOVE_BITE, MOVE_CHARGE, MOVE_QUICK_ATTACK}
     },
     {
