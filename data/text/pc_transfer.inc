@@ -5,7 +5,8 @@ gText_PkmnTransferredSomeonesPC:: @ 8273216
 	.string "Box “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredLanettesPC:: @ 8273256
-	.string "{STR_VAR_2} was transferred to\nColress's PC.\p"
+	.string "{STR_VAR_2} was transferred to\n"
+	.string "Colress's PC.\p"
 	.string "It was placed in \n"
 	.string "Box “{STR_VAR_1}.”$"
 
@@ -29,3 +30,7 @@ gText_NoMoreRoomForPokemon:: @ 827331C
 gText_NicknameThisPokemon:: @ 8273374
 	.string "Do you want to give a nickname to\n"
 	.string "this {STR_VAR_1}?$"
+
+gText_WouldLikeSendToPC::
+	.string "{COLOR WHITE}Add {STR_VAR_1} to your party and\n"
+	.string "send a party member to the PC?$"

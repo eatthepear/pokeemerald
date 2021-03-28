@@ -139,6 +139,8 @@ struct PartyMenuBox
     u8 statusSpriteId;
 };
 
+extern const u8 gText_WouldLikeSendToPC[];
+
 // EWRAM vars
 static EWRAM_DATA struct PartyMenuInternal *sPartyMenuInternal = NULL;
 EWRAM_DATA struct PartyMenu gPartyMenu = {0};
@@ -417,6 +419,8 @@ static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Dive(void);
+static void Task_ChooseSendMonToPC(u8 taskId);
+static void CB2_ChooseSendMonToPC(void);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -6798,4 +6802,43 @@ void CursorCb_MoveItem(u8 taskId)
         ScheduleBgCopyTilemapToVram(2);
         gTasks[taskId].func = Task_UpdateHeldItemSprite;
     }
+}
+
+void ChooseSendMonToPC(void)
+{
+    ScriptContext2_Enable();
+    FadeScreen(FADE_TO_BLACK, 0);
+    CreateTask(Task_ChooseSendMonToPC, 10);
+}
+
+static void Task_ChooseSendMonToPC(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseSendMonToPC);
+        DestroyTask(taskId);
+    }
+}
+
+static void CB2_ChooseSendMonToPC(void)
+{
+    u8 gSendMonPartyIndex;
+    
+    gSendMonPartyIndex = GetCursorSelectionMonId();
+    if (gContestMonPartyIndex >= PARTY_SIZE)
+        gContestMonPartyIndex = 7;
+    VarSet(VAR_MON_TO_PC, gSendMonPartyIndex);
+    //gFieldCallback2 = CB2_FadeFromPartyMenu;
+    SetMainCallback2(BattleMainCB2);
+}
+
+void DisplaySendMonToPCMessage(struct Pokemon* mon)
+{
+    GetMonData(mon, MON_DATA_NICKNAME, gStringVar1);
+    
+    StringExpandPlaceholders(gStringVar4, gText_WouldLikeSendToPC);
+    DrawDialogueFrame(1, 0);
+    gTextFlags.canABSpeedUpPrint = TRUE;
+    AddTextPrinterParameterized2(0, 1, gStringVar4, GetPlayerTextSpeedDelay(), 0, 2, 0, 3);
+    CopyWindowToVram(0, 3);
 }

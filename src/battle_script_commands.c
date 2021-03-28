@@ -55,6 +55,7 @@
 #include "constants/rgb.h"
 #include "data.h"
 #include "constants/party_menu.h"
+#include "constants/vars.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_BGM;
 
@@ -12265,24 +12266,68 @@ static void Cmd_handleballthrow(void)
 
 static void Cmd_givecaughtmon(void)
 {
-    if (GiveMonToPlayer(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]) != MON_GIVEN_TO_PARTY)
-    {
-        if (!ShouldShowBoxWasFullMessage())
-        {
-            gBattleCommunication[MULTISTRING_CHOOSER] = 0;
-            StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
-            GetMonData(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]], MON_DATA_NICKNAME, gStringVar2);
-        }
-        else
-        {
-            StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
-            GetMonData(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]], MON_DATA_NICKNAME, gStringVar2);
-            StringCopy(gStringVar3, GetBoxNamePtr(GetPCBoxToSendMon()));
-            gBattleCommunication[MULTISTRING_CHOOSER] = 2;
-        }
+    u8 position;
+    struct Pokemon *pokemon;
+    u32 monItem;
 
-        if (FlagGet(FLAG_SYS_PC_LANETTE))
-            gBattleCommunication[MULTISTRING_CHOOSER]++;
+    if (VarGet(VAR_MON_TO_PC) > 5){//Either the player has less than 6 Pokémon in party or said they didn't want to swap
+        pokemon = &gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]];
+
+        GiveMonToPlayer(pokemon);
+        /*if (GiveMonToPlayer(pokemon) != MON_GIVEN_TO_PARTY)
+        {
+            if (!ShouldShowBoxWasFullMessage())
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+                StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
+                GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar2);
+            }
+            else
+            {
+                StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
+                GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar2);
+                StringCopy(gStringVar3, GetBoxNamePtr(GetPCBoxToSendMon()));
+                gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+            }
+
+            if (FlagGet(FLAG_SYS_PC_LANETTE))
+                gBattleCommunication[MULTISTRING_CHOOSER]++;
+        }*/
+    }
+    else{//The player's party is full and they chose a Pokémon to swap
+        /*&gPlayerParty[VAR_MON_TO_PC]
+        &gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]*/
+        position = VarGet(VAR_MON_TO_PC);
+        pokemon = &gPlayerParty[position]; //the Pokémon to be sent to PC
+        monItem = GetMonData(pokemon, MON_DATA_HELD_ITEM, NULL);
+        if (!NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) || (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) && GetMonData(pokemon, MON_DATA_HP, NULL) != 0 && (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES, NULL) && !GetMonData(pokemon, MON_DATA_IS_EGG, NULL))))
+        {
+            GiveMonToPlayer(pokemon);//sends the mon to the PC if it's either not nuzlocke mode or if it is nuzlocke mode but the mon has more than 0 hp
+        
+            /*if (!ShouldShowBoxWasFullMessage())
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+                StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
+                GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar2);
+            }
+            else
+            {
+                StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
+                GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar2);
+                StringCopy(gStringVar3, GetBoxNamePtr(GetPCBoxToSendMon()));
+                gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+            }
+
+            if (FlagGet(FLAG_SYS_PC_LANETTE))
+                gBattleCommunication[MULTISTRING_CHOOSER]++;*/
+        
+        }else{
+            if (monItem != ITEM_NONE)
+                AddBagItem(monItem, 1);
+        }
+        DeletePartyMon(position);
+        pokemon = &gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]];
+        GiveMonToPlayer(pokemon); //Deletes the mon that you sent to the PC from your party, then adds the caught mon to your party
     }
 
     gBattleResults.caughtMonSpecies = GetMonData(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]], MON_DATA_SPECIES, NULL);
@@ -12434,14 +12479,14 @@ static void Cmd_trygivecaughtmonnick(void)
 {
     switch (gBattleCommunication[MULTIUSE_STATE])
     {
-    case 0:
+    case 0: //nickname yes no menu
         HandleBattleWindow(0x18, 8, 0x1D, 0xD, 0);
         BattlePutTextOnWindow(gText_BattleYesNoChoice, 0xC);
         gBattleCommunication[MULTIUSE_STATE]++;
         gBattleCommunication[CURSOR_POSITION] = 0;
         BattleCreateYesNoCursorAt(0);
         break;
-    case 1:
+    case 1: //nickname yes no menu inputs
         if (JOY_NEW(DPAD_UP) && gBattleCommunication[CURSOR_POSITION] != 0)
         {
             PlaySE(SE_SELECT);
@@ -12466,16 +12511,16 @@ static void Cmd_trygivecaughtmonnick(void)
             }
             else
             {
-                gBattleCommunication[MULTIUSE_STATE] = 4;
+                gBattleCommunication[MULTIUSE_STATE] = 10;
             }
         }
         else if (JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
-            gBattleCommunication[MULTIUSE_STATE] = 4;
+            gBattleCommunication[MULTIUSE_STATE] = 10;
         }
         break;
-    case 2:
+    case 2: //nickname yes
         if (!gPaletteFade.active)
         {
             GetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], MON_DATA_NICKNAME, gBattleStruct->caughtMonNick);
@@ -12490,18 +12535,170 @@ static void Cmd_trygivecaughtmonnick(void)
             gBattleCommunication[MULTIUSE_STATE]++;
         }
         break;
-    case 3:
+    case 3: //finish nickname yes
         if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active )
         {
             SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], MON_DATA_NICKNAME, gBattleStruct->caughtMonNick);
+            gBattleCommunication[MULTIUSE_STATE]++; /*gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);*/
+        }
+        break;
+    case 4: //nickname yes, check if party is full
+        if (CalculatePlayerPartyCount() != PARTY_SIZE){
+            VarSet(VAR_MON_TO_PC, 7);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
+        else{
+            SetVBlankCallback(VBlankCB_Battle);
+            InitBattleBgsVideo();
+            LoadBattleTextboxAndBackground();
+            gBattle_BG3_X = 0x100;
+            gBattleCommunication[MULTIUSE_STATE]++;
+        }
+        break;
+    case 5: //nickname yes, party full, swap menu
+        if (!IsDma3ManagerBusyWithBgCopy())
+        {
+            BeginNormalPaletteFade(0xFFFF, 0, 0x10, 0, RGB_BLACK);
+            ShowBg(0);
+            //ShowBg(3); This shows like a shadow of the last screen? it's weird
+            gBattleCommunication[MULTIUSE_STATE]++;
+        }
+        break;
+    case 6: 
+        if (!gPaletteFade.active){
+            GetMonNickname(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], gStringVar1);
+            PrepareStringBattle(STRINGID_WALLYUSEDITEM, gBattlerAttacker);
+            gBattleCommunication[MSG_DISPLAY] = 1;
+            //FillWindowPixelBuffer(0, PIXEL_FILL(0xF));
+            //DisplaySendMonToPCMessage(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]]);
+            HandleBattleWindow(0x18, 8, 0x1D, 0xD, 0);
+            BattlePutTextOnWindow(gText_BattleYesNoChoice, 0xC);
+            gBattleCommunication[MULTIUSE_STATE]++;
+            gBattleCommunication[CURSOR_POSITION] = 0;
+            BattleCreateYesNoCursorAt(0);
+        }
+        break;
+    case 7: //nickname yes, party full, swap menu input
+        if (JOY_NEW(DPAD_UP) && gBattleCommunication[CURSOR_POSITION] != 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
+            gBattleCommunication[CURSOR_POSITION] = 0;
+            BattleCreateYesNoCursorAt(0);
+        }
+        if (JOY_NEW(DPAD_DOWN) && gBattleCommunication[CURSOR_POSITION] == 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
+            gBattleCommunication[CURSOR_POSITION] = 1;
+            BattleCreateYesNoCursorAt(1);
+        }
+        if (JOY_NEW(A_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            if (gBattleCommunication[CURSOR_POSITION] == 0)
+            {
+                gBattleCommunication[MULTIUSE_STATE]++;
+                BeginFastPaletteFade(3);
+            }
+            else
+            {
+                VarSet(VAR_MON_TO_PC, 7);
+                gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            }
+        }
+        else if (JOY_NEW(B_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            VarSet(VAR_MON_TO_PC, 7);
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         }
         break;
-    case 4:
-        if (CalculatePlayerPartyCount() == PARTY_SIZE)
-            gBattlescriptCurrInstr += 5;
-        else
+    case 8: //nickname yes, party full, swap menu yes
+        if (!gPaletteFade.active)
+        {
+            FreeAllWindowBuffers();
+
+            ChooseSendMonToPC();
+
+            gBattleCommunication[MULTIUSE_STATE]++;
+        }
+        break;
+    case 9: //nickname yes, party full, finish swap menu
+        if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active )
+        {
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1); /*gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1); does the next thing on same line, while gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1); does the next line*/
+        }
+        break;
+    case 10: //nickname no, check if party is full
+        if (CalculatePlayerPartyCount() != PARTY_SIZE){
+            VarSet(VAR_MON_TO_PC, 7);
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
+        else{
+            FillWindowPixelBuffer(0, PIXEL_FILL(0xF));
+            gBattleCommunication[MULTIUSE_STATE]++;
+        }
+        break;
+    case 11: //nickname no, party full, swap menu
+        DisplaySendMonToPCMessage(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]]);
+        HandleBattleWindow(0x18, 8, 0x1D, 0xD, 0);
+        BattlePutTextOnWindow(gText_BattleYesNoChoice, 0xC);
+        gBattleCommunication[MULTIUSE_STATE]++;
+        gBattleCommunication[CURSOR_POSITION] = 0;
+        BattleCreateYesNoCursorAt(0);
+        break;
+    case 12: //nickname no, party full, swap menu input
+        if (JOY_NEW(DPAD_UP) && gBattleCommunication[CURSOR_POSITION] != 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
+            gBattleCommunication[CURSOR_POSITION] = 0;
+            BattleCreateYesNoCursorAt(0);
+        }
+        if (JOY_NEW(DPAD_DOWN) && gBattleCommunication[CURSOR_POSITION] == 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
+            gBattleCommunication[CURSOR_POSITION] = 1;
+            BattleCreateYesNoCursorAt(1);
+        }
+        if (JOY_NEW(A_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            if (gBattleCommunication[CURSOR_POSITION] == 0)
+            {
+                gBattleCommunication[MULTIUSE_STATE]++;
+                BeginFastPaletteFade(3);
+            }
+            else
+            {
+                VarSet(VAR_MON_TO_PC, 7);
+                gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            }
+        }
+        else if (JOY_NEW(B_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            VarSet(VAR_MON_TO_PC, 7);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
+        break;
+    case 13: //nickname no, party full, swap menu yes
+        if (!gPaletteFade.active)
+        {
+            FreeAllWindowBuffers();
+
+            ChooseSendMonToPC();
+
+            gBattleCommunication[MULTIUSE_STATE]++;
+        }
+        break;
+    case 14: //nickname no, party full, finish swap menu
+        if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active )
+        {
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
         break;
     }
 }
