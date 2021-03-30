@@ -22,7 +22,7 @@ Zone13C_EventScript_HideLeviathan8:
 Zone13C_EventScript_KeizanBlackBelt::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN7 Zone13C_EventScript_KeizanBlackBelt_ComeBack
+	goto_if_set FLAG_BEATLEVIATHAN7, Zone13C_EventScript_KeizanBlackBelt_ComeBack
 	msgbox Zone13C_Text_KeizanBlackBelt_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone13C_EventScript_Keizan_ISee
@@ -81,7 +81,7 @@ Zone13C_Text_KeizanBlackBelt_ComeBack:
 Zone13C_EventScript_KeizanPsychic::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN8 Zone13C_EventScript_KeizanPsychic_LikeHome
+	goto_if_set FLAG_BEATLEVIATHAN8, Zone13C_EventScript_KeizanPsychic_LikeHome
 	msgbox Zone13C_Text_KeizanPsychic_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone13C_EventScript_Keizan_ISee
