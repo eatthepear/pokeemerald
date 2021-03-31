@@ -862,7 +862,7 @@ static const struct TrainerMon sParty_Conrad[] = {
 static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     {
     .iv = 255,
-    .lvl = 18,
+    .lvl = 17,
     .nature = NATURE_IMPISH,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_DWEBBLE,
@@ -870,7 +870,7 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     },
     {
     .iv = 255,
-    .lvl = 18,
+    .lvl = 17,
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Blaze
     .species = SPECIES_BRAIXEN,
@@ -878,7 +878,7 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     },
     {
     .iv = 255,
-    .lvl = 18,
+    .lvl = 17,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_2, //Mold Breaker
     .species = SPECIES_SAWK,
@@ -886,7 +886,7 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
     },
     {
     .iv = 255,
-    .lvl = 18,
+    .lvl = 17,
     .nature = NATURE_JOLLY,
     .ability = ABILITY_SLOT_2, //Guts
     .species = SPECIES_LUXIO,

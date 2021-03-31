@@ -58,7 +58,7 @@
 #define FLAG_RECEIVED_ZONE9F_ZORUA    0x2D // gift Shiny Zorua from Erica
 #define FLAG_HIDE_ZONE9A_MAN    0x2E // Man blocks exit
 #define FLAG_HIDE_LEVIATHAN5 0x2F
-#define FLAG_ADAMINA_INTRO  0x30
+#define FLAG_ADAMINA_WARP_INTRO  0x30
 #define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x31 // Substitute Sidequest
 #define FLAG_HIDE_ZONE10B_BERRYMAN 0x32 // Status Berry Exchange Sidequest
 #define FLAG_RECEIVED_ZONE10B_LUCKY_EGG  0x33 // Lucky Egg Sidequest
@@ -70,7 +70,7 @@
 #define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x39
 #define FLAG_HIDE_ZONE15B_COLRESS    0x3A
 #define FLAG_HIDE_ZONE15B_MIRAGE    0x3B
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_ADAMINA_INTRO    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag

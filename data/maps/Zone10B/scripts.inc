@@ -20,8 +20,7 @@ Zone10B_EventScript_Kirlia::
 	end
 	
 Zone10B_EventScript_CheckIntro:
-	compare VAR_ZONE0_WARPS, 0
-	goto_if_ne Zone10B_EventScript_AdaminaLeave
+	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaLeave
 	checkitem ITEM_RUBY, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Zone10B_EventScript_AdaminaIntro
@@ -48,6 +47,7 @@ Zone10B_EventScript_AdaminaIntro:
 	msgbox Zone10B_Text_Adamina_SafeSpace, MSGBOX_DEFAULT
 	delay 96
 	msgbox Zone10B_Text_Adamina_TellYouWhat, MSGBOX_AUTOCLOSE
+	setflag FLAG_ADAMINA_WARP_INTRO
 	release
 	end
 
@@ -90,8 +90,7 @@ Zone10B_Text_Adamina_WhenReady:
 	.string "Come speak to me when you're ready.$"
 
 Zone10B_EventScript_Exit:
-	compare VAR_ZONE0_WARPS, 0
-	goto_if_ne EventScript_WarpZone0
+	goto_if_set FLAG_ADAMINA_WARP_INTRO, EventScript_WarpZone0
 	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0
