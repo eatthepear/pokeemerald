@@ -272,45 +272,63 @@ Zone0D_EventScript_WarpZONE1::
 
 Zone0D_EventScript_WarpZONE2::
 	lockall
+	buffernumberstring 0, 2
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE2A, 255, 4, 3
 	end
 
 Zone0D_EventScript_WarpZONE3::
 	lockall
+	buffernumberstring 0, 3
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE3A, 255, 38, 25
 	end
 
 Zone0D_EventScript_WarpZONE4::
 	lockall
+	buffernumberstring 0, 4
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE4A, 255, 4, 3
 	end
 
 Zone0D_EventScript_WarpZONE5::
 	lockall
+	buffernumberstring 0, 5
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE5A, 255, 41, 33
 	end
 
 Zone0D_EventScript_WarpZONE6::
 	lockall
+	buffernumberstring 0, 6
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE6A, 255, 21, 25
 	end
 
 Zone0D_EventScript_WarpZONE7::
 	lockall
+	buffernumberstring 0, 7
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE7A, 255, 5, 34
 	end
 
 Zone0D_EventScript_WarpZONE8::
 	lockall
+	buffernumberstring 0, 1
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE8A, 255, 33, 9
 	end
 
 Zone0D_EventScript_WarpZONE9::
 	lockall
+	buffernumberstring 0, 8
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE9A, 255, 23, 13
 	end
 
 Zone0D_EventScript_WarpZONE10::
 	lockall
+	buffernumberstring 0, 10
+	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE10A, 255, 42, 51
 	end
