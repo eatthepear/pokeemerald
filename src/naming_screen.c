@@ -674,7 +674,11 @@ static bool8 MainState_PressedOKButton(void)
     SetInputState(INPUT_STATE_DISABLED);
     SetCursorFlashing(FALSE);
     TryStartButtonFlash(BUTTON_COUNT, FALSE, TRUE);
-    if (sNamingScreen->templateNum == NAMING_SCREEN_CAUGHT_MON 
+    
+    sNamingScreen->state = STATE_FADE_OUT;
+    return TRUE;
+    
+    /*if (sNamingScreen->templateNum == NAMING_SCREEN_CAUGHT_MON
         && CalculatePlayerPartyCount() >= PARTY_SIZE)
     {
         DisplaySentToPCMessage();
@@ -685,7 +689,7 @@ static bool8 MainState_PressedOKButton(void)
     {
         sNamingScreen->state = STATE_FADE_OUT;
         return TRUE;
-    }
+    }*/
 }
 
 static bool8 MainState_FadeOut(void)

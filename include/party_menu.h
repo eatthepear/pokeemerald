@@ -90,6 +90,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+void ChooseSendMonToPC(void);
+void DisplaySendMonToPCMessage(struct Pokemon* mon);
 
 bool8 CanLearnTutorMove(u16, u8);
 
