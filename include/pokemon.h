@@ -313,7 +313,7 @@ void SetMonMoveSlot(struct Pokemon *mon, u16 move, u8 slot);
 void SetBattleMonMoveSlot(struct BattlePokemon *mon, u16 move, u8 slot);
 void GiveMonInitialMoveset(struct Pokemon *mon);
 void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon);
-u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove, bool8 isEvolving);
+u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove);
 void DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move);
 void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move);
 
@@ -442,5 +442,6 @@ void DeletePartyMon(u8 position);
 void DeleteFaintedPartyPokemon(void);
 u16 GetFormSpeciesId(u16 speciesId, u8 formId);
 u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId);
+u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove);
 
 #endif // GUARD_POKEMON_H
