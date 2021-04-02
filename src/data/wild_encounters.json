@@ -15536,6 +15536,85 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE17A",
+          "base_label": "gZone17A",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_SIGILYPH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_YAMASK_GALARIAN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_GOLETT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_KLEFKI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_KLEFKI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_STONJOURNER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_STONJOURNER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_SINISTEA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_SINISTEA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_HONEDGE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_ABSOL"
+              }
+            ]
+          }
         }
       ]
     },
