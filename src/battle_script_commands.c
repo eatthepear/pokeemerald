@@ -11969,7 +11969,6 @@ static void Cmd_handleballthrow(void)
             catchRate = gBaseStats[gBattleMons[gBattlerTarget].species].catchRate;
 
         
-        #ifdef POKEMON_EXPANSION
         if (gBaseStats[gBattleMons[gBattlerTarget].species].flags & F_ULTRA_BEAST)
         {
             if (gLastUsedItem == ITEM_BEAST_BALL)
@@ -11979,7 +11978,6 @@ static void Cmd_handleballthrow(void)
         }
         else
         {
-        #endif
 
 
         if (gLastUsedItem > ITEM_SAFARI_BALL)
@@ -11988,54 +11986,23 @@ static void Cmd_handleballthrow(void)
             {
             case ITEM_NET_BALL:
                 if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))
-                    #if I_NET_BALL_MODIFIER >= GEN_7
-                        ballMultiplier = 50;
-                    #else
-                        ballMultiplier = 30;
-                    #endif
+                    ballMultiplier = 50;
                 break;
             case ITEM_DIVE_BALL:
-                #if I_DIVE_BALL_MODIFIER >= GEN_4
-                    if (GetCurrentMapType() == MAP_TYPE_UNDERWATER || gIsFishingEncounter || gIsSurfingEncounter)
-                        ballMultiplier = 35;
-                #else
-                    if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
-                        ballMultiplier = 35;
-                #endif
+                if (GetCurrentMapType() == MAP_TYPE_UNDERWATER || gIsFishingEncounter || gIsSurfingEncounter)
+                    ballMultiplier = 35;
                 break;
             case ITEM_NEST_BALL:
-                #if I_NEST_BALL_MODIFIER >= GEN_6
-                    //((41 - Pokémon's level) ÷ 10)× if Pokémon's level is between 1 and 29, 1× otherwise.
-                    if (gBattleMons[gBattlerTarget].level < 30)
-                        ballMultiplier = 41 - gBattleMons[gBattlerTarget].level;
-                #elif I_NEST_BALL_MODIFIER == GEN_5
-                    //((41 - Pokémon's level) ÷ 10)×, minimum 1×
-                    if (gBattleMons[gBattlerTarget].level < 31)
-                        ballMultiplier = 41 - gBattleMons[gBattlerTarget].level;
-                #else
-                    //((40 - Pokémon's level) ÷ 10)×, minimum 1×
-                    if (gBattleMons[gBattlerTarget].level < 40)
-                    {
-                        ballMultiplier = 40 - gBattleMons[gBattlerTarget].level;
-                        if (ballMultiplier <= 9)
-                            ballMultiplier = 10;
-                    }
-                #endif
+                //((41 - Pokémon's level) ÷ 10)× if Pokémon's level is between 1 and 29, 1× otherwise.
+                if (gBattleMons[gBattlerTarget].level < 30)
+                    ballMultiplier = 41 - gBattleMons[gBattlerTarget].level;
                 break;
             case ITEM_REPEAT_BALL:
                 if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species), FLAG_GET_CAUGHT))
-                    #if I_REPEAT_BALL_MODIFIER >= GEN_7
-                        ballMultiplier = 35;
-                    #else
-                        ballMultiplier = 30;
-                    #endif
+                    ballMultiplier = 35;
                 break;
             case ITEM_TIMER_BALL:
-                #if I_TIMER_BALL_MODIFIER >= GEN_5
-                    ballMultiplier = (gBattleResults.battleTurnCounter * 3) + 10;
-                #else
-                    ballMultiplier = gBattleResults.battleTurnCounter + 10;
-                #endif
+                ballMultiplier = (gBattleResults.battleTurnCounter * 3) + 10;
                 if (ballMultiplier > 40)
                     ballMultiplier = 40;
                 break;
@@ -12059,11 +12026,7 @@ static void Cmd_handleballthrow(void)
                 break;
             case ITEM_LURE_BALL:
                 if (gIsFishingEncounter)
-                    #if I_LURE_BALL_MODIFIER >= GEN_7
-                        ballMultiplier = 50;
-                    #else
-                        ballMultiplier = 30;
-                    #endif
+                    ballMultiplier = 50;
                 break;
             case ITEM_MOON_BALL:
                 for (i = 0; i < EVOS_PER_MON; i++)
@@ -12085,36 +12048,14 @@ static void Cmd_handleballthrow(void)
                 break;
             case ITEM_HEAVY_BALL:
                 i = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species), 1);
-                #if I_HEAVY_BALL_MODIFIER >= GEN_7
-                    if (i < 1000)
-                        ballAddition = -20;
-                    else if (i < 2000)
-                        ballAddition = 0;
-                    else if (i < 3000)
-                        ballAddition = 20;
-                    else
-                        ballAddition = 30;
-                #elif I_HEAVY_BALL_MODIFIER >= GEN_4
-                    if (i < 2048)
-                        ballAddition = -20;
-                    else if (i < 3072)
-                        ballAddition = 20;
-                    else if (i < 4096)
-                        ballAddition = 30;
-                    else
-                        ballAddition = 40;
-                #else
-                    if (i < 1024)
-                        ballAddition = -20;
-                    else if (i < 2048)
-                        ballAddition = 0;
-                    else if (i < 3072)
-                        ballAddition = 20;
-                    else if (i < 4096)
-                        ballAddition = 30;
-                    else
-                        ballAddition = 40;
-                #endif
+                if (i < 1000)
+                    ballAddition = -20;
+                else if (i < 2000)
+                    ballAddition = 0;
+                else if (i < 3000)
+                    ballAddition = 20;
+                else
+                    ballAddition = 30;
                 break;
             case ITEM_FAST_BALL:
                 if (gBaseStats[gBattleMons[gBattlerTarget].species].baseSpeed >= 100)
@@ -12122,28 +12063,16 @@ static void Cmd_handleballthrow(void)
                 break;
             case ITEM_QUICK_BALL:
                 if (gBattleResults.battleTurnCounter == 0)
-                    #if I_QUICK_BALL_MODIFIER >= GEN_5
-                        ballMultiplier = 50;
-                    #else
-                        ballMultiplier = 40;
-                    #endif
+                    ballMultiplier = 50;
                 break;
             case ITEM_DUSK_BALL:
                 RtcCalcLocalTime();
-                if ((gLocalTime.hours >= 20 && gLocalTime.hours <= 3) || gMapHeader.cave || gMapHeader.mapType == MAP_TYPE_UNDERGROUND)
-                    #if I_DUSK_BALL_MODIFIER >= GEN_7
-                        ballMultiplier = 30;
-                    #else
-                        ballMultiplier = 35;
-                    #endif
+                if (gMapHeader.cave || gMapHeader.mapType == MAP_TYPE_UNDERGROUND)
+                    ballMultiplier = 30;
                 break;
             case ITEM_DREAM_BALL:
-                #if I_DREAM_BALL_MODIFIER >= GEN_8
-                    if (gBattleMons[gBattlerTarget].status1 & STATUS1_SLEEP)
-                        ballMultiplier = 40;
-                #else
-                    ballMultiplier = 10;
-                #endif
+                if (gBattleMons[gBattlerTarget].status1 & STATUS1_SLEEP)
+                    ballMultiplier = 40;
                 break;
             case ITEM_BEAST_BALL:
                 ballMultiplier = 1;
@@ -12153,9 +12082,7 @@ static void Cmd_handleballthrow(void)
         else
             ballMultiplier = sBallCatchBonuses[gLastUsedItem - ITEM_ULTRA_BALL];
 
-        #ifdef POKEMON_EXPANSION
         }
-        #endif
 
         // catchRate is unsigned, which means that it may potentially overflow if sum is applied directly.
         if (catchRate < 21 && ballAddition == -20)
@@ -12196,6 +12123,14 @@ static void Cmd_handleballthrow(void)
                 gBattleCommunication[MULTISTRING_CHOOSER] = 0;
             else
                 gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+            
+            if (gLastUsedItem == ITEM_HEAL_BALL)
+            {
+                MonRestorePP(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]]);
+                HealStatusConditions(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], gBattlerPartyIndexes[gBattlerTarget], STATUS1_ANY, gBattlerTarget);
+                gBattleMons[gBattlerTarget].hp = gBattleMons[gBattlerTarget].maxHP;
+                SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], MON_DATA_HP, &gBattleMons[gBattlerTarget].hp);
+            }
         }
         else // mon may be caught, calculate shakes
         {
