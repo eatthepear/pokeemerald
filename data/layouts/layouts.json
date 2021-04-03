@@ -5140,6 +5140,26 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Zone17A/border.bin",
       "blockdata_filepath": "data/layouts/Zone17A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE17SANCTUARY",
+      "name": "Zone17Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone17Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone17Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE17SHOPS",
+      "name": "Zone17Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone17Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone17Shops/map.bin"
     }
   ]
 }

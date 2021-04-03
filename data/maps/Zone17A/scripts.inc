@@ -97,8 +97,7 @@ Zone17A_EventScript_CheckLeave::
 	end
 
 Zone17A_EventScript_Leave:
-	warp MAP_ZONE17A, 255, 13, 15
-	@ warp MAP_ZONE17SANCTUARY, 255, 7, 7
+	warp MAP_ZONE17SANCTUARY, 255, 7, 7
 	releaseall
 	end
 
