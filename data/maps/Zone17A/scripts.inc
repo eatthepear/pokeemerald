@@ -205,12 +205,18 @@ Zone17A_EventScript_Released:
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 8
+	msgbox Zone17A_Text_Shimmering, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM14
 	release
 	end
 
 Zone17A_Text_Released:
 	.string "Thank you...\n"
 	.string "Finally, we may know peace...$"
+
+Zone17A_Text_Shimmering:
+	.string "There's something shimmering on the\n"
+	.string "ground by your feet!$"
 
 Zone17A_EventScript_Sign1::
 	lock
