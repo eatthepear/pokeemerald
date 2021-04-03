@@ -123,7 +123,7 @@ static const struct TrainerMon sParty_Jemma[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_BLIPBUG,
+    .species = SPECIES_BUDEW,
     }
 };
 
@@ -189,7 +189,7 @@ static const struct TrainerMon sParty_Ralph[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_BUDEW,
+    .species = SPECIES_PATRAT,
     }
 };
 
@@ -202,7 +202,7 @@ static const struct TrainerMon sParty_Patrick[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_NINCADA,
+    .species = SPECIES_BLIPBUG,
     },
     {
     .iv = 0,
@@ -266,7 +266,7 @@ static const struct TrainerMon sParty_Fred[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_PATRAT,
+    .species = SPECIES_EMOLGA,
     }
 };
 
