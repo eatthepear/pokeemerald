@@ -1601,14 +1601,14 @@ static const u8 sTM13Desc[] = _(
     "be avoided.");
 
 static const u8 sTM14Desc[] = _(
-    "A brutal snow-and-\n"
-    "wind attack that\n"
-    "may freeze the foe.");
+    "Inflicts a burn on\n"
+    "the foe with intense\n"
+    "fire.");
 
 static const u8 sTM15Desc[] = _(
-    "Powerful, but needs\n"
-    "recharging the\n"
-    "next turn.");
+    "Strikes with a\n"
+    "shadow claw. High\n"
+    "critical-hit ratio.");
 
 static const u8 sTM16Desc[] = _(
     "Creates a wall of\n"
@@ -1771,9 +1771,9 @@ static const u8 sTM47Desc[] = _(
     "slams into the foe.");
 
 static const u8 sTM48Desc[] = _(
-    "Switches abilities\n"
-    "with the foe on the\n"
-    "turn this is used.");
+    "A brutal snow-and-\n"
+    "wind attack that\n"
+    "may freeze the foe.");
 
 static const u8 sTM49Desc[] = _(
     "Raises the power of\n"

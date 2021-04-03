@@ -3988,10 +3988,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM14_BLIZZARD] =
+    [ITEM_TM14_WILL_O_WISP] =
     {
         .name = _("TM14"),
-        .itemId = ITEM_TM14_BLIZZARD,
+        .itemId = ITEM_TM14_WILL_O_WISP,
         .price = 5500,
         .description = sTM14Desc,
         .pocket = POCKET_TM_HM,
@@ -4000,10 +4000,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM15_HYPER_BEAM] =
+    [ITEM_TM15_SHADOW_CLAW] =
     {
         .name = _("TM15"),
-        .itemId = ITEM_TM15_HYPER_BEAM,
+        .itemId = ITEM_TM15_SHADOW_CLAW,
         .price = 7500,
         .description = sTM15Desc,
         .pocket = POCKET_TM_HM,
