@@ -3976,10 +3976,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM13_ICE_BEAM] =
+    [ITEM_TM13_AERIAL_ACE] =
     {
         .name = _("TM13"),
-        .itemId = ITEM_TM13_ICE_BEAM,
+        .itemId = ITEM_TM13_AERIAL_ACE,
         .price = 3000,
         .description = sTM13Desc,
         .pocket = POCKET_TM_HM,
@@ -3988,10 +3988,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM14_BLIZZARD] =
+    [ITEM_TM14_WILL_O_WISP] =
     {
         .name = _("TM14"),
-        .itemId = ITEM_TM14_BLIZZARD,
+        .itemId = ITEM_TM14_WILL_O_WISP,
         .price = 5500,
         .description = sTM14Desc,
         .pocket = POCKET_TM_HM,
@@ -4000,10 +4000,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM15_HYPER_BEAM] =
+    [ITEM_TM15_SHADOW_CLAW] =
     {
         .name = _("TM15"),
-        .itemId = ITEM_TM15_HYPER_BEAM,
+        .itemId = ITEM_TM15_SHADOW_CLAW,
         .price = 7500,
         .description = sTM15Desc,
         .pocket = POCKET_TM_HM,
@@ -4300,10 +4300,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM40_AERIAL_ACE] =
+    [ITEM_TM40_ICE_BEAM] =
     {
         .name = _("TM40"),
-        .itemId = ITEM_TM40_AERIAL_ACE,
+        .itemId = ITEM_TM40_ICE_BEAM,
         .price = 3000,
         .description = sTM40Desc,
         .pocket = POCKET_TM_HM,

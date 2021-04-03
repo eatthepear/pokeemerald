@@ -20,13 +20,9 @@ PetalburgCity_Gym_OnLoad: @ 820489E
 PetalburgCity_Gym_EventScript_OpenUnlockedDoors:: @ 82048B5
 	setvar VAR_0x8005, 1
 	call PetalburgCity_Gym_EventScript_OpenGymEntranceDoors
-	call_if_defeated TRAINER_RANDALL, PetalburgCity_Gym_EventScript_OpenSpeedRoomDoors
 	call_if_defeated TRAINER_MARY, PetalburgCity_Gym_EventScript_OpenAccuracyRoomDoors
-	call_if_defeated TRAINER_PARKER, PetalburgCity_Gym_EventScript_OpenConfusionRoomDoors
 	call_if_defeated TRAINER_ALEXIA, PetalburgCity_Gym_EventScript_OpenDefenseRoomDoors
-	call_if_defeated TRAINER_GEORGE, PetalburgCity_Gym_EventScript_OpenRecoveryRoomDoors
 	call_if_defeated TRAINER_JODY, PetalburgCity_Gym_EventScript_OpenStrengthRoomDoors
-	call_if_defeated TRAINER_BERKE, PetalburgCity_Gym_EventScript_OpenOHKORoomDoors
 	end
 
 PetalburgCity_Gym_EventScript_UnlockAllDoors:: @ 82048FF
@@ -826,7 +822,6 @@ PetalburgCity_Gym_EventScript_AccuracyRoomDoor:: @ 8205187
 
 PetalburgCity_Gym_EventScript_ConfusionRoomDoor:: @ 82051BC
 	lockall
-	goto_if_not_defeated TRAINER_RANDALL, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 46
 	msgbox PetalburgCity_Gym_Text_EnterConfusionRoom, MSGBOX_YESNO
@@ -838,7 +833,6 @@ PetalburgCity_Gym_EventScript_ConfusionRoomDoor:: @ 82051BC
 
 PetalburgCity_Gym_EventScript_LeftDefenseRoomDoor:: @ 82051EF
 	lockall
-	goto_if_not_defeated TRAINER_RANDALL, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 59
 	msgbox PetalburgCity_Gym_Text_EnterDefenseRoom, MSGBOX_YESNO
@@ -874,7 +868,6 @@ PetalburgCity_Gym_EventScript_RecoveryRoomDoor:: @ 8205255
 
 PetalburgCity_Gym_EventScript_LeftStrengthRoomDoor:: @ 8205288
 	lockall
-	goto_if_not_defeated TRAINER_PARKER, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 20
 	msgbox PetalburgCity_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
@@ -910,7 +903,6 @@ PetalburgCity_Gym_EventScript_LeftOHKORoomDoor:: @ 82052EE
 
 PetalburgCity_Gym_EventScript_RightOHKORoomDoor:: @ 8205321
 	lockall
-	goto_if_not_defeated TRAINER_GEORGE, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 33
 	msgbox PetalburgCity_Gym_Text_EnterOHKORoom, MSGBOX_YESNO
@@ -934,7 +926,6 @@ PetalburgCity_Gym_EventScript_LeftGymLeadersRoomDoor:: @ 8205354
 
 PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor:: @ 8205387
 	lockall
-	goto_if_not_defeated TRAINER_BERKE, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 7
 	msgbox PetalburgCity_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
@@ -944,27 +935,11 @@ PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor:: @ 8205387
 	goto_if_eq PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
 
-PetalburgCity_Gym_EventScript_Randall:: @ 82053BA
-	trainerbattle_single TRAINER_RANDALL, PetalburgCity_Gym_Text_RandallIntro, PetalburgCity_Gym_Text_RandallDefeat, PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_RandallPostBadge
-	msgbox PetalburgCity_Gym_Text_RandallPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors:: @ 82053DE
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenSpeedRoomDoors
 	special DrawWholeMapView
 	release
-	end
-
-PetalburgCity_Gym_EventScript_RandallPostBadge:: @ 82053ED
-	msgbox PetalburgCity_Gym_Text_RandallPostBadge, MSGBOX_NPC
-	end
-
-PetalburgCity_Gym_EventScript_Parker:: @ 82053F6
-	trainerbattle_single TRAINER_PARKER, PetalburgCity_Gym_Text_ParkerIntro, PetalburgCity_Gym_Text_ParkerDefeat, PetalburgCity_Gym_EventScript_SlideOpenConfusionRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_ParkerPostBadge
-	msgbox PetalburgCity_Gym_Text_ParkerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PetalburgCity_Gym_EventScript_SlideOpenConfusionRoomDoors:: @ 820541A
@@ -974,16 +949,6 @@ PetalburgCity_Gym_EventScript_SlideOpenConfusionRoomDoors:: @ 820541A
 	release
 	end
 
-PetalburgCity_Gym_EventScript_ParkerPostBadge:: @ 8205429
-	msgbox PetalburgCity_Gym_Text_ParkerPostBadge, MSGBOX_NPC
-	end
-
-PetalburgCity_Gym_EventScript_George:: @ 8205432
-	trainerbattle_single TRAINER_GEORGE, PetalburgCity_Gym_Text_GeorgeIntro, PetalburgCity_Gym_Text_GeorgeDefeat, PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_GeorgePostBadge
-	msgbox PetalburgCity_Gym_Text_GeorgePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors:: @ 8205456
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenRecoveryRoomDoors
@@ -991,25 +956,11 @@ PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors:: @ 8205456
 	release
 	end
 
-PetalburgCity_Gym_EventScript_GeorgePostBadge:: @ 8205465
-	msgbox PetalburgCity_Gym_Text_GeorgePostBadge, MSGBOX_NPC
-	end
-
-PetalburgCity_Gym_EventScript_Berke:: @ 820546E
-	trainerbattle_single TRAINER_BERKE, PetalburgCity_Gym_Text_BerkeIntro, PetalburgCity_Gym_Text_BerkeDefeat, PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_BerkePostBadge
-	msgbox PetalburgCity_Gym_Text_BerkePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors:: @ 8205492
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenOHKORoomDoors
 	special DrawWholeMapView
 	release
-	end
-
-PetalburgCity_Gym_EventScript_BerkePostBadge:: @ 82054A1
-	msgbox PetalburgCity_Gym_Text_BerkePostBadge, MSGBOX_NPC
 	end
 
 PetalburgCity_Gym_EventScript_Mary:: @ 82054AA
@@ -1439,94 +1390,6 @@ PetalburgCity_Gym_Text_GymGuidePostVictory: @ 82066F3
 	.string "your own father!\p"
 	.string "Like, whoa!\n"
 	.string "What a stunning turn of events!$"
-
-PetalburgCity_Gym_Text_RandallIntro: @ 820674F
-	.string "The ability to attack before the\n"
-	.string "opponent…\p"
-	.string "Just that alone puts me at a great\n"
-	.string "advantage, don't you agree?$"
-
-PetalburgCity_Gym_Text_RandallDefeat: @ 82067B9
-	.string "That was a magnificent battle!$"
-
-PetalburgCity_Gym_Text_RandallPostBattle: @ 82067D8
-	.string "Go on to the next room where a new\n"
-	.string "challenge awaits you.\p"
-	.string "At the left is the CONFUSION ROOM.\p"
-	.string "The right door leads to the DEFENSE\n"
-	.string "ROOM.$"
-
-PetalburgCity_Gym_Text_RandallPostBadge: @ 820685E
-	.string "Whomever you beat, and whomever you\n"
-	.string "may lose to, you never shirk from\l"
-	.string "training yourself and your POKéMON.\p"
-	.string "That's what I think being a\n"
-	.string "GYM LEADER is all about.$"
-
-PetalburgCity_Gym_Text_ParkerIntro: @ 82068FD
-	.string "This is the CONFUSION ROOM.\p"
-	.string "Let me see how well bonded you are\n"
-	.string "with your POKéMON!$"
-
-PetalburgCity_Gym_Text_ParkerDefeat: @ 820694F
-	.string "I couldn't confuse your team enough…\n"
-	.string "You share a strong bond together.$"
-
-PetalburgCity_Gym_Text_ParkerPostBattle: @ 8206996
-	.string "The next room is the STRENGTH ROOM.\n"
-	.string "Can you withstand brute force?$"
-
-PetalburgCity_Gym_Text_ParkerPostBadge: @ 82069D9
-	.string "After you beat our LEADER, the\n"
-	.string "training has become a lot tougher.$"
-
-PetalburgCity_Gym_Text_GeorgeIntro: @ 8206A1B
-	.string "Just when you think you're going to\n"
-	.string "win, your opponent restores HP…\p"
-	.string "Can you just imagine how awful that\n"
-	.string "must feel?\p"
-	.string "I'll show you exactly how awful it\n"
-	.string "feels!$"
-
-PetalburgCity_Gym_Text_GeorgeDefeat: @ 8206AB8
-	.string "I couldn't restore HP enough…\n"
-	.string "What ATTACK power…$"
-
-PetalburgCity_Gym_Text_GeorgePostBattle: @ 8206AE9
-	.string "I should have expected no less from\n"
-	.string "our LEADER's kid.\p"
-	.string "No, wait! A TRAINER's abilities are\n"
-	.string "earned only through effort.\p"
-	.string "I lost because my own efforts\n"
-	.string "weren't enough.\p"
-	.string "Go on! The ONE-HIT KO ROOM is next.$"
-
-PetalburgCity_Gym_Text_GeorgePostBadge: @ 8206BB1
-	.string "I'm going to keep training at GYMS.\n"
-	.string "One day, I'll become a LEADER.$"
-
-PetalburgCity_Gym_Text_BerkeIntro: @ 8206BF4
-	.string "I'm not going to take it easy just\n"
-	.string "because you're our LEADER's kid.\p"
-	.string "I'll show you how horrid it is for\n"
-	.string "a POKéMON to take a critical hit!$"
-
-PetalburgCity_Gym_Text_BerkeDefeat: @ 8206C7D
-	.string "Your power…\n"
-	.string "You're the real deal.$"
-
-PetalburgCity_Gym_Text_BerkePostBattle: @ 8206C9F
-	.string "Your father really is strong.\n"
-	.string "He's a TRAINER worth my respect.\p"
-	.string "And, I sense the same glow coming\n"
-	.string "from you as your father.\p"
-	.string "I hope that you'll stage a terrific\n"
-	.string "battle with your father!$"
-
-PetalburgCity_Gym_Text_BerkePostBadge: @ 8206D56
-	.string "Since your dad became the LEADER,\n"
-	.string "the TRAINERS of PETALBURG CITY have\l"
-	.string "become a lot tougher.$"
 
 PetalburgCity_Gym_Text_MaryIntro: @ 8206DB2
 	.string "Giggle…\n"
