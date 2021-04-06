@@ -40,35 +40,39 @@
 // gTileset_BattlePalace
 #define METATILE_BattlePalace_Door  0x219
 
-// gTileset_BattlePike
-#define METATILE_BattlePike_Curtain_Stage0_Tile0  0x24A
-#define METATILE_BattlePike_Curtain_Stage0_Tile1  0x251
-#define METATILE_BattlePike_Curtain_Stage0_Tile2  0x252
-#define METATILE_BattlePike_Curtain_Stage0_Tile3  0x253
-#define METATILE_BattlePike_Curtain_Stage0_Tile4  0x259
-#define METATILE_BattlePike_Curtain_Stage0_Tile5  0x25A
-#define METATILE_BattlePike_Curtain_Stage0_Tile6  0x25B
-#define METATILE_BattlePike_Curtain_Stage1_Tile0  0x22A
-#define METATILE_BattlePike_Curtain_Stage1_Tile1  0x231
-#define METATILE_BattlePike_Curtain_Stage1_Tile2  0x232
-#define METATILE_BattlePike_Curtain_Stage1_Tile3  0x233
-#define METATILE_BattlePike_Curtain_Stage1_Tile4  0x239
-#define METATILE_BattlePike_Curtain_Stage1_Tile5  0x23A
-#define METATILE_BattlePike_Curtain_Stage1_Tile6  0x23B
-#define METATILE_BattlePike_Curtain_Stage2_Tile0  0x20A
-#define METATILE_BattlePike_Curtain_Stage2_Tile1  0x211
-#define METATILE_BattlePike_Curtain_Stage2_Tile2  0x212
-#define METATILE_BattlePike_Curtain_Stage2_Tile3  0x213
-#define METATILE_BattlePike_Curtain_Stage2_Tile4  0x219
-#define METATILE_BattlePike_Curtain_Stage2_Tile5  0x21A
-#define METATILE_BattlePike_Curtain_Stage2_Tile6  0x21B
-#define METATILE_BattlePike_Curtain_Stage3_Tile0  0x2AB
-#define METATILE_BattlePike_Curtain_Stage3_Tile1  0x2B2
-#define METATILE_BattlePike_Curtain_Stage3_Tile2  0x2B3
-#define METATILE_BattlePike_Curtain_Stage3_Tile3  0x2B4
-#define METATILE_BattlePike_Curtain_Stage3_Tile4  0x2BA
-#define METATILE_BattlePike_Curtain_Stage3_Tile5  0x2BB
-#define METATILE_BattlePike_Curtain_Stage3_Tile6  0x2BC
+// gTileset_Cave
+#define METATILE_Cave_EntranceCover                     0x229
+#define METATILE_Cave_CrackedFloor_Hole                 0x206
+#define METATILE_Cave_CrackedFloor                      0x22F
+#define METATILE_Cave_SealedChamberEntrance_TopLeft     0x22A
+#define METATILE_Cave_SealedChamberEntrance_TopMid      0x22B
+#define METATILE_Cave_SealedChamberEntrance_TopRight    0x22C
+#define METATILE_Cave_SealedChamberEntrance_BottomLeft  0x232
+#define METATILE_Cave_SealedChamberEntrance_BottomMid   0x233
+#define METATILE_Cave_SealedChamberEntrance_BottomRight 0x234
+#define METATILE_Cave_SealedChamberBraille_Mid          0x235
+#define METATILE_Cave_ShoalCave_DirtPile_Large          0x358
+#define METATILE_Cave_ShoalCave_DirtPile_Small          0x35A
+#define METATILE_Cave_ShoalCave_BlueStone_Large         0x359
+#define METATILE_Cave_ShoalCave_BlueStone_Small         0x35B
+
+// gTileset_Pacifidlog
+#define METATILE_Pacifidlog_Door                          0x21A
+#define METATILE_Pacifidlog_FloatingLogs_Horizontal0      0x250
+#define METATILE_Pacifidlog_FloatingLogs_Horizontal1      0x251
+#define METATILE_Pacifidlog_HalfSubmergedLogs_Horizontal0 0x252
+#define METATILE_Pacifidlog_HalfSubmergedLogs_Horizontal1 0x253
+#define METATILE_Pacifidlog_SubmergedLogs_Horizontal0     0x254
+#define METATILE_Pacifidlog_SubmergedLogs_Horizontal1     0x255
+#define METATILE_Pacifidlog_FloatingLogs_Vertical0        0x258
+#define METATILE_Pacifidlog_FloatingLogs_Vertical1        0x260
+#define METATILE_Pacifidlog_HalfSubmergedLogs_Vertical0   0x259
+#define METATILE_Pacifidlog_HalfSubmergedLogs_Vertical1   0x261
+#define METATILE_Pacifidlog_SubmergedLogs_Vertical0       0x25A
+#define METATILE_Pacifidlog_SubmergedLogs_Vertical1       0x262
+#define METATILE_Pacifidlog_SkyPillar_CrackedFloor_Hole   0x237
+#define METATILE_Pacifidlog_SkyPillar_DoorOpen_Top        0x2AA
+#define METATILE_Pacifidlog_SkyPillar_DoorOpen_Bottom     0x2B2
 
 // gTileset_BattleTent
 #define METATILE_BattleTent_Door  0x26B
@@ -236,6 +240,36 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Interior  0x297
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
+
+// gTileset_BattlePike
+#define METATILE_BattlePike_Curtain_Stage0_Tile0  0x24A
+#define METATILE_BattlePike_Curtain_Stage0_Tile1  0x251
+#define METATILE_BattlePike_Curtain_Stage0_Tile2  0x252
+#define METATILE_BattlePike_Curtain_Stage0_Tile3  0x253
+#define METATILE_BattlePike_Curtain_Stage0_Tile4  0x259
+#define METATILE_BattlePike_Curtain_Stage0_Tile5  0x25A
+#define METATILE_BattlePike_Curtain_Stage0_Tile6  0x25B
+#define METATILE_BattlePike_Curtain_Stage1_Tile0  0x22A
+#define METATILE_BattlePike_Curtain_Stage1_Tile1  0x231
+#define METATILE_BattlePike_Curtain_Stage1_Tile2  0x232
+#define METATILE_BattlePike_Curtain_Stage1_Tile3  0x233
+#define METATILE_BattlePike_Curtain_Stage1_Tile4  0x239
+#define METATILE_BattlePike_Curtain_Stage1_Tile5  0x23A
+#define METATILE_BattlePike_Curtain_Stage1_Tile6  0x23B
+#define METATILE_BattlePike_Curtain_Stage2_Tile0  0x20A
+#define METATILE_BattlePike_Curtain_Stage2_Tile1  0x211
+#define METATILE_BattlePike_Curtain_Stage2_Tile2  0x212
+#define METATILE_BattlePike_Curtain_Stage2_Tile3  0x213
+#define METATILE_BattlePike_Curtain_Stage2_Tile4  0x219
+#define METATILE_BattlePike_Curtain_Stage2_Tile5  0x21A
+#define METATILE_BattlePike_Curtain_Stage2_Tile6  0x21B
+#define METATILE_BattlePike_Curtain_Stage3_Tile0  0x2AB
+#define METATILE_BattlePike_Curtain_Stage3_Tile1  0x2B2
+#define METATILE_BattlePike_Curtain_Stage3_Tile2  0x2B3
+#define METATILE_BattlePike_Curtain_Stage3_Tile3  0x2B4
+#define METATILE_BattlePike_Curtain_Stage3_Tile4  0x2BA
+#define METATILE_BattlePike_Curtain_Stage3_Tile5  0x2BB
+#define METATILE_BattlePike_Curtain_Stage3_Tile6  0x2BC
 
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
