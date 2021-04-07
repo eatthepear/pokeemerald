@@ -5170,6 +5170,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Zone18A/border.bin",
       "blockdata_filepath": "data/layouts/Zone18A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE18B",
+      "name": "Zone18B_Layout",
+      "width": 9,
+      "height": 203,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/Zone18B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone18B/map.bin"
     }
   ]
 }
