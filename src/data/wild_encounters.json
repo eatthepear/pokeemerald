@@ -15145,12 +15145,12 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_CUBONE"
+                "species": "SPECIES_DRUDDIGON"
               },
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_CUBONE"
+                "species": "SPECIES_DRUDDIGON"
               },
               {
                 "min_level": 15,
@@ -15224,12 +15224,12 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_CUBONE"
+                "species": "SPECIES_DRUDDIGON"
               },
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_CUBONE"
+                "species": "SPECIES_DRUDDIGON"
               },
               {
                 "min_level": 15,
@@ -15546,7 +15546,7 @@
               {
                 "min_level": 20,
                 "max_level": 23,
-                "species": "SPECIES_BALTOY"
+                "species": "SPECIES_DUSKULL"
               },
               {
                 "min_level": 20,
