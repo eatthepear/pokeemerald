@@ -1107,17 +1107,17 @@
 #define FLAG_ITEM_ZONE15A_WISE_GLASSES                              0x425
 #define FLAG_ITEM_ZONE15A_WIDE_LENS                                 0x426
 #define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
-#define FLAG_ITEM_ZONE3A_HYPER_POTION                    0x428
-#define FLAG_ITEM_ZONE5A_FULL_HEAL                    0x429
-#define FLAG_ITEM_ZONE16A_DIVE_BALL                            0x42A
-#define FLAG_ITEM_ZONE16A_WATER_STONE                 0x42B
-#define FLAG_ITEM_ZONE16A_FULL_HEAL                  0x42C
-#define FLAG_ITEM_ZONE16A_TM13                    0x42D//start here
-#define FLAG_ITEM_JAGGED_PASS_BURN_HEAL                             0x42E
-#define FLAG_ITEM_AQUA_HIDEOUT_B1F_MAX_ELIXIR                       0x42F
+#define FLAG_ITEM_ZONE3A_HYPER_POTION                               0x428
+#define FLAG_ITEM_ZONE5A_FULL_HEAL                                  0x429
+#define FLAG_ITEM_ZONE16A_DIVE_BALL                                 0x42A
+#define FLAG_ITEM_ZONE16A_WATER_STONE                               0x42B
+#define FLAG_ITEM_ZONE16A_FULL_HEAL                                 0x42C
+#define FLAG_ITEM_ZONE16A_TM13                                      0x42D
+#define FLAG_ITEM_ZONE18A_HEAT_ROCK                                 0x42E
+#define FLAG_ITEM_ZONE18A_TM16                                      0x42F
 #define FLAG_ITEM_AQUA_HIDEOUT_B2F_NEST_BALL                        0x430
 #define FLAG_ITEM_MT_PYRE_EXTERIOR_MAX_POTION                       0x431
-#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_48                            0x432
+#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_48                            0x432//start here
 #define FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL                           0x433
 #define FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE                          0x434
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_6_LUXURY_BALL    0x435
