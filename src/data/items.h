@@ -4012,10 +4012,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM16_LIGHT_SCREEN] =
+    [ITEM_TM16_SUNNY_DAY] =
     {
         .name = _("TM16"),
-        .itemId = ITEM_TM16_LIGHT_SCREEN,
+        .itemId = ITEM_TM16_SUNNY_DAY,
         .price = 3000,
         .description = sTM16Desc,
         .pocket = POCKET_TM_HM,
@@ -4024,10 +4024,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM17_PROTECT] =
+    [ITEM_TM17_BRICK_BREAK] =
     {
         .name = _("TM17"),
-        .itemId = ITEM_TM17_PROTECT,
+        .itemId = ITEM_TM17_BRICK_BREAK,
         .price = 3000,
         .description = sTM17Desc,
         .pocket = POCKET_TM_HM,
@@ -4036,10 +4036,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM18_RAIN_DANCE] =
+    [ITEM_TM18_WATERFALL] =
     {
         .name = _("TM18"),
-        .itemId = ITEM_TM18_RAIN_DANCE,
+        .itemId = ITEM_TM18_WATERFALL,
         .price = 2000,
         .description = sTM18Desc,
         .pocket = POCKET_TM_HM,
@@ -4048,10 +4048,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM19_GIGA_DRAIN] =
+    [ITEM_TM19_THUNDER_WAVE] =
     {
         .name = _("TM19"),
-        .itemId = ITEM_TM19_GIGA_DRAIN,
+        .itemId = ITEM_TM19_THUNDER_WAVE,
         .price = 3000,
         .description = sTM19Desc,
         .pocket = POCKET_TM_HM,
