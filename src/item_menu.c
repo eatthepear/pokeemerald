@@ -59,6 +59,7 @@ enum
 };
 
 void GoToBagMenu(u8 bagMenuType, u8 pocketId, void (*postExitMenuMainCallback2)());
+
 void CB2_Bag(void);
 bool8 SetupBagMenu(void);
 void BagMenu_InitBGs(void);
@@ -226,6 +227,8 @@ static const struct ListMenuTemplate sItemListMenu =
 static const u8 sMenuText_ByName[] = _("Name");
 static const u8 sMenuText_ByType[] = _("Type");
 static const u8 sMenuText_ByAmount[] = _("Amount");
+static const u8 sMenuText_ByNumber[] = _("Number");
+static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
 static const struct MenuAction sItemMenuActions[] = {
     [ITEMMENUACTION_USE] =          {gMenuText_Use, ItemMenu_UseOutOfBattle},
     [ITEMMENUACTION_TOSS] =         {gMenuText_Toss, ItemMenu_Toss},
@@ -1181,79 +1184,78 @@ void Task_BagMenu_HandleInput(u8 taskId)
     {
         switch (GetSwitchBagPocketDirection())
         {
-            case SWITCH_POCKET_LEFT:
-                SwitchBagPocket(taskId, MENU_CURSOR_DELTA_LEFT, 0);
-                return;
-            case SWITCH_POCKET_RIGHT:
-                SwitchBagPocket(taskId, MENU_CURSOR_DELTA_RIGHT, 0);
-                return;
-            default:
-                if (JOY_NEW(SELECT_BUTTON))
+        case SWITCH_POCKET_LEFT:
+            SwitchBagPocket(taskId, MENU_CURSOR_DELTA_LEFT, 0);
+            return;
+        case SWITCH_POCKET_RIGHT:
+            SwitchBagPocket(taskId, MENU_CURSOR_DELTA_RIGHT, 0);
+            return;
+        default:
+            if (JOY_NEW(SELECT_BUTTON))
+            {
+                if (CanSwapItems() == TRUE)
                 {
-                    if (CanSwapItems() == TRUE)
+                    ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
+                    if ((*scrollPos + *cursorPos) != gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1)
                     {
-                        ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
-                        if ((*scrollPos + *cursorPos) != gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1)
-                        {
-                            PlaySE(SE_SELECT);
-                            BagMenu_SwapItems(taskId);
-                        }
-                    }
-                    return;
-                }
-                else if (JOY_NEW(START_BUTTON))
-                {
-                    if ((gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1) <= 1) //can't sort with 0 or 1 item in bag
-                    {
-                        static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
                         PlaySE(SE_SELECT);
-                        DisplayItemMessage(taskId, 1, sText_NothingToSort, sub_81AD350);
-                        break;
+                        BagMenu_SwapItems(taskId);
                     }
-                    
-                    data[1] = GetItemListPosition(gBagPositionStruct.pocket);
-                    data[2] = BagGetQuantityByPocketPosition(gBagPositionStruct.pocket + 1, data[1]);
-                    if (gBagPositionStruct.cursorPosition[gBagPositionStruct.pocket] == gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1)
-                        break;
-                    else
-                        gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPositionStruct.pocket + 1, data[1]);
-                    
-                    PlaySE(SE_SELECT);
-                    BagDestroyPocketScrollArrowPair();
-                    BagMenu_PrintCursor_(data[0], 2);
-                    ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
-                    gTasks[taskId].func = Task_LoadBagSortOptions;
                 }
-                else
+            }
+            else if (JOY_NEW(START_BUTTON))
+            {
+                if ((gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1) <= 1) //can't sort with 0 or 1 item in bag
                 {
-                    listPosition = ListMenu_ProcessInput(data[0]);
-                    ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
-                    switch (listPosition)
-                    {
-                        case LIST_NOTHING_CHOSEN:
-                            break;
-                        case LIST_CANCEL:
-                            if (gBagPositionStruct.location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH)
-                            {
-                                PlaySE(SE_FAILURE);
-                                break;
-                            }
-                            PlaySE(SE_SELECT);
-                            gSpecialVar_ItemId = ITEM_NONE;
-                            gTasks[taskId].func = Task_FadeAndCloseBagMenu;
-                            break;
-                        default: // A_BUTTON
-                            PlaySE(SE_SELECT);
-                            BagDestroyPocketScrollArrowPair();
-                            BagMenu_PrintCursor_(data[0], 2);
-                            data[1] = listPosition;
-                            data[2] = BagGetQuantityByPocketPosition(gBagPositionStruct.pocket + 1, listPosition);
-                            gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPositionStruct.pocket + 1, listPosition);
-                            gUnknown_08614054[gBagPositionStruct.location](taskId);
-                            break;
-                    }
+                    static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+                    PlaySE(SE_FAILURE);
+                    DisplayItemMessage(taskId, 1, sText_NothingToSort, sub_81AD350);
+                    break;
                 }
-                break;
+                
+                data[1] = GetItemListPosition(gBagPositionStruct.pocket);
+                data[2] = BagGetQuantityByPocketPosition(gBagPositionStruct.pocket + 1, data[1]);
+                if (gBagPositionStruct.cursorPosition[gBagPositionStruct.pocket] == gBagMenu->numItemStacks[gBagPositionStruct.pocket] - 1)
+                    break;
+                else
+                    gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPositionStruct.pocket + 1, data[1]);
+                
+                PlaySE(SE_SELECT);
+                BagDestroyPocketScrollArrowPair();
+                BagMenu_PrintCursor_(data[0], 2);
+                ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
+                gTasks[taskId].func = Task_LoadBagSortOptions;
+            }
+            else
+            {
+                listPosition = ListMenu_ProcessInput(data[0]);
+                ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
+                switch (listPosition)
+                {
+                    case LIST_NOTHING_CHOSEN:
+                        break;
+                    case LIST_CANCEL:
+                        if (gBagPositionStruct.location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH)
+                        {
+                            PlaySE(SE_FAILURE);
+                            break;
+                        }
+                        PlaySE(SE_SELECT);
+                        gSpecialVar_ItemId = ITEM_NONE;
+                        gTasks[taskId].func = Task_FadeAndCloseBagMenu;
+                        break;
+                    default: // A_BUTTON
+                        PlaySE(SE_SELECT);
+                        BagDestroyPocketScrollArrowPair();
+                        BagMenu_PrintCursor_(data[0], 2);
+                        data[1] = listPosition;
+                        data[2] = BagGetQuantityByPocketPosition(gBagPositionStruct.pocket + 1, listPosition);
+                        gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPositionStruct.pocket + 1, listPosition);
+                        gUnknown_08614054[gBagPositionStruct.location](taskId);
+                        break;
+                }
+            }
+            break;
         }
     }
 }
@@ -1756,7 +1758,7 @@ bool8 sub_81ACDFC(s8 a)
         return FALSE;
     if (a > gBagMenu->contextMenuNumItems)
         return FALSE;
-    if (gBagMenu->contextMenuItemsPtr[a] == ITEMMENUACTION_DUMMY)
+    if (gBagMenu->contextMenuItemsPtr[a] == ITEMMENUACTION_COUNT)
         return FALSE;
     return TRUE;
 }
@@ -2632,7 +2634,7 @@ static const u8 sBagMenuSortPokeBallsBerries[] =
 {
     ITEMMENUACTION_BY_NAME,
     ITEMMENUACTION_BY_AMOUNT,
-    ITEMMENUACTION_DUMMY,
+    ITEMMENUACTION_COUNT,
     ITEMMENUACTION_CANCEL,
 };
 
@@ -2658,7 +2660,7 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_ENERGY_POWDER] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_ENERGY_ROOT] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_REVIVAL_HERB] = ITEM_TYPE_HEALTH_RECOVERY,
-    [ITEM_SWEET_HEART] = ITEM_TYPE_HEALTH_RECOVERY,
+    //[ITEM_SWEET_HEART] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_BERRY_JUICE] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_SACRED_ASH] = ITEM_TYPE_HEALTH_RECOVERY,
 
@@ -2791,7 +2793,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_METAL_POWDER] = ITEM_TYPE_HELD_ITEM,
     [ITEM_THICK_CLUB] = ITEM_TYPE_HELD_ITEM,
     [ITEM_STICK] = ITEM_TYPE_HELD_ITEM,
-    
     [ITEM_ADAMANT_ORB] = ITEM_TYPE_HELD_ITEM,
     [ITEM_LUSTROUS_ORB] = ITEM_TYPE_HELD_ITEM,
     [ITEM_GRISEOUS_ORB] = ITEM_TYPE_HELD_ITEM,
@@ -2851,7 +2852,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_UTILITY_UMBRELLA] = ITEM_TYPE_HELD_ITEM,
     [ITEM_THROAT_SPRAY] = ITEM_TYPE_HELD_ITEM,
     */
-
     [ITEM_FIST_PLATE] = ITEM_TYPE_PLATE,
     [ITEM_SKY_PLATE] = ITEM_TYPE_PLATE,
     [ITEM_TOXIC_PLATE] = ITEM_TYPE_PLATE,
@@ -2869,7 +2869,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_DRACO_PLATE] = ITEM_TYPE_PLATE,
     [ITEM_DREAD_PLATE] = ITEM_TYPE_PLATE,
     [ITEM_PIXIE_PLATE] = ITEM_TYPE_PLATE,
-
     [ITEM_FIGHTING_MEMORY] = ITEM_TYPE_MEMORY,
     [ITEM_FLYING_MEMORY] = ITEM_TYPE_MEMORY,
     [ITEM_POISON_MEMORY] = ITEM_TYPE_MEMORY,
@@ -2887,12 +2886,10 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_DRAGON_MEMORY] = ITEM_TYPE_MEMORY,
     [ITEM_DARK_MEMORY] = ITEM_TYPE_MEMORY,
     [ITEM_FAIRY_MEMORY] = ITEM_TYPE_MEMORY,
-
     [ITEM_BURN_DRIVE] = ITEM_TYPE_DRIVE,
     [ITEM_DOUSE_DRIVE] = ITEM_TYPE_DRIVE,
     [ITEM_SHOCK_DRIVE] = ITEM_TYPE_DRIVE,
     [ITEM_CHILL_DRIVE] = ITEM_TYPE_DRIVE,
-
     [ITEM_NORMAL_GEM] = ITEM_TYPE_GEM,
     [ITEM_FIGHTING_GEM] = ITEM_TYPE_GEM,
     [ITEM_FLYING_GEM] = ITEM_TYPE_GEM,
@@ -2911,7 +2908,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_DRAGON_GEM] = ITEM_TYPE_GEM,
     [ITEM_DARK_GEM] = ITEM_TYPE_GEM,
     [ITEM_FAIRY_GEM] = ITEM_TYPE_GEM,
-    
     [ITEM_SEA_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_LAX_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_LUCK_INCENSE] = ITEM_TYPE_INCENSE,
@@ -2921,7 +2917,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_ROCK_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_ROSE_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_WAVE_INCENSE] = ITEM_TYPE_INCENSE,
-    
     [ITEM_VENUSAURITE] = ITEM_TYPE_MEGA_STONE,
     [ITEM_CHARIZARDITE_X] = ITEM_TYPE_MEGA_STONE,
     [ITEM_CHARIZARDITE_Y] = ITEM_TYPE_MEGA_STONE,
@@ -3039,7 +3034,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     /*[ITEM_BOTTLE_CAP] = ITEM_TYPE_SELLABLE,
     [ITEM_GOLD_BOTTLE_CAP] = ITEM_TYPE_SELLABLE,
     [ITEM_WISHING_PIECE] = ITEM_TYPE_SELLABLE,
-
     [ITEM_RELIC_COPPER] = ITEM_TYPE_RELIC,
     [ITEM_RELIC_SILVER] = ITEM_TYPE_RELIC,
     [ITEM_RELIC_GOLD] = ITEM_TYPE_RELIC,
