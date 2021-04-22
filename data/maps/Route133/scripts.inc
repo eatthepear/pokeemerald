@@ -16,11 +16,6 @@ Route133_EventScript_Linda:: @ 81F75D1
 	msgbox Route133_Text_LindaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route133_EventScript_Warren:: @ 81F75E8
-	trainerbattle_single TRAINER_WARREN, Route133_Text_WarrenIntro, Route133_Text_WarrenDefeat
-	msgbox Route133_Text_WarrenPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route133_EventScript_Beck:: @ 81F75FF
 	trainerbattle_single TRAINER_BECK, Route133_Text_BeckIntro, Route133_Text_BeckDefeat
 	msgbox Route133_Text_BeckPostBattle, MSGBOX_AUTOCLOSE

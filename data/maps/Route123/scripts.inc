@@ -44,11 +44,6 @@ Route123_EventScript_BerryMastersHouseSign:: @ 81F61BC
 	msgbox Route123_Text_BerryMastersHouse, MSGBOX_SIGN
 	end
 
-Route123_EventScript_Wendy:: @ 81F61C5
-	trainerbattle_single TRAINER_WENDY, Route123_Text_WendyIntro, Route123_Text_WendyDefeat
-	msgbox Route123_Text_WendyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route123_EventScript_Cameron:: @ 81F620A
 	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
 	specialvar VAR_RESULT, ShouldTryRematchBattle
