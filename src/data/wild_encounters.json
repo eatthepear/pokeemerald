@@ -14254,12 +14254,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 9,
@@ -14333,12 +14333,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 9,
@@ -14412,12 +14412,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 9,
@@ -14842,17 +14842,17 @@
               {
                 "min_level": 13,
                 "max_level": 16,
-                "species": "SPECIES_ZANGOOSE"
-              },
-              {
-                "min_level": 13,
-                "max_level": 16,
-                "species": "SPECIES_SEVIPER"
+                "species": "SPECIES_TOXEL"
               },
               {
                 "min_level": 13,
                 "max_level": 16,
                 "species": "SPECIES_TOXEL"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_ZANGOOSE"
               },
               {
                 "min_level": 13,
@@ -15140,7 +15140,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_FERROSEED"
               },
               {
                 "min_level": 15,
@@ -15180,7 +15180,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_SHUCKLE"
+                "species": "SPECIES_DEINO"
               }
             ]
           }
@@ -15219,7 +15219,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_FERROSEED"
               },
               {
                 "min_level": 15,
@@ -15259,7 +15259,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_SHUCKLE"
+                "species": "SPECIES_DEINO"
               }
             ]
           }
