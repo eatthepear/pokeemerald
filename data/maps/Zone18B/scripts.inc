@@ -415,13 +415,16 @@ Zone18B_EventScript_Jay::
 	end
 
 Zone18B_Text_JayIntro:
-	.string "$"
+	.string "Welcome to the Cool Room.\n"
+	.string "Speaking of cool, have you\l"
+	.string "ever read the Great Gatsby?$"
 
 Zone18B_Text_JayDefeat:
-	.string "$"
+	.string "I'm not Gatsby!$"
 
 Zone18B_Text_JayPostBattle:
-	.string "$"
+	.string "I just like the book because\n"
+	.string "of the social commentary.$"
 
 Zone18B_EventScript_Blanche::
 	trainerbattle_single TRAINER_BLANCHE, Zone18B_Text_BlancheIntro, Zone18B_Text_BlancheDefeat, Zone18B_EventScript_SlideOpenCuteRoomDoors
@@ -429,13 +432,14 @@ Zone18B_EventScript_Blanche::
 	end
 
 Zone18B_Text_BlancheIntro:
-	.string "$"
+	.string "Cutie walks into the Cute\n"
+	.string "Room. Prepare to battle!$"
 
 Zone18B_Text_BlancheDefeat:
-	.string "$"
+	.string "Awww.$"
 
 Zone18B_Text_BlanchePostBattle:
-	.string "$"
+	.string "I wish I had a Clefairy.$"
 
 Zone18B_EventScript_Terrence::
 	trainerbattle_single TRAINER_TERRENCE, Zone18B_Text_TerrenceIntro, Zone18B_Text_TerrenceDefeat, Zone18B_EventScript_SlideOpenStallRoomDoors
@@ -443,13 +447,16 @@ Zone18B_EventScript_Terrence::
 	end
 
 Zone18B_Text_TerrenceIntro:
-	.string "$"
+	.string "I like to take things slow,\n"
+	.string "in battle and in life!$"
 
 Zone18B_Text_TerrenceDefeat:
-	.string "$"
+	.string "I guess stalling you out did\n"
+	.string "no good...$"
 
 Zone18B_Text_TerrencePostBattle:
-	.string "$"
+	.string "Sometimes my wife gets annoyed\n"
+	.string "that everything I do is so slow.$"
 
 Zone18B_EventScript_Marty::
 	trainerbattle_single TRAINER_MARTY, Zone18B_Text_MartyIntro, Zone18B_Text_MartyDefeat, Zone18B_EventScript_SlideOpenBalanceRoomDoors
@@ -457,13 +464,16 @@ Zone18B_EventScript_Marty::
 	end
 
 Zone18B_Text_MartyIntro:
-	.string "$"
+	.string "I've collected a balanced team\n"
+	.string "from across the globe to defeat\l"
+	.string "you in battle!$"
 
 Zone18B_Text_MartyDefeat:
-	.string "$"
+	.string "Argh! You tipped the scales on me!$"
 
 Zone18B_Text_MartyPostBattle:
-	.string "$"
+	.string "Maybe I need a more straightforward\n"
+	.string "strategy...$"
 
 Zone18B_EventScript_Kari::
 	trainerbattle_single TRAINER_KARI, Zone18B_Text_KariIntro, Zone18B_Text_KariDefeat, Zone18B_EventScript_SlideOpenOffenseRoomDoors
@@ -471,13 +481,13 @@ Zone18B_EventScript_Kari::
 	end
 
 Zone18B_Text_KariIntro:
-	.string "$"
+	.string "ALL OUT OFFENSE! ATTACK!$"
 
 Zone18B_Text_KariDefeat:
-	.string "$"
+	.string "DEFEATED! CRY!$"
 
 Zone18B_Text_KariPostBattle:
-	.string "$"
+	.string "HUSBAND WILL BE DISAPPOINTED!$"
 
 Zone18B_EventScript_Abraham::
 	trainerbattle_single TRAINER_ABRAHAM, Zone18B_Text_AbrahamIntro, Zone18B_Text_AbrahamDefeat, Zone18B_EventScript_SlideOpenSwitchRoomDoors
@@ -485,13 +495,17 @@ Zone18B_EventScript_Abraham::
 	end
 
 Zone18B_Text_AbrahamIntro:
-	.string "$"
+	.string "Battle is all about weaving\n"
+	.string "in and out. It's a metaphor\l"
+	.string "for life!$"
 
 Zone18B_Text_AbrahamDefeat:
-	.string "$"
+	.string "Nice moves, dude.$"
 
 Zone18B_Text_AbrahamPostBattle:
-	.string "$"
+	.string "Even though I lost, remember\n"
+	.string "that moves like U-Turn are\l"
+	.string "incredibly powerful.$"
 
 Zone18B_EventScript_Rex::
 	trainerbattle_single TRAINER_REX, Zone18B_Text_RexIntro, Zone18B_Text_RexDefeat, Zone18B_EventScript_SlideOpenHazardRoomDoors
@@ -499,13 +513,14 @@ Zone18B_EventScript_Rex::
 	end
 
 Zone18B_Text_RexIntro:
-	.string "$"
+	.string "Sneak attack! Hazardous terrain!$"
 
 Zone18B_Text_RexDefeat:
-	.string "$"
+	.string "I didn't have the element of surprise!$"
 
 Zone18B_Text_RexPostBattle:
-	.string "$"
+	.string "I usually stack Spikes and\n"
+	.string "hope for the best.$"
 
 Zone18B_EventScript_Emilio::
 	trainerbattle_single TRAINER_EMILIO, Zone18B_Text_EmilioIntro, Zone18B_Text_EmilioDefeat, Zone18B_EventScript_SlideOpenSetupRoomDoors
@@ -513,13 +528,13 @@ Zone18B_EventScript_Emilio::
 	end
 
 Zone18B_Text_EmilioIntro:
-	.string "$"
+	.string "Setup and sweep. Easy peazy$."
 
 Zone18B_Text_EmilioDefeat:
-	.string "$"
+	.string "Hmm. I guess that didn't work.$"
 
 Zone18B_Text_EmilioPostBattle:
-	.string "$"
+	.string "My Pokémon just need to train more.$"
 
 Zone18B_EventScript_Melinda::
 	trainerbattle_single TRAINER_MELINDA, Zone18B_Text_MelindaIntro, Zone18B_Text_MelindaDefeat, Zone18B_EventScript_SlideOpenHailRoomDoors
@@ -527,13 +542,13 @@ Zone18B_EventScript_Melinda::
 	end
 
 Zone18B_Text_MelindaIntro:
-	.string "$"
+	.string "Hail is the best weather!$"
 
 Zone18B_Text_MelindaDefeat:
-	.string "$"
+	.string "Well, not defensively...$"
 
 Zone18B_Text_MelindaPostBattle:
-	.string "$"
+	.string "My Pokémon just need to learn Blizzard.$"
 
 Zone18B_EventScript_Louis::
 	trainerbattle_single TRAINER_LOUIS, Zone18B_Text_LouisIntro, Zone18B_Text_LouisDefeat, Zone18B_EventScript_SlideOpenBuffRoomDoors
@@ -541,13 +556,15 @@ Zone18B_EventScript_Louis::
 	end
 
 Zone18B_Text_LouisIntro:
-	.string "$"
+	.string "Double Battle! Buff the Kabuto!$"
 
 Zone18B_Text_LouisDefeat:
-	.string "$"
+	.string "Kabuto wasn't buff enough!$"
 
 Zone18B_Text_LouisPostBattle:
-	.string "$"
+	.string "Stonjourner, you did great.\n"
+	.string "Kabuto, we gotta work on the\l"
+	.string "execution.$"
 
 Zone18B_EventScript_Desiree::
 	trainerbattle_single TRAINER_DESIREE, Zone18B_Text_DesireeIntro, Zone18B_Text_DesireeDefeat, Zone18B_EventScript_SlideOpenSpeedRoomDoors
@@ -555,13 +572,14 @@ Zone18B_EventScript_Desiree::
 	end
 
 Zone18B_Text_DesireeIntro:
-	.string "$"
+	.string "Slow you down then spread the pain!$"
 
 Zone18B_Text_DesireeDefeat:
-	.string "$"
+	.string "The only one in pain is me...$"
 
 Zone18B_Text_DesireePostBattle:
-	.string "$"
+	.string "Discharge plus Earthquake is\n"
+	.string "a nice combo.$"
 
 Zone18B_EventScript_Pam::
 	trainerbattle_single TRAINER_PAM, Zone18B_Text_PamIntro, Zone18B_Text_PamDefeat, Zone18B_EventScript_SlideOpenSupportRoomDoors
@@ -569,13 +587,13 @@ Zone18B_EventScript_Pam::
 	end
 
 Zone18B_Text_PamIntro:
-	.string "$"
+	.string "My Pokémon, lend me a Helping Hand!$"
 
 Zone18B_Text_PamDefeat:
-	.string "$"
+	.string "Drats.$"
 
 Zone18B_Text_PamPostBattle:
-	.string "$"
+	.string "I think I just need more Pokémon.$"
 
 Zone18B_EventScript_Willie::
 	trainerbattle_single TRAINER_WILLIE, Zone18B_Text_WillieIntro, Zone18B_Text_WillieDefeat, Zone18B_EventScript_SlideOpenStatsRoomDoors
@@ -583,13 +601,13 @@ Zone18B_EventScript_Willie::
 	end
 
 Zone18B_Text_WillieIntro:
-	.string "$"
+	.string "My Pokémon have the best stats!$"
 
 Zone18B_Text_WillieDefeat:
-	.string "$"
+	.string "Darn! Stats can't carry the team...$"
 
 Zone18B_Text_WilliePostBattle:
-	.string "$"
+	.string "Ahead you'll find the Leviathan's room.$"
 
 Zone18B_EventScript_Doris::
 	trainerbattle_single TRAINER_DORIS, Zone18B_Text_DorisIntro, Zone18B_Text_DorisDefeat, Zone18B_EventScript_SlideOpenAbilityRoomDoors
@@ -597,13 +615,14 @@ Zone18B_EventScript_Doris::
 	end
 
 Zone18B_Text_DorisIntro:
-	.string "$"
+	.string "My Pokémon have the best abilities!$"
 
 Zone18B_Text_DorisDefeat:
-	.string "$"
+	.string "I guess abilities won't always\n"
+	.string "save you...$"
 
 Zone18B_Text_DorisPostBattle:
-	.string "$"
+	.string "Next stop, Leviathan's Room.$"
 
 Zone18B_EventScript_SlideOpenCoolRoomDoors::
 	setvar VAR_0x8005, 0
