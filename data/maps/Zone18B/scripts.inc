@@ -47,7 +47,7 @@ Zone18B_EventScript_UnlockAllDoors:: @ 82048FF
 	call Zone18B_EventScript_OpenAbilityRoomDoors
 	return
 
-Zone18B_EventScript_Joseph::
+Zone18B_EventScript_Odysseus::
 	lock
 	switch VAR_FACING
 	case DIR_NORTH, Zone18B_EventScript_PlayerBottom
@@ -92,17 +92,57 @@ Zone18B_EventScript_LeviathanBattle:
 Zone18B_EventScript_InitiatePirateSequence:
 	call Zone18B_EventScript_UnlockAllDoors
 	special DrawWholeMapView
-	msgbox Zone18B_Text_LeviathanCutoff
+	msgbox Zone18B_Text_LeviathanCutoff, MSGBOX_AUTOCLOSE
 	delay 40
 	playse SE_DOOR
 	delay 10
 	addobject 2
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Zone18B_Text_Sir, MSGBOX_AUTOCLOSE
+	msgbox Zone18B_Text_LeviathanNotAgain, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceDown
+	playse SE_DOOR
+	delay 10
+	waitmovement 0
+	removeobject 2
+	applymovement 1, Zone18B_Movement_LeviathanLeave
+	waitmovement 0
+	playse SE_DOOR
+	delay 10
+	removeobject 1
+	setflag FLAG_HIDE_ZONE18B_ODYSSEUS
 	setvar VAR_ZONE18B_STATE, 1
 	release
 	end
 
 Zone18B_Text_LeviathanCutoff:
-	.string "$"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: Hello, {PLAYER}.\p"
+	.string "You're making quite the impression,\n"
+	.string "defeating all of my hand-selected\l"
+	.string "trainers.\p"
+	.string "Now is the time to battle.\p"
+	.string "I, {COLOR BLUE}Leviathan Odysseus{COLOR DARK_GREY}, challenge-$"
+
+Zone18B_Text_Sir:
+	.string "Sir!\n"
+	.string "The pirates are raiding the beach!$"
+
+Zone18B_Text_LeviathanNotAgain:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: Not again!$"
+
+Zone18B_Movement_LeviathanLeave:
+	walk_fastest_left
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_left
+	walk_fastest_down
+	walk_fastest_down
+	step_end
 
 Zone18B_EventScript_EnterRoom::
 	closemessage
