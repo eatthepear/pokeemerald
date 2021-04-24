@@ -4578,12 +4578,12 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_GOLD_TEETH] =
+    [ITEM_DIVING_GEAR] =
     {
-        .name = _("Gold Teeth"),
-        .itemId = ITEM_GOLD_TEETH,
+        .name = _("Diving Gear"),
+        .itemId = ITEM_DIVING_GEAR,
         .price = 0,
-        .description = sGoldTeethDesc,
+        .description = sDivingGearDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

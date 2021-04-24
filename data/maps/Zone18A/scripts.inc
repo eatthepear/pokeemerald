@@ -33,7 +33,7 @@ Zone18A_EventScript_PirateEvent::
 	applymovement 4, Common_Movement_WalkLeft
 	waitmovement 0
 	msgbox Zone18A_Text_Odysseus_GoAfterPirates, MSGBOX_AUTOCLOSE
-	@ giveitem ITEM_DIVING_GEAR
+	giveitem ITEM_DIVING_GEAR
 	msgbox Zone18A_Text_Odysseus_FindPirates, MSGBOX_AUTOCLOSE
 	applymovement 4, Zone18A_Movement_WalkAway
 	waitmovement 0

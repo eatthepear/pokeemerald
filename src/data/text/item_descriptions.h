@@ -1850,10 +1850,10 @@ static const u8 sSurfboardDesc[] = _(
     "device used to travel\n"
     "across open water.");
 
-static const u8 sGoldTeethDesc[] = _(
-    "Gold dentures lost\n"
-    "by the Safari\n"
-    "Zone's Warden.");
+static const u8 sDivingGearDesc[] = _(
+    "Special gear given\n"
+    "by Odysseus to\n"
+    "travel underwater.");
 
 static const u8 sOldAmberDesc[] = _(
     "A stone containing\n"
