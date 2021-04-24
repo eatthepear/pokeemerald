@@ -1,6 +1,94 @@
 Zone18A_MapScripts::
 	.byte 0
 
+Zone18A_EventScript_PirateEventRight::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	goto Zone18A_EventScript_PirateEvent
+	end
+
+Zone18A_EventScript_PirateEventLeft::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	goto Zone18A_EventScript_PirateEvent
+	end
+
+Zone18A_EventScript_PirateEvent::
+	lockall
+	clearflag FLAG_HIDE_ZONE18B_MAN
+	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_WalkDownToBeach
+	waitmovement 0
+	applymovement 4, Zone18A_Movement_WalkSlowlyRight
+	waitmovement 0
+	msgbox Zone18A_Text_Odysseus_GotAway, MSGBOX_AUTOCLOSE
+	applymovement 4, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 40
+	applymovement 4, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkLeft
+	waitmovement 0
+	msgbox Zone18A_Text_Odysseus_GoAfterPirates, MSGBOX_AUTOCLOSE
+	@ giveitem ITEM_DIVING_GEAR
+	msgbox Zone18A_Text_Odysseus_FindPirates, MSGBOX_AUTOCLOSE
+	applymovement 4, Zone18A_Movement_WalkAway
+	waitmovement 0
+	removeobject 4
+	setflag FLAG_HIDE_ZONE18B_MAN
+	setvar VAR_ZONE18B_STATE, 2
+	releaseall
+	end
+
+Zone18A_Movement_WalkDownToBeach:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Zone18A_Movement_WalkSlowlyRight:
+	walk_slow_right
+	walk_slow_right
+	step_end
+
+Zone18A_Text_Odysseus_GotAway:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: They're gone...\p"
+	.string "They can't keep getting away like\n"
+	.string "this, but I can't just leave this\l"
+	.string "place unprotected.$"
+
+Zone18A_Text_Odysseus_GoAfterPirates:
+	.string "Listen, {PLAYER}, you're clearly a\n"
+	.string "capable Trainer. I need you to go\l"
+	.string "after the pirates. Their hideout\l"
+	.string "should be somewhere east of here.\p"
+	.string "Here, take this.$"
+
+Zone18A_Text_Odysseus_FindPirates:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: Please, find the pirates!$"
+
+Zone18A_Movement_WalkAway:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 Zone18A_EventScript_Marion::
 	trainerbattle_single TRAINER_MARION, Zone18A_Text_MarionIntro, Zone18A_Text_MarionDefeat
 	msgbox Zone18A_Text_MarionPostBattle, MSGBOX_AUTOCLOSE

@@ -82,10 +82,11 @@ Zone18B_EventScript_PlayerLeft::
 Zone18B_EventScript_LeviathanOptions:
 	switch VAR_ZONE18B_STATE
 	case 0, Zone18B_EventScript_InitiatePirateSequence
-	case 2, Zone18B_EventScript_LeviathanBattle
+	case 2, Zone18B_EventScript_FindPirates
 	end
 
-Zone18B_EventScript_LeviathanBattle:
+Zone18B_EventScript_FindPirates:
+	msgbox Zone18A_Text_Odysseus_FindPirates, MSGBOX_AUTOCLOSE
 	release
 	end
 
