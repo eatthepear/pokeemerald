@@ -631,6 +631,7 @@
 #define MAP_ZONE18B         (76 | (27 << 8))
 #define MAP_ZONE19A         (77 | (27 << 8))
 #define MAP_ZONE19B         (78 | (27 << 8))
+#define MAP_ZONE19C         (79 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

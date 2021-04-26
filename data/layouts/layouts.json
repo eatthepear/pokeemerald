@@ -5200,6 +5200,16 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Zone19B/border.bin",
       "blockdata_filepath": "data/layouts/Zone19B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19C",
+      "name": "Zone19C_Layout",
+      "width": 18,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Zone19C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19C/map.bin"
     }
   ]
 }
