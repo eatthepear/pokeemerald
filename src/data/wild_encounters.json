@@ -15789,6 +15789,70 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE19B",
+          "base_label": "gZone19B",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_CLAMPERL"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_CHINCHOU"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_WIMPOD"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_RELICANTH"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_DHELMISE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SKRELP"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SKRELP"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_FRILLISH"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_FRILLISH"
+              }
+            ]
+          }
         }
       ]
     },
