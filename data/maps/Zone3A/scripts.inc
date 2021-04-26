@@ -53,8 +53,8 @@ Zone3A_EventScript_Leviathan1::
 	end
 
 Zone3A_Text_Leviathan1Text:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: That's the only Fishing Rod\n"
-	.string "in the game. Don't lose it!$"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: That's my favorite\n"
+	.string "Fishing Rod. Don't lose it!$"
 
 Zone3A_EventScript_Warp:
 	warp MAP_ZONE3SANCTUARY, 255, 7, 7

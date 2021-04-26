@@ -158,12 +158,12 @@ Zone6A_EventScript_ItemNestBall::
 
 Zone6A_Text_Rita_Intro:
 	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Hey. I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GREY}.\n"
-	.string "Welcome to Zone 6.\p"
+	.string "Welcome to our humble island.\p"
 	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: You can challenge me, if you\n"
 	.string "want. I'm pretty tough.\l"
 	.string "But you have to show your strength.\p"
-	.string "Beat all the other Trainers in the\n"
-	.string "Zone, then come back here.$"
+	.string "Beat all the other Trainers on the\n"
+	.string "island, then come back here.$"
 
 Zone6A_Text_Rita_HaventDefeatedEveryone:
 	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: You haven't beaten everyone.\n"

@@ -20,8 +20,8 @@ Zone12A_Text_DoloresDefeat:
 	.string "You've raised them well!$"
 
 Zone12A_Text_DoloresPostBattle:
-	.string "You should check out the Day-Care\n"
-	.string "in Zone 0. Their service is excellent!$"
+	.string "You should check out the Day-Care.\n"
+	.string "Their service is excellent!$"
 
 Zone12A_EventScript_Essence::
 	trainerbattle_single TRAINER_ESSENCE, Zone12A_Text_EssenceIntro, Zone12A_Text_EssenceDefeat

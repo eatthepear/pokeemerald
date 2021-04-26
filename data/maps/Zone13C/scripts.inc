@@ -34,7 +34,7 @@ Zone13C_EventScript_KeizanBlackBelt::
 
 Zone13C_Text_KeizanBlackBelt_Battle:
 	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: Greetings.\n"
-	.string "I am Leviathan Keizan.\p"
+	.string "I am {COLOR BLUE}Leviathan Keizan{COLOR DARK_GREY}.\p"
 	.string "Would you do me the honor of\n"
 	.string "engaging in battle?$"
 

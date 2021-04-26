@@ -21,10 +21,9 @@ Zone4D_EventScript_Fred::
 	end
 
 Zone4D_Text_FredIntro:
-	.string "In these enchanted woods,\n"
-	.string "there's only one thing that\l"
-	.string "will get you through:\l"
-	.string "Perseverance!$"
+	.string "The most important character\n"
+	.string "trait someone can have is to\l"
+	.string "have perseverance.$"
 
 Zone4D_Text_FredDefeat:
 	.string "I can make it through anything!$"
