@@ -90,7 +90,8 @@ Zone10B_Text_Adamina_WhenReady:
 	.string "Come speak to me when you're ready.$"
 
 Zone10B_EventScript_Exit:
-	goto_if_set FLAG_ADAMINA_WARP_INTRO, EventScript_WarpZone0
+	compare VAR_ZONE, 10
+	goto_if_gt EventScript_WarpZone0
 	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0

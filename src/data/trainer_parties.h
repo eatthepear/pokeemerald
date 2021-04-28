@@ -700,7 +700,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     }
 };
 
-static const struct TrainerMon sParty_Ari[] = {
+static const struct TrainerMon sParty_Ari[] = {//You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
     {
     .iv = 0,
     .lvl = 14,
@@ -1836,7 +1836,7 @@ static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
     }
 };
 
-static const struct TrainerMon sParty_Pirate1[] = {
+static const struct TrainerMon sParty_Pirate1[] = {//You fight each of these pirates in the order 4, 3, 2, 1 in a row without healing
     {
     .iv = 100,
     .lvl = 28,
