@@ -39,6 +39,7 @@ Zone18A_EventScript_PirateEvent::
 	waitmovement 0
 	removeobject 4
 	setflag FLAG_HIDE_ZONE18B_MAN
+	setflag FLAG_HIDE_ZONE19D_PIRATES
 	setvar VAR_ZONE18B_STATE, 2
 	releaseall
 	end

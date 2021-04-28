@@ -96,10 +96,10 @@
 #define TRAINER_PAM                              92
 #define TRAINER_WILLIE                           93
 #define TRAINER_DORIS                            94
-#define TRAINER_JENNIFER                     95
-#define TRAINER_HOPE                         96
-#define TRAINER_SHANNON                      97
-#define TRAINER_MICHELLE                     98
+#define TRAINER_PIRATE_1                         95
+#define TRAINER_PIRATE_2                         96
+#define TRAINER_PIRATE_3                         97
+#define TRAINER_PIRATE_4                         98
 #define TRAINER_CAROLINE                     99
 #define TRAINER_JULIE                       100
 #define TRAINER_BROOKE_2                    101
