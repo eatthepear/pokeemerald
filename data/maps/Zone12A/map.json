@@ -199,7 +199,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 6,
+      "x": 7,
       "y": 10,
       "elevation": 3,
       "item": "ITEM_RED_SHARD",
