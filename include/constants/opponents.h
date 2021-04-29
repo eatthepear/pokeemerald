@@ -100,7 +100,7 @@
 #define TRAINER_PIRATE_2                         96
 #define TRAINER_PIRATE_3                         97
 #define TRAINER_PIRATE_4                         98
-#define TRAINER_CAROLINE                     99
+#define TRAINER_LEVIATHAN10                      99
 #define TRAINER_JULIE                       100
 #define TRAINER_BROOKE_2                    101
 #define TRAINER_BROOKE_3                    102

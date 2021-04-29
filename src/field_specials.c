@@ -922,8 +922,8 @@ static void PetalburgGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
             break;
         case 11:
             nDoors = 1;
-            doorCoordsX[1] = 7;
-            doorCoordsY[1] = 65;
+            doorCoordsX[0] = 7;
+            doorCoordsY[0] = 65;
             break;
         case 12:
             nDoors = 2;

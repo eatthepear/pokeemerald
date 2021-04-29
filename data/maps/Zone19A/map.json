@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": 0,
       "map": "MAP_ZONE18A"
+    },
+    {
+      "direction": "dive",
+      "offset": 0,
+      "map": "MAP_ZONE19B"
     }
   ],
   "object_events": [

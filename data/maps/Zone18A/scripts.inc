@@ -3,22 +3,29 @@ Zone18A_MapScripts::
 
 Zone18A_EventScript_PirateEventRight::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
 	goto Zone18A_EventScript_PirateEvent
 	end
 
 Zone18A_EventScript_PirateEventLeft::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunRight
 	waitmovement 0
 	goto Zone18A_EventScript_PirateEvent
 	end
 
-Zone18A_EventScript_PirateEvent::
+Zone18A_EventScript_PirateEventMiddle::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunRight
+	waitmovement 0
+	goto Zone18A_EventScript_PirateEvent
+	end
+
+Zone18A_EventScript_PirateEvent:
+	setflag FLAG_HIDE_ZONE19D_PIRATES
 	clearflag FLAG_HIDE_ZONE18B_MAN
-	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_WalkDownToBeach
+	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunDownToBeach
 	waitmovement 0
 	applymovement 4, Zone18A_Movement_WalkSlowlyRight
 	waitmovement 0
@@ -27,6 +34,7 @@ Zone18A_EventScript_PirateEvent::
 	waitmovement 0
 	delay 40
 	applymovement 4, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
 	applymovement 4, Common_Movement_WalkLeft
 	waitmovement 0
@@ -38,21 +46,25 @@ Zone18A_EventScript_PirateEvent::
 	applymovement 4, Zone18A_Movement_WalkAway
 	waitmovement 0
 	removeobject 4
+	clearflag FLAG_HIDE_ZONE18B_ODYSSEUS
 	setflag FLAG_HIDE_ZONE18B_MAN
 	setflag FLAG_HIDE_ZONE19D_PIRATES
 	setvar VAR_ZONE18B_STATE, 2
 	releaseall
 	end
 
-Zone18A_Movement_WalkDownToBeach:
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
+Zone18A_Movement_RunRight:
+	player_run_right
+	step_end
+
+Zone18A_Movement_RunDownToBeach:
+	player_run_down
+	player_run_down
+	player_run_down
+	player_run_down
+	player_run_down
+	player_run_down
+	player_run_right
 	walk_right
 	step_end
 
@@ -136,6 +148,14 @@ Zone18A_Text_KennethDefeat:
 Zone18A_Text_KennethPostBattle:
 	.string "Papa isn't gonna be happy\n"
 	.string "when he finds out I lost...$"
+
+Zone18A_EventScript_Sign::
+	msgbox Zone18A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone18A_Text_Sign:
+	.string "Trainer's Dojo!\n"
+	.string "All challengers welcome!$"
 
 Zone18A_EventScript_HeatRock::
 	finditem ITEM_HEAT_ROCK

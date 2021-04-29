@@ -83,6 +83,9 @@ Zone18B_EventScript_LeviathanOptions:
 	switch VAR_ZONE18B_STATE
 	case 0, Zone18B_EventScript_InitiatePirateSequence
 	case 2, Zone18B_EventScript_FindPirates
+	case 3, Zone18B_EventScript_ThankForPirates
+	case 4, Zone18B_EventScript_WantBattleOrLeave
+	case 5, Zone18B_EventScript_WantLeave
 	end
 
 Zone18B_EventScript_FindPirates:
@@ -95,6 +98,12 @@ Zone18B_EventScript_InitiatePirateSequence:
 	special DrawWholeMapView
 	msgbox Zone18B_Text_LeviathanCutoff, MSGBOX_AUTOCLOSE
 	delay 40
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
 	playse SE_DOOR
 	delay 10
 	addobject 2
@@ -102,6 +111,7 @@ Zone18B_EventScript_InitiatePirateSequence:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
 	msgbox Zone18B_Text_Sir, MSGBOX_AUTOCLOSE
 	msgbox Zone18B_Text_LeviathanNotAgain, MSGBOX_AUTOCLOSE
@@ -116,6 +126,12 @@ Zone18B_EventScript_InitiatePirateSequence:
 	delay 10
 	removeobject 1
 	setflag FLAG_HIDE_ZONE18B_ODYSSEUS
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	special RemoveCameraObject
 	setvar VAR_ZONE18B_STATE, 1
 	release
 	end
@@ -145,13 +161,93 @@ Zone18B_Movement_LeviathanLeave:
 	walk_fastest_down
 	step_end
 
-Zone18B_EventScript_EnterRoom::
-	closemessage
-	delay 30
-	warpdoor MAP_ZONE18B, 255, VAR_0x8008, VAR_0x8009
-	waitstate
-	releaseall
+Zone18B_EventScript_ThankForPirates:
+	msgbox Zone18B_Odysseus_ThankYou, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM18
+	setvar VAR_ZONE18B_STATE, 4
+	goto Zone18B_EventScript_WantBattleOrLeave
+	release
 	end
+
+Zone18B_Odysseus_ThankYou:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: You defeated the pirates?\p"
+	.string "Thank you, {PLAYER}, for finding\n"
+	.string "their hideout. I want you to have\l"
+	.string "this as a reward.$"
+
+Zone18B_EventScript_WantBattleOrLeave:
+	msgbox Zone18B_Odysseus_WantBattle, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone18B_EventScript_OdysseusBattle
+	compare VAR_RESULT, NO
+	goto_if_eq Zone18B_EventScript_WantLeave
+	end
+
+Zone18B_Odysseus_WantBattle:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: If you'd like, we can\n"
+	.string "have a battle.$"
+
+Zone18B_EventScript_OdysseusBattle:
+	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_LEVIATHAN10, Zone18B_Text_LeviathanDefeat
+	goto Zone18B_EventScript_Leviathan10Defeated
+	end
+
+Zone18B_OdysseusBattleIntro:
+	.string "Let this be a match for the ages!$"
+
+Zone18B_Text_LeviathanDefeat:
+	.string "Well met. Congratulations.$"
+
+Zone18B_EventScript_Leviathan10Defeated:
+	setflag FLAG_BEATLEVIATHAN10
+	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
+	giveitem ITEM_SHARPEDONITE, 1
+	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
+	setvar VAR_ZONE18B_STATE, 5
+	release
+	end
+
+Zone18B_Text_Odysseus_PostBattle:
+	.string "What a stunning battle. You must be\n"
+	.string "proud of your Pokémon.\p"
+	.string "Here, I want you to have this.$"
+
+Zone18B_Text_Odysseus_ExplainItem:
+	.string "That is a Sharpedonite, a special\n"
+	.string "Mega Stone. You'll need a\l"
+	.string "Mega Bracelet to use it.$"
+
+Zone18B_EventScript_WantLeave:
+	msgbox Zone18B_Odysseus_WantLeave, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone18B_EventScript_Leave
+	msgbox Zone18B_Odysseus_Stay, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone18B_Odysseus_WantLeave:
+	.string "I can arrange travel for you,\n"
+	.string "if you want.$"
+
+Zone18B_Odysseus_Stay:
+	.string "You're more than welcome to stay as\n"
+	.string "long as you wish on this island.\p"
+	.string "Come to me if you need anything.$"
+
+Zone18B_EventScript_Leave:
+	msgbox Zone18B_Odysseus_Goodbye, MSGBOX_AUTOCLOSE
+	compare VAR_ZONE, 18
+	goto_if_gt EventScript_WarpZone0
+	@ warp MAP_ZONE19SANCTUARY, 255, 7, 7
+	release
+	end
+
+Zone18B_Odysseus_Goodbye:
+	.string "Of course.\p"
+	.string "Thank you for your actions, and\n"
+	.string "know you are always welcome here.\p"
+	.string "Goodbye.$"
 
 Zone18B_EventScript_DontEnterRoom::
 	releaseall
@@ -162,292 +258,434 @@ Zone18B_EventScript_DoorLocked::
 	releaseall
 	end
 
-@ VAR_0x8008 and VAR_0x8009 below are the x and y coordinates of the warp
-
 Zone18B_EventScript_CoolRoomDoor::
 	lockall
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 189
 	msgbox Zone18B_Text_EnterCoolRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterCoolRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
 	end
 
+Zone18B_EventScript_EnterCoolRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 5, 7, 189
+	waitstate
+	releaseall
+	end
+
 Zone18B_EventScript_CuteRoomDoor::
 	lockall
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 176
 	msgbox Zone18B_Text_EnterCuteRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterCuteRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterCuteRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 6, 1, 176
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_StallRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_JAY, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 163
 	msgbox Zone18B_Text_EnterStallRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterStallRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterStallRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 13, 7, 163
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftBalanceRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_JAY, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 150
 	msgbox Zone18B_Text_EnterBalanceRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftBalanceRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftBalanceRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 14, 1, 150
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightBalanceRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_BLANCHE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 150
 	msgbox Zone18B_Text_EnterBalanceRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightBalanceRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightBalanceRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 17, 7, 150
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_OffenseRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_BLANCHE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 137
 	msgbox Zone18B_Text_EnterOffenseRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterOffenseRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterOffenseRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 18, 1, 137
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_SwitchRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_TERRENCE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 124
 	msgbox Zone18B_Text_EnterSwitchRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterSwitchRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterSwitchRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 27, 7, 124
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftHazardRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_TERRENCE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 111
 	msgbox Zone18B_Text_EnterHazardRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftHazardRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftHazardRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 28, 1, 111
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightHazardRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_MARTY, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 111
 	msgbox Zone18B_Text_EnterHazardRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightHazardRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightHazardRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 31, 7, 111
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftSetupRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_MARTY, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 98
 	msgbox Zone18B_Text_EnterSetupRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftSetupRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftSetupRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 32, 1, 98
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightSetupRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_KARI, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 98
 	msgbox Zone18B_Text_EnterSetupRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightSetupRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightSetupRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 35, 7, 98
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_HailRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_KARI, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 85
 	msgbox Zone18B_Text_EnterHailRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterHailRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterHailRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 36, 1, 85
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftBuffRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_ABRAHAM, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 72
 	msgbox Zone18B_Text_EnterBuffRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftBuffRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftBuffRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 44, 1, 72
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightBuffRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_REX, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 72
 	msgbox Zone18B_Text_EnterBuffRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightBuffRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightBuffRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 47, 7, 72
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftSpeedRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_REX, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 59
 	msgbox Zone18B_Text_EnterSpeedRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftSpeedRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftSpeedRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 48, 1, 59
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightSpeedRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_EMILIO, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 59
 	msgbox Zone18B_Text_EnterSpeedRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightSpeedRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightSpeedRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 50, 7, 59
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftSupportRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_EMILIO, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 46
 	msgbox Zone18B_Text_EnterSupportRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftSupportRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftSupportRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 52, 1, 46
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightSupportRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_MELINDA, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 46
 	msgbox Zone18B_Text_EnterSupportRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightSupportRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightSupportRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 54, 7, 46
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftStatsRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_LOUIS, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 33
 	msgbox Zone18B_Text_EnterStatsRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftStatsRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftStatsRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 60, 1, 33
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightStatsRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_DESIREE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 33
 	msgbox Zone18B_Text_EnterStatsRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightStatsRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightStatsRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 63, 7, 33
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftAbilityRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_DESIREE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 20
 	msgbox Zone18B_Text_EnterAbilityRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftAbilityRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftAbilityRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 64, 1, 20
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightAbilityRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_PAM, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 20
 	msgbox Zone18B_Text_EnterAbilityRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightAbilityRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightAbilityRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 67, 7, 20
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_LeftLeviathanRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_WILLIE, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 7
 	msgbox Zone18B_Text_EnterLeviathanRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterLeftLeviathanRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterLeftLeviathanRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 71, 1, 7
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_RightLeviathanRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_DORIS, Zone18B_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 7
 	msgbox Zone18B_Text_EnterLeviathanRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_EnterRoom
+	goto_if_eq Zone18B_EventScript_EnterRightLeviathanRoom
 	compare VAR_RESULT, NO
 	goto_if_eq Zone18B_EventScript_DontEnterRoom
+	end
+
+Zone18B_EventScript_EnterRightLeviathanRoom:
+	closemessage
+	delay 30
+	warpdoor MAP_ZONE18B, 72, 7, 7
+	waitstate
+	releaseall
 	end
 
 Zone18B_EventScript_Jay::
@@ -1011,14 +1249,20 @@ Zone18B_EventScript_EntranceMan::
 	end
 
 Zone18B_Text_EntranceMan:
-	.string "bleh$"
+	.string "Welcome to the Trainer's Dojo!\p"
+	.string "Uh... what else is in this script...\p"
+	.string "Oh! Each room has a particular style.\n"
+	.string "You can pick and choose which room to\l"
+	.string "challenge.\p"
+	.string "Good luck!$"
 
 Zone18B_EventScript_Statue::
 	msgbox Zone18B_Text_Statue, MSGBOX_SIGN
 	end
 
 Zone18B_Text_Statue:
-	.string "test$"
+	.string "Trainer's Dojo\n"
+	.string "Established 2021$"
 
 Zone18B_Text_DoorAppearsLocked:
 	.string "This door appears to be locked\n"
@@ -1081,7 +1325,7 @@ Zone18B_Text_EnterAbilityRoom:
 	.string "Do you want to go through?$"
 
 Zone18B_Text_EnterLeviathanRoom:
-	.string "“Leviathan's Room\p"
+	.string "“Leviathan's Room,”\p"
 	.string "“See for yourself what Pokémon await\n"
 	.string "you!” the sign says.\p"
 	.string "Do you want to go through?$"

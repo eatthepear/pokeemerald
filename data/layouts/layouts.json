@@ -5204,8 +5204,8 @@
     {
       "id": "LAYOUT_ZONE19C",
       "name": "Zone19C_Layout",
-      "width": 18,
-      "height": 10,
+      "width": 19,
+      "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Zone19C/border.bin",

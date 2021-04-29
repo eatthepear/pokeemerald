@@ -7,16 +7,14 @@ Zone19D_EventScript_InitiatePirateBattles::
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
 	playbgm MUS_ENCOUNTER_AQUA, 0
 	addobject 1
 	addobject 2
 	addobject 3
 	addobject 4
 	clearflag FLAG_HIDE_ZONE19D_PIRATES
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown
 	applymovement 2, Zone19D_Movement_LeftPirateWalkUp
 	applymovement 3, Zone19D_Movement_BottomPirateWalkUp
@@ -50,7 +48,7 @@ Zone19D_EventScript_InitiatePirateBattles::
 	msgbox Zone19D_Text_Pirate4, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_PIRATE_4, Zone19D_Text_Pirate4Defeat
-	applymovement 3, Common_Movement_WalkInPlaceFastestDown
+	applymovement 3, Common_Movement_WalkInPlaceFastestUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate3Intro, MSGBOX_AUTOCLOSE
@@ -81,6 +79,14 @@ Zone19D_EventScript_InitiatePirateBattles::
 	setflag FLAG_HIDE_ZONE19D_PIRATES
 	fadedefaultbgm
 	setvar VAR_ZONE18B_STATE, 3
+	msgbox Zone19D_Text_ReturnToDojo, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone19D_EventScript_ReturnToDojo
+	releaseall
+	end
+
+Zone19D_EventScript_ReturnToDojo:
+	warp MAP_ZONE18B, 255, 4, 4
 	releaseall
 	end
 
@@ -135,6 +141,11 @@ Zone19D_Text_Pirate1Run:
 
 Zone19D_Text_PirateArr:
 	.string "Arrr!$"
+
+Zone19D_Movement_TopPirateWalkDown:
+	walk_down
+	walk_down
+	step_end
 
 Zone19D_Movement_LeftPirateWalkUp:
 	walk_up
@@ -204,3 +215,7 @@ Zone19D_Movement_Pirate4Run:
 	walk_fastest_down
 	walk_fastest_down
 	step_end
+
+Zone19D_Text_ReturnToDojo:
+	.string "Would you like to return to the Dojo?$"
+

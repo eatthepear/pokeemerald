@@ -1888,16 +1888,11 @@ static const struct TrainerMon sParty_Pirate4[] = {
     }
 };
 
-static const struct TrainerMon sParty_Caroline[] = {
+static const struct TrainerMon sParty_Odysseus[] = {
     {
-    .iv = 100,
-    .lvl = 43,
-    .species = SPECIES_SKARMORY,
-    },
-    {
-    .iv = 100,
-    .lvl = 43,
-    .species = SPECIES_SABLEYE,
+    .iv = 255,
+    .lvl = 30,
+    .species = SPECIES_SHARPEDO,
     }
 };
 

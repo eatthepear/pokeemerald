@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ZONE19A"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
@@ -119,7 +125,7 @@
       "elevation": 0,
       "var": "VAR_ZONE18B_STATE",
       "var_value": "1",
-      "script": "Zone18A_EventScript_PirateEvent"
+      "script": "Zone18A_EventScript_PirateEventMiddle"
     },
     {
       "type": "trigger",
