@@ -65,6 +65,8 @@ Zone19D_EventScript_InitiatePirateBattles::
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate1Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_PIRATE_1, Zone19D_Text_Pirate1Defeat
+	msgbox Zone19D_Text_Pirate1Here, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM17
 	msgbox Zone19D_Text_Pirate1Run, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone19D_Movement_Pirate1Run
 	applymovement 2, Zone19D_Movement_Pirate2Run
@@ -83,43 +85,56 @@ Zone19D_EventScript_InitiatePirateBattles::
 	end
 
 Zone19D_Text_Pirate1:
-	.string "$"
+	.string "Shiver me timbers!\n"
+	.string "Ahoy, maties! This here trainer\l"
+	.string "found us!$"
 
 Zone19D_Text_Pirate2:
-	.string "$"
+	.string "We'll be feedin' the fish if the\n"
+	.string "Cap'n ever finds out someone found\l"
+	.string "our hideout.$"
 
 Zone19D_Text_Pirate3:
-	.string "$"
+	.string "Well, dead men tell no tales.\p"
+	.string "The Cap'n will ne'er ‘ave to know,\n"
+	.string "savvy?$"
 
 Zone19D_Text_Pirate4:
-	.string "$"
+	.string "Ye lily-livered scallywags,\n"
+	.string "let's just get to the battle!$"
 
 Zone19D_Text_Pirate4Defeat:
-	.string "$"
+	.string "Arrr!$"
 
 Zone19D_Text_Pirate3Defeat:
-	.string "$"
+	.string "Arrr!$"
 
 Zone19D_Text_Pirate2Defeat:
-	.string "$"
+	.string "Arrr!$"
 
 Zone19D_Text_Pirate1Defeat:
-	.string "$"
+	.string "Arrr!$"
 
 Zone19D_Text_Pirate3Intro:
-	.string "$"
+	.string "I be next. Fire in the hole!$"
 
 Zone19D_Text_Pirate2Intro:
-	.string "$"
+	.string "We give no quarter!$"
 
 Zone19D_Text_Pirate1Intro:
-	.string "$"
+	.string "Son o' a biscuit eater!\n"
+	.string "Face the might o' us seadogs!$"
+
+Zone19D_Text_Pirate1Here:
+	.string "Sink me!\n"
+	.string "This trainer beat all four o' us!\l"
+	.string "‘ere be your booty, take it!$"
 
 Zone19D_Text_Pirate1Run:
-	.string "$"
+	.string "Me hearties, run!$"
 
 Zone19D_Text_PirateArr:
-	.string "$"
+	.string "Arrr!$"
 
 Zone19D_Movement_LeftPirateWalkUp:
 	walk_up
