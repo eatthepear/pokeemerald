@@ -1,6 +1,12 @@
 Zone19D_MapScripts::
 	.byte 0
 
+Zone19D_EventScript_Exit::
+	lockall
+	warp MAP_ZONE19SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone19D_EventScript_InitiatePirateBattles::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark

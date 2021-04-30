@@ -30,11 +30,19 @@ Zone17Sanctuary_EventScript_Intro:
 	closemessage
 	setvar VAR_ZONE, 18
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox Zone17Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
+
+Zone17Sanctuary_Text_Colress_WhenUReady:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The next two zones,\n"
+	.string "{COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}, are combined.\p"
+	.string "You will not be able to access a\n"
+	.string "Sanctuary in between the Zones.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are prepared to\n"
+	.string "enter {COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}, speak to me.$"
 
 Zone17Sanctuary_EventScript_NextZone::
 	lock
@@ -52,11 +60,16 @@ Zone17Sanctuary_EventScript_NextZone::
 
 Zone17Sanctuary_EventScript_NextZoneCheck:
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
+	msgbox Zone17Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone17Sanctuary_EventScript_Leave
 	goto EventScript_WhenUReady
 	end
+
+Zone17Sanctuary_Text_Colress_ReadyToLeave:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you ready to leave?\n"
+	.string "You will be entering\l"
+	.string "{COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}.$"
 
 Zone17Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup

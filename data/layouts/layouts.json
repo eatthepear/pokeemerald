@@ -5220,6 +5220,26 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone19D/border.bin",
       "blockdata_filepath": "data/layouts/Zone19D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19SANCTUARY",
+      "name": "Zone19Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone19Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19SHOPS",
+      "name": "Zone19Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone19Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19Shops/map.bin"
     }
   ]
 }

@@ -85,6 +85,15 @@
       "var": "VAR_ZONE18B_STATE",
       "var_value": "2",
       "script": "Zone19D_EventScript_InitiatePirateBattles"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_ZONE",
+      "var_value": "18",
+      "script": "Zone19D_EventScript_Exit"
     }
   ],
   "bg_events": [
