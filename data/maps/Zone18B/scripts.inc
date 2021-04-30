@@ -189,6 +189,7 @@ Zone18B_Odysseus_WantBattle:
 
 Zone18B_EventScript_OdysseusBattle:
 	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
+	totemboost_atk2 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN10, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan10Defeated
 	end

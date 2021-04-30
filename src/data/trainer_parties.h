@@ -1888,12 +1888,17 @@ static const struct TrainerMon sParty_Pirate4[] = {
     }
 };
 
-static const struct TrainerMon sParty_Odysseus[] = {
+static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10
     {
-    .iv = 255,
+    .iv = 255,//Starts with aura +2 Attack
     .lvl = 30,
+    .nature = NATURE_ADAMANT,
+    .gender = MON_FEMALE,
+    .heldItem = ITEM_LUM_BERRY,
+    .ability = ABILITY_SLOT_1, //Speed Boost
     .species = SPECIES_SHARPEDO,
-    }
+    .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_PSYCHIC_FANGS}
+    },
 };
 
 static const struct TrainerMon sParty_Julie[] = {
