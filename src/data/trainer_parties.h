@@ -1705,9 +1705,9 @@ static const struct TrainerMon sParty_Rex[] = {//Zone 18 Hazard Room
     {
     .iv = 100,
     .lvl = 25,
-    .species = SPECIES_SHIELDON,
+    .species = SPECIES_TRUBBISH,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_STEALTH_ROCK, MOVE_ROCK_SLIDE, MOVE_CURSE, MOVE_REST}
+    .moves = {MOVE_SPIKES, MOVE_SLUDGE, MOVE_ROCK_BLAST, MOVE_REST}
     }
 };
 
@@ -1727,8 +1727,9 @@ static const struct TrainerMon sParty_Emilio[] = {//Zone 18 Setup Room
     {
     .iv = 100,
     .lvl = 25,
-    .species = SPECIES_FARFETCHD_GALARIAN,
-    .moves = {MOVE_SWORDS_DANCE, MOVE_BRICK_BREAK, MOVE_KNOCK_OFF, MOVE_SUBSTITUTE}
+    .species = SPECIES_SHIELDON,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_STEALTH_ROCK, MOVE_ROCK_SLIDE, MOVE_CURSE, MOVE_REST}
     }
 };
 
