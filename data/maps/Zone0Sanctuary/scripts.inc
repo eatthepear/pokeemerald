@@ -34,11 +34,13 @@ Zone0Sanctuary_EventScript_Intro:
 	end
 
 Zone0Sanctuary_EventScript_ModeSkipTutorial:
+	setvar VAR_ZONE, 2 @this is to skip dialogue
 	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
 	case 0, Zone0Sanctuary_EventScript_VanillaSkip
 	case 1, Zone0Sanctuary_EventScript_NuzlockeSkip
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
 
@@ -52,6 +54,7 @@ Zone0Sanctuary_EventScript_VanillaSkip:
 
 Zone0Sanctuary_EventScript_SetVanillaSkip:
 	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
 	
@@ -67,6 +70,7 @@ Zone0Sanctuary_EventScript_SetNuzlockeSkip:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
 
@@ -150,6 +154,7 @@ Zone0Sanctuary_EventScript_Tour:
 Zone0Sanctuary_EventScript_Zone0Available:
 	msgbox Zone0Sanctuary_Text_Colress_Zone0Unlocked, MSGBOX_AUTOCLOSE
 	delay 96
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
 	
@@ -162,7 +167,6 @@ Zone0Sanctuary_Text_Colress_Zone0Unlocked:
 
 Zone0Sanctuary_EventScript_PickStarter:
 	hidemonpic
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	msgbox Zone0Sanctuary_Text_ChooseAStarter, MSGBOX_DEFAULT
 	scrollingmultichoice 0, 0, 0, 5, FALSE
 	compare VAR_RESULT, 0
@@ -739,6 +743,8 @@ Zone0Sanctuary_EventScript_NuzlockeDialog:
 	return
 
 Zone0Sanctuary_EventScript_Colress_EndIntro:
+	compare VAR_ZONE, 2
+	goto_if_eq Zone0Sanctuary_EventScript_Colress_EndIntroSkip
 	msgbox Zone0Sanctuary_Text_Colress_NiceChoice, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Zone0Sanctuary_Text_Colress_Freebies, MSGBOX_AUTOCLOSE
@@ -757,6 +763,26 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	delay 96
+	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8004, MALE
+	fadescreen FADE_TO_BLACK
+	special StartWallClock
+	waitstate
+	setvar VAR_ZONE, 1
+	buffernumberstring 0, VAR_ZONE
+	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Colress_WalkUp
+	waitmovement 1
+	releaseall
+	end
+
+Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
+	additem ITEM_POKE_BALL, 30
+	additem ITEM_POTION, 10
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
+	special SetUnlockedPokedexFlags
 	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, MALE
 	fadescreen FADE_TO_BLACK
