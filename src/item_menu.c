@@ -3078,18 +3078,21 @@ static void AddBagSortSubMenu(void)
     switch (gBagPositionStruct.pocket + 1)
     {
         case POCKET_KEY_ITEMS:
+        case POCKET_TM_HM:
             gBagMenu->contextMenuItemsPtr = sBagMenuSortKeyItems;
             memcpy(&gBagMenu->contextMenuItemsBuffer, &sBagMenuSortKeyItems, NELEMS(sBagMenuSortKeyItems));
             gBagMenu->contextMenuNumItems = NELEMS(sBagMenuSortKeyItems);
             break;
         case POCKET_POKE_BALLS:
         case POCKET_BERRIES:
-        case POCKET_TM_HM:
             gBagMenu->contextMenuItemsPtr = sBagMenuSortPokeBallsBerries;
             memcpy(&gBagMenu->contextMenuItemsBuffer, &sBagMenuSortPokeBallsBerries, NELEMS(sBagMenuSortPokeBallsBerries));
             gBagMenu->contextMenuNumItems = NELEMS(sBagMenuSortPokeBallsBerries);
             break;
-        default:
+        case POCKET_ITEMS:
+        case POCKET_MEDICINE:
+        case POCKET_BATTLE_ITEMS:
+        case POCKET_POWER_UP:
             gBagMenu->contextMenuItemsPtr = sBagMenuSortItems;
             memcpy(&gBagMenu->contextMenuItemsBuffer, &sBagMenuSortItems, NELEMS(sBagMenuSortItems));
             gBagMenu->contextMenuNumItems = NELEMS(sBagMenuSortItems);
@@ -3177,6 +3180,10 @@ static void SortItemsInBag(u8 pocket, u8 type)
         itemMem = gSaveBlock1Ptr->bagPocket_Items;
         itemAmount = BAG_ITEMS_COUNT;
         break;
+    case MEDICINE_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_Medicine;
+        itemAmount = BAG_MEDICINE_COUNT;
+        break;
     case KEYITEMS_POCKET:
         itemMem = gSaveBlock1Ptr->bagPocket_KeyItems;
         itemAmount = BAG_KEYITEMS_COUNT;
@@ -3184,6 +3191,14 @@ static void SortItemsInBag(u8 pocket, u8 type)
     case BALLS_POCKET:
         itemMem = gSaveBlock1Ptr->bagPocket_PokeBalls;
         itemAmount = BAG_POKEBALLS_COUNT;
+        break;
+    case BATTLEITEMS_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_BattleItems;
+        itemAmount = BAG_BATTLEITEMS_COUNT;
+        break;
+    case POWERUP_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_PowerUp;
+        itemAmount = BAG_POWERUP_COUNT;
         break;
     case BERRIES_POCKET:
         itemMem = gSaveBlock1Ptr->bagPocket_Berries;
@@ -3193,6 +3208,8 @@ static void SortItemsInBag(u8 pocket, u8 type)
         itemMem = gSaveBlock1Ptr->bagPocket_TMHM;
         itemAmount = BAG_TMHM_COUNT;
         break;
+    
+        
     default:
         return;
     }
