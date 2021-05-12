@@ -849,7 +849,7 @@ gText_PokemonCenterSign:: @ 8272B9E
 	.string "POKéMON CENTER$"
 
 gText_MomOrDadMightLikeThisProgram:: @ 8272BCF
-	.string "{STR_VAR_1} might like this program.\n"
+	.string "There's nothing on the TV...\n"
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "Better get going!$"
 
@@ -862,8 +862,8 @@ gText_SandstormIsVicious:: @ 8272C5F
 	.string "It's impossible to keep going.$"
 
 gText_SelectWithoutRegisteredItem:: @ 8272C98
-	.string "An item in the BAG can be\n"
-	.string "registered to SELECT for easy use.$"
+	.string "An item in the Bag can be\n"
+	.string "registered to Select for easy use.$"
 
 gText_PokemonTrainerSchoolEmail:: @ 8272CD5
 	.string "There's an e-mail from POKéMON TRAINER\n"
@@ -886,7 +886,7 @@ gText_UnusedNicknameReceivedPokemon:: @ 8272DB3
 
 gText_PlayerWhitedOut:: @ 8272DE3
 	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p{PLAYER} whited out!$"
+	.string "Pokémon!\p{PLAYER} whited out!$"
 
 gText_RegisteredTrainerinPokeNav:: @ 8272E0F
 	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
@@ -902,12 +902,12 @@ gText_ComeBackWithSecretPower:: @ 8272E30
 	.string "you good stuff in secrecy.$"
 
 gText_PokerusExplanation:: @ 8272F07
-	.string "Your POKéMON may be infected with\n"
-	.string "POKéRUS.\p"
-	.string "Little is known about the POKéRUS\n"
+	.string "Your Pokémon may be infected with\n"
+	.string "Pokérus.\p"
+	.string "Little is known about the Pokérus\n"
 	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKéMON.\p"
-	.string "While infected, POKéMON are said to\n"
+	.string "forms that attach to Pokémon.\p"
+	.string "While infected, Pokémon are said to\n"
 	.string "grow exceptionally well.$"
 
 	.include "data/text/surf.inc"
