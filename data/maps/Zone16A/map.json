@@ -214,6 +214,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone16A_EventScript_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 25,
+      "elevation": 3,
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE16A_RED_SHARD"
     }
   ]
 }
