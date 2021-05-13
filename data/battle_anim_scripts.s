@@ -23250,15 +23250,15 @@ Move_SKY_UPPERCUT:
 
 Move_SECRET_POWER:
 	createvisualtask AnimTask_GetBattleTerrain, 5
-	jumpargeq 0, BATTLE_TERRAIN_GRASS,      Move_NEEDLE_ARM
-	jumpargeq 0, BATTLE_TERRAIN_LONG_GRASS, Move_MAGICAL_LEAF
-	jumpargeq 0, BATTLE_TERRAIN_SAND,       Move_MUD_SHOT
-	jumpargeq 0, BATTLE_TERRAIN_UNDERWATER, Move_WATERFALL
-	jumpargeq 0, BATTLE_TERRAIN_WATER,      Move_SURF
-	jumpargeq 0, BATTLE_TERRAIN_POND,       Move_BUBBLE_BEAM
-	jumpargeq 0, BATTLE_TERRAIN_MOUNTAIN,   Move_ROCK_THROW
-	jumpargeq 0, BATTLE_TERRAIN_CAVE,       Move_BITE
-	jumpargeq 0, BATTLE_TERRAIN_BUILDING,   Move_STRENGTH
+	jumpargeq 0, BATTLE_TERRAIN_GRASS,      Move_VINE_WHIP
+	jumpargeq 0, BATTLE_TERRAIN_LONG_GRASS, Move_VINE_WHIP
+	jumpargeq 0, BATTLE_TERRAIN_SAND,       Move_MUD_SLAP
+	jumpargeq 0, BATTLE_TERRAIN_UNDERWATER, Move_WATER_PULSE
+	jumpargeq 0, BATTLE_TERRAIN_WATER,      Move_WATER_PULSE
+	jumpargeq 0, BATTLE_TERRAIN_POND,       Move_MUD_SHOT
+	jumpargeq 0, BATTLE_TERRAIN_MOUNTAIN,   Move_MUD_SLAP
+	jumpargeq 0, BATTLE_TERRAIN_CAVE,       Move_ROCK_THROW
+	jumpargeq 0, BATTLE_TERRAIN_BUILDING,   Move_BODY_SLAM
 	goto Move_SLAM
 
 Move_TWISTER:
