@@ -26,7 +26,7 @@ static const TaskFunc sBattleIntroSlideFuncs[] =
 {
     [BATTLE_TERRAIN_GRASS]      = BattleIntroSlide1,
     [BATTLE_TERRAIN_LONG_GRASS] = BattleIntroSlide1,
-    [BATTLE_TERRAIN_SAND]       = BattleIntroSlide2,
+    [BATTLE_TERRAIN_BEACH]       = BattleIntroSlide2,
     [BATTLE_TERRAIN_UNDERWATER] = BattleIntroSlide2,
     [BATTLE_TERRAIN_WATER]      = BattleIntroSlide2,
     [BATTLE_TERRAIN_POND]       = BattleIntroSlide1,
@@ -242,7 +242,7 @@ static void BattleIntroSlide2(u8 taskId)
 
     switch (gTasks[taskId].tTerrain)
     {
-    case BATTLE_TERRAIN_SAND:
+    case BATTLE_TERRAIN_BEACH:
     case BATTLE_TERRAIN_WATER:
         gBattle_BG1_X += 8;
         break;

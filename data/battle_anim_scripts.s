@@ -23252,7 +23252,7 @@ Move_SECRET_POWER:
 	createvisualtask AnimTask_GetBattleTerrain, 5
 	jumpargeq 0, BATTLE_TERRAIN_GRASS,      Move_VINE_WHIP
 	jumpargeq 0, BATTLE_TERRAIN_LONG_GRASS, Move_VINE_WHIP
-	jumpargeq 0, BATTLE_TERRAIN_SAND,       Move_MUD_SLAP
+	jumpargeq 0, BATTLE_TERRAIN_BEACH,       Move_MUD_SLAP
 	jumpargeq 0, BATTLE_TERRAIN_UNDERWATER, Move_WATER_PULSE
 	jumpargeq 0, BATTLE_TERRAIN_WATER,      Move_WATER_PULSE
 	jumpargeq 0, BATTLE_TERRAIN_POND,       Move_MUD_SHOT

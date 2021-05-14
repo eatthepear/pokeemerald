@@ -351,7 +351,7 @@
 // Battle terrain defines for gBattleTerrain.
 #define BATTLE_TERRAIN_GRASS        0
 #define BATTLE_TERRAIN_LONG_GRASS   1
-#define BATTLE_TERRAIN_SAND         2
+#define BATTLE_TERRAIN_BEACH        2
 #define BATTLE_TERRAIN_UNDERWATER   3
 #define BATTLE_TERRAIN_WATER        4
 #define BATTLE_TERRAIN_POND         5

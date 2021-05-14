@@ -707,7 +707,9 @@ u8 BattleSetup_GetTerrainId(void)
     if (MetatileBehavior_IsLongGrass(tileBehavior))
         return BATTLE_TERRAIN_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
-        return BATTLE_TERRAIN_SAND;
+        /*if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE10A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE10A))
+            return BATTLE_TERRAIN_DESERT; */
+        return BATTLE_TERRAIN_BEACH;
 
     switch (gMapHeader.mapType)
     {
@@ -745,9 +747,9 @@ u8 BattleSetup_GetTerrainId(void)
             return BATTLE_TERRAIN_WATER;
     }
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE113) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE113))
-        return BATTLE_TERRAIN_SAND;
+        return BATTLE_TERRAIN_BEACH;
     if (GetSav1Weather() == 8)
-        return BATTLE_TERRAIN_SAND;
+        return BATTLE_TERRAIN_BEACH;
 
     return BATTLE_TERRAIN_PLAIN;
 }

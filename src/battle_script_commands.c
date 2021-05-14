@@ -1038,7 +1038,7 @@ static const u16 sNaturePowerMoves[] =
 {
     [BATTLE_TERRAIN_GRASS]      = MOVE_ENERGY_BALL,
     [BATTLE_TERRAIN_LONG_GRASS] = MOVE_ENERGY_BALL,
-    [BATTLE_TERRAIN_SAND]       = MOVE_MUD_BOMB,
+    [BATTLE_TERRAIN_BEACH]       = MOVE_MUD_BOMB,
     [BATTLE_TERRAIN_UNDERWATER] = MOVE_HYDRO_PUMP,
     [BATTLE_TERRAIN_WATER]      = MOVE_HYDRO_PUMP,
     [BATTLE_TERRAIN_POND]       = MOVE_HYDRO_PUMP,
@@ -1094,7 +1094,7 @@ static const u8 sTerrainToType[] =
 {
     [BATTLE_TERRAIN_GRASS]      = TYPE_GRASS,
     [BATTLE_TERRAIN_LONG_GRASS] = TYPE_GRASS,
-    [BATTLE_TERRAIN_SAND]       = TYPE_GROUND,
+    [BATTLE_TERRAIN_BEACH]       = TYPE_GROUND,
     [BATTLE_TERRAIN_UNDERWATER] = TYPE_WATER,
     [BATTLE_TERRAIN_WATER]      = TYPE_WATER,
     [BATTLE_TERRAIN_POND]       = TYPE_WATER,
@@ -11676,7 +11676,7 @@ static void Cmd_getsecretpowereffect(void)
     case BATTLE_TERRAIN_LONG_GRASS:
         gBattleScripting.moveEffect = MOVE_EFFECT_SLEEP;
         break;
-    case BATTLE_TERRAIN_SAND:
+    case BATTLE_TERRAIN_BEACH:
         gBattleScripting.moveEffect = MOVE_EFFECT_ACC_MINUS_1;
         break;
     case BATTLE_TERRAIN_UNDERWATER:

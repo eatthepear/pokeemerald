@@ -620,7 +620,7 @@ static const struct BattleBackground gBattleTerrainTable[] =
         .palette = gBattleTerrainPalette_TallGrass,
     },
 
-    [BATTLE_TERRAIN_SAND] =
+    [BATTLE_TERRAIN_BEACH] =
     {
         .tileset = gBattleTerrainTiles_Sand,
         .tilemap = gBattleTerrainTilemap_Sand,
