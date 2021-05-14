@@ -706,9 +706,9 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_GRASS;
     if (MetatileBehavior_IsLongGrass(tileBehavior))
         return BATTLE_TERRAIN_LONG_GRASS;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE10A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE10A))
+        return BATTLE_TERRAIN_DESERT;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
-        /*if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE10A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE10A))
-            return BATTLE_TERRAIN_DESERT; */
         return BATTLE_TERRAIN_BEACH;
 
     switch (gMapHeader.mapType)

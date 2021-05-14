@@ -6688,6 +6688,12 @@ extern const u32 gUnknown_08D857A8[];
 extern const u32 gUnknown_08D85A1C[];
 
 // battle terrains
+extern const u32 gBattleTerrainTiles_Desert[];
+extern const u32 gBattleTerrainTilemap_Desert[];
+extern const u32 gBattleTerrainAnimTiles_Desert[];
+extern const u32 gBattleTerrainAnimTilemap_Desert[];
+extern const u32 gBattleTerrainPalette_Desert[];
+
 extern const u32 gBattleTerrainTiles_TallGrass[];
 extern const u32 gBattleTerrainTilemap_TallGrass[];
 extern const u32 gBattleTerrainAnimTiles_TallGrass[];
