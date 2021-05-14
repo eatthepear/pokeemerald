@@ -3011,9 +3011,9 @@ static void FillPartnerParty(u16 trainerId)
             for (j = 0; gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].trainerName[j] != EOS; j++)
                 nameHash += gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].trainerName[j];
 
-            if (gTrainers[trainerNum].doubleBattle == TRUE)
+            if (gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].doubleBattle == TRUE)
                 personalityValue = 0x80;
-            else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
+            else if (gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].encounterMusic_gender & 0x80)
             {
                 personalityValue = 0x78;
                 gender = MON_MALE;
@@ -3031,7 +3031,7 @@ static void FillPartnerParty(u16 trainerId)
 
 
             if ((partyData[i].nature > 0) || (partyData[i].gender > 0))
-                CreateMonWithGenderNatureLetter(&gPlayerParty[i + 3], partyData[i].species, partyData[i].lvl, fixedIV, partyData[i].gender, partyData[i].nature, 0, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
+                CreateMonWithGenderNatureLetter(&gPlayerParty[i + 3], partyData[i].species, partyData[i].lvl, fixedIV, gender, partyData[i].nature, 0, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
             else
             {
                 CreateMon(&gPlayerParty[i + 3], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
@@ -3075,8 +3075,6 @@ static void FillPartnerParty(u16 trainerId)
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {
                     SetMonData(&gPlayerParty[i + 3], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
-                    SetMonData(&gPlayerParty[i + 3], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
-                    SetMonData(&gPlayerParty[i + 3], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                     SetMonData(&gPlayerParty[i + 3], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                 }
             }
