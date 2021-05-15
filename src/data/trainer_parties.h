@@ -1902,21 +1902,60 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10
     },
 };
 
-static const struct TrainerMon sParty_Julie[] = {
+static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_SANDSLASH,
+    .iv = 255,
+    .lvl = 29,
+    .nature = NATURE_IMPISH,
+    .ability = ABILITY_SLOT_2, //Sturdy
+    .species = SPECIES_RELICANTH,
+    .heldItem = ITEM_MUSCLE_BAND,
+    .moves = {MOVE_WATERFALL, MOVE_BODY_PRESS, MOVE_ROCK_TOMB, MOVE_YAWN}
     },
     {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_NINETALES,
+    .iv = 255,
+    .lvl = 29,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Battle Armor
+    .species = SPECIES_MAROWAK,
+    .heldItem = ITEM_THICK_CLUB,
+    .moves = {MOVE_BONEMERANG, MOVE_THRASH, MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH}
     },
     {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_TROPIUS,
+    .iv = 255,
+    .lvl = 29,
+    .nature = NATURE_TIMID,
+    .ability = ABILITY_SLOT_1, //Prankster
+    .species = SPECIES_MEOWSTIC,
+    .heldItem = ITEM_LIGHT_CLAY,
+    .moves = {MOVE_PSYSHOCK, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_NASTY_PLOT}
+    },
+    {
+    .iv = 255,
+    .lvl = 29,
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1, //Unburden
+    .species = SPECIES_SLURPUFF,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_DRAINING_KISS, MOVE_COVET, MOVE_SUBSTITUTE, MOVE_ENERGY_BALL}
+    },
+    {
+    .iv = 255,
+    .lvl = 29,
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1, //Swarm
+    .species = SPECIES_LEAVANNY,
+    .heldItem = ITEM_MIRACLE_SEED,
+    .moves = {MOVE_LEAF_BLADE, MOVE_FELL_STINGER, MOVE_SHADOW_CLAW, MOVE_AERIAL_ACE}
+    },
+    {
+    .iv = 255,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .ability = ABILITY_SLOT_1, //Shell Armor
+    .species = SPECIES_TURTONATOR,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_PULSE, MOVE_WILL_O_WISP, MOVE_SUBSTITUTE}
     }
 };
 
