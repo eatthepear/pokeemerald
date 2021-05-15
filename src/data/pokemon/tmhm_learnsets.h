@@ -127,6 +127,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -144,6 +145,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -161,6 +163,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -906,6 +909,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM15_SHADOW_CLAW)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -926,6 +930,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM15_SHADOW_CLAW)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -1020,6 +1025,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -1038,6 +1044,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -1057,6 +1064,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM08_BULK_UP)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -1226,6 +1234,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -1243,6 +1252,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -1458,6 +1468,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -1473,6 +1484,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2000,6 +2012,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_HORSEA]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2013,6 +2026,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_SEADRA]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2026,6 +2040,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_GOLDEEN]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2039,6 +2054,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_SEAKING]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2052,6 +2068,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_STARYU]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -2071,6 +2088,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_STARMIE]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -2223,6 +2241,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_GYARADOS]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
@@ -2244,6 +2263,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LAPRAS]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2280,6 +2300,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -2355,6 +2376,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2372,6 +2394,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -2390,6 +2413,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -2409,6 +2433,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -2527,6 +2552,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DRATINI]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -2549,6 +2575,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DRAGONAIR]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -2573,6 +2600,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
@@ -2606,6 +2634,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM14_WILL_O_WISP)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
@@ -2767,6 +2796,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -2786,6 +2816,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -2805,6 +2836,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -2975,6 +3007,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CHINCHOU]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -2991,6 +3024,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LANTURN]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -3204,6 +3238,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -3221,6 +3256,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -3255,6 +3291,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -3370,6 +3407,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_WOOPER]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -3390,6 +3428,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -3663,6 +3702,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_QWILFISH]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -3884,6 +3924,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -3902,6 +3943,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -3938,6 +3980,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -3998,6 +4041,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_KINGDRA]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -4255,6 +4299,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM09_CALM_MIND)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -4329,6 +4374,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -4502,6 +4548,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -4517,6 +4564,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -4534,6 +4582,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -4673,6 +4722,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM42_FACADE)
@@ -4690,6 +4740,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM42_FACADE)
@@ -5132,6 +5183,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -5473,6 +5525,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -5489,6 +5542,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -5503,6 +5557,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -5518,6 +5573,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -5826,6 +5882,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -5841,6 +5898,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -5858,6 +5916,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -5876,6 +5935,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -5993,6 +6053,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_FEEBAS]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -6007,6 +6068,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_MILOTIC]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -6232,6 +6294,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -6247,6 +6310,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -6262,6 +6326,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -6276,6 +6341,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CLAMPERL]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -6290,6 +6356,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -6303,6 +6370,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_GOREBYSS]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -6320,6 +6388,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -6337,6 +6406,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LUVDISC]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -6507,6 +6577,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM27_RETURN) //dragon claw
@@ -6535,6 +6606,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM27_RETURN) //dragon claw
@@ -6562,6 +6634,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM09_CALM_MIND)
@@ -6608,6 +6681,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM08_BULK_UP)
@@ -6779,6 +6853,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -6798,6 +6873,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -6817,6 +6893,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -6894,6 +6971,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM19_THUNDER_WAVE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
@@ -7146,6 +7224,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM08_BULK_UP)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -7163,6 +7242,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM08_BULK_UP)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -7213,6 +7293,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -7799,6 +7880,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_FINNEON]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -7813,6 +7895,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LUMINEON]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -7828,6 +7911,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
@@ -8437,6 +8521,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -8452,6 +8537,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM42_FACADE)
@@ -8512,6 +8598,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM14_WILL_O_WISP)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM09_CALM_MIND)
@@ -8659,6 +8746,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -8675,6 +8763,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -8691,6 +8780,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -8895,6 +8985,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -8913,6 +9004,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
@@ -9400,6 +9492,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_BASCULIN]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -9627,6 +9720,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -9643,6 +9737,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM03_ROCK_TOMB)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM26_EARTHQUAKE)
@@ -10063,6 +10158,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_WILL_O_WISP)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -10081,6 +10177,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM14_WILL_O_WISP)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -10098,6 +10195,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_ALOMOMOLA]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM42_FACADE)
@@ -11108,6 +11206,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -11124,6 +11223,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -11140,6 +11240,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_THIEF)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM42_FACADE)
@@ -11650,6 +11751,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_SKRELP]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -11664,6 +11766,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DRAGALGE]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -11679,6 +11782,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CLAUNCHER]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM40_ICE_BEAM)
@@ -11691,6 +11795,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CLAWITZER]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM40_ICE_BEAM)
@@ -12288,6 +12393,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -12302,6 +12408,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -12315,6 +12422,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_PRIMARINA]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM06_COVET)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
@@ -12539,6 +12647,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM06_COVET)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
@@ -12607,6 +12716,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DEWPIDER]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -12619,6 +12729,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_ARAQUANID]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -12840,6 +12951,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_WIMPOD]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -12854,6 +12966,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM15_SHADOW_CLAW)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM08_BULK_UP)
@@ -13027,6 +13140,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM13_AERIAL_ACE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM08_BULK_UP)
                                             | TMHM(TM09_CALM_MIND)
@@ -13192,6 +13306,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_TAPU_FINI]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM02_RETURN)
                                             | TMHM(TM05_SUBSTITUTE)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM09_CALM_MIND)
                                             | TMHM(TM42_FACADE)
@@ -14807,6 +14922,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM11_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
+                                            | TMHM(TM18_WATERFALL)
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
