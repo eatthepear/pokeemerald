@@ -314,14 +314,14 @@ Zone0D_EventScript_WarpZONE7::
 
 Zone0D_EventScript_WarpZONE8::
 	lockall
-	buffernumberstring 0, 1
+	buffernumberstring 0, 8
 	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE8A, 255, 33, 9
 	end
 
 Zone0D_EventScript_WarpZONE9::
 	lockall
-	buffernumberstring 0, 8
+	buffernumberstring 0, 9
 	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE9A, 255, 23, 13
 	end
