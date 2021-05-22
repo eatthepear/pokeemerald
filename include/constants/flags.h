@@ -72,9 +72,9 @@
 #define FLAG_HIDE_ZONE15B_MIRAGE    0x3B
 #define FLAG_ADAMINA_INTRO    0x3C // Unused Flag
 #define FLAG_HIDE_ZONE17A_HEX_MANIAC    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
+#define FLAG_HIDE_ZONE18B_MAN    0x3E // Unused Flag
+#define FLAG_HIDE_ZONE18B_ODYSSEUS    0x3F // Unused Flag
+#define FLAG_HIDE_ZONE19D_PIRATES    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
@@ -578,15 +578,15 @@
 #define FLAG_HIDDEN_ITEM_ZONE14A_BLUE_SHARD                  (FLAG_HIDDEN_ITEMS_START + 0x1D)
 #define FLAG_HIDDEN_ITEM_ZONE14B_BLUE_SHARD                  (FLAG_HIDDEN_ITEMS_START + 0x4E)
 #define FLAG_HIDDEN_ITEM_ZONE14B_YELLOW_SHARD                (FLAG_HIDDEN_ITEMS_START + 0x4F)
-#define FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY           (FLAG_HIDDEN_ITEMS_START + 0x50)
-#define FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH           (FLAG_HIDDEN_ITEMS_START + 0x6D)
-#define FLAG_HIDDEN_ITEM_PETALBURG_CITY_RARE_CANDY           (FLAG_HIDDEN_ITEMS_START + 0x5F)
-#define FLAG_HIDDEN_ITEM_PETALBURG_WOODS_POTION              (FLAG_HIDDEN_ITEMS_START + 0x3A)
-#define FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_1     (FLAG_HIDDEN_ITEMS_START + 0x3B)
-#define FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_2     (FLAG_HIDDEN_ITEMS_START + 0x3C)
-#define FLAG_HIDDEN_ITEM_PETALBURG_WOODS_POKE_BALL           (FLAG_HIDDEN_ITEMS_START + 0x3D)
-#define FLAG_HIDDEN_ITEM_VICTORY_ROAD_B2F_ELIXIR             (FLAG_HIDDEN_ITEMS_START + 0x52)
-#define FLAG_HIDDEN_ITEM_VICTORY_ROAD_B2F_MAX_REPEL          (FLAG_HIDDEN_ITEMS_START + 0x53)
+#define FLAG_HIDDEN_ITEM_ZONE16A_RED_SHARD                   (FLAG_HIDDEN_ITEMS_START + 0x50)
+#define FLAG_HIDDEN_ITEM_ZONE18A_LEPPA_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x6D)
+#define FLAG_HIDDEN_ITEM_ZONE19B_BLUE_SHARD                  (FLAG_HIDDEN_ITEMS_START + 0x5F)
+#define FLAG_HIDDEN_ITEM_ZONE19B_STARDUST                    (FLAG_HIDDEN_ITEMS_START + 0x3A)
+#define FLAG_HIDDEN_ITEM_ZONE19B_PEARL                       (FLAG_HIDDEN_ITEMS_START + 0x3B)
+#define FLAG_HIDDEN_ITEM_ZONE19B_YELLOW_SHARD                (FLAG_HIDDEN_ITEMS_START + 0x3C)
+#define FLAG_HIDDEN_ITEM_ZONE19B_BIG_PEARL                   (FLAG_HIDDEN_ITEMS_START + 0x3D)
+#define FLAG_HIDDEN_ITEM_ZONE19B_RED_SHARD                   (FLAG_HIDDEN_ITEMS_START + 0x52)
+#define FLAG_HIDDEN_ITEM_ZONE19B_STAR_PIECE                  (FLAG_HIDDEN_ITEMS_START + 0x53)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_EAST_RARE_CANDY   (FLAG_HIDDEN_ITEMS_START + 0x6A)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_EAST_ZINC         (FLAG_HIDDEN_ITEMS_START + 0x6B)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_SOUTH_EAST_PP_UP        (FLAG_HIDDEN_ITEMS_START + 0x6C)
@@ -1107,17 +1107,17 @@
 #define FLAG_ITEM_ZONE15A_WISE_GLASSES                              0x425
 #define FLAG_ITEM_ZONE15A_WIDE_LENS                                 0x426
 #define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
-#define FLAG_ITEM_ZONE3A_HYPER_POTION                    0x428
-#define FLAG_ITEM_ZONE5A_FULL_HEAL                    0x429
-#define FLAG_ITEM_ZONE16A_DIVE_BALL                            0x42A
-#define FLAG_ITEM_ZONE16A_WATER_STONE                 0x42B
-#define FLAG_ITEM_ZONE16A_FULL_HEAL                  0x42C
-#define FLAG_ITEM_ZONE16A_TM13                    0x42D//start here
-#define FLAG_ITEM_JAGGED_PASS_BURN_HEAL                             0x42E
-#define FLAG_ITEM_AQUA_HIDEOUT_B1F_MAX_ELIXIR                       0x42F
+#define FLAG_ITEM_ZONE3A_HYPER_POTION                               0x428
+#define FLAG_ITEM_ZONE5A_FULL_HEAL                                  0x429
+#define FLAG_ITEM_ZONE16A_DIVE_BALL                                 0x42A
+#define FLAG_ITEM_ZONE16A_WATER_STONE                               0x42B
+#define FLAG_ITEM_ZONE16A_FULL_HEAL                                 0x42C
+#define FLAG_ITEM_ZONE16A_TM13                                      0x42D
+#define FLAG_ITEM_ZONE18A_HEAT_ROCK                                 0x42E
+#define FLAG_ITEM_ZONE18A_TM16                                      0x42F
 #define FLAG_ITEM_AQUA_HIDEOUT_B2F_NEST_BALL                        0x430
 #define FLAG_ITEM_MT_PYRE_EXTERIOR_MAX_POTION                       0x431
-#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_48                            0x432
+#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_48                            0x432//start here
 #define FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL                           0x433
 #define FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE                          0x434
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_6_LUXURY_BALL    0x435

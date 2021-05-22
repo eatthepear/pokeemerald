@@ -858,49 +858,94 @@ static void PetalburgGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
             nDoors = 2;
             doorCoordsX[0] = 1;
             doorCoordsX[1] = 7;
-            doorCoordsY[0] = 104;
-            doorCoordsY[1] = 104;
+            doorCoordsY[0] = 195;
+            doorCoordsY[1] = 195;
             break;
         case 2:
             nDoors = 2;
             doorCoordsX[0] = 1;
             doorCoordsX[1] = 7;
-            doorCoordsY[0] = 78;
-            doorCoordsY[1] = 78;
+            doorCoordsY[0] = 182;
+            doorCoordsY[1] = 182;
             break;
         case 3:
+            nDoors = 2;
+            doorCoordsX[0] = 1;
+            doorCoordsX[1] = 7;
+            doorCoordsY[0] = 169;
+            doorCoordsY[1] = 169;
+            break;
+        case 4:
+            nDoors = 2;
+            doorCoordsX[0] = 1;
+            doorCoordsX[1] = 7;
+            doorCoordsY[0] = 156;
+            doorCoordsY[1] = 156;
+            break;
+        case 5:
+            nDoors = 2;
+            doorCoordsX[0] = 1;
+            doorCoordsX[1] = 7;
+            doorCoordsY[0] = 143;
+            doorCoordsY[1] = 143;
+            break;
+        case 6:
+            nDoors = 2;
+            doorCoordsX[0] = 1;
+            doorCoordsX[1] = 7;
+            doorCoordsY[0] = 130;
+            doorCoordsY[1] = 130;
+            break;
+        case 7:
+            nDoors = 1;
+            doorCoordsX[0] = 7;
+            doorCoordsY[0] = 117;
+            break;
+        case 8:
+            nDoors = 2;
+            doorCoordsX[0] = 1;
+            doorCoordsX[1] = 7;
+            doorCoordsY[0] = 104;
+            doorCoordsY[1] = 104;
+            break;
+        case 9:
             nDoors = 2;
             doorCoordsX[0] = 1;
             doorCoordsX[1] = 7;
             doorCoordsY[0] = 91;
             doorCoordsY[1] = 91;
             break;
-        case 4:
+        case 10:
+            nDoors = 1;
+            doorCoordsX[0] = 1;
+            doorCoordsY[0] = 78;
+            break;
+        case 11:
             nDoors = 1;
             doorCoordsX[0] = 7;
-            doorCoordsY[0] = 39;
+            doorCoordsY[0] = 65;
             break;
-        case 5:
+        case 12:
             nDoors = 2;
             doorCoordsX[0] = 1;
             doorCoordsX[1] = 7;
             doorCoordsY[0] = 52;
             doorCoordsY[1] = 52;
             break;
-        case 6:
+        case 13:
             nDoors = 1;
             doorCoordsX[0] = 1;
-            doorCoordsY[0] = 65;
+            doorCoordsY[0] = 39;
             break;
-        case 7:
+        case 14:
             nDoors = 1;
             doorCoordsX[0] = 7;
-            doorCoordsY[0] = 13;
+            doorCoordsY[0] = 26;
             break;
-        case 8:
+        case 15:
             nDoors = 1;
             doorCoordsX[0] = 1;
-            doorCoordsY[0] = 26;
+            doorCoordsY[0] = 13;
             break;
     }
     for (i = 0; i < nDoors; i++)

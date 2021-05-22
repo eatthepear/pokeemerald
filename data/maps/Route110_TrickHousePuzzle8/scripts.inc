@@ -13,11 +13,6 @@ Route110_TrickHousePuzzle8_EventScript_FoundScroll:: @ 826E814
 	goto Route110_TrickHousePuzzle_EventScript_FoundScroll
 	end
 
-Route110_TrickHousePuzzle8_EventScript_Keira:: @ 826E836
-	trainerbattle_single TRAINER_KEIRA, Route110_TrickHousePuzzle8_Text_KeiraIntro, Route110_TrickHousePuzzle8_Text_KeiraDefeat
-	msgbox Route110_TrickHousePuzzle8_Text_KeiraPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route110_TrickHousePuzzle8_EventScript_WroteSecretCodeLockOpened:: @ 826E864
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"

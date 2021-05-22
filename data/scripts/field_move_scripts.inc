@@ -386,17 +386,14 @@ Text_MonUsedWaterfall: @ 8290AFC
 	.string "{STR_VAR_1} used WATERFALL.$"
 
 EventScript_UseDive:: @ 8290B0F
-	lockall
-	checkpartymove MOVE_DIVE
-	compare VAR_RESULT, PARTY_SIZE
+	checkitem ITEM_DIVING_GEAR, 1
+	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantDive
-	bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
-	setfieldeffectargument 1, 1
 	msgbox Text_WantToDive, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndDive
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
+	setitemarg ITEM_DIVING_GEAR
+	setfieldeffectargument 1, 1
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
 	end
@@ -412,19 +409,17 @@ EventScript_EndDive:: @ 8290B58
 
 EventScript_UseDiveUnderwater:: @ 8290B5A
 	lockall
-	checkpartymove MOVE_DIVE
-	compare VAR_RESULT, PARTY_SIZE
+	checkitem ITEM_DIVING_GEAR, 1
+	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSurface
-	bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
-	setfieldeffectargument 1, 1
 	msgbox Text_WantToSurface, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndSurface
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
+	setitemarg ITEM_DIVING_GEAR
+	setfieldeffectargument 1, 1
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
-	end
+	end	
 
 EventScript_CantSurface:: @ 8290B99
 	lockall
@@ -437,23 +432,22 @@ EventScript_EndSurface:: @ 8290BA8
 	end
 
 Text_CantDive: @ 8290BAA
-	.string "The sea is deep here. A POKéMON\n"
-	.string "may be able to go underwater.$"
+	.string "The sea is deep here.$"
 
 Text_WantToDive: @ 8290BE8
 	.string "The sea is deep here.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Use the Diving Gear?$"
 
 Text_MonUsedDive: @ 8290C1A
-	.string "{STR_VAR_1} used DIVE.$"
+	.string "{PLAYER} used the Diving Gear.$"
 
 Text_CantSurface: @ 8290C28
 	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
+	.string "You may be able to surface..$"
 
 Text_WantToSurface: @ 8290C6E
 	.string "Light is filtering down from above.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to surface?$"
 
 EventScript_FailSweetScent:: @ 8290CAE
 	msgbox Text_FailSweetScent, MSGBOX_SIGN

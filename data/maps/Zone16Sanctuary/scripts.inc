@@ -64,6 +64,7 @@ Zone16Sanctuary_EventScript_NextZoneCheck:
 
 Zone16Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
+	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE17A, 255, 13, 42
 	release

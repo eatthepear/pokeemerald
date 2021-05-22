@@ -157,9 +157,6 @@ Zone8D_EventScript_PlayerWon:
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone8D_Text_Mirage1_NoMatter, MSGBOX_AUTOCLOSE
-	applymovement 2, Common_Movement_FaceDown
-	waitmovement 0
-	msgbox Zone8D_Text_Mirage1_YoullRegret, MSGBOX_AUTOCLOSE
 	fadescreenswapbuffers FADE_TO_BLACK
 	playmoncry SPECIES_REGIROCK, 2
 	delay 40
@@ -225,7 +222,7 @@ Zone8D_Text_Wally_WontLet:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: I won't let you hurt Regirock!$"
 
 Zone8D_Text_Mirage2_BackAgain:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: The child is back again.\n"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: It is back again.\n"
 	.string "With a friend this time.$"
 
 Zone8D_Text_Mirage1_Entertaining:
@@ -239,13 +236,10 @@ Zone8D_Text_MirageDefeat:
 	.string "...$"
 
 Zone8D_Text_Mirage2_DefeatedByTwo:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Defeated by two children...$"
+	.string "{COLOR BLUE}???{COLOR DARK_GREY}: I was defeated...$"
 
 Zone8D_Text_Mirage1_NoMatter:
 	.string "{COLOR BLUE}???{COLOR DARK_GREY}: No matter. It's done.$"
-
-Zone8D_Text_Mirage1_YoullRegret:
-	.string "You'll regret getting in our way.$"
 
 Zone8D_EventScript_Conclusion:
 	applymovement 4, Common_Movement_WalkUp

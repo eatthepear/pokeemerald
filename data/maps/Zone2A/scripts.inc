@@ -11,14 +11,14 @@ Zone2A_EventScript_Harper::
 	end
 
 Zone2A_Text_HarperIntro:
-	.string "We're not in Kansas anymore...$"
+	.string "Surprise! Battle time!$"
 
 Zone2A_Text_HarperDefeat:
-	.string "We're in a simulation!$"
+	.string "My spirit, crushed!$"
 
 Zone2A_Text_HarperPostBattle:
-	.string "Does that mean... I could be just\n"
-	.string "a construct of the simulation?$"
+	.string "I don't know if I can ever\n"
+	.string "come back from this loss...$"
 
 Zone2A_EventScript_Dexter::
 	trainerbattle_single TRAINER_DEXTER, Zone2A_Text_DexterIntro, Zone2A_Text_DexterDefeat

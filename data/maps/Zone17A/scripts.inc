@@ -137,30 +137,35 @@ Zone17A_EventScript_Released:
 	delay 32
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 48
 	msgbox Zone17A_Text_Released, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE17A_STATE, 30
@@ -170,24 +175,28 @@ Zone17A_EventScript_Released:
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 8
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
@@ -200,6 +209,7 @@ Zone17A_EventScript_Released:
 	delay 8
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
+	setobjectxy 1, 13, 7
 	delay 8
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC

@@ -55,16 +55,15 @@ Zone16A_EventScript_Iona::
 	end
 
 Zone16A_Text_IonaIntro:
-	.string "The Water Pokémon are\n"
-	.string "tickling my toes!$"
+	.string "The Water Pokémon are tickling\n"
+	.string "my toes!$"
 
 Zone16A_Text_IonaDefeat:
 	.string "Oh, that was just seaweed.$"
 
 Zone16A_Text_IonaPostBattle:
-	.string "Don't you love that there\n"
-	.string "is such a diversity of\l"
-	.string "Water Pokémon?$"
+	.string "Don't you love that there is such\n"
+	.string "a diversity of Water Pokémon?$"
 
 Zone16A_EventScript_Tanisha::
 	trainerbattle_single TRAINER_TANISHA, Zone16A_Text_TanishaIntro, Zone16A_Text_TanishaDefeat
@@ -133,8 +132,8 @@ Zone16A_EventScript_Georgina::
 	end
 
 Zone16A_Text_GeorginaIntro:
-	.string "Up, right, down, left,\p"
-	.string "up, right, down, left!$"
+	.string "Up, right, left, down,\p"
+	.string "up, right, left, down!$"
 
 Zone16A_Text_GeorginaDefeat:
 	.string "It's my little chant.$"

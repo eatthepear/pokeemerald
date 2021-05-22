@@ -72,8 +72,8 @@ Zone10B_Text_Adamina_TellYouWhat:
 	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Tell you what, you can\n"
 	.string "stay as long as you like to chat\l"
 	.string "with the people here.\p"
-	.string "When you're ready to leave this\n"
-	.string "Zone, come speak to me.$"
+	.string "When you're ready to leave,\n"
+	.string "come speak to me.$"
 
 Zone10B_EventScript_AdaminaLeave:
 	msgbox Zone10B_Text_Adamina_AreYouLeaving, MSGBOX_YESNO
@@ -90,8 +90,8 @@ Zone10B_Text_Adamina_WhenReady:
 	.string "Come speak to me when you're ready.$"
 
 Zone10B_EventScript_Exit:
-	compare VAR_ZONE, 11
-	goto_if_ge EventScript_WarpZone0
+	compare VAR_ZONE, 10
+	goto_if_gt EventScript_WarpZone0
 	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0
@@ -196,8 +196,8 @@ Zone10B_Text_SubstituteIntro:
 	.string "possession, I hold a useful TM for\l"
 	.string "your Pokémon, but only if you have\l"
 	.string "proven yourself in battle.\p"
-	.string "You must defeat all Trainers in\n"
-	.string "Zones 1-10.$"
+	.string "You must have defeated all\n"
+	.string "Trainers available thus far.$"
 
 Zone10B_Text_GiveSubstitute:
 	.string "Impressive, young one. I see you\n"
@@ -375,9 +375,6 @@ Zone10B_EventScript_BerryEnd:
 	waitmovement 0
 	release
 	end
-
-
-
 
 Zone10B_EventScript_FossilScientist::
 	lock

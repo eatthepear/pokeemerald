@@ -1610,25 +1610,28 @@ static const u8 sTM15Desc[] = _(
     "shadow claw. High\n"
     "critical-hit ratio.");
 
+/* "Creates a wall of\n"
+ "light that lowers\n"
+ "Sp. Atk damage."); */
 static const u8 sTM16Desc[] = _(
-    "Creates a wall of\n"
-    "light that lowers\n"
-    "Sp. Atk damage.");
-
-static const u8 sTM17Desc[] = _(
-    "Negates all damage,\n"
-    "but may fail if used\n"
-    "in succession.");
-
-static const u8 sTM18Desc[] = _(
     "Raises the power of\n"
-    "Water-type moves\n"
+    "Fire-type moves\n"
     "for 5 turns.");
 
+static const u8 sTM17Desc[] = _(
+    "Destroys barriers\n"
+    "like Light Screen\n"
+    "and causes damage.");
+
+static const u8 sTM18Desc[] = _(
+    "Attacks the foe\n"
+    "with enough power\n"
+    "to climb waterfalls.");
+
 static const u8 sTM19Desc[] = _(
-    "Recovers half the\n"
-    "HP of the damage \n"
-    "this move inflicts.");
+    "A weak jolt of\n"
+    "electricity that\n"
+    "paralyzes the foe.");
 
 static const u8 sTM20Desc[] = _(
     "Prevents status\n"
@@ -1777,7 +1780,7 @@ static const u8 sTM48Desc[] = _(
 
 static const u8 sTM49Desc[] = _(
     "Raises the power of\n"
-    "Fire-type moves\n"
+    "Water-type moves\n"
     "for 5 turns.");
 
 static const u8 sTM50Desc[] = _(
@@ -1847,10 +1850,10 @@ static const u8 sSurfboardDesc[] = _(
     "device used to travel\n"
     "across open water.");
 
-static const u8 sGoldTeethDesc[] = _(
-    "Gold dentures lost\n"
-    "by the Safari\n"
-    "Zone's Warden.");
+static const u8 sDivingGearDesc[] = _(
+    "Special gear given\n"
+    "by Odysseus to\n"
+    "travel underwater.");
 
 static const u8 sOldAmberDesc[] = _(
     "A stone containing\n"

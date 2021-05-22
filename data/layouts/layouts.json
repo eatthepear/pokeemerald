@@ -5160,6 +5160,96 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone17Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone17Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE18A",
+      "name": "Zone18A_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Zone18A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone18A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE18B",
+      "name": "Zone18B_Layout",
+      "width": 9,
+      "height": 203,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/Zone18B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone18B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19A",
+      "name": "Zone19A_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Zone19A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19B",
+      "name": "Zone19B_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Zone19B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19C",
+      "name": "Zone19C_Layout",
+      "width": 19,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Zone19C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19D",
+      "name": "Zone19D_Layout",
+      "width": 19,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone19D/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19SANCTUARY",
+      "name": "Zone19Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone19Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE19SHOPS",
+      "name": "Zone19Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone19Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone19Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE20A",
+      "name": "Zone20A_Layout",
+      "width": 16,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Zone20A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone20A/map.bin"
     }
   ]
 }

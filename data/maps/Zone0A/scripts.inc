@@ -46,7 +46,7 @@ Zone0A_EventScript_Intro:
 Zone0A_Text_Intro:
 	.string "Hello, {PLAYER}.\n"
 	.string "I'm the Day-Care Man.\p"
-	.string "Welcome to our peaceful Zone 0.\p"
+	.string "Welcome to my home.\p"
 	.string "There are no trainers here, no\n"
 	.string "challenges to face. Everything is\l"
 	.string "meant to help you on your journey.\p"
@@ -60,8 +60,8 @@ Zone0A_Text_Intro:
 
 Zone0A_Text_End:
 	.string "I definitely suggest exploring as\n"
-	.string "this Zone was built to help\l"
-	.string "challengers such as yourself.$"
+	.string "this place was built to help\l"
+	.string "Trainers such as yourself.$"
 
 Zone0A_EventScript_DaycareMan::
 	lock

@@ -20,9 +20,6 @@ PetalburgCity_Gym_OnLoad: @ 820489E
 PetalburgCity_Gym_EventScript_OpenUnlockedDoors:: @ 82048B5
 	setvar VAR_0x8005, 1
 	call PetalburgCity_Gym_EventScript_OpenGymEntranceDoors
-	call_if_defeated TRAINER_MARY, PetalburgCity_Gym_EventScript_OpenAccuracyRoomDoors
-	call_if_defeated TRAINER_ALEXIA, PetalburgCity_Gym_EventScript_OpenDefenseRoomDoors
-	call_if_defeated TRAINER_JODY, PetalburgCity_Gym_EventScript_OpenStrengthRoomDoors
 	end
 
 PetalburgCity_Gym_EventScript_UnlockAllDoors:: @ 82048FF
@@ -844,7 +841,6 @@ PetalburgCity_Gym_EventScript_LeftDefenseRoomDoor:: @ 82051EF
 
 PetalburgCity_Gym_EventScript_RightDefenseRoomDoor:: @ 8205222
 	lockall
-	goto_if_not_defeated TRAINER_MARY, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 59
 	msgbox PetalburgCity_Gym_Text_EnterDefenseRoom, MSGBOX_YESNO
@@ -856,7 +852,6 @@ PetalburgCity_Gym_EventScript_RightDefenseRoomDoor:: @ 8205222
 
 PetalburgCity_Gym_EventScript_RecoveryRoomDoor:: @ 8205255
 	lockall
-	goto_if_not_defeated TRAINER_MARY, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 72
 	msgbox PetalburgCity_Gym_Text_EnterRecoveryRoom, MSGBOX_YESNO
@@ -879,7 +874,6 @@ PetalburgCity_Gym_EventScript_LeftStrengthRoomDoor:: @ 8205288
 
 PetalburgCity_Gym_EventScript_RightStrengthRoomDoor:: @ 82052BB
 	lockall
-	goto_if_not_defeated TRAINER_ALEXIA, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 20
 	msgbox PetalburgCity_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
@@ -891,7 +885,6 @@ PetalburgCity_Gym_EventScript_RightStrengthRoomDoor:: @ 82052BB
 
 PetalburgCity_Gym_EventScript_LeftOHKORoomDoor:: @ 82052EE
 	lockall
-	goto_if_not_defeated TRAINER_ALEXIA, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 33
 	msgbox PetalburgCity_Gym_Text_EnterOHKORoom, MSGBOX_YESNO
@@ -914,7 +907,6 @@ PetalburgCity_Gym_EventScript_RightOHKORoomDoor:: @ 8205321
 
 PetalburgCity_Gym_EventScript_LeftGymLeadersRoomDoor:: @ 8205354
 	lockall
-	goto_if_not_defeated TRAINER_JODY, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 7
 	msgbox PetalburgCity_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
@@ -963,27 +955,11 @@ PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors:: @ 8205492
 	release
 	end
 
-PetalburgCity_Gym_EventScript_Mary:: @ 82054AA
-	trainerbattle_single TRAINER_MARY, PetalburgCity_Gym_Text_MaryIntro, PetalburgCity_Gym_Text_MaryDefeat, PetalburgCity_Gym_EventScript_SlideOpenAccuracyRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_MaryPostBadge
-	msgbox PetalburgCity_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 PetalburgCity_Gym_EventScript_SlideOpenAccuracyRoomDoors:: @ 82054CE
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenAccuracyRoomDoors
 	special DrawWholeMapView
 	release
-	end
-
-PetalburgCity_Gym_EventScript_MaryPostBadge:: @ 82054DD
-	msgbox PetalburgCity_Gym_Text_MaryPostBadge, MSGBOX_NPC
-	end
-
-PetalburgCity_Gym_EventScript_Alexia:: @ 82054E6
-	trainerbattle_single TRAINER_ALEXIA, PetalburgCity_Gym_Text_AlexiaIntro, PetalburgCity_Gym_Text_AlexiaDefeat, PetalburgCity_Gym_EventScript_SlideOpenDefenseRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_AlexiaPostBadge
-	msgbox PetalburgCity_Gym_Text_AlexiaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PetalburgCity_Gym_EventScript_SlideOpenDefenseRoomDoors:: @ 820550A
@@ -995,12 +971,6 @@ PetalburgCity_Gym_EventScript_SlideOpenDefenseRoomDoors:: @ 820550A
 
 PetalburgCity_Gym_EventScript_AlexiaPostBadge:: @ 8205519
 	msgbox PetalburgCity_Gym_Text_AlexiaPostBadge, MSGBOX_NPC
-	end
-
-PetalburgCity_Gym_EventScript_Jody:: @ 8205522
-	trainerbattle_single TRAINER_JODY, PetalburgCity_Gym_Text_JodyIntro, PetalburgCity_Gym_Text_JodyDefeat, PetalburgCity_Gym_EventScript_SlideOpenStrengthRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_JodyPostBadge
-	msgbox PetalburgCity_Gym_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PetalburgCity_Gym_EventScript_SlideOpenStrengthRoomDoors:: @ 8205546
