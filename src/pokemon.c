@@ -3375,12 +3375,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     {
         case OT_ID_SHINY:
         {
-            u32 shinyValue = 0;
-            do
-            {
-                value = Random32();
-                shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
-            } while (shinyValue >= SHINY_ODDS);
+            value = HIHALF(personality) ^ LOHALF(personality);
         }
         break;
 
@@ -3501,6 +3496,13 @@ void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV,
 void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter, u8 otIdType)
 {
     u32 personality;
+    u8 genderRatio;
+
+    genderRatio = gBaseStats[species].genderRatio;
+
+// Infinite loop protection
+    if ((genderRatio == MON_MALE) || (genderRatio == MON_FEMALE) || (genderRatio == MON_GENDERLESS))
+       gender = genderRatio;
 
     if ((u8)(unownLetter - 1) < NUM_UNOWN_FORMS)
     {
@@ -3525,7 +3527,7 @@ void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level,
             || gender != GetGenderFromSpeciesAndPersonality(species, personality));
     }
 
-    CreateMon(mon, species, level, fixedIV, 1, personality, OT_ID_PLAYER_ID, 0);
+    CreateMon(mon, species, level, fixedIV, 1, personality, otIdType, 0);
 }
 
 // This is only used to create Wally's Ralts.

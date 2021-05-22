@@ -1000,7 +1000,7 @@ static const struct TrainerMon sParty_Jake[] = {//Leviathan 6
     {
     .iv = 255, //Starts with aura +2 Speed
     .lvl = 20,
-    .friendship = FRIENDSHIP_RETURN,
+    .friendship = TRAINER_MON_FRIENDLY,
     .nature = NATURE_ADAMANT,
     .gender = MON_MALE,
     .ability = ABILITY_SLOT_1, //Scrappy
@@ -1673,7 +1673,7 @@ static const struct TrainerMon sParty_Abraham[] = {//Zone 18 Switch Room
     .iv = 100,
     .lvl = 25,
     .species = SPECIES_KLINK,
-    .friendship = FRIENDSHIP_RETURN,
+    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_VOLT_SWITCH, MOVE_GEAR_GRIND, MOVE_RETURN, MOVE_SHOCK_WAVE}
     },
     {
