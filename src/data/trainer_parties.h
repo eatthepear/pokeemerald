@@ -998,14 +998,15 @@ static const struct TrainerMon sParty_Joel[] = {
 
 static const struct TrainerMon sParty_Jake[] = {//Leviathan 6
     {
-    .iv = 255, //Starts with aura +1 Attack
+    .iv = 255, //Starts with aura +2 Speed
     .lvl = 20,
-    .nature = NATURE_JOLLY,
+    .friendship = FRIENDSHIP_RETURN,
+    .nature = NATURE_ADAMANT,
     .gender = MON_MALE,
-    .ability = ABILITY_SLOT_1, //Defiant
-    .species = SPECIES_FARFETCHD,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AERIAL_ACE, MOVE_KNOCK_OFF, MOVE_REVENGE, MOVE_SLASH}
+    .ability = ABILITY_SLOT_1, //Scrappy
+    .species = SPECIES_FARFETCHD_GALARIAN,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_BRICK_BREAK, MOVE_KNOCK_OFF, MOVE_RETURN, MOVE_SUBSTITUTE}
     }
 };
 
