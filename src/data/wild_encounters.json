@@ -13293,7 +13293,7 @@
               {
                 "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_PATRAT"
+                "species": "SPECIES_FOONGUS"
               },
               {
                 "min_level": 4,
@@ -14609,7 +14609,7 @@
               {
                 "min_level": 1,
                 "max_level": 3,
-                "species": "SPECIES_MEOWTH"
+                "species": "SPECIES_STUFFUL"
               },
               {
                 "min_level": 1,

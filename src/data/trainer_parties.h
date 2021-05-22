@@ -194,7 +194,7 @@ static const struct TrainerMon sParty_Ralph[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_PATRAT,
+    .species = SPECIES_FOONGUS,
     }
 };
 
@@ -614,7 +614,7 @@ static const struct TrainerMon sParty_Anita[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_MEOWTH,
+    .species = SPECIES_STUFFUL,
     },
     {
     .iv = 0,
