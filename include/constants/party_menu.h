@@ -29,7 +29,7 @@
 #define TUTOR_MOVE_BOUNCE          16
 #define TUTOR_MOVE_FLIP_TURN       17
 #define TUTOR_MOVE_IRON_HEAD       18
-#define TUTOR_MOVE_SEED_BOMB       19
+#define TUTOR_MOVE_GIGA_DRAIN      19
 #define TUTOR_MOVE_ZEN_HEADBUTT    20
 #define TUTOR_MOVE_ROOST           21
 #define TUTOR_MOVE_SYNTHESIS       22
