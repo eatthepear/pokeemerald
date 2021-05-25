@@ -1,3 +1,20 @@
+/**
+ * Notes for documentation
+ * 
+ * Trainers are arranged in the order it is possible to battle them.
+ * 
+ * If a Pokemon does not have a specified parameter (for example the nature) then it is usually determined randomly.
+ * EVs are by default set to 0.
+ * 
+ * .iv determines the IVs of a given Pokemon.
+ * There are 4 different levels for Battle Labyrinth, 0, 100, 200, and 255.
+ * 0 is the Pokemon has 0 in every IV, 255 is the Pokemon has 31 in every IV, and 100 and 200 are somewhere in between.
+ * 
+ * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
+ * These are included in the comments next to each trainer.
+ * 
+ * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. */
+
 static const struct TrainerMon sParty_Corey[] = {
     {
     .iv = 0,
@@ -638,7 +655,7 @@ static const struct TrainerMon sParty_Neil[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
+static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in a tag battle with Zone8DWally
     {
     .iv = 255, //Starts with aura +1 Speed
     .lvl = 17,
@@ -1297,7 +1314,7 @@ static const struct TrainerMon sParty_Charlie[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9
+static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9, Double Battle
     {
     .iv = 255,
     .lvl = 24,
