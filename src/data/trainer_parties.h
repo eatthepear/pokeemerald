@@ -360,20 +360,12 @@ static const struct TrainerMon sParty_Ryan[] = {
 static const struct TrainerMon sParty_Declan[] = {//Leviathan 2
     {
     .iv = 255,
-    .lvl = 11,
-    .nature = NATURE_TIMID,
-    .gender = MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Compound Eyes
-    .species = SPECIES_BUTTERFREE,
-    .moves = {MOVE_GUST, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_POISON_POWDER}
-    },
-    {
-    .iv = 255,
     .lvl = 13,
     .nature = NATURE_BOLD,
     .gender = MON_MALE,
     .ability = ABILITY_SLOT_2, //Shield Dust
     .species = SPECIES_DUSTOX,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST}
     }
 };
@@ -650,11 +642,13 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
     {
     .iv = 255, //Starts with aura +1 Speed
     .lvl = 17,
-    .nature = NATURE_NAIVE,
+    .nature = NATURE_JOLLY,
     .gender = MON_MALE,
-    .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_STANTLER,
-    .moves = {MOVE_STOMP, MOVE_DOUBLE_KICK, MOVE_HYPNOSIS, MOVE_ME_FIRST}
+    .ability = ABILITY_SLOT_2, //Intimidate
+    .species = SPECIES_STARAVIA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .friendship = TRAINER_MON_FRIENDLY,
+    .moves = {MOVE_RETURN, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR}
     },
     {
     .iv = 255, //Starts with aura +1 Attack
@@ -663,6 +657,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4
     .gender = MON_MALE,
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_MAWILE,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_ICE_FANG, MOVE_FIRE_FANG}
     }
 };
@@ -671,22 +666,12 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     {
     .iv = 255,
     .lvl = 16,
-    .nature = NATURE_TIMID,
-    .gender = MON_MALE,
-    .ability = ABILITY_SLOT_2, //Synchronize
-    .species = SPECIES_RALTS,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CONFUSION, MOVE_GROWL, MOVE_LUCKY_CHANT, MOVE_PROTECT}
-    },
-    {
-    .iv = 255,
-    .lvl = 16,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Gale Wings
     .gender = MON_FEMALE,
     .species = SPECIES_FLETCHLING,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_FLAIL, MOVE_PROTECT}
+    .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_FLAIL, MOVE_GROWL}
     },
     {
     .iv = 255,
@@ -696,7 +681,17 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_MARILL,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TAIL_WHIP, MOVE_PROTECT}
+    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TAIL_WHIP, MOVE_COVET}
+    },
+    {
+    .iv = 255,
+    .lvl = 16,
+    .nature = NATURE_TIMID,
+    .gender = MON_MALE,
+    .ability = ABILITY_SLOT_1, //Trace
+    .species = SPECIES_RALTS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CONFUSION, MOVE_GROWL, MOVE_LUCKY_CHANT, MOVE_WILL_O_WISP}
     }
 };
 
@@ -848,7 +843,7 @@ static const struct TrainerMon sParty_Dewey[] = {
     {
     .iv = 0,
     .lvl = 16,
-    .species = SPECIES_STARAVIA,
+    .species = SPECIES_STANTLER,
     }
 };
 
@@ -1000,12 +995,12 @@ static const struct TrainerMon sParty_Jake[] = {//Leviathan 6
     {
     .iv = 255, //Starts with aura +2 Speed
     .lvl = 20,
-    .friendship = TRAINER_MON_FRIENDLY,
     .nature = NATURE_ADAMANT,
     .gender = MON_MALE,
     .ability = ABILITY_SLOT_1, //Scrappy
     .species = SPECIES_FARFETCHD_GALARIAN,
     .heldItem = ITEM_LUM_BERRY,
+    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_BRICK_BREAK, MOVE_KNOCK_OFF, MOVE_RETURN, MOVE_SUBSTITUTE}
     }
 };
