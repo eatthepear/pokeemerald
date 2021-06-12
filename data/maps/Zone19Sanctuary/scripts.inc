@@ -70,17 +70,17 @@ Zone19Sanctuary_EventScript_Leave:
 	end
 
 Zone19Sanctuary_Text_Colress_ReachedZone:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Congratulations.\n"
-	.string "You have cleared {COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
+	.string "You have cleared {COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}.$"
 
 Zone19Sanctuary_Text_RewardClear18:
-	.string "Your reward for clearing {COLOR RED}Zone 18{COLOR DARK_GREY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone 18{COLOR DARK_GRAY} is...$"
 
 Zone19Sanctuary_Text_18Reward:
 	.string "5 Yellow Shards.$"
 
 Zone19Sanctuary_Text_RewardClear19:
-	.string "Your reward for clearing {COLOR RED}Zone 19{COLOR DARK_GREY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone 19{COLOR DARK_GRAY} is...$"
 
 Zone19Sanctuary_Text_19Reward:
 	.string "TM19 - Thunder Wave.$"

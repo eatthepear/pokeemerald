@@ -18,7 +18,7 @@ Zone10A_EventScript_AdaminaIntro:
 	return
 
 Zone10A_Text_NoChance:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Nope.\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Nope.\n"
 	.string "No chance you're getting in.\p"
 	.string "Zero.\n"
 	.string "Zip.\l"
@@ -46,11 +46,11 @@ Zone10A_EventScript_InitiateLeviathanBattle:
 	end
 
 Zone10A_Text_FoundEm:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Oh, wow, you actually\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, wow, you actually\n"
 	.string "found them? What a surprise.$"
 
 Zone10A_Text_CrushYou:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Oh, you were expecting me\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, you were expecting me\n"
 	.string "to let you in just because you\l"
 	.string "found some scraps? No way.\p"
 	.string "You'll have to beat me in a battle\n"
@@ -77,7 +77,7 @@ Zone10A_EventScript_Leviathan5Defeated:
 	end
 
 Zone10A_Text_HeadInside:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GREY}: Go on, head inside.\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Go on, head inside.\n"
 	.string "I've got nothing for you.$"
 
 Zone10A_EventScript_Pearlie::

@@ -112,11 +112,11 @@ Zone5A_EventScript_DontTalk:
 	end
 
 Zone5A_Text_Leviathan2Defeated:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: Don't talk to me!\n"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Don't talk to me!\n"
 	.string "I'm brooding.$"
 
 Zone5A_Text_Leviathan2Intro1:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: ...\n"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: ...\n"
 	.string "...\l"
 	.string "Stupid kids...\l"
 	.string "...\l"
@@ -126,18 +126,18 @@ Zone5A_Text_Leviathan2Intro1:
 	.string "My club is the only club for me...$"
 
 Zone5A_Text_Leviathan2Intro2:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: Hey you! Want to join my\n"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Hey you! Want to join my\n"
 	.string "club? The name: The Bug Maniacs!\p"
 	.string "... You don't?!\p"
 	.string "You'll change your mind after\n"
-	.string "{COLOR BLUE}Leviathan Declan{COLOR DARK_GREY} beats you with his\l"
+	.string "{COLOR BLUE}Leviathan Declan{COLOR DARK_GRAY} beats you with his\l"
 	.string "fabulous Bug Pokémon!$"
 
 Zone5A_Text_Leviathan2Defeat:
 	.string "Declan: But how?! My Bugs!$"
 
 Zone5A_Text_Leviathan2Reward:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GREY}: Fine. You got me. You don't\n"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You got me. You don't\n"
 	.string "have to join my club. \p"
 	.string "A reward?\n"
 	.string "...\l"

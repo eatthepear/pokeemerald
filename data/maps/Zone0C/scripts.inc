@@ -25,7 +25,7 @@ Zone0C_EventScript_JayaDeny:
 	end
 
 Zone0C_Text_Jaya_Deny:
-	.string "{COLOR BLUE}Jaya{COLOR DARK_GREY}: It looks like the PC won't\n"
+	.string "{COLOR BLUE}Jaya{COLOR DARK_GRAY}: It looks like the PC won't\n"
 	.string "boot up if you haven't used\l"
 	.string "Joy's Healing Shop recently...$"
 
@@ -36,10 +36,10 @@ Zone0C_EventScript_JayaIntro:
 	end
 
 Zone0C_EventScript_Jaya_Sorry:
-	.string "{COLOR BLUE}Jaya{COLOR DARK_GREY}: Alright, I guess I'm done.$"
+	.string "{COLOR BLUE}Jaya{COLOR DARK_GRAY}: Alright, I guess I'm done.$"
 
 Zone0C_Text_Jaya_Intro:
-	.string "{COLOR BLUE}Jaya{COLOR DARK_GREY}: My name is Jaya.\p"
+	.string "{COLOR BLUE}Jaya{COLOR DARK_GRAY}: My name is Jaya.\p"
 	.string "I'm actually one of the scientists\n"
 	.string "who worked on the original PSS.$"
 

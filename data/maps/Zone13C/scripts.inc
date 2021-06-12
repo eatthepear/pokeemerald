@@ -33,8 +33,8 @@ Zone13C_EventScript_KeizanBlackBelt::
 	end
 
 Zone13C_Text_KeizanBlackBelt_Battle:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: Greetings.\n"
-	.string "I am {COLOR BLUE}Leviathan Keizan{COLOR DARK_GREY}.\p"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: Greetings.\n"
+	.string "I am {COLOR BLUE}Leviathan Keizan{COLOR DARK_GRAY}.\p"
 	.string "Would you do me the honor of\n"
 	.string "engaging in battle?$"
 
@@ -62,10 +62,10 @@ Zone13C_EventScript_Leviathan7Defeated:
 	end
 
 Zone13C_Text_KeizanBlackBelt_HereTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: For the victor go the spoils.$"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: For the victor go the spoils.$"
 
 Zone13C_Text_KeizanBlackBelt_ExplainTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: TM08 - Bulk Up helps your\n"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: TM08 - Bulk Up helps your\n"
 	.string "Pokémon grow ever stronger.$"
 
 Zone13C_EventScript_KeizanBlackBelt_ComeBack:
@@ -74,7 +74,7 @@ Zone13C_EventScript_KeizanBlackBelt_ComeBack:
 	end
 
 Zone13C_Text_KeizanBlackBelt_ComeBack:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: You should come back later.\n"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: You should come back later.\n"
 	.string "I have other strengths aside from\l"
 	.string "my karate training.$"
 
@@ -92,7 +92,7 @@ Zone13C_EventScript_KeizanPsychic::
 	end
 
 Zone13C_Text_KeizanPsychic_Battle:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: Yes, I am both a Psychic\n"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: Yes, I am both a Psychic\n"
 	.string "and a Black Belt.\p"
 	.string "Speaking of which, I would like to\n"
 	.string "battle again, if you are up to it?$"
@@ -113,10 +113,10 @@ Zone13C_EventScript_Leviathan8Defeated:
 	end
 
 Zone13C_Text_KeizanPsychic_HereTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: Another victory, another TM.$"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: Another victory, another TM.$"
 
 Zone13C_Text_KeizanPsychic_ExplainTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: TM09 - Calm Mind functions\n"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: TM09 - Calm Mind functions\n"
 	.string "similarly to Bulk Up, just as\l"
 	.string "Psychics train similarly to\l"
 	.string "Black Belts.$"
@@ -127,7 +127,7 @@ Zone13C_EventScript_KeizanPsychic_LikeHome:
 	end
 
 Zone13C_Text_KeizanPsychic_LikeHome:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GREY}: It is a bit strange, but I\n"
+	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: It is a bit strange, but I\n"
 	.string "enjoy this place.\l"
 	.string "I can train in peace here.\p"
 	.string "It feels like home, despite all the\n"
@@ -325,7 +325,7 @@ Zone13C_EventScript_DeveloperEatthepear::
 	end
 
 Zone13C_Text_Eatthepear:
-	.string "Hello there. It's {COLOR BLUE}eatthepear{COLOR DARK_GREY}, the\n"
+	.string "Hello there. It's {COLOR BLUE}eatthepear{COLOR DARK_GRAY}, the\n"
 	.string "developer of this ROM hack!\p"
 	.string "Thanks for playing and I hope\n"
 	.string "you're enjoying your time.\p"

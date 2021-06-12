@@ -258,7 +258,7 @@ Zone0D_EventScript_DecidedNot:
 
 Zone0D_Text_AreYouSure:
 	.string "Are you sure you want to go to\n"
-	.string "{COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GREY}?$"
+	.string "{COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GRAY}?$"
 
 Zone0D_Text_DecidedNot:
 	.string "Decided not to warp.$"

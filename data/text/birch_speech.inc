@@ -1,6 +1,6 @@
 gText_Birch_Welcome:: @ 82C897B
 	.string "Hello there, trainer!\p"
-	.string "My name is {COLOR BLUE}Dr. Colress{COLOR DARK_GREY} of Unova.\p"
+	.string "My name is {COLOR BLUE}Dr. Colress{COLOR DARK_GRAY} of Unova.\p"
 	.string "I've dedicated my life to\n"
 	.string "understanding what it is that makes\l"
 	.string "Pokémon Trainers powerful.\p"
@@ -18,8 +18,8 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "I've designed a simulated\n"
 	.string "environment for trainers at the\l"
 	.string "highest skill level, called the\l"
-	.string "{COLOR RED}Pokémon Battle Labyrinth!{COLOR DARK_GREY}\p"
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The simulation is meant to\n"
+	.string "{COLOR RED}Pokémon Battle Labyrinth!{COLOR DARK_GRAY}\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The simulation is meant to\n"
 	.string "analyze the will, resourcefulness,\l"
 	.string "and courage of all trainers who\l"
 	.string "participate.\p"
@@ -40,7 +40,7 @@ gText_Birch_WhatsYourName:: @ 82C8BFF
 	.string "Please enter your name.$"
 
 gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "Your name is {COLOR BLUE}{PLAYER}{KUN}{COLOR DARK_GREY}?$"
+	.string "Your name is {COLOR BLUE}{PLAYER}{KUN}{COLOR DARK_GRAY}?$"
 
 gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "Thank you very much.\p"
@@ -50,6 +50,6 @@ gText_Birch_YourePlayer:: @ 82C8C2A
 
 gText_Birch_AreYouReady:: @ 82C8C7A
 	.string "I hope you enjoy the\n"
-	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GREY}.\p"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}.\p"
 	.string "I'll see you again soon.\p"
 	.string "$"
