@@ -187,6 +187,9 @@ Zone0D_EventScript_WarpBack::
 	case 13, Zone0D_EventScript_WarpSanctuary12
 	case 15, Zone0D_EventScript_WarpSanctuary14
 	case 16, Zone0D_EventScript_WarpSanctuary15
+	case 17, Zone0D_EventScript_WarpSanctuary16
+	case 18, Zone0D_EventScript_WarpSanctuary17
+	case 20, Zone0D_EventScript_WarpSanctuary19
 	end
 
 Zone0D_EventScript_WarpSanctuary0:
@@ -243,6 +246,18 @@ Zone0D_EventScript_WarpSanctuary14:
 
 Zone0D_EventScript_WarpSanctuary15:
 	warpteleport MAP_ZONE15SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary16:
+	warpteleport MAP_ZONE16SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary17:
+	warpteleport MAP_ZONE17SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary19:
+	warpteleport MAP_ZONE19SANCTUARY, 255, 7, 7
 	end
 
 Zone0D_EventScript_VerifyDestination:
