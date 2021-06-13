@@ -36,11 +36,11 @@ Zone11A_EventScript_LeviathanIntro::
 	end
 
 Zone11A_Text_LeviathanWalkAway:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: You should not be here.\n"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: You should not be here.\n"
 	.string "Walk away.$"
 
 Zone11A_Text_LeviathanIThoughtSo:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: Don't come back.$"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Don't come back.$"
 
 Zone11A_EventScript_BeginLeviathanBattle:
 	fadeoutbgm 1
@@ -51,7 +51,7 @@ Zone11A_EventScript_BeginLeviathanBattle:
 	end
 
 Zone11A_Text_LeviathanIntro:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: You dare tread in my woods?\p"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: You dare tread in my woods?\p"
 	.string "My Farfetch'd will cut you down\n"
 	.string "before you even know it!$"
 
@@ -72,11 +72,11 @@ Zone11A_EventScript_Leviathan6Defeated:
 	end
 
 Zone11A_Text_TakeIt:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: ....\n"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: ....\n"
 	.string "Just take it.$"
 
 Zone11A_Text_Goodbye:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GREY}: Small trees blocking the way\n"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Small trees blocking the way\n"
 	.string "will be distant memories.\p"
 	.string "Goodbye.$"
 

@@ -9,7 +9,7 @@ Zone9F_EventScript_Ari::
 	end
 
 Zone9F_Text_Ari:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GREY}: I miss my cousin Victoria.\n"
+	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: I miss my cousin Victoria.\n"
 	.string "She lives in the Hoenn region.$"
 
 Zone9F_EventScript_Bertha::
@@ -20,7 +20,7 @@ Zone9F_EventScript_Bertha::
 	end
 
 Zone9F_Text_Bertha:
-	.string "{COLOR BLUE}Bertha{COLOR DARK_GREY}: Why did Mom buy this house?\n"
+	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: Why did Mom buy this house?\n"
 	.string "It's so small for the five of us...$"
 
 Zone9F_EventScript_Cassandra::
@@ -31,7 +31,7 @@ Zone9F_EventScript_Cassandra::
 	end
 
 Zone9F_Text_Cassandra:
-	.string "{COLOR BLUE}Cassandra{COLOR DARK_GREY}: All my kids do is\n"
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: All my kids do is\n"
 	.string "complain, complain, then complain\l"
 	.string "some more.$"
 
@@ -43,7 +43,7 @@ Zone9F_EventScript_Dominic::
 	end
 
 Zone9F_Text_Dominic:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: I wonder what's for dinner...$"
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: I wonder what's for dinner...$"
 
 Zone9F_EventScript_Erica::
 	lock
@@ -112,7 +112,7 @@ Zone9F_EventScript_SafeTravels:
 	end
 
 Zone9F_Text_Erica_Request:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: {PLAYER}, is it?\n"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: {PLAYER}, is it?\n"
 	.string "I have a request for you.\p"
 	.string "About two weeks ago, I found an\n"
 	.string "abandoned Pokémon in the forest.\p"
@@ -123,7 +123,7 @@ Zone9F_Text_Erica_Request:
 	.string "Will you accept the responsibility?$"
 
 Zone9F_Text_Erica:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: May your travels be safe.$"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: May your travels be safe.$"
 
 Zone9F_Text_NoZorua:
 	.string "Ah. That is... unfortunate.\n"
@@ -133,7 +133,7 @@ Zone9F_Text_ThankYou:
 	.string "Thank you, kind Trainer.$"
 
 Zone9F_Text_HowBoutNickname:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: Would you like to give a\n"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Would you like to give a\n"
 	.string "nickname to Zorua?$"
 
 Zone9F_Text_ReceivedZorua:

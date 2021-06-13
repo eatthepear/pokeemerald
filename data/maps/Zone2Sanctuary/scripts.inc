@@ -69,9 +69,9 @@ Zone2Sanctuary_EventScript_Leave:
 	end
 
 Zone2Sanctuary_Text_Colress_ExplainLeviathans:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The next Zone will contain\n"
-	.string "a {COLOR RED}Leviathan{COLOR DARK_GREY}.\p"
-	.string "{COLOR RED}Leviathans{COLOR DARK_GREY} are difficult bosses\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next Zone will contain\n"
+	.string "a {COLOR RED}Leviathan{COLOR DARK_GRAY}.\p"
+	.string "{COLOR RED}Leviathans{COLOR DARK_GRAY} are difficult bosses\n"
 	.string "that appear in some Zones.\p"
 	.string "Defeating a Leviathan yields\n"
 	.string "great rewards.\p"

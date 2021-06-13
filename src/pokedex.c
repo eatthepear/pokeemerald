@@ -231,6 +231,8 @@ struct PokedexView
     u8 unkArr3[8]; // Cleared, never read
 };
 
+extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
+
 // this file's functions
 static void CB2_Pokedex(void);
 static void Task_OpenPokedexMainPage(u8);
@@ -530,7 +532,7 @@ static const struct SpritePalette sStatBarSpritePal[] = //{sStatBarPalette, TAG_
 
 static const struct OamData sOamData_ScrollBar =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -547,7 +549,7 @@ static const struct OamData sOamData_ScrollBar =
 
 static const struct OamData sOamData_ScrollArrow =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -564,7 +566,7 @@ static const struct OamData sOamData_ScrollArrow =
 
 static const struct OamData sOamData_InterfaceText =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -581,7 +583,7 @@ static const struct OamData sOamData_InterfaceText =
 
 static const struct OamData sOamData_RotatingPokeBall =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_WINDOW,
     .mosaic = 0,
@@ -598,7 +600,7 @@ static const struct OamData sOamData_RotatingPokeBall =
 
 static const struct OamData sOamData_SeenOwnText =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -615,7 +617,7 @@ static const struct OamData sOamData_SeenOwnText =
 
 static const struct OamData sOamData_Dex8x16 =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -2369,8 +2371,8 @@ static bool8 LoadPokedexListPage(u8 page)
         gMain.state++;
         break;
     case 5:
-        SetGpuReg(REG_OFFSET_WININ, 0x3F3F);
-        SetGpuReg(REG_OFFSET_WINOUT, 0x1D3F);
+        SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_ALL | WININ_WIN1_ALL);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_ALL | WINOUT_WINOBJ_BG0 | WINOUT_WINOBJ_BG2 | WINOUT_WINOBJ_BG3 | WINOUT_WINOBJ_OBJ);
         SetGpuReg(REG_OFFSET_WIN0H, 0);
         SetGpuReg(REG_OFFSET_WIN0V, 0);
         SetGpuReg(REG_OFFSET_WIN1H, 0);
@@ -2592,7 +2594,7 @@ static void PrintMonDexNumAndName(u8 windowId, u8 fontId, const u8* str, u8 left
 
     color[0] = TEXT_COLOR_TRANSPARENT;
     color[1] = TEXT_DYNAMIC_COLOR_6;
-    color[2] = TEXT_COLOR_LIGHT_GREY;
+    color[2] = TEXT_COLOR_LIGHT_GRAY;
     AddTextPrinterParameterized4(windowId, fontId, left * 8, (top * 8) + 1, 0, 0, color, -1, str);
 }
 
@@ -3052,7 +3054,7 @@ static void CreateInterfaceSprites(u8 page)
     // Scroll arrows
     spriteId = CreateSprite(&sScrollArrowSpriteTemplate, 10, 4, 0);
     gSprites[spriteId].sIsDownArrow = FALSE;
-    spriteId = CreateSprite(&sScrollArrowSpriteTemplate, 10, 156, 0);
+    spriteId = CreateSprite(&sScrollArrowSpriteTemplate, 10, DISPLAY_HEIGHT - 4, 0);
     gSprites[spriteId].sIsDownArrow = TRUE;
     gSprites[spriteId].vFlip = TRUE;
 
@@ -3082,25 +3084,29 @@ static void CreateInterfaceSprites(u8 page)
     // gSprites[spriteId].data[0] = 31;
     // gSprites[spriteId].data[1] = 128;
 
-    if (!IsNationalPokedexEnabled() && page == PAGE_MAIN)
+    if (page == PAGE_MAIN)
     {
-        // Hoenn text
-        CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
-        // Hoenn seen
-        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
-        // Hoenn own
-        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 7, 1);
-        StartSpriteAnim(&gSprites[spriteId], 1);
+        bool32 drawNextDigit;
 
-        // Hoenn seen value - 100s
-        drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
-        digitNum = sPokedexView->seenCount / 100;
-        StartSpriteAnim(&gSprites[spriteId], digitNum);
-        if (digitNum != 0)
-            drawNextDigit = TRUE;
-        else
-            gSprites[spriteId].invisible = TRUE;
+        if (!IsNationalPokedexEnabled())
+        {
+            // Hoenn text
+            CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
+            // Hoenn seen
+            CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+            // Hoenn own
+            spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 7, 1);
+            StartSpriteAnim(&gSprites[spriteId], 1);
+
+            // Hoenn seen value - 100s
+            drawNextDigit = FALSE;
+            spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+            digitNum = sPokedexView->seenCount / 100;
+            StartSpriteAnim(&gSprites[spriteId], digitNum);
+            if (digitNum != 0)
+                drawNextDigit = TRUE;
+            else
+                gSprites[spriteId].invisible = TRUE;
 
         // Hoenn seen value - 10s
         spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 8, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
@@ -3265,6 +3271,7 @@ static void CreateInterfaceSprites(u8 page)
     {
         spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 80, 1);
         gSprites[spriteId].invisible = TRUE;
+    }
     }
 }
 
@@ -3443,7 +3450,7 @@ static void PrintInfoScreenText(const u8* str, u8 left, u8 top)
     u8 color[3];
     color[0] = TEXT_COLOR_TRANSPARENT;
     color[1] = TEXT_DYNAMIC_COLOR_6;
-    color[2] = TEXT_COLOR_LIGHT_GREY;
+    color[2] = TEXT_COLOR_LIGHT_GRAY;
 
     AddTextPrinterParameterized4(0, 1, left, top, 0, 0, color, -1, str);
 }
@@ -3461,7 +3468,7 @@ static void PrintInfoScreenTextSmall(const u8* str, u8 left, u8 top)
     u8 color[3];
     color[0] = TEXT_COLOR_TRANSPARENT;
     color[1] = TEXT_DYNAMIC_COLOR_6;
-    color[2] = TEXT_COLOR_LIGHT_GREY;
+    color[2] = TEXT_COLOR_LIGHT_GRAY;
 
     AddTextPrinterParameterized4(0, 0, left, top, 0, 0, color, 0, str);
 }
@@ -4867,7 +4874,7 @@ static void PrintInfoSubMenuText(u8 windowId, const u8 *str, u8 left, u8 top)
     u8 color[3];
     color[0] = TEXT_COLOR_TRANSPARENT;
     color[1] = TEXT_DYNAMIC_COLOR_6;
-    color[2] = TEXT_COLOR_LIGHT_GREY;
+    color[2] = TEXT_COLOR_LIGHT_GRAY;
 
     AddTextPrinterParameterized4(windowId, 1, left, top, 0, 0, color, -1, str);
 }
@@ -5265,7 +5272,7 @@ static void PrintSearchText(const u8 *str, u32 x, u32 y)
 
     color[0] = TEXT_COLOR_TRANSPARENT;
     color[1] = TEXT_DYNAMIC_COLOR_6;
-    color[2] = TEXT_COLOR_DARK_GREY;
+    color[2] = TEXT_COLOR_DARK_GRAY;
     AddTextPrinterParameterized4(0, 1, x, y, 0, 0, color, -1, str);
 }
 
@@ -6951,7 +6958,7 @@ static void PrintMonStatsToggle(u8 taskId)
     }
     else //Hidden abilities
     {
-        ability0 = gBaseStats[species].abilityHidden;
+        ability0 = gBaseStats[species].abilities[2];
         PrintInfoScreenTextSmallWhite(gAbilityNames[ability0], abilities_x, abilities_y);
         PrintInfoScreenTextSmall(gAbilityDescriptionPointers[ability0], abilities_x, abilities_y + 14);
     }

@@ -74,7 +74,7 @@ Zone18A_Movement_WalkSlowlyRight:
 	step_end
 
 Zone18A_Text_Odysseus_GotAway:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: They're gone...\p"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: They're gone...\p"
 	.string "They can't keep getting away like\n"
 	.string "this, but I can't just leave this\l"
 	.string "place unprotected.$"
@@ -87,7 +87,7 @@ Zone18A_Text_Odysseus_GoAfterPirates:
 	.string "Here, take this.$"
 
 Zone18A_Text_Odysseus_FindPirates:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: Please, find the pirates!$"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Please, find the pirates!$"
 
 Zone18A_Movement_WalkAway:
 	walk_up

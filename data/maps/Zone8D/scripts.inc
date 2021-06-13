@@ -41,12 +41,12 @@ Zone8D_EventScript_WallyIntro:
 	end
 
 Zone8D_Text_Wally_Intro1:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: Um… E-excuse me…\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Um… E-excuse me…\p"
 	.string "I'm Wally and…\n"
 	.string "I need your help to save Regirock!$"
 
 Zone8D_Text_Wally_Intro2:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Those two have been talking\n"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Those two have been talking\n"
 	.string "about harvesting something from it.\p"
 	.string "They look really strong though…$"
 
@@ -61,7 +61,7 @@ Zone8D_EventScript_WallyYesNo::
 	end
 
 Zone8D_Text_Wally_YesNo:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Will you join forces with me\n"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Will you join forces with me\n"
 	.string "to stop them from hurting Regirock?$"
 
 Zone8D_Text_Wally_Preparations:
@@ -219,27 +219,27 @@ Zone8D_Text_Wally_WhatYourName:
 	.string "{PLAYER}. I'll remember that.$"
 
 Zone8D_Text_Wally_WontLet:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: I won't let you hurt Regirock!$"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: I won't let you hurt Regirock!$"
 
 Zone8D_Text_Mirage2_BackAgain:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: It is back again.\n"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It is back again.\n"
 	.string "With a friend this time.$"
 
 Zone8D_Text_Mirage1_Entertaining:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: This should be... entertaining.\n"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: This should be... entertaining.\n"
 	.string "Deal with them.$"
 
 Zone8D_Text_Mirage2_AtOnce:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: At once.$"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: At once.$"
 
 Zone8D_Text_MirageDefeat:
 	.string "...$"
 
 Zone8D_Text_Mirage2_DefeatedByTwo:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: I was defeated...$"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: I was defeated...$"
 
 Zone8D_Text_Mirage1_NoMatter:
-	.string "{COLOR BLUE}???{COLOR DARK_GREY}: No matter. It's done.$"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. It's done.$"
 
 Zone8D_EventScript_Conclusion:
 	applymovement 4, Common_Movement_WalkUp
@@ -274,23 +274,23 @@ Zone8D_EventScript_Conclusion:
 	end
 	
 Zone8D_Text_Wally_WhereTheyGo:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Where did they go?$"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Where did they go?$"
 
 Zone8D_Text_Wally_LooksLike:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Looks like they took\n"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Looks like they took\n"
 	.string "Regirock with them...\p"
 	.string "What could they have planned?$"
 
 Zone8D_Text_Wally_HaveThis:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: Thanks for your help.\n"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Thanks for your help.\n"
 	.string "Um... I want you to have this.$"
 
 Zone8D_Text_Wally_NotFlashiest:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: It's not... the flashiest\n"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: It's not... the flashiest\n"
 	.string "item, but I'm sure it'll be useful.$"
 
 Zone8D_Text_Wally_Goodbye:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GREY}: I hope we meet again.\p"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: I hope we meet again.\p"
 	.string "Goodbye, {PLAYER}.$"
 
 Zone8A_EventScript_Exit::

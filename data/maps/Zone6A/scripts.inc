@@ -157,27 +157,27 @@ Zone6A_EventScript_ItemNestBall::
 	end
 
 Zone6A_Text_Rita_Intro:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Hey. I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GREY}.\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey. I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GRAY}.\n"
 	.string "Welcome to our humble island.\p"
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: You can challenge me, if you\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: You can challenge me, if you\n"
 	.string "want. I'm pretty tough.\l"
 	.string "But you have to show your strength.\p"
 	.string "Beat all the other Trainers on the\n"
 	.string "island, then come back here.$"
 
 Zone6A_Text_Rita_HaventDefeatedEveryone:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: You haven't beaten everyone.\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: You haven't beaten everyone.\n"
 	.string "Come on, where's your spirit?$"
 
 Zone6A_Text_Rita_ReadyToBattle:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Wow, you beat everyone.\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Wow, you beat everyone.\n"
 	.string "Want to challenge me now?$"
 
 Zone6A_Text_Rita_IWait:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: I'll wait for your challenge.$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: I'll wait for your challenge.$"
 
 Zone6A_Text_Rita_IWillWin:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: I will defeat you using the\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: I will defeat you using the\n"
 	.string "power of Friendship and Happiness!$"
 
 Zone6A_Text_Leviathan3Defeat:
@@ -185,12 +185,12 @@ Zone6A_Text_Leviathan3Defeat:
 	.string "one and the same!$"
 
 Zone6A_Text_Rita_HereReward:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: For your victory, have a\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: For your victory, have a\n"
 	.string "Soothe Bell, so you can also be\l"
 	.string "friends with your Pokémon partners.$"
 
 Zone6A_Text_Rita_GoodLuck:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GREY}: Did you know Pokémon\n"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Did you know Pokémon\n"
 	.string "no longer evolve by Friendship?\p"
 	.string "That's right, no need to walk around\n"
 	.string "for ages just to evolve them.$"

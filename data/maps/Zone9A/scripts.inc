@@ -151,7 +151,7 @@ Zone9A_Movement_WaitForNextWinstrate:
 	step_end
 
 Zone9A_Text_BattleOurFamily:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GREY}: Howzit goin?\p"
+	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\p"
 	.string "Oh, you're a traveler!\n"
 	.string "You might be strong enough...\p"
 	.string "I bet you can't defeat the five\n"
@@ -170,11 +170,11 @@ Zone9A_Text_AriDefeat:
 	.string "You're tougher than I thought!$"
 
 Zone9A_Text_AriPostBattle:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GREY}: Hey, everyone!\n"
+	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Hey, everyone!\n"
 	.string "I've found a pretty strong Trainer!$"
 
 Zone9A_Text_BerthaIntro:
-	.string "{COLOR BLUE}Bertha{COLOR DARK_GREY}: You beat my brother?\n"
+	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: You beat my brother?\n"
 	.string "Ugh. Such a brat.\p"
 	.string "Let's just get this over with.$"
 
@@ -183,10 +183,10 @@ Zone9A_Text_BerthaDefeat:
 	.string "I thought this would happen...$"
 
 Zone9A_Text_BerthaPostBattle:
-	.string "{COLOR BLUE}Bertha{COLOR DARK_GREY}: Mom! It's your turn!$"
+	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: Mom! It's your turn!$"
 
 Zone9A_Text_CassandraIntro:
-	.string "{COLOR BLUE}Cassandra{COLOR DARK_GREY}: Oh! I am so excited!\p"
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: Oh! I am so excited!\p"
 	.string "Finally, a challenger who got past\n"
 	.string "both of my children!\p"
 	.string "It's Momma's time to shine!$"
@@ -195,10 +195,10 @@ Zone9A_Text_CassandraDefeat:
 	.string "It was you who shined instead!$"
 
 Zone9A_Text_CassandraPostBattle:
-	.string "{COLOR BLUE}Cassandra{COLOR DARK_GREY}: It's all you, baby!$"
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: It's all you, baby!$"
 
 Zone9A_Text_DominicIntro:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: Guess what time it is?\n"
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Guess what time it is?\n"
 	.string "It's time to take out the trash!$"
 
 Zone9A_Text_DominicDefeat:
@@ -206,16 +206,16 @@ Zone9A_Text_DominicDefeat:
 	.string "I didn't realize you were so strong!$"
 
 Zone9A_Text_DominicPostBattle:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GREY}: Kids!\n"
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Kids!\n"
 	.string "Wake your grandma up!$"
 
 Zone9A_Text_EricaIntro:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: Who dares disturb me from\n"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from\n"
 	.string "my slumber?$"
 
 Zone9A_Text_EricaDefeat:
 	.string "Oh... You are the one...$"
 
 Zone9A_Text_EricaPostBattle:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GREY}: Please, come inside.\n"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\n"
 	.string "I have a request for you.$"

@@ -70,17 +70,17 @@ Zone14Sanctuary_EventScript_Leave:
 	end
 
 Zone14Sanctuary_Text_Colress_ReachedZone:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Congratulations.\n"
-	.string "You have cleared {COLOR RED}Zone 13{COLOR DARK_GREY} and {COLOR RED}Zone 14{COLOR DARK_GREY}.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
+	.string "You have cleared {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}.$"
 
 Zone14Sanctuary_Text_RewardClear13:
-	.string "Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GREY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GRAY} is...$"
 
 Zone14Sanctuary_Text_13Reward:
 	.string "The Mach Bike.$"
 
 Zone14Sanctuary_Text_RewardClear14:
-	.string "Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GREY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GRAY} is...$"
 
 Zone14Sanctuary_Text_14Reward:
 	.string "TM10 - Hidden Power.$"

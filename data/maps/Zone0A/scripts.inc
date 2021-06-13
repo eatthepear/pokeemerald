@@ -51,10 +51,10 @@ Zone0A_Text_Intro:
 	.string "challenges to face. Everything is\l"
 	.string "meant to help you on your journey.\p"
 	.string "Zone 0 has three main attractions:\n"
-	.string "The {COLOR RED}Pokémon Day Care{COLOR DARK_GREY}, which I run;\l"
-	.string "the purple building, or the {COLOR RED}TPI{COLOR DARK_GREY},\l"
+	.string "The {COLOR RED}Pokémon Day Care{COLOR DARK_GRAY}, which I run;\l"
+	.string "the purple building, or the {COLOR RED}TPI{COLOR DARK_GRAY},\l"
 	.string "which gives access to warp\l"
-	.string "technology; and the {COLOR RED}Berry fields{COLOR DARK_GREY}.\p"
+	.string "technology; and the {COLOR RED}Berry fields{COLOR DARK_GRAY}.\p"
 	.string "For the Berry fields, you'll want\n"
 	.string "to have this.$"
 

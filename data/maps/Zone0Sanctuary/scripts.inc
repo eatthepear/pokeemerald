@@ -159,9 +159,9 @@ Zone0Sanctuary_EventScript_Zone0Available:
 	end
 	
 Zone0Sanctuary_Text_Colress_Zone0Unlocked:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: In addition, you will\n"
-	.string "have access to {COLOR RED}Zone 0{COLOR DARK_GREY}.\p"
-	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GREY},\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you will\n"
+	.string "have access to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\p"
+	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY},\n"
 	.string "you can access it from any\l"
 	.string "Sanctuary by talking to me.$"
 
@@ -314,7 +314,7 @@ Zone0Sanctuary_EventScript_RandomStarter:
 	return
 
 Zone0Sanctuary_Text_Colress_RandomStarter:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Randomizing...$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing...$"
 
 Zone0Sanctuary_EventScript_BULBASAUR:
 	bufferspeciesname 0, SPECIES_BULBASAUR
@@ -328,7 +328,7 @@ Zone0Sanctuary_EventScript_BULBASAUR:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterBULBASAUR:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Bulbasaur?$"
 
 Zone0Sanctuary_EventScript_CHARMANDER:
@@ -343,7 +343,7 @@ Zone0Sanctuary_EventScript_CHARMANDER:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCHARMANDER:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Charmander?$"
 
 Zone0Sanctuary_EventScript_SQUIRTLE:
@@ -358,7 +358,7 @@ Zone0Sanctuary_EventScript_SQUIRTLE:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSQUIRTLE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Squirtle?$"
 
 Zone0Sanctuary_EventScript_PIKACHU:
@@ -373,7 +373,7 @@ Zone0Sanctuary_EventScript_PIKACHU:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPIKACHU:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Pikachu?$"
 
 Zone0Sanctuary_EventScript_EEVEE:
@@ -388,7 +388,7 @@ Zone0Sanctuary_EventScript_EEVEE:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterEEVEE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Eevee?$"
 
 Zone0Sanctuary_EventScript_CHIKORITA:
@@ -403,7 +403,7 @@ Zone0Sanctuary_EventScript_CHIKORITA:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCHIKORITA:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Chikorita?$"
 
 Zone0Sanctuary_EventScript_CYNDAQUIL:
@@ -418,7 +418,7 @@ Zone0Sanctuary_EventScript_CYNDAQUIL:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCYNDAQUIL:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Cyndaquil?$"
 
 Zone0Sanctuary_EventScript_TOTODILE:
@@ -433,7 +433,7 @@ Zone0Sanctuary_EventScript_TOTODILE:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTOTODILE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Totodile?$"
 
 Zone0Sanctuary_EventScript_TREECKO:
@@ -448,7 +448,7 @@ Zone0Sanctuary_EventScript_TREECKO:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTREECKO:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Treecko?$"
 
 Zone0Sanctuary_EventScript_TORCHIC:
@@ -463,7 +463,7 @@ Zone0Sanctuary_EventScript_TORCHIC:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTORCHIC:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Torchic?$"
 
 Zone0Sanctuary_EventScript_MUDKIP:
@@ -478,7 +478,7 @@ Zone0Sanctuary_EventScript_MUDKIP:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterMUDKIP:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Mudkip?$"
 
 Zone0Sanctuary_EventScript_TURTWIG:
@@ -493,7 +493,7 @@ Zone0Sanctuary_EventScript_TURTWIG:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTURTWIG:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Turtwig?$"
 
 Zone0Sanctuary_EventScript_CHIMCHAR:
@@ -508,7 +508,7 @@ Zone0Sanctuary_EventScript_CHIMCHAR:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCHIMCHAR:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Chimchar?$"
 
 Zone0Sanctuary_EventScript_PIPLUP:
@@ -523,7 +523,7 @@ Zone0Sanctuary_EventScript_PIPLUP:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPIPLUP:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Piplup?$"
 
 Zone0Sanctuary_EventScript_MUNCHLAX:
@@ -538,7 +538,7 @@ Zone0Sanctuary_EventScript_MUNCHLAX:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterMUNCHLAX:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Munchlax?$"
 
 Zone0Sanctuary_EventScript_RIOLU:
@@ -553,7 +553,7 @@ Zone0Sanctuary_EventScript_RIOLU:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterRIOLU:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Riolu?$"
 
 Zone0Sanctuary_EventScript_SNIVY:
@@ -568,7 +568,7 @@ Zone0Sanctuary_EventScript_SNIVY:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSNIVY:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Snivy?$"
 
 Zone0Sanctuary_EventScript_TEPIG:
@@ -583,7 +583,7 @@ Zone0Sanctuary_EventScript_TEPIG:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTEPIG:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Tepig?$"
 
 Zone0Sanctuary_EventScript_OSHAWOTT:
@@ -598,7 +598,7 @@ Zone0Sanctuary_EventScript_OSHAWOTT:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterOSHAWOTT:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Oshawott?$"
 
 Zone0Sanctuary_EventScript_CHESPIN:
@@ -613,7 +613,7 @@ Zone0Sanctuary_EventScript_CHESPIN:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCHESPIN:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Chespin?$"
 
 Zone0Sanctuary_EventScript_FENNEKIN:
@@ -628,7 +628,7 @@ Zone0Sanctuary_EventScript_FENNEKIN:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterFENNEKIN:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Fennekin?$"
 
 Zone0Sanctuary_EventScript_FROAKIE:
@@ -643,7 +643,7 @@ Zone0Sanctuary_EventScript_FROAKIE:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterFROAKIE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Froakie?$"
 
 Zone0Sanctuary_EventScript_ROWLET:
@@ -658,7 +658,7 @@ Zone0Sanctuary_EventScript_ROWLET:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterROWLET:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Rowlet?$"
 
 Zone0Sanctuary_EventScript_LITTEN:
@@ -673,7 +673,7 @@ Zone0Sanctuary_EventScript_LITTEN:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterLITTEN:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Litten?$"
 
 Zone0Sanctuary_EventScript_POPPLIO:
@@ -688,7 +688,7 @@ Zone0Sanctuary_EventScript_POPPLIO:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPOPPLIO:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Popplio?$"
 
 Zone0Sanctuary_EventScript_GROOKEY:
@@ -703,7 +703,7 @@ Zone0Sanctuary_EventScript_GROOKEY:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterGROOKEY:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Grookey?$"
 
 Zone0Sanctuary_EventScript_SCORBUNNY:
@@ -718,7 +718,7 @@ Zone0Sanctuary_EventScript_SCORBUNNY:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSCORBUNNY:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Scorbunny?$"
 
 Zone0Sanctuary_EventScript_SOBBLE:
@@ -733,7 +733,7 @@ Zone0Sanctuary_EventScript_SOBBLE:
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSOBBLE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you sure you want\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Sobble?$"
 
 Zone0Sanctuary_EventScript_NuzlockeDialog:
@@ -797,7 +797,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	end
 
 Zone0Sanctuary_Text_RTC:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Finally, please set the clock.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Finally, please set the clock.$"
 
 Zone0Sanctuary_EventScript_NextZone::
 	lock
@@ -828,11 +828,11 @@ Zone0Sanctuary_EventScript_Leave:
 	end
 
 Zone0Sanctuary_Text_Colress_Hello:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Ah. Welcome, trainer.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. Welcome, trainer.$"
 
 Zone0Sanctuary_Text_Colress_Welcome:
 	.string "Welcome to the\n"
-	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GREY}!\p"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\p"
 	.string "I am here to aid challengers who\n"
 	.string "might attempt to brave the\l"
 	.string "trials ahead.\p"
@@ -841,15 +841,15 @@ Zone0Sanctuary_Text_Colress_Welcome:
 
 Zone0Sanctuary_Text_Colress_VanillaNuzlocke:
 	.string "There are two game modes:\n"
-	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} and {COLOR RED}Nuzlocke{COLOR DARK_GREY}.$"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} and {COLOR RED}Nuzlocke{COLOR DARK_GRAY}.$"
 
 Zone0Sanctuary_Text_Colress_VanillaExplained:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode does not add any extra\n"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\n"
 	.string "modifications. It will be a normal\l"
 	.string "playthrough with no added rules.$"
 
 Zone0Sanctuary_Text_Colress_NuzlockeExplained:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GREY} mode completely implements\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode completely implements\n"
 	.string "all standard Nuzlocke rules, such\l"
 	.string "as permanent death and capture\l"
 	.string "restrictions, and comes with\l"
@@ -863,46 +863,46 @@ Zone0Sanctuary_Text_Colress_PickMode:
 	.string "play on?$"
 
 Zone0Sanctuary_Text_Colress_VanillaSure:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode? Are you sure?\n"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode? Are you sure?\n"
 	.string "You won't be able to switch later.$"
 
 Zone0Sanctuary_Text_Colress_NuzlockeSure:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GREY} mode? Are you sure?\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode? Are you sure?\n"
 	.string "You won't be able to switch later.$"
 
 Zone0Sanctuary_Text_Colress_VanillaMode:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GREY} mode enabled. Good luck.$"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled. Good luck.$"
 
 Zone0Sanctuary_Text_Colress_NuzlockeMode:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GREY} mode enabled. Good luck.$"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled. Good luck.$"
 
 Zone0Sanctuary_Text_Colress_StartTour:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Allow me to show you each\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each\n"
 	.string "of the shops.$"
 
 Zone0Sanctuary_Text_Colress_General:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The top left shop is\n"
-	.string "{COLOR RED}Tim's General Purpose Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is\n"
+	.string "{COLOR RED}Tim's General Purpose Shop{COLOR DARK_GRAY}.\p"
 	.string "Healing supplies, basic Pokéballs,\n"
 	.string "Repels, and X items are sold here.$"
 
 Zone0Sanctuary_Text_Colress_Item:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The top right shop is \n"
-	.string "{COLOR RED}Silph Unique Item Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is \n"
+	.string "{COLOR RED}Silph Unique Item Shop{COLOR DARK_GRAY}.\p"
 	.string "They sell Pokéball variations,\n"
 	.string "Evolution items, held items,\l"
 	.string "and other various trinkets.$"
 
 Zone0Sanctuary_Text_Colress_Services:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom left shop is\n"
-	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is\n"
+	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
 	.string "They offer a variety of Pokémon\n"
 	.string "services, but only to customers who\l"
 	.string "can pay the right price.$"
 
 Zone0Sanctuary_Text_Colress_Healing:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The bottom right shop is\n"
-	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GREY}.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is\n"
+	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
 	.string "For ¥1000, they will heal your\n"
 	.string "entire party and also grant\l"
 	.string "complimentary access to the\l"
@@ -914,7 +914,7 @@ Zone0Sanctuary_Text_Colress_NuzlockeHealing:
 	.string "surviving party.$"
 
 Zone0Sanctuary_Text_Colress_TourDone:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Our tour has finished.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
 	.string "These four shops will be available\n"
 	.string "at every Sanctuary.\p"
 	.string "As you progress through more Zones,\n"
@@ -937,7 +937,7 @@ Zone0Sanctuary_Text_ReceivedStarter:
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
 Zone0Sanctuary_Text_Colress_HowBoutNickname:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: How about a nickname\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname\n"
 	.string "for this wonderful Pokémon?$"
 
 Zone0Sanctuary_Text_Colress_NiceChoice:
@@ -953,7 +953,7 @@ Zone0Sanctuary_Text_ReceivedMoney:
 	.string "Received ¥5000!$"
 
 Zone0Sanctuary_Text_ReceivedPokedex:
-	.string "Received the {COLOR RED}Pokédex{COLOR DARK_GREY}!$"
+	.string "Received the {COLOR RED}Pokédex{COLOR DARK_GRAY}!$"
 
 Zone0Sanctuary_Movement_Colress_FirstShop:
 	walk_left

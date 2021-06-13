@@ -37,12 +37,12 @@ Zone17Sanctuary_EventScript_Intro:
 	end
 
 Zone17Sanctuary_Text_Colress_WhenUReady:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: The next two zones,\n"
-	.string "{COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}, are combined.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones,\n"
+	.string "{COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}, are combined.\p"
 	.string "You will not be able to access a\n"
 	.string "Sanctuary in between the Zones.\p"
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: When you are prepared to\n"
-	.string "enter {COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}, speak to me.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to\n"
+	.string "enter {COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}, speak to me.$"
 
 Zone17Sanctuary_EventScript_NextZone::
 	lock
@@ -67,9 +67,9 @@ Zone17Sanctuary_EventScript_NextZoneCheck:
 	end
 
 Zone17Sanctuary_Text_Colress_ReadyToLeave:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GREY}: Are you ready to leave?\n"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you ready to leave?\n"
 	.string "You will be entering\l"
-	.string "{COLOR RED}Zone 18{COLOR DARK_GREY} and {COLOR RED}Zone 19{COLOR DARK_GREY}.$"
+	.string "{COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}.$"
 
 Zone17Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup

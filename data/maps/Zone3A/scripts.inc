@@ -53,7 +53,7 @@ Zone3A_EventScript_Leviathan1::
 	end
 
 Zone3A_Text_Leviathan1Text:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: That's my favorite\n"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: That's my favorite\n"
 	.string "Fishing Rod. Don't lose it!$"
 
 Zone3A_EventScript_Warp:
@@ -62,15 +62,15 @@ Zone3A_EventScript_Warp:
 	end
 
 Zone3A_Text_Leviathan1Intro:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You! How dare you intrude on\n"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: You! How dare you intrude on\n"
 	.string "my house, my home! Begone!\l"
-	.string "I am {COLOR BLUE}Leviathan Remi{COLOR DARK_GREY}, all powerful!$"
+	.string "I am {COLOR BLUE}Leviathan Remi{COLOR DARK_GRAY}, all powerful!$"
 
 Zone3A_Text_Leviathan1Defeat:
 	.string "Remi: Do a Marill roll!$"
 
 Zone3A_Text_Leviathan1Reward:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GREY}: You have bested me.\n"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: You have bested me.\n"
 	.string "I grant you the Fishing Rod,\l"
 	.string "a way to fish for Water Pokémon.$"
 

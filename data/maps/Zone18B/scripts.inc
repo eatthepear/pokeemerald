@@ -137,19 +137,19 @@ Zone18B_EventScript_InitiatePirateSequence:
 	end
 
 Zone18B_Text_LeviathanCutoff:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: Hello, {PLAYER}.\p"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Hello, {PLAYER}.\p"
 	.string "You're making quite the impression,\n"
 	.string "defeating all of my hand-selected\l"
 	.string "trainers.\p"
 	.string "Now is the time to battle.\p"
-	.string "I, {COLOR BLUE}Leviathan Odysseus{COLOR DARK_GREY}, challenge-$"
+	.string "I, {COLOR BLUE}Leviathan Odysseus{COLOR DARK_GRAY}, challenge-$"
 
 Zone18B_Text_Sir:
 	.string "Sir!\n"
 	.string "The pirates are raiding the beach!$"
 
 Zone18B_Text_LeviathanNotAgain:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: Not again!$"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Not again!$"
 
 Zone18B_Movement_LeviathanLeave:
 	walk_fastest_left
@@ -170,7 +170,7 @@ Zone18B_EventScript_ThankForPirates:
 	end
 
 Zone18B_Odysseus_ThankYou:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: You defeated the pirates?\p"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: You defeated the pirates?\p"
 	.string "Thank you, {PLAYER}, for finding\n"
 	.string "their hideout. I want you to have\l"
 	.string "this as a reward.$"
@@ -184,7 +184,7 @@ Zone18B_EventScript_WantBattleOrLeave:
 	end
 
 Zone18B_Odysseus_WantBattle:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GREY}: If you'd like, we can\n"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: If you'd like, we can\n"
 	.string "have a battle.$"
 
 Zone18B_EventScript_OdysseusBattle:
