@@ -28,6 +28,7 @@ Zone13C_EventScript_KeizanBlackBelt::
 	goto_if_eq Zone13C_EventScript_Keizan_ISee
 	fadeoutbgm 1
 	msgbox Zone13C_Text_KeizanBlackBelt_LetsGetStarted, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN1
 	trainerbattle_no_intro TRAINER_LEVIATHAN7, Zone13C_Text_Leviathan7Defeat
 	goto Zone13C_EventScript_Leviathan7Defeated
 	end
@@ -87,6 +88,7 @@ Zone13C_EventScript_KeizanPsychic::
 	goto_if_eq Zone13C_EventScript_Keizan_ISee
 	fadeoutbgm 1
 	msgbox Zone13C_Text_KeizanPsychic_FairBetter, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN2
 	trainerbattle_no_intro TRAINER_LEVIATHAN8, Zone13C_Text_Leviathan8Defeat
 	goto Zone13C_EventScript_Leviathan8Defeated
 	end

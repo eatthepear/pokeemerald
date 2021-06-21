@@ -123,6 +123,7 @@ Zone8D_EventScript_BattleSetup:
 	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
 	totemboost_atk1 B_POSITION_OPPONENT_RIGHT
 	totemboost_speed1 B_POSITION_OPPONENT_LEFT
 	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_MirageDefeat

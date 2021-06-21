@@ -86,6 +86,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	waitse
 	faceplayer
 	msgbox Zone5A_Text_Leviathan2Intro2, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	totemboost_def1 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN2, Zone5A_Text_Leviathan2Defeat
 	goto Zone5A_EventScript_Leviathan2Defeated

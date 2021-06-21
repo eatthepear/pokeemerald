@@ -28,6 +28,7 @@ Zone3A_EventScript_Exit::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone3A_Text_Leviathan1Intro, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_REMI
 	trainerbattle_no_intro TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Defeat
 	goto Zone3A_EventScript_Leviathan1Defeated
 	end

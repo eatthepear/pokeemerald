@@ -75,6 +75,7 @@ Zone14C_EventScript_InitiateLeviathanBattle:
 	compare VAR_RESULT, 1
 	goto_if_eq Zone14C_EventScript_DontHaveEnoughMons
 	fadeoutbgm 1
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC, TRAINER_LEVIATHAN9, 0, Zone14C_Text_Mirage_Begone, Zone14C_Text_Leviathan9Defeat, gText_NotEnoughMons, Zone14C_EventScript_Leviathan9Defeated
 	end
 

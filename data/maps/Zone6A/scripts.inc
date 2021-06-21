@@ -57,6 +57,7 @@ Zone6A_EventScript_RitaSaysNo:
 Zone6A_EventScript_RitaBattle:
 	fadeoutbgm 1
 	msgbox Zone6A_Text_Rita_IWillWin, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
 	goto Zone6A_EventScript_Leviathan3Defeated
 	end

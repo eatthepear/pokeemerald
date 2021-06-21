@@ -41,6 +41,7 @@ Zone10A_EventScript_InitiateLeviathanBattle:
 	msgbox Zone10A_Text_FoundEm, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Zone10A_Text_CrushYou, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ADAMINA
 	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
 	goto Zone10A_EventScript_Leviathan5Defeated
 	end

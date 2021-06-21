@@ -24,6 +24,10 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
+#include "data.h"
+#include "event_data.h"
+#include "constants/battle_transition.h"
+#include "constants/vars.h"
 
 struct TransitionData
 {
@@ -76,6 +80,7 @@ static void Phase2Task_Slice(u8 taskId);
 static void Phase2Task_WhiteFade(u8 taskId);
 static void Phase2Task_GridSquares(u8 taskId);
 static void Phase2Task_Shards(u8 taskId);
+static void Phase2Task_Mugshot(u8 taskId);
 static void Phase2Task_Sidney(u8 taskId);
 static void Phase2Task_Phoebe(u8 taskId);
 static void Phase2Task_Glacia(u8 taskId);
@@ -331,6 +336,7 @@ static const TaskFunc sPhase2_Tasks[B_TRANSITION_COUNT] =
     [B_TRANSITION_WHITEFADE] = Phase2Task_WhiteFade,
     [B_TRANSITION_GRID_SQUARES] = Phase2Task_GridSquares,
     [B_TRANSITION_SHARDS] = Phase2Task_Shards,
+    [B_TRANSITION_MUGSHOT] = Phase2Task_Mugshot,
     [B_TRANSITION_SIDNEY] = Phase2Task_Sidney,
     [B_TRANSITION_PHOEBE] = Phase2Task_Phoebe,
     [B_TRANSITION_GLACIA] = Phase2Task_Glacia,
@@ -515,6 +521,16 @@ static const TransitionStateFunc sPhase2_Mugshot_Funcs[] =
 
 static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
 {
+    [MUGSHOT_REMI] = TRAINER_PIC_FISHERMAN,
+    [MUGSHOT_DECLAN] = TRAINER_PIC_BUG_MANIAC,
+    [MUGSHOT_RITA] = TRAINER_PIC_AROMA_LADY,
+    [MUGSHOT_MIRAGE] = TRAINER_PIC_DOME_ACE_TUCKER,
+    [MUGSHOT_ADAMINA] = TRAINER_PIC_LASS,
+    [MUGSHOT_JAKE] = TRAINER_PIC_BIRD_KEEPER,
+    [MUGSHOT_KAIZEN1] = TRAINER_PIC_BLACK_BELT,
+    [MUGSHOT_KAIZEN2] = TRAINER_PIC_PSYCHIC_M,
+    [MUGSHOT_ODYSSEUS] = TRAINER_PIC_SAILOR,
+    [MUGSHOT_JULIE] = TRAINER_PIC_PICNICKER,
     [MUGSHOT_SIDNEY] = TRAINER_PIC_ELITE_FOUR_SIDNEY,
     [MUGSHOT_PHOEBE] = TRAINER_PIC_ELITE_FOUR_PHOEBE,
     [MUGSHOT_GLACIA] = TRAINER_PIC_ELITE_FOUR_GLACIA,
@@ -523,6 +539,16 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
+    [MUGSHOT_REMI] = {0x200, 0x200},
+    [MUGSHOT_DECLAN] = {0x200, 0x200},
+    [MUGSHOT_RITA] = {0x200, 0x200},
+    [MUGSHOT_MIRAGE] = {0x200, 0x200},
+    [MUGSHOT_ADAMINA] = {0x200, 0x200},
+    [MUGSHOT_JAKE] = {0x200, 0x200},
+    [MUGSHOT_KAIZEN1] = {0x200, 0x200},
+    [MUGSHOT_KAIZEN2] = {0x200, 0x200},
+    [MUGSHOT_ODYSSEUS] = {0x200, 0x200},
+    [MUGSHOT_JULIE] = {0x200, 0x200},
     [MUGSHOT_SIDNEY] =   {0x200, 0x200},
     [MUGSHOT_PHOEBE] =   {0x200, 0x200},
     [MUGSHOT_GLACIA] =   {0x1B0, 0x1B0},
@@ -531,6 +557,16 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
+    [MUGSHOT_REMI] = {0,     0},
+    [MUGSHOT_DECLAN] = {0,     0},
+    [MUGSHOT_RITA] = {0,     0},
+    [MUGSHOT_MIRAGE] = {0,     0},
+    [MUGSHOT_ADAMINA] = {0,     0},
+    [MUGSHOT_JAKE] = {0,     0},
+    [MUGSHOT_KAIZEN1] = {0,     0},
+    [MUGSHOT_KAIZEN2] = {0,     0},
+    [MUGSHOT_ODYSSEUS] = {0,     0},
+    [MUGSHOT_JULIE] = {0,     0},
     [MUGSHOT_SIDNEY] =   {0,     0},
     [MUGSHOT_PHOEBE] =   {0,     0},
     [MUGSHOT_GLACIA] =   {-4,    4},
@@ -831,6 +867,16 @@ static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/battle_transitions/may
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
 {
+    [MUGSHOT_REMI] = sMugshotPal_Glacia,
+    [MUGSHOT_DECLAN] = sMugshotPal_Glacia,
+    [MUGSHOT_RITA] = sMugshotPal_Glacia,
+    [MUGSHOT_MIRAGE] = sMugshotPal_Drake,
+    [MUGSHOT_ADAMINA] = sMugshotPal_Glacia,
+    [MUGSHOT_JAKE] = sMugshotPal_Glacia,
+    [MUGSHOT_KAIZEN1] = sMugshotPal_Glacia,
+    [MUGSHOT_KAIZEN2] = sMugshotPal_Glacia,
+    [MUGSHOT_ODYSSEUS] = sMugshotPal_Glacia,
+    [MUGSHOT_JULIE] = sMugshotPal_Glacia,
     [MUGSHOT_SIDNEY] = sMugshotPal_Sidney,
     [MUGSHOT_PHOEBE] = sMugshotPal_Phoebe,
     [MUGSHOT_GLACIA] = sMugshotPal_Glacia,
@@ -2063,6 +2109,13 @@ static void VBlankCB_Phase2_Wave(void)
     REG_WINOUT = sTransitionStructPtr->WINOUT;
     REG_WIN0V = sTransitionStructPtr->WIN0V;
     DmaSet(0, gScanlineEffectRegBuffers[1], &REG_WIN0H, 0xA2400001);
+}
+
+
+static void Phase2Task_Mugshot(u8 taskId)
+{
+    gTasks[taskId].tMugshotId = VarGet(VAR_MUGSHOT_ID);
+    Phase2Task_MugShotTransition(taskId);
 }
 
 static void Phase2Task_Sidney(u8 taskId)
@@ -4340,3 +4393,4 @@ static bool8 Phase2_FrontierSquaresScroll_Func5(struct Task *task)
 #undef tData5
 #undef tData6
 #undef tData7
+
