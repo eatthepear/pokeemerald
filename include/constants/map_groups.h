@@ -555,7 +555,7 @@
 #define MAP_NAVEL_ROCK_BOTTOM                               (87 | (26 << 8))
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 
-// gMapGroup_IndoorRoute104Prototype
+// gMapGroup_BattleLabyrinth
 #define MAP_ZONE0SANCTUARY  (0 | (27 << 8))
 #define MAP_ZONE0SHOPS      (1 | (27 << 8))
 #define MAP_ZONE1A          (2 | (27 << 8))
