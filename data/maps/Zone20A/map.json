@@ -58,7 +58,15 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 75,
+      "elevation": 0,
+      "var": "VAR_ZONE",
+      "var_value": "20",
+      "script": "Zone20A_EventScript_Exit"
+    }
   ],
   "bg_events": [
     {

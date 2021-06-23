@@ -5250,6 +5250,26 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/Zone20A/border.bin",
       "blockdata_filepath": "data/layouts/Zone20A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE20SANCTUARY",
+      "name": "Zone20Sanctuary_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone20Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone20Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE20SHOPS",
+      "name": "Zone20Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone20Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone20Shops/map.bin"
     }
   ]
 }

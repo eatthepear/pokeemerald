@@ -1,6 +1,12 @@
 Zone20A_MapScripts::
 	.byte 0
 
+Zone20A_EventScript_Exit::
+	lockall
+	warp MAP_ZONE20SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone20A_EventScript_InitiateLeviathanBattle::
 	lock
 	fadeoutbgm 1
