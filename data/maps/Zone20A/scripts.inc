@@ -16,6 +16,7 @@ Zone20A_EventScript_InitiateLeviathanBattle::
 	waitse
 	faceplayer
 	msgbox Zone20A_Text_Leviathan11Intro, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JULIE
 	trainerbattle_no_intro TRAINER_LEVIATHAN11, Zone20A_Text_Leviathan11Defeat
 	goto Zone20A_EventScript_Leviathan11Defeated
 	end

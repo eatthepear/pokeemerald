@@ -529,8 +529,8 @@ static void CB2_InitBattleInternal(void)
     gBattle_BG3_Y = 0;
 
     gBattleTerrain = BattleSetup_GetTerrainId();
-    if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
-        gBattleTerrain = BATTLE_TERRAIN_BUILDING;
+    /*if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
+        gBattleTerrain = BATTLE_TERRAIN_BUILDING;*/
 
     InitBattleBgsVideo();
     LoadBattleTextboxAndBackground();

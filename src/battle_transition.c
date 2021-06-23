@@ -521,6 +521,11 @@ static const TransitionStateFunc sPhase2_Mugshot_Funcs[] =
 
 static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
 {
+    [MUGSHOT_SIDNEY] = TRAINER_PIC_ELITE_FOUR_SIDNEY,
+    [MUGSHOT_PHOEBE] = TRAINER_PIC_ELITE_FOUR_PHOEBE,
+    [MUGSHOT_GLACIA] = TRAINER_PIC_ELITE_FOUR_GLACIA,
+    [MUGSHOT_DRAKE] = TRAINER_PIC_ELITE_FOUR_DRAKE,
+    [MUGSHOT_CHAMPION] = TRAINER_PIC_CHAMPION_WALLACE,
     [MUGSHOT_REMI] = TRAINER_PIC_FISHERMAN,
     [MUGSHOT_DECLAN] = TRAINER_PIC_BUG_MANIAC,
     [MUGSHOT_RITA] = TRAINER_PIC_AROMA_LADY,
@@ -531,14 +536,14 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_KAIZEN2] = TRAINER_PIC_PSYCHIC_M,
     [MUGSHOT_ODYSSEUS] = TRAINER_PIC_SAILOR,
     [MUGSHOT_JULIE] = TRAINER_PIC_PICNICKER,
-    [MUGSHOT_SIDNEY] = TRAINER_PIC_ELITE_FOUR_SIDNEY,
-    [MUGSHOT_PHOEBE] = TRAINER_PIC_ELITE_FOUR_PHOEBE,
-    [MUGSHOT_GLACIA] = TRAINER_PIC_ELITE_FOUR_GLACIA,
-    [MUGSHOT_DRAKE] = TRAINER_PIC_ELITE_FOUR_DRAKE,
-    [MUGSHOT_CHAMPION] = TRAINER_PIC_CHAMPION_WALLACE,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
+    [MUGSHOT_SIDNEY] =   {0x200, 0x200},
+    [MUGSHOT_PHOEBE] =   {0x200, 0x200},
+    [MUGSHOT_GLACIA] =   {0x1B0, 0x1B0},
+    [MUGSHOT_DRAKE] =    {0x1A0, 0x1A0},
+    [MUGSHOT_CHAMPION] = {0x188, 0x188},
     [MUGSHOT_REMI] = {0x200, 0x200},
     [MUGSHOT_DECLAN] = {0x200, 0x200},
     [MUGSHOT_RITA] = {0x200, 0x200},
@@ -549,14 +554,14 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_KAIZEN2] = {0x200, 0x200},
     [MUGSHOT_ODYSSEUS] = {0x200, 0x200},
     [MUGSHOT_JULIE] = {0x200, 0x200},
-    [MUGSHOT_SIDNEY] =   {0x200, 0x200},
-    [MUGSHOT_PHOEBE] =   {0x200, 0x200},
-    [MUGSHOT_GLACIA] =   {0x1B0, 0x1B0},
-    [MUGSHOT_DRAKE] =    {0x1A0, 0x1A0},
-    [MUGSHOT_CHAMPION] = {0x188, 0x188},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
+    [MUGSHOT_SIDNEY] =   {0,     0},
+    [MUGSHOT_PHOEBE] =   {0,     0},
+    [MUGSHOT_GLACIA] =   {-4,    4},
+    [MUGSHOT_DRAKE] =    {0,     5},
+    [MUGSHOT_CHAMPION] = {-8,    7},
     [MUGSHOT_REMI] = {0,     0},
     [MUGSHOT_DECLAN] = {0,     0},
     [MUGSHOT_RITA] = {0,     0},
@@ -567,11 +572,6 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_KAIZEN2] = {0,     0},
     [MUGSHOT_ODYSSEUS] = {0,     0},
     [MUGSHOT_JULIE] = {0,     0},
-    [MUGSHOT_SIDNEY] =   {0,     0},
-    [MUGSHOT_PHOEBE] =   {0,     0},
-    [MUGSHOT_GLACIA] =   {-4,    4},
-    [MUGSHOT_DRAKE] =    {0,     5},
-    [MUGSHOT_CHAMPION] = {-8,    7},
 };
 
 static const TransitionSpriteCallback sTrainerPicSpriteCbs[] =
@@ -867,6 +867,11 @@ static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/battle_transitions/may
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
 {
+    [MUGSHOT_SIDNEY] = sMugshotPal_Sidney,
+    [MUGSHOT_PHOEBE] = sMugshotPal_Phoebe,
+    [MUGSHOT_GLACIA] = sMugshotPal_Glacia,
+    [MUGSHOT_DRAKE] = sMugshotPal_Drake,
+    [MUGSHOT_CHAMPION] = sMugshotPal_Champion,
     [MUGSHOT_REMI] = sMugshotPal_Glacia,
     [MUGSHOT_DECLAN] = sMugshotPal_Glacia,
     [MUGSHOT_RITA] = sMugshotPal_Glacia,
@@ -876,12 +881,7 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_KAIZEN1] = sMugshotPal_Glacia,
     [MUGSHOT_KAIZEN2] = sMugshotPal_Glacia,
     [MUGSHOT_ODYSSEUS] = sMugshotPal_Glacia,
-    [MUGSHOT_JULIE] = sMugshotPal_Glacia,
-    [MUGSHOT_SIDNEY] = sMugshotPal_Sidney,
-    [MUGSHOT_PHOEBE] = sMugshotPal_Phoebe,
-    [MUGSHOT_GLACIA] = sMugshotPal_Glacia,
-    [MUGSHOT_DRAKE] = sMugshotPal_Drake,
-    [MUGSHOT_CHAMPION] = sMugshotPal_Champion
+    [MUGSHOT_JULIE] = sMugshotPal_Glacia
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =
