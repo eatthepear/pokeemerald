@@ -4056,10 +4056,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM20_SAFEGUARD] =
+    [ITEM_TM20_ENERGY_BALL] =
     {
         .name = _("TM20"),
-        .itemId = ITEM_TM20_SAFEGUARD,
+        .itemId = ITEM_TM20_ENERGY_BALL,
         .price = 3000,
         .description = sTM20Desc,
         .pocket = POCKET_TM_HM,

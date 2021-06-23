@@ -1634,9 +1634,9 @@ static const u8 sTM19Desc[] = _(
     "paralyzes the foe.");
 
 static const u8 sTM20Desc[] = _(
-    "Prevents status\n"
-    "abnormality with a\n"
-    "mystical power.");
+    "Draws power from\n"
+    "nature to attack.\n"
+    "May lower Sp. Def.");
 
 static const u8 sTM21Desc[] = _(
     "The less the user\n"
