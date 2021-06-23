@@ -15853,6 +15853,85 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE20A",
+          "base_label": "gZone20A",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SALANDIT"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SALANDIT"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_CHIMCHAR"
+              }
+            ]
+          }
         }
       ]
     },
