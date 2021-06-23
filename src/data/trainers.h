@@ -914,6 +914,19 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
+    [TRAINER_LELOUCHEXP2] =
+    {
+        .trainerClass = TRAINER_CLASS_EXPERT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_EXPERT_M,
+        .trainerName = _("Lelouch"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_LelouchExp2),
+        .party = {.TrainerMon = sParty_LelouchExp2},
+    },
+
     [TRAINER_ANGUS] =
     {
         .trainerClass = TRAINER_CLASS_FISHERMAN,
@@ -1332,19 +1345,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Julie},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
-    },
-
-    [TRAINER_BROOKE_2] =
-    {
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
-        .trainerName = _("BROOKE"),
-        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Brooke2),
-        .party = {.TrainerMon = sParty_Brooke2},
     },
 
     [TRAINER_BROOKE_3] =

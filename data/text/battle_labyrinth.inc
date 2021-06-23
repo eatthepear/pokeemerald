@@ -274,8 +274,12 @@ gText_Lelouch_CostsRedShards:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Each training session\n"
 	.string "costs one Red Shard.$"
 
-gText_Lelouch_Exp1:
+gText_Lelouch_Exp1Cost:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 1\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp2Cost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 2\n"
 	.string "costs one Red Shard, are you sure?$"
 
 gText_Lelouch_PayRed:

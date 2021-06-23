@@ -391,18 +391,24 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
     .lvl = 10,
+    .nature = NATURE_BASHFUL,
+    .ability = ABILITY_SLOT_1,
     .species = SPECIES_AUDINO,
     .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 10,
+    .nature = NATURE_BASHFUL,
+    .ability = ABILITY_SLOT_1,
     .species = SPECIES_AUDINO,
     .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 10,
+    .nature = NATURE_BASHFUL,
+    .ability = ABILITY_SLOT_1,
     .species = SPECIES_AUDINO,
     .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
     }
@@ -1353,6 +1359,33 @@ static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9, Double B
     }
 };
 
+static const struct TrainerMon sParty_LelouchExp2[] = {
+    {
+    .iv = 0,
+    .lvl = 20,
+    .nature = NATURE_BASHFUL,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 20,
+    .nature = NATURE_BASHFUL,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 20,
+    .nature = NATURE_BASHFUL,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    }
+};
+
 static const struct TrainerMon sParty_Angus[] = {
     {
     .iv = 100,
@@ -1969,24 +2002,6 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     .species = SPECIES_TURTONATOR,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_PULSE, MOVE_WILL_O_WISP, MOVE_SUBSTITUTE}
-    }
-};
-
-static const struct TrainerMon sParty_Brooke2[] = {
-    {
-    .iv = 110,
-    .lvl = 26,
-    .species = SPECIES_WINGULL,
-    },
-    {
-    .iv = 110,
-    .lvl = 26,
-    .species = SPECIES_NUMEL,
-    },
-    {
-    .iv = 110,
-    .lvl = 26,
-    .species = SPECIES_ROSELIA,
     }
 };
 

@@ -1907,6 +1907,7 @@ const u8 gText_MoveReminderService[] = _("Move Reminder - Blue");
 const u8 gText_MoveTutorService[] = _("Move Tutor - Yellow");
 const u8 gText_OtherService[] = _("Other - Green");
 const u8 gText_ExpTraining1[] =_("Experience Training 1");
+const u8 gText_ExpTraining2[] =_("Experience Training 2");
 const u8 gMenuText_Move[] = _("Move");
 const u8 gText_MoveItemWhere[] = _("Move item to where?");
 const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s\n{STR_VAR_2} and\l");
