@@ -42,8 +42,12 @@ Zone20A_EventScript_Leviathan11Defeated:
 	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone20A_Text_Leviathan2Karen, MSGBOX_AUTOCLOSE
+	delay 128
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	setflag FLAG_BEATLEVIATHAN11
 	removeobject 2
+	waitmovement 0
+	delay 96
 	msgbox Zone20A_Text_Ground, MSGBOX_AUTOCLOSE
 	finditem ITEM_SAPPHIRE, 1
 	closemessage
