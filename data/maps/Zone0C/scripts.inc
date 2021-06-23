@@ -9,7 +9,19 @@ Zone0C_EventScript_Jaya::
 	compare VAR_TEMP_0, 1
 	goto_if_eq Zone0C_EventScript_JayaIntro
 	msgbox Zone0C_EventScript_Jaya_Sorry, MSGBOX_AUTOCLOSE
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	compare VAR_TEMP_1, 9
+	goto_if_eq Zone0C_EventScript_JayaWalkRight
 	applymovement 2, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 2, Common_Movement_FaceDown
+	waitmovement 0
+	setvar VAR_TEMP_0, 1
+	release
+	end
+
+Zone0C_EventScript_JayaWalkRight:
+	applymovement 2, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
