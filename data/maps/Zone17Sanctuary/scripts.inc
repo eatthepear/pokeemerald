@@ -75,7 +75,8 @@ Zone17Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_HIDE_ZONE18B_MAN
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE18A, 255, 28, 19
+	warp MAP_ZONE20A, 255, 7, 8
+	@ warp MAP_ZONE18A, 255, 28, 19
 	release
 	end
 

@@ -1918,7 +1918,7 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10
 static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     {
     .iv = 255,
-    .lvl = 29,
+    .lvl = 5,
     .nature = NATURE_IMPISH,
     .ability = ABILITY_SLOT_2, //Sturdy
     .species = SPECIES_RELICANTH,
@@ -1927,7 +1927,7 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     },
     {
     .iv = 255,
-    .lvl = 29,
+    .lvl = 5,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Battle Armor
     .species = SPECIES_MAROWAK,
@@ -1936,7 +1936,7 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     },
     {
     .iv = 255,
-    .lvl = 29,
+    .lvl = 5,
     .nature = NATURE_TIMID,
     .ability = ABILITY_SLOT_1, //Prankster
     .species = SPECIES_MEOWSTIC,
@@ -1945,7 +1945,7 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     },
     {
     .iv = 255,
-    .lvl = 29,
+    .lvl = 5,
     .nature = NATURE_NAIVE,
     .ability = ABILITY_SLOT_1, //Unburden
     .species = SPECIES_SLURPUFF,
@@ -1954,7 +1954,7 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     },
     {
     .iv = 255,
-    .lvl = 29,
+    .lvl = 5,
     .nature = NATURE_JOLLY,
     .ability = ABILITY_SLOT_1, //Swarm
     .species = SPECIES_LEAVANNY,
@@ -1963,7 +1963,7 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     },
     {
     .iv = 255,
-    .lvl = 30,
+    .lvl = 6,
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Shell Armor
     .species = SPECIES_TURTONATOR,
