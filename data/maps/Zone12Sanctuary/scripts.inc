@@ -80,9 +80,6 @@ Zone12Sanctuary_EventScript_Leave:
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE13A, 255, 18, 10
 	end
-	@ msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
-	@ release
-	@ end
 	
 Zone12Sanctuary_Text_Reward:
 	.string "TM07 - Rest.$"

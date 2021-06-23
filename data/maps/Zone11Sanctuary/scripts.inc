@@ -67,9 +67,6 @@ Zone11Sanctuary_EventScript_Leave:
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE12A, 255, 10, 18
 	end
-	@ msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
-	@ release
-	@ end
 
 Zone11Sanctuary_Text_Reward:
 	.string "TM06 - Covet.$"

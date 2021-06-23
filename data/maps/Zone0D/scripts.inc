@@ -12,11 +12,12 @@ Zone0D_OnTransition:
 	end
 
 Zone0D_EventScript_TryMoveScientist::
-	@ call_if_set FLAG_BEATLEVIATHAN10, Zone0D_EventScript_MoveScientist1
+	compare VAR_ZONE0_WARPS, 3
+	call_if_eq Zone0D_EventScript_MoveScientist1
 	return
 
 Zone0D_EventScript_MoveScientist1:
-	@ setobjectxyperm 1, 11, 23
+	setobjectxyperm 1, 11, 23
 	return
 
 Zone0D_EventScript_Intro:
@@ -134,26 +135,99 @@ Zone0D_Text_NoWarpstoneGetOut:
 	.string "You don't have one???\p"
 	.string "Then get out!$"
 
-Zone0D_EventScript_LeftDeny::
+Zone0D_EventScript_LeftCheck::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
-	goto Zone0D_EventScript_DenyNextWarps
+	goto Zone0D_EventScript_Scientist
 	end
 
-Zone0D_EventScript_RightDeny::
+Zone0D_EventScript_RightCheck::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
-	goto Zone0D_EventScript_DenyNextWarps
+	goto Zone0D_EventScript_Scientist
 	end
 
-Zone0D_EventScript_MiddleDeny::
+Zone0D_EventScript_Scientist::
 	lockall
-	goto Zone0D_EventScript_DenyNextWarps
+	compare VAR_ZONE0_WARPS, 2
+	goto_if_eq Zone0D_EventScript_CheckWarpstone2
+	compare VAR_ZONE0_WARPS, 3
+	goto_if_eq Zone0D_EventScript_CheckWarpstone3
+	releaseall
 	end
+
+Zone0D_EventScript_MiddleCheckWarpstone2:
+	goto Zone0D_EventScript_CheckWarpstone2
+	end
+
+Zone0D_EventScript_CheckWarpstone2::
+	checkitem ITEM_SAPPHIRE, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone0D_EventScript_DenyNextWarps
+	removeitem ITEM_SAPPHIRE
+	msgbox Zone0D_Text_AnotherWarpstone, MSGBOX_AUTOCLOSE
+	applymovement 1, Zone0D_Movement_WarpstoneGeneral
+	waitmovement 0
+	msgbox Zone0D_Text_Warps1120, MSGBOX_AUTOCLOSE
+	applymovement 1, Zone0D_Movement_WalkUp
+	waitmovement 0
+	setvar VAR_ZONE0_WARPS, 3
+	releaseall
+	end
+
+Zone0D_Text_AnotherWarpstone:
+	.string "Oh! You have another Warpstone?\p"
+	.string "I can upgrade the warps again!$"
+
+Zone0D_Movement_WarpstoneGeneral:
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	jump_in_place_up
+	jump_in_place_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+Zone0D_Text_Warps1120:
+	.string "Huzzah! Now the warps to Zones 11-20\n"
+	.string "are fully functional.\p"
+	.string "There are more warps I couldn't get\n"
+	.string "functional though, I'll need more\l"
+	.string "Warpstones for those.$"
+
+Zone0D_Movement_WalkUp:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_down
+	step_end
 
 Zone0D_EventScript_DenyNextWarps:
 	msgbox Zone0D_Text_NoWarpstone, MSGBOX_AUTOCLOSE
@@ -168,6 +242,10 @@ Zone0D_Text_NoWarpstone:
 	.string "functional yet and quite dangerous.\p"
 	.string "If you've got a Warpstone, maybe I\n"
 	.string "could make some progress.$"
+
+Zone0D_EventScript_CheckWarpstone3::
+	goto Zone0D_EventScript_DenyNextWarps
+	end
 
 Zone0D_EventScript_WarpBack::
 	lockall
@@ -190,6 +268,7 @@ Zone0D_EventScript_WarpBack::
 	case 17, Zone0D_EventScript_WarpSanctuary16
 	case 18, Zone0D_EventScript_WarpSanctuary17
 	case 20, Zone0D_EventScript_WarpSanctuary19
+	case 21, Zone0D_EventScript_WarpSanctuary20
 	end
 
 Zone0D_EventScript_WarpSanctuary0:
@@ -258,6 +337,10 @@ Zone0D_EventScript_WarpSanctuary17:
 
 Zone0D_EventScript_WarpSanctuary19:
 	warpteleport MAP_ZONE19SANCTUARY, 255, 7, 7
+	end
+
+Zone0D_EventScript_WarpSanctuary20:
+	warpteleport MAP_ZONE20SANCTUARY, 255, 7, 7
 	end
 
 Zone0D_EventScript_VerifyDestination:
@@ -346,4 +429,74 @@ Zone0D_EventScript_WarpZONE10::
 	buffernumberstring 0, 10
 	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE10A, 255, 42, 51
+	end
+
+Zone0D_EventScript_WarpZONE11::
+	lockall
+	buffernumberstring 0, 11
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE11A, 255, 48, 2
+	end
+
+Zone0D_EventScript_WarpZONE12::
+	lockall
+	buffernumberstring 0, 12
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE12A, 255, 10, 18
+	end
+
+Zone0D_EventScript_WarpZONE13::
+	lockall
+	buffernumberstring 0, 13
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE13A, 255, 18, 10
+	end
+
+Zone0D_EventScript_WarpZONE14::
+	lockall
+	buffernumberstring 0, 14
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE14A, 255, 19, 3
+	end
+
+Zone0D_EventScript_WarpZONE15::
+	lockall
+	buffernumberstring 0, 15
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE15A, 255, 4, 4
+	end
+
+Zone0D_EventScript_WarpZONE16::
+	lockall
+	buffernumberstring 0, 16
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE16A, 255, 6, 4
+	end
+
+Zone0D_EventScript_WarpZONE17::
+	lockall
+	buffernumberstring 0, 17
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE17A, 255, 13, 42
+	end
+
+Zone0D_EventScript_WarpZONE18::
+	lockall
+	buffernumberstring 0, 18
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE18A, 255, 28, 19
+	end
+
+Zone0D_EventScript_WarpZONE19::
+	lockall
+	buffernumberstring 0, 19
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE19D, 255, 9, 3
+	end
+
+Zone0D_EventScript_WarpZONE20::
+	lockall
+	buffernumberstring 0, 20
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE20A, 255, 7, 8
 	end

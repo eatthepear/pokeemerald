@@ -4915,7 +4915,7 @@
       "id": "LAYOUT_ZONE0D",
       "name": "Zone0D_Layout",
       "width": 54,
-      "height": 30,
+      "height": 36,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Zone0D/border.bin",
