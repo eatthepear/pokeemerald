@@ -59,3 +59,7 @@ Zone20A_Text_Leviathan2Karen:
 
 Zone20A_Text_Ground:
 	.string "There's something on the ground!$"
+
+Zone20A_EventScript_HyperPotion::
+	finditem ITEM_HYPER_POTION
+	end
