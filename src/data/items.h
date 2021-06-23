@@ -4957,7 +4957,7 @@ const struct Item gItems[] =
 
     [ITEM_SAPPHIRE] =
     {
-        .name = _("Sapphire"),
+        .name = _("Warpstone"),
         .itemId = ITEM_SAPPHIRE,
         .price = 0,
         .description = sSapphireDesc,

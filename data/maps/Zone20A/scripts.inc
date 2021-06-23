@@ -45,7 +45,7 @@ Zone20A_EventScript_Leviathan11Defeated:
 	setflag FLAG_BEATLEVIATHAN11
 	removeobject 2
 	msgbox Zone20A_Text_Ground, MSGBOX_AUTOCLOSE
-	giveitem ITEM_FOCUS_SASH, 1
+	finditem ITEM_SAPPHIRE, 1
 	closemessage
 	releaseall
 	end
