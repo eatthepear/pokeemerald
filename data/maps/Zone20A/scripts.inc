@@ -32,6 +32,7 @@ Zone20A_Text_Leviathan11Defeat:
 
 Zone20A_EventScript_Leviathan11Defeated:
 	msgbox Zone20A_Text_Leviathan2StrongWeak, MSGBOX_AUTOCLOSE
+	fadeoutbgm 1
 	delay 96
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
@@ -51,6 +52,7 @@ Zone20A_EventScript_Leviathan11Defeated:
 	msgbox Zone20A_Text_Ground, MSGBOX_AUTOCLOSE
 	finditem ITEM_SAPPHIRE, 1
 	closemessage
+	fadeinbgm 1
 	releaseall
 	end
 
