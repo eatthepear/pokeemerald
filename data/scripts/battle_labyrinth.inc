@@ -206,6 +206,8 @@ EventScript_Shop_LelouchCheckTutor:
 	checkitem ITEM_YELLOW_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	compare VAR_ZONE, 20
+	goto_if_gt EventScript_Shop_LelouchTutor3
 	compare VAR_ZONE, 15
 	goto_if_gt EventScript_Shop_LelouchTutor2
 	msgbox gText_Lelouch_CostsYellowShards, MSGBOX_DEFAULT
@@ -242,6 +244,37 @@ EventScript_Shop_LelouchTutor2:
 	case 13, EventScript_Shop_LelouchMoveTutorMagicCoat
 	case 14, EventScript_Shop_LelouchMoveTutorPainSplit
 	case 15, EventScript_Shop_LelouchMoveTutorTrick
+	case MULTI_B_PRESSED, EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchTutor3:
+	msgbox gText_Lelouch_CostsYellowShards, MSGBOX_DEFAULT
+	scrollingmultichoice 4, 0, 0, 5, TRUE
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchMoveTutorIcyWind
+	case 1, EventScript_Shop_LelouchMoveTutorKnockOff
+	case 2, EventScript_Shop_LelouchMoveTutorLowKick
+	case 3, EventScript_Shop_LelouchMoveTutorHealBell
+	case 4, EventScript_Shop_LelouchMoveTutorHelpingHand
+	case 5, EventScript_Shop_LelouchMoveTutorSleepTalk
+	case 6, EventScript_Shop_LelouchMoveTutorStealthRock
+	case 7, EventScript_Shop_LelouchMoveTutorTaunt
+	case 8, EventScript_Shop_LelouchMoveTutorFirePunch
+	case 9, EventScript_Shop_LelouchMoveTutorIcePunch
+	case 10, EventScript_Shop_LelouchMoveTutorThunderPunch
+	case 11, EventScript_Shop_LelouchMoveTutorUTurn
+	case 12, EventScript_Shop_LelouchMoveTutorVoltSwitch
+	case 13, EventScript_Shop_LelouchMoveTutorMagicCoat
+	case 14, EventScript_Shop_LelouchMoveTutorPainSplit
+	case 15, EventScript_Shop_LelouchMoveTutorTrick
+	case 16, EventScript_Shop_LelouchMoveTutorBounce
+	case 17, EventScript_Shop_LelouchMoveTutorFlipTurn
+	case 18, EventScript_Shop_LelouchMoveTutorIronHead
+	case 19, EventScript_Shop_LelouchMoveTutorGigaDrain
+	case 20, EventScript_Shop_LelouchMoveTutorZenHeadbutt
+	case 21, EventScript_Shop_LelouchMoveTutorRoost
+	case 22, EventScript_Shop_LelouchMoveTutorSynthesis
+	case 23, EventScript_Shop_LelouchMoveTutorTailwind
 	case MULTI_B_PRESSED, EventScript_Shop_LelouchLeave
 	end
 
@@ -453,6 +486,110 @@ EventScript_Shop_LelouchMoveTutorTrick:
 	goto EventScript_Shop_LelouchMoveTaught1
 	end
 
+EventScript_Shop_LelouchMoveTutorBounce:
+	buffermovename 0, MOVE_BOUNCE
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_BOUNCE
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorFlipTurn:
+	buffermovename 0, MOVE_FLIP_TURN
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_FLIP_TURN
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+	
+EventScript_Shop_LelouchMoveTutorIronHead:
+	buffermovename 0, MOVE_IRON_HEAD
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_IRON_HEAD
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+	
+EventScript_Shop_LelouchMoveTutorGigaDrain:
+	buffermovename 0, MOVE_GIGA_DRAIN
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_GIGA_DRAIN
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+	
+EventScript_Shop_LelouchMoveTutorZenHeadbutt:
+	buffermovename 0, MOVE_ZEN_HEADBUTT
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_ZEN_HEADBUTT
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+	
+EventScript_Shop_LelouchMoveTutorRoost:
+	buffermovename 0, MOVE_ROOST
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_ROOST
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+	
+EventScript_Shop_LelouchMoveTutorSynthesis:
+	buffermovename 0, MOVE_SYNTHESIS
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_SYNTHESIS
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
+EventScript_Shop_LelouchMoveTutorTailwind:
+	buffermovename 0, MOVE_TAILWIND
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_TAILWIND
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+	
 EventScript_Shop_LelouchMoveTaught1:
 	msgbox gText_Lelouch_PayYellow1, MSGBOX_DEFAULT
 	removeitem ITEM_YELLOW_SHARD

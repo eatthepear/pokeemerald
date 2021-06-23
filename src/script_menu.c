@@ -848,6 +848,14 @@ static const u8 sText_MoveTutorVoltSwitch[] = _("Volt Switch");
 static const u8 sText_MoveTutorMagicCoat[] = _("Magic Coat");
 static const u8 sText_MoveTutorPainSplit[] = _("Pain Split");
 static const u8 sText_MoveTutorTrick[] = _("Trick");
+static const u8 sText_MoveTutorBounce[] = _("Bounce");
+static const u8 sText_MoveTutorFlipTurn[] = _("Flip Turn");
+static const u8 sText_MoveTutorIronHead[] = _("Iron Head");
+static const u8 sText_MoveTutorGigaDrain[] = _("Giga Drain");
+static const u8 sText_MoveTutorZenHeadbutt[] = _("Zen Headbutt");
+static const u8 sText_MoveTutorRoost[] = _("Roost");
+static const u8 sText_MoveTutorSynthesis[] = _("Synthesis");
+static const u8 sText_MoveTutorTailwind[] = _("Tailwind");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -928,6 +936,34 @@ static const struct ListMenuItem MoveTutorLevel2[] =
     {sText_MoveTutorTrick, 15},
 };
 
+static const struct ListMenuItem MoveTutorLevel3[] =
+{
+    {sText_MoveTutorIcyWind, 0},
+    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorLowKick, 2},
+    {sText_MoveTutorHealBell, 3},
+    {sText_MoveTutorHelpingHand, 4},
+    {sText_MoveTutorSleepTalk, 5},
+    {sText_MoveTutorStealthRock, 6},
+    {sText_MoveTutorTaunt, 7},
+    {sText_MoveTutorFirePunch, 8},
+    {sText_MoveTutorIcePunch, 9},
+    {sText_MoveTutorThunderPunch, 10},
+    {sText_MoveTutorUTurn, 11},
+    {sText_MoveTutorVoltSwitch, 12},
+    {sText_MoveTutorMagicCoat, 13},
+    {sText_MoveTutorPainSplit, 14},
+    {sText_MoveTutorTrick, 15},
+    {sText_MoveTutorBounce, 16},
+    {sText_MoveTutorFlipTurn, 17},
+    {sText_MoveTutorIronHead, 18},
+    {sText_MoveTutorGigaDrain, 19},
+    {sText_MoveTutorZenHeadbutt, 20},
+    {sText_MoveTutorRoost, 21},
+    {sText_MoveTutorSynthesis, 22},
+    {sText_MoveTutorTailwind, 23},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -939,6 +975,7 @@ struct
     {EvolutionaryStones, ARRAY_COUNT(EvolutionaryStones)},
     {MoveTutorLevel1, ARRAY_COUNT(MoveTutorLevel1)},
     {MoveTutorLevel2, ARRAY_COUNT(MoveTutorLevel2)},
+    {MoveTutorLevel3, ARRAY_COUNT(MoveTutorLevel3)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);
