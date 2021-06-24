@@ -393,7 +393,7 @@ Zone0D_EventScript_WarpZONE5::
 	lockall
 	buffernumberstring 0, 5
 	call Zone0D_EventScript_VerifyDestination
-	warpteleport MAP_ZONE5A, 255, 41, 33
+	warpteleport MAP_ZONE5A, 255, 43, 31
 	end
 
 Zone0D_EventScript_WarpZONE6::

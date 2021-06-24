@@ -6,9 +6,10 @@ Zone10A_EventScript_Adamina::
 	faceplayer
 	call_if_unset FLAG_ADAMINA_INTRO, Zone10A_EventScript_AdaminaIntro
 	msgbox Zone10A_Text_Explain, MSGBOX_AUTOCLOSE
-	checkitem ITEM_YELLOW_SHARD, 3
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10A_EventScript_InitiateLeviathanBattle
+	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1, Zone10A_EventScript_AdaminaMissingShards
+	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2, Zone10A_EventScript_AdaminaMissingShards
+	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3, Zone10A_EventScript_AdaminaMissingShards
+	goto Zone10A_EventScript_InitiateLeviathanBattle
 	release
 	end
 
@@ -35,6 +36,10 @@ Zone10A_Text_Explain:
 	.string "Yellow Shards.\p"
 	.string "Find them and bring them to me.\n"
 	.string "Then we'll see.$"
+
+Zone10A_EventScript_AdaminaMissingShards:
+	release
+	end
 
 Zone10A_EventScript_InitiateLeviathanBattle:
 	fadeoutbgm 1

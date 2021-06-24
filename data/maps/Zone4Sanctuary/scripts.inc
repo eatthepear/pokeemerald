@@ -66,7 +66,7 @@ Zone4Sanctuary_EventScript_NextZoneCheck:
 Zone4Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE5A, 255, 41, 33
+	warp MAP_ZONE5A, 255, 43, 31
 	end
 
 Zone4Sanctuary_Text_Reward:
