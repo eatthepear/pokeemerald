@@ -83,6 +83,8 @@ Zone8D_Text_DontGoAlone:
 
 Zone8D_EventScript_InitiateLeviathan4:
 	msgbox Zone8D_Text_Wally_WhatYourName, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox Zone8D_Text_Wally_Player, MSGBOX_AUTOCLOSE
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 6
 	call_if_eq Zone8D_EventScript_Left
@@ -216,7 +218,9 @@ Zone8D_EventScript_MiddleDown:
 	return
 
 Zone8D_Text_Wally_WhatYourName:
-	.string "Thank you. What's your name?\p"
+	.string "Thank you. What's your name?$"
+
+Zone8D_Text_Wally_Player:
 	.string "{PLAYER}. I'll remember that.$"
 
 Zone8D_Text_Wally_WontLet:

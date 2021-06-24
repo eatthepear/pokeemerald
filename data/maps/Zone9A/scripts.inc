@@ -52,7 +52,7 @@ Zone9A_EventScript_Man::
 
 Zone9A_Text_ShouldChallenge:
 	.string "Hey there, champ!\p"
-	.string "In our modest Zone 9, there is\n"
+	.string "In our modest village, there is\n"
 	.string "a family of strong Trainers.\l"
 	.string "Why don't you go spar with them?$"
 
