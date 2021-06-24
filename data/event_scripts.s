@@ -1089,6 +1089,8 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 
 	.include "data/maps/Zone3Shops/scripts.inc"
 
+	.include "data/maps/Zone3Unused/scripts.inc"
+
 	.include "data/maps/Zone4A/scripts.inc"
 
 	.include "data/maps/Zone4B/scripts.inc"
