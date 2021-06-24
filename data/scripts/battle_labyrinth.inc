@@ -239,8 +239,8 @@ EventScript_Shop_LelouchTutor2:
 	case 8, EventScript_Shop_LelouchMoveTutorFirePunch
 	case 9, EventScript_Shop_LelouchMoveTutorIcePunch
 	case 10, EventScript_Shop_LelouchMoveTutorThunderPunch
-	case 11, EventScript_Shop_LelouchMoveTutorUTurn
-	case 12, EventScript_Shop_LelouchMoveTutorVoltSwitch
+	case 11, EventScript_Shop_LelouchMoveTutorFlipTurn
+	case 12, EventScript_Shop_LelouchMoveTutorUTurn
 	case 13, EventScript_Shop_LelouchMoveTutorMagicCoat
 	case 14, EventScript_Shop_LelouchMoveTutorPainSplit
 	case 15, EventScript_Shop_LelouchMoveTutorTrick
@@ -262,15 +262,15 @@ EventScript_Shop_LelouchTutor3:
 	case 8, EventScript_Shop_LelouchMoveTutorFirePunch
 	case 9, EventScript_Shop_LelouchMoveTutorIcePunch
 	case 10, EventScript_Shop_LelouchMoveTutorThunderPunch
-	case 11, EventScript_Shop_LelouchMoveTutorUTurn
-	case 12, EventScript_Shop_LelouchMoveTutorVoltSwitch
+	case 11, EventScript_Shop_LelouchMoveTutorFlipTurn
+	case 12, EventScript_Shop_LelouchMoveTutorUTurn
 	case 13, EventScript_Shop_LelouchMoveTutorMagicCoat
 	case 14, EventScript_Shop_LelouchMoveTutorPainSplit
 	case 15, EventScript_Shop_LelouchMoveTutorTrick
 	case 16, EventScript_Shop_LelouchMoveTutorBounce
-	case 17, EventScript_Shop_LelouchMoveTutorFlipTurn
-	case 18, EventScript_Shop_LelouchMoveTutorIronHead
-	case 19, EventScript_Shop_LelouchMoveTutorGigaDrain
+	case 17, EventScript_Shop_LelouchMoveTutorIronHead
+	case 18, EventScript_Shop_LelouchMoveTutorGigaDrain
+	case 19, EventScript_Shop_LelouchMoveTutorVoltSwitch
 	case 20, EventScript_Shop_LelouchMoveTutorZenHeadbutt
 	case 21, EventScript_Shop_LelouchMoveTutorRoost
 	case 22, EventScript_Shop_LelouchMoveTutorSynthesis
@@ -421,6 +421,19 @@ EventScript_Shop_LelouchMoveTutorThunderPunch:
 	goto EventScript_Shop_LelouchMoveTaught1
 	end
 
+EventScript_Shop_LelouchMoveTutorFlipTurn:
+	buffermovename 0, MOVE_FLIP_TURN
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_FLIP_TURN
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
 EventScript_Shop_LelouchMoveTutorUTurn:
 	buffermovename 0, MOVE_U_TURN
 	msgbox gText_TutorMove, MSGBOX_YESNO
@@ -428,19 +441,6 @@ EventScript_Shop_LelouchMoveTutorUTurn:
 	goto_if_eq EventScript_Shop_LelouchCheckTutor
 	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
 	setvar VAR_0x8005, TUTOR_MOVE_U_TURN
-	call MoveTutor_EventScript_OpenPartyMenu
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto EventScript_Shop_LelouchMoveTaught1
-	end
-
-EventScript_Shop_LelouchMoveTutorVoltSwitch:
-	buffermovename 0, MOVE_VOLT_SWITCH
-	msgbox gText_TutorMove, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchCheckTutor
-	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_VOLT_SWITCH
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Shop_LelouchLeave
@@ -498,19 +498,6 @@ EventScript_Shop_LelouchMoveTutorBounce:
 	goto_if_eq EventScript_Shop_LelouchLeave
 	goto EventScript_Shop_LelouchMoveTaught1
 	end
-
-EventScript_Shop_LelouchMoveTutorFlipTurn:
-	buffermovename 0, MOVE_FLIP_TURN
-	msgbox gText_TutorMove, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchCheckTutor
-	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_FLIP_TURN
-	call MoveTutor_EventScript_OpenPartyMenu
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto EventScript_Shop_LelouchMoveTaught1
-	end
 	
 EventScript_Shop_LelouchMoveTutorIronHead:
 	buffermovename 0, MOVE_IRON_HEAD
@@ -538,6 +525,19 @@ EventScript_Shop_LelouchMoveTutorGigaDrain:
 	goto EventScript_Shop_LelouchMoveTaught1
 	end
 	
+EventScript_Shop_LelouchMoveTutorVoltSwitch:
+	buffermovename 0, MOVE_VOLT_SWITCH
+	msgbox gText_TutorMove, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchCheckTutor
+	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_VOLT_SWITCH
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_LelouchMoveTaught1
+	end
+
 EventScript_Shop_LelouchMoveTutorZenHeadbutt:
 	buffermovename 0, MOVE_ZEN_HEADBUTT
 	msgbox gText_TutorMove, MSGBOX_YESNO
