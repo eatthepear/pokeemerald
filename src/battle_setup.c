@@ -748,7 +748,8 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_BEACH;
     if (GetSav1Weather() == 8)
         return BATTLE_TERRAIN_BEACH;
-
+    if (MetatileBehavior_IsGrassTerrain(tileBehavior))
+        return BATTLE_TERRAIN_GRASS;
     return BATTLE_TERRAIN_PLAIN;
 }
 
