@@ -749,7 +749,7 @@ u8 BattleSetup_GetTerrainId(void)
     if (GetSav1Weather() == 8)
         return BATTLE_TERRAIN_BEACH;
 
-    return BATTLE_TERRAIN_GRASS;
+    return BATTLE_TERRAIN_PLAIN;
 }
 
 static u8 GetBattleTransitionTypeByMap(void)
