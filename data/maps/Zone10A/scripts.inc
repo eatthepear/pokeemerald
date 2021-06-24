@@ -51,7 +51,7 @@ Zone10A_Text_FoundEm:
 	.string "found them? What a surprise.$"
 
 Zone10A_Text_CrushYou:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, you were expecting me\n"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, were you expecting me\n"
 	.string "to let you in just because you\l"
 	.string "found some scraps? No way.\p"
 	.string "You'll have to beat me in a battle\n"
@@ -135,7 +135,8 @@ Zone10A_EventScript_Dewey::
 
 Zone10A_Text_DeweyIntro:
 	.string "My party is so worn down...\n"
-	.string "Maybe they'll be reenergized after battle!$"
+	.string "Maybe they'll be reenergized after\l"
+	.string "battle!$"
 
 Zone10A_Text_DeweyDefeat:
 	.string "Hmm...\n"

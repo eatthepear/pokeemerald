@@ -7,7 +7,7 @@
  * EVs are by default set to 0.
  * 
  * .iv determines the IVs of a given Pokemon.
- * There are 4 different levels for Battle Labyrinth, 0, 100, 200, and 255.
+ * There are 4 different .iv values in Battle Labyrinth: 0, 100, 200, and 255.
  * 0 is the Pokemon has 0 in every IV, 255 is the Pokemon has 31 in every IV, and 100 and 200 are somewhere in between.
  * 
  * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
@@ -158,7 +158,7 @@ static const struct TrainerMon sParty_Boris[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_PIDOVE,
+    .species = SPECIES_MEDITITE,
     },
     {
     .iv = 0,
@@ -171,7 +171,7 @@ static const struct TrainerMon sParty_Annabelle[] = {
     {
     .iv = 0,
     .lvl = 8,
-    .species = SPECIES_MEDITITE,
+    .species = SPECIES_PIDOVE,
     },
     {
     .iv = 0,
@@ -376,7 +376,7 @@ static const struct TrainerMon sParty_Ryan[] = {
 
 static const struct TrainerMon sParty_Declan[] = {//Leviathan 2
     {
-    .iv = 255,
+    .iv = 255, //Starts with aura +1 Defense
     .lvl = 13,
     .nature = NATURE_BOLD,
     .gender = MON_MALE,
@@ -487,7 +487,7 @@ static const struct TrainerMon sParty_Ronan[] = {
     }
 };
 
-static const struct TrainerMon sParty_Rita[] = {//Leviathan 3
+static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional
     {
     .iv = 255,
     .lvl = 13,
@@ -1182,7 +1182,7 @@ static const struct TrainerMon sParty_AmberAndKim[] = {
     }
 };
 
-static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7
+static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional
     {
     .iv = 255,
     .lvl = 21,
@@ -1215,7 +1215,7 @@ static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7
     }
 };
 
-static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8
+static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optional
     {
     .iv = 255,
     .lvl = 21,
@@ -1935,7 +1935,7 @@ static const struct TrainerMon sParty_Pirate4[] = {
     }
 };
 
-static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10
+static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10, optional
     {
     .iv = 255,//Starts with aura +2 Attack
     .lvl = 30,

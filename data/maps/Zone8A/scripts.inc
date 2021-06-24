@@ -10,7 +10,8 @@ Zone8A_Text_EmilianoIntro:
 	.string "I'm so hungry...$"
 
 Zone8A_Text_EmilianoDefeat:
-	.string "It's because I keep thinking about pancakes!$"
+	.string "It's because I keep thinking about\n"
+	.string "pancakes!$"
 
 Zone8A_Text_EmilianoPostBattle:
 	.string "Mmm... Pancakes...$"
