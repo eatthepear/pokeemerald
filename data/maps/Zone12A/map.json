@@ -156,6 +156,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone12A_EventScript_BlackSludge",
       "flag": "FLAG_ITEM_ZONE12A_BLACK_SLUDGE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 47,
+      "y": 30,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone12A_EventScript_BlockMan",
+      "flag": "FLAG_HIDE_ZONE12A_MAN"
     }
   ],
   "warp_events": [

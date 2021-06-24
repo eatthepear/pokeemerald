@@ -1,4 +1,5 @@
 Zone12A_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone12A_OnTransition
 	.byte 0
 
 Zone12A_EventScript_Exit::
@@ -6,6 +7,32 @@ Zone12A_EventScript_Exit::
 	warp MAP_ZONE12SANCTUARY, 255, 7, 7
 	releaseall
 	end
+
+Zone12A_OnTransition:
+	goto_if_not_defeated TRAINER_DOLORES, Zone12A_EventScript_DoNothing
+	goto_if_not_defeated TRAINER_ESSENCE, Zone12A_EventScript_DoNothing
+	goto_if_not_defeated TRAINER_RANDOLPH, Zone12A_EventScript_DoNothing
+	goto_if_not_defeated TRAINER_HILDA, Zone12A_EventScript_DoNothing
+	goto_if_not_defeated TRAINER_GENIE, Zone12A_EventScript_DoNothing
+	goto_if_not_defeated TRAINER_KINLEY, Zone12A_EventScript_DoNothing
+	removeobject 12
+	setflag FLAG_HIDE_ZONE12A_MAN
+	end
+
+Zone12A_EventScript_DoNothing:
+	end
+
+Zone12A_EventScript_BlockMan::
+	lock
+	faceplayer
+	msgbox Zone12A_Text_DefeatAll, MSGBOX_AUTOCLOSE
+	release
+	end
+	
+Zone12A_Text_DefeatAll:
+	.string "Greetings, trainer!\p"
+	.string "In order to pass, you must defeat\n"
+	.string "all the other Trainers in this area.$"
 
 Zone12A_EventScript_Dolores::
 	trainerbattle_single TRAINER_DOLORES, Zone12A_Text_DoloresIntro, Zone12A_Text_DoloresDefeat
