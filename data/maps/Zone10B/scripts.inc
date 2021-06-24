@@ -704,9 +704,12 @@ Zone10B_EventScript_WaterMerchant::
 	lock
 	faceplayer
 	showmoneybox 0, 0, 0
-	msgbox Zone10B_Text_WaterOffer, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone10B_EventScript_WaterCheckMoney
+	msgbox Zone10B_Text_WaterOffer, MSGBOX_AUTOCLOSE
+	closemessage
+	multichoice 0, 12, MULTI_FRESH_WATER, 0
+	switch VAR_RESULT
+	case 0, Zone10B_EventScript_WaterCheckMoneyOne
+	case 1, Zone10B_EventScript_WaterCheckMoneyTen
 	closemessage
 	hidemoneybox
 	msgbox Zone10B_Text_NoWater, MSGBOX_AUTOCLOSE
@@ -716,17 +719,24 @@ Zone10B_EventScript_WaterMerchant::
 Zone10B_Text_WaterOffer:
 	.string "In the desert, it's supply and\n"
 	.string "demand. And the demand is water.\p"
-	.string "For you only: 200 for one Fresh\n"
-	.string "Water. Want it or not?$"
+	.string "¥200 for Fresh Water.\n"
+	.string "Restores 30 HP each.$"
 
 Zone10B_Text_NoWater:
 	.string "Ah, fine.$"
 
-Zone10B_EventScript_WaterCheckMoney:
+Zone10B_EventScript_WaterCheckMoneyOne:
 	checkmoney 200, 0
 	compare VAR_RESULT, FALSE
 	goto_if_eq Zone10B_EventScript_WaterNotEnough
-	goto Zone10B_EventScript_BuyWater
+	goto Zone10B_EventScript_BuyOneWater
+	end
+
+Zone10B_EventScript_WaterCheckMoneyTen:
+	checkmoney 2000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_WaterNotEnough
+	goto Zone10B_EventScript_BuyTenWater
 	end
 
 Zone10B_EventScript_WaterNotEnough:
@@ -738,11 +748,20 @@ Zone10B_EventScript_WaterNotEnough:
 Zone10B_Text_NotEnough:
 	.string "You don't have enough money.$"
 
-Zone10B_EventScript_BuyWater:
+Zone10B_EventScript_BuyOneWater:
 	removemoney 200, 0
 	updatemoneybox 0, 0
 	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FRESH_WATER, 1
+	hidemoneybox
+	release
+	end
+
+Zone10B_EventScript_BuyTenWater:
+	removemoney 2000, 0
+	updatemoneybox 0, 0
+	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
+	giveitem ITEM_FRESH_WATER, 10
 	hidemoneybox
 	release
 	end

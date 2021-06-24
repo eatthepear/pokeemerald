@@ -68,7 +68,7 @@
 #define MULTI_FLOORS                       57 
 #define MULTI_LELOUCH_TRAINING1            58
 #define MULTI_LELOUCH_TRAINING2            59
-#define MULTI_SHARDS_RY                    60
+#define MULTI_FRESH_WATER                  60
 #define MULTI_SHARDS_B                     61
 #define MULTI_SHARDS_RB                    62
 #define MULTI_SHARDS_YB                    63

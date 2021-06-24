@@ -3107,6 +3107,9 @@ extern const u8 gText_OtherService[];
 extern const u8 gText_ExpTraining1[];
 extern const u8 gText_ExpTraining2[];
 
+extern const u8 gText_OneFreshWater[];
+extern const u8 gText_TenFreshWater[];
+
 extern const u8 gMenuText_Move[];
 extern const u8 gText_MoveItemWhere[];
 extern const u8 gText_XsYAnd[];
