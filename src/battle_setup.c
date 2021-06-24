@@ -696,7 +696,7 @@ u8 BattleSetup_GetTerrainId(void)
 {
     u16 tileBehavior;
     s16 x, y;
-
+    
     PlayerGetDestCoords(&x, &y);
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
