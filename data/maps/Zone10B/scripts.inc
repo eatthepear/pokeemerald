@@ -296,11 +296,10 @@ Zone10B_EventScript_BerryCheck:
 Zone10B_EventScript_BerryNuzlockeMoney:
 	showmoneybox 0, 0, 0
 	msgbox Zone10B_Text_BerryCraftingNuzlocke, MSGBOX_AUTOCLOSE
-	msgbox Zone10B_Text_Received7500, MSGBOX_AUTOCLOSE
 	addmoney 7500, 0
 	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone10B_Text_Received7500, MSGBOX_AUTOCLOSE
 	updatemoneybox 0, 0
-	msgbox Zone4Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	hidemoneybox
 	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
