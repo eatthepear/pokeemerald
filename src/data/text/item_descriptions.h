@@ -1634,9 +1634,9 @@ static const u8 sTM19Desc[] = _(
     "paralyzes the foe.");
 
 static const u8 sTM20Desc[] = _(
-    "Draws power from\n"
-    "nature to attack.\n"
-    "May lower Sp. Def.");
+    "Hurls sludge at the\n"
+    "foe. It may poison\n"
+    "the foe.");
 
 static const u8 sTM21Desc[] = _(
     "The less the user\n"
@@ -1714,9 +1714,9 @@ static const u8 sTM35Desc[] = _(
     "the foe.");
 
 static const u8 sTM36Desc[] = _(
-    "Hurls sludge at the\n"
-    "foe. It may poison\n"
-    "the foe.");
+    "Draws power from\n"
+    "nature to attack.\n"
+    "May lower Sp. Def.");
 
 static const u8 sTM37Desc[] = _(
     "Causes a sandstorm\n"

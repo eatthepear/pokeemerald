@@ -70,4 +70,4 @@ Zone20Sanctuary_EventScript_Leave:
 	end
 
 Zone20Sanctuary_Text_Reward:
-	.string "TM20 - Energy Ball!$"
+	.string "TM20 - Sludge Bomb!$"
