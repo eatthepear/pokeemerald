@@ -65,7 +65,7 @@ Zone6A_EventScript_RitaBattle:
 Zone6A_EventScript_Leviathan3Defeated:
 	setflag FLAG_BEATLEVIATHAN3
 	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_SOOTHE_BELL, 1
+	giveitem ITEM_TM02, 1
 	release
 	end
 
@@ -186,9 +186,9 @@ Zone6A_Text_Leviathan3Defeat:
 	.string "one and the same!$"
 
 Zone6A_Text_Rita_HereReward:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: For your victory, have a\n"
-	.string "Soothe Bell, so you can also be\l"
-	.string "friends with your Pokémon partners.$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: For your victory, have the\n"
+	.string "TM for Return. It grows stronger as\l"
+	.string "your Pokémon become more friendly.$"
 
 Zone6A_Text_Rita_GoodLuck:
 	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Did you know Pokémon\n"

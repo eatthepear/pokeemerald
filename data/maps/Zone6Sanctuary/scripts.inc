@@ -26,7 +26,7 @@ Zone6Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM02
+	giveitem ITEM_SOOTHE_BELL
 	closemessage
 	setvar VAR_ZONE, 7
 	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -85,5 +85,5 @@ Zone6Sanctuary_Text_Colress_ReadyToLeave:
 	.string "{COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}.$"
 
 Zone6Sanctuary_Text_Reward:
-	.string "TM02 - Return.$"
+	.string "A Soothe Bell$"
 

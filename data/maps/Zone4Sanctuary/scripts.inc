@@ -25,14 +25,9 @@ Zone4Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	showmoneybox 0, 0, 0
 	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	addmoney 3000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox 0, 0
-	msgbox Zone4Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	giveitem ITEM_SLEDGEHAMMER, 1
+	closemessage
 	setvar VAR_ZONE, 5
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -70,7 +65,5 @@ Zone4Sanctuary_EventScript_Leave:
 	end
 
 Zone4Sanctuary_Text_Reward:
-	.string "¥3000!$"
+	.string "The Sledgehammer.$"
 
-Zone4Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥3000!$"
