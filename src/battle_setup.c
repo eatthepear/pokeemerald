@@ -49,6 +49,7 @@
 #include "constants/trainer_hill.h"
 #include "pokedex.h"
 #include "pokemon.h"
+#include "wild_encounter.h"
 
 enum
 {
@@ -700,6 +701,7 @@ u8 BattleSetup_GetTerrainId(void)
     PlayerGetDestCoords(&x, &y);
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
+    //Note: POND refers to underground water (so it will be darker there)
     if (MetatileBehavior_IsTallGrass(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
     if (MetatileBehavior_IsLongGrass(tileBehavior))
@@ -720,6 +722,8 @@ u8 BattleSetup_GetTerrainId(void)
             return BATTLE_TERRAIN_BUILDING;
         if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
             return BATTLE_TERRAIN_POND;
+        if (gIsFishingEncounter)
+            return BATTLE_TERRAIN_POND;
         return BATTLE_TERRAIN_CAVE;
     case MAP_TYPE_INDOOR:
     case MAP_TYPE_SECRET_BASE:
@@ -729,18 +733,18 @@ u8 BattleSetup_GetTerrainId(void)
     case MAP_TYPE_OCEAN_ROUTE:
         if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
             return BATTLE_TERRAIN_WATER;
-        return BATTLE_TERRAIN_PLAIN;
+        return BATTLE_TERRAIN_BEACH;
     }
     if (MetatileBehavior_IsDeepOrOceanWater(tileBehavior))
         return BATTLE_TERRAIN_WATER;
     if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
-        return BATTLE_TERRAIN_POND;
+        return BATTLE_TERRAIN_WATER;
     if (MetatileBehavior_IsMountain(tileBehavior))
         return BATTLE_TERRAIN_MOUNTAIN;
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
         if (MetatileBehavior_GetBridgeType(tileBehavior))
-            return BATTLE_TERRAIN_POND;
+            return BATTLE_TERRAIN_WATER;
         if (MetatileBehavior_IsBridge(tileBehavior) == TRUE)
             return BATTLE_TERRAIN_WATER;
     }
@@ -748,6 +752,8 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_BEACH;
     if (GetSav1Weather() == 8)
         return BATTLE_TERRAIN_BEACH;
+    if (gIsFishingEncounter)
+        return BATTLE_TERRAIN_WATER;
     if (MetatileBehavior_IsGrassTerrain(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
     return BATTLE_TERRAIN_PLAIN;
