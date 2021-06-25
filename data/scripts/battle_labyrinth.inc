@@ -726,7 +726,7 @@ EventScript_WarpToZone0:
 
 EventScript_WarpZone0::
 	lockall
-	warpteleport MAP_ZONE0D, 255, 2, 43
+	warpteleport MAP_ZONE0D, 255, 2, 32
 	end
 
 EventScript_Advice:
