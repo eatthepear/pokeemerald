@@ -111,6 +111,9 @@ Zone17A_Text_Intro:
 
 Zone17A_EventScript_RiddleSign::
 	lock
+	checkitem ITEM_ODD_KEYSTONE, 1
+	compare VAR_RESULT, TRUE
+	call_if_eq Zone17A_EventScript_PlaceOddKeystone
 	compare VAR_ZONE17A_STATE, 29
 	goto_if_eq Zone17A_EventScript_Released
 	msgbox Zone17A_Text_RiddleSign, MSGBOX_SIGN
@@ -228,6 +231,46 @@ Zone17A_Text_Released:
 Zone17A_Text_Shimmering:
 	.string "There's something shimmering on the\n"
 	.string "ground by your feet!$"
+
+Zone17A_EventScript_PlaceOddKeystone:
+	msgbox Zone17A_Text_Spot, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone17A_StartSpiritombBattle
+	return
+
+Zone17A_Text_Spot:
+	.string "There is a spot that looks like it\n"
+	.string "can fit the Odd Keystone.\p"
+	.string "Would you like to place the\n"
+	.string "Odd Keystone?$"
+
+Zone17A_StartSpiritombBattle:
+	removeitem ITEM_ODD_KEYSTONE
+	msgbox Zone17A_Text_PlacedOddKeystone, MSGBOX_AUTOCLOSE
+	delay 48
+	setwildbattle SPECIES_SPIRITOMB, 30, ITEM_NONE
+	playmoncry SPECIES_SPIRITOMB, 2
+	delay 40
+	waitmoncry
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Zone17A_EventScript_SpiritombDisappeared
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Zone17A_EventScript_SpiritombDisappeared
+	release
+	end
+
+Zone17A_Text_PlacedOddKeystone:
+	.string "{PLAYER} placed the Odd Keystone.$"
+
+Zone17A_EventScript_SpiritombDisappeared:
+	msgbox Zone17A_Text_SpiritombDisappeared, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone17A_Text_SpiritombDisappeared:
+	.string "Spiritomb disappeared…$"
 
 Zone17A_EventScript_Sign1::
 	lock
