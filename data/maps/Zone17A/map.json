@@ -37,8 +37,8 @@
       "x": 14,
       "y": 45,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "17",
+      "var": "VAR_GENERIC",
+      "var_value": "0",
       "script": "Zone17A_EventScript_CheckLeave"
     },
     {
@@ -46,8 +46,8 @@
       "x": 13,
       "y": 45,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "17",
+      "var": "VAR_GENERIC",
+      "var_value": "0",
       "script": "Zone17A_EventScript_CheckLeave"
     },
     {
@@ -55,8 +55,8 @@
       "x": 12,
       "y": 45,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "17",
+      "var": "VAR_GENERIC",
+      "var_value": "0",
       "script": "Zone17A_EventScript_CheckLeave"
     }
   ],

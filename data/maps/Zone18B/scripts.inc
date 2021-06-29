@@ -239,7 +239,7 @@ Zone18B_Odysseus_Stay:
 
 Zone18B_EventScript_Leave:
 	msgbox Zone18B_Odysseus_Goodbye, MSGBOX_AUTOCLOSE
-	compare VAR_ZONE, 18
+	compare VAR_ZONE, 19
 	goto_if_gt EventScript_WarpZone0
 	warp MAP_ZONE19SANCTUARY, 255, 7, 7
 	release

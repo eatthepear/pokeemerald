@@ -3,6 +3,8 @@ Zone12A_MapScripts::
 
 Zone12A_EventScript_Exit::
 	lockall
+	compare VAR_ZONE, 12
+	goto_if_gt EventScript_WarpZone0
 	warp MAP_ZONE12SANCTUARY, 255, 7, 7
 	releaseall
 	end

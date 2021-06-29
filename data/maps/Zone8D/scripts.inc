@@ -298,8 +298,10 @@ Zone8D_Text_Wally_Goodbye:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: I hope we meet again.\p"
 	.string "Goodbye, {PLAYER}.$"
 
-Zone8A_EventScript_Exit::
+Zone8D_EventScript_Exit::
 	lockall
+	compare VAR_ZONE, 8
+	goto_if_gt EventScript_WarpZone0
 	warp MAP_ZONE8SANCTUARY, 255, 7, 7
 	releaseall
 	end

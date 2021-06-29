@@ -10,6 +10,14 @@ Zone5A_EventScript_MoveLeviathan:
 	setobjectxyperm 4, 28, 9
 	end
 
+Zone5A_EventScript_Exit::
+	lockall
+	compare VAR_ZONE, 5
+	goto_if_gt EventScript_WarpZone0
+	warp MAP_ZONE5SANCTUARY, 255, 7, 7
+	releaseall
+	end
+
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons
 	msgbox Zone5A_Text_AnneAndJunePostBattle, MSGBOX_DEFAULT
@@ -100,11 +108,7 @@ Zone5A_EventScript_Leviathan2Defeated:
 	applymovement 4, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceDown
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
-	warp MAP_ZONE5SANCTUARY, 255, 7, 7
 	releaseall
 	end
 

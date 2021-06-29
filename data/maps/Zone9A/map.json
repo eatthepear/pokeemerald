@@ -156,18 +156,9 @@
       "x": 10,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "9",
+      "var": "VAR_GENERIC",
+      "var_value": "0",
       "script": "Zone9A_EventScript_Exit"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 12,
-      "elevation": 0,
-      "var": "VAR_WARP_ZONES_1_TO_10",
-      "var_value": "1",
-      "script": "EventScript_WarpZone0"
     }
   ],
   "bg_events": [

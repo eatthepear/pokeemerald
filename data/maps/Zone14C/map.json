@@ -101,8 +101,8 @@
       "x": 7,
       "y": 1,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "13",
+      "var": "VAR_GENERIC",
+      "var_value": "0",
       "script": "Zone14C_EventScript_Exit"
     }
   ],

@@ -79,15 +79,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 7,
-      "y": 1,
-      "elevation": 0,
-      "var": "VAR_WARP_ZONES_1_TO_10",
-      "var_value": "1",
-      "script": "EventScript_WarpZone0"
-    },
-    {
-      "type": "trigger",
       "x": 8,
       "y": 5,
       "elevation": 0,
@@ -136,9 +127,9 @@
       "x": 7,
       "y": 1,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "7",
-      "script": "Zone8A_EventScript_Exit"
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone8D_EventScript_Exit"
     }
   ],
   "bg_events": [

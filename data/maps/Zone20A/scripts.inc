@@ -3,6 +3,8 @@ Zone20A_MapScripts::
 
 Zone20A_EventScript_Exit::
 	lockall
+	compare VAR_ZONE, 20
+	goto_if_gt EventScript_WarpZone0
 	warp MAP_ZONE20SANCTUARY, 255, 7, 7
 	releaseall
 	end

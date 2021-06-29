@@ -3,6 +3,8 @@ Zone19D_MapScripts::
 
 Zone19D_EventScript_Exit::
 	lockall
+	compare VAR_ZONE, 19
+	goto_if_gt EventScript_WarpZone0
 	warp MAP_ZONE19SANCTUARY, 255, 7, 7
 	releaseall
 	end

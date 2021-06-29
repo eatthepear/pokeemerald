@@ -724,8 +724,7 @@ EventScript_WarpToZone0:
 	warpteleport MAP_ZONE0A, 255, 17, 10
 	end
 
-EventScript_WarpZone0::
-	lockall
+EventScript_WarpZone0:
 	warpteleport MAP_ZONE0D, 255, 2, 32
 	end
 

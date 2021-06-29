@@ -1,8 +1,10 @@
 Zone15A_MapScripts::
 	.byte 0
 
-Zone15A_EventScript_WarpTo15B::
+Zone15A_EventScript_Exit::
 	lockall
+	compare VAR_ZONE, 15
+	goto_if_gt EventScript_WarpZone0
 	setflag FLAG_HIDE_ZONE15B_COLRESS
 	warp MAP_ZONE15B, 255, 7, 72
 	releaseall

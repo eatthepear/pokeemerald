@@ -91,8 +91,8 @@
       "x": 9,
       "y": 1,
       "elevation": 0,
-      "var": "VAR_ZONE",
-      "var_value": "18",
+      "var": "VAR_GENERIC",
+      "var_value": "0",
       "script": "Zone19D_EventScript_Exit"
     }
   ],
