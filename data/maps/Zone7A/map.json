@@ -343,6 +343,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone7A_EventScript_HealSign"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 34,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Zone7A_EventScript_NoFish"
     }
   ]
 }

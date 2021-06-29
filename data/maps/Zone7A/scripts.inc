@@ -80,3 +80,11 @@ Zone7A_EventScript_HealSign::
 
 Zone7A_Text_HealSign:
 	.string "A stop for weary travelers.$"
+
+Zone7A_EventScript_NoFish::
+	msgbox Zone7A_Text_NoFish, MSGBOX_SIGN
+	end
+
+Zone7A_Text_NoFish:
+	.string "Due to nitrogen runoff, there are\n"
+	.string "no Pokémon living in the water.$"
