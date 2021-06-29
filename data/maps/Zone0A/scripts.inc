@@ -4,7 +4,7 @@ Zone0A_MapScripts::
 	.byte 0
 
 Zone0A_OnFrame:
-	map_script_2 VAR_ZONE0_WARPS, 0, Zone0A_EventScript_Intro
+	map_script_2 VAR_ZONE0_STATE, 0, Zone0A_EventScript_Intro
 	.2byte 0
 
 Zone0A_OnTransition: @ 81F3983
@@ -39,7 +39,7 @@ Zone0A_EventScript_Intro:
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	setvar VAR_ZONE0_WARPS, 1
+	setvar VAR_ZONE0_STATE, 1
 	releaseall
 	end
 

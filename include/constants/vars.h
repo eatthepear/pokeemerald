@@ -107,11 +107,11 @@
 #define VAR_SLATEPORT_CITY_STATE             0x4058
 #define VAR_ADVICE                           0x4059 // custom var
 #define VAR_RUSTBORO_CITY_STATE              0x405A
-#define VAR_ZONE0_WARPS                      0x405B // custom Var
+#define VAR_ZONE0_STATE                      0x405B // custom Var
 #define VAR_ZONE6A_STATE                     0x405C // custom Var
 #define VAR_MOSSDEEP_CITY_STATE              0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E
-#define VAR_WARP_ZONES_1_TO_10               0x405F // custom Var
+#define VAR_UNUSED_0x405F                    0x405F // unused Var
 #define VAR_ROUTE101_STATE                   0x4060
 #define VAR_ZONE8D_STATE                     0x4061 // custom Var
 #define VAR_ZONE11A_STATE                    0x4062 // custom Var
