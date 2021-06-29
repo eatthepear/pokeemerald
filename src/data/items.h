@@ -5333,7 +5333,7 @@ const struct Item gItems[] =
     {
         .name = _("Odd Keystone"),
         .itemId = ITEM_ODD_KEYSTONE,
-        .price = 2100,
+        .price = 0,
         .description = sOddKeystoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,

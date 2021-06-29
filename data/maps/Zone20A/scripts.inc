@@ -51,7 +51,7 @@ Zone20A_EventScript_Leviathan11Defeated:
 	waitmovement 0
 	delay 96
 	msgbox Zone20A_Text_Ground, MSGBOX_AUTOCLOSE
-	finditem ITEM_SAPPHIRE, 1
+	finditem ITEM_ODD_KEYSTONE, 1
 	closemessage
 	fadeinbgm 1
 	releaseall
