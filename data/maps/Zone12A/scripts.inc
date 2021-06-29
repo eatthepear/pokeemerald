@@ -100,8 +100,8 @@ Zone12A_Text_KinleyDefeat:
 Zone12A_Text_KinleyPostBattle:
 	.string "Errr... Never mind.$"
 
-Zone12A_EventScript_ExpertBelt::
-	finditem ITEM_EXPERT_BELT
+Zone12A_EventScript_SuperPotion::
+	finditem ITEM_SUPER_POTION
 	end
 
 Zone12A_EventScript_Metronome::

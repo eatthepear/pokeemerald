@@ -2,29 +2,31 @@ Zone10B_MapScripts::
 	.byte 0
 
 Zone10B_EventScript_Adamina::
-	lockall
+	lock
 	faceplayer
-	call Zone10B_EventScript_CheckIntro
-	goto Zone10B_EventScript_AdaminaLeave
+	goto Zone10B_EventScript_AdaminaStuff
+	end
+	
+Zone10B_EventScript_AdaminaStuff:
+	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaLeave
+	msgbox Zone10B_Text_Adamina_Sorry, MSGBOX_AUTOCLOSE
+	giveitem ITEM_EXPERT_BELT
+	msgbox Zone10B_Text_Adamina_SafeSpace, MSGBOX_DEFAULT
+	delay 96
+	msgbox Zone10B_Text_Adamina_TellYouWhat, MSGBOX_AUTOCLOSE
+	setflag FLAG_ADAMINA_WARP_INTRO
+	release
 	end
 
 Zone10B_EventScript_Kirlia::
-	lockall
+	lock
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 6
 	call_if_eq Zone10B_EventScript_Down
 	compare VAR_TEMP_0, 7
 	call_if_eq Zone10B_EventScript_Right
-	call Zone10B_EventScript_CheckIntro
-	goto Zone10B_EventScript_AdaminaLeave
+	goto Zone10B_EventScript_AdaminaStuff
 	end
-	
-Zone10B_EventScript_CheckIntro:
-	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaLeave
-	checkitem ITEM_RUBY, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_AdaminaIntro
-	return
 
 Zone10B_EventScript_Down:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
@@ -40,16 +42,6 @@ Zone10B_EventScript_Right:
 	waitmovement 0
 	call Zone10B_EventScript_Down
 	return
-
-Zone10B_EventScript_AdaminaIntro:
-	msgbox Zone10B_Text_Adamina_Sorry, MSGBOX_AUTOCLOSE
-	giveitem ITEM_RUBY
-	msgbox Zone10B_Text_Adamina_SafeSpace, MSGBOX_DEFAULT
-	delay 96
-	msgbox Zone10B_Text_Adamina_TellYouWhat, MSGBOX_AUTOCLOSE
-	setflag FLAG_ADAMINA_WARP_INTRO
-	release
-	end
 
 Zone10B_Text_Adamina_Sorry:
 	.string "You...\n"
@@ -84,7 +76,7 @@ Zone10B_EventScript_AdaminaLeave:
 	end
 
 Zone10B_Text_Adamina_AreYouLeaving:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving the Zone?$"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving here?$"
 
 Zone10B_Text_Adamina_WhenReady:
 	.string "Come speak to me when you're ready.$"
@@ -98,11 +90,11 @@ Zone10B_EventScript_Exit:
 	msgbox Zone10B_Text_Adamina_UseTeleport, MSGBOX_AUTOCLOSE
 	waitmoncry
 	warpteleport MAP_ZONE10SANCTUARY, 255, 7, 7
-	releaseall
+	release
 	end
 
 Zone10B_Text_Adamina_UseWell:
-	.string "Okay. Use that Warpstone well.$"
+	.string "Safe travels.$"
 
 Zone10B_Text_Adamina_UseTeleport:
 	.string "Kirlia, use Teleport!$"

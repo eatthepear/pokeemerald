@@ -1091,7 +1091,7 @@
 #define FLAG_ITEM_ZONE11A_WIDE_LENS                                 0x413
 #define FLAG_ITEM_ZONE11A_SUPER_POTION                              0x414
 #define FLAG_ITEM_ZONE11A_FULL_HEAL                                 0x415
-#define FLAG_ITEM_ZONE12A_EXPERT_BELT                               0x416
+#define FLAG_ITEM_ZONE12A_SUPER_POTION                              0x416
 #define FLAG_ITEM_ZONE12A_METRONOME                                 0x417
 #define FLAG_ITEM_ZONE12A_OVAL_STONE                                0x418
 #define FLAG_ITEM_ZONE12A_GRIP_CLAW                                 0x419
