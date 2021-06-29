@@ -173,7 +173,8 @@ Zone0D_Text_AreYouSure:
 Zone0D_Text_DecidedNot:
 	.string "Decided not to warp.$"
 
-Zone0D_EventScript_DenyWarp:
+Zone0D_EventScript_DenyWarp::
+	lockall
 	msgbox Zone0D_Text_DoesntWork, MSGBOX_AUTOCLOSE
 	releaseall
 	end
@@ -357,6 +358,276 @@ Zone0D_EventScript_WarpZONE20::
 	compare VAR_ZONE, 21
 	goto_if_lt Zone0D_EventScript_DenyWarp
 	buffernumberstring 0, 20
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE20A, 255, 7, 8
+	end
+
+Zone0D_EventScript_WarpZONE21::
+	lockall
+	compare VAR_ZONE, 22
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 21
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE1A, 255, 16, 28
+	end
+
+Zone0D_EventScript_WarpZONE22::
+	lockall
+	compare VAR_ZONE, 23
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 22
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE2A, 255, 4, 3
+	end
+
+Zone0D_EventScript_WarpZONE23::
+	lockall
+	compare VAR_ZONE, 24
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 23
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE3A, 255, 38, 25
+	end
+
+Zone0D_EventScript_WarpZONE24::
+	lockall
+	compare VAR_ZONE, 25
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 24
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE4A, 255, 4, 3
+	end
+
+Zone0D_EventScript_WarpZONE25::
+	lockall
+	compare VAR_ZONE, 26
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 25
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE5A, 255, 43, 31
+	end
+
+Zone0D_EventScript_WarpZONE26::
+	lockall
+	compare VAR_ZONE, 27
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 26
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE6A, 255, 21, 25
+	end
+
+Zone0D_EventScript_WarpZONE27::
+	lockall
+	compare VAR_ZONE, 28
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 27
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE7A, 255, 5, 34
+	end
+
+Zone0D_EventScript_WarpZONE28::
+	lockall
+	compare VAR_ZONE, 29
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 28
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE8A, 255, 33, 9
+	end
+
+Zone0D_EventScript_WarpZONE29::
+	lockall
+	compare VAR_ZONE, 30
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 29
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE9A, 255, 23, 13
+	end
+
+Zone0D_EventScript_WarpZONE30::
+	lockall
+	compare VAR_ZONE, 31
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 30
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE10A, 255, 42, 51
+	end
+
+Zone0D_EventScript_WarpZONE31::
+	lockall
+	compare VAR_ZONE, 32
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 31
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE11A, 255, 48, 2
+	end
+
+Zone0D_EventScript_WarpZONE32::
+	lockall
+	compare VAR_ZONE, 33
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 32
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE12A, 255, 10, 18
+	end
+
+Zone0D_EventScript_WarpZONE33::
+	lockall
+	compare VAR_ZONE, 34
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 33
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE13A, 255, 18, 10
+	end
+
+Zone0D_EventScript_WarpZONE34::
+	lockall
+	compare VAR_ZONE, 35
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 34
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE14A, 255, 19, 3
+	end
+
+Zone0D_EventScript_WarpZONE35::
+	lockall
+	compare VAR_ZONE, 36
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 35
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE15A, 255, 4, 4
+	end
+
+Zone0D_EventScript_WarpZONE36::
+	lockall
+	compare VAR_ZONE, 37
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 36
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE16A, 255, 6, 4
+	end
+
+Zone0D_EventScript_WarpZONE37::
+	lockall
+	compare VAR_ZONE, 38
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 37
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE17A, 255, 13, 42
+	end
+
+Zone0D_EventScript_WarpZONE38::
+	lockall
+	compare VAR_ZONE, 39
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 38
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE18A, 255, 28, 19
+	end
+
+Zone0D_EventScript_WarpZONE39::
+	lockall
+	compare VAR_ZONE, 40
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 39
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE19D, 255, 9, 3
+	end
+
+Zone0D_EventScript_WarpZONE40::
+	lockall
+	compare VAR_ZONE, 41
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 40
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE20A, 255, 7, 8
+	end
+
+Zone0D_EventScript_WarpZONE41::
+	lockall
+	compare VAR_ZONE, 42
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 41
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE11A, 255, 48, 2
+	end
+
+Zone0D_EventScript_WarpZONE42::
+	lockall
+	compare VAR_ZONE, 43
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 42
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE12A, 255, 10, 18
+	end
+
+Zone0D_EventScript_WarpZONE43::
+	lockall
+	compare VAR_ZONE, 44
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 43
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE13A, 255, 18, 10
+	end
+
+Zone0D_EventScript_WarpZONE44::
+	lockall
+	compare VAR_ZONE, 45
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 44
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE14A, 255, 19, 3
+	end
+
+Zone0D_EventScript_WarpZONE45::
+	lockall
+	compare VAR_ZONE, 46
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 45
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE15A, 255, 4, 4
+	end
+
+Zone0D_EventScript_WarpZONE46::
+	lockall
+	compare VAR_ZONE, 47
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 46
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE16A, 255, 6, 4
+	end
+
+Zone0D_EventScript_WarpZONE47::
+	lockall
+	compare VAR_ZONE, 48
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 47
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE17A, 255, 13, 42
+	end
+
+Zone0D_EventScript_WarpZONE48::
+	lockall
+	compare VAR_ZONE, 49
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 48
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE18A, 255, 28, 19
+	end
+
+Zone0D_EventScript_WarpZONE49::
+	lockall
+	compare VAR_ZONE, 50
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 49
+	call Zone0D_EventScript_VerifyDestination
+	warpteleport MAP_ZONE19D, 255, 9, 3
+	end
+
+Zone0D_EventScript_WarpZONE50::
+	lockall
+	compare VAR_ZONE, 51
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	buffernumberstring 0, 50
 	call Zone0D_EventScript_VerifyDestination
 	warpteleport MAP_ZONE20A, 255, 7, 8
 	end
