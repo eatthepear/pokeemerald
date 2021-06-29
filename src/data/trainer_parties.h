@@ -580,7 +580,7 @@ static const struct TrainerMon sParty_Emiliano[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_DIGLETT_ALOLAN,
+    .species = SPECIES_ZUBAT,
     },
     {
     .iv = 0,
@@ -1281,6 +1281,11 @@ static const struct TrainerMon sParty_Lola[] = {
     .iv = 100,
     .lvl = 19,
     .species = SPECIES_MINCCINO,
+    },
+    {
+    .iv = 100,
+    .lvl = 19,
+    .species = SPECIES_FERROSEED,
     }
 };
 
@@ -1306,17 +1311,12 @@ static const struct TrainerMon sParty_Charlie[] = {
     {
     .iv = 100,
     .lvl = 19,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 100,
-    .lvl = 19,
     .species = SPECIES_MUNNA,
     },
     {
     .iv = 100,
     .lvl = 19,
-    .species = SPECIES_FERROSEED,
+    .species = SPECIES_DURALUDON,
     }
 };
 

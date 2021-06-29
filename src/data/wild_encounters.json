@@ -14264,12 +14264,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 9,
@@ -14343,12 +14343,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 9,
@@ -14422,12 +14422,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 9,
@@ -15135,7 +15135,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_DURALUDON"
               },
               {
                 "min_level": 15,
@@ -15214,7 +15214,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_DURALUDON"
               },
               {
                 "min_level": 15,
