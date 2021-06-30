@@ -361,7 +361,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_AROMA_LADY,
         .trainerName = _("Rita"),
         .items = {},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Rita),
         .party = {.TrainerMon = sParty_Rita},
