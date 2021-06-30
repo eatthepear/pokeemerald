@@ -15081,11 +15081,6 @@
               {
                 "min_level": 20,
                 "max_level": 22,
-                "species": "SPECIES_TYMPOLE"
-              },
-              {
-                "min_level": 20,
-                "max_level": 22,
                 "species": "SPECIES_BARBOACH"
               },
               {
@@ -15112,6 +15107,11 @@
                 "min_level": 20,
                 "max_level": 22,
                 "species": "SPECIES_CHEWTLE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_STUNFISK"
               },
               {
                 "min_level": 20,
@@ -15195,7 +15195,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_DURALUDON"
+                "species": "SPECIES_BRONZOR"
               },
               {
                 "min_level": 15,
@@ -15274,7 +15274,7 @@
               {
                 "min_level": 15,
                 "max_level": 17,
-                "species": "SPECIES_DURALUDON"
+                "species": "SPECIES_BRONZOR"
               },
               {
                 "min_level": 15,
@@ -15373,12 +15373,12 @@
               {
                 "min_level": 16,
                 "max_level": 19,
-                "species": "SPECIES_BRONZOR"
+                "species": "SPECIES_DURALUDON"
               },
               {
                 "min_level": 16,
                 "max_level": 19,
-                "species": "SPECIES_BRONZOR"
+                "species": "SPECIES_DURALUDON"
               },
               {
                 "min_level": 16,

@@ -1316,7 +1316,7 @@ static const struct TrainerMon sParty_Charlie[] = {
     {
     .iv = 100,
     .lvl = 19,
-    .species = SPECIES_DURALUDON,
+    .species = SPECIES_DRUDDIGON,
     }
 };
 
@@ -1861,7 +1861,7 @@ static const struct TrainerMon sParty_Willie[] = {//Zone 18 Stats Room
     {
     .iv = 100,
     .lvl = 26,
-    .species = SPECIES_DRUDDIGON,
+    .species = SPECIES_DURALUDON,
     }
 };
 
