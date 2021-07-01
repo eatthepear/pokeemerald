@@ -138,7 +138,7 @@ EventScript_Shop_LelouchTraining2:
 EventScript_Shop_LelouchExp1:
 	msgbox gText_Lelouch_Exp1Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchTraining1
+	goto_if_eq EventScript_Shop_LelouchLeave
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
@@ -149,7 +149,7 @@ EventScript_Shop_LelouchExp1:
 EventScript_Shop_LelouchExp2:
 	msgbox gText_Lelouch_Exp2Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchTraining2
+	goto_if_eq EventScript_Shop_LelouchLeave
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
