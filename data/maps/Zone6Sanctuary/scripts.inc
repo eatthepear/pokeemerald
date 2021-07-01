@@ -85,5 +85,5 @@ Zone6Sanctuary_Text_Colress_ReadyToLeave:
 	.string "{COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}.$"
 
 Zone6Sanctuary_Text_Reward:
-	.string "A Soothe Bell$"
+	.string "A Soothe Bell!$"
 
