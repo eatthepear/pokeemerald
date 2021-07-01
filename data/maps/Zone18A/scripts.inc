@@ -103,6 +103,8 @@ Zone18A_Movement_WalkAway:
 	step_end
 
 Zone18A_EventScript_SellSodaPop::
+	lock
+	faceplayer
 	showmoneybox 0, 0, 0
 	msgbox Zone19A_Text_WantToBuySodaPop, MSGBOX_YESNO
 	compare VAR_RESULT, YES
