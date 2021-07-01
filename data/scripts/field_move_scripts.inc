@@ -343,8 +343,7 @@ Text_MonUsedStrength: @ 829098C
 	.string "possible to move boulders around!$"
 
 Text_CantStrength: @ 82909D6
-	.string "It's a big boulder, but a POKéMON\n"
-	.string "may be able to push it aside.$"
+	.string "It's a big boulder.$"
 
 Text_StrengthActivated: @ 8290A16
 	.string "STRENGTH made it possible to move\n"
