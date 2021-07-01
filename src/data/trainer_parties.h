@@ -389,26 +389,29 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_BASHFUL,
-    .ability = ABILITY_SLOT_1,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
-    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_BASHFUL,
-    .ability = ABILITY_SLOT_1,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
-    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_BASHFUL,
-    .ability = ABILITY_SLOT_1,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
-    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -1365,26 +1368,29 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_BASHFUL,
-    .ability = ABILITY_SLOT_1,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
-    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_BASHFUL,
-    .ability = ABILITY_SLOT_1,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
-    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_BASHFUL,
-    .ability = ABILITY_SLOT_1,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
-    .moves = {MOVE_GROWL, MOVE_CONFIDE, MOVE_ENTRAINMENT, MOVE_NONE}
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
