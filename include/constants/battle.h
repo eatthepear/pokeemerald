@@ -364,6 +364,7 @@
 #define BATTLE_TERRAIN_PLAIN        9
 #define BATTLE_TERRAIN_DESERT       10
 #define BATTLE_TERRAIN_FOREST       11
+#define BATTLE_TERRAIN_BRIDGE       12
 
 #define B_WAIT_TIME_LONG  64
 #define B_WAIT_TIME_MED   48

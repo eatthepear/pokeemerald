@@ -752,12 +752,14 @@ u8 BattleSetup_GetTerrainId(void)
         if (MetatileBehavior_IsBridge(tileBehavior) == TRUE)
             return BATTLE_TERRAIN_WATER;
     }
+    if (gIsFishingEncounter)
+        return BATTLE_TERRAIN_WATER;
+    if(MetatileBehavior_IsBridgeTerrain(tileBehavior))
+        return BATTLE_TERRAIN_BRIDGE;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE113) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE113))
         return BATTLE_TERRAIN_BEACH;
     if (GetSav1Weather() == 8)
         return BATTLE_TERRAIN_BEACH;
-    if (gIsFishingEncounter)
-        return BATTLE_TERRAIN_WATER;
     if (MetatileBehavior_IsGrassTerrain(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
     return BATTLE_TERRAIN_PLAIN;
