@@ -102,6 +102,47 @@ Zone18A_Movement_WalkAway:
 	walk_up
 	step_end
 
+Zone18A_EventScript_SellSodaPop::
+	showmoneybox 0, 0, 0
+	msgbox Zone19A_Text_WantToBuySodaPop, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone19A_EventScript_BuySodaPop
+	hidemoneybox
+	msgbox Zone19A_Text_DidntLike, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone19A_Text_WantToBuySodaPop:
+	.string "Want to buy some Soda Pop?\n"
+	.string "¥300 for 50 HP a pop!$"
+
+Zone19A_Text_DidntLike:
+	.string "Aww, did you not like my pun?$"
+
+Zone19A_EventScript_BuySodaPop:
+	checkmoney 300, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone19A_Text_NotEnoughMoney
+	msgbox Zone19A_Text_HereYouGo, MSGBOX_AUTOCLOSE
+	removemoney 300, 0
+	updatemoneybox 0, 0
+	giveitem ITEM_SODA_POP
+	hidemoneybox
+	release
+	end
+
+Zone19A_Text_HereYouGo:
+	.string "Here you go!$"
+
+Zone19A_Text_NotEnoughMoney:
+	msgbox Zone19A_Text_NotEnough, MSGBOX_AUTOCLOSE
+	hidemoneybox
+	release
+	end
+
+Zone19A_Text_NotEnough:
+	.string "You don't have enough money!$"
+
 Zone18A_EventScript_Marion::
 	trainerbattle_single TRAINER_MARION, Zone18A_Text_MarionIntro, Zone18A_Text_MarionDefeat
 	msgbox Zone18A_Text_MarionPostBattle, MSGBOX_AUTOCLOSE
