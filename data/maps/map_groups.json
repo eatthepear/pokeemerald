@@ -28,7 +28,7 @@
     "gMapGroup_Dungeons",
     "gMapGroup_IndoorDynamic",
     "gMapGroup_SpecialArea",
-    "gMapGroup_IndoorRoute104Prototype",
+    "gMapGroup_BattleLabyrinth",
     "gMapGroup_IndoorRoute109",
     "gMapGroup_IndoorRoute110",
     "gMapGroup_IndoorRoute113",
@@ -586,7 +586,7 @@
     "NavelRock_Bottom",
     "TrainerHill_Elevator"
   ],
-  "gMapGroup_IndoorRoute104Prototype": [
+  "gMapGroup_BattleLabyrinth": [
     "Zone0Sanctuary",
     "Zone0Shops",
     "Zone1A",
