@@ -762,6 +762,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
+	callnative SetStarterFatefulEncounter
 	delay 96
 	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, MALE
@@ -783,6 +784,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
+	callnative SetStarterFatefulEncounter
 	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
 	setvar VAR_0x8004, MALE
 	fadescreen FADE_TO_BLACK

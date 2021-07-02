@@ -8359,6 +8359,12 @@ void DeleteFaintedPartyPokemon(void)
     CompactPartySlots();
 }
 
+void SetStarterFatefulEncounter(void)
+{
+    u8 metLocation = METLOC_FATEFUL_ENCOUNTER;
+    SetMonData(&gPlayerParty[0], MON_DATA_MET_LOCATION, &metLocation);
+}
+
 void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature)
 {
     u32 personality;
