@@ -2725,9 +2725,6 @@ static const struct LevelUpMove sScytherLevelUpLearnset[] = {
 
 static const struct LevelUpMove sJynxLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_POUND),
-	LEVEL_UP_MOVE( 1, MOVE_LICK),
-	LEVEL_UP_MOVE( 1, MOVE_LOVELY_KISS),
-	LEVEL_UP_MOVE( 1, MOVE_POWDER_SNOW),
 	LEVEL_UP_MOVE( 4, MOVE_LICK),
 	LEVEL_UP_MOVE( 7, MOVE_LOVELY_KISS),
 	LEVEL_UP_MOVE(10, MOVE_POWDER_SNOW),
@@ -5328,8 +5325,6 @@ static const struct LevelUpMove sHitmontopLevelUpLearnset[] = {
 
 static const struct LevelUpMove sSmoochumLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
-    LEVEL_UP_MOVE( 1, MOVE_LICK),
-    LEVEL_UP_MOVE( 1, MOVE_POWDER_SNOW),
     LEVEL_UP_MOVE( 4, MOVE_LICK),
     LEVEL_UP_MOVE( 7, MOVE_SWEET_KISS),
     LEVEL_UP_MOVE(10, MOVE_POWDER_SNOW),
