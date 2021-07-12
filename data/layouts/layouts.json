@@ -5270,6 +5270,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone20Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone20Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE21A",
+      "name": "Zone21A_Layout",
+      "width": 65,
+      "height": 100,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Zone21A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone21A/map.bin"
     }
   ]
 }
