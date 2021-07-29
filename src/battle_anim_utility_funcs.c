@@ -1093,3 +1093,9 @@ void AnimTask_SetInvisible(u8 taskId)
     gSprites[spriteId].invisible = gBattleSpritesDataPtr->battlerData[battlerId].invisible = gBattleAnimArgs[1];
     DestroyAnimVisualTask(taskId);
 }
+
+void AnimTask_SetAnimTargetToAttackerOpposite(u8 taskId)
+{
+    gBattleAnimTarget = BATTLE_OPPOSITE(gBattleAnimAttacker);
+    DestroyAnimVisualTask(taskId);
+}

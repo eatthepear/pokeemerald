@@ -721,22 +721,21 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         #endif
         
         // terrain & effect checks
-        if (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN)
+        if (AI_IsTerrainAffected(battlerDef, STATUS_FIELD_ELECTRIC_TERRAIN))
         {
             if (moveEffect == EFFECT_SLEEP || moveEffect == EFFECT_YAWN)
                 RETURN_SCORE_MINUS(20);
         }
         
-        if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN)
+        if (AI_IsTerrainAffected(battlerDef, STATUS_FIELD_MISTY_TERRAIN))
         {
             if (IsNonVolatileStatusMoveEffect(moveEffect) || IsConfusionMoveEffect(moveEffect))
                 RETURN_SCORE_MINUS(20);
         }
         
-        if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
+        if (AI_IsTerrainAffected(battlerAtk, STATUS_FIELD_PSYCHIC_TERRAIN) && atkPriority > 0)
         {
-            if (atkPriority > 0)
-                RETURN_SCORE_MINUS(20);
+            RETURN_SCORE_MINUS(20);
         }
     } // end check MOVE_TARGET_USER
     
@@ -1641,11 +1640,11 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case EFFECT_TEETER_DANCE:
             if (((gBattleMons[battlerDef].status2 & STATUS2_CONFUSION)
               || (!DoesBattlerIgnoreAbilityChecks(AI_DATA->atkAbility, move) && AI_DATA->defAbility == ABILITY_OWN_TEMPO)
-              || (IsBattlerGrounded(battlerDef) && (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN))
+              || (IsBattlerGrounded(battlerDef) && AI_IsTerrainAffected(battlerDef, STATUS_FIELD_MISTY_TERRAIN))
               || (DoesSubstituteBlockMove(battlerAtk, battlerDef, move)))
              && ((gBattleMons[AI_DATA->battlerDefPartner].status2 & STATUS2_CONFUSION)
               || (!DoesBattlerIgnoreAbilityChecks(AI_DATA->atkAbility, move) && AI_DATA->defPartnerAbility == ABILITY_OWN_TEMPO)
-              || (IsBattlerGrounded(AI_DATA->battlerDefPartner) && (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN))
+              || (IsBattlerGrounded(AI_DATA->battlerDefPartner) && AI_IsTerrainAffected(AI_DATA->battlerDefPartner, STATUS_FIELD_MISTY_TERRAIN))
               || (DoesSubstituteBlockMove(battlerAtk, AI_DATA->battlerDefPartner, move))))
             {
                score -= 10;
@@ -2870,7 +2869,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         score++;
     
     // check thawing moves
-    if ((gBattleMons[battlerAtk].status1 & STATUS1_FREEZE) && IsThawingMove(battlerAtk, move))
+    if ((gBattleMons[battlerAtk].status1 & STATUS1_FREEZE) && TestMoveFlags(move, FLAG_THAW_USER))
         score += (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) ? 20 : 10;
     
     // check burn
@@ -3836,7 +3835,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             score++;
         break;
     case EFFECT_SAFEGUARD:
-        if (!(gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN) || !IsBattlerGrounded(battlerAtk))
+        if (!AI_IsTerrainAffected(battlerAtk, STATUS_FIELD_MISTY_TERRAIN) || !IsBattlerGrounded(battlerAtk))
             score++;
         //if (CountUsablePartyMons(battlerDef) != 0)
             //score += 8;
