@@ -5275,7 +5275,7 @@
       "id": "LAYOUT_ZONE21A",
       "name": "Zone21A_Layout",
       "width": 65,
-      "height": 100,
+      "height": 106,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone21A/border.bin",
