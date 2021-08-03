@@ -103,18 +103,18 @@
 #define TRAINER_PIRATE_4                      	99
 #define TRAINER_LEVIATHAN10                   	100
 #define TRAINER_LEVIATHAN11                   	101
-#define TRAINER_BROOKE_3                    102
-#define TRAINER_BROOKE_4                    103
-#define TRAINER_BROOKE_5                    104//START HERE
-#define TRAINER_PATRICIA                    105
-#define TRAINER_KINDRA                      106
-#define TRAINER_TAMMY                       107
-#define TRAINER_VALERIE_1                   108
-#define TRAINER_TASHA                       109
+#define TRAINER_HOWARD                      	102
+#define TRAINER_ELOISE                      	103
+#define TRAINER_ALLY_AND_EMMY               	104
+#define TRAINER_AMIR                        	105
+#define TRAINER_GETHIN                      	106
+#define TRAINER_BERNARD                     	107
+#define TRAINER_ELLIE                       	108
+#define TRAINER_RUSTY                       109
 #define TRAINER_VALERIE_2                   110
 #define TRAINER_VALERIE_3                   111
 #define TRAINER_VALERIE_4                   112
-#define TRAINER_VALERIE_5                   113
+#define TRAINER_VALERIE_5                   113//START HERE
 #define TRAINER_CINDY_1                     114
 #define TRAINER_DAPHNE                      115
 #define TRAINER_GRUNT_SPACE_CENTER_2        116
