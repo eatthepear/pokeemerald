@@ -5284,8 +5284,8 @@
     {
       "id": "LAYOUT_ZONE21B",
       "name": "Zone21B_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 14,
+      "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone21B/border.bin",
@@ -5304,8 +5304,8 @@
     {
       "id": "LAYOUT_ZONE21D",
       "name": "Zone21D_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 30,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone21D/border.bin",
