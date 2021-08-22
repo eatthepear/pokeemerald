@@ -107,6 +107,7 @@ Zone17Shops_Shop_ZhuLiUnique:
 	.2byte ITEM_LEAF_STONE
 	.2byte ITEM_ICE_STONE
 	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_OVAL_STONE
 	.2byte ITEM_SACHET
 	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_NONE

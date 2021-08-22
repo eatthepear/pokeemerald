@@ -173,6 +173,25 @@ EventScript_SmashItems:
 	call_if_eq EventScript_SmashYELLOWShard
 	compare VAR_RESULT, 39
 	call_if_eq EventScript_SmashYELLOWShard
+	compare VAR_RESULT, 40
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 41
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 42
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 43
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 44
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 45
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 46
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 47
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 48
+	call_if_eq EventScript_SmashREDShard
+	compare VAR_RESULT, 49
 	return
 	
 EventScript_SmashYELLOWShard:
