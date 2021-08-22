@@ -2,7 +2,7 @@
   "id": "MAP_ZONE19D",
   "name": "Zone19D",
   "layout": "LAYOUT_ZONE19D",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_RG_MT_MOON",
   "region_map_section": "MAPSEC_ZONE_19",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

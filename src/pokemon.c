@@ -47,6 +47,7 @@
 #include "constants/moves.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
+#include "constants/species.h"
 #include "constants/trainers.h"
 #include "constants/weather.h"
 #include "constants/battle_config.h"
@@ -7624,7 +7625,41 @@ u16 GetBattleBGM(void)
         }
     }
     else
-        return MUS_VS_WILD;
+    {
+        switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
+        {
+        case SPECIES_ARTICUNO:
+        case SPECIES_ZAPDOS:
+        case SPECIES_MOLTRES:
+            return MUS_RG_VS_LEGEND;
+        case SPECIES_MEWTWO:
+            return MUS_RG_VS_MEWTWO;
+        case SPECIES_MEW:
+            return MUS_VS_MEW;
+        case SPECIES_RAIKOU:
+            return HG_SEQ_GS_VS_RAIKOU;
+        case SPECIES_ENTEI:
+            return HG_SEQ_GS_VS_ENTEI;
+        case SPECIES_SUICUNE:
+            return HG_SEQ_GS_VS_SUICUNE;
+        case SPECIES_LUGIA:
+            return HG_SEQ_GS_VS_LUGIA;
+        case SPECIES_HO_OH:
+            return HG_SEQ_GS_VS_HOUOU;
+        case SPECIES_REGIROCK:
+        case SPECIES_REGICE:
+        case SPECIES_REGISTEEL:
+            return MUS_VS_REGI;
+        case SPECIES_GROUDON:
+        case SPECIES_KYOGRE:
+        case SPECIES_RAYQUAZA:
+            return MUS_VS_KYOGRE_GROUDON;
+        case SPECIES_DEOXYS:
+            return MUS_RG_VS_DEOXYS;
+        default:
+            return MUS_VS_WILD;
+        }
+    }
 }
 
 void PlayBattleBGM(void)
