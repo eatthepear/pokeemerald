@@ -2,7 +2,7 @@
   "id": "MAP_ZONE21A",
   "name": "Zone21A",
   "layout": "LAYOUT_ZONE21A",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_SEQ_ROAD_D_D",
   "region_map_section": "MAPSEC_ZONE_21",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

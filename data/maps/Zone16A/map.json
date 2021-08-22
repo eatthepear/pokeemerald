@@ -2,7 +2,7 @@
   "id": "MAP_ZONE16A",
   "name": "Zone16A",
   "layout": "LAYOUT_ZONE16A",
-  "music": "MUS_ROUTE120",
+  "music": "MUS_ROUTE104",
   "region_map_section": "MAPSEC_ZONE_16",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

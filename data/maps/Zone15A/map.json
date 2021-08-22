@@ -2,7 +2,7 @@
   "id": "MAP_ZONE15A",
   "name": "Zone15A",
   "layout": "LAYOUT_ZONE15A",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_HG_SEQ_GS_D_KOORINONUKE",
   "region_map_section": "MAPSEC_ZONE_15",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

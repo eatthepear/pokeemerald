@@ -2,7 +2,7 @@
   "id": "MAP_ZONE0A",
   "name": "Zone0A",
   "layout": "LAYOUT_ZONE0A",
-  "music": "MUS_LITTLEROOT",
+  "music": "MUS_HG_SEQ_GS_C_KUCHIBA",
   "region_map_section": "MAPSEC_ZONE_0",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

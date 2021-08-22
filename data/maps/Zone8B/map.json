@@ -2,7 +2,7 @@
   "id": "MAP_ZONE8B",
   "name": "Zone8B",
   "layout": "LAYOUT_ZONE8B",
-  "music": "MUS_SEALED_CHAMBER",
+  "music": "MUS_DP_SEQ_D_05",
   "region_map_section": "MAPSEC_ZONE_8",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

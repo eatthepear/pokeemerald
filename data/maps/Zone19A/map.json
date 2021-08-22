@@ -2,7 +2,7 @@
   "id": "MAP_ZONE19A",
   "name": "Zone19A",
   "layout": "LAYOUT_ZONE19A",
-  "music": "MUS_DEWFORD",
+  "music": "MUS_HG_SEQ_GS_T_GUREN",
   "region_map_section": "MAPSEC_ZONE_19",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

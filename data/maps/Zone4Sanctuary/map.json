@@ -2,7 +2,7 @@
   "id": "MAP_ZONE4SANCTUARY",
   "name": "Zone4Sanctuary",
   "layout": "LAYOUT_ZONE4SANCTUARY",
-  "music": "MUS_SOOTOPOLIS",
+  "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_4",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

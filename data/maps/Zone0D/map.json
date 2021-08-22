@@ -2,7 +2,7 @@
   "id": "MAP_ZONE0D",
   "name": "Zone0D",
   "layout": "LAYOUT_ZONE0D",
-  "music": "MUS_LITTLEROOT",
+  "music": "MUS_DP_SEQ_CITY07_D",
   "region_map_section": "MAPSEC_ZONE_0",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

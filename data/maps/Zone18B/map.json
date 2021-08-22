@@ -2,7 +2,7 @@
   "id": "MAP_ZONE18B",
   "name": "Zone18B",
   "layout": "LAYOUT_ZONE18B",
-  "music": "MUS_B_TOWER_RS",
+  "music": "MUS_DP_SEQ_GYM",
   "region_map_section": "MAPSEC_ZONE_18",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

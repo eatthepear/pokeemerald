@@ -2,7 +2,7 @@
   "id": "MAP_ZONE11A",
   "name": "Zone11A",
   "layout": "LAYOUT_ZONE11A",
-  "music": "MUS_ROUTE113",
+  "music": "MUS_DP_SEQ_ROAD_E_D",
   "region_map_section": "MAPSEC_ZONE_11",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",

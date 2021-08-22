@@ -2,7 +2,7 @@
   "id": "MAP_ZONE20A",
   "name": "Zone20A",
   "layout": "LAYOUT_ZONE20A",
-  "music": "MUS_B_PYRAMID",
+  "music": "MUS_DP_SEQ_D_01",
   "region_map_section": "MAPSEC_ZONE_20",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

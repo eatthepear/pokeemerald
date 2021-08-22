@@ -2,7 +2,7 @@
   "id": "MAP_ZONE20SANCTUARY",
   "name": "Zone20Sanctuary",
   "layout": "LAYOUT_ZONE20SANCTUARY",
-  "music": "MUS_SOOTOPOLIS",
+  "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_20",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -96,4 +96,3 @@
     }
   ]
 }
-

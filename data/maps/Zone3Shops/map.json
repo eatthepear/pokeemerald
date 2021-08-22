@@ -2,7 +2,7 @@
   "id": "MAP_ZONE3SHOPS",
   "name": "Zone3Shops",
   "layout": "LAYOUT_ZONE3SHOPS",
-  "music": "MUS_SOOTOPOLIS",
+  "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_3",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

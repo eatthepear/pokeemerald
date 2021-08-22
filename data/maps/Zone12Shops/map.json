@@ -2,7 +2,7 @@
   "id": "MAP_ZONE12SHOPS",
   "name": "Zone12Shops",
   "layout": "LAYOUT_ZONE12SHOPS",
-  "music": "MUS_SOOTOPOLIS",
+  "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_12",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

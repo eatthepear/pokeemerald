@@ -2,7 +2,7 @@
   "id": "MAP_ZONE14B",
   "name": "Zone14B",
   "layout": "LAYOUT_ZONE14B",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DP_SEQ_D_04",
   "region_map_section": "MAPSEC_ZONE_14",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

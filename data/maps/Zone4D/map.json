@@ -2,7 +2,7 @@
   "id": "MAP_ZONE4D",
   "name": "Zone4D",
   "layout": "LAYOUT_ZONE4D",
-  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "music": "MUS_HG_SEQ_GS_D_UNKNOWN_ISEKI",
   "region_map_section": "MAPSEC_ZONE_4",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
