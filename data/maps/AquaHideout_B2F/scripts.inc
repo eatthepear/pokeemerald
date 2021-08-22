@@ -24,7 +24,7 @@ AquaHideout_B2F_EventScript_SubmarineEscape:: @ 8233E25
 	release
 	end
 
-AquaHideout_B2F_Movement_SumbarineDepartLeft: @ 8233E80
+AquaHideout_B2F_Movement_SumbarineDepartLeft:
 	walk_left
 	walk_left
 	walk_left
@@ -32,7 +32,7 @@ AquaHideout_B2F_Movement_SumbarineDepartLeft: @ 8233E80
 	step_end
 
 @ Unused
-AquaHideout_B2F_Movement_SumbarineDepartRight: @ 8233E85
+AquaHideout_B2F_Movement_SumbarineDepartRight:
 	walk_right
 	walk_right
 	walk_right
@@ -40,7 +40,7 @@ AquaHideout_B2F_Movement_SumbarineDepartRight: @ 8233E85
 	step_end
 	end
 
-AquaHideout_B2F_EventScript_Grunt8:: @ 8233EC6
+AquaHideout_B2F_EventScript_Grunt8::
 	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_8, AquaHideout_B2F_Text_Grunt8Intro, AquaHideout_B2F_Text_Grunt8Defeat
 	msgbox AquaHideout_B2F_Text_Grunt8PostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -55,10 +55,10 @@ AquaHideout_B2F_Text_Grunt8Intro: @ 823426F
 	.string "thing I had to learn was how these\l"
 	.string "warp panels connected.$"
 
-AquaHideout_B2F_Text_Grunt8Defeat: @ 82342CC
+AquaHideout_B2F_Text_Grunt8Defeat:
 	.string "I was too occupied thinking about\n"
 	.string "the warp panels…$"
 
-AquaHideout_B2F_Text_Grunt8PostBattle: @ 82342FF
+AquaHideout_B2F_Text_Grunt8PostBattle:
 	.string "I'll have to learn about how I can\n"
 	.string "battle more effectively…$"

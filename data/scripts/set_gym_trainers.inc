@@ -1,4 +1,4 @@
-Common_EventScript_SetGymTrainers:: @ 8271F43
+Common_EventScript_SetGymTrainers::
 	switch VAR_0x8008
 	case 1, RustboroCity_Gym_SetGymTrainers
 	case 2, DewfordTown_Gym_SetGymTrainers
@@ -10,26 +10,26 @@ Common_EventScript_SetGymTrainers:: @ 8271F43
 	case 8, SootopolisCity_Gym_SetGymTrainers
 	end
 
-RustboroCity_Gym_SetGymTrainers:: @ 8271FA1
+RustboroCity_Gym_SetGymTrainers::
 	return
 
-DewfordTown_Gym_SetGymTrainers:: @ 8271FAB
+DewfordTown_Gym_SetGymTrainers::
 	return
 
-MauvilleCity_Gym_SetGymTrainers:: @ 8271FBE
+MauvilleCity_Gym_SetGymTrainers::
 	return
 
-LavaridgeTown_Gym_SetGymTrainers:: @ 8271FCE
+LavaridgeTown_Gym_SetGymTrainers::
 	return
 
-PetalburgCity_Gym_SetGymTrainers:: @ 8271FE7
+PetalburgCity_Gym_SetGymTrainers::
 	return
 
-FortreeCity_Gym_SetGymTrainers:: @ 8271FFD
+FortreeCity_Gym_SetGymTrainers::
 	return
 
-MossdeepCity_Gym_SetGymTrainers:: @ 8272010
+MossdeepCity_Gym_SetGymTrainers::
 	return
 
-SootopolisCity_Gym_SetGymTrainers:: @ 8272035
+SootopolisCity_Gym_SetGymTrainers::
 	return

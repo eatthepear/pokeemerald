@@ -2025,7 +2025,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
 
 static void Task_OpenInfoScreenAfterMonMovement(u8 taskId)
 {
-    if (gSprites[sPokedexView->selectedMonSpriteId].pos1.x == 48 && gSprites[sPokedexView->selectedMonSpriteId].pos1.y == 56)
+    if (gSprites[sPokedexView->selectedMonSpriteId].x == 48 && gSprites[sPokedexView->selectedMonSpriteId].y == 56)
     {
         sPokedexView->currentPageBackup = sPokedexView->currentPage;
         gTasks[taskId].tTaskId = LoadInfoScreen(&sPokedexView->pokedexList[sPokedexView->selectedPokemon], sPokedexView->selectedMonSpriteId);
@@ -2241,7 +2241,7 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
 
 static void Task_OpenSearchResultsInfoScreenAfterMonMovement(u8 taskId)
 {
-    if (gSprites[sPokedexView->selectedMonSpriteId].pos1.x == 48 && gSprites[sPokedexView->selectedMonSpriteId].pos1.y == 56)
+    if (gSprites[sPokedexView->selectedMonSpriteId].x == 48 && gSprites[sPokedexView->selectedMonSpriteId].y == 56)
     {
         sPokedexView->currentPageBackup = sPokedexView->currentPage;
         gTasks[taskId].tTaskId = LoadInfoScreen(&sPokedexView->pokedexList[sPokedexView->selectedPokemon], sPokedexView->selectedMonSpriteId);
@@ -2933,7 +2933,7 @@ static void UpdateSelectedMonSpriteId(void)
     {
         u16 spriteId = sPokedexView->monSpriteIds[i];
 
-        if (gSprites[spriteId].pos2.x == 0 && gSprites[spriteId].pos2.y == 0 && spriteId != 0xFFFF)
+        if (gSprites[spriteId].x2 == 0 && gSprites[spriteId].y2 == 0 && spriteId != 0xFFFF)
             sPokedexView->selectedMonSpriteId = spriteId;
     }
 }
@@ -3290,11 +3290,11 @@ void SpriteCB_MoveMonForInfoScreen(struct Sprite *sprite)
 {
     sprite->oam.priority = 0;
     sprite->oam.affineMode = ST_OAM_AFFINE_OFF;
-    sprite->pos2.x = 0;
-    sprite->pos2.y = 0;
-    if (sprite->pos1.x != 48 || sprite->pos1.y != 56)
+    sprite->x2 = 0;
+    sprite->y2 = 0;
+    if (sprite->x != 48 || sprite->y != 56)
     {
-        if (sprite->pos1.x > 48)
+        /*if (sprite->pos1.x > 48)
             sprite->pos1.x -= 4;
         if (sprite->pos1.x < 48)
             sprite->pos1.x = 48;
@@ -3302,7 +3302,16 @@ void SpriteCB_MoveMonForInfoScreen(struct Sprite *sprite)
         if (sprite->pos1.y > 56)
             sprite->pos1.y -= 4;
         if (sprite->pos1.y < 56)
-            sprite->pos1.y = 56;
+            sprite->pos1.y = 56;*/
+        if (sprite->x > 48)
+            sprite->x--;
+        if (sprite->x < 48)
+            sprite->x++;
+
+        if (sprite->y > 56)
+            sprite->y--;
+        if (sprite->y < 56)
+            sprite->y++;
     }
     else
     {
@@ -3322,7 +3331,7 @@ static void SpriteCB_PokedexListMonSprite(struct Sprite *sprite)
     else
     {
         u32 var;
-        sprite->pos2.y = gSineTable[(u8)sprite->data[5]] * 76 / 256;
+        sprite->y2 = gSineTable[(u8)sprite->data[5]] * 76 / 256;
         var = SAFE_DIV(0x10000, gSineTable[sprite->data[5] + 64]);
         if (var > 0xFFFF)
             var = 0xFFFF;
@@ -3352,7 +3361,7 @@ static void SpriteCB_Scrollbar(struct Sprite *sprite)
     if (sPokedexView->currentPage != PAGE_MAIN && sPokedexView->currentPage != PAGE_SEARCH_RESULTS)
         DestroySprite(sprite);
     else
-        sprite->pos2.y = sPokedexView->selectedPokemon * 120 / (sPokedexView->pokemonListCount - 1);
+        sprite->y2 = sPokedexView->selectedPokemon * 120 / (sPokedexView->pokemonListCount - 1);
 }
 
 static void SpriteCB_ScrollArrow(struct Sprite *sprite)
@@ -3381,7 +3390,7 @@ static void SpriteCB_ScrollArrow(struct Sprite *sprite)
                 sprite->invisible = FALSE;
             r0 = sprite->data[2] - 128;
         }
-        sprite->pos2.y = gSineTable[r0] / 64;
+        sprite->y2 = gSineTable[r0] / 64;
         sprite->data[2] = sprite->data[2] + 8;
         if (sPokedexView->menuIsOpen == FALSE && sPokedexView->menuY == 0 && sprite->invisible == FALSE)
             sprite->invisible = FALSE;
@@ -3416,8 +3425,8 @@ static void SpriteCB_RotatingPokeBall(struct Sprite *sprite)
         val = sPokedexView->pokeBallRotation + (sprite->data[1] + 64);
         r3 = gSineTable[val];
         r0 = gSineTable[val + 64];
-        sprite->pos2.x = r0 * 40 / 256;
-        sprite->pos2.y = r3 * 40 / 256;
+        sprite->x2 = r0 * 40 / 256;
+        sprite->y2 = r3 * 40 / 256;
     }
 }
 
@@ -3434,8 +3443,8 @@ static void SpriteCB_DexListStartMenuCursor(struct Sprite *sprite)
         if (sPokedexView->menuIsOpen && sPokedexView->menuY == r1)
         {
             sprite->invisible = FALSE;
-            sprite->pos2.y = sPokedexView->menuCursorPos * 16;
-            sprite->pos2.x = gSineTable[(u8)sprite->data[2]] / 64;
+            sprite->y2 = sPokedexView->menuCursorPos * 16;
+            sprite->x2 = gSineTable[(u8)sprite->data[2]] / 64;
             sprite->data[2] += 8;
         }
         else
@@ -4094,7 +4103,7 @@ static void Task_LoadSizeScreen(u8 taskId)
         gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
         gSprites[spriteId].oam.matrixNum = 1;
         gSprites[spriteId].oam.priority = 0;
-        gSprites[spriteId].pos2.y = gPokedexEntries[sPokedexListItem->dexNum].trainerOffset;
+        gSprites[spriteId].y2 = gPokedexEntries[sPokedexListItem->dexNum].trainerOffset;
         SetOamMatrix(1, gPokedexEntries[sPokedexListItem->dexNum].trainerScale, 0, 0, gPokedexEntries[sPokedexListItem->dexNum].trainerScale);
         LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
         gTasks[taskId].data[5] = spriteId;
@@ -4105,7 +4114,7 @@ static void Task_LoadSizeScreen(u8 taskId)
         gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
         gSprites[spriteId].oam.matrixNum = 2;
         gSprites[spriteId].oam.priority = 0;
-        gSprites[spriteId].pos2.y = gPokedexEntries[sPokedexListItem->dexNum].pokemonOffset;
+        gSprites[spriteId].y2 = gPokedexEntries[sPokedexListItem->dexNum].pokemonOffset;
         SetOamMatrix(2, gPokedexEntries[sPokedexListItem->dexNum].pokemonScale, 0, 0, gPokedexEntries[sPokedexListItem->dexNum].pokemonScale);
         LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
         gTasks[taskId].tMonSpriteId = spriteId;
@@ -4403,15 +4412,15 @@ static void Task_ExitCaughtMonPage(u8 taskId)
 
 static void SpriteCB_SlideCaughtMonToCenter(struct Sprite *sprite)
 {
-    if (sprite->pos1.x < 0x78)
-        sprite->pos1.x += 2;
-    if (sprite->pos1.x > 0x78)
-        sprite->pos1.x -= 2;
+    if (sprite->x < 0x78)
+        sprite->x += 2;
+    if (sprite->x > 0x78)
+        sprite->x -= 2;
 
-    if (sprite->pos1.y < 0x50)
-        sprite->pos1.y += 1;
-    if (sprite->pos1.y > 0x50)
-        sprite->pos1.y -= 1;
+    if (sprite->y < 0x50)
+        sprite->y += 1;
+    if (sprite->y > 0x50)
+        sprite->y -= 1;
 }
 
 #undef tState
@@ -4466,8 +4475,8 @@ static void SetTypeIconPosAndPal(u8 typeId, u8 x, u8 y, u8 spriteArrayId)
     sprite = &gSprites[sPokedexView->typeIconSpriteIds[spriteArrayId]];
     StartSpriteAnim(sprite, typeId);
     sprite->oam.paletteNum = sMoveTypeToOamPaletteNum[typeId];
-    sprite->pos1.x = x + 16;
-    sprite->pos1.y = y + 8;
+    sprite->x = x + 16;
+    sprite->y = y + 8;
     SetSpriteInvisibility(spriteArrayId, FALSE);
 }
 static void PrintCurrentSpeciesTypeInfo(void)
@@ -6084,7 +6093,7 @@ static void SpriteCB_SearchParameterScrollArrow(struct Sprite *sprite)
                 sprite->invisible = FALSE;
         }
         val = sprite->data[2] + sprite->sIsDownArrow * 128;
-        sprite->pos2.y = gSineTable[val] / 128;
+        sprite->y2 = gSineTable[val] / 128;
         sprite->data[2] += 8;
     }
     else
@@ -6535,8 +6544,8 @@ static void PrintMoveNameAndInfo(u8 taskId, bool8 toggle)
 
     //Egg/TM/Level/Tutor Item Icon
     gTasks[taskId].data[3] = AddItemIconSprite(ITEM_TAG, ITEM_TAG, item);
-    gSprites[gTasks[taskId].data[3]].pos2.x = 203;
-    gSprites[gTasks[taskId].data[3]].pos2.y = 39;
+    gSprites[gTasks[taskId].data[3]].x = 203;
+    gSprites[gTasks[taskId].data[3]].y = 39;
     gSprites[gTasks[taskId].data[3]].oam.priority = 0;
 
     //Moves selected from move max

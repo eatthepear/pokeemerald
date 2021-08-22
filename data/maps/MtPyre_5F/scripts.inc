@@ -1,4 +1,3 @@
-MtPyre_5F_MapScripts:: @ 8231C6D
+MtPyre_5F_MapScripts::
 	.byte 0
 
-@ Seems like the scripts for the 4F and 5F were swapped
