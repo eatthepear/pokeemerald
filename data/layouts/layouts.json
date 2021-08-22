@@ -5270,6 +5270,46 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone20Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone20Shops/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE21A",
+      "name": "Zone21A_Layout",
+      "width": 65,
+      "height": 106,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Zone21A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone21A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE21B",
+      "name": "Zone21B_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone21B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone21B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE21C",
+      "name": "Zone21C_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Zone21C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone21C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE21D",
+      "name": "Zone21D_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone21D/border.bin",
+      "blockdata_filepath": "data/layouts/Zone21D/map.bin"
     }
   ]
 }

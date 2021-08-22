@@ -96,11 +96,6 @@ Route121_EventScript_RematchWalter:: @ 81F5ED6
 	msgbox Route121_Text_WalterPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route121_EventScript_Tammy:: @ 81F5EED
-	trainerbattle_single TRAINER_TAMMY, Route121_Text_TammyIntro, Route121_Text_TammyDefeat
-	msgbox Route121_Text_TammyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route121_EventScript_Kate:: @ 81F5F04
 	trainerbattle_double TRAINER_KATE_AND_JOY, Route121_Text_KateIntro, Route121_Text_KateDefeat, Route121_Text_KateNotEnoughMons
 	msgbox Route121_Text_KatePostBattle, MSGBOX_AUTOCLOSE
