@@ -3045,6 +3045,7 @@ static void FillPartnerParty(u16 trainerId)
 
 // Comment out the following line if you have changed .iv to go 0-31, instead of 0-255 as in vanilla.
             //fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
+            fixedIV = partyData[i].iv;
 
             for (j = 0; gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].trainerName[j] != EOS; j++)
                 nameHash += gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].trainerName[j];

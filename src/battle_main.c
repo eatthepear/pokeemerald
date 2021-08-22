@@ -1837,7 +1837,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 // Comment out the following line if you have changed .iv to go 0-31, instead of 0-255 as in vanilla.
             //fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-            fixedIV = fixedIV + TRAINER_IV_MODIFIER;
+            fixedIV = partyData[i].iv + TRAINER_IV_MODIFIER;
 
             if (gTrainers[trainerNum].doubleBattle == TRUE)
                 personalityValue = 0x80;
