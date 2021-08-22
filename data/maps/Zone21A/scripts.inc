@@ -143,3 +143,10 @@ Zone21A_Text_RustyDefeat:
 Zone21A_Text_RustyPostBattle:
 	.string "I can't remember the next line in the\n"
 	.string "song. Something to do with a name?$"
+
+Zone21A_EventScript_Sign::
+	msgbox Zone21A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone21A_Text_Sign:
+	.string "Lakeside Cottage$"
