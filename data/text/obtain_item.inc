@@ -32,3 +32,6 @@ gText_TheDecorWasTransferredToThePC::
 
 gText_ObtainedTheItems::
     .string "Obtained {STR_VAR_1} {STR_VAR_2}!$"
+
+gText_PlayerFoundItems::
+    .string "{PLAYER} found {STR_VAR_1} {STR_VAR_2}!$"
