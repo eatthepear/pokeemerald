@@ -1242,3 +1242,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Zone21C/scripts.inc"
 
 	.include "data/maps/Zone21D/scripts.inc"
+
+	.include "data/maps/Zone21Sanctuary/scripts.inc"
+
+	.include "data/maps/Zone21Shops/scripts.inc"
