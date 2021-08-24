@@ -2,7 +2,7 @@
   "id": "MAP_ZONE21D",
   "name": "Zone21D",
   "layout": "LAYOUT_ZONE21D",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_HG_SEQ_GS_D_CHIKATSUURO",
   "region_map_section": "MAPSEC_ZONE_21",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
