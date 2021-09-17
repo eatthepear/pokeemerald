@@ -9,3 +9,9 @@ Zone21D_OnTransition:
 Zone21D_EventScript_SetFlashRadius:
 	setflashradius 4
 	return
+
+Zone21D_EventScript_SecretWarp::
+	lockall
+        warp MAP_ZONE21A, 255, 30, 63
+        releaseall
+        end

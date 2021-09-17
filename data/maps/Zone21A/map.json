@@ -151,15 +151,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 30,
-      "y": 63,
-      "elevation": 1,
-      "var": "VAR_GENERIC",
-      "var_value": "0",
-      "script": "Zone21A_EventScript_SecretWarp"
-    },
-    {
-      "type": "trigger",
       "x": 51,
       "y": 16,
       "elevation": 0,
@@ -175,6 +166,15 @@
       "var": "VAR_GENERIC",
       "var_value": "0",
       "script": "Zone21A_EventScript_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 63,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SecretWarp"
     }
   ],
   "bg_events": [

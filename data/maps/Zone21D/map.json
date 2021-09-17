@@ -17,10 +17,24 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE21B",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21D_EventScript_SecretWarp"
+    }
   ],
   "bg_events": [
 

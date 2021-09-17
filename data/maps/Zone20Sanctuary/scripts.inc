@@ -63,10 +63,9 @@ Zone20Sanctuary_EventScript_NextZoneCheck:
 	end
 
 Zone20Sanctuary_EventScript_Leave:
-	msgbox gText_Colress_EndofDemo, MSGBOX_AUTOCLOSE
-	@ call EventScript_LeavingSetup
-	@ setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	@ warp MAP_ZONE21A, 255, 38, 100
+	call EventScript_LeavingSetup
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
+	warp MAP_ZONE21A, 255, 38, 100
 	release
 	end
 

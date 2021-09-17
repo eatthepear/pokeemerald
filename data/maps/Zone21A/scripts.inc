@@ -11,9 +11,9 @@ Zone21A_EventScript_Exit::
 
 Zone21A_EventScript_SecretWarp::
 	lockall
-	warpteleport MAP_ZONE21D, 255, 7, 7
-	releaseall
-	end
+        warp MAP_ZONE21D, 255, 2, 28
+        releaseall
+        end
 
 Zone21A_EventScript_Howard::
 	trainerbattle_single TRAINER_HOWARD, Zone21A_Text_HowardIntro, Zone21A_Text_HowardDefeat
