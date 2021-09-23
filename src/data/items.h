@@ -1501,8 +1501,8 @@ const struct Item gItems[] =
         .holdEffectParam = 0,
         .description = sRedNectarDesc,
         .pocket = POCKET_POWER_UP,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Placeholder
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
     },
 
     [ITEM_YELLOW_NECTAR] =
@@ -1513,9 +1513,8 @@ const struct Item gItems[] =
         .holdEffectParam = 0,
         .description = sYellowNectarDesc,
         .pocket = POCKET_POWER_UP,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Placeholder
-    },
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
 
     [ITEM_PINK_NECTAR] =
     {
@@ -1525,8 +1524,8 @@ const struct Item gItems[] =
         .holdEffectParam = 0,
         .description = sPinkNectarDesc,
         .pocket = POCKET_POWER_UP,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Placeholder
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
     },
 
     [ITEM_PURPLE_NECTAR] =
@@ -1537,8 +1536,8 @@ const struct Item gItems[] =
         .holdEffectParam = 0,
         .description = sPurpleNectarDesc,
         .pocket = POCKET_POWER_UP,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Placeholder
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
     },
 
     [ITEM_RARE_BONE] =
@@ -5383,9 +5382,9 @@ const struct Item gItems[] =
         .price = 0,
         .holdEffect = HOLD_EFFECT_GRACIDEA,
         .description = sGracideaDesc,
-        .pocket = POCKET_BATTLE_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
     },
 
     [ITEM_BUG_MEMORY] =
