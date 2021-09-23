@@ -2619,10 +2619,10 @@ const struct Item gItems[] =
 
     [ITEM_MENTAL_HERB] =
     {
-        .name = _("Mental Herb"),
+        .name = _("MENTAL HERB"),
         .itemId = ITEM_MENTAL_HERB,
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_CURE_ATTRACT,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_MENTAL_HERB,
         .description = sMentalHerbDesc,
         .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
