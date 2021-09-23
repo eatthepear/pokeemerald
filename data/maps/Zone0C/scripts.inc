@@ -264,7 +264,9 @@ Zone0C_PokemonDayCare_EventScript_TwoMonsInDaycare:
 
 Zone0C_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon:
 	.string "I'm the Day-Care Lady.\p"
-	.string "We can raise Pokémon for you.\p"
+	.string "We can raise a Pokémon for you\n"
+	.string "for a flat cost of ¥500,\l"
+	.string "plus ¥200 per level gained.\p"
 	.string "Would you like us to raise one?$"
 
 Zone0C_PokemonDayCare_Text_WhichMonShouldWeRaise:
