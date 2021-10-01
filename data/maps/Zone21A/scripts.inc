@@ -150,3 +150,27 @@ Zone21A_EventScript_Sign::
 
 Zone21A_Text_Sign:
 	.string "Lakeside Cottage$"
+
+Zone21A_EventScript_QuickBall::
+	finditem ITEM_QUICK_BALL
+	end
+
+Zone21A_EventScript_UltraBall::
+	finditem ITEM_ULTRA_BALL
+	end
+
+Zone21A_EventScript_FullHeal::
+	finditem ITEM_FULL_HEAL
+	end
+
+Zone21A_EventScript_SuperRepel::
+	finditem ITEM_SUPER_REPEL
+	end
+
+Zone21A_EventScript_Everstone::
+	finditem ITEM_EVERSTONE
+	end
+
+Zone21A_EventScript_Nugget::
+	finditem ITEM_NUGGET
+	end

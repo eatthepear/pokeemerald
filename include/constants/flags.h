@@ -591,12 +591,12 @@
 #define FLAG_HIDDEN_ITEM_ZONE19B_RED_SHARD	                 (FLAG_HIDDEN_ITEMS_START + 0x32)
 #define FLAG_HIDDEN_ITEM_ZONE19B_STAR_PIECE	                 (FLAG_HIDDEN_ITEMS_START + 0x33)
 #define FLAG_HIDDEN_ITEM_ZONE20A_RED_SHARD	                 (FLAG_HIDDEN_ITEMS_START + 0x34)
-#define FLAG_HIDDEN_ITEM_NEXT1	     (FLAG_HIDDEN_ITEMS_START + 0x35)
-#define FLAG_HIDDEN_ITEM_NEXT2	     (FLAG_HIDDEN_ITEMS_START + 0x36)
-#define FLAG_HIDDEN_ITEM_NEXT3       (FLAG_HIDDEN_ITEMS_START + 0x37)
-#define FLAG_HIDDEN_ITEM_NEXT4       (FLAG_HIDDEN_ITEMS_START + 0x38)
-#define FLAG_HIDDEN_ITEM_NEXT5       (FLAG_HIDDEN_ITEMS_START + 0x39)
-#define FLAG_HIDDEN_ITEM_NEXT6       (FLAG_HIDDEN_ITEMS_START + 0x3A)
+#define FLAG_HIDDEN_ITEM_ZONE21A_BLUE_SHARD	                 (FLAG_HIDDEN_ITEMS_START + 0x35)
+#define FLAG_HIDDEN_ITEM_ZONE21B_BLUE_SHARD	                 (FLAG_HIDDEN_ITEMS_START + 0x36)
+#define FLAG_HIDDEN_ITEM_ZONE21A_YELLOW_SHARD                (FLAG_HIDDEN_ITEMS_START + 0x37)
+#define FLAG_HIDDEN_ITEM_ZONE21A_LUM_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x38)
+#define FLAG_HIDDEN_ITEM_ZONE21A_CHESTO_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x39)
+#define FLAG_HIDDEN_ITEM_ZONE21A_SITRUS_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x3A)
 #define FLAG_HIDDEN_ITEM_NEXT7       (FLAG_HIDDEN_ITEMS_START + 0x3B)
 #define FLAG_HIDDEN_ITEM_NEXT8       (FLAG_HIDDEN_ITEMS_START + 0x3C)
 #define FLAG_HIDDEN_ITEM_NEXT9       (FLAG_HIDDEN_ITEMS_START + 0x3D)
@@ -1118,13 +1118,13 @@
 #define FLAG_ITEM_ZONE18A_HEAT_ROCK                                 0x42E
 #define FLAG_ITEM_ZONE18A_TM16                                      0x42F
 #define FLAG_ITEM_ZONE20A_HYPER_POTION                              0x430
-#define FLAG_ITEM_MT_PYRE_EXTERIOR_MAX_POTION                       0x431
-#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_48                            0x432//start here
-#define FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL                           0x433
-#define FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE                          0x434
-#define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_6_LUXURY_BALL    0x435
-#define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_4_SCANNER        0x436
-#define FLAG_ITEM_SCORCHED_SLAB_TM_11                               0x437
+#define FLAG_ITEM_ZONE21A_QUICK_BALL                                0x431
+#define FLAG_ITEM_ZONE21A_ULTRA_BALL                                0x432
+#define FLAG_ITEM_ZONE21A_FULL_HEAL                                 0x433
+#define FLAG_ITEM_ZONE21A_SUPER_REPEL                               0x434
+#define FLAG_ITEM_ZONE21A_EVERSTONE                                 0x435
+#define FLAG_ITEM_ZONE21A_NUGGET                                    0x436
+#define FLAG_ITEM_ZONE21B_SABLENITE                                 0x437//start here
 #define FLAG_ITEM_METEOR_FALLS_B1F_2R_TM_02                         0x438
 #define FLAG_ITEM_SHOAL_CAVE_ENTRANCE_BIG_PEARL                     0x439
 #define FLAG_ITEM_SHOAL_CAVE_INNER_ROOM_RARE_CANDY                  0x43A
