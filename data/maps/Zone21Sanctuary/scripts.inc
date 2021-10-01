@@ -26,7 +26,7 @@ Zone21Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone21Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	@ giveitem ITEM_TM21
+	giveitem ITEM_RED_SHARD, 30
 	closemessage
 	setvar VAR_ZONE, 22
 	buffernumberstring 0, VAR_ZONE
@@ -66,4 +66,4 @@ Zone21Sanctuary_EventScript_Leave:
 	end
 
 Zone21Sanctuary_Text_Reward:
-	.string "TM21 - Sludge Bomb!$"
+	.string "30 Red Shards!$"
