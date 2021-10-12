@@ -138,12 +138,9 @@ gText_Advice9:
 
 gText_Advice10:
 	.string "While you are on the Pokémon stats\n"
-	.string "screen, you can press the L button\l"
-	.string "to show the Pokémon's IVs,\l"
-	.string "the R button to show the\l"
-	.string "Pokémon's EVs, and the\l"
-	.string "Start button to show the\l"
-	.string "Pokémon's stats again.$"
+	.string "screen, you can press the A button\l"
+	.string "to cycle through screens that show\l"
+	.string "the Pokémon's IVs, EVs, or stats.$"
 
 gText_Advice11:
 	.string "Press the R key to enable\n"

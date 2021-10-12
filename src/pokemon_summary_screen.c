@@ -1596,41 +1596,68 @@ static void CloseSummaryScreen(u8 taskId)
     }
 }
 
+// Cycle summary page between stats, IVs and EVs
+static void ChangeSummaryState (s16 *taskData, u8 taskId)
+{
+    switch (taskData[3])
+    {
+        case 0:
+            taskData[3] = 1;
+            break;
+        case 1:
+            taskData[3] = 2;
+            break;
+        case 2:
+            taskData[3] = 0;
+            break;
+    }
+    gTasks[taskId].func = Task_HandleInput;
+}
+
 static void Task_HandleInput(u8 taskId)
 {
+    s16 *data = gTasks[taskId].data;
+
     if (MenuHelpers_CallLinkSomething() != TRUE && !gPaletteFade.active)
     {
         if (JOY_NEW(DPAD_UP))
         {
+            data[3] = 0;
             ChangeSummaryPokemon(taskId, -1);
         }
         else if (JOY_NEW(DPAD_DOWN))
         {
+            data[3] = 0;
             ChangeSummaryPokemon(taskId, 1);
         }
         else if ((JOY_NEW(DPAD_LEFT)) || GetLRKeysPressed() == MENU_L_PRESSED)
         {
+            data[3] = 0;
             ChangePage(taskId, -1);
         }
         else if ((JOY_NEW(DPAD_RIGHT)) || GetLRKeysPressed() == MENU_R_PRESSED)
         {
+            data[3] = 0;
             ChangePage(taskId, 1);
         }
         else if (JOY_NEW(A_BUTTON))
         {
-            if (sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS)
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
             {
-                if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
-                {
-                    StopPokemonAnimations();
-                    PlaySE(SE_SELECT);
-                    BeginCloseSummaryScreen(taskId);
-                }
-                else // Contest or Battle Moves
-                {
-                    PlaySE(SE_SELECT);
-                    SwitchToMoveSelection(taskId);
-                }
+                // Cycle through IVs/EVs/stats on pressing A
+                ChangeSummaryState(data, taskId);
+                BufferIvOrEvStats(data[3]);
+            }
+            else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
+            {
+                StopPokemonAnimations();
+                PlaySE(SE_SELECT);
+                BeginCloseSummaryScreen(taskId);
+            }
+            else // Contest or Battle Moves
+            {
+                PlaySE(SE_SELECT);
+                SwitchToMoveSelection(taskId);
             }
         }
         else if (JOY_NEW(B_BUTTON))
@@ -1638,28 +1665,6 @@ static void Task_HandleInput(u8 taskId)
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
             BeginCloseSummaryScreen(taskId);
-        }
-        // show IVs/EVs/stats on button presses
-        else if (gMain.newKeys & R_BUTTON)
-        {
-            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-            {
-                BufferIvOrEvStats(0);
-            }
-        }
-        else if (gMain.newKeys & L_BUTTON)
-        {
-            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-            {
-                BufferIvOrEvStats(1);
-            }
-        }
-        else if (gMain.newKeys & START_BUTTON)
-        {
-            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-            {
-                BufferIvOrEvStats(2);
-            }
         }
     }
 }
