@@ -1502,8 +1502,8 @@ const struct Item gItems[] =
         .description = sRedNectarDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        //.secondaryId = FORM_ITEM_USE,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .secondaryId = FORM_ITEM_USE,
     },
 
     [ITEM_YELLOW_NECTAR] =
@@ -1515,8 +1515,8 @@ const struct Item gItems[] =
         .description = sYellowNectarDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        //.secondaryId = FORM_ITEM_USE,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .secondaryId = FORM_ITEM_USE,
     },
 
     [ITEM_PINK_NECTAR] =
@@ -1528,8 +1528,8 @@ const struct Item gItems[] =
         .description = sPinkNectarDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        //.secondaryId = FORM_ITEM_USE,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .secondaryId = FORM_ITEM_USE,
     },
 
     [ITEM_PURPLE_NECTAR] =
@@ -1541,8 +1541,8 @@ const struct Item gItems[] =
         .description = sPurpleNectarDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        //.secondaryId = FORM_ITEM_USE,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .secondaryId = FORM_ITEM_USE,
     },
 
     [ITEM_RARE_BONE] =
@@ -5389,8 +5389,8 @@ const struct Item gItems[] =
         .description = sGracideaDesc,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        //.secondaryId = FORM_ITEM_USE,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .secondaryId = FORM_ITEM_USE_TIME,
     },
 
     [ITEM_BUG_MEMORY] =
