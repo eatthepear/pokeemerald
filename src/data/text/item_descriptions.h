@@ -1042,9 +1042,9 @@ static const u8 sSootheBellDesc[] = _(
     "fosters friendship.");
 
 static const u8 sMentalHerbDesc[] = _(
-    "A hold item that\n"
-    "snaps Pokémon out\n"
-    "of infatuation.");
+    "Snaps Pokémon out\n"
+    "of move-binding\n"
+    "effects.");
 
 static const u8 sChoiceBandDesc[] = _(
     "Raises a move's\n"

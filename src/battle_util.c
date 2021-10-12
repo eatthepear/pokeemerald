@@ -6116,6 +6116,16 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     effect = ITEM_STATUS_CHANGE;
                 }
                 break;
+            case HOLD_EFFECT_MENTAL_HERB:
+                if (gBattleMons[battlerId].status2 & STATUS2_INFATUATION)
+                {
+                    gBattleMons[battlerId].status2 &= ~(STATUS2_INFATUATION);
+                    StringCopy(gBattleTextBuff1, gStatusConditionString_LoveJpn);
+                    BattleScriptExecute(BattleScript_BerryCureChosenStatusEnd2);
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_PROBLEM;
+                    effect = ITEM_EFFECT_OTHER;
+                }
+                break;
             case HOLD_EFFECT_RESTORE_HP:
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);

@@ -12676,8 +12676,16 @@ static void Cmd_handleballthrow(void)
                     ballMultiplier = 30;
                 break;
             case ITEM_DREAM_BALL:
-                if (gBattleMons[gBattlerTarget].status1 & STATUS1_SLEEP)
-                    ballMultiplier = 40;
+                #if I_DREAM_BALL_MODIFIER >= GEN_8
+                    #ifdef BATTLE_ENGINE
+                    if (gBattleMons[gBattlerTarget].status1 & STATUS1_SLEEP || GetBattlerAbility(gBattlerTarget) == ABILITY_COMATOSE)
+                    #else 
+                    if (gBattleMons[gBattlerTarget].status1 & STATUS1_SLEEP)
+                        ballMultiplier = 40;
+                    #endif
+                #else
+                    ballMultiplier = 10;
+                #endif
                 break;
             case ITEM_BEAST_BALL:
                 ballMultiplier = 1;
