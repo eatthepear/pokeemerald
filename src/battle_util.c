@@ -1725,6 +1725,21 @@ u8 TrySetCantSelectMoveBattleScript(void)
             limitations++;
         }
     }
+    
+    if (move == MOVE_STUFF_CHEEKS && ItemId_GetPocket(gBattleMons[gActiveBattler].item) != POCKET_BERRIES)
+    {
+        gCurrentMove = move;
+        if (gBattleTypeFlags & BATTLE_TYPE_PALACE)
+        {
+            gPalaceSelectionBattleScripts[gActiveBattler] = BattleScript_SelectingNotAllowedBelchInPalace;
+            gProtectStructs[gActiveBattler].palaceUnableToUseMove = 1;
+        }
+        else
+        {
+            gSelectionBattleScripts[gActiveBattler] = BattleScript_SelectingNotAllowedStuffCheeks;
+            limitations++;
+        }
+    }
 
     gPotentialItemEffectBattler = gActiveBattler;
     if (HOLD_EFFECT_CHOICE(holdEffect) && *choicedMove != 0 && *choicedMove != 0xFFFF && *choicedMove != move)
@@ -1807,6 +1822,8 @@ u8 CheckMoveLimitations(u8 battlerId, u8 unusableMoves, u8 check)
         else if (IsBelchPreventingMove(battlerId, gBattleMons[battlerId].moves[i]))
             unusableMoves |= gBitTable[i];
         else if (gDisableStructs[battlerId].throatChopTimer && gBattleMoves[gBattleMons[battlerId].moves[i]].flags & FLAG_SOUND)
+            unusableMoves |= gBitTable[i];
+        else if (gBattleMons[battlerId].moves[i] == MOVE_STUFF_CHEEKS && ItemId_GetPocket(gBattleMons[gActiveBattler].item) != POCKET_BERRIES)
             unusableMoves |= gBitTable[i];
     }
     return unusableMoves;
@@ -2234,7 +2251,7 @@ u8 DoFieldEndTurnEffects(void)
             break;
         case ENDTURN_ELECTRIC_TERRAIN:
             if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN
-              && ((!gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.electricTerrainTimer == 0))
+              && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.electricTerrainTimer == 0))
             {
                 gFieldStatuses &= ~(STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_TERRAIN_PERMANENT);
                 BattleScriptExecute(BattleScript_ElectricTerrainEnds);
@@ -2244,7 +2261,7 @@ u8 DoFieldEndTurnEffects(void)
             break;
         case ENDTURN_MISTY_TERRAIN:
             if (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN
-              && ((!gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.mistyTerrainTimer == 0))
+              && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.mistyTerrainTimer == 0))
             {
                 gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN);
                 BattleScriptExecute(BattleScript_MistyTerrainEnds);
@@ -2266,7 +2283,7 @@ u8 DoFieldEndTurnEffects(void)
             break;
         case ENDTURN_PSYCHIC_TERRAIN:
             if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN
-              && ((!gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.psychicTerrainTimer == 0))
+              && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.psychicTerrainTimer == 0))
             {
                 gFieldStatuses &= ~(STATUS_FIELD_PSYCHIC_TERRAIN);
                 BattleScriptExecute(BattleScript_PsychicTerrainEnds);
@@ -3436,7 +3453,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_PRANKSTER:
-            if (BlocksPrankster(gCurrentMove, gBattlerAttacker, gBattlerTarget)
+            if (BlocksPrankster(gCurrentMove, gBattlerAttacker, gBattlerTarget, TRUE)
               && !(IS_MOVE_STATUS(gCurrentMove) && GetBattlerAbility(gBattlerTarget) == ABILITY_MAGIC_BOUNCE))
             {
                 if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE) || !(gBattleMoves[gCurrentMove].target & (MOVE_TARGET_BOTH | MOVE_TARGET_FOES_AND_ALLY)))
@@ -5028,20 +5045,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && TARGET_TURN_DAMAGED
-             && !(WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SANDSTORM_ANY)
-             && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE)
-             && !(WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_PRIMAL_ANY))
+             && !(WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SANDSTORM_ANY))
             {
-                gBattleScripting.battler = gActiveBattler = battler;
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_SandSpitActivates;
-                effect++;
-            }
-            else if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_PRIMAL_ANY)
-            {
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_BlockedByPrimalWeatherRet;
-                effect++;
+                if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_PRIMAL_ANY)
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_BlockedByPrimalWeatherRet;
+                    effect++;
+                }
+                else if (TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE))
+                {
+                    gBattleScripting.battler = gActiveBattler = battler;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_SandSpitActivates;
+                    effect++;
+                }
             }
             break;
         case ABILITY_PERISH_BODY:
@@ -5145,18 +5163,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_AttackerFormChange;
                 effect++;
-            }
-            break;
-        case ABILITY_BATTLE_BOND:
-            if (gBattleMons[gBattlerAttacker].species == SPECIES_GRENINJA_BATTLE_BOND
-             && gBattleResults.opponentFaintCounter != 0
-             && CalculateEnemyPartyCount() > 1)
-            {
-                PREPARE_SPECIES_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerAttacker].species);
-                gBattleStruct->changedSpecies[gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
-                gBattleMons[gBattlerAttacker].species = SPECIES_GRENINJA_ASH;
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_BattleBondActivatesOnMoveEndAttacker;
             }
             break;
         }
@@ -5640,6 +5646,8 @@ bool32 HasEnoughHpToEatBerry(u32 battlerId, u32 hpFraction, u32 itemId)
 
     if (gBattleMons[battlerId].hp == 0)
         return FALSE;
+    if (gBattleScripting.overrideBerryRequirements)
+        return TRUE;
     // Unnerve prevents consumption of opponents' berries.
     if (isBerry && IsUnnerveAbilityOnOpposingSide(battlerId))
         return FALSE;
@@ -5843,7 +5851,8 @@ u8 TryHandleSeed(u8 battler, u32 terrainFlag, u8 statId, u16 itemId, bool32 exec
 
 static u8 ItemHealHp(u32 battlerId, u32 itemId, bool32 end2, bool32 percentHeal)
 {
-    if (HasEnoughHpToEatBerry(battlerId, 2, itemId))
+    if (HasEnoughHpToEatBerry(battlerId, 2, itemId)
+      && !(gBattleScripting.overrideBerryRequirements && gBattleMons[battlerId].hp == gBattleMons[battlerId].maxHP))
     {
         if (percentHeal)
             gBattleMoveDamage = (gBattleMons[battlerId].maxHP * GetBattlerHoldEffectParam(battlerId) / 100) * -1;
@@ -6480,11 +6489,14 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             }
         }
         break;
+    case ITEMEFFECT_BATTLER_MOVE_END:
+        goto DO_ITEMEFFECT_MOVE_END;    // this hurts a bit to do, but is an easy solution
     case ITEMEFFECT_MOVE_END:
         for (battlerId = 0; battlerId < gBattlersCount; battlerId++)
         {
             gLastUsedItem = gBattleMons[battlerId].item;
             battlerHoldEffect = GetBattlerHoldEffect(battlerId, TRUE);
+        DO_ITEMEFFECT_MOVE_END:
             switch (battlerHoldEffect)
             {
             case HOLD_EFFECT_MICLE_BERRY:
@@ -8863,6 +8875,7 @@ void UndoFormChange(u32 monId, u32 side, bool32 isSwitchingOut)
     static const u16 species[][2] = // changed form id, default form id
     {
         {SPECIES_MIMIKYU_BUSTED, SPECIES_MIMIKYU},
+        {SPECIES_GRENINJA_ASH, SPECIES_GRENINJA_BATTLE_BOND},
         {SPECIES_AEGISLASH_BLADE, SPECIES_AEGISLASH},
         {SPECIES_DARMANITAN_ZEN_MODE, SPECIES_DARMANITAN},
         {SPECIES_MINIOR, SPECIES_MINIOR_CORE_RED},
@@ -8875,11 +8888,10 @@ void UndoFormChange(u32 monId, u32 side, bool32 isSwitchingOut)
         {SPECIES_WISHIWASHI_SCHOOL, SPECIES_WISHIWASHI},
         {SPECIES_CRAMORANT_GORGING, SPECIES_CRAMORANT},
         {SPECIES_CRAMORANT_GULPING, SPECIES_CRAMORANT},
-        {SPECIES_GRENINJA_ASH, SPECIES_GRENINJA_BATTLE_BOND},
     };
 
-    if (isSwitchingOut) // Don't revert Mimikyu Busted when switching out
-        i = 1;
+    if (isSwitchingOut) // Don't revert Mimikyu Busted or Ash-Greninja when switching out
+        i = 2;
     else
         i = 0;
 
@@ -9464,16 +9476,21 @@ void DoBurmyFormChange(u32 monId)
     }
 }
 
-bool32 BlocksPrankster(u16 move, u8 battlerPrankster, u8 battlerDef)
+bool32 BlocksPrankster(u16 move, u8 battlerPrankster, u8 battlerDef, bool32 checkTarget)
 {
     #if B_PRANKSTER_DARK_TYPES >= GEN_7
-    if (gProtectStructs[battlerPrankster].pranksterElevated
-      && GetBattlerSide(battlerPrankster) != GetBattlerSide(battlerDef)
-      && !(gBattleMoves[gCurrentMove].target & (MOVE_TARGET_OPPONENTS_FIELD | MOVE_TARGET_DEPENDS)) // Don't block hazards, assist-type moves
-      && IS_BATTLER_OF_TYPE(battlerDef, TYPE_DARK)  // Only Dark-types can block Prankster'd
-      && !(gStatuses3[battlerDef] & STATUS3_SEMI_INVULNERABLE))
-        return TRUE;
-    else
-    #endif
+    if (!gProtectStructs[battlerPrankster].pranksterElevated)
         return FALSE;
+    if (GetBattlerSide(battlerPrankster) == GetBattlerSide(battlerDef))
+        return FALSE;
+    if (checkTarget && (gBattleMoves[move].target & (MOVE_TARGET_OPPONENTS_FIELD | MOVE_TARGET_DEPENDS)))
+        return FALSE;
+    if (!IS_BATTLER_OF_TYPE(battlerDef, TYPE_DARK))
+        return FALSE;
+    if (gStatuses3[battlerDef] & STATUS3_SEMI_INVULNERABLE)
+        return FALSE;
+    
+    return TRUE;
+    #endif
+    return FALSE;
 }

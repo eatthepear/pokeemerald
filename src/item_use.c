@@ -978,11 +978,18 @@ u32 CanThrowBall(void)
     {
         return 4; // Nuzlocke Species Clause
     }
-    else if (IsPlayerPartyAndPokemonStorageFull() == FALSE) // have room for mon?
-        return 0;   // usable 
+     #if B_SEMI_INVULNERABLE_CATCH >= GEN_4
+    else if (gStatuses3[GetCatchingBattler()] & STATUS3_SEMI_INVULNERABLE)
+    {
+        return 6;   // in semi-invulnerable state
+    }
+    #endif
+    
+    return 0;   // usable 
 }
 
-static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThere are two pokemon out there!\p");
+static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThere are two Pokémon out there!\p");
+static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("Cannot throw a ball!\nThere's no Pokémon in sight!\p");
 void ItemUseInBattle_PokeBall(u8 taskId)
 {
     switch (CanThrowBall())
@@ -1016,6 +1023,14 @@ void ItemUseInBattle_PokeBall(u8 taskId)
     case 5: // Can't catch Pokemon
         DisplayItemMessage(taskId, 1, sText_BallsCannotBeUsed, CloseItemMessage);
         break;
+    #if B_SEMI_INVULNERABLE_CATCH >= GEN_4
+    case 6: // Semi-Invulnerable
+        if (!InBattlePyramid())
+            DisplayItemMessage(taskId, 1, sText_CantThrowPokeBall_SemiInvulnerable, CloseItemMessage);
+        else
+            DisplayItemMessageInBattlePyramid(taskId, sText_CantThrowPokeBall_SemiInvulnerable, Task_CloseBattlePyramidBagMessage);
+        break;
+    #endif
     }
 }
 
