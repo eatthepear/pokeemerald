@@ -4,6 +4,7 @@ Zone0C_MapScripts::
 Zone0C_EventScript_Jaya::
 	lock
 	faceplayer
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	compare VAR_HEAL_SHOP_USED, 0
 	goto_if_eq Zone0C_EventScript_JayaDeny
 	compare VAR_TEMP_0, 1
@@ -58,6 +59,7 @@ Zone0C_Text_Jaya_Intro:
 Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
 	goto_if_eq Zone0C_PokemonDayCare_EventScript_EggWaiting
