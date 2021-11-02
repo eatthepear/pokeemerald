@@ -7,6 +7,7 @@
  * EVs are by default set to 0.
  * 
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
+ * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
  * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
  * These are included in the comments next to each trainer.
@@ -138,7 +139,7 @@ static const struct TrainerMon sParty_Jemma[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_PACHIRISU,
+    .species = SPECIES_BIDOOF,
     },
     {
     .iv = 0,
@@ -161,7 +162,7 @@ static const struct TrainerMon sParty_Boris[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_BIDOOF,
+    .species = SPECIES_PACHIRISU,
     }
 };
 
@@ -286,7 +287,7 @@ static const struct TrainerMon sParty_Fred[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_WOOPER,
+    .species = SPECIES_CLEFFA,
     },
     {
     .iv = 0,
@@ -327,7 +328,7 @@ static const struct TrainerMon sParty_Rebecca[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .species = SPECIES_CLEFFA,
+    .species = SPECIES_WOOPER,
     },
     {
     .iv = 0,
@@ -374,14 +375,14 @@ static const struct TrainerMon sParty_Ryan[] = {
 
 static const struct TrainerMon sParty_Declan[] = {//Leviathan 2
     {
-    .iv = 31, //Starts with aura +1 Defense
+    .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 13,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Shield Dust
-    .species = SPECIES_DUSTOX,
+    .species = SPECIES_DUSTOX, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_GUST}
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
     }
 };
 
@@ -491,7 +492,7 @@ static const struct TrainerMon sParty_Ronan[] = {
 static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional
     {
     .iv = 31,
-    .lvl = 13,
+    .lvl = 15,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Poison Point
@@ -500,7 +501,7 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional
     },
     {
     .iv = 31,
-    .lvl = 13,
+    .lvl = 15,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Cloud Nine
@@ -509,7 +510,7 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional
     },
     {
     .iv = 31,
-    .lvl = 14,
+    .lvl = 15,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Triage
@@ -521,17 +522,17 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional
 static const struct TrainerMon sParty_Millie[] = {
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_FEEBAS,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_DRIFLOON,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_PAWNIARD,
     },
 };
@@ -539,17 +540,12 @@ static const struct TrainerMon sParty_Millie[] = {
 static const struct TrainerMon sParty_Paige[] = {
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_SKIDDO,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_MAKUHITA,
-    },
-    {
-    .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_ORICORIO,
     }
 };
@@ -557,17 +553,17 @@ static const struct TrainerMon sParty_Paige[] = {
 static const struct TrainerMon sParty_Jamal[] = {
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_SANDSHREW,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_APPLIN,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_VOLBEAT,
     }
 };
@@ -587,60 +583,65 @@ static const struct TrainerMon sParty_Emiliano[] = {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_BELDUM,
+    },
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_MAKUHITA,
     }
 };
 
 static const struct TrainerMon sParty_Marcus[] = {
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_JOLTIK,
+    .lvl = 14,
+    .species = SPECIES_VULLABY,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 14,
     .species = SPECIES_MACHOP,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_VULLABY,
+    .lvl = 14,
+    .species = SPECIES_WOOLOO,
     }
 };
 
 static const struct TrainerMon sParty_Jayden[] = {
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_ARON,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_PHANPY,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_TYROGUE,
+    .lvl = 13,
+    .species = SPECIES_THROH,
     }
 };
 
 static const struct TrainerMon sParty_Anita[] = {
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_STUFFUL,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_WOOLOO,
+    .lvl = 13,
+    .species = SPECIES_JOLTIK,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_THROH,
+    .lvl = 13,
+    .species = SPECIES_ILLUMISE,
     }
 };
 
@@ -664,23 +665,23 @@ static const struct TrainerMon sParty_Neil[] = {
 
 static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in a tag battle with Zone8DWally
     {
-    .iv = 31, //Starts with aura +1 Speed
-    .lvl = 17,
+    .iv = 31,
+    .lvl = 18,
     .nature = NATURE_JOLLY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Intimidate
-    .species = SPECIES_STARAVIA,
+    .species = SPECIES_STARAVIA, //Starts with aura +1 Speed
     .heldItem = ITEM_SITRUS_BERRY,
     .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_RETURN, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR}
     },
     {
-    .iv = 31, //Starts with aura +1 Attack
-    .lvl = 17,
+    .iv = 31,
+    .lvl = 18,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_MAWILE,
+    .species = SPECIES_MAWILE, //Starts with aura +1 Attack
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_ICE_FANG, MOVE_FIRE_FANG}
     }
@@ -719,7 +720,8 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     }
 };
 
-static const struct TrainerMon sParty_Ari[] = {//You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
+//You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
+static const struct TrainerMon sParty_Ari[] = {
     {
     .iv = 0,
     .lvl = 14,
@@ -826,7 +828,7 @@ static const struct TrainerMon sParty_Kyle[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_ILLUMISE,
+    .species = SPECIES_TYROGUE,
     },
     {
     .iv = 0,
