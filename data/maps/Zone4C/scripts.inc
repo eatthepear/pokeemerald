@@ -7,7 +7,7 @@ Zone4C_EventScript_Patrick::
 	end
 
 Zone4C_Text_PatrickIntro:
-	.string "Just... One... More... Level...$"
+	.string "The more legs, the better!$"
 
 Zone4C_Text_PatrickDefeat:
 	.string "Oh... Come on!$"
