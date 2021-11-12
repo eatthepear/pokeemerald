@@ -5314,8 +5314,8 @@
     {
       "id": "LAYOUT_ZONE21SANCTUARY",
       "name": "Zone21Sanctuary_Layout",
-      "width": 15,
-      "height": 15,
+      "width": 45,
+      "height": 25,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Zone21Sanctuary/border.bin",

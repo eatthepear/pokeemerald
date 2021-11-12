@@ -10,13 +10,13 @@ Zone21Sanctuary_EventScript_Intro:
 	lockall
 	setvar VAR_HEAL_SHOP_USED, 0
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	call EventScript_MoveCameraUp
+	@ call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	call EventScript_MoveCameraDown
+	@ call EventScript_MoveCameraDown
 	applymovement 1, Common_Movement_Colress_WalkDown
 	waitmovement 0
 	playfanfare MUS_OBTAIN_BADGE
