@@ -56,6 +56,98 @@ Zone0C_Text_Jaya_Intro:
 	.string "I'm actually one of the scientists\n"
 	.string "who worked on the original PSS.$"
 
+
+Zone0C_EventScript_EeveeGirl::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZONE0C_EEVEE, Zone0C_EventScript_EeveeUnique
+	msgbox Zone0C_Text_EeveeGiveaway, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0C_EventScript_NoThanks
+	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq Zone0C_EventScript_SendEeveePC
+	goto Zone0C_EventScript_SendEeveeParty
+	end
+
+Zone0C_EventScript_SendEeveeParty::
+	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_EEVEE
+	call Zone0C_EventScript_ReceivedEeveeFanfare
+	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0C_EventScript_ReceivedEevee
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Zone0C_EventScript_ReceivedEevee
+	end
+
+Zone0C_EventScript_SendEeveePC::
+	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_EEVEE
+	call Zone0C_EventScript_ReceivedEeveeFanfare
+	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0C_EventScript_EeveeTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Zone0C_EventScript_EeveeTransferredToPC
+	end
+
+Zone0C_EventScript_EeveeTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto Zone0C_EventScript_ReceivedEevee
+	end
+
+Zone0C_EventScript_ReceivedEeveeFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message Zone0C_Text_ReceivedEevee
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_EEVEE
+	return
+
+Zone0C_EventScript_ReceivedEevee::
+	setflag FLAG_RECEIVED_ZONE0C_EEVEE
+	goto Zone0C_EventScript_EeveeUnique
+	releaseall
+	end
+
+Zone0C_EventScript_NoThanks:
+	msgbox Zone0C_Text_NoThanks, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone0C_EventScript_EeveeUnique:
+	msgbox Zone0C_Text_EeveeUnique, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone0C_Text_EeveeGiveaway:
+	.string "Hiya!\p"
+	.string "We're running a special gift\n"
+	.string "Pokémon promotion!\p"
+	.string "If you'd like, you can have your\n"
+	.string "very own Eevee! What do you say?$"
+
+Zone0C_Text_EeveeUnique:
+	.string "Eevee is quite a unique Pokémon.\n"
+	.string "So many different evolutions!$"
+
+Zone0C_Text_NoThanks:
+	.string "No? Well, I'll be here anyways,\n"
+	.string "in case you change your mind.$"
+
+Zone0C_Text_SureThing:
+	.string "Sure thing! Here ya go!$"
+
+Zone0C_Text_HowBoutNickname:
+	.string "Would you like to give a nickname\n"
+	.string "to Eevee?$"
+
+Zone0C_Text_ReceivedEevee:
+	.string "Received Eevee!$"
+
 Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer

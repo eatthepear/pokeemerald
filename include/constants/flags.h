@@ -70,13 +70,13 @@
 #define FLAG_ZONE13C_RECEIVED_SCOPE_LENS    0x39
 #define FLAG_HIDE_ZONE15B_COLRESS    0x3A
 #define FLAG_HIDE_ZONE15B_MIRAGE    0x3B
-#define FLAG_ADAMINA_INTRO    0x3C // Unused Flag
-#define FLAG_HIDE_ZONE17A_HEX_MANIAC    0x3D // Unused Flag
-#define FLAG_HIDE_ZONE18B_MAN    0x3E // Unused Flag
-#define FLAG_HIDE_ZONE18B_ODYSSEUS    0x3F // Unused Flag
-#define FLAG_HIDE_ZONE19D_PIRATES    0x40 // Unused Flag
-#define FLAG_RECEIVED_ZONE21C_PORYGON    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_ADAMINA_INTRO    0x3C 
+#define FLAG_HIDE_ZONE17A_HEX_MANIAC    0x3D 
+#define FLAG_HIDE_ZONE18B_MAN    0x3E 
+#define FLAG_HIDE_ZONE18B_ODYSSEUS    0x3F 
+#define FLAG_HIDE_ZONE19D_PIRATES    0x40 
+#define FLAG_RECEIVED_ZONE21C_PORYGON    0x41 
+#define FLAG_RECEIVED_ZONE0C_EEVEE    0x42 
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
