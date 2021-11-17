@@ -3,7 +3,7 @@
   "name": "Zone0C",
   "layout": "LAYOUT_ZONE0C",
   "music": "MUS_HG_SEQ_GS_C_KUCHIBA",
-  "region_map_section": "MAPSEC_POKEMON_DAYCARE",
+  "region_map_section": "MAPSEC_ZONE_0",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

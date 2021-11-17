@@ -389,7 +389,6 @@ const u8 NuzlockeLUT[] =
     [MAPSEC_ZONE_48] = 0x30,
     [MAPSEC_ZONE_49] = 0x31,
     [MAPSEC_ZONE_50] = 0x32,
-    [MAPSEC_POKEMON_DAYCARE] = 0x33,
     [GLOBAL_NUZLOCKE_SWITCH] = 0x47
 };
 
