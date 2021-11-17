@@ -341,7 +341,7 @@ static void BuildZoneStartMenu(void)
     {
         AddStartMenuAction(MENU_ACTION_POKENAV);
     }
-    
+    AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
