@@ -25,9 +25,10 @@ Zone4Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_SLEDGEHAMMER, 1
-	closemessage
+	goto Zone4Sanctuary_EventScript_StonesMultichoice
+	end
+
+Zone4Sanctuary_EventScript_EndIntro:
 	setvar VAR_ZONE, 5
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -35,7 +36,65 @@ Zone4Sanctuary_EventScript_Intro:
 	waitmovement 0
 	releaseall
 	end
-	
+
+Zone4Sanctuary_EventScript_StonesMultichoice:
+	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_DEFAULT
+	scrollingmultichoice 1, 0, 0, 4, FALSE
+	switch VAR_RESULT
+	case 0, Zone4Sanctuary_EventScript_FireStone
+	case 1, Zone4Sanctuary_EventScript_WaterStone
+	case 2, Zone4Sanctuary_EventScript_ThunderStone
+	case 3, Zone4Sanctuary_EventScript_LeafStone
+	case 4, Zone4Sanctuary_EventScript_MoonStone
+	case 5, Zone4Sanctuary_EventScript_SunStone
+	case 6, Zone4Sanctuary_EventScript_ShinyStone
+	case 7, Zone4Sanctuary_EventScript_IceStone
+	end
+
+Zone4Sanctuary_EventScript_FireStone:
+	giveitem ITEM_FIRE_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_WaterStone:
+	giveitem ITEM_WATER_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_ThunderStone:
+	giveitem ITEM_THUNDER_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_LeafStone:
+	giveitem ITEM_LEAF_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_MoonStone:
+	giveitem ITEM_MOON_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_SunStone:
+	giveitem ITEM_SUN_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_ShinyStone:
+	giveitem ITEM_SHINY_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_EventScript_IceStone:
+	giveitem ITEM_ICE_STONE
+	goto Zone4Sanctuary_EventScript_EndIntro
+	end
+
+Zone4Sanctuary_Text_Reward:
+	.string "An Evolutionary Stone!\n"
+	.string "Choose whichever one you'd like!$"
+
 Zone4Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
@@ -63,7 +122,3 @@ Zone4Sanctuary_EventScript_Leave:
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE5A, 255, 43, 31
 	end
-
-Zone4Sanctuary_Text_Reward:
-	.string "The Sledgehammer.$"
-

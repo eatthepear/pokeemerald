@@ -25,10 +25,9 @@ Zone5Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	goto Zone5Sanctuary_EventScript_StonesMultichoice
-	end
-
-Zone5Sanctuary_EventScript_EndIntro:
+	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_SLEDGEHAMMER, 1
+	closemessage
 	setvar VAR_ZONE, 6
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	@ playfanfare MUS_OBTAIN_ITEM
@@ -45,60 +44,6 @@ Zone5Sanctuary_EventScript_EndIntro:
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
-	end
-
-Zone5Sanctuary_EventScript_StonesMultichoice:
-	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_DEFAULT
-	scrollingmultichoice 1, 0, 0, 4, FALSE
-	switch VAR_RESULT
-	case 0, Zone5Sanctuary_EventScript_FireStone
-	case 1, Zone5Sanctuary_EventScript_WaterStone
-	case 2, Zone5Sanctuary_EventScript_ThunderStone
-	case 3, Zone5Sanctuary_EventScript_LeafStone
-	case 4, Zone5Sanctuary_EventScript_MoonStone
-	case 5, Zone5Sanctuary_EventScript_SunStone
-	case 6, Zone5Sanctuary_EventScript_ShinyStone
-	case 7, Zone5Sanctuary_EventScript_IceStone
-	return
-
-Zone5Sanctuary_EventScript_FireStone:
-	giveitem ITEM_FIRE_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_WaterStone:
-	giveitem ITEM_WATER_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_ThunderStone:
-	giveitem ITEM_THUNDER_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_LeafStone:
-	giveitem ITEM_LEAF_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_MoonStone:
-	giveitem ITEM_MOON_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_SunStone:
-	giveitem ITEM_SUN_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_ShinyStone:
-	giveitem ITEM_SHINY_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
-	end
-
-Zone5Sanctuary_EventScript_IceStone:
-	giveitem ITEM_ICE_STONE
-	goto Zone5Sanctuary_EventScript_EndIntro
 	end
 
 Zone5Sanctuary_EventScript_NextZone::
@@ -130,5 +75,4 @@ Zone5Sanctuary_EventScript_Leave:
 	end
 
 Zone5Sanctuary_Text_Reward:
-	.string "An Evolutionary Stone!\n"
-	.string "Choose whichever one you'd like!$"
+	.string "The Sledgehammer.$"
