@@ -147,7 +147,7 @@ Zone13C_EventScript_Fossil_Scientist::
 	msgbox Zone13C_Text_Fossil_YouGetAFossil, MSGBOX_AUTOCLOSE
 	call_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_SetNuzlockeFossilFlag
 	setflag FLAG_DAILY_FOSSIL_RECEIVED
-	random 11
+	random 9
 	compare VAR_RESULT, 0
 	goto_if_eq Zone13C_EventScript_Fossil_GiveDome
 	compare VAR_RESULT, 1
@@ -159,16 +159,12 @@ Zone13C_EventScript_Fossil_Scientist::
 	compare VAR_RESULT, 4
 	goto_if_eq Zone13C_EventScript_Fossil_GiveClaw
 	compare VAR_RESULT, 5
-	goto_if_eq Zone13C_EventScript_Fossil_GiveSkull
-	compare VAR_RESULT, 6
-	goto_if_eq Zone13C_EventScript_Fossil_GiveArmor
-	compare VAR_RESULT, 7
 	goto_if_eq Zone13C_EventScript_Fossil_GiveCover
-	compare VAR_RESULT, 8
+	compare VAR_RESULT, 6
 	goto_if_eq Zone13C_EventScript_Fossil_GivePlume
-	compare VAR_RESULT, 9
+	compare VAR_RESULT, 7
 	goto_if_eq Zone13C_EventScript_Fossil_GiveJaw
-	compare VAR_RESULT, 10
+	compare VAR_RESULT, 8
 	goto_if_eq Zone13C_EventScript_Fossil_GiveSail
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto Zone13C_EventScript_Fossil_VanillaReceived
@@ -222,16 +218,6 @@ Zone13C_EventScript_Fossil_GiveRoot:
 
 Zone13C_EventScript_Fossil_GiveClaw:
 	giveitem ITEM_CLAW_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveSkull:
-	giveitem ITEM_SKULL_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveArmor:
-	giveitem ITEM_ARMOR_FOSSIL, 1
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto Zone13C_EventScript_Fossil_VanillaReceived
 
