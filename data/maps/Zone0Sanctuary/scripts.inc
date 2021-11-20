@@ -176,56 +176,48 @@ Zone0Sanctuary_EventScript_PickStarter:
 	compare VAR_RESULT, 2
 	call_if_eq Zone0Sanctuary_EventScript_SQUIRTLE
 	compare VAR_RESULT, 3
-	call_if_eq Zone0Sanctuary_EventScript_PIKACHU
-	compare VAR_RESULT, 4
-	call_if_eq Zone0Sanctuary_EventScript_EEVEE
-	compare VAR_RESULT, 5
 	call_if_eq Zone0Sanctuary_EventScript_CHIKORITA
-	compare VAR_RESULT, 6
+	compare VAR_RESULT, 4
 	call_if_eq Zone0Sanctuary_EventScript_CYNDAQUIL
-	compare VAR_RESULT, 7
+	compare VAR_RESULT, 5
 	call_if_eq Zone0Sanctuary_EventScript_TOTODILE
-	compare VAR_RESULT, 8
+	compare VAR_RESULT, 6
 	call_if_eq Zone0Sanctuary_EventScript_TREECKO
-	compare VAR_RESULT, 9
+	compare VAR_RESULT, 7
 	call_if_eq Zone0Sanctuary_EventScript_TORCHIC
-	compare VAR_RESULT, 10
+	compare VAR_RESULT, 8
 	call_if_eq Zone0Sanctuary_EventScript_MUDKIP
-	compare VAR_RESULT, 11
+	compare VAR_RESULT, 9
 	call_if_eq Zone0Sanctuary_EventScript_TURTWIG
-	compare VAR_RESULT, 12
+	compare VAR_RESULT, 10
 	call_if_eq Zone0Sanctuary_EventScript_CHIMCHAR
-	compare VAR_RESULT, 13
+	compare VAR_RESULT, 11
 	call_if_eq Zone0Sanctuary_EventScript_PIPLUP
-	compare VAR_RESULT, 14
-	call_if_eq Zone0Sanctuary_EventScript_MUNCHLAX
-	compare VAR_RESULT, 15
-	call_if_eq Zone0Sanctuary_EventScript_RIOLU
-	compare VAR_RESULT, 16
+	compare VAR_RESULT, 12
 	call_if_eq Zone0Sanctuary_EventScript_SNIVY
-	compare VAR_RESULT, 17
+	compare VAR_RESULT, 13
 	call_if_eq Zone0Sanctuary_EventScript_TEPIG
-	compare VAR_RESULT, 18
+	compare VAR_RESULT, 14
 	call_if_eq Zone0Sanctuary_EventScript_OSHAWOTT
-	compare VAR_RESULT, 19
+	compare VAR_RESULT, 15
 	call_if_eq Zone0Sanctuary_EventScript_CHESPIN
-	compare VAR_RESULT, 20
+	compare VAR_RESULT, 16
 	call_if_eq Zone0Sanctuary_EventScript_FENNEKIN
-	compare VAR_RESULT, 21
+	compare VAR_RESULT, 17
 	call_if_eq Zone0Sanctuary_EventScript_FROAKIE
-	compare VAR_RESULT, 22
+	compare VAR_RESULT, 18
 	call_if_eq Zone0Sanctuary_EventScript_ROWLET
-	compare VAR_RESULT, 23
+	compare VAR_RESULT, 19
 	call_if_eq Zone0Sanctuary_EventScript_LITTEN
-	compare VAR_RESULT, 24
+	compare VAR_RESULT, 20
 	call_if_eq Zone0Sanctuary_EventScript_POPPLIO
-	compare VAR_RESULT, 25
+	compare VAR_RESULT, 21
 	call_if_eq Zone0Sanctuary_EventScript_GROOKEY
-	compare VAR_RESULT, 26
+	compare VAR_RESULT, 22
 	call_if_eq Zone0Sanctuary_EventScript_SCORBUNNY
-	compare VAR_RESULT, 27
+	compare VAR_RESULT, 23
 	call_if_eq Zone0Sanctuary_EventScript_SOBBLE
-	compare VAR_RESULT, 28
+	compare VAR_RESULT, 24
 	call_if_eq Zone0Sanctuary_EventScript_RandomStarter
 	hidemonpic
 	playfanfare MUS_OBTAIN_ITEM
@@ -254,7 +246,7 @@ Zone0Sanctuary_EventScript_RandomStarter:
 	delay 96
 	waitse
 	waitmessage
-	random 28
+	random 24
 	compare VAR_RESULT, 0
 	call_if_eq Zone0Sanctuary_EventScript_BULBASAUR
 	compare VAR_RESULT, 1
@@ -262,54 +254,46 @@ Zone0Sanctuary_EventScript_RandomStarter:
 	compare VAR_RESULT, 2
 	call_if_eq Zone0Sanctuary_EventScript_SQUIRTLE
 	compare VAR_RESULT, 3
-	call_if_eq Zone0Sanctuary_EventScript_PIKACHU
-	compare VAR_RESULT, 4
-	call_if_eq Zone0Sanctuary_EventScript_EEVEE
-	compare VAR_RESULT, 5
 	call_if_eq Zone0Sanctuary_EventScript_CHIKORITA
-	compare VAR_RESULT, 6
+	compare VAR_RESULT, 4
 	call_if_eq Zone0Sanctuary_EventScript_CYNDAQUIL
-	compare VAR_RESULT, 7
+	compare VAR_RESULT, 5
 	call_if_eq Zone0Sanctuary_EventScript_TOTODILE
-	compare VAR_RESULT, 8
+	compare VAR_RESULT, 6
 	call_if_eq Zone0Sanctuary_EventScript_TREECKO
-	compare VAR_RESULT, 9
+	compare VAR_RESULT, 7
 	call_if_eq Zone0Sanctuary_EventScript_TORCHIC
-	compare VAR_RESULT, 10
+	compare VAR_RESULT, 8
 	call_if_eq Zone0Sanctuary_EventScript_MUDKIP
-	compare VAR_RESULT, 11
+	compare VAR_RESULT, 9
 	call_if_eq Zone0Sanctuary_EventScript_TURTWIG
-	compare VAR_RESULT, 12
+	compare VAR_RESULT, 10
 	call_if_eq Zone0Sanctuary_EventScript_CHIMCHAR
-	compare VAR_RESULT, 13
+	compare VAR_RESULT, 11
 	call_if_eq Zone0Sanctuary_EventScript_PIPLUP
-	compare VAR_RESULT, 14
-	call_if_eq Zone0Sanctuary_EventScript_MUNCHLAX
-	compare VAR_RESULT, 15
-	call_if_eq Zone0Sanctuary_EventScript_RIOLU
-	compare VAR_RESULT, 16
+	compare VAR_RESULT, 12
 	call_if_eq Zone0Sanctuary_EventScript_SNIVY
-	compare VAR_RESULT, 17
+	compare VAR_RESULT, 13
 	call_if_eq Zone0Sanctuary_EventScript_TEPIG
-	compare VAR_RESULT, 18
+	compare VAR_RESULT, 14
 	call_if_eq Zone0Sanctuary_EventScript_OSHAWOTT
-	compare VAR_RESULT, 19
+	compare VAR_RESULT, 15
 	call_if_eq Zone0Sanctuary_EventScript_CHESPIN
-	compare VAR_RESULT, 20
+	compare VAR_RESULT, 16
 	call_if_eq Zone0Sanctuary_EventScript_FENNEKIN
-	compare VAR_RESULT, 21
+	compare VAR_RESULT, 17
 	call_if_eq Zone0Sanctuary_EventScript_FROAKIE
-	compare VAR_RESULT, 22
+	compare VAR_RESULT, 18
 	call_if_eq Zone0Sanctuary_EventScript_ROWLET
-	compare VAR_RESULT, 23
+	compare VAR_RESULT, 19
 	call_if_eq Zone0Sanctuary_EventScript_LITTEN
-	compare VAR_RESULT, 24
+	compare VAR_RESULT, 20
 	call_if_eq Zone0Sanctuary_EventScript_POPPLIO
-	compare VAR_RESULT, 25
+	compare VAR_RESULT, 21
 	call_if_eq Zone0Sanctuary_EventScript_GROOKEY
-	compare VAR_RESULT, 26
+	compare VAR_RESULT, 22
 	call_if_eq Zone0Sanctuary_EventScript_SCORBUNNY
-	compare VAR_RESULT, 27
+	compare VAR_RESULT, 23
 	call_if_eq Zone0Sanctuary_EventScript_SOBBLE
 	return
 
@@ -360,36 +344,6 @@ Zone0Sanctuary_EventScript_SQUIRTLE:
 Zone0Sanctuary_Text_Colress_YouSureStarterSQUIRTLE:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Squirtle?$"
-
-Zone0Sanctuary_EventScript_PIKACHU:
-	bufferspeciesname 0, SPECIES_PIKACHU
-	showmonpic SPECIES_PIKACHU, 10, 3
-	playmoncry SPECIES_PIKACHU, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPIKACHU, MSGBOX_YESNO
-	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_PIKACHU, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
-	return
-
-Zone0Sanctuary_Text_Colress_YouSureStarterPIKACHU:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
-	.string "Pikachu?$"
-
-Zone0Sanctuary_EventScript_EEVEE:
-	bufferspeciesname 0, SPECIES_EEVEE
-	showmonpic SPECIES_EEVEE, 10, 3
-	playmoncry SPECIES_EEVEE, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterEEVEE, MSGBOX_YESNO
-	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
-	return
-
-Zone0Sanctuary_Text_Colress_YouSureStarterEEVEE:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
-	.string "Eevee?$"
 
 Zone0Sanctuary_EventScript_CHIKORITA:
 	bufferspeciesname 0, SPECIES_CHIKORITA
@@ -525,36 +479,6 @@ Zone0Sanctuary_EventScript_PIPLUP:
 Zone0Sanctuary_Text_Colress_YouSureStarterPIPLUP:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Piplup?$"
-
-Zone0Sanctuary_EventScript_MUNCHLAX:
-	bufferspeciesname 0, SPECIES_MUNCHLAX
-	showmonpic SPECIES_MUNCHLAX, 10, 3
-	playmoncry SPECIES_MUNCHLAX, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterMUNCHLAX, MSGBOX_YESNO
-	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_MUNCHLAX, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
-	return
-
-Zone0Sanctuary_Text_Colress_YouSureStarterMUNCHLAX:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
-	.string "Munchlax?$"
-
-Zone0Sanctuary_EventScript_RIOLU:
-	bufferspeciesname 0, SPECIES_RIOLU
-	showmonpic SPECIES_RIOLU, 10, 3
-	playmoncry SPECIES_RIOLU, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterRIOLU, MSGBOX_YESNO
-	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_RIOLU, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
-	return
-
-Zone0Sanctuary_Text_Colress_YouSureStarterRIOLU:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
-	.string "Riolu?$"
 
 Zone0Sanctuary_EventScript_SNIVY:
 	bufferspeciesname 0, SPECIES_SNIVY
@@ -929,9 +853,7 @@ Zone0Sanctuary_Text_Colress_Starters:
 	.string "As a new challenger, you will\n"
 	.string "receive a starter Pokémon.\p"
 	.string "You may have your choice of any of\n"
-	.string "the generation 1-8 starter Pokémon,\l"
-	.string "as well as Pikachu, Eevee,\l"
-	.string "Munchlax, and Riolu.\p"
+	.string "the generation 1-8 starter Pokémon.\p"
 	.string "Choose carefully as these Pokémon\n"
 	.string "are very rare.$"
 

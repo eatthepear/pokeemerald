@@ -19,6 +19,7 @@ Zone15B_EventScript_Intro:
 	playse SE_PIN
 	waitmovement 0
 	waitse
+	fadeoutbgm 1
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone15B_Text_Mirage_AnotherAI, MSGBOX_AUTOCLOSE
@@ -42,6 +43,7 @@ Zone15B_EventScript_Intro:
 	removeobject 2
 	setflag FLAG_HIDE_ZONE15B_MIRAGE
 	fadescreenswapbuffers FADE_FROM_BLACK
+	fadeinbgm 1
 	delay 48
 	clearflag FLAG_HIDE_ZONE15B_COLRESS
 	addobject 3

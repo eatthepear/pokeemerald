@@ -798,8 +798,6 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
 static const u8 sText_Bulbasaur[] = _("Bulbasaur");
 static const u8 sText_Charmander[] = _("Charmander");
 static const u8 sText_Squirtle[] = _("Squirtle");
-static const u8 sText_Pikachu[] = _("Pikachu");
-static const u8 sText_Eevee[] = _("Eevee");
 static const u8 sText_Chikorita[] = _("Chikorita");
 static const u8 sText_Cyndaquil[] = _("Cyndaquil");
 static const u8 sText_Totodile[] = _("Totodile");
@@ -809,8 +807,6 @@ static const u8 sText_Mudkip[] = _("Mudkip");
 static const u8 sText_Turtwig[] = _("Turtwig");
 static const u8 sText_Chimchar[] = _("Chimchar");
 static const u8 sText_Piplup[] = _("Piplup");
-static const u8 sText_Munchlax[] = _("Munchlax");
-static const u8 sText_Riolu[] = _("Riolu");
 static const u8 sText_Snivy[] = _("Snivy");
 static const u8 sText_Tepig[] = _("Tepig");
 static const u8 sText_Oshawott[] = _("Oshawott");
@@ -864,32 +860,28 @@ static const struct ListMenuItem Starters[] =
     {sText_Bulbasaur, 0},
     {sText_Charmander, 1},
     {sText_Squirtle, 2},
-    {sText_Pikachu, 3},
-    {sText_Eevee, 4},
-    {sText_Chikorita, 5},
-    {sText_Cyndaquil, 6},
-    {sText_Totodile, 7},
-    {sText_Treecko, 8},
-    {sText_Torchic, 9},
-    {sText_Mudkip, 10},
-    {sText_Turtwig, 11},
-    {sText_Chimchar, 12},
-    {sText_Piplup, 13},
-    {sText_Munchlax, 14},
-    {sText_Riolu, 15},
-    {sText_Snivy, 16},
-    {sText_Tepig, 17},
-    {sText_Oshawott, 18},
-    {sText_Chespin, 19},
-    {sText_Fennekin, 20},
-    {sText_Froakie, 21},
-    {sText_Rowlet, 22},
-    {sText_Litten, 23},
-    {sText_Popplio, 24},
-    {sText_Grookey, 25},
-    {sText_Scorbunny, 26},
-    {sText_Sobble, 27},
-    {sText_Random, 28},
+    {sText_Chikorita, 3},
+    {sText_Cyndaquil, 4},
+    {sText_Totodile, 5},
+    {sText_Treecko, 6},
+    {sText_Torchic, 7},
+    {sText_Mudkip, 8},
+    {sText_Turtwig, 9},
+    {sText_Chimchar, 10},
+    {sText_Piplup, 11},
+    {sText_Snivy, 12},
+    {sText_Tepig, 13},
+    {sText_Oshawott, 14},
+    {sText_Chespin, 15},
+    {sText_Fennekin, 16},
+    {sText_Froakie, 17},
+    {sText_Rowlet, 18},
+    {sText_Litten, 19},
+    {sText_Popplio, 20},
+    {sText_Grookey, 21},
+    {sText_Scorbunny, 22},
+    {sText_Sobble, 23},
+    {sText_Random, 24},
 };
 
 static const struct ListMenuItem EvolutionaryStones[] =

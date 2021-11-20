@@ -24,7 +24,7 @@ Zone19Sanctuary_EventScript_Intro:
 	waitfanfare
 	msgbox Zone19Sanctuary_Text_RewardClear18, MSGBOX_AUTOCLOSE
 	msgbox Zone19Sanctuary_Text_18Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_YELLOW_SHARD, 12
+	giveitem ITEM_YELLOW_SHARD, 5
 	msgbox Zone19Sanctuary_Text_RewardClear19, MSGBOX_AUTOCLOSE
 	msgbox Zone19Sanctuary_Text_19Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM19

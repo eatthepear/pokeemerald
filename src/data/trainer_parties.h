@@ -385,7 +385,7 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -394,7 +394,7 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -403,7 +403,7 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -412,7 +412,7 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -1404,7 +1404,7 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -1413,7 +1413,7 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -1422,7 +1422,7 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
@@ -1431,7 +1431,7 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2,
     .species = SPECIES_AUDINO,
