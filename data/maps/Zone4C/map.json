@@ -2,7 +2,7 @@
   "id": "MAP_ZONE4C",
   "name": "Zone4C",
   "layout": "LAYOUT_ZONE4C",
-  "music": "MUS_HG_SEQ_GS_D_UNKNOWN_ISEKI",
+  "music": "MUS_DP_SEQ_D_02",
   "region_map_section": "MAPSEC_ZONE_4",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
