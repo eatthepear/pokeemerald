@@ -14,7 +14,7 @@ Zone5A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 5
 	goto_if_gt EventScript_WarpZone0
-	warp MAP_ZONE5SANCTUARY, 255, 7, 7
+	warp MAP_ZONE5SANCTUARY, 255, 22, 7
 	releaseall
 	end
 

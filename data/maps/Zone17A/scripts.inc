@@ -99,7 +99,7 @@ Zone17A_EventScript_CheckLeave::
 Zone17A_EventScript_Leave:
 	compare VAR_ZONE, 17
 	goto_if_gt EventScript_WarpZone0
-	warp MAP_ZONE17SANCTUARY, 255, 7, 7
+	warp MAP_ZONE17SANCTUARY, 255, 22, 7
 	releaseall
 	end
 

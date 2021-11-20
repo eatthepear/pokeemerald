@@ -83,75 +83,75 @@ Zone0D_EventScript_WarpBack::
 	end
 
 Zone0D_EventScript_WarpSanctuary0:
-	warpteleport MAP_ZONE0SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE0SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary1:
-	warpteleport MAP_ZONE1SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE1SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary2:
-	warpteleport MAP_ZONE2SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE2SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary3:
-	warpteleport MAP_ZONE3SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE3SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary4:
-	warpteleport MAP_ZONE4SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE4SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary5:
-	warpteleport MAP_ZONE5SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE5SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary6:
-	warpteleport MAP_ZONE6SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE6SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary8:
-	warpteleport MAP_ZONE8SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE8SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary9:
-	warpteleport MAP_ZONE9SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE9SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary10:
-	warpteleport MAP_ZONE10SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE10SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary11:
-	warpteleport MAP_ZONE11SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE11SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary12:
-	warpteleport MAP_ZONE12SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE12SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary14:
-	warpteleport MAP_ZONE14SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE14SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary15:
-	warpteleport MAP_ZONE15SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE15SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary16:
-	warpteleport MAP_ZONE16SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE16SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary17:
-	warpteleport MAP_ZONE17SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE17SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary19:
-	warpteleport MAP_ZONE19SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE19SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_WarpSanctuary20:
-	warpteleport MAP_ZONE20SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_VerifyDestination:

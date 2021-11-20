@@ -121,49 +121,121 @@ Zone0Sanctuary_EventScript_Tour:
 	applymovement 1, Zone0Sanctuary_Movement_Colress_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop
 	waitmovement 0
-	call EventScript_MoveCameraUp
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_General, MSGBOX_AUTOCLOSE
-	call EventScript_MoveCameraDown
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
 	applymovement 1, Zone0Sanctuary_Movement_Colress_SecondShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_SecondShop
 	waitmovement 0
-	call EventScript_MoveCameraUp
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
+	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_Item, MSGBOX_AUTOCLOSE
-	call EventScript_MoveCameraDown
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
 	applymovement 1, Zone0Sanctuary_Movement_Colress_ThirdShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_ThirdShop
 	waitmovement 0
-	call EventScript_MoveCameraUp
-	msgbox Zone0Sanctuary_Text_Colress_Services, MSGBOX_AUTOCLOSE
-	call EventScript_MoveCameraDown
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
+	waitmovement 0
+	msgbox Zone0Sanctuary_Text_Colress_Healing, MSGBOX_AUTOCLOSE
+	call_if_set FLAG_NUZLOCKE_ON, Zone0Sanctuary_EventScript_NuzlockeDialog
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
 	applymovement 1, Zone0Sanctuary_Movement_Colress_FourthShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FourthShop
 	waitmovement 0
-	call EventScript_MoveCameraUp
-	msgbox Zone0Sanctuary_Text_Colress_Healing, MSGBOX_AUTOCLOSE
-	call_if_set FLAG_NUZLOCKE_ON, Zone0Sanctuary_EventScript_NuzlockeDialog
-	call EventScript_MoveCameraDown
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
+	waitmovement 0
+	msgbox Zone0Sanctuary_Text_Colress_Services, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
+	applymovement 1, Zone0Sanctuary_Movement_Colress_ToWarp
+	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_ToWarp
+	waitmovement 0
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	msgbox Zone0Sanctuary_Text_Colress_Zone0Warp, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
 	applymovement 1, Zone0Sanctuary_Movement_Colress_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_BackMid
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_TourDone, MSGBOX_AUTOCLOSE
 	delay 96
-	goto Zone0Sanctuary_EventScript_Zone0Available
-	end
-
-Zone0Sanctuary_EventScript_Zone0Available:
-	msgbox Zone0Sanctuary_Text_Colress_Zone0Unlocked, MSGBOX_AUTOCLOSE
-	delay 96
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
 	
-Zone0Sanctuary_Text_Colress_Zone0Unlocked:
+Zone0Sanctuary_Text_Colress_Zone0Warp:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you will\n"
 	.string "have access to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\p"
 	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY},\n"
 	.string "you can access it from any\l"
-	.string "Sanctuary by talking to me.$"
+	.string "Sanctuary using this warp.$"
 
 Zone0Sanctuary_EventScript_PickStarter:
 	hidemonpic
@@ -729,7 +801,7 @@ Zone0Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
-	multichoice 20, 0, MULTI_COLRESS_MENU_2, 0
+	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
 	case 0, Zone0Sanctuary_EventScript_NextZoneCheck
 	case 1, EventScript_WarpToZone0
@@ -885,12 +957,26 @@ Zone0Sanctuary_Movement_Colress_FirstShop:
 	walk_left
 	walk_left
 	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	face_up
 	step_end
 
 Zone0Sanctuary_Movement_Player_FirstShop:
 	delay_16
 	delay_16
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	walk_left
 	walk_left
 	walk_left
@@ -903,6 +989,20 @@ Zone0Sanctuary_Movement_Colress_SecondShop:
 	walk_right
 	walk_right
 	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -925,6 +1025,20 @@ Zone0Sanctuary_Movement_Player_SecondShop:
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	delay_16
 	face_up
 	step_end
@@ -936,16 +1050,18 @@ Zone0Sanctuary_Movement_Colress_ThirdShop:
 	walk_down
 	walk_left
 	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	face_up
 	step_end
 
@@ -959,30 +1075,56 @@ Zone0Sanctuary_Movement_Player_ThirdShop:
 	walk_left
 	walk_left
 	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_left
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
 	delay_16
 	face_up
 	step_end
 
 Zone0Sanctuary_Movement_Colress_FourthShop:
 	walk_up
-	walk_right
-	walk_right
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	face_up
 	step_end
 
@@ -990,44 +1132,131 @@ Zone0Sanctuary_Movement_Player_FourthShop:
 	face_up
 	delay_16
 	delay_16
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+Zone0Sanctuary_Movement_Colress_ToWarp:
+	walk_up
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+Zone0Sanctuary_Movement_Player_ToWarp:
+	delay_16
+	delay_16
+	face_up
 	delay_16
 	face_right
 	delay_16
 	walk_right
 	walk_right
 	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_right
 	walk_right
 	walk_right
-	delay_16
+	walk_right
+	walk_right
+	walk_right
 	face_up
 	step_end
 
 Zone0Sanctuary_Movement_Colress_BackMid:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_left
 	walk_left
 	walk_left
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_left
 	walk_up
 	face_down
 	step_end
 
 Zone0Sanctuary_Movement_Player_BackMid:
-	delay_16
-	delay_16
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_left
 	walk_left
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_left
+	walk_left
+	face_up
 	step_end

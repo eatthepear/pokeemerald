@@ -71,7 +71,7 @@ Zone15B_EventScript_Colress::
 	lockall
 	faceplayer
 	msgbox Zone15B_Text_Colress_OnTo, MSGBOX_AUTOCLOSE
-	warpteleport MAP_ZONE15SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE15SANCTUARY, 255, 22, 7
 	releaseall
 	end
 

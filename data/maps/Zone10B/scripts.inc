@@ -89,7 +89,7 @@ Zone10B_EventScript_Exit:
 	playmoncry SPECIES_KIRLIA, 0
 	msgbox Zone10B_Text_Adamina_UseTeleport, MSGBOX_AUTOCLOSE
 	waitmoncry
-	warpteleport MAP_ZONE10SANCTUARY, 255, 7, 7
+	warpteleport MAP_ZONE10SANCTUARY, 255, 22, 7
 	release
 	end
 

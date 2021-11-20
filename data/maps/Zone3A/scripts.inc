@@ -60,7 +60,7 @@ Zone3A_Text_Leviathan1Text:
 Zone3A_EventScript_Warp:
 	compare VAR_ZONE, 3
 	goto_if_gt EventScript_WarpZone0
-	warp MAP_ZONE3SANCTUARY, 255, 7, 7
+	warp MAP_ZONE3SANCTUARY, 255, 22, 7
 	releaseall
 	end
 
