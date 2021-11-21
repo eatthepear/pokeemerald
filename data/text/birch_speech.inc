@@ -34,7 +34,7 @@ gText_Birch_AndYouAre::
 	.string "It will be confidential.$"
 
 gText_Birch_BoyOrGirl::
-	.string "Please enter your gender.$"
+	.string "Please select your avatar.$"
 
 gText_Birch_WhatsYourName::
 	.string "Please enter your name.$"
