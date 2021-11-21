@@ -279,6 +279,34 @@ gText_Lelouch_Exp2Cost:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 2\n"
 	.string "costs one Red Shard, are you sure?$"
 
+gText_Lelouch_Exp3Cost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 3\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EVHPCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training HP\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EVAtkCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Attack\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EVDefCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Defense\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EVSpACost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Special Attack\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EVSpDCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Special Defense\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EVSpeCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Speed\n"
+	.string "costs one Red Shard, are you sure?$"
+
 gText_Lelouch_PayRed:
 	.string "{PLAYER} handed over 1 Red Shard.$"
 

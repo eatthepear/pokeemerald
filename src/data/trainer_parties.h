@@ -2027,6 +2027,279 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
     }
 };
 
+static const struct TrainerMon sParty_LelouchExp3[] = {
+    {
+    .iv = 0,
+    .lvl = 30,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 30,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 30,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 30,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_LelouchEVHP[] = {
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOQUEEN,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOQUEEN,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOQUEEN,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOQUEEN,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_LelouchEVAttack[] = {
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOKING,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOKING,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOKING,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_NIDOKING,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_LelouchEVDefense[] = {
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_POLIWRATH,
+    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_POLIWRATH,
+    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_POLIWRATH,
+    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_POLIWRATH,
+    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_LelouchEVSpecialAttack[] = {
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_BEAUTIFLY,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_BEAUTIFLY,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_BEAUTIFLY,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_BEAUTIFLY,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_LelouchEVSpecialDefense[] = {
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_DUSTOX,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_DUSTOX,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_DUSTOX,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_DUSTOX,
+    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_LelouchEVSpeed[] = {
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_RAICHU,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_RAICHU,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_RAICHU,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 1,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1,
+    .species = SPECIES_RAICHU,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
 static const struct TrainerMon sParty_Howard[] = {
     {
     .iv = 20,
@@ -2150,107 +2423,6 @@ static const struct TrainerMon sParty_Ellie[] = {
     .iv = 20,
     .lvl = 28,
     .species = SPECIES_ABSOL,
-    }
-};
-
-static const struct TrainerMon sParty_Rusty[] = {
-    {
-    .iv = 20,
-    .lvl = 28,
-    .species = SPECIES_NUMEL,
-    },
-    {
-    .iv = 20,
-    .lvl = 28,
-    .species = SPECIES_TORKOAL,
-    },
-    {
-    .iv = 20,
-    .lvl = 28,
-    .species = SPECIES_MORPEKO,
-    }
-};
-
-static const struct TrainerMon sParty_Valerie2[] = {
-    {
-    .iv = 10,
-    .lvl = 31,
-    .species = SPECIES_SABLEYE,
-    },
-    {
-    .iv = 10,
-    .lvl = 31,
-    .species = SPECIES_SPOINK,
-    }
-};
-
-static const struct TrainerMon sParty_Valerie3[] = {
-    {
-    .iv = 20,
-    .lvl = 35,
-    .species = SPECIES_SPOINK,
-    },
-    {
-    .iv = 20,
-    .lvl = 35,
-    .species = SPECIES_SABLEYE,
-    }
-};
-
-static const struct TrainerMon sParty_Valerie4[] = {
-    {
-    .iv = 30,
-    .lvl = 40,
-    .species = SPECIES_SPOINK,
-    },
-    {
-    .iv = 30,
-    .lvl = 40,
-    .species = SPECIES_SABLEYE,
-    }
-};
-
-static const struct TrainerMon sParty_Valerie5[] = {
-    {
-    .iv = 40,
-    .lvl = 42,
-    .species = SPECIES_DUSKULL,
-    },
-    {
-    .iv = 40,
-    .lvl = 42,
-    .species = SPECIES_SABLEYE,
-    },
-    {
-    .iv = 40,
-    .lvl = 42,
-    .species = SPECIES_GRUMPIG,
-    }
-};
-
-static const struct TrainerMon sParty_Cindy1[] = {
-    {
-    .iv = 0,
-    .lvl = 7,
-    .species = SPECIES_ZIGZAGOON,
-    .heldItem = ITEM_NUGGET
-    }
-};
-
-static const struct TrainerMon sParty_Daphne[] = {
-    {
-    .iv = 10,
-    .lvl = 39,
-    .species = SPECIES_LUVDISC,
-    .heldItem = ITEM_NUGGET,
-    .moves = {MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_FLAIL, MOVE_WATER_PULSE}
-    },
-    {
-    .iv = 10,
-    .lvl = 39,
-    .species = SPECIES_LUVDISC,
-    .heldItem = ITEM_NUGGET,
-    .moves = {MOVE_ATTRACT, MOVE_SAFEGUARD, MOVE_TAKE_DOWN, MOVE_WATER_PULSE}
     }
 };
 

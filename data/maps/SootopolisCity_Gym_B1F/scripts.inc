@@ -46,11 +46,6 @@ SootopolisCity_Gym_B1F_EventScript_Annika::
 	msgbox SootopolisCity_Gym_B1F_Text_AnnikaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SootopolisCity_Gym_B1F_EventScript_Daphne::
-	trainerbattle_single TRAINER_DAPHNE, SootopolisCity_Gym_B1F_Text_DaphneIntro, SootopolisCity_Gym_B1F_Text_DaphneDefeat
-	msgbox SootopolisCity_Gym_B1F_Text_DaphnePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SootopolisCity_Gym_B1F_Text_AndreaIntro:
 	.string "I'll show you the sublime techniques\n"
 	.string "I learned from our LEADER JUAN!$"

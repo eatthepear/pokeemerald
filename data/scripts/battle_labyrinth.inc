@@ -135,6 +135,25 @@ EventScript_Shop_LelouchTraining2:
 	goto EventScript_Shop_LelouchLeave
 	end
 
+EventScript_Shop_LelouchTraining3:
+	checkitem ITEM_RED_SHARD, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	scrollingmultichoice 5, 0, 0, 5, TRUE
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchExp1
+	case 1, EventScript_Shop_LelouchExp2
+	case 2, EventScript_Shop_LelouchExp3
+	case 3, EventScript_Shop_LelouchEVHP
+	case 4, EventScript_Shop_LelouchEVAtk
+	case 5, EventScript_Shop_LelouchEVDef
+	case 6, EventScript_Shop_LelouchEVSpA
+	case 7, EventScript_Shop_LelouchEVSpD
+	case 8, EventScript_Shop_LelouchEVSpe
+	goto EventScript_Shop_LelouchLeave
+	end
+
 EventScript_Shop_LelouchExp1:
 	msgbox gText_Lelouch_Exp1Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -154,6 +173,83 @@ EventScript_Shop_LelouchExp2:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchExp3:
+	msgbox gText_Lelouch_Exp3Cost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchEVHP:
+	msgbox gText_Lelouch_EVHPCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchEVAtk:
+	msgbox gText_Lelouch_EVAtkCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchEVDef:
+	msgbox gText_Lelouch_EVDefCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchEVSpA:
+	msgbox gText_Lelouch_EVSpACost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchEVSpD:
+	msgbox gText_Lelouch_EVSpDCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
+	release
+	end
+
+EventScript_Shop_LelouchEVSpe:
+	msgbox gText_Lelouch_EVSpeCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	delay 96
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
 	release
 	end
 

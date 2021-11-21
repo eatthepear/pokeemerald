@@ -852,6 +852,15 @@ static const u8 sText_MoveTutorZenHeadbutt[] = _("Zen Headbutt");
 static const u8 sText_MoveTutorRoost[] = _("Roost");
 static const u8 sText_MoveTutorSynthesis[] = _("Synthesis");
 static const u8 sText_MoveTutorTailwind[] = _("Tailwind");
+static const u8 sText_Exp1[] =_("Experience Training 1");
+static const u8 sText_Exp2[] =_("Experience Training 2");
+static const u8 sText_Exp3[] =_("Experience Training 3");
+static const u8 sText_EVHP[] =_("EV Training HP");
+static const u8 sText_EVAtk[] =_("EV Training Attack");
+static const u8 sText_EVDef[] =_("EV Training Defense");
+static const u8 sText_EVSpA[] =_("EV Training Special Attack");
+static const u8 sText_EVSpD[] =_("EV Training Special Defense");
+static const u8 sText_EVSpe[] =_("EV Training Speed");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -956,6 +965,19 @@ static const struct ListMenuItem MoveTutorLevel3[] =
     {sText_MoveTutorTailwind, 23},
 };
 
+static const struct ListMenuItem Exp3[] =
+{
+    {sText_Exp1, 0},
+    {sText_Exp2, 1},
+    {sText_Exp3, 2},
+    {sText_EVHP, 3},
+    {sText_EVAtk, 4},
+    {sText_EVDef, 5},
+    {sText_EVSpA, 6},
+    {sText_EVSpD, 7},
+    {sText_EVSpe, 8},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -968,6 +990,7 @@ struct
     {MoveTutorLevel1, ARRAY_COUNT(MoveTutorLevel1)},
     {MoveTutorLevel2, ARRAY_COUNT(MoveTutorLevel2)},
     {MoveTutorLevel3, ARRAY_COUNT(MoveTutorLevel3)},
+    {Exp3, ARRAY_COUNT(Exp3)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);
