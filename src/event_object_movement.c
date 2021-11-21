@@ -7874,8 +7874,11 @@ static void GetGroundEffectFlags_Tracks(struct ObjectEvent *objEvent, u32 *flags
     {
         *flags |= GROUND_EFFECT_FLAG_DEEP_SAND;
     }
-    else if (MetatileBehavior_IsSandOrDeepSand(behavior)
-             || MetatileBehavior_IsFootprints(behavior))
+    else if (MetatileBehavior_IsSandOrDeepSand(behavior))
+    {
+        *flags |= GROUND_EFFECT_FLAG_SAND;
+    }
+    else if (MetatileBehavior_IsFootprints(behavior))
     {
         *flags |= GROUND_EFFECT_FLAG_SAND;
     }
