@@ -944,11 +944,11 @@ EventScript_Rules:
 EventScript_LeavingSetup:
 	msgbox gText_Colress_Empower, MSGBOX_AUTOCLOSE
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 6
+	compare VAR_TEMP_0, 21
 	call_if_eq EventScript_LeaveLeft
-	compare VAR_TEMP_0, 7
+	compare VAR_TEMP_0, 22
 	call_if_eq EventScript_LeaveMiddle
-	compare VAR_TEMP_0, 8
+	compare VAR_TEMP_0, 23
 	call_if_eq EventScript_LeaveRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
