@@ -704,7 +704,7 @@
 #define METATILE_Slateport_Door_BattleTent  0x393
 
 // gTileset_Snowy
-#define METATILE_Snowy_TallGrass  0x201
+#define METATILE_Snowy_TallGrass  0x21D
 
 // gTileset_SootopolisGym
 #define METATILE_SootopolisGym_Ice_Broken   0x206
