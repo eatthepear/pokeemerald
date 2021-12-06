@@ -1542,7 +1542,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Rusty},
     },
 
-    [TRAINER_CINDY_2] =
+    [TRAINER_WESLEY] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1555,7 +1555,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Cindy2},
     },
 
-    [TRAINER_BRIANNA] =
+    [TRAINER_AUDREY] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1568,7 +1568,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Brianna},
     },
 
-    [TRAINER_NAOMI] =
+    [TRAINER_CORNELIUS] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1581,7 +1581,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Naomi},
     },
 
-    [TRAINER_CINDY_3] =
+    [TRAINER_IAN] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1594,7 +1594,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Cindy3},
     },
 
-    [TRAINER_CINDY_4] =
+    [TRAINER_LEWIS] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1607,7 +1607,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Cindy4},
     },
 
-    [TRAINER_CINDY_5] =
+    [TRAINER_HELEN] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1620,7 +1620,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Cindy5},
     },
 
-    [TRAINER_CINDY_6] =
+    [TRAINER_ALFREDO] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1633,7 +1633,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Cindy6},
     },
 
-    [TRAINER_MELISSA] =
+    [TRAINER_CODY] =
     {
         .trainerClass = TRAINER_CLASS_BEAUTY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1646,7 +1646,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Melissa},
     },
 
-    [TRAINER_SHEILA] =
+    [TRAINER_INEZ_AND_EMMA] =
     {
         .trainerClass = TRAINER_CLASS_BEAUTY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
