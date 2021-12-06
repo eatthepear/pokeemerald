@@ -16355,74 +16355,74 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_DARUMAKA_GALARIAN"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_CRYOGONAL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_CUBCHOO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_MR_MIME_GALARIAN"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_SNOVER"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_DRAMPA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_TEDDIURSA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_TEDDIURSA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_RUFFLET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_RUFFLET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_MIMIKYU"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_MIMIKYU"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_KIRLIA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIKACHU"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_ZORUA"
               }
             ]
           }
