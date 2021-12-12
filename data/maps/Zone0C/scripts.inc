@@ -151,6 +151,7 @@ Zone0C_Text_ReceivedEevee:
 Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone0C_PokemonDayCare_EventScript_Closed
 	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
@@ -165,6 +166,17 @@ Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	msgbox Zone0C_PokemonDayCare_Text_FineThenComeAgain, MSGBOX_DEFAULT
 	release
 	end
+
+Zone0C_PokemonDayCare_EventScript_Closed:
+	msgbox Zone0C_PokemonDayCare_Text_Closed, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone0C_PokemonDayCare_Text_Closed:
+	.string "Apologies, we have too many Pokémon\n"
+	.string "to take care of and not enough\l"
+	.string "space, so we will be unable to take\l"
+	.string "care of your Pokémon at this time.$"
 
 Zone0C_PokemonDayCare_EventScript_GiveMonToRaise:
 	call_if_set FLAG_NUZLOCKE_ON, Zone0C_PokemonDayCare_EventScript_NuzlockeDialog

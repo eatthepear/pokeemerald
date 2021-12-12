@@ -92,6 +92,7 @@ EventScript_EndSmash::
 	end
 
 EventScript_SmashItems:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_EndSmash
 	random 100
 	compare VAR_RESULT, 0
 	call_if_eq EventScript_SmashBUGGem

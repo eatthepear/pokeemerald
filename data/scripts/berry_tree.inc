@@ -21,6 +21,7 @@ BerryTree_EventScript_Sparkling::
 BerryTree_EventScript_CheckSoil::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, BerryTree_EventScript_BadSoil
 	specialvar VAR_RESULT, PlayerHasBerries
 	compare VAR_RESULT, TRUE
 	goto_if_eq BerryTree_EventScript_WantToPlant
@@ -29,6 +30,14 @@ BerryTree_EventScript_CheckSoil::
 	waitbuttonpress
 	release
 	end
+
+BerryTree_EventScript_BadSoil::
+	msgbox BerryTree_Text_BadSoil, MSGBOX_AUTOCLOSE
+	release
+	end
+
+BerryTree_Text_BadSoil:
+	.string "The soil is too hard for Berries.$"
 
 BerryTree_EventScript_WantToPlant::
 	msgbox BerryTree_Text_WantToPlant, MSGBOX_YESNO
