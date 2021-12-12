@@ -48,10 +48,9 @@ Zone14Sanctuary_EventScript_NextZone::
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
 	case 0, Zone14Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_WarpToZone0
-	case 2, EventScript_Advice
-	case 3, EventScript_Rules
-	case 4, EventScript_WhenUReady
+	case 1, EventScript_Advice
+	case 2, EventScript_Rules
+	case 3, EventScript_WhenUReady
 	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 

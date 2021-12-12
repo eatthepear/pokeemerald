@@ -34,19 +34,27 @@ Zone12Sanctuary_EventScript_Intro:
 	waitfanfare
 	setvar VAR_ZONE, 13
 	buffernumberstring 0, VAR_ZONE
+	msgbox Zone12Sanctuary_Text_Colress_Explain, MSGBOX_AUTOCLOSE
 	msgbox Zone12Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
 
-Zone12Sanctuary_Text_Colress_WhenUReady:
+Zone12Sanctuary_Text_Colress_Explain:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones,\n"
 	.string "{COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}, are combined.\p"
 	.string "You will not be able to access a\n"
-	.string "Sanctuary in between the Zones.\p"
+	.string "Sanctuary in between the Zones.$"
+
+Zone12Sanctuary_Text_Colress_WhenUReady:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to\n"
 	.string "enter {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}, speak to me.$"
+
+Zone12Sanctuary_EventScript_WhenUReady:
+	msgbox Zone12Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	release
+	end
 
 Zone12Sanctuary_EventScript_NextZone::
 	lock
@@ -55,10 +63,9 @@ Zone12Sanctuary_EventScript_NextZone::
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
 	case 0, Zone12Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_WarpToZone0
-	case 2, EventScript_Advice
-	case 3, EventScript_Rules
-	case 4, EventScript_WhenUReady
+	case 1, EventScript_Advice
+	case 2, EventScript_Rules
+	case 3, EventScript_WhenUReady
 	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 

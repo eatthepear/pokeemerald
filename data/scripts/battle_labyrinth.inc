@@ -809,6 +809,12 @@ EventScript_LeaveRight:
 	return
 
 EventScript_WhenUReady:
+	compare VAR_ZONE, 7
+	goto_if_eq Zone6Sanctuary_EventScript_WhenUReady
+	compare VAR_ZONE, 13
+	goto_if_eq Zone12Sanctuary_EventScript_WhenUReady
+	compare VAR_ZONE, 18
+	goto_if_eq Zone17Sanctuary_EventScript_WhenUReady
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
@@ -924,8 +930,6 @@ EventScript_AdviceAgain:
 	msgbox gText_Colress_WantMoreAdvice, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Advice
-	compare VAR_ZONE, 7
-	goto_if_eq Zone6Sanctuary_EventScript_WhenUReady
 	goto EventScript_WhenUReady
 	end
 
@@ -936,8 +940,6 @@ EventScript_Rules:
 	delay 48
 	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
-	compare VAR_ZONE, 7
-	goto_if_eq Zone6Sanctuary_EventScript_WhenUReady
 	goto EventScript_WhenUReady
 	end
 
