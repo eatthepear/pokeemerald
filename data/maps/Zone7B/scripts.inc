@@ -4,6 +4,7 @@ Zone7B_MapScripts::
 Zone7B_EventScript_Lady::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone7B_EventScript_AlreadyHealed
 	goto_if_set FLAG_ZONE7_HEAL_USED, Zone7B_EventScript_AlreadyHealed
 	msgbox Zone7B_Text_WantToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, YES

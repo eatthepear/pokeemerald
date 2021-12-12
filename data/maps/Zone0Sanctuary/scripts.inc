@@ -972,6 +972,7 @@ Zone0Sanctuary_Text_Colress_BrutalExplained:
 	.string "The Daycare cannot be used.\p"
 	.string "Items can't be used in battle.\p"
 	.string "You cannot turn off Set mode.\p"
+	.string "Many helpful areas are unavailable.\p"
 	.string "It is not recommended to play on\n"
 	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\l"
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.$"

@@ -4,6 +4,7 @@ Zone9C_MapScripts::
 Zone9C_EventScript_Man::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9C_EventScript_Closed
 	message Zone9C_Text_Man_Welcome
 	waitmessage
 	pokemart Zone9C_Shop_Herbal
@@ -23,6 +24,7 @@ Zone9C_Shop_Herbal:
 Zone9C_EventScript_Woman::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9C_EventScript_Closed
 	message Zone9C_Text_Woman_Welcome
 	waitmessage
 	pokemart Zone9C_Shop_Incense
@@ -44,6 +46,14 @@ Zone9C_Shop_Incense:
 	.2byte ITEM_NONE
 	release
 	end
+
+Zone9C_EventScript_Closed:
+	msgbox Zone9C_Text_Closed, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9C_Text_Closed:
+	.string "We are closed. Sorry about that.$"
 
 Zone9C_Text_Man_Welcome:
 	.string "Welcome to my Herb shop.\n"

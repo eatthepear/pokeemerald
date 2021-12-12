@@ -29,7 +29,16 @@ Zone6Sanctuary_EventScript_Intro:
 	giveitem ITEM_SOOTHE_BELL
 	closemessage
 	setvar VAR_ZONE, 7
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6Sanctuary_EventScript_ExplainBrutal
 	msgbox Zone6Sanctuary_Text_Colress_Explain, MSGBOX_AUTOCLOSE
+	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_Colress_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+Zone6Sanctuary_EventScript_ExplainBrutal:
+	msgbox Zone6Sanctuary_Text_Colress_ExplainBrutal, MSGBOX_AUTOCLOSE
 	msgbox Zone6Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
@@ -75,6 +84,12 @@ Zone6Sanctuary_Text_Colress_Explain:
 	.string "Sanctuary in between the Zones.\p"
 	.string "However, there will be a single use\n"
 	.string "healing stop available.$"
+
+Zone6Sanctuary_Text_Colress_ExplainBrutal:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones,\n"
+	.string "{COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}, are combined.\p"
+	.string "You will not be able to access a\n"
+	.string "Sanctuary in between the Zones.$"
 
 Zone6Sanctuary_Text_Colress_WhenUReady:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to\n"
