@@ -776,14 +776,6 @@ EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
 
-EventScript_BeforeLeviathanHeal:
-	fadescreen FADE_TO_WHITE
-	msgbox gText_SoothingLight, MSGBOX_AUTOCLOSE
-	fadescreen FADE_FROM_WHITE
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
-	special HealPlayerParty
-	return
-
 EventScript_LeaveLeft:
 	applymovement 1, Common_Movement_WalkRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
@@ -818,12 +810,6 @@ EventScript_WhenUReady:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
-	end
-
-EventScript_WarpToZone0:
-	msgbox gText_Colress_SendToZone0, MSGBOX_AUTOCLOSE
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warpteleport MAP_ZONE0A, 255, 17, 10
 	end
 
 EventScript_WarpZone0:
