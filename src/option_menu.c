@@ -15,6 +15,7 @@
 #include "strings.h"
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
+#include "event_data.h"
 
 // Task data
 enum
@@ -361,6 +362,10 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsTextSpeed = gTasks[taskId].data[TD_TEXTSPEED];
     gSaveBlock2Ptr->optionsBattleSceneOff = gTasks[taskId].data[TD_BATTLESCENE];
     gSaveBlock2Ptr->optionsBattleStyle = gTasks[taskId].data[TD_BATTLESTYLE];
+    if (FlagGet(FLAG_BRUTAL_MODE_ON))
+    {
+        gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
+    }
     gSaveBlock2Ptr->optionsSound = gTasks[taskId].data[TD_SOUND];
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].data[TD_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].data[TD_FRAMETYPE];

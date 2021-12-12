@@ -920,6 +920,7 @@ EventScript_AdviceAgain:
 	end
 
 EventScript_Rules:
+	setflag FLAG_BRUTAL_MODE_ON
 	msgbox gText_Colress_RulesReminder, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
