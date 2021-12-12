@@ -40,8 +40,7 @@ Zone0Sanctuary_EventScript_ModeSkipTutorial:
 	switch VAR_RESULT
 	case 0, Zone0Sanctuary_EventScript_VanillaSkip
 	case 1, Zone0Sanctuary_EventScript_NuzlockeSkip
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
+	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 
 Zone0Sanctuary_EventScript_VanillaSkip:
@@ -54,8 +53,7 @@ Zone0Sanctuary_EventScript_VanillaSkip:
 
 Zone0Sanctuary_EventScript_SetVanillaSkip:
 	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
+	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 	
 Zone0Sanctuary_EventScript_NuzlockeSkip:
@@ -70,8 +68,7 @@ Zone0Sanctuary_EventScript_SetNuzlockeSkip:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
+	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 
 Zone0Sanctuary_EventScript_PickMode:
@@ -98,7 +95,7 @@ Zone0Sanctuary_EventScript_Vanilla:
 
 Zone0Sanctuary_EventScript_SetVanilla:
 	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_Tour
+	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 	
 Zone0Sanctuary_EventScript_Nuzlocke:
@@ -113,9 +110,89 @@ Zone0Sanctuary_EventScript_SetNuzlocke:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickDifficulty
+	end
+
+Zone0Sanctuary_EventScript_DifficultySkipTutorial:
+	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
+	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
+	switch VAR_RESULT
+	case 0, Zone0Sanctuary_EventScript_DefaultSkip
+	case 1, Zone0Sanctuary_EventScript_BrutalSkip
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+
+Zone0Sanctuary_EventScript_DefaultSkip:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_DefaultSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_SetDefaultSkip
+	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_SetDefaultSkip:
+	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+	
+Zone0Sanctuary_EventScript_BrutalSkip:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_BrutalSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_SetBrutalSkip
+	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_SetBrutalSkip:
+	setflag FLAG_BRUTAL_MODE_ON
+	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+
+Zone0Sanctuary_EventScript_PickDifficulty:
+	msgbox Zone0Sanctuary_Text_Colress_DefaultBrutal, MSGBOX_AUTOCLOSE
+	delay 16
+	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained, MSGBOX_AUTOCLOSE
+	delay 16
+	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained, MSGBOX_AUTOCLOSE
+	delay 96
+	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
+	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
+	switch VAR_RESULT
+	case 0, Zone0Sanctuary_EventScript_Default
+	case 1, Zone0Sanctuary_EventScript_Brutal
+	end
+	
+Zone0Sanctuary_EventScript_Default:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_DefaultSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_SetDefault
+	goto Zone0Sanctuary_EventScript_PickDifficulty
+	end
+
+Zone0Sanctuary_EventScript_SetDefault:
+	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_Tour
 	end
 	
+Zone0Sanctuary_EventScript_Brutal:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_BrutalSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_SetBrutal
+	goto Zone0Sanctuary_EventScript_PickDifficulty
+	end
+
+Zone0Sanctuary_EventScript_SetBrutal:
+	setflag FLAG_BRUTAL_MODE_ON
+	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_Tour
+	end
+
 Zone0Sanctuary_EventScript_Tour:
 	msgbox Zone0Sanctuary_Text_Colress_StartTour, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0Sanctuary_Movement_Colress_FirstShop
@@ -838,12 +915,14 @@ Zone0Sanctuary_Text_Colress_Welcome:
 
 Zone0Sanctuary_Text_Colress_VanillaNuzlocke:
 	.string "There are two game modes:\n"
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} and {COLOR RED}Nuzlocke{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} and {COLOR RED}Nuzlocke{COLOR DARK_GRAY}.\p"
+	.string "If you play on {COLOR RED}Nuzlocke{COLOR DARK_GRAY}, you can\n"
+	.string "change to {COLOR RED}Vanilla{COLOR DARK_GRAY} at any point by\l"
+	.string "speaking to me.$"
 
 Zone0Sanctuary_Text_Colress_VanillaExplained:
 	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\n"
-	.string "modifications. It will be a normal\l"
-	.string "playthrough with no added rules.$"
+	.string "modifications.$"
 
 Zone0Sanctuary_Text_Colress_NuzlockeExplained:
 	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode completely implements\n"
@@ -852,7 +931,7 @@ Zone0Sanctuary_Text_Colress_NuzlockeExplained:
 	.string "restrictions, and comes with\l"
 	.string "Species Clause and Shiny Clause.\p"
 	.string "It is not recommended to play\n"
-	.string "Nuzlocke mode unless you are\l"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are\l"
 	.string "familiar with Nuzlockes already.$"
 
 Zone0Sanctuary_Text_Colress_PickMode:
@@ -864,14 +943,57 @@ Zone0Sanctuary_Text_Colress_VanillaSure:
 	.string "You won't be able to switch later.$"
 
 Zone0Sanctuary_Text_Colress_NuzlockeSure:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode? Are you sure?\n"
-	.string "You won't be able to switch later.$"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode? Are you sure?$"
 
 Zone0Sanctuary_Text_Colress_VanillaMode:
 	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled. Good luck.$"
 
 Zone0Sanctuary_Text_Colress_NuzlockeMode:
 	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled. Good luck.$"
+
+Zone0Sanctuary_Text_Colress_DefaultBrutal:
+	.string "There are two game difficulty settings:\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}.\p"
+	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can\n"
+	.string "change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by\l"
+	.string "speaking to me.$"
+
+Zone0Sanctuary_Text_Colress_DefaultExplained:
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the intended difficulty.$"
+
+Zone0Sanctuary_Text_Colress_BrutalExplained:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode makes all the opponents\n"
+	.string "more challenging.\p"
+	.string "In addition, there are a number of\n"
+	.string "restrictions on your challenge.\p"
+	.string "Your Pokémon cannot gain EVs.\p"
+	.string "You cannot farm items from wild\n"
+	.string "Pokémon or other means.\p"
+	.string "The Daycare cannot be used.\p"
+	.string "Items can't be used in battle.\p"
+	.string "You cannot turn off Set mode.\p"
+	.string "It is not recommended to play on\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\l"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.$"
+
+Zone0Sanctuary_Text_Colress_PickDifficulty:
+	.string "Which difficulty would you like to\n"
+	.string "play on?$"
+
+Zone0Sanctuary_Text_Colress_DefaultSure:
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty? Are you sure?\n"
+	.string "You won't be able to switch later.$"
+
+Zone0Sanctuary_Text_Colress_BrutalSure:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty? Are you sure?$"
+
+Zone0Sanctuary_Text_Colress_DefaultDifficulty:
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled.\n"
+	.string "Good luck.$"
+
+Zone0Sanctuary_Text_Colress_BrutalDifficulty:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled.\n"
+	.string "Good luck.$"
 
 Zone0Sanctuary_Text_Colress_StartTour:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each\n"
