@@ -2175,13 +2175,29 @@ static void MainMenu_FormatSavegameMode(void)
     
     if (FlagGet(FLAG_NUZLOCKE_ON) == TRUE)
     {
-        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuNuzlockeMode);
-        AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+        if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+        {   
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalNuzlockeMode);
+            AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+        }
+        else
+        {
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuDefaultNuzlockeMode);
+            AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+        }
     }
     else
     {
-        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuVanillaMode);
-        AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+        if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+        {   
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalVanillaMode);
+            AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+        }
+        else
+        {
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuDefaultVanillaMode);
+            AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
+        }
     }
 }
 
