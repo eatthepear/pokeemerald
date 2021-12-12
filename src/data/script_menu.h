@@ -775,7 +775,7 @@ static const struct MenuAction MultichoiceList_ColressMenu[] =
 {
     {gText_NextZone},
     {gText_Advice},
-    {gText_Rules},
+    {gText_Settings},
     {gText_Exit},
 };
 

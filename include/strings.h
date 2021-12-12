@@ -3113,9 +3113,8 @@ extern const u8 gText_ContinueMenuDefaultNuzlockeMode[];
 extern const u8 gText_ContinueMenuBrutalNuzlockeMode[];
 
 extern const u8 gText_NextZone[];
-extern const u8 gText_Zone0[];
 extern const u8 gText_Advice[];
-extern const u8 gText_Rules[];
+extern const u8 gText_Settings[];
 
 extern const u8 gText_TrainingService[];
 extern const u8 gText_MoveReminderService[];

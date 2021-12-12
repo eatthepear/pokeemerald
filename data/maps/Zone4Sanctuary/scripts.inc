@@ -103,7 +103,7 @@ Zone4Sanctuary_EventScript_NextZone::
 	switch VAR_RESULT
 	case 0, Zone4Sanctuary_EventScript_NextZoneCheck
 	case 1, EventScript_Advice
-	case 2, EventScript_Rules
+	case 2, EventScript_Settings
 	case 3, EventScript_WhenUReady
 	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end

@@ -919,16 +919,79 @@ EventScript_AdviceAgain:
 	goto EventScript_WhenUReady
 	end
 
-EventScript_Rules:
-	setflag FLAG_BRUTAL_MODE_ON
-	msgbox gText_Colress_RulesReminder, MSGBOX_AUTOCLOSE
-	delay 96
-	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
-	delay 48
-	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
-	delay 96
+EventScript_Settings:
+	goto_if_set FLAG_NUZLOCKE_ON, EventScript_CheckDifficultyNuzlocke
+	goto EventScript_CheckDifficultyVanilla
+	end
+
+EventScript_CheckDifficultyNuzlocke:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_BrutalNuzlockeMsg
+	goto EventScript_DefaultNuzlockeMsg
+	end
+
+EventScript_BrutalNuzlockeMsg:
+	msgbox gText_Colress_BrutalNuzlockeMsg
+	call EventScript_TurnOffBrutal
+	call EventScript_TurnOffNuzlocke
 	goto EventScript_WhenUReady
 	end
+
+EventScript_DefaultNuzlockeMsg:
+	msgbox gText_Colress_DefaultNuzlockeMsg
+	call EventScript_TurnOffNuzlocke
+	goto EventScript_WhenUReady
+	end
+
+EventScript_CheckDifficultyVanilla:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_BrutalVanillaMsg
+	goto EventScript_DefaultVanillaMsg
+	end
+
+EventScript_BrutalVanillaMsg:
+	msgbox gText_Colress_BrutalVanillaMsg
+	call EventScript_TurnOffBrutal
+	goto EventScript_WhenUReady
+	end
+
+EventScript_DefaultVanillaMsg:
+	msgbox gText_Colress_DefaultVanillaMsg
+	goto EventScript_WhenUReady
+	end
+
+EventScript_TurnOffBrutal:
+	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq EventScript_SureTurnOffBrutal
+	return
+
+EventScript_SureTurnOffBrutal:
+	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq EventScript_TurnedOffBrutal
+	return
+
+EventScript_TurnedOffBrutal:
+	msgbox gText_Colress_BrutalOff, MSGBOX_AUTOCLOSE
+	clearflag FLAG_BRUTAL_MODE_ON
+	return
+
+EventScript_TurnOffNuzlocke:
+	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq EventScript_SureTurnOffNuzlocke
+	return
+
+EventScript_SureTurnOffNuzlocke:
+	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq EventScript_TurnedOffNuzlocke
+	return
+
+EventScript_TurnedOffNuzlocke:
+	msgbox gText_Colress_NuzlockeOff, MSGBOX_AUTOCLOSE
+	clearflag FLAG_NUZLOCKE_ON
+	callnative GlobalNuzlockeClear
+	return
 
 EventScript_LeavingSetup:
 	msgbox gText_Colress_Empower, MSGBOX_AUTOCLOSE

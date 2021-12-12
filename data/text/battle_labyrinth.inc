@@ -8,9 +8,45 @@ gText_Colress_EndofDemo:
 	.string "transfer your save file to the next\l"
 	.string "version when it comes out.$"
 
-gText_Colress_RulesReminder:
-	.string "You need a reminder of the rules?\n"
-	.string "Of course.$"
+gText_Colress_BrutalNuzlockeMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty, {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_DefaultNuzlockeMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty, {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_BrutalVanillaMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty, {COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_DefaultVanillaMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty, {COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_WouldTurnOffBrutal:
+	.string "Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
+	.string "and switch to {COLOR RED}Default{COLOR DARK_GRAY}?$"
+
+gText_Colress_SureTurnOffBrutal:
+	.string "Are you sure you would like to turn\n"
+	.string "off {COLOR RED}Brutal{COLOR DARK_GRAY} and switch to {COLOR RED}Default{COLOR DARK_GRAY}?$"
+
+gText_Colress_BrutalOff:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty turned off.\n"
+	.string "Difficulty set to {COLOR RED}Default{COLOR DARK_GRAY}.$"
+
+gText_Colress_WouldTurnOffNuzlocke:
+	.string "Would you like to turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
+	.string "and switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?$"
+
+gText_Colress_SureTurnOffNuzlocke:
+	.string "Are you sure you would like to turn\n"
+	.string "off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} and switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?$"
+
+gText_Colress_NuzlockeOff:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\n"
+	.string "Mode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.$"
 
 gText_Colress_Rules:
 	.string "The Battle Labyrinth is comprised\n"
