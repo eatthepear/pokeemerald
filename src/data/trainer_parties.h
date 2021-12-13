@@ -2,12 +2,14 @@
  * Notes for documentation
  * 
  * Trainers are arranged in the order it is possible to battle them.
+ * Only boss trainers have significantly changed parties on Brutal. You can CTRL+F for them in the document (just search for the word Brutal)
  * 
  * If a Pokemon does not have a specified parameter (for example the nature) then it is usually determined randomly.
  * EVs are by default set to 0.
  * 
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
+ * On Brutal, the normal trainers have +11 to their .iv value. So for example, if a Pokemon has .iv = 20, it actually has the max IVs of 31.
  * 
  * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
  * These are included in the comments next to each trainer.
@@ -184,7 +186,7 @@ static const struct TrainerMon sParty_Annabelle[] = {
     },
 };
 
-static const struct TrainerMon sParty_Remi[] = {//Leviathan 1
+static const struct TrainerMon sParty_Remi[] = {//Leviathan 1, Default
     {
     .iv = 31,
     .lvl = 11,
@@ -368,7 +370,7 @@ static const struct TrainerMon sParty_Ryan[] = {
     }
 };
 
-static const struct TrainerMon sParty_Declan[] = {//Leviathan 2
+static const struct TrainerMon sParty_Declan[] = {//Leviathan 2, Default
     {
     .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 15,
@@ -493,7 +495,7 @@ static const struct TrainerMon sParty_Ronan[] = {
     }
 };
 
-static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional
+static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     {
     .iv = 31,
     .lvl = 15,
@@ -667,7 +669,7 @@ static const struct TrainerMon sParty_Neil[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in a tag battle with Zone8DWally
+static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in a tag battle with Zone8DWally, Default
     {
     .iv = 31,
     .lvl = 18,
@@ -693,7 +695,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in
 
 static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     {
-    .iv = 31,
+    .iv = 20,
     .lvl = 18,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Gale Wings
@@ -703,7 +705,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_EMBER, MOVE_GROWL}
     },
     {
-    .iv = 31,
+    .iv = 20,
     .lvl = 18,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
@@ -713,7 +715,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TAIL_WHIP, MOVE_COVET}
     },
     {
-    .iv = 31,
+    .iv = 20,
     .lvl = 18,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_MALE,
@@ -915,7 +917,7 @@ static const struct TrainerMon sParty_Conrad[] = {
     }
 };
 
-static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5
+static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Default
     {
     .iv = 31,
     .lvl = 20,
@@ -1041,7 +1043,7 @@ static const struct TrainerMon sParty_Joel[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jake[] = {//Leviathan 6
+static const struct TrainerMon sParty_Jake[] = {//Leviathan 6, Default
     {
     .iv = 31,
     .lvl = 24,
@@ -1199,7 +1201,7 @@ static const struct TrainerMon sParty_AmberAndKim[] = {
     }
 };
 
-static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional
+static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional, Default
     {
     .iv = 31,
     .lvl = 26,
@@ -1232,7 +1234,7 @@ static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional
     }
 };
 
-static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optional
+static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optional, Default
     {
     .iv = 31,
     .lvl = 26,
@@ -1347,7 +1349,7 @@ static const struct TrainerMon sParty_Charlie[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9, Double Battle
+static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9, Double Battle, Default
     {
     .iv = 31,
     .lvl = 27,
@@ -1951,7 +1953,7 @@ static const struct TrainerMon sParty_Pirate4[] = {
     }
 };
 
-static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10, optional
+static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10, optional, Default
     {
     .iv = 31,
     .lvl = 32,
@@ -1964,7 +1966,7 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 10, optional
     },
 };
 
-static const struct TrainerMon sParty_Julie[] = {//Leviathan 11
+static const struct TrainerMon sParty_Julie[] = {//Leviathan 11, Default
     {
     .iv = 31,
     .lvl = 32,
