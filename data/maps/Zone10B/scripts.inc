@@ -695,6 +695,7 @@ Zone10B_EventScript_FossilDone:
 Zone10B_EventScript_WaterMerchant::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_DontSell
 	showmoneybox 0, 0, 0
 	msgbox Zone10B_Text_WaterOffer, MSGBOX_AUTOCLOSE
 	closemessage
@@ -707,6 +708,14 @@ Zone10B_EventScript_WaterMerchant::
 	msgbox Zone10B_Text_NoWater, MSGBOX_AUTOCLOSE
 	releaseall
 	end
+
+Zone10B_EventScript_DontSell:
+	msgbox Zone10B_Text_DontSell, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone10B_Text_DontSell:
+	.string "Sorry, I'm out of stock.$"
 
 Zone10B_Text_WaterOffer:
 	.string "In the desert, it's supply and\n"
