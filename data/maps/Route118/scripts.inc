@@ -187,53 +187,6 @@ Route118_Movement_StevenExit2:
 	walk_right
 	step_end
 
-Route118_EventScript_Barny:: @ 81F3FE9
-	trainerbattle_single TRAINER_BARNY, Route118_Text_BarnyIntro, Route118_Text_BarnyDefeat
-	msgbox Route118_Text_BarnyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route118_EventScript_Wade::
-	trainerbattle_single TRAINER_WADE, Route118_Text_WadeIntro, Route118_Text_WadeDefeat
-	msgbox Route118_Text_WadePostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route118_EventScript_Dalton::
-	trainerbattle_single TRAINER_DALTON_1, Route118_Text_DaltonIntro, Route118_Text_DaltonDefeat, Route118_EventScript_RegisterDalton
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq Route118_EventScript_RematchDalton
-	msgbox Route118_Text_DaltonPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route118_EventScript_RegisterDalton::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox Route118_Text_DaltonRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_DALTON_1
-	release
-	end
-
-Route118_EventScript_RematchDalton::
-	trainerbattle_rematch TRAINER_DALTON_1, Route118_Text_DaltonRematchIntro, Route118_Text_DaltonRematchDefeat
-	msgbox Route118_Text_DaltonPostRematch, MSGBOX_AUTOCLOSE
-	end
-
-Route118_EventScript_Perry::
-	trainerbattle_single TRAINER_PERRY, Route118_Text_PerryIntro, Route118_Text_PerryDefeat
-	msgbox Route118_Text_PerryPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route118_EventScript_Chester::
-	trainerbattle_single TRAINER_CHESTER, Route118_Text_ChesterIntro, Route118_Text_ChesterDefeat
-	msgbox Route118_Text_ChesterPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route118_EventScript_Deandre::
-	trainerbattle_single TRAINER_DEANDRE, Route118_Text_DeandreIntro, Route118_Text_DeandreDefeat
-	msgbox Route118_Text_DeandrePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route118_Text_StevenQuestions:
 	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
 	.string "It's me, STEVEN!\n"

@@ -56,7 +56,6 @@ Route111_OnTransition:
 	call_if_eq Route111_EventScript_SetMirageTowerGone
 	call Route111_EventScript_CheckSetSandstorm
 	call GabbyAndTy_EventScript_UpdateLocation
-	goto_if_not_defeated TRAINER_VICKY, Route111_EventScript_SetWinstratesNotDefeated
 	end
 
 Route111_EventScript_SetFallingPlayerGfx::
@@ -97,9 +96,6 @@ Route111_EventScript_SetWinstratesNotDefeated::
 	setflag FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE
 	setflag FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE
 	setflag FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE
-	cleartrainerflag TRAINER_VICTOR
-	cleartrainerflag TRAINER_VICTORIA
-	cleartrainerflag TRAINER_VIVI
 	end
 
 Route111_EventScript_SetLayoutNoMirageTower::
@@ -293,7 +289,6 @@ Route111_EventScript_Victor::
 
 Route111_EventScript_BattleWinstrates::
 	msgbox Route111_Text_VictorIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_VICTOR, Route111_Text_VictorDefeat
 	applymovement LOCALID_VICTOR, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -311,7 +306,6 @@ Route111_EventScript_BattleWinstrates::
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VictoriaIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_VICTORIA, Route111_Text_VictoriaDefeat
 	applymovement LOCALID_VICTORIA, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -329,7 +323,6 @@ Route111_EventScript_BattleWinstrates::
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_ViviIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_VIVI, Route111_Text_ViviDefeat
 	applymovement LOCALID_VIVI, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -347,7 +340,6 @@ Route111_EventScript_BattleWinstrates::
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VickyIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_VICKY, Route111_Text_VickyDefeat
 	msgbox Route111_Text_VickyPostBattle, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_VICKY, Common_Movement_WalkInPlaceFastestUp
@@ -453,76 +445,6 @@ Route111_EventScript_RockSmashTipFatMan::
 	applymovement LOCALID_ROCK_SMASH_MAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	releaseall
-	end
-
-Route111_EventScript_Drew::
-	trainerbattle_single TRAINER_DREW, Route111_Text_DrewIntro, Route111_Text_DrewDefeat
-	msgbox Route111_Text_DrewPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Heidi::
-	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
-	msgbox Route111_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Beau::
-	trainerbattle_single TRAINER_BEAU, Route111_Text_BeauIntro, Route111_Text_BeauDefeat
-	msgbox Route111_Text_BeauPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Becky::
-	trainerbattle_single TRAINER_BECKY, Route111_Text_BeckyIntro, Route111_Text_BeckyDefeat
-	msgbox Route111_Text_BeckyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Travis:: @ 81F12C2
-	trainerbattle_single TRAINER_TRAVIS, Route111_Text_TravisIntro, Route111_Text_TravisDefeat
-	msgbox Route111_Text_TravisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Irene::
-	trainerbattle_single TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
-	msgbox Route111_Text_IrenePostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Daisuke::
-	trainerbattle_single TRAINER_DAISUKE, Route111_Text_DaisukeIntro, Route111_Text_DaisukeDefeat
-	msgbox Route111_Text_DaisukePostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Hayden:: @ 81F13CB
-	trainerbattle_single TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat
-	msgbox Route111_Text_HaydenPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Bianca::
-	trainerbattle_single TRAINER_BIANCA, Route111_Text_BiancaIntro, Route111_Text_BiancaDefeat
-	msgbox Route111_Text_BiancaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Tyron::
-	trainerbattle_single TRAINER_TYRON, Route111_Text_TyronIntro, Route111_Text_TyronDefeat
-	msgbox Route111_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Celina::
-	trainerbattle_single TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
-	msgbox Route111_Text_CelinaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Celia::
-	trainerbattle_single TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
-	msgbox Route111_Text_CeliaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Bryan::
-	trainerbattle_single TRAINER_BRYAN, Route111_Text_BryanIntro, Route111_Text_BryanDefeat
-	msgbox Route111_Text_BryanPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route111_EventScript_Branden::
-	trainerbattle_single TRAINER_BRANDEN, Route111_Text_BrandenIntro, Route111_Text_BrandenDefeat
-	msgbox Route111_Text_BrandenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_TrainerHillSign::

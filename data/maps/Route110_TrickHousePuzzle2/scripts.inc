@@ -89,21 +89,6 @@ Route110_TrickHousePuzzle2_EventScript_PressButton4::
 	setmetatile 14, 12, METATILE_TrickHousePuzzle_Door_Shuttered, 0
 	return
 
-Route110_TrickHousePuzzle2_EventScript_Ted::
-	trainerbattle_single TRAINER_TED, Route110_TrickHousePuzzle2_Text_TedIntro, Route110_TrickHousePuzzle2_Text_TedDefeat
-	msgbox Route110_TrickHousePuzzle2_Text_TedPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route110_TrickHousePuzzle2_EventScript_Paul::
-	trainerbattle_single TRAINER_PAUL, Route110_TrickHousePuzzle2_Text_PaulIntro, Route110_TrickHousePuzzle2_Text_PaulDefeat
-	msgbox Route110_TrickHousePuzzle2_Text_PaulPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route110_TrickHousePuzzle2_EventScript_Georgia::
-	trainerbattle_single TRAINER_GEORGIA, Route110_TrickHousePuzzle2_Text_GeorgiaIntro, Route110_TrickHousePuzzle2_Text_GeorgiaDefeat
-	msgbox Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"

@@ -406,16 +406,6 @@ MtChimney_EventScript_BusyAquaGrunt3::
 	msgbox MtChimney_Text_MagmasNameSimilar, MSGBOX_SIGN
 	end
 
-MtChimney_EventScript_Tabitha::
-	trainerbattle_single TRAINER_TABITHA_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
-	msgbox MtChimney_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-MtChimney_EventScript_Grunt2::
-	trainerbattle_single TRAINER_GRUNT_MT_CHIMNEY_2, MtChimney_Text_Grunt2Intro, MtChimney_Text_Grunt2Defeat
-	msgbox MtChimney_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 MtChimney_EventScript_BusyMagmaGrunt1::
 	msgbox MtChimney_Text_TeamAquaAlwaysMessingWithPlans, MSGBOX_SIGN
 	end
@@ -478,33 +468,6 @@ MtChimney_EventScript_MachineOn::
 
 MtChimney_EventScript_RouteSign::
 	msgbox MtChimney_Text_RouteSign, MSGBOX_SIGN
-	end
-
-MtChimney_EventScript_Shelby::
-	trainerbattle_single TRAINER_SHELBY_1, MtChimney_Text_ShelbyIntro, MtChimney_Text_ShelbyDefeat, MtChimney_EventScript_DefeatedShelby
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq MtChimney_EventScript_RematchShelby
-	msgbox MtChimney_Text_ShelbyPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-MtChimney_EventScript_DefeatedShelby::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox MtChimney_Text_ShelbyRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_SHELBY_1
-	release
-	end
-
-MtChimney_EventScript_RematchShelby::
-	trainerbattle_rematch TRAINER_SHELBY_1, MtChimney_Text_ShelbyRematchIntro, MtChimney_Text_ShelbyRematchDefeat
-	msgbox MtChimney_Text_ShelbyPostRematch, MSGBOX_AUTOCLOSE
-	end
-
-MtChimney_EventScript_Grunt1::
-	trainerbattle_single TRAINER_GRUNT_MT_CHIMNEY_1, MtChimney_Text_Grunt1Intro, MtChimney_Text_Grunt1Defeat
-	msgbox MtChimney_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_Text_MeteoriteWillActivateVolcano: @ 822F26A

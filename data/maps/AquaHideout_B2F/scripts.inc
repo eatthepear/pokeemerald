@@ -40,11 +40,6 @@ AquaHideout_B2F_Movement_SumbarineDepartRight:
 	step_end
 	end
 
-AquaHideout_B2F_EventScript_Grunt8::
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_8, AquaHideout_B2F_Text_Grunt8Intro, AquaHideout_B2F_Text_Grunt8Defeat
-	msgbox AquaHideout_B2F_Text_Grunt8PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 AquaHideout_B2F_Text_OurBossGotThroughHisPreparations: @ 8233FA6
 	.string "Hehehe!\p"
 	.string "While I was toying with you, our BOSS\n"
