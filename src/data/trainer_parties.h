@@ -2446,7 +2446,7 @@ static const struct TrainerMon sParty_Rusty[] = {
     }
 };
 
-static const struct TrainerMon sParty_Cindy2[] = {
+static const struct TrainerMon sParty_Cody[] = {
     {
     .iv = 0,
     .lvl = 11,
@@ -2456,7 +2456,7 @@ static const struct TrainerMon sParty_Cindy2[] = {
     }
 };
 
-static const struct TrainerMon sParty_Brianna[] = {
+static const struct TrainerMon sParty_Lewis[] = {
     {
     .iv = 150,
     .lvl = 40,
@@ -2465,7 +2465,7 @@ static const struct TrainerMon sParty_Brianna[] = {
     }
 };
 
-static const struct TrainerMon sParty_Naomi[] = {
+static const struct TrainerMon sParty_Cornelius[] = {
     {
     .iv = 10,
     .lvl = 45,
@@ -2474,7 +2474,7 @@ static const struct TrainerMon sParty_Naomi[] = {
     }
 };
 
-static const struct TrainerMon sParty_Cindy3[] = {
+static const struct TrainerMon sParty_InezAndEmma[] = {
     {
     .iv = 10,
     .lvl = 27,
@@ -2483,7 +2483,7 @@ static const struct TrainerMon sParty_Cindy3[] = {
     }
 };
 
-static const struct TrainerMon sParty_Cindy4[] = {
+static const struct TrainerMon sParty_Helen[] = {
     {
     .iv = 20,
     .lvl = 30,
@@ -2492,7 +2492,7 @@ static const struct TrainerMon sParty_Cindy4[] = {
     }
 };
 
-static const struct TrainerMon sParty_Cindy5[] = {
+static const struct TrainerMon sParty_Wesley[] = {
     {
     .iv = 30,
     .lvl = 33,
@@ -2501,7 +2501,7 @@ static const struct TrainerMon sParty_Cindy5[] = {
     }
 };
 
-static const struct TrainerMon sParty_Cindy6[] = {
+static const struct TrainerMon sParty_Alfredo[] = {
     {
     .iv = 40,
     .lvl = 36,
@@ -2511,7 +2511,7 @@ static const struct TrainerMon sParty_Cindy6[] = {
     }
 };
 
-static const struct TrainerMon sParty_Melissa[] = {
+static const struct TrainerMon sParty_Ian[] = {
     {
     .iv = 0,
     .lvl = 21,
@@ -2519,7 +2519,7 @@ static const struct TrainerMon sParty_Melissa[] = {
     }
 };
 
-static const struct TrainerMon sParty_Sheila[] = {
+static const struct TrainerMon sParty_Audrey[] = {
     {
     .iv = 0,
     .lvl = 21,
