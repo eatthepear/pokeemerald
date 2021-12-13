@@ -648,6 +648,7 @@
 #define MAP_ZONE21D         (89 | (27 << 8))
 #define MAP_ZONE21SANCTUARY (90 | (27 << 8))
 #define MAP_ZONE21SHOPS     (91 | (27 << 8))
+#define MAP_ZONE22A         (92 | (27 << 8))
 
 // gMapGroup_IndoorRoute109
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

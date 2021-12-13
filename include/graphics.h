@@ -6664,6 +6664,9 @@ extern const u32 gTrainerFrontPic_Red[];
 extern const u32 gTrainerFrontPic_Leaf[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
+extern const u32 gTrainerFrontPic_Scientist[];
+extern const u32 gTrainerFrontPic_Waiter[];
+extern const u32 gTrainerFrontPic_Waitress[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -6758,6 +6761,9 @@ extern const u32 gTrainerPalette_Red[];
 extern const u32 gTrainerPalette_Leaf[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
+extern const u32 gTrainerPalette_Scientist[];
+extern const u32 gTrainerPalette_Waiter[];
+extern const u32 gTrainerPalette_Waitress[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];
@@ -6929,6 +6935,12 @@ extern const u32 gBattleTerrainTilemap_Bridge[];
 extern const u32 gBattleTerrainAnimTiles_Bridge[];
 extern const u32 gBattleTerrainAnimTilemap_Bridge[];
 extern const u32 gBattleTerrainPalette_Bridge[];
+
+extern const u32 gBattleTerrainTiles_Snow[];
+extern const u32 gBattleTerrainTilemap_Snow[];
+extern const u32 gBattleTerrainAnimTiles_Snow[];
+extern const u32 gBattleTerrainAnimTilemap_Snow[];
+extern const u32 gBattleTerrainPalette_Snow[];
 
 extern const u32 gBattleTerrainTiles_TallGrass[];
 extern const u32 gBattleTerrainTilemap_TallGrass[];

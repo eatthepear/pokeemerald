@@ -263,7 +263,6 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_LILA_AND_ROY] = REMATCH(TRAINER_LILA_AND_ROY_1, TRAINER_LILA_AND_ROY_2, TRAINER_LILA_AND_ROY_3, TRAINER_LILA_AND_ROY_4, TRAINER_LILA_AND_ROY_5, ROUTE124),
     [REMATCH_CRISTIN] = REMATCH(TRAINER_CRISTIN_1, TRAINER_CRISTIN_2, TRAINER_CRISTIN_3, TRAINER_CRISTIN_4, TRAINER_CRISTIN_5, ROUTE121),
     [REMATCH_THALIA] = REMATCH(TRAINER_THALIA_1, TRAINER_THALIA_2, TRAINER_THALIA_3, TRAINER_THALIA_4, TRAINER_THALIA_5, ABANDONED_SHIP_ROOMS_1F),
-    [REMATCH_JESSICA] = REMATCH(TRAINER_JESSICA_1, TRAINER_JESSICA_2, TRAINER_JESSICA_3, TRAINER_JESSICA_4, TRAINER_JESSICA_5, ROUTE121),
     [REMATCH_WINSTON] = REMATCH(TRAINER_WINSTON_1, TRAINER_WINSTON_2, TRAINER_WINSTON_3, TRAINER_WINSTON_4, TRAINER_WINSTON_5, ROUTE104),
     [REMATCH_STEVE] = REMATCH(TRAINER_STEVE_1, TRAINER_STEVE_2, TRAINER_STEVE_3, TRAINER_STEVE_4, TRAINER_STEVE_5, ROUTE114),
     [REMATCH_TONY] = REMATCH(TRAINER_TONY_1, TRAINER_TONY_2, TRAINER_TONY_3, TRAINER_TONY_4, TRAINER_TONY_5, ROUTE107),
@@ -732,6 +731,8 @@ u8 BattleSetup_GetTerrainId(void)
     //Note: POND refers to underground water (so it will be darker there). FOREST refers to a forest area (so it will be darker there)
     if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE2A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE2A)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE2B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE2B)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4A)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4B)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4C) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4C)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4D)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4E) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4E)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE11A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE11A))|| (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE17A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE17A)))
         return BATTLE_TERRAIN_FOREST;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE22A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE22A))
+        return BATTLE_TERRAIN_SNOW;
     if (MetatileBehavior_IsTallGrass(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
     if (MetatileBehavior_IsLongGrass(tileBehavior))

@@ -60,7 +60,7 @@ Zone21Sanctuary_EventScript_NextZoneCheck:
 Zone21Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE21A, 255, 38, 100
+	warp MAP_ZONE22A, 255, 10, 10
 	release
 	end
 
