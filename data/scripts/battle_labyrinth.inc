@@ -920,6 +920,7 @@ EventScript_AdviceAgain:
 	end
 
 EventScript_Settings:
+	setflag FLAG_BRUTAL_MODE_ON
 	goto_if_set FLAG_NUZLOCKE_ON, EventScript_CheckDifficultyNuzlocke
 	goto EventScript_CheckDifficultyVanilla
 	end

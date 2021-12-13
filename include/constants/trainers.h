@@ -376,7 +376,7 @@
 #define F_TRAINER_FEMALE (1 << 7)
 
 // Set to buff up all trained pokemon that use .iv instead of .ivs
-#define TRAINER_IV_MODIFIER       0
+#define TRAINER_IV_MODIFIER       11
 
 // Unused.
 #define F_TRAINER_PARTY_CUSTOM_MOVESET (1 << 0)
