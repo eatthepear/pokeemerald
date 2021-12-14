@@ -154,8 +154,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone12A_EventScript_BlackSludge",
-      "flag": "FLAG_ITEM_ZONE12A_BLACK_SLUDGE"
+      "script": "Zone12A_EventScript_EnergyRoot",
+      "flag": "FLAG_ITEM_ZONE12A_ENERGY_ROOT"
     }
   ],
   "warp_events": [

@@ -24,7 +24,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone13C_EventScript_KeizanBlackBelt",
+      "script": "Zone13C_EventScript_KaizenBlackBelt",
       "flag": "FLAG_HIDE_LEVIATHAN7"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone13C_EventScript_KeizanPsychic",
+      "script": "Zone13C_EventScript_KaizenPsychic",
       "flag": "FLAG_HIDE_LEVIATHAN8"
     },
     {

@@ -19,7 +19,13 @@ Zone20A_EventScript_InitiateLeviathanBattle::
 	faceplayer
 	msgbox Zone20A_Text_Leviathan11Intro, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JULIE
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone20A_EventScript_JulieBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN11, Zone20A_Text_Leviathan11Defeat
+	goto Zone20A_EventScript_Leviathan11Defeated
+	end
+
+Zone20A_EventScript_JulieBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN11_BRUTAL, Zone20A_Text_Leviathan11Defeat
 	goto Zone20A_EventScript_Leviathan11Defeated
 	end
 

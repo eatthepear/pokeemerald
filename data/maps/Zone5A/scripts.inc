@@ -95,8 +95,16 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	faceplayer
 	msgbox Zone5A_Text_Leviathan2Intro2, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_DeclanBrutal
 	totemboost_def1 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN2, Zone5A_Text_Leviathan2Defeat
+	goto Zone5A_EventScript_Leviathan2Defeated
+	end
+
+Zone5A_EventScript_DeclanBrutal:
+	totemboost_def1 B_POSITION_OPPONENT_LEFT
+	totemboost_def1 B_POSITION_OPPONENT_RIGHT
+	trainerbattle_no_intro TRAINER_LEVIATHAN2_BRUTAL, Zone5A_Text_Leviathan2Defeat
 	goto Zone5A_EventScript_Leviathan2Defeated
 	end
 

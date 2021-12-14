@@ -29,7 +29,13 @@ Zone3A_EventScript_Exit::
 	waitmovement 0
 	msgbox Zone3A_Text_Leviathan1Intro, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_REMI
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_RemiBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Defeat
+	goto Zone3A_EventScript_Leviathan1Defeated
+	end
+
+Zone3A_EventScript_RemiBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN1_BRUTAL, Zone3A_Text_Leviathan1Defeat
 	goto Zone3A_EventScript_Leviathan1Defeated
 	end
 

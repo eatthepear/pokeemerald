@@ -47,7 +47,13 @@ Zone10A_EventScript_InitiateLeviathanBattle:
 	delay 96
 	msgbox Zone10A_Text_CrushYou, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ADAMINA
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10A_EventScript_AdaminaBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
+	goto Zone10A_EventScript_Leviathan5Defeated
+	end
+
+Zone10A_EventScript_AdaminaBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN5_BRUTAL, Zone10A_Text_Leviathan5Defeat
 	goto Zone10A_EventScript_Leviathan5Defeated
 	end
 

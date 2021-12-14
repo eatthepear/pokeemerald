@@ -190,8 +190,15 @@ Zone18B_Odysseus_WantBattle:
 Zone18B_EventScript_OdysseusBattle:
 	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
 	totemboost_atk2 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN10, Zone18B_Text_LeviathanDefeat
+	goto Zone18B_EventScript_Leviathan10Defeated
+	end
+
+Zone18B_EventScript_OdysseusBrutal:
+	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 2, 2, 2
+	trainerbattle_no_intro TRAINER_LEVIATHAN10_BRUTAL, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan10Defeated
 	end
 

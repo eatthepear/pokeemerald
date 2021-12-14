@@ -316,10 +316,7 @@ static void BuildNormalStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
-    {
-        AddStartMenuAction(MENU_ACTION_SAVE);
-    }
+    AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }

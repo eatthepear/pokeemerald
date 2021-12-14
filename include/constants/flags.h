@@ -1056,7 +1056,7 @@
 #define FLAG_ITEM_ZONE4B_SILK_SCARF                                 0x3F0
 #define FLAG_ITEM_ZONE4C_ETHER                                      0x3F1
 #define FLAG_ITEM_ZONE4D_REPEL                                      0x3F2
-#define FLAG_ITEM_ZONE4E_SHELL_BELL                                 0x3F3
+#define FLAG_ITEM_ZONE4E_ENERGY_POWDER                              0x3F3
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
 #define FLAG_ITEM_ZONE5A_1000                                       0x3F5
 #define FLAG_ITEM_ZONE6A_NET_BALL                                   0x3F6
@@ -1095,7 +1095,7 @@
 #define FLAG_ITEM_ZONE12A_METRONOME                                 0x417
 #define FLAG_ITEM_ZONE12A_OVAL_STONE                                0x418
 #define FLAG_ITEM_ZONE12A_GRIP_CLAW                                 0x419
-#define FLAG_ITEM_ZONE12A_BLACK_SLUDGE                              0x41A
+#define FLAG_ITEM_ZONE12A_ENERGY_ROOT                               0x41A
 #define FLAG_ITEM_ZONE13A_SUPER_POTION                              0x41B
 #define FLAG_ITEM_ZONE14A_GREAT_BALL                                0x41C
 #define FLAG_ITEM_ZONE14B_QUICK_BALL                                0x41D

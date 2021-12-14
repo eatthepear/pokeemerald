@@ -116,6 +116,6 @@ Zone12A_EventScript_GripClaw::
 	finditem ITEM_GRIP_CLAW
 	end
 
-Zone12A_EventScript_BlackSludge::
-	finditem ITEM_BLACK_SLUDGE
+Zone12A_EventScript_EnergyRoot::
+	finditem ITEM_ENERGY_ROOT
 	end

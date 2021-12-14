@@ -126,9 +126,21 @@ Zone8D_EventScript_BattleSetup:
 	special ChooseHalfPartyForBattle
 	waitstate
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_MirageBrutal
 	totemboost_atk1 B_POSITION_OPPONENT_RIGHT
 	totemboost_speed1 B_POSITION_OPPONENT_LEFT
 	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_MirageDefeat
+	compare VAR_RESULT, 0
+	goto_if_ne Zone8D_EventScript_LeviathanBattle
+	special LoadPlayerParty
+	goto Zone8D_EventScript_BattleSetup
+	release
+	end
+
+Zone8D_EventScript_MirageBrutal:
+	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4_BRUTAL, 0, NULL, Zone8D_Text_MirageDefeat
 	compare VAR_RESULT, 0
 	goto_if_ne Zone8D_EventScript_LeviathanBattle
 	special LoadPlayerParty

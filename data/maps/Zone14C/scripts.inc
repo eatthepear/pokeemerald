@@ -79,7 +79,13 @@ Zone14C_EventScript_InitiateLeviathanBattle:
 	fadeoutbgm 1
 	msgbox Zone14C_Text_Mirage_Begone, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone14C_EventScript_MirageBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN9, Zone14C_Text_Leviathan9Defeat
+	goto Zone14C_EventScript_Leviathan9Defeated
+	end
+
+Zone14C_EventScript_MirageBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN9_BRUTAL, Zone14C_Text_Leviathan9Defeat
 	goto Zone14C_EventScript_Leviathan9Defeated
 	end
 

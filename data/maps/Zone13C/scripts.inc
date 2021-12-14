@@ -19,87 +19,99 @@ Zone13C_EventScript_HideLeviathan8:
 	clearflag FLAG_HIDE_LEVIATHAN7
 	end
 
-Zone13C_EventScript_KeizanBlackBelt::
+Zone13C_EventScript_KaizenBlackBelt::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN7, Zone13C_EventScript_KeizanBlackBelt_ComeBack
-	msgbox Zone13C_Text_KeizanBlackBelt_Battle, MSGBOX_YESNO
+	goto_if_set FLAG_BEATLEVIATHAN7, Zone13C_EventScript_KaizenBlackBelt_ComeBack
+	msgbox Zone13C_Text_KaizenBlackBelt_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Zone13C_EventScript_Keizan_ISee
+	goto_if_eq Zone13C_EventScript_Kaizen_ISee
 	fadeoutbgm 1
-	msgbox Zone13C_Text_KeizanBlackBelt_LetsGetStarted, MSGBOX_AUTOCLOSE
+	msgbox Zone13C_Text_KaizenBlackBelt_LetsGetStarted, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN1
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_KaizenBulkUpBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN7, Zone13C_Text_Leviathan7Defeat
 	goto Zone13C_EventScript_Leviathan7Defeated
 	end
 
-Zone13C_Text_KeizanBlackBelt_Battle:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: Greetings.\n"
-	.string "I am {COLOR BLUE}Leviathan Keizan{COLOR DARK_GRAY}.\p"
+Zone13C_EventScript_KaizenBulkUpBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN7_BRUTAL, Zone13C_Text_Leviathan7Defeat
+	goto Zone13C_EventScript_Leviathan7Defeated
+	end
+
+Zone13C_Text_KaizenBlackBelt_Battle:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Greetings.\n"
+	.string "I am {COLOR BLUE}Leviathan Kaizen{COLOR DARK_GRAY}.\p"
 	.string "Would you do me the honor of\n"
 	.string "engaging in battle?$"
 
-Zone13C_Text_KeizanBlackBelt_LetsGetStarted:
+Zone13C_Text_KaizenBlackBelt_LetsGetStarted:
 	.string "Excellent. Let us get started.\p"
 	.string "Kiai!$"
 
 Zone13C_Text_Leviathan7Defeat:
 	.string "Well matched.$"
 
-Zone13C_EventScript_Keizan_ISee:
-	msgbox Zone13C_Text_Keizan_ISee, MSGBOX_AUTOCLOSE
+Zone13C_EventScript_Kaizen_ISee:
+	msgbox Zone13C_Text_Kaizen_ISee, MSGBOX_AUTOCLOSE
 	release
 	end
 
-Zone13C_Text_Keizan_ISee:
+Zone13C_Text_Kaizen_ISee:
 	.string "I see.$"
 
 Zone13C_EventScript_Leviathan7Defeated:
 	setflag FLAG_BEATLEVIATHAN7
-	msgbox Zone13C_Text_KeizanBlackBelt_HereTM, MSGBOX_DEFAULT
+	msgbox Zone13C_Text_KaizenBlackBelt_HereTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM08
-	msgbox Zone13C_Text_KeizanBlackBelt_ExplainTM, MSGBOX_DEFAULT
-	goto Zone13C_EventScript_KeizanBlackBelt_ComeBack
+	msgbox Zone13C_Text_KaizenBlackBelt_ExplainTM, MSGBOX_DEFAULT
+	goto Zone13C_EventScript_KaizenBlackBelt_ComeBack
 	end
 
-Zone13C_Text_KeizanBlackBelt_HereTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: For the victor go the spoils.$"
+Zone13C_Text_KaizenBlackBelt_HereTM:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: For the victor go the spoils.$"
 
-Zone13C_Text_KeizanBlackBelt_ExplainTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: TM08 - Bulk Up helps your\n"
+Zone13C_Text_KaizenBlackBelt_ExplainTM:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM08 - Bulk Up helps your\n"
 	.string "Pokémon grow ever stronger.$"
 
-Zone13C_EventScript_KeizanBlackBelt_ComeBack:
-	msgbox Zone13C_Text_KeizanBlackBelt_ComeBack, MSGBOX_AUTOCLOSE
+Zone13C_EventScript_KaizenBlackBelt_ComeBack:
+	msgbox Zone13C_Text_KaizenBlackBelt_ComeBack, MSGBOX_AUTOCLOSE
 	release
 	end
 
-Zone13C_Text_KeizanBlackBelt_ComeBack:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: You should come back later.\n"
+Zone13C_Text_KaizenBlackBelt_ComeBack:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: You should come back later.\n"
 	.string "I have other strengths aside from\l"
 	.string "my karate training.$"
 
-Zone13C_EventScript_KeizanPsychic::
+Zone13C_EventScript_KaizenPsychic::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN8, Zone13C_EventScript_KeizanPsychic_LikeHome
-	msgbox Zone13C_Text_KeizanPsychic_Battle, MSGBOX_YESNO
+	goto_if_set FLAG_BEATLEVIATHAN8, Zone13C_EventScript_KaizenPsychic_LikeHome
+	msgbox Zone13C_Text_KaizenPsychic_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Zone13C_EventScript_Keizan_ISee
+	goto_if_eq Zone13C_EventScript_Kaizen_ISee
 	fadeoutbgm 1
-	msgbox Zone13C_Text_KeizanPsychic_FairBetter, MSGBOX_AUTOCLOSE
+	msgbox Zone13C_Text_KaizenPsychic_FairBetter, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN2
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_KaizenCalmMindBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN8, Zone13C_Text_Leviathan8Defeat
 	goto Zone13C_EventScript_Leviathan8Defeated
 	end
 
-Zone13C_Text_KeizanPsychic_Battle:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: Yes, I am both a Psychic\n"
+Zone13C_EventScript_KaizenCalmMindBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN8_BRUTAL, Zone13C_Text_Leviathan8Defeat
+	goto Zone13C_EventScript_Leviathan8Defeated
+	end
+
+Zone13C_Text_KaizenPsychic_Battle:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Yes, I am both a Psychic\n"
 	.string "and a Black Belt.\p"
 	.string "Speaking of which, I would like to\n"
 	.string "battle again, if you are up to it?$"
 
-Zone13C_Text_KeizanPsychic_FairBetter:
+Zone13C_Text_KaizenPsychic_FairBetter:
 	.string "Perhaps I will fair better with a\n"
 	.string "different angle of attack!$"
 
@@ -108,28 +120,28 @@ Zone13C_Text_Leviathan8Defeat:
 
 Zone13C_EventScript_Leviathan8Defeated:
 	setflag FLAG_BEATLEVIATHAN8
-	msgbox Zone13C_Text_KeizanPsychic_HereTM, MSGBOX_AUTOCLOSE
+	msgbox Zone13C_Text_KaizenPsychic_HereTM, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM09
-	msgbox Zone13C_Text_KeizanPsychic_ExplainTM, MSGBOX_AUTOCLOSE
-	goto Zone13C_EventScript_KeizanPsychic_LikeHome
+	msgbox Zone13C_Text_KaizenPsychic_ExplainTM, MSGBOX_AUTOCLOSE
+	goto Zone13C_EventScript_KaizenPsychic_LikeHome
 	end
 
-Zone13C_Text_KeizanPsychic_HereTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: Another victory, another TM.$"
+Zone13C_Text_KaizenPsychic_HereTM:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Another victory, another TM.$"
 
-Zone13C_Text_KeizanPsychic_ExplainTM:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: TM09 - Calm Mind functions\n"
+Zone13C_Text_KaizenPsychic_ExplainTM:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM09 - Calm Mind functions\n"
 	.string "similarly to Bulk Up, just as\l"
 	.string "Psychics train similarly to\l"
 	.string "Black Belts.$"
 
-Zone13C_EventScript_KeizanPsychic_LikeHome:
-	msgbox Zone13C_Text_KeizanPsychic_LikeHome, MSGBOX_AUTOCLOSE
+Zone13C_EventScript_KaizenPsychic_LikeHome:
+	msgbox Zone13C_Text_KaizenPsychic_LikeHome, MSGBOX_AUTOCLOSE
 	release
 	end
 
-Zone13C_Text_KeizanPsychic_LikeHome:
-	.string "{COLOR BLUE}Keizan{COLOR DARK_GRAY}: It is a bit strange, but I\n"
+Zone13C_Text_KaizenPsychic_LikeHome:
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: It is a bit strange, but I\n"
 	.string "enjoy this place.\l"
 	.string "I can train in peace here.\p"
 	.string "It feels like home, despite all the\n"
