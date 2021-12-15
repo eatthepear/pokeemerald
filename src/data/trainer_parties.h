@@ -2641,13 +2641,13 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {
     .moves = {MOVE_ROCK_BLAST, MOVE_BUG_BITE, MOVE_FEINT_ATTACK, MOVE_STEALTH_ROCK}
     },
     {
-    .ivs = {30, 31, 31, 31, 30, 31},
+    .iv = 31,
     .lvl = 20,
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Blaze
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRAIXEN,
-    .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FIRE_SPIN, MOVE_HIDDEN_POWER} //Hidden Power Grass
+    .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FIRE_SPIN, MOVE_FLAME_CHARGE}
     },
     {
     .iv = 31,
