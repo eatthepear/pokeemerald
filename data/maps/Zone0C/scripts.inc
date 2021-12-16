@@ -72,7 +72,7 @@ Zone0C_EventScript_EeveeGirl::
 	end
 
 Zone0C_EventScript_SendEeveeParty::
-	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	givecustommon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 1
 	setvar VAR_TEMP_1, SPECIES_EEVEE
 	call Zone0C_EventScript_ReceivedEeveeFanfare
 	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
@@ -84,7 +84,7 @@ Zone0C_EventScript_SendEeveeParty::
 	end
 
 Zone0C_EventScript_SendEeveePC::
-	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	givecustommon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 1
 	setvar VAR_TEMP_1, SPECIES_EEVEE
 	call Zone0C_EventScript_ReceivedEeveeFanfare
 	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
