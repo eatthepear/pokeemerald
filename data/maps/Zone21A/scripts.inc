@@ -11,9 +11,9 @@ Zone21A_EventScript_Exit::
 
 Zone21A_EventScript_SecretWarp::
 	lockall
-        warp MAP_ZONE21D, 255, 2, 28
-        releaseall
-        end
+    warp MAP_ZONE21D, 255, 2, 28
+    releaseall
+    end
 
 Zone21A_EventScript_Howard::
 	trainerbattle_single TRAINER_HOWARD, Zone21A_Text_HowardIntro, Zone21A_Text_HowardDefeat
@@ -171,6 +171,6 @@ Zone21A_EventScript_Everstone::
 	finditem ITEM_EVERSTONE
 	end
 
-Zone21A_EventScript_Nugget::
-	finditem ITEM_NUGGET
+Zone21A_EventScript_LightClay::
+	finditem ITEM_LIGHT_CLAY
 	end

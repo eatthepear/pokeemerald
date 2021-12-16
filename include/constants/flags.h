@@ -1123,7 +1123,7 @@
 #define FLAG_ITEM_ZONE21A_FULL_HEAL                                 0x433
 #define FLAG_ITEM_ZONE21A_SUPER_REPEL                               0x434
 #define FLAG_ITEM_ZONE21A_EVERSTONE                                 0x435
-#define FLAG_ITEM_ZONE21A_NUGGET                                    0x436
+#define FLAG_ITEM_ZONE21A_LIGHT_CLAY                                0x436
 #define FLAG_ITEM_ZONE21B_SABLENITE                                 0x437//start here
 #define FLAG_ITEM_METEOR_FALLS_B1F_2R_TM_02                         0x438
 #define FLAG_ITEM_SHOAL_CAVE_ENTRANCE_BIG_PEARL                     0x439
