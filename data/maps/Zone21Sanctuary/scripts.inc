@@ -59,8 +59,9 @@ Zone21Sanctuary_EventScript_NextZoneCheck:
 
 Zone21Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
+	setflag FLAG_HIDE_LEVIATHAN12
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE22A, 255, 10, 10
+	warp MAP_ZONE22A, 255, 9, 50
 	release
 	end
 

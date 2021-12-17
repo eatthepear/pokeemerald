@@ -253,6 +253,78 @@
       "var": "VAR_GENERIC",
       "var_value": "0",
       "script": "Zone21A_EventScript_SecretWarp"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState1"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState1"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState0"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState0"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 97,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState1"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 97,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState1"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 98,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState0"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 98,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone21A_EventScript_SetState0"
     }
   ],
   "bg_events": [

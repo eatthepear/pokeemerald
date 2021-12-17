@@ -11,9 +11,27 @@ Zone21A_EventScript_Exit::
 
 Zone21A_EventScript_SecretWarp::
 	lockall
-    warp MAP_ZONE21D, 255, 2, 28
-    releaseall
-    end
+	compare VAR_ZONE21A_STATE, 1
+	goto_if_eq Zone21A_EventScript_EndWarp
+	warp MAP_ZONE21D, 255, 2, 28
+	releaseall
+	end
+
+Zone21A_EventScript_EndWarp:
+	releaseall
+	end
+
+Zone21A_EventScript_SetState1::
+	lockall
+	setvar VAR_ZONE21A_STATE, 1
+	releaseall
+	end
+
+Zone21A_EventScript_SetState0::
+	lockall
+	setvar VAR_ZONE21A_STATE, 0
+	releaseall
+	end
 
 Zone21A_EventScript_Howard::
 	trainerbattle_single TRAINER_HOWARD, Zone21A_Text_HowardIntro, Zone21A_Text_HowardDefeat

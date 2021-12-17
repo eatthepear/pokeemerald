@@ -3011,7 +3011,7 @@ static const struct TrainerMon sParty_JulieBrutal[] = {
 static const struct TrainerMon sParty_CamAndPam[] = { // Leviathan 12, Double Battle, Default
     {
     .iv = 31,
-    .lvl = 36,
+    .lvl = 35,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Wandering Spirit
@@ -3021,7 +3021,7 @@ static const struct TrainerMon sParty_CamAndPam[] = { // Leviathan 12, Double Ba
     },
     {
     .ivs = {31, 31, 31, 30, 30, 31},
-    .lvl = 36,
+    .lvl = 35,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Levitate
