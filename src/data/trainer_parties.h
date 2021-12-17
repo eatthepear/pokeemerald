@@ -3008,16 +3008,26 @@ static const struct TrainerMon sParty_JulieBrutal[] = {
     }
 };
 
-static const struct TrainerMon sParty_Mollie[] = {
+static const struct TrainerMon sParty_CamAndPam[] = { // Leviathan 12, Double Battle, Default
     {
-    .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WHISCASH,
+    .iv = 31,
+    .lvl = 36,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Wandering Spirit
+    .species = SPECIES_RUNERIGUS, //Starts with aura +1 all stats
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_CLAW, MOVE_ROCK_SLIDE, MOVE_BODY_PRESS}
     },
     {
-    .iv = 200,
-    .lvl = 33,
-    .species = SPECIES_MEDITITE,
+    .ivs = {31, 31, 31, 30, 30, 31},
+    .lvl = 36,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Levitate
+    .species = SPECIES_VIKAVOLT, //Starts with aura +1 all stats
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_DISCHARGE, MOVE_BUG_BUZZ, MOVE_ROOST, MOVE_HIDDEN_POWER}
     }
 };
 

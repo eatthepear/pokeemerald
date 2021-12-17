@@ -1,6 +1,177 @@
 Zone22A_MapScripts::
 	.byte 0
 
+Zone22A_EventScript_Exit::
+	lockall
+	goto_if_unset FLAG_BEATLEVIATHAN12, Zone22A_EventScript_LeviathanBattle
+	releaseall
+	end
+
+Zone22A_EventScript_LeviathanBattle:
+	fadeoutbgm 1
+	msgbox Zone22A_Text_Pam_StopRightThere, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	addobject 11
+	addobject 12
+	clearflag FLAG_HIDE_LEVIATHAN12
+	applymovement 11, Zone22A_Movement_Cam_WalkUp
+	applymovement 12, Zone22A_Movement_Pam_WalkUp
+	waitmovement 0
+	msgbox Zone22A_Text_Cam_LookWhatWeHave, MSGBOX_AUTOCLOSE
+	msgbox Zone22A_Text_Pam_LittleTrainer, MSGBOX_AUTOCLOSE
+	applymovement 11, Common_Movement_FaceRight
+	applymovement 12, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 32
+	applymovement 11, Common_Movement_FaceUp
+	applymovement 12, Common_Movement_FaceUp
+	waitmovement 0
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq Zone22A_EventScript_DontHaveEnoughMons
+	msgbox Zone22A_Text_Cam_WhatDo, MSGBOX_AUTOCLOSE
+	msgbox Zone22A_Text_Pam_OurCombo, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PAM_AND_CAM
+	@ goto_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_PamAndCamBrutal
+	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
+	trainerbattle_no_intro TRAINER_LEVIATHAN12, Zone22A_Text_Leviathan12Defeat
+	goto Zone22A_EventScript_Leviathan12Defeated
+	end
+
+Zone22A_EventScript_DontHaveEnoughMons:
+	msgbox Zone22A_Text_Cam_Well, MSGBOX_AUTOCLOSE
+	msgbox Zone22A_Text_Pam_GetMore, MSGBOX_AUTOCLOSE
+	applymovement 11, Zone22A_Movement_Cam_WalkDown
+	applymovement 12, Zone22A_Movement_Pam_WalkDown
+	waitmovement 0
+	setflag FLAG_HIDE_LEVIATHAN12
+	removeobject 11
+	removeobject 12
+	fadeinbgm 1
+	releaseall
+	end
+
+Zone22A_EventScript_Leviathan12Defeated:
+	setflag FLAG_BEATLEVIATHAN12
+	msgbox Zone22A_Text_Cam_Wah, MSGBOX_AUTOCLOSE
+	msgbox Zone22A_Text_Pam_Crushed, MSGBOX_AUTOCLOSE
+	applymovement 11, Common_Movement_FaceRight
+	applymovement 12, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 32
+	applymovement 11, Common_Movement_FaceUp
+	applymovement 12, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Zone22A_Text_Pam_Strong, MSGBOX_AUTOCLOSE
+	msgbox Zone22A_Text_Cam_GiveYou, MSGBOX_AUTOCLOSE
+	giveitem ITEM_DESTINY_KNOT
+	msgbox Zone22A_Text_Pam_Seeya, MSGBOX_AUTOCLOSE
+	applymovement 11, Zone22A_Movement_Cam_WalkDown
+	applymovement 12, Zone22A_Movement_Pam_WalkDown
+	waitmovement 0
+	setflag FLAG_HIDE_LEVIATHAN12
+	removeobject 11
+	removeobject 12
+	fadeinbgm 1
+	releaseall
+	end
+
+Zone22A_Movement_Cam_WalkUp:
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Zone22A_Movement_Pam_WalkUp:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Zone22A_Movement_Cam_WalkDown:
+	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Zone22A_Movement_Pam_WalkDown:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Zone22A_Text_Pam_StopRightThere:
+	.string "Pam: Stop right there!$"
+
+Zone22A_Text_Cam_LookWhatWeHave:
+	.string "Cam: Look what we have here, honey.\n"
+	.string "Another lonely trainer!$"
+
+Zone22A_Text_Pam_LittleTrainer:
+	.string "Pam: Oh, little trainer.\n"
+	.string "Don't you know you're trespassing?\p"
+	.string "This is our private space!$"
+
+Zone22A_Text_Cam_WhatDo:
+	.string "Cam: Well then, trespasser.\p"
+	.string "What shall we do with you?$"
+
+Zone22A_Text_Pam_OurCombo:
+	.string "Pam: The obvious thing, of course.\p"
+	.string "Prepare to face the combined combo\n"
+	.string "of Leviathan Pam and Cam!$"
+
+Zone22A_Text_Leviathan12Defeat:
+	.string "Pam: What? How did we lose?\p"
+	.string "Cam: Our combo, ruined!$"
+
+Zone22A_Text_Cam_Well:
+	.string "Cam: Well, we were going to beat\n"
+	.string "you in a battle.$"
+
+Zone22A_Text_Pam_GetMore:
+	.string "Pam: But you don't even have enough\n"
+	.string "Pokémon. Go get some more!$"
+
+Zone22A_Text_Cam_Wah:
+	.string "Cam: Wah!$"
+
+Zone22A_Text_Pam_Crushed:
+	.string "Pam: Our perfect pair, defeated?\p"
+	.string "It can't be!\l"
+	.string "We're the perfect couple!$"
+
+Zone22A_Text_Pam_Strong:
+	.string "Pam: Our relationship is strong\n"
+	.string "enough to get through anything.\p"
+	.string "You've shown us that we just need\n"
+	.string "to work harder, together!$"
+
+Zone22A_Text_Cam_GiveYou:
+	.string "Cam: Here's a little something for\n"
+	.string "inspiring us.$"
+
+Zone22A_Text_Pam_Seeya:
+	.string "Pam: Well, we've got to run.\n"
+	.string "Our dinner reservation is soon!\p"
+	.string "Bye!$"
+
 Zone22A_EventScript_Cody::
 	trainerbattle_single TRAINER_CODY, Zone22A_Text_CodyIntro, Zone22A_Text_CodyDefeat
 	msgbox Zone22A_Text_CodyPostBattle, MSGBOX_AUTOCLOSE

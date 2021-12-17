@@ -77,7 +77,7 @@
 #define FLAG_HIDE_ZONE19D_PIRATES    0x40 
 #define FLAG_RECEIVED_ZONE21C_PORYGON    0x41 
 #define FLAG_RECEIVED_ZONE0C_EEVEE    0x42 
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
+#define FLAG_HIDE_LEVIATHAN12    0x43
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
@@ -1228,7 +1228,7 @@
 #define FLAG_BEATLEVIATHAN9                                         0x49B // Unused Flag
 #define FLAG_BEATLEVIATHAN10                                        0x49C // Unused Flag
 #define FLAG_BEATLEVIATHAN11                                        0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
+#define FLAG_BEATLEVIATHAN12                                        0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag

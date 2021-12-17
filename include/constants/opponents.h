@@ -138,7 +138,7 @@
 #define TRAINER_LEVIATHAN9_BRUTAL               134
 #define TRAINER_LEVIATHAN10_BRUTAL              135
 #define TRAINER_LEVIATHAN11_BRUTAL              136
-#define TRAINER_MOLLIE                      137
+#define TRAINER_LEVIATHAN12                     137
 #define TRAINER_GARRET                      138
 #define TRAINER_WINSTON_2                   139
 #define TRAINER_WINSTON_3                   140
