@@ -7,7 +7,7 @@ Zone21D_OnTransition:
 	end
 
 Zone21D_EventScript_SetFlashRadius:
-	setflashradius 4
+	setflashlevel 4
 	return
 
 Zone21D_EventScript_SecretWarp::

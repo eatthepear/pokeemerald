@@ -152,13 +152,13 @@ Zone18B_Text_LeviathanNotAgain:
 	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Not again!$"
 
 Zone18B_Movement_LeviathanLeave:
-	walk_fastest_left
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_left
-	walk_fastest_down
-	walk_fastest_down
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Zone18B_EventScript_ThankForPirates:

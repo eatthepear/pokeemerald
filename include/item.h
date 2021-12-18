@@ -30,6 +30,7 @@ struct BagPocket
     u8 capacity;
 };
 
+extern const struct Item gItems[];
 extern struct BagPocket gBagPockets[];
 
 u16 GetBagItemQuantity(u16 *quantity);

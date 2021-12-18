@@ -2,9 +2,11 @@
 #define GUARD_BATTLE_SCRIPT_COMMANDS_H
 
 #include "constants/pokemon.h"
+#include "constants/battle_script_commands.h"
 
-#define WINDOW_CLEAR            0x1
-#define WINDOW_x80              0x80
+// Arguments for 'flags' in HandleBattleWindow
+#define WINDOW_CLEAR (1 << 0)
+#define WINDOW_BG1   (1 << 7)
 
 struct StatFractions
 {
@@ -36,6 +38,7 @@ u32 IsAbilityStatusProtected(u32 battler);
 bool32 TryResetBattlerStatChanges(u8 battler);
 bool32 CanCamouflage(u8 battlerId);
 u16 GetNaturePowerMove(void);
+u16 GetSecretPowerMoveEffect(void);
 void StealTargetItem(u8 battlerStealer, u8 battlerItem);
 u8 GetCatchingBattler(void);
 

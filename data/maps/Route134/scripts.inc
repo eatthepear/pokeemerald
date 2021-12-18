@@ -3,5 +3,5 @@ Route134_MapScripts::
 	.byte 0
 
 Route134_OnResume:
-	setdivewarp MAP_UNDERWATER_ROUTE134, 255, 8, 6
+	setdivewarp MAP_UNDERWATER_ROUTE134, 8, 6
 	end

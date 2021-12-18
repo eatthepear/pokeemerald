@@ -173,7 +173,7 @@ Zone5A_EventScript_Item1000::
 	addmoney 1000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone5A_Text_Found1000, MSGBOX_DEFAULT
-	updatemoneybox 0, 0
+	updatemoneybox
 	waitfanfare
 	hidemoneybox
 	setflag FLAG_ITEM_ZONE5A_1000

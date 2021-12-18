@@ -1,5 +1,5 @@
 #define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
-#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_PROTECT))
+#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_PROTECT - ((ITEM_##tmhm > ITEM_TM100) ? 50 : 0)))
 
 // This table determines which TMs and HMs a species is capable of learning.
 // Each entry is a 64-bit bit array spread across two 32-bit values, with
@@ -26,7 +26,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -39,7 +39,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -53,7 +53,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -110,7 +110,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -182,7 +182,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -200,7 +200,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -545,7 +545,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -570,7 +570,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -604,7 +604,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -625,7 +625,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -648,7 +648,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -688,7 +688,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -700,7 +700,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -712,7 +712,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -729,7 +729,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -746,7 +746,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -759,7 +759,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -774,7 +774,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -951,7 +951,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1125,7 +1125,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1138,7 +1138,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1151,7 +1151,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1241,7 +1241,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1254,7 +1254,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1626,7 +1626,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1641,7 +1641,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1730,7 +1730,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -1836,7 +1836,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -1851,7 +1851,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -1876,7 +1876,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -1988,7 +1988,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -2087,7 +2087,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -2129,7 +2129,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -2215,7 +2215,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -2330,7 +2330,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -2381,7 +2381,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2482,7 +2482,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -2518,7 +2518,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -2533,7 +2533,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2545,7 +2545,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2558,7 +2558,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2606,7 +2606,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2682,7 +2682,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -2703,7 +2703,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -2749,7 +2749,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2764,7 +2764,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2777,7 +2777,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2790,7 +2790,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2868,7 +2868,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2886,7 +2886,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2904,7 +2904,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2924,7 +2924,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2942,7 +2942,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -2960,7 +2960,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3010,7 +3010,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3090,7 +3090,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3102,7 +3102,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3114,7 +3114,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3132,7 +3132,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -3145,7 +3145,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3156,7 +3156,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3169,7 +3169,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3330,7 +3330,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3345,7 +3345,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3365,7 +3365,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -3418,7 +3418,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -3443,7 +3443,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -3593,7 +3593,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3746,7 +3746,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3761,7 +3761,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -3813,7 +3813,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -3834,7 +3834,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -3937,7 +3937,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -3965,7 +3965,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4003,7 +4003,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4120,7 +4120,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4140,7 +4140,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4154,7 +4154,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4168,7 +4168,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4184,7 +4184,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4235,7 +4235,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4367,7 +4367,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4385,7 +4385,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4400,7 +4400,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -4418,7 +4418,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -4436,7 +4436,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -4449,7 +4449,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4464,7 +4464,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4480,7 +4480,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4598,7 +4598,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4614,7 +4614,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4625,7 +4625,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4639,7 +4639,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4660,7 +4660,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4684,7 +4684,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4708,7 +4708,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4723,7 +4723,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4737,7 +4737,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4753,7 +4753,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4768,7 +4768,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4786,7 +4786,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4804,7 +4804,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -4879,7 +4879,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4897,7 +4897,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -4936,7 +4936,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -4989,7 +4989,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -5095,7 +5095,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -5114,7 +5114,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -5130,7 +5130,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5143,7 +5143,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5157,7 +5157,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5248,7 +5248,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5263,7 +5263,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5326,7 +5326,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5339,7 +5339,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5356,7 +5356,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5368,7 +5368,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5380,7 +5380,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5393,7 +5393,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5410,7 +5410,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5431,7 +5431,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -5485,7 +5485,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5573,7 +5573,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5593,7 +5593,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5606,7 +5606,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5620,7 +5620,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -5694,7 +5694,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -5718,7 +5718,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -5802,7 +5802,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6153,7 +6153,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -6180,7 +6180,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -6222,7 +6222,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -6247,7 +6247,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -6289,7 +6289,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -6303,7 +6303,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6315,7 +6315,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6330,7 +6330,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6386,7 +6386,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6580,7 +6580,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6594,7 +6594,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6689,7 +6689,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6703,7 +6703,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6774,7 +6774,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6783,7 +6783,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM05_SUBSTITUTE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -6831,7 +6831,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -6882,7 +6882,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -6899,7 +6899,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -7032,7 +7032,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7050,7 +7050,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7083,7 +7083,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -7103,7 +7103,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7206,7 +7206,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -7345,7 +7345,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7402,7 +7402,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ABOMASNOW]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -7420,7 +7420,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_WEAVILE]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -7475,7 +7475,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -7518,7 +7518,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7556,7 +7556,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -7577,7 +7577,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7590,7 +7590,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7605,7 +7605,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7672,7 +7672,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -7784,7 +7784,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -7891,7 +7891,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -7941,7 +7941,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8010,7 +8010,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8040,7 +8040,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -8060,7 +8060,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -8076,7 +8076,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8090,7 +8090,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8104,7 +8104,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8118,7 +8118,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8133,7 +8133,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8150,7 +8150,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8323,7 +8323,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8338,7 +8338,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8355,7 +8355,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8373,7 +8373,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8528,7 +8528,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_WOOBAT]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -8613,7 +8613,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -8733,7 +8733,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8745,7 +8745,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8760,7 +8760,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8770,7 +8770,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8780,7 +8780,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8793,7 +8793,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8804,7 +8804,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8819,7 +8819,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8830,7 +8830,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8842,7 +8842,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8916,7 +8916,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8935,7 +8935,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8945,7 +8945,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM13_AERIAL_ACE)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -8960,7 +8960,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_CRUSTLE]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -8974,7 +8974,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_SCRAGGY]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -9025,7 +9025,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_YAMASK]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -9137,7 +9137,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -9389,7 +9389,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9403,7 +9403,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9450,7 +9450,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9462,7 +9462,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9553,7 +9553,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -9568,7 +9568,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -9684,7 +9684,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9701,7 +9701,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9718,7 +9718,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -9813,7 +9813,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_SHELMET]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -9932,7 +9932,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10047,7 +10047,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10115,7 +10115,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10131,7 +10131,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10170,7 +10170,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10218,7 +10218,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10320,7 +10320,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -10339,7 +10339,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10357,7 +10357,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10377,7 +10377,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10394,7 +10394,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10411,7 +10411,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10430,7 +10430,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10549,7 +10549,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10570,7 +10570,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10585,7 +10585,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10600,7 +10600,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10614,7 +10614,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10628,7 +10628,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10643,7 +10643,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -10657,7 +10657,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -10674,7 +10674,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -11238,7 +11238,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11257,7 +11257,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11275,7 +11275,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11293,7 +11293,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11337,7 +11337,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11354,7 +11354,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11447,7 +11447,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11460,7 +11460,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11473,7 +11473,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11487,7 +11487,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11671,7 +11671,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -11747,7 +11747,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11865,7 +11865,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11877,7 +11877,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11890,7 +11890,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11903,7 +11903,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11974,7 +11974,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -11987,7 +11987,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -12000,7 +12000,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -12014,7 +12014,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -12168,7 +12168,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_KOMALA]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -12195,7 +12195,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -12266,7 +12266,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -12286,7 +12286,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -12376,7 +12376,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -12412,7 +12412,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -12433,7 +12433,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -12483,7 +12483,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -12497,7 +12497,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_KARTANA]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -12541,7 +12541,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MAGEARNA]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -12554,7 +12554,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM24_THUNDERBOLT)),
 
     [SPECIES_MARSHADOW]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -12880,7 +12880,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM20_SLUDGE_BOMB)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13206,7 +13206,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -13227,7 +13227,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -13248,7 +13248,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -13377,7 +13377,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13404,7 +13404,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13434,7 +13434,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13464,7 +13464,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13494,7 +13494,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13524,7 +13524,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13554,7 +13554,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13584,7 +13584,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13614,7 +13614,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13644,7 +13644,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13674,7 +13674,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13704,7 +13704,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13734,7 +13734,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13764,7 +13764,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13794,7 +13794,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13824,7 +13824,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13854,7 +13854,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13884,7 +13884,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM37_SANDSTORM)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
@@ -13911,7 +13911,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13923,7 +13923,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13935,7 +13935,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13947,7 +13947,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13959,7 +13959,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -13971,7 +13971,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14082,7 +14082,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -14099,7 +14099,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -14116,7 +14116,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -14133,7 +14133,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -14164,7 +14164,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14179,7 +14179,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14194,7 +14194,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14209,7 +14209,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14224,7 +14224,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14239,7 +14239,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14254,7 +14254,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14269,7 +14269,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14284,7 +14284,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14299,7 +14299,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14314,7 +14314,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14329,7 +14329,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14344,7 +14344,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14359,7 +14359,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14374,7 +14374,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14389,7 +14389,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14404,7 +14404,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14419,7 +14419,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14434,7 +14434,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14447,7 +14447,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14460,7 +14460,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14473,7 +14473,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14486,7 +14486,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14499,7 +14499,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14512,7 +14512,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14525,7 +14525,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14538,7 +14538,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14551,7 +14551,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14565,7 +14565,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14579,7 +14579,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14593,7 +14593,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14607,7 +14607,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14742,7 +14742,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14759,7 +14759,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14776,7 +14776,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14793,7 +14793,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14810,7 +14810,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -14827,7 +14827,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -15279,7 +15279,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MINIOR_CORE_ORANGE]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15294,7 +15294,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MINIOR_CORE_YELLOW]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15309,7 +15309,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MINIOR_CORE_GREEN]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15324,7 +15324,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MINIOR_CORE_BLUE]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15339,7 +15339,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MINIOR_CORE_INDIGO]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15354,7 +15354,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MINIOR_CORE_VIOLET]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15369,7 +15369,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_NECROZMA_DUSK_MANE]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15386,7 +15386,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_NECROZMA_DAWN_WINGS]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15403,7 +15403,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM07_REST)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_MAGEARNA_ORIGINAL_COLOR]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15416,7 +15416,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM24_THUNDERBOLT)),
 
     [SPECIES_GROOKEY]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15426,7 +15426,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(HM04_STRENGTH)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -15438,7 +15438,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM07_REST)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -15452,7 +15452,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM26_EARTHQUAKE)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -15600,7 +15600,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ORBEETLE]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15614,7 +15614,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic),
 
     [SPECIES_NICKIT]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15648,7 +15648,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)),
 
     [SPECIES_ELDEGOSS]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -15658,7 +15658,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -15770,7 +15770,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM50_OVERHEAT)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM37_SANDSTORM)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_APPLIN]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)),
@@ -15783,7 +15783,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(HM02_FLY)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -15796,7 +15796,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -15893,7 +15893,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM38_FIRE_BLAST)
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM50_OVERHEAT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -16111,7 +16111,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -16151,7 +16151,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_FALINKS]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16350,7 +16350,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(HM06_ROCK_SMASH)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -16394,7 +16394,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(HM03_SURF)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -16419,7 +16419,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM23_IRON_TAIL)
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM33_REFLECT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ETERNATUS]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16433,7 +16433,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
                                             | TMHM(TM20_SLUDGE_BOMB)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_KUBFU]       = TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16472,7 +16472,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM23_IRON_TAIL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -16530,7 +16530,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -16667,7 +16667,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM24_THUNDERBOLT)
@@ -16808,7 +16808,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM35_FLAMETHROWER)
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(TM50_OVERHEAT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -16830,7 +16830,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(TM50_OVERHEAT)
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -16909,7 +16909,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_MATCHA_CREAM]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16921,7 +16921,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_MINT_CREAM]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16933,7 +16933,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_LEMON_CREAM]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16945,7 +16945,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_SALTED_CREAM]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16957,7 +16957,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_RUBY_SWIRL]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16969,7 +16969,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_CARAMEL_SWIRL]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16981,7 +16981,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_ALCREMIE_RAINBOW_SWIRL]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -16993,7 +16993,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
     [SPECIES_INDEEDEE_FEMALE]= TMHM_LEARNSET(TMHM(TM01_PROTECT)
@@ -17035,7 +17035,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM17_BRICK_BREAK)
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM23_IRON_TAIL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 
@@ -17051,7 +17051,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM41_TORMENT)
                                             | TMHM(TM50_OVERHEAT)), //toxic
@@ -17067,7 +17067,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM29_PSYCHIC)
                                             | TMHM(TM33_REFLECT)
                                             | TMHM(TM30_SHADOW_BALL)
-                                            | TMHM(TM22_SOLARBEAM)
+                                            | TMHM(TM22_SOLAR_BEAM)
                                             | TMHM(TM16_SUNNY_DAY)
                                             | TMHM(TM50_OVERHEAT)), //toxic
 };

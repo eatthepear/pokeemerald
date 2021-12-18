@@ -71,7 +71,7 @@ Zone9A_EventScript_Ari::
 Zone9A_EventScript_BattleWinstrates::
 	msgbox Zone9A_Text_AriIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ARI, Zone9A_Text_AriDefeat
-	applymovement 1, Common_Movement_WalkInPlaceFastestUp
+	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Zone9A_Text_AriPostBattle, MSGBOX_DEFAULT
 	closemessage
@@ -85,7 +85,7 @@ Zone9A_EventScript_BattleWinstrates::
 	waitmovement 0
 	msgbox Zone9A_Text_BerthaIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BERTHA, Zone9A_Text_BerthaDefeat
-	applymovement 2, Common_Movement_WalkInPlaceFastestUp
+	applymovement 2, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Zone9A_Text_BerthaPostBattle, MSGBOX_DEFAULT
 	closemessage
@@ -99,7 +99,7 @@ Zone9A_EventScript_BattleWinstrates::
 	waitmovement 0
 	msgbox Zone9A_Text_CassandraIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CASSANDRA, Zone9A_Text_CassandraDefeat
-	applymovement 3, Common_Movement_WalkInPlaceFastestUp
+	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Zone9A_Text_CassandraPostBattle, MSGBOX_DEFAULT
 	closemessage
@@ -115,7 +115,7 @@ Zone9A_EventScript_BattleWinstrates::
 	trainerbattle_no_intro TRAINER_DOMINIC, Zone9A_Text_DominicDefeat
 	msgbox Zone9A_Text_DominicPostBattle, MSGBOX_DEFAULT
 	closemessage
-	applymovement 4, Common_Movement_WalkInPlaceFastestUp
+	applymovement 4, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	applymovement 4, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
@@ -129,7 +129,7 @@ Zone9A_EventScript_BattleWinstrates::
 	trainerbattle_no_intro TRAINER_ERICA, Zone9A_Text_EricaDefeat
 	msgbox Zone9A_Text_EricaPostBattle, MSGBOX_DEFAULT
 	closemessage
-	applymovement 5, Common_Movement_WalkInPlaceFastestUp
+	applymovement 5, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	applymovement 5, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
@@ -138,7 +138,7 @@ Zone9A_EventScript_BattleWinstrates::
 	end
 
 Zone9A_Movement_WinstrateEnterHouse:
-	walk_in_place_fastest_up
+	walk_in_place_faster_up
 	walk_up
 	step_end
 

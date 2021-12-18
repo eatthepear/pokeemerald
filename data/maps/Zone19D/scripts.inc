@@ -37,36 +37,36 @@ Zone19D_EventScript_InitiatePirateBattles::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	delay 40
-	applymovement 1, Common_Movement_WalkInPlaceFastestDown
+	applymovement 1, Common_Movement_WalkInPlaceFasterDown
 	msgbox Zone19D_Text_Pirate1, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 2, Common_Movement_WalkInPlaceFastestRight
+	applymovement 2, Common_Movement_WalkInPlaceFasterRight
 	msgbox Zone19D_Text_Pirate2, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 3, Common_Movement_WalkInPlaceFastestUp
+	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	msgbox Zone19D_Text_Pirate3, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	applymovement 4, Common_Movement_WalkInPlaceFastestLeft
+	applymovement 4, Common_Movement_WalkInPlaceFasterLeft
 	msgbox Zone19D_Text_Pirate4, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_PIRATE_4, Zone19D_Text_Pirate4Defeat
-	applymovement 3, Common_Movement_WalkInPlaceFastestUp
+	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate3Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_PIRATE_3, Zone19D_Text_Pirate3Defeat
-	applymovement 2, Common_Movement_WalkInPlaceFastestRight
+	applymovement 2, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate2Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_PIRATE_2, Zone19D_Text_Pirate2Defeat
-	applymovement 1, Common_Movement_WalkInPlaceFastestDown
+	applymovement 1, Common_Movement_WalkInPlaceFasterDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate1Intro, MSGBOX_AUTOCLOSE
@@ -183,45 +183,45 @@ Zone19D_Movement_RightPirateWalkUp:
 	step_end
 
 Zone19D_Movement_Pirate1Run:
-	walk_fastest_left
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Zone19D_Movement_Pirate2Run:
-	walk_fastest_down
-	walk_fastest_left
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
+	walk_faster_down
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 
 Zone19D_Movement_Pirate3Run:
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Zone19D_Movement_Pirate4Run:
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_right
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
-	walk_fastest_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_right
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Zone19D_Text_ReturnToDojo:

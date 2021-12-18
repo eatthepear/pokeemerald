@@ -135,9 +135,6 @@ void AnimTask_SetCamouflageBlend(u8 taskId)
     case BATTLE_TERRAIN_BUILDING:
         gBattleAnimArgs[4] = RGB(31, 31, 31);
         break;
-    case BATTLE_TERRAIN_PLAIN:
-        gBattleAnimArgs[4] = RGB(31, 31, 31);
-        break;
     case BATTLE_TERRAIN_DESERT:
         gBattleAnimArgs[4] = RGB(31, 31, 31);
         break;
@@ -148,6 +145,10 @@ void AnimTask_SetCamouflageBlend(u8 taskId)
         gBattleAnimArgs[4] = RGB(31, 31, 31);
         break;
     case BATTLE_TERRAIN_SNOW:
+        gBattleAnimArgs[4] = RGB(31, 31, 31);
+        break;
+    case BATTLE_TERRAIN_PLAIN:
+    default:
         gBattleAnimArgs[4] = RGB(31, 31, 31);
         break;
     }
@@ -279,7 +280,7 @@ static void AnimMonTrace(struct Sprite *sprite)
     else
     {
         gTasks[sprite->data[1]].data[sprite->data[2]]--;
-        obj_delete_but_dont_free_vram(sprite);
+        DestroySpriteWithActiveSheet(sprite);
     }
 }
 
@@ -343,7 +344,7 @@ void AnimTask_DrawFallingWhiteLinesOnAttacker(u8 taskId)
     spriteId = GetAnimBattlerSpriteId(ANIM_ATTACKER);
     newSpriteId = CreateInvisibleSpriteCopy(gBattleAnimAttacker, spriteId, species);
     GetBattleAnimBg1Data(&animBgData);
-    AnimLoadCompressedBgTilemapHandleContest(&animBgData, gBattleAnimMaskTilemap_Curse, 0);
+    AnimLoadCompressedBgTilemapHandleContest(&animBgData, gBattleAnimMaskTilemap_Curse, FALSE);
     AnimLoadCompressedBgGfx(animBgData.bgId, gBattleAnimMaskImage_Curse, animBgData.tilesOffset);
     LoadPalette(sCurseLinesPalette, animBgData.paletteId * 16 + 1, 2);
 
@@ -482,9 +483,9 @@ static void StatsChangeAnimation_Step2(u8 taskId)
 
     GetBattleAnimBg1Data(&animBgData);
     if (sAnimStatsChangeData->data[0] == 0)
-        AnimLoadCompressedBgTilemapHandleContest(&animBgData, gBattleStatMask1_Tilemap, 0);
+        AnimLoadCompressedBgTilemapHandleContest(&animBgData, gBattleStatMask1_Tilemap, FALSE);
     else
-        AnimLoadCompressedBgTilemapHandleContest(&animBgData, gBattleStatMask2_Tilemap, 0);
+        AnimLoadCompressedBgTilemapHandleContest(&animBgData, gBattleStatMask2_Tilemap, FALSE);
 
     AnimLoadCompressedBgGfx(animBgData.bgId, gBattleStatMask_Gfx, animBgData.tilesOffset);
     switch (sAnimStatsChangeData->data[1])
@@ -833,7 +834,7 @@ void StartMonScrollingBgMask(u8 taskId, int unused, u16 scrollSpeed, u8 battler,
         spriteId2 = CreateInvisibleSpriteCopy(battler2, gBattlerSpriteIds[battler2], species);
 
     GetBattleAnimBg1Data(&animBgData);
-    AnimLoadCompressedBgTilemapHandleContest(&animBgData, tilemap, 0);
+    AnimLoadCompressedBgTilemapHandleContest(&animBgData, tilemap, FALSE);
     AnimLoadCompressedBgGfx(animBgData.bgId, gfx, animBgData.tilesOffset);
     LoadCompressedPalette(palette, animBgData.paletteId * 16, 32);
 
@@ -913,6 +914,12 @@ static void UpdateMonScrollingBgMask(u8 taskId)
 void AnimTask_GetBattleTerrain(u8 taskId)
 {
     gBattleAnimArgs[0] = gBattleTerrain;
+    DestroyAnimVisualTask(taskId);
+}
+
+void AnimTask_GetFieldTerrain(u8 taskId)
+{
+    gBattleAnimArgs[0] = gFieldStatuses & STATUS_FIELD_TERRAIN_ANY;
     DestroyAnimVisualTask(taskId);
 }
 

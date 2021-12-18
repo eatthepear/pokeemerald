@@ -28,7 +28,7 @@ Zone3Sanctuary_EventScript_Intro:
 	msgbox Zone3Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	addmoney 3000, 0
 	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox 0, 0
+	updatemoneybox
 	msgbox Zone3Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	hidemoneybox

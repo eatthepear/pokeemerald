@@ -44,15 +44,21 @@
 #include "constants/items.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
-#include "constants/maps.h"
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
 #include "pokedex.h"
 #include "pokemon.h"
 #include "wild_encounter.h"
+#include "constants/weather.h"
 
-enum
-{
+enum {
+    TRANSITION_TYPE_NORMAL,
+    TRANSITION_TYPE_CAVE,
+    TRANSITION_TYPE_FLASH,
+    TRANSITION_TYPE_WATER,
+};
+
+enum {
     TRAINER_PARAM_LOAD_VAL_8BIT,
     TRAINER_PARAM_LOAD_VAL_16BIT,
     TRAINER_PARAM_LOAD_VAL_32BIT,
@@ -87,7 +93,6 @@ static void HandleRematchVarsOnBattleEnd(void);
 static const u8 *GetIntroSpeechOfApproachingTrainer(void);
 static const u8 *GetTrainerCantBattleSpeech(void);
 
-// ewram vars
 EWRAM_DATA static u16 sTrainerBattleMode = 0;
 EWRAM_DATA u16 gTrainerBattleOpponent_A = 0;
 EWRAM_DATA u16 gTrainerBattleOpponent_B = 0;
@@ -107,55 +112,53 @@ EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 EWRAM_DATA u8 IsCaptureBlockedByNuzlocke = 0;
 EWRAM_DATA u8 IsSpeciesClauseActive = 0;
 
-// const rom data
-
 // The first transition is used if the enemy pokemon are lower level than our pokemon.
 // Otherwise, the second transition is used.
 static const u8 sBattleTransitionTable_Wild[][2] =
 {
-    {B_TRANSITION_SLICE,               B_TRANSITION_WHITEFADE},     // Normal
-    {B_TRANSITION_CLOCKWISE_BLACKFADE, B_TRANSITION_GRID_SQUARES},  // Cave
-    {B_TRANSITION_BLUR,                B_TRANSITION_GRID_SQUARES},  // Cave with flash used
-    {B_TRANSITION_WAVE,                B_TRANSITION_RIPPLE},        // Water
+    [TRANSITION_TYPE_NORMAL] = {B_TRANSITION_SLICE,          B_TRANSITION_WHITE_BARS_FADE},
+    [TRANSITION_TYPE_CAVE]   = {B_TRANSITION_CLOCKWISE_WIPE, B_TRANSITION_GRID_SQUARES},
+    [TRANSITION_TYPE_FLASH]  = {B_TRANSITION_BLUR,           B_TRANSITION_GRID_SQUARES},
+    [TRANSITION_TYPE_WATER]  = {B_TRANSITION_WAVE,           B_TRANSITION_RIPPLE},
 };
 
 static const u8 sBattleTransitionTable_Trainer[][2] =
 {
-    {B_TRANSITION_POKEBALLS_TRAIL, B_TRANSITION_SHARDS},        // Normal
-    {B_TRANSITION_SHUFFLE,         B_TRANSITION_BIG_POKEBALL},  // Cave
-    {B_TRANSITION_BLUR,            B_TRANSITION_GRID_SQUARES},  // Cave with flash used
-    {B_TRANSITION_SWIRL,           B_TRANSITION_RIPPLE},        // Water
+    [TRANSITION_TYPE_NORMAL] = {B_TRANSITION_POKEBALLS_TRAIL, B_TRANSITION_ANGLED_WIPES},
+    [TRANSITION_TYPE_CAVE]   = {B_TRANSITION_SHUFFLE,         B_TRANSITION_BIG_POKEBALL},
+    [TRANSITION_TYPE_FLASH]  = {B_TRANSITION_BLUR,            B_TRANSITION_GRID_SQUARES},
+    [TRANSITION_TYPE_WATER]  = {B_TRANSITION_SWIRL,           B_TRANSITION_RIPPLE},
 };
 
 // Battle Frontier (excluding Pyramid and Dome, which have their own tables below)
 static const u8 sBattleTransitionTable_BattleFrontier[] =
 {
-    B_TRANSITION_FRONTIER_LOGO_WIGGLE, 
-    B_TRANSITION_FRONTIER_LOGO_WAVE, 
-    B_TRANSITION_FRONTIER_SQUARES, 
+    B_TRANSITION_FRONTIER_LOGO_WIGGLE,
+    B_TRANSITION_FRONTIER_LOGO_WAVE,
+    B_TRANSITION_FRONTIER_SQUARES,
     B_TRANSITION_FRONTIER_SQUARES_SCROLL,
-    B_TRANSITION_FRONTIER_CIRCLES_MEET, 
-    B_TRANSITION_FRONTIER_CIRCLES_CROSS, 
-    B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL, 
+    B_TRANSITION_FRONTIER_CIRCLES_MEET,
+    B_TRANSITION_FRONTIER_CIRCLES_CROSS,
+    B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL,
     B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL,
-    B_TRANSITION_FRONTIER_CIRCLES_MEET_IN_SEQ, 
-    B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ, 
-    B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ, 
+    B_TRANSITION_FRONTIER_CIRCLES_MEET_IN_SEQ,
+    B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ,
+    B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ,
     B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ
 };
 
 static const u8 sBattleTransitionTable_BattlePyramid[] =
 {
-    B_TRANSITION_FRONTIER_SQUARES, 
-    B_TRANSITION_FRONTIER_SQUARES_SCROLL, 
+    B_TRANSITION_FRONTIER_SQUARES,
+    B_TRANSITION_FRONTIER_SQUARES_SCROLL,
     B_TRANSITION_FRONTIER_SQUARES_SPIRAL
 };
 
 static const u8 sBattleTransitionTable_BattleDome[] =
 {
-    B_TRANSITION_FRONTIER_LOGO_WIGGLE, 
-    B_TRANSITION_FRONTIER_SQUARES, 
-    B_TRANSITION_FRONTIER_SQUARES_SCROLL, 
+    B_TRANSITION_FRONTIER_LOGO_WIGGLE,
+    B_TRANSITION_FRONTIER_SQUARES,
+    B_TRANSITION_FRONTIER_SQUARES_SCROLL,
     B_TRANSITION_FRONTIER_SQUARES_SPIRAL
 };
 
@@ -291,7 +294,7 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_JAMES] = REMATCH(TRAINER_JAMES_1, TRAINER_JAMES_2, TRAINER_JAMES_3, TRAINER_JAMES_4, TRAINER_JAMES_5, PETALBURG_WOODS),
     [REMATCH_TRENT] = REMATCH(TRAINER_TRENT_1, TRAINER_TRENT_2, TRAINER_TRENT_3, TRAINER_TRENT_4, TRAINER_TRENT_5, ROUTE112),
     [REMATCH_KIRA_AND_DAN] = REMATCH(TRAINER_KIRA_AND_DAN_1, TRAINER_KIRA_AND_DAN_2, TRAINER_KIRA_AND_DAN_3, TRAINER_KIRA_AND_DAN_4, TRAINER_KIRA_AND_DAN_5, ABANDONED_SHIP_ROOMS2_1F),
-    [REMATCH_WALLY_3] = REMATCH(TRAINER_WALLY_VR_2, TRAINER_WALLY_VR_3, TRAINER_WALLY_VR_4, TRAINER_WALLY_VR_5, TRAINER_WALLY_VR_5, VICTORY_ROAD_1F),
+    [REMATCH_WALLY_VR] = REMATCH(TRAINER_WALLY_VR_2, TRAINER_WALLY_VR_3, TRAINER_WALLY_VR_4, TRAINER_WALLY_VR_5, TRAINER_WALLY_VR_5, VICTORY_ROAD_1F),
     [REMATCH_ROXANNE] = REMATCH(TRAINER_ROXANNE_1, TRAINER_ROXANNE_2, TRAINER_ROXANNE_3, TRAINER_ROXANNE_4, TRAINER_ROXANNE_5, RUSTBORO_CITY),
     [REMATCH_BRAWLY] = REMATCH(TRAINER_BRAWLY_1, TRAINER_BRAWLY_2, TRAINER_BRAWLY_3, TRAINER_BRAWLY_4, TRAINER_BRAWLY_5, DEWFORD_TOWN),
     [REMATCH_WATTSON] = REMATCH(TRAINER_WATTSON_1, TRAINER_WATTSON_2, TRAINER_WATTSON_3, TRAINER_WATTSON_4, TRAINER_WATTSON_5, MAUVILLE_CITY),
@@ -449,7 +452,7 @@ static void DoStandardWildBattle(bool32 isDouble)
 {
     ScriptContext2_Enable();
     FreezeObjectEvents();
-    sub_808BCF4();
+    StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = 0;
     if (isDouble)
@@ -470,7 +473,7 @@ void BattleSetup_StartRoamerBattle(void)
 {
     ScriptContext2_Enable();
     FreezeObjectEvents();
-    sub_808BCF4();
+    StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_ROAMER;
     CreateBattleStartTask(GetWildBattleTransition(), 0);
@@ -484,7 +487,7 @@ static void DoSafariBattle(void)
 {
     ScriptContext2_Enable();
     FreezeObjectEvents();
-    sub_808BCF4();
+    StopPlayerAvatar();
     gMain.savedCallback = CB2_EndSafariBattle;
     gBattleTypeFlags = BATTLE_TYPE_SAFARI;
     CreateBattleStartTask(GetWildBattleTransition(), 0);
@@ -494,7 +497,7 @@ static void DoBattlePikeWildBattle(void)
 {
     ScriptContext2_Enable();
     FreezeObjectEvents();
-    sub_808BCF4();
+    StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_PIKE;
     CreateBattleStartTask(GetWildBattleTransition(), 0);
@@ -512,12 +515,12 @@ static void DoTrainerBattle(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-static void sub_80B0828(void)
+static void DoBattlePyramidTrainerHillBattle(void)
 {
     if (InBattlePyramid())
-        CreateBattleStartTask(GetSpecialBattleTransition(10), 0);
+        CreateBattleStartTask(GetSpecialBattleTransition(B_TRANSITION_GROUP_B_PYRAMID), 0);
     else
-        CreateBattleStartTask(GetSpecialBattleTransition(11), 0);
+        CreateBattleStartTask(GetSpecialBattleTransition(B_TRANSITION_GROUP_TRAINER_HILL), 0);
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
@@ -602,7 +605,7 @@ void BattleSetup_StartLegendaryBattle(void) //only capturable legendaries
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
     case SPECIES_CELEBI:
-        CreateBattleStartTask(B_TRANSITION_WHITEFADE, MUS_C_VS_LEGEND_BEAST);
+        CreateBattleStartTask(B_TRANSITION_WHITE_BARS_FADE, MUS_C_VS_LEGEND_BEAST);
         break;
     case SPECIES_REGIROCK:
         CreateBattleStartTask(B_TRANSITION_REGIROCK, MUS_VS_REGI);
@@ -622,7 +625,7 @@ void StartGroudonKyogreBattle(void)
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON;
 
     if (gGameVersion == VERSION_RUBY)
-        CreateBattleStartTask(B_TRANSITION_SHARDS, MUS_VS_KYOGRE_GROUDON); // GROUDON
+        CreateBattleStartTask(B_TRANSITION_ANGLED_WIPES, MUS_VS_KYOGRE_GROUDON); // GROUDON
     else
         CreateBattleStartTask(B_TRANSITION_RIPPLE, MUS_VS_KYOGRE_GROUDON); // KYOGRE
 
@@ -755,18 +758,18 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_MOUNTAIN;
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
+        // Is BRIDGE_TYPE_POND_*?
         if (MetatileBehavior_GetBridgeType(tileBehavior))
             return BATTLE_TERRAIN_WATER;
-        if (MetatileBehavior_IsBridge(tileBehavior) == TRUE)
+
+        if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
             return BATTLE_TERRAIN_WATER;
     }
     if (gIsFishingEncounter)
         return BATTLE_TERRAIN_WATER;
     if(MetatileBehavior_IsBridgeTerrain(tileBehavior))
         return BATTLE_TERRAIN_BRIDGE;
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE113) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE113))
-        return BATTLE_TERRAIN_BEACH;
-    if (GetSav1Weather() == 8)
+    if (GetSavedWeather() == WEATHER_SANDSTORM)
         return BATTLE_TERRAIN_BEACH;
     if (MetatileBehavior_IsGrassTerrain(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
@@ -780,21 +783,21 @@ static u8 GetBattleTransitionTypeByMap(void)
 
     PlayerGetDestCoords(&x, &y);
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
-    if (Overworld_GetFlashLevel())
-        return B_TRANSITION_SHUFFLE;
+    if (GetFlashLevel())
+        return TRANSITION_TYPE_FLASH;
     if (!MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
     {
         switch (gMapHeader.mapType)
         {
         case MAP_TYPE_UNDERGROUND:
-            return B_TRANSITION_SWIRL;
+            return TRANSITION_TYPE_CAVE;
         case MAP_TYPE_UNDERWATER:
-            return B_TRANSITION_BIG_POKEBALL;
+            return TRANSITION_TYPE_WATER;
         default:
-            return B_TRANSITION_BLUR;
+            return TRANSITION_TYPE_NORMAL;
         }
     }
-    return B_TRANSITION_BIG_POKEBALL;
+    return TRANSITION_TYPE_WATER;
 }
 
 static u16 GetSumOfPlayerPartyLevel(u8 numMons)
@@ -911,16 +914,7 @@ u8 GetTrainerBattleTransition(void)
         return sBattleTransitionTable_Trainer[transitionType][1];
 }
 
-// 0: Battle Tower
-// 3: Battle Dome
-// 4: Battle Palace
-// 5: Battle Arena
-// 6: Battle Factory
-// 7: Battle Pike
-// 10: Battle Pyramid
-// 11: Trainer Hill
-// 12: Secret Base
-// 13: E-Reader
+#define RANDOM_TRANSITION(table)(table[Random() % ARRAY_COUNT(table)])
 u8 GetSpecialBattleTransition(s32 id)
 {
     u16 var;
@@ -931,35 +925,35 @@ u8 GetSpecialBattleTransition(s32 id)
     {
         switch (id)
         {
-        case 11:
-        case 12:
-        case 13:
+        case B_TRANSITION_GROUP_TRAINER_HILL:
+        case B_TRANSITION_GROUP_SECRET_BASE:
+        case B_TRANSITION_GROUP_E_READER:
             return B_TRANSITION_POKEBALLS_TRAIL;
-        case 10:
-            return sBattleTransitionTable_BattlePyramid[Random() % ARRAY_COUNT(sBattleTransitionTable_BattlePyramid)];
-        case 3:
-            return sBattleTransitionTable_BattleDome[Random() % ARRAY_COUNT(sBattleTransitionTable_BattleDome)];
+        case B_TRANSITION_GROUP_B_PYRAMID:
+            return RANDOM_TRANSITION(sBattleTransitionTable_BattlePyramid);
+        case B_TRANSITION_GROUP_B_DOME:
+            return RANDOM_TRANSITION(sBattleTransitionTable_BattleDome);
         }
 
         if (VarGet(VAR_FRONTIER_BATTLE_MODE) != FRONTIER_MODE_LINK_MULTIS)
-            return sBattleTransitionTable_BattleFrontier[Random() % ARRAY_COUNT(sBattleTransitionTable_BattleFrontier)];
+            return RANDOM_TRANSITION(sBattleTransitionTable_BattleFrontier);
     }
     else
     {
         switch (id)
         {
-        case 11:
-        case 12:
-        case 13:
+        case B_TRANSITION_GROUP_TRAINER_HILL:
+        case B_TRANSITION_GROUP_SECRET_BASE:
+        case B_TRANSITION_GROUP_E_READER:
             return B_TRANSITION_BIG_POKEBALL;
-        case 10:
-            return sBattleTransitionTable_BattlePyramid[Random() % ARRAY_COUNT(sBattleTransitionTable_BattlePyramid)];
-        case 3:
-            return sBattleTransitionTable_BattleDome[Random() % ARRAY_COUNT(sBattleTransitionTable_BattleDome)];
+        case B_TRANSITION_GROUP_B_PYRAMID:
+            return RANDOM_TRANSITION(sBattleTransitionTable_BattlePyramid);
+        case B_TRANSITION_GROUP_B_DOME:
+            return RANDOM_TRANSITION(sBattleTransitionTable_BattleDome);
         }
 
         if (VarGet(VAR_FRONTIER_BATTLE_MODE) != FRONTIER_MODE_LINK_MULTIS)
-            return sBattleTransitionTable_BattleFrontier[Random() % ARRAY_COUNT(sBattleTransitionTable_BattleFrontier)];
+            return RANDOM_TRANSITION(sBattleTransitionTable_BattleFrontier);
     }
 
     var = gSaveBlock2Ptr->frontier.trainerIds[gSaveBlock2Ptr->frontier.curChallengeBattleNum * 2 + 0]
@@ -1378,7 +1372,7 @@ void BattleSetup_StartTrainerBattle(void)
     gMain.savedCallback = CB2_EndTrainerBattle;
 
     if (InBattlePyramid() || InTrainerHillChallenge())
-        sub_80B0828();
+        DoBattlePyramidTrainerHillBattle();
     else
         DoTrainerBattle();
 
@@ -1634,12 +1628,14 @@ static s32 TrainerIdToRematchTableId(const struct RematchTrainer *table, u16 tra
     return -1;
 }
 
-static bool32 sub_80B1D94(s32 rematchTableId)
+// Returns TRUE if the given trainer (by their entry in the rematch table) is not allowed to have rematches.
+// This applies to the Elite Four and Victory Road Wally (if he's not been defeated yet)
+static bool32 IsRematchForbidden(s32 rematchTableId)
 {
     if (rematchTableId >= REMATCH_ELITE_FOUR_ENTRIES)
         return TRUE;
-    else if (rematchTableId == REMATCH_WALLY_3)
-        return (FlagGet(FLAG_DEFEATED_WALLY_VICTORY_ROAD) == FALSE);
+    else if (rematchTableId == REMATCH_WALLY_VR)
+        return !FlagGet(FLAG_DEFEATED_WALLY_VICTORY_ROAD);
     else
         return FALSE;
 }
@@ -1668,7 +1664,7 @@ static bool32 UpdateRandomTrainerRematches(const struct RematchTrainer *table, u
 
     for (i = 0; i <= REMATCH_SPECIAL_TRAINER_START; i++)
     {
-        if (table[i].mapGroup == mapGroup && table[i].mapNum == mapNum && !sub_80B1D94(i))
+        if (table[i].mapGroup == mapGroup && table[i].mapNum == mapNum && !IsRematchForbidden(i))
         {
             if (gSaveBlock1Ptr->trainerRematches[i] != 0)
             {

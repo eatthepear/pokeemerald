@@ -752,7 +752,7 @@ EventScript_Joy_NotEnough:
 
 EventScript_Joy_Heal:
 	removemoney 1000, 0
-	updatemoneybox 0, 0
+	updatemoneybox
 	msgbox gText_Joy_ThankYou, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_HEAL

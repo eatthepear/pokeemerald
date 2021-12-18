@@ -136,7 +136,7 @@ Zone18A_EventScript_BuySodaPop:
 	goto_if_eq Zone18A_Text_NotEnoughMoney
 	msgbox Zone18A_Text_HereYouGo, MSGBOX_AUTOCLOSE
 	removemoney 300, 0
-	updatemoneybox 0, 0
+	updatemoneybox
 	giveitem ITEM_SODA_POP
 	hidemoneybox
 	release

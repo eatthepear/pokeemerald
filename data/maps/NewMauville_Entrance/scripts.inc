@@ -4,8 +4,7 @@ NewMauville_Entrance_MapScripts::
 	.byte 0
 
 NewMauville_Entrance_OnLoad:
-	compare VAR_NEW_MAUVILLE_STATE, 0
-	call_if_eq NewMauville_Entrance_EventScript_CloseDoor
+	call_if_eq VAR_NEW_MAUVILLE_STATE, 0, NewMauville_Entrance_EventScript_CloseDoor
 	end
 
 NewMauville_Entrance_EventScript_CloseDoor:: @ 82372C4
@@ -23,15 +22,13 @@ NewMauville_Entrance_OnTransition:
 
 NewMauville_Entrance_EventScript_Door::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox NewMauville_Entrance_Text_DoorIsLocked, MSGBOX_DEFAULT
-	checkitem ITEM_BASEMENT_KEY, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq NewMauville_Entrance_EventScript_DontOpenDoor
+	checkitem ITEM_BASEMENT_KEY
+	goto_if_eq VAR_RESULT, FALSE, NewMauville_Entrance_EventScript_DontOpenDoor
 	msgbox NewMauville_Entrance_Text_UseBasementKey, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq NewMauville_Entrance_EventScript_DontOpenDoor
+	goto_if_eq VAR_RESULT, NO, NewMauville_Entrance_EventScript_DontOpenDoor
 	msgbox NewMauville_Entrance_Text_UsedBasementKey, MSGBOX_DEFAULT
 	@ setmetatile 3, 0, METATILE_Facility_NewMauvilleDoor_Open_Tile0, 0
 	@ setmetatile 4, 0, METATILE_Facility_NewMauvilleDoor_Open_Tile1, 0

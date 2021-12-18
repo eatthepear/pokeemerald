@@ -37,7 +37,7 @@ Zone10Sanctuary_EventScript_NuzlockeIntro:
 	msgbox Zone10Sanctuary_Text_RewardNuzlocke, MSGBOX_AUTOCLOSE
 	addmoney 4500, 0
 	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox 0, 0
+	updatemoneybox
 	msgbox Zone10Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
 	hidemoneybox

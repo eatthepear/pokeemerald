@@ -291,7 +291,7 @@ Zone10B_EventScript_BerryNuzlockeMoney:
 	addmoney 7500, 0
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone10B_Text_Received7500, MSGBOX_AUTOCLOSE
-	updatemoneybox 0, 0
+	updatemoneybox
 	waitfanfare
 	hidemoneybox
 	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
@@ -751,7 +751,7 @@ Zone10B_Text_NotEnough:
 
 Zone10B_EventScript_BuyOneWater:
 	removemoney 200, 0
-	updatemoneybox 0, 0
+	updatemoneybox
 	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FRESH_WATER, 1
 	hidemoneybox
@@ -760,7 +760,7 @@ Zone10B_EventScript_BuyOneWater:
 
 Zone10B_EventScript_BuyTenWater:
 	removemoney 2000, 0
-	updatemoneybox 0, 0
+	updatemoneybox
 	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FRESH_WATER, 10
 	hidemoneybox

@@ -151,7 +151,7 @@ Zone6A_EventScript_Item2000::
 	addmoney 2000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone6A_Text_Found2000, MSGBOX_DEFAULT
-	updatemoneybox 0, 0
+	updatemoneybox
 	waitfanfare
 	hidemoneybox
 	setflag FLAG_ITEM_ZONE6A_2000

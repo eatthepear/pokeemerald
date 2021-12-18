@@ -7,7 +7,7 @@ Zone14A_OnTransition: @ 81FC642
 	end
 
 Zone14A_EventScript_SetFlashRadius:
-	setflashradius 4
+	setflashlevel 4
 	return
 
 Zone14A_EventScript_Bart::

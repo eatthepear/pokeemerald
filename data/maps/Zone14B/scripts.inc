@@ -7,7 +7,7 @@ Zone14B_OnTransition: @ 81FC642
 	end
 
 Zone14B_EventScript_SetFlashRadius:
-	setflashradius 4
+	setflashlevel 4
 	return
 
 Zone14B_EventScript_Todd::
@@ -47,7 +47,7 @@ Zone14B_EventScript_Item2000::
 	addmoney 3000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone14B_Text_Found3000, MSGBOX_DEFAULT
-	updatemoneybox 0, 0
+	updatemoneybox
 	waitfanfare
 	hidemoneybox
 	setflag FLAG_ITEM_ZONE14B_3000

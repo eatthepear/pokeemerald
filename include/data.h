@@ -5,6 +5,8 @@
 
 #define SPECIES_SHINY_TAG 5000
 
+#define MAX_TRAINER_ITEMS 4
+
 enum {
     BATTLER_AFFINE_NORMAL,
     BATTLER_AFFINE_EMERGE,
@@ -18,6 +20,10 @@ struct MonCoords
     u8 size; // u8 width:4, height:4;
     u8 y_offset;
 };
+
+#define MON_COORDS_SIZE(width, height)(DIV_ROUND_UP(width, 8) << 4 | DIV_ROUND_UP(height, 8))
+#define GET_MON_COORDS_WIDTH(size)((size >> 4) * 8)
+#define GET_MON_COORDS_HEIGHT(size)((size & 0xF) * 8)
 
 struct TrainerMon
 {
@@ -47,18 +53,18 @@ union TrainerMonPtr
 
 struct Trainer
 {
-    u8 partyFlags; // Unread
-    u8 trainerClass;
-    u8 encounterMusic_gender; // last bit is gender
-    u8 trainerPic;
-    u8 trainerName[12];
-    u16 items[4];
-    bool8 doubleBattle;
-    u32 aiFlags;
-    u8 partySize;
+    /*0x00*/ u8 partyFlags;
+    /*0x01*/ u8 trainerClass;
+    /*0x02*/ u8 encounterMusic_gender; // last bit is gender
+    /*0x03*/ u8 trainerPic;
+    /*0x04*/ u8 trainerName[12];
+    /*0x10*/ u16 items[MAX_TRAINER_ITEMS];
+    /*0x18*/ bool8 doubleBattle;
+    /*0x1C*/ u32 aiFlags;
+    /*0x20*/ u8 partySize;
     u8 transition:7;
     u8 hasCustomTransition:1;
-    union TrainerMonPtr party;
+    /*0x24*/ union TrainerMonPtr party;
 };
 
 #define TRAINER_ENCOUNTER_MUSIC(trainer)((gTrainers[trainer].encounterMusic_gender & 0x7F))

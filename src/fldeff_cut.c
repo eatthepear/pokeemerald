@@ -125,7 +125,7 @@ const struct SpritePalette gSpritePalette_CutGrass = {gFieldEffectPal_CutGrass, 
 
 static const struct SpriteTemplate sSpriteTemplate_CutGrass =
 {
-    .tileTag = 0xFFFF,
+    .tileTag = TAG_NONE,
     .paletteTag = FLDEFF_PAL_TAG_CUT_GRASS,
     .oam = &sOamData_CutGrass,
     .anims = sSpriteAnimTable_CutGrass,
@@ -371,10 +371,6 @@ static void SetCutGrassMetatile(s16 x, s16 y)
         break;
     case METATILE_Fortree_SecretBase_LongGrass_BottomRight:
         MapGridSetMetatileIdAt(x, y, METATILE_Fortree_SecretBase_LongGrass_TopRight);
-        break;
-    case METATILE_Lavaridge_NormalGrass:
-    case METATILE_Lavaridge_AshGrass:
-        MapGridSetMetatileIdAt(x, y, METATILE_Lavaridge_LavaField);
         break;
     case METATILE_Fallarbor_NormalGrass:
     case METATILE_Fallarbor_AshGrass:

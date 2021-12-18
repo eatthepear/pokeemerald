@@ -6,24 +6,19 @@ Route105_MapScripts::
 
 Route105_OnLoad:
 	call_if_unset FLAG_REGI_DOORS_OPENED, Route105_CloseRegiEntrance
-	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_NORTH
-	call_if_eq AbnormalWeather_EventScript_PlaceTilesRoute105North
-	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_SOUTH
-	call_if_eq AbnormalWeather_EventScript_PlaceTilesRoute105South
+	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_NORTH, AbnormalWeather_EventScript_PlaceTilesRoute105North
+	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_SOUTH, AbnormalWeather_EventScript_PlaceTilesRoute105South
 	end
 
 Route105_CloseRegiEntrance::
-	setmetatile 9, 19, METATILE_General_RockWall_RockBase, 1
-	setmetatile 9, 20, METATILE_General_RockWall_SandBase, 1
+	setmetatile 9, 19, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 9, 20, METATILE_General_RockWall_SandBase, TRUE
 	return
 
 Route105_OnTransition:
-	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
-	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
-	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_NORTH
-	call_if_eq AbnormalWeather_StartKyogreWeather
-	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_SOUTH
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_HideMapNamePopup
+	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_NORTH, AbnormalWeather_StartKyogreWeather
+	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_SOUTH, AbnormalWeather_StartKyogreWeather
 	end
 
 Route105_OnFrame:
