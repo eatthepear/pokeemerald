@@ -15145,6 +15145,41 @@
                 "species": "SPECIES_CHIKORITA"
               }
             ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_NONE"
+              }
+            ]
           }
         },
         {
