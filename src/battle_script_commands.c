@@ -6557,7 +6557,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     u32 i = 0;
     u32 lastMonLevel = 0;
     u32 moneyReward;
-    u32 scale = 2;
+    u32 scale = 4;
 
     if (trainerId == TRAINER_SECRET_BASE)
     {
