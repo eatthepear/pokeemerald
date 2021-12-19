@@ -13442,33 +13442,33 @@
             "encounter_rate": 30,
             "mons": [
               {
-                "min_level": 4,
-                "max_level": 6,
-                "species": "SPECIES_POLIWAG"
-              },
-              {
-                "min_level": 4,
-                "max_level": 6,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_WOOPER"
               },
               {
-                "min_level": 4,
-                "max_level": 6,
-                "species": "SPECIES_LOTAD"
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 4,
-                "max_level": 6,
-                "species": "SPECIES_SLOWPOKE"
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_FEEBAS"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -14012,6 +14012,41 @@
               }
             ]
           },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_CORPHISH"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_DEWPIDER"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          },
           "water_mons": {
             "encounter_rate": 4,
             "mons": [
@@ -14180,13 +14215,13 @@
                 "species": "SPECIES_CHEWTLE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -14250,8 +14285,8 @@
                 "species": "SPECIES_LAPRAS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_SQUIRTLE"
               }
             ]
@@ -14991,13 +15026,13 @@
                 "species": "SPECIES_CARVANHA"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -15170,14 +15205,79 @@
                 "species": "SPECIES_GRIMER_ALOLAN"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLAN"
               }
             ]
           }
@@ -15442,13 +15542,13 @@
                 "species": "SPECIES_CLOBBOPUS"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -15546,13 +15646,13 @@
                 "species": "SPECIES_STARYU"
               },
               {
-                "min_level": 18,
-                "max_level": 21,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 18,
-                "max_level": 21,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -15598,17 +15698,22 @@
               {
                 "min_level": 24,
                 "max_level": 26,
-                "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 24,
-                "max_level": 26,
                 "species": "SPECIES_PYUKUMUKU"
               },
               {
                 "min_level": 24,
                 "max_level": 26,
-                "species": "SPECIES_PYUKUMUKU"
+                "species": "SPECIES_PINCURCHIN"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_PINCURCHIN"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_CORSOLA_GALARIAN"
               },
               {
                 "min_level": 24,
@@ -15781,7 +15886,7 @@
               {
                 "min_level": 22,
                 "max_level": 25,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_BASCULIN"
               },
               {
                 "min_level": 22,
@@ -15799,13 +15904,13 @@
                 "species": "SPECIES_MANTYKE"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 22,
-                "max_level": 25,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -16126,13 +16231,13 @@
                 "species": "SPECIES_KRABBY"
               },
               {
-                "min_level": 29,
-                "max_level": 31,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 29,
-                "max_level": 31,
+                "min_level": 1,
+                "max_level": 1,
                 "species": "SPECIES_NONE"
               }
             ]
