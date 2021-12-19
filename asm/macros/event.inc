@@ -1848,8 +1848,10 @@
         .byte \isShiny
     .endif
     .endm
-
-
+    
+    .macro givemonmoves species:req, level:req, move1:req, move2:req, move3:req, move4:req
+    customgivemon \species, \level, 0, 0, NUM_NATURES, 0xFF, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \move1, \move2, \move3, \move4, 0
+    .endm
 
 @ Supplementary
 
