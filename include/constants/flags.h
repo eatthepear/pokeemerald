@@ -85,11 +85,11 @@
 #define FLAG_UNUSED_0x048    0x48 // Unused Flag
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_SYS_NO_COLLISION       0x4B // Unused Flag //DEBUG
+#define FLAG_SYS_NO_ENCOUNTER       0x4C // Unused Flag //DEBUG
+#define FLAG_SYS_NO_TRAINER_SEE     0x4D // Unused Flag //DEBUG
+#define FLAG_SYS_NO_BAG_USE         0x4E // Unused Flag //DEBUG
+#define FLAG_SYS_NO_CATCHING        0x4F // Unused Flag //DEBUG
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
