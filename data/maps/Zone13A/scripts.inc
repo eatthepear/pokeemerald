@@ -44,3 +44,10 @@ Zone13A_Text_AmberandKimPostBattle:
 Zone13A_EventScript_SuperPotion::
 	finditem ITEM_SUPER_POTION
 	end
+
+Zone13A_EventScript_Sign::
+	msgbox Zone13A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone13A_Text_Sign:
+	.string "Mining Facility$"

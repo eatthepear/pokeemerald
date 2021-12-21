@@ -100,6 +100,14 @@
       "elevation": 3,
       "item": "ITEM_LUM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE13A_LUM_BERRY"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Zone13A_EventScript_Sign"
     }
   ]
 }
