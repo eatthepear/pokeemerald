@@ -48,11 +48,6 @@ AbandonedShip_Corridors_B1F_EventScript_DoorIsUnlocked::
 	releaseall
 	end
 
-AbandonedShip_Corridors_B1F_EventScript_Duncan::
-	trainerbattle_single TRAINER_DUNCAN, AbandonedShip_Corridors_B1F_Text_DuncanIntro, AbandonedShip_Corridors_B1F_Text_DuncanDefeat
-	msgbox AbandonedShip_Corridors_B1F_Text_DuncanPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 AbandonedShip_Corridors_B1F_Text_DuncanIntro:
 	.string "When we go out to sea, we SAILORS\n"
 	.string "always bring our POKéMON.\l"

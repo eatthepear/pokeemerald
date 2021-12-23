@@ -1,11 +1,6 @@
 VictoryRoad_B2F_MapScripts::
 	.byte 0
 
-VictoryRoad_B2F_EventScript_Dianne:: @ 8236948
-	trainerbattle_single TRAINER_DIANNE, VictoryRoad_B2F_Text_DianneIntro, VictoryRoad_B2F_Text_DianneDefeat
-	msgbox VictoryRoad_B2F_Text_DiannePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 VictoryRoad_B2F_Text_VitoIntro:
 	.string "I trained together with my whole family,\n"
 	.string "every one of us!\l"

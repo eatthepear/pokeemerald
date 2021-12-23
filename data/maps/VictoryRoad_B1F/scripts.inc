@@ -1,16 +1,6 @@
 VictoryRoad_B1F_MapScripts::
 	.byte 0
 
-VictoryRoad_B1F_EventScript_Mitchell:: @ 823652A
-	trainerbattle_single TRAINER_MITCHELL, VictoryRoad_B1F_Text_MitchellIntro, VictoryRoad_B1F_Text_MitchellDefeat
-	msgbox VictoryRoad_B1F_Text_MitchellPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-VictoryRoad_B1F_EventScript_Halle::
-	trainerbattle_single TRAINER_HALLE, VictoryRoad_B1F_Text_HalleIntro, VictoryRoad_B1F_Text_HalleDefeat
-	msgbox VictoryRoad_B1F_Text_HallePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 VictoryRoad_B1F_Text_SamuelIntro:
 	.string "The thought that I'm getting closer to\n"
 	.string "the POKéMON LEAGUE…\p"
