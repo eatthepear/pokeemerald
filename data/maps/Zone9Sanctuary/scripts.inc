@@ -26,7 +26,7 @@ Zone9Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone9Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM04
+	giveitem ITEM_TM06
 	closemessage
 	setvar VAR_ZONE, 10
 	buffernumberstring 0, VAR_ZONE
@@ -64,4 +64,4 @@ Zone9Sanctuary_EventScript_Leave:
 	end
 
 Zone9Sanctuary_Text_Reward:
-	.string "TM04 - Thief.$"
+	.string "TM06 - Bullet Seed!$"

@@ -163,7 +163,7 @@ Zone18B_Movement_LeviathanLeave:
 
 Zone18B_EventScript_ThankForPirates:
 	msgbox Zone18B_Odysseus_ThankYou, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM18
+	giveitem ITEM_TM25
 	setvar VAR_ZONE18B_STATE, 4
 	goto Zone18B_EventScript_WantBattleOrLeave
 	release

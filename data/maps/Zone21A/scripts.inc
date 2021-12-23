@@ -177,8 +177,8 @@ Zone21A_EventScript_UltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-Zone21A_EventScript_FullHeal::
-	finditem ITEM_FULL_HEAL
+Zone21A_EventScript_HeatRock::
+	finditem ITEM_HEAT_ROCK
 	end
 
 Zone21A_EventScript_SuperRepel::

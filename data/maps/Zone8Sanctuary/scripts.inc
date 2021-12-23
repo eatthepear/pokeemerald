@@ -27,7 +27,7 @@ Zone8Sanctuary_EventScript_Intro:
 	giveitem ITEM_BLUE_SHARD, 3
 	msgbox Zone8Sanctuary_Text_RewardClear8, MSGBOX_AUTOCLOSE
 	msgbox Zone8Sanctuary_Text_8Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM03
+	giveitem ITEM_TM05
 	closemessage
 	setvar VAR_ZONE, 9
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
@@ -88,4 +88,4 @@ Zone8Sanctuary_Text_RewardClear8:
 	.string "Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is...$"
 
 Zone8Sanctuary_Text_8Reward:
-	.string "TM03 - Rock Tomb.$"
+	.string "TM05 - Rock Tomb!$"

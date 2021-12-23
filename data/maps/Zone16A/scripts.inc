@@ -167,10 +167,10 @@ Zone16A_EventScript_WaterStone::
 	finditem ITEM_WATER_STONE
 	end
 
-Zone16A_EventScript_FullHeal::
-	finditem ITEM_FULL_HEAL
+Zone16A_EventScript_TM19::
+	finditem ITEM_TM19
 	end
 
-Zone16A_EventScript_TM13::
-	finditem ITEM_TM13
+Zone16A_EventScript_TM20::
+	finditem ITEM_TM20
 	end

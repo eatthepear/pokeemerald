@@ -26,7 +26,7 @@ Zone11Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone11Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM06
+	giveitem ITEM_TM11
 	closemessage
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
@@ -68,4 +68,4 @@ Zone11Sanctuary_EventScript_Leave:
 	end
 
 Zone11Sanctuary_Text_Reward:
-	.string "TM06 - Covet.$"
+	.string "TM11 - Teleport!$"

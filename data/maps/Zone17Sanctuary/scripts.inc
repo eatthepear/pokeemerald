@@ -26,7 +26,7 @@ Zone17Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone17Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM15
+	giveitem ITEM_TM22
 	closemessage
 	setvar VAR_ZONE, 18
 	buffernumberstring 0, VAR_ZONE
@@ -87,4 +87,4 @@ Zone17Sanctuary_EventScript_Leave:
 	end
 
 Zone17Sanctuary_Text_Reward:
-	.string "TM15 - Shadow Claw.$"
+	.string "TM22 - Shadow Claw!$"

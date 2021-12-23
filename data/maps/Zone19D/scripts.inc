@@ -72,7 +72,7 @@ Zone19D_EventScript_InitiatePirateBattles::
 	msgbox Zone19D_Text_Pirate1Intro, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_PIRATE_1, Zone19D_Text_Pirate1Defeat
 	msgbox Zone19D_Text_Pirate1Here, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM17
+	giveitem ITEM_TM24
 	msgbox Zone19D_Text_Pirate1Run, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone19D_Movement_Pirate1Run
 	applymovement 2, Zone19D_Movement_Pirate2Run

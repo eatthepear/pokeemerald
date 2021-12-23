@@ -27,7 +27,7 @@ Zone19Sanctuary_EventScript_Intro:
 	giveitem ITEM_YELLOW_SHARD, 5
 	msgbox Zone19Sanctuary_Text_RewardClear19, MSGBOX_AUTOCLOSE
 	msgbox Zone19Sanctuary_Text_19Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM19
+	giveitem ITEM_TM26
 	closemessage
 	setvar VAR_ZONE, 20
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
@@ -76,10 +76,10 @@ Zone19Sanctuary_Text_RewardClear18:
 	.string "Your reward for clearing {COLOR RED}Zone 18{COLOR DARK_GRAY} is...$"
 
 Zone19Sanctuary_Text_18Reward:
-	.string "5 Yellow Shards.$"
+	.string "5 Yellow Shards!$"
 
 Zone19Sanctuary_Text_RewardClear19:
 	.string "Your reward for clearing {COLOR RED}Zone 19{COLOR DARK_GRAY} is...$"
 
 Zone19Sanctuary_Text_19Reward:
-	.string "TM19 - Thunder Wave.$"
+	.string "TM26 - Thunder Wave!$"

@@ -33,6 +33,6 @@ Zone4C_Text_ChloeandKayaPostBattle:
 	.string "Chloe: Twin power!\p"
 	.string "Kaya: Twin power!$"
 
-Zone4C_EventScript_ItemEther::
-	finditem ITEM_ETHER
+Zone4C_EventScript_ItemMuscleBand::
+	finditem ITEM_MUSCLE_BAND
 	end
