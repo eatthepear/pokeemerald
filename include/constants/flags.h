@@ -1100,7 +1100,7 @@
 #define FLAG_ITEM_ZONE13A_SUPER_POTION                              0x41B
 #define FLAG_ITEM_ZONE14A_GREAT_BALL                                0x41C
 #define FLAG_ITEM_ZONE14B_QUICK_BALL                                0x41D
-#define FLAG_ITEM_ZONE14B_3000                                      0x41E
+#define FLAG_ITEM_ZONE14B_2000                                      0x41E
 #define FLAG_ITEM_ZONE14B_FULL_HEAL                                 0x41F
 #define FLAG_ITEM_ZONE15A_TM17                                      0x420
 #define FLAG_ITEM_ZONE15A_TM18                                      0x421
