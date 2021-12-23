@@ -26,7 +26,7 @@ Zone20Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone20Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM20
+	giveitem ITEM_TM27
 	closemessage
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
@@ -69,4 +69,4 @@ Zone20Sanctuary_EventScript_Leave:
 	end
 
 Zone20Sanctuary_Text_Reward:
-	.string "TM20 - Sludge Bomb!$"
+	.string "TM27 - Sludge Bomb!$"

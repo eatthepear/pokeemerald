@@ -10,7 +10,7 @@ Zone10B_EventScript_Adamina::
 Zone10B_EventScript_AdaminaStuff:
 	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaLeave
 	msgbox Zone10B_Text_Adamina_Sorry, MSGBOX_AUTOCLOSE
-	giveitem ITEM_EXPERT_BELT
+	giveitem ITEM_TM07
 	msgbox Zone10B_Text_Adamina_SafeSpace, MSGBOX_DEFAULT
 	delay 96
 	msgbox Zone10B_Text_Adamina_TellYouWhat, MSGBOX_AUTOCLOSE
@@ -179,7 +179,7 @@ Zone10B_EventScript_SideQuestSubstitute::
 	goto_if_not_defeated TRAINER_CONRAD, Zone10B_EventScript_NoSubstitute
 	setflag FLAG_RECEIVED_ZONE10B_SUBSTITUTE
 	msgbox Zone10B_Text_GiveSubstitute, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM05
+	giveitem ITEM_TM08
 	goto Zone10B_EventScript_GaveSubstitute
 	end
 
@@ -194,7 +194,7 @@ Zone10B_Text_SubstituteIntro:
 Zone10B_Text_GiveSubstitute:
 	.string "Impressive, young one. I see you\n"
 	.string "have defeated all those trainers.\p"
-	.string "Here is the TM05 - Substitute.$"
+	.string "Here is the TM08 - Substitute.$"
 
 Zone10B_EventScript_NoSubstitute:
 	msgbox Zone10B_Text_NoSubstitute, MSGBOX_AUTOCLOSE

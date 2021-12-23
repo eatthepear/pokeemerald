@@ -10,24 +10,24 @@ Zone15A_EventScript_Exit::
 	releaseall
 	end
 
-Zone15A_EventScript_TM11::
-	finditem ITEM_TM11
+Zone15A_EventScript_TM17::
+	finditem ITEM_TM17
 	end
 
-Zone15A_EventScript_TM12::
-	finditem ITEM_TM12
+Zone15A_EventScript_TM18::
+	finditem ITEM_TM18
 	end
 
 Zone15A_EventScript_DuskBall::
 	finditem ITEM_DUSK_BALL
 	end
 
-Zone15A_EventScript_MuscleBand::
+Zone15A_EventScript_Ether::
 	finditem ITEM_MUSCLE_BAND
 	end
 
-Zone15A_EventScript_WiseGlasses::
-	finditem ITEM_WISE_GLASSES
+Zone15A_EventScript_Glalitite::
+	finditem ITEM_GLALITITE
 	end
 
 Zone15A_EventScript_WideLens::

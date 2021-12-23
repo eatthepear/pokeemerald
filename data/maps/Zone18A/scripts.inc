@@ -209,10 +209,10 @@ Zone18A_Text_Sign:
 	.string "Trainer's Dojo!\n"
 	.string "All challengers welcome!$"
 
-Zone18A_EventScript_HeatRock::
-	finditem ITEM_HEAT_ROCK
+Zone18A_EventScript_ExpertBelt::
+	finditem ITEM_EXPERT_BELT
 	end
 
-Zone18A_EventScript_TM16::
-	finditem ITEM_TM16
+Zone18A_EventScript_TM23::
+	finditem ITEM_TM23
 	end

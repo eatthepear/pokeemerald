@@ -220,7 +220,7 @@ Zone17A_EventScript_Released:
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 8
 	msgbox Zone17A_Text_Shimmering, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM14
+	giveitem ITEM_TM21
 	release
 	end
 

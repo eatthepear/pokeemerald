@@ -44,19 +44,19 @@ Zone14B_Text_CharliePostBattle:
 Zone14B_EventScript_Item2000::
 	lock
 	showmoneybox 0, 0, 0
-	addmoney 3000, 0
+	addmoney 2000, 0
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone14B_Text_Found3000, MSGBOX_DEFAULT
+	msgbox Zone14B_Text_Found2000, MSGBOX_DEFAULT
 	updatemoneybox
 	waitfanfare
 	hidemoneybox
-	setflag FLAG_ITEM_ZONE14B_3000
+	setflag FLAG_ITEM_ZONE14B_2000
 	removeobject 3
 	release
 	end
 
-Zone14B_Text_Found3000:
-	.string "Found ¥3000!$"
+Zone14B_Text_Found2000:
+	.string "Found ¥2000!$"
 
 Zone14B_EventScript_QuickBall::
 	finditem ITEM_QUICK_BALL

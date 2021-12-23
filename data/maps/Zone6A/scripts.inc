@@ -74,7 +74,7 @@ Zone6A_EventScript_RitaBrutal:
 Zone6A_EventScript_Leviathan3Defeated:
 	setflag FLAG_BEATLEVIATHAN3
 	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM02, 1
+	giveitem ITEM_TM04, 1
 	release
 	end
 
@@ -145,22 +145,9 @@ Zone6A_EventScript_ItemNetBall::
 	finditem ITEM_NET_BALL
 	end
 
-Zone6A_EventScript_Item2000::
-	lock
-	showmoneybox 0, 0, 0
-	addmoney 2000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone6A_Text_Found2000, MSGBOX_DEFAULT
-	updatemoneybox
-	waitfanfare
-	hidemoneybox
-	setflag FLAG_ITEM_ZONE6A_2000
-	removeobject 7
-	release
+Zone6A_EventScript_ItemSootheBell::
+	finditem ITEM_SOOTHE_BELL
 	end
-
-Zone6A_Text_Found2000:
-	.string "Found ¥2000!$"
 
 Zone6A_EventScript_ItemNestBall::
 	finditem ITEM_NEST_BALL

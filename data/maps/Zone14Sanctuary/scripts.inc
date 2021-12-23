@@ -27,7 +27,7 @@ Zone14Sanctuary_EventScript_Intro:
 	giveitem ITEM_MACH_BIKE
 	msgbox Zone14Sanctuary_Text_RewardClear14, MSGBOX_AUTOCLOSE
 	msgbox Zone14Sanctuary_Text_14Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM10
+	giveitem ITEM_TM16
 	closemessage
 	setvar VAR_ZONE, 15
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
@@ -76,10 +76,10 @@ Zone14Sanctuary_Text_RewardClear13:
 	.string "Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GRAY} is...$"
 
 Zone14Sanctuary_Text_13Reward:
-	.string "The Mach Bike.$"
+	.string "The Mach Bike!$"
 
 Zone14Sanctuary_Text_RewardClear14:
 	.string "Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GRAY} is...$"
 
 Zone14Sanctuary_Text_14Reward:
-	.string "TM10 - Hidden Power.$"
+	.string "TM16 - Steel Wing!$"

@@ -55,21 +55,21 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 43,
-      "y": 19,
+      "x": 7,
+      "y": 47,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone15A_EventScript_WiseGlasses",
-      "flag": "FLAG_ITEM_ZONE15A_WISE_GLASSES"
+      "script": "Zone15A_EventScript_Glalitite",
+      "flag": "FLAG_ITEM_ZONE15A_GLALITITE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 61,
-      "y": 21,
+      "x": 43,
+      "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -81,32 +81,6 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 55,
-      "y": 25,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone15A_EventScript_MuscleBand",
-      "flag": "FLAG_ITEM_ZONE15A_MUSCLE_BAND"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 71,
-      "y": 12,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone15A_EventScript_TM12",
-      "flag": "FLAG_ITEM_ZONE15A_TM12"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 78,
       "y": 40,
       "elevation": 3,
@@ -115,8 +89,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone15A_EventScript_DuskBall",
-      "flag": "FLAG_ITEM_ZONE15A_DUSK_BALL"
+      "script": "Zone15A_EventScript_Ether",
+      "flag": "FLAG_ITEM_ZONE15A_ETHER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 61,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone15A_EventScript_TM17",
+      "flag": "FLAG_ITEM_ZONE15A_TM17"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -128,8 +115,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone15A_EventScript_ZoomLens",
-      "flag": "FLAG_ITEM_ZONE15A_ZOOM_LENS"
+      "script": "Zone15A_EventScript_DuskBall",
+      "flag": "FLAG_ITEM_ZONE15A_DUSK_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -141,8 +128,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone15A_EventScript_TM11",
-      "flag": "FLAG_ITEM_ZONE15A_TM11"
+      "script": "Zone15A_EventScript_ZoomLens",
+      "flag": "FLAG_ITEM_ZONE15A_ZOOM_LENS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 55,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone15A_EventScript_TM18",
+      "flag": "FLAG_ITEM_ZONE15A_TM18"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",

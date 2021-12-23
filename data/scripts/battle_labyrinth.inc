@@ -139,6 +139,7 @@ EventScript_Shop_LelouchTraining3:
 	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_LelouchTraining3Brutal
 	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
 	scrollingmultichoice 5, 0, 0, 5, TRUE
 	switch VAR_RESULT
@@ -151,6 +152,16 @@ EventScript_Shop_LelouchTraining3:
 	case 6, EventScript_Shop_LelouchEVSpA
 	case 7, EventScript_Shop_LelouchEVSpD
 	case 8, EventScript_Shop_LelouchEVSpe
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchTraining3Brutal:
+	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 0, 0, 3, TRUE
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchExp1
+	case 1, EventScript_Shop_LelouchExp2
+	case 2, EventScript_Shop_LelouchExp3
 	goto EventScript_Shop_LelouchLeave
 	end
 

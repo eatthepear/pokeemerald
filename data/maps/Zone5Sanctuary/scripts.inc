@@ -25,8 +25,8 @@ Zone5Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_SLEDGEHAMMER, 1
+	msgbox Zone3Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM03
 	closemessage
 	setvar VAR_ZONE, 6
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
@@ -74,4 +74,4 @@ Zone5Sanctuary_EventScript_Leave:
 	end
 
 Zone5Sanctuary_Text_Reward:
-	.string "The Sledgehammer.$"
+	.string "TM03 - Bug Bite!$"

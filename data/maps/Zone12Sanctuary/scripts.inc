@@ -26,7 +26,7 @@ Zone12Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone12Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM07
+	giveitem ITEM_TM13
 	closemessage
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
@@ -89,4 +89,4 @@ Zone12Sanctuary_EventScript_Leave:
 	end
 	
 Zone12Sanctuary_Text_Reward:
-	.string "TM07 - Rest.$"
+	.string "TM13 - Rest!$"

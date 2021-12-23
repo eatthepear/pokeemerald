@@ -32,6 +32,6 @@ Zone4D_Text_FredPostBattle:
 	.string "Just keep swimming,\n"
 	.string "just keep swimming.$"
 
-Zone4D_EventScript_ItemRepel::
-	finditem ITEM_REPEL
+Zone4D_EventScript_ItemWiseGlasses::
+	finditem ITEM_WISE_GLASSES
 	end

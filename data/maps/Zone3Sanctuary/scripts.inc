@@ -24,14 +24,9 @@ Zone3Sanctuary_EventScript_Intro:
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	showmoneybox 0, 0, 0
 	msgbox Zone3Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	addmoney 3000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox
-	msgbox Zone3Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
+	giveitem ITEM_TM02
+	closemessage
 	setvar VAR_ZONE, 4
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
@@ -78,9 +73,4 @@ Zone3Sanctuary_EventScript_Leave:
 	end
 
 Zone3Sanctuary_Text_Reward:
-	.string "¥3000!$"
-
-Zone3Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥3000!$"
-
-
+	.string "TM02 - Pluck!$"

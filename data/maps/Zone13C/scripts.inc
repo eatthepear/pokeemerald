@@ -63,7 +63,7 @@ Zone13C_Text_Kaizen_ISee:
 Zone13C_EventScript_Leviathan7Defeated:
 	setflag FLAG_BEATLEVIATHAN7
 	msgbox Zone13C_Text_KaizenBlackBelt_HereTM, MSGBOX_DEFAULT
-	giveitem ITEM_TM08
+	giveitem ITEM_TM14
 	msgbox Zone13C_Text_KaizenBlackBelt_ExplainTM, MSGBOX_DEFAULT
 	goto Zone13C_EventScript_KaizenBlackBelt_ComeBack
 	end
@@ -72,7 +72,7 @@ Zone13C_Text_KaizenBlackBelt_HereTM:
 	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: For the victor go the spoils.$"
 
 Zone13C_Text_KaizenBlackBelt_ExplainTM:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM08 - Bulk Up helps your\n"
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM14 - Bulk Up helps your\n"
 	.string "Pokémon grow ever stronger.$"
 
 Zone13C_EventScript_KaizenBlackBelt_ComeBack:
@@ -121,7 +121,7 @@ Zone13C_Text_Leviathan8Defeat:
 Zone13C_EventScript_Leviathan8Defeated:
 	setflag FLAG_BEATLEVIATHAN8
 	msgbox Zone13C_Text_KaizenPsychic_HereTM, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM09
+	giveitem ITEM_TM15
 	msgbox Zone13C_Text_KaizenPsychic_ExplainTM, MSGBOX_AUTOCLOSE
 	goto Zone13C_EventScript_KaizenPsychic_LikeHome
 	end
@@ -130,7 +130,7 @@ Zone13C_Text_KaizenPsychic_HereTM:
 	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Another victory, another TM.$"
 
 Zone13C_Text_KaizenPsychic_ExplainTM:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM09 - Calm Mind functions\n"
+	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM15 - Calm Mind functions\n"
 	.string "similarly to Bulk Up, just as\l"
 	.string "Psychics train similarly to\l"
 	.string "Black Belts.$"

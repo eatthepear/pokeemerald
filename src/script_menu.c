@@ -979,6 +979,13 @@ static const struct ListMenuItem Exp3[] =
     {sText_EVSpe, 8},
 };
 
+static const struct ListMenuItem Exp3Brutal[] =
+{
+    {sText_Exp1, 0},
+    {sText_Exp2, 1},
+    {sText_Exp3, 2},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -992,6 +999,7 @@ struct
     {MoveTutorLevel2, ARRAY_COUNT(MoveTutorLevel2)},
     {MoveTutorLevel3, ARRAY_COUNT(MoveTutorLevel3)},
     {Exp3, ARRAY_COUNT(Exp3)},
+    {Exp3Brutal, ARRAY_COUNT(Exp3Brutal)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);

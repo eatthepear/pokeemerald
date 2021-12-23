@@ -1,11 +1,6 @@
 MtPyre_6F_MapScripts::
 	.byte 0
 
-MtPyre_6F_EventScript_Cedric:: @ 8231D9D
-	trainerbattle_single TRAINER_CEDRIC, MtPyre_6F_Text_CedricIntro, MtPyre_6F_Text_CedricDefeat
-	msgbox MtPyre_6F_Text_CedricPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 MtPyre_6F_Text_ValerieIntro:
 	.string "When I'm here…\n"
 	.string "A curious power flows into me…$"

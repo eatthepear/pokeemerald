@@ -5340,6 +5340,26 @@
       "secondary_tileset": "gTileset_Snowy",
       "border_filepath": "data/layouts/Zone22A/border.bin",
       "blockdata_filepath": "data/layouts/Zone22A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE22SANCTUARY",
+      "name": "Zone22Sanctuary_Layout",
+      "width": 45,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone22Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone22Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE22SHOPS",
+      "name": "Zone22Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone22Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone22Shops/map.bin"
     }
   ]
 }

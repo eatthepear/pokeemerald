@@ -178,10 +178,10 @@ Zone11A_EventScript_WideLens::
 	finditem ITEM_WIDE_LENS
 	end
 
-Zone11A_EventScript_SuperPotion::
-	finditem ITEM_SUPER_POTION
+Zone11A_EventScript_TM09::
+	finditem ITEM_TM09
 	end
 
-Zone11A_EventScript_FullHeal::
-	finditem ITEM_FULL_HEAL
+Zone11A_EventScript_TM10::
+	finditem ITEM_TM10
 	end

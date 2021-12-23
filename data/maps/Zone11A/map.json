@@ -167,8 +167,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone11A_EventScript_SuperPotion",
-      "flag": "FLAG_ITEM_ZONE11A_SUPER_POTION"
+      "script": "Zone11A_EventScript_TM09",
+      "flag": "FLAG_ITEM_ZONE11A_TM09"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -180,8 +180,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone11A_EventScript_FullHeal",
-      "flag": "FLAG_ITEM_ZONE11A_FULL_HEAL"
+      "script": "Zone11A_EventScript_TM10",
+      "flag": "FLAG_ITEM_ZONE11A_TM10"
     }
   ],
   "warp_events": [
