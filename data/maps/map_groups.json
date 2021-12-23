@@ -679,7 +679,9 @@
     "Zone21D",
     "Zone21Sanctuary",
     "Zone21Shops",
-    "Zone22A"
+    "Zone22A",
+    "Zone22Sanctuary",
+    "Zone22Shops"
   ],
   "gMapGroup_IndoorRoute109": [
     "Route109_SeashoreHouse"
