@@ -7911,10 +7911,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM51_SOLAR_BEAM] =
+    [ITEM_TM51] =
     {
         .name = _("TM51"),
-        .itemId = ITEM_TM51_SOLAR_BEAM,
+        .itemId = ITEM_TM51,
         .price = 3000,
         .description = sTM51Desc,
         .pocket = POCKET_TM_HM,
@@ -7923,10 +7923,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM52_THUNDERBOLT] =
+    [ITEM_TM52] =
     {
         .name = _("TM52"),
-        .itemId = ITEM_TM52_THUNDERBOLT,
+        .itemId = ITEM_TM52,
         .price = 3000,
         .description = sTM52Desc,
         .pocket = POCKET_TM_HM,
@@ -7935,10 +7935,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM53_THUNDER] =
+    [ITEM_TM53] =
     {
         .name = _("TM53"),
-        .itemId = ITEM_TM53_THUNDER,
+        .itemId = ITEM_TM53,
         .price = 3000,
         .description = sTM53Desc,
         .pocket = POCKET_TM_HM,
@@ -7947,10 +7947,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM54_EARTHQUAKE] =
+    [ITEM_TM54] =
     {
         .name = _("TM54"),
-        .itemId = ITEM_TM54_EARTHQUAKE,
+        .itemId = ITEM_TM54,
         .price = 3000,
         .description = sTM54Desc,
         .pocket = POCKET_TM_HM,
@@ -7959,10 +7959,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM55_DRAGON_CLAW] =
+    [ITEM_TM55] =
     {
         .name = _("TM55"),
-        .itemId = ITEM_TM55_DRAGON_CLAW,
+        .itemId = ITEM_TM55,
         .price = 3000,
         .description = sTM55Desc,
         .pocket = POCKET_TM_HM,
@@ -7971,10 +7971,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM56_PSYSHOCK] =
+    [ITEM_TM56] =
     {
         .name = _("TM56"),
-        .itemId = ITEM_TM56_PSYSHOCK,
+        .itemId = ITEM_TM56,
         .price = 3000,
         .description = sTM56Desc,
         .pocket = POCKET_TM_HM,
@@ -7983,10 +7983,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM57_PSYCHIC] =
+    [ITEM_TM57] =
     {
         .name = _("TM57"),
-        .itemId = ITEM_TM57_PSYCHIC,
+        .itemId = ITEM_TM57,
         .price = 3000,
         .description = sTM57Desc,
         .pocket = POCKET_TM_HM,
