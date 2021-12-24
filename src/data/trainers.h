@@ -1,7 +1,7 @@
 const struct Trainer gTrainers[] = {
     [TRAINER_NONE] =
     {
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_HIKER,
         .trainerName = _(""),
@@ -291,7 +291,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEXP1] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -916,7 +916,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEXP2] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1349,7 +1349,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEXP3] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1362,7 +1362,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEVHP] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1375,7 +1375,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEVATK] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1388,7 +1388,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEVDEF] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1401,7 +1401,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEVSPA] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1414,7 +1414,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEVSPD] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),
@@ -1427,7 +1427,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LELOUCHEVSPE] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_LELOUCH,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("Lelouch"),

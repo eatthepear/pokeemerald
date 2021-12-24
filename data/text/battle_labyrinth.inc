@@ -344,7 +344,7 @@ gText_Lelouch_PayRed:
 	.string "{PLAYER} handed over 1 Red Shard.$"
 
 gText_LelouchDefeated:
-	.string "Excellent work.\n"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Excellent work.\n"
 	.string "Your Pokémon have grown stronger.$"
 
 gText_Lelouch_CostsBlueShards:

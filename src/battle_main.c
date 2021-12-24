@@ -4945,6 +4945,10 @@ static void HandleEndTurn_BattleWon(void)
         else
             PlayBGM(MUS_VICTORY_TRAINER);
     }
+    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & BATTLE_TYPE_LINK) && gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_LELOUCH)
+    {
+        gBattlescriptCurrInstr = BattleScript_PayDayMoneyAndPickUpItems;
+    }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {
         BattleStopLowHpSound();
