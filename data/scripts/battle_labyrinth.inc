@@ -426,6 +426,10 @@ Shop_Unique_Varrick_11to14:
 	.2byte ITEM_SPELL_TAG
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_RED_NECTAR
+	.2byte ITEM_YELLOW_NECTAR
+	.2byte ITEM_PINK_NECTAR
+	.2byte ITEM_PURPLE_NECTAR
 	.2byte ITEM_NONE
 	release
 	end
@@ -454,6 +458,10 @@ Shop_Unique_Varrick_15to20:
 	.2byte ITEM_SPELL_TAG
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_RED_NECTAR
+	.2byte ITEM_YELLOW_NECTAR
+	.2byte ITEM_PINK_NECTAR
+	.2byte ITEM_PURPLE_NECTAR
 	.2byte ITEM_NONE
 	release
 	end
@@ -482,6 +490,10 @@ Shop_Unique_Varrick_21to25:
 	.2byte ITEM_SPELL_TAG
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_RED_NECTAR
+	.2byte ITEM_YELLOW_NECTAR
+	.2byte ITEM_PINK_NECTAR
+	.2byte ITEM_PURPLE_NECTAR
 	.2byte ITEM_NONE
 	release
 	end
