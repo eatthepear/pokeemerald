@@ -587,6 +587,10 @@
     "TrainerHill_Elevator"
   ],
   "gMapGroup_BattleLabyrinth": [
+    "Zone0A",
+    "Zone0B",
+    "Zone0C",
+    "Zone0D",
     "Zone0Sanctuary",
     "Zone0Shops",
     "Zone1A",
@@ -599,7 +603,6 @@
     "Zone3A",
     "Zone3Sanctuary",
     "Zone3Shops",
-    "Zone3Unused",
     "Zone4A",
     "Zone4B",
     "Zone4C",
@@ -614,11 +617,11 @@
     "Zone6Sanctuary",
     "Zone6Shops",
     "Zone7A",
+    "Zone7B",
     "Zone8A",
     "Zone8B",
     "Zone8C",
     "Zone8D",
-    "Zone7B",
     "Zone8Sanctuary",
     "Zone8Shops",
     "Zone9A",
@@ -634,10 +637,6 @@
     "Zone10B",
     "Zone10Sanctuary",
     "Zone10Shops",
-    "Zone0A",
-    "Zone0B",
-    "Zone0C",
-    "Zone0D",
     "Zone11A",
     "Zone11Sanctuary",
     "Zone11Shops",
@@ -715,6 +714,7 @@
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse",
     "Route104_Prototype",
-    "Route104_PrototypePrettyPetalFlowerShop"
+    "Route104_PrototypePrettyPetalFlowerShop",
+    "Zone3Unused"
   ]
 }
