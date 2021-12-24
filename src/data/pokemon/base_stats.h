@@ -8142,12 +8142,12 @@ const struct BaseStats gBaseStats[] =
     
     [SPECIES_CACNEA] =
     {
-        .baseHP        = 50,
+        .baseHP        = 60,
         .baseAttack    = 85,
-        .baseDefense   = 40,
+        .baseDefense   = 50,
         .baseSpeed     = 35,
         .baseSpAttack  = 85,
-        .baseSpDefense = 40,
+        .baseSpDefense = 50,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_GRASS,
         .catchRate = 190,
@@ -8167,12 +8167,12 @@ const struct BaseStats gBaseStats[] =
     
     [SPECIES_CACTURNE] =
     {
-        .baseHP        = 70,
+        .baseHP        = 80,
         .baseAttack    = 115,
-        .baseDefense   = 60,
+        .baseDefense   = 70,
         .baseSpeed     = 55,
         .baseSpAttack  = 115,
-        .baseSpDefense = 60,
+        .baseSpDefense = 70,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_DARK,
         .catchRate = 60,

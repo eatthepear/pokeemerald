@@ -2691,6 +2691,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_CYNDAQUIL]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM09_COVET)
                                             | TMHM(TM12_FLAME_CHARGE)
@@ -2706,6 +2707,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_QUILAVA]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM09_COVET)
                                             | TMHM(TM12_FLAME_CHARGE)
@@ -2723,6 +2725,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_TYPHLOSION]  = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM05_ROCK_TOMB)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM09_COVET)
                                             | TMHM(TM12_FLAME_CHARGE)
@@ -3933,6 +3936,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_HOUNDOOM]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM10_THIEF)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM12_FLAME_CHARGE)
@@ -3964,6 +3968,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_PHANPY]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM05_ROCK_TOMB)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             // | TMHM(TM54_EARTHQUAKE)
                                             | TMHM(TM17_HIDDEN_POWER)
@@ -3975,6 +3980,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_DONPHAN]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM05_ROCK_TOMB)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             // | TMHM(TM54_EARTHQUAKE)
                                             | TMHM(TM17_HIDDEN_POWER)
@@ -5624,6 +5630,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CACNEA]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM06_BULLET_SEED)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM29_BRICK_BREAK)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -5637,6 +5644,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_CACTURNE]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM06_BULLET_SEED)
+                                            | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM29_BRICK_BREAK)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -8422,6 +8430,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SNIVY]       = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM20_AERIAL_ACE)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -8436,6 +8445,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SERVINE]     = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM20_AERIAL_ACE)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -8450,6 +8460,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SERPERIOR]   = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM20_AERIAL_ACE)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -9117,6 +9128,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_SEWADDLE]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM03_BUG_BITE)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM15_CALM_MIND)
                                             | TMHM(TM17_HIDDEN_POWER)
@@ -9130,6 +9142,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_SWADLOON]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM03_BUG_BITE)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM15_CALM_MIND)
                                             | TMHM(TM17_HIDDEN_POWER)
@@ -9143,6 +9156,7 @@ const u32 gTMHMLearnsets[][2] =
     [SPECIES_LEAVANNY]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM03_BUG_BITE)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM16_STEEL_WING)
                                             | TMHM(TM20_AERIAL_ACE)
@@ -9813,6 +9827,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_DEERLING]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM26_THUNDER_WAVE)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -9827,6 +9842,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SAWSBUCK]    = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM26_THUNDER_WAVE)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -11157,6 +11173,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_SKIDDO]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM29_BRICK_BREAK)
                                             | TMHM(TM36_SLUDGE_BOMB) // Energy Ball
@@ -11172,6 +11189,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_GOGOAT]      = TMHM_LEARNSET(TMHM(TM01_PROTECT)
                                             | TMHM(TM04_RETURN)
+                                            | TMHM(TM06_BULLET_SEED)
                                             | TMHM(TM08_SUBSTITUTE)
                                             | TMHM(TM20_AERIAL_ACE)
                                             | TMHM(TM29_BRICK_BREAK)
@@ -16506,6 +16524,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
+                                            | TMHM(TM12_FLAME_CHARGE)
                                             | TMHM(TM13_REST)
                                             | TMHM(TM17_HIDDEN_POWER)
                                             | TMHM(TM23_SUNNY_DAY)
@@ -16516,6 +16535,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM04_RETURN)
                                             | TMHM(TM07_SCORCHING_SANDS)
                                             | TMHM(TM08_SUBSTITUTE)
+                                            | TMHM(TM12_FLAME_CHARGE)
                                             | TMHM(TM13_REST)
                                             | TMHM(TM17_HIDDEN_POWER)
                                             | TMHM(TM21_WILL_O_WISP)
