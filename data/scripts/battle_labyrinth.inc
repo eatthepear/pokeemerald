@@ -1465,6 +1465,7 @@ EventScript_WhenUReady:
 	end
 
 EventScript_WarpZone0:
+	setvar VAR_HEAL_SHOP_USED, 0
 	warpteleport MAP_ZONE0D, 255, 2, 32
 	end
 
