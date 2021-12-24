@@ -1,7 +1,11 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-// Map Group 0
+//
+// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
+//
+
+// gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY      (1 | (0 << 8))
 #define MAP_MAUVILLE_CITY       (2 | (0 << 8))
@@ -60,21 +64,21 @@
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
 
-// Map Group 1
+// gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F    (1 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (2 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
 
-// Map Group 2
+// gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
 #define MAP_OLDALE_TOWN_HOUSE2            (1 | (2 << 8))
 #define MAP_OLDALE_TOWN_POKEMON_CENTER_1F (2 | (2 << 8))
 #define MAP_OLDALE_TOWN_POKEMON_CENTER_2F (3 | (2 << 8))
 #define MAP_OLDALE_TOWN_MART              (4 | (2 << 8))
 
-// Map Group 3
+// gMapGroup_IndoorDewford
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))
 #define MAP_DEWFORD_TOWN_POKEMON_CENTER_1F (1 | (3 << 8))
 #define MAP_DEWFORD_TOWN_POKEMON_CENTER_2F (2 | (3 << 8))
@@ -82,7 +86,7 @@
 #define MAP_DEWFORD_TOWN_HALL              (4 | (3 << 8))
 #define MAP_DEWFORD_TOWN_HOUSE2            (5 | (3 << 8))
 
-// Map Group 4
+// gMapGroup_IndoorLavaridge
 #define MAP_LAVARIDGE_TOWN_HERB_SHOP         (0 | (4 << 8))
 #define MAP_LAVARIDGE_TOWN_GYM_1F            (1 | (4 << 8))
 #define MAP_LAVARIDGE_TOWN_GYM_B1F           (2 | (4 << 8))
@@ -91,7 +95,7 @@
 #define MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F (5 | (4 << 8))
 #define MAP_LAVARIDGE_TOWN_POKEMON_CENTER_2F (6 | (4 << 8))
 
-// Map Group 5
+// gMapGroup_IndoorFallarbor
 #define MAP_FALLARBOR_TOWN_MART                    (0 | (5 << 8))
 #define MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY       (1 | (5 << 8))
 #define MAP_FALLARBOR_TOWN_BATTLE_TENT_CORRIDOR    (2 | (5 << 8))
@@ -101,7 +105,7 @@
 #define MAP_FALLARBOR_TOWN_COZMOS_HOUSE            (6 | (5 << 8))
 #define MAP_FALLARBOR_TOWN_MOVE_RELEARNERS_HOUSE   (7 | (5 << 8))
 
-// Map Group 6
+// gMapGroup_IndoorVerdanturf
 #define MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY       (0 | (6 << 8))
 #define MAP_VERDANTURF_TOWN_BATTLE_TENT_CORRIDOR    (1 | (6 << 8))
 #define MAP_VERDANTURF_TOWN_BATTLE_TENT_BATTLE_ROOM (2 | (6 << 8))
@@ -112,7 +116,7 @@
 #define MAP_VERDANTURF_TOWN_FRIENDSHIP_RATERS_HOUSE (7 | (6 << 8))
 #define MAP_VERDANTURF_TOWN_HOUSE                   (8 | (6 << 8))
 
-// Map Group 7
+// gMapGroup_IndoorPacifidlog
 #define MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F (0 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_2F (1 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE1            (2 | (7 << 8))
@@ -121,7 +125,7 @@
 #define MAP_PACIFIDLOG_TOWN_HOUSE4            (5 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE5            (6 | (7 << 8))
 
-// Map Group 8
+// gMapGroup_IndoorPetalburg
 #define MAP_PETALBURG_CITY_WALLYS_HOUSE      (0 | (8 << 8))
 #define MAP_PETALBURG_CITY_GYM               (1 | (8 << 8))
 #define MAP_PETALBURG_CITY_HOUSE1            (2 | (8 << 8))
@@ -130,7 +134,7 @@
 #define MAP_PETALBURG_CITY_POKEMON_CENTER_2F (5 | (8 << 8))
 #define MAP_PETALBURG_CITY_MART              (6 | (8 << 8))
 
-// Map Group 9
+// gMapGroup_IndoorSlateport
 #define MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F      (0 | (9 << 8))
 #define MAP_SLATEPORT_CITY_STERNS_SHIPYARD_2F      (1 | (9 << 8))
 #define MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY       (2 | (9 << 8))
@@ -146,7 +150,7 @@
 #define MAP_SLATEPORT_CITY_POKEMON_CENTER_2F       (12 | (9 << 8))
 #define MAP_SLATEPORT_CITY_MART                    (13 | (9 << 8))
 
-// Map Group 10
+// gMapGroup_IndoorMauville
 #define MAP_MAUVILLE_CITY_GYM               (0 | (10 << 8))
 #define MAP_MAUVILLE_CITY_BIKE_SHOP         (1 | (10 << 8))
 #define MAP_MAUVILLE_CITY_HOUSE1            (2 | (10 << 8))
@@ -156,7 +160,7 @@
 #define MAP_MAUVILLE_CITY_POKEMON_CENTER_2F (6 | (10 << 8))
 #define MAP_MAUVILLE_CITY_MART              (7 | (10 << 8))
 
-// Map Group 11
+// gMapGroup_IndoorRustboro
 #define MAP_RUSTBORO_CITY_DEVON_CORP_1F     (0 | (11 << 8))
 #define MAP_RUSTBORO_CITY_DEVON_CORP_2F     (1 | (11 << 8))
 #define MAP_RUSTBORO_CITY_DEVON_CORP_3F     (2 | (11 << 8))
@@ -175,7 +179,7 @@
 #define MAP_RUSTBORO_CITY_FLAT2_3F          (15 | (11 << 8))
 #define MAP_RUSTBORO_CITY_HOUSE3            (16 | (11 << 8))
 
-// Map Group 12
+// gMapGroup_IndoorFortree
 #define MAP_FORTREE_CITY_HOUSE1            (0 | (12 << 8))
 #define MAP_FORTREE_CITY_GYM               (1 | (12 << 8))
 #define MAP_FORTREE_CITY_POKEMON_CENTER_1F (2 | (12 << 8))
@@ -187,7 +191,7 @@
 #define MAP_FORTREE_CITY_HOUSE5            (8 | (12 << 8))
 #define MAP_FORTREE_CITY_DECORATION_SHOP   (9 | (12 << 8))
 
-// Map Group 13
+// gMapGroup_IndoorLilycove
 #define MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F        (0 | (13 << 8))
 #define MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_2F        (1 | (13 << 8))
 #define MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_1F        (2 | (13 << 8))
@@ -212,7 +216,7 @@
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP  (21 | (13 << 8))
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR (22 | (13 << 8))
 
-// Map Group 14
+// gMapGroup_IndoorMossdeep
 #define MAP_MOSSDEEP_CITY_GYM               (0 | (14 << 8))
 #define MAP_MOSSDEEP_CITY_HOUSE1            (1 | (14 << 8))
 #define MAP_MOSSDEEP_CITY_HOUSE2            (2 | (14 << 8))
@@ -227,7 +231,7 @@
 #define MAP_MOSSDEEP_CITY_GAME_CORNER_1F    (11 | (14 << 8))
 #define MAP_MOSSDEEP_CITY_GAME_CORNER_B1F   (12 | (14 << 8))
 
-// Map Group 15
+// gMapGroup_IndoorSootopolis
 #define MAP_SOOTOPOLIS_CITY_GYM_1F                   (0 | (15 << 8))
 #define MAP_SOOTOPOLIS_CITY_GYM_B1F                  (1 | (15 << 8))
 #define MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_1F        (2 | (15 << 8))
@@ -244,7 +248,7 @@
 #define MAP_SOOTOPOLIS_CITY_MYSTERY_EVENTS_HOUSE_1F  (13 | (15 << 8))
 #define MAP_SOOTOPOLIS_CITY_MYSTERY_EVENTS_HOUSE_B1F (14 | (15 << 8))
 
-// Map Group 16
+// gMapGroup_IndoorEverGrande
 #define MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM      (0 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_PHOEBES_ROOM      (1 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_GLACIAS_ROOM      (2 | (16 << 8))
@@ -261,33 +265,33 @@
 #define MAP_EVER_GRANDE_CITY_POKEMON_CENTER_2F (13 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_2F (14 | (16 << 8))
 
-// Map Group 17
+// gMapGroup_IndoorRoute104
 #define MAP_ROUTE104_MR_BRINEYS_HOUSE         (0 | (17 << 8))
 #define MAP_ROUTE104_PRETTY_PETAL_FLOWER_SHOP (1 | (17 << 8))
 
-// Map Group 18
+// gMapGroup_IndoorRoute111
 #define MAP_ROUTE111_WINSTRATE_FAMILYS_HOUSE (0 | (18 << 8))
 #define MAP_ROUTE111_OLD_LADYS_REST_STOP     (1 | (18 << 8))
 
-// Map Group 19
+// gMapGroup_IndoorRoute112
 #define MAP_ROUTE112_CABLE_CAR_STATION   (0 | (19 << 8))
 #define MAP_MT_CHIMNEY_CABLE_CAR_STATION (1 | (19 << 8))
 
-// Map Group 20
+// gMapGroup_IndoorRoute114
 #define MAP_ROUTE114_FOSSIL_MANIACS_HOUSE  (0 | (20 << 8))
 #define MAP_ROUTE114_FOSSIL_MANIACS_TUNNEL (1 | (20 << 8))
 #define MAP_ROUTE114_LANETTES_HOUSE        (2 | (20 << 8))
 
-// Map Group 21
+// gMapGroup_IndoorRoute116
 #define MAP_ROUTE116_TUNNELERS_REST_HOUSE (0 | (21 << 8))
 
-// Map Group 22
+// gMapGroup_IndoorRoute117
 #define MAP_ROUTE117_POKEMON_DAY_CARE (0 | (22 << 8))
 
-// Map Group 23
+// gMapGroup_IndoorRoute121
 #define MAP_ROUTE121_SAFARI_ZONE_ENTRANCE (0 | (23 << 8))
 
-// Map Group 24
+// gMapGroup_Dungeons
 #define MAP_METEOR_FALLS_1F_1R                       (0 | (24 << 8))
 #define MAP_METEOR_FALLS_1F_2R                       (1 | (24 << 8))
 #define MAP_METEOR_FALLS_B1F_1R                      (2 | (24 << 8))
@@ -397,7 +401,7 @@
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
 
-// Map Group 25
+// gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
 #define MAP_SECRET_BASE_BROWN_CAVE1  (1 | (25 << 8))
 #define MAP_SECRET_BASE_BLUE_CAVE1   (2 | (25 << 8))
@@ -460,7 +464,7 @@
 #define MAP_BATTLE_PYRAMID_SQUARE16  (59 | (25 << 8))
 #define MAP_UNION_ROOM               (60 | (25 << 8))
 
-// Map Group 26
+// gMapGroup_SpecialArea
 #define MAP_SAFARI_ZONE_NORTHWEST                           (0 | (26 << 8))
 #define MAP_SAFARI_ZONE_NORTH                               (1 | (26 << 8))
 #define MAP_SAFARI_ZONE_SOUTHWEST                           (2 | (26 << 8))
@@ -551,107 +555,106 @@
 #define MAP_NAVEL_ROCK_BOTTOM                               (87 | (26 << 8))
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 
-// Map Group 27
-#define MAP_ZONE0SANCTUARY  (0 | (27 << 8))
-#define MAP_ZONE0SHOPS      (1 | (27 << 8))
-#define MAP_ZONE1A          (2 | (27 << 8))
-#define MAP_ZONE1SANCTUARY  (3 | (27 << 8))
-#define MAP_ZONE1SHOPS      (4 | (27 << 8))
-#define MAP_ZONE2A          (5 | (27 << 8))
-#define MAP_ZONE2B          (6 | (27 << 8))
-#define MAP_ZONE2SANCTUARY  (7 | (27 << 8))
-#define MAP_ZONE2SHOPS      (8 | (27 << 8))
-#define MAP_ZONE3A          (9 | (27 << 8))
-#define MAP_ZONE3SANCTUARY  (10 | (27 << 8))
-#define MAP_ZONE3SHOPS      (11 | (27 << 8))
-#define MAP_ZONE3UNUSED     (12 | (27 << 8))
-#define MAP_ZONE4A          (13 | (27 << 8))
-#define MAP_ZONE4B          (14 | (27 << 8))
-#define MAP_ZONE4C          (15 | (27 << 8))
-#define MAP_ZONE4D          (16 | (27 << 8))
-#define MAP_ZONE4E          (17 | (27 << 8))
-#define MAP_ZONE4SANCTUARY  (18 | (27 << 8))
-#define MAP_ZONE4SHOPS      (19 | (27 << 8))
-#define MAP_ZONE5A          (20 | (27 << 8))
-#define MAP_ZONE5SANCTUARY  (21 | (27 << 8))
-#define MAP_ZONE5SHOPS      (22 | (27 << 8))
-#define MAP_ZONE6A          (23 | (27 << 8))
-#define MAP_ZONE6SANCTUARY  (24 | (27 << 8))
-#define MAP_ZONE6SHOPS      (25 | (27 << 8))
-#define MAP_ZONE7A          (26 | (27 << 8))
-#define MAP_ZONE8A          (27 | (27 << 8))
-#define MAP_ZONE8B          (28 | (27 << 8))
-#define MAP_ZONE8C          (29 | (27 << 8))
-#define MAP_ZONE8D          (30 | (27 << 8))
-#define MAP_ZONE7B          (31 | (27 << 8))
-#define MAP_ZONE8SANCTUARY  (32 | (27 << 8))
-#define MAP_ZONE8SHOPS      (33 | (27 << 8))
-#define MAP_ZONE9A          (34 | (27 << 8))
-#define MAP_ZONE9B          (35 | (27 << 8))
-#define MAP_ZONE9C          (36 | (27 << 8))
-#define MAP_ZONE9D          (37 | (27 << 8))
-#define MAP_ZONE9E          (38 | (27 << 8))
-#define MAP_ZONE9F          (39 | (27 << 8))
-#define MAP_ZONE9G          (40 | (27 << 8))
-#define MAP_ZONE9SANCTUARY  (41 | (27 << 8))
-#define MAP_ZONE9SHOPS      (42 | (27 << 8))
-#define MAP_ZONE10A         (43 | (27 << 8))
-#define MAP_ZONE10B         (44 | (27 << 8))
-#define MAP_ZONE10SANCTUARY (45 | (27 << 8))
-#define MAP_ZONE10SHOPS     (46 | (27 << 8))
-#define MAP_ZONE0A          (47 | (27 << 8))
-#define MAP_ZONE0B          (48 | (27 << 8))
-#define MAP_ZONE0C          (49 | (27 << 8))
-#define MAP_ZONE0D          (50 | (27 << 8))
-#define MAP_ZONE11A         (51 | (27 << 8))
-#define MAP_ZONE11SANCTUARY (52 | (27 << 8))
-#define MAP_ZONE11SHOPS     (53 | (27 << 8))
-#define MAP_ZONE12A         (54 | (27 << 8))
-#define MAP_ZONE12SANCTUARY (55 | (27 << 8))
-#define MAP_ZONE12SHOPS     (56 | (27 << 8))
-#define MAP_ZONE13A         (57 | (27 << 8))
-#define MAP_ZONE13B         (58 | (27 << 8))
-#define MAP_ZONE13C         (59 | (27 << 8))
-#define MAP_ZONE14A         (60 | (27 << 8))
-#define MAP_ZONE14B         (61 | (27 << 8))
-#define MAP_ZONE14C         (62 | (27 << 8))
-#define MAP_ZONE14SANCTUARY (63 | (27 << 8))
-#define MAP_ZONE14SHOPS     (64 | (27 << 8))
-#define MAP_ZONE15A         (65 | (27 << 8))
-#define MAP_ZONE15B         (66 | (27 << 8))
-#define MAP_ZONE15SANCTUARY (67 | (27 << 8))
-#define MAP_ZONE15SHOPS     (68 | (27 << 8))
-#define MAP_ZONE16A         (69 | (27 << 8))
-#define MAP_ZONE16SANCTUARY (70 | (27 << 8))
-#define MAP_ZONE16SHOPS     (71 | (27 << 8))
-#define MAP_ZONE17A         (72 | (27 << 8))
-#define MAP_ZONE17SANCTUARY (73 | (27 << 8))
-#define MAP_ZONE17SHOPS     (74 | (27 << 8))
-#define MAP_ZONE18A         (75 | (27 << 8))
-#define MAP_ZONE18B         (76 | (27 << 8))
-#define MAP_ZONE19A         (77 | (27 << 8))
-#define MAP_ZONE19B         (78 | (27 << 8))
-#define MAP_ZONE19C         (79 | (27 << 8))
-#define MAP_ZONE19D         (80 | (27 << 8))
-#define MAP_ZONE19SANCTUARY (81 | (27 << 8))
-#define MAP_ZONE19SHOPS     (82 | (27 << 8))
-#define MAP_ZONE20A         (83 | (27 << 8))
-#define MAP_ZONE20SANCTUARY (84 | (27 << 8))
-#define MAP_ZONE20SHOPS     (85 | (27 << 8))
-#define MAP_ZONE21A         (86 | (27 << 8))
-#define MAP_ZONE21B         (87 | (27 << 8))
-#define MAP_ZONE21C         (88 | (27 << 8))
-#define MAP_ZONE21D         (89 | (27 << 8))
-#define MAP_ZONE21SANCTUARY (90 | (27 << 8))
-#define MAP_ZONE21SHOPS     (91 | (27 << 8))
-#define MAP_ZONE22A         (92 | (27 << 8))
-#define MAP_ZONE22SANCTUARY (93 | (27 << 8))
-#define MAP_ZONE22SHOPS     (94 | (27 << 8))
+// gMapGroup_BattleLabyrinth
+#define MAP_ZONE0A          (0 | (27 << 8))
+#define MAP_ZONE0B          (1 | (27 << 8))
+#define MAP_ZONE0C          (2 | (27 << 8))
+#define MAP_ZONE0D          (3 | (27 << 8))
+#define MAP_ZONE0SANCTUARY  (4 | (27 << 8))
+#define MAP_ZONE0SHOPS      (5 | (27 << 8))
+#define MAP_ZONE1A          (6 | (27 << 8))
+#define MAP_ZONE1SANCTUARY  (7 | (27 << 8))
+#define MAP_ZONE1SHOPS      (8 | (27 << 8))
+#define MAP_ZONE2A          (9 | (27 << 8))
+#define MAP_ZONE2B          (10 | (27 << 8))
+#define MAP_ZONE2SANCTUARY  (11 | (27 << 8))
+#define MAP_ZONE2SHOPS      (12 | (27 << 8))
+#define MAP_ZONE3A          (13 | (27 << 8))
+#define MAP_ZONE3SANCTUARY  (14 | (27 << 8))
+#define MAP_ZONE3SHOPS      (15 | (27 << 8))
+#define MAP_ZONE4A          (16 | (27 << 8))
+#define MAP_ZONE4B          (17 | (27 << 8))
+#define MAP_ZONE4C          (18 | (27 << 8))
+#define MAP_ZONE4D          (19 | (27 << 8))
+#define MAP_ZONE4E          (20 | (27 << 8))
+#define MAP_ZONE4SANCTUARY  (21 | (27 << 8))
+#define MAP_ZONE4SHOPS      (22 | (27 << 8))
+#define MAP_ZONE5A          (23 | (27 << 8))
+#define MAP_ZONE5SANCTUARY  (24 | (27 << 8))
+#define MAP_ZONE5SHOPS      (25 | (27 << 8))
+#define MAP_ZONE6A          (26 | (27 << 8))
+#define MAP_ZONE6SANCTUARY  (27 | (27 << 8))
+#define MAP_ZONE6SHOPS      (28 | (27 << 8))
+#define MAP_ZONE7A          (29 | (27 << 8))
+#define MAP_ZONE7B          (30 | (27 << 8))
+#define MAP_ZONE8A          (31 | (27 << 8))
+#define MAP_ZONE8B          (32 | (27 << 8))
+#define MAP_ZONE8C          (33 | (27 << 8))
+#define MAP_ZONE8D          (34 | (27 << 8))
+#define MAP_ZONE8SANCTUARY  (35 | (27 << 8))
+#define MAP_ZONE8SHOPS      (36 | (27 << 8))
+#define MAP_ZONE9A          (37 | (27 << 8))
+#define MAP_ZONE9B          (38 | (27 << 8))
+#define MAP_ZONE9C          (39 | (27 << 8))
+#define MAP_ZONE9D          (40 | (27 << 8))
+#define MAP_ZONE9E          (41 | (27 << 8))
+#define MAP_ZONE9F          (42 | (27 << 8))
+#define MAP_ZONE9G          (43 | (27 << 8))
+#define MAP_ZONE9SANCTUARY  (44 | (27 << 8))
+#define MAP_ZONE9SHOPS      (45 | (27 << 8))
+#define MAP_ZONE10A         (46 | (27 << 8))
+#define MAP_ZONE10B         (47 | (27 << 8))
+#define MAP_ZONE10SANCTUARY (48 | (27 << 8))
+#define MAP_ZONE10SHOPS     (49 | (27 << 8))
+#define MAP_ZONE11A         (50 | (27 << 8))
+#define MAP_ZONE11SANCTUARY (51 | (27 << 8))
+#define MAP_ZONE11SHOPS     (52 | (27 << 8))
+#define MAP_ZONE12A         (53 | (27 << 8))
+#define MAP_ZONE12SANCTUARY (54 | (27 << 8))
+#define MAP_ZONE12SHOPS     (55 | (27 << 8))
+#define MAP_ZONE13A         (56 | (27 << 8))
+#define MAP_ZONE13B         (57 | (27 << 8))
+#define MAP_ZONE13C         (58 | (27 << 8))
+#define MAP_ZONE14A         (59 | (27 << 8))
+#define MAP_ZONE14B         (60 | (27 << 8))
+#define MAP_ZONE14C         (61 | (27 << 8))
+#define MAP_ZONE14SANCTUARY (62 | (27 << 8))
+#define MAP_ZONE14SHOPS     (63 | (27 << 8))
+#define MAP_ZONE15A         (64 | (27 << 8))
+#define MAP_ZONE15B         (65 | (27 << 8))
+#define MAP_ZONE15SANCTUARY (66 | (27 << 8))
+#define MAP_ZONE15SHOPS     (67 | (27 << 8))
+#define MAP_ZONE16A         (68 | (27 << 8))
+#define MAP_ZONE16SANCTUARY (69 | (27 << 8))
+#define MAP_ZONE16SHOPS     (70 | (27 << 8))
+#define MAP_ZONE17A         (71 | (27 << 8))
+#define MAP_ZONE17SANCTUARY (72 | (27 << 8))
+#define MAP_ZONE17SHOPS     (73 | (27 << 8))
+#define MAP_ZONE18A         (74 | (27 << 8))
+#define MAP_ZONE18B         (75 | (27 << 8))
+#define MAP_ZONE19A         (76 | (27 << 8))
+#define MAP_ZONE19B         (77 | (27 << 8))
+#define MAP_ZONE19C         (78 | (27 << 8))
+#define MAP_ZONE19D         (79 | (27 << 8))
+#define MAP_ZONE19SANCTUARY (80 | (27 << 8))
+#define MAP_ZONE19SHOPS     (81 | (27 << 8))
+#define MAP_ZONE20A         (82 | (27 << 8))
+#define MAP_ZONE20SANCTUARY (83 | (27 << 8))
+#define MAP_ZONE20SHOPS     (84 | (27 << 8))
+#define MAP_ZONE21A         (85 | (27 << 8))
+#define MAP_ZONE21B         (86 | (27 << 8))
+#define MAP_ZONE21C         (87 | (27 << 8))
+#define MAP_ZONE21D         (88 | (27 << 8))
+#define MAP_ZONE21SANCTUARY (89 | (27 << 8))
+#define MAP_ZONE21SHOPS     (90 | (27 << 8))
+#define MAP_ZONE22A         (91 | (27 << 8))
+#define MAP_ZONE22SANCTUARY (92 | (27 << 8))
+#define MAP_ZONE22SHOPS     (93 | (27 << 8))
 
-// Map Group 28
+// gMapGroup_IndoorRoute109
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))
 
-// Map Group 29
+// gMapGroup_IndoorRoute110
 #define MAP_ROUTE110_TRICK_HOUSE_ENTRANCE                (0 | (29 << 8))
 #define MAP_ROUTE110_TRICK_HOUSE_END                     (1 | (29 << 8))
 #define MAP_ROUTE110_TRICK_HOUSE_CORRIDOR                (2 | (29 << 8))
@@ -666,21 +669,22 @@
 #define MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE (11 | (29 << 8))
 #define MAP_ROUTE110_SEASIDE_CYCLING_ROAD_SOUTH_ENTRANCE (12 | (29 << 8))
 
-// Map Group 30
+// gMapGroup_IndoorRoute113
 #define MAP_ROUTE113_GLASS_WORKSHOP (0 | (30 << 8))
 
-// Map Group 31
+// gMapGroup_IndoorRoute123
 #define MAP_ROUTE123_BERRY_MASTERS_HOUSE (0 | (31 << 8))
 
-// Map Group 32
+// gMapGroup_IndoorRoute119
 #define MAP_ROUTE119_WEATHER_INSTITUTE_1F (0 | (32 << 8))
 #define MAP_ROUTE119_WEATHER_INSTITUTE_2F (1 | (32 << 8))
 #define MAP_ROUTE119_HOUSE                (2 | (32 << 8))
 
-// Map Group 33
+// gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE      (0 | (33 << 8))
 #define MAP_ROUTE104_PROTOTYPE                          (1 | (33 << 8))
 #define MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP (2 | (33 << 8))
+#define MAP_ZONE3UNUSED                                 (3 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
 
