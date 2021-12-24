@@ -30,10 +30,6 @@ Zone19Sanctuary_EventScript_Intro:
 	giveitem ITEM_TM26
 	closemessage
 	setvar VAR_ZONE, 20
-	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
-	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp

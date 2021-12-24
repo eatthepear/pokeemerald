@@ -28,10 +28,6 @@ Zone11Sanctuary_EventScript_Intro:
 	msgbox Zone11Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM11
 	closemessage
-	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
-	waitfanfare
 	setvar VAR_ZONE, 12
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE

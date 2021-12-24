@@ -35,9 +35,6 @@ Zone3Sanctuary_EventScript_Intro:
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare
-	@ playfanfare MUS_OBTAIN_ITEM
-	@ msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
-	@ waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp

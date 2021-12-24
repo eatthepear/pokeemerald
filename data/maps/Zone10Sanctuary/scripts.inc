@@ -46,9 +46,6 @@ Zone10Sanctuary_EventScript_NuzlockeIntro:
 
 Zone10Sanctuary_EventScript_Unlocked:
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
-	@ playfanfare MUS_OBTAIN_ITEM
-	@ msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
-	@ waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare

@@ -61,7 +61,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_ITEM_HOLD, ITEM_KINGS_ROCK, SPECIES_SLOWKING}},
     [SPECIES_SLOWBRO]               = {{EVO_MEGA_EVOLUTION, ITEM_SLOWBRONITE, SPECIES_SLOWBRO_MEGA}},
     [SPECIES_MAGNEMITE]             = {{EVO_LEVEL, 30, SPECIES_MAGNETON}},
-    [SPECIES_MAGNETON]              = {{EVO_ITEM, 40, SPECIES_MAGNEZONE}},
+    [SPECIES_MAGNETON]              = {{EVO_LEVEL, 40, SPECIES_MAGNEZONE}},
     [SPECIES_DODUO]                 = {{EVO_LEVEL, 31, SPECIES_DODRIO}},
     [SPECIES_SEEL]                  = {{EVO_LEVEL, 34, SPECIES_DEWGONG}},
     [SPECIES_GRIMER]                = {{EVO_LEVEL, 38, SPECIES_MUK}},

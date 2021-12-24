@@ -32,10 +32,573 @@ EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
 
+EventScript_Shop_General::
+	lock
+	faceplayer
+	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntro
+	message gText_Tim_Welcome
+	waitmessage
+	switch VAR_ZONE
+	case 1, EventScript_Shop_General_1to3
+	case 2, EventScript_Shop_General_1to3
+	case 3, EventScript_Shop_General_1to3
+	case 4, EventScript_Shop_General_4to8
+	case 5, EventScript_Shop_General_4to8
+	case 6, EventScript_Shop_General_4to8
+	case 7, EventScript_Shop_General_4to8
+	case 9, EventScript_Shop_General_9to12
+	case 10, EventScript_Shop_General_9to12
+	case 11, EventScript_Shop_General_9to12
+	case 12, EventScript_Shop_General_9to12
+	case 13, EventScript_Shop_General_13to16
+	case 15, EventScript_Shop_General_13to16
+	case 16, EventScript_Shop_General_13to16
+	case 17, EventScript_Shop_General_17to25
+	case 18, EventScript_Shop_General_17to25
+	case 20, EventScript_Shop_General_17to25
+	case 21, EventScript_Shop_General_17to25
+	case 22, EventScript_Shop_General_17to25
+	case 23, EventScript_Shop_General_17to25
+	case 24, EventScript_Shop_General_17to25
+	case 25, EventScript_Shop_General_17to25
+	end
+
+EventScript_Shop_General_1to3:
+	pokemart Shop_General_1to3
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_4to8:
+	pokemart Shop_General_4to8
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_9to12:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_General_9to12_Brutal
+	pokemart Shop_General_9to12
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_9to12_Brutal:
+	pokemart Shop_General_9to12_Brutal
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_13to16:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_General_13to16_Brutal
+	pokemart Shop_General_13to16
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_13to16_Brutal:
+	pokemart Shop_General_13to16_Brutal
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_17to25:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_General_17to25_Brutal
+	pokemart Shop_General_17to25
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_17to25_Brutal:
+	pokemart Shop_General_17to25_Brutal
+	goto EventScript_Shop_General_End
+	end
+
+	.align 2
+Shop_General_1to3:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_4to8:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_9to12:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_9to12_Brutal:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_13to16:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_ETHER
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_13to16_Brutal:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_ETHER
+	.2byte ITEM_NONE
+	release
+	end
+	
+	.align 2
+Shop_General_17to25:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_ETHER
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_17to25_Brutal:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_ETHER
+	.2byte ITEM_NONE
+	release
+	end
+
+EventScript_Shop_General_End:
+	msgbox gText_Tim_Leave, MSGBOX_DEFAULT
+	release
+	end
+
 EventScript_Shop_TimIntro:
 	msgbox gText_Tim_Intro, MSGBOX_AUTOCLOSE
 	setflag FLAG_TIM_INTRO
 	return
+
+EventScript_Shop_Unique_Varrick::
+	lock
+	faceplayer
+	call_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_VarrickIntro
+	message gText_Varrick_Welcome
+	waitmessage
+	switch VAR_ZONE
+	case 1, EventScript_Shop_Unique_Varrick_1to3
+	case 2, EventScript_Shop_Unique_Varrick_1to3
+	case 3, EventScript_Shop_Unique_Varrick_1to3
+	case 4, EventScript_Shop_Unique_Varrick_4to5
+	case 5, EventScript_Shop_Unique_Varrick_4to5
+	case 6, EventScript_Shop_Unique_Varrick_6to8
+	case 7, EventScript_Shop_Unique_Varrick_6to8
+	case 9, EventScript_Shop_Unique_Varrick_9to10
+	case 10, EventScript_Shop_Unique_Varrick_9to10
+	case 11, EventScript_Shop_Unique_Varrick_11to14
+	case 12, EventScript_Shop_Unique_Varrick_11to14
+	case 13, EventScript_Shop_Unique_Varrick_11to14
+	case 15, EventScript_Shop_Unique_Varrick_15to20
+	case 16, EventScript_Shop_Unique_Varrick_15to20
+	case 17, EventScript_Shop_Unique_Varrick_15to20
+	case 18, EventScript_Shop_Unique_Varrick_15to20
+	case 20, EventScript_Shop_Unique_Varrick_15to20
+	case 21, EventScript_Shop_Unique_Varrick_21to25
+	case 22, EventScript_Shop_Unique_Varrick_21to25
+	case 23, EventScript_Shop_Unique_Varrick_21to25
+	case 24, EventScript_Shop_Unique_Varrick_21to25
+	case 25, EventScript_Shop_Unique_Varrick_21to25
+	end
+
+EventScript_Shop_Unique_Varrick_1to3:
+	pokemart Shop_Unique_Varrick_1to3
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_4to5:
+	pokemart Shop_Unique_Varrick_4to5
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_6to8:
+	pokemart Shop_Unique_Varrick_6to8
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_9to10:
+	pokemart Shop_Unique_Varrick_9to10
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_11to14:
+	pokemart Shop_Unique_Varrick_11to14
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_15to20:
+	pokemart Shop_Unique_Varrick_15to20
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_21to25:
+	pokemart Shop_Unique_Varrick_21to25
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+	.align 2
+Shop_Unique_Varrick_1to3:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_Unique_Varrick_4to5:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_NONE
+	release
+	end
+	
+	.align 2
+Shop_Unique_Varrick_6to8:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_NONE
+	release
+	end
+	
+	.align 2
+Shop_Unique_Varrick_9to10:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_MAGNET
+	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_TWISTED_SPOON
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_Unique_Varrick_11to14:
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_MAGNET
+	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_TWISTED_SPOON
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_Unique_Varrick_15to20:
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_SCOPE_LENS
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_ZOOM_LENS
+	.2byte ITEM_METRONOME
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_MAGNET
+	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_TWISTED_SPOON
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_Unique_Varrick_21to25:
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_SCOPE_LENS
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_ZOOM_LENS
+	.2byte ITEM_METRONOME
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_MAGNET
+	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_TWISTED_SPOON
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_NONE
+	release
+	end
+
+EventScript_Shop_Unique_Varrick_End:
+	msgbox gText_Varrick_Leave, MSGBOX_DEFAULT
+	release
+	end
+
+EventScript_Shop_Unique_ZhuLi::
+	lock
+	faceplayer
+	message gText_ZhuLi_Welcome
+	waitmessage
+	switch VAR_ZONE
+	case 11, EventScript_Shop_Unique_ZhuLi_11to14
+	case 12, EventScript_Shop_Unique_ZhuLi_11to14
+	case 13, EventScript_Shop_Unique_ZhuLi_11to14
+	case 15, EventScript_Shop_Unique_ZhuLi_15to20
+	case 16, EventScript_Shop_Unique_ZhuLi_15to20
+	case 17, EventScript_Shop_Unique_ZhuLi_15to20
+	case 18, EventScript_Shop_Unique_ZhuLi_15to20
+	case 20, EventScript_Shop_Unique_ZhuLi_15to20
+	case 21, EventScript_Shop_Unique_ZhuLi_21to25
+	case 22, EventScript_Shop_Unique_ZhuLi_21to25
+	case 23, EventScript_Shop_Unique_ZhuLi_21to25
+	case 24, EventScript_Shop_Unique_ZhuLi_21to25
+	case 25, EventScript_Shop_Unique_ZhuLi_21to25
+	end
+
+EventScript_Shop_Unique_ZhuLi_11to14:
+	pokemart Shop_Unique_ZhuLi_11to14
+	goto EventScript_Shop_Unique_ZhuLi_End
+	end
+
+EventScript_Shop_Unique_ZhuLi_15to20:
+	pokemart Shop_Unique_ZhuLi_15to20
+	goto EventScript_Shop_Unique_ZhuLi_End
+	end
+
+EventScript_Shop_Unique_ZhuLi_21to25:
+	pokemart Shop_Unique_ZhuLi_21to25
+	goto EventScript_Shop_Unique_ZhuLi_End
+	end
+
+	.align 2
+Shop_Unique_ZhuLi_11to14:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_SACHET
+	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_Unique_ZhuLi_15to20:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_SACHET
+	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_Unique_ZhuLi_21to25:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_DEEP_SEA_SCALE
+	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_UPGRADE
+	.2byte ITEM_SACHET
+	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_NONE
+	release
+	end
+
+EventScript_Shop_Unique_ZhuLi_End:
+	msgbox gText_ZhuLi_Leave, MSGBOX_DEFAULT
+	release
+	end
 
 EventScript_Shop_VarrickIntro:
 	msgbox gText_Varrick_Intro, MSGBOX_AUTOCLOSE
@@ -64,6 +627,7 @@ EventScript_Shop_ZhuLiIntro::
 	msgbox gText_ZhuLi_ZhuLiIntro2, MSGBOX_AUTOCLOSE
 	msgbox gText_Varrick_ZhuLiIntro3, MSGBOX_AUTOCLOSE
 	setvar VAR_ZHULI_INTRO, 1
+	setflag FLAG_VARRICK_INTRO
 	releaseall
 	end
 
@@ -82,10 +646,75 @@ EventScript_Shop_ZhuLiIntroMoveUpLeft:
 	call EventScript_Shop_ZhuLiIntroMoveUp
 	return
 
-EventScript_Shop_LelouchIntroCheck::
+EventScript_Shop_Lelouch::
 	lock
 	faceplayer
 	call_if_unset FLAG_LELOUCH_INTRO, EventScript_Shop_LelouchIntro
+	goto_if_lt VAR_ZONE, 6, EventScript_Shop_Lelouch_Deny
+	call_if_unset FLAG_LELOUCH_SHARDS, EventScript_Shop_LelouchExplainShards
+	msgbox gText_Lelouch_Welcome, MSGBOX_DEFAULT
+	switch VAR_ZONE
+	case 6, EventScript_Shop_Lelouch_6to15
+	case 7, EventScript_Shop_Lelouch_6to15
+	case 9, EventScript_Shop_Lelouch_6to15
+	case 10, EventScript_Shop_Lelouch_6to15
+	case 11, EventScript_Shop_Lelouch_6to15
+	case 12, EventScript_Shop_Lelouch_6to15
+	case 13, EventScript_Shop_Lelouch_6to15
+	case 15, EventScript_Shop_Lelouch_6to15
+	case 16, EventScript_Shop_Lelouch_16to20
+	case 17, EventScript_Shop_Lelouch_16to20
+	case 18, EventScript_Shop_Lelouch_16to20
+	case 20, EventScript_Shop_Lelouch_16to20
+	case 21, EventScript_Shop_Lelouch_21to25
+	case 22, EventScript_Shop_Lelouch_21to25
+	case 23, EventScript_Shop_Lelouch_21to25
+	case 24, EventScript_Shop_Lelouch_21to25
+	case 25, EventScript_Shop_Lelouch_21to25
+	end
+
+EventScript_Shop_Lelouch_6to15:
+	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchTraining1
+	case 1, EventScript_Shop_LelouchCheckReminder
+	case 2, EventScript_Shop_LelouchCheckTutor
+	case 3, EventScript_Shop_LelouchNotEnoughColor
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_Lelouch_16to20:
+	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchTraining2
+	case 1, EventScript_Shop_LelouchCheckReminder
+	case 2, EventScript_Shop_LelouchCheckTutor
+	case 3, EventScript_Shop_LelouchNotEnoughColor
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_Lelouch_21to25:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_21to25_Brutal
+	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchTraining3
+	case 1, EventScript_Shop_LelouchCheckReminder
+	case 2, EventScript_Shop_LelouchCheckTutor
+	case 3, EventScript_Shop_LelouchNotEnoughColor
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_Lelouch_21to25_Brutal:
+	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchTraining3Brutal
+	case 1, EventScript_Shop_LelouchCheckReminder
+	case 2, EventScript_Shop_LelouchCheckTutor
+	case 3, EventScript_Shop_LelouchNotEnoughColor
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_Lelouch_Deny:
 	msgbox gText_Lelouch_NoShards, MSGBOX_AUTOCLOSE
 	release
 	end
