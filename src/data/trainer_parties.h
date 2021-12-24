@@ -2728,7 +2728,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {
     .ability = ABILITY_SLOT_1, //Blaze
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRAIXEN,
-    .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FIRE_SPIN, MOVE_FLAME_CHARGE}
+    .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FIRE_SPIN, MOVE_SCORCHING_SANDS}
     },
     {
     .iv = 31,
