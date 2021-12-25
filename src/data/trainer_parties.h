@@ -1634,17 +1634,17 @@ static const struct TrainerMon sParty_Sophia[] = { //Leviathan 10, Default
 static const struct TrainerMon sParty_Marion[] = {
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_KRABBY,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_WAILMER,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_CRAMORANT,
     }
 };
@@ -1652,17 +1652,17 @@ static const struct TrainerMon sParty_Marion[] = {
 static const struct TrainerMon sParty_Clinton[] = {
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_BASCULIN,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_BASCULIN_BLUE_STRIPED,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_MANTYKE,
     }
 };
@@ -1670,17 +1670,17 @@ static const struct TrainerMon sParty_Clinton[] = {
 static const struct TrainerMon sParty_Kenneth[] = {
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_TYNAMO,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_OSHAWOTT,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_POPPLIO,
     }
 };
@@ -1688,17 +1688,17 @@ static const struct TrainerMon sParty_Kenneth[] = {
 static const struct TrainerMon sParty_Jay[] = {//Zone 18 Cool Room
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_DRATINI,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_DREEPY,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_DEINO,
     }
 };
@@ -1706,17 +1706,17 @@ static const struct TrainerMon sParty_Jay[] = {//Zone 18 Cool Room
 static const struct TrainerMon sParty_Blanche[] = {//Zone 18 Cute Room
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_SNOM,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_SMOOCHUM,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_VULPIX_ALOLAN,
     }
 };
@@ -1724,17 +1724,17 @@ static const struct TrainerMon sParty_Blanche[] = {//Zone 18 Cute Room
 static const struct TrainerMon sParty_Terrence[] = {//Zone 18 Stall Room
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_DUSKULL,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_KLEFKI,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_BAYLEEF,
     }
 };
@@ -1742,17 +1742,17 @@ static const struct TrainerMon sParty_Terrence[] = {//Zone 18 Stall Room
 static const struct TrainerMon sParty_Marty[] = {//Zone 18 Balance Room
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_YAMASK,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_EXEGGCUTE,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_PRINPLUP,
     }
 };
@@ -1760,17 +1760,17 @@ static const struct TrainerMon sParty_Marty[] = {//Zone 18 Balance Room
 static const struct TrainerMon sParty_Kari[] = {//Zone 18 Offense Room
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_GASTLY,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_ANORITH,
     },
     {
     .iv = 10,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_AERODACTYL,
     }
 };
@@ -1778,19 +1778,19 @@ static const struct TrainerMon sParty_Kari[] = {//Zone 18 Offense Room
 static const struct TrainerMon sParty_Abraham[] = {//Zone 18 Switch Room
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_MAGNEMITE,
     .moves = {MOVE_VOLT_SWITCH, MOVE_FLASH_CANNON, MOVE_ELECTRO_BALL, MOVE_METAL_SOUND}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_MEOWTH_GALARIAN,
     .moves = {MOVE_U_TURN, MOVE_SLASH, MOVE_SNATCH, MOVE_FURY_SWIPES}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_THWACKEY,
     .moves = {MOVE_U_TURN, MOVE_GRASSY_GLIDE, MOVE_GROWTH, MOVE_KNOCK_OFF}
     }
@@ -1799,19 +1799,19 @@ static const struct TrainerMon sParty_Abraham[] = {//Zone 18 Switch Room
 static const struct TrainerMon sParty_Rex[] = {//Zone 18 Hazard Room
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_BRONZOR,
     .moves = {MOVE_STEALTH_ROCK, MOVE_METAL_SOUND, MOVE_FUTURE_SIGHT, MOVE_FEINT_ATTACK}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_TENTACOOL,
     .moves = {MOVE_TOXIC_SPIKES, MOVE_BRINE, MOVE_POISON_JAB, MOVE_BARRIER}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_TRUBBISH,
     .moves = {MOVE_SPIKES, MOVE_TAKE_DOWN, MOVE_STOCKPILE, MOVE_SLUDGE}
     }
@@ -1820,19 +1820,19 @@ static const struct TrainerMon sParty_Rex[] = {//Zone 18 Hazard Room
 static const struct TrainerMon sParty_Emilio[] = {//Zone 18 Setup Room
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_GRIMER_ALOLAN,
     .moves = {MOVE_MINIMIZE, MOVE_KNOCK_OFF, MOVE_PURSUIT, MOVE_POWER_UP_PUNCH}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_LILEEP,
     .moves = {MOVE_CURSE, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_RECOVER}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_TORRACAT,
     .moves = {MOVE_BULK_UP, MOVE_REVENGE, MOVE_FAKE_OUT, MOVE_FLAME_CHARGE}
     }
@@ -1841,19 +1841,19 @@ static const struct TrainerMon sParty_Emilio[] = {//Zone 18 Setup Room
 static const struct TrainerMon sParty_Melinda[] = {//Zone 18 Hail Room
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_AMAURA,
     .ability = ABILITY_SLOT_2, //Snow Warning
     .heldItem = ITEM_ICY_ROCK,
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_SANDSHREW_ALOLAN,
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_VANILLITE,
     }
 };
@@ -1861,12 +1861,12 @@ static const struct TrainerMon sParty_Melinda[] = {//Zone 18 Hail Room
 static const struct TrainerMon sParty_Louis[] = {//Zone 18 Buff Room, Double Battle
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_ABSOL,
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_STONJOURNER,
     }
 };
@@ -1874,12 +1874,12 @@ static const struct TrainerMon sParty_Louis[] = {//Zone 18 Buff Room, Double Bat
 static const struct TrainerMon sParty_Desiree[] = {//Zone 18 Speed Room, Double Battle
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_PIGNITE,
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_LOMBRE,
     .moves = {MOVE_ICY_WIND, MOVE_LEECH_SEED, MOVE_NATURE_POWER, MOVE_BUBBLE_BEAM}
     }
@@ -1888,13 +1888,13 @@ static const struct TrainerMon sParty_Desiree[] = {//Zone 18 Speed Room, Double 
 static const struct TrainerMon sParty_Pam[] = {//Zone 18 Support Room, Double Battle
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_SNEASEL,
     .moves = {MOVE_FAKE_OUT, MOVE_HONE_CLAWS, MOVE_BITE, MOVE_CRUSH_CLAW}
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_HERDIER,
     .moves = {MOVE_HELPING_HAND, MOVE_RETALIATE, MOVE_ROAR, MOVE_CRUNCH}
     }
@@ -1903,17 +1903,17 @@ static const struct TrainerMon sParty_Pam[] = {//Zone 18 Support Room, Double Ba
 static const struct TrainerMon sParty_Willie[] = {//Zone 18 Stats Room
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_GROWLITHE,
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_NUZLEAF,
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_DURALUDON,
     }
 };
@@ -1921,19 +1921,19 @@ static const struct TrainerMon sParty_Willie[] = {//Zone 18 Stats Room
 static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_TYRUNT,
     .ability = ABILITY_SLOT_1, //Strong Jaw
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_ARCHEN,
     .ability = ABILITY_SLOT_1, //Defeatist
     },
     {
     .iv = 10,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_FROGADIER,
     .ability = ABILITY_SLOT_1, //Protean
     }
@@ -1942,12 +1942,12 @@ static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
 static const struct TrainerMon sParty_Pirate1[] = {//You fight each of these pirates in the order 4, 3, 2, 1 in a row without healing
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_BARRASKEWDA,
     },
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_PERRSERKER,
     }
 };
@@ -1955,12 +1955,12 @@ static const struct TrainerMon sParty_Pirate1[] = {//You fight each of these pir
 static const struct TrainerMon sParty_Pirate2[] = {
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_CRABOMINABLE,
     },
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_KINGLER,
     }
 };
@@ -1968,12 +1968,12 @@ static const struct TrainerMon sParty_Pirate2[] = {
 static const struct TrainerMon sParty_Pirate3[] = {
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_DHELMISE,
     },
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_DREDNAW,
     }
 };
@@ -1981,12 +1981,12 @@ static const struct TrainerMon sParty_Pirate3[] = {
 static const struct TrainerMon sParty_Pirate4[] = {
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_OCTILLERY,
     },
     {
     .iv = 10,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_CHATOT,
     }
 };
@@ -1994,7 +1994,7 @@ static const struct TrainerMon sParty_Pirate4[] = {
 static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, optional, Default
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 34,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .heldItem = ITEM_LUM_BERRY,
