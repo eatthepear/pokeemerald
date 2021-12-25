@@ -855,6 +855,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
 	initclock 1, 1
+	callnative ReturnFromStartWallClock
 	setvar VAR_ZONE, 1
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
