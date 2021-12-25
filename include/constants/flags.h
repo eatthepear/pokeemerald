@@ -1094,7 +1094,7 @@
 #define FLAG_ITEM_ZONE11A_TM10                                      0x415
 #define FLAG_ITEM_ZONE12A_TM12                                      0x416
 #define FLAG_ITEM_ZONE12A_METRONOME                                 0x417
-#define FLAG_ITEM_ZONE12A_OVAL_STONE                                0x418
+#define FLAG_ITEM_ZONE12A_THUNDER_STONE                             0x418
 #define FLAG_ITEM_ZONE12A_GRIP_CLAW                                 0x419
 #define FLAG_ITEM_ZONE12A_ENERGY_ROOT                               0x41A
 #define FLAG_ITEM_ZONE13A_SUPER_POTION                              0x41B
@@ -1108,7 +1108,7 @@
 #define FLAG_ITEM_ZONE15A_HYPER_POTION                              0x423
 #define FLAG_ITEM_ZONE15A_GLALITITE                                 0x424
 #define FLAG_ITEM_ZONE15A_ETHER                                     0x425
-#define FLAG_ITEM_ZONE15A_WIDE_LENS                                 0x426
+#define FLAG_ITEM_ZONE15A_ICE_STONE                                 0x426
 #define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
 #define FLAG_ITEM_ZONE3A_HYPER_POTION                               0x428
 #define FLAG_ITEM_ZONE5A_FULL_HEAL                                  0x429
