@@ -49,6 +49,8 @@ Zone16A_EventScript_SophiaWalkDown:
 	waitmovement 0
 	applymovement 14, Common_Movement_WalkDown
 	waitmovement 0
+	applymovement 14, Common_Movement_WalkRight
+	waitmovement 0
 	releaseall
 	end
 
