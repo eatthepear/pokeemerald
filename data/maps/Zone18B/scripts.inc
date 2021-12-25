@@ -192,14 +192,14 @@ Zone18B_EventScript_OdysseusBattle:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
 	totemboost_atk2 B_POSITION_OPPONENT_LEFT
-	trainerbattle_no_intro TRAINER_LEVIATHAN10, Zone18B_Text_LeviathanDefeat
-	goto Zone18B_EventScript_Leviathan10Defeated
+	trainerbattle_no_intro TRAINER_LEVIATHAN11, Zone18B_Text_LeviathanDefeat
+	goto Zone18B_EventScript_Leviathan11Defeated
 	end
 
 Zone18B_EventScript_OdysseusBrutal:
 	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 2, 2, 2
-	trainerbattle_no_intro TRAINER_LEVIATHAN10_BRUTAL, Zone18B_Text_LeviathanDefeat
-	goto Zone18B_EventScript_Leviathan10Defeated
+	trainerbattle_no_intro TRAINER_LEVIATHAN11_BRUTAL, Zone18B_Text_LeviathanDefeat
+	goto Zone18B_EventScript_Leviathan11Defeated
 	end
 
 Zone18B_OdysseusBattleIntro:
@@ -208,8 +208,8 @@ Zone18B_OdysseusBattleIntro:
 Zone18B_Text_LeviathanDefeat:
 	.string "Well met. Congratulations.$"
 
-Zone18B_EventScript_Leviathan10Defeated:
-	setflag FLAG_BEATLEVIATHAN10
+Zone18B_EventScript_Leviathan11Defeated:
+	setflag FLAG_BEATLEVIATHAN11
 	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
 	giveitem ITEM_SHARPEDONITE, 1
 	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE

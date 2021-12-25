@@ -17,29 +17,29 @@ Zone20A_EventScript_InitiateLeviathanBattle::
 	waitmovement 0
 	waitse
 	faceplayer
-	msgbox Zone20A_Text_Leviathan11Intro, MSGBOX_AUTOCLOSE
+	msgbox Zone20A_Text_Leviathan12Intro, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JULIE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone20A_EventScript_JulieBrutal
-	trainerbattle_no_intro TRAINER_LEVIATHAN11, Zone20A_Text_Leviathan11Defeat
-	goto Zone20A_EventScript_Leviathan11Defeated
+	trainerbattle_no_intro TRAINER_LEVIATHAN12, Zone20A_Text_Leviathan12Defeat
+	goto Zone20A_EventScript_Leviathan12Defeated
 	end
 
 Zone20A_EventScript_JulieBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN11_BRUTAL, Zone20A_Text_Leviathan11Defeat
-	goto Zone20A_EventScript_Leviathan11Defeated
+	trainerbattle_no_intro TRAINER_LEVIATHAN12_BRUTAL, Zone20A_Text_Leviathan12Defeat
+	goto Zone20A_EventScript_Leviathan12Defeated
 	end
 
-Zone20A_Text_Leviathan11Intro:
+Zone20A_Text_Leviathan12Intro:
 	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: The terrain in these tunnels\n"
 	.string "is harsh, a perfect training ground\l"
 	.string "for my Pokémon.\p"
 	.string "What Pokémon will you use to defeat\n"
 	.string "me, {COLOR BLUE}Leviathan Julie{COLOR DARK_GRAY}?$"
 
-Zone20A_Text_Leviathan11Defeat:
+Zone20A_Text_Leviathan12Defeat:
 	.string "Woe is me...$"
 
-Zone20A_EventScript_Leviathan11Defeated:
+Zone20A_EventScript_Leviathan12Defeated:
 	msgbox Zone20A_Text_Leviathan2StrongWeak, MSGBOX_AUTOCLOSE
 	fadeoutbgm 1
 	delay 96
@@ -54,7 +54,7 @@ Zone20A_EventScript_Leviathan11Defeated:
 	msgbox Zone20A_Text_Leviathan2Karen, MSGBOX_AUTOCLOSE
 	delay 128
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	setflag FLAG_BEATLEVIATHAN11
+	setflag FLAG_BEATLEVIATHAN12
 	removeobject 2
 	waitmovement 0
 	delay 96

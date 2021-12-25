@@ -1,5 +1,82 @@
 Zone16A_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone16A_OnTransition
 	.byte 0
+
+Zone16A_OnTransition:
+	goto_if_set FLAG_BEATLEVIATHAN10 Zone16A_EventScript_MoveLeviathan
+	end
+
+Zone16A_EventScript_MoveLeviathan:
+	setobjectxyperm 14, 66, 27
+	end
+
+Zone16A_EventScript_InitiateLeviathanBattle::
+	lock
+	faceplayer
+	goto_if_set FLAG_BEATLEVIATHAN10, Zone16A_EventScript_ByeBye
+	fadeoutbgm 1
+	msgbox Zone16A_Text_Leviathan10Intro, MSGBOX_AUTOCLOSE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_SOPHIA
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_SophiaBrutal
+	trainerbattle_no_intro TRAINER_LEVIATHAN10, Zone16A_Text_Leviathan10Defeat
+	goto Zone16A_EventScript_Leviathan10Defeated
+	end
+
+Zone16A_EventScript_SophiaBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN10_BRUTAL, Zone16A_Text_Leviathan10Defeat
+	goto Zone16A_EventScript_Leviathan10Defeated
+	end
+
+Zone16A_EventScript_Leviathan10Defeated:
+	setflag FLAG_BEATLEVIATHAN10
+	msgbox Zone16A_Text_Leviathan10Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_BLUE_SHARD, 10
+	closemessage
+	msgbox Zone16A_Text_Leviathan10Bye, MSGBOX_AUTOCLOSE
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	goto_if_eq VAR_TEMP_2, 25, Zone16A_EventScript_SophiaWalkDown
+	applymovement 14, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 14, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 14, Common_Movement_WalkDown
+	waitmovement 0
+	releaseall
+	end
+
+Zone16A_EventScript_SophiaWalkDown:
+	applymovement 14, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 14, Common_Movement_WalkDown
+	waitmovement 0
+	releaseall
+	end
+
+Zone16A_EventScript_ByeBye:
+	msgbox Zone16A_Text_Leviathan10Defeated, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone16A_Text_Leviathan10Intro:
+	.string "{COLOR BLUE}Sophia{COLOR DARK_GRAY}: Hiya!\n"
+	.string "I love the ocean, and my Pokémon do too!\p"
+	.string "Sometimes I get bored though…\p"
+	.string "I know! We should have a battle!\p"
+	.string "Here comes {COLOR BLUE}Leviathan Sophia{COLOR DARK_GRAY}!$"
+
+Zone16A_Text_Leviathan10Defeat:
+	.string "Sophia: Aw!$"
+
+Zone16A_Text_Leviathan10Reward:
+	.string "{COLOR BLUE}Sophia{COLOR DARK_GRAY}: That was fun!\p"
+	.string "I want you to have these!\n"
+	.string "They're Blue Shards I found!$"
+
+Zone16A_Text_Leviathan10Bye:
+	.string "{COLOR BLUE}Sophia{COLOR DARK_GRAY}: Thanks for playing with me!$"
+
+Zone16A_Text_Leviathan10Defeated:
+	.string "{COLOR BLUE}Sophia{COLOR DARK_GRAY}: Bye bye!$"
 
 Zone16A_EventScript_Exit::
 	lockall
@@ -171,6 +248,6 @@ Zone16A_EventScript_TM19::
 	finditem ITEM_TM19
 	end
 
-Zone16A_EventScript_TM20::
-	finditem ITEM_TM20
+Zone16A_EventScript_TimerBall::
+	finditem ITEM_TIMER_BALL
 	end

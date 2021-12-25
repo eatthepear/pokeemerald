@@ -3,7 +3,7 @@ Zone22A_MapScripts::
 
 Zone22A_EventScript_Exit::
 	lockall
-	goto_if_unset FLAG_BEATLEVIATHAN12, Zone22A_EventScript_LeviathanBattle
+	goto_if_unset FLAG_BEATLEVIATHAN13, Zone22A_EventScript_LeviathanBattle
 	releaseall
 	end
 
@@ -18,7 +18,7 @@ Zone22A_EventScript_LeviathanBattle:
 	waitmovement 0
 	addobject 11
 	addobject 12
-	clearflag FLAG_HIDE_LEVIATHAN12
+	clearflag FLAG_HIDE_CAM_AND_PAM
 	applymovement 11, Zone22A_Movement_Cam_WalkUp
 	applymovement 12, Zone22A_Movement_Pam_WalkUp
 	waitmovement 0
@@ -40,8 +40,8 @@ Zone22A_EventScript_LeviathanBattle:
 	@ goto_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_PamAndCamBrutal
 	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
-	trainerbattle_no_intro TRAINER_LEVIATHAN12, Zone22A_Text_Leviathan12Defeat
-	goto Zone22A_EventScript_Leviathan12Defeated
+	trainerbattle_no_intro TRAINER_LEVIATHAN13, Zone22A_Text_Leviathan13Defeat
+	goto Zone22A_EventScript_Leviathan13Defeated
 	end
 
 Zone22A_EventScript_DontHaveEnoughMons:
@@ -50,15 +50,15 @@ Zone22A_EventScript_DontHaveEnoughMons:
 	applymovement 11, Zone22A_Movement_Cam_WalkDown
 	applymovement 12, Zone22A_Movement_Pam_WalkDown
 	waitmovement 0
-	setflag FLAG_HIDE_LEVIATHAN12
+	setflag FLAG_HIDE_CAM_AND_PAM
 	removeobject 11
 	removeobject 12
 	fadeinbgm 1
 	releaseall
 	end
 
-Zone22A_EventScript_Leviathan12Defeated:
-	setflag FLAG_BEATLEVIATHAN12
+Zone22A_EventScript_Leviathan13Defeated:
+	setflag FLAG_BEATLEVIATHAN13
 	msgbox Zone22A_Text_Cam_Wah, MSGBOX_AUTOCLOSE
 	msgbox Zone22A_Text_Pam_Crushed, MSGBOX_AUTOCLOSE
 	applymovement 11, Common_Movement_FaceRight
@@ -75,7 +75,7 @@ Zone22A_EventScript_Leviathan12Defeated:
 	applymovement 11, Zone22A_Movement_Cam_WalkDown
 	applymovement 12, Zone22A_Movement_Pam_WalkDown
 	waitmovement 0
-	setflag FLAG_HIDE_LEVIATHAN12
+	setflag FLAG_HIDE_CAM_AND_PAM
 	removeobject 11
 	removeobject 12
 	fadeinbgm 1
@@ -137,7 +137,7 @@ Zone22A_Text_Pam_OurCombo:
 	.string "Prepare to face the combined combo\n"
 	.string "of Leviathan Pam and Cam!$"
 
-Zone22A_Text_Leviathan12Defeat:
+Zone22A_Text_Leviathan13Defeat:
 	.string "Pam: What? How did we lose?\p"
 	.string "Cam: Our combo, ruined!$"
 
