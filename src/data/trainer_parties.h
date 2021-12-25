@@ -2,17 +2,19 @@
  * Notes for documentation
  * 
  * Trainers are arranged in the order it is possible to battle them.
- * Only boss trainers have significantly changed parties on Brutal. You can CTRL+F for them in the document (just search for the word Brutal)
+ * 
+ * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
+ * These are included in the comments next to each trainer.
+ * 
+ * Some trainers have different parties on Default and Brutal.
+ * You can CTRL+F for them in the document (just search for the word Default or Brutal)
  * 
  * If a Pokemon does not have a specified parameter (for example the nature) then it is usually determined randomly.
  * EVs are by default set to 0.
  * 
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
- * On Brutal, the normal trainers have +11 to their .iv value. So for example, if a Pokemon has .iv = 20, it actually has the max IVs of 31.
- * 
- * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
- * These are included in the comments next to each trainer.
+ * On Brutal, all non-Leviathan trainers have +11 to their .iv value. So for example, if a Pokemon has .iv = 20, it actually has the max IVs of 31.
  * 
  * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. */
 
@@ -729,12 +731,12 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
 //You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
 static const struct TrainerMon sParty_Ari[] = {
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 17,
     .species = SPECIES_ODDISH,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 17,
     .species = SPECIES_REMORAID,
     }
@@ -742,17 +744,17 @@ static const struct TrainerMon sParty_Ari[] = {
 
 static const struct TrainerMon sParty_Bertha[] = {
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 17,
     .species = SPECIES_PIKIPEK,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 17,
     .species = SPECIES_BOUNSWEET,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 17,
     .species = SPECIES_LITTEN,
     }
@@ -760,17 +762,17 @@ static const struct TrainerMon sParty_Bertha[] = {
 
 static const struct TrainerMon sParty_Cassandra[] = {
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 18,
     .species = SPECIES_AIPOM,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 18,
     .species = SPECIES_GROOKEY,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 18,
     .species = SPECIES_CUFANT,
     },
@@ -778,12 +780,12 @@ static const struct TrainerMon sParty_Cassandra[] = {
 
 static const struct TrainerMon sParty_Dominic[] = {
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 19,
     .species = SPECIES_CROAGUNK,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 19,
     .species = SPECIES_ORANGURU,
     }
@@ -791,17 +793,17 @@ static const struct TrainerMon sParty_Dominic[] = {
 
 static const struct TrainerMon sParty_Erica[] = {
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 19,
     .species = SPECIES_SABLEYE,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 19,
     .species = SPECIES_BAGON,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 19,
     .species = SPECIES_PASSIMIAN,
     }
@@ -1941,12 +1943,12 @@ static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
 
 static const struct TrainerMon sParty_Pirate1[] = {//You fight each of these pirates in the order 4, 3, 2, 1 in a row without healing
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_BARRASKEWDA,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_PERRSERKER,
     }
@@ -1954,12 +1956,12 @@ static const struct TrainerMon sParty_Pirate1[] = {//You fight each of these pir
 
 static const struct TrainerMon sParty_Pirate2[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_CRABOMINABLE,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_KINGLER,
     }
@@ -1967,12 +1969,12 @@ static const struct TrainerMon sParty_Pirate2[] = {
 
 static const struct TrainerMon sParty_Pirate3[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_DHELMISE,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_DREDNAW,
     }
@@ -1980,12 +1982,12 @@ static const struct TrainerMon sParty_Pirate3[] = {
 
 static const struct TrainerMon sParty_Pirate4[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_OCTILLERY,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 31,
     .species = SPECIES_CHATOT,
     }
