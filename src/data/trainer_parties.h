@@ -2883,7 +2883,7 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {
     {
     .iv = 31,
     .lvl = 27,
-    .nature = NATURE_RASH,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Chlorophyll
     .species = SPECIES_GLOOM,
@@ -2893,22 +2893,22 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {
     {
     .ivs = {31, 31, 31, 30, 31, 31},
     .lvl = 27,
-    .nature = NATURE_NAIVE,
+    .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Solar Power
     .species = SPECIES_HELIOLISK,
     .heldItem = ITEM_MAGNET,
-    .moves = {MOVE_SHOCK_WAVE, MOVE_HIDDEN_POWER, MOVE_BULLDOZE, MOVE_THUNDER_WAVE} //Hidden Power Ice
+    .moves = {MOVE_SHOCK_WAVE, MOVE_HIDDEN_POWER, MOVE_VOLT_SWITCH, MOVE_THUNDER_WAVE} //Hidden Power Ice
     },
     {
-    .iv = 31,
+    .ivs = {31, 31, 30, 30, 30, 30},
     .lvl = 27,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Telepathy
     .species = SPECIES_MUSHARNA,
     .heldItem = ITEM_TWISTED_SPOON,
-    .moves = {MOVE_EXTRASENSORY, MOVE_CALM_MIND, MOVE_MOONLIGHT, MOVE_YAWN}
+    .moves = {MOVE_EXTRASENSORY, MOVE_CALM_MIND, MOVE_MOONLIGHT, MOVE_HIDDEN_POWER} //Hidden Power Fighting
     },
     {
     .ivs = {31, 31, 31, 31, 30, 31},
@@ -2918,7 +2918,7 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {
     .ability = ABILITY_SLOT_1, //Drought
     .species = SPECIES_TORKOAL,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_LAVA_PLUME, MOVE_WILL_O_WISP, MOVE_REST, MOVE_HIDDEN_POWER} //Hidden Power Electric
+    .moves = {MOVE_LAVA_PLUME, MOVE_SCORCHING_SANDS, MOVE_REST, MOVE_HIDDEN_POWER} //Hidden Power Electric
     },
     {
     .iv = 31,
@@ -2928,7 +2928,7 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {
     .ability = ABILITY_SLOT_2, //Unnerve
     .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_FLAME_BURST, MOVE_FEINT_ATTACK, MOVE_THUNDER_FANG, MOVE_SNARL}
+    .moves = {MOVE_FLAMETHROWER, MOVE_FEINT_ATTACK, MOVE_THUNDER_FANG, MOVE_SCORCHING_SANDS}
     }
 };
 
