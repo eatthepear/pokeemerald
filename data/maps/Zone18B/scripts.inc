@@ -197,7 +197,7 @@ Zone18B_EventScript_OdysseusBattle:
 	end
 
 Zone18B_EventScript_OdysseusBrutal:
-	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 2, 2, 2
+	settotemboost B_POSITION_OPPONENT_LEFT, 2, 0, 0, 0, 0, 0, 2
 	trainerbattle_no_intro TRAINER_LEVIATHAN11_BRUTAL, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan11Defeated
 	end
@@ -816,7 +816,7 @@ Zone18B_EventScript_Emilio::
 	end
 
 Zone18B_Text_EmilioIntro:
-	.string "Setup and sweep. Easy peazy$."
+	.string "Setup and sweep. Easy peazy.$"
 
 Zone18B_Text_EmilioDefeat:
 	.string "Hmm. I guess that didn't work.$"
@@ -844,14 +844,14 @@ Zone18B_EventScript_Louis::
 	end
 
 Zone18B_Text_LouisIntro:
-	.string "Double Battle! Buff the Kabuto!$"
+	.string "Double Battle! Buff the Absol!$"
 
 Zone18B_Text_LouisDefeat:
-	.string "Kabuto wasn't buff enough!$"
+	.string "Absol wasn't buff enough!$"
 
 Zone18B_Text_LouisPostBattle:
 	.string "Stonjourner, you did great.\n"
-	.string "Kabuto, we gotta work on the\l"
+	.string "Absol, we gotta work on the\l"
 	.string "execution.$"
 
 Zone18B_EventScript_Desiree::
