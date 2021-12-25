@@ -93,105 +93,76 @@ EventScript_EndSmash::
 EventScript_SmashItems:
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_EndSmash
 	random 100
-	compare VAR_RESULT, 0
-	call_if_eq EventScript_SmashBUGGem
-	compare VAR_RESULT, 1
-	call_if_eq EventScript_SmashDARKGem
-	compare VAR_RESULT, 2
-	call_if_eq EventScript_SmashDRAGONGem
-	compare VAR_RESULT, 3
-	call_if_eq EventScript_SmashELECTRICGem
-	compare VAR_RESULT, 4
-	call_if_eq EventScript_SmashFAIRYGem
-	compare VAR_RESULT, 5
-	call_if_eq EventScript_SmashFIGHTINGGem
-	compare VAR_RESULT, 6
-	call_if_eq EventScript_SmashFIREGem
-	compare VAR_RESULT, 7
-	call_if_eq EventScript_SmashFLYINGGem
-	compare VAR_RESULT, 8
-	call_if_eq EventScript_SmashGHOSTGem
-	compare VAR_RESULT, 9
-	call_if_eq EventScript_SmashGRASSGem
-	compare VAR_RESULT, 10
-	call_if_eq EventScript_SmashGROUNDGem
-	compare VAR_RESULT, 11
-	call_if_eq EventScript_SmashICEGem
-	compare VAR_RESULT, 12
-	call_if_eq EventScript_SmashNORMALGem
-	compare VAR_RESULT, 13
-	call_if_eq EventScript_SmashPOISONGem
-	compare VAR_RESULT, 14
-	call_if_eq EventScript_SmashPSYCHICGem
-	compare VAR_RESULT, 15
-	call_if_eq EventScript_SmashROCKGem
-	compare VAR_RESULT, 16
-	call_if_eq EventScript_SmashSTEELGem
-	compare VAR_RESULT, 17
-	call_if_eq EventScript_SmashWATERGem
-	compare VAR_RESULT, 18
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 19
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 20
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 21
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 22
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 23
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 24
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 25
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 26
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 27
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 28
-	call_if_eq EventScript_SmashBLUEShard
-	compare VAR_RESULT, 29
-	call_if_eq EventScript_SmashBLUEShard
-	compare VAR_RESULT, 30
-	call_if_eq EventScript_SmashBLUEShard
-	compare VAR_RESULT, 31
-	call_if_eq EventScript_SmashBLUEShard
-	compare VAR_RESULT, 32
-	call_if_eq EventScript_SmashBLUEShard
-	compare VAR_RESULT, 33
-	call_if_eq EventScript_SmashBLUEShard
-	compare VAR_RESULT, 34
-	call_if_eq EventScript_SmashGREENShard
-	compare VAR_RESULT, 35
-	call_if_eq EventScript_SmashGREENShard
-	compare VAR_RESULT, 36
-	call_if_eq EventScript_SmashGREENShard
-	compare VAR_RESULT, 37
-	call_if_eq EventScript_SmashGREENShard
-	compare VAR_RESULT, 38
-	call_if_eq EventScript_SmashYELLOWShard
-	compare VAR_RESULT, 39
-	call_if_eq EventScript_SmashYELLOWShard
-	compare VAR_RESULT, 40
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 41
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 42
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 43
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 44
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 45
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 46
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 47
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 48
-	call_if_eq EventScript_SmashREDShard
-	compare VAR_RESULT, 49
+	call_if_eq VAR_RESULT, 1, EventScript_SmashBUGGem
+	call_if_eq VAR_RESULT, 2, EventScript_SmashDARKGem
+	call_if_eq VAR_RESULT, 3, EventScript_SmashDRAGONGem
+	call_if_eq VAR_RESULT, 4, EventScript_SmashELECTRICGem
+	call_if_eq VAR_RESULT, 5, EventScript_SmashFAIRYGem
+	call_if_eq VAR_RESULT, 6, EventScript_SmashFIGHTINGGem
+	call_if_eq VAR_RESULT, 7, EventScript_SmashFIREGem
+	call_if_eq VAR_RESULT, 8, EventScript_SmashFLYINGGem
+	call_if_eq VAR_RESULT, 9, EventScript_SmashGHOSTGem
+	call_if_eq VAR_RESULT, 10, EventScript_SmashGRASSGem
+	call_if_eq VAR_RESULT, 11, EventScript_SmashGROUNDGem
+	call_if_eq VAR_RESULT, 12, EventScript_SmashICEGem
+	call_if_eq VAR_RESULT, 13, EventScript_SmashNORMALGem
+	call_if_eq VAR_RESULT, 14, EventScript_SmashPOISONGem
+	call_if_eq VAR_RESULT, 15, EventScript_SmashPSYCHICGem
+	call_if_eq VAR_RESULT, 16, EventScript_SmashROCKGem
+	call_if_eq VAR_RESULT, 17, EventScript_SmashSTEELGem
+	call_if_eq VAR_RESULT, 18, EventScript_SmashWATERGem
+	call_if_eq VAR_RESULT, 19, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 20, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 21, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 22, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 23, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 24, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 25, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 26, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 27, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 28, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 29, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 30, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 31, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 32, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 33, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 34, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 35, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 36, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 37, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 38, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 39, EventScript_SmashREDShard
+	call_if_eq VAR_RESULT, 40, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 41, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 42, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 43, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 44, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 45, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 46, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 47, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 48, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 49, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 50, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 51, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 52, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 53, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 54, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 55, EventScript_SmashBLUEShard
+	call_if_eq VAR_RESULT, 56, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 57, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 58, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 59, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 60, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 61, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 62, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 63, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 64, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 65, EventScript_SmashYELLOWShard
+	call_if_eq VAR_RESULT, 66, EventScript_SmashGREENShard
+	call_if_eq VAR_RESULT, 67, EventScript_SmashGREENShard
+	call_if_eq VAR_RESULT, 68, EventScript_SmashGREENShard
+	call_if_eq VAR_RESULT, 69, EventScript_SmashGREENShard
+	call_if_eq VAR_RESULT, 70, EventScript_SmashGREENShard
 	return
 	
 EventScript_SmashYELLOWShard:
