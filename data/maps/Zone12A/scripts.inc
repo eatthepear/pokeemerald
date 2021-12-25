@@ -108,8 +108,8 @@ Zone12A_EventScript_Metronome::
 	finditem ITEM_METRONOME
 	end
 
-Zone12A_EventScript_OvalStone::
-	finditem ITEM_OVAL_STONE
+Zone12A_EventScript_ThunderStone::
+	finditem ITEM_THUNDER_STONE
 	end
 
 Zone12A_EventScript_GripClaw::

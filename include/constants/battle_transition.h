@@ -14,11 +14,12 @@
 #define MUGSHOT_JAKE        10
 #define MUGSHOT_KAIZEN1     11
 #define MUGSHOT_KAIZEN2     12
-#define MUGSHOT_ODYSSEUS    13
-#define MUGSHOT_JULIE       14
-#define MUGSHOT_PAM_AND_CAM 15
+#define MUGSHOT_SOPHIA      13
+#define MUGSHOT_ODYSSEUS    14
+#define MUGSHOT_JULIE       15
+#define MUGSHOT_PAM_AND_CAM 16
 
 
-#define MUGSHOTS_COUNT      16
+#define MUGSHOTS_COUNT      17
 
 #endif //GUARD_CONSTANTS_BATTLE_TRANSITION_H

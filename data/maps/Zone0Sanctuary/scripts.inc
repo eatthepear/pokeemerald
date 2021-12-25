@@ -836,12 +836,8 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
+	initclock 1, 1
 	delay 96
-	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
-	setvar VAR_0x8004, MALE
-	fadescreen FADE_TO_BLACK
-	special StartWallClock
-	waitstate
 	setvar VAR_ZONE, 1
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -858,11 +854,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
-	msgbox Zone0Sanctuary_Text_RTC, MSGBOX_AUTOCLOSE
-	setvar VAR_0x8004, MALE
-	fadescreen FADE_TO_BLACK
-	special StartWallClock
-	waitstate
+	initclock 1, 1
 	setvar VAR_ZONE, 1
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -870,9 +862,6 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	waitmovement 1
 	releaseall
 	end
-
-Zone0Sanctuary_Text_RTC:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Finally, please set the clock.$"
 
 Zone0Sanctuary_EventScript_NextZone::
 	lock

@@ -23,15 +23,15 @@ Zone15A_EventScript_DuskBall::
 	end
 
 Zone15A_EventScript_Ether::
-	finditem ITEM_MUSCLE_BAND
+	finditem ITEM_ETHER
 	end
 
 Zone15A_EventScript_Glalitite::
 	finditem ITEM_GLALITITE
 	end
 
-Zone15A_EventScript_WideLens::
-	finditem ITEM_WIDE_LENS
+Zone15A_EventScript_IceStone::
+	finditem ITEM_ICE_STONE
 	end
 
 Zone15A_EventScript_ZoomLens::

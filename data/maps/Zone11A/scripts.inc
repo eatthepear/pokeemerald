@@ -55,7 +55,7 @@ Zone11A_EventScript_BeginLeviathanBattle:
 	end
 
 Zone11A_EventScript_JakeBrutal:
-	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 2, 2, 2
+	settotemboost B_POSITION_OPPONENT_LEFT, 2, 0, 2, 0, 0
 	trainerbattle_no_intro TRAINER_LEVIATHAN6_BRUTAL, Zone11A_Text_Leviathan6Defeat
 	goto Zone11A_EventScript_Leviathan6Defeated
 	end

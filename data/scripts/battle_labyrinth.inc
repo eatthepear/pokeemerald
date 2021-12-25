@@ -814,6 +814,7 @@ EventScript_Shop_LelouchExp1:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -825,6 +826,7 @@ EventScript_Shop_LelouchExp2:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -836,6 +838,7 @@ EventScript_Shop_LelouchExp3:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -847,6 +850,7 @@ EventScript_Shop_LelouchEVHP:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -858,6 +862,7 @@ EventScript_Shop_LelouchEVAtk:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -869,6 +874,7 @@ EventScript_Shop_LelouchEVDef:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -880,6 +886,7 @@ EventScript_Shop_LelouchEVSpA:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -891,6 +898,7 @@ EventScript_Shop_LelouchEVSpD:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -902,6 +910,7 @@ EventScript_Shop_LelouchEVSpe:
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
+	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
 
