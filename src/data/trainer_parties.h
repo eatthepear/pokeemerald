@@ -1592,6 +1592,16 @@ static const struct TrainerMon sParty_Sophia[] = { //Leviathan 10, Default
     {
     .iv = 31,
     .lvl = 29,
+    .nature = NATURE_NAIVE,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2, //Torrent
+    .species = SPECIES_DRIZZILE,
+    .heldItem = ITEM_GROUND_GEM,
+    .moves = {MOVE_SCALD, MOVE_U_TURN, MOVE_MUD_SHOT, MOVE_AIR_SLASH}
+    },
+    {
+    .iv = 31,
+    .lvl = 29,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Strong Jaw
@@ -2963,21 +2973,31 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {
 static const struct TrainerMon sParty_SophiaBrutal[] = {
     {
     .iv = 31,
-    .lvl = 30,
+    .lvl = 29,
+    .nature = NATURE_NAIVE,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2, //Torrent
+    .species = SPECIES_DRIZZILE,
+    .heldItem = ITEM_GROUND_GEM,
+    .moves = {MOVE_SCALD, MOVE_U_TURN, MOVE_MUD_SHOT, MOVE_AIR_SLASH}
+    },
+    {
+    .iv = 31,
+    .lvl = 29,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Strong Jaw
-    .species = SPECIES_FERALIGATR,
+    .species = SPECIES_CROCONAW,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_FLIP_TURN, MOVE_AQUA_JET, MOVE_CRUNCH, MOVE_ICE_FANG}
     },
     {
     .ivs = {31, 31, 31, 30, 30, 30},
-    .lvl = 30,
+    .lvl = 29,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Swift Swim
-    .species = SPECIES_SEISMITOAD,
+    .species = SPECIES_PALPITOAD,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_MUDDY_WATER, MOVE_MUD_SHOT, MOVE_HIDDEN_POWER, MOVE_RAIN_DANCE} //Hidden Power Flying
     },
