@@ -3,7 +3,7 @@ Zone5A_MapScripts::
 	.byte 0
 
 Zone5A_OnTransition:
-	goto_if_set FLAG_BEATLEVIATHAN2 Zone5A_EventScript_MoveLeviathan
+	goto_if_set FLAG_BEATLEVIATHAN2, Zone5A_EventScript_MoveLeviathan
 	end
 
 Zone5A_EventScript_MoveLeviathan:

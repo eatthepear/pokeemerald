@@ -6,7 +6,6 @@ LilycoveCity_CoveLilyMotel_1F_MapScripts::
 LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner::
 	lockall
 	goto_if_set FLAG_SYS_GAME_CLEAR, LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot, MSGBOX_DEFAULT
 	applymovement LOCALID_OWNER, Common_Movement_FacePlayer
 	waitmovement 0

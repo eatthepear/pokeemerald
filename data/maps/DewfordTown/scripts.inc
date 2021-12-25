@@ -15,7 +15,6 @@ DewfordTown_MapScripts::
 	.byte 0
 
 DewfordTown_OnTransition:
-	setflag FLAG_VISITED_DEWFORD_TOWN
 	end
 
 DewfordTown_EventScript_Briney::

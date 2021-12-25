@@ -1217,19 +1217,19 @@
 #define FLAG_UNUSED_0x490                                           0x490
 #define FLAG_UNUSED_0x491                                           0x491
 #define FLAG_UNUSED_0x492                                           0x492
-#define FLAG_BEATLEVIATHAN1                                         0x493 
-#define FLAG_BEATLEVIATHAN2                                         0x494 
-#define FLAG_BEATLEVIATHAN3                                         0x495 
-#define FLAG_BEATLEVIATHAN4                                         0x496 
-#define FLAG_BEATLEVIATHAN5                                         0x497 
-#define FLAG_BEATLEVIATHAN6                                         0x498 
-#define FLAG_BEATLEVIATHAN7                                         0x499 
-#define FLAG_BEATLEVIATHAN8                                         0x49A 
-#define FLAG_BEATLEVIATHAN9                                         0x49B 
-#define FLAG_BEATLEVIATHAN10                                        0x49C 
-#define FLAG_BEATLEVIATHAN11                                        0x49D 
-#define FLAG_BEATLEVIATHAN12                                        0x49E 
-#define FLAG_BEATLEVIATHAN13                                        0x49F 
+#define FLAG_UNUSED_0x493                                           0x493 
+#define FLAG_UNUSED_0x494                                           0x494 
+#define FLAG_UNUSED_0x495                                           0x495 
+#define FLAG_UNUSED_0x496                                           0x496 
+#define FLAG_UNUSED_0x497                                           0x497 
+#define FLAG_UNUSED_0x498                                           0x498 
+#define FLAG_UNUSED_0x499                                           0x499 
+#define FLAG_UNUSED_0x49A                                           0x49A 
+#define FLAG_UNUSED_0x49B                                           0x49B 
+#define FLAG_UNUSED_0x49C                                           0x49C 
+#define FLAG_UNUSED_0x49D                                           0x49D 
+#define FLAG_UNUSED_0x49E                                           0x49E 
+#define FLAG_UNUSED_0x49F                                           0x49F 
 #define FLAG_UNUSED_0x4A0                                           0x4A0 
 #define FLAG_UNUSED_0x4A1                                           0x4A1 
 #define FLAG_UNUSED_0x4A2                                           0x4A2 
@@ -1347,38 +1347,36 @@
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
 #define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
-#define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
-#define FLAG_SYS_HIPSTER_MEET                        (SYSTEM_FLAGS + 0x6)
 
-// Badges
-#define FLAG_BADGE01_GET                             (SYSTEM_FLAGS + 0x7)
-#define FLAG_BADGE02_GET                             (SYSTEM_FLAGS + 0x8)
-#define FLAG_BADGE03_GET                             (SYSTEM_FLAGS + 0x9)
-#define FLAG_BADGE04_GET                             (SYSTEM_FLAGS + 0xA)
-#define FLAG_BADGE05_GET                             (SYSTEM_FLAGS + 0xB)
-#define FLAG_BADGE06_GET                             (SYSTEM_FLAGS + 0xC)
-#define FLAG_BADGE07_GET                             (SYSTEM_FLAGS + 0xD)
-#define FLAG_BADGE08_GET                             (SYSTEM_FLAGS + 0xE)
-#define NUM_BADGES                                   (1 + FLAG_BADGE08_GET - FLAG_BADGE01_GET)
+// Beat Leviathan Flags
+#define FLAG_BEATLEVIATHAN1                          (SYSTEM_FLAGS + 0x5) 
+#define FLAG_BEATLEVIATHAN2                          (SYSTEM_FLAGS + 0x6) 
+#define FLAG_BEATLEVIATHAN3                          (SYSTEM_FLAGS + 0x7) 
+#define FLAG_BEATLEVIATHAN4                          (SYSTEM_FLAGS + 0x8) 
+#define FLAG_BEATLEVIATHAN5                          (SYSTEM_FLAGS + 0x9) 
+#define FLAG_BEATLEVIATHAN6                          (SYSTEM_FLAGS + 0xA) 
+#define FLAG_BEATLEVIATHAN7                          (SYSTEM_FLAGS + 0xB) 
+#define FLAG_BEATLEVIATHAN8                          (SYSTEM_FLAGS + 0xC) 
+#define FLAG_BEATLEVIATHAN9                          (SYSTEM_FLAGS + 0xD) 
+#define FLAG_BEATLEVIATHAN10                         (SYSTEM_FLAGS + 0xE) 
+#define FLAG_BEATLEVIATHAN11                         (SYSTEM_FLAGS + 0xF) 
+#define FLAG_BEATLEVIATHAN12                         (SYSTEM_FLAGS + 0x10) 
+#define FLAG_BEATLEVIATHAN13                         (SYSTEM_FLAGS + 0x11)
+#define FLAG_BEATLEVIATHAN14                         (SYSTEM_FLAGS + 0x12)
+#define FLAG_BEATLEVIATHAN15                         (SYSTEM_FLAGS + 0x13)
+#define FLAG_BEATLEVIATHAN16                         (SYSTEM_FLAGS + 0x14)
+#define FLAG_BEATLEVIATHAN17                         (SYSTEM_FLAGS + 0x15)
+#define FLAG_BEATLEVIATHAN18                         (SYSTEM_FLAGS + 0x16)
+#define FLAG_BEATLEVIATHAN19                         (SYSTEM_FLAGS + 0x17)
+#define FLAG_BEATLEVIATHAN20                         (SYSTEM_FLAGS + 0x18)
+#define FLAG_BEATLEVIATHAN21                         (SYSTEM_FLAGS + 0x19)
+#define FLAG_BEATLEVIATHAN22                         (SYSTEM_FLAGS + 0x1A)
+#define FLAG_BEATLEVIATHAN23                         (SYSTEM_FLAGS + 0x1B)
+#define FLAG_BEATLEVIATHAN24                         (SYSTEM_FLAGS + 0x1C)
+#define FLAG_BEATLEVIATHAN25                         (SYSTEM_FLAGS + 0x1D)
+#define FLAG_BEATLEVIATHAN26                         (SYSTEM_FLAGS + 0x1E)
 
-// Towns and Cities
-#define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)
-#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
-#define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
-#define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
-#define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
-#define FLAG_VISITED_VERDANTURF_TOWN                (SYSTEM_FLAGS + 0x14)
-#define FLAG_VISITED_PACIFIDLOG_TOWN                (SYSTEM_FLAGS + 0x15)
-#define FLAG_VISITED_PETALBURG_CITY                 (SYSTEM_FLAGS + 0x16)
-#define FLAG_VISITED_SLATEPORT_CITY                 (SYSTEM_FLAGS + 0x17)
-#define FLAG_VISITED_MAUVILLE_CITY                  (SYSTEM_FLAGS + 0x18)
-#define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x19)
-#define FLAG_VISITED_FORTREE_CITY                   (SYSTEM_FLAGS + 0x1A)
-#define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1B)
-#define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1C)
-#define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)
-#define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
-
+//Original Flags
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 

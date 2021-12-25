@@ -2951,7 +2951,6 @@ static void SetSpecialEasyChatResult(void)
     switch (sEasyChatScreen->type)
     {
     case EASY_CHAT_TYPE_PROFILE:
-        FlagSet(FLAG_SYS_CHAT_USED);
         break;
     case EASY_CHAT_TYPE_QUESTIONNAIRE:
         if (DidPlayerInputMysteryGiftPhrase())
@@ -5091,19 +5090,7 @@ static void AddMainScreenButtonWindow(void)
 
 static bool8 IsEasyChatGroupUnlocked(u8 groupId)
 {
-    switch (groupId)
-    {
-    case EC_GROUP_TRENDY_SAYING:
-        return FlagGet(FLAG_SYS_HIPSTER_MEET);
-    case EC_GROUP_EVENTS:
-    case EC_GROUP_MOVE_1:
-    case EC_GROUP_MOVE_2:
-        return FlagGet(FLAG_SYS_GAME_CLEAR);
-    case EC_GROUP_POKEMON_NATIONAL:
-        return EasyChatIsNationalPokedexEnabled();
-    default:
-        return TRUE;
-    }
+    return TRUE;
 }
 
 u16 EasyChat_GetNumWordsInGroup(u8 groupId)
@@ -5596,9 +5583,6 @@ static void SetUnlockedEasyChatGroups(void)
         sWordData->unlockedGroupIds[sWordData->numUnlockedGroups++] = EC_GROUP_MOVE_1;
         sWordData->unlockedGroupIds[sWordData->numUnlockedGroups++] = EC_GROUP_MOVE_2;
     }
-
-    if (FlagGet(FLAG_SYS_HIPSTER_MEET))
-        sWordData->unlockedGroupIds[sWordData->numUnlockedGroups++] = EC_GROUP_TRENDY_SAYING;
 
     if (IsNationalPokedexEnabled())
         sWordData->unlockedGroupIds[sWordData->numUnlockedGroups++] = EC_GROUP_POKEMON_NATIONAL;

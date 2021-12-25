@@ -76,7 +76,6 @@ MossdeepCity_EventScript_SpaceCenterSign::
 	end
 
 MossdeepCity_EventScript_VisitedMossdeep::
-	setflag FLAG_VISITED_MOSSDEEP_CITY
 	setvar VAR_TEMP_1, 1
 	end
 

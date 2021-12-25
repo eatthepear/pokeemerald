@@ -63,7 +63,6 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_MOSSDEEP_GYM
-	setflag FLAG_BADGE07_GET
 	setflag FLAG_HIDE_AQUA_HIDEOUT_GRUNTS
 	clearflag FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY
 	clearflag FLAG_UNKNOWN_0x393
@@ -224,13 +223,11 @@ MossdeepCity_Gym_Movement_WaitAfterSwitchUse:
 
 MossdeepCity_Gym_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE07_GET, MossdeepCity_Gym_EventScript_GymStatueCertified
 	goto MossdeepCity_Gym_EventScript_GymStatue
 	end
 
 MossdeepCity_Gym_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE07_GET, MossdeepCity_Gym_EventScript_GymStatueCertified
 	goto MossdeepCity_Gym_EventScript_GymStatue
 	end
 
