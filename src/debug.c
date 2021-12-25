@@ -889,22 +889,6 @@ static void DebugAction_Util_HealParty(u8 taskId)
 }
 static void DebugAction_Util_Fly(u8 taskId)
 {
-    FlagSet(FLAG_VISITED_LITTLEROOT_TOWN);
-    FlagSet(FLAG_VISITED_OLDALE_TOWN);
-    FlagSet(FLAG_VISITED_DEWFORD_TOWN);
-    FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
-    FlagSet(FLAG_VISITED_FALLARBOR_TOWN);
-    FlagSet(FLAG_VISITED_VERDANTURF_TOWN);
-    FlagSet(FLAG_VISITED_PACIFIDLOG_TOWN);
-    FlagSet(FLAG_VISITED_PETALBURG_CITY);
-    FlagSet(FLAG_VISITED_SLATEPORT_CITY);
-    FlagSet(FLAG_VISITED_MAUVILLE_CITY);
-    FlagSet(FLAG_VISITED_RUSTBORO_CITY);
-    FlagSet(FLAG_VISITED_FORTREE_CITY);
-    FlagSet(FLAG_VISITED_LILYCOVE_CITY);
-    FlagSet(FLAG_VISITED_MOSSDEEP_CITY);
-    FlagSet(FLAG_VISITED_SOOTOPOLIS_CITY);
-    FlagSet(FLAG_VISITED_EVER_GRANDE_CITY);
     FlagSet(FLAG_LANDMARK_POKEMON_LEAGUE);
     FlagSet(FLAG_LANDMARK_BATTLE_FRONTIER);
     Debug_DestroyMenu(taskId);
@@ -1383,40 +1367,26 @@ static void DebugAction_Flags_ToggleFlyFlags(u8 taskId)
         PlaySE(SE_PC_OFF);
     else
         PlaySE(SE_PC_LOGIN);
-    FlagToggle(FLAG_VISITED_LITTLEROOT_TOWN);
-    FlagToggle(FLAG_VISITED_OLDALE_TOWN);
-    FlagToggle(FLAG_VISITED_DEWFORD_TOWN);
-    FlagToggle(FLAG_VISITED_LAVARIDGE_TOWN);
-    FlagToggle(FLAG_VISITED_FALLARBOR_TOWN);
-    FlagToggle(FLAG_VISITED_VERDANTURF_TOWN);
-    FlagToggle(FLAG_VISITED_PACIFIDLOG_TOWN);
-    FlagToggle(FLAG_VISITED_PETALBURG_CITY);
-    FlagToggle(FLAG_VISITED_SLATEPORT_CITY);
-    FlagToggle(FLAG_VISITED_MAUVILLE_CITY);
-    FlagToggle(FLAG_VISITED_RUSTBORO_CITY);
-    FlagToggle(FLAG_VISITED_FORTREE_CITY);
-    FlagToggle(FLAG_VISITED_LILYCOVE_CITY);
-    FlagToggle(FLAG_VISITED_MOSSDEEP_CITY);
-    FlagToggle(FLAG_VISITED_SOOTOPOLIS_CITY);
-    FlagToggle(FLAG_VISITED_EVER_GRANDE_CITY);
     FlagToggle(FLAG_LANDMARK_POKEMON_LEAGUE);
     FlagToggle(FLAG_LANDMARK_BATTLE_FRONTIER);
 }
 static void DebugAction_Flags_ToggleBadgeFlags(u8 taskId)
 {
     // Sound effect
-    if(FlagGet(FLAG_BADGE08_GET))
-        PlaySE(SE_PC_OFF);
-    else
-        PlaySE(SE_PC_LOGIN);
-    FlagToggle(FLAG_BADGE01_GET);
-    FlagToggle(FLAG_BADGE02_GET);
-    FlagToggle(FLAG_BADGE03_GET);
-    FlagToggle(FLAG_BADGE04_GET);
-    FlagToggle(FLAG_BADGE05_GET);
-    FlagToggle(FLAG_BADGE06_GET);
-    FlagToggle(FLAG_BADGE07_GET);
-    FlagToggle(FLAG_BADGE08_GET);
+    PlaySE(SE_PC_LOGIN);
+    FlagToggle(FLAG_BEATLEVIATHAN1);
+    FlagToggle(FLAG_BEATLEVIATHAN2);
+    FlagToggle(FLAG_BEATLEVIATHAN3);
+    FlagToggle(FLAG_BEATLEVIATHAN4);
+    FlagToggle(FLAG_BEATLEVIATHAN5);
+    FlagToggle(FLAG_BEATLEVIATHAN6);
+    FlagToggle(FLAG_BEATLEVIATHAN7);
+    FlagToggle(FLAG_BEATLEVIATHAN8);
+    FlagToggle(FLAG_BEATLEVIATHAN9);
+    FlagToggle(FLAG_BEATLEVIATHAN10);
+    FlagToggle(FLAG_BEATLEVIATHAN11);
+    FlagToggle(FLAG_BEATLEVIATHAN12);
+    FlagToggle(FLAG_BEATLEVIATHAN13);
 }
 static void DebugAction_Flags_CollisionOnOff(u8 taskId)
 {

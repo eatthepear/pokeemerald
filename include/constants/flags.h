@@ -1349,8 +1349,8 @@
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 
 // Beat Leviathan Flags
-#define FLAG_BEATLEVIATHAN1                          (SYSTEM_FLAGS + 0x5) 
-#define FLAG_BEATLEVIATHAN2                          (SYSTEM_FLAGS + 0x6) 
+#define FLAG_BEATLEVIATHAN1                          (SYSTEM_FLAGS + 0x5) // FLAG_0x865
+#define FLAG_BEATLEVIATHAN2                          (SYSTEM_FLAGS + 0x6)
 #define FLAG_BEATLEVIATHAN3                          (SYSTEM_FLAGS + 0x7) 
 #define FLAG_BEATLEVIATHAN4                          (SYSTEM_FLAGS + 0x8) 
 #define FLAG_BEATLEVIATHAN5                          (SYSTEM_FLAGS + 0x9) 
@@ -1360,7 +1360,7 @@
 #define FLAG_BEATLEVIATHAN9                          (SYSTEM_FLAGS + 0xD) 
 #define FLAG_BEATLEVIATHAN10                         (SYSTEM_FLAGS + 0xE) 
 #define FLAG_BEATLEVIATHAN11                         (SYSTEM_FLAGS + 0xF) 
-#define FLAG_BEATLEVIATHAN12                         (SYSTEM_FLAGS + 0x10) 
+#define FLAG_BEATLEVIATHAN12                         (SYSTEM_FLAGS + 0x10) // FLAG_0x875
 #define FLAG_BEATLEVIATHAN13                         (SYSTEM_FLAGS + 0x11)
 #define FLAG_BEATLEVIATHAN14                         (SYSTEM_FLAGS + 0x12)
 #define FLAG_BEATLEVIATHAN15                         (SYSTEM_FLAGS + 0x13)
