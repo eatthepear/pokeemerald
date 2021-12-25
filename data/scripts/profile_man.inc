@@ -1,7 +1,6 @@
 ProfileMan_EventScript_Man::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_CHAT_USED, ProfileMan_EventScript_GivenProfileBefore
 	msgbox ProfileMan_Text_CollectTrainerProfiles, MSGBOX_DEFAULT
 	goto ProfileMan_EventScript_AskToSeeProfile
 	end

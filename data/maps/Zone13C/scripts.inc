@@ -3,7 +3,7 @@ Zone13C_MapScripts::
 	.byte 0
 
 Zone13C_OnTransition:
-	goto_if_unset FLAG_BEATLEVIATHAN7 Zone13C_EventScript_HideLeviathan8
+	goto_if_unset FLAG_BEATLEVIATHAN7, Zone13C_EventScript_HideLeviathan8
 	goto Zone13C_EventScript_HideLeviathan7
 	end
 

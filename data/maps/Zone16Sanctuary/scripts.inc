@@ -26,7 +26,7 @@ Zone16Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone16Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BLUE_SHARD, 10
+	giveitem ITEM_TM20
 	closemessage
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
@@ -70,4 +70,4 @@ Zone16Sanctuary_EventScript_Leave:
 	end
 
 Zone16Sanctuary_Text_Reward:
-	.string "10 Blue Shards!$"
+	.string "TM20 - Aerial Ace!$"

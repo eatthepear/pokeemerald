@@ -3,7 +3,7 @@ Zone5A_MapScripts::
 	.byte 0
 
 Zone5A_OnTransition:
-	goto_if_set FLAG_BEATLEVIATHAN2 Zone5A_EventScript_MoveLeviathan
+	goto_if_set FLAG_BEATLEVIATHAN2, Zone5A_EventScript_MoveLeviathan
 	end
 
 Zone5A_EventScript_MoveLeviathan:
@@ -30,11 +30,11 @@ Zone5A_Text_AnneAndJuneIntro:
 	.string "you're the Junior!$"
 
 Zone5A_Text_AnneAndJuneDefeat:
-	.string "Anne: I guess you were right...\p"
-	.string "June: We still lost though...$"
+	.string "Anne: I guess you were right…\p"
+	.string "June: We still lost though…$"
 
 Zone5A_Text_AnneAndJunePostBattle:
-	.string "Anne: Maybe we needed better...\p"
+	.string "Anne: Maybe we needed better…\p"
 	.string "June: Coordination?\p"
 	.string "Anne: Yeah, exactly that!$"
 
@@ -51,7 +51,7 @@ Zone5A_Text_RebeccaDefeat:
 	.string "First of the Fearsome Foursome down!$"
 
 Zone5A_Text_RebeccaPostBattle:
-	.string "Defeat leaves me in disgrace...$"
+	.string "Defeat leaves me in disgrace…$"
 
 Zone5A_EventScript_Caitlyn::
 	trainerbattle_single TRAINER_CAITLYN, Zone5A_Text_CaitlynIntro, Zone5A_Text_CaitlynDefeat
@@ -66,7 +66,7 @@ Zone5A_Text_CaitlynDefeat:
 	.string "Second of the Fearsome Foursome down!$"
 
 Zone5A_Text_CaitlynPostBattle:
-	.string "They say second is the best...$"
+	.string "They say second is the best…$"
 
 Zone5A_EventScript_Ryan::
 	trainerbattle_single TRAINER_RYAN, Zone5A_Text_RyanIntro, Zone5A_Text_RyanDefeat
@@ -86,6 +86,8 @@ Zone5A_Text_RyanPostBattle:
 Zone5A_EventScript_InitiateLeviathanBattle::
 	lock
 	goto_if_set FLAG_BEATLEVIATHAN2, Zone5A_EventScript_DontTalk
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	goto_if_eq VAR_TEMP_2, 9, Zone5A_EventScript_Ignore
 	fadeoutbgm 1
 	msgbox Zone5A_Text_Leviathan2Intro1, MSGBOX_AUTOCLOSE
 	applymovement 4, Common_Movement_ExclamationMark
@@ -100,6 +102,14 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	trainerbattle_no_intro TRAINER_LEVIATHAN2, Zone5A_Text_Leviathan2Defeat
 	goto Zone5A_EventScript_Leviathan2Defeated
 	end
+
+Zone5A_EventScript_Ignore:
+	msgbox Zone5A_Text_DoesntNotice, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone5A_Text_DoesntNotice:
+	.string "Looks like he doesn't notice you…$"
 
 Zone5A_EventScript_DeclanBrutal:
 	totemboost_def1 B_POSITION_OPPONENT_LEFT
@@ -130,19 +140,19 @@ Zone5A_Text_Leviathan2Defeated:
 	.string "I'm brooding.$"
 
 Zone5A_Text_Leviathan2Intro1:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: ...\n"
-	.string "...\l"
-	.string "Stupid kids...\l"
-	.string "...\l"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"
+	.string "…\l"
+	.string "Stupid kids…\l"
+	.string "…\l"
 	.string "I don't want to be part of that\l"
-	.string "nonsense Fearsome Foursome club...\l"
-	.string "...\l"
-	.string "My club is the only club for me...$"
+	.string "nonsense Fearsome Foursome club…\l"
+	.string "…\l"
+	.string "My club is the only club for me…$"
 
 Zone5A_Text_Leviathan2Intro2:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Hey you! Want to join my\n"
 	.string "club? The name: The Bug Maniacs!\p"
-	.string "... You don't?!\p"
+	.string "… You don't?!\p"
 	.string "You'll change your mind after\n"
 	.string "{COLOR BLUE}Leviathan Declan{COLOR DARK_GRAY} beats you with his\l"
 	.string "fabulous Bug Pokémon!$"
@@ -154,11 +164,11 @@ Zone5A_Text_Leviathan2Reward:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You got me. You don't\n"
 	.string "have to join my club. \p"
 	.string "A reward?\n"
-	.string "...\l"
+	.string "…\l"
 	.string "Look, I don't go around giving out\l"
 	.string "sweet rewards to non-club members.\l"
-	.string "...\l"
-	.string "...\p"
+	.string "…\l"
+	.string "…\p"
 	.string "You can have these Shards I found.\n"
 	.string "They're no use for my fabulous\l"
 	.string "Bug Pokémon anyways.$"

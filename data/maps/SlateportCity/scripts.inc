@@ -34,7 +34,6 @@ SlateportCity_OnTransition:
 	end
 
 SlateportCity_EventScript_EnterSlateport::
-	setflag FLAG_VISITED_SLATEPORT_CITY
 	setvar VAR_CONTEST_HALL_STATE, 0
 	setflag FLAG_HIDE_SLATEPORT_CITY_CONTEST_REPORTER
 	return
@@ -286,7 +285,6 @@ SlateportCity_EventScript_BattleTentSign::
 SlateportCity_EventScript_SternsShipyardSign::
 	lockall
 	goto_if_set FLAG_SYS_GAME_CLEAR, SlateportCity_EventScript_SternsShipyardFerryComplete
-	goto_if_set FLAG_BADGE07_GET, SlateportCity_EventScript_SternsShipyardNearsCompletion
 	msgbox SlateportCity_Text_SternsShipyardWantedSign, MSGBOX_DEFAULT
 	releaseall
 	end

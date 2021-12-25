@@ -3,7 +3,7 @@ Zone16A_MapScripts::
 	.byte 0
 
 Zone16A_OnTransition:
-	goto_if_set FLAG_BEATLEVIATHAN10 Zone16A_EventScript_MoveLeviathan
+	goto_if_set FLAG_BEATLEVIATHAN10, Zone16A_EventScript_MoveLeviathan
 	end
 
 Zone16A_EventScript_MoveLeviathan:
@@ -48,6 +48,8 @@ Zone16A_EventScript_SophiaWalkDown:
 	applymovement 14, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement 14, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 14, Common_Movement_WalkRight
 	waitmovement 0
 	releaseall
 	end

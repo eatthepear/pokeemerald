@@ -11,7 +11,6 @@ RustboroCity_MapScripts::
 	.byte 0
 
 RustboroCity_OnTransition:
-	setflag FLAG_VISITED_RUSTBORO_CITY
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_HideMapNamePopup
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
@@ -163,7 +162,6 @@ RustboroCity_EventScript_Woman::
 RustboroCity_EventScript_Man1::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_EventScript_Man1HaveBadge
 	msgbox RustboroCity_Text_HaveYouChallengedGym, MSGBOX_DEFAULT
 	release
 	end

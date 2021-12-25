@@ -157,7 +157,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Zone18A_EventScript_Sign"
     },
     {
       "type": "hidden_item",

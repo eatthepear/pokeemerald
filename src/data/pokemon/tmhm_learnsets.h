@@ -16165,6 +16165,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM09_COVET)
                                             | TMHM(TM13_REST)
                                             | TMHM(TM17_HIDDEN_POWER)
+                                            | TMHM(TM20_AERIAL_ACE)
                                             | TMHM(TM49_SNATCH) // Light Screen
                                             // | TMHM(HM08_DIVE) //Rain Dance
                                             | TMHM(TM33_REFLECT)
@@ -16177,6 +16178,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM09_COVET)
                                             | TMHM(TM13_REST)
                                             | TMHM(TM17_HIDDEN_POWER)
+                                            | TMHM(TM20_AERIAL_ACE)
                                             | TMHM(TM48_SKILL_SWAP) //Blizzard
                                             | TMHM(TM40_ICE_BEAM)
                                             | TMHM(TM49_SNATCH) // Light Screen
