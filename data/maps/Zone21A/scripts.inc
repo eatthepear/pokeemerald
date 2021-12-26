@@ -33,6 +33,31 @@ Zone21A_EventScript_SetState0::
 	releaseall
 	end
 
+Zone21A_EventScript_BattleGirl::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZONE21A_TM29, Zone21A_EventScript_ReceivedTM29
+	msgbox Zone21A_Text_GiveTM29, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM29
+	setflag FLAG_RECEIVED_ZONE21A_TM29
+	release
+	end
+
+Zone21A_Text_GiveTM29:
+	.string "I work hard, so I can break even\n"
+	.string "the toughest of opponents!\p"
+	.string "Take this, so your Pokémon can\n"
+	.string "break even the toughest of screens!$"
+
+Zone21A_EventScript_ReceivedTM29:
+	msgbox Zone21A_Text_ReceivedTM29, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone21A_Text_ReceivedTM29:
+	.string "Leave me be, I'm busy training\n"
+	.string "for my next challenge!$"
+
 Zone21A_EventScript_Howard::
 	trainerbattle_single TRAINER_HOWARD, Zone21A_Text_HowardIntro, Zone21A_Text_HowardDefeat
 	msgbox Zone21A_Text_HowardPostBattle, MSGBOX_AUTOCLOSE

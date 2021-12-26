@@ -75,10 +75,10 @@
 #define FLAG_HIDE_ZONE18B_MAN    0x3E 
 #define FLAG_HIDE_ZONE18B_ODYSSEUS    0x3F 
 #define FLAG_HIDE_ZONE19D_PIRATES    0x40 
-#define FLAG_RECEIVED_ZONE21C_PORYGON    0x41 
-#define FLAG_RECEIVED_ZONE0C_EEVEE    0x42 
-#define FLAG_HIDE_CAM_AND_PAM    0x43
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
+#define FLAG_RECEIVED_ZONE21A_TM29    0x41 // Unused Flag
+#define FLAG_RECEIVED_ZONE21C_PORYGON    0x42 
+#define FLAG_RECEIVED_ZONE0C_EEVEE    0x43 
+#define FLAG_HIDE_CAM_AND_PAM    0x44
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    0x47 // Unused Flag
