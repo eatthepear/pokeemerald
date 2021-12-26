@@ -396,6 +396,150 @@
       "elevation": 3,
       "item": "ITEM_SITRUS_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE21A_SITRUS_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 95,
+      "elevation": 3,
+      "item": "ITEM_TANGA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_TANGA_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 82,
+      "elevation": 3,
+      "item": "ITEM_CHILAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_CHILAN_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 64,
+      "elevation": 3,
+      "item": "ITEM_YACHE_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_YACHE_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 41,
+      "elevation": 3,
+      "item": "ITEM_CHOPLE_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_CHOPLE_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 12,
+      "y": 27,
+      "elevation": 3,
+      "item": "ITEM_WACAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_WACAN_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 0,
+      "y": 0,
+      "elevation": 3,
+      "item": "ITEM_BABIRI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_BABIRI_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 51,
+      "y": 90,
+      "elevation": 3,
+      "item": "ITEM_CHARTI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_CHARTI_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 0,
+      "y": 0,
+      "elevation": 3,
+      "item": "ITEM_COBA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_COBA_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 57,
+      "y": 69,
+      "elevation": 3,
+      "item": "ITEM_PAYAPA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_PAYAPA_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 58,
+      "y": 50,
+      "elevation": 3,
+      "item": "ITEM_KASIB_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_KASIB_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 48,
+      "y": 19,
+      "elevation": 3,
+      "item": "ITEM_PASSHO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_PASSHO_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 41,
+      "y": 21,
+      "elevation": 3,
+      "item": "ITEM_KEBIA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_KEBIA_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 55,
+      "y": 37,
+      "elevation": 3,
+      "item": "ITEM_COLBUR_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_COLBUR_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 46,
+      "y": 25,
+      "elevation": 3,
+      "item": "ITEM_ROSELI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_ROSELI_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 15,
+      "elevation": 3,
+      "item": "ITEM_OCCA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_OCCA_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 37,
+      "y": 12,
+      "elevation": 3,
+      "item": "ITEM_SHUCA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_SHUCA_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 47,
+      "y": 96,
+      "elevation": 3,
+      "item": "ITEM_RINDO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_RINDO_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 50,
+      "y": 31,
+      "elevation": 3,
+      "item": "ITEM_HABAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_HABAN_BERRY"
     }
   ]
 }
