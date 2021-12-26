@@ -2895,9 +2895,9 @@ static const u8 sTM29Desc[] = _(
     "and causes damage.");
 
 static const u8 sTM30Desc[] = _(
-    "Hurls a dark lump\n"
-    "at the foe. It may\n"
-    "lower Sp. Def.");
+    "Slams a barrage of\n"
+    "hard-shelled seeds\n"
+    "down on the target.");
 
 static const u8 sTM31Desc[] = _(
     "Destroys barriers\n"
