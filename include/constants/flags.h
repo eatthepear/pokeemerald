@@ -1124,7 +1124,7 @@
 #define FLAG_ITEM_ZONE21A_HEAT_ROCK                                 0x433
 #define FLAG_ITEM_ZONE21A_SUPER_REPEL                               0x434
 #define FLAG_ITEM_ZONE21A_EVERSTONE                                 0x435
-#define FLAG_ITEM_ZONE21A_LIGHT_CLAY                                0x436
+#define FLAG_ITEM_ZONE21A_TM28                                      0x436
 #define FLAG_ITEM_ZONE21B_SABLENITE                                 0x437//start here
 #define FLAG_UNUSED_0x438                                           0x438
 #define FLAG_UNUSED_0x439                                           0x439

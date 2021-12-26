@@ -214,6 +214,6 @@ Zone21A_EventScript_Everstone::
 	finditem ITEM_EVERSTONE
 	end
 
-Zone21A_EventScript_LightClay::
-	finditem ITEM_LIGHT_CLAY
+Zone21A_EventScript_TM28::
+	finditem ITEM_TM28
 	end
