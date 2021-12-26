@@ -2885,9 +2885,9 @@ static const u8 sTM27Desc[] = _(
     "the foe.");
 
 static const u8 sTM28Desc[] = _(
-    "Digs underground\n"
-    "the 1st turn, then\n"
-    "strikes next turn.");
+    "Raises Attack when\n"
+    "poisoned, burned,\n"
+    "or paralyzed.");
 
 static const u8 sTM29Desc[] = _(
     "Destroys barriers\n"
