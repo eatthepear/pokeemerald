@@ -5280,7 +5280,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_AERIAL_ACE] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 60,
         .type = TYPE_FLYING,
         .accuracy = 0,
         .pp = 25,
@@ -11454,7 +11454,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_DOUBLE_HIT,
         .power = 40,
         .type = TYPE_FLYING,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,

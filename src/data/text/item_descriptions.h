@@ -2845,9 +2845,9 @@ static const u8 sTM19Desc[] = _(
     "its Speed.");
 
 static const u8 sTM20Desc[] = _(
-    "An extremely fast\n"
-    "attack that can't\n"
-    "be avoided.");
+    "Slams the target\n"
+    "with wings and hits\n"
+    "twice in a row.");
 
 static const u8 sTM21Desc[] = _(
     "Inflicts a burn on\n"

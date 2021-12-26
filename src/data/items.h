@@ -7539,10 +7539,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM20_AERIAL_ACE] =
+    [ITEM_TM20_DUAL_WINGBEAT] =
     {
         .name = _("TM20"),
-        .itemId = ITEM_TM20_AERIAL_ACE,
+        .itemId = ITEM_TM20_DUAL_WINGBEAT,
         .price = 3000,
         .description = sTM20Desc,
         .pocket = POCKET_TM_HM,
