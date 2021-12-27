@@ -273,6 +273,12 @@ static void SetTmHmOwned(u16 itemId)
     *flagByte = (*flagByte) | (1 << ((itemId - ITEM_TM01) % 8));
 }
 
+static void SetTmHmUnowned(u16 itemId)
+{
+    u8* flagByte = &gSaveBlock1Ptr->bagPocket_TMHMOwnedFlags[(itemId - ITEM_TM01) / 8];
+    *flagByte = (*flagByte) & ~(1 << ((itemId - ITEM_TM01) % 8));
+}
+
 bool8 AddBagItem(u16 itemId, u16 count)
 {
     u8 i;
@@ -448,6 +454,8 @@ bool8 RemoveBagItem(u16 itemId, u16 count)
                 itemPocket->itemSlots[var].itemId = ITEM_NONE;
 
             if (count == 0)
+                if (pocket == TMHM_POCKET)
+                    SetTmHmUnowned(itemId);
                 return TRUE;
         }
 
@@ -471,9 +479,13 @@ bool8 RemoveBagItem(u16 itemId, u16 count)
                     itemPocket->itemSlots[i].itemId = ITEM_NONE;
 
                 if (count == 0)
+                    if (pocket == TMHM_POCKET)
+                        SetTmHmUnowned(itemId);
                     return TRUE;
             }
         }
+        if (pocket == TMHM_POCKET)
+            SetTmHmUnowned(itemId);
         return TRUE;
     }
 }
