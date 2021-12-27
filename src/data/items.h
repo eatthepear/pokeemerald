@@ -7911,10 +7911,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM51_SOLAR_BEAM] =
     {
         .name = _("TM51"),
-        .itemId = ITEM_TM51,
+        .itemId = ITEM_TM51_SOLAR_BEAM,
         .price = 3000,
         .description = sTM51Desc,
         .pocket = POCKET_TM_HM,

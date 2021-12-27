@@ -1315,7 +1315,7 @@ static const u8 *const sUnused_StatStrings[] =
     gText_Speed2
 };
 
-static const u16 sTMHMMoves[] =
+const u16 sTMHMMoves[TMHM_COUNT] =
 {
     [ITEM_TM01 - ITEM_TM01] = MOVE_PROTECT,
     [ITEM_TM02 - ITEM_TM01] = MOVE_PLUCK,
@@ -1367,8 +1367,8 @@ static const u16 sTMHMMoves[] =
     [ITEM_TM48 - ITEM_TM01] = MOVE_SKILL_SWAP,
     [ITEM_TM49 - ITEM_TM01] = MOVE_SNATCH,
     [ITEM_TM50 - ITEM_TM01] = MOVE_OVERHEAT,
-    [ITEM_TM51 - ITEM_TM01] = MOVE_NONE, // Todo
-    [ITEM_TM52 - ITEM_TM01] = MOVE_NONE, // Todo
+    [ITEM_TM51 - ITEM_TM01] = MOVE_SOLAR_BEAM, // Todo
+    /* [ITEM_TM52 - ITEM_TM01] = MOVE_NONE, // Todo
     [ITEM_TM53 - ITEM_TM01] = MOVE_NONE, // Todo
     [ITEM_TM54 - ITEM_TM01] = MOVE_NONE, // Todo
     [ITEM_TM55 - ITEM_TM01] = MOVE_NONE, // Todo
@@ -1424,5 +1424,5 @@ static const u16 sTMHMMoves[] =
     [ITEM_HM05 - ITEM_TM01] = MOVE_FLASH,
     [ITEM_HM06 - ITEM_TM01] = MOVE_ROCK_SMASH,
     [ITEM_HM07 - ITEM_TM01] = MOVE_WATERFALL,
-    [ITEM_HM08 - ITEM_TM01] = MOVE_DIVE,
+    [ITEM_HM08 - ITEM_TM01] = MOVE_DIVE, */
 };
