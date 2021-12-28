@@ -70,4 +70,4 @@ Zone16Sanctuary_EventScript_Leave:
 	end
 
 Zone16Sanctuary_Text_Reward:
-	.string "TM20 - Aerial Ace!$"
+	.string "TM20 - Dual Wingbeat!$"

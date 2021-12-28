@@ -2845,9 +2845,9 @@ static const u8 sTM19Desc[] = _(
     "its Speed.");
 
 static const u8 sTM20Desc[] = _(
-    "An extremely fast\n"
-    "attack that can't\n"
-    "be avoided.");
+    "Slams the target\n"
+    "with wings and hits\n"
+    "twice in a row.");
 
 static const u8 sTM21Desc[] = _(
     "Inflicts a burn on\n"
@@ -2885,9 +2885,9 @@ static const u8 sTM27Desc[] = _(
     "the foe.");
 
 static const u8 sTM28Desc[] = _(
-    "Digs underground\n"
-    "the 1st turn, then\n"
-    "strikes next turn.");
+    "Raises Attack when\n"
+    "poisoned, burned,\n"
+    "or paralyzed.");
 
 static const u8 sTM29Desc[] = _(
     "Destroys barriers\n"
@@ -2895,9 +2895,9 @@ static const u8 sTM29Desc[] = _(
     "and causes damage.");
 
 static const u8 sTM30Desc[] = _(
-    "Hurls a dark lump\n"
-    "at the foe. It may\n"
-    "lower Sp. Def.");
+    "Slams a barrage of\n"
+    "hard-shelled seeds\n"
+    "down on the target.");
 
 static const u8 sTM31Desc[] = _(
     "Destroys barriers\n"

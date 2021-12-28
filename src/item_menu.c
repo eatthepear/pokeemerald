@@ -568,6 +568,17 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
 };
 
+// .text
+
+struct TempWallyStruct {
+    struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
+    struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
+    u16 cursorPosition[POCKETS_COUNT];
+    u16 scrollPosition[POCKETS_COUNT];
+    u8 filler[0x2];
+    u16 pocket;
+};
+
 EWRAM_DATA struct BagMenu *gBagMenu = 0;
 EWRAM_DATA struct BagPosition gBagPosition = {0};
 static EWRAM_DATA struct ListBuffer1 *sListBuffer1 = 0;
@@ -933,7 +944,7 @@ static void GetItemName(s8 *dest, u16 itemId)
         else
         {
             // Get TM number
-            ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
+            ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 3);
             StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
         }
         break;
@@ -3296,7 +3307,7 @@ static void SortItemsInBag(u8 pocket, u8 type)
         itemAmount = BAG_BERRIES_COUNT;
         break;
     case TMHM_POCKET:
-        itemMem = gSaveBlock1Ptr->bagPocket_TMHM;
+        itemMem = &gTmHmItemSlots[0];
         itemAmount = BAG_TMHM_COUNT;
         break;
     
