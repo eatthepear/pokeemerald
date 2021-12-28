@@ -2652,7 +2652,7 @@ static const struct TrainerMon sParty_Audrey[] = {
 static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Double Battle, Default
     {
     .iv = 31,
-    .lvl = 38,
+    .lvl = 37,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Ice Scales
@@ -2679,7 +2679,7 @@ static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Double Batt
     },
     {
     .iv = 31,
-    .lvl = 38,
+    .lvl = 37,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Water Absorb
