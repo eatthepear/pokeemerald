@@ -963,7 +963,6 @@ Zone0Sanctuary_Text_Colress_BrutalExplained:
 	.string "Items can't be used in battle.\p"
 	.string "You cannot turn off Set mode.\p"
 	.string "The Daycare cannot be used.\p"
-	.string "Trainer battles gives less money.\p"
 	.string "Many helpful NPCs are unavailable.\p"
 	.string "It is not recommended to play on\n"
 	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\l"
