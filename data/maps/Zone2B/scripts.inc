@@ -5,9 +5,16 @@ Zone2B_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 2
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone2B_EventScript_CheckBrutal
 	warp MAP_ZONE2SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone2B_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_DEXTER, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_JEREMIAH, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ARTHUR, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone2B_EventScript_Jeremiah::
 	trainerbattle_single TRAINER_JEREMIAH, Zone2B_Text_JeremiahIntro, Zone2B_Text_JeremiahDefeat

@@ -5,9 +5,17 @@ Zone11A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 11
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone11A_EventScript_CheckBrutal
 	warp MAP_ZONE11SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone11A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_JEANETTE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_REGINA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_EMMA_AND_LEO, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_JOEL, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone11A_EventScript_LeviathanIntro::
 	lockall

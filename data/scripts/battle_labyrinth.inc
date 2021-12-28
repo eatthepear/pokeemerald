@@ -1437,6 +1437,13 @@ EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
 
+EventScript_BrutalExitNotSatisfied::
+	msgbox gText_BrutalExitNotSatisfied, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	releaseall
+	end
+
 EventScript_LeaveLeft:
 	applymovement 1, Common_Movement_WalkRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight

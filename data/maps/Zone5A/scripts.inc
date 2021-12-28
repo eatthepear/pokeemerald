@@ -14,9 +14,14 @@ Zone5A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 5
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_CheckBrutal
 	warp MAP_ZONE5SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone5A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_ANNE_AND_JUNE, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons

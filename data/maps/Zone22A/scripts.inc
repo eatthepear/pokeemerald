@@ -4,8 +4,18 @@ Zone22A_MapScripts::
 Zone22A_EventScript_Exit::
 	lockall
 	goto_if_unset FLAG_BEATLEVIATHAN13, Zone22A_EventScript_LeviathanBattle
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_CheckBrutal
 	releaseall
 	end
+
+Zone22A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_CODY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_LEWIS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_INEZ_AND_EMMA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ALFREDO, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_IAN, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_AUDREY, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone22A_EventScript_LeviathanBattle:
 	fadeoutbgm 1

@@ -66,9 +66,15 @@ Zone3A_Text_Leviathan1Text:
 Zone3A_EventScript_Warp:
 	compare VAR_ZONE, 3
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_CheckBrutal
 	warp MAP_ZONE3SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone3A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_BORIS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ANNABELLE, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone3A_Text_Leviathan1Intro:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: You! How dare you intrude on\n"

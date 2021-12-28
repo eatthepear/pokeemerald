@@ -8,6 +8,7 @@
  * 
  * Some trainers have different parties on Default and Brutal.
  * You can CTRL+F for them in the document (just search for the word Default or Brutal)
+ * Some bosses are optional on Default and are commented as such. However, on Brutal, all trainers are mandatory.
  * 
  * If a Pokemon does not have a specified parameter (for example the nature) then it is usually determined randomly.
  * EVs are by default set to 0.
@@ -2734,7 +2735,7 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     }
 };
 
-static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, optional, Brutal
+static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     {
     .iv = 31,
     .lvl = 15,
@@ -2863,7 +2864,7 @@ static const struct TrainerMon sParty_JakeBrutal[] = {//Leviathan 6, Brutal
     }
 };
 
-static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, optional, Brutal
+static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Brutal
     {
     .iv = 31,
     .lvl = 26,
@@ -2906,7 +2907,7 @@ static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, opt
     }
 };
 
-static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, optional, Brutal
+static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, Brutal
     {
     .iv = 31,
     .lvl = 26,
@@ -3127,7 +3128,7 @@ static const struct TrainerMon sParty_Pirate4Brutal[] = {//Brutal
     }
 };
 
-static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, optional, Brutal
+static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Brutal
     {
     .iv = 31,
     .lvl = 34,
@@ -3140,7 +3141,7 @@ static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, option
     },
 };
 
-static const struct TrainerMon sParty_JulieBrutal[] = {
+static const struct TrainerMon sParty_JulieBrutal[] = {//Leviathan 12, Brutal
     {
     .iv = 31,
     .lvl = 34,

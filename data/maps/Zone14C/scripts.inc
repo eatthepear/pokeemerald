@@ -5,9 +5,18 @@ Zone14C_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 14
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone14C_EventScript_CheckBrutal
 	warp MAP_ZONE14SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone14C_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_JAN_AND_ERIN, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_AMBER_AND_KIM, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEATLEVIATHAN7, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEATLEVIATHAN8, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_LOLA, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone14C_EventScript_LeftMost::
 	lockall

@@ -5,9 +5,19 @@ Zone12A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 12
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_CheckBrutal
 	warp MAP_ZONE12SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone12A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_DOLORES, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ESSENCE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_RANDOLPH, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_HILDA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_GENIE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_KINLEY, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone12A_EventScript_Dolores::
 	trainerbattle_single TRAINER_DOLORES, Zone12A_Text_DoloresIntro, Zone12A_Text_DoloresDefeat
