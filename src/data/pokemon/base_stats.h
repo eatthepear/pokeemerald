@@ -4772,7 +4772,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_UNAWARE, ABILITY_DAMP, ABILITY_NONE},
+        .abilities = {ABILITY_UNAWARE, ABILITY_WATER_ABSORB, ABILITY_NONE},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -4796,7 +4796,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_UNAWARE, ABILITY_DAMP, ABILITY_NONE},
+        .abilities = {ABILITY_UNAWARE, ABILITY_WATER_ABSORB, ABILITY_NONE},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -21578,10 +21578,10 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_FROSMOTH] =
     {
-        .baseHP        = 70,
+        .baseHP        = 80,
         .baseAttack    = 65,
         .baseDefense   = 60,
-        .baseSpeed     = 65,
+        .baseSpeed     = 85,
         .baseSpAttack  = 125,
         .baseSpDefense = 90,
         .type1 = TYPE_ICE,
