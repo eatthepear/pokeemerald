@@ -313,3 +313,36 @@ Zone22A_Text_AudreyDefeat:
 Zone22A_Text_AudreyPostBattle:
 	.string "Am I disappointed?\n"
 	.string "Maybe a little bit.$"
+
+Zone22A_EventScript_DestinyKnot::
+	finditem ITEM_DESTINY_KNOT
+	end
+
+Zone22A_EventScript_IcyRock::
+	finditem ITEM_ICY_ROCK
+	end
+
+Zone22A_EventScript_IceStone::
+	finditem ITEM_ICE_STONE
+	end
+
+Zone22A_EventScript_MetalCoat::
+	finditem ITEM_METAL_COAT
+	end
+
+Zone22A_EventScript_Item3000::
+	lock
+	showmoneybox 0, 0, 0
+	addmoney 3000, 0
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone22A_Text_Found3000, MSGBOX_DEFAULT
+	updatemoneybox
+	waitfanfare
+	hidemoneybox
+	setflag FLAG_ITEM_ZONE22A_3000
+	removeobject 14
+	release
+	end
+
+Zone22A_Text_Found3000:
+	.string "Found ¥3000!$"

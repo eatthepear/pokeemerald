@@ -1931,8 +1931,8 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Winston3),
-        .party = {.TrainerMon = sParty_Winston3},
+        .partySize = ARRAY_COUNT(sParty_CamAndPamBrutal),
+        .party = {.TrainerMon = sParty_CamAndPamBrutal},
     },
 
     [TRAINER_MARK] =
