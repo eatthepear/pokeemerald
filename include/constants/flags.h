@@ -616,16 +616,16 @@
 #define FLAG_HIDDEN_ITEM_ZONE21A_COLBUR_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x4A)
 #define FLAG_HIDDEN_ITEM_ZONE21A_BABIRI_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x4B)
 #define FLAG_HIDDEN_ITEM_ZONE21A_ROSELI_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x4C)
-#define FLAG_HIDDEN_ITEM_NEXTT       (FLAG_HIDDEN_ITEMS_START + 0x4D)
-#define FLAG_HIDDEN_ITEM_NEXTY       (FLAG_HIDDEN_ITEMS_START + 0x4E)
-#define FLAG_HIDDEN_ITEM_NEXTU       (FLAG_HIDDEN_ITEMS_START + 0x4F)
-#define FLAG_HIDDEN_ITEM_NEXTI       (FLAG_HIDDEN_ITEMS_START + 0x50)
-#define FLAG_HIDDEN_ITEM_NEXTO       (FLAG_HIDDEN_ITEMS_START + 0x51)
-#define FLAG_HIDDEN_ITEM_NEXTP       (FLAG_HIDDEN_ITEMS_START + 0x52)
-#define FLAG_HIDDEN_ITEM_NEXTA       (FLAG_HIDDEN_ITEMS_START + 0x53)
-#define FLAG_HIDDEN_ITEM_NEXTS       (FLAG_HIDDEN_ITEMS_START + 0x54)
-#define FLAG_HIDDEN_ITEM_NEXTD       (FLAG_HIDDEN_ITEMS_START + 0x55)
-#define FLAG_HIDDEN_ITEM_NEXTF       (FLAG_HIDDEN_ITEMS_START + 0x56)
+#define FLAG_HIDDEN_ITEM_ZONE22A_SITRUS_BERRY_1              (FLAG_HIDDEN_ITEMS_START + 0x4D)
+#define FLAG_HIDDEN_ITEM_ZONE22A_SITRUS_BERRY_2              (FLAG_HIDDEN_ITEMS_START + 0x4E)
+#define FLAG_HIDDEN_ITEM_ZONE22A_ASPEAR_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x4F)
+#define FLAG_HIDDEN_ITEM_ZONE22A_LUM_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x50)
+#define FLAG_HIDDEN_ITEM_ZONE22A_RED_SHARD_1                 (FLAG_HIDDEN_ITEMS_START + 0x51)
+#define FLAG_HIDDEN_ITEM_ZONE22A_RED_SHARD_2                 (FLAG_HIDDEN_ITEMS_START + 0x52)
+#define FLAG_HIDDEN_ITEM_ZONE22A_BLUE_SHARD_1                (FLAG_HIDDEN_ITEMS_START + 0x53)
+#define FLAG_HIDDEN_ITEM_ZONE22A_BLUE_SHARD_2                (FLAG_HIDDEN_ITEMS_START + 0x54)
+#define FLAG_HIDDEN_ITEM_ZONE22A_YELLOW_SHARD_1              (FLAG_HIDDEN_ITEMS_START + 0x55)
+#define FLAG_HIDDEN_ITEM_ZONE22A_YELLOW_SHARD_2              (FLAG_HIDDEN_ITEMS_START + 0x56)
 #define FLAG_HIDDEN_ITEM_NEXTG       (FLAG_HIDDEN_ITEMS_START + 0x57)
 #define FLAG_HIDDEN_ITEM_NEXTH       (FLAG_HIDDEN_ITEMS_START + 0x58)
 #define FLAG_HIDDEN_ITEM_NEXTJ       (FLAG_HIDDEN_ITEMS_START + 0x59)
@@ -1125,12 +1125,12 @@
 #define FLAG_ITEM_ZONE21A_SUPER_REPEL                               0x434
 #define FLAG_ITEM_ZONE21A_EVERSTONE                                 0x435
 #define FLAG_ITEM_ZONE21A_TM28                                      0x436
-#define FLAG_ITEM_ZONE21B_SABLENITE                                 0x437//start here
-#define FLAG_UNUSED_0x438                                           0x438
-#define FLAG_UNUSED_0x439                                           0x439
-#define FLAG_UNUSED_0x43A                                           0x43A
-#define FLAG_UNUSED_0x43B                                           0x43B
-#define FLAG_UNUSED_0x43C                                           0x43C
+#define FLAG_ITEM_ZONE21B_SABLENITE                                 0x437
+#define FLAG_ITEM_ZONE22A_ICE_STONE                                 0x438
+#define FLAG_ITEM_ZONE22A_ICY_ROCK                                  0x439
+#define FLAG_ITEM_ZONE22A_METAL_COAT                                0x43A
+#define FLAG_ITEM_ZONE22A_DESTINY_KNOT                              0x43B
+#define FLAG_ITEM_ZONE22A_3000                                      0x43C
 #define FLAG_UNUSED_0x43D                                           0x43D
 #define FLAG_UNUSED_0x43E                                           0x43E
 #define FLAG_UNUSED_0x43F                                           0x43F
