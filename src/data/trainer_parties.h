@@ -2738,22 +2738,20 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
 static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     {
     .iv = 31,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Poison Point
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
     .iv = 31,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Cloud Nine
     .species = SPECIES_PSYDUCK,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_CONFUSION, MOVE_TAIL_WHIP, MOVE_FURY_SWIPES}
     },
     {
@@ -2763,7 +2761,6 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Triage
     .species = SPECIES_COMFEY,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_DRAINING_KISS, MOVE_FLOWER_SHIELD, MOVE_LEECH_SEED, MOVE_GROWTH}
     }
 };
