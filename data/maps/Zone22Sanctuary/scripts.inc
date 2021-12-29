@@ -26,7 +26,7 @@ Zone22Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone22Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_RED_SHARD, 30
+	giveitem ITEM_ASSAULT_VEST
 	closemessage
 	setvar VAR_ZONE, 23
 	buffernumberstring 0, VAR_ZONE
@@ -65,4 +65,4 @@ Zone22Sanctuary_EventScript_Leave:
 	end
 
 Zone22Sanctuary_Text_Reward:
-	.string "30 Red Shards!$"
+	.string "The Assault Vest!$"
