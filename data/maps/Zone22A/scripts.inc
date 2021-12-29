@@ -5,17 +5,25 @@ Zone22A_EventScript_Exit::
 	lockall
 	goto_if_unset FLAG_BEATLEVIATHAN13, Zone22A_EventScript_LeviathanBattle
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_CheckBrutal
+	warp MAP_ZONE22SANCTUARY, 255, 22, 7
 	releaseall
 	end
 
 Zone22A_EventScript_CheckBrutal:
-	goto_if_not_defeated TRAINER_CODY, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_LEWIS, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_INEZ_AND_EMMA, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_ALFREDO, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_IAN, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_AUDREY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_CODY, Zone22A_EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_LEWIS, Zone22A_EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_INEZ_AND_EMMA, Zone22A_EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ALFREDO, Zone22A_EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_IAN, Zone22A_EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_AUDREY, Zone22A_EventScript_BrutalExitNotSatisfied
 	return
+
+Zone22A_EventScript_BrutalExitNotSatisfied::
+	msgbox gText_BrutalExitNotSatisfied, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	releaseall
+	end
 
 Zone22A_EventScript_LeviathanBattle:
 	fadeoutbgm 1
@@ -47,10 +55,13 @@ Zone22A_EventScript_LeviathanBattle:
 	msgbox Zone22A_Text_Cam_WhatDo, MSGBOX_AUTOCLOSE
 	msgbox Zone22A_Text_Pam_OurCombo, MSGBOX_AUTOCLOSE
 	setvar VAR_MUGSHOT_ID, MUGSHOT_PAM_AND_CAM
-	@ goto_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_PamAndCamBrutal
-	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_PamAndCamBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN13, Zone22A_Text_Leviathan13Defeat
+	goto Zone22A_EventScript_Leviathan13Defeated
+	end
+
+Zone22A_EventScript_PamAndCamBrutal:
+	trainerbattle_no_intro TRAINER_LEVIATHAN13_BRUTAL, Zone22A_Text_Leviathan13Defeat
 	goto Zone22A_EventScript_Leviathan13Defeated
 	end
 
@@ -80,7 +91,7 @@ Zone22A_EventScript_Leviathan13Defeated:
 	waitmovement 0
 	msgbox Zone22A_Text_Pam_Strong, MSGBOX_AUTOCLOSE
 	msgbox Zone22A_Text_Cam_GiveYou, MSGBOX_AUTOCLOSE
-	giveitem ITEM_DESTINY_KNOT
+	giveitem ITEM_TM31
 	msgbox Zone22A_Text_Pam_Seeya, MSGBOX_AUTOCLOSE
 	applymovement 11, Zone22A_Movement_Cam_WalkDown
 	applymovement 12, Zone22A_Movement_Pam_WalkDown
@@ -127,58 +138,58 @@ Zone22A_Movement_Pam_WalkDown:
 	step_end
 
 Zone22A_Text_Pam_StopRightThere:
-	.string "Pam: Stop right there!$"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: Stop right there!$"
 
 Zone22A_Text_Cam_LookWhatWeHave:
-	.string "Cam: Look what we have here, honey.\n"
+	.string "{COLOR BLUE}Cam{COLOR DARK_GRAY}: Look what we have here, honey.\n"
 	.string "Another lonely trainer!$"
 
 Zone22A_Text_Pam_LittleTrainer:
-	.string "Pam: Oh, little trainer.\n"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: Oh, little trainer.\n"
 	.string "Don't you know you're trespassing?\p"
 	.string "This is our private space!$"
 
 Zone22A_Text_Cam_WhatDo:
-	.string "Cam: Well then, trespasser.\p"
+	.string "{COLOR BLUE}Cam{COLOR DARK_GRAY}: Well then, trespasser.\p"
 	.string "What shall we do with you?$"
 
 Zone22A_Text_Pam_OurCombo:
-	.string "Pam: The obvious thing, of course.\p"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: The obvious thing, of course.\p"
 	.string "Prepare to face the combined combo\n"
-	.string "of Leviathan Pam and Cam!$"
+	.string "of {COLOR BLUE}Leviathan Pam and Cam{COLOR DARK_GRAY}!$"
 
 Zone22A_Text_Leviathan13Defeat:
 	.string "Pam: What? How did we lose?\p"
 	.string "Cam: Our combo, ruined!$"
 
 Zone22A_Text_Cam_Well:
-	.string "Cam: Well, we were going to beat\n"
+	.string "{COLOR BLUE}Cam{COLOR DARK_GRAY}: Well, we were going to beat\n"
 	.string "you in a battle.$"
 
 Zone22A_Text_Pam_GetMore:
-	.string "Pam: But you don't even have enough\n"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: But you don't even have enough\n"
 	.string "Pokémon. Go get some more!$"
 
 Zone22A_Text_Cam_Wah:
-	.string "Cam: Wah!$"
+	.string "{COLOR BLUE}Cam{COLOR DARK_GRAY}: Wah!$"
 
 Zone22A_Text_Pam_Crushed:
-	.string "Pam: Our perfect pair, defeated?\p"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: Our perfect pair, defeated?\p"
 	.string "It can't be!\l"
 	.string "We're the perfect couple!$"
 
 Zone22A_Text_Pam_Strong:
-	.string "Pam: Our relationship is strong\n"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: Our relationship is strong\n"
 	.string "enough to get through anything.\p"
 	.string "You've shown us that we just need\n"
 	.string "to work harder, together!$"
 
 Zone22A_Text_Cam_GiveYou:
-	.string "Cam: Here's a little something for\n"
+	.string "{COLOR BLUE}Cam{COLOR DARK_GRAY}: Here's a little something for\n"
 	.string "inspiring us.$"
 
 Zone22A_Text_Pam_Seeya:
-	.string "Pam: Well, we've got to run.\n"
+	.string "{COLOR BLUE}Pam{COLOR DARK_GRAY}: Well, we've got to run.\n"
 	.string "Our dinner reservation is soon!\p"
 	.string "Bye!$"
 

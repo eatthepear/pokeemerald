@@ -7671,10 +7671,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM31_BRICK_BREAK] =
+    [ITEM_TM31_AURORA_VEIL] =
     {
         .name = _("TM31"),
-        .itemId = ITEM_TM31_BRICK_BREAK,
+        .itemId = ITEM_TM31_AURORA_VEIL,
         .price = 3000,
         .description = sTM31Desc,
         .pocket = POCKET_TM_HM,

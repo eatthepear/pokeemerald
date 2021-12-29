@@ -2900,9 +2900,9 @@ static const u8 sTM30Desc[] = _(
     "down on the target.");
 
 static const u8 sTM31Desc[] = _(
-    "Destroys barriers\n"
-    "like Light Screen\n"
-    "and causes damage.");
+    "Weakens enemy attacks,\n"
+    "but can only be used\n"
+    "in a hailstorm.");
 
 static const u8 sTM32Desc[] = _(
     "Weakens enemy attacks,\n"
