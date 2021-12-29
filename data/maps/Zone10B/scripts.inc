@@ -84,7 +84,8 @@ Zone10B_Text_Adamina_WhenReady:
 Zone10B_EventScript_Exit:
 	compare VAR_ZONE, 10
 	goto_if_gt EventScript_WarpZone0
-	msgbox Zone10B_Text_Adamina_UseWell, MSGBOX_AUTOCLOSE
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_CheckBrutal
+	msgbox Zone10B_Text_Adamina_SafeTravels, MSGBOX_AUTOCLOSE
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0
 	msgbox Zone10B_Text_Adamina_UseTeleport, MSGBOX_AUTOCLOSE
@@ -93,7 +94,15 @@ Zone10B_EventScript_Exit:
 	release
 	end
 
-Zone10B_Text_Adamina_UseWell:
+Zone10B_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_PEARLIE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_KYLE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ALANA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_DEWEY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_CONRAD, EventScript_BrutalExitNotSatisfied
+	return
+
+Zone10B_Text_Adamina_SafeTravels:
 	.string "Safe travels.$"
 
 Zone10B_Text_Adamina_UseTeleport:

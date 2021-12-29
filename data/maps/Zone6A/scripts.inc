@@ -32,9 +32,18 @@ Zone6A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 6
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_CheckBrutal
 	warp MAP_ZONE6SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone6A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_FRANK, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_MELANIE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_CONSTANCE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_RONAN, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEATLEVIATHAN3, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone6A_EventScript_Rita::
 	lock

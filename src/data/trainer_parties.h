@@ -8,6 +8,7 @@
  * 
  * Some trainers have different parties on Default and Brutal.
  * You can CTRL+F for them in the document (just search for the word Default or Brutal)
+ * Some bosses are optional on Default and are commented as such. However, on Brutal, all trainers are mandatory.
  * 
  * If a Pokemon does not have a specified parameter (for example the nature) then it is usually determined randomly.
  * EVs are by default set to 0.
@@ -2734,25 +2735,23 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     }
 };
 
-static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, optional, Brutal
+static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     {
     .iv = 31,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Poison Point
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
     .iv = 31,
-    .lvl = 15,
+    .lvl = 16,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Cloud Nine
     .species = SPECIES_PSYDUCK,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_CONFUSION, MOVE_TAIL_WHIP, MOVE_FURY_SWIPES}
     },
     {
@@ -2762,7 +2761,6 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, optional, B
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Triage
     .species = SPECIES_COMFEY,
-    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_DRAINING_KISS, MOVE_FLOWER_SHIELD, MOVE_LEECH_SEED, MOVE_GROWTH}
     }
 };
@@ -2863,7 +2861,7 @@ static const struct TrainerMon sParty_JakeBrutal[] = {//Leviathan 6, Brutal
     }
 };
 
-static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, optional, Brutal
+static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Brutal
     {
     .iv = 31,
     .lvl = 26,
@@ -2906,7 +2904,7 @@ static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, opt
     }
 };
 
-static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, optional, Brutal
+static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, Brutal
     {
     .iv = 31,
     .lvl = 26,
@@ -3127,7 +3125,7 @@ static const struct TrainerMon sParty_Pirate4Brutal[] = {//Brutal
     }
 };
 
-static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, optional, Brutal
+static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Brutal
     {
     .iv = 31,
     .lvl = 34,
@@ -3140,7 +3138,7 @@ static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, option
     },
 };
 
-static const struct TrainerMon sParty_JulieBrutal[] = {
+static const struct TrainerMon sParty_JulieBrutal[] = {//Leviathan 12, Brutal
     {
     .iv = 31,
     .lvl = 34,

@@ -5,9 +5,21 @@ Zone21A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 21
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone21A_EventScript_CheckBrutal
 	warp MAP_ZONE21SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone21A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_HOWARD, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ELOISE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ALLY_AND_EMMY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_AMIR, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_GETHIN, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_BERNARD, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ELLIE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_RUSTY, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone21A_EventScript_SecretWarp::
 	lockall

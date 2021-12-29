@@ -5,9 +5,31 @@ Zone19D_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 19
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_CheckBrutal
 	warp MAP_ZONE19SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone19D_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_MARION, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_CLINTON, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_KENNETH, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_JAY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_BLANCHE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_TERRENCE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_MARTY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_KARI, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ABRAHAM, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_REX, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_EMILIO, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_MELINDA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_LOUIS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_DESIREE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_PAM, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_WILLIE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_DORIS, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEATLEVIATHAN11, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone19D_EventScript_InitiatePirateBattles::
 	lockall

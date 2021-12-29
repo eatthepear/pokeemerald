@@ -314,9 +314,20 @@ Zone8D_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 8
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_CheckBrutal
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone8D_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_MILLIE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_PAIGE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_EMILIANO, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_MARCUS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_JAYDEN, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ANITA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_NEIL, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone8D_Movement_Camera_GoUp:
 	walk_up

@@ -84,9 +84,22 @@ Zone16A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 16
 	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_CheckBrutal
 	warp MAP_ZONE16SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone16A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_ANGUS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_HOMER, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_IONA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_TANISHA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_RAFAEL, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_OTIS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_BERKE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_GEORGINA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_RUSSELL, EventScript_BrutalExitNotSatisfied
+	return
 
 Zone16A_EventScript_Sign::
 	msgbox Zone16A_Text_Sign, MSGBOX_SIGN
