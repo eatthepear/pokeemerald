@@ -5364,8 +5364,8 @@
     {
       "id": "LAYOUT_ZONE23A",
       "name": "Zone23A_Layout",
-      "width": 80,
-      "height": 80,
+      "width": 77,
+      "height": 70,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Zone23A/border.bin",
