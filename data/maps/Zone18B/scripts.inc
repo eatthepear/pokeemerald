@@ -189,6 +189,7 @@ Zone18B_Odysseus_WantBattle:
 
 Zone18B_EventScript_OdysseusBattle:
 	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
 	totemboost_atk2 B_POSITION_OPPONENT_LEFT
@@ -210,6 +211,7 @@ Zone18B_Text_LeviathanDefeat:
 
 Zone18B_EventScript_Leviathan11Defeated:
 	setflag FLAG_BEATLEVIATHAN11
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
 	giveitem ITEM_SHARPEDONITE, 1
 	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE

@@ -18,6 +18,7 @@ Zone20A_EventScript_InitiateLeviathanBattle::
 	waitse
 	faceplayer
 	msgbox Zone20A_Text_Leviathan12Intro, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JULIE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone20A_EventScript_JulieBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN12, Zone20A_Text_Leviathan12Defeat
@@ -55,6 +56,7 @@ Zone20A_EventScript_Leviathan12Defeated:
 	delay 128
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	setflag FLAG_BEATLEVIATHAN12
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	removeobject 2
 	waitmovement 0
 	delay 96

@@ -49,6 +49,7 @@ Zone22A_EventScript_LeviathanBattle:
 	goto_if_eq Zone22A_EventScript_DontHaveEnoughMons
 	msgbox Zone22A_Text_Cam_WhatDo, MSGBOX_AUTOCLOSE
 	msgbox Zone22A_Text_Pam_OurCombo, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_PAM_AND_CAM
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_PamAndCamBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN13, Zone22A_Text_Leviathan13Defeat
@@ -75,6 +76,7 @@ Zone22A_EventScript_DontHaveEnoughMons:
 
 Zone22A_EventScript_Leviathan13Defeated:
 	setflag FLAG_BEATLEVIATHAN13
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone22A_Text_Cam_Wah, MSGBOX_AUTOCLOSE
 	msgbox Zone22A_Text_Pam_Crushed, MSGBOX_AUTOCLOSE
 	applymovement 11, Common_Movement_FaceRight

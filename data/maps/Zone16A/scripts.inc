@@ -16,6 +16,7 @@ Zone16A_EventScript_InitiateLeviathanBattle::
 	goto_if_set FLAG_BEATLEVIATHAN10, Zone16A_EventScript_ByeBye
 	fadeoutbgm 1
 	msgbox Zone16A_Text_Leviathan10Intro, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_SOPHIA
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_SophiaBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN10, Zone16A_Text_Leviathan10Defeat
@@ -29,6 +30,7 @@ Zone16A_EventScript_SophiaBrutal:
 
 Zone16A_EventScript_Leviathan10Defeated:
 	setflag FLAG_BEATLEVIATHAN10
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone16A_Text_Leviathan10Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_BLUE_SHARD, 10
 	closemessage

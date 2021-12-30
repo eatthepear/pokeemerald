@@ -46,6 +46,7 @@ Zone10A_EventScript_InitiateLeviathanBattle:
 	msgbox Zone10A_Text_FoundEm, MSGBOX_AUTOCLOSE
 	delay 96
 	msgbox Zone10A_Text_CrushYou, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ADAMINA
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10A_EventScript_AdaminaBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
@@ -74,6 +75,7 @@ Zone10A_Text_Leviathan5Defeat:
 
 Zone10A_EventScript_Leviathan5Defeated:
 	setflag FLAG_BEATLEVIATHAN5
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone10A_Text_HeadInside, MSGBOX_AUTOCLOSE
 	applymovement 6, Common_Movement_FaceUp
 	waitmovement 0

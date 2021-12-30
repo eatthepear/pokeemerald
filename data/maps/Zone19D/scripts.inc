@@ -77,6 +77,7 @@ Zone19D_EventScript_InitiatePirateBattles::
 	applymovement 4, Common_Movement_WalkInPlaceFasterLeft
 	msgbox Zone19D_Text_Pirate4, MSGBOX_AUTOCLOSE
 	waitmovement 0
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_PirateBattle4Brutal
 	trainerbattle_no_intro TRAINER_PIRATE_4, Zone19D_Text_Pirate4Defeat
 	goto Zone19D_EventScript_PirateBattle3
@@ -147,6 +148,7 @@ Zone19D_EventScript_PirateBattleEnd:
 	removeobject 3
 	removeobject 4
 	setflag FLAG_HIDE_ZONE19D_PIRATES
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadedefaultbgm
 	setvar VAR_ZONE18B_STATE, 3
 	msgbox Zone19D_Text_ReturnToDojo, MSGBOX_YESNO

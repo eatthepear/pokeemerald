@@ -70,6 +70,7 @@ Zone9A_EventScript_Ari::
 
 Zone9A_EventScript_BattleWinstrates::
 	msgbox Zone9A_Text_AriIntro, MSGBOX_DEFAULT
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_ARI, Zone9A_Text_AriDefeat
 	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -134,6 +135,7 @@ Zone9A_EventScript_BattleWinstrates::
 	applymovement 5, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
 	removeobject 5
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	release
 	end
 

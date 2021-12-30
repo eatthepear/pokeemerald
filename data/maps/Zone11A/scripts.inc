@@ -55,6 +55,7 @@ Zone11A_Text_LeviathanIThoughtSo:
 Zone11A_EventScript_BeginLeviathanBattle:
 	fadeoutbgm 1
 	msgbox Zone11A_Text_LeviathanIntro, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JAKE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone11A_EventScript_JakeBrutal
 	totemboost_speed2 B_POSITION_OPPONENT_LEFT
@@ -78,6 +79,7 @@ Zone11A_Text_Leviathan6Defeat:
 
 Zone11A_EventScript_Leviathan6Defeated:
 	setflag FLAG_BEATLEVIATHAN6
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone11A_Text_TakeIt, MSGBOX_AUTOCLOSE
 	giveitem ITEM_MACHETE
 	msgbox Zone11A_Text_Goodbye, MSGBOX_AUTOCLOSE

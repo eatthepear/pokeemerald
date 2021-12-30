@@ -69,6 +69,7 @@ Zone6A_EventScript_RitaSaysNo:
 Zone6A_EventScript_RitaBattle:
 	fadeoutbgm 1
 	msgbox Zone6A_Text_Rita_IWillWin, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_RitaBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
@@ -82,6 +83,7 @@ Zone6A_EventScript_RitaBrutal:
 
 Zone6A_EventScript_Leviathan3Defeated:
 	setflag FLAG_BEATLEVIATHAN3
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM04, 1
 	release

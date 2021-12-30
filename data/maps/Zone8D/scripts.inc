@@ -115,6 +115,7 @@ Zone8D_EventScript_InitiateLeviathan4:
 	msgbox Zone8D_Text_Mirage2_AtOnce, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto Zone8D_EventScript_BattleSetup
 	release
 	end
@@ -180,6 +181,7 @@ Zone8D_EventScript_PlayerWon:
 	removeobject 2
 	removeobject 3
 	setflag FLAG_BEATLEVIATHAN4
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Zone8D_EventScript_Conclusion
 	release
