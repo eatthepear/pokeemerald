@@ -3,6 +3,8 @@ Zone22A_MapScripts::
 
 Zone22A_EventScript_Exit::
 	lockall
+	compare VAR_ZONE, 22
+	goto_if_gt EventScript_WarpZone0
 	goto_if_unset FLAG_BEATLEVIATHAN13, Zone22A_EventScript_LeviathanBattle
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone22A_EventScript_CheckBrutal
 	warp MAP_ZONE22SANCTUARY, 255, 22, 7

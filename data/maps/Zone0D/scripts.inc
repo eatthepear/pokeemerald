@@ -381,7 +381,7 @@ Zone0D_EventScript_WarpZONE22::
 	goto_if_lt Zone0D_EventScript_DenyWarp
 	buffernumberstring 0, 22
 	call Zone0D_EventScript_VerifyDestination
-	warpteleport MAP_ZONE2A, 255, 4, 3
+	warpteleport MAP_ZONE22A, 255, 9, 50
 	end
 
 Zone0D_EventScript_WarpZONE23::
@@ -390,7 +390,7 @@ Zone0D_EventScript_WarpZONE23::
 	goto_if_lt Zone0D_EventScript_DenyWarp
 	buffernumberstring 0, 23
 	call Zone0D_EventScript_VerifyDestination
-	warpteleport MAP_ZONE3A, 255, 38, 25
+	warpteleport MAP_ZONE23A, 255, 9, 1
 	end
 
 Zone0D_EventScript_WarpZONE24::
