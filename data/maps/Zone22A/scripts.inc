@@ -10,20 +10,13 @@ Zone22A_EventScript_Exit::
 	end
 
 Zone22A_EventScript_CheckBrutal:
-	goto_if_not_defeated TRAINER_CODY, Zone22A_EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_LEWIS, Zone22A_EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_INEZ_AND_EMMA, Zone22A_EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_ALFREDO, Zone22A_EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_IAN, Zone22A_EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_AUDREY, Zone22A_EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_CODY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_LEWIS, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_INEZ_AND_EMMA, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ALFREDO, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_IAN, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_AUDREY, EventScript_BrutalExitNotSatisfied
 	return
-
-Zone22A_EventScript_BrutalExitNotSatisfied::
-	msgbox gText_BrutalExitNotSatisfied, MSGBOX_AUTOCLOSE
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	releaseall
-	end
 
 Zone22A_EventScript_LeviathanBattle:
 	fadeoutbgm 1

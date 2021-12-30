@@ -1,6 +1,23 @@
 Zone23A_MapScripts::
 	.byte 0
 
+Zone23A_EventScript_Exit::
+	lockall
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone23A_EventScript_CheckBrutal
+	warp MAP_ZONE23SANCTUARY, 255, 22, 7
+	releaseall
+	end
+
+Zone23A_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_EDGARDO, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_JEAN, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ROSE, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_JENNIFER, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_MATTHEW, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_KERRY, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ANNIE, EventScript_BrutalExitNotSatisfied
+	return
+
 Zone23A_EventScript_Edgardo::
 	trainerbattle_single TRAINER_EDGARDO, Zone23A_Text_EdgardoIntro, Zone23A_Text_EdgardoDefeat
 	msgbox Zone23A_Text_EdgardoPostBattle, MSGBOX_AUTOCLOSE
