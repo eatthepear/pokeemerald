@@ -79,7 +79,7 @@
 #define FLAG_RECEIVED_ZONE21C_PORYGON    0x42 
 #define FLAG_RECEIVED_ZONE0C_EEVEE    0x43 
 #define FLAG_HIDE_CAM_AND_PAM    0x44
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
+#define FLAG_RECEIVED_ZONE23A_TM31    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    0x47 // Unused Flag
 #define FLAG_UNUSED_0x048    0x48 // Unused Flag
@@ -168,7 +168,7 @@
 #define FLAG_MR_BRINEY_SAILING_INTRO         0x93
 #define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95
-#define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
+#define FLAG_FORCE_BATTLE_ANIM_ON            0x96 // Forces battle animations to be on if set
 #define FLAG_RECEIVED_CASTFORM               0x97
 #define FLAG_RECEIVED_SUPER_ROD              0x98
 #define FLAG_RUSTBORO_NPC_TRADE_COMPLETED    0x99
@@ -254,7 +254,7 @@
 #define FLAG_RECEIVED_TM05                   0xE7
 #define FLAG_RECEIVED_TM19                   0xE8
 
-#define FLAG_UNUSED_0x0E9                    0xE9 // Unused Flag
+#define FLAG_IS_REVISITING_ZONE              0xE9 // Unused Flag
 
 #define FLAG_RECEIVED_TM44                   0xEA
 #define FLAG_RECEIVED_TM45                   0xEB
@@ -626,12 +626,12 @@
 #define FLAG_HIDDEN_ITEM_ZONE22A_BLUE_SHARD_2                (FLAG_HIDDEN_ITEMS_START + 0x54)
 #define FLAG_HIDDEN_ITEM_ZONE22A_YELLOW_SHARD_1              (FLAG_HIDDEN_ITEMS_START + 0x55)
 #define FLAG_HIDDEN_ITEM_ZONE22A_YELLOW_SHARD_2              (FLAG_HIDDEN_ITEMS_START + 0x56)
-#define FLAG_HIDDEN_ITEM_NEXTG       (FLAG_HIDDEN_ITEMS_START + 0x57)
-#define FLAG_HIDDEN_ITEM_NEXTH       (FLAG_HIDDEN_ITEMS_START + 0x58)
-#define FLAG_HIDDEN_ITEM_NEXTJ       (FLAG_HIDDEN_ITEMS_START + 0x59)
-#define FLAG_HIDDEN_ITEM_NEXTK       (FLAG_HIDDEN_ITEMS_START + 0x5A)
-#define FLAG_HIDDEN_ITEM_NEXTL       (FLAG_HIDDEN_ITEMS_START + 0x5B)
-#define FLAG_HIDDEN_ITEM_NEXTZ       (FLAG_HIDDEN_ITEMS_START + 0x5C)
+#define FLAG_HIDDEN_ITEM_ZONE23A_SITRUS_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x57)
+#define FLAG_HIDDEN_ITEM_ZONE23A_CHESTO_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x58)
+#define FLAG_HIDDEN_ITEM_ZONE23A_PERSIM_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x59)
+#define FLAG_HIDDEN_ITEM_ZONE23A_LUM_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x5A)
+#define FLAG_HIDDEN_ITEM_ZONE23A_CHERI_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x5B)
+#define FLAG_HIDDEN_ITEM_ZONE23A_ASPEAR_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x5C)
 #define FLAG_HIDDEN_ITEM_NEXTX       (FLAG_HIDDEN_ITEMS_START + 0x5D)
 #define FLAG_HIDDEN_ITEM_NEXTC       (FLAG_HIDDEN_ITEMS_START + 0x5E)
 #define FLAG_HIDDEN_ITEM_NEXTV       (FLAG_HIDDEN_ITEMS_START + 0x5F)
@@ -1131,12 +1131,12 @@
 #define FLAG_ITEM_ZONE22A_METAL_COAT                                0x43A
 #define FLAG_ITEM_ZONE22A_DESTINY_KNOT                              0x43B
 #define FLAG_ITEM_ZONE22A_3000                                      0x43C
-#define FLAG_UNUSED_0x43D                                           0x43D
-#define FLAG_UNUSED_0x43E                                           0x43E
-#define FLAG_UNUSED_0x43F                                           0x43F
-#define FLAG_UNUSED_0x440                                           0x440
-#define FLAG_UNUSED_0x441                                           0x441
-#define FLAG_UNUSED_0x442                                           0x442
+#define FLAG_ITEM_ZONE23A_LEAF_STONE                                0x43D
+#define FLAG_ITEM_ZONE23A_HYPER_POTION                              0x43E
+#define FLAG_ITEM_ZONE23A_SUPER_REPEL                               0x43F
+#define FLAG_ITEM_ZONE23A_QUICK_BALL                                0x440
+#define FLAG_ITEM_ZONE23A_TIMER_BALL                                0x441
+#define FLAG_ITEM_ZONE23A_DUSK_BALL                                 0x442
 #define FLAG_UNUSED_0x443                                           0x443
 #define FLAG_UNUSED_0x444                                           0x444
 #define FLAG_UNUSED_0x445                                           0x445

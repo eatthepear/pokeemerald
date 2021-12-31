@@ -2900,19 +2900,19 @@ static const u8 sTM30Desc[] = _(
     "down on the target.");
 
 static const u8 sTM31Desc[] = _(
-    "Destroys barriers\n"
-    "like Light Screen\n"
-    "and causes damage.");
-
-static const u8 sTM32Desc[] = _(
     "Weakens enemy attacks,\n"
     "but can only be used\n"
     "in a hailstorm.");
 
+static const u8 sTM32Desc[] = _(
+    "Slashes with crossed\n"
+    "scythes, claws, etc.\n"
+    "High crit ratio.");
+
 static const u8 sTM33Desc[] = _(
-    "Creates a wall of\n"
-    "light that weakens\n"
-    "physical attacks.");
+    "Raises the power of\n"
+    "Water-type moves\n"
+    "for 5 turns.");
 
 static const u8 sTM34Desc[] = _(
     "Zaps the foe with a\n"

@@ -101,6 +101,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	waitse
 	faceplayer
 	msgbox Zone5A_Text_Leviathan2Intro2, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_DeclanBrutal
 	totemboost_def1 B_POSITION_OPPONENT_LEFT
@@ -125,6 +126,7 @@ Zone5A_EventScript_DeclanBrutal:
 
 Zone5A_EventScript_Leviathan2Defeated:
 	setflag FLAG_BEATLEVIATHAN2
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone5A_Text_Leviathan2Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_RED_SHARD, 5
 	closemessage

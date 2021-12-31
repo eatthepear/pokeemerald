@@ -379,3 +379,6 @@ const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/h
 const u32 gObjectEventPic_Colress[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/colress.4bpp");
 const u16 gObjectEventPal_Colress[] = INCBIN_U16("graphics/object_events/pics/people/frontier_brains/colress.gbapal");
 const u16 gObjectEventPal_Shadow[] = INCBIN_U16("graphics/object_events/pics/people/frontier_brains/tucker.gbapal");
+const u32 gObjectEventPic_RangerM[] = INCBIN_U32("graphics/object_events/pics/people/ranger_m.4bpp");
+const u16 gObjectEventPal_Ranger[] = INCBIN_U16("graphics/object_events/pics/people/ranger_m.gbapal");
+const u32 gObjectEventPic_RangerF[] = INCBIN_U32("graphics/object_events/pics/people/ranger_f.4bpp");

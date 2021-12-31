@@ -28,6 +28,7 @@ Zone13C_EventScript_KaizenBlackBelt::
 	goto_if_eq Zone13C_EventScript_Kaizen_ISee
 	fadeoutbgm 1
 	msgbox Zone13C_Text_KaizenBlackBelt_LetsGetStarted, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN1
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_KaizenBulkUpBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN7, Zone13C_Text_Leviathan7Defeat
@@ -62,6 +63,7 @@ Zone13C_Text_Kaizen_ISee:
 
 Zone13C_EventScript_Leviathan7Defeated:
 	setflag FLAG_BEATLEVIATHAN7
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone13C_Text_KaizenBlackBelt_HereTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM14
 	msgbox Zone13C_Text_KaizenBlackBelt_ExplainTM, MSGBOX_DEFAULT
@@ -94,6 +96,7 @@ Zone13C_EventScript_KaizenPsychic::
 	goto_if_eq Zone13C_EventScript_Kaizen_ISee
 	fadeoutbgm 1
 	msgbox Zone13C_Text_KaizenPsychic_FairBetter, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN2
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_KaizenCalmMindBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN8, Zone13C_Text_Leviathan8Defeat
@@ -120,6 +123,7 @@ Zone13C_Text_Leviathan8Defeat:
 
 Zone13C_EventScript_Leviathan8Defeated:
 	setflag FLAG_BEATLEVIATHAN8
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone13C_Text_KaizenPsychic_HereTM, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM15
 	msgbox Zone13C_Text_KaizenPsychic_ExplainTM, MSGBOX_AUTOCLOSE

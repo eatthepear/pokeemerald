@@ -6603,6 +6603,11 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     u32 moneyReward;
     u32 scale = 4;
     
+    if (FlagGet(FLAG_BRUTAL_MODE_ON))
+    {
+        scale = 3;
+    }
+
     if (trainerId == TRAINER_SECRET_BASE)
     {
         moneyReward = 20 * gBattleResources->secretBase->party.levels[0] * gBattleStruct->moneyMultiplier;

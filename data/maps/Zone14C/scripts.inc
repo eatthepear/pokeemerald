@@ -87,6 +87,7 @@ Zone14C_EventScript_InitiateLeviathanBattle:
 	goto_if_eq Zone14C_EventScript_DontHaveEnoughMons
 	fadeoutbgm 1
 	msgbox Zone14C_Text_Mirage_Begone, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone14C_EventScript_MirageBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN9, Zone14C_Text_Leviathan9Defeat
@@ -144,6 +145,7 @@ Zone14C_EventScript_Leviathan9Defeated:
 	removeobject 1
 	removeobject 2
 	setflag FLAG_BEATLEVIATHAN9
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone14C_Text_FoundBag, MSGBOX_AUTOCLOSE
 	giveitem ITEM_RED_SHARD, 20

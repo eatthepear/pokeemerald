@@ -7671,10 +7671,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM31_BRICK_BREAK] =
+    [ITEM_TM31_AURORA_VEIL] =
     {
         .name = _("TM31"),
-        .itemId = ITEM_TM31_BRICK_BREAK,
+        .itemId = ITEM_TM31_AURORA_VEIL,
         .price = 3000,
         .description = sTM31Desc,
         .pocket = POCKET_TM_HM,
@@ -7683,10 +7683,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM32_AURORA_VEIL] =
+    [ITEM_TM32_X_SCISSOR] =
     {
         .name = _("TM32"),
-        .itemId = ITEM_TM32_AURORA_VEIL,
+        .itemId = ITEM_TM32_X_SCISSOR,
         .price = 2000,
         .description = sTM32Desc,
         .pocket = POCKET_TM_HM,
@@ -7695,10 +7695,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM33_REFLECT] =
+    [ITEM_TM33_RAIN_DANCE] =
     {
         .name = _("TM33"),
-        .itemId = ITEM_TM33_REFLECT,
+        .itemId = ITEM_TM33_RAIN_DANCE,
         .price = 3000,
         .description = sTM33Desc,
         .pocket = POCKET_TM_HM,

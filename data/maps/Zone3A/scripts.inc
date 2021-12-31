@@ -28,6 +28,7 @@ Zone3A_EventScript_Exit::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone3A_Text_Leviathan1Intro, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_REMI
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_RemiBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Defeat
@@ -41,6 +42,7 @@ Zone3A_EventScript_RemiBrutal:
 
 Zone3A_EventScript_Leviathan1Defeated:
 	setflag FLAG_BEATLEVIATHAN1
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_GOOD_ROD, 1
 	closemessage
