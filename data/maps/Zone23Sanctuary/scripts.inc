@@ -26,7 +26,7 @@ Zone23Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone23Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_ASSAULT_VEST
+	giveitem ITEM_TM33
 	closemessage
 	setvar VAR_ZONE, 24
 	buffernumberstring 0, VAR_ZONE
@@ -65,4 +65,4 @@ Zone23Sanctuary_EventScript_Leave:
 	end
 
 Zone23Sanctuary_Text_Reward:
-	.string "The Assault Vest!$"
+	.string "TM33 - Rain Dance!$"

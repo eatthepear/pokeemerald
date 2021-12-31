@@ -7695,10 +7695,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM33_REFLECT] =
+    [ITEM_TM33_RAIN_DANCE] =
     {
         .name = _("TM33"),
-        .itemId = ITEM_TM33_REFLECT,
+        .itemId = ITEM_TM33_RAIN_DANCE,
         .price = 3000,
         .description = sTM33Desc,
         .pocket = POCKET_TM_HM,

@@ -2910,9 +2910,9 @@ static const u8 sTM32Desc[] = _(
     "High crit ratio.");
 
 static const u8 sTM33Desc[] = _(
-    "Creates a wall of\n"
-    "light that weakens\n"
-    "physical attacks.");
+    "Raises the power of\n"
+    "Water-type moves\n"
+    "for 5 turns.");
 
 static const u8 sTM34Desc[] = _(
     "Zaps the foe with a\n"
