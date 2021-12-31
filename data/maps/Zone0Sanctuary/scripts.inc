@@ -854,6 +854,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
+	callnative StartSetMode
 	initclock 1, 1
 	callnative ReturnFromStartWallClock
 	setvar VAR_ZONE, 1
