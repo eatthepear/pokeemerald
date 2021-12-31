@@ -117,6 +117,84 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone23A_EventScript_XScissor",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 2,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone23A_EventScript_DuskBall",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone23A_EventScript_HyperPotion",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 5,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone23A_EventScript_QuickBall",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 39,
+      "y": 58,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone23A_EventScript_SuperRepel",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 63,
+      "y": 45,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone23A_EventScript_LeafStone",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 62,
+      "y": 67,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone23A_EventScript_TimerBall",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -130,7 +208,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone23A_EventScript_Exit"
+      "script": "Zone23A_EventScript_Jean"
     }
   ],
   "bg_events": [
@@ -141,6 +219,54 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_ExitSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 4,
+      "elevation": 3,
+      "item": "ITEM_ASPEAR_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE23A_ASPEAR_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 21,
+      "y": 24,
+      "elevation": 3,
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE23A_SITRUS_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 18,
+      "elevation": 3,
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE23A_CHERI_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 47,
+      "elevation": 3,
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE23A_CHESTO_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 47,
+      "y": 50,
+      "elevation": 3,
+      "item": "ITEM_PERSIM_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE23A_PERSIM_BERRY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 74,
+      "y": 49,
+      "elevation": 3,
+      "item": "ITEM_LUM_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE23A_LUM_BERRY"
     }
   ]
 }

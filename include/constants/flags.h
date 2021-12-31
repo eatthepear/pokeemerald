@@ -626,12 +626,12 @@
 #define FLAG_HIDDEN_ITEM_ZONE22A_BLUE_SHARD_2                (FLAG_HIDDEN_ITEMS_START + 0x54)
 #define FLAG_HIDDEN_ITEM_ZONE22A_YELLOW_SHARD_1              (FLAG_HIDDEN_ITEMS_START + 0x55)
 #define FLAG_HIDDEN_ITEM_ZONE22A_YELLOW_SHARD_2              (FLAG_HIDDEN_ITEMS_START + 0x56)
-#define FLAG_HIDDEN_ITEM_NEXTG       (FLAG_HIDDEN_ITEMS_START + 0x57)
-#define FLAG_HIDDEN_ITEM_NEXTH       (FLAG_HIDDEN_ITEMS_START + 0x58)
-#define FLAG_HIDDEN_ITEM_NEXTJ       (FLAG_HIDDEN_ITEMS_START + 0x59)
-#define FLAG_HIDDEN_ITEM_NEXTK       (FLAG_HIDDEN_ITEMS_START + 0x5A)
-#define FLAG_HIDDEN_ITEM_NEXTL       (FLAG_HIDDEN_ITEMS_START + 0x5B)
-#define FLAG_HIDDEN_ITEM_NEXTZ       (FLAG_HIDDEN_ITEMS_START + 0x5C)
+#define FLAG_HIDDEN_ITEM_ZONE23A_SITRUS_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x57)
+#define FLAG_HIDDEN_ITEM_ZONE23A_CHESTO_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x58)
+#define FLAG_HIDDEN_ITEM_ZONE23A_PERSIM_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x59)
+#define FLAG_HIDDEN_ITEM_ZONE23A_LUM_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x5A)
+#define FLAG_HIDDEN_ITEM_ZONE23A_CHERI_BERRY                 (FLAG_HIDDEN_ITEMS_START + 0x5B)
+#define FLAG_HIDDEN_ITEM_ZONE23A_ASPEAR_BERRY                (FLAG_HIDDEN_ITEMS_START + 0x5C)
 #define FLAG_HIDDEN_ITEM_NEXTX       (FLAG_HIDDEN_ITEMS_START + 0x5D)
 #define FLAG_HIDDEN_ITEM_NEXTC       (FLAG_HIDDEN_ITEMS_START + 0x5E)
 #define FLAG_HIDDEN_ITEM_NEXTV       (FLAG_HIDDEN_ITEMS_START + 0x5F)
@@ -1131,12 +1131,12 @@
 #define FLAG_ITEM_ZONE22A_METAL_COAT                                0x43A
 #define FLAG_ITEM_ZONE22A_DESTINY_KNOT                              0x43B
 #define FLAG_ITEM_ZONE22A_3000                                      0x43C
-#define FLAG_UNUSED_0x43D                                           0x43D
-#define FLAG_UNUSED_0x43E                                           0x43E
-#define FLAG_UNUSED_0x43F                                           0x43F
-#define FLAG_UNUSED_0x440                                           0x440
-#define FLAG_UNUSED_0x441                                           0x441
-#define FLAG_UNUSED_0x442                                           0x442
+#define FLAG_ITEM_ZONE23A_LEAF_STONE                                0x43D
+#define FLAG_ITEM_ZONE23A_HYPER_POTION                              0x43E
+#define FLAG_ITEM_ZONE23A_SUPER_REPEL                               0x43F
+#define FLAG_ITEM_ZONE23A_QUICK_BALL                                0x440
+#define FLAG_ITEM_ZONE23A_TIMER_BALL                                0x441
+#define FLAG_ITEM_ZONE23A_DUSK_BALL                                 0x442
 #define FLAG_UNUSED_0x443                                           0x443
 #define FLAG_UNUSED_0x444                                           0x444
 #define FLAG_UNUSED_0x445                                           0x445

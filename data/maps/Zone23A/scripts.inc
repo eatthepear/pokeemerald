@@ -164,3 +164,27 @@ Zone23A_Text_AnnieDefeat:
 
 Zone23A_Text_AnniePostBattle:
 	.string "$"
+
+Zone23A_EventScript_LeafStone::
+	finditem ITEM_LEAF_STONE
+	end
+
+Zone23A_EventScript_HyperPotion::
+	finditem ITEM_HYPER_POTION
+	end
+
+Zone23A_EventScript_SuperRepel::
+	finditem ITEM_SUPER_REPEL
+	end
+	
+Zone23A_EventScript_QuickBall::
+	finditem ITEM_QUICK_BALL
+	end
+
+Zone23A_EventScript_TimerBall::
+	finditem ITEM_TIMER_BALL
+	end
+
+Zone23A_EventScript_DuskBall::
+	finditem ITEM_DUSK_BALL
+	end
