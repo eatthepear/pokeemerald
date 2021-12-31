@@ -73,13 +73,14 @@ Zone23A_EventScript_Edgardo::
 	end
 
 Zone23A_Text_EdgardoIntro:
-	.string "$"
+	.string "Yuck, I've got mud on my boots!$"
 
 Zone23A_Text_EdgardoDefeat:
-	.string "$"
+	.string "Oh, that's not mud…$"
 
 Zone23A_Text_EdgardoPostBattle:
-	.string "$"
+	.string "Raising these little ones is\n"
+	.string "hard work!$"
 
 Zone23A_EventScript_Jean::
 	trainerbattle_single TRAINER_JEAN, Zone23A_Text_JeanIntro, Zone23A_Text_JeanDefeat
@@ -87,13 +88,14 @@ Zone23A_EventScript_Jean::
 	end
 
 Zone23A_Text_JeanIntro:
-	.string "$"
+	.string "Attack, my swarm of Bugs!$"
 
 Zone23A_Text_JeanDefeat:
-	.string "$"
+	.string "Retreat! Full retreat!$"
 
 Zone23A_Text_JeanPostBattle:
-	.string "$"
+	.string "I just need one more Bug to fill\n"
+	.string "out my party!$"
 
 Zone23A_EventScript_Rose::
 	trainerbattle_single TRAINER_ROSE, Zone23A_Text_RoseIntro, Zone23A_Text_RoseDefeat
@@ -101,13 +103,14 @@ Zone23A_EventScript_Rose::
 	end
 
 Zone23A_Text_RoseIntro:
-	.string "$"
+	.string "For the environment!$"
 
 Zone23A_Text_RoseDefeat:
-	.string "$"
+	.string "That's a downer!$"
 
 Zone23A_Text_RosePostBattle:
-	.string "$"
+	.string "Climate change is a real threat to\n"
+	.string "environments like these.$"
 
 Zone23A_EventScript_Jennifer::
 	trainerbattle_single TRAINER_JENNIFER, Zone23A_Text_JenniferIntro, Zone23A_Text_JenniferDefeat
@@ -115,13 +118,13 @@ Zone23A_EventScript_Jennifer::
 	end
 
 Zone23A_Text_JenniferIntro:
-	.string "$"
+	.string "A dark, brooding swamp…$"
 
 Zone23A_Text_JenniferDefeat:
-	.string "$"
+	.string "Just the perfect place for me!$"
 
 Zone23A_Text_JenniferPostBattle:
-	.string "$"
+	.string "I like to dress up as a witch.$"
 
 Zone23A_EventScript_Matthew::
 	trainerbattle_single TRAINER_MATTHEW, Zone23A_Text_MatthewIntro, Zone23A_Text_MatthewDefeat
@@ -129,13 +132,15 @@ Zone23A_EventScript_Matthew::
 	end
 
 Zone23A_Text_MatthewIntro:
-	.string "$"
+	.string "I journey to exotic biomes to\n"
+	.string "gather the rarest of Pokémon!$"
 
 Zone23A_Text_MatthewDefeat:
-	.string "$"
+	.string "Argh!$"
 
 Zone23A_Text_MatthewPostBattle:
-	.string "$"
+	.string "Rare Pokémon don't always battle\n"
+	.string "too well.$"
 
 Zone23A_EventScript_Kerry::
 	trainerbattle_single TRAINER_KERRY, Zone23A_Text_KerryIntro, Zone23A_Text_KerryDefeat
@@ -143,13 +148,15 @@ Zone23A_EventScript_Kerry::
 	end
 
 Zone23A_Text_KerryIntro:
-	.string "$"
+	.string "What's your favorite food?$"
 
 Zone23A_Text_KerryDefeat:
-	.string "$"
+	.string "I personally love teriyaki!$"
 
 Zone23A_Text_KerryPostBattle:
-	.string "$"
+	.string "Sometimes, it's nice to just chat\n"
+	.string "instead of battling.\l"
+	.string "Don't you think so?$"
 
 Zone23A_EventScript_Annie::
 	trainerbattle_single TRAINER_ANNIE, Zone23A_Text_AnnieIntro, Zone23A_Text_AnnieDefeat
@@ -157,13 +164,15 @@ Zone23A_EventScript_Annie::
 	end
 
 Zone23A_Text_AnnieIntro:
-	.string "$"
+	.string "Ah! A swamp monster!$"
 
 Zone23A_Text_AnnieDefeat:
-	.string "$"
+	.string "Oh, I'm so sorry!$"
 
 Zone23A_Text_AnniePostBattle:
-	.string "$"
+	.string "I didn't mean to insult you like\n"
+	.string "that. You look nothing like a swamp\l"
+	.string "monster!$"
 
 Zone23A_EventScript_LeafStone::
 	finditem ITEM_LEAF_STONE
