@@ -323,6 +323,10 @@ static void BuildNormalStartMenu(void)
 
 static void BuildZoneStartMenu(void)
 {
+    if (FlagGet(FLAG_IS_REVISITING_ZONE) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_RETIRE_SAFARI);
+    }
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_POKEDEX);

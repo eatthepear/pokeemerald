@@ -5,10 +5,8 @@ SafariZone_EventScript_OutOfBallsMidBattle::
 	end
 
 SafariZone_EventScript_Exit::
-	setvar VAR_SAFARI_ZONE_STATE, 1
-	special ExitSafariMode
-	warp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
-	waitstate
+	clearflag FLAG_IS_REVISITING_ZONE
+	goto EventScript_WarpZone0
 	end
 
 SafariZone_EventScript_RetirePrompt::
@@ -70,8 +68,8 @@ SafariZone_EventScript_PokeblockPresent::
 	end
 
 SafariZone_Text_WouldYouLikeToExit:
-	.string "Would you like to exit the SAFARI\n"
-	.string "ZONE right now?$"
+	.string "Would you like to return to\n"
+	.string "Zone 0 right now?$"
 
 SafariZone_Text_TimesUp:
 	.string "Ding-dong! Time's up!\n"
