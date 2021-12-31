@@ -962,6 +962,7 @@ Zone0Sanctuary_Text_Colress_BrutalExplained:
 	.string "Items can't be used in battle.\p"
 	.string "You cannot turn off Set mode.\p"
 	.string "Your Pokémon cannot gain EVs.\p"
+	.string "Trainer battles give less money.\p"
 	.string "You cannot farm items from wild\n"
 	.string "Pokémon or other means.\p"
 	.string "The Daycare cannot be used.\p"
