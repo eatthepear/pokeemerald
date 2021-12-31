@@ -2905,9 +2905,9 @@ static const u8 sTM31Desc[] = _(
     "in a hailstorm.");
 
 static const u8 sTM32Desc[] = _(
-    "Weakens enemy attacks,\n"
-    "but can only be used\n"
-    "in a hailstorm.");
+    "Slashes with crossed\n"
+    "scythes, claws, etc.\n"
+    "High crit ratio.");
 
 static const u8 sTM33Desc[] = _(
     "Creates a wall of\n"

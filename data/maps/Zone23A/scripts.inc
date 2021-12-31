@@ -20,6 +20,53 @@ Zone23A_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_ANNIE, EventScript_BrutalExitNotSatisfied
 	return
 
+Zone23A_EventScript_XScissor::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZONE23A_TM31, Zone23A_EventScript_GaveXScissor
+	msgbox Zone23A_Text_XScissor, MSGBOX_AUTOCLOSE
+	goto_if_not_defeated TRAINER_EDGARDO, Zone23A_EventScript_NotDefeated
+	goto_if_not_defeated TRAINER_JEAN, Zone23A_EventScript_NotDefeated
+	goto_if_not_defeated TRAINER_ROSE, Zone23A_EventScript_NotDefeated
+	goto_if_not_defeated TRAINER_JENNIFER, Zone23A_EventScript_NotDefeated
+	goto_if_not_defeated TRAINER_MATTHEW, Zone23A_EventScript_NotDefeated
+	goto_if_not_defeated TRAINER_KERRY, Zone23A_EventScript_NotDefeated
+	goto_if_not_defeated TRAINER_ANNIE, Zone23A_EventScript_NotDefeated
+	msgbox Zone23A_Text_Here, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM32
+	setflag FLAG_RECEIVED_ZONE23A_TM31
+	goto Zone23A_EventScript_GaveXScissor
+	end
+
+Zone23A_EventScript_GaveXScissor:
+	msgbox Zone23A_Text_GaveXScissor, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone23A_EventScript_NotDefeated:
+	msgbox Zone23A_Text_NotDefeated, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone23A_Text_XScissor:
+	.string "Hey, you.\p"
+	.string "Yeah, you.\p"
+	.string "If you've beat all the trainers in\n"
+	.string "this swamp, I've got a little\l"
+	.string "something for you.$"
+
+Zone23A_Text_NotDefeated:
+	.string "Hmm. Still more to go.$"
+
+Zone23A_Text_Here:
+	.string "Ooh, nice. You've done it.\p"
+	.string "Here's what I promised, a special\n"
+	.string "Bug-type TM.$"
+
+Zone23A_Text_GaveXScissor:
+	.string "X-Scissor has a high critical hit\n"
+	.string "ratio. Isn't that neat?$"
+
 Zone23A_EventScript_Edgardo::
 	trainerbattle_single TRAINER_EDGARDO, Zone23A_Text_EdgardoIntro, Zone23A_Text_EdgardoDefeat
 	msgbox Zone23A_Text_EdgardoPostBattle, MSGBOX_AUTOCLOSE

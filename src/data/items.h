@@ -7683,10 +7683,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM32_AURORA_VEIL] =
+    [ITEM_TM32_X_SCISSOR] =
     {
         .name = _("TM32"),
-        .itemId = ITEM_TM32_AURORA_VEIL,
+        .itemId = ITEM_TM32_X_SCISSOR,
         .price = 2000,
         .description = sTM32Desc,
         .pocket = POCKET_TM_HM,
