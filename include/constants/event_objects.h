@@ -243,8 +243,10 @@
 #define OBJ_EVENT_GFX_COLRESS                    239
 #define OBJ_EVENT_GFX_RANGER_M                   240
 #define OBJ_EVENT_GFX_RANGER_F                   241
+#define OBJ_EVENT_GFX_REGIDRAGO                  242
+#define OBJ_EVENT_GFX_REGIELEKI                  243
 
-#define NUM_OBJ_EVENT_GFX                        242
+#define NUM_OBJ_EVENT_GFX                        244
 
 
 // These are dynamic object gfx ids.
