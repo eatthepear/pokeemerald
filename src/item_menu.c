@@ -81,18 +81,18 @@ enum {
     ACTION_GIVE,
     ACTION_CANCEL,
     ACTION_BATTLE_USE,
-    ACTION_CHECK,     
-    ACTION_WALK,      
-    ACTION_DESELECT,  
-    ACTION_CHECK_TAG, 
-    ACTION_CONFIRM,   
-    ACTION_SHOW,      
-    ACTION_GIVE_FAVOR_LADY,    
-    ACTION_CONFIRM_QUIZ_LADY, 
+    ACTION_CHECK,
+    ACTION_WALK,
+    ACTION_DESELECT,
+    ACTION_CHECK_TAG,
+    ACTION_CONFIRM,
+    ACTION_SHOW,
+    ACTION_GIVE_FAVOR_LADY,
+    ACTION_CONFIRM_QUIZ_LADY,
     ACTION_BY_NAME,
     ACTION_BY_TYPE,
     ACTION_BY_AMOUNT,
-    ACTION_DUMMY,     
+    ACTION_DUMMY,
 };
 
 enum {
@@ -183,6 +183,8 @@ static void SellItem(u8);
 static void WaitAfterItemSell(u8);
 static void TryDepositItem(u8);
 static void Task_ChooseHowManyToDeposit(u8 taskId);
+
+// .rodata
 static void WaitDepositErrorMessage(u8);
 static void CB2_ApprenticeExitBagMenu(void);
 static void CB2_FavorLadyExitBagMenu(void);
@@ -1293,39 +1295,38 @@ static void Task_BagMenu_HandleInput(u8 taskId)
                 
                 PlaySE(SE_SELECT);
                 BagDestroyPocketScrollArrowPair();
-                BagMenu_PrintCursor(data[0], 2);
+                BagMenu_PrintCursor(tListTaskId, COLORID_GRAY_CURSOR);
                 ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
                 gTasks[taskId].func = Task_LoadBagSortOptions;
+                return;
             }
-            else
+            break;
+        }
+
+        listPosition = ListMenu_ProcessInput(tListTaskId);
+        ListMenuGetScrollAndRow(tListTaskId, scrollPos, cursorPos);
+        switch (listPosition)
+        {
+        case LIST_NOTHING_CHOSEN:
+            break;
+        case LIST_CANCEL:
+            if (gBagPosition.location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH)
             {
-                listPosition = ListMenu_ProcessInput(data[0]);
-                ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
-                switch (listPosition)
-                {
-                    case LIST_NOTHING_CHOSEN:
-                        break;
-                    case LIST_CANCEL:
-                        if (gBagPosition.location == ITEMMENULOCATION_BERRY_BLENDER_CRUSH)
-                        {
-                            PlaySE(SE_FAILURE);
-                            break;
-                        }
-                        PlaySE(SE_SELECT);
-                        gSpecialVar_ItemId = ITEM_NONE;
-                        gTasks[taskId].func = Task_FadeAndCloseBagMenu;
-                        break;
-                    default: // A_BUTTON
-                        PlaySE(SE_SELECT);
-                        BagDestroyPocketScrollArrowPair();
-                        BagMenu_PrintCursor(data[0], 2);
-                        data[1] = listPosition;
-                        data[2] = BagGetQuantityByPocketPosition(gBagPosition.pocket + 1, listPosition);
-                        gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPosition.pocket + 1, listPosition);
-                        sContextMenuFuncs[gBagPosition.location](taskId);
-                        break;
-                }
+                PlaySE(SE_FAILURE);
+                break;
             }
+            PlaySE(SE_SELECT);
+            gSpecialVar_ItemId = ITEM_NONE;
+            gTasks[taskId].func = Task_FadeAndCloseBagMenu;
+            break;
+        default: // A_BUTTON
+            PlaySE(SE_SELECT);
+            BagDestroyPocketScrollArrowPair();
+            BagMenu_PrintCursor(tListTaskId, COLORID_GRAY_CURSOR);
+            tListPosition = listPosition;
+            tQuantity = BagGetQuantityByPocketPosition(gBagPosition.pocket + 1, listPosition);
+            gSpecialVar_ItemId = BagGetItemIdByPocketPosition(gBagPosition.pocket + 1, listPosition);
+            sContextMenuFuncs[gBagPosition.location](taskId);
             break;
         }
     }
@@ -2683,7 +2684,7 @@ enum ItemSortType
 	ITEM_TYPE_STATUS_RECOVERY,
 	ITEM_TYPE_PP_RECOVERY,
 	ITEM_TYPE_STAT_BOOST_DRINK,
-	ITEM_TYPE_STAT_BOOST_WING,
+	ITEM_TYPE_STAT_BOOST_FEATHER,
 	ITEM_TYPE_EVOLUTION_STONE,
 	ITEM_TYPE_EVOLUTION_ITEM,
 	ITEM_TYPE_BATTLE_ITEM,
@@ -2760,7 +2761,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_ENERGY_POWDER] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_ENERGY_ROOT] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_REVIVAL_HERB] = ITEM_TYPE_HEALTH_RECOVERY,
-    //[ITEM_SWEET_HEART] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_BERRY_JUICE] = ITEM_TYPE_HEALTH_RECOVERY,
     [ITEM_SACRED_ASH] = ITEM_TYPE_HEALTH_RECOVERY,
 
@@ -2771,16 +2771,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_PARALYZE_HEAL] = ITEM_TYPE_STATUS_RECOVERY,
     [ITEM_FULL_HEAL] = ITEM_TYPE_STATUS_RECOVERY,
     [ITEM_LAVA_COOKIE] = ITEM_TYPE_STATUS_RECOVERY,
-    
-    [ITEM_HONEY] = ITEM_TYPE_STATUS_RECOVERY,
-    [ITEM_BIG_MALASADA] = ITEM_TYPE_STATUS_RECOVERY,
-    /*[ITEM_CASTELIACONE] = ITEM_TYPE_STATUS_RECOVERY,
-    [ITEM_LUMIOSE_GALETTE] = ITEM_TYPE_STATUS_RECOVERY,
-    [ITEM_RAGE_CANDY_BAR] = ITEM_TYPE_STATUS_RECOVERY,
-    [ITEM_SHALOUR_SABLE] = ITEM_TYPE_STATUS_RECOVERY,
-     */
-    [ITEM_OLD_GATEAU] = ITEM_TYPE_STATUS_RECOVERY,
-    [ITEM_HEAL_POWDER] = ITEM_TYPE_STATUS_RECOVERY,
     
     [ITEM_ETHER] = ITEM_TYPE_PP_RECOVERY,
     [ITEM_MAX_ETHER] = ITEM_TYPE_PP_RECOVERY,
@@ -2797,22 +2787,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_ZINC] = ITEM_TYPE_STAT_BOOST_DRINK,
     [ITEM_PP_MAX] = ITEM_TYPE_STAT_BOOST_DRINK,
     
-    [ITEM_ABILITY_CAPSULE] = ITEM_TYPE_STAT_BOOST_DRINK,
-
-    [ITEM_HEALTH_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    [ITEM_MUSCLE_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    [ITEM_RESIST_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    [ITEM_GENIUS_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    [ITEM_CLEVER_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    [ITEM_SWIFT_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    [ITEM_PRETTY_FEATHER] = ITEM_TYPE_STAT_BOOST_WING,
-    
-    [ITEM_POWER_BRACER] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
-    [ITEM_POWER_BELT] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
-    [ITEM_POWER_LENS] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
-    [ITEM_POWER_BAND] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
-    [ITEM_POWER_ANKLET] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
-    [ITEM_POWER_WEIGHT] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
     [ITEM_MACHO_BRACE] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
 
     [ITEM_SUN_STONE] = ITEM_TYPE_EVOLUTION_STONE,
@@ -2821,11 +2795,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_THUNDER_STONE] = ITEM_TYPE_EVOLUTION_STONE,
     [ITEM_WATER_STONE] = ITEM_TYPE_EVOLUTION_STONE,
     [ITEM_LEAF_STONE] = ITEM_TYPE_EVOLUTION_STONE,
-    [ITEM_DAWN_STONE] = ITEM_TYPE_EVOLUTION_STONE,
-    [ITEM_DUSK_STONE] = ITEM_TYPE_EVOLUTION_STONE,
-    [ITEM_SHINY_STONE] = ITEM_TYPE_EVOLUTION_STONE,
-    [ITEM_ICE_STONE] = ITEM_TYPE_EVOLUTION_STONE,
-    [ITEM_OVAL_STONE] = ITEM_TYPE_EVOLUTION_STONE,
     
     [ITEM_KINGS_ROCK] = ITEM_TYPE_EVOLUTION_ITEM,
     [ITEM_DEEP_SEA_TOOTH] = ITEM_TYPE_EVOLUTION_ITEM,
@@ -2834,17 +2803,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_METAL_COAT] = ITEM_TYPE_EVOLUTION_ITEM,
     [ITEM_DRAGON_SCALE] = ITEM_TYPE_EVOLUTION_ITEM,
     [ITEM_UPGRADE] = ITEM_TYPE_EVOLUTION_ITEM,
-    
-    [ITEM_PROTECTOR] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_MAGMARIZER] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_PRISM_SCALE] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_SACHET] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_WHIPPED_DREAM] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_RAZOR_CLAW] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_RAZOR_FANG] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_REAPER_CLOTH] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_DUBIOUS_DISC] = ITEM_TYPE_EVOLUTION_ITEM,
-    [ITEM_ELECTIRIZER] = ITEM_TYPE_EVOLUTION_ITEM,
     
     [ITEM_GUARD_SPEC] = ITEM_TYPE_BATTLE_ITEM,
     [ITEM_DIRE_HIT] = ITEM_TYPE_BATTLE_ITEM,
@@ -2893,6 +2851,62 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_METAL_POWDER] = ITEM_TYPE_HELD_ITEM,
     [ITEM_THICK_CLUB] = ITEM_TYPE_HELD_ITEM,
     [ITEM_LEEK] = ITEM_TYPE_HELD_ITEM,
+    
+    [ITEM_SEA_INCENSE] = ITEM_TYPE_INCENSE,
+    [ITEM_LAX_INCENSE] = ITEM_TYPE_INCENSE,
+    
+    [ITEM_RED_ORB] = ITEM_TYPE_MEGA_STONE,
+    [ITEM_BLUE_ORB] = ITEM_TYPE_MEGA_STONE,
+    
+    [ITEM_BLUE_FLUTE] = ITEM_TYPE_FLUTE,
+    [ITEM_YELLOW_FLUTE] = ITEM_TYPE_FLUTE,
+    [ITEM_RED_FLUTE] = ITEM_TYPE_FLUTE,
+    [ITEM_BLACK_FLUTE] = ITEM_TYPE_FLUTE,
+    [ITEM_WHITE_FLUTE] = ITEM_TYPE_FLUTE,
+    
+    [ITEM_SHOAL_SALT] = ITEM_TYPE_SELLABLE,
+    [ITEM_SHOAL_SHELL] = ITEM_TYPE_SELLABLE,
+    [ITEM_TINY_MUSHROOM] = ITEM_TYPE_SELLABLE,
+    [ITEM_BIG_MUSHROOM] = ITEM_TYPE_SELLABLE,
+    [ITEM_PEARL] = ITEM_TYPE_SELLABLE,
+    [ITEM_BIG_PEARL] = ITEM_TYPE_SELLABLE,
+    [ITEM_STARDUST] = ITEM_TYPE_SELLABLE,
+    [ITEM_STAR_PIECE] = ITEM_TYPE_SELLABLE,
+    [ITEM_NUGGET] = ITEM_TYPE_SELLABLE,
+   
+    [ITEM_RED_SHARD] = ITEM_TYPE_SHARD,
+    [ITEM_BLUE_SHARD] = ITEM_TYPE_SHARD,
+    [ITEM_YELLOW_SHARD] = ITEM_TYPE_SHARD,
+    [ITEM_GREEN_SHARD] = ITEM_TYPE_SHARD,
+
+    [ITEM_HELIX_FOSSIL] = ITEM_TYPE_FOSSIL,
+    [ITEM_DOME_FOSSIL] = ITEM_TYPE_FOSSIL,
+    [ITEM_OLD_AMBER] = ITEM_TYPE_FOSSIL,
+
+    [ITEM_ORANGE_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_HARBOR_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_GLITTER_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_MECH_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_WOOD_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_WAVE_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_BEAD_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_SHADOW_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_TROPIC_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_DREAM_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_FAB_MAIL] = ITEM_TYPE_MAIL,
+    [ITEM_RETRO_MAIL] = ITEM_TYPE_MAIL,
+    
+    [ITEM_HONEY] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_BIG_MALASADA] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_CASTELIACONE] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_LUMIOSE_GALETTE] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_RAGE_CANDY_BAR] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_SHALOUR_SABLE] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_OLD_GATEAU] = ITEM_TYPE_STATUS_RECOVERY,
+    [ITEM_HEAL_POWDER] = ITEM_TYPE_STATUS_RECOVERY,
+    
+    [ITEM_SWEET_HEART] = ITEM_TYPE_HEALTH_RECOVERY,
+    
     [ITEM_ADAMANT_ORB] = ITEM_TYPE_HELD_ITEM,
     [ITEM_LUSTROUS_ORB] = ITEM_TYPE_HELD_ITEM,
     [ITEM_GRISEOUS_ORB] = ITEM_TYPE_HELD_ITEM,
@@ -2945,13 +2959,12 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_BLACK_SLUDGE] = ITEM_TYPE_HELD_ITEM,
     [ITEM_CHOICE_SPECS] = ITEM_TYPE_HELD_ITEM,
     [ITEM_CHOICE_SCARF] = ITEM_TYPE_HELD_ITEM,
-    /*[ITEM_EJECT_PACK] = ITEM_TYPE_HELD_ITEM,
+    [ITEM_EJECT_PACK] = ITEM_TYPE_HELD_ITEM,
     [ITEM_ROOM_SERVICE] = ITEM_TYPE_HELD_ITEM,
     [ITEM_BLUNDER_POLICY] = ITEM_TYPE_HELD_ITEM,
     [ITEM_HEAVY_DUTY_BOOTS] = ITEM_TYPE_HELD_ITEM,
     [ITEM_UTILITY_UMBRELLA] = ITEM_TYPE_HELD_ITEM,
     [ITEM_THROAT_SPRAY] = ITEM_TYPE_HELD_ITEM,
-    */
     [ITEM_FIST_PLATE] = ITEM_TYPE_PLATE,
     [ITEM_SKY_PLATE] = ITEM_TYPE_PLATE,
     [ITEM_TOXIC_PLATE] = ITEM_TYPE_PLATE,
@@ -3008,8 +3021,7 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_DRAGON_GEM] = ITEM_TYPE_GEM,
     [ITEM_DARK_GEM] = ITEM_TYPE_GEM,
     [ITEM_FAIRY_GEM] = ITEM_TYPE_GEM,
-    [ITEM_SEA_INCENSE] = ITEM_TYPE_INCENSE,
-    [ITEM_LAX_INCENSE] = ITEM_TYPE_INCENSE,
+    
     [ITEM_LUCK_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_FULL_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_ODD_INCENSE] = ITEM_TYPE_INCENSE,
@@ -3017,6 +3029,7 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_ROCK_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_ROSE_INCENSE] = ITEM_TYPE_INCENSE,
     [ITEM_WAVE_INCENSE] = ITEM_TYPE_INCENSE,
+    
     [ITEM_VENUSAURITE] = ITEM_TYPE_MEGA_STONE,
     [ITEM_CHARIZARDITE_X] = ITEM_TYPE_MEGA_STONE,
     [ITEM_CHARIZARDITE_Y] = ITEM_TYPE_MEGA_STONE,
@@ -3064,12 +3077,9 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_GALLADITE] = ITEM_TYPE_MEGA_STONE,
     [ITEM_AUDINITE] = ITEM_TYPE_MEGA_STONE,
     [ITEM_DIANCITE] = ITEM_TYPE_MEGA_STONE,
-    //[ITEM_ULTRANECROZIUM_Z] =  ITEM_TYPE_MEGA_STONE,
+    [ITEM_ULTRANECROZIUM_Z] =  ITEM_TYPE_MEGA_STONE,
     
-    [ITEM_RED_ORB] = ITEM_TYPE_MEGA_STONE,
-    [ITEM_BLUE_ORB] = ITEM_TYPE_MEGA_STONE,
-    
-    /*[ITEM_NORMALIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
+    [ITEM_NORMALIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
     [ITEM_FIGHTINIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
     [ITEM_FLYINIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
     [ITEM_POISONIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
@@ -3103,35 +3113,52 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_SNORLIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
     [ITEM_SOLGANIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
     [ITEM_TAPUNIUM_Z] = ITEM_TYPE_Z_CRYSTAL,
-    */
-    [ITEM_BLUE_FLUTE] = ITEM_TYPE_FLUTE,
-    [ITEM_YELLOW_FLUTE] = ITEM_TYPE_FLUTE,
-    [ITEM_RED_FLUTE] = ITEM_TYPE_FLUTE,
-    [ITEM_BLACK_FLUTE] = ITEM_TYPE_FLUTE,
-    [ITEM_WHITE_FLUTE] = ITEM_TYPE_FLUTE,
-
+    
     [ITEM_RED_NECTAR] = ITEM_TYPE_NECTAR,
     [ITEM_YELLOW_NECTAR] = ITEM_TYPE_NECTAR,
     [ITEM_PINK_NECTAR] = ITEM_TYPE_NECTAR,
     [ITEM_PURPLE_NECTAR] = ITEM_TYPE_NECTAR,
     
-    [ITEM_SHOAL_SALT] = ITEM_TYPE_SELLABLE,
-    [ITEM_SHOAL_SHELL] = ITEM_TYPE_SELLABLE,
-    [ITEM_TINY_MUSHROOM] = ITEM_TYPE_SELLABLE,
-    [ITEM_BIG_MUSHROOM] = ITEM_TYPE_SELLABLE,
-    [ITEM_PEARL] = ITEM_TYPE_SELLABLE,
-    [ITEM_BIG_PEARL] = ITEM_TYPE_SELLABLE,
-    [ITEM_STARDUST] = ITEM_TYPE_SELLABLE,
-    [ITEM_STAR_PIECE] = ITEM_TYPE_SELLABLE,
-    [ITEM_NUGGET] = ITEM_TYPE_SELLABLE,
+    [ITEM_ABILITY_CAPSULE] = ITEM_TYPE_STAT_BOOST_DRINK,
+    [ITEM_HEALTH_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    [ITEM_MUSCLE_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    [ITEM_RESIST_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    [ITEM_GENIUS_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    [ITEM_CLEVER_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    [ITEM_SWIFT_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    [ITEM_PRETTY_FEATHER] = ITEM_TYPE_STAT_BOOST_FEATHER,
+    
+    [ITEM_POWER_BRACER] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
+    [ITEM_POWER_BELT] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
+    [ITEM_POWER_LENS] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
+    [ITEM_POWER_BAND] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
+    [ITEM_POWER_ANKLET] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
+    [ITEM_POWER_WEIGHT] = ITEM_TYPE_STAT_BOOST_HELD_ITEM,
+    
+    [ITEM_DAWN_STONE] = ITEM_TYPE_EVOLUTION_STONE,
+    [ITEM_DUSK_STONE] = ITEM_TYPE_EVOLUTION_STONE,
+    [ITEM_SHINY_STONE] = ITEM_TYPE_EVOLUTION_STONE,
+    [ITEM_ICE_STONE] = ITEM_TYPE_EVOLUTION_STONE,
+    [ITEM_OVAL_STONE] = ITEM_TYPE_EVOLUTION_STONE,
+    
+    [ITEM_PROTECTOR] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_MAGMARIZER] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_PRISM_SCALE] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_SACHET] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_WHIPPED_DREAM] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_RAZOR_CLAW] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_RAZOR_FANG] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_REAPER_CLOTH] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_DUBIOUS_DISC] = ITEM_TYPE_EVOLUTION_ITEM,
+    [ITEM_ELECTIRIZER] = ITEM_TYPE_EVOLUTION_ITEM,
     
     [ITEM_RARE_BONE] = ITEM_TYPE_SELLABLE,
-    //[ITEM_PEARL_STRING] = ITEM_TYPE_SELLABLE,
-    //[ITEM_BIG_NUGGET] = ITEM_TYPE_SELLABLE,
-    //[ITEM_COMET_SHARD] = ITEM_TYPE_SELLABLE,
-    //[ITEM_BALM_MUSHROOM] = ITEM_TYPE_SELLABLE,
+    [ITEM_PEARL_STRING] = ITEM_TYPE_SELLABLE,
+    [ITEM_BIG_NUGGET] = ITEM_TYPE_SELLABLE,
+    [ITEM_COMET_SHARD] = ITEM_TYPE_SELLABLE,
+    [ITEM_BALM_MUSHROOM] = ITEM_TYPE_SELLABLE,
     [ITEM_ODD_KEYSTONE] = ITEM_TYPE_SELLABLE,
-    /*[ITEM_BOTTLE_CAP] = ITEM_TYPE_SELLABLE,
+    [ITEM_BOTTLE_CAP] = ITEM_TYPE_SELLABLE,
     [ITEM_GOLD_BOTTLE_CAP] = ITEM_TYPE_SELLABLE,
     [ITEM_WISHING_PIECE] = ITEM_TYPE_SELLABLE,
     [ITEM_RELIC_COPPER] = ITEM_TYPE_RELIC,
@@ -3141,15 +3168,7 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_RELIC_BAND] = ITEM_TYPE_RELIC,
     [ITEM_RELIC_STATUE] = ITEM_TYPE_RELIC,
     [ITEM_RELIC_CROWN] = ITEM_TYPE_RELIC,
-    */
-    [ITEM_RED_SHARD] = ITEM_TYPE_SHARD,
-    [ITEM_BLUE_SHARD] = ITEM_TYPE_SHARD,
-    [ITEM_YELLOW_SHARD] = ITEM_TYPE_SHARD,
-    [ITEM_GREEN_SHARD] = ITEM_TYPE_SHARD,
-
-    [ITEM_HELIX_FOSSIL] = ITEM_TYPE_FOSSIL,
-    [ITEM_DOME_FOSSIL] = ITEM_TYPE_FOSSIL,
-    [ITEM_OLD_AMBER] = ITEM_TYPE_FOSSIL,
+    
     [ITEM_ROOT_FOSSIL] = ITEM_TYPE_FOSSIL,
     [ITEM_CLAW_FOSSIL] = ITEM_TYPE_FOSSIL,
     [ITEM_SKULL_FOSSIL] = ITEM_TYPE_FOSSIL,
@@ -3158,19 +3177,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_PLUME_FOSSIL] = ITEM_TYPE_FOSSIL,
     [ITEM_JAW_FOSSIL] = ITEM_TYPE_FOSSIL,
     [ITEM_SAIL_FOSSIL] = ITEM_TYPE_FOSSIL,
-
-    [ITEM_ORANGE_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_HARBOR_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_GLITTER_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_MECH_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_WOOD_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_WAVE_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_BEAD_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_SHADOW_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_TROPIC_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_DREAM_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_FAB_MAIL] = ITEM_TYPE_MAIL,
-    [ITEM_RETRO_MAIL] = ITEM_TYPE_MAIL,
 };
 
 static void AddBagSortSubMenu(void)
@@ -3204,17 +3210,20 @@ static void AddBagSortSubMenu(void)
     BagMenu_Print(1, 1, gStringVar4, 3, 1, 0, 0, 0, 0);
     
     if (gBagMenu->contextMenuNumItems == 2)
-        PrintContextMenuItems(BagMenu_AddWindow(1));
+        PrintContextMenuItems(BagMenu_AddWindow(ITEMWIN_1x2));
     else if (gBagMenu->contextMenuNumItems == 4)
-        PrintContextMenuItemGrid(BagMenu_AddWindow(2), 2, 2);
+        PrintContextMenuItemGrid(BagMenu_AddWindow(ITEMWIN_2x2), 2, 2);
     else
-        PrintContextMenuItemGrid(BagMenu_AddWindow(3), 2, 3);
+        PrintContextMenuItemGrid(BagMenu_AddWindow(ITEMWIN_2x3), 2, 3);
 }
 
 static void Task_LoadBagSortOptions(u8 taskId)
 {
     AddBagSortSubMenu();
-    gTasks[taskId].func = Task_ItemContext_MultipleRows;
+    if (gBagMenu->contextMenuNumItems <= 2)
+        gTasks[taskId].func = Task_ItemContext_SingleRow;
+    else
+        gTasks[taskId].func = Task_ItemContext_MultipleRows;
 }
 
 #define tSortType data[2]
@@ -3241,10 +3250,19 @@ static void ItemMenu_SortByAmount(u8 taskId)
 
 static void SortBagItems(u8 taskId)
 {
-    s16* data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
+    u16 *scrollPos = &gBagPosition.scrollPosition[gBagPosition.pocket];
+    u16 *cursorPos = &gBagPosition.cursorPosition[gBagPosition.pocket];
 
     RemoveContextWindow();
-    //sItemDescriptionPocket = 0; //Sorting Items
+    
+    SortItemsInBag(gBagPosition.pocket, tSortType);
+    DestroyListMenuTask(data[0], scrollPos, cursorPos);
+    UpdatePocketListPosition(gBagPosition.pocket);
+    LoadBagItemListBuffers(gBagPosition.pocket);
+    data[0] = ListMenuInit(&gMultiuseListMenuTemplate, *scrollPos, *cursorPos);
+    ScheduleBgCopyTilemapToVram(0);
+
     StringCopy(gStringVar1, sSortTypeStrings[tSortType]);
     StringExpandPlaceholders(gStringVar4, sText_ItemsSorted);
     DisplayItemMessage(taskId, 1, gStringVar4, Task_SortFinish);
@@ -3253,19 +3271,10 @@ static void SortBagItems(u8 taskId)
 static void Task_SortFinish(u8 taskId)
 {
     s16* data = gTasks[taskId].data;
-    u16* scrollPos = &gBagPosition.scrollPosition[gBagPosition.pocket];
-    u16* cursorPos = &gBagPosition.cursorPosition[gBagPosition.pocket];
 
     if (gMain.newKeys & (A_BUTTON | B_BUTTON))
     {
-        //BagPrintTextOnWindow(ShowBagWindow(6, 3), 2, gStringVar4, 0, 2, 1, 0, 0, 1);
-        SortItemsInBag(gBagPosition.pocket, tSortType);
         RemoveItemMessageWindow(4);
-        DestroyListMenuTask(data[0], scrollPos, cursorPos);
-        UpdatePocketListPosition(gBagPosition.pocket);
-        LoadBagItemListBuffers(gBagPosition.pocket);
-        data[0] = ListMenuInit(&gMultiuseListMenuTemplate, *scrollPos, *cursorPos);
-        ScheduleBgCopyTilemapToVram(0);
         ReturnToItemList(taskId);
     }
 }
