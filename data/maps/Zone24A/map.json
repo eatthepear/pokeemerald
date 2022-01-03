@@ -26,7 +26,33 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone24A_EventScript_LookDown"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone24A_EventScript_LookDown"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone24A_EventScript_LookDown"
+    }
   ],
   "bg_events": [
 
