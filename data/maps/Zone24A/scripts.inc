@@ -48,9 +48,29 @@ Zone24A_Movement_Camera_MoveCameraDown:
 	walk_faster_down
 	walk_faster_down
 	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Zone24A_Movement_Camera_MoveCameraUp:
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_faster_up
 	walk_faster_up
 	walk_faster_up
