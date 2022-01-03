@@ -5394,7 +5394,7 @@
     {
       "id": "LAYOUT_ZONE24A",
       "name": "Zone24A_Layout",
-      "width": 80,
+      "width": 90,
       "height": 80,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
