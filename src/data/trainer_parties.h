@@ -3317,12 +3317,12 @@ static const struct TrainerMon sParty_Jennifer[] = {
     {
     .iv = 20,
     .lvl = 36,
-    .species = SPECIES_SPIRITOMB,
+    .species = SPECIES_HAUNTER,
     },
     {
     .iv = 20,
     .lvl = 36,
-    .species = SPECIES_MIMIKYU,
+    .species = SPECIES_SPIRITOMB,
     }
 };
 
