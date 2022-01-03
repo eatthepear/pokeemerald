@@ -382,3 +382,7 @@ const u16 gObjectEventPal_Shadow[] = INCBIN_U16("graphics/object_events/pics/peo
 const u32 gObjectEventPic_RangerM[] = INCBIN_U32("graphics/object_events/pics/people/ranger_m.4bpp");
 const u16 gObjectEventPal_Ranger[] = INCBIN_U16("graphics/object_events/pics/people/ranger_m.gbapal");
 const u32 gObjectEventPic_RangerF[] = INCBIN_U32("graphics/object_events/pics/people/ranger_f.4bpp");
+const u32 gObjectEventPic_Regidrago[] = INCBIN_U32("graphics/object_events/pics/pokemon/regidrago.4bpp");
+const u16 gObjectEventPal_Regidrago[] = INCBIN_U16("graphics/object_events/pics/pokemon/regidrago.gbapal");
+const u32 gObjectEventPic_Regieleki[] = INCBIN_U32("graphics/object_events/pics/pokemon/regieleki.4bpp");
+const u16 gObjectEventPal_Regieleki[] = INCBIN_U16("graphics/object_events/pics/pokemon/regidrago.gbapal");
