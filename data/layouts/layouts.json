@@ -5400,6 +5400,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone24A/border.bin",
       "blockdata_filepath": "data/layouts/Zone24A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE24B",
+      "name": "Zone24B_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone24B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone24B/map.bin"
     }
   ]
 }
