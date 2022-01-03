@@ -16565,6 +16565,85 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE24A",
+          "base_label": "gZone24A",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_KANGASKHAN"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_FALINKS"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_ELGYEM"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_SIGILYPH"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_SKARMORY"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_SKARMORY"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_JANGMO_O"
+              },
+              {
+                "min_level": 36,
+                "max_level": 38,
+                "species": "SPECIES_RIOLU"
+              }
+            ]
+          }
         }
       ]
     },
