@@ -411,6 +411,8 @@
 #define EVO_SPECIFIC_MON_IN_PARTY  26 // Pokémon levels up with a specified Pokémon in party
 #define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  27 // Pokémon reaches the specified level with a Dark Type Pokémon in party
 #define EVO_MAPSEC                        28     // Pokémon levels up on specified mapsec
+#define EVO_LEVEL_NATURE_AMPED            29     // Pokémon reaches the specified level, it has a Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature.
+#define EVO_LEVEL_NATURE_LOW_KEY          30     // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
 
 #define EVOS_PER_MON 10
 #define EVOS_PER_LINE 16

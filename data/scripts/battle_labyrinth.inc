@@ -549,6 +549,8 @@ Shop_Unique_ZhuLi_11to14:
 	.2byte ITEM_LUXURY_BALL
 	.2byte ITEM_SACHET
 	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_TART_APPLE
+	.2byte ITEM_SWEET_APPLE
 	.2byte ITEM_NONE
 	release
 	end
@@ -573,6 +575,8 @@ Shop_Unique_ZhuLi_15to20:
 	.2byte ITEM_OVAL_STONE
 	.2byte ITEM_SACHET
 	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_TART_APPLE
+	.2byte ITEM_SWEET_APPLE
 	.2byte ITEM_NONE
 	release
 	end
@@ -600,9 +604,14 @@ Shop_Unique_ZhuLi_21to25:
 	.2byte ITEM_DEEP_SEA_SCALE
 	.2byte ITEM_DEEP_SEA_TOOTH
 	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_WREATH
+	.2byte ITEM_CRACKED_POT
 	.2byte ITEM_UPGRADE
 	.2byte ITEM_SACHET
 	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_TART_APPLE
+	.2byte ITEM_SWEET_APPLE
 	.2byte ITEM_NONE
 	release
 	end

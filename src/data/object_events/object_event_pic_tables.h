@@ -2207,3 +2207,28 @@ const struct SpriteFrameImage sPicTable_RangerF[] = {
     overworld_frame(gObjectEventPic_RangerF, 2, 4, 7),
     overworld_frame(gObjectEventPic_RangerF, 2, 4, 8),
 };
+
+static const struct SpriteFrameImage sPicTable_Regidrago[] = {
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+    obj_frame_tiles(gObjectEventPic_Regidrago),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Regieleki[] = {
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+    obj_frame_tiles(gObjectEventPic_Regieleki),
+};
