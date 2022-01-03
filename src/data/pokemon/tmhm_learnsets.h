@@ -18853,6 +18853,7 @@ static const u8 sCopperajahTMHMLearnset[] =
 static const u8 sDracozoltTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -18877,6 +18878,7 @@ static const u8 sDracozoltTMHMLearnset[] =
 static const u8 sArctozoltTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
