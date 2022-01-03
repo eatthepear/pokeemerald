@@ -340,8 +340,8 @@ Zone22A_EventScript_IcyRock::
 	finditem ITEM_ICY_ROCK
 	end
 
-Zone22A_EventScript_IceStone::
-	finditem ITEM_ICE_STONE
+Zone22A_EventScript_Ether::
+	finditem ITEM_ETHER
 	end
 
 Zone22A_EventScript_MetalCoat::

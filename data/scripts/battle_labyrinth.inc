@@ -304,11 +304,11 @@ EventScript_Shop_Unique_Varrick::
 	case 17, EventScript_Shop_Unique_Varrick_15to20
 	case 18, EventScript_Shop_Unique_Varrick_15to20
 	case 20, EventScript_Shop_Unique_Varrick_15to20
-	case 21, EventScript_Shop_Unique_Varrick_21to25
-	case 22, EventScript_Shop_Unique_Varrick_21to25
-	case 23, EventScript_Shop_Unique_Varrick_21to25
-	case 24, EventScript_Shop_Unique_Varrick_21to25
-	case 25, EventScript_Shop_Unique_Varrick_21to25
+	case 21, EventScript_Shop_Unique_Varrick_21to23
+	case 22, EventScript_Shop_Unique_Varrick_21to23
+	case 23, EventScript_Shop_Unique_Varrick_21to23
+	case 24, EventScript_Shop_Unique_Varrick_24to25
+	case 25, EventScript_Shop_Unique_Varrick_24to25
 	end
 
 EventScript_Shop_Unique_Varrick_1to3:
@@ -341,8 +341,13 @@ EventScript_Shop_Unique_Varrick_15to20:
 	goto EventScript_Shop_Unique_Varrick_End
 	end
 
-EventScript_Shop_Unique_Varrick_21to25:
-	pokemart Shop_Unique_Varrick_21to25
+EventScript_Shop_Unique_Varrick_21to23:
+	pokemart Shop_Unique_Varrick_21to23
+	goto EventScript_Shop_Unique_Varrick_End
+	end
+
+EventScript_Shop_Unique_Varrick_24to25:
+	pokemart Shop_Unique_Varrick_24to25
 	goto EventScript_Shop_Unique_Varrick_End
 	end
 
@@ -467,7 +472,44 @@ Shop_Unique_Varrick_15to20:
 	end
 
 	.align 2
-Shop_Unique_Varrick_21to25:
+Shop_Unique_Varrick_21to23:
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_SCOPE_LENS
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_ZOOM_LENS
+	.2byte ITEM_METRONOME
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_MAGNET
+	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_TWISTED_SPOON
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_LIGHT_BALL
+	.2byte ITEM_LEEK
+	.2byte ITEM_THICK_CLUB
+	.2byte ITEM_LUCKY_PUNCH
+	.2byte ITEM_RED_NECTAR
+	.2byte ITEM_YELLOW_NECTAR
+	.2byte ITEM_PINK_NECTAR
+	.2byte ITEM_PURPLE_NECTAR
+	.2byte ITEM_NONE
+	release
+	end
+
+
+	.align 2
+Shop_Unique_Varrick_24to25:
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_SCOPE_LENS

@@ -1107,7 +1107,7 @@
 #define FLAG_ITEM_ZONE15A_DUSK_BALL                                 0x422
 #define FLAG_ITEM_ZONE15A_HYPER_POTION                              0x423
 #define FLAG_ITEM_ZONE15A_GLALITITE                                 0x424
-#define FLAG_ITEM_ZONE15A_ETHER                                     0x425
+#define FLAG_ITEM_ZONE15A_NEVER_MELT_ICE                            0x425
 #define FLAG_ITEM_ZONE15A_ICE_STONE                                 0x426
 #define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
 #define FLAG_ITEM_ZONE3A_HYPER_POTION                               0x428
@@ -1126,7 +1126,7 @@
 #define FLAG_ITEM_ZONE21A_EVERSTONE                                 0x435
 #define FLAG_ITEM_ZONE21A_TM28                                      0x436
 #define FLAG_ITEM_ZONE21B_SABLENITE                                 0x437
-#define FLAG_ITEM_ZONE22A_ICE_STONE                                 0x438
+#define FLAG_ITEM_ZONE22A_ETHER                                     0x438
 #define FLAG_ITEM_ZONE22A_ICY_ROCK                                  0x439
 #define FLAG_ITEM_ZONE22A_METAL_COAT                                0x43A
 #define FLAG_ITEM_ZONE22A_DESTINY_KNOT                              0x43B

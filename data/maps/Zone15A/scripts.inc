@@ -22,8 +22,8 @@ Zone15A_EventScript_DuskBall::
 	finditem ITEM_DUSK_BALL
 	end
 
-Zone15A_EventScript_Ether::
-	finditem ITEM_ETHER
+Zone15A_EventScript_NeverMeltIce::
+	finditem ITEM_NEVER_MELT_ICE
 	end
 
 Zone15A_EventScript_Glalitite::
