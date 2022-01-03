@@ -2,11 +2,11 @@
   "id": "MAP_ZONE24A",
   "name": "Zone24A",
   "layout": "LAYOUT_ZONE24A",
-  "music": "MUS_ROUTE113",
+  "music": "MUS_HG_SEQ_GS_D_CHAMPROAD",
   "region_map_section": "MAPSEC_ZONE_24",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_INDOOR",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
@@ -21,12 +21,38 @@
       "x": 53,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_ZONE23SANCTUARY",
+      "dest_map": "MAP_ZONE24B",
       "dest_warp_id": 0
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone24A_EventScript_LookDown"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone24A_EventScript_LookDown"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone24A_EventScript_LookDown"
+    }
   ],
   "bg_events": [
 
