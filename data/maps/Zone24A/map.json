@@ -2,7 +2,7 @@
   "id": "MAP_ZONE24A",
   "name": "Zone24A",
   "layout": "LAYOUT_ZONE24A",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ROUTE113",
   "region_map_section": "MAPSEC_ZONE_24",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
