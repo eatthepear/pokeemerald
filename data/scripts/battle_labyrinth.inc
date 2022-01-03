@@ -1526,6 +1526,8 @@ EventScript_WhenUReady:
 	goto_if_eq Zone12Sanctuary_EventScript_WhenUReady
 	compare VAR_ZONE, 18
 	goto_if_eq Zone17Sanctuary_EventScript_WhenUReady
+	compare VAR_ZONE, 24
+	goto_if_eq Zone23Sanctuary_EventScript_WhenUReady
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release

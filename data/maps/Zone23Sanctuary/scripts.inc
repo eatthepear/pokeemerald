@@ -34,10 +34,26 @@ Zone23Sanctuary_EventScript_Intro:
 	waitfanfare
 	setvar VAR_ZONE, 24
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox Zone23Sanctuary_Text_Colress_Explain, MSGBOX_AUTOCLOSE
+	msgbox Zone23Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
+	end
+
+Zone23Sanctuary_Text_Colress_Explain:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones,\n"
+	.string "{COLOR RED}Zone 24{COLOR DARK_GRAY} and {COLOR RED}Zone 25{COLOR DARK_GRAY}, are combined.\p"
+	.string "You will not be able to access a\n"
+	.string "Sanctuary in between the Zones.$"
+
+Zone23Sanctuary_Text_Colress_WhenUReady:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to\n"
+	.string "enter {COLOR RED}Zone 24{COLOR DARK_GRAY} and {COLOR RED}Zone 25{COLOR DARK_GRAY}, speak to me.$"
+
+Zone23Sanctuary_EventScript_WhenUReady:
+	msgbox Zone23Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	release
 	end
 
 Zone23Sanctuary_EventScript_NextZone::
