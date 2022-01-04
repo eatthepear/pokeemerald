@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ZONE25G",
-  "name": "Zone25G",
-  "layout": "LAYOUT_ZONE25G",
+  "id": "MAP_ZONE25K",
+  "name": "Zone25K",
+  "layout": "LAYOUT_ZONE25K",
   "music": "MUS_BW_SEQ_BGM_D_04",
   "region_map_section": "MAPSEC_ZONE_25",
   "requires_flash": false,
@@ -18,32 +18,25 @@
   ],
   "warp_events": [
     {
-      "x": 15,
-      "y": 3,
+      "x": 7,
+      "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_ZONE25F",
-      "dest_warp_id": 1
-    },
-    {
-      "x": 17,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ZONE25F",
+      "dest_map": "MAP_ZONE25J",
       "dest_warp_id": 2
     },
     {
-      "x": 14,
-      "y": 14,
+      "x": 4,
+      "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_ZONE25H",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ZONE25J",
+      "dest_warp_id": 3
     },
     {
-      "x": 16,
-      "y": 7,
+      "x": 10,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ZONE25H",
-      "dest_warp_id": 3
+      "dest_map": "MAP_ZONE25L",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
