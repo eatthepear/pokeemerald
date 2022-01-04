@@ -5440,6 +5440,46 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/Zone25C/border.bin",
       "blockdata_filepath": "data/layouts/Zone25C/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE25D",
+      "name": "Zone25D_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/Zone25D/border.bin",
+      "blockdata_filepath": "data/layouts/Zone25D/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE25E",
+      "name": "Zone25E_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/Zone25E/border.bin",
+      "blockdata_filepath": "data/layouts/Zone25E/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE25F",
+      "name": "Zone25F_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/Zone25F/border.bin",
+      "blockdata_filepath": "data/layouts/Zone25F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE25G",
+      "name": "Zone25G_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/Zone25G/border.bin",
+      "blockdata_filepath": "data/layouts/Zone25G/map.bin"
     }
   ]
 }

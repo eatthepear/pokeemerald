@@ -658,6 +658,10 @@
 #define MAP_ZONE25A         (99 | (27 << 8))
 #define MAP_ZONE25B         (100 | (27 << 8))
 #define MAP_ZONE25C         (101 | (27 << 8))
+#define MAP_ZONE25D         (102 | (27 << 8))
+#define MAP_ZONE25E         (103 | (27 << 8))
+#define MAP_ZONE25F         (104 | (27 << 8))
+#define MAP_ZONE25G         (105 | (27 << 8))
 
 // gMapGroup_IndoorRoute109
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

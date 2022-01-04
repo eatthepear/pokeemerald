@@ -1266,3 +1266,11 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Zone25B/scripts.inc"
 
 	.include "data/maps/Zone25C/scripts.inc"
+
+	.include "data/maps/Zone25D/scripts.inc"
+
+	.include "data/maps/Zone25E/scripts.inc"
+
+	.include "data/maps/Zone25F/scripts.inc"
+
+	.include "data/maps/Zone25G/scripts.inc"
