@@ -290,30 +290,14 @@ static void BuildStartMenuActions(void)
     {
         BuildMultiPartnerRoomStartMenu();
     }
-    #ifdef TX_DEBUGGING
-        if (TX_DEBUG_MENU_OPTION)
-        {
-            BuildDebugStartMenu();
-        }
-        else if (GetZoneFlag() == TRUE)
-        {
-            BuildZoneStartMenu();
-        }
-        else
-        {
-            BuildNormalStartMenu();
-        }
-    #else
-        else
-            else if (GetZoneFlag() == TRUE)
-            {
-                BuildZoneStartMenu();
-            }
-            else
-            {
-                BuildNormalStartMenu();
-            }
-    #endif
+    else if (GetZoneFlag() == TRUE)
+    {
+        BuildZoneStartMenu();
+    }
+    else
+    {
+        BuildNormalStartMenu();
+    }
 }
 
 static void AddStartMenuAction(u8 action)
@@ -342,7 +326,13 @@ static void BuildNormalStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
-    AddStartMenuAction(MENU_ACTION_EXIT);
+    if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_DEBUG);
+    }
+    else {
+        AddStartMenuAction(MENU_ACTION_EXIT);
+    }
 }
 
 static void BuildZoneStartMenu(void)
@@ -366,10 +356,20 @@ static void BuildZoneStartMenu(void)
     {
         AddStartMenuAction(MENU_ACTION_POKENAV);
     }
-    AddStartMenuAction(MENU_ACTION_SAVE);
+    if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_SAVE);
+    }
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
-    AddStartMenuAction(MENU_ACTION_DEBUG);
+    if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_DEBUG);
+    }
+    else
+    {
+        AddStartMenuAction(MENU_ACTION_EXIT);
+    }
 }
 
 static void BuildDebugStartMenu(void)
