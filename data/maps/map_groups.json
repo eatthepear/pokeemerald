@@ -685,7 +685,10 @@
     "Zone23Sanctuary",
     "Zone23Shops",
     "Zone24A",
-    "Zone24B"
+    "Zone24B",
+    "Zone25A",
+    "Zone25B",
+    "Zone25C"
   ],
   "gMapGroup_IndoorRoute109": [
     "Route109_SeashoreHouse"
