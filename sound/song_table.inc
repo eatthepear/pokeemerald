@@ -896,9 +896,9 @@ gSongTable::
 	song hg_seq_gs_d_shinto, 0, 0
 	song hg_seq_gs_e_arceus, 0, 0
 	song hg_seq_me_gonin, 2, 2
-	song bw_seq_bgm_gf_logo, 0, 0
-	song bw_seq_bgm_title, 0, 0
-	song bw_seq_bgm_title01, 0, 0
+	song mus_dummy, 0, 0
+	song mus_dummy, 0, 0
+	song mus_dummy, 0, 0
 	song bw_seq_bgm_pokemon_theme, 0, 0
 	song bw_seq_bgm_starting, 0, 0
 	song bw_seq_bgm_starting2, 0, 0

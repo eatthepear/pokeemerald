@@ -2331,15 +2331,6 @@ $(MID_SUBDIR)/hg_seq_me_cardgame2.s: %.s: %.mid
 $(MID_SUBDIR)/hg_seq_me_gonin.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G229 -V088 -p5
 
-$(MID_SUBDIR)/bw_seq_bgm_gf_logo.s: %.s: %.mid
-	$(MID) $< $@ -E -R5 -G278 -V070
-
-$(MID_SUBDIR)/bw_seq_bgm_title.s: %.s: %.mid
-	$(MID) $< $@ -E -R5 -G274 -V092
-
-$(MID_SUBDIR)/bw_seq_bgm_title01.s: %.s: %.mid
-	$(MID) $< $@ -E -R5 -G274 -V093
-
 $(MID_SUBDIR)/bw_seq_bgm_pokemon_theme.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G276 -V106
 
