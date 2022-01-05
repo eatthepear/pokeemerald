@@ -58,13 +58,13 @@ Zone12A_EventScript_Randolph::
 	end
 
 Zone12A_Text_RandolphIntro:
-	.string "Huh? Declan? Who's that?$"
+	.string "You distracted me from my search!$"
 
 Zone12A_Text_RandolphDefeat:
-	.string "Why does everyone think I'm Declan?$"
+	.string "The search for cool Pokémon!$"
 
 Zone12A_Text_RandolphPostBattle:
-	.string "I'm pretty sure we don't look alike!$"
+	.string "I guess you have some cool Pokémon.$"
 
 Zone12A_EventScript_Hilda::
 	trainerbattle_single TRAINER_HILDA, Zone12A_Text_HildaIntro, Zone12A_Text_HildaDefeat

@@ -386,3 +386,5 @@ const u32 gObjectEventPic_Regidrago[] = INCBIN_U32("graphics/object_events/pics/
 const u16 gObjectEventPal_Regidrago[] = INCBIN_U16("graphics/object_events/pics/pokemon/regidrago.gbapal");
 const u32 gObjectEventPic_Regieleki[] = INCBIN_U32("graphics/object_events/pics/pokemon/regieleki.4bpp");
 const u16 gObjectEventPal_Regieleki[] = INCBIN_U16("graphics/object_events/pics/pokemon/regieleki.gbapal");
+const u32 gObjectEventPic_BugManiac[] = INCBIN_U32("graphics/object_events/pics/people/bug_maniac.4bpp");
+const u16 gObjectEventPal_BugManiac[] = INCBIN_U16("graphics/object_events/pics/people/bug_maniac.gbapal");

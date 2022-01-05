@@ -245,8 +245,9 @@
 #define OBJ_EVENT_GFX_RANGER_F                   241
 #define OBJ_EVENT_GFX_REGIDRAGO                  242
 #define OBJ_EVENT_GFX_REGIELEKI                  243
+#define OBJ_EVENT_GFX_BUG_MANIAC                 244
 
-#define NUM_OBJ_EVENT_GFX                        244
+#define NUM_OBJ_EVENT_GFX                        245
 
 
 // These are dynamic object gfx ids.
