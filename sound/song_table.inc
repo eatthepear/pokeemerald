@@ -477,6 +477,9 @@ gSongTable::
 	song mus_rg_silph, 0, 0
 	song mus_rg_fuchsia, 0, 0
 	song mus_rg_celadon, 0, 0
+	song mus_victory_trainer, 0, 0
+	song mus_victory_wild, 0, 0
+	song mus_victory_gym_leader, 0, 0
 	song mus_rg_vermillion, 0, 0
 	song mus_rg_pewter, 0, 0
 	song mus_rg_encounter_rival, 0, 0
@@ -495,7 +498,11 @@ gSongTable::
 	song mus_rg_net_center, 0, 0
 	song mus_rg_mystery_gift, 0, 0
 	song mus_rg_berry_pick, 0, 0
+	song mus_rg_mt_moon, 0, 0
+	song mus_rg_follow_me, 0, 0
 	song mus_rg_sevii_route, 0, 0
+	song mus_rg_viridian_forest, 0, 0
+	song mus_rg_pewter, 0, 0
 	song mus_rg_sevii_45, 0, 0
 	song mus_rg_sevii_67, 0, 0
 	song mus_rg_poke_flute, 2, 2
@@ -521,6 +528,7 @@ gSongTable::
 	song mus_b_dome, 0, 0
 	song mus_b_pike, 0, 0
 	song mus_b_factory, 0, 0
+	song mus_vs_kyogre_groudon, 0, 0
 	song mus_vs_frontier_brain, 0, 0
 	song mus_vs_mew, 0, 0
 	song mus_b_dome_lobby, 0, 0
@@ -888,6 +896,7 @@ gSongTable::
 	song hg_seq_gs_d_shinto, 0, 0
 	song hg_seq_gs_e_arceus, 0, 0
 	song hg_seq_me_gonin, 2, 2
+	song bw_seq_bgm_gf_logo, 0, 0
 	song bw_seq_bgm_title, 0, 0
 	song bw_seq_bgm_title01, 0, 0
 	song bw_seq_bgm_pokemon_theme, 0, 0
@@ -905,9 +914,6 @@ gSongTable::
 	song bw_seq_bgm_vs_norapoke, 0, 0
 	song bw_seq_bgm_win1, 0, 0
 	song bw_seq_me_lvup, 2, 2
-	song bw_seq_bgm_t_02_var1, 0, 0
-	song bw_seq_bgm_t_02_var2, 0, 0
-	song bw_seq_bgm_t_02_var3, 0, 0
 	song bw_seq_bgm_t_02, 0, 0
 	song bw_seq_bgm_e_tsureteke2, 0, 0
 	song bw_seq_bgm_pokecen, 0, 0
@@ -930,14 +936,13 @@ gSongTable::
 	song bw_seq_bgm_d_01_b1f, 0, 0
 	song bw_seq_bgm_e_plasma, 0, 0
 	song bw_seq_bgm_vs_plasma, 0, 0
-	song bw_seq_bgm_win4, 0, 0
+	song bw_seq_bgm_win6, 0, 0
 	song bw_seq_bgm_shinka, 0, 0
 	song bw_seq_bgm_koukan, 0, 0
 	song bw_seq_me_shinkaome, 2, 2
 	song bw_seq_bgm_eye_03, 0, 0
 	song bw_seq_bgm_e_rival, 0, 0
 	song bw_seq_bgm_e_trouble, 0, 0
-	song bw_seq_bgm_c_02_var, 0, 0
 	song bw_seq_bgm_c_02, 0, 0
 	song bw_seq_me_hyouka3, 2, 2
 	song bw_seq_bgm_gym, 0, 0
@@ -980,7 +985,6 @@ gSongTable::
 	song bw_seq_me_hyouka4, 2, 2
 	song bw_seq_me_wasure, 2, 2
 	song bw_seq_bgm_eye_08, 0, 0
-	song bw_seq_bgm_c_07_var, 0, 0
 	song bw_seq_bgm_c_07, 0, 0
 	song bw_seq_bgm_d_05, 0, 0
 	song bw_seq_bgm_eye_plasma, 0, 0
@@ -990,18 +994,9 @@ gSongTable::
 	song bw_seq_bgm_h_03, 0, 0
 	song bw_seq_bgm_fs, 0, 0
 	song bw_seq_bgm_eye_05, 0, 0
-	song bw_seq_bgm_c_08_b_var, 0, 0
 	song bw_seq_bgm_c_08_b, 0, 0
-	song bw_seq_bgm_c_08_w_var, 0, 0
 	song bw_seq_bgm_c_08_w, 0, 0
 	song bw_seq_bgm_r_f, 0, 0
-	song bw_seq_bgm_d_champroad_var1, 0, 0
-	song bw_seq_bgm_d_champroad_var2, 0, 0
-	song bw_seq_bgm_d_champroad_var3, 0, 0
-	song bw_seq_bgm_d_champroad_var4, 0, 0
-	song bw_seq_bgm_d_champroad_var5, 0, 0
-	song bw_seq_bgm_d_champroad_var6, 0, 0
-	song bw_seq_bgm_d_champroad_var7, 0, 0
 	song bw_seq_bgm_d_champroad, 0, 0
 	song bw_seq_bgm_eye_04, 0, 0
 	song bw_seq_bgm_pokemon_league, 0, 0
@@ -1025,8 +1020,72 @@ gSongTable::
 	song bw_seq_bgm_glterminal, 0, 0
 	song bw_seq_bgm_gts, 0, 0
 	song bw_seq_bgm_guruguru, 0, 0
+	song bw_seq_bgm_united_nations, 0, 0
 	song bw_seq_me_hyouka5, 2, 2
 	song bw_seq_bgm_gear_station, 0, 0
+	song bw_seq_bgm_battle_subway, 0, 0
+	song bw_seq_bgm_vs_subway_trainer, 0, 0
+	song bw_seq_me_bpget, 2, 2
+	song bw_seq_bgm_msl_field, 0, 0
+	song bw_seq_me_acce, 2, 2
+	song bw_seq_bgm_msl_dressup, 0, 0
+	song bw_seq_bgm_msl_before, 0, 0
+	song bw_seq_bgm_msl_01, 0, 0
+	song bw_seq_bgm_msl_02, 0, 0
+	song bw_seq_bgm_msl_03, 0, 0
+	song bw_seq_bgm_msl_04, 0, 0
+	song bw_seq_bgm_msl_dl_munna, 0, 0
+	song bw_seq_bgm_msl_dl_smash, 0, 0
+	song bw_seq_bgm_msl_dl_festa, 0, 0
+	song bw_seq_bgm_msl_dl_relic, 0, 0
+	song bw_seq_bgm_msl_dl_runpa, 0, 0
+	song bw_seq_bgm_e_kanransya, 0, 0
+	song bw_seq_me_aishou_kidou, 2, 2
+	song bw_seq_me_aishou_h, 2, 2
+	song bw_seq_me_aishou_m, 2, 2
+	song bw_seq_me_aishou_l, 2, 2
+	song bw_seq_bgm_vs_movepoke, 0, 0
+	song bw_seq_bgm_t_03, 0, 0
+	song bw_seq_bgm_h_05, 0, 0
+	song bw_seq_bgm_r_e_sp, 0, 0
+	song bw_seq_bgm_r_e_su, 0, 0
+	song bw_seq_bgm_r_e_au, 0, 0
+	song bw_seq_bgm_r_e_wi, 0, 0
+	song bw_seq_bgm_eye_07, 0, 0
+	song bw_seq_bgm_palpark, 0, 0
+	song bw_seq_bgm_palpark_box, 0, 0
+	song bw_seq_bgm_palpark_game, 0, 0
+	song bw_seq_bgm_eye_10, 0, 0
+	song bw_seq_bgm_c_10_b, 0, 0
+	song bw_seq_bgm_c_10_w, 0, 0
+	song bw_seq_bgm_game_sync, 0, 0
+	song bw_seq_bgm_palace, 0, 0
+	song bw_seq_me_mission_start, 2, 2
+	song bw_seq_bgm_palace2, 0, 0
+	song bw_seq_me_mission_clear, 2, 2
+	song bw_seq_me_mission_failed, 2, 2
+	song bw_seq_bgm_eye_13, 0, 0
+	song bw_seq_bgm_t_05_sp, 0, 0
+	song bw_seq_bgm_t_05_su, 0, 0
+	song bw_seq_bgm_e_shirona, 0, 0
+	song bw_seq_bgm_vs_shirona, 0, 0
+	song bw_seq_bgm_d_06, 0, 0
+	song bw_seq_bgm_vs_tsuyopoke, 0, 0
+	song bw_seq_bgm_naminori, 0, 0
+	song bw_seq_bgm_diving, 0, 0
+	song bw_seq_bgm_t_04, 0, 0
+	song bw_seq_bgm_h_04, 0, 0
+	song bw_seq_bgm_wifi_present, 0, 0
+	song bw_seq_bgm_wcs, 0, 0
+	song bw_seq_bgm_e_sound_designer, 0, 0
+	song bw_seq_bgm_vs_rai, 0, 0
+	song bw_seq_me_hyouka6, 2, 2
+	song bw_seq_bgm_vs_champ, 0, 0
+	song bw_seq_bgm_win5, 0, 0
+	song bw_seq_bgm_e_dendouiri, 0, 0
+	song bw_seq_bgm_e_inishie, 0, 0
+	song bw_seq_bgm_vs_wcs, 0, 0
+	song bw_seq_me_kinomi, 2, 2
 
 	.align 2
 dummy_song_header:
