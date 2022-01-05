@@ -103,14 +103,14 @@ Zone23A_EventScript_Rose::
 	end
 
 Zone23A_Text_RoseIntro:
-	.string "For the environment!$"
+	.string "I just love the rain!$"
 
 Zone23A_Text_RoseDefeat:
-	.string "That's a downer!$"
+	.string "Water you doing?$"
 
 Zone23A_Text_RosePostBattle:
-	.string "Climate change is a real threat to\n"
-	.string "environments like these.$"
+	.string "Fine, I just love bad puns.\n"
+	.string "Happy now?$"
 
 Zone23A_EventScript_Jennifer::
 	trainerbattle_single TRAINER_JENNIFER, Zone23A_Text_JenniferIntro, Zone23A_Text_JenniferDefeat
@@ -164,15 +164,14 @@ Zone23A_EventScript_Annie::
 	end
 
 Zone23A_Text_AnnieIntro:
-	.string "Ah! A swamp monster!$"
+	.string "For the environment!$"
 
 Zone23A_Text_AnnieDefeat:
-	.string "Oh, I'm so sorry!$"
+	.string "That's a downer!$"
 
 Zone23A_Text_AnniePostBattle:
-	.string "I didn't mean to insult you like\n"
-	.string "that. You look nothing like a swamp\l"
-	.string "monster!$"
+	.string "Climate change is a real threat to\n"
+	.string "environments like these.$"
 
 Zone23A_EventScript_LeafStone::
 	finditem ITEM_LEAF_STONE
