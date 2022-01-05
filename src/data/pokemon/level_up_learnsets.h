@@ -10393,6 +10393,7 @@ static const struct LevelUpMove sElectivireLevelUpLearnset[] = {
     LEVEL_UP_MOVE(43, MOVE_THUNDER),
     LEVEL_UP_MOVE(46, MOVE_FOCUS_PUNCH),
     LEVEL_UP_MOVE(48, MOVE_GIGA_IMPACT),
+    LEVEL_UP_MOVE(50, MOVE_CLOSE_COMBAT),
 	LEVEL_UP_END
 };
 
