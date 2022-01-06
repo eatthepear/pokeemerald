@@ -441,6 +441,11 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_REGIDRAGO               0x1127
 #define OBJ_EVENT_PAL_TAG_REGIELEKI               0x1128
 #define OBJ_EVENT_PAL_TAG_BUG_MANIAC              0x1129
+#define OBJ_EVENT_PAL_TAG_BREEDER                 0x112A
+#define OBJ_EVENT_PAL_TAG_RUIN_MANIAC             0x112B
+#define OBJ_EVENT_PAL_TAG_GUITARIST               0x112C
+#define OBJ_EVENT_PAL_TAG_COLLECTOR               0x112D
+#define OBJ_EVENT_PAL_TAG_KINDLER                 0x112E
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -493,6 +498,11 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Regidrago,             OBJ_EVENT_PAL_TAG_REGIDRAGO},
     {gObjectEventPal_Regieleki,             OBJ_EVENT_PAL_TAG_REGIELEKI},
     {gObjectEventPal_BugManiac,             OBJ_EVENT_PAL_TAG_BUG_MANIAC},
+    {gObjectEventPal_Breeder,               OBJ_EVENT_PAL_TAG_BREEDER},
+    {gObjectEventPal_RuinManiac,            OBJ_EVENT_PAL_TAG_RUIN_MANIAC},
+    {gObjectEventPal_Guitarist,             OBJ_EVENT_PAL_TAG_GUITARIST},
+    {gObjectEventPal_Collector,             OBJ_EVENT_PAL_TAG_COLLECTOR},
+    {gObjectEventPal_Kindler,               OBJ_EVENT_PAL_TAG_KINDLER},
     {NULL,                                  0x0000},
 };
 
