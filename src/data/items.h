@@ -508,7 +508,7 @@ const struct Item gItems[] =
     {
         .name = _("Moomoo Milk"),
         .itemId = ITEM_MOOMOO_MILK,
-        .price = 600,
+        .price = 500,
         .holdEffectParam = 100,
         .description = sMoomooMilkDesc,
         .pocket = POCKET_MEDICINE,

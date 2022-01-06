@@ -101,6 +101,58 @@ Zone24A_Movement_Camera_MoveCameraUp:
 	walk_faster_up
 	step_end
 
+Zone24A_EventScript_SellLemonade::
+	lock
+	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone24A_EventScript_DontSell
+	showmoneybox 0, 0, 0
+	msgbox Zone24A_Text_WantToBuyLemonade, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone24A_EventScript_BuyLemonade
+	hidemoneybox
+	msgbox Zone24A_Text_DidntLike, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone24A_EventScript_DontSell:
+	msgbox Zone24A_Text_DontSell, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone24A_Text_DontSell:
+	.string "Sorry, I'm out of stock.$"
+
+Zone24A_Text_WantToBuyLemonade:
+	.string "Lemonade, Lemonade!\n"
+	.string "70 HP, for the low price of ¥400!$"
+
+Zone24A_Text_DidntLike:
+	.string "Maybe next time!$"
+
+Zone24A_EventScript_BuyLemonade:
+	checkmoney 400, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone24A_Text_NotEnoughMoney
+	msgbox Zone24A_Text_HereYouGo, MSGBOX_AUTOCLOSE
+	removemoney 400, 0
+	updatemoneybox
+	giveitem ITEM_LEMONADE
+	hidemoneybox
+	release
+	end
+
+Zone24A_Text_HereYouGo:
+	.string "Here you go!$"
+
+Zone24A_Text_NotEnoughMoney:
+	msgbox Zone24A_Text_NotEnough, MSGBOX_AUTOCLOSE
+	hidemoneybox
+	release
+	end
+
+Zone24A_Text_NotEnough:
+	.string "You don't have enough money!$"
+
 Zone24A_EventScript_Christi::
 	trainerbattle_single TRAINER_CHRISTI, Zone24A_Text_ChristiIntro, Zone24A_Text_ChristiDefeat
 	msgbox Zone24A_Text_ChristiPostBattle, MSGBOX_AUTOCLOSE
