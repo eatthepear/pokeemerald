@@ -8,3 +8,17 @@ Zone25B_SetHoleWarp:
 	setstepcallback STEP_CB_CRACKED_FLOOR
 	setholewarp MAP_ZONE25A
 	end
+
+Zone25B_EventScript_Sheldon::
+	trainerbattle_single TRAINER_SHELDON, Zone25B_Text_SheldonIntro, Zone25B_Text_SheldonDefeat
+	msgbox Zone25B_Text_SheldonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone25B_Text_SheldonIntro:
+	.string "$"
+
+Zone25B_Text_SheldonDefeat:
+	.string "$"
+
+Zone25B_Text_SheldonPostBattle:
+	.string "$"
