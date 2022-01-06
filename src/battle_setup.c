@@ -705,7 +705,18 @@ u8 BattleSetup_GetTerrainId(void)
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
     //Note: POND refers to underground water (so it will be darker there). FOREST refers to a forest area (so it will be darker there)
-    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE2A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE2A)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE2B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE2B)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4A)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4B)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4C) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4C)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4D)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4E) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4E)) || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE11A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE11A))|| (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE17A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE17A)))
+    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE2A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE2A)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE2B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE2B)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4A)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4B)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4C) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4C)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4D)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE4E) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE4E)) 
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE11A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE11A))
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE17A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE17A))
+    || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE23A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE23A)))
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+            return BATTLE_TERRAIN_WATER;
         return BATTLE_TERRAIN_FOREST;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE22A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE22A))
         return BATTLE_TERRAIN_SNOW;
