@@ -715,6 +715,10 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_LONG_GRASS;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE10A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE10A))
         return BATTLE_TERRAIN_DESERT;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE24A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE24A))
+        if (MetatileBehavior_IsMountain(tileBehavior))
+            return BATTLE_TERRAIN_MOUNTAIN;
+        return BATTLE_TERRAIN_DESERT;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE19D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE19D))
         return BATTLE_TERRAIN_CAVE;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
