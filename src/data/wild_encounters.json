@@ -14375,7 +14375,7 @@
           "map": "MAP_ZONE8A",
           "base_label": "gZone8A",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 13,
@@ -14454,7 +14454,7 @@
           "map": "MAP_ZONE8B",
           "base_label": "gZone8B",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 13,
@@ -14533,7 +14533,7 @@
           "map": "MAP_ZONE8C",
           "base_label": "gZone8C",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 13,
@@ -15286,7 +15286,7 @@
           "map": "MAP_ZONE14A",
           "base_label": "gZone14A",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 22,
@@ -15365,7 +15365,7 @@
           "map": "MAP_ZONE14B",
           "base_label": "gZone14B",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 22,
@@ -15444,7 +15444,7 @@
           "map": "MAP_ZONE15A",
           "base_label": "gZone15A",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 23,
@@ -16054,7 +16054,7 @@
           "map": "MAP_ZONE20A",
           "base_label": "gZone20A",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 4,
             "mons": [
               {
                 "min_level": 29,
@@ -16641,6 +16641,875 @@
                 "min_level": 36,
                 "max_level": 38,
                 "species": "SPECIES_RIOLU"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25A",
+          "base_label": "gZone25A",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25B",
+          "base_label": "gZone25B",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25C",
+          "base_label": "gZone25C",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25D",
+          "base_label": "gZone25D",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25E",
+          "base_label": "gZone25E",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25F",
+          "base_label": "gZone25F",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25G",
+          "base_label": "gZone25G",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25H",
+          "base_label": "gZone25H",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25I",
+          "base_label": "gZone25I",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25J",
+          "base_label": "gZone25J",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE25K",
+          "base_label": "gZone25K",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_OMANYTE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_KABUTO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AERODACTYL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_LILEEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ANORITH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TIRTOUGA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCHEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TYRUNT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_AMAURA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_ARCTOZOLT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_DRACOZOLT"
               }
             ]
           }
