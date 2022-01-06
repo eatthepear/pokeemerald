@@ -197,8 +197,6 @@ const u32 gObjectEventPic_PsychicF[] = INCBIN_U32("graphics/object_events/pics/p
 const u16 gObjectEventPal_PsychicF[] = INCBIN_U16("graphics/object_events/pics/people/psychic_f.gbapal");
 const u32 gObjectEventPic_DragonTamer[] = INCBIN_U32("graphics/object_events/pics/people/dragon_tamer.4bpp");
 const u16 gObjectEventPal_DragonTamer[] = INCBIN_U16("graphics/object_events/pics/people/dragon_tamer.gbapal");
-const u32 gObjectEventPic_ParasolLady[] = INCBIN_U32("graphics/object_events/pics/people/parasol_lady.4bpp");
-const u16 gObjectEventPal_ParasolLady[] = INCBIN_U16("graphics/object_events/pics/people/parasol_lady.gbapal");
 
 const u32 gObjectEventPic_TogepiDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/togepi_doll.4bpp");
 const u32 gObjectEventPic_CyndaquilDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/cyndaquil_doll.4bpp");

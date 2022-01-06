@@ -145,7 +145,7 @@
 #define OBJ_EVENT_GFX_SUBMARINE_SHADOW           141
 #define OBJ_EVENT_GFX_PSYCHIC_F                  142
 #define OBJ_EVENT_GFX_DRAGON_TAMER               143
-#define OBJ_EVENT_GFX_PARASOL_LADY               144
+#define OBJ_EVENT_GFX_UNUSED                     144
 #define OBJ_EVENT_GFX_TOGEPI_DOLL                145
 #define OBJ_EVENT_GFX_CYNDAQUIL_DOLL             146
 #define OBJ_EVENT_GFX_CHIKORITA_DOLL             147
