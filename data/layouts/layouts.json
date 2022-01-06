@@ -5530,6 +5530,26 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/Zone25L/border.bin",
       "blockdata_filepath": "data/layouts/Zone25L/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE25SANCTUARY",
+      "name": "Zone25Sanctuary_Layout",
+      "width": 45,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Zone25Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Zone25Sanctuary/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE25SHOPS",
+      "name": "Zone25Shops_Layout",
+      "width": 23,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Zone25Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Zone25Shops/map.bin"
     }
   ]
 }
