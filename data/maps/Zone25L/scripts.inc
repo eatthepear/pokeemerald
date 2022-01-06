@@ -1,2 +1,22 @@
 Zone25L_MapScripts::
 	.byte 0
+
+Zone25L_EventScript_Exit::
+	lockall
+	compare VAR_ZONE, 24
+	goto_if_gt EventScript_WarpZone0
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone25L_EventScript_CheckBrutal
+	warp MAP_ZONE25SANCTUARY, 255, 22, 7
+	releaseall
+	end
+
+Zone25L_EventScript_CheckBrutal:
+	goto_if_not_defeated TRAINER_CHRISTI, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_SPENCER, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_HAYWOOD, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_MONROE, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_DAVID, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_DOMINIK, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_DOUGLAS, Zone24B_EventScript_HaventDefeated
+	goto_if_not_defeated TRAINER_NADINE, Zone24B_EventScript_HaventDefeated
+	return
