@@ -1483,16 +1483,40 @@ static const struct SpriteFrameImage sPicTable_SubmarineShadow[] = {
     obj_frame_tiles(gObjectEventPic_SubmarineShadow),
 };
 
-static const struct SpriteFrameImage sPicTable_PichuDoll[] = {
-    obj_frame_tiles(gObjectEventPic_PichuDoll),
+static const struct SpriteFrameImage sPicTable_PsychicF[] = {
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 0),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 1),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 2),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 3),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 4),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 5),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 6),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 7),
+    overworld_frame(gObjectEventPic_PsychicF, 2, 4, 8),
 };
 
-static const struct SpriteFrameImage sPicTable_PikachuDoll[] = {
-    obj_frame_tiles(gObjectEventPic_PikachuDoll),
+static const struct SpriteFrameImage sPicTable_DragonTamer[] = {
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 0),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 1),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 2),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 3),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 4),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 5),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 6),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 7),
+    overworld_frame(gObjectEventPic_DragonTamer, 2, 4, 8),
 };
 
-static const struct SpriteFrameImage sPicTable_MarillDoll[] = {
-    obj_frame_tiles(gObjectEventPic_MarillDoll),
+static const struct SpriteFrameImage sPicTable_ParasolLady[] = {
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 1),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 2),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 3),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 4),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 5),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 6),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 7),
+    overworld_frame(gObjectEventPic_ParasolLady, 2, 4, 8),
 };
 
 static const struct SpriteFrameImage sPicTable_TogepiDoll[] = {

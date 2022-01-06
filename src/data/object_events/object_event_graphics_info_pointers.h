@@ -140,9 +140,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HotSpringsOldWoman;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSTidal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SubmarineShadow;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PichuDoll;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PikachuDoll;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MarillDoll;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DragonTamer;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParasolLady;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TogepiDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyndaquilDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChikoritaDoll;
@@ -395,9 +395,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN] =    &gObjectEventGraphicsInfo_HotSpringsOldWoman,
     [OBJ_EVENT_GFX_SS_TIDAL] =                 &gObjectEventGraphicsInfo_SSTidal,
     [OBJ_EVENT_GFX_SUBMARINE_SHADOW] =         &gObjectEventGraphicsInfo_SubmarineShadow,
-    [OBJ_EVENT_GFX_PICHU_DOLL] =               &gObjectEventGraphicsInfo_PichuDoll,
-    [OBJ_EVENT_GFX_PIKACHU_DOLL] =             &gObjectEventGraphicsInfo_PikachuDoll,
-    [OBJ_EVENT_GFX_MARILL_DOLL] =              &gObjectEventGraphicsInfo_MarillDoll,
+    [OBJ_EVENT_GFX_PSYCHIC_F] =                &gObjectEventGraphicsInfo_PsychicF,
+    [OBJ_EVENT_GFX_DRAGON_TAMER] =             &gObjectEventGraphicsInfo_DragonTamer,
+    [OBJ_EVENT_GFX_PARASOL_LADY] =             &gObjectEventGraphicsInfo_ParasolLady,
     [OBJ_EVENT_GFX_TOGEPI_DOLL] =              &gObjectEventGraphicsInfo_TogepiDoll,
     [OBJ_EVENT_GFX_CYNDAQUIL_DOLL] =           &gObjectEventGraphicsInfo_CyndaquilDoll,
     [OBJ_EVENT_GFX_CHIKORITA_DOLL] =           &gObjectEventGraphicsInfo_ChikoritaDoll,
