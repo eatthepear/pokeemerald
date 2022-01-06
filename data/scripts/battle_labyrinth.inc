@@ -559,11 +559,11 @@ EventScript_Shop_Unique_ZhuLi::
 	case 17, EventScript_Shop_Unique_ZhuLi_15to20
 	case 18, EventScript_Shop_Unique_ZhuLi_15to20
 	case 20, EventScript_Shop_Unique_ZhuLi_15to20
-	case 21, EventScript_Shop_Unique_ZhuLi_21to25
-	case 22, EventScript_Shop_Unique_ZhuLi_21to25
-	case 23, EventScript_Shop_Unique_ZhuLi_21to25
-	case 24, EventScript_Shop_Unique_ZhuLi_21to25
-	case 25, EventScript_Shop_Unique_ZhuLi_21to25
+	case 21, EventScript_Shop_Unique_ZhuLi_21to23
+	case 22, EventScript_Shop_Unique_ZhuLi_21to23
+	case 23, EventScript_Shop_Unique_ZhuLi_21to23
+	case 24, EventScript_Shop_Unique_ZhuLi_24to25
+	case 25, EventScript_Shop_Unique_ZhuLi_24to25
 	end
 
 EventScript_Shop_Unique_ZhuLi_11to14:
@@ -576,8 +576,13 @@ EventScript_Shop_Unique_ZhuLi_15to20:
 	goto EventScript_Shop_Unique_ZhuLi_End
 	end
 
-EventScript_Shop_Unique_ZhuLi_21to25:
-	pokemart Shop_Unique_ZhuLi_21to25
+EventScript_Shop_Unique_ZhuLi_21to23:
+	pokemart Shop_Unique_ZhuLi_21to23
+	goto EventScript_Shop_Unique_ZhuLi_End
+	end
+
+EventScript_Shop_Unique_ZhuLi_24to25:
+	pokemart Shop_Unique_ZhuLi_24to25
 	goto EventScript_Shop_Unique_ZhuLi_End
 	end
 
@@ -624,7 +629,7 @@ Shop_Unique_ZhuLi_15to20:
 	end
 
 	.align 2
-Shop_Unique_ZhuLi_21to25:
+Shop_Unique_ZhuLi_21to23:
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_DIVE_BALL
@@ -641,6 +646,48 @@ Shop_Unique_ZhuLi_21to25:
 	.2byte ITEM_SHINY_STONE
 	.2byte ITEM_DUSK_STONE
 	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_DEEP_SEA_SCALE
+	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_WREATH
+	.2byte ITEM_CRACKED_POT
+	.2byte ITEM_UPGRADE
+	.2byte ITEM_SACHET
+	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_TART_APPLE
+	.2byte ITEM_SWEET_APPLE
+	.2byte ITEM_NONE
+	release
+	end
+
+Shop_Unique_ZhuLi_24to25:
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_PROTECTOR
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_ELECTIRIZER
+	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_DUBIOUS_DISC
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_PRISM_SCALE
 	.2byte ITEM_DEEP_SEA_SCALE
