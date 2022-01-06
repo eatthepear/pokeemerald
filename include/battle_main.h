@@ -22,6 +22,12 @@ struct MultiPartnerMenuPokemon
     /*0x1D*/ u8 language;
 };
 
+struct TrainerBall
+{
+    u8 classId;
+    u8 Ball; // make this a u16 if needed
+};
+
 #define TYPE_NAME_LENGTH 6
 
 #if B_EXPANDED_ABILITY_NAMES
