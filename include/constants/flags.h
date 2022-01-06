@@ -80,8 +80,8 @@
 #define FLAG_RECEIVED_ZONE0C_EEVEE    0x43 
 #define FLAG_HIDE_CAM_AND_PAM    0x44
 #define FLAG_RECEIVED_ZONE23A_TM31    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
+#define FLAG_RECEIVED_ZONE24A_TM34    0x46 // Unused Flag
+#define FLAG_RECEIVED_ZONE24B_TM35    0x47 // Unused Flag
 #define FLAG_UNUSED_0x048    0x48 // Unused Flag
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag

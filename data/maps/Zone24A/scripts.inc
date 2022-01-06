@@ -153,6 +153,34 @@ Zone24A_Text_NotEnoughMoney:
 Zone24A_Text_NotEnough:
 	.string "You don't have enough money!$"
 
+
+Zone24A_EventScript_DragonTamer::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZONE24A_TM34, Zone24A_EventScript_ReceivedTM34
+	msgbox Zone24A_Text_GiveTM34, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM34
+	setflag FLAG_RECEIVED_ZONE24A_TM34
+	release
+	end
+
+Zone24A_Text_GiveTM34:
+	.string "Training Dragon Pokémon is my\n"
+	.string "passion.\p"
+	.string "I hope that this gift can inspire\n"
+	.string "you, too, to train your own Dragon\l"
+	.string "Pokémon.$"
+
+Zone24A_EventScript_ReceivedTM34:
+	msgbox Zone24A_Text_ReceivedTM34, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone24A_Text_ReceivedTM34:
+	.string "The move Dragon Tail is a tricky\n"
+	.string "one to use, but can be extremely\l"
+	.string "effective in the right situation.$"
+
 Zone24A_EventScript_Christi::
 	trainerbattle_single TRAINER_CHRISTI, Zone24A_Text_ChristiIntro, Zone24A_Text_ChristiDefeat
 	msgbox Zone24A_Text_ChristiPostBattle, MSGBOX_AUTOCLOSE
