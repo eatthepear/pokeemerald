@@ -3005,7 +3005,7 @@ static const struct TrainerMon sParty_Sheldon[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMirageA[] = {//Leviathan 14, fought in a Double Battle against Zone25LMirageB, Default
+static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double Battle, Default
     {
     .ivs = {31, 31, 31, 31, 30, 31},
     .lvl = 43,
@@ -3019,12 +3019,32 @@ static const struct TrainerMon sParty_Zone25LMirageA[] = {//Leviathan 14, fought
     {
     .iv = 31,
     .lvl = 43,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Disguise
+    .species = SPECIES_MIMIKYU,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_PLAY_ROUGH, MOVE_SHADOW_CLAW, MOVE_HONE_CLAWS, MOVE_WOOD_HAMMER}
+    },
+    {
+    .iv = 31,
+    .lvl = 43,
     .nature = NATURE_RASH,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Protean
     .species = SPECIES_GRENINJA,
     .heldItem = ITEM_EXPERT_BELT,
     .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_PUNCH, MOVE_ROCK_SLIDE, MOVE_EXTRASENSORY}
+    },
+    {
+    .iv = 31,
+    .lvl = 43,
+    .nature = NATURE_NAIVE,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Vital Spirit
+    .species = SPECIES_ELECTIVIRE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_THUNDERBOLT, MOVE_HAMMER_ARM, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH}
     },
     {
     .ivs = {31, 31, 30, 30, 30, 30},
@@ -3035,6 +3055,17 @@ static const struct TrainerMon sParty_Zone25LMirageA[] = {//Leviathan 14, fought
     .species = SPECIES_GENGAR,
     .heldItem = ITEM_LIFE_ORB,
     .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_NASTY_PLOT, MOVE_HIDDEN_POWER} // Hidden Power Fighting
+    },
+    {
+    .iv = 31,
+    .lvl = 43,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Scrappy
+    .species = SPECIES_KANGASKHAN,
+    .heldItem = ITEM_LIFE_ORB,
+    .friendship = TRAINER_MON_FRIENDLY,
+    .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_HAMMER_ARM, MOVE_FAKE_OUT}
     }
 };
 
@@ -3627,7 +3658,7 @@ static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Doubl
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMirageABrutal[] = {//Leviathan 14, fought in a 1v2 Double Battle against Zone25LMirageBBrutal, Brutal
+static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Kangaskhan
     {
     .ivs = {31, 31, 31, 31, 30, 31},
     .lvl = 43,
@@ -3637,6 +3668,16 @@ static const struct TrainerMon sParty_Zone25LMirageABrutal[] = {//Leviathan 14, 
     .species = SPECIES_ACCELGOR,
     .heldItem = ITEM_FOCUS_SASH,
     .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_HIDDEN_POWER} // Hidden Power Electric
+    },
+    {
+    .iv = 31,
+    .lvl = 43,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Disguise
+    .species = SPECIES_MIMIKYU,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_PLAY_ROUGH, MOVE_POLTERGEIST, MOVE_SWORDS_DANCE, MOVE_WOOD_HAMMER}
     },
     {
     .iv = 31,
@@ -3651,12 +3692,33 @@ static const struct TrainerMon sParty_Zone25LMirageABrutal[] = {//Leviathan 14, 
     {
     .iv = 31,
     .lvl = 43,
+    .nature = NATURE_NAIVE,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Vital Spirit
+    .species = SPECIES_ELECTIVIRE,
+    .heldItem = ITEM_EXPERT_BELT,
+    .moves = {MOVE_THUNDERBOLT, MOVE_CLOSE_COMBAT, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH}
+    },
+    {
+    .iv = 31,
+    .lvl = 43,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Levitate, turns into Shadow Tag after Mega Evolving
     .species = SPECIES_GENGAR,
     .heldItem = ITEM_GENGARITE,
     .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_NASTY_PLOT, MOVE_AURA_SPHERE}
+    },
+    {
+    .iv = 31,
+    .lvl = 43,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Scrappy, turns into Parental Bond after Mega Evolving
+    .species = SPECIES_KANGASKHAN,
+    .heldItem = ITEM_KANGASKHANITE,
+    .friendship = TRAINER_MON_FRIENDLY,
+    .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_POWER_UP_PUNCH, MOVE_FAKE_OUT}
     }
 };
 

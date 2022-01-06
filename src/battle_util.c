@@ -9171,12 +9171,12 @@ bool32 CanMegaEvolve(u8 battlerId)
 #endif
 
     // Check if trainer already mega evolved a pokemon.
-    if (mega->alreadyEvolved[battlerPosition])
+    if (mega->alreadyEvolved[battlerPosition] && (GetBattlerSide(battlerId) == B_SIDE_PLAYER))
         return FALSE;
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
     {
         if (IsPartnerMonFromSameTrainer(battlerId)
-            && (mega->alreadyEvolved[partnerPosition] || (mega->toEvolve & gBitTable[BATTLE_PARTNER(battlerId)])))
+            && (mega->alreadyEvolved[partnerPosition] || (mega->toEvolve & gBitTable[BATTLE_PARTNER(battlerId)])) && (GetBattlerSide(battlerId) == B_SIDE_PLAYER))
             return FALSE;
     }
 

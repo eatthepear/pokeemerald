@@ -1911,17 +1911,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Sheldon},
     },
 
-    [TRAINER_LEVIATHAN14_A] =
+    [TRAINER_LEVIATHAN14] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Mirage"),
+        .trainerName = _("Mirages"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone25LMirageA),
-        .party = {.TrainerMon = sParty_Zone25LMirageA},
+        .partySize = ARRAY_COUNT(sParty_Zone25LMirages),
+        .party = {.TrainerMon = sParty_Zone25LMirages},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
@@ -2188,17 +2188,17 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
     
-    [TRAINER_LEVIATHAN14_A_BRUTAL] =
+    [TRAINER_LEVIATHAN14_BRUTAL] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Mirage"),
+        .trainerName = _("Mirages"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone25LMirageABrutal),
-        .party = {.TrainerMon = sParty_Zone25LMirageABrutal},
+        .partySize = ARRAY_COUNT(sParty_Zone25LMiragesBrutal),
+        .party = {.TrainerMon = sParty_Zone25LMiragesBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
