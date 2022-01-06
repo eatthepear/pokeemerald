@@ -1004,8 +1004,21 @@ void GetOnOffBike(u8 transitionFlags)
     else
     {
         SetPlayerAvatarTransitionFlags(transitionFlags);
-        Overworld_SetSavedMusic(MUS_CYCLING);
-        Overworld_ChangeMusicTo(MUS_CYCLING);
+        if (!((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25A)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25B)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25C) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25C)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25D)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25E) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25E)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25F) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25F)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25G) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25G)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25I) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25I)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25J) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25J)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25K) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25K)) 
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25L) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25L))))
+        {
+            Overworld_SetSavedMusic(MUS_CYCLING);
+            Overworld_ChangeMusicTo(MUS_CYCLING);
+        }
     }
 }
 

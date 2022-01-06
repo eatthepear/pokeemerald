@@ -744,8 +744,6 @@ u8 BattleSetup_GetTerrainId(void)
             return BATTLE_TERRAIN_DESERT;
         }
     }
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE19D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE19D))
-        return BATTLE_TERRAIN_CAVE;
     if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE19D) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE19D)) 
     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25A)) 
     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE25B) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE25B)) 
