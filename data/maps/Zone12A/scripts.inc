@@ -19,6 +19,18 @@ Zone12A_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_KINLEY, EventScript_BrutalExitNotSatisfied
 	return
 
+Zone12A_EventScript_Waterfall::
+	lockall
+	msgbox Zone12A_Text_DontGoDown, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+Zone12A_Text_DontGoDown:
+	.string "You don't want to go down the\n"
+	.string "waterfall without a way back up!$"
+
 Zone12A_EventScript_Dolores::
 	trainerbattle_single TRAINER_DOLORES, Zone12A_Text_DoloresIntro, Zone12A_Text_DoloresDefeat
 	msgbox Zone12A_Text_DoloresPostBattle, MSGBOX_AUTOCLOSE

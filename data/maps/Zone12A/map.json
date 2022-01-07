@@ -170,6 +170,24 @@
       "var": "VAR_GENERIC",
       "var_value": "0",
       "script": "Zone12A_EventScript_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone12A_EventScript_Waterfall"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone12A_EventScript_Waterfall"
     }
   ],
   "bg_events": [
