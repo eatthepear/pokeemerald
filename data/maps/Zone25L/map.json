@@ -95,7 +95,7 @@
       "x": 7,
       "y": 1,
       "elevation": 0,
-      "var": "VAR_ZONE25L_STATE",
+      "var": "VAR_GENERIC",
       "var_value": "0",
       "script": "Zone25L_EventScript_Exit"
     },
@@ -105,7 +105,7 @@
       "y": 4,
       "elevation": 0,
       "var": "VAR_ZONE25L_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Zone25L_EventScript_LeftMost"
     },
     {
@@ -114,7 +114,7 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_ZONE25L_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Zone25L_EventScript_Left"
     },
     {
@@ -123,7 +123,7 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_ZONE25L_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Zone25L_EventScript_Middle"
     },
     {
@@ -132,7 +132,7 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_ZONE25L_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Zone25L_EventScript_Right"
     },
     {
@@ -141,7 +141,7 @@
       "y": 4,
       "elevation": 0,
       "var": "VAR_ZONE25L_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Zone25L_EventScript_RightMost"
     }
   ],

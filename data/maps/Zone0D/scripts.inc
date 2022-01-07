@@ -81,6 +81,9 @@ Zone0D_EventScript_WarpBack::
 	case 20, Zone0D_EventScript_WarpSanctuary19
 	case 21, Zone0D_EventScript_WarpSanctuary20
 	case 22, Zone0D_EventScript_WarpSanctuary21
+	case 23, Zone0D_EventScript_WarpSanctuary22
+	case 24, Zone0D_EventScript_WarpSanctuary23
+	case 26, Zone0D_EventScript_WarpSanctuary25
 	end
 
 Zone0D_EventScript_WarpSanctuary0:
@@ -157,6 +160,18 @@ Zone0D_EventScript_WarpSanctuary20:
 
 Zone0D_EventScript_WarpSanctuary21:
 	warpteleport MAP_ZONE21SANCTUARY, 255, 22, 12
+	end
+
+Zone0D_EventScript_WarpSanctuary22:
+	warpteleport MAP_ZONE22SANCTUARY, 255, 22, 12
+	end
+
+Zone0D_EventScript_WarpSanctuary23:
+	warpteleport MAP_ZONE23SANCTUARY, 255, 22, 12
+	end
+
+Zone0D_EventScript_WarpSanctuary25:
+	warpteleport MAP_ZONE25SANCTUARY, 255, 22, 12
 	end
 
 Zone0D_EventScript_VerifyDestination:
@@ -423,7 +438,7 @@ Zone0D_EventScript_WarpZONE24::
 	buffernumberstring 0, 24
 	call Zone0D_EventScript_VerifyDestination
 	setflag FLAG_IS_REVISITING_ZONE
-	warpteleport MAP_ZONE4A, 255, 4, 3
+	warpteleport MAP_ZONE24A, 255, 31, 23
 	end
 
 Zone0D_EventScript_WarpZONE25::
@@ -433,7 +448,7 @@ Zone0D_EventScript_WarpZONE25::
 	buffernumberstring 0, 25
 	call Zone0D_EventScript_VerifyDestination
 	setflag FLAG_IS_REVISITING_ZONE
-	warpteleport MAP_ZONE5A, 255, 43, 31
+	warpteleport MAP_ZONE25A, 255, 10, 13
 	end
 
 Zone0D_EventScript_WarpZONE26::
