@@ -3564,7 +3564,7 @@ static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Brutal
     .ability = ABILITY_SLOT_1, //Speed Boost
     .species = SPECIES_SHARPEDO, //Starts with aura +2 Attack, +2 Evasion
     .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_PSYCHIC_FANGS}
-    },
+    }
 };
 
 static const struct TrainerMon sParty_JulieBrutal[] = {//Leviathan 12, Brutal

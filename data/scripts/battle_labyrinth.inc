@@ -989,7 +989,7 @@ EventScript_Shop_Lelouch_26to30:
 	case 0, EventScript_Shop_LelouchTraining4
 	case 1, EventScript_Shop_LelouchCheckReminder
 	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchNotEnoughColor
+	case 3, EventScript_Shop_LelouchCheckOther
 	goto EventScript_Shop_LelouchLeave
 	end
 
@@ -999,7 +999,7 @@ EventScript_Shop_Lelouch_26to30_Brutal:
 	case 0, EventScript_Shop_LelouchTraining4Brutal
 	case 1, EventScript_Shop_LelouchCheckReminder
 	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchNotEnoughColor
+	case 3, EventScript_Shop_LelouchCheckOther
 	goto EventScript_Shop_LelouchLeave
 	end
 
@@ -1672,6 +1672,163 @@ EventScript_Shop_LelouchMoveTaught1:
 	msgbox gText_Lelouch_PayYellow1, MSGBOX_DEFAULT
 	removeitem ITEM_YELLOW_SHARD
 	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchCheckOther:
+	checkitem ITEM_GREEN_SHARD, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
+	msgbox gText_Lelouch_CostsGreenShards, MSGBOX_DEFAULT
+	multichoice 0, 0, MULTI_LELOUCH_NATURES1, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_LelouchAttackMints
+	case 1, EventScript_Shop_LelouchDefenseMints
+	case 2, EventScript_Shop_LelouchSpAttackMints
+	case 3, EventScript_Shop_LelouchSpDefenseMints
+	case 4, EventScript_Shop_LelouchSpeedMints
+	case 5, EventScript_Shop_LelouchNeutralMints
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_LelouchAttackMints:
+	msgbox gText_Lelouch_AttackMintsCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_GREEN_SHARD, 1
+	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 96
+	playfanfare MUS_SLOTS_WIN
+	waitfanfare
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+	additem ITEM_LONELY_MINT
+	additem ITEM_ADAMANT_MINT
+	additem ITEM_NAUGHTY_MINT
+	additem ITEM_BRAVE_MINT
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Lelouch_ObtainedMints, MSGBOX_AUTOCLOSE
+	waitfanfare
+	goto EventScript_Shop_LelouchLeave
+	release
+	end
+
+EventScript_Shop_LelouchDefenseMints:
+	msgbox gText_Lelouch_DefenseMintsCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_GREEN_SHARD, 1
+	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 96
+	playfanfare MUS_SLOTS_WIN
+	waitfanfare
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+	additem ITEM_BOLD_MINT
+	additem ITEM_IMPISH_MINT
+	additem ITEM_LAX_MINT
+	additem ITEM_RELAXED_MINT
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Lelouch_ObtainedMints, MSGBOX_AUTOCLOSE
+	waitfanfare
+	goto EventScript_Shop_LelouchLeave
+	release
+	end
+	
+EventScript_Shop_LelouchSpAttackMints:
+	msgbox gText_Lelouch_SpAttackMintsCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_GREEN_SHARD, 1
+	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 96
+	playfanfare MUS_SLOTS_WIN
+	waitfanfare
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+	additem ITEM_MODEST_MINT
+	additem ITEM_MILD_MINT
+	additem ITEM_RASH_MINT
+	additem ITEM_QUIET_MINT
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Lelouch_ObtainedMints, MSGBOX_AUTOCLOSE
+	waitfanfare
+	goto EventScript_Shop_LelouchLeave
+	release
+	end
+
+EventScript_Shop_LelouchSpDefenseMints:
+	msgbox gText_Lelouch_SpDefenseMintsCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_GREEN_SHARD, 1
+	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 96
+	playfanfare MUS_SLOTS_WIN
+	waitfanfare
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+	additem ITEM_CALM_MINT
+	additem ITEM_GENTLE_MINT
+	additem ITEM_CAREFUL_MINT
+	additem ITEM_SASSY_MINT
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Lelouch_ObtainedMints, MSGBOX_AUTOCLOSE
+	waitfanfare
+	goto EventScript_Shop_LelouchLeave
+	release
+	end
+	
+EventScript_Shop_LelouchSpeedMints:
+	msgbox gText_Lelouch_SpeedMintsCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_GREEN_SHARD, 1
+	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 96
+	playfanfare MUS_SLOTS_WIN
+	waitfanfare
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+	additem ITEM_TIMID_MINT
+	additem ITEM_HASTY_MINT
+	additem ITEM_JOLLY_MINT
+	additem ITEM_NAIVE_MINT
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Lelouch_ObtainedMints, MSGBOX_AUTOCLOSE
+	waitfanfare
+	goto EventScript_Shop_LelouchLeave
+	release
+	end
+	
+EventScript_Shop_LelouchNeutralMints:
+	msgbox gText_Lelouch_NeutralMintsCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_GREEN_SHARD, 1
+	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 96
+	playfanfare MUS_SLOTS_WIN
+	waitfanfare
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+	additem ITEM_SERIOUS_MINT, 4
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Lelouch_ObtainedMints, MSGBOX_AUTOCLOSE
+	waitfanfare
+	goto EventScript_Shop_LelouchLeave
+	release
 	end
 
 EventScript_Shop_LelouchLeave:

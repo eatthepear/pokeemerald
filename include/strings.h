@@ -3135,6 +3135,13 @@ extern const u8 gText_ExpTraining2[];
 extern const u8 gText_ExpTraining3[];
 extern const u8 gText_ExpTraining4[];
 
+extern const u8 gText_AttackMints[];
+extern const u8 gText_DefenseMints[];
+extern const u8 gText_SpAttackMints[];
+extern const u8 gText_SpDefenseMints[];
+extern const u8 gText_SpeedMints[];
+extern const u8 gText_NeutralMints[];
+
 extern const u8 gText_OneFreshWater[];
 extern const u8 gText_TenFreshWater[];
 

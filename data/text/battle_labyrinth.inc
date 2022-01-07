@@ -391,6 +391,49 @@ gText_TutorWhichMon:
 gText_Lelouch_PayYellow1:
 	.string "{PLAYER} handed over 1 Yellow Shard.$"
 
+gText_Lelouch_CostsGreenShards:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I can craft special items\n"
+	.string "as well as upgrade your items\l"
+	.string "in exchange for Green Shards.\l"
+	.string "What would you like?$"
+
+gText_Lelouch_AttackMintsCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting Attack Mints\n"
+	.string "costs one Green Shard, are you sure?$"
+
+gText_Lelouch_DefenseMintsCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting Defense Mints\n"
+	.string "costs one Green Shard, are you sure?$"
+
+gText_Lelouch_SpAttackMintsCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting Sp. Attack Mints\n"
+	.string "costs one Green Shard, are you sure?$"
+
+gText_Lelouch_SpDefenseMintsCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting Sp. Defense Mints\n"
+	.string "costs one Green Shard, are you sure?$"
+
+gText_Lelouch_SpeedMintsCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting Speed Mints\n"
+	.string "costs one Green Shard, are you sure?$"
+
+gText_Lelouch_NeutralMintsCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting Neutral Mints\n"
+	.string "costs one Green Shard, are you sure?$"
+
+gText_Lelouch_PayGreen:
+	.string "{PLAYER} handed over 1 Green Shard.$"
+
+gText_Lelouch_OneMoment:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: One moment, please.$"
+
+gText_Lelouch_ItsDone:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: It's done.\p"
+	.string "Here are your requested items.$"
+
+gText_Lelouch_ObtainedMints:
+	.string "Obtained the Mints!$"
+
 gText_Lelouch_Leave:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Farewell.$"
 

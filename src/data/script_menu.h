@@ -288,6 +288,16 @@ static const struct MenuAction MultichoiceList_HowsFishing[] =
     {gText_NotSoGood},
 };
 
+static const struct MenuAction MultichoiceList_LelouchNatures1[] =
+{
+    {gText_AttackMints},
+    {gText_DefenseMints},
+    {gText_SpAttackMints},
+    {gText_SpDefenseMints},
+    {gText_SpeedMints},
+    {gText_NeutralMints},
+};
+
 static const struct MenuAction MultichoiceList_SSTidalSlateportWithBF[] =
 {
     {gText_LilycoveCity},
@@ -861,7 +871,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_DOLLS]          = MULTICHOICE(MultichoiceList_GameCornerDolls),
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),
     [MULTI_HOWS_FISHING]               = MULTICHOICE(MultichoiceList_HowsFishing),
-    [MULTI_UNUSED_51]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_LELOUCH_NATURES1]           = MULTICHOICE(MultichoiceList_LelouchNatures1),
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),
     [MULTI_SSTIDAL_BATTLE_FRONTIER]    = MULTICHOICE(MultichoiceList_SSTidalBattleFrontier),
     [MULTI_RIGHTLEFT]                  = MULTICHOICE(MultichoiceList_RightLeft),
