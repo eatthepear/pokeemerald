@@ -3191,19 +3191,19 @@ static const u8 sTM35Desc[] = _(
     "over several turns.");
 
 static const u8 sTM36Desc[] = _(
-    "Hurls sludge at the\n"
-    "foe. It may poison\n"
-    "the foe.");
+    "Sends an odd psychic\n"
+    "wave that does\n"
+    "physical damage.");
 
 static const u8 sTM37Desc[] = _(
-    "Causes a sandstorm\n"
-    "that hits the foe\n"
-    "over several turns.");
+    "Fiercely attacks\n"
+    "the foe with the\n"
+    "user's whole body.");
 
 static const u8 sTM38Desc[] = _(
-    "A powerful fire\n"
-    "attack that may\n"
-    "burn the foe.");
+    "Hurls large\n"
+    "boulders that may\n"
+    "cause flinches.");
 
 static const u8 sTM39Desc[] = _(
     "Stops the foe from\n"
