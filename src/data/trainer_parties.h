@@ -2698,6 +2698,11 @@ static const struct TrainerMon sParty_Edgardo[] = {
     {
     .iv = 20,
     .lvl = 36,
+    .species = SPECIES_TOGEPI,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
     .species = SPECIES_TURTWIG,
     },
     {
@@ -2775,7 +2780,7 @@ static const struct TrainerMon sParty_Matthew[] = {
     {
     .iv = 20,
     .lvl = 36,
-    .species = SPECIES_PORYGON,
+    .species = SPECIES_HATTREM,
     },
     {
     .iv = 20,

@@ -16138,17 +16138,7 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_TOGEDEMARU"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
                 "species": "SPECIES_BOUFFALANT"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_MUDBRAY"
               },
               {
                 "min_level": 30,
@@ -16168,6 +16158,26 @@
               {
                 "min_level": 30,
                 "max_level": 32,
+                "species": "SPECIES_TOGEDEMARU"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
                 "species": "SPECIES_INDEEDEE"
               },
               {
@@ -16178,32 +16188,22 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_MIENFOO"
+                "species": "SPECIES_MUNCHLAX"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_MIENFOO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_LUXIO"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_FLAAFFY"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_HAPPINY"
+                "species": "SPECIES_TOGEPI"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
                 "species": "SPECIES_SCORBUNNY"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_TURTWIG"
               }
             ]
           },
