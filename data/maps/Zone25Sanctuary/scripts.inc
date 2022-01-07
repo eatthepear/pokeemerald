@@ -22,13 +22,23 @@ Zone25Sanctuary_EventScript_Intro:
 	playfanfare MUS_OBTAIN_BADGE
 	msgbox Zone25Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	msgbox Zone25Sanctuary_Text_RewardClear18, MSGBOX_AUTOCLOSE
-	msgbox Zone25Sanctuary_Text_18Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_YELLOW_SHARD, 5
-	msgbox Zone25Sanctuary_Text_RewardClear19, MSGBOX_AUTOCLOSE
-	msgbox Zone25Sanctuary_Text_19Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM26
+	msgbox Zone25Sanctuary_Text_RewardClear24, MSGBOX_AUTOCLOSE
+	msgbox Zone25Sanctuary_Text_24Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM38
+	msgbox Zone25Sanctuary_Text_RewardClear25, MSGBOX_AUTOCLOSE
+	msgbox Zone25Sanctuary_Text_25Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_MEGA_RING
 	closemessage
+	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
+	waitfanfare
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
+	waitfanfare
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
+	waitfanfare
 	setvar VAR_ZONE, 26
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -66,16 +76,16 @@ Zone25Sanctuary_EventScript_Leave:
 
 Zone25Sanctuary_Text_Colress_ReachedZone:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
-	.string "You have cleared {COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}.$"
+	.string "You have cleared {COLOR RED}Zone 24{COLOR DARK_GRAY} and {COLOR RED}Zone 25{COLOR DARK_GRAY}.$"
 
-Zone25Sanctuary_Text_RewardClear18:
-	.string "Your reward for clearing {COLOR RED}Zone 18{COLOR DARK_GRAY} is...$"
+Zone25Sanctuary_Text_RewardClear24:
+	.string "Your reward for clearing {COLOR RED}Zone 24{COLOR DARK_GRAY} is...$"
 
-Zone25Sanctuary_Text_18Reward:
-	.string "5 Yellow Shards!$"
+Zone25Sanctuary_Text_24Reward:
+	.string "TM38 - Rock Slide!$"
 
-Zone25Sanctuary_Text_RewardClear19:
-	.string "Your reward for clearing {COLOR RED}Zone 19{COLOR DARK_GRAY} is...$"
+Zone25Sanctuary_Text_RewardClear25:
+	.string "Your reward for clearing {COLOR RED}Zone 25{COLOR DARK_GRAY} is...$"
 
-Zone25Sanctuary_Text_19Reward:
-	.string "TM26 - Thunder Wave!$"
+Zone25Sanctuary_Text_25Reward:
+	.string "The Mega Ring!$"
