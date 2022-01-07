@@ -36,6 +36,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
+#include "event_data.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -329,7 +330,7 @@ static void HandleInputChooseAction(void)
     {
         SwapHpBarsWithHpText();
     }
-    else if (B_ENABLE_DEBUG && gMain.newKeys & SELECT_BUTTON)
+    else if (B_ENABLE_DEBUG && gMain.newKeys & SELECT_BUTTON && FlagGet(FLAG_IS_DEBUGGING_SAVEFILE))
     {
         BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_DEBUG, 0);
         PlayerBufferExecCompleted();
