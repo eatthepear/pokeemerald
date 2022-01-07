@@ -1057,7 +1057,7 @@ const struct Item gItems[] =
         .description = sLonelyMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_ADAMANT_MINT] =
@@ -1068,7 +1068,7 @@ const struct Item gItems[] =
         .description = sAdamantMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_NAUGHTY_MINT] =
@@ -1079,7 +1079,7 @@ const struct Item gItems[] =
         .description = sNaughtyMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_BRAVE_MINT] =
@@ -1090,7 +1090,7 @@ const struct Item gItems[] =
         .description = sBraveMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_BOLD_MINT] =
@@ -1101,7 +1101,7 @@ const struct Item gItems[] =
         .description = sBoldMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_IMPISH_MINT] =
@@ -1112,7 +1112,7 @@ const struct Item gItems[] =
         .description = sImpishMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_LAX_MINT] =
@@ -1123,7 +1123,7 @@ const struct Item gItems[] =
         .description = sLaxMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_RELAXED_MINT] =
@@ -1134,7 +1134,7 @@ const struct Item gItems[] =
         .description = sRelaxedMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_MODEST_MINT] =
@@ -1145,7 +1145,7 @@ const struct Item gItems[] =
         .description = sModestMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_MILD_MINT] =
@@ -1156,7 +1156,7 @@ const struct Item gItems[] =
         .description = sMildMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_RASH_MINT] =
@@ -1167,7 +1167,7 @@ const struct Item gItems[] =
         .description = sRashMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_QUIET_MINT] =
@@ -1178,7 +1178,7 @@ const struct Item gItems[] =
         .description = sQuietMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_CALM_MINT] =
@@ -1189,7 +1189,7 @@ const struct Item gItems[] =
         .description = sCalmMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_GENTLE_MINT] =
@@ -1200,7 +1200,7 @@ const struct Item gItems[] =
         .description = sGentleMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_CAREFUL_MINT] =
@@ -1211,7 +1211,7 @@ const struct Item gItems[] =
         .description = sCarefulMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_SASSY_MINT] =
@@ -1222,7 +1222,7 @@ const struct Item gItems[] =
         .description = sSassyMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_TIMID_MINT] =
@@ -1233,7 +1233,7 @@ const struct Item gItems[] =
         .description = sTimidMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_HASTY_MINT] =
@@ -1244,7 +1244,7 @@ const struct Item gItems[] =
         .description = sHastyMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_JOLLY_MINT] =
@@ -1255,7 +1255,7 @@ const struct Item gItems[] =
         .description = sJollyMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_NAIVE_MINT] =
@@ -1266,7 +1266,7 @@ const struct Item gItems[] =
         .description = sNaiveMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
     [ITEM_SERIOUS_MINT] =
@@ -1277,7 +1277,7 @@ const struct Item gItems[] =
         .description = sSeriousMintDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .fieldUseFunc = ItemUseOutOfBattle_PlaceholderMint, // Todo
     },
 
 // Candy

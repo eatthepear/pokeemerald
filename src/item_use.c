@@ -1228,4 +1228,9 @@ void ItemUseOutOfBattle_CannotUse(u8 taskId)
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
+void ItemUseOutOfBattle_PlaceholderMint(u8 taskId)
+{
+    DisplayCannotUseItemMessage(taskId, FALSE, gText_PlaceholderMint);
+}
+
 #undef tUsingRegisteredKeyItem
