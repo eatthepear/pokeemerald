@@ -6857,6 +6857,7 @@ extern const u32 gTrainerFrontPic_RubySapphireMay[];
 extern const u32 gTrainerFrontPic_Scientist[];
 extern const u32 gTrainerFrontPic_Waiter[];
 extern const u32 gTrainerFrontPic_Waitress[];
+extern const u32 gTrainerFrontPic_Mirages[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];

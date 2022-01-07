@@ -119,7 +119,7 @@ Zone25L_EventScript_InitiateLeviathanBattle:
 	msgbox Zone25L_Text_Mirage_7, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGES
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone25L_EventScript_MirageBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN14, Zone25L_Text_Leviathan14Defeat
 	goto Zone25L_EventScript_Leviathan14Defeated

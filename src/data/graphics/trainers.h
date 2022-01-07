@@ -297,3 +297,5 @@ const u32 gTrainerPalette_Waiter[] = INCBIN_U32("graphics/trainers/palettes/Wait
 
 const u32 gTrainerFrontPic_Waitress[] = INCBIN_U32("graphics/trainers/front_pics/Waitress_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Waitress[] = INCBIN_U32("graphics/trainers/palettes/Waitress.gbapal.lz");
+
+const u32 gTrainerFrontPic_Mirages[] = INCBIN_U32("graphics/trainers/front_pics/mirages_front_pic.4bpp.lz");
