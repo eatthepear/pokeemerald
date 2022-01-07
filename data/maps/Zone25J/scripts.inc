@@ -8,3 +8,7 @@ Zone25J_SetHoleWarp:
 	setstepcallback STEP_CB_CRACKED_FLOOR
 	setholewarp MAP_ZONE25K
 	end
+
+Zone25J_EventScript_DuskStone::
+	finditem ITEM_DUSK_STONE
+	end

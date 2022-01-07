@@ -8,3 +8,7 @@ Zone25E_SetHoleWarp:
 	setstepcallback STEP_CB_CRACKED_FLOOR
 	setholewarp MAP_ZONE25F
 	end
+
+Zone25E_EventScript_FullHeal::
+	finditem ITEM_FULL_HEAL
+	end

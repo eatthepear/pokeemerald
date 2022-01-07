@@ -292,3 +292,27 @@ Zone24A_Text_NadineDefeat:
 
 Zone24A_Text_NadinePostBattle:
 	.string "$"
+
+Zone24A_EventScript_FireStone::
+	finditem ITEM_FIRE_STONE
+	end
+
+Zone24A_EventScript_SunStone::
+	finditem ITEM_SUN_STONE
+	end
+	
+Zone24A_EventScript_DragonFang::
+	finditem ITEM_DRAGON_FANG
+	end
+	
+Zone24A_EventScript_SmoothRock::
+	finditem ITEM_SMOOTH_ROCK
+	end
+	
+Zone24A_EventScript_UltraBall::
+	finditem ITEM_ULTRA_BALL
+	end
+	
+Zone24A_EventScript_HyperPotion::
+	finditem ITEM_HYPER_POTION
+	end

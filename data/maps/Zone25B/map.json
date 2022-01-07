@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone25B_EventScript_DuskBall",
-      "flag": "0"
+      "flag": "FLAG_ITEM_ZONE25B_DUSK_BALL"
     }
   ],
   "warp_events": [

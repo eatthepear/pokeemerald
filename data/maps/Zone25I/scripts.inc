@@ -8,3 +8,7 @@ Zone25I_SetHoleWarp:
 	setstepcallback STEP_CB_CRACKED_FLOOR
 	setholewarp MAP_ZONE25J
 	end
+
+Zone25I_EventScript_MaxRepel::
+	finditem ITEM_MAX_REPEL
+	end
