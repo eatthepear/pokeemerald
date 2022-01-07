@@ -198,13 +198,15 @@ Zone24A_EventScript_Christi::
 	end
 
 Zone24A_Text_ChristiIntro:
-	.string "$"
+	.string "I've trained on these cliffs for\n"
+	.string "days! Battle me!$"
 
 Zone24A_Text_ChristiDefeat:
-	.string "$"
+	.string "Foiled again!$"
 
 Zone24A_Text_ChristiPostBattle:
-	.string "$"
+	.string "I still get stronger by battling,\n"
+	.string "even when I lose!$"
 
 Zone24A_EventScript_Spencer::
 	trainerbattle_single TRAINER_SPENCER, Zone24A_Text_SpencerIntro, Zone24A_Text_SpencerDefeat
@@ -212,13 +214,15 @@ Zone24A_EventScript_Spencer::
 	end
 
 Zone24A_Text_SpencerIntro:
-	.string "$"
+	.string "Ah, ah, ah, ah,\n"
+	.string "staying alive, staying alive.$"
 
 Zone24A_Text_SpencerDefeat:
-	.string "$"
+	.string "Sorry, I had my headphones in.$"
 
 Zone24A_Text_SpencerPostBattle:
-	.string "$"
+	.string "Do you listen to music while\n"
+	.string "walking around too?$"
 
 Zone24A_EventScript_Haywood::
 	trainerbattle_single TRAINER_HAYWOOD, Zone24A_Text_HaywoodIntro, Zone24A_Text_HaywoodDefeat
@@ -226,13 +230,14 @@ Zone24A_EventScript_Haywood::
 	end
 
 Zone24A_Text_HaywoodIntro:
-	.string "$"
+	.string "Puny white belt! Be crushed!$"
 
 Zone24A_Text_HaywoodDefeat:
-	.string "$"
+	.string "How could I lose?$"
 
 Zone24A_Text_HaywoodPostBattle:
-	.string "$"
+	.string "A Black Belt like me, defeated by a\n"
+	.string "white belt…$"
 
 Zone24A_EventScript_Monroe::
 	trainerbattle_single TRAINER_MONROE, Zone24A_Text_MonroeIntro, Zone24A_Text_MonroeDefeat
@@ -240,13 +245,13 @@ Zone24A_EventScript_Monroe::
 	end
 
 Zone24A_Text_MonroeIntro:
-	.string "$"
+	.string "The symmetry… the patterns…$"
 
 Zone24A_Text_MonroeDefeat:
-	.string "$"
+	.string "It must mean something!$"
 
 Zone24A_Text_MonroePostBattle:
-	.string "$"
+	.string "I can't solve the tower's puzzle…$"
 
 Zone24A_EventScript_David::
 	trainerbattle_single TRAINER_DAVID, Zone24A_Text_DavidIntro, Zone24A_Text_DavidDefeat
@@ -254,13 +259,14 @@ Zone24A_EventScript_David::
 	end
 
 Zone24A_Text_DavidIntro:
-	.string "$"
+	.string "How did I get on a cliff this high?\n"
+	.string "Uhm…$"
 
 Zone24A_Text_DavidDefeat:
-	.string "$"
+	.string "It definitely wasn't a dare!$"
 
 Zone24A_Text_DavidPostBattle:
-	.string "$"
+	.string "I'm not scared of heights! Eek!$"
 
 Zone24A_EventScript_Dominik::
 	trainerbattle_single TRAINER_DOMINIK, Zone24A_Text_DominikIntro, Zone24A_Text_DominikDefeat
@@ -268,13 +274,14 @@ Zone24A_EventScript_Dominik::
 	end
 
 Zone24A_Text_DominikIntro:
-	.string "$"
+	.string "The air is so dry, I bet I don't\n"
+	.string "even need firewood to start cooking!$"
 
 Zone24A_Text_DominikDefeat:
-	.string "$"
+	.string "Urgh, my throat hurts.$"
 
 Zone24A_Text_DominikPostBattle:
-	.string "$"
+	.string "I should have brought more water.$"
 
 Zone24A_EventScript_Douglas::
 	trainerbattle_single TRAINER_DOUGLAS, Zone24A_Text_DouglasIntro, Zone24A_Text_DouglasDefeat
@@ -282,13 +289,13 @@ Zone24A_EventScript_Douglas::
 	end
 
 Zone24A_Text_DouglasIntro:
-	.string "$"
+	.string "ROCKING OUT! MY VOICE ECHOES!$"
 
 Zone24A_Text_DouglasDefeat:
-	.string "$"
+	.string "LOSING FAST! MY HEART FALLS!$"
 
 Zone24A_Text_DouglasPostBattle:
-	.string "$"
+	.string "WRITING SONGS! MY SOUL BREATHES!$"
 
 Zone24A_EventScript_Nadine::
 	trainerbattle_single TRAINER_NADINE, Zone24A_Text_NadineIntro, Zone24A_Text_NadineDefeat
@@ -296,13 +303,14 @@ Zone24A_EventScript_Nadine::
 	end
 
 Zone24A_Text_NadineIntro:
-	.string "$"
+	.string "At least I don't have to wade\n"
+	.string "through the snow…$"
 
 Zone24A_Text_NadineDefeat:
-	.string "$"
+	.string "This assignment still stinks!$"
 
 Zone24A_Text_NadinePostBattle:
-	.string "$"
+	.string "Uff.$"
 
 Zone24A_EventScript_FireStone::
 	finditem ITEM_FIRE_STONE

@@ -7,10 +7,10 @@ Zone25A_EventScript_Sandy::
 	end
 
 Zone25A_Text_SandyIntro:
-	.string "$"
+	.string "Even a Psychic can't solve it…$"
 
 Zone25A_Text_SandyDefeat:
-	.string "$"
+	.string "How are we supposed to go down?$"
 
 Zone25A_Text_SandyPostBattle:
-	.string "$"
+	.string "There's too many paths…$"

@@ -15,13 +15,14 @@ Zone25B_EventScript_Sheldon::
 	end
 
 Zone25B_Text_SheldonIntro:
-	.string "$"
+	.string "Hmm… if I had a Bike…$"
 
 Zone25B_Text_SheldonDefeat:
-	.string "$"
+	.string "I dunno.$"
 
 Zone25B_Text_SheldonPostBattle:
-	.string "$"
+	.string "My Psychic powers don't work too\n"
+	.string "well here.$"
 
 Zone25B_EventScript_DuskBall::
 	finditem ITEM_DUSK_BALL
