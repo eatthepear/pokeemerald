@@ -1926,19 +1926,17 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
-    [TRAINER_LEVIATHAN14_B] =
+    [TRAINER_LELOUCHEXP4] =
     {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Mirage"),
+        .trainerClass = TRAINER_CLASS_LELOUCH,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_EXPERT_M,
+        .trainerName = _("Lelouch"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone25LMirageB),
-        .party = {.TrainerMon = sParty_Zone25LMirageB},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_LelouchExp4),
+        .party = {.TrainerMon = sParty_LelouchExp4},
     },
 
     [TRAINER_LEVIATHAN1_BRUTAL] =
@@ -2203,19 +2201,17 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
-    [TRAINER_LEVIATHAN14_B_BRUTAL] =
+    [TRAINER_UNUSED] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Mirage"),
+        .trainerName = _("Unused"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Zone25LMirageBBrutal),
-        .party = {.TrainerMon = sParty_Zone25LMirageBBrutal},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
+        .partySize = ARRAY_COUNT(sParty_Unused),
+        .party = {.TrainerMon = sParty_Unused},
     },
 
     [TRAINER_RICHARD] =

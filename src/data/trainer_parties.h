@@ -1458,7 +1458,7 @@ static const struct TrainerMon sParty_Angus[] = {
     {
     .iv = 10,
     .lvl = 26,
-    .species = SPECIES_CLOBBOPUS,
+    .species = SPECIES_ARCTOVISH,
     }
 };
 
@@ -1557,6 +1557,11 @@ static const struct TrainerMon sParty_Berke[] = {
     .iv = 10,
     .lvl = 26,
     .species = SPECIES_CORSOLA_GALARIAN,
+    },
+    {
+    .iv = 10,
+    .lvl = 26,
+    .species = SPECIES_CLOBBOPUS,
     }
 };
 
@@ -3074,37 +3079,42 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMirageB[] = {//Leviathan 14, fought in a Double Battle against Zone25LMirageA, Default
+static const struct TrainerMon sParty_LelouchExp4[] = {
     {
-    .iv = 31,
-    .lvl = 43,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Disguise
-    .species = SPECIES_MIMIKYU,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PLAY_ROUGH, MOVE_SHADOW_CLAW, MOVE_HONE_CLAWS, MOVE_WOOD_HAMMER}
-    },
-    {
-    .iv = 31,
-    .lvl = 43,
-    .nature = NATURE_NAIVE,
+    .iv = 0,
+    .lvl = 40,
+    .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Vital Spirit
-    .species = SPECIES_ELECTIVIRE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_THUNDERBOLT, MOVE_HAMMER_ARM, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH}
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 31,
-    .lvl = 43,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Scrappy
-    .species = SPECIES_KANGASKHAN,
-    .heldItem = ITEM_LIFE_ORB,
-    .friendship = TRAINER_MON_FRIENDLY,
-    .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_HAMMER_ARM, MOVE_FAKE_OUT}
+    .iv = 0,
+    .lvl = 40,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 40,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 40,
+    .nature = NATURE_BASHFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2,
+    .species = SPECIES_AUDINO,
+    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -3727,37 +3737,11 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMirageBBrutal[] = {//Leviathan 14, fought in a 1v2 Double Battle against Zone25LMirageABrutal, Brutal
+static const struct TrainerMon sParty_Unused[] = {
     {
-    .iv = 31,
-    .lvl = 43,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Disguise
-    .species = SPECIES_MIMIKYU,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PLAY_ROUGH, MOVE_POLTERGEIST, MOVE_SWORDS_DANCE, MOVE_WOOD_HAMMER}
-    },
-    {
-    .iv = 31,
-    .lvl = 43,
-    .nature = NATURE_NAIVE,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Vital Spirit
-    .species = SPECIES_ELECTIVIRE,
-    .heldItem = ITEM_EXPERT_BELT,
-    .moves = {MOVE_THUNDERBOLT, MOVE_CLOSE_COMBAT, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH}
-    },
-    {
-    .iv = 31,
-    .lvl = 43,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Scrappy, turns into Parental Bond after Mega Evolving
-    .species = SPECIES_KANGASKHAN,
-    .heldItem = ITEM_KANGASKHANITE,
-    .friendship = TRAINER_MON_FRIENDLY,
-    .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_POWER_UP_PUNCH, MOVE_FAKE_OUT}
+    .iv = 0,
+    .lvl = 34,
+    .species = SPECIES_PELIPPER,
     }
 };
 

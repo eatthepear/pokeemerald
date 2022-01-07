@@ -147,7 +147,7 @@
 #define TRAINER_SANDY                      	143
 #define TRAINER_SHELDON                       	144
 #define TRAINER_LEVIATHAN14                        	145
-#define TRAINER_LEVIATHAN14_B                       	146
+#define TRAINER_LELOUCHEXP4                       	146
 #define TRAINER_LEVIATHAN1_BRUTAL               	147
 #define TRAINER_LEVIATHAN2_BRUTAL               	148
 #define TRAINER_LEVIATHAN3_BRUTAL               	149
@@ -166,7 +166,7 @@
 #define TRAINER_LEVIATHAN12_BRUTAL              	162
 #define TRAINER_LEVIATHAN13_BRUTAL              	163
 #define TRAINER_LEVIATHAN14_BRUTAL                        	164
-#define TRAINER_LEVIATHAN14_B_BRUTAL                      	165
+#define TRAINER_UNUSED                      	165
 #define TRAINER_RICHARD                     166
 #define TRAINER_HERMAN                      167
 #define TRAINER_SANTIAGO                    168
