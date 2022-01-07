@@ -759,7 +759,7 @@ Zone17A_Text_Sign8:
 	.string "March 2, '45 - November 21, '04$"
 
 Zone17A_Text_Sign9:
-	.string "Mundi Sato\n"
+	.string "Mundi Suzuki\n"
 	.string "August 20, '39 - January 6, '98$"
 
 Zone17A_Text_Sign10:
