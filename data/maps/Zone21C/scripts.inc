@@ -30,7 +30,7 @@ Zone21C_EventScript_BreederNoHappiny:
 	end
 
 Zone21C_EventScript_SendHappinyParty::
-	givecustommon SPECIES_HAPPINY, 25, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_BARRIER, MOVE_SWIFT, TRUE
+	givecustommon SPECIES_HAPPINY, 25, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_HAPPINY
 	call Zone21C_EventScript_ReceivedHappinyFanfare
 	msgbox Zone21C_Text_HowBoutNickname, MSGBOX_YESNO
@@ -42,7 +42,7 @@ Zone21C_EventScript_SendHappinyParty::
 	end
 
 Zone21C_EventScript_SendHappinyPC::
-	givecustommon SPECIES_HAPPINY, 25, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_BARRIER, MOVE_SWIFT, TRUE
+	givecustommon SPECIES_HAPPINY, 25, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_HAPPINY
 	call Zone21C_EventScript_ReceivedHappinyFanfare
 	msgbox Zone21C_Text_HowBoutNickname, MSGBOX_YESNO
