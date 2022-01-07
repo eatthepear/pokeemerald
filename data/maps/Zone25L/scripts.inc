@@ -208,7 +208,7 @@ Zone25L_EventScript_Leviathan14Defeated:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone25L_Text_FoundBag, MSGBOX_AUTOCLOSE
-	giveitem ITEM_GREEN_SHARD, 5
+	giveitem ITEM_GREEN_SHARD, 2
 	clearflag FLAG_HIDE_ZONE25L_COLRESS
 	addobject 5
 	fadeoutbgm 1
