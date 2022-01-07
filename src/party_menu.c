@@ -414,6 +414,7 @@ static bool8 SetUpFieldMove_Dive(void);
 static void Task_ChooseSendMonToPC(u8 taskId);
 static void CB2_ChooseSendMonToPC(void);
 void TryItemHoldFormChange(struct Pokemon *mon);
+static bool8 SetUpFieldMove_RockClimb(void);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -6934,4 +6935,25 @@ void DisplaySendMonToPCMessage(struct Pokemon* mon)
     gTextFlags.canABSpeedUpPrint = TRUE;
     AddTextPrinterParameterized2(0, 1, gStringVar4, GetPlayerTextSpeedDelay(), 0, 2, 0, 3);
     CopyWindowToVram(0, 3);
+}
+
+static void FieldCallback_RockClimb(void)
+{
+    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    FieldEffectStart(FLDEFF_USE_ROCK_CLIMB);
+}
+
+static bool8 SetUpFieldMove_RockClimb(void)
+{
+    s16 x, y;
+
+    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
+    if (MetatileBehavior_IsRockClimbable(MapGridGetMetatileBehaviorAt(x, y)))
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_RockClimb;
+        return TRUE;
+    }
+    
+    return FALSE;
 }

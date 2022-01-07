@@ -249,7 +249,7 @@ static const u8 sTileBitAttributes[] =
     [MB_UNUSED_EC] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_ED] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_EE] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_EF] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_ROCK_CLIMB] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -1525,6 +1525,14 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSidewaysStairsRightSide(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SIDEWAYS_STAIRS_RIGHT_SIDE || metatileBehavior == MB_SIDEWAYS_STAIRS_RIGHT_SIDE_BOTTOM)
+            return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_ROCK_CLIMB)
         return TRUE;
     else
         return FALSE;
@@ -1597,5 +1605,3 @@ bool8 MetatileBehavior_IsRockStairs(u8 metatileBehavior)
     else
         return FALSE;
 }
-
-
