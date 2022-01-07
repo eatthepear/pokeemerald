@@ -186,5 +186,73 @@ Zone25L_Text_Mirage_NotEnoughMons:
 	.string "It's no threat.$"
 
 Zone25L_EventScript_Leviathan14Defeated:
+	applymovement 1, Common_Movement_FaceRight
+	applymovement 2, Common_Movement_FaceLeft
+	msgbox Zone25L_Text_Mirage_8, MSGBOX_AUTOCLOSE
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceLeft
+	msgbox Zone25L_Text_Mirage_9, MSGBOX_AUTOCLOSE
+	waitmovement 0
+	fadescreenswapbuffers FADE_TO_BLACK
+	playmoncry SPECIES_REGISTEEL, 2
+	delay 40
+	waitmoncry
+	playmoncry SPECIES_REGIDRAGO, 2
+	delay 40
+	waitmoncry
+	removeobject 1
+	removeobject 2
+	removeobject 3
+	removeobject 4
+	setflag FLAG_BEATLEVIATHAN14
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox Zone25L_Text_FoundBag, MSGBOX_AUTOCLOSE
+	giveitem ITEM_GREEN_SHARD, 5
+	clearflag FLAG_HIDE_ZONE25L_COLRESS
+	addobject 5
+	fadeoutbgm 1
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	delay 48
+	applymovement 5, Common_Movement_WalkUp
+	waitmovement 0
+	msgbox Zone25L_Text_Colress_Blast, MSGBOX_AUTOCLOSE
+	delay 48
+	applymovement 5, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Zone25L_Text_Colress_GotAway, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox Zone25L_Text_Colress_Going, MSGBOX_AUTOCLOSE
+	removeobject 5
+	setflag FLAG_HIDE_ZONE25L_COLRESS
+	fadeinbgm 1
 	releaseall
 	end
+
+Zone25L_Text_Mirage_8:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: We… lost?\n"
+	.string "Even with the two of us, together?$"
+
+Zone25L_Text_Mirage_9:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It doesn't matter.\n"
+	.string "We have to get out of here.\p"
+	.string "Command, we need evac immediately.$"
+
+Zone25L_Text_Colress_Blast:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Blast!$"
+
+Zone25L_Text_Colress_GotAway:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: They got away, again.\p"
+	.string "Those rebels will wish they never…$"
+
+Zone25L_Text_Colress_Going:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Never mind.\n"
+	.string "I've got to get going, now.$"
+
+Zone25L_Text_FoundBag:
+	.string "There are Shards on the ground!$"
