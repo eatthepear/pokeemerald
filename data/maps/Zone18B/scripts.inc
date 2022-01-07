@@ -213,7 +213,7 @@ Zone18B_EventScript_Leviathan11Defeated:
 	setflag FLAG_BEATLEVIATHAN11
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
-	giveitem ITEM_SHARPEDONITE, 1
+	giveitem ITEM_FOCUS_SASH, 1
 	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE18B_STATE, 5
 	release
@@ -225,9 +225,10 @@ Zone18B_Text_Odysseus_PostBattle:
 	.string "Here, I want you to have this.$"
 
 Zone18B_Text_Odysseus_ExplainItem:
-	.string "That is a Sharpedonite, a special\n"
-	.string "Mega Stone. You'll need a\l"
-	.string "Mega Bracelet to use it.$"
+	.string "A Focus Sash allows your Pokémon to\n"
+	.string "tank a hit from full HP that would\l"
+	.string "have otherwise knocked it out.\p"
+	.string "However, it is only single use.$"
 
 Zone18B_EventScript_WantLeave:
 	msgbox Zone18B_Odysseus_WantLeave, MSGBOX_YESNO
