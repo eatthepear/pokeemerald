@@ -5546,7 +5546,7 @@
       "name": "Zone25Shops_Layout",
       "width": 23,
       "height": 23,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Zone25Shops/border.bin",
       "blockdata_filepath": "data/layouts/Zone25Shops/map.bin"
