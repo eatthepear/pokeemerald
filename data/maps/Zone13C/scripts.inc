@@ -154,6 +154,7 @@ Zone13C_Text_KaizenPsychic_LikeHome:
 Zone13C_EventScript_Fossil_Scientist::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_Fossil_NoFossil
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_VanillaReceived
 	applymovement 3, Common_Movement_ExclamationMark
@@ -256,6 +257,14 @@ Zone13C_EventScript_Fossil_GiveSail:
 	giveitem ITEM_SAIL_FOSSIL, 1
 	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto Zone13C_EventScript_Fossil_VanillaReceived
+
+Zone13C_EventScript_Fossil_NoFossil:
+	msgbox Zone13C_Text_Fossil_NoFossil, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone13C_Text_Fossil_NoFossil:
+	.string "Sorry, I just ran out of fossils.$"
 
 Zone13C_EventScript_Scientist1::
 	lock

@@ -48,6 +48,7 @@ Zone9F_Text_Dominic:
 Zone9F_EventScript_Erica::
 	lock
 	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9F_EventScript_SafeTravels
 	goto_if_set FLAG_RECEIVED_ZONE9F_ZORUA, Zone9F_EventScript_SafeTravels
 	msgbox Zone9F_Text_Erica_Request, MSGBOX_YESNO
 	compare VAR_RESULT, NO

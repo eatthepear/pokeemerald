@@ -128,6 +128,7 @@ Zone9A_EventScript_BattleWinstrates::
 	waitmovement 0
 	msgbox Zone9A_Text_EricaIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ERICA, Zone9A_Text_EricaDefeat
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_NoZorua
 	msgbox Zone9A_Text_EricaPostBattle, MSGBOX_DEFAULT
 	closemessage
 	applymovement 5, Common_Movement_WalkInPlaceFasterUp
@@ -223,3 +224,19 @@ Zone9A_Text_EricaDefeat:
 Zone9A_Text_EricaPostBattle:
 	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\n"
 	.string "I have a request for you.$"
+
+Zone9A_EventScript_NoZorua:
+	msgbox Zone9A_Text_EricaPostBattleNoZorua, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	applymovement 5, Zone9A_Movement_WinstrateEnterHouse
+	waitmovement 0
+	removeobject 5
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	release
+	end
+
+Zone9A_Text_EricaPostBattleNoZorua:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\p"
+	.string "Well done, young one.$"
