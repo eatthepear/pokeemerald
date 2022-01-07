@@ -22,3 +22,7 @@ Zone25B_Text_SheldonDefeat:
 
 Zone25B_Text_SheldonPostBattle:
 	.string "$"
+
+Zone25B_EventScript_DuskBall::
+	finditem ITEM_DUSK_BALL
+	end
