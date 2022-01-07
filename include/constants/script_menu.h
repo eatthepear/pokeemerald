@@ -70,7 +70,7 @@
 #define MULTI_LELOUCH_TRAINING2            59
 #define MULTI_FRESH_WATER                  60
 #define MULTI_LELOUCH_TRAINING3            61
-#define MULTI_SHARDS_RB                    62
+#define MULTI_LELOUCH_TRAINING4            62
 #define MULTI_SHARDS_YB                    63
 #define MULTI_SHARDS_RYB                   64
 #define MULTI_SHARDS_G                     65

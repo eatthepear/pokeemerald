@@ -856,6 +856,7 @@ static const u8 sText_MoveTutorTailwind[] = _("Tailwind");
 static const u8 sText_Exp1[] =_("Experience Training 1");
 static const u8 sText_Exp2[] =_("Experience Training 2");
 static const u8 sText_Exp3[] =_("Experience Training 3");
+static const u8 sText_Exp4[] =_("Experience Training 4");
 static const u8 sText_EVHP[] =_("EV Training HP");
 static const u8 sText_EVAtk[] =_("EV Training Attack");
 static const u8 sText_EVDef[] =_("EV Training Defense");
@@ -979,11 +980,18 @@ static const struct ListMenuItem Exp3[] =
     {sText_EVSpe, 8},
 };
 
-static const struct ListMenuItem Exp3Brutal[] =
+static const struct ListMenuItem Exp4[] =
 {
     {sText_Exp1, 0},
     {sText_Exp2, 1},
     {sText_Exp3, 2},
+    {sText_Exp4, 3},
+    {sText_EVHP, 4},
+    {sText_EVAtk, 5},
+    {sText_EVDef, 6},
+    {sText_EVSpA, 7},
+    {sText_EVSpD, 8},
+    {sText_EVSpe, 9},
 };
 
 // Table of your multichoice sets.
@@ -999,7 +1007,7 @@ struct
     {MoveTutorLevel2, ARRAY_COUNT(MoveTutorLevel2)},
     {MoveTutorLevel3, ARRAY_COUNT(MoveTutorLevel3)},
     {Exp3, ARRAY_COUNT(Exp3)},
-    {Exp3Brutal, ARRAY_COUNT(Exp3Brutal)},
+    {Exp4, ARRAY_COUNT(Exp4)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);

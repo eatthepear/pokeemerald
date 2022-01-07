@@ -316,6 +316,10 @@ gText_Lelouch_Exp3Cost:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 3\n"
 	.string "costs one Red Shard, are you sure?$"
 
+gText_Lelouch_Exp4Cost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 4\n"
+	.string "costs one Red Shard, are you sure?$"
+
 gText_Lelouch_EVHPCost:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training HP\n"
 	.string "costs one Red Shard, are you sure?$"

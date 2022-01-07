@@ -3132,6 +3132,8 @@ extern const u8 gText_OtherService[];
 
 extern const u8 gText_ExpTraining1[];
 extern const u8 gText_ExpTraining2[];
+extern const u8 gText_ExpTraining3[];
+extern const u8 gText_ExpTraining4[];
 
 extern const u8 gText_OneFreshWater[];
 extern const u8 gText_TenFreshWater[];
