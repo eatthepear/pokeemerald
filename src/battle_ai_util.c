@@ -630,13 +630,13 @@ u32 GetTotalBaseStat(u32 species)
 bool32 IsTruantMonVulnerable(u32 battlerAI, u32 opposingBattler)
 {
     int i;
+    u16 *moves = GetMovesArray(opposingBattler);
 
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
-        u32 move = gBattleResources->battleHistory->usedMoves[opposingBattler][i];
-        if (gBattleMoves[move].effect == EFFECT_PROTECT && move != MOVE_ENDURE)
+        if (gBattleMoves[moves[i]].effect == EFFECT_PROTECT && moves[i] != MOVE_ENDURE)
             return TRUE;
-        if (gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE && AI_WhoStrikesFirst(battlerAI, opposingBattler) == AI_IS_SLOWER)
+        if (gBattleMoves[moves[i]].effect == EFFECT_SEMI_INVULNERABLE && GetWhoStrikesFirst(battlerAI, opposingBattler, TRUE) == 1)
             return TRUE;
     }
     return FALSE;
@@ -1033,7 +1033,7 @@ bool32 CanTargetFaintAi(u8 battlerDef, u8 battlerAtk)
 {
     s32 i, dmg;
     u32 unusable = CheckMoveLimitations(battlerDef, 0, MOVE_LIMITATIONS_ALL);
-    u16 *moves = gBattleResources->battleHistory->usedMoves[battlerDef];
+    u16 *moves = GetMovesArray(battlerDef);
 
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
@@ -1090,7 +1090,7 @@ bool32 CanTargetFaintAiWithMod(u8 battlerDef, u8 battlerAtk, s32 hpMod, s32 dmgM
     u32 i;
     u32 unusable = CheckMoveLimitations(battlerDef, 0, MOVE_LIMITATIONS_ALL);
     s32 dmg;
-    u16 *moves = gBattleResources->battleHistory->usedMoves[battlerDef];
+    u16 *moves = GetMovesArray(battlerDef);
     u32 hpCheck = gBattleMons[battlerAtk].hp + hpMod;
 
     if (hpCheck > gBattleMons[battlerAtk].maxHP)
@@ -1126,8 +1126,9 @@ s32 AI_GetAbility(u32 battlerId)
 {
     u32 knownAbility = GetBattlerAbility(battlerId);
     
-    // The AI knows its own ability.
-    if (IsBattlerAIControlled(battlerId))
+    // The AI knows its own ability, and "Smart" AI knows the player's ability too. This prevents it from
+    // getting cheesed due to the fact that it forgets the player's ability on switching out.
+    if (IsBattlerAIControlled(battlerId) || (AI_THINKING_STRUCT->aiFlags & AI_FLAG_KNOWLEDGABLE))
         return knownAbility;
     
     // Check neutralizing gas, gastro acid
@@ -1147,7 +1148,7 @@ s32 AI_GetAbility(u32 battlerId)
         u16 abilityGuess = ABILITY_NONE;
         while (abilityGuess == ABILITY_NONE)
         {
-            abilityGuess = gBaseStats[gBattleMons[battlerId].species].abilities[Random() % NUM_ABILITY_SLOTS];
+            abilityGuess = gBaseStats[gBattleMons[battlerId].species].abilities[Random() % 2];
         }
         
         return abilityGuess;
@@ -1826,7 +1827,11 @@ bool32 CanIndexMoveFaintTarget(u8 battlerAtk, u8 battlerDef, u8 index, u8 numHit
 
 u16 *GetMovesArray(u32 battler)
 {
-    if (IsBattlerAIControlled(battler) || IsBattlerAIControlled(BATTLE_PARTNER(battler)))
+    // "Smart" AI reads player's moves to simulate knowledge of Pokemon learnsets.
+    // As a human player you know that Salamence learns Flamethrower and that leaving your Scizor
+    // in on it is a bad idea. The AI doesn't have this knowledge, and this is the simplest way to fix that.
+    if (IsBattlerAIControlled(battler) || IsBattlerAIControlled(BATTLE_PARTNER(battler)) 
+        || (AI_THINKING_STRUCT->aiFlags & AI_FLAG_KNOWLEDGABLE))
         return gBattleMons[battler].moves;
     else
         return gBattleResources->battleHistory->usedMoves[battler];
