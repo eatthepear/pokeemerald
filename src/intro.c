@@ -1160,8 +1160,9 @@ static u8 SetUpCopyrightScreen(void)
         break;
 
     case 255:
-        CreateTask(Task_Scene1_Load, 0);
-        SetMainCallback2(MainCB2_Intro);
+        /*CreateTask(Task_Scene1_Load, 0);
+        SetMainCallback2(MainCB2_Intro);*/
+        SetMainCallback2(MainCB2_EndIntro);
         if (gMultibootProgramStruct.gcmb_field_2 != 0)
         {
             if (gMultibootProgramStruct.gcmb_field_2 == 2)
