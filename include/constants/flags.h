@@ -1061,7 +1061,7 @@
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
 #define FLAG_ITEM_ZONE5A_1000                                       0x3F5
 #define FLAG_ITEM_ZONE6A_NET_BALL                                   0x3F6
-#define FLAG_ITEM_ZONE6A_SOOTHE_BELL                                0x3F7
+#define FLAG_ITEM_ZONE6A_POKE_BALL                                  0x3F7
 #define FLAG_ITEM_ZONE6A_NEST_BALL                                  0x3F8
 #define FLAG_ITEM_ZONE7A_SHARP_BEAK                                 0x3F9
 #define FLAG_ITEM_ZONE7A_SUPER_POTION                               0x3FA

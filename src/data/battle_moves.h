@@ -3443,8 +3443,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_RETURN] =
     {
-        .effect = EFFECT_RETURN,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 102,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 25,

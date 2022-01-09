@@ -681,7 +681,6 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in
     .ability = ABILITY_SLOT_2, //Intimidate
     .species = SPECIES_STARAVIA, //Starts with aura +1 Speed
     .heldItem = ITEM_SITRUS_BERRY,
-    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_RETURN, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR}
     },
     {
@@ -1055,7 +1054,6 @@ static const struct TrainerMon sParty_Jake[] = {//Leviathan 6, Default
     .ability = ABILITY_SLOT_1, //Scrappy
     .species = SPECIES_FARFETCHD_GALARIAN, //Starts with aura +2 Speed
     .heldItem = ITEM_LUM_BERRY,
-    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_BRICK_BREAK, MOVE_KNOCK_OFF, MOVE_RETURN, MOVE_SWORDS_DANCE}
     }
 };
@@ -3074,7 +3072,6 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     .ability = ABILITY_SLOT_1, //Scrappy
     .species = SPECIES_KANGASKHAN,
     .heldItem = ITEM_LIFE_ORB,
-    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_HAMMER_ARM, MOVE_FAKE_OUT}
     }
 };
@@ -3203,7 +3200,6 @@ static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan 4, fou
     .ability = ABILITY_SLOT_2, //Intimidate
     .species = SPECIES_STARAVIA, //Starts with aura +1 all stats
     .heldItem = ITEM_SITRUS_BERRY,
-    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_RETURN, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR}
     },
     {
@@ -3519,7 +3515,6 @@ static const struct TrainerMon sParty_Pirate2Brutal[] = {//Brutal
     .iv = 20,
     .lvl = 32,
     .species = SPECIES_KINGLER,
-    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_RAZOR_SHELL, MOVE_AQUA_JET, MOVE_KNOCK_OFF, MOVE_RETURN}
     }
 };
@@ -3732,7 +3727,6 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     .ability = ABILITY_SLOT_1, //Scrappy, turns into Parental Bond after Mega Evolving
     .species = SPECIES_KANGASKHAN,
     .heldItem = ITEM_KANGASKHANITE,
-    .friendship = TRAINER_MON_FRIENDLY,
     .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_POWER_UP_PUNCH, MOVE_FAKE_OUT}
     }
 };
