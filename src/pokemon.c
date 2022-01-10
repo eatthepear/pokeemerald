@@ -8515,6 +8515,18 @@ void SetStarterFatefulEncounter(void)
     SetMonData(&gPlayerParty[0], MON_DATA_MET_LOCATION, &metLocation);
 }
 
+void SetEeveeGivenAtEncounter(void)
+{
+    u8 i;
+    u8 metLocation = METLOC_DAYCARE_GIVEAWAY;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_EEVEE) && (GetMonData(&gPlayerParty[i], MON_DATA_MET_LOCATION, NULL) == MAPSEC_ZONE_0))
+           break;
+    }
+    SetMonData(&gPlayerParty[i], MON_DATA_MET_LOCATION, &metLocation);
+}
+
 void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature)
 {
     u32 personality;

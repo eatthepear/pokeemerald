@@ -64,15 +64,16 @@ Zone0C_EventScript_EeveeGirl::
 	msgbox Zone0C_Text_EeveeGiveaway, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0C_EventScript_NoThanks
-	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq Zone0C_EventScript_SendEeveePC
+	goto_if_eq Zone0C_EventScript_CantGiveFullParty
 	goto Zone0C_EventScript_SendEeveeParty
 	end
 
 Zone0C_EventScript_SendEeveeParty::
+	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
 	givecustommon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 1
+	callnative SetEeveeGivenAtEncounter
 	setvar VAR_TEMP_1, SPECIES_EEVEE
 	call Zone0C_EventScript_ReceivedEeveeFanfare
 	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
@@ -83,21 +84,14 @@ Zone0C_EventScript_SendEeveeParty::
 	goto Zone0C_EventScript_ReceivedEevee
 	end
 
-Zone0C_EventScript_SendEeveePC::
-	givecustommon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 1
-	setvar VAR_TEMP_1, SPECIES_EEVEE
-	call Zone0C_EventScript_ReceivedEeveeFanfare
-	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0C_EventScript_EeveeTransferredToPC
-	call Common_EventScript_NameReceivedBoxMon
-	goto Zone0C_EventScript_EeveeTransferredToPC
+Zone0C_EventScript_CantGiveFullParty::
+	msgbox Zone0C_Text_CantGive, MSGBOX_AUTOCLOSE
+	release
 	end
 
-Zone0C_EventScript_EeveeTransferredToPC::
-	call Common_EventScript_TransferredToPC
-	goto Zone0C_EventScript_ReceivedEevee
-	end
+Zone0C_Text_CantGive:
+	.string "Looks like you've got a full party.\n"
+	.string "Make some space, then come back!$"
 
 Zone0C_EventScript_ReceivedEeveeFanfare::
 	playfanfare MUS_OBTAIN_ITEM

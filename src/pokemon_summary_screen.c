@@ -3215,12 +3215,22 @@ static void BufferMonTrainerMemo(void)
             if (sum->metLevel == 0)
                 text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
             else
-                text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
+            {
+                if (sum->metLocation == METLOC_DAYCARE_GIVEAWAY)
+                {
+                    text = gText_XNatureGivenAt;
+                }
+                else
+                {
+                    text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
+                }
+            }
         }
         else if (sum->metLocation == METLOC_FATEFUL_ENCOUNTER)
         {
             text = gText_XNatureFatefulEncounter;
         }
+        
         else if (sum->metLocation != METLOC_IN_GAME_TRADE && DidMonComeFromGBAGames())
         {
             text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureObtainedInTrade : gText_XNatureProbablyMetAt;
