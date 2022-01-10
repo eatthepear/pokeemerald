@@ -6488,7 +6488,7 @@ const struct Item gItems[] =
     {
         .name = _("Cheri Berry"),
         .itemId = ITEM_CHERI_BERRY,
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_PAR,
         .description = sCheriBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6502,7 +6502,7 @@ const struct Item gItems[] =
     {
         .name = _("Chesto Berry"),
         .itemId = ITEM_CHESTO_BERRY,
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_SLP,
         .description = sChestoBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6516,7 +6516,7 @@ const struct Item gItems[] =
     {
         .name = _("Pecha Berry"),
         .itemId = ITEM_PECHA_BERRY,
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_PSN,
         .description = sPechaBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6530,7 +6530,7 @@ const struct Item gItems[] =
     {
         .name = _("Rawst Berry"),
         .itemId = ITEM_RAWST_BERRY,
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_BRN,
         .description = sRawstBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6544,7 +6544,7 @@ const struct Item gItems[] =
     {
         .name = _("Aspear Berry"),
         .itemId = ITEM_ASPEAR_BERRY,
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_FRZ,
         .description = sAspearBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6573,7 +6573,7 @@ const struct Item gItems[] =
     {
         .name = _("Oran Berry"),
         .itemId = ITEM_ORAN_BERRY,
-        .price = 20,
+        .price = 200,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 10,
         .description = sOranBerryDesc,
@@ -6588,7 +6588,7 @@ const struct Item gItems[] =
     {
         .name = _("Persim Berry"),
         .itemId = ITEM_PERSIM_BERRY,
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_CONFUSION,
         .description = sPersimBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6616,7 +6616,7 @@ const struct Item gItems[] =
     {
         .name = _("Sitrus Berry"),
         .itemId = ITEM_SITRUS_BERRY,
-        .price = 20,
+        .price = 1000,
         #if defined(BATTLE_ENGINE) && I_SITRUS_BERRY_HEAL >= GEN_4
             .holdEffect = HOLD_EFFECT_RESTORE_PCT_HP,
             .holdEffectParam = 25,

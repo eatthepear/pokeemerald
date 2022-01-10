@@ -452,6 +452,7 @@ Shop_Unique_Varrick_4to5:
 	
 	.align 2
 Shop_Unique_Varrick_6to8:
+	.2byte ITEM_ORAN_BERRY
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_NEST_BALL
@@ -467,6 +468,7 @@ Shop_Unique_Varrick_6to8:
 	
 	.align 2
 Shop_Unique_Varrick_9to10:
+	.2byte ITEM_ORAN_BERRY
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_NEST_BALL
@@ -495,6 +497,7 @@ Shop_Unique_Varrick_9to10:
 
 	.align 2
 Shop_Unique_Varrick_11to14:
+	.2byte ITEM_ORAN_BERRY
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_MIRACLE_SEED
@@ -523,6 +526,7 @@ Shop_Unique_Varrick_11to14:
 
 	.align 2
 Shop_Unique_Varrick_15to20:
+	.2byte ITEM_ORAN_BERRY
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_SCOPE_LENS
@@ -555,6 +559,14 @@ Shop_Unique_Varrick_15to20:
 
 	.align 2
 Shop_Unique_Varrick_21to23:
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_SCOPE_LENS
@@ -591,6 +603,14 @@ Shop_Unique_Varrick_21to23:
 
 	.align 2
 Shop_Unique_Varrick_24to25:
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_SCOPE_LENS
@@ -631,6 +651,14 @@ Shop_Unique_Varrick_26to30:
 	.2byte ITEM_POWER_LENS
 	.2byte ITEM_POWER_BAND
 	.2byte ITEM_POWER_ANKLET
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_EVIOLITE
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
@@ -665,6 +693,14 @@ Shop_Unique_Varrick_26to30:
 	.align 2
 Shop_Unique_Varrick_26to30_Brutal:
 	.2byte ITEM_EXP_SHARE
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_EVIOLITE
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
