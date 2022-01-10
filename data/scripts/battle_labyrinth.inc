@@ -36,6 +36,7 @@ EventScript_Shop_General::
 	lock
 	faceplayer
 	call_if_unset FLAG_TIM_INTRO, EventScript_Shop_TimIntro
+	call_if_gt VAR_ZONE, 20, EventScript_Shop_CheckTimSuperPotionDiscount
 	message gText_Tim_Welcome
 	waitmessage
 	switch VAR_ZONE
@@ -348,6 +349,15 @@ EventScript_Shop_General_End:
 EventScript_Shop_TimIntro:
 	msgbox gText_Tim_Intro, MSGBOX_AUTOCLOSE
 	setflag FLAG_TIM_INTRO
+	return
+
+EventScript_Shop_CheckTimSuperPotionDiscount:
+	call_if_unset FLAG_TIM_SUPER_POTION_INTRO, EventScript_Shop_TimExplainSuperPotionDiscount
+	return
+
+EventScript_Shop_TimExplainSuperPotionDiscount:
+	msgbox gText_Tim_ExplainSuperPotionDiscount, MSGBOX_AUTOCLOSE
+	setflag FLAG_TIM_SUPER_POTION_INTRO
 	return
 
 EventScript_Shop_Unique_Varrick::

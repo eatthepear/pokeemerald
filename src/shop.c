@@ -38,6 +38,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "event_data.h"
 
 #define TAG_SCROLL_ARROW   2100
 #define TAG_ITEM_ICON_BASE 2110
@@ -1121,6 +1122,10 @@ static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
         if (tItemId == ITEM_POKE_BALL && tItemCount > 9 && AddBagItem(ITEM_PREMIER_BALL, 1) == TRUE)
         {
             BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
+        }
+        else if (VarGet(VAR_ZONE) > 20 && tItemId == ITEM_POTION && tItemCount > 9 && AddBagItem(ITEM_SUPER_POTION, 1) == TRUE)
+        {
+            BuyMenuDisplayMessage(taskId, gText_ThrowInSuperPotion, BuyMenuReturnToItemList);
         }
         else
         {
