@@ -457,7 +457,7 @@ static const struct TrainerMon sParty_Melanie[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_MILCERY,
+    .species = SPECIES_COMFEY,
     }
 };
 
@@ -476,6 +476,11 @@ static const struct TrainerMon sParty_Constance[] = {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_HOPPIP,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_MILCERY,
     }
 };
 
@@ -520,11 +525,11 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     {
     .iv = 31,
     .lvl = 16,
-    .nature = NATURE_BOLD,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Triage
-    .species = SPECIES_COMFEY,
-    .moves = {MOVE_DRAINING_KISS, MOVE_FLOWER_SHIELD, MOVE_LEECH_SEED, MOVE_GROWTH}
+    .ability = ABILITY_SLOT_1, //Adamant
+    .species = SPECIES_HERDIER,
+    .moves = {MOVE_RETURN, MOVE_BITE, MOVE_HOWL, MOVE_LEER}
     }
 };
 
@@ -1886,8 +1891,7 @@ static const struct TrainerMon sParty_Desiree[] = {//Zone 18 Speed Room, Double 
     {
     .iv = 10,
     .lvl = 29,
-    .species = SPECIES_LOMBRE,
-    .moves = {MOVE_ICY_WIND, MOVE_LEECH_SEED, MOVE_NATURE_POWER, MOVE_BUBBLE_BEAM}
+    .species = SPECIES_BIBAREL,
     }
 };
 
@@ -1901,8 +1905,8 @@ static const struct TrainerMon sParty_Pam[] = {//Zone 18 Support Room, Double Ba
     {
     .iv = 10,
     .lvl = 29,
-    .species = SPECIES_HERDIER,
-    .moves = {MOVE_HELPING_HAND, MOVE_RETALIATE, MOVE_ROAR, MOVE_CRUNCH}
+    .species = SPECIES_LOMBRE,
+    .moves = {MOVE_FAKE_OUT, MOVE_BUBBLE_BEAM, MOVE_MEGA_DRAIN, MOVE_RAIN_DANCE}
     }
 };
 
@@ -2973,7 +2977,7 @@ static const struct TrainerMon sParty_Nadine[] = {
     {
     .iv = 20,
     .lvl = 38,
-    .species = SPECIES_BIBAREL,
+    .species = SPECIES_CHANSEY,
     }
 };
 
@@ -3169,6 +3173,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Poison Point
     .species = SPECIES_ROSELIA,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
@@ -3178,16 +3183,18 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Cloud Nine
     .species = SPECIES_PSYDUCK,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_CONFUSION, MOVE_TAIL_WHIP, MOVE_FURY_SWIPES}
     },
     {
     .iv = 31,
     .lvl = 16,
-    .nature = NATURE_BOLD,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Triage
-    .species = SPECIES_COMFEY,
-    .moves = {MOVE_DRAINING_KISS, MOVE_FLOWER_SHIELD, MOVE_LEECH_SEED, MOVE_GROWTH}
+    .ability = ABILITY_SLOT_1, //Adamant
+    .species = SPECIES_HERDIER,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_RETURN, MOVE_BITE, MOVE_HOWL, MOVE_LEER}
     }
 };
 
