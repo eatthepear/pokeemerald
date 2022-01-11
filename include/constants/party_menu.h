@@ -36,14 +36,15 @@
 #define TUTOR_MOVE_ROOST           21
 #define TUTOR_MOVE_SYNTHESIS       22
 #define TUTOR_MOVE_TAILWIND        23
-#define TUTOR_MOVE_SPACIAL_REND    24
-#define TUTOR_MOVE_SWIFT           25
-#define TUTOR_MOVE_DEFENSE_CURL    26
-#define TUTOR_MOVE_ROCK_SLIDE      27
-#define TUTOR_MOVE_EXPLOSION       28
-#define TUTOR_MOVE_FURY_CUTTER     29
-#define TUTOR_MOVE_COUNT           30
-
+#define TUTOR_MOVE_AQUA_TAIL       24
+#define TUTOR_MOVE_DRAGON_PULSE    25
+#define TUTOR_MOVE_EARTH_POWER     26
+#define TUTOR_MOVE_EXPANDING_FORCE 27
+#define TUTOR_MOVE_GRASS_KNOT      28
+#define TUTOR_MOVE_HEAT_WAVE       29
+#define TUTOR_MOVE_POLTERGEIST     30
+#define TUTOR_MOVE_SUPERPOWER      31
+#define TUTOR_MOVE_COUNT           32
 #define PARTY_LAYOUT_SINGLE          0
 #define PARTY_LAYOUT_DOUBLE          1
 #define PARTY_LAYOUT_MULTI           2

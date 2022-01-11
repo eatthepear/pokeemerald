@@ -3038,7 +3038,7 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     .ability = ABILITY_SLOT_1, //Disguise
     .species = SPECIES_MIMIKYU,
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PLAY_ROUGH, MOVE_SHADOW_CLAW, MOVE_HONE_CLAWS, MOVE_WOOD_HAMMER}
+    .moves = {MOVE_PLAY_ROUGH, MOVE_SHADOW_CLAW, MOVE_HONE_CLAWS, MOVE_SHADOW_SNEAK}
     },
     {
     .iv = 31,
@@ -3696,7 +3696,7 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     .ability = ABILITY_SLOT_1, //Disguise
     .species = SPECIES_MIMIKYU,
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PLAY_ROUGH, MOVE_POLTERGEIST, MOVE_SWORDS_DANCE, MOVE_WOOD_HAMMER}
+    .moves = {MOVE_PLAY_ROUGH, MOVE_SHADOW_CLAW, MOVE_SWORDS_DANCE, MOVE_SHADOW_SNEAK}
     },
     {
     .iv = 31,
