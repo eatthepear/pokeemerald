@@ -11,6 +11,7 @@
  * Some bosses are optional on Default and are commented as such. However, on Brutal, all trainers are mandatory.
  * 
  * If a Pokemon does not have a specified parameter (for example the nature) then it is usually determined randomly.
+ * Abilities are by default set to the first ability.
  * EVs are by default set to 0.
  * 
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
@@ -168,6 +169,7 @@ static const struct TrainerMon sParty_Boris[] = {
     .iv = 0,
     .lvl = 7,
     .species = SPECIES_PACHIRISU,
+    .ability = ABILITY_SLOT_2, //Volt Absorb
     }
 };
 
@@ -938,7 +940,7 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     .iv = 31,
     .lvl = 20,
     .nature = NATURE_MODEST,
-    .ability = ABILITY_SLOT_1, //Blaze
+    .ability = ABILITY_SLOT_2, //Magic Guard
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRAIXEN,
     .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FIRE_SPIN, MOVE_FLAME_CHARGE}
@@ -3235,7 +3237,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan 5, Battle s
     .iv = 31,
     .lvl = 20,
     .nature = NATURE_MODEST,
-    .ability = ABILITY_SLOT_1, //Blaze
+    .ability = ABILITY_SLOT_2, //Magic Guard
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRAIXEN,
     .moves = {MOVE_INCINERATE, MOVE_PSYBEAM, MOVE_FIRE_SPIN, MOVE_SCORCHING_SANDS}
