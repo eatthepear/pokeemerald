@@ -2676,7 +2676,7 @@ static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Double Batt
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Competitive
     .species = SPECIES_MILOTIC,
-    .moves = {MOVE_SURF, MOVE_ICY_WIND, MOVE_RECOVER, MOVE_MIRROR_COAT}
+    .moves = {MOVE_SURF, MOVE_DAZZLING_GLEAM, MOVE_RECOVER, MOVE_MIRROR_COAT}
     },
     {
     .iv = 31,
@@ -3652,8 +3652,8 @@ static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Doubl
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Competitive
     .species = SPECIES_MILOTIC,
-    .heldItem = ITEM_MYSTIC_WATER,
-    .moves = {MOVE_SURF, MOVE_ICY_WIND, MOVE_RECOVER, MOVE_MIRROR_COAT}
+    .heldItem = ITEM_WACAN_BERRY,
+    .moves = {MOVE_SURF, MOVE_DAZZLING_GLEAM, MOVE_RECOVER, MOVE_MIRROR_COAT}
     },
     {
     .iv = 31,
