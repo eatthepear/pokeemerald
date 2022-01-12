@@ -7479,6 +7479,8 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         switch (sPokedexView->screenSwitchState)
         {
         case 1:
+            FreeAllWindowBuffers();
+            InitWindows(sInfoScreen_WindowTemplates);
             gTasks[taskId].func = Task_LoadInfoScreen;
             break;
         case 2:
