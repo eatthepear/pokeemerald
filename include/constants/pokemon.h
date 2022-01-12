@@ -398,9 +398,9 @@
 #define EVO_BEAUTY           13 // Pokémon levels up with beauty ≥ specified value
 #define EVO_LEVEL_FEMALE     14 // Pokémon reaches the specified level, is female
 #define EVO_LEVEL_MALE       15 // Pokémon reaches the specified level, is male
-#define EVO_LEVEL_NIGHT      16 // Pokémon reaches the specified level, is night
-#define EVO_LEVEL_DAY        17 // Pokémon reaches the specified level, is day
-#define EVO_LEVEL_DUSK       18 // Pokémon reaches the specified level, is dusk (5-6 P.M)
+#define EVO_LEVEL_NATURE_MIDDAY     16 // Pokémon reaches the specified level with a Lycanroc-Midday Nature
+#define EVO_LEVEL_NATURE_MIDNIGHT   17 // Pokémon reaches the specified level with a Lycanroc-Midnight Nature
+#define EVO_LEVEL_NATURE_DUSK       18 // Pokémon reaches the specified level with a Lycanroc-Dusk Nature
 #define EVO_ITEM_HOLD        19 // Pokémon levels up, holds specified item at day
 #define EVO_MOVE             20 // Pokémon levels up, knows specified move
 #define EVO_MOVE_TYPE        21 // Pokémon levels up, knows move with specified type
