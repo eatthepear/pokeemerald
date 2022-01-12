@@ -4412,24 +4412,24 @@
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE0SANCTUARY",
-      "name": "Zone0Sanctuary_Layout",
+      "id": "LAYOUT_SANCTUARY",
+      "name": "Sanctuary_Layout",
       "width": 45,
       "height": 25,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone0Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone0Sanctuary/map.bin"
+      "border_filepath": "data/layouts/Sanctuary/border.bin",
+      "blockdata_filepath": "data/layouts/Sanctuary/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE0SHOPS",
-      "name": "Zone0Shops_Layout",
+      "id": "LAYOUT_SHOPS",
+      "name": "Shops_Layout",
       "width": 23,
       "height": 23,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone0Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone0Shops/map.bin"
+      "border_filepath": "data/layouts/Shops/border.bin",
+      "blockdata_filepath": "data/layouts/Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE1A",
