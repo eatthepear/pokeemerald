@@ -4442,26 +4442,6 @@
       "blockdata_filepath": "data/layouts/Zone1A/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE1SANCTUARY",
-      "name": "Zone1Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone1Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone1Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE1SHOPS",
-      "name": "Zone1Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone1Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone1Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE2A",
       "name": "Zone2A_Layout",
       "width": 20,
@@ -4482,26 +4462,6 @@
       "blockdata_filepath": "data/layouts/Zone2B/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE2SANCTUARY",
-      "name": "Zone2Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone2Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone2Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE2SHOPS",
-      "name": "Zone2Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone2Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone2Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE3A",
       "name": "Zone3A_Layout",
       "width": 40,
@@ -4510,26 +4470,6 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Zone3A/border.bin",
       "blockdata_filepath": "data/layouts/Zone3A/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE3SANCTUARY",
-      "name": "Zone3Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone3Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone3Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE3SHOPS",
-      "name": "Zone3Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone3Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone3Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE3UNUSED",
@@ -4592,26 +4532,6 @@
       "blockdata_filepath": "data/layouts/Zone4E/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE4SANCTUARY",
-      "name": "Zone4Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone4Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone4Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE4SHOPS",
-      "name": "Zone4Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone4Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone4Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE5A",
       "name": "Zone5A_Layout",
       "width": 60,
@@ -4622,26 +4542,6 @@
       "blockdata_filepath": "data/layouts/Zone5A/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE5SANCTUARY",
-      "name": "Zone5Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone5Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone5Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE5SHOPS",
-      "name": "Zone5Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone5Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone5Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE6A",
       "name": "Zone6A_Layout",
       "width": 45,
@@ -4650,26 +4550,6 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone6A/border.bin",
       "blockdata_filepath": "data/layouts/Zone6A/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE6SANCTUARY",
-      "name": "Zone6Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone6Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone6Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE6SHOPS",
-      "name": "Zone6Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone6Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone6Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE7A",
@@ -4730,26 +4610,6 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Zone7B/border.bin",
       "blockdata_filepath": "data/layouts/Zone7B/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE8SANCTUARY",
-      "name": "Zone8Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone8Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone8Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE8SHOPS",
-      "name": "Zone8Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone8Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone8Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE9A",
@@ -4822,26 +4682,6 @@
       "blockdata_filepath": "data/layouts/Zone9G/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE9SANCTUARY",
-      "name": "Zone9Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone9Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone9Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE9SHOPS",
-      "name": "Zone9Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone9Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone9Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE10A",
       "name": "Zone10A_Layout",
       "width": 60,
@@ -4860,26 +4700,6 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Zone10B/border.bin",
       "blockdata_filepath": "data/layouts/Zone10B/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE10SANCTUARY",
-      "name": "Zone10Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone10Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone10Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE10SHOPS",
-      "name": "Zone10Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone10Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone10Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE0A",
@@ -4932,26 +4752,6 @@
       "blockdata_filepath": "data/layouts/Zone11A/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE11SANCTUARY",
-      "name": "Zone11Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone11Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone11Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE11SHOPS",
-      "name": "Zone11Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone11Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone11Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE12A",
       "name": "Zone12A_Layout",
       "width": 50,
@@ -4960,26 +4760,6 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone12A/border.bin",
       "blockdata_filepath": "data/layouts/Zone12A/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE12SANCTUARY",
-      "name": "Zone12Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone12Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone12Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE12SHOPS",
-      "name": "Zone12Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone12Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone12Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE13A",
@@ -5042,26 +4822,6 @@
       "blockdata_filepath": "data/layouts/Zone14C/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE14SANCTUARY",
-      "name": "Zone14Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone14Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone14Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE14SHOPS",
-      "name": "Zone14Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone14Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone14Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE15A",
       "name": "Zone15A_Layout",
       "width": 82,
@@ -5082,26 +4842,6 @@
       "blockdata_filepath": "data/layouts/Zone15B/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE15SANCTUARY",
-      "name": "Zone15Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone15Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone15Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE15SHOPS",
-      "name": "Zone15Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone15Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone15Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE16A",
       "name": "Zone16A_Layout",
       "width": 80,
@@ -5112,26 +4852,6 @@
       "blockdata_filepath": "data/layouts/Zone16A/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE16SANCTUARY",
-      "name": "Zone16Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone16Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone16Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE16SHOPS",
-      "name": "Zone16Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone16Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone16Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE17A",
       "name": "Zone17A_Layout",
       "width": 33,
@@ -5140,26 +4860,6 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Zone17A/border.bin",
       "blockdata_filepath": "data/layouts/Zone17A/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE17SANCTUARY",
-      "name": "Zone17Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone17Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone17Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE17SHOPS",
-      "name": "Zone17Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone17Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone17Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE18A",
@@ -5222,26 +4922,6 @@
       "blockdata_filepath": "data/layouts/Zone19D/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE19SANCTUARY",
-      "name": "Zone19Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone19Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone19Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE19SHOPS",
-      "name": "Zone19Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone19Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone19Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE20A",
       "name": "Zone20A_Layout",
       "width": 20,
@@ -5250,26 +4930,6 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/Zone20A/border.bin",
       "blockdata_filepath": "data/layouts/Zone20A/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE20SANCTUARY",
-      "name": "Zone20Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone20Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone20Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE20SHOPS",
-      "name": "Zone20Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone20Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone20Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE21A",
@@ -5312,26 +4972,6 @@
       "blockdata_filepath": "data/layouts/Zone21D/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE21SANCTUARY",
-      "name": "Zone21Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone21Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone21Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE21SHOPS",
-      "name": "Zone21Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone21Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone21Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE22A",
       "name": "Zone22A_Layout",
       "width": 67,
@@ -5342,26 +4982,6 @@
       "blockdata_filepath": "data/layouts/Zone22A/map.bin"
     },
     {
-      "id": "LAYOUT_ZONE22SANCTUARY",
-      "name": "Zone22Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone22Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone22Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE22SHOPS",
-      "name": "Zone22Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone22Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone22Shops/map.bin"
-    },
-    {
       "id": "LAYOUT_ZONE23A",
       "name": "Zone23A_Layout",
       "width": 77,
@@ -5370,26 +4990,6 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Zone23A/border.bin",
       "blockdata_filepath": "data/layouts/Zone23A/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE23SANCTUARY",
-      "name": "Zone23Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone23Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone23Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE23SHOPS",
-      "name": "Zone23Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone23Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone23Shops/map.bin"
     },
     {
       "id": "LAYOUT_ZONE24A",
@@ -5530,26 +5130,6 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/Zone25L/border.bin",
       "blockdata_filepath": "data/layouts/Zone25L/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE25SANCTUARY",
-      "name": "Zone25Sanctuary_Layout",
-      "width": 45,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/Zone25Sanctuary/border.bin",
-      "blockdata_filepath": "data/layouts/Zone25Sanctuary/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE25SHOPS",
-      "name": "Zone25Shops_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Zone25Shops/border.bin",
-      "blockdata_filepath": "data/layouts/Zone25Shops/map.bin"
     }
   ]
 }

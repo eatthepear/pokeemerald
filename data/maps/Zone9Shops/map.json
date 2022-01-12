@@ -1,7 +1,7 @@
 {
   "id": "MAP_ZONE9SHOPS",
   "name": "Zone9Shops",
-  "layout": "LAYOUT_ZONE9SHOPS",
+  "layout": "LAYOUT_SHOPS",
   "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_9",
   "requires_flash": false,

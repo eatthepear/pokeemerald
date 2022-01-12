@@ -1,7 +1,7 @@
 {
   "id": "MAP_ZONE23SHOPS",
   "name": "Zone23Shops",
-  "layout": "LAYOUT_ZONE23SHOPS",
+  "layout": "LAYOUT_SHOPS",
   "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_23",
   "requires_flash": false,

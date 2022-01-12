@@ -1,7 +1,7 @@
 {
   "id": "MAP_ZONE3SANCTUARY",
   "name": "Zone3Sanctuary",
-  "layout": "LAYOUT_ZONE3SANCTUARY",
+  "layout": "LAYOUT_SANCTUARY",
   "music": "MUS_DP_SEQ_D_KOUEN",
   "region_map_section": "MAPSEC_ZONE_3",
   "requires_flash": false,
