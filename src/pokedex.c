@@ -340,7 +340,7 @@ static void SetSpriteInvisibility(u8 spriteArrayId, bool8 invisible);
 static void CreateTypeIconSprites(void);
 //Stats screen HGSS_Ui
 #define SCROLLING_MON_X 146
-#define HGSS_DECAPPED 0 //0 false, 1 true
+#define HGSS_DECAPPED 1 //0 false, 1 true
 #define HGSS_DARK_MODE 0 //0 false, 1 true
 #define HGSS_HIDE_UNSEEN_EVOLUTION_NAMES 0 //0 false, 1 true
 static void LoadTilesetTilemapHGSS(u8 page);
@@ -3772,11 +3772,18 @@ static void Task_HandleInfoScreenInput(u8 taskId)
 
     if ((JOY_NEW(DPAD_RIGHT) || (JOY_NEW(R_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)))
     {
-        sPokedexView->selectedScreen = AREA_SCREEN;
-        BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
-        sPokedexView->screenSwitchState = 1;
-        gTasks[taskId].func = Task_SwitchScreensFromInfoScreen;
-        PlaySE(SE_PIN);
+        if (!sPokedexListItem->owned)
+        {
+            PlaySE(SE_FAILURE);
+        }
+        else
+        {
+            sPokedexView->selectedScreen = STATS_SCREEN;
+            BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
+            sPokedexView->screenSwitchState = 1;
+            gTasks[taskId].func = Task_SwitchScreensFromInfoScreen;
+            PlaySE(SE_PIN);
+        }
     }
 
 }
@@ -3789,8 +3796,7 @@ static void Task_SwitchScreensFromInfoScreen(u8 taskId)
         switch (sPokedexView->screenSwitchState)
         {
         case 1:
-        default:
-            gTasks[taskId].func = Task_LoadAreaScreen;
+            gTasks[taskId].func = Task_LoadStatsScreen;
             break;
         case 2:
             gTasks[taskId].func = Task_LoadCryScreen;
@@ -7232,7 +7238,7 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         switch (sPokedexView->screenSwitchState)
         {
         case 1:
-            gTasks[taskId].func = Task_LoadAreaScreen;
+            gTasks[taskId].func = Task_LoadInfoScreen;
             break;
         case 2:
             gTasks[taskId].func = Task_LoadCryScreen;
