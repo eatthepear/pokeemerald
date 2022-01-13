@@ -72,12 +72,19 @@ Zone0Sanctuary_EventScript_SetNuzlockeSkip:
 	end
 
 Zone0Sanctuary_EventScript_PickMode:
+	msgbox Zone0Sanctuary_Text_WouldLikeSkipModeExplanation, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_PickModeMenu
 	msgbox Zone0Sanctuary_Text_Colress_VanillaNuzlocke, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_VanillaExplained, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
 	delay 96
+	goto Zone0Sanctuary_EventScript_PickModeMenu
+	end
+
+Zone0Sanctuary_EventScript_PickModeMenu:
 	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
@@ -90,7 +97,7 @@ Zone0Sanctuary_EventScript_Vanilla:
 	msgbox Zone0Sanctuary_Text_Colress_VanillaSure, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_SetVanilla
-	goto Zone0Sanctuary_EventScript_PickMode
+	goto Zone0Sanctuary_EventScript_PickModeMenu
 	end
 
 Zone0Sanctuary_EventScript_SetVanilla:
@@ -103,7 +110,7 @@ Zone0Sanctuary_EventScript_Nuzlocke:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeSure, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_SetNuzlocke
-	goto Zone0Sanctuary_EventScript_PickMode
+	goto Zone0Sanctuary_EventScript_PickModeMenu
 	end
 
 Zone0Sanctuary_EventScript_SetNuzlocke:
@@ -153,12 +160,19 @@ Zone0Sanctuary_EventScript_SetBrutalSkip:
 	end
 
 Zone0Sanctuary_EventScript_PickDifficulty:
+	msgbox Zone0Sanctuary_Text_WouldLikeSkipDifficultyExplanation, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_PickDifficultyMenu
 	msgbox Zone0Sanctuary_Text_Colress_DefaultBrutal, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained, MSGBOX_AUTOCLOSE
 	delay 96
+	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
+	end
+
+Zone0Sanctuary_EventScript_PickDifficultyMenu:
 	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
 	switch VAR_RESULT
@@ -171,7 +185,7 @@ Zone0Sanctuary_EventScript_Default:
 	msgbox Zone0Sanctuary_Text_Colress_DefaultSure, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_SetDefault
-	goto Zone0Sanctuary_EventScript_PickDifficulty
+	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
 	end
 
 Zone0Sanctuary_EventScript_SetDefault:
@@ -184,7 +198,7 @@ Zone0Sanctuary_EventScript_Brutal:
 	msgbox Zone0Sanctuary_Text_Colress_BrutalSure, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_SetBrutal
-	goto Zone0Sanctuary_EventScript_PickDifficulty
+	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
 	end
 
 Zone0Sanctuary_EventScript_SetBrutal:
@@ -906,6 +920,10 @@ Zone0Sanctuary_Text_Colress_Welcome:
 	.string "Would you like to skip the\n"
 	.string "tutorial?$"
 
+Zone0Sanctuary_Text_WouldLikeSkipModeExplanation:
+	.string "Would you like to skip the mode\n"
+	.string "explanation?$"
+
 Zone0Sanctuary_Text_Colress_VanillaNuzlocke:
 	.string "There are two game modes:\n"
 	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} and {COLOR RED}Nuzlocke{COLOR DARK_GRAY}.\p"
@@ -943,6 +961,10 @@ Zone0Sanctuary_Text_Colress_VanillaMode:
 
 Zone0Sanctuary_Text_Colress_NuzlockeMode:
 	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled. Good luck.$"
+
+Zone0Sanctuary_Text_WouldLikeSkipDifficultyExplanation:
+	.string "Would you like to skip the difficulty\n"
+	.string "explanation?$"
 
 Zone0Sanctuary_Text_Colress_DefaultBrutal:
 	.string "There are two game difficulty settings:\n"
