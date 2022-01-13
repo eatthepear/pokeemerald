@@ -2347,6 +2347,7 @@ EventScript_AdviceAgain:
 	end
 
 EventScript_Settings:
+	setflag FLAG_IS_DEBUGGING_SAVEFILE
 	goto_if_set FLAG_NUZLOCKE_ON, EventScript_CheckDifficultyNuzlocke
 	goto EventScript_CheckDifficultyVanilla
 	end
