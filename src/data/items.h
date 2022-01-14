@@ -613,7 +613,7 @@ const struct Item gItems[] =
     {
         .name = _("Ice Heal"),
         .itemId = ITEM_ICE_HEAL,
-        .price = 100,
+        .price = 200,
         .description = sIceHealDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -626,7 +626,7 @@ const struct Item gItems[] =
     {
         .name = _("Awakening"),
         .itemId = ITEM_AWAKENING,
-        .price = 100,
+        .price = 200,
         .description = sAwakeningDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -639,7 +639,7 @@ const struct Item gItems[] =
     {
         .name = _("Full Heal"),
         .itemId = ITEM_FULL_HEAL,
-        .price = 400,
+        .price = 500,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -652,7 +652,7 @@ const struct Item gItems[] =
     {
         .name = _("Ether"),
         .itemId = ITEM_ETHER,
-        .price = 1200,
+        .price = 2000,
         .holdEffectParam = 10,
         .description = sEtherDesc,
         .pocket = POCKET_MEDICINE,
@@ -666,7 +666,7 @@ const struct Item gItems[] =
     {
         .name = _("Max Ether"),
         .itemId = ITEM_MAX_ETHER,
-        .price = 2000,
+        .price = 4000,
         .holdEffectParam = 255,
         .description = sMaxEtherDesc,
         .pocket = POCKET_MEDICINE,
@@ -680,7 +680,7 @@ const struct Item gItems[] =
     {
         .name = _("Elixir"),
         .itemId = ITEM_ELIXIR,
-        .price = 3000,
+        .price = 4000,
         .holdEffectParam = 10,
         .description = sElixirDesc,
         .pocket = POCKET_MEDICINE,
@@ -694,7 +694,7 @@ const struct Item gItems[] =
     {
         .name = _("Max Elixir"),
         .itemId = ITEM_MAX_ELIXIR,
-        .price = 4500,
+        .price = 8000,
         .holdEffectParam = 255,
         .description = sMaxElixirDesc,
         .pocket = POCKET_MEDICINE,
@@ -5176,7 +5176,7 @@ const struct Item gItems[] =
     {
         .name = _("Luck Incense"),
         .itemId = ITEM_LUCK_INCENSE,
-        .price = 20000,
+        .price = 50000,
         .holdEffect = HOLD_EFFECT_DOUBLE_PRIZE,
         .holdEffectParam = 10,
         .description = sLuckIncenseDesc,
