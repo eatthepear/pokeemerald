@@ -200,7 +200,3 @@ Zone5A_EventScript_Item1000::
 
 Zone5A_Text_Found1000:
 	.string "Found ¥1000!$"
-
-Zone5A_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
-	end

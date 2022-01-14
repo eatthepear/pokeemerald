@@ -114,15 +114,15 @@
       "x": 10,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4B",
-      "dest_warp_id": 3
+      "dest_map": "MAP_ZONE4D",
+      "dest_warp_id": 9
     },
     {
       "x": 9,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_ZONE4B",
-      "dest_warp_id": 2
+      "dest_map": "MAP_ZONE4D",
+      "dest_warp_id": 8
     }
   ],
   "coord_events": [

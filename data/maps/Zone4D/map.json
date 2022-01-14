@@ -52,6 +52,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone4D_EventScript_ItemWiseGlasses",
       "flag": "FLAG_ITEM_ZONE4D_WISE_GLASSES"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 3,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone4D_EventScript_ItemBeedrillite",
+      "flag": "FLAG_ITEM_ZONE4D_BEEDRILLITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 2,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_1"
     }
   ],
   "warp_events": [
@@ -110,6 +136,20 @@
       "elevation": 0,
       "dest_map": "MAP_ZONE4B",
       "dest_warp_id": 2
+    },
+    {
+      "x": 1,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE4A",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 2,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE4A",
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [

@@ -35,3 +35,7 @@ Zone4D_Text_FredPostBattle:
 Zone4D_EventScript_ItemWiseGlasses::
 	finditem ITEM_WISE_GLASSES
 	end
+
+Zone4D_EventScript_ItemBeedrillite::
+	finditem ITEM_BEEDRILLITE
+	end

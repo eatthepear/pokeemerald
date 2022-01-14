@@ -1111,7 +1111,7 @@
 #define FLAG_ITEM_ZONE15A_ICE_STONE                                 0x426
 #define FLAG_ITEM_ZONE15A_ZOOM_LENS                                 0x427
 #define FLAG_ITEM_ZONE3A_HYPER_POTION                               0x428
-#define FLAG_ITEM_ZONE5A_FULL_HEAL                                  0x429
+#define FLAG_ITEM_ZONE4D_BEEDRILLITE                                0x429
 #define FLAG_ITEM_ZONE16A_DIVE_BALL                                 0x42A
 #define FLAG_ITEM_ZONE16A_WATER_STONE                               0x42B
 #define FLAG_ITEM_ZONE16A_TM19                                      0x42C
