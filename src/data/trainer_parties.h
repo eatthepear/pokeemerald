@@ -109,7 +109,7 @@ static const struct TrainerMon sParty_Jeremiah[] = {
     {
     .iv = 0,
     .lvl = 6,
-    .species = SPECIES_SCATTERBUG,
+    .species = SPECIES_CATERPIE,
     },
     {
     .iv = 0,
@@ -284,7 +284,7 @@ static const struct TrainerMon sParty_Fred[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_PURRLOIN,
+    .species = SPECIES_STUNKY,
     },
     {
     .iv = 0,
@@ -509,7 +509,7 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     {
     .iv = 31,
     .lvl = 15,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Poison Point
     .species = SPECIES_ROSELIA,
@@ -518,7 +518,7 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     {
     .iv = 31,
     .lvl = 15,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_MILD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Cloud Nine
     .species = SPECIES_PSYDUCK,
@@ -527,9 +527,9 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     {
     .iv = 31,
     .lvl = 16,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Adamant
+    .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_HERDIER,
     .moves = {MOVE_RETURN, MOVE_BITE, MOVE_HOWL, MOVE_LEER}
     }
@@ -1213,7 +1213,7 @@ static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional,
     {
     .iv = 31,
     .lvl = 26,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAUGHTY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Guts
     .species = SPECIES_TIMBURR,
@@ -1223,7 +1223,7 @@ static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional,
     {
     .iv = 31,
     .lvl = 26,
-    .nature = NATURE_CAREFUL,
+    .nature = NATURE_SASSY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Overgrow
     .species = SPECIES_QUILLADIN,
@@ -1233,7 +1233,7 @@ static const struct TrainerMon sParty_KaizenBulkUp[] = {//Leviathan 7, optional,
     {
     .iv = 31,
     .lvl = 26,
-    .nature = NATURE_JOLLY,
+    .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Vital Spirit
     .species = SPECIES_VIGOROTH,
@@ -1246,7 +1246,7 @@ static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optiona
     {
     .iv = 31,
     .lvl = 26,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Illusion
     .species = SPECIES_ZORUA,
@@ -1256,7 +1256,7 @@ static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optiona
     {
     .iv = 31,
     .lvl = 26,
-    .nature = NATURE_HASTY,
+    .nature = NATURE_SERIOUS,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Lightning Rod
     .species = SPECIES_PIKACHU,
@@ -1266,7 +1266,7 @@ static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optiona
     {
     .ivs = {31, 31, 30, 30, 30, 30},
     .lvl = 26,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_RASH,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Magic Guard
     .species = SPECIES_KADABRA,
@@ -1289,7 +1289,7 @@ static const struct TrainerMon sParty_Bart[] = {
     {
     .iv = 10,
     .lvl = 24,
-    .species = SPECIES_DEDENNE,
+    .species = SPECIES_TOXEL,
     }
 };
 
@@ -1302,7 +1302,7 @@ static const struct TrainerMon sParty_Lola[] = {
     {
     .iv = 10,
     .lvl = 24,
-    .species = SPECIES_TOXEL,
+    .species = SPECIES_PURRLOIN,
     },
     {
     .iv = 10,
@@ -2534,7 +2534,7 @@ static const struct TrainerMon sParty_Lewis[] = {
     {
     .iv = 20,
     .lvl = 34,
-    .species = SPECIES_SPEWPA,
+    .species = SPECIES_METAPOD,
     }
 };
 
@@ -2812,7 +2812,7 @@ static const struct TrainerMon sParty_Kerry[] = {
     {
     .iv = 20,
     .lvl = 36,
-    .species = SPECIES_FLOETTE,
+    .species = SPECIES_BELLSPROUT,
     },
     {
     .iv = 20,
@@ -3191,9 +3191,9 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     {
     .iv = 31,
     .lvl = 16,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_JOLLY,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Adamant
+    .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_HERDIER,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_RETURN, MOVE_BITE, MOVE_HOWL, MOVE_LEER}
@@ -3298,7 +3298,7 @@ static const struct TrainerMon sParty_JakeBrutal[] = {//Leviathan 6, Brutal
 static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Brutal
     {
     .iv = 31,
-    .lvl = 26,
+    .lvl = 27,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Guts
@@ -3308,7 +3308,7 @@ static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Bru
     },
     {
     .iv = 31,
-    .lvl = 26,
+    .lvl = 27,
     .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Overgrow
@@ -3318,30 +3318,20 @@ static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Bru
     },
     {
     .iv = 31,
-    .lvl = 26,
+    .lvl = 28,
     .nature = NATURE_JOLLY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Vital Spirit
     .species = SPECIES_VIGOROTH,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BULK_UP, MOVE_SLASH, MOVE_ENCORE, MOVE_FURY_SWIPES}
-    },
-    {
-    .iv = 31,
-    .lvl = 26,
-    .nature = NATURE_BRAVE,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_2, //Strong Jaw
-    .species = SPECIES_GRANBULL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BULK_UP, MOVE_COVET, MOVE_CRUNCH, MOVE_FIRE_FANG}
     }
 };
 
 static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, Brutal
     {
     .iv = 31,
-    .lvl = 26,
+    .lvl = 27,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Illusion
@@ -3351,7 +3341,7 @@ static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, B
     },
     {
     .iv = 31,
-    .lvl = 26,
+    .lvl = 27,
     .nature = NATURE_HASTY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Lightning Rod
@@ -3361,23 +3351,13 @@ static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, B
     },
     {
     .ivs = {31, 31, 30, 30, 30, 30},
-    .lvl = 26,
+    .lvl = 28,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Magic Guard
     .species = SPECIES_KADABRA,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_CALM_MIND, MOVE_PSYBEAM, MOVE_HIDDEN_POWER, MOVE_ENCORE} //Hidden Power Fighting
-    },
-    {
-    .ivs = {31, 31, 31, 31, 30, 30},
-    .lvl = 26,
-    .nature = NATURE_RASH,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Compound Eyes
-    .species = SPECIES_VIVILLON,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CALM_MIND, MOVE_AIR_CUTTER, MOVE_SLEEP_POWDER, MOVE_HIDDEN_POWER} //Hidden Power Ground
     }
 };
 
