@@ -9773,6 +9773,7 @@ static const u8 sStunkyTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     TMHM(TM27_SLUDGE_BOMB),
     TMHM(TM23_SUNNY_DAY),
+    TMHM(TM24_THROAT_CHOP),
     // TMHM(TM50_TOXIC),
     0xFF,
 };
@@ -9794,6 +9795,7 @@ static const u8 sSkuntankTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     TMHM(TM27_SLUDGE_BOMB),
     TMHM(TM23_SUNNY_DAY),
+    TMHM(TM24_THROAT_CHOP),
     // TMHM(TM50_TOXIC),
     0xFF,
 };
