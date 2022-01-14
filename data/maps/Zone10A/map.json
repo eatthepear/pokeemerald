@@ -190,15 +190,15 @@
       "y": 26,
       "elevation": 3,
       "item": "ITEM_RED_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE10A_RED_SHARD"
+      "flag": "FLAG_HIDDEN_ITEM_ZONE10A_RED_SHARD1"
     },
     {
       "type": "hidden_item",
       "x": 41,
       "y": 18,
       "elevation": 3,
-      "item": "ITEM_BLUE_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE10A_BLUE_SHARD"
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE10A_RED_SHARD2"
     },
     {
       "type": "hidden_item",

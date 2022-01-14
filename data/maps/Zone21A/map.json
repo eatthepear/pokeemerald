@@ -362,16 +362,16 @@
       "x": 26,
       "y": 9,
       "elevation": 3,
-      "item": "ITEM_BLUE_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_BLUE_SHARD"
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_RED_SHARD1"
     },
     {
       "type": "hidden_item",
       "x": 58,
       "y": 59,
       "elevation": 3,
-      "item": "ITEM_YELLOW_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_YELLOW_SHARD"
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21A_RED_SHARD2"
     },
     {
       "type": "hidden_item",

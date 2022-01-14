@@ -53,8 +53,8 @@
       "x": 8,
       "y": 10,
       "elevation": 3,
-      "item": "ITEM_BLUE_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE21B_BLUE_SHARD"
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE21B_RED_SHARD"
     }
   ]
 }

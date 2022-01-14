@@ -23,8 +23,8 @@ Zone8Sanctuary_EventScript_Intro:
 	msgbox Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox Zone8Sanctuary_Text_RewardClear7, MSGBOX_AUTOCLOSE
-	msgbox Zone8Sanctuary_Text_7Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BLUE_SHARD, 3
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone8Sanctuary_EventScript_7RewardBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone8Sanctuary_EventScript_7RewardDefault
 	msgbox Zone8Sanctuary_Text_RewardClear8, MSGBOX_AUTOCLOSE
 	msgbox Zone8Sanctuary_Text_8Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM05
@@ -46,6 +46,16 @@ Zone8Sanctuary_EventScript_Intro:
 	waitmovement 0
 	releaseall
 	end
+
+Zone8Sanctuary_EventScript_7RewardBrutal:
+	msgbox Zone8Sanctuary_Text_7RewardBrutal, MSGBOX_AUTOCLOSE
+	giveitem ITEM_BLUE_SHARD, 2
+	return
+
+Zone8Sanctuary_EventScript_7RewardDefault:
+	msgbox Zone8Sanctuary_Text_7RewardDefault, MSGBOX_AUTOCLOSE
+	giveitem ITEM_BLUE_SHARD, 5
+	return
 
 Zone8Sanctuary_EventScript_NextZone::
 	lock
@@ -81,8 +91,11 @@ Zone8Sanctuary_Text_Colress_ReachedZone:
 Zone8Sanctuary_Text_RewardClear7:
 	.string "Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is...$"
 
-Zone8Sanctuary_Text_7Reward:
-	.string "3 Blue Shards!$"
+Zone8Sanctuary_Text_7RewardDefault:
+	.string "5 Blue Shards!$"
+
+Zone8Sanctuary_Text_7RewardBrutal:
+	.string "2 Blue Shards!$"
 
 Zone8Sanctuary_Text_RewardClear8:
 	.string "Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is...$"
