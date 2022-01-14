@@ -490,17 +490,20 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_BELLSPROUT]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_GIGA_DRAIN)
-                                            | TUTOR(MOVE_SYNTHESIS)),
+                                            | TUTOR(MOVE_SYNTHESIS)
+                                            | TUTOR(MOVE_GRASS_KNOT)),
 
     [SPECIES_WEEPINBELL]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_GIGA_DRAIN)
-                                            | TUTOR(MOVE_SYNTHESIS)),
+                                            | TUTOR(MOVE_SYNTHESIS)
+                                            | TUTOR(MOVE_GRASS_KNOT)),
 
     [SPECIES_VICTREEBEL]    = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_GIGA_DRAIN)
-                                            | TUTOR(MOVE_SYNTHESIS)),
+                                            | TUTOR(MOVE_SYNTHESIS)
+                                            | TUTOR(MOVE_GRASS_KNOT)),
 
     [SPECIES_TENTACOOL]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)

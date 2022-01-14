@@ -13226,7 +13226,7 @@
               {
                 "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_SCATTERBUG"
+                "species": "SPECIES_CATERPIE"
               },
               {
                 "min_level": 3,
@@ -13305,7 +13305,7 @@
               {
                 "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_SCATTERBUG"
+                "species": "SPECIES_CATERPIE"
               },
               {
                 "min_level": 3,
@@ -13568,7 +13568,7 @@
               {
                 "min_level": 7,
                 "max_level": 9,
-                "species": "SPECIES_PURRLOIN"
+                "species": "SPECIES_STUNKY"
               },
               {
                 "min_level": 7,
@@ -13647,7 +13647,7 @@
               {
                 "min_level": 7,
                 "max_level": 9,
-                "species": "SPECIES_PURRLOIN"
+                "species": "SPECIES_STUNKY"
               },
               {
                 "min_level": 7,
@@ -13726,7 +13726,7 @@
               {
                 "min_level": 7,
                 "max_level": 9,
-                "species": "SPECIES_PURRLOIN"
+                "species": "SPECIES_STUNKY"
               },
               {
                 "min_level": 7,
@@ -13805,7 +13805,7 @@
               {
                 "min_level": 7,
                 "max_level": 9,
-                "species": "SPECIES_PURRLOIN"
+                "species": "SPECIES_STUNKY"
               },
               {
                 "min_level": 7,
@@ -13884,7 +13884,7 @@
               {
                 "min_level": 7,
                 "max_level": 9,
-                "species": "SPECIES_PURRLOIN"
+                "species": "SPECIES_STUNKY"
               },
               {
                 "min_level": 7,
@@ -15142,12 +15142,12 @@
               {
                 "min_level": 21,
                 "max_level": 23,
-                "species": "SPECIES_DEDENNE"
+                "species": "SPECIES_PURRLOIN"
               },
               {
                 "min_level": 21,
                 "max_level": 23,
-                "species": "SPECIES_DEDENNE"
+                "species": "SPECIES_PURRLOIN"
               },
               {
                 "min_level": 21,
@@ -16416,6 +16416,26 @@
               {
                 "min_level": 34,
                 "max_level": 36,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
+                "species": "SPECIES_TANGELA"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
+                "species": "SPECIES_TANGELA"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
                 "species": "SPECIES_SHELMET"
               },
               {
@@ -16426,32 +16446,12 @@
               {
                 "min_level": 34,
                 "max_level": 36,
-                "species": "SPECIES_PINECO"
+                "species": "SPECIES_PHANTUMP"
               },
               {
                 "min_level": 34,
                 "max_level": 36,
-                "species": "SPECIES_PINECO"
-              },
-              {
-                "min_level": 34,
-                "max_level": 36,
-                "species": "SPECIES_TANGELA"
-              },
-              {
-                "min_level": 34,
-                "max_level": 36,
-                "species": "SPECIES_TANGELA"
-              },
-              {
-                "min_level": 34,
-                "max_level": 36,
-                "species": "SPECIES_FARFETCHD_GALARIAN"
-              },
-              {
-                "min_level": 34,
-                "max_level": 36,
-                "species": "SPECIES_PAWNIARD"
+                "species": "SPECIES_PUMPKABOO"
               },
               {
                 "min_level": 34,
