@@ -209,6 +209,8 @@ Zone25L_EventScript_Leviathan14Defeated:
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone25L_Text_FoundBag, MSGBOX_AUTOCLOSE
 	giveitem ITEM_GREEN_SHARD, 2
+	closemessage
+	delay 48
 	clearflag FLAG_HIDE_ZONE25L_COLRESS
 	addobject 5
 	fadeoutbgm 1
@@ -221,15 +223,28 @@ Zone25L_EventScript_Leviathan14Defeated:
 	delay 48
 	applymovement 5, Common_Movement_WalkUp
 	waitmovement 0
-	msgbox Zone25L_Text_Colress_Blast, MSGBOX_AUTOCLOSE
+	msgbox Zone25L_Text_Colress_Unfortunate, MSGBOX_AUTOCLOSE
 	delay 48
 	applymovement 5, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone25L_Text_Colress_GotAway, MSGBOX_AUTOCLOSE
+	applymovement 5, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	msgbox Zone25L_Text_Colress_Hmm, MSGBOX_AUTOCLOSE
 	delay 48
-	msgbox Zone25L_Text_Colress_Going, MSGBOX_AUTOCLOSE
+	applymovement 5, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Zone25L_Text_Colress_Resistance, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox Zone25L_Text_Colress_BringOut, MSGBOX_AUTOCLOSE
+	delay 48
+	fadescreenswapbuffers FADE_TO_BLACK
+	playse SE_WARP_OUT
+	waitse
 	removeobject 5
 	setflag FLAG_HIDE_ZONE25L_COLRESS
+	fadescreenswapbuffers FADE_FROM_BLACK
 	fadeinbgm 1
 	releaseall
 	end
@@ -243,16 +258,23 @@ Zone25L_Text_Mirage_9:
 	.string "We have to get out of here.\p"
 	.string "Command, we need evac immediately.$"
 
-Zone25L_Text_Colress_Blast:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Blast!$"
+Zone25L_Text_Colress_Unfortunate:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Unfortunate.\n"
+	.string "It appears they've escaped, again.$"
 
-Zone25L_Text_Colress_GotAway:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: They got away, again.\p"
-	.string "Those rebels will wish they never…$"
+Zone25L_Text_Colress_Hmm:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Hmm.\n"
+	.string "It seems that your battles against\l"
+	.string "these Mirages has brought out your\l"
+	.string "strength as a Trainer.$"
 
-Zone25L_Text_Colress_Going:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Never mind.\n"
-	.string "I've got to get going, now.$"
+Zone25L_Text_Colress_Resistance:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Perhaps their…{PAUSE_UNTIL_PRESS}\n"
+	.string "resistance can be put to good use…$"
+
+Zone25L_Text_Colress_BringOut:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: To bring out the power in\n"
+	.string "Pokémon…{PAUSE_UNTIL_PRESS} what else could it take?$"
 
 Zone25L_Text_FoundBag:
 	.string "There are Shards on the ground!$"
