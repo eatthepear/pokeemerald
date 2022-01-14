@@ -1284,14 +1284,14 @@ static void PrintTradesStringOnCard(void)
 
 static void BufferBerryCrushPoints(void)
 {
-    if (sData->cardType == CARD_TYPE_FRLG && sData->trainerCard.linkPoints.berryCrush)
-        ConvertIntToDecimalStringN(sData->textBerryCrushPts, sData->trainerCard.linkPoints.berryCrush, STR_CONV_MODE_RIGHT_ALIGN, 5);
+    // if (sData->cardType == CARD_TYPE_FRLG && sData->trainerCard.linkPoints.berryCrush)
+    //     ConvertIntToDecimalStringN(sData->textBerryCrushPts, sData->trainerCard.linkPoints.berryCrush, STR_CONV_MODE_RIGHT_ALIGN, 5);
 }
 
 static void PrintBerryCrushStringOnCard(void)
 {
-    if (sData->cardType == CARD_TYPE_FRLG && sData->trainerCard.linkPoints.berryCrush)
-        PrintStatOnBackOfCard(4, gText_BerryCrush, sData->textBerryCrushPts, sTrainerCardStatColors);
+    // if (sData->cardType == CARD_TYPE_FRLG && sData->trainerCard.linkPoints.berryCrush)
+    //     PrintStatOnBackOfCard(4, gText_BerryCrush, sData->textBerryCrushPts, sTrainerCardStatColors);
 }
 
 static void BufferUnionRoomStats(void)
@@ -1565,11 +1565,11 @@ static void DrawCardBackStats(void)
             FillBgTilemapBufferRect(3, 141, 27, 9, 1, 1, 1);
             FillBgTilemapBufferRect(3, 157, 27, 10, 1, 1, 1);
         }
-        if (sData->trainerCard.linkPoints.berryCrush)
-        {
-            FillBgTilemapBufferRect(3, 141, 21, 13, 1, 1, 1);
-            FillBgTilemapBufferRect(3, 157, 21, 14, 1, 1, 1);
-        }
+        // if (sData->trainerCard.linkPoints.berryCrush)
+        // {
+        //     FillBgTilemapBufferRect(3, 141, 21, 13, 1, 1, 1);
+        //     FillBgTilemapBufferRect(3, 157, 21, 14, 1, 1, 1);
+        // }
         if (sData->trainerCard.unionRoomNum)
         {
             FillBgTilemapBufferRect(3, 141, 27, 11, 1, 1, 1);

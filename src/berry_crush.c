@@ -1080,41 +1080,41 @@ static void SaveResults(void)
     presses = MathUtil_Div32(presses, time) & 0xFFFF;
     sGame->pressingSpeed = presses;
 
-    switch (sGame->playerCount)
-    {
-    case 2:
-        if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[0])
-        {
-            // New 2-player record
-            sGame->newRecord = TRUE;
-            gSaveBlock2Ptr->berryCrush.pressingSpeeds[0] = sGame->pressingSpeed;
-        }
-        break;
-    case 3:
-        if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[1])
-        {
-            // New 3-player record
-            sGame->newRecord = TRUE;
-            gSaveBlock2Ptr->berryCrush.pressingSpeeds[1] = sGame->pressingSpeed;
-        }
-        break;
-    case 4:
-        if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[2])
-        {
-            // New 4-player record
-            sGame->newRecord = TRUE;
-            gSaveBlock2Ptr->berryCrush.pressingSpeeds[2] = sGame->pressingSpeed;
-        }
-        break;
-    case 5:
-        if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[3])
-        {
-            // New 5-player record
-            sGame->newRecord = TRUE;
-            gSaveBlock2Ptr->berryCrush.pressingSpeeds[3] = sGame->pressingSpeed;
-        }
-        break;
-    }
+    // switch (sGame->playerCount)
+    // {
+    // case 2:
+    //     if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[0])
+    //     {
+    //         // New 2-player record
+    //         sGame->newRecord = TRUE;
+    //         gSaveBlock2Ptr->berryCrush.pressingSpeeds[0] = sGame->pressingSpeed;
+    //     }
+    //     break;
+    // case 3:
+    //     if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[1])
+    //     {
+    //         // New 3-player record
+    //         sGame->newRecord = TRUE;
+    //         gSaveBlock2Ptr->berryCrush.pressingSpeeds[1] = sGame->pressingSpeed;
+    //     }
+    //     break;
+    // case 4:
+    //     if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[2])
+    //     {
+    //         // New 4-player record
+    //         sGame->newRecord = TRUE;
+    //         gSaveBlock2Ptr->berryCrush.pressingSpeeds[2] = sGame->pressingSpeed;
+    //     }
+    //     break;
+    // case 5:
+    //     if (sGame->pressingSpeed > gSaveBlock2Ptr->berryCrush.pressingSpeeds[3])
+    //     {
+    //         // New 5-player record
+    //         sGame->newRecord = TRUE;
+    //         gSaveBlock2Ptr->berryCrush.pressingSpeeds[3] = sGame->pressingSpeed;
+    //     }
+    //     break;
+    // }
 
     sGame->powder = sGame->results.powder;
     if (GiveBerryPowder(sGame->powder))
@@ -1867,10 +1867,10 @@ void ShowBerryCrushRankings(void)
 
     ScriptContext2_Enable();
     taskId = CreateTask(Task_ShowRankings, 0);
-    gTasks[taskId].tPressingSpeeds(0) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[0];
-    gTasks[taskId].tPressingSpeeds(1) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[1];
-    gTasks[taskId].tPressingSpeeds(2) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[2];
-    gTasks[taskId].tPressingSpeeds(3) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[3];
+    // gTasks[taskId].tPressingSpeeds(0) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[0];
+    // gTasks[taskId].tPressingSpeeds(1) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[1];
+    // gTasks[taskId].tPressingSpeeds(2) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[2];
+    // gTasks[taskId].tPressingSpeeds(3) = gSaveBlock2Ptr->berryCrush.pressingSpeeds[3];
 }
 
 static void PrintTimer(struct BerryCrushGame_Gfx *gfx, u16 timer)
