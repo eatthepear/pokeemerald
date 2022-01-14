@@ -259,7 +259,7 @@ Zone10B_Text_BerriesOfferNuzlocke:
 	.string "can treat status conditions?\p"
 	.string "Well, I'm looking to start a Berry\n"
 	.string "farm. If you have 10 of each of\l"
-	.string "those Berries, I'll pay you ¥7500\l"
+	.string "those Berries, I'll pay you ¥5000\l"
 	.string "for them. How about it?$"
 
 Zone10B_Text_BerriesTooBad:
@@ -297,9 +297,9 @@ Zone10B_EventScript_BerryCheck:
 Zone10B_EventScript_BerryNuzlockeMoney:
 	showmoneybox 0, 0, 0
 	msgbox Zone10B_Text_BerryCraftingNuzlocke, MSGBOX_AUTOCLOSE
-	addmoney 7500, 0
+	addmoney 5000, 0
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone10B_Text_Received7500, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_Text_Received5000, MSGBOX_AUTOCLOSE
 	updatemoneybox
 	waitfanfare
 	hidemoneybox
@@ -316,10 +316,10 @@ Zone10B_Text_BerryCraftingVanilla:
 	.string "And bam! 5 Revives!$"
 
 Zone10B_Text_BerryCraftingNuzlocke:
-	.string "Thank you, and here is your ¥7500.$"
+	.string "Thank you, and here is your ¥5000.$"
 
-Zone10B_Text_Received7500:
-	.string "Received ¥7500!$"
+Zone10B_Text_Received5000:
+	.string "Received ¥5000!$"
 
 Zone10B_Text_GoodDay:
 	.string "Thank you.\n"

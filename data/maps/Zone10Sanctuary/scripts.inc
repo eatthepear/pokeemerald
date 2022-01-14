@@ -35,7 +35,7 @@ Zone10Sanctuary_EventScript_Intro:
 Zone10Sanctuary_EventScript_NuzlockeIntro:
 	showmoneybox 0, 0, 0
 	msgbox Zone10Sanctuary_Text_RewardNuzlocke, MSGBOX_AUTOCLOSE
-	addmoney 4500, 0
+	addmoney 3000, 0
 	playfanfare MUS_OBTAIN_ITEM
 	updatemoneybox
 	msgbox Zone10Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
@@ -91,7 +91,7 @@ Zone10Sanctuary_Text_Reward:
 	.string "3 Revives!$"
 
 Zone10Sanctuary_Text_RewardNuzlocke:
-	.string "¥4500!$"
+	.string "¥3000!$"
 
 Zone10Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥4500!$"
+	.string "Received ¥3000!$"

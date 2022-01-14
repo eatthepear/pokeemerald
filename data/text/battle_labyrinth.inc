@@ -121,8 +121,9 @@ gText_Advice0:
 	.string "most up to date version!$"
 
 gText_Advice1:
-	.string "You can press the Start button\n"
-	.string "while in the Bag to sort items.$"
+	.string "Press the R key to enable\n"
+	.string "or disable Auto Run.\l"
+	.string "Trust me, it's a lifesaver!$"
 
 gText_Advice2:
 	.string "Though it costs money,\n"
@@ -143,10 +144,10 @@ gText_Advice4:
 	.string "from it in the overworld.$"
 
 gText_Advice5:
-	.string "Defeating other Trainers is the\n"
-	.string "best way to make money.\p"
-	.string "Try to battle as many as you can so\n"
-	.string "you will have money to spend.$"
+	.string "Brutal difficulty can be turned off\n"
+	.string "by talking to me at any point.\p"
+	.string "Nuzlocke mode can also be turned\n"
+	.string "off by talking to me at any point.$"
 
 gText_Advice6:
 	.string "Silph Unique Item Shop hosts a huge\n"
@@ -176,9 +177,8 @@ gText_Advice10:
 	.string "the Pokémon's IVs, EVs, or stats.$"
 
 gText_Advice11:
-	.string "Press the R key to enable\n"
-	.string "or disable Auto Run.\l"
-	.string "Trust me, it's a lifesaver!$"
+	.string "You can press the Start button\n"
+	.string "while in the Bag to sort items.$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"

@@ -110,12 +110,24 @@ EventScript_Shop_General_17to25_Brutal:
 
 EventScript_Shop_General_26to30:
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_General_26to30_Brutal
+	goto_if_set FLAG_NUZLOCKE_ON, EventScript_Shop_General_26to30_DefaultNuzlocke
 	pokemart Shop_General_26to30
 	goto EventScript_Shop_General_End
 	end
 
+EventScript_Shop_General_26to30_DefaultNuzlocke:
+	pokemart Shop_General_26to30Nuzlocke
+	goto EventScript_Shop_General_End
+	end
+
 EventScript_Shop_General_26to30_Brutal:
+	goto_if_set FLAG_NUZLOCKE_ON, EventScript_Shop_General_26to30_BrutalNuzlocke
 	pokemart Shop_General_26to30_Brutal
+	goto EventScript_Shop_General_End
+	end
+
+EventScript_Shop_General_26to30_BrutalNuzlocke:
+	pokemart Shop_General_26to30_BrutalNuzlocke
 	goto EventScript_Shop_General_End
 	end
 
@@ -297,6 +309,43 @@ Shop_General_26to30:
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_ICE_HEAL
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_ETHER
+	.2byte ITEM_ELIXIR
+	.2byte ITEM_HP_UP
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_IRON
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_ZINC
+	.2byte ITEM_CARBOS
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_26to30Nuzlocke:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_X_ATTACK
@@ -321,6 +370,29 @@ Shop_General_26to30:
 
 	.align 2
 Shop_General_26to30_Brutal:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_ETHER
+	.2byte ITEM_ELIXIR
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Shop_General_26to30_BrutalNuzlocke:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
