@@ -3627,13 +3627,13 @@ static void DetermineFinalStandings(void)
 
 void SaveLinkContestResults(void)
 {
-    if ((gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK))
-    {
-        gSaveBlock2Ptr->contestLinkResults[gSpecialVar_ContestCategory][gContestFinalStandings[gContestPlayerMonIndex]] =
-        ((gSaveBlock2Ptr->contestLinkResults[gSpecialVar_ContestCategory][gContestFinalStandings[gContestPlayerMonIndex]] + 1) > 9999) ? 9999 :
-        (gSaveBlock2Ptr->contestLinkResults[gSpecialVar_ContestCategory][gContestFinalStandings[gContestPlayerMonIndex]] + 1);
+    // if ((gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK))
+    // {
+    //     gSaveBlock2Ptr->contestLinkResults[gSpecialVar_ContestCategory][gContestFinalStandings[gContestPlayerMonIndex]] =
+    //     ((gSaveBlock2Ptr->contestLinkResults[gSpecialVar_ContestCategory][gContestFinalStandings[gContestPlayerMonIndex]] + 1) > 9999) ? 9999 :
+    //     (gSaveBlock2Ptr->contestLinkResults[gSpecialVar_ContestCategory][gContestFinalStandings[gContestPlayerMonIndex]] + 1);
 
-    }
+    // }
 }
 
 static bool8 DidContestantPlaceHigher(s32 a, s32 b, struct ContestFinalStandings *standings)
@@ -5510,9 +5510,9 @@ void ResetContestLinkResults(void)
     s32 i;
     s32 j;
 
-    for(i = 0; i < CONTEST_CATEGORIES_COUNT; i++)
-        for(j = 0; j < CONTESTANT_COUNT; j++)
-            gSaveBlock2Ptr->contestLinkResults[i][j] = 0;
+    // for(i = 0; i < CONTEST_CATEGORIES_COUNT; i++)
+    //     for(j = 0; j < CONTESTANT_COUNT; j++)
+    //         gSaveBlock2Ptr->contestLinkResults[i][j] = 0;
 }
 
 bool8 SaveContestWinner(u8 rank)
