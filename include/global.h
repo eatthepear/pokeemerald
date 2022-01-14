@@ -957,7 +957,8 @@ struct SaveBlock1
               struct ItemSlot bagPocket_Medicine[BAG_MEDICINE_COUNT];
               struct ItemSlot bagPocket_BattleItems[BAG_BATTLEITEMS_COUNT];
               struct ItemSlot bagPocket_PowerUp[BAG_POWERUP_COUNT];
-    /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
+              u8 fillerStuffBleh[320];
+    // /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
     /*0x9BC*/ u16 berryBlenderRecords[3];
     /*0x9C2*/ u8 unused_9C2[6];
