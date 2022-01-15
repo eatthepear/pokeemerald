@@ -13581,6 +13581,10 @@ static void Cmd_givecaughtmon(void)
         monItem = GetMonData(pokemon, MON_DATA_HELD_ITEM, NULL);
         if (!NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) || (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) && GetMonData(pokemon, MON_DATA_HP, NULL) != 0 && (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES, NULL) && !GetMonData(pokemon, MON_DATA_IS_EGG, NULL))))
         {
+            if (monItem != ITEM_NONE)
+                AddBagItem(monItem, 1);
+            monItem = 0;
+            SetMonData(pokemon, MON_DATA_HELD_ITEM, &monItem);
             GiveMonToPlayer(pokemon);//sends the mon to the PC if it's either not nuzlocke mode or if it is nuzlocke mode but the mon has more than 0 hp
         
             /*if (!ShouldShowBoxWasFullMessage())
