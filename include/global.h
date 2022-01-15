@@ -953,9 +953,10 @@ struct SaveBlock1
     /*0x690*/ //struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
               u8 bagPocket_TMHMOwnedFlags[14]; //allow for a total of 112 TMs/HMs
               u8 fillerStuffToNotBreakSaves[148];
-    /*0x790*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT]; // needs to be 60
-              struct ItemSlot bagPocket_Medicine[BAG_MEDICINE_COUNT]; // needs to be 40
-              struct ItemSlot bagPocket_BattleItems[BAG_BATTLEITEMS_COUNT]; // needs to be 180
+    /*0x790*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
+              struct ItemSlot bagPocket_Medicine[BAG_MEDICINE_COUNT];
+              struct ItemSlot bagPocket_BattleItems[BAG_BATTLEITEMS_COUNT];
+              // PowerUp is at the bottomish, no space here
               // each ItemSlot is 4 bytes, each u8 is 1 byte
     // /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     // /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
@@ -998,7 +999,7 @@ struct SaveBlock1
     /*0x2BC8*/ u16 easyChatBattleWon[EASY_CHAT_BATTLE_WORDS_COUNT];
     /*0x2BD4*/ u16 easyChatBattleLost[EASY_CHAT_BATTLE_WORDS_COUNT];
     /*0x2BE0*/ struct Mail mail[MAIL_COUNT];
-              struct ItemSlot bagPocket_PowerUp[BAG_POWERUP_COUNT]; // needs to be 135
+              struct ItemSlot bagPocket_PowerUp[BAG_POWERUP_COUNT];
     /*0x2E20*/ u8 additionalPhrases[8]; // bitfield for 33 additional phrases in easy chat system
     /*0x2E28*/ OldMan oldMan;
     /*0x2e64*/ struct DewfordTrend dewfordTrends[SAVED_TRENDS_COUNT];
