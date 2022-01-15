@@ -821,14 +821,14 @@ static const u8 sText_Grookey[] = _("Grookey");
 static const u8 sText_Scorbunny[] = _("Scorbunny");
 static const u8 sText_Sobble[] = _("Sobble");
 static const u8 sText_Random[] = _("Random");
-static const u8 sText_FireStone[] = _("Fire Stone");
-static const u8 sText_WaterStone[] = _("Water Stone");
-static const u8 sText_ThunderStone[] = _("Thunder Stone");
-static const u8 sText_LeafStone[] = _("Leaf Stone");
-static const u8 sText_MoonStone[] = _("Moon Stone");
-static const u8 sText_SunStone[] = _("Sun Stone");
-static const u8 sText_ShinyStone[] = _("Shiny Stone");
-static const u8 sText_IceStone[] = _("Ice Stone");
+static const u8 sText_FireGem[] = _("Fire Gem");
+static const u8 sText_WaterGem[] = _("Water Gem");
+static const u8 sText_ElectricGem[] = _("Electric Gem");
+static const u8 sText_GrassGem[] = _("Grass Gem");
+static const u8 sText_DarkGem[] = _("Dark Gem");
+static const u8 sText_PsychicGem[] = _("Psychic Gem");
+static const u8 sText_FairyGem[] = _("Fairy Gem");
+static const u8 sText_IceGem[] = _("Ice Gem");
 static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
 static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
 static const u8 sText_MoveTutorLowKick[] = _("Low Kick");
@@ -903,16 +903,16 @@ static const struct ListMenuItem Starters[] =
     {sText_Random, 24},
 };
 
-static const struct ListMenuItem EvolutionaryStones[] =
+static const struct ListMenuItem EvolutionaryGems[] =
 {
-    {sText_FireStone, 0},
-    {sText_WaterStone, 1},
-    {sText_ThunderStone, 2},
-    {sText_LeafStone, 3},
-    {sText_MoonStone, 4},
-    {sText_SunStone, 5},
-    {sText_ShinyStone, 6},
-    {sText_IceStone, 7},
+    {sText_FireGem, 0},
+    {sText_WaterGem, 1},
+    {sText_ElectricGem, 2},
+    {sText_GrassGem, 3},
+    {sText_DarkGem, 4},
+    {sText_PsychicGem, 5},
+    {sText_FairyGem, 6},
+    {sText_IceGem, 7},
 };
 
 static const struct ListMenuItem MoveTutorLevel1[] =
@@ -1046,7 +1046,7 @@ struct
 } static const sScrollingSets[] =
 {
     {Starters, ARRAY_COUNT(Starters)},
-    {EvolutionaryStones, ARRAY_COUNT(EvolutionaryStones)},
+    {EvolutionaryGems, ARRAY_COUNT(EvolutionaryGems)},
     {MoveTutorLevel1, ARRAY_COUNT(MoveTutorLevel1)},
     {MoveTutorLevel2, ARRAY_COUNT(MoveTutorLevel2)},
     {MoveTutorLevel3, ARRAY_COUNT(MoveTutorLevel3)},
