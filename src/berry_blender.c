@@ -3451,8 +3451,8 @@ static void SpriteCB_PlayerArrow(struct Sprite* sprite)
 
 static void TryUpdateBerryBlenderRecord(void)
 {
-    if (gSaveBlock1Ptr->berryBlenderRecords[sBerryBlender->numPlayers - 2] < sBerryBlender->maxRPM)
-        gSaveBlock1Ptr->berryBlenderRecords[sBerryBlender->numPlayers - 2] = sBerryBlender->maxRPM;
+    // if (gSaveBlock1Ptr->berryBlenderRecords[sBerryBlender->numPlayers - 2] < sBerryBlender->maxRPM)
+    //     gSaveBlock1Ptr->berryBlenderRecords[sBerryBlender->numPlayers - 2] = sBerryBlender->maxRPM;
 }
 
 static bool8 PrintBlendingResults(void)
@@ -3771,21 +3771,21 @@ void ShowBerryBlenderRecordWindow(void)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_BlenderMaxSpeedRecord, xPos, 1, 0, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_234Players, 4, 41, 0, NULL);
 
-    for (i = 0, yPos = 41; i < NUM_SCORE_TYPES; i++)
-    {
-        u8 *txtPtr;
-        u32 record;
+    // for (i = 0, yPos = 41; i < NUM_SCORE_TYPES; i++)
+    // {
+    //     u8 *txtPtr;
+    //     u32 record;
 
-        record = gSaveBlock1Ptr->berryBlenderRecords[i];
+    //     record = gSaveBlock1Ptr->berryBlenderRecords[i];
 
-        txtPtr = ConvertIntToDecimalStringN(text, record / 100, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        txtPtr = StringAppend(txtPtr, sText_Dot);
-        txtPtr = ConvertIntToDecimalStringN(txtPtr, record % 100, STR_CONV_MODE_LEADING_ZEROS, 2);
-        txtPtr = StringAppend(txtPtr, sText_RPM);
+    //     txtPtr = ConvertIntToDecimalStringN(text, record / 100, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    //     txtPtr = StringAppend(txtPtr, sText_Dot);
+    //     txtPtr = ConvertIntToDecimalStringN(txtPtr, record % 100, STR_CONV_MODE_LEADING_ZEROS, 2);
+    //     txtPtr = StringAppend(txtPtr, sText_RPM);
 
-        xPos = GetStringRightAlignXOffset(FONT_NORMAL, text, 140);
-        AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, text, xPos, yPos + (i * 16), 0, NULL);
-    }
+    //     xPos = GetStringRightAlignXOffset(FONT_NORMAL, text, 140);
+    //     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, text, xPos, yPos + (i * 16), 0, NULL);
+    // }
 
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
