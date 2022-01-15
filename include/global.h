@@ -958,11 +958,11 @@ struct SaveBlock1
               struct ItemSlot bagPocket_BattleItems[BAG_BATTLEITEMS_COUNT]; // needs to be 180
               struct ItemSlot bagPocket_PowerUp[BAG_POWERUP_COUNT]; // needs to be 135
               // each ItemSlot is 4 bytes, each u8 is 1 byte
-              u8 fillerStuffBleh[378];
+              u8 fillerStuffBleh[384];
     // /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     // /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
     // /*0x9BC*/ u16 berryBlenderRecords[3];
-    /*0x9C2*/ u8 unused_9C2[6];
+    // /*0x9C2*/ u8 unused_9C2[6];
     /*0x9C8*/ u16 trainerRematchStepCounter;
     /*0x9CA*/ u8 trainerRematches[MAX_REMATCH_ENTRIES];
     /*0xA30*/ struct ObjectEvent objectEvents[OBJECT_EVENTS_COUNT];
