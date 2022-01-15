@@ -705,22 +705,22 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in
 static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     {
     .iv = 20,
-    .lvl = 18,
-    .nature = NATURE_ADAMANT,
+    .lvl = 16,
+    .nature = NATURE_NAUGHTY,
     .ability = ABILITY_SLOT_1, //Gale Wings
     .gender = TRAINER_MON_FEMALE,
-    .species = SPECIES_FLETCHINDER,
-    .heldItem = ITEM_NONE,
+    .species = SPECIES_FLETCHLING,
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_EMBER, MOVE_GROWL}
     },
     {
     .iv = 20,
-    .lvl = 18,
+    .lvl = 16,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Huge Power
-    .species = SPECIES_AZUMARILL,
-    .heldItem = ITEM_NONE,
+    .species = SPECIES_MARILL,
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TAIL_WHIP, MOVE_COVET}
     },
     {
@@ -730,7 +730,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Trace
     .species = SPECIES_RALTS,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_GROWL, MOVE_WILL_O_WISP}
     }
 };
