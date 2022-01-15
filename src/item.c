@@ -82,7 +82,6 @@ void DeserializeTmHmItemSlots(void)
         if (gSaveBlock1Ptr->bagPocket_TMHMOwnedFlags[i / 8] & (1<<bit))
             AddBagItem(i + ITEM_TM01, 1);
     }
-    ClearItemSlots(gBagPockets[POWERUP_POCKET].itemSlots, gBagPockets[POWERUP_POCKET].capacity);
 }
 
 void SetBagItemsPointers(void)
