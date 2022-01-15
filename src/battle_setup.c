@@ -1690,7 +1690,7 @@ static void SetRematchIdForTrainer(const struct RematchTrainer *table, u32 table
             break;
     }
 
-    gSaveBlock1Ptr->trainerRematches[tableId] = i;
+    // gSaveBlock1Ptr->trainerRematches[tableId] = i;
 }
 
 static bool32 UpdateRandomTrainerRematches(const struct RematchTrainer *table, u16 mapGroup, u16 mapNum)
@@ -1698,23 +1698,23 @@ static bool32 UpdateRandomTrainerRematches(const struct RematchTrainer *table, u
     s32 i;
     bool32 ret = FALSE;
 
-    for (i = 0; i <= REMATCH_SPECIAL_TRAINER_START; i++)
-    {
-        if (table[i].mapGroup == mapGroup && table[i].mapNum == mapNum && !IsRematchForbidden(i))
-        {
-            if (gSaveBlock1Ptr->trainerRematches[i] != 0)
-            {
-                // Trainer already wants a rematch. Don't bother updating it.
-                ret = TRUE;
-            }
-            else if (FlagGet(FLAG_MATCH_CALL_REGISTERED + i)
-             && (Random() % 100) <= 30)  // 31% chance of getting a rematch.
-            {
-                SetRematchIdForTrainer(table, i);
-                ret = TRUE;
-            }
-        }
-    }
+    // for (i = 0; i <= REMATCH_SPECIAL_TRAINER_START; i++)
+    // {
+    //     if (table[i].mapGroup == mapGroup && table[i].mapNum == mapNum && !IsRematchForbidden(i))
+    //     {
+    //         if (gSaveBlock1Ptr->trainerRematches[i] != 0)
+    //         {
+    //             // Trainer already wants a rematch. Don't bother updating it.
+    //             ret = TRUE;
+    //         }
+    //         else if (FlagGet(FLAG_MATCH_CALL_REGISTERED + i)
+    //          && (Random() % 100) <= 30)  // 31% chance of getting a rematch.
+    //         {
+    //             SetRematchIdForTrainer(table, i);
+    //             ret = TRUE;
+    //         }
+    //     }
+    // }
 
     return ret;
 }
@@ -1729,11 +1729,11 @@ static bool32 DoesSomeoneWantRematchIn_(const struct RematchTrainer *table, u16 
 {
     s32 i;
 
-    for (i = 0; i < REMATCH_TABLE_ENTRIES; i++)
-    {
-        if (table[i].mapGroup == mapGroup && table[i].mapNum == mapNum && gSaveBlock1Ptr->trainerRematches[i] != 0)
-            return TRUE;
-    }
+    // for (i = 0; i < REMATCH_TABLE_ENTRIES; i++)
+    // {
+    //     if (table[i].mapGroup == mapGroup && table[i].mapNum == mapNum && gSaveBlock1Ptr->trainerRematches[i] != 0)
+    //         return TRUE;
+    // }
 
     return FALSE;
 }
@@ -1755,12 +1755,12 @@ static bool8 IsFirstTrainerIdReadyForRematch(const struct RematchTrainer *table,
 {
     s32 tableId = FirstBattleTrainerIdToRematchTableId(table, firstBattleTrainerId);
 
-    if (tableId == -1)
-        return FALSE;
-    if (tableId >= MAX_REMATCH_ENTRIES)
-        return FALSE;
-    if (gSaveBlock1Ptr->trainerRematches[tableId] == 0)
-        return FALSE;
+    // if (tableId == -1)
+    //     return FALSE;
+    // if (tableId >= MAX_REMATCH_ENTRIES)
+    //     return FALSE;
+    // if (gSaveBlock1Ptr->trainerRematches[tableId] == 0)
+    //     return FALSE;
 
     return TRUE;
 }
@@ -1769,12 +1769,12 @@ static bool8 IsTrainerReadyForRematch_(const struct RematchTrainer *table, u16 t
 {
     s32 tableId = TrainerIdToRematchTableId(table, trainerId);
 
-    if (tableId == -1)
-        return FALSE;
-    if (tableId >= MAX_REMATCH_ENTRIES)
-        return FALSE;
-    if (gSaveBlock1Ptr->trainerRematches[tableId] == 0)
-        return FALSE;
+    // if (tableId == -1)
+    //     return FALSE;
+    // if (tableId >= MAX_REMATCH_ENTRIES)
+    //     return FALSE;
+    // if (gSaveBlock1Ptr->trainerRematches[tableId] == 0)
+    //     return FALSE;
 
     return TRUE;
 }
@@ -1825,8 +1825,8 @@ static void ClearTrainerWantRematchState(const struct RematchTrainer *table, u16
 {
     s32 tableId = TrainerIdToRematchTableId(table, firstBattleTrainerId);
 
-    if (tableId != -1)
-        gSaveBlock1Ptr->trainerRematches[tableId] = 0;
+    // if (tableId != -1)
+    //     gSaveBlock1Ptr->trainerRematches[tableId] = 0;
 }
 
 static u32 GetTrainerMatchCallFlag(u32 trainerId)
@@ -1879,8 +1879,8 @@ static bool32 IsRematchStepCounterMaxed(void)
 
 void TryUpdateRandomTrainerRematches(u16 mapGroup, u16 mapNum)
 {
-    if (IsRematchStepCounterMaxed() && UpdateRandomTrainerRematches(gRematchTable, mapGroup, mapNum) == TRUE)
-        gSaveBlock1Ptr->trainerRematchStepCounter = 0;
+    // if (IsRematchStepCounterMaxed() && UpdateRandomTrainerRematches(gRematchTable, mapGroup, mapNum) == TRUE)
+    //     gSaveBlock1Ptr->trainerRematchStepCounter = 0;
 }
 
 bool32 DoesSomeoneWantRematchIn(u16 mapGroup, u16 mapNum)
