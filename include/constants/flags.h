@@ -1071,7 +1071,7 @@
 #define FLAG_ITEM_ZONE7A_LUXURY_BALL                                0x3FE
 #define FLAG_ITEM_ZONE7A_SILVER_POWDER                              0x3FF
 #define FLAG_ITEM_ZONE8A_MAGNET                                     0x400
-#define FLAG_ITEM_ZONE8A_SMOKE_BALL                                 0x401
+#define FLAG_ITEM_ZONE8A_POKE_BALL                                  0x401
 #define FLAG_ITEM_ZONE8A_SOFT_SAND                                  0x402
 #define FLAG_ITEM_ZONE8B_DUSK_BALL                                  0x403
 #define FLAG_ITEM_ZONE8B_FULL_HEAL                                  0x404

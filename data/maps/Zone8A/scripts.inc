@@ -34,8 +34,8 @@ Zone8A_EventScript_ItemMagnet::
 	finditem ITEM_MAGNET
 	end
 
-Zone8A_EventScript_ItemSmokeBall::
-	finditem ITEM_SMOKE_BALL
+Zone8A_EventScript_ItemPokeBall::
+	finditem ITEM_POKE_BALL
 	end
 
 Zone8A_EventScript_ItemSoftSand::
