@@ -7,14 +7,14 @@ Zone8A_EventScript_Emiliano::
 	end
 
 Zone8A_Text_EmilianoIntro:
-	.string "I'm so hungry...$"
+	.string "I'm so hungry…$"
 
 Zone8A_Text_EmilianoDefeat:
 	.string "It's because I keep thinking about\n"
 	.string "pancakes!$"
 
 Zone8A_Text_EmilianoPostBattle:
-	.string "Mmm... Pancakes...$"
+	.string "Mmm… Pancakes…$"
 
 Zone8A_EventScript_Marcus::
 	trainerbattle_single TRAINER_MARCUS, Zone8A_Text_MarcusIntro, Zone8A_Text_MarcusDefeat
@@ -22,13 +22,14 @@ Zone8A_EventScript_Marcus::
 	end
 
 Zone8A_Text_MarcusIntro:
-	.string "I wonder how far this cave goes.$"
+	.string "If I win, you have to lead me out of here!$"
 
 Zone8A_Text_MarcusDefeat:
-	.string "At least there's a rest house outside.$"
+	.string "Wahhhhh!!!$"
 
 Zone8A_Text_MarcusPostBattle:
-	.string "The lady says we can only heal once.$"
+	.string "It's my destiny to wander this cave\n"
+	.string "forever…$"
 
 Zone8A_EventScript_ItemMagnet::
 	finditem ITEM_MAGNET

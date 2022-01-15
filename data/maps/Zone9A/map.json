@@ -104,6 +104,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone9A_EventScript_MiracleSeed",
       "flag": "FLAG_ITEM_ZONE9A_MIRACLE_SEED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 8,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Zone9A_EventScript_Anita",
+      "flag": "0"
     }
   ],
   "warp_events": [

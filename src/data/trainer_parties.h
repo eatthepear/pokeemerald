@@ -643,24 +643,6 @@ static const struct TrainerMon sParty_Jayden[] = {
     }
 };
 
-static const struct TrainerMon sParty_Anita[] = {
-    {
-    .iv = 0,
-    .lvl = 13,
-    .species = SPECIES_PAWNIARD,
-    },
-    {
-    .iv = 0,
-    .lvl = 13,
-    .species = SPECIES_JOLTIK,
-    },
-    {
-    .iv = 0,
-    .lvl = 13,
-    .species = SPECIES_ILLUMISE,
-    }
-};
-
 static const struct TrainerMon sParty_Neil[] = {
     {
     .iv = 0,
@@ -732,6 +714,24 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .species = SPECIES_RALTS,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_GROWL, MOVE_WILL_O_WISP}
+    }
+};
+
+static const struct TrainerMon sParty_Anita[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_PAWNIARD,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_JOLTIK,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_ILLUMISE,
     }
 };
 

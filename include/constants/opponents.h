@@ -35,10 +35,10 @@
 #define TRAINER_EMILIANO                         31
 #define TRAINER_MARCUS                           32
 #define TRAINER_JAYDEN                           33
-#define TRAINER_ANITA                            34
-#define TRAINER_NEIL                             35
-#define TRAINER_LEVIATHAN4                       36
-#define TRAINER_ZONE8D_WALLY                     37
+#define TRAINER_NEIL                             34
+#define TRAINER_LEVIATHAN4                       35
+#define TRAINER_ZONE8D_WALLY                     36
+#define TRAINER_ANITA                            37
 #define TRAINER_ARI                              38
 #define TRAINER_BERTHA                           39
 #define TRAINER_CASSANDRA                        40

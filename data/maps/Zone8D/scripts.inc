@@ -327,7 +327,6 @@ Zone8D_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_EMILIANO, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_MARCUS, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_JAYDEN, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_ANITA, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_NEIL, EventScript_BrutalExitNotSatisfied
 	return
 

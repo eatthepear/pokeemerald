@@ -240,3 +240,18 @@ Zone9A_EventScript_NoZorua:
 Zone9A_Text_EricaPostBattleNoZorua:
 	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\p"
 	.string "Well done, young one.$"
+
+Zone9A_EventScript_Anita::
+	trainerbattle_single TRAINER_ANITA, Zone9A_Text_AnitaIntro, Zone9A_Text_AnitaDefeat
+	msgbox Zone9A_Text_AnitaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone9A_Text_AnitaIntro:
+	.string "The vegetation is so thick!$"
+
+Zone9A_Text_AnitaDefeat:
+	.string "I can barely see past my nose!$"
+
+Zone9A_Text_AnitaPostBattle:
+	.string "Okay, maybe that was a bit of\n"
+	.string "an exaggeration…$"

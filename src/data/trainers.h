@@ -447,19 +447,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Jayden},
     },
 
-    [TRAINER_ANITA] =
-    {
-        .trainerClass = TRAINER_CLASS_PICNICKER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_PICNICKER,
-        .trainerName = _("Anita"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Anita),
-        .party = {.TrainerMon = sParty_Anita},
-    },
-
     [TRAINER_NEIL] =
     {
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -501,6 +488,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Zone8DWally},
     },
     
+    [TRAINER_ANITA] =
+    {
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Anita"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Anita),
+        .party = {.TrainerMon = sParty_Anita},
+    },
+
     [TRAINER_ARI] =
     {
         .trainerClass = TRAINER_CLASS_WINSTRATE,
