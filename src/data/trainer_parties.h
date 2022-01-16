@@ -3163,7 +3163,7 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     .ability = ABILITY_SLOT_1, //Berserk
     .species = SPECIES_BEAUTIFLY, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SILVER_WIND, MOVE_GUST, MOVE_ABSORB, MOVE_STUN_SPORE}
+    .moves = {MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_STUN_SPORE}
     }
 };
 
