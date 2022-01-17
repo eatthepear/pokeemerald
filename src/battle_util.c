@@ -2363,7 +2363,7 @@ u8 DoFieldEndTurnEffects(void)
                     gFieldStatuses &= ~STATUS_FIELD_GRASSY_TERRAIN;
                     TryToRevertMimicry();
                 }
-                BattleScriptExecute(BattleScript_GrassyTerrainHeals);
+                //BattleScriptExecute(BattleScript_GrassyTerrainHeals);
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
