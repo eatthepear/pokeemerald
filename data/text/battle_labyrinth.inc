@@ -357,6 +357,12 @@ gText_Lelouch_EVSpeCost:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Speed\n"
 	.string "costs one Red Shard, are you sure?$"
 
+gText_Lelouch_HaventHealedForTraining:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: It appears you are not\n"
+	.string "fully healed for training.\p"
+	.string "Perhaps visit Joy's Healing Shop\n"
+	.string "first, then come back.$"
+
 gText_Lelouch_PayRed:
 	.string "{PLAYER} handed over 1 Red Shard.$"
 

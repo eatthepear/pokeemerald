@@ -1278,10 +1278,13 @@ EventScript_Shop_LelouchExp1:
 	msgbox gText_Lelouch_Exp1Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1290,10 +1293,13 @@ EventScript_Shop_LelouchExp2:
 	msgbox gText_Lelouch_Exp2Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1302,10 +1308,13 @@ EventScript_Shop_LelouchExp3:
 	msgbox gText_Lelouch_Exp3Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1314,10 +1323,13 @@ EventScript_Shop_LelouchExp4:
 	msgbox gText_Lelouch_Exp4Cost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1326,10 +1338,13 @@ EventScript_Shop_LelouchEVHP:
 	msgbox gText_Lelouch_EVHPCost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1338,10 +1353,13 @@ EventScript_Shop_LelouchEVAtk:
 	msgbox gText_Lelouch_EVAtkCost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1350,10 +1368,13 @@ EventScript_Shop_LelouchEVDef:
 	msgbox gText_Lelouch_EVDefCost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1362,10 +1383,13 @@ EventScript_Shop_LelouchEVSpA:
 	msgbox gText_Lelouch_EVSpACost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1374,10 +1398,13 @@ EventScript_Shop_LelouchEVSpD:
 	msgbox gText_Lelouch_EVSpDCost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -1386,12 +1413,20 @@ EventScript_Shop_LelouchEVSpe:
 	msgbox gText_Lelouch_EVSpeCost, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
+	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
 	removeitem ITEM_RED_SHARD, 1
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
+	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	special HealPlayerParty
 	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
 	release
+	end
+
+EventScript_Shop_LelouchHaventHealed:
+	msgbox gText_Lelouch_HaventHealedForTraining, MSGBOX_AUTOCLOSE
+	goto EventScript_Shop_LelouchLeave
 	end
 
 EventScript_Shop_LelouchCheckReminder:
