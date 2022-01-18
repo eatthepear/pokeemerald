@@ -114,7 +114,7 @@ Zone10B_EventScript_SideQuestLuckyEgg::
 	goto_if_set FLAG_RECEIVED_ZONE10B_LUCKY_EGG, Zone10B_EventScript_LuckyEggFinished
 	msgbox Zone10B_Text_LuckyEggIntro, MSGBOX_AUTOCLOSE
 	specialvar VAR_RESULT, GetCaughtSpeciesCount
-	compare VAR_RESULT, 30
+	compare VAR_RESULT, 50
 	goto_if_ge Zone10B_EventScript_GiveLuckyEgg @go to if greater than or equal
 	applymovement 3, Common_Movement_FaceRight
 	waitmovement 0
@@ -124,7 +124,7 @@ Zone10B_EventScript_SideQuestLuckyEgg::
 Zone10B_Text_LuckyEggIntro:
 	.string "You know what would make a\n"
 	.string "Collector like me happy? Meeting\l"
-	.string "someone who has caught 30 different\l"
+	.string "someone who has caught 50 different\l"
 	.string "species of Pokémon. Now, that\l"
 	.string "person is someone I'd like to meet!$"
 
@@ -136,20 +136,20 @@ Zone10B_EventScript_GiveLuckyEgg:
 	end
 
 Zone10B_Text_GiveLuckyEgg:
-	.string "Whoah, you've caught 30 species of\n"
+	.string "Whoah, you've caught 50 species of\n"
 	.string "Pokémon? That's amazing.\p"
 	.string "I aspire to be like you. Here, I\n"
 	.string "want you to have this.$"
 
 Zone10B_EventScript_LuckyEggFinished:
-	msgbox Zone10B_Text_Maybe30, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_Text_Maybe50, MSGBOX_AUTOCLOSE
 	applymovement 3, Common_Movement_FaceRight
 	waitmovement 0
 	release
 	end
 
-Zone10B_Text_Maybe30:
-	.string "Maybe I can catch 30 species of\n"
+Zone10B_Text_Maybe50:
+	.string "Maybe I can catch 50 species of\n"
 	.string "Pokémon some day too.$"
 
 Zone10B_EventScript_SideQuestSubstitute::
