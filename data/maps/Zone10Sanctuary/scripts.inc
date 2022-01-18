@@ -30,9 +30,6 @@ Zone10Sanctuary_EventScript_Intro:
 	closemessage
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
 	setvar VAR_ZONE, 11
