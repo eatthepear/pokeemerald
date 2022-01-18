@@ -25,26 +25,9 @@ Zone10Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_NUZLOCKE_ON, Zone10Sanctuary_EventScript_NuzlockeIntro
 	msgbox Zone10Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_REVIVE, 3
+	giveitem ITEM_MACHETE
 	closemessage
-	goto Zone10Sanctuary_EventScript_Unlocked
-	end
-
-Zone10Sanctuary_EventScript_NuzlockeIntro:
-	showmoneybox 0, 0, 0
-	msgbox Zone10Sanctuary_Text_RewardNuzlocke, MSGBOX_AUTOCLOSE
-	addmoney 3000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	updatemoneybox
-	msgbox Zone10Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
-	waitfanfare
-	hidemoneybox
-	goto Zone10Sanctuary_EventScript_Unlocked
-	end
-
-Zone10Sanctuary_EventScript_Unlocked:
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
@@ -88,10 +71,4 @@ Zone10Sanctuary_EventScript_Leave:
 	end
 
 Zone10Sanctuary_Text_Reward:
-	.string "3 Revives!$"
-
-Zone10Sanctuary_Text_RewardNuzlocke:
-	.string "¥3000!$"
-
-Zone10Sanctuary_Text_ReceivedMoney:
-	.string "Received ¥3000!$"
+	.string "The Machete!$"

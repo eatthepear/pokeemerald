@@ -19,6 +19,8 @@ Zone11A_EventScript_CheckBrutal:
 
 Zone11A_EventScript_LeviathanIntro::
 	lockall
+	applymovement 6, Common_Movement_FaceRight
+	waitmovement 0
 	applymovement 6, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
@@ -29,10 +31,10 @@ Zone11A_EventScript_LeviathanIntro::
 	waitmovement 0
 	applymovement 6, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Zone11A_Text_LeviathanWalkAway, MSGBOX_YESNO
-	compare VAR_RESULT, NO
+	msgbox Zone11A_Text_LeviathanRockOut, MSGBOX_YESNO
+	compare VAR_RESULT, YES
 	goto_if_eq Zone11A_EventScript_BeginLeviathanBattle
-	msgbox Zone11A_Text_LeviathanIThoughtSo, MSGBOX_AUTOCLOSE
+	msgbox Zone11A_Text_LeviathanMood, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	applymovement 6, Common_Movement_WalkLeft
 	waitmovement 0
@@ -45,12 +47,17 @@ Zone11A_EventScript_LeviathanIntro::
 	releaseall
 	end
 
-Zone11A_Text_LeviathanWalkAway:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: You should not be here.\n"
-	.string "Walk away.$"
+Zone11A_Text_LeviathanRockOut:
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: What's popping, my friend?\n"
+	.string "You here to rock out?$"
 
-Zone11A_Text_LeviathanIThoughtSo:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Don't come back.$"
+Zone11A_Text_LeviathanMood:
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: I get it.\p"
+	.string "It's kinda foggy and weird, and a\n"
+	.string "stranger just asked you to rock\l"
+	.string "out.\p"
+	.string "All's good.\n"
+	.string "Come back if you change your mind!$"
 
 Zone11A_EventScript_BeginLeviathanBattle:
 	fadeoutbgm 1
@@ -64,24 +71,24 @@ Zone11A_EventScript_BeginLeviathanBattle:
 	end
 
 Zone11A_EventScript_JakeBrutal:
-	settotemboost B_POSITION_OPPONENT_LEFT, 2, 0, 2, 0, 0
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 2, 2, 0
 	trainerbattle_no_intro TRAINER_LEVIATHAN6_BRUTAL, Zone11A_Text_Leviathan6Defeat
 	goto Zone11A_EventScript_Leviathan6Defeated
 	end
 
 Zone11A_Text_LeviathanIntro:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: You dare tread in my woods?\p"
-	.string "My Farfetch'd will cut you down\n"
-	.string "before you even know it!$"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Oh yeah! Let's rock out!\p"
+	.string "Time for some sick tunes with\n"
+	.string "{COLOR BLUE}Leviathan Jake{COLOR DARK_GRAY}!$"
 
 Zone11A_Text_Leviathan6Defeat:
-	.string "Jake: If only I had a Stick...$"
+	.string "Jake: Your music was inspiring!$"
 
 Zone11A_EventScript_Leviathan6Defeated:
 	setflag FLAG_BEATLEVIATHAN6
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone11A_Text_TakeIt, MSGBOX_AUTOCLOSE
-	giveitem ITEM_MACHETE
+	giveitem ITEM_TM11
 	msgbox Zone11A_Text_Goodbye, MSGBOX_AUTOCLOSE
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 6
@@ -92,13 +99,13 @@ Zone11A_EventScript_Leviathan6Defeated:
 	end
 
 Zone11A_Text_TakeIt:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: ....\n"
-	.string "Just take it.$"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Yo, that was a blast!\p"
+	.string "Why don't you take this?$"
 
 Zone11A_Text_Goodbye:
-	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Small trees blocking the way\n"
-	.string "will be distant memories.\p"
-	.string "Goodbye.$"
+	.string "{COLOR BLUE}Jake{COLOR DARK_GRAY}: Still, though, this forest is\n"
+	.string "too creepy to get the right vibe.\p"
+	.string "I'll see you later, friend!$"
 
 Zone11A_EventScript_CelebiIntro::
 	lockall

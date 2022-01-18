@@ -701,8 +701,8 @@ const struct Trainer gTrainers[] = {
     [TRAINER_LEVIATHAN6] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_GUITARIST,
         .trainerName = _("Jake"),
         .items = {},
         .doubleBattle = FALSE,
@@ -2017,8 +2017,8 @@ const struct Trainer gTrainers[] = {
     [TRAINER_LEVIATHAN6_BRUTAL] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_GUITARIST,
         .trainerName = _("Jake"),
         .items = {},
         .doubleBattle = FALSE,

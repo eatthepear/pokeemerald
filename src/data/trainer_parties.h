@@ -551,6 +551,11 @@ static const struct TrainerMon sParty_Millie[] = {
     .lvl = 14,
     .species = SPECIES_EKANS,
     },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_FARFETCHD_GALARIAN,
+    }
 };
 
 static const struct TrainerMon sParty_Paige[] = {
@@ -855,7 +860,7 @@ static const struct TrainerMon sParty_Kyle[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_CACNEA,
+    .species = SPECIES_PIKACHU,
     }
 };
 
@@ -981,7 +986,7 @@ static const struct TrainerMon sParty_Jeanette[] = {
     {
     .iv = 10,
     .lvl = 21,
-    .species = SPECIES_ROWLET,
+    .species = SPECIES_CACNEA,
     },
     {
     .iv = 10,
@@ -1004,7 +1009,7 @@ static const struct TrainerMon sParty_Regina[] = {
     {
     .iv = 10,
     .lvl = 21,
-    .species = SPECIES_MISDREAVUS,
+    .species = SPECIES_ROWLET,
     }
 };
 
@@ -1053,12 +1058,12 @@ static const struct TrainerMon sParty_Jake[] = {//Leviathan 6, Default
     {
     .iv = 31,
     .lvl = 24,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Scrappy
-    .species = SPECIES_FARFETCHD_GALARIAN, //Starts with aura +2 Speed
+    .ability = ABILITY_SLOT_1, //Surge Surfer
+    .species = SPECIES_RAICHU_ALOLAN, //Starts with aura +2 Speed
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_BRICK_BREAK, MOVE_KNOCK_OFF, MOVE_RETURN, MOVE_SWORDS_DANCE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_DRAINING_KISS, MOVE_NASTY_PLOT}
     }
 };
 
@@ -1255,10 +1260,10 @@ static const struct TrainerMon sParty_KaizenCalmMind[] = {//Leviathan 8, optiona
     .lvl = 26,
     .nature = NATURE_SERIOUS,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Lightning Rod
-    .species = SPECIES_PIKACHU,
+    .ability = ABILITY_SLOT_1, //Levitate
+    .species = SPECIES_MISDREAVUS,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CALM_MIND, MOVE_ELECTRO_BALL, MOVE_NUZZLE, MOVE_DOUBLE_KICK}
+    .moves = {MOVE_CALM_MIND, MOVE_HEX, MOVE_FAIRY_WIND, MOVE_PAIN_SPLIT}
     },
     {
     .ivs = {31, 31, 30, 30, 30, 30},
@@ -3283,12 +3288,12 @@ static const struct TrainerMon sParty_JakeBrutal[] = {//Leviathan 6, Brutal
     {
     .iv = 31,
     .lvl = 24,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Scrappy
-    .species = SPECIES_FARFETCHD_GALARIAN, //Starts with aura +2 all stats
+    .ability = ABILITY_SLOT_1, //Surge Surfer
+    .species = SPECIES_RAICHU_ALOLAN, //Starts with aura +2 Sp. Attack, +2 Speed
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_BRICK_BREAK, MOVE_KNOCK_OFF, MOVE_POISON_JAB, MOVE_SWORDS_DANCE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_DRAINING_KISS, MOVE_NASTY_PLOT}
     }
 };
 
@@ -3339,12 +3344,12 @@ static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, B
     {
     .iv = 31,
     .lvl = 27,
-    .nature = NATURE_HASTY,
+    .nature = NATURE_BOLD,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Lightning Rod
-    .species = SPECIES_PIKACHU,
+    .ability = ABILITY_SLOT_1, //Levitate
+    .species = SPECIES_MISDREAVUS,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CALM_MIND, MOVE_ELECTRO_BALL, MOVE_NUZZLE, MOVE_DOUBLE_KICK}
+    .moves = {MOVE_CALM_MIND, MOVE_HEX, MOVE_DRAINING_KISS, MOVE_PAIN_SPLIT}
     },
     {
     .ivs = {31, 31, 30, 30, 30, 30},
