@@ -574,7 +574,7 @@ void CB2_InitTitleScreen(void)
     {
         u8 taskId = CreateTask(Task_TitleScreenPhase1, 0);
 
-        gTasks[taskId].tCounter = 256;
+        gTasks[taskId].tCounter = 496;
         gTasks[taskId].tSkipToNext = FALSE;
         gTasks[taskId].data[2] = -16;
         gTasks[taskId].data[3] = -32;
@@ -646,8 +646,14 @@ static void Task_TitleScreenPhase1(u8 taskId)
     if (gTasks[taskId].tCounter != 0)
     {
         u16 frameNum = gTasks[taskId].tCounter;
-        if (frameNum == 176)
+        if (frameNum == 416)
             StartPokemonLogoShine(1);
+        if (frameNum == 304)
+            StartPokemonLogoShine(1);
+        else if (frameNum == 192)
+            StartPokemonLogoShine(2);
+        else if (frameNum == 128)
+            StartPokemonLogoShine(2);
         else if (frameNum == 64)
             StartPokemonLogoShine(2);
 
