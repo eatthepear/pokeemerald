@@ -333,53 +333,53 @@ Zone0Sanctuary_EventScript_PickStarter:
 	msgbox Zone0Sanctuary_Text_ChooseAStarter, MSGBOX_DEFAULT
 	scrollingmultichoice 0, 0, 0, 5, FALSE
 	compare VAR_RESULT, 0
-	call_if_eq Zone0Sanctuary_EventScript_BULBASAUR
+	call_if_eq Zone0Sanctuary_EventScript_Bulbasaur
 	compare VAR_RESULT, 1
-	call_if_eq Zone0Sanctuary_EventScript_CHARMANDER
+	call_if_eq Zone0Sanctuary_EventScript_Charmander
 	compare VAR_RESULT, 2
-	call_if_eq Zone0Sanctuary_EventScript_SQUIRTLE
+	call_if_eq Zone0Sanctuary_EventScript_Squirtle
 	compare VAR_RESULT, 3
-	call_if_eq Zone0Sanctuary_EventScript_CHIKORITA
+	call_if_eq Zone0Sanctuary_EventScript_Chikorita
 	compare VAR_RESULT, 4
-	call_if_eq Zone0Sanctuary_EventScript_CYNDAQUIL
+	call_if_eq Zone0Sanctuary_EventScript_Cyndaquil
 	compare VAR_RESULT, 5
-	call_if_eq Zone0Sanctuary_EventScript_TOTODILE
+	call_if_eq Zone0Sanctuary_EventScript_Totodile
 	compare VAR_RESULT, 6
-	call_if_eq Zone0Sanctuary_EventScript_TREECKO
+	call_if_eq Zone0Sanctuary_EventScript_Torchic
 	compare VAR_RESULT, 7
-	call_if_eq Zone0Sanctuary_EventScript_TORCHIC
+	call_if_eq Zone0Sanctuary_EventScript_Torchic
 	compare VAR_RESULT, 8
-	call_if_eq Zone0Sanctuary_EventScript_MUDKIP
+	call_if_eq Zone0Sanctuary_EventScript_Mudkip
 	compare VAR_RESULT, 9
-	call_if_eq Zone0Sanctuary_EventScript_TURTWIG
+	call_if_eq Zone0Sanctuary_EventScript_Turtwig
 	compare VAR_RESULT, 10
-	call_if_eq Zone0Sanctuary_EventScript_CHIMCHAR
+	call_if_eq Zone0Sanctuary_EventScript_Chimchar
 	compare VAR_RESULT, 11
-	call_if_eq Zone0Sanctuary_EventScript_PIPLUP
+	call_if_eq Zone0Sanctuary_EventScript_Piplup
 	compare VAR_RESULT, 12
-	call_if_eq Zone0Sanctuary_EventScript_SNIVY
+	call_if_eq Zone0Sanctuary_EventScript_Snivy
 	compare VAR_RESULT, 13
-	call_if_eq Zone0Sanctuary_EventScript_TEPIG
+	call_if_eq Zone0Sanctuary_EventScript_Tepig
 	compare VAR_RESULT, 14
-	call_if_eq Zone0Sanctuary_EventScript_OSHAWOTT
+	call_if_eq Zone0Sanctuary_EventScript_Oshawott
 	compare VAR_RESULT, 15
-	call_if_eq Zone0Sanctuary_EventScript_CHESPIN
+	call_if_eq Zone0Sanctuary_EventScript_Chespin
 	compare VAR_RESULT, 16
-	call_if_eq Zone0Sanctuary_EventScript_FENNEKIN
+	call_if_eq Zone0Sanctuary_EventScript_Fennekin
 	compare VAR_RESULT, 17
-	call_if_eq Zone0Sanctuary_EventScript_FROAKIE
+	call_if_eq Zone0Sanctuary_EventScript_Froakie
 	compare VAR_RESULT, 18
-	call_if_eq Zone0Sanctuary_EventScript_ROWLET
+	call_if_eq Zone0Sanctuary_EventScript_Rowlet
 	compare VAR_RESULT, 19
-	call_if_eq Zone0Sanctuary_EventScript_LITTEN
+	call_if_eq Zone0Sanctuary_EventScript_Litten
 	compare VAR_RESULT, 20
-	call_if_eq Zone0Sanctuary_EventScript_POPPLIO
+	call_if_eq Zone0Sanctuary_EventScript_Popplio
 	compare VAR_RESULT, 21
-	call_if_eq Zone0Sanctuary_EventScript_GROOKEY
+	call_if_eq Zone0Sanctuary_EventScript_Grookey
 	compare VAR_RESULT, 22
-	call_if_eq Zone0Sanctuary_EventScript_SCORBUNNY
+	call_if_eq Zone0Sanctuary_EventScript_Scorbunny
 	compare VAR_RESULT, 23
-	call_if_eq Zone0Sanctuary_EventScript_SOBBLE
+	call_if_eq Zone0Sanctuary_EventScript_Sobble
 	compare VAR_RESULT, 24
 	call_if_eq Zone0Sanctuary_EventScript_RandomStarter
 	hidemonpic
@@ -411,415 +411,631 @@ Zone0Sanctuary_EventScript_RandomStarter:
 	waitmessage
 	random 24
 	compare VAR_RESULT, 0
-	call_if_eq Zone0Sanctuary_EventScript_BULBASAUR
+	call_if_eq Zone0Sanctuary_EventScript_Bulbasaur
 	compare VAR_RESULT, 1
-	call_if_eq Zone0Sanctuary_EventScript_CHARMANDER
+	call_if_eq Zone0Sanctuary_EventScript_Charmander
 	compare VAR_RESULT, 2
-	call_if_eq Zone0Sanctuary_EventScript_SQUIRTLE
+	call_if_eq Zone0Sanctuary_EventScript_Squirtle
 	compare VAR_RESULT, 3
-	call_if_eq Zone0Sanctuary_EventScript_CHIKORITA
+	call_if_eq Zone0Sanctuary_EventScript_Chikorita
 	compare VAR_RESULT, 4
-	call_if_eq Zone0Sanctuary_EventScript_CYNDAQUIL
+	call_if_eq Zone0Sanctuary_EventScript_Cyndaquil
 	compare VAR_RESULT, 5
-	call_if_eq Zone0Sanctuary_EventScript_TOTODILE
+	call_if_eq Zone0Sanctuary_EventScript_Totodile
 	compare VAR_RESULT, 6
-	call_if_eq Zone0Sanctuary_EventScript_TREECKO
+	call_if_eq Zone0Sanctuary_EventScript_Torchic
 	compare VAR_RESULT, 7
-	call_if_eq Zone0Sanctuary_EventScript_TORCHIC
+	call_if_eq Zone0Sanctuary_EventScript_Torchic
 	compare VAR_RESULT, 8
-	call_if_eq Zone0Sanctuary_EventScript_MUDKIP
+	call_if_eq Zone0Sanctuary_EventScript_Mudkip
 	compare VAR_RESULT, 9
-	call_if_eq Zone0Sanctuary_EventScript_TURTWIG
+	call_if_eq Zone0Sanctuary_EventScript_Turtwig
 	compare VAR_RESULT, 10
-	call_if_eq Zone0Sanctuary_EventScript_CHIMCHAR
+	call_if_eq Zone0Sanctuary_EventScript_Chimchar
 	compare VAR_RESULT, 11
-	call_if_eq Zone0Sanctuary_EventScript_PIPLUP
+	call_if_eq Zone0Sanctuary_EventScript_Piplup
 	compare VAR_RESULT, 12
-	call_if_eq Zone0Sanctuary_EventScript_SNIVY
+	call_if_eq Zone0Sanctuary_EventScript_Snivy
 	compare VAR_RESULT, 13
-	call_if_eq Zone0Sanctuary_EventScript_TEPIG
+	call_if_eq Zone0Sanctuary_EventScript_Tepig
 	compare VAR_RESULT, 14
-	call_if_eq Zone0Sanctuary_EventScript_OSHAWOTT
+	call_if_eq Zone0Sanctuary_EventScript_Oshawott
 	compare VAR_RESULT, 15
-	call_if_eq Zone0Sanctuary_EventScript_CHESPIN
+	call_if_eq Zone0Sanctuary_EventScript_Chespin
 	compare VAR_RESULT, 16
-	call_if_eq Zone0Sanctuary_EventScript_FENNEKIN
+	call_if_eq Zone0Sanctuary_EventScript_Fennekin
 	compare VAR_RESULT, 17
-	call_if_eq Zone0Sanctuary_EventScript_FROAKIE
+	call_if_eq Zone0Sanctuary_EventScript_Froakie
 	compare VAR_RESULT, 18
-	call_if_eq Zone0Sanctuary_EventScript_ROWLET
+	call_if_eq Zone0Sanctuary_EventScript_Rowlet
 	compare VAR_RESULT, 19
-	call_if_eq Zone0Sanctuary_EventScript_LITTEN
+	call_if_eq Zone0Sanctuary_EventScript_Litten
 	compare VAR_RESULT, 20
-	call_if_eq Zone0Sanctuary_EventScript_POPPLIO
+	call_if_eq Zone0Sanctuary_EventScript_Popplio
 	compare VAR_RESULT, 21
-	call_if_eq Zone0Sanctuary_EventScript_GROOKEY
+	call_if_eq Zone0Sanctuary_EventScript_Grookey
 	compare VAR_RESULT, 22
-	call_if_eq Zone0Sanctuary_EventScript_SCORBUNNY
+	call_if_eq Zone0Sanctuary_EventScript_Scorbunny
 	compare VAR_RESULT, 23
-	call_if_eq Zone0Sanctuary_EventScript_SOBBLE
+	call_if_eq Zone0Sanctuary_EventScript_Sobble
 	return
 
 Zone0Sanctuary_Text_Colress_RandomStarter:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing...$"
 
-Zone0Sanctuary_EventScript_BULBASAUR:
+Zone0Sanctuary_EventScript_Bulbasaur:
 	bufferspeciesname 0, SPECIES_BULBASAUR
 	showmonpic SPECIES_BULBASAUR, 10, 3
 	playmoncry SPECIES_BULBASAUR, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterBULBASAUR, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveBulbasaurBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveBulbasaur
+	return
+
+Zone0Sanctuary_EventScript_GiveBulbasaur:
+	givecustommon SPECIES_BULBASAUR, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveBulbasaurBrutal:
 	givecustommon SPECIES_BULBASAUR, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterBULBASAUR:
+Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Bulbasaur?$"
 
-Zone0Sanctuary_EventScript_CHARMANDER:
+Zone0Sanctuary_EventScript_Charmander:
 	bufferspeciesname 0, SPECIES_CHARMANDER
 	showmonpic SPECIES_CHARMANDER, 10, 3
 	playmoncry SPECIES_CHARMANDER, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCHARMANDER, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCharmander, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCharmanderBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCharmander
+	return
+
+Zone0Sanctuary_EventScript_GiveCharmander:
+	givecustommon SPECIES_CHARMANDER, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveCharmanderBrutal:
 	givecustommon SPECIES_CHARMANDER, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterCHARMANDER:
+Zone0Sanctuary_Text_Colress_YouSureStarterCharmander:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Charmander?$"
 
-Zone0Sanctuary_EventScript_SQUIRTLE:
+Zone0Sanctuary_EventScript_Squirtle:
 	bufferspeciesname 0, SPECIES_SQUIRTLE
 	showmonpic SPECIES_SQUIRTLE, 10, 3
 	playmoncry SPECIES_SQUIRTLE, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSQUIRTLE, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSquirtleBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSquirtle
+	return
+
+Zone0Sanctuary_EventScript_GiveSquirtle:
+	givecustommon SPECIES_SQUIRTLE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveSquirtleBrutal:
 	givecustommon SPECIES_SQUIRTLE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterSQUIRTLE:
+Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Squirtle?$"
 
-Zone0Sanctuary_EventScript_CHIKORITA:
+Zone0Sanctuary_EventScript_Chikorita:
 	bufferspeciesname 0, SPECIES_CHIKORITA
 	showmonpic SPECIES_CHIKORITA, 10, 3
 	playmoncry SPECIES_CHIKORITA, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCHIKORITA, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChikorita, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChikoritaBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChikorita
+	return
+
+Zone0Sanctuary_EventScript_GiveChikorita:
+	givecustommon SPECIES_CHIKORITA, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveChikoritaBrutal:
 	givecustommon SPECIES_CHIKORITA, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterCHIKORITA:
+Zone0Sanctuary_Text_Colress_YouSureStarterChikorita:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Chikorita?$"
 
-Zone0Sanctuary_EventScript_CYNDAQUIL:
+Zone0Sanctuary_EventScript_Cyndaquil:
 	bufferspeciesname 0, SPECIES_CYNDAQUIL
 	showmonpic SPECIES_CYNDAQUIL, 10, 3
 	playmoncry SPECIES_CYNDAQUIL, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCYNDAQUIL, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCyndaquilBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCyndaquil
+	return
+
+Zone0Sanctuary_EventScript_GiveCyndaquil:
+	givecustommon SPECIES_CYNDAQUIL, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveCyndaquilBrutal:
 	givecustommon SPECIES_CYNDAQUIL, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterCYNDAQUIL:
+Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Cyndaquil?$"
 
-Zone0Sanctuary_EventScript_TOTODILE:
+Zone0Sanctuary_EventScript_Totodile:
 	bufferspeciesname 0, SPECIES_TOTODILE
 	showmonpic SPECIES_TOTODILE, 10, 3
 	playmoncry SPECIES_TOTODILE, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTOTODILE, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTotodile, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTotodileBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTotodile
+	return
+
+Zone0Sanctuary_EventScript_GiveTotodile:
+	givecustommon SPECIES_TOTODILE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveTotodileBrutal:
 	givecustommon SPECIES_TOTODILE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterTOTODILE:
+Zone0Sanctuary_Text_Colress_YouSureStarterTotodile:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Totodile?$"
 
-Zone0Sanctuary_EventScript_TREECKO:
+Zone0Sanctuary_EventScript_Treecko:
 	bufferspeciesname 0, SPECIES_TREECKO
 	showmonpic SPECIES_TREECKO, 10, 3
 	playmoncry SPECIES_TREECKO, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTREECKO, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTreecko, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTreeckoBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTreecko
+	return
+
+Zone0Sanctuary_EventScript_GiveTreecko:
+	givecustommon SPECIES_TREECKO, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveTreeckoBrutal:
 	givecustommon SPECIES_TREECKO, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterTREECKO:
+Zone0Sanctuary_Text_Colress_YouSureStarterTreecko:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Treecko?$"
 
-Zone0Sanctuary_EventScript_TORCHIC:
+Zone0Sanctuary_EventScript_Torchic:
 	bufferspeciesname 0, SPECIES_TORCHIC
 	showmonpic SPECIES_TORCHIC, 10, 3
 	playmoncry SPECIES_TORCHIC, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTORCHIC, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTorchic, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTorchicBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTorchic
+	return
+
+Zone0Sanctuary_EventScript_GiveTorchic:
+	givecustommon SPECIES_TORCHIC, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveTorchicBrutal:
 	givecustommon SPECIES_TORCHIC, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterTORCHIC:
+Zone0Sanctuary_Text_Colress_YouSureStarterTorchic:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Torchic?$"
 
-Zone0Sanctuary_EventScript_MUDKIP:
+Zone0Sanctuary_EventScript_Mudkip:
 	bufferspeciesname 0, SPECIES_MUDKIP
 	showmonpic SPECIES_MUDKIP, 10, 3
 	playmoncry SPECIES_MUDKIP, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterMUDKIP, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterMudkip, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveMudkipBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveMudkip
+	return
+
+Zone0Sanctuary_EventScript_GiveMudkip:
+	givecustommon SPECIES_MUDKIP, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveMudkipBrutal:
 	givecustommon SPECIES_MUDKIP, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterMUDKIP:
+Zone0Sanctuary_Text_Colress_YouSureStarterMudkip:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Mudkip?$"
 
-Zone0Sanctuary_EventScript_TURTWIG:
+Zone0Sanctuary_EventScript_Turtwig:
 	bufferspeciesname 0, SPECIES_TURTWIG
 	showmonpic SPECIES_TURTWIG, 10, 3
 	playmoncry SPECIES_TURTWIG, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTURTWIG, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTurtwigBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTurtwig
+	return
+
+Zone0Sanctuary_EventScript_GiveTurtwig:
+	givecustommon SPECIES_TURTWIG, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveTurtwigBrutal:
 	givecustommon SPECIES_TURTWIG, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterTURTWIG:
+Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Turtwig?$"
 
-Zone0Sanctuary_EventScript_CHIMCHAR:
+Zone0Sanctuary_EventScript_Chimchar:
 	bufferspeciesname 0, SPECIES_CHIMCHAR
 	showmonpic SPECIES_CHIMCHAR, 10, 3
 	playmoncry SPECIES_CHIMCHAR, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCHIMCHAR, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChimchar, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChimcharBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChimchar
+	return
+
+Zone0Sanctuary_EventScript_GiveChimchar:
+	givecustommon SPECIES_CHIMCHAR, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveChimcharBrutal:
 	givecustommon SPECIES_CHIMCHAR, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterCHIMCHAR:
+Zone0Sanctuary_Text_Colress_YouSureStarterChimchar:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Chimchar?$"
 
-Zone0Sanctuary_EventScript_PIPLUP:
+Zone0Sanctuary_EventScript_Piplup:
 	bufferspeciesname 0, SPECIES_PIPLUP
 	showmonpic SPECIES_PIPLUP, 10, 3
 	playmoncry SPECIES_PIPLUP, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPIPLUP, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPiplup, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePiplupBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePiplup
+	return
+
+Zone0Sanctuary_EventScript_GivePiplup:
+	givecustommon SPECIES_PIPLUP, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GivePiplupBrutal:
 	givecustommon SPECIES_PIPLUP, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterPIPLUP:
+Zone0Sanctuary_Text_Colress_YouSureStarterPiplup:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Piplup?$"
 
-Zone0Sanctuary_EventScript_SNIVY:
+Zone0Sanctuary_EventScript_Snivy:
 	bufferspeciesname 0, SPECIES_SNIVY
 	showmonpic SPECIES_SNIVY, 10, 3
 	playmoncry SPECIES_SNIVY, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSNIVY, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSnivy, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSnivyBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSnivy
+	return
+
+Zone0Sanctuary_EventScript_GiveSnivy:
+	givecustommon SPECIES_SNIVY, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveSnivyBrutal:
 	givecustommon SPECIES_SNIVY, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterSNIVY:
+Zone0Sanctuary_Text_Colress_YouSureStarterSnivy:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Snivy?$"
 
-Zone0Sanctuary_EventScript_TEPIG:
+Zone0Sanctuary_EventScript_Tepig:
 	bufferspeciesname 0, SPECIES_TEPIG
 	showmonpic SPECIES_TEPIG, 10, 3
 	playmoncry SPECIES_TEPIG, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTEPIG, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTepig, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTepigBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTepig
+	return
+
+Zone0Sanctuary_EventScript_GiveTepig:
+	givecustommon SPECIES_TEPIG, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveTepigBrutal:
 	givecustommon SPECIES_TEPIG, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterTEPIG:
+Zone0Sanctuary_Text_Colress_YouSureStarterTepig:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Tepig?$"
 
-Zone0Sanctuary_EventScript_OSHAWOTT:
+Zone0Sanctuary_EventScript_Oshawott:
 	bufferspeciesname 0, SPECIES_OSHAWOTT
 	showmonpic SPECIES_OSHAWOTT, 10, 3
 	playmoncry SPECIES_OSHAWOTT, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterOSHAWOTT, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterOshawott, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveOshawottBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveOshawott
+	return
+
+Zone0Sanctuary_EventScript_GiveOshawott:
+	givecustommon SPECIES_OSHAWOTT, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveOshawottBrutal:
 	givecustommon SPECIES_OSHAWOTT, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterOSHAWOTT:
+Zone0Sanctuary_Text_Colress_YouSureStarterOshawott:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Oshawott?$"
 
-Zone0Sanctuary_EventScript_CHESPIN:
+Zone0Sanctuary_EventScript_Chespin:
 	bufferspeciesname 0, SPECIES_CHESPIN
 	showmonpic SPECIES_CHESPIN, 10, 3
 	playmoncry SPECIES_CHESPIN, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCHESPIN, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChespin, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChespinBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChespin
+	return
+
+Zone0Sanctuary_EventScript_GiveChespin:
+	givecustommon SPECIES_CHESPIN, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveChespinBrutal:
 	givecustommon SPECIES_CHESPIN, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterCHESPIN:
+Zone0Sanctuary_Text_Colress_YouSureStarterChespin:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Chespin?$"
 
-Zone0Sanctuary_EventScript_FENNEKIN:
+Zone0Sanctuary_EventScript_Fennekin:
 	bufferspeciesname 0, SPECIES_FENNEKIN
 	showmonpic SPECIES_FENNEKIN, 10, 3
 	playmoncry SPECIES_FENNEKIN, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFENNEKIN, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFennekin, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFennekinBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFennekin
+	return
+
+Zone0Sanctuary_EventScript_GiveFennekin:
+	givecustommon SPECIES_FENNEKIN, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveFennekinBrutal:
 	givecustommon SPECIES_FENNEKIN, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterFENNEKIN:
+Zone0Sanctuary_Text_Colress_YouSureStarterFennekin:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Fennekin?$"
 
-Zone0Sanctuary_EventScript_FROAKIE:
+Zone0Sanctuary_EventScript_Froakie:
 	bufferspeciesname 0, SPECIES_FROAKIE
 	showmonpic SPECIES_FROAKIE, 10, 3
 	playmoncry SPECIES_FROAKIE, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFROAKIE, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFroakie, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFroakieBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFroakie
+	return
+
+Zone0Sanctuary_EventScript_GiveFroakie:
+	givecustommon SPECIES_FROAKIE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveFroakieBrutal:
 	givecustommon SPECIES_FROAKIE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterFROAKIE:
+Zone0Sanctuary_Text_Colress_YouSureStarterFroakie:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Froakie?$"
 
-Zone0Sanctuary_EventScript_ROWLET:
+Zone0Sanctuary_EventScript_Rowlet:
 	bufferspeciesname 0, SPECIES_ROWLET
 	showmonpic SPECIES_ROWLET, 10, 3
 	playmoncry SPECIES_ROWLET, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterROWLET, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterRowlet, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveRowletBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveRowlet
+	return
+
+Zone0Sanctuary_EventScript_GiveRowlet:
+	givecustommon SPECIES_ROWLET, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveRowletBrutal:
 	givecustommon SPECIES_ROWLET, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterROWLET:
+Zone0Sanctuary_Text_Colress_YouSureStarterRowlet:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Rowlet?$"
 
-Zone0Sanctuary_EventScript_LITTEN:
+Zone0Sanctuary_EventScript_Litten:
 	bufferspeciesname 0, SPECIES_LITTEN
 	showmonpic SPECIES_LITTEN, 10, 3
 	playmoncry SPECIES_LITTEN, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterLITTEN, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterLitten, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveLittenBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveLitten
+	return
+
+Zone0Sanctuary_EventScript_GiveLitten:
+	givecustommon SPECIES_LITTEN, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveLittenBrutal:
 	givecustommon SPECIES_LITTEN, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterLITTEN:
+Zone0Sanctuary_Text_Colress_YouSureStarterLitten:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Litten?$"
 
-Zone0Sanctuary_EventScript_POPPLIO:
+Zone0Sanctuary_EventScript_Popplio:
 	bufferspeciesname 0, SPECIES_POPPLIO
 	showmonpic SPECIES_POPPLIO, 10, 3
 	playmoncry SPECIES_POPPLIO, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPOPPLIO, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPopplio, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePopplioBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePopplio
+	return
+
+Zone0Sanctuary_EventScript_GivePopplio:
+	givecustommon SPECIES_POPPLIO, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GivePopplioBrutal:
 	givecustommon SPECIES_POPPLIO, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterPOPPLIO:
+Zone0Sanctuary_Text_Colress_YouSureStarterPopplio:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Popplio?$"
 
-Zone0Sanctuary_EventScript_GROOKEY:
+Zone0Sanctuary_EventScript_Grookey:
 	bufferspeciesname 0, SPECIES_GROOKEY
 	showmonpic SPECIES_GROOKEY, 10, 3
 	playmoncry SPECIES_GROOKEY, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterGROOKEY, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterGrookey, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveGrookeyBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveGrookey
+	return
+
+Zone0Sanctuary_EventScript_GiveGrookey:
+	givecustommon SPECIES_GROOKEY, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveGrookeyBrutal:
 	givecustommon SPECIES_GROOKEY, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterGROOKEY:
+Zone0Sanctuary_Text_Colress_YouSureStarterGrookey:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Grookey?$"
 
-Zone0Sanctuary_EventScript_SCORBUNNY:
+Zone0Sanctuary_EventScript_Scorbunny:
 	bufferspeciesname 0, SPECIES_SCORBUNNY
 	showmonpic SPECIES_SCORBUNNY, 10, 3
 	playmoncry SPECIES_SCORBUNNY, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSCORBUNNY, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveScorbunnyBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveScorbunny
+	return
+
+Zone0Sanctuary_EventScript_GiveScorbunny:
+	givecustommon SPECIES_SCORBUNNY, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveScorbunnyBrutal:
 	givecustommon SPECIES_SCORBUNNY, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterSCORBUNNY:
+Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Scorbunny?$"
 
-Zone0Sanctuary_EventScript_SOBBLE:
+Zone0Sanctuary_EventScript_Sobble:
 	bufferspeciesname 0, SPECIES_SOBBLE
 	showmonpic SPECIES_SOBBLE, 10, 3
 	playmoncry SPECIES_SOBBLE, 0
-	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSOBBLE, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSobble, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSobbleBrutal
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSobble
+	return
+
+Zone0Sanctuary_EventScript_GiveSobble:
+	givecustommon SPECIES_SOBBLE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	return
+
+Zone0Sanctuary_EventScript_GiveSobbleBrutal:
 	givecustommon SPECIES_SOBBLE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
-Zone0Sanctuary_Text_Colress_YouSureStarterSOBBLE:
+Zone0Sanctuary_Text_Colress_YouSureStarterSobble:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Sobble?$"
 
