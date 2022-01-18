@@ -111,76 +111,76 @@ EventScript_SmashItems:
 	call_if_eq VAR_RESULT, 16, EventScript_SmashROCKGem
 	call_if_eq VAR_RESULT, 17, EventScript_SmashSTEELGem
 	call_if_eq VAR_RESULT, 18, EventScript_SmashWATERGem
-	call_if_eq VAR_RESULT, 19, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 20, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 21, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 22, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 23, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 24, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 25, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 26, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 27, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 28, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 29, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 30, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 31, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 32, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 33, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 34, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 35, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 36, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 37, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 38, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 39, EventScript_SmashREDShard
-	call_if_eq VAR_RESULT, 40, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 41, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 42, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 43, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 44, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 45, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 46, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 47, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 48, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 49, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 50, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 51, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 52, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 53, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 54, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 55, EventScript_SmashBLUEShard
-	call_if_eq VAR_RESULT, 56, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 57, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 58, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 59, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 60, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 61, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 62, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 63, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 64, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 65, EventScript_SmashYELLOWShard
-	call_if_eq VAR_RESULT, 66, EventScript_SmashGREENShard
-	call_if_eq VAR_RESULT, 67, EventScript_SmashGREENShard
-	call_if_eq VAR_RESULT, 68, EventScript_SmashGREENShard
-	call_if_eq VAR_RESULT, 69, EventScript_SmashGREENShard
-	call_if_eq VAR_RESULT, 70, EventScript_SmashGREENShard
+	call_if_eq VAR_RESULT, 19, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 20, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 21, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 22, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 23, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 24, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 25, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 26, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 27, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 28, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 29, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 30, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 31, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 32, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 33, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 34, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 35, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 36, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 37, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 38, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 39, EventScript_SmashRedShard
+	call_if_eq VAR_RESULT, 40, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 41, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 42, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 43, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 44, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 45, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 46, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 47, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 48, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 49, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 50, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 51, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 52, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 53, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 54, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 55, EventScript_SmashBlueShard
+	call_if_eq VAR_RESULT, 56, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 57, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 58, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 59, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 60, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 61, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 62, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 63, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 64, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 65, EventScript_SmashYellowShard
+	call_if_eq VAR_RESULT, 66, EventScript_SmashGreenShard
+	call_if_eq VAR_RESULT, 67, EventScript_SmashGreenShard
+	call_if_eq VAR_RESULT, 68, EventScript_SmashGreenShard
+	call_if_eq VAR_RESULT, 69, EventScript_SmashGreenShard
+	call_if_eq VAR_RESULT, 70, EventScript_SmashGreenShard
 	return
 	
-EventScript_SmashYELLOWShard:
-	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
+EventScript_SmashYellowShard:
+	goto_if_unset FLAG_BEATLEVIATHAN5, EventScript_EndSmash
 	finditem ITEM_YELLOW_SHARD, 1
 	return
 	
-EventScript_SmashGREENShard:
-	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
+EventScript_SmashGreenShard:
+	goto_if_unset FLAG_BEATLEVIATHAN14, EventScript_EndSmash
 	finditem ITEM_GREEN_SHARD, 1
 	return
 	
-EventScript_SmashBLUEShard:
+EventScript_SmashBlueShard:
 	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
 	finditem ITEM_BLUE_SHARD, 1
 	return
 	
-EventScript_SmashREDShard:
+EventScript_SmashRedShard:
 	finditem ITEM_RED_SHARD, 1
 	return
 	
