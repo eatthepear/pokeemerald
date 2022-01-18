@@ -697,7 +697,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_AZUMARILL,
-    .moves = {MOVE_AQUA_JET, MOVE_RETURN, MOVE_BUBBLE_BEAM, MOVE_COVET}
+    .moves = {MOVE_AQUA_JET, MOVE_CHARM, MOVE_BUBBLE_BEAM, MOVE_COVET}
     },
     {
     .iv = 20,
