@@ -254,7 +254,6 @@ void SetDexPokemonPokenavFlags(void) // unused
 {
     FlagSet(FLAG_SYS_POKEDEX_GET);
     FlagSet(FLAG_SYS_POKEMON_GET);
-    FlagSet(FLAG_SYS_POKENAV_GET);
 }
 
 bool32 GetZoneFlag(void)
@@ -318,10 +317,10 @@ static void BuildNormalStartMenu(void)
 
     AddStartMenuAction(MENU_ACTION_BAG);
 
-    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKENAV);
-    }
+    // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
+    // {
+    //     AddStartMenuAction(MENU_ACTION_POKENAV);
+    // }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
@@ -352,10 +351,10 @@ static void BuildZoneStartMenu(void)
     
     AddStartMenuAction(MENU_ACTION_BAG);
     
-    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKENAV);
-    }
+    // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
+    // {
+    //     AddStartMenuAction(MENU_ACTION_POKENAV);
+    // }
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_SAVE);
@@ -385,10 +384,10 @@ static void BuildDebugStartMenu(void)
     
     AddStartMenuAction(MENU_ACTION_BAG);
     
-    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKENAV);
-    }
+    // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
+    // {
+    //     AddStartMenuAction(MENU_ACTION_POKENAV);
+    // }
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -411,10 +410,10 @@ static void BuildLinkModeStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_BAG);
 
-    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKENAV);
-    }
+    // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
+    // {
+    //     AddStartMenuAction(MENU_ACTION_POKENAV);
+    // }
 
     AddStartMenuAction(MENU_ACTION_PLAYER_LINK);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -426,10 +425,10 @@ static void BuildUnionRoomStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_BAG);
 
-    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKENAV);
-    }
+    // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
+    // {
+    //     AddStartMenuAction(MENU_ACTION_POKENAV);
+    // }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);

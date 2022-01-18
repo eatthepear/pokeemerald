@@ -1351,14 +1351,14 @@ static void DebugAction_Flags_SwitchNatDex(u8 taskId)
 }
 static void DebugAction_Flags_SwitchPokeNav(u8 taskId)
 {
-    if(FlagGet(FLAG_SYS_POKENAV_GET))
-    {
-        FlagClear(FLAG_SYS_POKENAV_GET);
-        PlaySE(SE_PC_OFF);
-    }else{
-        FlagSet(FLAG_SYS_POKENAV_GET);
-        PlaySE(SE_PC_LOGIN);
-    }
+    // if(FlagGet(FLAG_SYS_POKENAV_GET))
+    // {
+    //     FlagClear(FLAG_SYS_POKENAV_GET);
+    //     PlaySE(SE_PC_OFF);
+    // }else{
+    //     FlagSet(FLAG_SYS_POKENAV_GET);
+    //     PlaySE(SE_PC_LOGIN);
+    // }
 }
 static void DebugAction_Flags_ToggleFlyFlags(u8 taskId)
 {
