@@ -1079,13 +1079,13 @@
 #define FLAG_ITEM_ZONE8C_SUPER_POTION                               0x406
 #define FLAG_ITEM_ZONE8C_GREAT_BALL                                 0x407
 #define FLAG_ITEM_ZONE8C_ETHER                                      0x408
-#define FLAG_ITEM_ZONE9A_MIRACLE_SEED                               0x409
+#define FLAG_ITEM_ZONE9G_MIRACLE_SEED                               0x409
 #define FLAG_ITEM_ZONE9D_MYSTIC_WATER                               0x40A
-#define FLAG_ITEM_ZONE9G_CHARCOAL                                   0x40B
+#define FLAG_ITEM_ZONE9A_BIG_ROOT                                   0x40B
 #define FLAG_ITEM_ZONE10A_BLACK_GLASSES                             0x40C
 #define FLAG_ITEM_ZONE10A_BLACK_BELT                                0x40D
 #define FLAG_ITEM_ZONE10A_TIMER_BALL                                0x40E
-#define FLAG_ITEM_ZONE10A_SUPER_POTION                              0x40F
+#define FLAG_ITEM_ZONE10A_CHARCOAL                                  0x40F
 #define FLAG_ITEM_ZONE10A_ETHER                                     0x410
 #define FLAG_ITEM_ZONE10A_SUPER_REPEL                               0x411
 #define FLAG_ITEM_ZONE11A_SPELL_TAG                                 0x412

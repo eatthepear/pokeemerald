@@ -41,8 +41,8 @@ Zone9A_Text_HerbalSign:
 	.string "Herbal Shop and\n"
 	.string "Incense Shop$"
 
-Zone9A_EventScript_MiracleSeed::
-	finditem ITEM_MIRACLE_SEED
+Zone9A_EventScript_BigRoot::
+	finditem ITEM_BIG_ROOT
 	end
 
 Zone9A_EventScript_Man::

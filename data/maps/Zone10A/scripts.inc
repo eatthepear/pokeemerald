@@ -186,8 +186,8 @@ Zone10A_EventScript_TimerBall::
 	finditem ITEM_TIMER_BALL
 	end
 
-Zone10A_EventScript_SuperPotion::
-	finditem ITEM_SUPER_POTION
+Zone10A_EventScript_Charcoal::
+	finditem ITEM_CHARCOAL
 	end
 
 Zone10A_EventScript_Ether::
