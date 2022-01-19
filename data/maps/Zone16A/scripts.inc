@@ -3,11 +3,11 @@ Zone16A_MapScripts::
 	.byte 0
 
 Zone16A_OnTransition:
-	goto_if_set FLAG_BEATLEVIATHAN10, Zone16A_EventScript_MoveLeviathan
+	goto_if_unset FLAG_BEATLEVIATHAN10, Zone16A_EventScript_MoveLeviathan
 	end
 
 Zone16A_EventScript_MoveLeviathan:
-	setobjectxyperm 14, 66, 27
+	setobjectxyperm 14, 65, 25
 	end
 
 Zone16A_EventScript_InitiateLeviathanBattle::
