@@ -24,17 +24,36 @@ Zone0Sanctuary_EventScript_Intro:
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_ModeSkipTutorial
+	goto_if_eq Zone0Sanctuary_EventScript_RandomizerSkipTutorial
 	delay 96
 	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
 	delay 48
 	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
-	goto Zone0Sanctuary_EventScript_PickMode
+	goto Zone0Sanctuary_EventScript_Randomizer
 	end
 
-Zone0Sanctuary_EventScript_ModeSkipTutorial:
+Zone0Sanctuary_EventScript_RandomizerSkipTutorial:
 	setvar VAR_ZONE, 2 @this is to skip dialogue
+	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizerSkip
+	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_SetRandomizerSkip:
+	setflag FLAG_RANDOMIZER_ON
+	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
+	end
+
+Zone0Sanctuary_Text_Colress_Randomizer:
+	.string "Would you like to enable the\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
+
+Zone0Sanctuary_Text_RandomizerEnabled:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} enabled.$"
+
+Zone0Sanctuary_EventScript_ModeSkipTutorial:
 	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
@@ -69,6 +88,38 @@ Zone0Sanctuary_EventScript_SetNuzlockeSkip:
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_Randomizer:
+	msgbox Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_PickRandomizerMenu
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
+	delay 96
+	goto Zone0Sanctuary_EventScript_PickRandomizerMenu
+	end
+
+Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation:
+	.string "Would you like to skip the\n"
+	.string "randomizer explanation?$"
+
+Zone0Sanctuary_Text_Colress_RandomizerExplanation:
+	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} option randomizes\n"
+	.string "wild encounters and gift Pokémon,\l"
+	.string "including your starter.\p"
+	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} cannot be\n"
+	.string "turned off.$"
+
+Zone0Sanctuary_EventScript_PickRandomizerMenu:
+	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizer
+	goto Zone0Sanctuary_EventScript_PickMode
+	end
+
+Zone0Sanctuary_EventScript_SetRandomizer:
+	setflag FLAG_RANDOMIZER_ON
+	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickMode
 	end
 
 Zone0Sanctuary_EventScript_PickMode:
@@ -126,6 +177,7 @@ Zone0Sanctuary_EventScript_DifficultySkipTutorial:
 	switch VAR_RESULT
 	case 0, Zone0Sanctuary_EventScript_DefaultSkip
 	case 1, Zone0Sanctuary_EventScript_BrutalSkip
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
@@ -140,6 +192,7 @@ Zone0Sanctuary_EventScript_DefaultSkip:
 
 Zone0Sanctuary_EventScript_SetDefaultSkip:
 	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
@@ -155,6 +208,7 @@ Zone0Sanctuary_EventScript_BrutalSkip:
 Zone0Sanctuary_EventScript_SetBrutalSkip:
 	setflag FLAG_BRUTAL_MODE_ON
 	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
@@ -317,6 +371,7 @@ Zone0Sanctuary_EventScript_Tour:
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_TourDone, MSGBOX_AUTOCLOSE
 	delay 96
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
 	end
@@ -1044,6 +1099,24 @@ Zone0Sanctuary_EventScript_NuzlockeDialog:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeHealing, MSGBOX_AUTOCLOSE
 	delay 24
 	return
+
+Zone0Sanctuary_EventScript_RandomizerStarter:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerStarter, MSGBOX_AUTOCLOSE
+	callnative GiveRandomStarter
+	playfanfare MUS_OBTAIN_ITEM
+	bufferleadmonspeciesname 0
+	message Zone0Sanctuary_Text_ReceivedStarter
+	waitmessage
+	waitfanfare
+	msgbox Zone0Sanctuary_Text_Colress_HowBoutNickname, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_NicknameStarter
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0Sanctuary_EventScript_Colress_EndIntro
+	end
+
+Zone0Sanctuary_Text_Colress_RandomizerStarter:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Here is your random starter.$"
 
 Zone0Sanctuary_EventScript_Colress_EndIntro:
 	compare VAR_ZONE, 2

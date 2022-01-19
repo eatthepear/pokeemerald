@@ -464,6 +464,7 @@ void DeletePartyMon(u8 position);
 void DeleteFaintedPartyPokemon(void);
 void SetStarterFatefulEncounter(void);
 void SetEeveeGivenAtEncounter(void);
+void GiveRandomStarter(void);
 u16 GetRandomSpecies(u8 wildMonLevel);
 u16 GetFormSpeciesId(u16 speciesId, u8 formId);
 u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId);

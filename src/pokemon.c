@@ -30,6 +30,7 @@
 #include "random.h"
 #include "recorded_battle.h"
 #include "rtc.h"
+#include "script_pokemon_util.h"
 #include "sound.h"
 #include "string_util.h"
 #include "strings.h"
@@ -10026,4 +10027,11 @@ u16 GetRandomSpecies(u8 wildMonLevel)
     }
     
     return species;
+}
+
+void GiveRandomStarter(void)
+{
+    u16 species;
+    species = GetRandomSpecies(5);
+    gSpecialVar_Result = ScriptGiveMon(species, 5, ITEM_NONE, 0, 0, 0);
 }
