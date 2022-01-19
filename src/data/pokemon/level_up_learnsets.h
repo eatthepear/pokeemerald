@@ -18293,9 +18293,9 @@ static const struct LevelUpMove sBlipbugLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sDottlerLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 0, MOVE_REFLECT),
     LEVEL_UP_MOVE( 0, MOVE_LIGHT_SCREEN),
-    LEVEL_UP_MOVE( 0, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 1, MOVE_STRUGGLE_BUG),
     LEVEL_UP_END
 };
