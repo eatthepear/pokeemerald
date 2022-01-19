@@ -1308,7 +1308,7 @@
 #define FLAG_UNUSED_0x4EB                                           0x4EB 
 #define FLAG_UNUSED_0x4EC                                           0x4EC 
 #define FLAG_NUZLOCKE_ON                                            0x4ED 
-#define FLAG_DISABLE_CATCHING                                       0x4EE 
+#define FLAG_RANDOMIZER_ON                                          0x4EE 
 #define FLAG_BRUTAL_MODE_ON                                         0x4EF 
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
@@ -1322,7 +1322,7 @@
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 
 #define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
+#define FLAG_DISABLE_CATCHING                                       0x4FA // Unused Flag
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
