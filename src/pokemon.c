@@ -4473,8 +4473,8 @@ const u32 gEvolutionLines[NUM_SPECIES][EVOS_PER_LINE] =
     [SPECIES_STUNFISK_GALARIAN]                             = {SPECIES_STUNFISK, SPECIES_STUNFISK_GALARIAN},
 };
 
-#define RANDOM_SPECIES_COUNT ARRAY_COUNT(sRandomSpecies)
-static const u16 sRandomSpecies[] =
+#define RANDOM_SPECIES_COUNT ARRAY_COUNT(sSpeciesToRandomize)
+static const u16 sSpeciesToRandomize[] =
 {
     SPECIES_SKWOVET,
     SPECIES_WOOLOO,
@@ -4804,7 +4804,7 @@ static const u16 sRandomSpecies[] =
     SPECIES_DRACOZOLT,
 };
 
-EWRAM_DATA static u16 sRandomizedSpecies[RANDOM_SPECIES_COUNT] = {0};
+EWRAM_DATA static u16 sRandomSpecies[RANDOM_SPECIES_COUNT] = {0};
 
 void ZeroBoxMonData(struct BoxPokemon *boxMon)
 {
@@ -10001,26 +10001,27 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
 u16 GetRandomSpecies(u8 wildMonLevel)
 {
     u16 species;
-    memcpy(sRandomizedSpecies, sRandomSpecies, sizeof(sRandomSpecies));
-    ShuffleList(sRandomizedSpecies, RANDOM_SPECIES_COUNT);
+    memcpy(sRandomSpecies, sSpeciesToRandomize, sizeof(sSpeciesToRandomize));
+    ShuffleList(sRandomSpecies, RANDOM_SPECIES_COUNT);
 
-    species = sRandomizedSpecies[0];
+    // sRandomSpecies only contains the base form Pokemon
+    species = sRandomSpecies[0];
 
+    // Only level evolutions are factored in, and only the first one (so third stage evolutions never appear)
     if (gEvolutionTable[species][0].method == EVO_LEVEL)
     {
         if (gEvolutionTable[species][0].param <= wildMonLevel)
             species = gEvolutionTable[species][0].targetSpecies;
     }
+
+    // Covers branching evolution where the player may have a choice
     if (species == SPECIES_SLOWBRO) {
         species = SPECIES_SLOWPOKE;
-    }
-    if (species == SPECIES_MAROWAK) {
+    } else if (species == SPECIES_MAROWAK) {
         species = SPECIES_CUBONE;
-    }
-    if (species == SPECIES_WEEZING) {
+    } else if (species == SPECIES_WEEZING) {
         species = SPECIES_KOFFING;
-    }
-    if (species == SPECIES_GLALIE) {
+    } else if (species == SPECIES_GLALIE) {
         species = SPECIES_SNORUNT;
     }
     
