@@ -5192,6 +5192,8 @@ static const u16 sRandomSpecies[] =
     SPECIES_DRACOZOLT,
 };
 
+EWRAM_DATA static u16 sRandomizedSpecies[RANDOM_SPECIES_COUNT] = {0};
+
 void ZeroBoxMonData(struct BoxPokemon *boxMon)
 {
     u8 *raw = (u8 *)boxMon;
@@ -10386,5 +10388,8 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
 
 u16 GetRandomSpecies(u8 wildMonLevel)
 {
-    return sRandomSpecies[wildMonLevel];
+    memcpy(sRandomizedSpecies, sRandomSpecies, sizeof(sRandomSpecies));
+    ShuffleList(sRandomizedSpecies, RANDOM_SPECIES_COUNT);
+    return sRandomizedSpecies[0];
 }
+

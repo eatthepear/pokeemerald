@@ -31,3 +31,16 @@ u16 Random2(void)
     gRng2Value = ISO_RANDOMIZE1(gRng2Value);
     return gRng2Value >> 16;
 }
+
+void ShuffleList(u16 *list, u16 count)
+{
+    u16 i;
+
+    for (i = (count - 1); i > 0; i--)
+    {
+        u16 j = Random() % (i + 1);
+        u16 arr = list[j];
+        list[j] = list[i];
+        list[i] = arr;
+    }
+}
