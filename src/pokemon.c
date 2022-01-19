@@ -9664,3 +9664,8 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
     }
     return 0;
 }
+
+u16 GetRandomSpecies(u8 wildMonLevel)
+{
+    return SPECIES_BULBASAUR;
+}

@@ -366,6 +366,11 @@ static void CreateWildMon(u16 species, u8 level)
     ZeroEnemyPartyMons();
     checkCuteCharm = TRUE;
 
+    if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
+    {
+        species = GetRandomSpecies(level);
+    }
+
     switch (gBaseStats[species].genderRatio)
     {
     case MON_MALE:

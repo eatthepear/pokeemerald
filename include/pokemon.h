@@ -464,6 +464,7 @@ void DeletePartyMon(u8 position);
 void DeleteFaintedPartyPokemon(void);
 void SetStarterFatefulEncounter(void);
 void SetEeveeGivenAtEncounter(void);
+u16 GetRandomSpecies(u8 wildMonLevel);
 u16 GetFormSpeciesId(u16 speciesId, u8 formId);
 u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId);
 u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove);
