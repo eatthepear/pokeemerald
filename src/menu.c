@@ -2146,24 +2146,30 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             else
                 string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);*/
             if (FlagGet(FLAG_BRUTAL_MODE_ON))
-                StringCopy(string, gText_Brutal);
+                StringCopy(string, gText_SaveMenuBrutal);
             else
-                StringCopy(string, gText_Default);
+                StringCopy(string, gText_SaveMenuDefault);
             break;
         case SAVE_MENU_PLAY_TIME:
             /*string = ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
             *(string++) = CHAR_COLON;
             ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);*/
             if (FlagGet(FLAG_NUZLOCKE_ON))
-                StringCopy(string, gText_Nuzlocke);
+                if (FlagGet(FLAG_RANDOMIZER_ON))
+                    StringCopy(string, gText_SaveMenuRandomlocke);
+                else
+                    StringCopy(string, gText_Nuzlocke);
             else
-                StringCopy(string, gText_Vanilla);
+                if (FlagGet(FLAG_RANDOMIZER_ON))
+                    StringCopy(string, gText_SaveMenuRandomizer);
+                else
+                    StringCopy(string, gText_SaveMenuVanilla);
             break;
         case SAVE_MENU_LOCATION:
             GetMapNameGeneric(string, gMapHeader.regionMapSectionId);
             break;
         case SAVE_MENU_BADGES:
-            zone = VarGet(VAR_ZONE);
+            zone = VarGet(VAR_ZONE) - 1;
             string = ConvertIntToDecimalStringN(string, zone, STR_CONV_MODE_LEFT_ALIGN, 3);
             *string = EOS;
             break;

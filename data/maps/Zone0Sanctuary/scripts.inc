@@ -23,7 +23,7 @@ Zone0Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraDown
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_RandomizerSkipTutorial
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	delay 96
 	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
 	delay 48
@@ -32,11 +32,36 @@ Zone0Sanctuary_EventScript_Intro:
 	goto Zone0Sanctuary_EventScript_PickRandomizer
 	end
 
-Zone0Sanctuary_EventScript_RandomizerSkipTutorial:
+Zone0Sanctuary_EventScript_DifficultySkipTutorial:
 	setvar VAR_ZONE, 2 @this is to skip dialogue
+	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
+	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
+	switch VAR_RESULT
+	case 0, Zone0Sanctuary_EventScript_DefaultSkip
+	case 1, Zone0Sanctuary_EventScript_BrutalSkip
+	end
+
+Zone0Sanctuary_EventScript_DefaultSkip:
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	goto Zone0Sanctuary_EventScript_RandomizerSkipTutorial
+	end
+	
+Zone0Sanctuary_EventScript_BrutalSkip:
+	setflag FLAG_BRUTAL_MODE_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	goto Zone0Sanctuary_EventScript_RandomizerSkipTutorial
+	end
+
+Zone0Sanctuary_EventScript_RandomizerSkipTutorial:
 	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizerSkip
-	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
+	goto Zone0Sanctuary_EventScript_NuzlockeSkipTutorial
 	end
 
 Zone0Sanctuary_EventScript_SetRandomizerSkip:
@@ -45,159 +70,36 @@ Zone0Sanctuary_EventScript_SetRandomizerSkip:
 	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
+	goto Zone0Sanctuary_EventScript_NuzlockeSkipTutorial
 	end
 
-Zone0Sanctuary_EventScript_ModeSkipTutorial:
-	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
-	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_VanillaSkip
-	case 1, Zone0Sanctuary_EventScript_NuzlockeSkip
-	@ goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
-	end
-
-Zone0Sanctuary_EventScript_VanillaSkip:
-	closemessage
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
+Zone0Sanctuary_EventScript_NuzlockeSkipTutorial:
+	msgbox Zone0Sanctuary_Text_Colress_Nuzlocke, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_NuzlockeSkip
+	call_if_unset FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Vanilla
+	goto Zone0Sanctuary_EventScript_ModesFinishedSkip
 	end
 	
 Zone0Sanctuary_EventScript_NuzlockeSkip:
-	closemessage
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
+	goto Zone0Sanctuary_EventScript_ModesFinishedSkip
 	end
 
-Zone0Sanctuary_EventScript_DifficultySkipTutorial:
-	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
-	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_DefaultSkip
-	case 1, Zone0Sanctuary_EventScript_BrutalSkip
+Zone0Sanctuary_EventScript_ModesFinishedSkip:
 	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
-	end
-
-Zone0Sanctuary_EventScript_DefaultSkip:
-	closemessage
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
-	end
-	
-Zone0Sanctuary_EventScript_BrutalSkip:
-	closemessage
-	setflag FLAG_BRUTAL_MODE_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
-	end
-
-Zone0Sanctuary_EventScript_PickRandomizer:
-	msgbox Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_PickRandomizerMenu
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
-	delay 96
-	goto Zone0Sanctuary_EventScript_PickRandomizerMenu
-	end
-
-Zone0Sanctuary_EventScript_PickRandomizerMenu:
-	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_Randomizer
-	goto Zone0Sanctuary_EventScript_PickMode
-	end
-
-Zone0Sanctuary_EventScript_Randomizer:
-	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerSure, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizer
-	goto Zone0Sanctuary_EventScript_PickRandomizerMenu
-	end
-
-Zone0Sanctuary_EventScript_SetRandomizer:
-	setflag FLAG_RANDOMIZER_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_PickMode
-	end
-
-Zone0Sanctuary_EventScript_PickMode:
-	msgbox Zone0Sanctuary_Text_WouldLikeSkipModeExplanation, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_PickModeMenu
-	msgbox Zone0Sanctuary_Text_Colress_VanillaNuzlocke, MSGBOX_AUTOCLOSE
-	delay 16
-	msgbox Zone0Sanctuary_Text_Colress_VanillaExplained, MSGBOX_AUTOCLOSE
-	delay 16
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
-	delay 96
-	goto Zone0Sanctuary_EventScript_PickModeMenu
-	end
-
-Zone0Sanctuary_EventScript_PickModeMenu:
-	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
-	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_Vanilla
-	case 1, Zone0Sanctuary_EventScript_Nuzlocke
-	end
-	
-Zone0Sanctuary_EventScript_Vanilla:
-	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_VanillaSure, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetVanilla
-	goto Zone0Sanctuary_EventScript_PickModeMenu
-	end
-
-Zone0Sanctuary_EventScript_SetVanilla:
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_PickDifficulty
-	end
-	
-Zone0Sanctuary_EventScript_Nuzlocke:
-	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeSure, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetNuzlocke
-	goto Zone0Sanctuary_EventScript_PickModeMenu
-	end
-
-Zone0Sanctuary_EventScript_SetNuzlocke:
-	callnative GlobalNuzlockeSet
-	setflag FLAG_NUZLOCKE_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 
 Zone0Sanctuary_EventScript_PickDifficulty:
+	msgbox Zone0Sanctuary_Text_Colress_DefaultBrutal, MSGBOX_AUTOCLOSE
 	msgbox Zone0Sanctuary_Text_WouldLikeSkipDifficultyExplanation, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_PickDifficultyMenu
-	msgbox Zone0Sanctuary_Text_Colress_DefaultBrutal, MSGBOX_AUTOCLOSE
-	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained, MSGBOX_AUTOCLOSE
@@ -214,25 +116,18 @@ Zone0Sanctuary_EventScript_PickDifficultyMenu:
 	end
 	
 Zone0Sanctuary_EventScript_Default:
-	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_DefaultSure, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetDefault
-	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
-	end
-
-Zone0Sanctuary_EventScript_SetDefault:
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	goto Zone0Sanctuary_EventScript_Tour
+	goto Zone0Sanctuary_EventScript_PickRandomizer
 	end
-	
+
 Zone0Sanctuary_EventScript_Brutal:
 	closemessage
 	msgbox Zone0Sanctuary_Text_Colress_BrutalSure, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetBrutal
-	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
+	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 
 Zone0Sanctuary_EventScript_SetBrutal:
@@ -241,8 +136,62 @@ Zone0Sanctuary_EventScript_SetBrutal:
 	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
 	waitse
 	closemessage
+	goto Zone0Sanctuary_EventScript_PickRandomizer
+	end
+
+Zone0Sanctuary_EventScript_PickRandomizer:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_Randomizer
+	goto Zone0Sanctuary_EventScript_PickNuzlocke
+	end
+
+Zone0Sanctuary_EventScript_Randomizer:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerSure, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizer
+	goto Zone0Sanctuary_EventScript_PickRandomizer
+	end
+
+Zone0Sanctuary_EventScript_SetRandomizer:
+	setflag FLAG_RANDOMIZER_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	goto Zone0Sanctuary_EventScript_PickNuzlocke
+	end
+
+Zone0Sanctuary_EventScript_PickNuzlocke:
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Nuzlocke, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_Nuzlocke
+	call_if_unset FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Vanilla
 	goto Zone0Sanctuary_EventScript_Tour
 	end
+	
+Zone0Sanctuary_EventScript_Nuzlocke:
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeSure, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetNuzlocke
+	goto Zone0Sanctuary_EventScript_PickNuzlocke
+	end
+
+Zone0Sanctuary_EventScript_SetNuzlocke:
+	callnative GlobalNuzlockeSet
+	setflag FLAG_NUZLOCKE_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	goto Zone0Sanctuary_EventScript_Tour
+	end
+
+Zone0Sanctuary_EventScript_Vanilla:
+	msgbox Zone0Sanctuary_Text_Colress_NoModesChosen, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	return
 
 Zone0Sanctuary_EventScript_Tour:
 	msgbox Zone0Sanctuary_Text_Colress_StartTour, MSGBOX_AUTOCLOSE
@@ -1164,88 +1113,25 @@ Zone0Sanctuary_Text_Colress_Welcome:
 	.string "Would you like to skip the\n"
 	.string "tutorial?$"
 
-Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation:
-	.string "Would you like to skip the\n"
-	.string "randomizer explanation?$"
-
-Zone0Sanctuary_Text_Colress_RandomizerExplanation:
-	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} option randomizes\n"
-	.string "wild encounters and gift Pokémon,\l"
-	.string "including your starter.\p"
-	.string "Trainer Pokémon are left unchanged.\p"
-	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} cannot be\n"
-	.string "turned off.$"
-
-Zone0Sanctuary_Text_Colress_Randomizer:
-	.string "Would you like to enable the\n"
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
-
-Zone0Sanctuary_Text_RandomizerEnabled:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} enabled.$"
-
-Zone0Sanctuary_Text_WouldLikeSkipModeExplanation:
-	.string "Would you like to skip the mode\n"
-	.string "explanation?$"
-
-Zone0Sanctuary_Text_Colress_VanillaNuzlocke:
-	.string "There are two game modes:\n"
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} and {COLOR RED}Nuzlocke{COLOR DARK_GRAY}.\p"
-	.string "If you play on {COLOR RED}Nuzlocke{COLOR DARK_GRAY}, you can\n"
-	.string "change to {COLOR RED}Vanilla{COLOR DARK_GRAY} at any point by\l"
-	.string "speaking to me.$"
-
-Zone0Sanctuary_Text_Colress_VanillaExplained:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\n"
-	.string "modifications.$"
-
-Zone0Sanctuary_Text_Colress_NuzlockeExplained:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode completely implements\n"
-	.string "all standard Nuzlocke rules, such\l"
-	.string "as permanent death and capture\l"
-	.string "restrictions, and comes with\l"
-	.string "Species Clause and Shiny Clause.\p"
-	.string "It is not recommended to play\n"
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are\l"
-	.string "familiar with Nuzlockes already.$"
-
-Zone0Sanctuary_Text_Colress_RandomizerSure:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} on? Are you sure?\n"
-	.string "You won't be able to switch later.$"
-
-Zone0Sanctuary_Text_Colress_PickMode:
-	.string "Which game mode would you like to\n"
-	.string "play on?$"
-
-Zone0Sanctuary_Text_Colress_VanillaSure:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode? Are you sure?\n"
-	.string "You won't be able to switch later.$"
-
-Zone0Sanctuary_Text_Colress_NuzlockeSure:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode? Are you sure?$"
-
-Zone0Sanctuary_Text_Colress_VanillaMode:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled. Good luck.$"
-
-Zone0Sanctuary_Text_Colress_NuzlockeMode:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled. Good luck.$"
+Zone0Sanctuary_Text_Colress_DefaultBrutal:
+	.string "There are two game difficulty options:\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}.$"
 
 Zone0Sanctuary_Text_WouldLikeSkipDifficultyExplanation:
 	.string "Would you like to skip the difficulty\n"
 	.string "explanation?$"
 
-Zone0Sanctuary_Text_Colress_DefaultBrutal:
-	.string "There are two game difficulty settings:\n"
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}.\p"
-	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can\n"
-	.string "change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by\l"
-	.string "speaking to me.$"
-
 Zone0Sanctuary_Text_Colress_DefaultExplained:
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the intended difficulty.$"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two\n"
+	.string "difficulty options.\p"
+	.string "It is recommended for any first\n"
+	.string "playthroughs.$"
 
 Zone0Sanctuary_Text_Colress_BrutalExplained:
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode makes all the opponents\n"
-	.string "more challenging.\p"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the\n"
+	.string "two difficulty options.\p"
+	.string "All opponents are more challenging,\n"
+	.string "especially bosses.\p"
 	.string "In addition, there are a number of\n"
 	.string "rules implemented to make this mode\l"
 	.string "even more difficult.\p"
@@ -1262,6 +1148,9 @@ Zone0Sanctuary_Text_Colress_BrutalExplained:
 	.string "Some Gift Pokémon, such as your\n"
 	.string "starter, are locked to have their\l"
 	.string "weaker ability.\p"
+	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can\n"
+	.string "change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by\l"
+	.string "speaking to me.$"
 	.string "It is not recommended to play on\n"
 	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\l"
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.$"
@@ -1284,6 +1173,63 @@ Zone0Sanctuary_Text_Colress_DefaultDifficulty:
 Zone0Sanctuary_Text_Colress_BrutalDifficulty:
 	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled.\n"
 	.string "Good luck.$"
+
+Zone0Sanctuary_Text_Colress_ModeExplanation:
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
+	.string "optional game modes.\p"
+	.string "If you do not choose any of them,\n"
+	.string "you will play on the\l"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} game mode,\l"
+	.string "which adds no extra modifications.$"
+
+Zone0Sanctuary_Text_Colress_RandomizerExplanation:
+	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode randomizes\n"
+	.string "wild encounters and gift Pokémon,\l"
+	.string "including your starter.\p"
+	.string "Trainer Pokémon are left unchanged.\p"
+	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode\n"
+	.string "cannot be turned off.$"
+
+Zone0Sanctuary_Text_Colress_Randomizer:
+	.string "Would you like to enable the\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?$"
+
+Zone0Sanctuary_Text_Colress_RandomizerSure:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} on? Are you sure?\n"
+	.string "You won't be able to switch later.$"
+
+Zone0Sanctuary_Text_RandomizerEnabled:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled.$"
+
+Zone0Sanctuary_Text_Colress_NuzlockeExplained:
+	.string "The {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode completely\n"
+	.string "implements all standard Nuzlocke\l"
+	.string "rules, such as permanent death and\l"
+	.string "capture restrictions.\p"
+	.string "It comes with Species Clause and\n"
+	.string "Shiny Clause.\p"
+	.string "You can turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode at\n"
+	.string "any point by speaking to me.\p"
+	.string "It is not recommended to play\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are\l"
+	.string "familiar with Nuzlockes already.$"
+
+Zone0Sanctuary_Text_Colress_Nuzlocke:
+	.string "Would you like to enable the\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?$"
+
+Zone0Sanctuary_Text_Colress_NuzlockeSure:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode? Are you sure?$"
+
+Zone0Sanctuary_Text_Colress_NuzlockeMode:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled. Good luck.$"
+
+Zone0Sanctuary_Text_Colress_NoModesChosen:
+	.string "You have chosen to disable all\n"
+	.string "optional game modes.$"
+
+Zone0Sanctuary_Text_Colress_VanillaMode:
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled. Good luck.$"
 
 Zone0Sanctuary_Text_Colress_StartTour:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each\n"

@@ -1161,11 +1161,17 @@ static void PrintModeOnCard(void)
 
     if (FlagGet(FLAG_NUZLOCKE_ON))
     {
-        StringExpandPlaceholders(gStringVar4, gText_TrainerCardNuzlocke);
+        if (FlagGet(FLAG_RANDOMIZER_ON))
+            StringExpandPlaceholders(gStringVar4, gText_TrainerCardRandomlocke);
+        else
+            StringExpandPlaceholders(gStringVar4, gText_TrainerCardNuzlocke);
     }
     else
     {
-        StringExpandPlaceholders(gStringVar4, gText_TrainerCardVanilla);
+        if (FlagGet(FLAG_RANDOMIZER_ON))
+            StringExpandPlaceholders(gStringVar4, gText_TrainerCardRandomizer);
+        else
+            StringExpandPlaceholders(gStringVar4, gText_TrainerCardVanilla);
     }
     
     if (!sData->isHoenn)
