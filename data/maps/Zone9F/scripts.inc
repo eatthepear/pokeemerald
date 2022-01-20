@@ -61,7 +61,7 @@ Zone9F_EventScript_Erica::
 	end
 
 Zone9F_EventScript_SendZoruaParty::
-	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, MOVE_LEER, MOVE_PURSUIT, MOVE_FAKE_TEARS, MOVE_SNARL, TRUE
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, 0xFF, 0xFF, 0xFF, 0xFF, TRUE
 	setvar VAR_TEMP_1, SPECIES_ZORUA
 	call Zone9F_EventScript_ReceivedZoruaFanfare
 	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
@@ -73,7 +73,7 @@ Zone9F_EventScript_SendZoruaParty::
 	end
 
 Zone9F_EventScript_SendZoruaPC::
-	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, MOVE_LEER, MOVE_PURSUIT, MOVE_FAKE_TEARS, MOVE_SNARL, TRUE
+	givecustommon SPECIES_ZORUA, 10, ITEM_NONE, ITEM_CHERISH_BALL, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, 0xFF, 0xFF, 0xFF, 0xFF, TRUE
 	setvar VAR_TEMP_1, SPECIES_ZORUA
 	call Zone9F_EventScript_ReceivedZoruaFanfare
 	msgbox Zone9F_Text_HowBoutNickname, MSGBOX_YESNO
