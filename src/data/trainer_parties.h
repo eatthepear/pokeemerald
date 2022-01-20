@@ -832,11 +832,6 @@ static const struct TrainerMon sParty_Pearlie[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_FENNEKIN,
-    },
-    {
-    .iv = 0,
-    .lvl = 19,
     .species = SPECIES_KOMALA,
     }
 };
@@ -860,7 +855,7 @@ static const struct TrainerMon sParty_Kyle[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_PIKACHU,
+    .species = SPECIES_FENNEKIN,
     }
 };
 
@@ -1056,14 +1051,14 @@ static const struct TrainerMon sParty_Joel[] = {
 
 static const struct TrainerMon sParty_Jake[] = {//Leviathan 6, Default
     {
-    .iv = 31,
+    .ivs = {31, 31, 31, 30, 31, 31},
     .lvl = 24,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Surge Surfer
-    .species = SPECIES_RAICHU_ALOLAN, //Starts with aura +2 Speed
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_DRAINING_KISS, MOVE_NASTY_PLOT}
+    .ability = ABILITY_SLOT_1, //Lightningrod
+    .species = SPECIES_PIKACHU, //Starts with aura +2 Speed
+    .heldItem = ITEM_LIGHT_BALL,
+    .moves = {MOVE_THUNDERBOLT, MOVE_NASTY_PLOT, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER} // Hidden Power Ice
     }
 };
 
@@ -3286,14 +3281,14 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan 5, Battle s
 
 static const struct TrainerMon sParty_JakeBrutal[] = {//Leviathan 6, Brutal
     {
-    .iv = 31,
+    .ivs = {31, 31, 31, 30, 31, 31},
     .lvl = 24,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Surge Surfer
-    .species = SPECIES_RAICHU_ALOLAN, //Starts with aura +2 Sp. Attack, +2 Speed
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_DRAINING_KISS, MOVE_NASTY_PLOT}
+    .ability = ABILITY_SLOT_1, //Lightningrod
+    .species = SPECIES_PIKACHU, //Starts with aura +2 Sp. Attack, +2 Speed
+    .heldItem = ITEM_LIGHT_BALL,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SURF, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER} // Hidden Power Ice
     }
 };
 
