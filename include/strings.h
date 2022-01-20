@@ -3129,11 +3129,12 @@ extern const u8 gText_Nuzlocke[];
 extern const u8 gText_Default[];
 extern const u8 gText_Brutal[];
 extern const u8 gText_ContinueMenuZone[];
-extern const u8 gText_ContinueMenuDefaultVanillaMode[];
-extern const u8 gText_ContinueMenuBrutalVanillaMode[];
-extern const u8 gText_ContinueMenuDefaultNuzlockeMode[];
-extern const u8 gText_ContinueMenuBrutalNuzlockeMode[];
-
+extern const u8 gText_ContinueMenuVanilla[];
+extern const u8 gText_ContinueMenuRandomizer[];
+extern const u8 gText_ContinueMenuNuzlocke[];
+extern const u8 gText_ContinueMenuRandomlocke[];
+extern const u8 gText_ContinueMenuDefault[];
+extern const u8 gText_ContinueMenuBrutal[];
 extern const u8 gText_NextZone[];
 extern const u8 gText_Advice[];
 extern const u8 gText_Settings[];

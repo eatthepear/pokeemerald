@@ -2143,14 +2143,25 @@ static void MainMenu_FormatSavegamePlayer(void)
 static void MainMenu_FormatSavegameTime(void)
 {
     u8 str[0x20];
-    u8* ptr;
 
-    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
-    ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
-    *ptr = 0xF0;
-    ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 0xD0), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+    {   
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutal);
+        AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    }
+    else
+    {
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuDefault);
+        AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    }
+    // u8* ptr;
+
+    // StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
+    // AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    // ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+    // *ptr = 0xF0;
+    // ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+    // AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 0xD0), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
 }
 
 static void MainMenu_FormatSavegameZone(void)
@@ -2158,7 +2169,7 @@ static void MainMenu_FormatSavegameZone(void)
     u8 str[0x20];
     u16 whichZone;
     
-    whichZone = VarGet(VAR_ZONE);
+    whichZone = VarGet(VAR_ZONE) - 1;
 
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuZone);
     AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
@@ -2172,27 +2183,27 @@ static void MainMenu_FormatSavegameMode(void)
     
     if (FlagGet(FLAG_NUZLOCKE_ON) == TRUE)
     {
-        if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+        if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
         {   
-            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalNuzlockeMode);
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuRandomlocke);
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuDefaultNuzlockeMode);
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuNuzlocke);
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
         }
     }
     else
     {
-        if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+        if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
         {   
-            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalVanillaMode);
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuRandomizer);
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuDefaultVanillaMode);
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuVanilla);
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
         }
     }
