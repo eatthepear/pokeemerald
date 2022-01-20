@@ -2493,43 +2493,123 @@ EventScript_AdviceAgain:
 
 EventScript_Settings:
 	setflag FLAG_IS_DEBUGGING_SAVEFILE
-	goto_if_set FLAG_NUZLOCKE_ON, EventScript_CheckDifficultyNuzlocke
-	goto EventScript_CheckDifficultyVanilla
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_CheckBrutalNuzlocke
+	goto EventScript_CheckDefaultNuzlocke
 	end
 
-EventScript_CheckDifficultyNuzlocke:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_BrutalNuzlockeMsg
+EventScript_CheckBrutalNuzlocke:
+	goto_if_set FLAG_NUZLOCKE_ON, EventScript_CheckBrutalNuzlockeRandomizer
+	goto EventScript_CheckBrutalRandomizer
+	end
+
+EventScript_CheckBrutalNuzlockeRandomizer:
+	goto_if_set FLAG_RANDOMIZER_ON, EventScript_BrutalNuzlockeRandomizerMsg
+	goto EventScript_BrutalNuzlockeMsg
+	end
+
+EventScript_CheckBrutalRandomizer:
+	goto_if_set FLAG_RANDOMIZER_ON, EventScript_BrutalRandomizerMsg
+	goto EventScript_BrutalVanillaMsg
+	end
+
+EventScript_CheckDefaultNuzlocke:
+	goto_if_set FLAG_NUZLOCKE_ON, EventScript_CheckDefaultNuzlockeRandomizer
+	goto EventScript_CheckDefaultRandomizer
+	end
+
+EventScript_CheckDefaultNuzlockeRandomizer:
+	goto_if_set FLAG_RANDOMIZER_ON, EventScript_DefaultNuzlockeRandomizerMsg
 	goto EventScript_DefaultNuzlockeMsg
 	end
 
-EventScript_BrutalNuzlockeMsg:
-	msgbox gText_Colress_BrutalNuzlockeMsg
+EventScript_CheckDefaultRandomizer:
+	goto_if_set FLAG_RANDOMIZER_ON, EventScript_DefaultRandomizerMsg
+	goto EventScript_DefaultVanillaMsg
+	end
+
+EventScript_BrutalNuzlockeRandomizerMsg:
+	msgbox gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
+	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
+	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
 	call EventScript_TurnOffBrutal
+	call EventScript_TurnOffNuzlocke
+	goto EventScript_WhenUReady
+	end
+
+EventScript_BrutalNuzlockeMsg:
+	msgbox gText_Colress_BrutalNuzlockeMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
+	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
+	call EventScript_TurnOffBrutal
+	call EventScript_TurnOffNuzlocke
+	goto EventScript_WhenUReady
+	end
+
+EventScript_BrutalRandomizerMsg:
+	msgbox gText_Colress_BrutalRandomizerMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
+	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
+	call EventScript_TurnOffBrutal
+	goto EventScript_WhenUReady
+	end
+
+EventScript_BrutalVanillaMsg:
+	msgbox gText_Colress_BrutalVanillaMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
+	call EventScript_TurnOffBrutal
+	goto EventScript_WhenUReady
+	end
+
+EventScript_DefaultNuzlockeRandomizerMsg:
+	msgbox gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
+	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
 	call EventScript_TurnOffNuzlocke
 	goto EventScript_WhenUReady
 	end
 
 EventScript_DefaultNuzlockeMsg:
-	msgbox gText_Colress_DefaultNuzlockeMsg
+	msgbox gText_Colress_DefaultNuzlockeMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
 	call EventScript_TurnOffNuzlocke
 	goto EventScript_WhenUReady
 	end
 
-EventScript_CheckDifficultyVanilla:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_BrutalVanillaMsg
-	goto EventScript_DefaultVanillaMsg
-	end
-
-EventScript_BrutalVanillaMsg:
-	msgbox gText_Colress_BrutalVanillaMsg
-	call EventScript_TurnOffBrutal
+EventScript_DefaultRandomizerMsg:
+	msgbox gText_Colress_DefaultRandomizerMsg, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
 	goto EventScript_WhenUReady
 	end
 
 EventScript_DefaultVanillaMsg:
-	msgbox gText_Colress_DefaultVanillaMsg
+	msgbox gText_Colress_DefaultVanillaMsg, MSGBOX_AUTOCLOSE
 	goto EventScript_WhenUReady
 	end
+
+EventScript_Colress_BrutalReminderMsg:
+	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained, MSGBOX_AUTOCLOSE
+	return
+
+EventScript_Colress_NuzlockeReminderMsg:
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
+	return
+
+EventScript_Colress_RandomizerReminderMsg:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
+	return
 
 EventScript_TurnOffBrutal:
 	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
@@ -2561,9 +2641,18 @@ EventScript_SureTurnOffNuzlocke:
 	return
 
 EventScript_TurnedOffNuzlocke:
-	msgbox gText_Colress_NuzlockeOff, MSGBOX_AUTOCLOSE
+	call_if_set FLAG_RANDOMIZER_ON, EventScript_TurnedOffNuzlockeMsg
+	call_if_unset FLAG_RANDOMIZER_ON, EventScript_TurnedOffNuzlockeMsgRandomizer
 	clearflag FLAG_NUZLOCKE_ON
 	callnative GlobalNuzlockeClear
+	return
+
+EventScript_TurnedOffNuzlockeMsg:
+	msgbox gText_Colress_NuzlockeOff, MSGBOX_AUTOCLOSE
+	return
+
+EventScript_TurnedOffNuzlockeMsgRandomizer:
+	msgbox gText_Colress_NuzlockeOffRandomizer, MSGBOX_AUTOCLOSE
 	return
 
 EventScript_LeavingSetup:

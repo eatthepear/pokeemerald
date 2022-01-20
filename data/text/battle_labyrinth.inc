@@ -8,21 +8,57 @@ gText_Colress_EndofDemo:
 	.string "transfer your save file to the next\l"
 	.string "version when it comes out.$"
 
+gText_Colress_BrutalNuzlockeRandomizerMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
+
 gText_Colress_BrutalNuzlockeMsg:
 	.string "You are currently playing on\n"
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty, {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
 
-gText_Colress_DefaultNuzlockeMsg:
+gText_Colress_BrutalRandomizerMsg:
 	.string "You are currently playing on\n"
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty, {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
 
 gText_Colress_BrutalVanillaMsg:
 	.string "You are currently playing on\n"
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty, {COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_DefaultNuzlockeRandomizerMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_DefaultNuzlockeMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_DefaultRandomizerMsg:
+	.string "You are currently playing on\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
 
 gText_Colress_DefaultVanillaMsg:
 	.string "You are currently playing on\n"
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty, {COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l"
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+gText_Colress_BrutalReminder:
+	.string "Would you like an explanation of\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?$"
+
+gText_Colress_RandomizerReminder:
+	.string "Would you like an explanation of the\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode?$"
+
+gText_Colress_NuzlockeReminder:
+	.string "Would you like an explanation of the\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
 
 gText_Colress_WouldTurnOffBrutal:
 	.string "Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
@@ -47,6 +83,10 @@ gText_Colress_SureTurnOffNuzlocke:
 gText_Colress_NuzlockeOff:
 	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\n"
 	.string "Mode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.$"
+
+gText_Colress_NuzlockeOffRandomizer:
+	.string "{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\n"
+	.string "Mode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.$"
 
 gText_Colress_Rules:
 	.string "The Battle Labyrinth is comprised\n"
