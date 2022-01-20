@@ -30,6 +30,7 @@
 #include "mystery_event_script.h"
 #include "palette.h"
 #include "party_menu.h"
+#include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "overworld.h"
@@ -1691,6 +1692,10 @@ bool8 ScrCmd_givemon(struct ScriptContext *ctx)
     u32 unkParam2 = ScriptReadWord(ctx);
     u8 unkParam3 = ScriptReadByte(ctx);
 
+    if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
+    {
+        species = GetRandomSpecies(level);
+    }
     gSpecialVar_Result = ScriptGiveMon(species, level, item, unkParam1, unkParam2, unkParam3);
     return FALSE;
 }
@@ -2367,6 +2372,11 @@ bool8 ScrCmd_givecustommon(struct ScriptContext *ctx)
     u8 ivs[NUM_STATS] = {hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv};
     u16 moves[4] = {move1, move2, move3, move4};
     
+    if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
+    {
+        species = GetRandomSpecies(level);
+    }
+
     gSpecialVar_Result = ScriptGiveCustomMon(species, level, item, ball, nature, abilityNum, evs, ivs, moves, isShiny);
     return FALSE;
 }
