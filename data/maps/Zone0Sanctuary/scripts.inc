@@ -41,7 +41,10 @@ Zone0Sanctuary_EventScript_RandomizerSkipTutorial:
 
 Zone0Sanctuary_EventScript_SetRandomizerSkip:
 	setflag FLAG_RANDOMIZER_ON
-	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
 	end
 
@@ -56,7 +59,10 @@ Zone0Sanctuary_EventScript_ModeSkipTutorial:
 
 Zone0Sanctuary_EventScript_VanillaSkip:
 	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 	
@@ -64,7 +70,10 @@ Zone0Sanctuary_EventScript_NuzlockeSkip:
 	closemessage
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 
@@ -81,7 +90,10 @@ Zone0Sanctuary_EventScript_DifficultySkipTutorial:
 
 Zone0Sanctuary_EventScript_DefaultSkip:
 	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
@@ -90,7 +102,10 @@ Zone0Sanctuary_EventScript_DefaultSkip:
 Zone0Sanctuary_EventScript_BrutalSkip:
 	closemessage
 	setflag FLAG_BRUTAL_MODE_ON
-	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
 	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_PickStarter
@@ -106,7 +121,7 @@ Zone0Sanctuary_EventScript_PickRandomizer:
 
 Zone0Sanctuary_EventScript_PickRandomizerMenu:
 	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizer
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_Randomizer
 	goto Zone0Sanctuary_EventScript_PickMode
 	end
 
@@ -119,7 +134,10 @@ Zone0Sanctuary_EventScript_Randomizer:
 
 Zone0Sanctuary_EventScript_SetRandomizer:
 	setflag FLAG_RANDOMIZER_ON
-	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_RandomizerEnabled, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_PickMode
 	end
 
@@ -151,7 +169,10 @@ Zone0Sanctuary_EventScript_Vanilla:
 	end
 
 Zone0Sanctuary_EventScript_SetVanilla:
-	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 	
@@ -165,7 +186,10 @@ Zone0Sanctuary_EventScript_Nuzlocke:
 Zone0Sanctuary_EventScript_SetNuzlocke:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 
@@ -197,7 +221,10 @@ Zone0Sanctuary_EventScript_Default:
 	end
 
 Zone0Sanctuary_EventScript_SetDefault:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_Tour
 	end
 	
@@ -210,7 +237,10 @@ Zone0Sanctuary_EventScript_Brutal:
 
 Zone0Sanctuary_EventScript_SetBrutal:
 	setflag FLAG_BRUTAL_MODE_ON
-	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
+	waitse
+	closemessage
 	goto Zone0Sanctuary_EventScript_Tour
 	end
 
@@ -1041,7 +1071,8 @@ Zone0Sanctuary_EventScript_RandomizerStarter:
 	end
 
 Zone0Sanctuary_Text_Colress_RandomizerStarter:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Here is your random starter.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is\n"
+	.string "on, you get a random starter.$"
 
 Zone0Sanctuary_EventScript_Colress_EndIntro:
 	compare VAR_ZONE, 2
