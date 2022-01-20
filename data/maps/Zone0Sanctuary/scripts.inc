@@ -23,14 +23,13 @@ Zone0Sanctuary_EventScript_Intro:
 	call EventScript_MoveCameraDown
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_RandomizerSkipTutorial
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_RandomizerSkipTutorial
 	delay 96
 	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
 	delay 48
 	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
-	goto Zone0Sanctuary_EventScript_Randomizer
+	goto Zone0Sanctuary_EventScript_PickRandomizer
 	end
 
 Zone0Sanctuary_EventScript_RandomizerSkipTutorial:
@@ -46,74 +45,76 @@ Zone0Sanctuary_EventScript_SetRandomizerSkip:
 	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
 	end
 
-Zone0Sanctuary_Text_Colress_Randomizer:
-	.string "Would you like to enable the\n"
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
-
-Zone0Sanctuary_Text_RandomizerEnabled:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} enabled.$"
-
 Zone0Sanctuary_EventScript_ModeSkipTutorial:
 	msgbox Zone0Sanctuary_Text_Colress_PickMode, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_VANILLA_NUZLOCKE, 1
 	switch VAR_RESULT
 	case 0, Zone0Sanctuary_EventScript_VanillaSkip
 	case 1, Zone0Sanctuary_EventScript_NuzlockeSkip
-	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
+	@ goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 
 Zone0Sanctuary_EventScript_VanillaSkip:
 	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_VanillaSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetVanillaSkip
-	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
-	end
-
-Zone0Sanctuary_EventScript_SetVanillaSkip:
 	msgbox Zone0Sanctuary_Text_Colress_VanillaMode, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 	
 Zone0Sanctuary_EventScript_NuzlockeSkip:
 	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetNuzlockeSkip
-	goto Zone0Sanctuary_EventScript_ModeSkipTutorial
-	end
-
-Zone0Sanctuary_EventScript_SetNuzlockeSkip:
 	callnative GlobalNuzlockeSet
 	setflag FLAG_NUZLOCKE_ON
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeMode, MSGBOX_AUTOCLOSE
 	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	end
 
-Zone0Sanctuary_EventScript_Randomizer:
+Zone0Sanctuary_EventScript_DifficultySkipTutorial:
+	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
+	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
+	switch VAR_RESULT
+	case 0, Zone0Sanctuary_EventScript_DefaultSkip
+	case 1, Zone0Sanctuary_EventScript_BrutalSkip
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+
+Zone0Sanctuary_EventScript_DefaultSkip:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+	
+Zone0Sanctuary_EventScript_BrutalSkip:
+	closemessage
+	setflag FLAG_BRUTAL_MODE_ON
+	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
+	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
+	goto Zone0Sanctuary_EventScript_PickStarter
+	end
+
+Zone0Sanctuary_EventScript_PickRandomizer:
 	msgbox Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_PickRandomizerMenu
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_PickRandomizerMenu
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
 	delay 96
 	goto Zone0Sanctuary_EventScript_PickRandomizerMenu
 	end
 
-Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation:
-	.string "Would you like to skip the\n"
-	.string "randomizer explanation?$"
-
-Zone0Sanctuary_Text_Colress_RandomizerExplanation:
-	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} option randomizes\n"
-	.string "wild encounters and gift Pokémon,\l"
-	.string "including your starter.\p"
-	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} cannot be\n"
-	.string "turned off.$"
-
 Zone0Sanctuary_EventScript_PickRandomizerMenu:
 	msgbox Zone0Sanctuary_Text_Colress_Randomizer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizer
 	goto Zone0Sanctuary_EventScript_PickMode
+	end
+
+Zone0Sanctuary_EventScript_Randomizer:
+	closemessage
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerSure, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetRandomizer
+	goto Zone0Sanctuary_EventScript_PickRandomizerMenu
 	end
 
 Zone0Sanctuary_EventScript_SetRandomizer:
@@ -124,8 +125,7 @@ Zone0Sanctuary_EventScript_SetRandomizer:
 
 Zone0Sanctuary_EventScript_PickMode:
 	msgbox Zone0Sanctuary_Text_WouldLikeSkipModeExplanation, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_PickModeMenu
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_PickModeMenu
 	msgbox Zone0Sanctuary_Text_Colress_VanillaNuzlocke, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_VanillaExplained, MSGBOX_AUTOCLOSE
@@ -146,8 +146,7 @@ Zone0Sanctuary_EventScript_PickModeMenu:
 Zone0Sanctuary_EventScript_Vanilla:
 	closemessage
 	msgbox Zone0Sanctuary_Text_Colress_VanillaSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetVanilla
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetVanilla
 	goto Zone0Sanctuary_EventScript_PickModeMenu
 	end
 
@@ -159,8 +158,7 @@ Zone0Sanctuary_EventScript_SetVanilla:
 Zone0Sanctuary_EventScript_Nuzlocke:
 	closemessage
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetNuzlocke
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetNuzlocke
 	goto Zone0Sanctuary_EventScript_PickModeMenu
 	end
 
@@ -171,52 +169,9 @@ Zone0Sanctuary_EventScript_SetNuzlocke:
 	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 
-Zone0Sanctuary_EventScript_DifficultySkipTutorial:
-	msgbox Zone0Sanctuary_Text_Colress_PickDifficulty, MSGBOX_DEFAULT
-	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_DefaultSkip
-	case 1, Zone0Sanctuary_EventScript_BrutalSkip
-	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
-	end
-
-Zone0Sanctuary_EventScript_DefaultSkip:
-	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_DefaultSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetDefaultSkip
-	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
-	end
-
-Zone0Sanctuary_EventScript_SetDefaultSkip:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultDifficulty, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
-	end
-	
-Zone0Sanctuary_EventScript_BrutalSkip:
-	closemessage
-	msgbox Zone0Sanctuary_Text_Colress_BrutalSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetBrutalSkip
-	goto Zone0Sanctuary_EventScript_DifficultySkipTutorial
-	end
-
-Zone0Sanctuary_EventScript_SetBrutalSkip:
-	setflag FLAG_BRUTAL_MODE_ON
-	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_RandomizerStarter
-	msgbox Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE
-	goto Zone0Sanctuary_EventScript_PickStarter
-	end
-
 Zone0Sanctuary_EventScript_PickDifficulty:
 	msgbox Zone0Sanctuary_Text_WouldLikeSkipDifficultyExplanation, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_PickDifficultyMenu
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_PickDifficultyMenu
 	msgbox Zone0Sanctuary_Text_Colress_DefaultBrutal, MSGBOX_AUTOCLOSE
 	delay 16
 	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained, MSGBOX_AUTOCLOSE
@@ -237,8 +192,7 @@ Zone0Sanctuary_EventScript_PickDifficultyMenu:
 Zone0Sanctuary_EventScript_Default:
 	closemessage
 	msgbox Zone0Sanctuary_Text_Colress_DefaultSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetDefault
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetDefault
 	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
 	end
 
@@ -250,8 +204,7 @@ Zone0Sanctuary_EventScript_SetDefault:
 Zone0Sanctuary_EventScript_Brutal:
 	closemessage
 	msgbox Zone0Sanctuary_Text_Colress_BrutalSure, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_SetBrutal
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_SetBrutal
 	goto Zone0Sanctuary_EventScript_PickDifficultyMenu
 	end
 
@@ -443,10 +396,8 @@ Zone0Sanctuary_EventScript_PickStarter:
 	waitmessage
 	waitfanfare
 	msgbox Zone0Sanctuary_Text_Colress_HowBoutNickname, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_NicknameStarter
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Colress_EndIntro
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_NicknameStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_Colress_EndIntro
 	end
 
 Zone0Sanctuary_Text_ChooseAStarter:
@@ -524,8 +475,7 @@ Zone0Sanctuary_EventScript_Bulbasaur:
 	playmoncry SPECIES_BULBASAUR, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveBulbasaurBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveBulbasaur
 	return
@@ -548,8 +498,7 @@ Zone0Sanctuary_EventScript_Charmander:
 	playmoncry SPECIES_CHARMANDER, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCharmander, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCharmanderBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCharmander
 	return
@@ -572,8 +521,7 @@ Zone0Sanctuary_EventScript_Squirtle:
 	playmoncry SPECIES_SQUIRTLE, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSquirtleBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSquirtle
 	return
@@ -596,8 +544,7 @@ Zone0Sanctuary_EventScript_Chikorita:
 	playmoncry SPECIES_CHIKORITA, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChikorita, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChikoritaBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChikorita
 	return
@@ -620,8 +567,7 @@ Zone0Sanctuary_EventScript_Cyndaquil:
 	playmoncry SPECIES_CYNDAQUIL, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCyndaquilBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCyndaquil
 	return
@@ -644,8 +590,7 @@ Zone0Sanctuary_EventScript_Totodile:
 	playmoncry SPECIES_TOTODILE, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTotodile, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTotodileBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTotodile
 	return
@@ -668,8 +613,7 @@ Zone0Sanctuary_EventScript_Treecko:
 	playmoncry SPECIES_TREECKO, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTreecko, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTreeckoBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTreecko
 	return
@@ -692,8 +636,7 @@ Zone0Sanctuary_EventScript_Torchic:
 	playmoncry SPECIES_TORCHIC, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTorchic, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTorchicBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTorchic
 	return
@@ -716,8 +659,7 @@ Zone0Sanctuary_EventScript_Mudkip:
 	playmoncry SPECIES_MUDKIP, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterMudkip, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveMudkipBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveMudkip
 	return
@@ -740,8 +682,7 @@ Zone0Sanctuary_EventScript_Turtwig:
 	playmoncry SPECIES_TURTWIG, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTurtwigBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTurtwig
 	return
@@ -764,8 +705,7 @@ Zone0Sanctuary_EventScript_Chimchar:
 	playmoncry SPECIES_CHIMCHAR, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChimchar, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChimcharBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChimchar
 	return
@@ -788,8 +728,7 @@ Zone0Sanctuary_EventScript_Piplup:
 	playmoncry SPECIES_PIPLUP, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPiplup, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePiplupBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePiplup
 	return
@@ -812,8 +751,7 @@ Zone0Sanctuary_EventScript_Snivy:
 	playmoncry SPECIES_SNIVY, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSnivy, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSnivyBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSnivy
 	return
@@ -836,8 +774,7 @@ Zone0Sanctuary_EventScript_Tepig:
 	playmoncry SPECIES_TEPIG, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTepig, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTepigBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTepig
 	return
@@ -860,8 +797,7 @@ Zone0Sanctuary_EventScript_Oshawott:
 	playmoncry SPECIES_OSHAWOTT, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterOshawott, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveOshawottBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveOshawott
 	return
@@ -884,8 +820,7 @@ Zone0Sanctuary_EventScript_Chespin:
 	playmoncry SPECIES_CHESPIN, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChespin, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChespinBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChespin
 	return
@@ -908,8 +843,7 @@ Zone0Sanctuary_EventScript_Fennekin:
 	playmoncry SPECIES_FENNEKIN, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFennekin, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFennekinBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFennekin
 	return
@@ -932,8 +866,7 @@ Zone0Sanctuary_EventScript_Froakie:
 	playmoncry SPECIES_FROAKIE, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFroakie, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFroakieBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFroakie
 	return
@@ -956,8 +889,7 @@ Zone0Sanctuary_EventScript_Rowlet:
 	playmoncry SPECIES_ROWLET, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterRowlet, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveRowletBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveRowlet
 	return
@@ -980,8 +912,7 @@ Zone0Sanctuary_EventScript_Litten:
 	playmoncry SPECIES_LITTEN, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterLitten, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveLittenBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveLitten
 	return
@@ -1004,8 +935,7 @@ Zone0Sanctuary_EventScript_Popplio:
 	playmoncry SPECIES_POPPLIO, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPopplio, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePopplioBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePopplio
 	return
@@ -1028,8 +958,7 @@ Zone0Sanctuary_EventScript_Grookey:
 	playmoncry SPECIES_GROOKEY, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterGrookey, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveGrookeyBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveGrookey
 	return
@@ -1052,8 +981,7 @@ Zone0Sanctuary_EventScript_Scorbunny:
 	playmoncry SPECIES_SCORBUNNY, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveScorbunnyBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveScorbunny
 	return
@@ -1076,8 +1004,7 @@ Zone0Sanctuary_EventScript_Sobble:
 	playmoncry SPECIES_SOBBLE, 0
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSobble, MSGBOX_YESNO
 	waitmoncry
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_PickStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSobbleBrutal
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSobble
 	return
@@ -1109,10 +1036,8 @@ Zone0Sanctuary_EventScript_RandomizerStarter:
 	waitmessage
 	waitfanfare
 	msgbox Zone0Sanctuary_Text_Colress_HowBoutNickname, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_NicknameStarter
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Colress_EndIntro
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_NicknameStarter
+	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_Colress_EndIntro
 	end
 
 Zone0Sanctuary_Text_Colress_RandomizerStarter:
@@ -1186,8 +1111,7 @@ Zone0Sanctuary_EventScript_NextZone::
 Zone0Sanctuary_EventScript_NextZoneCheck:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Leave
+	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_Leave
 	goto EventScript_WhenUReady
 	end
 
@@ -1208,6 +1132,25 @@ Zone0Sanctuary_Text_Colress_Welcome:
 	.string "trials ahead.\p"
 	.string "Would you like to skip the\n"
 	.string "tutorial?$"
+
+Zone0Sanctuary_Text_WouldLikeSkipRandomizerExplanation:
+	.string "Would you like to skip the\n"
+	.string "randomizer explanation?$"
+
+Zone0Sanctuary_Text_Colress_RandomizerExplanation:
+	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} option randomizes\n"
+	.string "wild encounters and gift Pokémon,\l"
+	.string "including your starter.\p"
+	.string "Trainer Pokémon are left unchanged.\p"
+	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} cannot be\n"
+	.string "turned off.$"
+
+Zone0Sanctuary_Text_Colress_Randomizer:
+	.string "Would you like to enable the\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
+
+Zone0Sanctuary_Text_RandomizerEnabled:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} enabled.$"
 
 Zone0Sanctuary_Text_WouldLikeSkipModeExplanation:
 	.string "Would you like to skip the mode\n"
@@ -1233,6 +1176,10 @@ Zone0Sanctuary_Text_Colress_NuzlockeExplained:
 	.string "It is not recommended to play\n"
 	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are\l"
 	.string "familiar with Nuzlockes already.$"
+
+Zone0Sanctuary_Text_Colress_RandomizerSure:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} on? Are you sure?\n"
+	.string "You won't be able to switch later.$"
 
 Zone0Sanctuary_Text_Colress_PickMode:
 	.string "Which game mode would you like to\n"
