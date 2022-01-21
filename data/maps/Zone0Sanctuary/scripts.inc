@@ -29,7 +29,7 @@ Zone0Sanctuary_EventScript_Intro:
 	delay 48
 	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
-	goto Zone0Sanctuary_EventScript_PickRandomizer
+	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
 
 Zone0Sanctuary_EventScript_DifficultySkipTutorial:

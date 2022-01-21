@@ -2158,7 +2158,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
                 if (FlagGet(FLAG_RANDOMIZER_ON))
                     StringCopy(string, gText_SaveMenuRandomlocke);
                 else
-                    StringCopy(string, gText_Nuzlocke);
+                    StringCopy(string, gText_SaveMenuNuzlocke);
             else
                 if (FlagGet(FLAG_RANDOMIZER_ON))
                     StringCopy(string, gText_SaveMenuRandomizer);
