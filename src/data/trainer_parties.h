@@ -30,6 +30,8 @@ static const struct TrainerMon sParty_Corey[] = {
     .iv = 0,
     .lvl = 3,
     .species = SPECIES_RATTATA,
+    .ability = ABILITY_SLOT_2, //Guts
+
     }
 };
 
@@ -79,6 +81,7 @@ static const struct TrainerMon sParty_Harper[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_NIDORAN_F,
+    .ability = ABILITY_SLOT_2, //Rivalry
     }
 };
 
@@ -97,6 +100,7 @@ static const struct TrainerMon sParty_Dexter[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_NIDORAN_M,
+    .ability = ABILITY_SLOT_2, //Rivalry
     },
 };
 
@@ -146,6 +150,7 @@ static const struct TrainerMon sParty_Jemma[] = {
     .iv = 0,
     .lvl = 7,
     .species = SPECIES_BIDOOF,
+    .ability = ABILITY_SLOT_2, //Unaware
     },
     {
     .iv = 0,
@@ -218,6 +223,7 @@ static const struct TrainerMon sParty_Ralph[] = {
     .iv = 0,
     .lvl = 9,
     .species = SPECIES_FOONGUS,
+    .ability = ABILITY_SLOT_2, //Effect Spore
     }
 };
 
@@ -236,6 +242,7 @@ static const struct TrainerMon sParty_Patrick[] = {
     .iv = 0,
     .lvl = 9,
     .species = SPECIES_VENIPEDE,
+    .ability = ABILITY_SLOT_2, //Swarm
     }
 };
 
@@ -285,6 +292,7 @@ static const struct TrainerMon sParty_Fred[] = {
     .iv = 0,
     .lvl = 9,
     .species = SPECIES_STUNKY,
+    .ability = ABILITY_SLOT_2, //Aftermath
     },
     {
     .iv = 0,
@@ -295,6 +303,7 @@ static const struct TrainerMon sParty_Fred[] = {
     .iv = 0,
     .lvl = 9,
     .species = SPECIES_EMOLGA,
+    .ability = ABILITY_SLOT_2, //Static
     }
 };
 
@@ -313,6 +322,7 @@ static const struct TrainerMon sParty_AnneAndJune[] = {
     .iv = 0,
     .lvl = 10,
     .species = SPECIES_GOTHITA,
+    .ability = ABILITY_SLOT_2, //Competitive
     },
     {
     .iv = 0,
@@ -344,6 +354,7 @@ static const struct TrainerMon sParty_Caitlyn[] = {
     .iv = 0,
     .lvl = 11,
     .species = SPECIES_SLOWPOKE,
+    .ability = ABILITY_SLOT_2, //Oblivious
     },
     {
     .iv = 0,
