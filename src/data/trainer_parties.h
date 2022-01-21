@@ -1066,10 +1066,10 @@ static const struct TrainerMon sParty_Jake[] = {//Leviathan 6, Default
     .lvl = 24,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Lightningrod
-    .species = SPECIES_PIKACHU, //Starts with aura +2 Speed
+    .ability = ABILITY_SLOT_2, //Static
+    .species = SPECIES_PIKACHU, //Starts with aura +1 Speed
     .heldItem = ITEM_LIGHT_BALL,
-    .moves = {MOVE_THUNDERBOLT, MOVE_NASTY_PLOT, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER} // Hidden Power Ice
+    .moves = {MOVE_ELECTRO_BALL, MOVE_NASTY_PLOT, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER} // Hidden Power Ice
     }
 };
 
@@ -3296,10 +3296,10 @@ static const struct TrainerMon sParty_JakeBrutal[] = {//Leviathan 6, Brutal
     .lvl = 24,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Lightningrod
-    .species = SPECIES_PIKACHU, //Starts with aura +2 Sp. Attack, +2 Speed
+    .ability = ABILITY_SLOT_2, //Static
+    .species = SPECIES_PIKACHU, //Starts with aura +1 all stats
     .heldItem = ITEM_LIGHT_BALL,
-    .moves = {MOVE_THUNDERBOLT, MOVE_SURF, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER} // Hidden Power Ice
+    .moves = {MOVE_ELECTRO_BALL, MOVE_NASTY_PLOT, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER} // Hidden Power Ice
     }
 };
 
@@ -3332,7 +3332,7 @@ static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Bru
     .ability = ABILITY_SLOT_1, //Vital Spirit
     .species = SPECIES_VIGOROTH,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BULK_UP, MOVE_SLASH, MOVE_ENCORE, MOVE_FURY_SWIPES}
+    .moves = {MOVE_BULK_UP, MOVE_RETURN, MOVE_ENCORE, MOVE_FEINT_ATTACK}
     }
 };
 
@@ -3401,24 +3401,24 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {//Leviathan 9, Do
     .moves = {MOVE_SHOCK_WAVE, MOVE_HIDDEN_POWER, MOVE_VOLT_SWITCH, MOVE_THUNDER_WAVE} //Hidden Power Ice
     },
     {
-    .ivs = {31, 31, 30, 30, 30, 30},
+    .iv = 31,
     .lvl = 27,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Telepathy
     .species = SPECIES_MUSHARNA,
     .heldItem = ITEM_TWISTED_SPOON,
-    .moves = {MOVE_EXTRASENSORY, MOVE_CALM_MIND, MOVE_MOONLIGHT, MOVE_HIDDEN_POWER} //Hidden Power Fighting
+    .moves = {MOVE_EXTRASENSORY, MOVE_CALM_MIND, MOVE_MOONLIGHT, MOVE_MOONBLAST}
     },
     {
-    .ivs = {31, 31, 31, 31, 30, 31},
+    .iv = 31,
     .lvl = 27,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Drought
     .species = SPECIES_TORKOAL,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_LAVA_PLUME, MOVE_SCORCHING_SANDS, MOVE_REST, MOVE_HIDDEN_POWER} //Hidden Power Electric
+    .moves = {MOVE_LAVA_PLUME, MOVE_SCORCHING_SANDS, MOVE_REST, MOVE_SOLAR_BEAM}
     },
     {
     .iv = 31,

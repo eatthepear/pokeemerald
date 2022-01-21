@@ -65,13 +65,13 @@ Zone11A_EventScript_BeginLeviathanBattle:
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JAKE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone11A_EventScript_JakeBrutal
-	totemboost_speed2 B_POSITION_OPPONENT_LEFT
+	totemboost_speed1 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN6, Zone11A_Text_Leviathan6Defeat
 	goto Zone11A_EventScript_Leviathan6Defeated
 	end
 
 Zone11A_EventScript_JakeBrutal:
-	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 2, 2, 0
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
 	trainerbattle_no_intro TRAINER_LEVIATHAN6_BRUTAL, Zone11A_Text_Leviathan6Defeat
 	goto Zone11A_EventScript_Leviathan6Defeated
 	end
