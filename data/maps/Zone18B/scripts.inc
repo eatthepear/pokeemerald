@@ -109,10 +109,11 @@ Zone18B_EventScript_InitiatePirateSequence:
 	addobject 2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	applymovement 1, Common_Movement_ExclamationMark
-	playse SE_PIN
 	waitmovement 0
+	waitse
 	msgbox Zone18B_Text_Sir, MSGBOX_AUTOCLOSE
 	msgbox Zone18B_Text_LeviathanNotAgain, MSGBOX_AUTOCLOSE
 	applymovement 2, Common_Movement_FaceDown

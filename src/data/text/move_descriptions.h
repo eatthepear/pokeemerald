@@ -2247,7 +2247,7 @@ static const u8 sFLOWER_SHIELDDescription[] = _(
 
 static const u8 sGRASSY_TERRAINDescription[] = _(
     "The ground turns to grass\n"
-    "for 5 turns. Restores HP.");
+    "for 5 turns.");
 
 static const u8 sMISTY_TERRAINDescription[] = _(
     "Covers the ground with mist\n"
