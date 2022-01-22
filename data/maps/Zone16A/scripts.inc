@@ -43,6 +43,7 @@ Zone16A_EventScript_Leviathan10Defeated:
 	waitmovement 0
 	applymovement 14, Common_Movement_WalkDown
 	waitmovement 0
+	setobjectxyperm 14, 66, 27
 	releaseall
 	end
 
@@ -53,6 +54,7 @@ Zone16A_EventScript_SophiaWalkDown:
 	waitmovement 0
 	applymovement 14, Common_Movement_WalkRight
 	waitmovement 0
+	setobjectxyperm 14, 66, 27
 	releaseall
 	end
 
