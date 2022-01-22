@@ -164,8 +164,8 @@
       "x": 17,
       "y": 14,
       "elevation": 3,
-      "item": "ITEM_LEPPA_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE18A_LEPPA_BERRY"
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE18A_SITRUS_BERRY"
     }
   ]
 }
