@@ -1148,7 +1148,7 @@ s32 AI_GetAbility(u32 battlerId)
         u16 abilityGuess = ABILITY_NONE;
         while (abilityGuess == ABILITY_NONE)
         {
-            abilityGuess = gBaseStats[gBattleMons[battlerId].species].abilities[Random() % 2];
+            abilityGuess = gBaseStats[gBattleMons[battlerId].species].abilities[Random() % NUM_ABILITY_SLOTS];
         }
         
         return abilityGuess;
