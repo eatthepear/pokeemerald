@@ -3026,14 +3026,14 @@ static const u8 sTM02Desc[] = _(
     "lowering speed.");
 
 static const u8 sTM03Desc[] = _(
-    "Deals double damage\n"
-    "if the foe is\n"
-    "poisoned.");
+    "Deals double\n"
+    "damage if the foe\n"
+    "is poisoned.");
 
 static const u8 sTM04Desc[] = _(
-    "The more the user\n"
-    "likes you, the more\n"
-    "powerful this move.");
+    "A powerful, strong\n"
+    "attack that can be\n"
+    "used by many.");
 
 static const u8 sTM05Desc[] = _(
     "Hurls boulders to\n"

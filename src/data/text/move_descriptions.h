@@ -862,8 +862,8 @@ static const u8 sHealBellDescription[] = _(
     "all status abnormalities.");
 
 static const u8 sReturnDescription[] = _(
-    "An attack that increases\n"
-    "in power with friendship.");
+    "A strong attack that can\n"
+    "be learned by many.");
 
 static const u8 sPresentDescription[] = _(
     "A gift in the form of a\n"
