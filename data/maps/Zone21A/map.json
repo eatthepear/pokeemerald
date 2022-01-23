@@ -503,8 +503,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 46,
-      "y": 25,
+      "x": 50,
+      "y": 72,
       "elevation": 3,
       "item": "ITEM_ROSELI_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE21A_ROSELI_BERRY"
