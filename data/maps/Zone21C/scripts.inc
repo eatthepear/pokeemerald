@@ -30,7 +30,7 @@ Zone21C_EventScript_BreederNoHappiny:
 	end
 
 Zone21C_EventScript_SendHappinyParty::
-	givecustommon SPECIES_HAPPINY, 25, ITEM_NONE
+	givemon SPECIES_HAPPINY, 25, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_HAPPINY
 	call Zone21C_EventScript_ReceivedHappinyFanfare
 	msgbox Zone21C_Text_HowBoutNickname, MSGBOX_YESNO
@@ -42,7 +42,7 @@ Zone21C_EventScript_SendHappinyParty::
 	end
 
 Zone21C_EventScript_SendHappinyPC::
-	givecustommon SPECIES_HAPPINY, 25, ITEM_NONE
+	givemon SPECIES_HAPPINY, 25, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_HAPPINY
 	call Zone21C_EventScript_ReceivedHappinyFanfare
 	msgbox Zone21C_Text_HowBoutNickname, MSGBOX_YESNO
