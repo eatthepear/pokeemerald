@@ -389,7 +389,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan 2, Default
     .ability = ABILITY_SLOT_2, //Shield Dust
     .species = SPECIES_DUSTOX, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_VENOSHOCK, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
     }
 };
 
@@ -3155,7 +3155,7 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     .ability = ABILITY_SLOT_2, //Shield Dust
     .species = SPECIES_DUSTOX, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_POISON_POWDER, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_VENOSHOCK, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
     },
     {
     .iv = 31,
@@ -3165,7 +3165,7 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     .ability = ABILITY_SLOT_1, //Berserk
     .species = SPECIES_BEAUTIFLY, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_STUN_SPORE}
+    .moves = {MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_ELECTROWEB}
     }
 };
 
