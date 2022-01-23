@@ -1611,7 +1611,7 @@ static const struct TrainerMon sParty_Sophia[] = {//Leviathan 10, Default
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Torrent
     .species = SPECIES_DRIZZILE,
-    .heldItem = ITEM_GROUND_GEM,
+    .heldItem = ITEM_WACAN_BERRY,
     .moves = {MOVE_SCALD, MOVE_U_TURN, MOVE_MUD_SHOT, MOVE_AIR_SLASH}
     },
     {
@@ -3434,7 +3434,7 @@ static const struct TrainerMon sParty_SophiaBrutal[] = {//Leviathan 10, Brutal
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Torrent
     .species = SPECIES_DRIZZILE,
-    .heldItem = ITEM_GROUND_GEM,
+    .heldItem = ITEM_WACAN_BERRY,
     .moves = {MOVE_SCALD, MOVE_U_TURN, MOVE_MUD_SHOT, MOVE_AIR_SLASH}
     },
     {
