@@ -914,8 +914,8 @@ Zone0Sanctuary_Text_Colress_DefaultExplained:
 Zone0Sanctuary_Text_Colress_BrutalExplained:
 	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the\n"
 	.string "two difficulty options.\p"
-	.string "All opponents are more challenging,\n"
-	.string "especially bosses.\p"
+	.string "All special opponents are far more\n"
+	.string "challenging.\p"
 	.string "In addition, there are a number of\n"
 	.string "rules implemented to make this mode\l"
 	.string "even more difficult.\p"

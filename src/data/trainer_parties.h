@@ -31,7 +31,6 @@ static const struct TrainerMon sParty_Corey[] = {
     .lvl = 3,
     .species = SPECIES_RATTATA,
     .ability = ABILITY_SLOT_2, //Guts
-
     }
 };
 
@@ -747,12 +746,12 @@ static const struct TrainerMon sParty_Anita[] = {
 //You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
 static const struct TrainerMon sParty_Ari[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 17,
     .species = SPECIES_ODDISH,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 17,
     .species = SPECIES_REMORAID,
     }
@@ -760,17 +759,17 @@ static const struct TrainerMon sParty_Ari[] = {
 
 static const struct TrainerMon sParty_Bertha[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 17,
     .species = SPECIES_PIKIPEK,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 17,
     .species = SPECIES_BOUNSWEET,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 17,
     .species = SPECIES_LITTEN,
     }
@@ -778,17 +777,17 @@ static const struct TrainerMon sParty_Bertha[] = {
 
 static const struct TrainerMon sParty_Cassandra[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 18,
     .species = SPECIES_AIPOM,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 18,
     .species = SPECIES_GROOKEY,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 18,
     .species = SPECIES_CUFANT,
     },
@@ -796,12 +795,12 @@ static const struct TrainerMon sParty_Cassandra[] = {
 
 static const struct TrainerMon sParty_Dominic[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 19,
     .species = SPECIES_CROAGUNK,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 19,
     .species = SPECIES_ORANGURU,
     }
@@ -809,17 +808,17 @@ static const struct TrainerMon sParty_Dominic[] = {
 
 static const struct TrainerMon sParty_Erica[] = {
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 19,
     .species = SPECIES_SABLEYE,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 19,
     .species = SPECIES_BAGON,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 19,
     .species = SPECIES_PASSIMIAN,
     }
@@ -1958,12 +1957,12 @@ static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
 //You fight each of these pirates in the order 4, 3, 2, 1 in a row without healing
 static const struct TrainerMon sParty_Pirate1[] = {//Default
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_BARRASKEWDA,
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_PERRSERKER,
     }
@@ -1971,12 +1970,12 @@ static const struct TrainerMon sParty_Pirate1[] = {//Default
 
 static const struct TrainerMon sParty_Pirate2[] = {//Default
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_CRABOMINABLE,
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_KINGLER,
     }
@@ -1984,12 +1983,12 @@ static const struct TrainerMon sParty_Pirate2[] = {//Default
 
 static const struct TrainerMon sParty_Pirate3[] = {//Default
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_DHELMISE,
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_DREDNAW,
     }
@@ -1997,12 +1996,12 @@ static const struct TrainerMon sParty_Pirate3[] = {//Default
 
 static const struct TrainerMon sParty_Pirate4[] = {//Default
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_OCTILLERY,
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_CHATOT,
     }
@@ -3484,13 +3483,13 @@ static const struct TrainerMon sParty_SophiaBrutal[] = {//Leviathan 10, Brutal
 //You fight each of these pirates in the order 4, 3, 2, 1 in a row without healing
 static const struct TrainerMon sParty_Pirate1Brutal[] = {//Brutal
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_BARRASKEWDA,
     .moves = {MOVE_FLIP_TURN, MOVE_THROAT_CHOP, MOVE_PSYCHIC_FANGS, MOVE_ICE_FANG}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_PERRSERKER,
     .moves = {MOVE_IRON_HEAD, MOVE_THROAT_CHOP, MOVE_COVET, MOVE_CURSE}
@@ -3499,13 +3498,13 @@ static const struct TrainerMon sParty_Pirate1Brutal[] = {//Brutal
 
 static const struct TrainerMon sParty_Pirate2Brutal[] = {//Brutal
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_CRABOMINABLE,
     .moves = {MOVE_ICE_HAMMER, MOVE_MACH_PUNCH, MOVE_THUNDER_PUNCH, MOVE_ZEN_HEADBUTT}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_KINGLER,
     .moves = {MOVE_RAZOR_SHELL, MOVE_AQUA_JET, MOVE_KNOCK_OFF, MOVE_RETURN}
@@ -3514,13 +3513,13 @@ static const struct TrainerMon sParty_Pirate2Brutal[] = {//Brutal
 
 static const struct TrainerMon sParty_Pirate3Brutal[] = {//Brutal
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_DHELMISE,
     .moves = {MOVE_ANCHOR_SHOT, MOVE_GRASSY_GLIDE, MOVE_SHADOW_CLAW, MOVE_BODY_PRESS}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_DREDNAW,
     .moves = {MOVE_LIQUIDATION, MOVE_JAW_LOCK, MOVE_ROCK_TOMB, MOVE_COUNTER}
@@ -3529,13 +3528,13 @@ static const struct TrainerMon sParty_Pirate3Brutal[] = {//Brutal
 
 static const struct TrainerMon sParty_Pirate4Brutal[] = {//Brutal
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_OCTILLERY,
     .moves = {MOVE_OCTAZOOKA, MOVE_ROCK_BLAST, MOVE_BULLET_SEED, MOVE_AURORA_BEAM}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
     .species = SPECIES_CHATOT,
     .moves = {MOVE_CHATTER, MOVE_UPROAR, MOVE_ROOST, MOVE_STEEL_WING}
