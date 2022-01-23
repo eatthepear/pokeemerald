@@ -71,8 +71,7 @@ Zone0C_EventScript_EeveeGirl::
 
 Zone0C_EventScript_SendEeveeParty::
 	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0C_EventScript_GiveEeveeBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0C_EventScript_GiveEevee
+	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	callnative SetEeveeGivenAtEncounter
 	setvar VAR_TEMP_1, SPECIES_EEVEE
 	call Zone0C_EventScript_ReceivedEeveeFanfare
@@ -83,14 +82,6 @@ Zone0C_EventScript_SendEeveeParty::
 	call Common_EventScript_NameReceivedPartyMon
 	goto Zone0C_EventScript_ReceivedEevee
 	end
-
-Zone0C_EventScript_GiveEevee:
-	givemon SPECIES_EEVEE, 5, ITEM_NONE
-	return
-
-Zone0C_EventScript_GiveEeveeBrutal:
-	givecustommon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 1
-	return
 
 Zone0C_EventScript_CantGiveFullParty::
 	msgbox Zone0C_Text_CantGive, MSGBOX_AUTOCLOSE

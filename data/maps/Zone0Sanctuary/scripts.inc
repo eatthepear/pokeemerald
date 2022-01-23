@@ -455,16 +455,7 @@ Zone0Sanctuary_EventScript_Bulbasaur:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveBulbasaurBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveBulbasaur
-	return
-
-Zone0Sanctuary_EventScript_GiveBulbasaur:
 	givecustommon SPECIES_BULBASAUR, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveBulbasaurBrutal:
-	givecustommon SPECIES_BULBASAUR, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur:
@@ -478,16 +469,7 @@ Zone0Sanctuary_EventScript_Charmander:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCharmander, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCharmanderBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCharmander
-	return
-
-Zone0Sanctuary_EventScript_GiveCharmander:
 	givecustommon SPECIES_CHARMANDER, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveCharmanderBrutal:
-	givecustommon SPECIES_CHARMANDER, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCharmander:
@@ -501,16 +483,7 @@ Zone0Sanctuary_EventScript_Squirtle:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSquirtleBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSquirtle
-	return
-
-Zone0Sanctuary_EventScript_GiveSquirtle:
 	givecustommon SPECIES_SQUIRTLE, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveSquirtleBrutal:
-	givecustommon SPECIES_SQUIRTLE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle:
@@ -524,16 +497,7 @@ Zone0Sanctuary_EventScript_Chikorita:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChikorita, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChikoritaBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChikorita
-	return
-
-Zone0Sanctuary_EventScript_GiveChikorita:
 	givecustommon SPECIES_CHIKORITA, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveChikoritaBrutal:
-	givecustommon SPECIES_CHIKORITA, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterChikorita:
@@ -547,16 +511,7 @@ Zone0Sanctuary_EventScript_Cyndaquil:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCyndaquilBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveCyndaquil
-	return
-
-Zone0Sanctuary_EventScript_GiveCyndaquil:
 	givecustommon SPECIES_CYNDAQUIL, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveCyndaquilBrutal:
-	givecustommon SPECIES_CYNDAQUIL, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil:
@@ -570,16 +525,7 @@ Zone0Sanctuary_EventScript_Totodile:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTotodile, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTotodileBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTotodile
-	return
-
-Zone0Sanctuary_EventScript_GiveTotodile:
 	givecustommon SPECIES_TOTODILE, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveTotodileBrutal:
-	givecustommon SPECIES_TOTODILE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTotodile:
@@ -593,16 +539,7 @@ Zone0Sanctuary_EventScript_Treecko:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTreecko, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTreeckoBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTreecko
-	return
-
-Zone0Sanctuary_EventScript_GiveTreecko:
 	givecustommon SPECIES_TREECKO, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveTreeckoBrutal:
-	givecustommon SPECIES_TREECKO, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTreecko:
@@ -616,16 +553,7 @@ Zone0Sanctuary_EventScript_Torchic:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTorchic, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTorchicBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTorchic
-	return
-
-Zone0Sanctuary_EventScript_GiveTorchic:
 	givecustommon SPECIES_TORCHIC, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveTorchicBrutal:
-	givecustommon SPECIES_TORCHIC, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTorchic:
@@ -639,16 +567,7 @@ Zone0Sanctuary_EventScript_Mudkip:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterMudkip, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveMudkipBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveMudkip
-	return
-
-Zone0Sanctuary_EventScript_GiveMudkip:
 	givecustommon SPECIES_MUDKIP, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveMudkipBrutal:
-	givecustommon SPECIES_MUDKIP, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterMudkip:
@@ -662,16 +581,7 @@ Zone0Sanctuary_EventScript_Turtwig:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTurtwigBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTurtwig
-	return
-
-Zone0Sanctuary_EventScript_GiveTurtwig:
 	givecustommon SPECIES_TURTWIG, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveTurtwigBrutal:
-	givecustommon SPECIES_TURTWIG, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig:
@@ -685,16 +595,7 @@ Zone0Sanctuary_EventScript_Chimchar:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChimchar, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChimcharBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChimchar
-	return
-
-Zone0Sanctuary_EventScript_GiveChimchar:
 	givecustommon SPECIES_CHIMCHAR, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveChimcharBrutal:
-	givecustommon SPECIES_CHIMCHAR, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterChimchar:
@@ -708,16 +609,7 @@ Zone0Sanctuary_EventScript_Piplup:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPiplup, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePiplupBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePiplup
-	return
-
-Zone0Sanctuary_EventScript_GivePiplup:
 	givecustommon SPECIES_PIPLUP, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GivePiplupBrutal:
-	givecustommon SPECIES_PIPLUP, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPiplup:
@@ -731,16 +623,7 @@ Zone0Sanctuary_EventScript_Snivy:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSnivy, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSnivyBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSnivy
-	return
-
-Zone0Sanctuary_EventScript_GiveSnivy:
 	givecustommon SPECIES_SNIVY, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveSnivyBrutal:
-	givecustommon SPECIES_SNIVY, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSnivy:
@@ -754,16 +637,7 @@ Zone0Sanctuary_EventScript_Tepig:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTepig, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTepigBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveTepig
-	return
-
-Zone0Sanctuary_EventScript_GiveTepig:
 	givecustommon SPECIES_TEPIG, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveTepigBrutal:
-	givecustommon SPECIES_TEPIG, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTepig:
@@ -777,16 +651,7 @@ Zone0Sanctuary_EventScript_Oshawott:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterOshawott, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveOshawottBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveOshawott
-	return
-
-Zone0Sanctuary_EventScript_GiveOshawott:
 	givecustommon SPECIES_OSHAWOTT, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveOshawottBrutal:
-	givecustommon SPECIES_OSHAWOTT, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterOshawott:
@@ -800,16 +665,7 @@ Zone0Sanctuary_EventScript_Chespin:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChespin, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChespinBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveChespin
-	return
-
-Zone0Sanctuary_EventScript_GiveChespin:
 	givecustommon SPECIES_CHESPIN, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveChespinBrutal:
-	givecustommon SPECIES_CHESPIN, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterChespin:
@@ -823,16 +679,7 @@ Zone0Sanctuary_EventScript_Fennekin:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFennekin, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFennekinBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFennekin
-	return
-
-Zone0Sanctuary_EventScript_GiveFennekin:
 	givecustommon SPECIES_FENNEKIN, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveFennekinBrutal:
-	givecustommon SPECIES_FENNEKIN, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterFennekin:
@@ -846,16 +693,7 @@ Zone0Sanctuary_EventScript_Froakie:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFroakie, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFroakieBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveFroakie
-	return
-
-Zone0Sanctuary_EventScript_GiveFroakie:
 	givecustommon SPECIES_FROAKIE, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveFroakieBrutal:
-	givecustommon SPECIES_FROAKIE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterFroakie:
@@ -869,16 +707,7 @@ Zone0Sanctuary_EventScript_Rowlet:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterRowlet, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveRowletBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveRowlet
-	return
-
-Zone0Sanctuary_EventScript_GiveRowlet:
 	givecustommon SPECIES_ROWLET, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveRowletBrutal:
-	givecustommon SPECIES_ROWLET, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterRowlet:
@@ -892,16 +721,7 @@ Zone0Sanctuary_EventScript_Litten:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterLitten, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveLittenBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveLitten
-	return
-
-Zone0Sanctuary_EventScript_GiveLitten:
 	givecustommon SPECIES_LITTEN, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveLittenBrutal:
-	givecustommon SPECIES_LITTEN, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterLitten:
@@ -915,16 +735,7 @@ Zone0Sanctuary_EventScript_Popplio:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPopplio, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePopplioBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GivePopplio
-	return
-
-Zone0Sanctuary_EventScript_GivePopplio:
 	givecustommon SPECIES_POPPLIO, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GivePopplioBrutal:
-	givecustommon SPECIES_POPPLIO, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPopplio:
@@ -938,16 +749,7 @@ Zone0Sanctuary_EventScript_Grookey:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterGrookey, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveGrookeyBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveGrookey
-	return
-
-Zone0Sanctuary_EventScript_GiveGrookey:
 	givecustommon SPECIES_GROOKEY, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveGrookeyBrutal:
-	givecustommon SPECIES_GROOKEY, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterGrookey:
@@ -961,16 +763,7 @@ Zone0Sanctuary_EventScript_Scorbunny:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveScorbunnyBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveScorbunny
-	return
-
-Zone0Sanctuary_EventScript_GiveScorbunny:
 	givecustommon SPECIES_SCORBUNNY, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveScorbunnyBrutal:
-	givecustommon SPECIES_SCORBUNNY, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny:
@@ -984,16 +777,7 @@ Zone0Sanctuary_EventScript_Sobble:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSobble, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSobbleBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_GiveSobble
-	return
-
-Zone0Sanctuary_EventScript_GiveSobble:
 	givecustommon SPECIES_SOBBLE, 5, ITEM_NONE, ITEM_PREMIER_BALL
-	return
-
-Zone0Sanctuary_EventScript_GiveSobbleBrutal:
-	givecustommon SPECIES_SOBBLE, 5, ITEM_NONE, ITEM_PREMIER_BALL, NUM_NATURES, 1
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSobble:
