@@ -518,7 +518,7 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Poison Point
     .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_GROWTH, MOVE_LEECH_SEED}
+    .moves = {MOVE_MEGA_DRAIN, MOVE_VENOSHOCK, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
     .iv = 31,
@@ -3178,7 +3178,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     .ability = ABILITY_SLOT_1, //Poison Point
     .species = SPECIES_ROSELIA,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_MEGA_DRAIN, MOVE_STUN_SPORE, MOVE_GROWTH, MOVE_LEECH_SEED}
+    .moves = {MOVE_MEGA_DRAIN, MOVE_VENOSHOCK, MOVE_GROWTH, MOVE_LEECH_SEED}
     },
     {
     .iv = 31,
