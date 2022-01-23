@@ -2626,6 +2626,7 @@ EventScript_SureTurnOffBrutal:
 EventScript_TurnedOffBrutal:
 	msgbox gText_Colress_BrutalOff, MSGBOX_AUTOCLOSE
 	clearflag FLAG_BRUTAL_MODE_ON
+	clearflag FLAG_SMART_WILD_AI_ON
 	return
 
 EventScript_TurnOffNuzlocke:

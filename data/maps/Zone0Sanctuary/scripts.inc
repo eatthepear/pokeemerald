@@ -51,6 +51,7 @@ Zone0Sanctuary_EventScript_DefaultSkip:
 	
 Zone0Sanctuary_EventScript_BrutalSkip:
 	setflag FLAG_BRUTAL_MODE_ON
+	setflag FLAG_SMART_WILD_AI_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
 	waitse
@@ -132,6 +133,7 @@ Zone0Sanctuary_EventScript_Brutal:
 
 Zone0Sanctuary_EventScript_SetBrutal:
 	setflag FLAG_BRUTAL_MODE_ON
+	setflag FLAG_SMART_WILD_AI_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_Text_Colress_BrutalDifficulty, MSGBOX_DEFAULT
 	waitse
