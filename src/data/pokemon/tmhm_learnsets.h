@@ -1,3 +1,5 @@
+// Ignore any commented TMs, those are for future planning!
+
 //#define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
 //#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_PROTECT))
 
@@ -21,6 +23,7 @@ static const u8 sNoneTMHMLearnset[] =
 static const u8 sBulbasaurTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -42,6 +45,7 @@ static const u8 sBulbasaurTMHMLearnset[] =
 static const u8 sIvysaurTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -62,6 +66,7 @@ static const u8 sIvysaurTMHMLearnset[] =
 static const u8 sVenusaurTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -235,17 +240,21 @@ static const u8 sBlastoiseTMHMLearnset[] =
 
 static const u8 sCaterpieTMHMLearnset[] =
 {
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sMetapodTMHMLearnset[] =
 {
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sButterfreeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -268,20 +277,24 @@ static const u8 sButterfreeTMHMLearnset[] =
 
 static const u8 sWeedleTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sKakunaTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sBeedrillTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -304,7 +317,7 @@ static const u8 sBeedrillTMHMLearnset[] =
 static const u8 sPidgeyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -324,7 +337,7 @@ static const u8 sPidgeyTMHMLearnset[] =
 static const u8 sPidgeottoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -344,7 +357,7 @@ static const u8 sPidgeottoTMHMLearnset[] =
 static const u8 sPidgeotTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -364,7 +377,7 @@ static const u8 sPidgeotTMHMLearnset[] =
 static const u8 sRattataTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -389,7 +402,7 @@ static const u8 sRattataTMHMLearnset[] =
 static const u8 sRaticateTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -449,6 +462,7 @@ static const u8 sFearowTMHMLearnset[] =
 static const u8 sEkansTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -470,6 +484,7 @@ static const u8 sEkansTMHMLearnset[] =
 static const u8 sArbokTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -494,6 +509,7 @@ static const u8 sArbokTMHMLearnset[] =
 static const u8 sPikachuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -517,6 +533,7 @@ static const u8 sPikachuTMHMLearnset[] =
 static const u8 sRaichuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -591,6 +608,7 @@ static const u8 sSandslashTMHMLearnset[] =
 static const u8 sNidoranFTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -615,6 +633,7 @@ static const u8 sNidoranFTMHMLearnset[] =
 static const u8 sNidorinaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -639,6 +658,7 @@ static const u8 sNidorinaTMHMLearnset[] =
 static const u8 sNidoqueenTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -676,6 +696,7 @@ static const u8 sNidoqueenTMHMLearnset[] =
 static const u8 sNidoranMTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -699,6 +720,7 @@ static const u8 sNidoranMTMHMLearnset[] =
 static const u8 sNidorinoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -722,6 +744,7 @@ static const u8 sNidorinoTMHMLearnset[] =
 static const u8 sNidokingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -926,7 +949,8 @@ static const u8 sWigglytuffTMHMLearnset[] =
 static const u8 sZubatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -947,7 +971,8 @@ static const u8 sZubatTMHMLearnset[] =
 static const u8 sGolbatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -968,6 +993,7 @@ static const u8 sGolbatTMHMLearnset[] =
 static const u8 sOddishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -987,6 +1013,7 @@ static const u8 sOddishTMHMLearnset[] =
 static const u8 sGloomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -1006,6 +1033,7 @@ static const u8 sGloomTMHMLearnset[] =
 static const u8 sVileplumeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -1573,6 +1601,7 @@ static const u8 sMachampTMHMLearnset[] =
 static const u8 sBellsproutTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -1593,6 +1622,7 @@ static const u8 sBellsproutTMHMLearnset[] =
 static const u8 sWeepinbellTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -1613,6 +1643,7 @@ static const u8 sWeepinbellTMHMLearnset[] =
 static const u8 sVictreebelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -1633,6 +1664,7 @@ static const u8 sVictreebelTMHMLearnset[] =
 static const u8 sTentacoolTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1654,6 +1686,7 @@ static const u8 sTentacoolTMHMLearnset[] =
 static const u8 sTentacruelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1844,6 +1877,7 @@ static const u8 sSlowbroTMHMLearnset[] =
 static const u8 sMagnemiteTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -1864,6 +1898,7 @@ static const u8 sMagnemiteTMHMLearnset[] =
 static const u8 sMagnetonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -1901,7 +1936,7 @@ static const u8 sFarfetchdTMHMLearnset[] =
 static const u8 sDoduoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1919,7 +1954,7 @@ static const u8 sDoduoTMHMLearnset[] =
 static const u8 sDodrioTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1975,6 +2010,7 @@ static const u8 sDewgongTMHMLearnset[] =
 static const u8 sGrimerTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -1999,6 +2035,7 @@ static const u8 sGrimerTMHMLearnset[] =
 static const u8 sMukTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -2062,6 +2099,7 @@ static const u8 sCloysterTMHMLearnset[] =
 static const u8 sGastlyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2084,6 +2122,7 @@ static const u8 sGastlyTMHMLearnset[] =
 static const u8 sHaunterTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2107,6 +2146,7 @@ static const u8 sHaunterTMHMLearnset[] =
 static const u8 sGengarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2452,6 +2492,7 @@ static const u8 sLickitungTMHMLearnset[] =
 static const u8 sKoffingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM10_THIEF),
@@ -2474,6 +2515,7 @@ static const u8 sKoffingTMHMLearnset[] =
 static const u8 sWeezingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2796,7 +2838,7 @@ static const u8 sMrMimeTMHMLearnset[] =
 static const u8 sScytherTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2845,6 +2887,7 @@ static const u8 sJynxTMHMLearnset[] =
 static const u8 sElectabuzzTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2893,7 +2936,7 @@ static const u8 sMagmarTMHMLearnset[] =
 static const u8 sPinsirTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -3092,6 +3135,7 @@ static const u8 sFlareonTMHMLearnset[] =
 static const u8 sPorygonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -3884,7 +3928,8 @@ static const u8 sAriadosTMHMLearnset[] =
 static const u8 sCrobatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -3948,6 +3993,7 @@ static const u8 sLanturnTMHMLearnset[] =
 static const u8 sPichuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -4070,7 +4116,7 @@ static const u8 sTogeticTMHMLearnset[] =
 static const u8 sNatuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -4098,7 +4144,7 @@ static const u8 sNatuTMHMLearnset[] =
 static const u8 sXatuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM11_TELEPORT),
@@ -4126,6 +4172,7 @@ static const u8 sXatuTMHMLearnset[] =
 static const u8 sMareepTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM26_THUNDER_WAVE),
@@ -4144,6 +4191,7 @@ static const u8 sMareepTMHMLearnset[] =
 static const u8 sFlaaffyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM26_THUNDER_WAVE),
@@ -4162,6 +4210,7 @@ static const u8 sFlaaffyTMHMLearnset[] =
 static const u8 sAmpharosTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM26_THUNDER_WAVE),
@@ -4180,6 +4229,7 @@ static const u8 sAmpharosTMHMLearnset[] =
 static const u8 sBellossomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -4403,7 +4453,7 @@ static const u8 sSunfloraTMHMLearnset[] =
 static const u8 sYanmaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -4514,7 +4564,7 @@ static const u8 sUmbreonTMHMLearnset[] =
 static const u8 sMurkrowTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -4628,7 +4678,8 @@ static const u8 sGirafarigTMHMLearnset[] =
 static const u8 sPinecoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -4650,7 +4701,8 @@ static const u8 sPinecoTMHMLearnset[] =
 static const u8 sForretressTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -4699,7 +4751,8 @@ static const u8 sDunsparceTMHMLearnset[] =
 static const u8 sGligarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -4809,6 +4862,7 @@ static const u8 sGranbullTMHMLearnset[] =
 static const u8 sQwilfishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -4831,7 +4885,8 @@ static const u8 sQwilfishTMHMLearnset[] =
 static const u8 sScizorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -4854,7 +4909,7 @@ static const u8 sScizorTMHMLearnset[] =
 static const u8 sShuckleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -4873,7 +4928,8 @@ static const u8 sShuckleTMHMLearnset[] =
 static const u8 sHeracrossTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM06_BULLET_SEED),
@@ -5194,7 +5250,7 @@ static const u8 sMantineTMHMLearnset[] =
 static const u8 sSkarmoryTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -5317,6 +5373,7 @@ static const u8 sDonphanTMHMLearnset[] =
 static const u8 sPorygon2TMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -5448,6 +5505,7 @@ static const u8 sSmoochumTMHMLearnset[] =
 static const u8 sElekidTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6075,20 +6133,24 @@ static const u8 sLinooneTMHMLearnset[] =
 
 static const u8 sWurmpleTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sSilcoonTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sBeautiflyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6108,14 +6170,17 @@ static const u8 sBeautiflyTMHMLearnset[] =
 
 static const u8 sCascoonTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
     0xFF,
 };
 
 static const u8 sDustoxTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6281,7 +6346,7 @@ static const u8 sShiftryTMHMLearnset[] =
 static const u8 sTaillowTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6300,7 +6365,7 @@ static const u8 sTaillowTMHMLearnset[] =
 static const u8 sSwellowTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6319,7 +6384,7 @@ static const u8 sSwellowTMHMLearnset[] =
 static const u8 sWingullTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6340,7 +6405,7 @@ static const u8 sWingullTMHMLearnset[] =
 static const u8 sPelipperTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6439,7 +6504,7 @@ static const u8 sGardevoirTMHMLearnset[] =
 static const u8 sSurskitTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6459,7 +6524,7 @@ static const u8 sSurskitTMHMLearnset[] =
 static const u8 sMasquerainTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6482,6 +6547,7 @@ static const u8 sMasquerainTMHMLearnset[] =
 static const u8 sShroomishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -6500,6 +6566,7 @@ static const u8 sShroomishTMHMLearnset[] =
 static const u8 sBreloomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM06_BULLET_SEED),
@@ -7118,7 +7185,7 @@ static const u8 sMinunTMHMLearnset[] =
 static const u8 sVolbeatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -7143,7 +7210,7 @@ static const u8 sVolbeatTMHMLearnset[] =
 static const u8 sIllumiseTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -7169,6 +7236,7 @@ static const u8 sIllumiseTMHMLearnset[] =
 static const u8 sRoseliaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -7443,7 +7511,7 @@ static const u8 sSpindaTMHMLearnset[] =
 static const u8 sTrapinchTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -7464,7 +7532,7 @@ static const u8 sTrapinchTMHMLearnset[] =
 static const u8 sVibravaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -7488,7 +7556,7 @@ static const u8 sVibravaTMHMLearnset[] =
 static const u8 sFlygonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -7517,6 +7585,7 @@ static const u8 sFlygonTMHMLearnset[] =
 static const u8 sCacneaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM07_SCORCHING_SANDS),
@@ -7537,6 +7606,7 @@ static const u8 sCacneaTMHMLearnset[] =
 static const u8 sCacturneTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM07_SCORCHING_SANDS),
@@ -7557,7 +7627,7 @@ static const u8 sCacturneTMHMLearnset[] =
 static const u8 sSwabluTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -7578,7 +7648,7 @@ static const u8 sSwabluTMHMLearnset[] =
 static const u8 sAltariaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -7893,7 +7963,7 @@ static const u8 sCradilyTMHMLearnset[] =
 static const u8 sAnorithTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7914,7 +7984,7 @@ static const u8 sAnorithTMHMLearnset[] =
 static const u8 sArmaldoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8927,7 +8997,7 @@ static const u8 sInfernapeTMHMLearnset[] =
 static const u8 sPiplupTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8951,7 +9021,7 @@ static const u8 sPiplupTMHMLearnset[] =
 static const u8 sPrinplupTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8976,7 +9046,7 @@ static const u8 sPrinplupTMHMLearnset[] =
 static const u8 sEmpoleonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -9005,7 +9075,7 @@ static const u8 sEmpoleonTMHMLearnset[] =
 static const u8 sStarlyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9024,7 +9094,7 @@ static const u8 sStarlyTMHMLearnset[] =
 static const u8 sStaraviaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9043,7 +9113,7 @@ static const u8 sStaraviaTMHMLearnset[] =
 static const u8 sStaraptorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9062,7 +9132,7 @@ static const u8 sStaraptorTMHMLearnset[] =
 static const u8 sBidoofTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9086,7 +9156,7 @@ static const u8 sBidoofTMHMLearnset[] =
 static const u8 sBibarelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9188,6 +9258,7 @@ static const u8 sLuxrayTMHMLearnset[] =
 static const u8 sBudewTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -9209,6 +9280,7 @@ static const u8 sBudewTMHMLearnset[] =
 static const u8 sRoseradeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -9372,7 +9444,7 @@ static const u8 sMothimTMHMLearnset[] =
 
 static const u8 sCombeeTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM20_DUAL_WINGBEAT),
     0xFF,
 };
@@ -9380,7 +9452,8 @@ static const u8 sCombeeTMHMLearnset[] =
 static const u8 sVespiquenTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9400,6 +9473,7 @@ static const u8 sVespiquenTMHMLearnset[] =
 static const u8 sPachirisuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -9673,7 +9747,7 @@ static const u8 sMismagiusTMHMLearnset[] =
 static const u8 sHonchkrowTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9759,6 +9833,7 @@ static const u8 sChinglingTMHMLearnset[] =
 static const u8 sStunkyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9781,6 +9856,7 @@ static const u8 sStunkyTMHMLearnset[] =
 static const u8 sSkuntankTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9924,7 +10000,7 @@ static const u8 sHappinyTMHMLearnset[] =
 static const u8 sChatotTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -10159,7 +10235,7 @@ static const u8 sHippowdonTMHMLearnset[] =
 static const u8 sSkorupiTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -10182,7 +10258,7 @@ static const u8 sSkorupiTMHMLearnset[] =
 static const u8 sDrapionTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -10208,6 +10284,7 @@ static const u8 sDrapionTMHMLearnset[] =
 static const u8 sCroagunkTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -10233,6 +10310,7 @@ static const u8 sCroagunkTMHMLearnset[] =
 static const u8 sToxicroakTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -10410,6 +10488,7 @@ static const u8 sWeavileTMHMLearnset[] =
 static const u8 sMagnezoneTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -10516,6 +10595,7 @@ static const u8 sTangrowthTMHMLearnset[] =
 static const u8 sElectivireTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -10573,7 +10653,7 @@ static const u8 sMagmortarTMHMLearnset[] =
 static const u8 sTogekissTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -10603,7 +10683,7 @@ static const u8 sTogekissTMHMLearnset[] =
 static const u8 sYanmegaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -10668,7 +10748,8 @@ static const u8 sGlaceonTMHMLearnset[] =
 static const u8 sGliscorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -10720,6 +10801,7 @@ static const u8 sMamoswineTMHMLearnset[] =
 static const u8 sPorygonZTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -10848,6 +10930,7 @@ static const u8 sFroslassTMHMLearnset[] =
 static const u8 sRotomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -11772,7 +11855,7 @@ static const u8 sMusharnaTMHMLearnset[] =
 static const u8 sPidoveTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM16_STEEL_WING),
@@ -11790,7 +11873,7 @@ static const u8 sPidoveTMHMLearnset[] =
 static const u8 sTranquillTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM16_STEEL_WING),
@@ -11808,7 +11891,7 @@ static const u8 sTranquillTMHMLearnset[] =
 static const u8 sUnfezantTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM16_STEEL_WING),
@@ -11914,7 +11997,7 @@ static const u8 sGigalithTMHMLearnset[] =
 static const u8 sWoobatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -11940,7 +12023,7 @@ static const u8 sWoobatTMHMLearnset[] =
 static const u8 sSwoobatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -12141,6 +12224,7 @@ static const u8 sPalpitoadTMHMLearnset[] =
 static const u8 sSeismitoadTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12205,7 +12289,7 @@ static const u8 sSawkTMHMLearnset[] =
 static const u8 sSewaddleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -12225,7 +12309,7 @@ static const u8 sSewaddleTMHMLearnset[] =
 static const u8 sSwadloonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -12245,7 +12329,7 @@ static const u8 sSwadloonTMHMLearnset[] =
 static const u8 sLeavannyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -12271,7 +12355,8 @@ static const u8 sLeavannyTMHMLearnset[] =
 static const u8 sVenipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -12287,7 +12372,8 @@ static const u8 sVenipedeTMHMLearnset[] =
 static const u8 sWhirlipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -12303,7 +12389,8 @@ static const u8 sWhirlipedeTMHMLearnset[] =
 static const u8 sScolipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12551,7 +12638,7 @@ static const u8 sMaractusTMHMLearnset[] =
 static const u8 sDwebbleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12573,7 +12660,7 @@ static const u8 sDwebbleTMHMLearnset[] =
 static const u8 sCrustleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12644,7 +12731,7 @@ static const u8 sScraftyTMHMLearnset[] =
 static const u8 sSigilyphTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -12755,7 +12842,7 @@ static const u8 sCarracostaTMHMLearnset[] =
 static const u8 sArchenTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12778,7 +12865,7 @@ static const u8 sArchenTMHMLearnset[] =
 static const u8 sArcheopsTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12802,6 +12889,7 @@ static const u8 sArcheopsTMHMLearnset[] =
 static const u8 sTrubbishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -12819,6 +12907,7 @@ static const u8 sTrubbishTMHMLearnset[] =
 static const u8 sGarbodorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -13084,7 +13173,7 @@ static const u8 sReuniclusTMHMLearnset[] =
 static const u8 sDucklettTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM16_STEEL_WING),
@@ -13104,7 +13193,7 @@ static const u8 sDucklettTMHMLearnset[] =
 static const u8 sSwannaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM16_STEEL_WING),
@@ -13242,7 +13331,7 @@ static const u8 sEmolgaTMHMLearnset[] =
 static const u8 sKarrablastTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM20_AERIAL_ACE),
@@ -13259,7 +13348,7 @@ static const u8 sKarrablastTMHMLearnset[] =
 static const u8 sEscavalierTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM20_AERIAL_ACE),
@@ -13276,6 +13365,7 @@ static const u8 sEscavalierTMHMLearnset[] =
 static const u8 sFoongusTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -13294,6 +13384,7 @@ static const u8 sFoongusTMHMLearnset[] =
 static const u8 sAmoongussTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -13380,7 +13471,8 @@ static const u8 sAlomomolaTMHMLearnset[] =
 static const u8 sJoltikTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -13400,7 +13492,8 @@ static const u8 sJoltikTMHMLearnset[] =
 static const u8 sGalvantulaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -13814,7 +13907,8 @@ static const u8 sCryogonalTMHMLearnset[] =
 static const u8 sShelmetTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -13830,7 +13924,8 @@ static const u8 sShelmetTMHMLearnset[] =
 static const u8 sAccelgorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -14058,7 +14153,7 @@ static const u8 sBouffalantTMHMLearnset[] =
 static const u8 sRuffletTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -14080,7 +14175,7 @@ static const u8 sRuffletTMHMLearnset[] =
 static const u8 sBraviaryTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -14102,7 +14197,7 @@ static const u8 sBraviaryTMHMLearnset[] =
 static const u8 sVullabyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -14123,7 +14218,7 @@ static const u8 sVullabyTMHMLearnset[] =
 static const u8 sMandibuzzTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -14144,7 +14239,7 @@ static const u8 sMandibuzzTMHMLearnset[] =
 static const u8 sHeatmorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -14170,7 +14265,7 @@ static const u8 sHeatmorTMHMLearnset[] =
 static const u8 sDurantTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -14253,7 +14348,7 @@ static const u8 sHydreigonTMHMLearnset[] =
 static const u8 sLarvestaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM12_FLAME_CHARGE),
@@ -14820,7 +14915,7 @@ static const u8 sDiggersbyTMHMLearnset[] =
 static const u8 sFletchlingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -14840,7 +14935,7 @@ static const u8 sFletchlingTMHMLearnset[] =
 static const u8 sFletchinderTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -14862,7 +14957,7 @@ static const u8 sFletchinderTMHMLearnset[] =
 static const u8 sTalonflameTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -14885,7 +14980,7 @@ static const u8 sTalonflameTMHMLearnset[] =
 
 static const u8 sScatterbugTMHMLearnset[] =
 {
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     0xFF,
 };
 
@@ -14893,14 +14988,14 @@ static const u8 sSpewpaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
     TMHM(TM04_RETURN),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     0xFF,
 };
 
 static const u8 sVivillonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -15345,7 +15440,7 @@ static const u8 sSlurpuffTMHMLearnset[] =
 static const u8 sInkayTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -15369,7 +15464,7 @@ static const u8 sInkayTMHMLearnset[] =
 static const u8 sMalamarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -15451,6 +15546,7 @@ static const u8 sBarbaracleTMHMLearnset[] =
 static const u8 sSkrelpTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15470,6 +15566,7 @@ static const u8 sSkrelpTMHMLearnset[] =
 static const u8 sDragalgeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15491,6 +15588,7 @@ static const u8 sDragalgeTMHMLearnset[] =
 static const u8 sClauncherTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15509,6 +15607,7 @@ static const u8 sClauncherTMHMLearnset[] =
 static const u8 sClawitzerTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15528,6 +15627,7 @@ static const u8 sClawitzerTMHMLearnset[] =
 static const u8 sHelioptileTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -15552,6 +15652,7 @@ static const u8 sHelioptileTMHMLearnset[] =
 static const u8 sHelioliskTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -16164,7 +16265,7 @@ static const u8 sVolcanionTMHMLearnset[] =
 static const u8 sRowletTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16186,7 +16287,7 @@ static const u8 sRowletTMHMLearnset[] =
 static const u8 sDartrixTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16208,7 +16309,7 @@ static const u8 sDartrixTMHMLearnset[] =
 static const u8 sDecidueyeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16359,7 +16460,7 @@ static const u8 sPrimarinaTMHMLearnset[] =
 static const u8 sPikipekTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -16379,7 +16480,7 @@ static const u8 sPikipekTMHMLearnset[] =
 static const u8 sTrumbeakTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -16399,7 +16500,7 @@ static const u8 sTrumbeakTMHMLearnset[] =
 static const u8 sToucannonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -16452,7 +16553,8 @@ static const u8 sGumshoosTMHMLearnset[] =
 static const u8 sGrubbinTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM26_THUNDER_WAVE),
@@ -16471,7 +16573,8 @@ static const u8 sGrubbinTMHMLearnset[] =
 static const u8 sCharjabugTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM26_THUNDER_WAVE),
@@ -16490,7 +16593,8 @@ static const u8 sCharjabugTMHMLearnset[] =
 static const u8 sVikavoltTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM02_ELECTROWEB),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM20_DUAL_WINGBEAT),
@@ -16556,7 +16660,7 @@ static const u8 sCrabominableTMHMLearnset[] =
 static const u8 sOricorioTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16575,7 +16679,7 @@ static const u8 sOricorioTMHMLearnset[] =
 static const u8 sCutieflyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -16598,7 +16702,7 @@ static const u8 sCutieflyTMHMLearnset[] =
 static const u8 sRibombeeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -16673,6 +16777,7 @@ static const u8 sWishiwashiTMHMLearnset[] =
 static const u8 sMareanieTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16692,6 +16797,7 @@ static const u8 sMareanieTMHMLearnset[] =
 static const u8 sToxapexTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16748,7 +16854,7 @@ static const u8 sMudsdaleTMHMLearnset[] =
 static const u8 sDewpiderTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -16767,7 +16873,7 @@ static const u8 sDewpiderTMHMLearnset[] =
 static const u8 sAraquanidTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -16855,6 +16961,7 @@ static const u8 sShiinoticTMHMLearnset[] =
 static const u8 sSalanditTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -16877,6 +16984,7 @@ static const u8 sSalanditTMHMLearnset[] =
 static const u8 sSalazzleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -17048,6 +17156,7 @@ static const u8 sOranguruTMHMLearnset[] =
 static const u8 sPassimianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -17089,7 +17198,8 @@ static const u8 sWimpodTMHMLearnset[] =
 static const u8 sGolisopodTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -17262,6 +17372,7 @@ static const u8 sKomalaTMHMLearnset[] =
 static const u8 sTurtonatorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -17286,6 +17397,7 @@ static const u8 sTurtonatorTMHMLearnset[] =
 static const u8 sTogedemaruTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -17328,6 +17440,7 @@ static const u8 sMimikyuTMHMLearnset[] =
 static const u8 sBruxishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM20_AERIAL_ACE),
@@ -18111,7 +18224,7 @@ static const u8 sGreedentTMHMLearnset[] =
 static const u8 sRookideeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -18126,7 +18239,7 @@ static const u8 sRookideeTMHMLearnset[] =
 static const u8 sCorvisquireTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -18141,7 +18254,7 @@ static const u8 sCorvisquireTMHMLearnset[] =
 static const u8 sCorviknightTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -18522,7 +18635,7 @@ static const u8 sSandacondaTMHMLearnset[] =
 static const u8 sCramorantTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -18590,6 +18703,7 @@ static const u8 sToxelTMHMLearnset[] =
 static const u8 sToxtricityTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -18607,7 +18721,8 @@ static const u8 sToxtricityTMHMLearnset[] =
 static const u8 sSizzlipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM07_SCORCHING_SANDS),
     TMHM(TM08_SUBSTITUTE),
@@ -18624,7 +18739,8 @@ static const u8 sSizzlipedeTMHMLearnset[] =
 static const u8 sCentiskorchTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    TMHM(TM03_VENOSHOCK),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM07_SCORCHING_SANDS),
     TMHM(TM08_SUBSTITUTE),
@@ -18905,7 +19021,7 @@ static const u8 sCursolaTMHMLearnset[] =
 static const u8 sSirfetchdTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -19027,6 +19143,7 @@ static const u8 sFalinksTMHMLearnset[] =
 static const u8 sPincurchinTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -19045,7 +19162,7 @@ static const u8 sPincurchinTMHMLearnset[] =
 static const u8 sSnomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_BUG_BITE),
+    // TMHM(TM03_BUG_BITE),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -19131,6 +19248,7 @@ static const u8 sIndeedeeTMHMLearnset[] =
 static const u8 sMorpekoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -19188,7 +19306,7 @@ static const u8 sCopperajahTMHMLearnset[] =
 static const u8 sDracozoltTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -19215,7 +19333,7 @@ static const u8 sDracozoltTMHMLearnset[] =
 static const u8 sArctozoltTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -19578,6 +19696,7 @@ static const u8 sRaticateAlolanTMHMLearnset[] =
 static const u8 sRaichuAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -19746,6 +19865,7 @@ static const u8 sPersianAlolanTMHMLearnset[] =
 static const u8 sGeodudeAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -19764,6 +19884,7 @@ static const u8 sGeodudeAlolanTMHMLearnset[] =
 static const u8 sGravelerAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -19784,6 +19905,7 @@ static const u8 sGravelerAlolanTMHMLearnset[] =
 static const u8 sGolemAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM02_ELECTROWEB),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -19804,6 +19926,7 @@ static const u8 sGolemAlolanTMHMLearnset[] =
 static const u8 sGrimerAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -19822,6 +19945,7 @@ static const u8 sGrimerAlolanTMHMLearnset[] =
 static const u8 sMukAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -19976,6 +20100,7 @@ static const u8 sSlowpokeGalarianTMHMLearnset[] =
 static const u8 sSlowbroGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -20007,7 +20132,7 @@ static const u8 sSlowbroGalarianTMHMLearnset[] =
 static const u8 sFarfetchdGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM02_PLUCK),
+    // TMHM(TM02_PLUCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -20026,6 +20151,7 @@ static const u8 sFarfetchdGalarianTMHMLearnset[] =
 static const u8 sWeezingGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -20125,6 +20251,7 @@ static const u8 sMoltresGalarianTMHMLearnset[] =
 static const u8 sSlowkingGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),

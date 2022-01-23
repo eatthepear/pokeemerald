@@ -25,10 +25,9 @@ Zone4Sanctuary_EventScript_Intro:
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	goto Zone4Sanctuary_EventScript_StonesMultichoice
-	end
-
-Zone4Sanctuary_EventScript_EndIntro:
+	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM02
+	closemessage
 	setvar VAR_ZONE, 5
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -37,63 +36,8 @@ Zone4Sanctuary_EventScript_EndIntro:
 	releaseall
 	end
 
-Zone4Sanctuary_EventScript_StonesMultichoice:
-	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_DEFAULT
-	scrollingmultichoice 1, 0, 0, 4, FALSE
-	switch VAR_RESULT
-	case 0, Zone4Sanctuary_EventScript_FireGem
-	case 1, Zone4Sanctuary_EventScript_WaterGem
-	case 2, Zone4Sanctuary_EventScript_ElectricGem
-	case 3, Zone4Sanctuary_EventScript_GrassGem
-	case 4, Zone4Sanctuary_EventScript_DarkGem
-	case 5, Zone4Sanctuary_EventScript_PsychicGem
-	case 6, Zone4Sanctuary_EventScript_FairyGem
-	case 7, Zone4Sanctuary_EventScript_IceGem
-	end
-
-Zone4Sanctuary_EventScript_FireGem:
-	giveitem ITEM_FIRE_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_WaterGem:
-	giveitem ITEM_WATER_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_ElectricGem:
-	giveitem ITEM_ELECTRIC_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_GrassGem:
-	giveitem ITEM_GRASS_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_DarkGem:
-	giveitem ITEM_DARK_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_PsychicGem:
-	giveitem ITEM_PSYCHIC_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_FairyGem:
-	giveitem ITEM_FAIRY_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
-Zone4Sanctuary_EventScript_IceGem:
-	giveitem ITEM_ICE_GEM
-	goto Zone4Sanctuary_EventScript_EndIntro
-	end
-
 Zone4Sanctuary_Text_Reward:
-	.string "An elemental Gem that can also\n"
-	.string "evolve Eevee! Pick your favorite!$"
+	.string "TM02 - Electroweb!$"
 
 Zone4Sanctuary_EventScript_NextZone::
 	lock

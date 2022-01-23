@@ -3021,14 +3021,14 @@ static const u8 sTM01Desc[] = _(
     "in succession.");
 
 static const u8 sTM02Desc[] = _(
-    "Pecks and eats the\n"
-    "foe's held Berry,\n"
-    "gaining its effect.");
+    "Snares foes with\n"
+    "an electric web,\n"
+    "lowering speed.");
 
 static const u8 sTM03Desc[] = _(
-    "Bites and eats the\n"
-    "foe's held Berry,\n"
-    "gaining its effect.");
+    "Deals double damage\n"
+    "if the foe is\n"
+    "poisoned.");
 
 static const u8 sTM04Desc[] = _(
     "The more the user\n"

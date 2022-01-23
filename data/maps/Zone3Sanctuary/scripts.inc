@@ -25,8 +25,28 @@ Zone3Sanctuary_EventScript_Intro:
 	waitfanfare
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone3Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM02
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone3Sanctuary_Text_RewardReceived, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
+	additem ITEM_NORMAL_GEM
+	additem ITEM_FIRE_GEM
+	additem ITEM_WATER_GEM
+	additem ITEM_ELECTRIC_GEM
+	additem ITEM_GRASS_GEM
+	additem ITEM_ICE_GEM
+	additem ITEM_FIGHTING_GEM
+	additem ITEM_POISON_GEM
+	additem ITEM_GROUND_GEM
+	additem ITEM_FLYING_GEM
+	additem ITEM_PSYCHIC_GEM
+	additem ITEM_BUG_GEM
+	additem ITEM_ROCK_GEM
+	additem ITEM_GHOST_GEM
+	additem ITEM_DRAGON_GEM
+	additem ITEM_DARK_GEM
+	additem ITEM_STEEL_GEM
+	additem ITEM_FAIRY_GEM
 	setvar VAR_ZONE, 4
 	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_ITEM
@@ -70,4 +90,7 @@ Zone3Sanctuary_EventScript_Leave:
 	end
 
 Zone3Sanctuary_Text_Reward:
-	.string "TM02 - Pluck!$"
+	.string "Elemental Gems!$"
+
+Zone3Sanctuary_Text_RewardReceived:
+	.string "{PLAYER} received Gems!$"

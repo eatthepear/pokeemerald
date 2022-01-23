@@ -71,4 +71,4 @@ Zone5Sanctuary_EventScript_Leave:
 	end
 
 Zone5Sanctuary_Text_Reward:
-	.string "TM03 - Bug Bite!$"
+	.string "TM03 - Venoshock!$"
