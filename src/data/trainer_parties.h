@@ -936,7 +936,7 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     .ability = ABILITY_SLOT_1, //Sturdy
     .gender = TRAINER_MON_MALE,
     .species = SPECIES_DWEBBLE,
-    .moves = {MOVE_ROCK_BLAST, MOVE_BUG_BITE, MOVE_FEINT_ATTACK, MOVE_STEALTH_ROCK}
+    .moves = {MOVE_ROCK_BLAST, MOVE_SKITTER_SMACK, MOVE_FEINT_ATTACK, MOVE_STEALTH_ROCK}
     },
     {
     .iv = 31,
@@ -3233,7 +3233,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan 5, Battle s
     .ability = ABILITY_SLOT_1, //Sturdy
     .gender = TRAINER_MON_MALE,
     .species = SPECIES_DWEBBLE,
-    .moves = {MOVE_ROCK_BLAST, MOVE_BUG_BITE, MOVE_FEINT_ATTACK, MOVE_STEALTH_ROCK}
+    .moves = {MOVE_ROCK_BLAST, MOVE_SKITTER_SMACK, MOVE_FEINT_ATTACK, MOVE_STEALTH_ROCK}
     },
     {
     .iv = 31,
