@@ -16,7 +16,6 @@
  * 
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
- * On Brutal, all non-Leviathan trainers have +11 to their .iv value. So for example, if a Pokemon has .iv = 20, it actually has the max IVs of 31.
  * 
  * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. */
 
