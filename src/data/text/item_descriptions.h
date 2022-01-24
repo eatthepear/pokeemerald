@@ -3063,12 +3063,12 @@ static const u8 sTM09Desc[] = _(
 static const u8 sTM10Desc[] = _(
     "Attacks and steals\n"
     "the target's held\n"
-    "item simultaneously.");
+    "item.");
 
 static const u8 sTM11Desc[] = _(
-    "Switches places with\n"
-    "a party Pokémon in\n"
-    "waiting, if any.");
+    "Switches places\n"
+    "with a party\n"
+    "Pokémon in waiting.");
 
 static const u8 sTM12Desc[] = _(
     "Attacks in a cloak\n"
@@ -3076,8 +3076,8 @@ static const u8 sTM12Desc[] = _(
     "the user's Speed.");
 
 static const u8 sTM13Desc[] = _(
-    "The user sleeps for\n"
-    "2 turns to restore\n"
+    "The user goes to\n"
+    "sleep to restore\n"
     "health and status.");
 
 static const u8 sTM14Desc[] = _(
@@ -3096,7 +3096,7 @@ static const u8 sTM16Desc[] = _(
     "slams into the foe.");
 
 static const u8 sTM17Desc[] = _(
-    "The attack power\n"
+    "The attack type\n"
     "varies among\n"
     "different Pokémon.");
 
@@ -3117,8 +3117,8 @@ static const u8 sTM20Desc[] = _(
 
 static const u8 sTM21Desc[] = _(
     "Inflicts a burn on\n"
-    "the foe with intense\n"
-    "fire.");
+    "the foe with\n"
+    "intense fire.");
 
 static const u8 sTM22Desc[] = _(
     "Strikes with a\n"
@@ -3166,12 +3166,12 @@ static const u8 sTM30Desc[] = _(
     "down on the target.");
 
 static const u8 sTM31Desc[] = _(
-    "Weakens enemy attacks,\n"
-    "but can only be used\n"
-    "in a hailstorm.");
+    "Weakens enemy\n"
+    "attacks. Only\n"
+    "usable in hail.");
 
 static const u8 sTM32Desc[] = _(
-    "Slashes with crossed\n"
+    "Cross-slashes with\n"
     "scythes, claws, etc.\n"
     "High crit ratio.");
 
