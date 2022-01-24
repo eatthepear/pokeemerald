@@ -79,6 +79,7 @@ Zone23Sanctuary_EventScript_NextZoneCheck:
 
 Zone23Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
+	setflag FLAG_HIDE_ZONE25L_COLRESS
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE24A, 255, 31, 23
 	release
