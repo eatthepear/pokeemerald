@@ -457,7 +457,7 @@ Zone0Sanctuary_EventScript_Bulbasaur:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_BULBASAUR, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterBulbasaur:
@@ -471,7 +471,7 @@ Zone0Sanctuary_EventScript_Charmander:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCharmander, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_CHARMANDER, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCharmander:
@@ -485,7 +485,7 @@ Zone0Sanctuary_EventScript_Squirtle:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_SQUIRTLE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSquirtle:
@@ -499,7 +499,7 @@ Zone0Sanctuary_EventScript_Chikorita:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChikorita, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_CHIKORITA, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterChikorita:
@@ -513,7 +513,7 @@ Zone0Sanctuary_EventScript_Cyndaquil:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_CYNDAQUIL, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterCyndaquil:
@@ -527,7 +527,7 @@ Zone0Sanctuary_EventScript_Totodile:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTotodile, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_TOTODILE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_TOTODILE, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTotodile:
@@ -541,7 +541,7 @@ Zone0Sanctuary_EventScript_Treecko:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTreecko, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_TREECKO, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_TREECKO, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTreecko:
@@ -555,7 +555,7 @@ Zone0Sanctuary_EventScript_Torchic:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTorchic, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_TORCHIC, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_TORCHIC, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTorchic:
@@ -569,7 +569,7 @@ Zone0Sanctuary_EventScript_Mudkip:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterMudkip, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_MUDKIP, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_MUDKIP, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterMudkip:
@@ -583,7 +583,7 @@ Zone0Sanctuary_EventScript_Turtwig:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_TURTWIG, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_TURTWIG, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTurtwig:
@@ -597,7 +597,7 @@ Zone0Sanctuary_EventScript_Chimchar:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChimchar, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_CHIMCHAR, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterChimchar:
@@ -611,7 +611,7 @@ Zone0Sanctuary_EventScript_Piplup:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPiplup, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_PIPLUP, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPiplup:
@@ -625,7 +625,7 @@ Zone0Sanctuary_EventScript_Snivy:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSnivy, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_SNIVY, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_SNIVY, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSnivy:
@@ -639,7 +639,7 @@ Zone0Sanctuary_EventScript_Tepig:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterTepig, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_TEPIG, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_TEPIG, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterTepig:
@@ -653,7 +653,7 @@ Zone0Sanctuary_EventScript_Oshawott:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterOshawott, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_OSHAWOTT, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_OSHAWOTT, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterOshawott:
@@ -667,7 +667,7 @@ Zone0Sanctuary_EventScript_Chespin:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterChespin, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_CHESPIN, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_CHESPIN, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterChespin:
@@ -681,7 +681,7 @@ Zone0Sanctuary_EventScript_Fennekin:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFennekin, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_FENNEKIN, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterFennekin:
@@ -695,7 +695,7 @@ Zone0Sanctuary_EventScript_Froakie:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterFroakie, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_FROAKIE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterFroakie:
@@ -709,7 +709,7 @@ Zone0Sanctuary_EventScript_Rowlet:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterRowlet, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_ROWLET, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_ROWLET, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterRowlet:
@@ -723,7 +723,7 @@ Zone0Sanctuary_EventScript_Litten:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterLitten, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_LITTEN, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_LITTEN, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterLitten:
@@ -737,7 +737,7 @@ Zone0Sanctuary_EventScript_Popplio:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterPopplio, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_POPPLIO, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterPopplio:
@@ -751,7 +751,7 @@ Zone0Sanctuary_EventScript_Grookey:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterGrookey, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_GROOKEY, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_GROOKEY, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterGrookey:
@@ -765,7 +765,7 @@ Zone0Sanctuary_EventScript_Scorbunny:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_SCORBUNNY, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_SCORBUNNY, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterScorbunny:
@@ -779,7 +779,7 @@ Zone0Sanctuary_EventScript_Sobble:
 	msgbox Zone0Sanctuary_Text_Colress_YouSureStarterSobble, MSGBOX_YESNO
 	waitmoncry
 	goto_if_eq VAR_RESULT, NO, Zone0Sanctuary_EventScript_PickStarter
-	givecustommon SPECIES_SOBBLE, 5, ITEM_NONE, ITEM_PREMIER_BALL
+	givemon SPECIES_SOBBLE, 5, ITEM_NONE
 	return
 
 Zone0Sanctuary_Text_Colress_YouSureStarterSobble:
