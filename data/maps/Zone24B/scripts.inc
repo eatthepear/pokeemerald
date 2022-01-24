@@ -4,8 +4,8 @@ Zone24B_MapScripts::
 Zone24B_EventScript_RuinManiac::
 	lock
 	faceplayer
-	msgbox Zone24B_Text_RuinManiac_Intro, MSGBOX_AUTOCLOSE
 	goto_if_set FLAG_RECEIVED_ZONE24B_TM35, Zone24B_EventScript_ReceivedTM35
+	msgbox Zone24B_Text_RuinManiac_Intro, MSGBOX_AUTOCLOSE
 	goto_if_not_defeated TRAINER_CHRISTI, Zone24B_EventScript_HaventDefeated
 	goto_if_not_defeated TRAINER_SPENCER, Zone24B_EventScript_HaventDefeated
 	goto_if_not_defeated TRAINER_HAYWOOD, Zone24B_EventScript_HaventDefeated
