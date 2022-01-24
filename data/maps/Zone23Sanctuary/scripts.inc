@@ -71,7 +71,7 @@ Zone23Sanctuary_EventScript_NextZone::
 
 Zone23Sanctuary_EventScript_NextZoneCheck:
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
+	msgbox Zone23Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone23Sanctuary_EventScript_Leave
 	goto EventScript_WhenUReady
@@ -86,3 +86,8 @@ Zone23Sanctuary_EventScript_Leave:
 
 Zone23Sanctuary_Text_Reward:
 	.string "TM33 - Rain Dance!$"
+
+Zone23Sanctuary_Text_Colress_ReadyToLeave:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you ready to leave?\n"
+	.string "You will be entering\l"
+	.string "{COLOR RED}Zone 24{COLOR DARK_GRAY} and {COLOR RED}Zone 25{COLOR DARK_GRAY}.$"
