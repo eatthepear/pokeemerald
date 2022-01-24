@@ -181,13 +181,13 @@ Zone21A_EventScript_Ellie::
 	end
 
 Zone21A_Text_EllieIntro:
-	.string "Mother said to be careful of Bug Bite.$"
+	.string "Mother said to be careful of Bugs.$"
 
 Zone21A_Text_EllieDefeat:
-	.string "It consumes all Berries!$"
+	.string "They come in all shapes and sizes!$"
 
 Zone21A_Text_ElliePostBattle:
-	.string "Pluck is just as scary as Bug Bite!$"
+	.string "But I just find them neat!$"
 
 Zone21A_EventScript_Rusty::
 	trainerbattle_single TRAINER_RUSTY, Zone21A_Text_RustyIntro, Zone21A_Text_RustyDefeat
