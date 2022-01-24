@@ -3024,17 +3024,17 @@ static const struct TrainerMon sParty_Sheldon[] = {
 static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double Battle, Default
     {
     .ivs = {31, 31, 31, 31, 30, 31},
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Unburden
     .species = SPECIES_ACCELGOR,
     .heldItem = ITEM_BUG_GEM,
-    .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_HIDDEN_POWER} // Hidden Power Electric
+    .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER} // Hidden Power Electric
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Disguise
@@ -3044,7 +3044,7 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_RASH,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Protean
@@ -3054,7 +3054,7 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Iron Fist
@@ -3064,7 +3064,7 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     },
     {
     .ivs = {31, 31, 30, 30, 30, 30},
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Levitate
@@ -3074,7 +3074,7 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Scrappy
@@ -3662,17 +3662,17 @@ static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Doubl
 static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Kangaskhan
     {
     .ivs = {31, 31, 31, 31, 30, 31},
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Unburden
     .species = SPECIES_ACCELGOR,
     .heldItem = ITEM_FOCUS_SASH,
-    .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_HIDDEN_POWER} // Hidden Power Electric
+    .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER} // Hidden Power Electric
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Disguise
@@ -3682,7 +3682,7 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_RASH,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Protean
@@ -3692,7 +3692,7 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Iron Fist
@@ -3702,7 +3702,7 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Levitate, turns into Shadow Tag after Mega Evolving
@@ -3712,7 +3712,7 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     },
     {
     .iv = 31,
-    .lvl = 43,
+    .lvl = 41,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Inner Focus, turns into Parental Bond after Mega Evolving

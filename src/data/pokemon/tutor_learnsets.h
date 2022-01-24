@@ -4306,7 +4306,8 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_ACCELGOR]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_U_TURN)
-                                            | TUTOR(MOVE_GIGA_DRAIN)),
+                                            | TUTOR(MOVE_GIGA_DRAIN)
+                                            | TUTOR(MOVE_EARTH_POWER)),
 
     [SPECIES_STUNFISK]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_STEALTH_ROCK)
