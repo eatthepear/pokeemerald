@@ -3719,6 +3719,8 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     .species = SPECIES_KANGASKHAN,
     .heldItem = ITEM_KANGASKHANITE,
     .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_POWER_UP_PUNCH, MOVE_FAKE_OUT}
+    // Note that Parental Bond is currently unimplemented (and thus Mega Kangaskhan effectively has no ability).
+    // The base attack of Mega Kangaskhan hsa been increased from 125 to 160 as a result.
     }
 };
 

@@ -22949,7 +22949,8 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_KANGASKHAN_MEGA] =
     {
         .baseHP        = 105,
-        .baseAttack    = 125,
+        .baseAttack    = 160,
+        // .baseAttack    = 125, NOTE THAT THIS CHANGE IS BECAUSE PARENTAL BOND IS CURRENTLY UNIMPLEMENTED. 
         .baseDefense   = 100,
         .baseSpeed     = 100,
         .baseSpAttack  = 60,
@@ -22966,6 +22967,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_PARENTAL_BOND, ABILITY_PARENTAL_BOND},
+        // PARENTAL BOND IS UNIMPLEMENTED. THIS ESSENTIALLY MEANS THAT MEGA KANGASKHAN HAS NO ABILITY.
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
