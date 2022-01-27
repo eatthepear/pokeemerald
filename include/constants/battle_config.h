@@ -3,8 +3,6 @@
 
 #include "constants/expansion_branches.h"
 
-// Items with peculiar battle effects.
-
 #ifndef GEN_3
     #define GEN_3 0
     #define GEN_4 1
@@ -13,9 +11,6 @@
     #define GEN_7 4
     #define GEN_8 5
 #endif
-
-// Mega Evolution settings
-#define B_MEGA_EVO_TURN_ORDER GEN_7 // In Gen7, a Pokémon's Speed after Mega Evolution is used to determine turn order, not its Speed before.
 
 // Calculation settings
 #define B_CRIT_CHANCE               GEN_7 // Chances of a critical hit landing. See CalcCritChanceStage.
@@ -51,7 +46,7 @@
 #define B_PRANKSTER_DARK_TYPES      GEN_7 // In Gen7+, Prankster-elevated status moves do not affect Dark type Pokémon.
 #define B_SHEER_COLD_IMMUNITY       GEN_7 // In Gen7+, Ice-types are immune to Sheer Cold
 
-// Turn count settings
+// Turn settings
 #define B_BINDING_TURNS             GEN_7 // In Gen5+, binding moves last for 4-5 turns instead of 2-5 turns. (With Grip Claw, 7 and 5 turns respectively.)
 #define B_UPROAR_TURNS              GEN_7 // In Gen5+, Uproar lasts for 3 turns instead of 2-5 turns.
 #define B_DISABLE_TURNS             GEN_7 // Disable's turns. See Cmd_disablelastusedattack.
@@ -59,6 +54,8 @@
 #define B_SLEEP_TURNS               GEN_7 // In Gen5+, sleep lasts for 1-3 turns instead of 2-5 turns.
 #define B_TAUNT_TURNS               GEN_7 // In Gen5+, Taunt lasts 3 turns if the user acts before the target, or 4 turns if the target acted before the user. In Gen3, taunt lasts 2 turns and in Gen 4, 3-5 turns.
 #define B_SPORT_TURNS               GEN_7 // In Gen6+, Water/Mud Sport last 5 turns, even if the user switches out.
+#define B_MEGA_EVO_TURN_ORDER       GEN_7 // In Gen7, a Pokémon's Speed after Mega Evolution is used to determine turn order, not its Speed before.
+#define B_RECALC_TURN_AFTER_ACTIONS GEN_8 // In Gen8, switching/using a move affects the current turn's order of actions.
 
 // Move data settings
 #define B_UPDATED_MOVE_DATA         GEN_8 // Updates move data in gBattleMoves, including Power, Accuracy, PP, stat changes, targets, chances of secondary effects, etc.
@@ -158,6 +155,7 @@
 // Other settings
 #define B_DOUBLE_WILD_CHANCE        0     // % chance of encountering two Pokémon in a Wild Encounter.
 #define B_MULTI_BATTLE_WHITEOUT     GEN_8 // In Gen4+, multi battles end when the Player and also their Partner don't have any more Pokémon to fight.
+#define B_WILD_NATURAL_ENEMIES      TRUE  // If set to TRUE, certain wild mon species will attack other species when partnered in double wild battles (eg. Zangoose vs Seviper)
 
 // Animation Settings
 #define B_NEW_SWORD_PARTICLE            TRUE    // If set to TRUE, it updates Swords Dance's particle.
