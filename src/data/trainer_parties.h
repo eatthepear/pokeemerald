@@ -3270,12 +3270,12 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan 5, Battle s
     {
     .iv = 31,
     .lvl = 22,
-    .nature = NATURE_TIMID,
-    .ability = ABILITY_SLOT_1, //Cursed Body
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Intimidate
     .gender = TRAINER_MON_FEMALE,
-    .species = SPECIES_FROSLASS,
+    .species = SPECIES_ARBOK,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_ICY_WIND, MOVE_DRAINING_KISS, MOVE_WILL_O_WISP}
+    .moves = {MOVE_CRUNCH, MOVE_POISON_FANG, MOVE_ICE_FANG, MOVE_GLARE}
     },
     {
     .iv = 31,
