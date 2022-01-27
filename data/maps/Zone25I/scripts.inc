@@ -9,6 +9,6 @@ Zone25I_SetHoleWarp:
 	setholewarp MAP_ZONE25J
 	end
 
-Zone25I_EventScript_MaxRepel::
-	finditem ITEM_MAX_REPEL
+Zone25I_EventScript_DawnStone::
+	finditem ITEM_DAWN_STONE
 	end

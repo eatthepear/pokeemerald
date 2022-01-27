@@ -1149,7 +1149,7 @@
 #define FLAG_ITEM_ZONE25F_SHINY_STONE                               0x44C
 #define FLAG_ITEM_ZONE25G_KINGS_ROCK                                0x44D
 #define FLAG_ITEM_ZONE25G_4000                                      0x44E
-#define FLAG_ITEM_ZONE25I_MAX_REPEL                                 0x44F
+#define FLAG_ITEM_ZONE25I_DAWN_STONE                                0x44F
 #define FLAG_ITEM_ZONE25J_DUSK_STONE                                0x450
 #define FLAG_ITEM_ZONE25K_TM37                                      0x451
 #define FLAG_UNUSED_0x452                                           0x452
