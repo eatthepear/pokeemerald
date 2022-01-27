@@ -2616,7 +2616,7 @@ static const struct TrainerMon sParty_Alfredo[] = {
     {
     .iv = 20,
     .lvl = 34,
-    .species = SPECIES_PINSIR,
+    .species = SPECIES_MONFERNO,
     },
     {
     .iv = 20,
@@ -2886,7 +2886,7 @@ static const struct TrainerMon sParty_Haywood[] = {
     {
     .iv = 20,
     .lvl = 38,
-    .species = SPECIES_MONFERNO,
+    .species = SPECIES_MACHOKE,
     },
     {
     .iv = 20,
@@ -2928,6 +2928,11 @@ static const struct TrainerMon sParty_David[] = {
     .iv = 20,
     .lvl = 38,
     .species = SPECIES_MORGREM,
+    },
+    {
+    .iv = 20,
+    .lvl = 38,
+    .species = SPECIES_KANGASKHAN,
     }
 };
 
@@ -3023,14 +3028,14 @@ static const struct TrainerMon sParty_Sheldon[] = {
 
 static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double Battle, Default
     {
-    .ivs = {31, 31, 31, 31, 30, 31},
+    .iv = 31,
     .lvl = 41,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Unburden
-    .species = SPECIES_ACCELGOR,
-    .heldItem = ITEM_BUG_GEM,
-    .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER} // Hidden Power Electric
+    .ability = ABILITY_SLOT_1, //Sheer Force
+    .species = SPECIES_NIDOKING,
+    .heldItem = ITEM_WISE_GLASSES,
+    .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_ICE_BEAM}
     },
     {
     .iv = 31,
@@ -3077,10 +3082,10 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     .lvl = 41,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Scrappy
-    .species = SPECIES_KANGASKHAN,
+    .ability = ABILITY_SLOT_1, //Moxie
+    .species = SPECIES_PINSIR,
     .heldItem = ITEM_LIFE_ORB,
-    .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_HAMMER_ARM, MOVE_FAKE_OUT}
+    .moves = {MOVE_X_SCISSOR, MOVE_CLOSE_COMBAT, MOVE_SWORDS_DANCE, MOVE_HIGH_HORSEPOWER}
     }
 };
 
@@ -3661,14 +3666,14 @@ static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Doubl
 
 static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Kangaskhan
     {
-    .ivs = {31, 31, 31, 31, 30, 31},
+    .iv = 31,
     .lvl = 41,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Unburden
-    .species = SPECIES_ACCELGOR,
-    .heldItem = ITEM_FOCUS_SASH,
-    .moves = {MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_EARTH_POWER, MOVE_HIDDEN_POWER} // Hidden Power Electric
+    .ability = ABILITY_SLOT_1, //Sheer Force
+    .species = SPECIES_NIDOKING,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_ICE_BEAM}
     },
     {
     .iv = 31,
@@ -3715,12 +3720,10 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     .lvl = 41,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Inner Focus, turns into Parental Bond after Mega Evolving
-    .species = SPECIES_KANGASKHAN,
-    .heldItem = ITEM_KANGASKHANITE,
-    .moves = {MOVE_RETURN, MOVE_SUCKER_PUNCH, MOVE_POWER_UP_PUNCH, MOVE_FAKE_OUT}
-    // Note that Parental Bond is currently unimplemented (and thus Mega Kangaskhan effectively has no ability).
-    // The base attack of Mega Kangaskhan hsa been increased from 125 to 160 as a result.
+    .ability = ABILITY_SLOT_2, //Hyper Cutter, turns into Aerilate after Mega Evolving
+    .species = SPECIES_PINSIR,
+    .heldItem = ITEM_PINSIRITE,
+    .moves = {MOVE_RETURN, MOVE_CLOSE_COMBAT, MOVE_SWORDS_DANCE, MOVE_HIGH_HORSEPOWER}
     }
 };
 
