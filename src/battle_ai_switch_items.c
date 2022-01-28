@@ -418,6 +418,74 @@ static bool8 FindMonWithFlagsAndSuperEffective(u16 flags, u8 moduloPercent)
     return FALSE;
 }
 
+static bool8 ShouldSwitchIfOnlyAttackingStatLowered(void)
+{
+    u8 opposingPosition;
+    u8 opposingBattler;
+    s32 i, j;
+    s32 firstId;
+    s32 lastId; // + 1
+    struct Pokemon *party = NULL;
+    u16 move;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        return FALSE;
+
+    opposingPosition = BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler));
+
+    if (GetBattlerAbility(GetBattlerAtPosition(opposingPosition)) == ABILITY_UNAWARE)
+        return FALSE;
+
+    // Check if Pokemon has a super effective move.
+    for (opposingBattler = GetBattlerAtPosition(opposingPosition), i = 0; i < MAX_MON_MOVES; i++)
+    {
+        move = gBattleMons[gActiveBattler].moves[i];
+        if (move != MOVE_NONE)
+        {
+            if (AI_GetTypeEffectiveness(move, gActiveBattler, opposingBattler) >= UQ_4_12(2.0))
+                return FALSE;
+        }
+    }
+
+    // Check if Pokemon has all physical moves and lowered Attack by 2 or more stages
+    if (gBattleMons[gActiveBattler].statStages[STAT_ATK] < DEFAULT_STAT_STAGE - 1)
+    {
+        for (i = 0; i < MAX_MON_MOVES; i++)
+        {
+            move = gBattleMons[gActiveBattler].moves[i];
+            if (move != MOVE_NONE)
+            {
+                if (IS_MOVE_SPECIAL(move) == TRUE)
+                    break;
+            }
+        }
+        if (i == MAX_MON_MOVES)
+            *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = PARTY_SIZE;
+            BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_SWITCH, 0);
+            return TRUE;
+    }
+
+    // Check if Pokemon has all special moves and lowered Special Attack by 2 or more stages
+    if (gBattleMons[gActiveBattler].statStages[STAT_SPATK] < DEFAULT_STAT_STAGE - 1)
+    {
+        for (i = 0; i < MAX_MON_MOVES; i++)
+        {
+            move = gBattleMons[gActiveBattler].moves[i];
+            if (move != MOVE_NONE)
+            {
+                if (IS_MOVE_PHYSICAL(move) == TRUE)
+                    break;
+            }
+        }
+        if (i == MAX_MON_MOVES)
+            *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = PARTY_SIZE;
+            BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_SWITCH, 0);
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 bool32 ShouldSwitch(void)
 {
     u8 battlerIn1, battlerIn2;
@@ -497,6 +565,8 @@ bool32 ShouldSwitch(void)
         return FALSE;
     if (FindMonWithFlagsAndSuperEffective(MOVE_RESULT_DOESNT_AFFECT_FOE, 2)
         || FindMonWithFlagsAndSuperEffective(MOVE_RESULT_NOT_VERY_EFFECTIVE, 3))
+        return TRUE;
+    if (ShouldSwitchIfOnlyAttackingStatLowered())
         return TRUE;
 
     return FALSE;
