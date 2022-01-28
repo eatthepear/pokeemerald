@@ -78,62 +78,22 @@ Zone19D_EventScript_InitiatePirateBattles::
 	msgbox Zone19D_Text_Pirate4, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_PirateBattle4Brutal
 	trainerbattle_no_intro TRAINER_PIRATE_4, Zone19D_Text_Pirate4Defeat
-	goto Zone19D_EventScript_PirateBattle3
-	end
-
-Zone19D_EventScript_PirateBattle4Brutal:
-	trainerbattle_no_intro TRAINER_PIRATE_4_BRUTAL, Zone19D_Text_Pirate4Defeat
-	goto Zone19D_EventScript_PirateBattle3
-	end
-
-Zone19D_EventScript_PirateBattle3:
 	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate3Intro, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_PirateBattle3Brutal
 	trainerbattle_no_intro TRAINER_PIRATE_3, Zone19D_Text_Pirate3Defeat
-	goto Zone19D_EventScript_PirateBattle2
-	end
-
-Zone19D_EventScript_PirateBattle3Brutal:
-	trainerbattle_no_intro TRAINER_PIRATE_3_BRUTAL, Zone19D_Text_Pirate3Defeat
-	goto Zone19D_EventScript_PirateBattle2
-	end
-
-Zone19D_EventScript_PirateBattle2:
 	applymovement 2, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate2Intro, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_PirateBattle2Brutal
 	trainerbattle_no_intro TRAINER_PIRATE_2, Zone19D_Text_Pirate2Defeat
-	goto Zone19D_EventScript_PirateBattle1
-	end
-
-Zone19D_EventScript_PirateBattle2Brutal:
-	trainerbattle_no_intro TRAINER_PIRATE_2_BRUTAL, Zone19D_Text_Pirate2Defeat
-	goto Zone19D_EventScript_PirateBattle1
-	end
-
-Zone19D_EventScript_PirateBattle1:
 	applymovement 1, Common_Movement_WalkInPlaceFasterDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone19D_Text_Pirate1Intro, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_PirateBattle1Brutal
 	trainerbattle_no_intro TRAINER_PIRATE_1, Zone19D_Text_Pirate1Defeat
-	goto Zone19D_EventScript_PirateBattleEnd
-	end
-
-Zone19D_EventScript_PirateBattle1Brutal:
-	trainerbattle_no_intro TRAINER_PIRATE_1_BRUTAL, Zone19D_Text_Pirate1Defeat
-	goto Zone19D_EventScript_PirateBattleEnd
-	end
-
-Zone19D_EventScript_PirateBattleEnd:
 	msgbox Zone19D_Text_Pirate1Here, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM24
 	msgbox Zone19D_Text_Pirate1Run, MSGBOX_AUTOCLOSE

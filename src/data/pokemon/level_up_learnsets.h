@@ -8788,7 +8788,8 @@ static const struct LevelUpMove sPrinplupLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sEmpoleonLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_AQUA_JET),
+    LEVEL_UP_MOVE( 0, MOVE_FLASH_CANNON),
+    LEVEL_UP_MOVE( 1, MOVE_AQUA_JET),
     LEVEL_UP_MOVE( 1, MOVE_METAL_CLAW),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
@@ -8807,7 +8808,6 @@ static const struct LevelUpMove sEmpoleonLevelUpLearnset[] = {
     LEVEL_UP_MOVE(35, MOVE_SURF),
     LEVEL_UP_MOVE(38, MOVE_YAWN),
 	LEVEL_UP_MOVE(41, MOVE_HYDRO_PUMP),
-    LEVEL_UP_MOVE(44, MOVE_FLASH_CANNON),
 	LEVEL_UP_END
 };
 

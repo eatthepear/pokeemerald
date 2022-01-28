@@ -830,7 +830,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
-	callnative StartSetMode
+	callnative StartSetModeAndPokedex
 	initclock 1, 1
 	callnative ReturnFromStartWallClock
 	delay 96
@@ -850,7 +850,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
-	callnative StartSetMode
+	callnative StartSetModeAndPokedex
 	initclock 1, 1
 	callnative ReturnFromStartWallClock
 	setvar VAR_ZONE, 1
