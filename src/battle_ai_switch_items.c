@@ -9,6 +9,7 @@
 #include "pokemon.h"
 #include "random.h"
 #include "util.h"
+#include "event_data.h"
 #include "constants/abilities.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
@@ -422,11 +423,12 @@ static bool8 ShouldSwitchIfOnlyAttackingStatLowered(void)
 {
     u8 opposingPosition;
     u8 opposingBattler;
-    s32 i, j;
-    s32 firstId;
-    s32 lastId; // + 1
-    struct Pokemon *party = NULL;
+    s32 i;
     u16 move;
+
+    // Brutal mode only, only 50% chance of triggering
+    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE || Random() & 1)
+        return FALSE;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
         return FALSE;
