@@ -567,15 +567,20 @@ static void Cmd_metalburstdamagecalculator(void);
 
 const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 {
-    FLAG_BEATLEVIATHAN1, FLAG_BEATLEVIATHAN2, FLAG_BEATLEVIATHAN4, FLAG_BEATLEVIATHAN5, FLAG_BEATLEVIATHAN6, FLAG_BEATLEVIATHAN9, FLAG_BEATLEVIATHAN10, FLAG_BEATLEVIATHAN12, FLAG_BEATLEVIATHAN13, FLAG_BEATLEVIATHAN14
+    FLAG_BEATLEVIATHAN1,
+    FLAG_BEATLEVIATHAN2,
+    FLAG_BEATLEVIATHAN4,
+    FLAG_BEATLEVIATHAN5,
+    FLAG_BEATLEVIATHAN6,
+    FLAG_BEATLEVIATHAN9,
+    FLAG_BEATLEVIATHAN10,
+    FLAG_BEATLEVIATHAN12,
+    FLAG_BEATLEVIATHAN13,
+    FLAG_BEATLEVIATHAN14,
+    FLAG_BEATLEVIATHAN15
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 11, 15, 19, 22, 24, 28, 30, 34, 38, 42};
-const double sLevelCapReduction[7] = { .05, .05, .04, .03, .02, .01, .005 };
-const double sRelativePartyScaling[27] =
-{
-    1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
-};
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 11, 15, 19, 22, 24, 28, 30, 34, 38, 42, 45};
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -3810,33 +3815,18 @@ double GetPkmnExpMultiplier(u8 level)
 {
     u8 i;
     double lvlCapMultiplier = 1.0;
-    u8 levelDiff;
-    s8 avgDiff;
     
     // multiply the usual exp yield by the soft cap multiplier
     for (i = 0; i < NUM_SOFT_CAPS; i++)
     {
         if (!FlagGet(sLevelCapFlags[i]) && level >= sLevelCaps[i])
         {
-            levelDiff = level - sLevelCaps[i];
-            if (levelDiff > 6)
-                levelDiff = 6;
-            lvlCapMultiplier = sLevelCapReduction[levelDiff];
+            lvlCapMultiplier = 0.05;
             break;
         }
     }
     
-    // multiply the usual exp yield by the party level multiplier
-    avgDiff = level - GetTeamLevel();
-    
-    if (avgDiff >= 12)
-        avgDiff = 12;
-    else if (avgDiff <= -14)
-        avgDiff = -14;
-    
-    avgDiff += 14;
-    
-    return lvlCapMultiplier * sRelativePartyScaling[avgDiff];
+    return lvlCapMultiplier;
 }
 
 static void Cmd_getexp(void)
