@@ -2023,19 +2023,34 @@ EventScript_Shop_LelouchCheckOther:
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
 	msgbox gText_Lelouch_CostsGreenShards, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_LELOUCH_NATURES1, 0
+	scrollingmultichoice 8, 0, 0, 5, TRUE
 	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchAttackMints
-	case 1, EventScript_Shop_LelouchDefenseMints
-	case 2, EventScript_Shop_LelouchSpAttackMints
-	case 3, EventScript_Shop_LelouchSpDefenseMints
-	case 4, EventScript_Shop_LelouchSpeedMints
-	case 5, EventScript_Shop_LelouchNeutralMints
+	case 0, EventScript_Shop_LelouchLonelyMint
+	case 1, EventScript_Shop_LelouchAdamantMint
+	case 2, EventScript_Shop_LelouchNaughtyMint
+	case 3, EventScript_Shop_LelouchBraveMint
+	case 4, EventScript_Shop_LelouchBoldMint
+	case 5, EventScript_Shop_LelouchImpishMint
+	case 6, EventScript_Shop_LelouchLaxMint
+	case 7, EventScript_Shop_LelouchRelaxedMint
+	case 8, EventScript_Shop_LelouchModestMint
+	case 9, EventScript_Shop_LelouchMildMint
+	case 10, EventScript_Shop_LelouchRashMint
+	case 11, EventScript_Shop_LelouchQuietMint
+	case 12, EventScript_Shop_LelouchCalmMint
+	case 13, EventScript_Shop_LelouchGentleMint
+	case 14, EventScript_Shop_LelouchCarefulMint
+	case 15, EventScript_Shop_LelouchSassyMint
+	case 16, EventScript_Shop_LelouchTimidMint
+	case 17, EventScript_Shop_LelouchHastyMint
+	case 18, EventScript_Shop_LelouchJollyMint
+	case 19, EventScript_Shop_LelouchNaiveMint
+	case 20, EventScript_Shop_LelouchSeriousMint
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_Shop_LelouchAttackMints:
-	msgbox gText_Lelouch_AttackMintsCost, MSGBOX_YESNO
+EventScript_Shop_LelouchMintSetup:
+	msgbox gText_Lelouch_MintCosts, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_LelouchLeave
 	removeitem ITEM_GREEN_SHARD, 1
@@ -2047,214 +2062,153 @@ EventScript_Shop_LelouchAttackMints:
 	waitfanfare
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
-	random 4
-	goto_if_eq VAR_RESULT, 0, EventScript_GiveLonelyMint
-	goto_if_eq VAR_RESULT, 1, EventScript_GiveAdamantMint
-	goto_if_eq VAR_RESULT, 2, EventScript_GiveNaughtyMint
-	goto_if_eq VAR_RESULT, 3, EventScript_GiveBraveMint
-	goto EventScript_Shop_LelouchLeave
-	end
+	return
 
-EventScript_GiveLonelyMint:
+EventScript_Shop_LelouchLonelyMint:
+	bufferitemname 0, ITEM_LONELY_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_LONELY_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveAdamantMint:
+EventScript_Shop_LelouchAdamantMint:
+	bufferitemname 0, ITEM_ADAMANT_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_ADAMANT_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveNaughtyMint:
+EventScript_Shop_LelouchNaughtyMint:
+	bufferitemname 0, ITEM_NAUGHTY_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_NAUGHTY_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveBraveMint:
+EventScript_Shop_LelouchBraveMint:
+	bufferitemname 0, ITEM_BRAVE_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_BRAVE_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_Shop_LelouchDefenseMints:
-	msgbox gText_Lelouch_DefenseMintsCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	removeitem ITEM_GREEN_SHARD, 1
-	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
-	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers FADE_TO_BLACK
-	delay 96
-	playfanfare MUS_SLOTS_WIN
-	waitfanfare
-	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
-	random 4
-	goto_if_eq VAR_RESULT, 0, EventScript_GiveBoldMint
-	goto_if_eq VAR_RESULT, 1, EventScript_GiveImpishMint
-	goto_if_eq VAR_RESULT, 2, EventScript_GiveLaxMint
-	goto_if_eq VAR_RESULT, 3, EventScript_GiveRelaxedMint
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_GiveBoldMint:
+EventScript_Shop_LelouchBoldMint:
+	bufferitemname 0, ITEM_BOLD_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_BOLD_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveImpishMint:
+EventScript_Shop_LelouchImpishMint:
+	bufferitemname 0, ITEM_IMPISH_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_IMPISH_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveLaxMint:
+EventScript_Shop_LelouchLaxMint:
+	bufferitemname 0, ITEM_LAX_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_LAX_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveRelaxedMint:
+EventScript_Shop_LelouchRelaxedMint:
+	bufferitemname 0, ITEM_RELAXED_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_RELAXED_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
-	
-EventScript_Shop_LelouchSpAttackMints:
-	msgbox gText_Lelouch_SpAttackMintsCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	removeitem ITEM_GREEN_SHARD, 1
-	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
-	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers FADE_TO_BLACK
-	delay 96
-	playfanfare MUS_SLOTS_WIN
-	waitfanfare
-	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
-	random 4
-	goto_if_eq VAR_RESULT, 0, EventScript_GiveModestMint
-	goto_if_eq VAR_RESULT, 1, EventScript_GiveMildMint
-	goto_if_eq VAR_RESULT, 2, EventScript_GiveRashMint
-	goto_if_eq VAR_RESULT, 3, EventScript_GiveQuietMint
-	goto EventScript_Shop_LelouchLeave
-	end
 
-EventScript_GiveModestMint:
+EventScript_Shop_LelouchModestMint:
+	bufferitemname 0, ITEM_MODEST_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_MODEST_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveMildMint:
+EventScript_Shop_LelouchMildMint:
+	bufferitemname 0, ITEM_MILD_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_MILD_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveRashMint:
+EventScript_Shop_LelouchRashMint:
+	bufferitemname 0, ITEM_RASH_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_RASH_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveQuietMint:
+EventScript_Shop_LelouchQuietMint:
+	bufferitemname 0, ITEM_QUIET_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_QUIET_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_Shop_LelouchSpDefenseMints:
-	msgbox gText_Lelouch_SpDefenseMintsCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	removeitem ITEM_GREEN_SHARD, 1
-	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
-	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers FADE_TO_BLACK
-	delay 96
-	playfanfare MUS_SLOTS_WIN
-	waitfanfare
-	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
-	random 4
-	goto_if_eq VAR_RESULT, 0, EventScript_GiveCalmMint
-	goto_if_eq VAR_RESULT, 1, EventScript_GiveGentleMint
-	goto_if_eq VAR_RESULT, 2, EventScript_GiveCarefulMint
-	goto_if_eq VAR_RESULT, 3, EventScript_GiveSassyMint
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_GiveCalmMint:
+EventScript_Shop_LelouchCalmMint:
+	bufferitemname 0, ITEM_CALM_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_CALM_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveGentleMint:
+EventScript_Shop_LelouchGentleMint:
+	bufferitemname 0, ITEM_GENTLE_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_GENTLE_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveCarefulMint:
+EventScript_Shop_LelouchCarefulMint:
+	bufferitemname 0, ITEM_CAREFUL_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_CAREFUL_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveSassyMint:
+EventScript_Shop_LelouchSassyMint:
+	bufferitemname 0, ITEM_SASSY_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_SASSY_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
-	
-EventScript_Shop_LelouchSpeedMints:
-	msgbox gText_Lelouch_SpeedMintsCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	removeitem ITEM_GREEN_SHARD, 1
-	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
-	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers FADE_TO_BLACK
-	delay 96
-	playfanfare MUS_SLOTS_WIN
-	waitfanfare
-	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
-	random 4
-	goto_if_eq VAR_RESULT, 0, EventScript_GiveTimidMint
-	goto_if_eq VAR_RESULT, 1, EventScript_GiveHastyMint
-	goto_if_eq VAR_RESULT, 2, EventScript_GiveJollyMint
-	goto_if_eq VAR_RESULT, 3, EventScript_GiveNaiveMint
-	goto EventScript_Shop_LelouchLeave
-	end
 
-EventScript_GiveTimidMint:
+EventScript_Shop_LelouchTimidMint:
+	bufferitemname 0, ITEM_TIMID_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_TIMID_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveHastyMint:
+EventScript_Shop_LelouchHastyMint:
+	bufferitemname 0, ITEM_HASTY_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_HASTY_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveJollyMint:
+EventScript_Shop_LelouchJollyMint:
+	bufferitemname 0, ITEM_JOLLY_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_JOLLY_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_GiveNaiveMint:
+EventScript_Shop_LelouchNaiveMint:
+	bufferitemname 0, ITEM_NAIVE_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_NAIVE_MINT
 	goto EventScript_Shop_LelouchLeave
 	end
-	
-EventScript_Shop_LelouchNeutralMints:
-	msgbox gText_Lelouch_NeutralMintsCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	removeitem ITEM_GREEN_SHARD, 1
-	msgbox gText_Lelouch_PayGreen, MSGBOX_AUTOCLOSE
-	msgbox gText_Lelouch_OneMoment, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers FADE_TO_BLACK
-	delay 96
-	playfanfare MUS_SLOTS_WIN
-	waitfanfare
-	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox gText_Lelouch_ItsDone, MSGBOX_AUTOCLOSE
+
+EventScript_Shop_LelouchSeriousMint:
+	bufferitemname 0, ITEM_SERIOUS_MINT
+	call EventScript_Shop_LelouchMintSetup
 	giveitem ITEM_SERIOUS_MINT
 	goto EventScript_Shop_LelouchLeave
-	release
 	end
 
 EventScript_Shop_LelouchLeave:

@@ -871,6 +871,28 @@ static const u8 sText_EVDef[] =_("EV Training Defense");
 static const u8 sText_EVSpA[] =_("EV Training Special Attack");
 static const u8 sText_EVSpD[] =_("EV Training Special Defense");
 static const u8 sText_EVSpe[] =_("EV Training Speed");
+static const u8 sText_LonelyMint[] = _("Lonely Mint");
+static const u8 sText_AdamantMint[] = _("Adamant Mint");
+static const u8 sText_NaughtyMint[] = _("Naughty Mint");
+static const u8 sText_BraveMint[] = _("Brave Mint");
+static const u8 sText_BoldMint[] = _("Bold Mint");
+static const u8 sText_ImpishMint[] = _("Impish Mint");
+static const u8 sText_LaxMint[] = _("Lax Mint");
+static const u8 sText_RelaxedMint[] = _("Relaxed Mint");
+static const u8 sText_ModestMint[] = _("Modest Mint");
+static const u8 sText_MildMint[] = _("Mild Mint");
+static const u8 sText_RashMint[] = _("Rash Mint");
+static const u8 sText_QuietMint[] = _("Quiet Mint");
+static const u8 sText_CalmMint[] = _("Calm Mint");
+static const u8 sText_GentleMint[] = _("Gentle Mint");
+static const u8 sText_CarefulMint[] = _("Careful Mint");
+static const u8 sText_QuirkyMint[] = _("Quirky Mint");
+static const u8 sText_SassyMint[] = _("Sassy Mint");
+static const u8 sText_TimidMint[] = _("Timid Mint");
+static const u8 sText_HastyMint[] = _("Hasty Mint");
+static const u8 sText_JollyMint[] = _("Jolly Mint");
+static const u8 sText_NaiveMint[] = _("Naive Mint");
+static const u8 sText_SeriousMint[] = _("Serious Mint");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -1038,6 +1060,31 @@ static const struct ListMenuItem Exp4[] =
     {sText_EVSpe, 9},
 };
 
+static const struct ListMenuItem Mints[] =
+{
+    {sText_LonelyMint, 0},
+    {sText_AdamantMint, 1},
+    {sText_NaughtyMint, 2},
+    {sText_BraveMint, 3},
+    {sText_BoldMint, 4},
+    {sText_ImpishMint, 5},
+    {sText_LaxMint, 6},
+    {sText_RelaxedMint, 7},
+    {sText_ModestMint, 8},
+    {sText_MildMint, 9},
+    {sText_RashMint, 10},
+    {sText_QuietMint, 11},
+    {sText_CalmMint, 12},
+    {sText_GentleMint, 13},
+    {sText_CarefulMint, 14},
+    {sText_SassyMint, 15},
+    {sText_TimidMint, 16},
+    {sText_HastyMint, 17},
+    {sText_JollyMint, 18},
+    {sText_NaiveMint, 19},
+    {sText_SeriousMint, 20},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -1053,6 +1100,7 @@ struct
     {MoveTutorLevel4, ARRAY_COUNT(MoveTutorLevel4)},
     {Exp3, ARRAY_COUNT(Exp3)},
     {Exp4, ARRAY_COUNT(Exp4)},
+    {Mints, ARRAY_COUNT(Mints)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);

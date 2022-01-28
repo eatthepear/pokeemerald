@@ -456,29 +456,10 @@ gText_Lelouch_CostsGreenShards:
 	.string "in exchange for Green Shards.\l"
 	.string "What would you like?$"
 
-gText_Lelouch_AttackMintsCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting an Attack Mint\n"
-	.string "costs one Green Shard, are you sure?$"
-
-gText_Lelouch_DefenseMintsCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting a Defense Mint\n"
-	.string "costs one Green Shard, are you sure?$"
-
-gText_Lelouch_SpAttackMintsCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting a Sp. Attack Mint\n"
-	.string "costs one Green Shard, are you sure?$"
-
-gText_Lelouch_SpDefenseMintsCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting a Sp. Defense Mint\n"
-	.string "costs one Green Shard, are you sure?$"
-
-gText_Lelouch_SpeedMintsCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting a Speed Mint\n"
-	.string "costs one Green Shard, are you sure?$"
-
-gText_Lelouch_NeutralMintsCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Crafting a Neutral Mint\n"
-	.string "costs one Green Shard, are you sure?$"
+gText_Lelouch_MintCosts:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You want me to craft\n"
+	.string "one {STR_VAR_1}? It will\l"
+	.string "cost one Green Shard.$"
 
 gText_Lelouch_PayGreen:
 	.string "{PLAYER} handed over 1 Green Shard.$"
