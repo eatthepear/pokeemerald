@@ -600,7 +600,7 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             RETURN_SCORE_MINUS(10);
             break;
         case AI_EFFECTIVENESS_x0_5:
-            score--;
+            score -= 2;
             break;
         }
         
