@@ -599,6 +599,9 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case AI_EFFECTIVENESS_x0_25:
             RETURN_SCORE_MINUS(10);
             break;
+        case AI_EFFECTIVENESS_x0_5:
+            score--;
+            break;
         }
         
         // target ability checks
@@ -3030,8 +3033,8 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
 	case EFFECT_ABSORB:
         if (AI_DATA->atkHoldEffect == HOLD_EFFECT_BIG_ROOT)
             score++;
-        if (effectiveness <= AI_EFFECTIVENESS_x0_5 && AI_RandLessThan(50))
-            score -= 3;
+        // if (effectiveness <= AI_EFFECTIVENESS_x0_5 && AI_RandLessThan(50))
+        //     score -= 3;
         break;
     case EFFECT_EXPLOSION:
     case EFFECT_MEMENTO:
