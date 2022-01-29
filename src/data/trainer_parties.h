@@ -3108,12 +3108,12 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     {
     .iv = 31,
     .lvl = 15,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_BOLD,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Berserk
-    .species = SPECIES_BEAUTIFLY, //Starts with aura +1 Defense
+    .ability = ABILITY_SLOT_1, //Swarm
+    .species = SPECIES_DOTTLER, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_SLEEP_TALK}
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_CONFUSION, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
     }
 };
 
