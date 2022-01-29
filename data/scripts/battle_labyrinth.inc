@@ -2450,7 +2450,7 @@ EventScript_AdviceAgain:
 	end
 
 EventScript_Settings:
-	setflag FLAG_IS_DEBUGGING_SAVEFILE
+	@ setflag FLAG_IS_DEBUGGING_SAVEFILE
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_CheckBrutalNuzlocke
 	goto EventScript_CheckDefaultNuzlocke
 	end
