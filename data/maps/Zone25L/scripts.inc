@@ -78,24 +78,16 @@ Zone25L_EventScript_RightMost::
 	end
 
 Zone25L_EventScript_InitiateLeviathanBattle:
-	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	msgbox Zone25L_Text_Mirage_1, MSGBOX_AUTOCLOSE
-	waitmovement 0
-	applymovement 2, Common_Movement_WalkInPlaceFasterUp
 	msgbox Zone25L_Text_Mirage_2, MSGBOX_AUTOCLOSE
-	waitmovement 0
-	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	msgbox Zone25L_Text_Mirage_3, MSGBOX_AUTOCLOSE
-	waitmovement 0
 	delay 96
 	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
 	fadeoutbgm 1
-	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	msgbox Zone25L_Text_Mirage_4, MSGBOX_AUTOCLOSE
-	waitmovement 0
 	applymovement 1, Common_Movement_WalkRight
 	applymovement 2, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -104,17 +96,17 @@ Zone25L_EventScript_InitiateLeviathanBattle:
 	applymovement 2, Common_Movement_FaceDown
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	applymovement 2, Common_Movement_WalkInPlaceFasterLeft
+	applymovement 2, Common_Movement_FaceLeft
 	msgbox Zone25L_Text_Mirage_5, MSGBOX_AUTOCLOSE
 	waitmovement 0
-	applymovement 1, Common_Movement_WalkInPlaceFasterRight
+	applymovement 1, Common_Movement_FaceRight
 	msgbox Zone25L_Text_Mirage_6, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_eq Zone25L_EventScript_DontHaveEnoughMons
 	delay 96
-	applymovement 1, Common_Movement_WalkInPlaceFasterDown
+	applymovement 1, Common_Movement_FaceDown
 	applymovement 2, Common_Movement_FaceDown
 	msgbox Zone25L_Text_Mirage_7, MSGBOX_AUTOCLOSE
 	waitmovement 0
