@@ -381,14 +381,14 @@ static const struct TrainerMon sParty_Ryan[] = {
 
 static const struct TrainerMon sParty_Declan[] = {//Leviathan 2, Default
     {
-    .ivs = {31, 31, 30, 30, 31, 30},
+    .iv = 31,
     .lvl = 15,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Shield Dust
     .species = SPECIES_DUSTOX, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_VENOSHOCK, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_VENOSHOCK, MOVE_CONFUSION, MOVE_ELECTROWEB}
     }
 };
 
@@ -3097,14 +3097,14 @@ static const struct TrainerMon sParty_RemiBrutal[] = {//Leviathan 1, Brutal
 
 static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Battle, Brutal
     {
-    .ivs = {31, 31, 30, 30, 31, 30},
+    .iv = 31,
     .lvl = 15,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Shield Dust
     .species = SPECIES_DUSTOX, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_VENOSHOCK, MOVE_CONFUSION, MOVE_HIDDEN_POWER} //Hidden Power Rock
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_VENOSHOCK, MOVE_CONFUSION, MOVE_ELECTROWEB}
     },
     {
     .iv = 31,
@@ -3114,7 +3114,7 @@ static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan 2, Double Ba
     .ability = ABILITY_SLOT_1, //Berserk
     .species = SPECIES_BEAUTIFLY, //Starts with aura +1 Defense
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_ELECTROWEB}
+    .moves = {MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_SLEEP_TALK}
     }
 };
 
