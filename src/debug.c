@@ -909,7 +909,6 @@ static void DebugAction_Util_Warp_Warp(u8 taskId)
 
     CopyWindowToVram(windowId, 3);
 
-
     ConvertIntToDecimalStringN(gStringVar1, gTasks[taskId].data[3], STR_CONV_MODE_LEADING_ZEROS, 2);
     ConvertIntToDecimalStringN(gStringVar2, MAP_GROUPS_COUNT-1, STR_CONV_MODE_LEADING_ZEROS, 2);
     StringExpandPlaceholders(gStringVar1, gDebugText_Util_WarpToMap_SelMax);
@@ -927,42 +926,43 @@ static void DebugAction_Util_Warp_Warp(u8 taskId)
 }
 static void DebugAction_Util_Warp_SelectMapGroup(u8 taskId)
 {
-    if (gMain.newKeys & DPAD_ANY)
-    {
-        PlaySE(SE_SELECT);
-        if(gMain.newKeys & DPAD_UP)
-        {
-            gTasks[taskId].data[3] += sPowersOfTen[gTasks[taskId].data[4]];
-            if(gTasks[taskId].data[3] > MAP_GROUPS_COUNT-1)
-                gTasks[taskId].data[3] = MAP_GROUPS_COUNT-1;
-        }
-        if(gMain.newKeys & DPAD_DOWN)
-        {
-            gTasks[taskId].data[3] -= sPowersOfTen[gTasks[taskId].data[4]];
-            if(gTasks[taskId].data[3] < 0)
-                gTasks[taskId].data[3] = 0;
-        }
-        if(gMain.newKeys & DPAD_LEFT)
-        {
-            if(gTasks[taskId].data[4] > 0)
-                gTasks[taskId].data[4] -= 1;
-        }
-        if(gMain.newKeys & DPAD_RIGHT)
-        {
-            if(gTasks[taskId].data[4] < 2)
-                gTasks[taskId].data[4] += 1;
-        }
+    // if (gMain.newKeys & DPAD_ANY)
+    // {
+    //     PlaySE(SE_SELECT);
+    //     if(gMain.newKeys & DPAD_UP)
+    //     {
+    //         gTasks[taskId].data[3] += sPowersOfTen[gTasks[taskId].data[4]];
+    //         if(gTasks[taskId].data[3] > MAP_GROUPS_COUNT-1)
+    //             gTasks[taskId].data[3] = MAP_GROUPS_COUNT-1;
+    //     }
+    //     if(gMain.newKeys & DPAD_DOWN)
+    //     {
+    //         gTasks[taskId].data[3] -= sPowersOfTen[gTasks[taskId].data[4]];
+    //         if(gTasks[taskId].data[3] < 0)
+    //             gTasks[taskId].data[3] = 0;
+    //     }
+    //     if(gMain.newKeys & DPAD_LEFT)
+    //     {
+    //         if(gTasks[taskId].data[4] > 0)
+    //             gTasks[taskId].data[4] -= 1;
+    //     }
+    //     if(gMain.newKeys & DPAD_RIGHT)
+    //     {
+    //         if(gTasks[taskId].data[4] < 2)
+    //             gTasks[taskId].data[4] += 1;
+    //     }
 
-        ConvertIntToDecimalStringN(gStringVar1, gTasks[taskId].data[3], STR_CONV_MODE_LEADING_ZEROS, 2);
-        ConvertIntToDecimalStringN(gStringVar2, MAP_GROUPS_COUNT-1, STR_CONV_MODE_LEADING_ZEROS, 2);
-        StringExpandPlaceholders(gStringVar1, gDebugText_Util_WarpToMap_SelMax);
-        StringCopy(gStringVar3, gText_DigitIndicator[gTasks[taskId].data[4]]);
-        StringExpandPlaceholders(gStringVar4, gDebugText_Util_WarpToMap_SelectMapGroup);
-        AddTextPrinterParameterized(gTasks[taskId].data[2], 1, gStringVar4, 1, 1, 0, NULL);
-    }
+    //     ConvertIntToDecimalStringN(gStringVar1, gTasks[taskId].data[3], STR_CONV_MODE_LEADING_ZEROS, 2);
+    //     ConvertIntToDecimalStringN(gStringVar2, MAP_GROUPS_COUNT-1, STR_CONV_MODE_LEADING_ZEROS, 2);
+    //     StringExpandPlaceholders(gStringVar1, gDebugText_Util_WarpToMap_SelMax);
+    //     StringCopy(gStringVar3, gText_DigitIndicator[gTasks[taskId].data[4]]);
+    //     StringExpandPlaceholders(gStringVar4, gDebugText_Util_WarpToMap_SelectMapGroup);
+    //     AddTextPrinterParameterized(gTasks[taskId].data[2], 1, gStringVar4, 1, 1, 0, NULL);
+    // }
+    gTasks[taskId].data[3] = 27;
 
-    if (gMain.newKeys & A_BUTTON)
-    {
+    // if (gMain.newKeys & A_BUTTON)
+    // {
         gTasks[taskId].data[5] = gTasks[taskId].data[3];
         gTasks[taskId].data[3] = 0;
         gTasks[taskId].data[4] = 0;
@@ -976,12 +976,12 @@ static void DebugAction_Util_Warp_SelectMapGroup(u8 taskId)
         AddTextPrinterParameterized(gTasks[taskId].data[2], 1, gStringVar4, 1, 1, 0, NULL);
 
         gTasks[taskId].func = DebugAction_Util_Warp_SelectMap;
-    }
-    else if (gMain.newKeys & B_BUTTON)
-    {
-        PlaySE(SE_SELECT);
-        DebugAction_DestroyExtraWindow(taskId);
-    }
+    // }
+    // else if (gMain.newKeys & B_BUTTON)
+    // {
+    //     PlaySE(SE_SELECT);
+    //     DebugAction_DestroyExtraWindow(taskId);
+    // }
 }
 static void DebugAction_Util_Warp_SelectMap(u8 taskId)
 {
