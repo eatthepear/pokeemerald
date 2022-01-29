@@ -155,7 +155,7 @@ gText_Colress_WantMoreAdvice:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Do you want more advice?$"
 
 gText_Advice0:
-	.string "This is version 1.2.4 of the\n"
+	.string "This is version 1.3.0 of the\n"
 	.string "Pokémon Battle Labyrinth.\p"
 	.string "Make sure you're playing the\n"
 	.string "most up to date version!$"
