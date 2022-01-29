@@ -505,7 +505,6 @@ static const struct TrainerMon sParty_Ronan[] = {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_AXEW,
-    .moves = {MOVE_SCRATCH, MOVE_LEER, MOVE_ASSURANCE, MOVE_NONE}
     }
 };
 
