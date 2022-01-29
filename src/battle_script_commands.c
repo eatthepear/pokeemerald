@@ -13605,6 +13605,10 @@ static void Cmd_handleballthrow(void)
             {
                 shakes = maxShakes;
             }
+            else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE0A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE0A))
+            {
+                shakes = maxShakes;
+            }
             else
             {
                 odds = Sqrt(Sqrt(16711680 / odds));
