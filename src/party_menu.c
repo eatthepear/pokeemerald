@@ -751,7 +751,7 @@ static void InitPartyMenuBoxes(u8 layout)
     }
     // The first party mon goes in the left column
     if (layout != PARTY_LAYOUT_SINGLE) //Custom party menu
-    sPartyMenuBoxes[0].infoRects = &sPartyBoxInfoRects[PARTY_BOX_LEFT_COLUMN];
+        sPartyMenuBoxes[0].infoRects = &sPartyBoxInfoRects[PARTY_BOX_LEFT_COLUMN];
 
     if (layout == PARTY_LAYOUT_MULTI_SHOWCASE)
         sPartyMenuBoxes[3].infoRects = &sPartyBoxInfoRects[PARTY_BOX_LEFT_COLUMN];
@@ -2212,7 +2212,7 @@ static void DrawEmptySlot(u8 windowId)
     if (gPartyMenu.layout == PARTY_LAYOUT_SINGLE) //Custom party menu
         BlitBitmapToPartyWindow(windowId, sEqualEmptySlotTileNums, 14, 0, 0, 14, 5);//
     else
-    BlitBitmapToPartyWindow(windowId, sEmptySlotTileNums, 18, 0, 0, 18, 3);
+        BlitBitmapToPartyWindow(windowId, sEmptySlotTileNums, 18, 0, 0, 18, 3);
 }
 
 //Custom party menu
@@ -2339,14 +2339,10 @@ static void DisplayPartyPokemonLevelCheck(struct Pokemon *mon, struct PartyMenuB
 {
     if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE)
     {
-        u8 ailment = GetMonAilment(mon);
-        if (ailment == AILMENT_NONE || ailment == AILMENT_PKRS)
-        {
-            if (c != 0)
-                menuBox->infoRects->blitFunc(menuBox->windowId, menuBox->infoRects->dimensions[4] >> 3, (menuBox->infoRects->dimensions[5] >> 3) + 1, menuBox->infoRects->dimensions[6] >> 3, menuBox->infoRects->dimensions[7] >> 3, FALSE);
-            if (c != 2)
-                DisplayPartyPokemonLevel(GetMonData(mon, MON_DATA_LEVEL), menuBox);
-        }
+        if (c != 0)
+            menuBox->infoRects->blitFunc(menuBox->windowId, menuBox->infoRects->dimensions[4] >> 3, (menuBox->infoRects->dimensions[5] >> 3), (menuBox->infoRects->dimensions[6] >> 3) + 8, menuBox->infoRects->dimensions[7] >> 3) + 4, FALSE);
+        if (c != 2)
+            DisplayPartyPokemonLevel(GetMonData(mon, MON_DATA_LEVEL), menuBox);
     }
 }
 
@@ -4509,8 +4505,7 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
             PlaySE(SE_GLASS_FLUTE);
         }
         SetPartyMonAilmentGfx(mon, &sPartyMenuBoxes[gPartyMenu.slotId]);
-        if (gSprites[sPartyMenuBoxes[gPartyMenu.slotId].statusSpriteId].invisible)
-            DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[gPartyMenu.slotId], 1);
+        DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[gPartyMenu.slotId], 1);
         if (canHeal == TRUE)
         {
             if (hp == 0)
@@ -5075,7 +5070,7 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
     struct Pokemon *mon;
     u16 move;
     u8 oldPP;
-    
+
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
         mon = &gPlayerParty[gPartyMenu.slotId];
@@ -5191,8 +5186,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
 static void UpdateMonDisplayInfoAfterRareCandy(u8 slot, struct Pokemon *mon)
 {
     SetPartyMonAilmentGfx(mon, &sPartyMenuBoxes[slot]);
-    if (gSprites[sPartyMenuBoxes[slot].statusSpriteId].invisible)
-        DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[slot], 1);
+    DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[slot], 1);
     DisplayPartyPokemonHPCheck(mon, &sPartyMenuBoxes[slot], 1);
     DisplayPartyPokemonMaxHPCheck(mon, &sPartyMenuBoxes[slot], 1);
     DisplayPartyPokemonHPBarCheck(mon, &sPartyMenuBoxes[slot]);
@@ -5369,8 +5363,7 @@ static void UseSacredAsh(u8 taskId)
 
     PlaySE(SE_USE_ITEM);
     SetPartyMonAilmentGfx(mon, &sPartyMenuBoxes[gPartyMenu.slotId]);
-    if (gSprites[sPartyMenuBoxes[gPartyMenu.slotId].statusSpriteId].invisible)
-        DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[gPartyMenu.slotId], 1);
+    DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[gPartyMenu.slotId], 1);
     AnimatePartySlot(sPartyMenuInternal->tLastSlotUsed, 0);
     AnimatePartySlot(gPartyMenu.slotId, 1);
     PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(mon, MON_DATA_HP) - hp, Task_SacredAshDisplayHPRestored);
@@ -6787,10 +6780,10 @@ void CursorCb_MoveItemCallback(u8 taskId)
 {
     u16 item1, item2;
     u8 buffer[100];
-    
+
     if (gPaletteFade.active || MenuHelpers_ShouldWaitForLinkRecv())
         return;
-    
+
     switch (PartyMenuButtonHandler(&gPartyMenu.slotId2))
     {
         case 2:     // User hit B or A while on Cancel
@@ -6804,29 +6797,29 @@ void CursorCb_MoveItemCallback(u8 taskId)
                 PlaySE(SE_FAILURE);
                 return;
             }
-            
+
             PlaySE(SE_SELECT);
             gPartyMenu.action = PARTY_ACTION_CHOOSE_MON;
-            
+
             // look up held items
             item1 = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HELD_ITEM);
             item2 = GetMonData(&gPlayerParty[gPartyMenu.slotId2], MON_DATA_HELD_ITEM);
-            
+
             // swap the held items
             SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HELD_ITEM, &item2);
             SetMonData(&gPlayerParty[gPartyMenu.slotId2], MON_DATA_HELD_ITEM, &item1);
-            
+
             // update the held item icons
             UpdatePartyMonHeldItemSprite(
                                          &gPlayerParty[gPartyMenu.slotId],
                                          &sPartyMenuBoxes[gPartyMenu.slotId]
                                          );
-            
+
             UpdatePartyMonHeldItemSprite(
                                          &gPlayerParty[gPartyMenu.slotId2],
                                          &sPartyMenuBoxes[gPartyMenu.slotId2]
                                          );
-            
+
             // create the string describing the move
             if (item2 == ITEM_NONE)
             {
@@ -6839,20 +6832,20 @@ void CursorCb_MoveItemCallback(u8 taskId)
                 GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
                 CopyItemName(item1, gStringVar2);
                 StringExpandPlaceholders(buffer, gText_XsYAnd);
-                
+
                 StringAppend(buffer, gText_XsYWereSwapped);
                 GetMonNickname(&gPlayerParty[gPartyMenu.slotId2], gStringVar1);
                 CopyItemName(item2, gStringVar2);
                 StringExpandPlaceholders(gStringVar4, buffer);
             }
-            
+
             // display the string
             DisplayPartyMenuMessage(gStringVar4, TRUE);
-            
+
             // update colors of selected boxes
             AnimatePartySlot(gPartyMenu.slotId2, 0);
             AnimatePartySlot(gPartyMenu.slotId, 1);
-            
+
             // return to the main party menu
             ScheduleBgCopyTilemapToVram(2);
             gTasks[taskId].func = Task_UpdateHeldItemSprite;
@@ -6863,22 +6856,22 @@ void CursorCb_MoveItemCallback(u8 taskId)
 void CursorCb_MoveItem(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
-    
+
     PlaySE(SE_SELECT);
-    
+
     // delete old windows
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
-    
+
     if (GetMonData(mon, MON_DATA_HELD_ITEM) != ITEM_NONE)
     {
         gPartyMenu.action = PARTY_ACTION_SWITCH;
-        
+
         // show "Move item to where" in bottom left
         DisplayPartyMenuStdMessage(PARTY_MSG_MOVE_ITEM_WHERE);
         // update color of first selected box
         AnimatePartySlot(gPartyMenu.slotId, 1);
-        
+
         // set up callback
         gPartyMenu.slotId2 = gPartyMenu.slotId;
         gTasks[taskId].func = CursorCb_MoveItemCallback;
@@ -6889,7 +6882,7 @@ void CursorCb_MoveItem(u8 taskId)
         GetMonNickname(mon, gStringVar1);
         StringExpandPlaceholders(gStringVar4, gText_PkmnNotHolding);
         DisplayPartyMenuMessage(gStringVar4, TRUE);
-        
+
         // return to the main party menu
         ScheduleBgCopyTilemapToVram(2);
         gTasks[taskId].func = Task_UpdateHeldItemSprite;
@@ -6915,7 +6908,7 @@ static void Task_ChooseSendMonToPC(u8 taskId)
 static void CB2_ChooseSendMonToPC(void)
 {
     u8 gSendMonPartyIndex;
-    
+
     gSendMonPartyIndex = GetCursorSelectionMonId();
     if (gContestMonPartyIndex >= PARTY_SIZE)
         gContestMonPartyIndex = 7;
@@ -6927,7 +6920,7 @@ static void CB2_ChooseSendMonToPC(void)
 void DisplaySendMonToPCMessage(struct Pokemon* mon)
 {
     GetMonData(mon, MON_DATA_NICKNAME, gStringVar1);
-    
+
     StringExpandPlaceholders(gStringVar4, gText_WouldLikeSendToPC);
     DrawDialogueFrame(1, 0);
     gTextFlags.canABSpeedUpPrint = TRUE;
@@ -6952,6 +6945,6 @@ static bool8 SetUpFieldMove_RockClimb(void)
         gPostMenuFieldCallback = FieldCallback_RockClimb;
         return TRUE;
     }
-    
+
     return FALSE;
 }
