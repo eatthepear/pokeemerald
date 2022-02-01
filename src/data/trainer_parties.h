@@ -1905,12 +1905,12 @@ static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
 static const struct TrainerMon sParty_Pirate1[] = {//Default
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_BARRASKEWDA,
     },
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_PERRSERKER,
     }
 };
@@ -1918,12 +1918,12 @@ static const struct TrainerMon sParty_Pirate1[] = {//Default
 static const struct TrainerMon sParty_Pirate2[] = {//Default
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_CRABOMINABLE,
     },
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_KINGLER,
     }
 };
@@ -1931,12 +1931,12 @@ static const struct TrainerMon sParty_Pirate2[] = {//Default
 static const struct TrainerMon sParty_Pirate3[] = {//Default
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_DHELMISE,
     },
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_DREDNAW,
     }
 };
@@ -1944,12 +1944,12 @@ static const struct TrainerMon sParty_Pirate3[] = {//Default
 static const struct TrainerMon sParty_Pirate4[] = {//Default
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_OCTILLERY,
     },
     {
     .iv = 31,
-    .lvl = 32,
+    .lvl = 30,
     .species = SPECIES_CHATOT,
     }
 };
