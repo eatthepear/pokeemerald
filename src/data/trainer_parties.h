@@ -697,19 +697,19 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .iv = 20,
     .lvl = 18,
     .nature = NATURE_NAUGHTY,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Huge Power
-    .species = SPECIES_AZUMARILL,
-    .moves = {MOVE_AQUA_JET, MOVE_CHARM, MOVE_BUBBLE_BEAM, MOVE_COVET}
-    },
-    {
-    .iv = 20,
-    .lvl = 18,
-    .nature = NATURE_NAUGHTY,
     .ability = ABILITY_HIDDEN, //Gale Wings
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_FLETCHINDER,
     .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_EMBER, MOVE_GROWL}
+    },
+    {
+    .iv = 20,
+    .lvl = 18,
+    .nature = NATURE_LONELY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Huge Power
+    .species = SPECIES_AZUMARILL,
+    .moves = {MOVE_AQUA_JET, MOVE_CHARM, MOVE_BUBBLE_BEAM, MOVE_COVET}
     },
     {
     .iv = 20,
