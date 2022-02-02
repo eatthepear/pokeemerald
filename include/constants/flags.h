@@ -1360,7 +1360,7 @@
 #define FLAG_BEATLEVIATHAN9                          (SYSTEM_FLAGS + 0xD) 
 #define FLAG_BEATLEVIATHAN10                         (SYSTEM_FLAGS + 0xE) 
 #define FLAG_BEATLEVIATHAN11                         (SYSTEM_FLAGS + 0xF) 
-#define FLAG_BEATLEVIATHAN12                         (SYSTEM_FLAGS + 0x10) // FLAG_0x875
+#define FLAG_BEATLEVIATHAN12                         (SYSTEM_FLAGS + 0x10) // FLAG_0x870
 #define FLAG_BEATLEVIATHAN13                         (SYSTEM_FLAGS + 0x11)
 #define FLAG_BEATLEVIATHAN14                         (SYSTEM_FLAGS + 0x12)
 #define FLAG_BEATLEVIATHAN15                         (SYSTEM_FLAGS + 0x13)
