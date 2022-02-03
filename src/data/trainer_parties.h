@@ -1962,7 +1962,7 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, optional, De
     .gender = TRAINER_MON_FEMALE,
     .heldItem = ITEM_FOCUS_SASH,
     .ability = ABILITY_HIDDEN, //Speed Boost
-    .species = SPECIES_SHARPEDO, //Starts with aura +2 Attack
+    .species = SPECIES_SHARPEDO, //Starts with aura +1 Attack
     .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_PSYCHIC_FANGS}
     },
 };
@@ -3435,7 +3435,7 @@ static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Brutal
     .gender = TRAINER_MON_FEMALE,
     .heldItem = ITEM_FOCUS_SASH,
     .ability = ABILITY_HIDDEN, //Speed Boost
-    .species = SPECIES_SHARPEDO, //Starts with aura +2 Attack, +2 Evasion
+    .species = SPECIES_SHARPEDO, //Starts with aura +2 Attack
     .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_PSYCHIC_FANGS}
     }
 };

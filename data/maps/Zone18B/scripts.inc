@@ -193,13 +193,13 @@ Zone18B_EventScript_OdysseusBattle:
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
-	totemboost_atk2 B_POSITION_OPPONENT_LEFT
+	totemboost_atk1 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN11, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan11Defeated
 	end
 
 Zone18B_EventScript_OdysseusBrutal:
-	settotemboost B_POSITION_OPPONENT_LEFT, 2, 0, 0, 0, 0, 0, 2
+	totemboost_atk2 B_POSITION_OPPONENT_LEFT
 	trainerbattle_no_intro TRAINER_LEVIATHAN11_BRUTAL, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan11Defeated
 	end
