@@ -2603,6 +2603,7 @@ EventScript_TurnedOffNuzlocke:
 	call_if_unset FLAG_RANDOMIZER_ON, EventScript_TurnedOffNuzlockeMsg
 	call_if_set FLAG_RANDOMIZER_ON, EventScript_TurnedOffNuzlockeMsgRandomizer
 	clearflag FLAG_NUZLOCKE_ON
+	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	return
 
