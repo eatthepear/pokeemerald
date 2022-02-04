@@ -1,8 +1,8 @@
 	.align 2
 voicegroup274:: @ BW Kageyama
-	voice_keysplit voicegroup282, KeySplitTable59    @ piano (all splits)
+	voice_keysplit voicegroup323, KeySplitTable59    @ piano (all splits)
 	voice_keysplit voicegroup233, KeySplitTable35    @ piano (HGSS)
-	voice_keysplit voicegroup282, KeySplitTable75    @ piano | 41 | 50 ||||| 77
+	voice_keysplit voicegroup323, KeySplitTable75    @ piano | 41 | 50 ||||| 77
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
 	voice_keysplit voicegroup304, KeySplitTable63    @ xtransceiver tone
 	voice_directsound 60, 0, DirectSoundWaveData_bw_vibrc5_pc, 255, 248, 2, 205
@@ -42,32 +42,32 @@ voicegroup274:: @ BW Kageyama
 	voice_keysplit voicegroup261, KeySplitTable39    @ trumpets
 	voice_keysplit voicegroup262, KeySplitTable47    @ trombones
 	voice_keysplit voicegroup248, KeySplitTable72    @ martin guitar
-	voice_keysplit voicegroup285, KeySplitTable64    @ french horns (old splits)
-	voice_keysplit voicegroup285, KeySplitTable41    @ french horns
-	voice_keysplit voicegroup287, KeySplitTable68    @ oboe
+	voice_keysplit voicegroup327, KeySplitTable64    @ french horns (old splits)
+	voice_keysplit voicegroup327, KeySplitTable41    @ french horns
+	voice_keysplit voicegroup288, KeySplitTable105   @ oboe
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
 	voice_keysplit voicegroup305, KeySplitTable44    @ tuba
 	voice_keysplit voicegroup287, KeySplitTable67    @ flute 2
-	voice_keysplit voicegroup286, KeySplitTable65    @ flute 1
+	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_square_2_alt 60, 0, 2, 0, 6, 2, 0
 	voice_keysplit voicegroup314, KeySplitTable89    @ alto sax
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 197, 227, 205
-	voice_keysplit voicegroup282, KeySplitTable96    @ piano | 44 || 56 || 68 || 80
-	voice_keysplit voicegroup285, KeySplitTable98    @ french horns | 52 | 53
+	voice_keysplit voicegroup323, KeySplitTable96    @ piano | 44 || 56 || 68 || 80
+	voice_keysplit voicegroup327, KeySplitTable98    @ french horns | 52 | 53
 	voice_keysplit voicegroup265, KeySplitTable51    @ oboe (HGSS)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
+	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)
+	voice_keysplit voicegroup245, KeySplitTable71    @ jazz organ
+	voice_directsound 60, 0, DirectSoundWaveData_dp_slapbass_c1_16, 255, 0, 255, 192
+	voice_keysplit voicegroup331, KeySplitTable111   @ nylon str. guitar 2 (relic song)
+	voice_keysplit voicegroup261, KeySplitTable112   @ trumpets | 65
+	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 236
-	voice_keysplit voicegroup283, KeySplitTable62    @ choir male
-	voice_keysplit voicegroup284, KeySplitTable63    @ choir female
+	voice_keysplit voicegroup324, KeySplitTable62    @ choir male
+	voice_keysplit voicegroup325, KeySplitTable63    @ choir female
 	voice_keysplit voicegroup303, KeySplitTable81    @ choir full
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
+	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gongp, 255, 252, 0, 236
@@ -76,6 +76,7 @@ voicegroup274:: @ BW Kageyama
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup319, KeySplitTable97    @ pipe organ
+	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -87,8 +88,7 @@ voicegroup274:: @ BW Kageyama
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup306, KeySplitTable102   @ saw lead | 56
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup320, KeySplitTable99    @ french horns p
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -100,9 +100,9 @@ voicegroup274:: @ BW Kageyama
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_bw_drumloop_vssubway, 255, 0, 255, 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_bw_seashorec4, 255, 0, 255, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -125,6 +125,6 @@ voicegroup274:: @ BW Kageyama
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 0, 255, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_keysplit_all voicegroup278				 @ drums
+	voice_keysplit_all voicegroup281				 @ drums
