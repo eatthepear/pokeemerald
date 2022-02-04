@@ -334,7 +334,7 @@ Zone0Sanctuary_EventScript_PickStarter:
 	compare VAR_RESULT, 5
 	call_if_eq Zone0Sanctuary_EventScript_Totodile
 	compare VAR_RESULT, 6
-	call_if_eq Zone0Sanctuary_EventScript_Torchic
+	call_if_eq Zone0Sanctuary_EventScript_Treecko
 	compare VAR_RESULT, 7
 	call_if_eq Zone0Sanctuary_EventScript_Torchic
 	compare VAR_RESULT, 8
@@ -410,7 +410,7 @@ Zone0Sanctuary_EventScript_RandomStarter:
 	compare VAR_RESULT, 5
 	call_if_eq Zone0Sanctuary_EventScript_Totodile
 	compare VAR_RESULT, 6
-	call_if_eq Zone0Sanctuary_EventScript_Torchic
+	call_if_eq Zone0Sanctuary_EventScript_Treecko
 	compare VAR_RESULT, 7
 	call_if_eq Zone0Sanctuary_EventScript_Torchic
 	compare VAR_RESULT, 8
