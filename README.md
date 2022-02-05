@@ -74,3 +74,4 @@ kWharever, Zeo254, WesleyFG - Battle Backgrounds
 Furret - DPPt and HGSS music
 SamuRH/Xhizy - animated RHH intro
 SageDeoxys - Regidrago, Regieleki overworld sprites
+Jaizu - Battle Graphics
