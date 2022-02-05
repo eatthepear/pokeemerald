@@ -164,7 +164,8 @@ Zone18B_Movement_LeviathanLeave:
 
 Zone18B_EventScript_ThankForPirates:
 	msgbox Zone18B_Odysseus_ThankYou, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM25
+	giveitem ITEM_FOCUS_SASH, 1
+	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE18B_STATE, 4
 	goto Zone18B_EventScript_WantBattleOrLeave
 	release
@@ -175,6 +176,12 @@ Zone18B_Odysseus_ThankYou:
 	.string "Thank you, {PLAYER}, for finding\n"
 	.string "their hideout. I want you to have\l"
 	.string "this as a reward.$"
+
+Zone18B_Text_Odysseus_ExplainItem:
+	.string "A Focus Sash allows your Pokémon to\n"
+	.string "tank a hit from full HP that would\l"
+	.string "have otherwise knocked it out.\p"
+	.string "However, it is only single use.$"
 
 Zone18B_EventScript_WantBattleOrLeave:
 	msgbox Zone18B_Odysseus_WantBattle, MSGBOX_YESNO
@@ -189,23 +196,32 @@ Zone18B_Odysseus_WantBattle:
 	.string "have a battle.$"
 
 Zone18B_EventScript_OdysseusBattle:
+	setweather WEATHER_RAIN
+	doweather
+	msgbox Zone18B_Text_Raining, MSGBOX_AUTOCLOSE
 	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
 	totemboost_atk1 B_POSITION_OPPONENT_LEFT
+	totemboost_spatk1 B_POSITION_OPPONENT_RIGHT
 	trainerbattle_no_intro TRAINER_LEVIATHAN11, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan11Defeated
 	end
 
+Zone18B_Text_Raining:
+	.string "It suddenly began to rain!$"
+
 Zone18B_EventScript_OdysseusBrutal:
-	totemboost_atk2 B_POSITION_OPPONENT_LEFT
+	totemboost_atk1 B_POSITION_OPPONENT_LEFT
+	totemboost_spatk1 B_POSITION_OPPONENT_RIGHT
 	trainerbattle_no_intro TRAINER_LEVIATHAN11_BRUTAL, Zone18B_Text_LeviathanDefeat
 	goto Zone18B_EventScript_Leviathan11Defeated
 	end
 
 Zone18B_OdysseusBattleIntro:
-	.string "Let this be a match for the ages!$"
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Let this be a match for\n"
+	.string "the ages!$"
 
 Zone18B_Text_LeviathanDefeat:
 	.string "Well met. Congratulations.$"
@@ -214,22 +230,26 @@ Zone18B_EventScript_Leviathan11Defeated:
 	setflag FLAG_BEATLEVIATHAN11
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
-	giveitem ITEM_FOCUS_SASH, 1
-	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM25
+	msgbox Zone18B_Text_Odysseus_ExplainItem2, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE18B_STATE, 5
-	release
+	resetweather
+	doweather
+	msgbox Zone18B_Text_StoppedRaining, MSGBOX_AUTOCLOSE
+	goto Zone18B_EventScript_WantLeave
 	end
+
+Zone18B_Text_StoppedRaining:
+	.string "The rain stopped.$"
 
 Zone18B_Text_Odysseus_PostBattle:
 	.string "What a stunning battle. You must be\n"
 	.string "proud of your Pokémon.\p"
 	.string "Here, I want you to have this.$"
 
-Zone18B_Text_Odysseus_ExplainItem:
-	.string "A Focus Sash allows your Pokémon to\n"
-	.string "tank a hit from full HP that would\l"
-	.string "have otherwise knocked it out.\p"
-	.string "However, it is only single use.$"
+Zone18B_Text_Odysseus_ExplainItem2:
+	.string "Waterfall is a strong, physical\n"
+	.string "Water move.$"
 
 Zone18B_EventScript_WantLeave:
 	msgbox Zone18B_Odysseus_WantLeave, MSGBOX_YESNO

@@ -1954,17 +1954,27 @@ static const struct TrainerMon sParty_Pirate4[] = {//Default
     }
 };
 
-static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, optional, Default
+static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle starts with permanent Rain, Double Battle, optional, Default
     {
     .iv = 31,
-    .lvl = 34,
+    .lvl = 33,
     .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .heldItem = ITEM_FOCUS_SASH,
-    .ability = ABILITY_HIDDEN, //Speed Boost
-    .species = SPECIES_SHARPEDO, //Starts with aura +1 Attack
-    .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_PSYCHIC_FANGS}
+    .gender = TRAINER_MON_MALE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .ability = ABILITY_SLOT_1, //Water Veil
+    .species = SPECIES_HUNTAIL, //Starts with aura +1 Attack
+    .moves = {MOVE_AQUA_TAIL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_SLEEP_TALK}
     },
+    {
+    .iv = 31,
+    .lvl = 33,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_FEMALE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .ability = ABILITY_SLOT_1, //Hydration
+    .species = SPECIES_GOREBYSS, //Starts with aura +1 Attack
+    .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_REST}
+    }
 };
 
 static const struct TrainerMon sParty_Julie[] = {//Leviathan 12, Default
@@ -3427,16 +3437,26 @@ static const struct TrainerMon sParty_SophiaBrutal[] = {//Leviathan 10, Brutal
     }
 };
 
-static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Brutal
+static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Battle starts with permanent Rain, Double Battle, Brutal
     {
     .iv = 31,
-    .lvl = 34,
+    .lvl = 33,
     .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .heldItem = ITEM_LUM_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_HUNTAIL, //Starts with aura +1 Attack
+    .moves = {MOVE_AQUA_TAIL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_SLEEP_TALK}
+    },
+    {
+    .iv = 31,
+    .lvl = 33,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_FEMALE,
-    .heldItem = ITEM_FOCUS_SASH,
-    .ability = ABILITY_HIDDEN, //Speed Boost
-    .species = SPECIES_SHARPEDO, //Starts with aura +2 Attack
-    .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_PSYCHIC_FANGS}
+    .heldItem = ITEM_LUM_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_GOREBYSS, //Starts with aura +1 Attack
+    .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_REST}
     }
 };
 
