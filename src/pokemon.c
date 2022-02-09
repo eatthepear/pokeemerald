@@ -9143,7 +9143,21 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
-            return MUS_VS_GYM_LEADER;
+            switch (VarGet(VAR_LEVIATHAN_MUSIC))
+            {
+            case 1:
+                return MUS_RG_VS_GYM_LEADER;
+            case 2:
+                return MUS_DP_SEQ_BA_GYM;
+            case 3:
+                return MUS_HG_SEQ_GS_VS_GYMREADER;
+            case 4:
+                return MUS_HG_SEQ_GS_VS_GYMREADER_KANTO;
+            case 5:
+                return MUS_BW_SEQ_BGM_VS_GYMLEADER;
+            default:
+                return MUS_VS_GYM_LEADER;
+            }
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
@@ -9163,7 +9177,21 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            return MUS_VS_TRAINER;
+            switch (VarGet(VAR_TRAINER_MUSIC))
+            {
+            case 1:
+                return MUS_RG_VS_TRAINER;
+            case 2:
+                return MUS_DP_SEQ_BA_TRAIN;
+            case 3:
+                return MUS_HG_SEQ_GS_VS_TRAINER;
+            case 4:
+                return MUS_HG_SEQ_GS_VS_TRAINER_KANTO;
+            case 5:
+                return MUS_BW_SEQ_BGM_VS_TRAINER;
+            default:
+                return MUS_VS_TRAINER;
+            }
         }
     }
     else
@@ -9307,7 +9335,21 @@ u16 GetBattleBGM(void)
             return MUS_BW_SEQ_BGM_VS_RAI;
         #endif
         default:
-            return MUS_VS_WILD;
+            switch (VarGet(VAR_WILD_MUSIC))
+            {
+            case 1:
+                return MUS_RG_VS_WILD;
+            case 2:
+                return MUS_DP_SEQ_BA_POKE;
+            case 3:
+                return MUS_HG_SEQ_GS_VS_NORAPOKE;
+            case 4:
+                return MUS_HG_SEQ_GS_VS_NORAPOKE_KANTO;
+            case 5:
+                return MUS_BW_SEQ_BGM_VS_NORAPOKE;
+            default:
+                return MUS_VS_WILD;
+            }
         }
     }
 }
