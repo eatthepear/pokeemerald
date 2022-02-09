@@ -27,9 +27,9 @@
 #define MULTI_VIEWED_PAINTINGS             16
 #define MULTI_YESNOINFO                    17
 #define MULTI_BATTLE_MODE                  18
-#define MULTI_UNUSED_19                    19
+#define MULTI_MUSIC_TYPE                   19
 #define MULTI_YESNOINFO_2                  20
-#define MULTI_UNUSED_21                    21
+#define MULTI_MUSIC_WHICH_GAME             21
 #define MULTI_UNUSED_22                    22
 #define MULTI_CHALLENGEINFO                23
 #define MULTI_LEVEL_MODE                   24

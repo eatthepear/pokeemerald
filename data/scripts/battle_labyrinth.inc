@@ -2576,35 +2576,35 @@ EventScript_DefaultVanillaMsg:
 EventScript_Colress_BrutalReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained, MSGBOX_AUTOCLOSE
 	call EventScript_TurnOffBrutal
-	goto EventScript_WhenUReady
+	goto EventScript_Settings
 	end
 
 EventScript_Colress_NuzlockeReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
 	call EventScript_TurnOffNuzlocke
-	goto EventScript_WhenUReady
+	goto EventScript_Settings
 	end
 
 EventScript_Colress_RandomizerReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
-	goto EventScript_WhenUReady
+	goto EventScript_Settings
 	end
 
 EventScript_Colress_RandomlockeReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
 	call EventScript_TurnOffNuzlocke
-	goto EventScript_WhenUReady
+	goto EventScript_Settings
 	end
 
 EventScript_Colress_VanillaReminderMsg:
 	msgbox gText_Colress_VanillaExplanation, MSGBOX_AUTOCLOSE
-	goto EventScript_WhenUReady
+	goto EventScript_Settings
 	end
 
 EventScript_Colress_DefaultReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained, MSGBOX_AUTOCLOSE
-	goto EventScript_WhenUReady
+	goto EventScript_Settings
 	end
 
 EventScript_TurnOffBrutal:
@@ -2654,8 +2654,254 @@ EventScript_TurnedOffNuzlockeMsgRandomizer:
 	return
 
 EventScript_MusicMenu:
-	msgbox gText_Advice0, MSGBOX_AUTOCLOSE
-	goto EventScript_WhenUReady
+	fadedefaultbgm
+	msgbox gText_Colress_MusicType, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_MUSIC_TYPE, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_SetWildMusic
+	case 1, EventScript_Colress_SetTrainerMusic
+	case 2, EventScript_Colress_SetLeviathanMusic
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_Settings
+	end
+
+EventScript_Colress_SetWildMusic:
+	call_if_eq VAR_WILD_MUSIC, 0, EventScript_WildMusic0Msg
+	call_if_eq VAR_WILD_MUSIC, 1, EventScript_WildMusic1Msg
+	call_if_eq VAR_WILD_MUSIC, 2, EventScript_WildMusic2Msg
+	call_if_eq VAR_WILD_MUSIC, 3, EventScript_WildMusic3Msg
+	call_if_eq VAR_WILD_MUSIC, 4, EventScript_WildMusic4Msg
+	call_if_eq VAR_WILD_MUSIC, 5, EventScript_WildMusic5Msg
+	multichoice 21, 0, MULTI_MUSIC_WHICH_GAME, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_SetWildRSE
+	case 1, EventScript_Colress_SetWildFRLG
+	case 2, EventScript_Colress_SetWildDPPt
+	case 3, EventScript_Colress_SetWildHGSSJohto
+	case 4, EventScript_Colress_SetWildHGSSKanto
+	case 5, EventScript_Colress_SetWildBW
+	case MULTI_B_PRESSED, EventScript_MusicMenu
+	goto EventScript_MusicMenu
+	end
+
+EventScript_WildMusic0Msg:
+	playbgm MUS_VS_WILD, FALSE
+	msgbox gText_Colress_WildMusic0Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_WildMusic1Msg:
+	playbgm MUS_RG_VS_WILD, FALSE
+	msgbox gText_Colress_WildMusic1Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_WildMusic2Msg:
+	playbgm MUS_DP_SEQ_BA_POKE, FALSE
+	msgbox gText_Colress_WildMusic2Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_WildMusic3Msg:
+	playbgm MUS_HG_SEQ_GS_VS_NORAPOKE, FALSE
+	msgbox gText_Colress_WildMusic3Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_WildMusic4Msg:
+	playbgm MUS_HG_SEQ_GS_VS_NORAPOKE_KANTO, FALSE
+	msgbox gText_Colress_WildMusic4Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_WildMusic5Msg:
+	@ playbgm MUS_BW_SEQ_BGM_VS_NORAPOKE, FALSE
+	msgbox gText_Colress_WildMusic5Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_Colress_SetWildRSE:
+	setvar VAR_WILD_MUSIC, 0
+	goto EventScript_Colress_SetWildMusic
+	end
+
+EventScript_Colress_SetWildFRLG:
+	setvar VAR_WILD_MUSIC, 1
+	goto EventScript_Colress_SetWildMusic
+	end
+
+EventScript_Colress_SetWildDPPt:
+	setvar VAR_WILD_MUSIC, 2
+	goto EventScript_Colress_SetWildMusic
+	end
+
+EventScript_Colress_SetWildHGSSJohto:
+	setvar VAR_WILD_MUSIC, 3
+	goto EventScript_Colress_SetWildMusic
+	end
+
+EventScript_Colress_SetWildHGSSKanto:
+	setvar VAR_WILD_MUSIC, 4
+	goto EventScript_Colress_SetWildMusic
+	end
+
+EventScript_Colress_SetWildBW:
+	msgbox gText_Colress_WildMusicBWNotFinished, MSGBOX_AUTOCLOSE
+	@ setvar VAR_WILD_MUSIC, 5
+	goto EventScript_Colress_SetWildMusic
+	end
+
+EventScript_Colress_SetTrainerMusic:
+	call_if_eq VAR_TRAINER_MUSIC, 0, EventScript_TrainerMusic0Msg
+	call_if_eq VAR_TRAINER_MUSIC, 1, EventScript_TrainerMusic1Msg
+	call_if_eq VAR_TRAINER_MUSIC, 2, EventScript_TrainerMusic2Msg
+	call_if_eq VAR_TRAINER_MUSIC, 3, EventScript_TrainerMusic3Msg
+	call_if_eq VAR_TRAINER_MUSIC, 4, EventScript_TrainerMusic4Msg
+	call_if_eq VAR_TRAINER_MUSIC, 5, EventScript_TrainerMusic5Msg
+	multichoice 21, 0, MULTI_MUSIC_WHICH_GAME, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_SetTrainerRSE
+	case 1, EventScript_Colress_SetTrainerFRLG
+	case 2, EventScript_Colress_SetTrainerDPPt
+	case 3, EventScript_Colress_SetTrainerHGSSJohto
+	case 4, EventScript_Colress_SetTrainerHGSSKanto
+	case 5, EventScript_Colress_SetTrainerBW
+	case MULTI_B_PRESSED, EventScript_MusicMenu
+	goto EventScript_MusicMenu
+	end
+
+EventScript_TrainerMusic0Msg:
+	playbgm MUS_VS_TRAINER, FALSE
+	msgbox gText_Colress_TrainerMusic0Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_TrainerMusic1Msg:
+	playbgm MUS_RG_VS_TRAINER, FALSE
+	msgbox gText_Colress_TrainerMusic1Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_TrainerMusic2Msg:
+	playbgm MUS_DP_SEQ_BA_TRAIN, FALSE
+	msgbox gText_Colress_TrainerMusic2Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_TrainerMusic3Msg:
+	playbgm MUS_HG_SEQ_GS_VS_TRAINER, FALSE
+	msgbox gText_Colress_TrainerMusic3Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_TrainerMusic4Msg:
+	playbgm MUS_HG_SEQ_GS_VS_TRAINER_KANTO, FALSE
+	msgbox gText_Colress_TrainerMusic4Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_TrainerMusic5Msg:
+	playbgm MUS_BW_SEQ_BGM_VS_TRAINER, FALSE
+	msgbox gText_Colress_TrainerMusic5Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_Colress_SetTrainerRSE:
+	setvar VAR_TRAINER_MUSIC, 0
+	goto EventScript_Colress_SetTrainerMusic
+	end
+
+EventScript_Colress_SetTrainerFRLG:
+	setvar VAR_TRAINER_MUSIC, 1
+	goto EventScript_Colress_SetTrainerMusic
+	end
+
+EventScript_Colress_SetTrainerDPPt:
+	setvar VAR_TRAINER_MUSIC, 2
+	goto EventScript_Colress_SetTrainerMusic
+	end
+
+EventScript_Colress_SetTrainerHGSSJohto:
+	setvar VAR_TRAINER_MUSIC, 3
+	goto EventScript_Colress_SetTrainerMusic
+	end
+
+EventScript_Colress_SetTrainerHGSSKanto:
+	setvar VAR_TRAINER_MUSIC, 4
+	goto EventScript_Colress_SetTrainerMusic
+	end
+
+EventScript_Colress_SetTrainerBW:
+	setvar VAR_TRAINER_MUSIC, 5
+	goto EventScript_Colress_SetTrainerMusic
+	end
+
+EventScript_Colress_SetLeviathanMusic:
+	call_if_eq VAR_LEVIATHAN_MUSIC, 0, EventScript_LeviathanMusic0Msg
+	call_if_eq VAR_LEVIATHAN_MUSIC, 1, EventScript_LeviathanMusic1Msg
+	call_if_eq VAR_LEVIATHAN_MUSIC, 2, EventScript_LeviathanMusic2Msg
+	call_if_eq VAR_LEVIATHAN_MUSIC, 3, EventScript_LeviathanMusic3Msg
+	call_if_eq VAR_LEVIATHAN_MUSIC, 4, EventScript_LeviathanMusic4Msg
+	call_if_eq VAR_LEVIATHAN_MUSIC, 5, EventScript_LeviathanMusic5Msg
+	multichoice 21, 0, MULTI_MUSIC_WHICH_GAME, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_SetLeviathanRSE
+	case 1, EventScript_Colress_SetLeviathanFRLG
+	case 2, EventScript_Colress_SetLeviathanDPPt
+	case 3, EventScript_Colress_SetLeviathanHGSSJohto
+	case 4, EventScript_Colress_SetLeviathanHGSSKanto
+	case 5, EventScript_Colress_SetLeviathanBW
+	case MULTI_B_PRESSED, EventScript_MusicMenu
+	goto EventScript_MusicMenu
+	end
+
+EventScript_LeviathanMusic0Msg:
+	playbgm MUS_VS_GYM_LEADER, FALSE
+	msgbox gText_Colress_LeviathanMusic0Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_LeviathanMusic1Msg:
+	playbgm MUS_RG_VS_GYM_LEADER, FALSE
+	msgbox gText_Colress_LeviathanMusic1Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_LeviathanMusic2Msg:
+	playbgm MUS_DP_SEQ_BA_GYM, FALSE
+	msgbox gText_Colress_LeviathanMusic2Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_LeviathanMusic3Msg:
+	playbgm MUS_HG_SEQ_GS_VS_GYMREADER, FALSE
+	msgbox gText_Colress_LeviathanMusic3Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_LeviathanMusic4Msg:
+	playbgm MUS_HG_SEQ_GS_VS_GYMREADER_KANTO, FALSE
+	msgbox gText_Colress_LeviathanMusic4Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_LeviathanMusic5Msg:
+	@ playbgm MUS_BW_SEQ_BGM_VS_GYMLEADER, FALSE
+	msgbox gText_Colress_LeviathanMusic5Msg, MSGBOX_DEFAULT
+	return
+
+EventScript_Colress_SetLeviathanRSE:
+	setvar VAR_LEVIATHAN_MUSIC, 0
+	goto EventScript_Colress_SetLeviathanMusic
+	end
+
+EventScript_Colress_SetLeviathanFRLG:
+	setvar VAR_LEVIATHAN_MUSIC, 1
+	goto EventScript_Colress_SetLeviathanMusic
+	end
+
+EventScript_Colress_SetLeviathanDPPt:
+	setvar VAR_LEVIATHAN_MUSIC, 2
+	goto EventScript_Colress_SetLeviathanMusic
+	end
+
+EventScript_Colress_SetLeviathanHGSSJohto:
+	setvar VAR_LEVIATHAN_MUSIC, 3
+	goto EventScript_Colress_SetLeviathanMusic
+	end
+
+EventScript_Colress_SetLeviathanHGSSKanto:
+	setvar VAR_LEVIATHAN_MUSIC, 4
+	goto EventScript_Colress_SetLeviathanMusic
+	end
+
+EventScript_Colress_SetLeviathanBW:
+	msgbox gText_Colress_LeviathanMusicBWNotFinished, MSGBOX_AUTOCLOSE
+	@ setvar VAR_LEVIATHAN_MUSIC, 5
+	goto EventScript_Colress_SetLeviathanMusic
 	end
 
 EventScript_LeavingSetup:

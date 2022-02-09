@@ -92,6 +92,89 @@ gText_Colress_VanillaExplanation:
 	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\n"
 	.string "modifications.$"
 
+gText_Colress_MusicType:
+	.string "Please select a music setting.$"
+
+gText_Colress_WildMusic0Msg:
+	.string "The Wild Pokémon music is\n"
+	.string "currently set to RSE.$"
+
+gText_Colress_WildMusic1Msg:
+	.string "The Wild Pokémon music is\n"
+	.string "currently set to FRLG.$"
+
+gText_Colress_WildMusic2Msg:
+	.string "The Wild Pokémon music is\n"
+	.string "currently set to DPPt.$"
+
+gText_Colress_WildMusic3Msg:
+	.string "The Wild Pokémon music is\n"
+	.string "currently set to HGSS (Johto).$"
+
+gText_Colress_WildMusic4Msg:
+	.string "The Wild Pokémon music is\n"
+	.string "currently set to HGSS (Kanto).$"
+
+gText_Colress_WildMusic5Msg:
+	.string "The Wild Pokémon music is\n"
+	.string "currently set to BW.$"
+
+gText_Colress_TrainerMusic0Msg:
+	.string "The Trainer music is\n"
+	.string "currently set to RSE.$"
+
+gText_Colress_TrainerMusic1Msg:
+	.string "The Trainer music is\n"
+	.string "currently set to FRLG.$"
+
+gText_Colress_TrainerMusic2Msg:
+	.string "The Trainer music is\n"
+	.string "currently set to DPPt.$"
+
+gText_Colress_TrainerMusic3Msg:
+	.string "The Trainer music is\n"
+	.string "currently set to HGSS (Johto).$"
+
+gText_Colress_TrainerMusic4Msg:
+	.string "The Trainer music is\n"
+	.string "currently set to HGSS (Kanto).$"
+
+gText_Colress_TrainerMusic5Msg:
+	.string "The Trainer music is\n"
+	.string "currently set to BW.$"
+
+gText_Colress_LeviathanMusic0Msg:
+	.string "The Leviathan music is\n"
+	.string "currently set to RSE.$"
+
+gText_Colress_LeviathanMusic1Msg:
+	.string "The Leviathan music is\n"
+	.string "currently set to FRLG.$"
+
+gText_Colress_LeviathanMusic2Msg:
+	.string "The Leviathan music is\n"
+	.string "currently set to DPPt.$"
+
+gText_Colress_LeviathanMusic3Msg:
+	.string "The Leviathan music is\n"
+	.string "currently set to HGSS (Johto).$"
+
+gText_Colress_LeviathanMusic4Msg:
+	.string "The Leviathan music is\n"
+	.string "currently set to HGSS (Kanto).$"
+
+gText_Colress_LeviathanMusic5Msg:
+	.string "The Leviathan music is\n"
+	.string "currently set to BW.$"
+
+gText_Colress_WildMusicBWNotFinished:
+	.string "The BW Wild Pokémon music is not\n"
+	.string "finished.$"
+
+gText_Colress_LeviathanMusicBWNotFinished:
+	.string "The BW Leviathan music is not\n"
+	.string "finished.$"
+
 gText_Colress_Rules:
 	.string "The Battle Labyrinth is comprised\n"
 	.string "of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
