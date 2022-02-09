@@ -17,7 +17,7 @@
 #define MULTI_BASE_PC_WITH_REGISTRY        6
 #define MULTI_REGISTER_MENU                7
 #define MULTI_SSTIDAL_LILYCOVE             8 // Exit only, populated by CreateLilycoveSSTidalMultichoice
-#define MULTI_VANILLA_NUZLOCKE             9
+#define MULTI_COLRESS_SETTINGS             9
 #define MULTI_COLRESS_MENU                 10
 #define MULTI_LELOUCH_OPTIONS              11
 #define MULTI_BIKE                         12

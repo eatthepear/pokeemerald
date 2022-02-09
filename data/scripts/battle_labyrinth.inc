@@ -2486,88 +2486,126 @@ EventScript_CheckDefaultRandomizer:
 	end
 
 EventScript_BrutalNuzlockeRandomizerMsg:
-	msgbox gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
-	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
-	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
-	call EventScript_TurnOffBrutal
-	call EventScript_TurnOffNuzlocke
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_BrutalReminderMsg
+	case 1, EventScript_Colress_RandomlockeReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_BrutalNuzlockeMsg:
-	msgbox gText_Colress_BrutalNuzlockeMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
-	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
-	call EventScript_TurnOffBrutal
-	call EventScript_TurnOffNuzlocke
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_BrutalNuzlockeMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_BrutalReminderMsg
+	case 1, EventScript_Colress_NuzlockeReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_BrutalRandomizerMsg:
-	msgbox gText_Colress_BrutalRandomizerMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
-	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
-	call EventScript_TurnOffBrutal
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_BrutalRandomizerMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_BrutalReminderMsg
+	case 1, EventScript_Colress_RandomizerReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_BrutalVanillaMsg:
-	msgbox gText_Colress_BrutalVanillaMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_BrutalReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_BrutalReminderMsg
-	call EventScript_TurnOffBrutal
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_BrutalVanillaMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_BrutalReminderMsg
+	case 1, EventScript_Colress_VanillaReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_DefaultNuzlockeRandomizerMsg:
-	msgbox gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
-	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
-	call EventScript_TurnOffNuzlocke
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_DefaultReminderMsg
+	case 1, EventScript_Colress_RandomlockeReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_DefaultNuzlockeMsg:
-	msgbox gText_Colress_DefaultNuzlockeMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_NuzlockeReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_NuzlockeReminderMsg
-	call EventScript_TurnOffNuzlocke
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_DefaultNuzlockeMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_DefaultReminderMsg
+	case 1, EventScript_Colress_NuzlockeReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_DefaultRandomizerMsg:
-	msgbox gText_Colress_DefaultRandomizerMsg, MSGBOX_AUTOCLOSE
-	msgbox gText_Colress_RandomizerReminder, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_Colress_RandomizerReminderMsg
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_DefaultRandomizerMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_DefaultReminderMsg
+	case 1, EventScript_Colress_RandomizerReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_DefaultVanillaMsg:
-	msgbox gText_Colress_DefaultVanillaMsg, MSGBOX_AUTOCLOSE
-	goto EventScript_WhenUReady
+	msgbox gText_Colress_DefaultVanillaMsg, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Colress_DefaultReminderMsg
+	case 1, EventScript_Colress_VanillaReminderMsg
+	case 2, EventScript_MusicMenu
+	case 3, EventScript_WhenUReady
+	case MULTI_B_PRESSED, EventScript_WhenUReady
 	end
 
 EventScript_Colress_BrutalReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained, MSGBOX_AUTOCLOSE
-	return
+	call EventScript_TurnOffBrutal
+	goto EventScript_WhenUReady
+	end
 
 EventScript_Colress_NuzlockeReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
-	return
+	call EventScript_TurnOffNuzlocke
+	goto EventScript_WhenUReady
+	end
 
 EventScript_Colress_RandomizerReminderMsg:
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
-	return
+	goto EventScript_WhenUReady
+	end
+
+EventScript_Colress_RandomlockeReminderMsg:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained, MSGBOX_AUTOCLOSE
+	call EventScript_TurnOffNuzlocke
+	goto EventScript_WhenUReady
+	end
+
+EventScript_Colress_VanillaReminderMsg:
+	msgbox gText_Colress_VanillaExplanation, MSGBOX_AUTOCLOSE
+	goto EventScript_WhenUReady
+	end
+
+EventScript_Colress_DefaultReminderMsg:
+	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained, MSGBOX_AUTOCLOSE
+	goto EventScript_WhenUReady
+	end
 
 EventScript_TurnOffBrutal:
 	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
@@ -2614,6 +2652,11 @@ EventScript_TurnedOffNuzlockeMsg:
 EventScript_TurnedOffNuzlockeMsgRandomizer:
 	msgbox gText_Colress_NuzlockeOffRandomizer, MSGBOX_AUTOCLOSE
 	return
+
+EventScript_MusicMenu:
+	msgbox gText_Advice0, MSGBOX_AUTOCLOSE
+	goto EventScript_WhenUReady
+	end
 
 EventScript_LeavingSetup:
 	msgbox gText_Colress_Empower, MSGBOX_AUTOCLOSE

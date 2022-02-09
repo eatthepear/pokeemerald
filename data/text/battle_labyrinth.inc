@@ -88,6 +88,10 @@ gText_Colress_NuzlockeOffRandomizer:
 	.string "{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\n"
 	.string "Mode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.$"
 
+gText_Colress_VanillaExplanation:
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\n"
+	.string "modifications.$"
+
 gText_Colress_Rules:
 	.string "The Battle Labyrinth is comprised\n"
 	.string "of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"

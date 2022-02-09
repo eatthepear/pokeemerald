@@ -778,10 +778,12 @@ static const struct MenuAction MultichoiceList_TagMatchType[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_VanillaNuzlocke[] =
+static const struct MenuAction MultichoiceList_ColressSettings[] =
 {
-    {gText_Vanilla},
-    {gText_Nuzlocke},
+    {gText_Difficulty},
+    {gText_Mode},
+    {gText_Music},
+    {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_ColressMenu[] =
@@ -829,7 +831,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_VANILLA_NUZLOCKE]           = MULTICHOICE(MultichoiceList_VanillaNuzlocke),
+    [MULTI_COLRESS_SETTINGS]           = MULTICHOICE(MultichoiceList_ColressSettings),
     [MULTI_COLRESS_MENU]               = MULTICHOICE(MultichoiceList_ColressMenu),
     [MULTI_LELOUCH_OPTIONS]            = MULTICHOICE(MultichoiceList_LelouchOptions),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
