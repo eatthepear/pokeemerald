@@ -931,6 +931,7 @@ Zone0Sanctuary_Text_Colress_BrutalExplained:
 	.string "Pokémon or other means.\p"
 	.string "The Daycare cannot be used.\p"
 	.string "Many helpful NPCs are unavailable.\p"
+	.string "Some moves use more PP than normal.\p"
 	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can\n"
 	.string "change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by\l"
 	.string "speaking to me.$"
