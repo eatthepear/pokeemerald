@@ -17,7 +17,7 @@
 #define MULTI_BASE_PC_WITH_REGISTRY        6
 #define MULTI_REGISTER_MENU                7
 #define MULTI_SSTIDAL_LILYCOVE             8 // Exit only, populated by CreateLilycoveSSTidalMultichoice
-#define MULTI_VANILLA_NUZLOCKE             9
+#define MULTI_COLRESS_SETTINGS             9
 #define MULTI_COLRESS_MENU                 10
 #define MULTI_LELOUCH_OPTIONS              11
 #define MULTI_BIKE                         12
@@ -27,9 +27,9 @@
 #define MULTI_VIEWED_PAINTINGS             16
 #define MULTI_YESNOINFO                    17
 #define MULTI_BATTLE_MODE                  18
-#define MULTI_UNUSED_19                    19
+#define MULTI_MUSIC_TYPE                   19
 #define MULTI_YESNOINFO_2                  20
-#define MULTI_UNUSED_21                    21
+#define MULTI_MUSIC_WHICH_GAME             21
 #define MULTI_UNUSED_22                    22
 #define MULTI_CHALLENGEINFO                23
 #define MULTI_LEVEL_MODE                   24

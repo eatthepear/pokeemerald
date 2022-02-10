@@ -124,9 +124,9 @@
 #define VAR_ROUTE110_STATE                   0x4069
 #define VAR_ZONE21A_STATE                    0x406A // Unused Var
 #define VAR_ZONE25L_STATE                    0x406B // Unused Var
-#define VAR_ROUTE113_STATE                   0x406C // Unused Var
-#define VAR_ROUTE114_STATE                   0x406D // Unused Var
-#define VAR_ROUTE115_STATE                   0x406E // Unused Var
+#define VAR_WILD_MUSIC                       0x406C // Unused Var
+#define VAR_TRAINER_MUSIC                    0x406D // Unused Var
+#define VAR_LEVIATHAN_MUSIC                  0x406E // Unused Var
 #define VAR_ROUTE116_STATE                   0x406F
 #define VAR_ROUTE117_STATE                   0x4070 // Unused Var
 #define VAR_ROUTE118_STATE                   0x4071

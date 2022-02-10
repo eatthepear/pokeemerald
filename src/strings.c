@@ -1908,8 +1908,18 @@ const u8 gText_Dex_OWN[]    = _("OWN");
 
 //My stuff
 const u8 gText_Nickname[] = _("Nickname");
-const u8 gText_Vanilla[] = _("{COLOR RED}Vanilla");
-const u8 gText_Nuzlocke[] = _("{COLOR RED}Nuzlocke");
+const u8 gText_Difficulty[] = _("Difficulty");
+const u8 gText_Mode[] = _("Mode");
+const u8 gText_Music[] = _("Music");
+const u8 gText_WildBattle[] = _("Wild Battles");
+const u8 gText_TrainerBattle[] = _("Trainer Battles");
+const u8 gText_LeviathanBattle[] = _("Leviathan Battles");
+const u8 gText_RSE[] = _("RSE");
+const u8 gText_FRLG[] = _("FRLG");
+const u8 gText_DPPt[] = _("DPPt");
+const u8 gText_HGSSJohto[] = _("HGSS (Johto)");
+const u8 gText_HGSSKanto[] = _("HGSS (Kanto)");
+const u8 gText_BW[] = _("BW");
 const u8 gText_Default[] = _("{COLOR RED}Default");
 const u8 gText_Brutal[] = _("{COLOR RED}Brutal");
 const u8 gText_ContinueMenuZone[] = _("Zones Completed");

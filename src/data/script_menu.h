@@ -89,6 +89,16 @@ static const struct MenuAction MultichoiceList_YesNoInfo2[] =
     {gText_Info2},
 };
 
+static const struct MenuAction MultichoiceList_MusicWhichGame[] =
+{
+    {gText_RSE},
+    {gText_FRLG},
+    {gText_DPPt},
+    {gText_HGSSJohto},
+    {gText_HGSSKanto},
+    {gText_BW},
+};
+
 static const struct MenuAction MultichoiceList_ChallengeInfo[] =
 {
     {gText_Challenge},
@@ -495,6 +505,14 @@ static const struct MenuAction MultichoiceList_BattleMode[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_MusicType[] =
+{
+    {gText_WildBattle},
+    {gText_TrainerBattle},
+    {gText_LeviathanBattle},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_LinkServicesNoRecord[] =
 {
     {gText_TradeCenter},
@@ -778,10 +796,12 @@ static const struct MenuAction MultichoiceList_TagMatchType[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_VanillaNuzlocke[] =
+static const struct MenuAction MultichoiceList_ColressSettings[] =
 {
-    {gText_Vanilla},
-    {gText_Nuzlocke},
+    {gText_Difficulty},
+    {gText_Mode},
+    {gText_Music},
+    {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_ColressMenu[] =
@@ -829,7 +849,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_VANILLA_NUZLOCKE]           = MULTICHOICE(MultichoiceList_VanillaNuzlocke),
+    [MULTI_COLRESS_SETTINGS]           = MULTICHOICE(MultichoiceList_ColressSettings),
     [MULTI_COLRESS_MENU]               = MULTICHOICE(MultichoiceList_ColressMenu),
     [MULTI_LELOUCH_OPTIONS]            = MULTICHOICE(MultichoiceList_LelouchOptions),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
@@ -839,9 +859,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_VIEWED_PAINTINGS]           = MULTICHOICE(MultichoiceList_ViewedPaintings),
     [MULTI_YESNOINFO]                  = MULTICHOICE(MultichoiceList_YesNoInfo),
     [MULTI_BATTLE_MODE]                = MULTICHOICE(MultichoiceList_BattleMode),
-    [MULTI_UNUSED_19]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_MUSIC_TYPE]                 = MULTICHOICE(MultichoiceList_MusicType),
     [MULTI_YESNOINFO_2]                = MULTICHOICE(MultichoiceList_YesNoInfo2),
-    [MULTI_UNUSED_21]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_MUSIC_WHICH_GAME]           = MULTICHOICE(MultichoiceList_MusicWhichGame),
     [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_CHALLENGEINFO]              = MULTICHOICE(MultichoiceList_ChallengeInfo),
     [MULTI_LEVEL_MODE]                 = MULTICHOICE(MultichoiceList_LevelMode),
