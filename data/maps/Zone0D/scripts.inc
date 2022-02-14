@@ -4,6 +4,7 @@ Zone0D_MapScripts::
 
 Zone0D_OnFrame:
 	map_script_2 VAR_ZONE0_STATE, 1, Zone0D_EventScript_Intro
+	map_script_2 VAR_ZONE0_STATE, 3, Zone0D_EventScript_JaggedWarp
 	.2byte 0
 
 Zone0D_EventScript_Intro:
@@ -57,6 +58,23 @@ Zone0D_Text_Explain:
 	.string "If you need to get back to where you\n"
 	.string "came from, you can use the warp\l"
 	.string "immediately to our left.$"
+
+Zone0D_EventScript_JaggedWarp:
+	lockall
+	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	msgbox Zone0D_Text_Intro1, MSGBOX_AUTOCLOSE
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 1, Zone0D_Movement_PostIntro
+	waitmovement 0
+	setvar VAR_ZONE0_STATE, 4
+	releaseall
+	end
 
 Zone0D_EventScript_WarpBack::
 	lockall

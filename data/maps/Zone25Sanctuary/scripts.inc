@@ -39,7 +39,9 @@ Zone25Sanctuary_EventScript_Intro:
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
+	msgbox gText_Colress_UnlockedWarp, MSGBOX_AUTOCLOSE
 	setvar VAR_ZONE, 26
+	setvar VAR_ZONE0_STATE, 3
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
@@ -47,9 +49,15 @@ Zone25Sanctuary_EventScript_Intro:
 	releaseall
 	end
 
+@ To delete eventually
+Zone25Sanctuary_EventScript_SetVarTemp:
+	setvar VAR_ZONE0_STATE, 3
+	return
+
 Zone25Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
+	call_if_lt VAR_ZONE0_STATE, 3, Zone25Sanctuary_EventScript_SetVarTemp
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT

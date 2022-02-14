@@ -235,6 +235,11 @@ gText_Colress_UnlockedUnique:
 gText_Colress_UnlockedServices:
 	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}!$"
 
+gText_Colress_UnlockedWarp:
+	.string "Because of your progress,\n"
+	.string "you have unlocked a special warp in\l"
+	.string "Zone 0.$"
+
 gText_Colress_HeresAPieceofAdvice:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Here's a piece of advice.$"
 
