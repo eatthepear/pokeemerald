@@ -5130,6 +5130,16 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/Zone25L/border.bin",
       "blockdata_filepath": "data/layouts/Zone25L/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE_B1",
+      "name": "ZoneB1_Layout",
+      "width": 39,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/ZoneB1/border.bin",
+      "blockdata_filepath": "data/layouts/ZoneB1/map.bin"
     }
   ]
 }
