@@ -363,6 +363,10 @@ const u8 NuzlockeLUT[] =
     [MAPSEC_ZONE_48] = 0x30,
     [MAPSEC_ZONE_49] = 0x31,
     [MAPSEC_ZONE_50] = 0x32,
+    [MAPSEC_ZONE_B1] = 0x33,
+    [MAPSEC_ZONE_B2] = 0x34,
+    [MAPSEC_ZONE_B3] = 0x35,
+    [MAPSEC_ZONE_B4] = 0x36,
     [GLOBAL_NUZLOCKE_SWITCH] = 0x47
 };
 

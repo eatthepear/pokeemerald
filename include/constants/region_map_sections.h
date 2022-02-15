@@ -140,10 +140,10 @@
 #define MAPSEC_ZONE_48                      0x88
 #define MAPSEC_ZONE_49                      0x89
 #define MAPSEC_ZONE_50                      0x8A
-#define MAPSEC_SEAFOAM_ISLANDS              0x8B
-#define MAPSEC_POKEMON_TOWER                0x8C
-#define MAPSEC_CERULEAN_CAVE                0x8D
-#define MAPSEC_POWER_PLANT                  0x8E
+#define MAPSEC_ZONE_B1                      0x8B
+#define MAPSEC_ZONE_B2                      0x8C
+#define MAPSEC_ZONE_B3                      0x8D
+#define MAPSEC_ZONE_B4                      0x8E
 #define MAPSEC_ONE_ISLAND                   0x8F
 #define MAPSEC_TWO_ISLAND                   0x90
 #define MAPSEC_THREE_ISLAND                 0x91
