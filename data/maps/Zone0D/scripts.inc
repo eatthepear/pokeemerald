@@ -4,7 +4,7 @@ Zone0D_MapScripts::
 
 Zone0D_OnFrame:
 	map_script_2 VAR_ZONE0_STATE, 1, Zone0D_EventScript_Intro
-	map_script_2 VAR_ZONE0_STATE, 3, Zone0D_EventScript_JaggedWarp
+	map_script_2 VAR_ZONEB1_STATE, 1, Zone0D_EventScript_B1WarpIntro
 	.2byte 0
 
 Zone0D_EventScript_Intro:
@@ -59,22 +59,31 @@ Zone0D_Text_Explain:
 	.string "came from, you can use the warp\l"
 	.string "immediately to our left.$"
 
-Zone0D_EventScript_JaggedWarp:
+Zone0D_EventScript_B1WarpIntro:
 	lockall
 	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	msgbox Zone0D_Text_Intro1, MSGBOX_AUTOCLOSE
+	msgbox Zone0D_Text_ExplainSpecialZones1, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
+	msgbox Zone0D_Text_ExplainSpecialZones2, MSGBOX_AUTOCLOSE
+	msgbox Zone0D_Text_ExplainSpecialZones3, MSGBOX_AUTOCLOSE
+	msgbox Zone0D_Text_ExplainSpecialZones4, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
-	setvar VAR_ZONE0_STATE, 4
+	setvar VAR_ZONEB1_STATE, 2
 	releaseall
 	end
+
+Zone0D_Text_ExplainSpecialZones1:
+	.string "Ah, my warp tester!$"
+
+Zone0D_Text_ExplainSpecialZones2:
+	.string "You may have noticed there are warps on the left side that are disabled. I've been tinkering about and I'm finally done with one of them. It's the 
 
 Zone0D_EventScript_WarpBack::
 	lockall
