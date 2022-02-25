@@ -71,8 +71,6 @@ Zone0D_EventScript_B1WarpIntro:
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	msgbox Zone0D_Text_ExplainSpecialZones2, MSGBOX_AUTOCLOSE
-	msgbox Zone0D_Text_ExplainSpecialZones3, MSGBOX_AUTOCLOSE
-	msgbox Zone0D_Text_ExplainSpecialZones4, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
 	setvar VAR_ZONEB1_STATE, 2
@@ -83,7 +81,15 @@ Zone0D_Text_ExplainSpecialZones1:
 	.string "Ah, my warp tester!$"
 
 Zone0D_Text_ExplainSpecialZones2:
-	.string "You may have noticed there are warps on the left side that are disabled. I've been tinkering about and I'm finally done with one of them. It's the 
+	.string "You may have noticed there are\n"
+	.string "special warps on the left side that\l"
+	.string "are disabled.\p"
+	.string "I've just finished installing the\n"
+	.string "warp to {COLOR RED}Zone B1{COLOR DARK_GRAY}.\p"
+	.string "If you could, please test it out\n"
+	.string "when you have the chance!\p"
+	.string "By my calculations, there's only a\n"
+	.string "17% chance of instant death!$"
 
 Zone0D_EventScript_WarpBack::
 	lockall
