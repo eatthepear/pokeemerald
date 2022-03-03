@@ -84,7 +84,7 @@
 #define FLAG_RECEIVED_ZONE24B_TM35    0x47 // Unused Flag
 #define FLAG_HIDE_ZONE25L_COLRESS    0x48 // Unused Flag
 #define FLAG_TIM_SUPER_POTION_INTRO    0x49 // Unused Flag
-#define FLAG_HIDE_ZONEB1_GLASSMAKER    0x4A // Unused Flag
+#define FLAG_UNUSED_0x04A     0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B     0x4B // Unused Flag //DEBUG
 #define FLAG_UNUSED_0x04C     0x4C // Unused Flag //DEBUG
 #define FLAG_UNUSED_0x04D     0x4D // Unused Flag //DEBUG

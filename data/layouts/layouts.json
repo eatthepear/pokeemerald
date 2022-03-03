@@ -5134,10 +5134,10 @@
     {
       "id": "LAYOUT_ZONE_B1",
       "name": "ZoneB1_Layout",
-      "width": 39,
-      "height": 22,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fallarbor",
+      "width": 28,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/ZoneB1/border.bin",
       "blockdata_filepath": "data/layouts/ZoneB1/map.bin"
     }
