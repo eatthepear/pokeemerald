@@ -234,6 +234,13 @@ Zone0D_EventScript_DenyWarp::
 Zone0D_Text_DoesntWork:
 	.string "The warp doesn't seem to work…$"
 
+Zone0D_EventScript_WarpZoneB1::
+	lockall
+	compare VAR_ZONEB1_STATE, 2
+	goto_if_lt Zone0D_EventScript_DenyWarp
+	warpteleport MAP_ZONE_B1, 255, 4, 19
+	end
+
 Zone0D_EventScript_WarpZONE1::
 	lockall
 	compare VAR_ZONE, 2

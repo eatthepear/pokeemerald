@@ -241,7 +241,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_DenyWarp"
+      "script": "Zone0D_EventScript_WarpZoneB1"
     },
     {
       "type": "trigger",
