@@ -1962,7 +1962,7 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle start
     .gender = TRAINER_MON_MALE,
     .heldItem = ITEM_SITRUS_BERRY,
     .ability = ABILITY_SLOT_1, //Water Veil
-    .species = SPECIES_HUNTAIL, //Starts with aura +1 Attack
+    .species = SPECIES_HUNTAIL,
     .moves = {MOVE_AQUA_TAIL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_SLEEP_TALK}
     },
     {
@@ -1972,7 +1972,7 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle start
     .gender = TRAINER_MON_FEMALE,
     .heldItem = ITEM_SITRUS_BERRY,
     .ability = ABILITY_SLOT_1, //Hydration
-    .species = SPECIES_GOREBYSS, //Starts with aura +1 Attack
+    .species = SPECIES_GOREBYSS,
     .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_REST}
     }
 };
@@ -3455,7 +3455,7 @@ static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Battle
     .gender = TRAINER_MON_FEMALE,
     .heldItem = ITEM_LUM_BERRY,
     .ability = ABILITY_HIDDEN, //Swift Swim
-    .species = SPECIES_GOREBYSS, //Starts with aura +1 Attack
+    .species = SPECIES_GOREBYSS, //Starts with aura +1 Special Attack
     .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_REST}
     }
 };
