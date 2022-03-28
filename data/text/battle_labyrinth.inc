@@ -445,58 +445,31 @@ gText_Lelouch_NotEnoughColor:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\n"
 	.string "of that color.$"
 
-gText_Lelouch_CostsRedShards:
+gText_Lelouch_ExplainRed:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Each training session\n"
-	.string "costs one Red Shard.$"
+	.string "costs one Red Shard.\p"
+	.string "You may train one Pokémon\n"
+	.string "as many times as you want.$"
 
-gText_Lelouch_Exp1Cost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 1\n"
+gText_Lelouch_SoloTrainingOnly:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You can only train one\n"
+	.string "Pokémon at a time.\p"
+	.string "Make sure there is only one Pokémon\n"
+	.string "in your party.$"
+
+gText_Lelouch_TrainingCost:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: A training session\n"
 	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_Exp2Cost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 2\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_Exp3Cost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 3\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_Exp4Cost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 4\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_EVHPCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training HP\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_EVAtkCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Attack\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_EVDefCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Defense\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_EVSpACost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Special Attack\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_EVSpDCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Special Defense\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_EVSpeCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: EV Training Speed\n"
-	.string "costs one Red Shard, are you sure?$"
-
-gText_Lelouch_HaventHealedForTraining:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: It appears you are not\n"
-	.string "fully healed for training.\p"
-	.string "Perhaps visit Joy's Healing Shop\n"
-	.string "first, then come back.$"
 
 gText_Lelouch_PayRed:
 	.string "{PLAYER} handed over 1 Red Shard.$"
+
+gText_Lelouch_LetBeginTraining:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Let us begin the training.$"
+
+gText_Lelouch_ChooseTraining:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You are training\n"
+	.string "{STR_VAR_2} the {STR_VAR_1}.$"
 
 gText_LelouchDefeated:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Excellent work.\n"

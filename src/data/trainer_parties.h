@@ -410,24 +410,6 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     .ability = ABILITY_SLOT_1,
     .species = SPECIES_AUDINO,
     .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 10,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 10,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -1408,24 +1390,6 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     .ability = ABILITY_SLOT_1,
     .species = SPECIES_AUDINO,
     .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 20,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 20,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -2041,24 +2005,6 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 12, Default
 };
 
 static const struct TrainerMon sParty_LelouchExp3[] = {
-    {
-    .iv = 0,
-    .lvl = 30,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
     {
     .iv = 0,
     .lvl = 30,
@@ -3043,24 +2989,6 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
 };
 
 static const struct TrainerMon sParty_LelouchExp4[] = {
-    {
-    .iv = 0,
-    .lvl = 40,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 40,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
     {
     .iv = 0,
     .lvl = 40,

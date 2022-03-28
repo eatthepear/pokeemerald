@@ -1306,7 +1306,7 @@
 #define FLAG_UNUSED_0x4E9                                           0x4E9 
 #define FLAG_UNUSED_0x4EA                                           0x4EA 
 #define FLAG_UNUSED_0x4EB                                           0x4EB 
-#define FLAG_UNUSED_0x4EC                                           0x4EC 
+#define FLAG_DOUBLE_EXP                                             0x4EC 
 #define FLAG_NUZLOCKE_ON                                            0x4ED 
 #define FLAG_RANDOMIZER_ON                                          0x4EE 
 #define FLAG_BRUTAL_MODE_ON                                         0x4EF 

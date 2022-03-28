@@ -1079,88 +1079,9 @@ EventScript_Shop_Lelouch::
 	goto_if_lt VAR_ZONE, 6, EventScript_Shop_Lelouch_Deny
 	call_if_unset FLAG_LELOUCH_SHARDS, EventScript_Shop_LelouchExplainShards
 	msgbox gText_Lelouch_Welcome, MSGBOX_DEFAULT
-	switch VAR_ZONE
-	case 6, EventScript_Shop_Lelouch_6to15
-	case 7, EventScript_Shop_Lelouch_6to15
-	case 9, EventScript_Shop_Lelouch_6to15
-	case 10, EventScript_Shop_Lelouch_6to15
-	case 11, EventScript_Shop_Lelouch_6to15
-	case 12, EventScript_Shop_Lelouch_6to15
-	case 13, EventScript_Shop_Lelouch_6to15
-	case 15, EventScript_Shop_Lelouch_6to15
-	case 16, EventScript_Shop_Lelouch_16to20
-	case 17, EventScript_Shop_Lelouch_16to20
-	case 18, EventScript_Shop_Lelouch_16to20
-	case 20, EventScript_Shop_Lelouch_16to20
-	case 21, EventScript_Shop_Lelouch_21to25
-	case 22, EventScript_Shop_Lelouch_21to25
-	case 23, EventScript_Shop_Lelouch_21to25
-	case 24, EventScript_Shop_Lelouch_21to25
-	case 25, EventScript_Shop_Lelouch_21to25
-	case 26, EventScript_Shop_Lelouch_26to30
-	case 27, EventScript_Shop_Lelouch_26to30
-	case 28, EventScript_Shop_Lelouch_26to30
-	case 29, EventScript_Shop_Lelouch_26to30
-	case 30, EventScript_Shop_Lelouch_26to30
-	case 31, EventScript_Shop_Lelouch_26to30
-	end
-
-EventScript_Shop_Lelouch_6to15:
 	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchTraining1
-	case 1, EventScript_Shop_LelouchCheckReminder
-	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchNotEnoughColor
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_Shop_Lelouch_16to20:
-	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchTraining2
-	case 1, EventScript_Shop_LelouchCheckReminder
-	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchNotEnoughColor
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_Shop_Lelouch_21to25:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_21to25_Brutal
-	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchTraining3
-	case 1, EventScript_Shop_LelouchCheckReminder
-	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchNotEnoughColor
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_Shop_Lelouch_21to25_Brutal:
-	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchTraining3Brutal
-	case 1, EventScript_Shop_LelouchCheckReminder
-	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchNotEnoughColor
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_Shop_Lelouch_26to30:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_26to30_Brutal
-	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchTraining4
-	case 1, EventScript_Shop_LelouchCheckReminder
-	case 2, EventScript_Shop_LelouchCheckTutor
-	case 3, EventScript_Shop_LelouchCheckOther
-	goto EventScript_Shop_LelouchLeave
-	end
-
-EventScript_Shop_Lelouch_26to30_Brutal:
-	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_LelouchTraining4Brutal
+	case 0, EventScript_Shop_LelouchTraining
 	case 1, EventScript_Shop_LelouchCheckReminder
 	case 2, EventScript_Shop_LelouchCheckTutor
 	case 3, EventScript_Shop_LelouchCheckOther
@@ -1194,11 +1115,59 @@ EventScript_Shop_LelouchNotEnoughColor:
 	goto EventScript_Shop_LelouchLeave
 	end
 
-EventScript_Shop_LelouchTraining1:
+EventScript_Shop_LelouchTraining:
 	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ExplainRed, MSGBOX_AUTOCLOSE
+	getpartysize
+	goto_if_ne VAR_RESULT, 1, EventScript_Shop_SoloTrainingOnly
+	msgbox gText_Lelouch_TrainingCost, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_Shop_LelouchLeave
+	removeitem ITEM_RED_SHARD, 1
+	setflag FLAG_DOUBLE_EXP
+	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
+	msgbox gText_Lelouch_LetBeginTraining, MSGBOX_AUTOCLOSE
+	goto EventScript_Shop_Lelouch_TrainSwitcher
+	end
+
+EventScript_Shop_SoloTrainingOnly:
+	msgbox gText_Lelouch_SoloTrainingOnly, MSGBOX_AUTOCLOSE
+	goto EventScript_Shop_LelouchLeave
+	end
+
+EventScript_Shop_Lelouch_TrainSwitcher:
+	bufferleadmonspeciesname STR_VAR_1
+	bufferpartymonnick STR_VAR_2, 0
+	switch VAR_ZONE
+	case 6, EventScript_Shop_LelouchTraining1
+	case 7, EventScript_Shop_LelouchTraining1
+	case 9, EventScript_Shop_LelouchTraining1
+	case 10, EventScript_Shop_LelouchTraining1
+	case 11, EventScript_Shop_LelouchTraining1
+	case 12, EventScript_Shop_LelouchTraining1
+	case 13, EventScript_Shop_LelouchTraining1
+	case 15, EventScript_Shop_LelouchTraining1
+	case 16, EventScript_Shop_LelouchTraining2
+	case 17, EventScript_Shop_LelouchTraining2
+	case 18, EventScript_Shop_LelouchTraining2
+	case 20, EventScript_Shop_LelouchTraining2
+	case 21, EventScript_Shop_LelouchTraining3
+	case 22, EventScript_Shop_LelouchTraining3
+	case 23, EventScript_Shop_LelouchTraining3
+	case 24, EventScript_Shop_LelouchTraining3
+	case 25, EventScript_Shop_LelouchTraining3
+	case 26, EventScript_Shop_LelouchTraining4
+	case 27, EventScript_Shop_LelouchTraining4
+	case 28, EventScript_Shop_LelouchTraining4
+	case 29, EventScript_Shop_LelouchTraining4
+	case 30, EventScript_Shop_LelouchTraining4
+	case 31, EventScript_Shop_LelouchTraining4
+	end
+
+EventScript_Shop_LelouchTraining1:
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING1, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
@@ -1206,10 +1175,7 @@ EventScript_Shop_LelouchTraining1:
 	end
 
 EventScript_Shop_LelouchTraining2:
-	checkitem ITEM_RED_SHARD, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING2, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
@@ -1218,11 +1184,8 @@ EventScript_Shop_LelouchTraining2:
 	end
 
 EventScript_Shop_LelouchTraining3:
-	checkitem ITEM_RED_SHARD, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_LelouchTraining3Brutal
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	scrollingmultichoice 6, 0, 0, 5, TRUE
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
@@ -1238,7 +1201,7 @@ EventScript_Shop_LelouchTraining3:
 	end
 
 EventScript_Shop_LelouchTraining3Brutal:
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING3, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
@@ -1248,11 +1211,8 @@ EventScript_Shop_LelouchTraining3Brutal:
 	end
 
 EventScript_Shop_LelouchTraining4:
-	checkitem ITEM_RED_SHARD, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_Shop_LelouchNotEnoughColor
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_LelouchTraining4Brutal
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	scrollingmultichoice 7, 0, 0, 5, TRUE
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
@@ -1269,7 +1229,7 @@ EventScript_Shop_LelouchTraining4:
 	end
 
 EventScript_Shop_LelouchTraining4Brutal:
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING4, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_LelouchExp1
@@ -1280,158 +1240,63 @@ EventScript_Shop_LelouchTraining4Brutal:
 	end
 
 EventScript_Shop_LelouchExp1:
-	msgbox gText_Lelouch_Exp1Cost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchExp2:
-	msgbox gText_Lelouch_Exp2Cost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchExp3:
-	msgbox gText_Lelouch_Exp3Cost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchExp4:
-	msgbox gText_Lelouch_Exp4Cost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVHP:
-	msgbox gText_Lelouch_EVHPCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVAtk:
-	msgbox gText_Lelouch_EVAtkCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVDef:
-	msgbox gText_Lelouch_EVDefCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVSpA:
-	msgbox gText_Lelouch_EVSpACost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVSpD:
-	msgbox gText_Lelouch_EVSpDCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVSpe:
-	msgbox gText_Lelouch_EVSpeCost, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_LelouchLeave
-	goto_if_eq VAR_HEAL_SHOP_USED, 0, EventScript_Shop_LelouchHaventHealed
-	removeitem ITEM_RED_SHARD, 1
-	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
-	delay 96
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
-	msgbox gText_LelouchDefeated, MSGBOX_AUTOCLOSE
-	release
-	end
-
-EventScript_Shop_LelouchHaventHealed:
-	msgbox gText_Lelouch_HaventHealedForTraining, MSGBOX_AUTOCLOSE
-	goto EventScript_Shop_LelouchLeave
+	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchCheckReminder:
@@ -2213,6 +2078,7 @@ EventScript_Shop_LelouchSeriousMint:
 
 EventScript_Shop_LelouchLeave:
 	msgbox gText_Lelouch_Leave, MSGBOX_AUTOCLOSE
+	clearflag FLAG_DOUBLE_EXP
 	release
 	end
 
@@ -2450,7 +2316,7 @@ EventScript_AdviceAgain:
 	end
 
 EventScript_Settings:
-	@ setflag FLAG_IS_DEBUGGING_SAVEFILE
+	setflag FLAG_IS_DEBUGGING_SAVEFILE
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_CheckBrutalNuzlocke
 	goto EventScript_CheckDefaultNuzlocke
 	end
