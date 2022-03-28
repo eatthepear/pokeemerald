@@ -2619,7 +2619,7 @@ static const struct TrainerMon sParty_Audrey[] = {
     }
 };
 
-static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Double Battle, Default
+static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Battle starts with permanent Hail, Double Battle, Default
     {
     .iv = 31,
     .lvl = 37,
@@ -3523,7 +3523,7 @@ static const struct TrainerMon sParty_JulieBrutal[] = {//Leviathan 12, Brutal
     }
 };
 
-static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Double Battle, Brutal
+static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Battle starts with permanent Hail, Double Battle, Brutal
     {
     .iv = 31,
     .lvl = 38,
@@ -3566,7 +3566,7 @@ static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Doubl
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Kangaskhan
+static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Pinsir
     {
     .iv = 31,
     .lvl = 42,
