@@ -298,7 +298,7 @@ Zone0D_EventScript_WarpZONE6::
 	buffernumberstring 0, 6
 	call Zone0D_EventScript_VerifyDestination
 	setflag FLAG_IS_REVISITING_ZONE
-	warpteleport MAP_ZONE6A, 255, 21, 25
+	warpteleport MAP_ZONE6A, 255, 27, 30
 	end
 
 Zone0D_EventScript_WarpZONE7::
