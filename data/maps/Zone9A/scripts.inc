@@ -128,6 +128,7 @@ Zone9A_EventScript_BattleWinstrates::
 	waitmovement 0
 	msgbox Zone9A_Text_EricaIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ERICA, Zone9A_Text_EricaDefeat
+	setflag FLAG_HIDE_ZONE9A_MAN
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_NoZorua
 	msgbox Zone9A_Text_EricaPostBattle, MSGBOX_DEFAULT
 	closemessage
