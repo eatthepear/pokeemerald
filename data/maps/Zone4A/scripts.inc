@@ -5,8 +5,8 @@ Zone4A_EventScript_Sign::
 	msgbox Zone4A_Text_Sign, MSGBOX_SIGN
 	end
 
-Zone4A_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
+Zone4A_EventScript_ItemBurnHeal::
+	finditem ITEM_BURN_HEAL
 	end
 
 Zone4A_Text_Sign:

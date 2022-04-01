@@ -156,8 +156,8 @@ Zone6A_EventScript_ItemNetBall::
 	finditem ITEM_NET_BALL
 	end
 
-Zone6A_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+Zone6A_EventScript_ItemPotion::
+	finditem ITEM_POTION
 	end
 
 Zone6A_EventScript_ItemNestBall::

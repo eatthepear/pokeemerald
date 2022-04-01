@@ -24,6 +24,6 @@ Zone8C_EventScript_ItemGreatBall::
 	finditem ITEM_GREAT_BALL
 	end
 
-Zone8C_EventScript_ItemEther::
-	finditem ITEM_ETHER
+Zone8C_EventScript_ItemPotion::
+	finditem ITEM_POTION
 	end

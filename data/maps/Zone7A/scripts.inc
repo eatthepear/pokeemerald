@@ -66,8 +66,8 @@ Zone7A_EventScript_ItemPoisonBarb::
 	finditem ITEM_POISON_BARB
 	end
 
-Zone7A_EventScript_ItemLuxuryBall::
-	finditem ITEM_LUXURY_BALL
+Zone7A_EventScript_ItemNestBall::
+	finditem ITEM_NEST_BALL
 	end
 
 Zone7A_EventScript_ItemSilverPowder::

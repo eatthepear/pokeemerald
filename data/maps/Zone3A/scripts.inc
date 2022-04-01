@@ -137,12 +137,12 @@ Zone3A_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
 	end
 
-Zone3A_EventScript_ItemAwakening::
-	finditem ITEM_AWAKENING
+Zone3A_EventScript_ItemPotion::
+	finditem ITEM_POTION
 	end
 
-Zone3A_EventScript_ItemBurnHeal::
-	finditem ITEM_BURN_HEAL
+Zone3A_EventScript_ItemParalyzeHeal::
+	finditem ITEM_PARALYZE_HEAL
 	end
 
 Zone3A_EventScript_ItemHyperPotion::

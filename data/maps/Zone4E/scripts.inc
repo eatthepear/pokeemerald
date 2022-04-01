@@ -1,8 +1,8 @@
 Zone4E_MapScripts::
 	.byte 0
 
-Zone4E_EventScript_ItemEnergyPowder::
-	finditem ITEM_ENERGY_POWDER
+Zone4E_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
 	end
 
 Zone4E_EventScript_Exit::

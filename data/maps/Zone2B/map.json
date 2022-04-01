@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone2B_EventScript_ItemParalyzeHeal",
-      "flag": "FLAG_ITEM_ZONE2B_PARALYZE_HEAL"
+      "script": "Zone2B_EventScript_ItemPotion",
+      "flag": "FLAG_ITEM_ZONE2B_POTION"
     }
   ],
   "warp_events": [

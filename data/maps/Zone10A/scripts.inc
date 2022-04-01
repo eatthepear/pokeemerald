@@ -190,8 +190,8 @@ Zone10A_EventScript_Charcoal::
 	finditem ITEM_CHARCOAL
 	end
 
-Zone10A_EventScript_Ether::
-	finditem ITEM_ETHER
+Zone10A_EventScript_SuperPotion::
+	finditem ITEM_SUPER_POTION
 	end
 
 Zone10A_EventScript_SuperRepel::
