@@ -3078,7 +3078,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     },
     {
     .iv = 31,
-    .lvl = 16,
+    .lvl = 17,
     .nature = NATURE_JOLLY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Intimidate

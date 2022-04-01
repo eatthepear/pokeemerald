@@ -569,18 +569,22 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 {
     FLAG_BEATLEVIATHAN1,
     FLAG_BEATLEVIATHAN2,
+    FLAG_BEATLEVIATHAN3,
     FLAG_BEATLEVIATHAN4,
     FLAG_BEATLEVIATHAN5,
     FLAG_BEATLEVIATHAN6,
+    FLAG_BEATLEVIATHAN7,
+    FLAG_BEATLEVIATHAN8,
     FLAG_BEATLEVIATHAN9,
     FLAG_BEATLEVIATHAN10,
+    FLAG_BEATLEVIATHAN11,
     FLAG_BEATLEVIATHAN12,
     FLAG_BEATLEVIATHAN13,
     FLAG_BEATLEVIATHAN14,
     FLAG_BEATLEVIATHAN15
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 11, 15, 19, 22, 24, 28, 30, 34, 38, 42, 45};
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 11, 15, 17, 19, 22, 24, 28, 28, 28, 30, 33, 34, 38, 42, 45};
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -3880,8 +3884,11 @@ double GetPkmnExpMultiplier(u8 level)
     {
         if (!FlagGet(sLevelCapFlags[i]) && level >= sLevelCaps[i])
         {
-            lvlCapMultiplier = 0.05;
-            break;
+            if (FlagGet(FLAG_BRUTAL_MODE_ON) || !((i == 3) || (i == 7) || (i == 8) || (i == 11)))
+            {
+                lvlCapMultiplier = 0.05;
+                break;
+            }
         }
     }
     
