@@ -2855,14 +2855,14 @@ void BufferStringBattle(u16 stringID)
         stringPtr = gBattleStruct->trainerSlideMsg;
         break;
     default: // load a string from the table
-        if (stringID >= BATTLESTRINGS_COUNT + BATTLESTRINGS_ID_ADDER)
+        if (stringID >= BATTLESTRINGS_COUNT)
         {
             gDisplayedStringBattle[0] = EOS;
             return;
         }
         else
         {
-            stringPtr = gBattleStringsTable[stringID - BATTLESTRINGS_ID_ADDER];
+            stringPtr = gBattleStringsTable[stringID - BATTLESTRINGS_TABLE_START];
         }
         break;
     }
@@ -3553,7 +3553,7 @@ static void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
         {
         case B_BUFF_STRING: // battle string
             hword = T1_READ_16(&src[srcID + 1]);
-            StringAppend(dst, gBattleStringsTable[hword - BATTLESTRINGS_ID_ADDER]);
+            StringAppend(dst, gBattleStringsTable[hword - BATTLESTRINGS_TABLE_START]);
             srcID += 3;
             break;
         case B_BUFF_NUMBER: // int to string
