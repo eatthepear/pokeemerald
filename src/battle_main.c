@@ -4979,6 +4979,7 @@ static void CheckQuickClaw_CustapBerryActivation(void)
                 }
                 else if (gProtectStructs[gActiveBattler].quickDraw)
                 {
+                    gBattlerAbility = gActiveBattler;
                     gProtectStructs[gActiveBattler].quickDraw = FALSE;
                     gLastUsedAbility = gBattleMons[gActiveBattler].ability;
                     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);

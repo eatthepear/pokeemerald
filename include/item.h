@@ -79,7 +79,6 @@ ItemUseFunc ItemId_GetFieldFunc(u16 itemId);
 u8 ItemId_GetBattleUsage(u16 itemId);
 ItemUseFunc ItemId_GetBattleFunc(u16 itemId);
 u8 ItemId_GetSecondaryId(u16 itemId);
-bool32 IsPinchBerryItemEffect(u16 holdEffect);
 void DeserializeTmHmItemSlots(void);
 u8 ItemId_GetFlingPower(u16 itemId);
 

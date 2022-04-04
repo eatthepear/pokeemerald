@@ -58,14 +58,14 @@ static const struct SpriteTemplate sSpriteTemplate_MoneyLabel =
 
 static const struct CompressedSpriteSheet sSpriteSheet_MoneyLabel =
 {
-    .data = gMenuMoneyGfx,
+    .data = gShopMenuMoney_Gfx,
     .size = 256,
     .tag = MONEY_LABEL_TAG,
 };
 
 static const struct CompressedSpritePalette sSpritePalette_MoneyLabel =
 {
-    .data = gMenuMoneyPal,
+    .data = gShopMenu_Pal,
     .tag = MONEY_LABEL_TAG
 };
 
@@ -132,7 +132,7 @@ void SubtractMoneyFromVar0x8005(void)
 
 void PrintMoneyAmountInMoneyBox(u8 windowId, int amount, u8 speed)
 {
-    PrintMoneyAmount(windowId, 0x20, 1, amount, speed);
+    PrintMoneyAmount(windowId, 32, 1, amount, speed);
 }
 
 void PrintMoneyAmount(u8 windowId, u8 x, u8 y, int amount, u8 speed)
@@ -140,17 +140,13 @@ void PrintMoneyAmount(u8 windowId, u8 x, u8 y, int amount, u8 speed)
     u8 *txtPtr = gStringVar4;
     s32 strLength;
 
-    if (amount > 999999)
-    {
-        ConvertIntToDecimalStringN(gStringVar1, amount, STR_CONV_MODE_LEFT_ALIGN, 7);
-    }
-    else
-    {
-        ConvertIntToDecimalStringN(gStringVar1, amount, STR_CONV_MODE_LEFT_ALIGN, 6);
-        strLength = 7 - StringLength(gStringVar1);
-        while (strLength-- > 0)
-            *(txtPtr++) = 0x77;
-    }
+    ConvertIntToDecimalStringN(gStringVar1, amount, STR_CONV_MODE_LEFT_ALIGN, 6);
+
+    strLength = 6 - StringLength(gStringVar1);
+    txtPtr = gStringVar4;
+
+    while (strLength-- > 0)
+        *(txtPtr++) = CHAR_SPACER;
 
     StringExpandPlaceholders(txtPtr, gText_PokedollarVar1);
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, x, y, speed, NULL);
