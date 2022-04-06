@@ -5134,8 +5134,8 @@
     {
       "id": "LAYOUT_ZONE_B1",
       "name": "ZoneB1_Layout",
-      "width": 28,
-      "height": 20,
+      "width": 30,
+      "height": 30,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/ZoneB1/border.bin",
