@@ -5140,6 +5140,16 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/ZoneB1/border.bin",
       "blockdata_filepath": "data/layouts/ZoneB1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE26A",
+      "name": "Zone26A_Layout",
+      "width": 41,
+      "height": 41,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Zone26A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone26A/map.bin"
     }
   ]
 }
