@@ -84,12 +84,12 @@
 #define FLAG_RECEIVED_ZONE24B_TM35    0x47 // Unused Flag
 #define FLAG_HIDE_ZONE25L_COLRESS    0x48 // Unused Flag
 #define FLAG_TIM_SUPER_POTION_INTRO    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A     0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B     0x4B // Unused Flag //DEBUG
-#define FLAG_UNUSED_0x04C     0x4C // Unused Flag //DEBUG
-#define FLAG_UNUSED_0x04D     0x4D // Unused Flag //DEBUG
-#define FLAG_UNUSED_0x04E     0x4E // Unused Flag //DEBUG
-#define FLAG_UNUSED_0x04F     0x4F // Unused Flag //DEBUG
+#define FLAG_ZONE_B1_PORYGON_1     0x4A // Unused Flag
+#define FLAG_ZONE_B1_PORYGON_2     0x4B // Unused Flag
+#define FLAG_ZONE_B1_PORYGON_3     0x4C // Unused Flag
+#define FLAG_ZONE_B1_PORYGON_4     0x4D // Unused Flag
+#define FLAG_ZONE_B1_PORYGON_5     0x4E // Unused Flag
+#define FLAG_RECEIVED_PORYGON     0x4F // Unused Flag
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
