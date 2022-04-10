@@ -186,7 +186,7 @@ Zone25L_EventScript_Leviathan14Defeated:
 	msgbox Zone25L_Text_Mirage_9, MSGBOX_AUTOCLOSE
 	waitmovement 0
 	fadescreenswapbuffers FADE_TO_BLACK
-	playmoncry SPECIES_REGISTEEL, 2
+	playmoncry SPECIES_REGIELEKI, 2
 	delay 40
 	waitmoncry
 	playmoncry SPECIES_REGIDRAGO, 2

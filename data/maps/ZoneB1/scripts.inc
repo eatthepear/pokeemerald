@@ -8,109 +8,94 @@ ZoneB1_OnFrame:
 	.2byte 0
 
 ZoneB1_OnTransition:
-	goto_if_eq VAR_ZONEB1_STATE, 2, ZoneB1_EventScript_MoveJudge
+	goto_if_eq VAR_ZONEB1_STATE, 3, ZoneB1_EventScript_MovePorygon1
+	goto_if_eq VAR_ZONEB1_STATE, 4, ZoneB1_EventScript_MovePorygon2
+	goto_if_eq VAR_ZONEB1_STATE, 5, ZoneB1_EventScript_MovePorygon3
+	goto_if_eq VAR_ZONEB1_STATE, 6, ZoneB1_EventScript_MovePorygon4
+	goto_if_eq VAR_ZONEB1_STATE, 7, ZoneB1_EventScript_MovePorygon5
 	end
 
-ZoneB1_EventScript_MoveJudge:
-	setobjectxyperm 1, 4, 16
+ZoneB1_EventScript_MovePorygon1:
+	setobjectxyperm 1, 10, 12
+	end
+
+ZoneB1_EventScript_MovePorygon2:
+	setobjectxyperm 1, 24, 8
+	end
+
+ZoneB1_EventScript_MovePorygon3:
+	setobjectxyperm 1, 11, 17
+	end
+
+ZoneB1_EventScript_MovePorygon4:
+	setobjectxyperm 1, 28, 15
+	end
+
+ZoneB1_EventScript_MovePorygon5:
+	setobjectxyperm 1, 16, 3
 	end
 
 ZoneB1_EventScript_Intro:
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 1, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	msgbox ZoneB1_Text_Notice, MSGBOX_AUTOCLOSE
-	delay 16
-	applymovement 1, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement 1, Common_Movement_WalkDown
-	waitmovement 0
-	setobjectxyperm 1, 13, 16
-	msgbox ZoneB1_Text_Explain, MSGBOX_AUTOCLOSE
-	applymovement 1, ZoneB1_Movement_WalkAway
-	waitmovement 0
+	call ZoneB1_EventScript_Porygon_Movement
+	setobjectxyperm 1, 10, 12
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setvar VAR_ZONEB1_STATE, 3
 	releaseall
 	end
 
+ZoneB1_EventScript_Porygon_Movement:
+	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	playmoncry SPECIES_PORYGON, 2
+	msgbox ZoneB1_Text_Notice, MSGBOX_AUTOCLOSE
+	delay 40
+	waitmoncry
+	fadescreenswapbuffers FADE_TO_BLACK
+	delay 40
+	return
+
 ZoneB1_Text_Notice:
-	.string "Oh!$"
+	.string "...!$"
 
-ZoneB1_Text_Explain:
-	.string "Welcome to the Trivia Hall!\p"
-	.string "Just step right up to the stage,\n"
-	.string "answer some trivia questions, and\l"
-	.string "you could earn great rewards!\p"
-	.string "Get questions right in a row to win\n"
-	.string "fabulous prizes!$"
+ZoneB1_EventScript_Porygon_Interact::
+	lock
+	@ goto_if_eq VAR_ZONEB1_STATE, 7, 
+	call ZoneB1_EventScript_Porygon_Movement
+	goto_if_eq VAR_ZONEB1_STATE, 3, ZoneB1_EventScript_MovePorygonAfterInteract1
+	goto_if_eq VAR_ZONEB1_STATE, 4, ZoneB1_EventScript_MovePorygonAfterInteract1
+	goto_if_eq VAR_ZONEB1_STATE, 5, ZoneB1_EventScript_MovePorygonAfterInteract1
+	goto_if_eq VAR_ZONEB1_STATE, 6, ZoneB1_EventScript_MovePorygonAfterInteract1
+	end
 
-ZoneB1_EventScript_BackToZone0::
-	lockall
-	warpteleport MAP_ZONE0D, 255, 2, 32
+ZoneB1_EventScript_MovePorygonAfterInteract1:
+	setvar VAR_ZONEB1_STATE, 4
+	setobjectxyperm 1, 24, 8
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
-ZoneB1_Movement_WalkAway:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	face_down
-	step_end
-
-ZoneB1_EventScript_Left::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto ZoneB1_EventScript_JudgeScript
-	end
-
-ZoneB1_EventScript_Right::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto ZoneB1_EventScript_JudgeScript
-	end
-
-ZoneB1_EventScript_Judge::
-	lockall
-	faceplayer
-	goto ZoneB1_EventScript_JudgeScript
-	end
-
-ZoneB1_EventScript_JudgeScript:
-	msgbox ZoneB1_Text_JudgePlay, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, ZoneB1_EventScript_StartTrivia
+ZoneB1_EventScript_MovePorygonAfterInteract2:
+	setvar VAR_ZONEB1_STATE, 5
+	setobjectxyperm 1, 11, 17
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
-ZoneB1_EventScript_StartTrivia:
-	msgbox ZoneB1_Text_Go, MSGBOX_AUTOCLOSE
+ZoneB1_EventScript_MovePorygonAfterInteract3:
+	setvar VAR_ZONEB1_STATE, 6
+	setobjectxyperm 1, 28, 15
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
-ZoneB1_Text_JudgePlay:
-	.string "Would you like to participate in\n"
-	.string "the Trivia Challenge?$"
-
-ZoneB1_Text_Go:
-	.string "Good luck!$"
+ZoneB1_EventScript_MovePorygonAfterInteract4:
+	setvar VAR_ZONEB1_STATE, 7
+	setobjectxyperm 1, 16, 3
+	fadescreenswapbuffers FADE_FROM_BLACK
+	releaseall
+	end
