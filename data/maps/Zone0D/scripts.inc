@@ -239,7 +239,7 @@ Zone0D_EventScript_WarpZoneB1::
 	compare VAR_ZONEB1_STATE, 2
 	goto_if_lt Zone0D_EventScript_DenyWarp
 	setflag FLAG_IS_REVISITING_ZONE
-	warpteleport MAP_ZONE_B1, 255, 4, 19
+	warpteleport MAP_ZONE_B1, 255, 11, 0
 	end
 
 Zone0D_EventScript_WarpZONE1::
