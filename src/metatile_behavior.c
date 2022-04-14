@@ -36,7 +36,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_ICE]                             = TILE_FLAG_UNUSED,
     [MB_SAND]                            = TILE_FLAG_UNUSED,
     [MB_SEAWEED]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
-    [MB_UNUSED_23]                       = TILE_FLAG_UNUSED,
+    [MB_NONREFLECTIVE_ICE]               = TILE_FLAG_UNUSED,
     [MB_ASHGRASS]                        = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_FOOTPRINTS]                      = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_THIN_ICE]                        = TILE_FLAG_UNUSED,
@@ -217,7 +217,7 @@ bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsIce(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_ICE)
+    if (metatileBehavior == MB_ICE || metatileBehavior == MB_NONREFLECTIVE_ICE)
         return TRUE;
     else
         return FALSE;
@@ -349,6 +349,7 @@ bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
      || metatileBehavior == MB_CRACKED_FLOOR
      || metatileBehavior == MB_WATERFALL
      || metatileBehavior == MB_ICE
+     || metatileBehavior == MB_NONREFLECTIVE_ICE
      || metatileBehavior == MB_SECRET_BASE_JUMP_MAT
      || metatileBehavior == MB_SECRET_BASE_SPIN_MAT)
         return TRUE;
@@ -358,7 +359,7 @@ bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsIce_2(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_ICE)
+    if (metatileBehavior == MB_ICE || metatileBehavior == MB_NONREFLECTIVE_ICE)
         return TRUE;
     else
         return FALSE;
