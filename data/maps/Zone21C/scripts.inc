@@ -5,8 +5,8 @@ Zone21C_EventScript_Breeder::
 	lock
 	faceplayer
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone21C_EventScript_BreederNoHappiny
-	msgbox Zone21C_Text_Breeder_Intro, MSGBOX_AUTOCLOSE
 	goto_if_set FLAG_RECEIVED_ZONE21C_HAPPINY, Zone21C_EventScript_SafeTravels
+	msgbox Zone21C_Text_Breeder_Intro, MSGBOX_AUTOCLOSE
 	goto_if_not_defeated TRAINER_HOWARD, Zone21C_EventScript_NoHappiny
 	goto_if_not_defeated TRAINER_ELOISE, Zone21C_EventScript_NoHappiny
 	goto_if_not_defeated TRAINER_ALLY_AND_EMMY, Zone21C_EventScript_NoHappiny

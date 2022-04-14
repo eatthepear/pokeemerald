@@ -246,16 +246,17 @@ Zone22A_EventScript_InezandEmma::
 	end
 
 Zone22A_Text_InezandEmmaIntro:
-	.string "Inez: The cold don't bother!\p"
-	.string "Emma: We got fire!$"
+	.string "Inez: Emma, look!\p"
+	.string "Emma: A snowflake!$"
 
 Zone22A_Text_InezandEmmaDefeat:
-	.string "Emma: Our fires are put out!\p"
-	.string "Inez: We're all out of gas!$"
+	.string "Emma: Ah, not you!\p"
+	.string "Inez: Sorry!$"
 
 Zone22A_Text_InezandEmmaPostBattle:
-	.string "Inez: Dad tells us jokes!\p"
-	.string "Emma: He calls them puns!$"
+	.string "Inez: We didn't mean to call you a\n"
+	.string "snowflake!\p"
+	.string "Emma: Our bad!$"
 
 Zone22A_EventScript_Helen::
 	trainerbattle_single TRAINER_HELEN, Zone22A_Text_HelenIntro, Zone22A_Text_HelenDefeat
