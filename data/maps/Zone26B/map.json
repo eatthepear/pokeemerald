@@ -2,10 +2,10 @@
   "id": "MAP_ZONE26B",
   "name": "Zone26B",
   "layout": "LAYOUT_ZONE26B",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_SEQ_D_03",
   "region_map_section": "MAPSEC_ZONE_26",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE26A",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE26A",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
