@@ -5144,8 +5144,8 @@
     {
       "id": "LAYOUT_ZONE26A",
       "name": "Zone26A_Layout",
-      "width": 41,
-      "height": 41,
+      "width": 27,
+      "height": 33,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Zone26A/border.bin",
