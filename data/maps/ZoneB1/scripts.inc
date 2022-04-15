@@ -170,10 +170,14 @@ ZoneB1_EventScript_ReceivedPorygonFanfare::
 	return
 
 ZoneB1_EventScript_ReceivedPorygon::
+	fadescreenswapbuffers FADE_TO_BLACK
 	setflag FLAG_RECEIVED_PORYGON
 	removeobject 5
 	setvar VAR_ZONEB1_STATE, 7
 	setflag FLAG_ZONE_B1_PORYGON_5
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox ZoneB1_Text_Holding, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM39, 1
 	releaseall
 	end
 
@@ -183,3 +187,7 @@ ZoneB1_Text_HowBoutNickname:
 
 ZoneB1_Text_ReceivedPorygon:
 	.string "Porygon joined you!$"
+
+ZoneB1_Text_Holding:
+	.string "It looks like Porygon was holding\n"
+	.string "something!$"

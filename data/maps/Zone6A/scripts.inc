@@ -186,19 +186,17 @@ Zone6A_Text_Rita_IWait:
 
 Zone6A_Text_Rita_IWillWin:
 	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: I will defeat you using the\n"
-	.string "power of Friendship and Happiness!$"
+	.string "power of my Pokémon!$"
 
 Zone6A_Text_Leviathan3Defeat:
-	.string "Happiness and Friendship are\n"
-	.string "one and the same!$"
+	.string "That was a lovely battle.\n"
+	.string "Thank you!$"
 
 Zone6A_Text_Rita_HereReward:
 	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: For your victory, have the\n"
-	.string "TM for Return. It grows stronger as\l"
-	.string "your Pokémon become more friendly.$"
+	.string "TM for Retaliate. It grows stronger if\l"
+	.string "an ally was KOed the previous turn.$"
 
 Zone6A_Text_Rita_GoodLuck:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Did you know Pokémon\n"
-	.string "no longer evolve by Friendship?\p"
-	.string "That's right, no need to walk around\n"
-	.string "for ages just to evolve them.$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Good luck on your journey.\n"
+	.string "You'll need it!$"

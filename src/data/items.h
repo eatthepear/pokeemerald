@@ -7842,10 +7842,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM04_RETURN] =
+    [ITEM_TM04_RETALIATE] =
     {
         .name = _("TM04"),
-        .itemId = ITEM_TM04_RETURN,
+        .itemId = ITEM_TM04_RETALIATE,
         .price = 3000,
         .description = sTM04Desc,
         .pocket = POCKET_TM_HM,
@@ -8262,10 +8262,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM39_ROCK_TOMB] =
+    [ITEM_TM39_RETURN] =
     {
         .name = _("TM39"),
-        .itemId = ITEM_TM39_ROCK_TOMB,
+        .itemId = ITEM_TM39_RETURN,
         .price = 3000,
         .description = sTM39Desc,
         .pocket = POCKET_TM_HM,

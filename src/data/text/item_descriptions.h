@@ -3026,9 +3026,9 @@ static const u8 sTM03Desc[] = _(
     "is poisoned.");
 
 static const u8 sTM04Desc[] = _(
-    "A powerful, strong\n"
-    "attack that can be\n"
-    "used by many.");
+    "An attack that does\n"
+    "more damage if an\n"
+    "ally fainted.");
 
 static const u8 sTM05Desc[] = _(
     "Hurls boulders to\n"
@@ -3201,9 +3201,9 @@ static const u8 sTM38Desc[] = _(
     "cause flinches.");
 
 static const u8 sTM39Desc[] = _(
-    "Stops the foe from\n"
-    "moving with rocks.\n"
-    "May lower Speed.");
+    "A powerful, strong\n"
+    "attack that can be\n"
+    "used by many.");
 
 static const u8 sTM40Desc[] = _(
     "An extremely fast\n"
