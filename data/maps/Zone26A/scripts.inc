@@ -20,3 +20,7 @@ Zone26A_EventScript_Exit::
 	warp MAP_ZONE26SANCTUARY, 255, 22, 7
 	releaseall
 	end
+
+Zone26A_EventScript_Banettite::
+	finditem ITEM_BANETTITE
+	end

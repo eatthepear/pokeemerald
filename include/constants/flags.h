@@ -1152,7 +1152,7 @@
 #define FLAG_ITEM_ZONE25I_DAWN_STONE                                0x44F
 #define FLAG_ITEM_ZONE25J_DUSK_STONE                                0x450
 #define FLAG_ITEM_ZONE25K_TM37                                      0x451
-#define FLAG_UNUSED_0x452                                           0x452
+#define FLAG_ITEM_ZONE26A_BANETTITE                                 0x452
 #define FLAG_UNUSED_0x453                                           0x453
 #define FLAG_UNUSED_0x454                                           0x454
 #define FLAG_UNUSED_0x455                                           0x455
