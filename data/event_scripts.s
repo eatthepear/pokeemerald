@@ -624,7 +624,6 @@ EventScript_MoveMrBrineyToRoute109::
 	end
 
 EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
-	clearflag FLAG_DEFEATED_ELITE_4_SIDNEY
 	clearflag FLAG_DEFEATED_ELITE_4_PHOEBE
 	clearflag FLAG_DEFEATED_ELITE_4_GLACIA
 	clearflag FLAG_DEFEATED_ELITE_4_DRAKE
@@ -1289,3 +1288,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Zone25Shops/scripts.inc"
 
 	.include "data/maps/ZoneB1/scripts.inc"
+
+	.include "data/maps/Zone26A/scripts.inc"
+
+	.include "data/maps/Zone26B/scripts.inc"

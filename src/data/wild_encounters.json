@@ -17513,6 +17513,164 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZONE_B1",
+          "base_label": "gZoneB1",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PORYGON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_ROTOM"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_ROTOM"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_ROTOM"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_ROTOM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE26A",
+          "base_label": "gZone26A",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_RATICATE"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_KADABRA"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_KLEFKI"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_GARBODOR"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_HAUNTER"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_DUSCLOPS"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_MIMIKYU"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_MIMIKYU"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_MUK"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_MUK_ALOLAN"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_GOTHORITA"
+              },
+              {
+                "min_level": 39,
+                "max_level": 41,
+                "species": "SPECIES_DUOSION"
+              }
+            ]
+          }
         }
       ]
     },

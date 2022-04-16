@@ -5140,6 +5140,26 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/ZoneB1/border.bin",
       "blockdata_filepath": "data/layouts/ZoneB1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE26A",
+      "name": "Zone26A_Layout",
+      "width": 27,
+      "height": 33,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Zone26A/border.bin",
+      "blockdata_filepath": "data/layouts/Zone26A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE26B",
+      "name": "Zone26B_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Zone26B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone26B/map.bin"
     }
   ]
 }
