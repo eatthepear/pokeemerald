@@ -101,9 +101,9 @@ static const struct YesNoFuncTable sUseTMHMYesNoFuncTable =
 
 static const u8 textCantThrowPokeBallNuzlocke[] = _("You have already used your encounter\nfor this Zone!{PAUSE_UNTIL_PRESS}");
 
-static const u8 textCantThrowPokeBallSpeciesClause[] = _("You have already caught a POKéMON\nin this evolution line!{PAUSE_UNTIL_PRESS}");
+static const u8 textCantThrowPokeBallSpeciesClause[] = _("You have already caught a Pokémon\nin this evolution line!{PAUSE_UNTIL_PRESS}");
 
-static const u8 sText_BallsCannotBeUsed[] = _("Pokéballs don't work\non a Leviathan!\p");
+static const u8 sText_BallsCannotBeUsed[] = _("A mysterious force is preventing\nPokéballs from being used now!{PAUSE_UNTIL_PRESS}");
 
 // .text
 

@@ -1323,8 +1323,7 @@
 
 #define FLAG_SMART_WILD_AI_ON                                       0x4F9 // Unused Flag
 #define FLAG_DISABLE_CATCHING                                       0x4FA // Unused Flag
-
-#define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
+#define FLAG_DISABLE_BAG                                            0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
 #define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
 #define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
