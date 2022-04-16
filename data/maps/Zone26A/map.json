@@ -61,6 +61,24 @@
       "var": "VAR_ZONE26_STATE",
       "var_value": "0",
       "script": "Zone26A_EventScript_StopLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone26A_EventScript_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone26A_EventScript_Exit"
     }
   ],
   "bg_events": [
