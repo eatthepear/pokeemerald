@@ -11,7 +11,7 @@ Zone26B_EventScript_InteractComputer::
 	end
 
 Zone26B_EventScript_NoRotom:
-	msgbox Zone26B_Text_ComputerOff, MSGBOX_YESNO
+	msgbox Zone26B_Text_ComputerOff, MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
@@ -26,6 +26,7 @@ Zone26B_EventScript_SingleRotomFight:
 	end
 
 Zone26B_EventScript_StartRotomSingleBattle:
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
@@ -47,7 +48,7 @@ Zone26B_Text_Flickering:
 Zone26B_EventScript_StartRotomBattles:
 	setflag FLAG_DISABLE_CATCHING
 	setflag FLAG_SMART_WILD_AI_ON
-	call_if_set FLAG_BRUTAL_MODE_ON Zone26B_EventScript_DisableBag
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_DisableBag
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -58,6 +59,7 @@ Zone26B_EventScript_StartRotomBattles:
 	delay 40
 	waitmoncry
 	delay 40
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_SetTotemBoost
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_RAN
@@ -84,6 +86,7 @@ Zone26B_EventScript_StartRotomBattles:
 	delay 40
 	waitmoncry
 	delay 40
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_SetTotemBoost
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_RAN
@@ -100,6 +103,7 @@ Zone26B_EventScript_StartRotomBattles:
 	delay 40
 	waitmoncry
 	delay 40
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_SetTotemBoost
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_RAN
@@ -116,6 +120,7 @@ Zone26B_EventScript_StartRotomBattles:
 	delay 40
 	waitmoncry
 	delay 40
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_SetTotemBoost
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_RAN
@@ -132,6 +137,7 @@ Zone26B_EventScript_StartRotomBattles:
 	delay 40
 	waitmoncry
 	delay 40
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_SetTotemBoost
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_RAN
@@ -148,6 +154,7 @@ Zone26B_EventScript_StartRotomBattles:
 	delay 40
 	waitmoncry
 	delay 40
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_SetTotemBoost
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_RAN
@@ -167,6 +174,10 @@ Zone26B_EventScript_StartRotomBattles:
 	setvar VAR_ZONE26_STATE, 1
 	releaseall
 	end
+
+Zone26B_EventScript_SetTotemBoost:
+	totemboost_spatk1 B_POSITION_OPPONENT_LEFT
+	return
 
 Zone26B_Text_RotomCalmedDown:
 	.string "Rotom seemed to calm down.\n"
