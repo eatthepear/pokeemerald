@@ -672,6 +672,8 @@
 #define MAP_ZONE_B1         (113 | (27 << 8))
 #define MAP_ZONE26A         (114 | (27 << 8))
 #define MAP_ZONE26B         (115 | (27 << 8))
+#define MAP_ZONE26SANCTUARY (116 | (27 << 8))
+#define MAP_ZONE26SHOPS     (117 | (27 << 8))
 
 // gMapGroup_IndoorRoute109
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))
@@ -710,6 +712,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {57, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 116, 1, 13, 1, 1, 3, 4, 0};
+// static const u8 MAP_GROUP_COUNT[] = {57, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 118, 1, 13, 1, 1, 3, 4, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
