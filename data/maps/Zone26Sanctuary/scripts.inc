@@ -26,14 +26,30 @@ Zone26Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone26Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_ASSAULT_VEST
+	giveitem ITEM_CLEANSE_TAG
 	closemessage
 	setvar VAR_ZONE, 27
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox Zone26Sanctuary_Text_Colress_Explain, MSGBOX_AUTOCLOSE
+	msgbox Zone26Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
+	end
+
+Zone26Sanctuary_Text_Colress_Explain:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones,\n"
+	.string "{COLOR RED}Zone 27{COLOR DARK_GRAY} and {COLOR RED}Zone 28{COLOR DARK_GRAY}, are combined.\p"
+	.string "You will not be able to access a\n"
+	.string "Sanctuary in between the Zones.$"
+
+Zone26Sanctuary_Text_Colress_WhenUReady:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to\n"
+	.string "enter {COLOR RED}Zone 27{COLOR DARK_GRAY} and {COLOR RED}Zone 28{COLOR DARK_GRAY}, speak to me.$"
+
+Zone26Sanctuary_EventScript_WhenUReady:
+	msgbox Zone26Sanctuary_Text_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	release
 	end
 
 Zone26Sanctuary_EventScript_NextZone::
@@ -51,7 +67,7 @@ Zone26Sanctuary_EventScript_NextZone::
 
 Zone26Sanctuary_EventScript_NextZoneCheck:
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
+	msgbox Zone26Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone26Sanctuary_EventScript_Leave
 	goto EventScript_WhenUReady
@@ -60,9 +76,14 @@ Zone26Sanctuary_EventScript_NextZoneCheck:
 Zone26Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	warp MAP_ZONE23A, 255, 9, 1
+	warp MAP_ZONE24A, 255, 31, 26
 	release
 	end
 
 Zone26Sanctuary_Text_Reward:
-	.string "The Assault Vest!$"
+	.string "The Cleanse Tag!$"
+
+Zone26Sanctuary_Text_Colress_ReadyToLeave:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you ready to leave?\n"
+	.string "You will be entering\l"
+	.string "{COLOR RED}Zone 27{COLOR DARK_GRAY} and {COLOR RED}Zone 28{COLOR DARK_GRAY}.$"
