@@ -565,3 +565,10 @@ gMetatiles_Snowy::
 	.align 1
 gMetatileAttributes_Snowy::
 	.incbin "data/tilesets/secondary/snowy/metatile_attributes.bin"
+	.align 1
+gMetatiles_Jungle::
+	.incbin "data/tilesets/secondary/jungle/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Jungle::
+	.incbin "data/tilesets/secondary/jungle/metatile_attributes.bin"

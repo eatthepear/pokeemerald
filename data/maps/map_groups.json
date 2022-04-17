@@ -704,7 +704,8 @@
     "Zone26A",
     "Zone26B",
     "Zone26Sanctuary",
-    "Zone26Shops"
+    "Zone26Shops",
+    "Zone27A"
   ],
   "gMapGroup_IndoorRoute109": [
     "Route109_SeashoreHouse"

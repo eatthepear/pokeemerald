@@ -841,3 +841,14 @@ gTileset_Snowy::
 	.4byte gMetatiles_Snowy
 	.4byte gMetatileAttributes_Snowy
 	.4byte NULL
+
+	.align 2
+gTileset_Jungle::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Jungle
+	.4byte gTilesetPalettes_Jungle
+	.4byte gMetatiles_Jungle
+	.4byte gMetatileAttributes_Jungle
+	.4byte NULL

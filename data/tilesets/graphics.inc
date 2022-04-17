@@ -1749,3 +1749,23 @@ gTilesetPalettes_Snowy::
 	.align 2
 gTilesetTiles_Snowy::
 	.incbin "data/tilesets/secondary/snowy/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Jungle::
+	.incbin "data/tilesets/secondary/jungle/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/jungle/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Jungle::
+	.incbin "data/tilesets/secondary/jungle/tiles.4bpp.lz"
