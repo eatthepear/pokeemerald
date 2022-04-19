@@ -852,3 +852,14 @@ gTileset_Jungle::
 	.4byte gMetatiles_Jungle
 	.4byte gMetatileAttributes_Jungle
 	.4byte NULL
+
+	.align 2
+gTileset_Marsh::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Marsh
+	.4byte gTilesetPalettes_Marsh
+	.4byte gMetatiles_Marsh
+	.4byte gMetatileAttributes_Marsh
+	.4byte NULL

@@ -7522,12 +7522,16 @@ static void GetGroundEffectFlags_LongGrassOnSpawn(struct ObjectEvent *objEvent, 
 {
     if (MetatileBehavior_IsLongGrass(objEvent->currentMetatileBehavior))
         *flags |= GROUND_EFFECT_FLAG_LONG_GRASS_ON_SPAWN;
+    // if (MetatileBehavior_IsDarkLongGrass(objEvent->currentMetatileBehavior))
+    //     *flags |= GROUND_EFFECT_FLAG_LONG_GRASS_ON_SPAWN;
 }
 
 static void GetGroundEffectFlags_LongGrassOnBeginStep(struct ObjectEvent *objEvent, u32 *flags)
 {
     if (MetatileBehavior_IsLongGrass(objEvent->currentMetatileBehavior))
         *flags |= GROUND_EFFECT_FLAG_LONG_GRASS_ON_MOVE;
+    // if (MetatileBehavior_IsDarkLongGrass(objEvent->currentMetatileBehavior))
+    //     *flags |= GROUND_EFFECT_FLAG_LONG_GRASS_ON_MOVE;
 }
 
 static void GetGroundEffectFlags_Tracks(struct ObjectEvent *objEvent, u32 *flags)

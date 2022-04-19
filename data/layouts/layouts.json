@@ -4987,7 +4987,7 @@
       "width": 77,
       "height": 70,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mossdeep",
+      "secondary_tileset": "gTileset_Marsh",
       "border_filepath": "data/layouts/Zone23A/border.bin",
       "blockdata_filepath": "data/layouts/Zone23A/map.bin"
     },
