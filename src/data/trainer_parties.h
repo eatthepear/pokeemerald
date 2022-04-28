@@ -127,9 +127,9 @@ static const struct TrainerMon sParty_Arthur[] = {
     .species = SPECIES_POOCHYENA,
     },
     {
-    .iv = 0,
+    .ivs = {1, 1, 0, 1, 1, 1}, //Hidden Power Dragon
     .lvl = 6,
-    .species = SPECIES_ROCKRUFF,
+    .species = SPECIES_ABRA,
     }
 };
 
@@ -161,12 +161,12 @@ static const struct TrainerMon sParty_Boris[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_ABRA,
+    .species = SPECIES_PICHU,
     },
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_PICHU,
+    .species = SPECIES_ROCKRUFF,
     }
 };
 
@@ -613,7 +613,7 @@ static const struct TrainerMon sParty_Jayden[] = {
     {
     .iv = 0,
     .lvl = 14,
-    .species = SPECIES_MACHOP,
+    .species = SPECIES_DRILBUR,
     }
 };
 

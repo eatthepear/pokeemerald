@@ -7,13 +7,14 @@ Zone4C_EventScript_Patrick::
 	end
 
 Zone4C_Text_PatrickIntro:
-	.string "The more legs, the better!$"
+	.string "My friends call me the free Exp guy,\n"
+	.string "but I'll prove them wrong!$"
 
 Zone4C_Text_PatrickDefeat:
-	.string "Oh... Come on!$"
+	.string "Oops, guess not...$"
 
 Zone4C_Text_PatrickPostBattle:
-	.string "Just wait till my Bugs are all evolved!$"
+	.string "I guess I am the free Exp guy...$"
 
 Zone4C_EventScript_ChloeandKaya::
 	trainerbattle_double TRAINER_CHLOE_AND_KAYA, Zone4C_Text_ChloeandKayaIntro, Zone4C_Text_ChloeandKayaDefeat, gText_NotEnoughMons

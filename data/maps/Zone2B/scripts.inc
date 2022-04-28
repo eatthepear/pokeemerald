@@ -22,14 +22,13 @@ Zone2B_EventScript_Jeremiah::
 	end
 
 Zone2B_Text_JeremiahIntro:
-	.string "My friends call me the free Exp guy,\n"
-	.string "but I'll prove them wrong!$"
+	.string "The more legs, the better!$"
 
 Zone2B_Text_JeremiahDefeat:
-	.string "Oops, guess not...$"
+	.string "Oh... Come on!$"
 
 Zone2B_Text_JeremiahPostBattle:
-	.string "I guess I am the free Exp guy...$"
+	.string "Just wait till my Bugs are all evolved!$"
 
 Zone2B_EventScript_Arthur::
 	trainerbattle_single TRAINER_ARTHUR, Zone2B_Text_ArthurIntro, Zone2B_Text_ArthurDefeat

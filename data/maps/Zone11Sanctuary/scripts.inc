@@ -27,7 +27,7 @@ Zone11Sanctuary_EventScript_Intro:
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	goto_if_set FLAG_NUZLOCKE_ON, Zone11Sanctuary_EventScript_NuzlockeIntro
 	msgbox Zone11Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_REVIVE, 3
+	giveitem ITEM_REVIVE, 6
 	goto Zone11Sanctuary_EventScript_End
 	end
 
@@ -81,7 +81,7 @@ Zone11Sanctuary_EventScript_Leave:
 	end
 
 Zone11Sanctuary_Text_Reward:
-	.string "3 Revives!$"
+	.string "6 Revives!$"
 
 Zone11Sanctuary_Text_RewardNuzlocke:
 	.string "¥3000!$"

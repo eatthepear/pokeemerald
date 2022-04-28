@@ -1786,6 +1786,7 @@ static void Cmd_ppreduce(void)
         case EFFECT_DEFENSE_UP:
         case EFFECT_COSMIC_POWER:
         case EFFECT_AROMATIC_MIST:
+        case EFFECT_SLEEP:
             ppToDeduct = 5; // divide PP by 5
             break;
         case EFFECT_REST:
