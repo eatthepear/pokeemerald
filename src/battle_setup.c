@@ -734,7 +734,7 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_SNOW;
     if (MetatileBehavior_IsTallGrass(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
-    if (MetatileBehavior_IsLongGrass(tileBehavior) || MetatileBehavior_IsDarkLongGrass(tileBehavior))
+    if (MetatileBehavior_IsLongGrass(tileBehavior))
         return BATTLE_TERRAIN_LONG_GRASS;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE10A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE10A))
         return BATTLE_TERRAIN_DESERT;

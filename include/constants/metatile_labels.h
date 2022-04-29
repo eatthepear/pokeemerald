@@ -271,9 +271,7 @@
 #define METATILE_Lilycove_Wailmer3         0x2A1
 
 // gTileset_Marsh
-#define METATILE_Marsh_CalmWater       0x20C
-#define METATILE_Marsh_LongGrass       0x222
-#define METATILE_Marsh_LongGrass_Root  0x232
+#define METATILE_Marsh_CalmWater  0x20C
 
 // gTileset_MauvilleGym
 #define METATILE_MauvilleGym_FloorTile        0x21A
