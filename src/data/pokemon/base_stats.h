@@ -4692,14 +4692,16 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_SUDOWOODO] =
     {
-        .baseHP        = 70,
+        .baseHP        = 90,
+        // .baseHP        = 70,
         .baseAttack    = 100,
         .baseDefense   = 115,
         .baseSpeed     = 30,
         .baseSpAttack  = 30,
         .baseSpDefense = 65,
         .type1 = TYPE_ROCK,
-        .type2 = TYPE_ROCK,
+        .type2 = TYPE_GRASS,
+        // .type2 = TYPE_ROCK,
         .catchRate = 65,
         .expYield = 144,
         .evYield_Defense   = 2,

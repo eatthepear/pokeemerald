@@ -473,11 +473,11 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     {
     .iv = 31,
     .lvl = 15,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .species = SPECIES_SUDOWOODO,
-    .moves = {MOVE_HEADBUTT, MOVE_ROCK_THROW, MOVE_LOW_KICK, MOVE_SLAM}
+    .ability = ABILITY_SLOT_2, //Natural Cure
+    .species = SPECIES_ROSELIA,
+    .moves = {MOVE_MAGICAL_LEAF, MOVE_VENOSHOCK, MOVE_GROWTH, MOVE_MEGA_DRAIN}
     },
     {
     .iv = 31,
@@ -855,7 +855,7 @@ static const struct TrainerMon sParty_Dewey[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_ROSELIA,
+    .species = SPECIES_FLAAFFY,
     }
 };
 
@@ -904,11 +904,11 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_CALM,
-    .ability = ABILITY_SLOT_2, //Natural Cure
-    .gender = TRAINER_MON_MALE,
-    .species = SPECIES_BAYLEEF,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_DRAINING_KISS, MOVE_REFLECT, MOVE_LIGHT_SCREEN}
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Defiant
+    .species = SPECIES_PASSIMIAN,
+    .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_TOMB, MOVE_RETALIATE, MOVE_SLEEP_TALK}
     },
     {
     .iv = 31,
@@ -922,12 +922,12 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     {
     .iv = 31,
     .lvl = 22,
-    .nature = NATURE_JOLLY,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Defiant
-    .species = SPECIES_PASSIMIAN,
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Sturdy
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SUDOWOODO,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_TOMB, MOVE_KNOCK_OFF, MOVE_RETALIATE}
+    .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_CURSE}
     }
 };
 
@@ -994,7 +994,7 @@ static const struct TrainerMon sParty_Joel[] = {
     {
     .iv = 10,
     .lvl = 21,
-    .species = SPECIES_FLAAFFY,
+    .species = SPECIES_BAYLEEF,
     }
 };
 
@@ -3093,12 +3093,12 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     {
     .iv = 31,
     .lvl = 16,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .species = SPECIES_SUDOWOODO,
+    .ability = ABILITY_SLOT_2, //Natural Cure
+    .species = SPECIES_ROSELIA,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_HEADBUTT, MOVE_ROCK_THROW, MOVE_LOW_KICK, MOVE_SLAM}
+    .moves = {MOVE_MAGICAL_LEAF, MOVE_VENOSHOCK, MOVE_GROWTH, MOVE_MEGA_DRAIN}
     },
     {
     .iv = 31,
@@ -3167,11 +3167,11 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan 5, Battle s
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_CALM,
-    .ability = ABILITY_SLOT_2, //Natural Cure
-    .gender = TRAINER_MON_MALE,
-    .species = SPECIES_BAYLEEF,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_DRAINING_KISS, MOVE_REFLECT, MOVE_LIGHT_SCREEN}
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Defiant
+    .species = SPECIES_PASSIMIAN,
+    .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_TOMB, MOVE_RETALIATE, MOVE_SLEEP_TALK}
     },
     {
     .iv = 31,
@@ -3195,12 +3195,12 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan 5, Battle s
     {
     .iv = 31,
     .lvl = 22,
-    .nature = NATURE_JOLLY,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Defiant
-    .species = SPECIES_PASSIMIAN,
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Sturdy
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SUDOWOODO,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_TOMB, MOVE_KNOCK_OFF, MOVE_RETALIATE}
+    .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_CURSE}
     }
 };
 
