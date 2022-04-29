@@ -14228,6 +14228,11 @@
               {
                 "min_level": 1,
                 "max_level": 3,
+                "species": "SPECIES_EEVEE"
+              },
+              {
+                "min_level": 1,
+                "max_level": 3,
                 "species": "SPECIES_ABRA"
               },
               {
@@ -14249,11 +14254,6 @@
                 "min_level": 1,
                 "max_level": 3,
                 "species": "SPECIES_CLEFFA"
-              },
-              {
-                "min_level": 1,
-                "max_level": 3,
-                "species": "SPECIES_EEVEE"
               },
               {
                 "min_level": 1,
