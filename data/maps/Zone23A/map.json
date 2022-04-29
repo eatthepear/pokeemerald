@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
-      "x": 13,
-      "y": 7,
+      "x": 8,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 15,
-      "y": 15,
+      "x": 20,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 33,
+      "x": 31,
       "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -62,14 +62,14 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Zone23A_EventScript_Jennifer",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COLLECTOR",
-      "x": 43,
-      "y": 48,
+      "x": 42,
+      "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -82,9 +82,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_RANGER_M",
       "x": 11,
-      "y": 52,
+      "y": 49,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -94,8 +94,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RANGER_F",
-      "x": 72,
-      "y": 57,
+      "x": 71,
+      "y": 58,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -107,7 +107,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 73,
+      "x": 72,
       "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -120,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 2,
-      "y": 10,
+      "x": 4,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -133,7 +133,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 35,
+      "x": 34,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -146,8 +146,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 5,
-      "y": 50,
+      "x": 8,
+      "y": 52,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -160,7 +160,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 39,
-      "y": 58,
+      "y": 56,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -173,7 +173,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 63,
-      "y": 45,
+      "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -185,7 +185,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 62,
+      "x": 60,
       "y": 67,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -203,8 +203,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 41,
-      "y": 67,
+      "x": 40,
+      "y": 66,
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
@@ -214,15 +214,15 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 44,
-      "y": 67,
+      "x": 43,
+      "y": 66,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_ExitSign"
     },
     {
       "type": "hidden_item",
-      "x": 19,
+      "x": 11,
       "y": 4,
       "elevation": 3,
       "item": "ITEM_ASPEAR_BERRY",
@@ -230,23 +230,23 @@
     },
     {
       "type": "hidden_item",
-      "x": 21,
-      "y": 24,
+      "x": 24,
+      "y": 19,
       "elevation": 3,
       "item": "ITEM_SITRUS_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE23A_SITRUS_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 42,
-      "y": 18,
+      "x": 48,
+      "y": 19,
       "elevation": 3,
       "item": "ITEM_CHERI_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE23A_CHERI_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 14,
+      "x": 15,
       "y": 47,
       "elevation": 3,
       "item": "ITEM_CHESTO_BERRY",
@@ -254,16 +254,16 @@
     },
     {
       "type": "hidden_item",
-      "x": 47,
-      "y": 50,
+      "x": 43,
+      "y": 53,
       "elevation": 3,
       "item": "ITEM_PERSIM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE23A_PERSIM_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 74,
-      "y": 49,
+      "x": 72,
+      "y": 41,
       "elevation": 3,
       "item": "ITEM_LUM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE23A_LUM_BERRY"

@@ -4984,7 +4984,7 @@
     {
       "id": "LAYOUT_ZONE23A",
       "name": "Zone23A_Layout",
-      "width": 77,
+      "width": 76,
       "height": 70,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Marsh",
