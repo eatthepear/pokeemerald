@@ -306,8 +306,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 26,
-      "y": 34,
+      "x": 40,
+      "y": 23,
       "elevation": 3,
       "item": "ITEM_ASPEAR_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE7A_ASPEAR_BERRY"
