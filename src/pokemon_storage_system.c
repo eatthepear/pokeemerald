@@ -6743,21 +6743,9 @@ static void InitCanReleaseMonVars(void)
         sStorage->releaseBoxPos = sCursorPosition;
     }
 
-    GetRestrictedReleaseMoves(sStorage->restrictedMoveList);
-    sStorage->restrictedReleaseMonMoves = GetMonData(&sStorage->tempMon, MON_DATA_KNOWN_MOVES, (u8*)sStorage->restrictedMoveList);
-    if (sStorage->restrictedReleaseMonMoves != 0)
-    {
-        // Pokémon knows at least one restricted release move
-        // Need to check if another Pokémon has this move first
-        sStorage->releaseStatusResolved = FALSE;
-    }
-    else
-    {
-        // Pokémon knows no restricted moves, can be released
-        sStorage->releaseStatusResolved = TRUE;
-        sStorage->canReleaseMon = TRUE;
-    }
-
+    // Pokémon knows no restricted moves, can be released
+    sStorage->releaseStatusResolved = TRUE;
+    sStorage->canReleaseMon = TRUE;
     sStorage->releaseCheckState = 0;
 }
 
