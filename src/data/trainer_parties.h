@@ -1,7 +1,7 @@
 /**
  * Notes for documentation
  * 
- * Trainers are arranged in the order it is possible to battle them.
+ * Trainers are arranged in the order it is possible to battle them. There are Zone tags that divide up where the trainers are located.
  * 
  * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
  * These are included in the comments next to each trainer.
@@ -17,7 +17,10 @@
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
- * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. */
+ * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. 
+ * On Brutal, the trainer AI knows your moveset. */
+
+/* ------------------- Zone 1 ------------------- */
 
 static const struct TrainerMon sParty_Corey[] = {
     {
@@ -63,6 +66,8 @@ static const struct TrainerMon sParty_Oscar[] = {
     .species = SPECIES_FLETCHLING,
     }
 };
+
+/* ------------------- Zone 2 ------------------- */
 
 static const struct TrainerMon sParty_Harper[] = {
     {
@@ -133,6 +138,8 @@ static const struct TrainerMon sParty_Arthur[] = {
     }
 };
 
+/* ------------------- Zone 3 ------------------- */
+
 static const struct TrainerMon sParty_Jemma[] = {
     {
     .iv = 0,
@@ -199,6 +206,8 @@ static const struct TrainerMon sParty_Remi[] = {//Leviathan 1, Default
     .moves = {MOVE_AQUA_JET, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_TAIL_WHIP}
     }
 };
+
+/* ------------------- Zone 4 ------------------- */
 
 static const struct TrainerMon sParty_Ralph[] = {
     {
@@ -281,7 +290,9 @@ static const struct TrainerMon sParty_Fred[] = {
     }
 };
 
-static const struct TrainerMon sParty_AnneAndJune[] = {
+/* ------------------- Zone 5 ------------------- */
+
+static const struct TrainerMon sParty_AnneAndJune[] = {// Double Battle
     {
     .iv = 0,
     .lvl = 10,
@@ -371,6 +382,8 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan 2, Default
     }
 };
 
+/* ------------------- Lelouch Training ------------------- */
+
 static const struct TrainerMon sParty_LelouchExp1[] = {
     {
     .iv = 0,
@@ -391,6 +404,8 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
     .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
+
+/* ------------------- Zone 6 ------------------- */
 
 static const struct TrainerMon sParty_Frank[] = {
     {
@@ -498,6 +513,8 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_FURY_SWIPES}
     }
 };
+
+/* ------------------- Zone 7 & 8 ------------------- */
 
 static const struct TrainerMon sParty_Millie[] = {
     {
@@ -693,6 +710,8 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     }
 };
 
+/* ------------------- Zone 9 ------------------- */
+
 static const struct TrainerMon sParty_Anita[] = {
     {
     .iv = 0,
@@ -786,6 +805,8 @@ static const struct TrainerMon sParty_Erica[] = {
     .species = SPECIES_KOMALA,
     }
 };
+
+/* ------------------- Zone 10 ------------------- */
 
 static const struct TrainerMon sParty_Pearlie[] = {
     {
@@ -931,6 +952,8 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     }
 };
 
+/* ------------------- Zone 11 ------------------- */
+
 static const struct TrainerMon sParty_Jeanette[] = {
     {
     .iv = 10,
@@ -1020,6 +1043,8 @@ static const struct TrainerMon sParty_Jake[] = {//Leviathan 6, Default, Double B
     .moves = {MOVE_AIR_SLASH, MOVE_SHOCK_WAVE, MOVE_AIR_CUTTER, MOVE_HIDDEN_POWER} // Hidden Power Grass
     }
 };
+
+/* ------------------- Zone 12 ------------------- */
 
 static const struct TrainerMon sParty_Dolores[] = {
     {
@@ -1143,6 +1168,8 @@ static const struct TrainerMon sParty_Kinley[] = {
     .species = SPECIES_ZANGOOSE,
     }
 };
+
+/* ------------------- Zone 13 & 14 ------------------- */
 
 static const struct TrainerMon sParty_JanAndErin[] = {
     {
@@ -1381,6 +1408,8 @@ static const struct TrainerMon sParty_Zone14CMirage[] = {//Leviathan 9, Double B
     }
 };
 
+/* ------------------- Lelouch Training ------------------- */
+
 static const struct TrainerMon sParty_LelouchExp2[] = {
     {
     .iv = 0,
@@ -1401,6 +1430,8 @@ static const struct TrainerMon sParty_LelouchExp2[] = {
     .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
+
+/* ------------------- Zone 16 ------------------- */
 
 static const struct TrainerMon sParty_Angus[] = {
     {
@@ -1586,6 +1617,8 @@ static const struct TrainerMon sParty_Sophia[] = {//Leviathan 10, Default
     .moves = {MOVE_SPARKLING_ARIA, MOVE_FREEZE_DRY, MOVE_BODY_PRESS, MOVE_REST}
     }
 };
+
+/* ------------------- Zone 18 & 19 ------------------- */
 
 static const struct TrainerMon sParty_Marion[] = {
     {
@@ -1980,6 +2013,8 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle start
     }
 };
 
+/* ------------------- Zone 20 ------------------- */
+
 static const struct TrainerMon sParty_Julie[] = {//Leviathan 12, Default
     {
     .iv = 31,
@@ -2042,6 +2077,8 @@ static const struct TrainerMon sParty_Julie[] = {//Leviathan 12, Default
     .moves = {MOVE_DRAGON_CLAW, MOVE_REVENGE, MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH}
     }
 };
+
+/* ------------------- Lelouch Training ------------------- */
 
 static const struct TrainerMon sParty_LelouchExp3[] = {
     {
@@ -2298,6 +2335,8 @@ static const struct TrainerMon sParty_LelouchEVSpeed[] = {
     }
 };
 
+/* ------------------- Zone 21 ------------------- */
+
 static const struct TrainerMon sParty_Howard[] = {
     {
     .iv = 20,
@@ -2466,6 +2505,8 @@ static const struct TrainerMon sParty_Rusty[] = {
     .species = SPECIES_CARKOL,
     }
 };
+
+/* ------------------- Zone 22 ------------------- */
 
 static const struct TrainerMon sParty_Cody[] = {
     {
@@ -2668,6 +2709,8 @@ static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Battle star
     }
 };
 
+/* ------------------- Zone 23 ------------------- */
+
 static const struct TrainerMon sParty_Edgardo[] = {
     {
     .iv = 20,
@@ -2783,6 +2826,8 @@ static const struct TrainerMon sParty_Annie[] = {
     .species = SPECIES_GREEDENT,
     }
 };
+
+/* ------------------- Zone 24 & 25 ------------------- */
 
 static const struct TrainerMon sParty_Christi[] = {
     {
@@ -3022,6 +3067,8 @@ static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double
     }
 };
 
+/* ------------------- Lelouch Training ------------------- */
+
 static const struct TrainerMon sParty_LelouchExp4[] = {
     {
     .iv = 0,
@@ -3042,6 +3089,8 @@ static const struct TrainerMon sParty_LelouchExp4[] = {
     .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
+
+/* ------------------- Brutal Leviathans ------------------- */
 
 static const struct TrainerMon sParty_RemiBrutal[] = {//Leviathan 1, Brutal
     {
