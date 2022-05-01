@@ -240,7 +240,7 @@ static const struct TrainerMon sParty_Patrick[] = {
     }
 };
 
-static const struct TrainerMon sParty_ChloeAndKaya[] = {
+static const struct TrainerMon sParty_ChloeAndKaya[] = {//Double Battle
     {
     .iv = 0,
     .lvl = 9,
@@ -990,7 +990,7 @@ static const struct TrainerMon sParty_Regina[] = {
     }
 };
 
-static const struct TrainerMon sParty_EmmaAndLeo[] = {
+static const struct TrainerMon sParty_EmmaAndLeo[] = {//Double Battle
     {
     .iv = 10,
     .lvl = 21,
@@ -1171,7 +1171,7 @@ static const struct TrainerMon sParty_Kinley[] = {
 
 /* ------------------- Zone 13 & 14 ------------------- */
 
-static const struct TrainerMon sParty_JanAndErin[] = {
+static const struct TrainerMon sParty_JanAndErin[] = {//Double Battle
     {
     .iv = 10,
     .lvl = 24,
@@ -1184,7 +1184,7 @@ static const struct TrainerMon sParty_JanAndErin[] = {
     }
 };
 
-static const struct TrainerMon sParty_AmberAndKim[] = {
+static const struct TrainerMon sParty_AmberAndKim[] = {//Double Battle
     {
     .iv = 10,
     .lvl = 24,
@@ -2383,7 +2383,7 @@ static const struct TrainerMon sParty_Eloise[] = {
     }
 };
 
-static const struct TrainerMon sParty_AllyAndEmmy[] = {
+static const struct TrainerMon sParty_AllyAndEmmy[] = {//Double Battle
     {
     .iv = 20,
     .lvl = 31,
@@ -2557,7 +2557,7 @@ static const struct TrainerMon sParty_Cornelius[] = {
     }
 };
 
-static const struct TrainerMon sParty_InezAndEmma[] = {
+static const struct TrainerMon sParty_InezAndEmma[] = {//Double Battle
     {
     .iv = 20,
     .lvl = 34,
