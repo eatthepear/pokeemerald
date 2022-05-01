@@ -1763,7 +1763,7 @@ static void Cmd_ppreduce(void)
         }
     }
 
-    if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+    if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE && GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
     {
         switch (gBattleMoves[gCurrentMove].effect)
         {

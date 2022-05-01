@@ -510,7 +510,7 @@ static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Fur Coat
     .species = SPECIES_FURRET,
-    .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_FURY_SWIPES}
+    .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_THIEF}
     }
 };
 
@@ -735,7 +735,7 @@ static const struct TrainerMon sParty_Ari[] = {
     {
     .iv = 20,
     .lvl = 17,
-    .species = SPECIES_ODDISH,
+    .species = SPECIES_BELLSPROUT,
     },
     {
     .iv = 20,
@@ -899,7 +899,7 @@ static const struct TrainerMon sParty_Conrad[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_BELLSPROUT,
+    .species = SPECIES_ODDISH,
     }
 };
 
@@ -3167,7 +3167,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
     .ability = ABILITY_SLOT_1, //Fur Coat
     .species = SPECIES_FURRET,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_FURY_SWIPES}
+    .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_THIEF}
     }
 };
 

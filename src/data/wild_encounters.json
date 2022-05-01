@@ -14075,6 +14075,11 @@
               {
                 "min_level": 15,
                 "max_level": 17,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
                 "species": "SPECIES_CROAGUNK"
               },
               {
@@ -14091,11 +14096,6 @@
                 "min_level": 15,
                 "max_level": 17,
                 "species": "SPECIES_KOMALA"
-              },
-              {
-                "min_level": 15,
-                "max_level": 17,
-                "species": "SPECIES_GRUBBIN"
               },
               {
                 "min_level": 15,
@@ -14307,11 +14307,6 @@
               {
                 "min_level": 18,
                 "max_level": 20,
-                "species": "SPECIES_BELLSPROUT"
-              },
-              {
-                "min_level": 18,
-                "max_level": 20,
                 "species": "SPECIES_HATENNA"
               },
               {
@@ -14342,7 +14337,12 @@
               {
                 "min_level": 18,
                 "max_level": 20,
-                "species": "SPECIES_NOIBAT"
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 18,
