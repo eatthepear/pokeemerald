@@ -1503,7 +1503,7 @@
 #define FLAG_SYS_NO_TRAINER_SEE                     (SYSTEM_FLAGS + 0x87) // Unused Flag
 #define FLAG_SYS_NO_BAG_USE                         (SYSTEM_FLAGS + 0x88) // Unused Flag
 #define FLAG_SYS_NO_CATCHING                        (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
+#define FLAG_SYS_PC_FROM_DEBUG_MENU                 (SYSTEM_FLAGS + 0x8A) // Unused Flag
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
 #define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
