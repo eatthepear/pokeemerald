@@ -323,9 +323,9 @@ static const u8 gDebugText_Util_Trainer_Gender[] =          _("Toggle T. Gender"
 static const u8 gDebugText_Util_Trainer_Id[] =              _("New Trainer Id");
 // Flags Menu
 static const u8 gDebugText_Flags_Flags[] =                  _("Set Flag XXXX");
-static const u8 gDebugText_Flags_SetPokedexFlags[] =        _("All Pokédex Flags");
-static const u8 gDebugText_Flags_SwitchDex[] =              _("Pokédex ON/OFF");
-static const u8 gDebugText_Flags_SwitchNationalDex[] =      _("NatDex ON/OFF");
+static const u8 gDebugText_Flags_SetPokedexFlags[] =        _("Brutal ON/OFF");
+static const u8 gDebugText_Flags_SwitchDex[] =              _("Nuzlocke ON/OFF");
+static const u8 gDebugText_Flags_SwitchNationalDex[] =      _("Randomizer ON/OFF");
 static const u8 gDebugText_Flags_SwitchPokeNav[] =          _("PokéNav ON/OFF");
 static const u8 gDebugText_Flags_ToggleFlyFlags[] =         _("Fly Flags ON/OFF");
 static const u8 gDebugText_Flags_ToggleAllBadges[] =        _("All badges ON/OFF");
@@ -1319,34 +1319,63 @@ static void DebugAction_Flags_FlagsSelect(u8 taskId)
 
 static void DebugAction_Flags_SetPokedexFlags(u8 taskId)
 {
-    u16 i;
-    for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    // u16 i;
+    // for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    // {
+    //     GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
+    //     GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+    // }
+    // Debug_DestroyMenu(taskId);
+    // EnableBothScriptContexts();
+    if(FlagGet(FLAG_BRUTAL_MODE_ON))
     {
-        GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
-        GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+        FlagClear(FLAG_BRUTAL_MODE_ON);
+        FlagClear(FLAG_SMART_WILD_AI_ON);
+        PlaySE(SE_PC_OFF);
+    }else{
+        FlagSet(FLAG_BRUTAL_MODE_ON);
+        FlagSet(FLAG_SMART_WILD_AI_ON);
+        PlaySE(SE_PC_LOGIN);
     }
-    Debug_DestroyMenu(taskId);
-    EnableBothScriptContexts();
+
 }
 static void DebugAction_Flags_SwitchDex(u8 taskId)
 {
-    if(FlagGet(FLAG_SYS_POKEDEX_GET))
+    // if(FlagGet(FLAG_SYS_POKEDEX_GET))
+    // {
+    //     FlagClear(FLAG_SYS_POKEDEX_GET);
+    //     PlaySE(SE_PC_OFF);
+    // }else{
+    //     FlagSet(FLAG_SYS_POKEDEX_GET);
+    //     PlaySE(SE_PC_LOGIN);
+    // }
+    if(FlagGet(FLAG_NUZLOCKE_ON))
     {
-        FlagClear(FLAG_SYS_POKEDEX_GET);
+        FlagClear(FLAG_NUZLOCKE_ON);
+        GlobalNuzlockeClear();
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SYS_POKEDEX_GET);
+        FlagSet(FLAG_NUZLOCKE_ON);
+        GlobalNuzlockeSet();
         PlaySE(SE_PC_LOGIN);
     }
 }
 static void DebugAction_Flags_SwitchNatDex(u8 taskId)
 {
-    if(IsNationalPokedexEnabled())
+    // if(IsNationalPokedexEnabled())
+    // {
+    //     DisableNationalPokedex();
+    //     PlaySE(SE_PC_OFF);
+    // }else{
+    //     EnableNationalPokedex();
+    //     PlaySE(SE_PC_LOGIN);
+    // }
+    if(FlagGet(FLAG_RANDOMIZER_ON))
     {
-        DisableNationalPokedex();
+        FlagClear(FLAG_RANDOMIZER_ON);
         PlaySE(SE_PC_OFF);
     }else{
-        EnableNationalPokedex();
+        FlagSet(FLAG_RANDOMIZER_ON);
         PlaySE(SE_PC_LOGIN);
     }
 }
