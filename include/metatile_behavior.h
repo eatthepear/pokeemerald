@@ -147,7 +147,6 @@ bool8 MetatileBehavior_IsBattlePyramidWarp(u8);
 bool8 MetatileBehavior_IsPlayerFacingWirelessBoxResults(u8 tile, u8 playerDir);
 bool8 MetatileBehavior_IsCableBoxResults2(u8 tile, u8 playerDir);
 bool8 MetatileBehavior_IsQuestionnaire(u8);
-bool8 MetatileBehavior_IsLongGrass_Duplicate(u8);
 bool8 MetatileBehavior_IsLongGrassSouthEdge(u8);
 bool8 MetatileBehavior_IsTrainerHillTimer(u8);
 bool8 MetatileBehavior_IsRockStairs(u8);

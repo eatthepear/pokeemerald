@@ -270,6 +270,9 @@
 #define METATILE_Lilycove_Wailmer2         0x2A0
 #define METATILE_Lilycove_Wailmer3         0x2A1
 
+// gTileset_Marsh
+#define METATILE_Marsh_CalmWater  0x20C
+
 // gTileset_MauvilleGym
 #define METATILE_MauvilleGym_FloorTile        0x21A
 #define METATILE_MauvilleGym_GreenBeamH1_Off  0x230

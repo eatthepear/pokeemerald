@@ -582,25 +582,6 @@ static void CutGrassSpriteCallbackEnd(struct Sprite *sprite)
 
 void FixLongGrassMetatilesWindowTop(s16 x, s16 y)
 {
-    u8 metatileBehavior = MapGridGetMetatileBehaviorAt(x, y);
-    if (MetatileBehavior_IsLongGrass_Duplicate(metatileBehavior))
-    {
-        switch (GetLongGrassCaseAt(x, y + 1))
-        {
-        case LONG_GRASS_FIELD:
-            MapGridSetMetatileIdAt(x, y + 1, METATILE_Fortree_LongGrass_Root);
-            break;
-        case LONG_GRASS_BASE_LEFT:
-            MapGridSetMetatileIdAt(x, y + 1, METATILE_Fortree_SecretBase_LongGrass_BottomLeft);
-            break;
-        case LONG_GRASS_BASE_CENTER:
-            MapGridSetMetatileIdAt(x, y + 1, METATILE_Fortree_SecretBase_LongGrass_BottomMid);
-            break;
-        case LONG_GRASS_BASE_RIGHT:
-            MapGridSetMetatileIdAt(x, y + 1, METATILE_Fortree_SecretBase_LongGrass_BottomRight);
-            break;
-        }
-    }
 }
 
 void FixLongGrassMetatilesWindowBottom(s16 x, s16 y)
