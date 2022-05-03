@@ -1892,10 +1892,10 @@ static bool8 Fishing_CheckForBite(struct Task *task)
 
         if (!bite)
         {
-            if (Random() & 1)
-                task->tStep = FISHING_NO_BITE;
-            else
-                bite = TRUE;
+            // if (Random() & 1)
+            //     task->tStep = FISHING_NO_BITE;
+            // else
+            bite = TRUE;
         }
 
         if (bite == TRUE)
