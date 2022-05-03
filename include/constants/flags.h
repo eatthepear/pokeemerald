@@ -169,7 +169,7 @@
 #define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95
 #define FLAG_FORCE_BATTLE_ANIM_ON            0x96 // Forces battle animations to be on if set
-#define FLAG_RECEIVED_CASTFORM               0x97
+#define FLAG_FORCE_BATTLE_ANIM_OFF           0x97 // Forces battle animations to be off if set
 #define FLAG_RECEIVED_SUPER_ROD              0x98
 #define FLAG_RUSTBORO_NPC_TRADE_COMPLETED    0x99
 #define FLAG_PACIFIDLOG_NPC_TRADE_COMPLETED  0x9A

@@ -1121,6 +1121,7 @@ EventScript_Shop_LelouchTraining:
 	goto_if_eq EventScript_Shop_LelouchLeave
 	removeitem ITEM_RED_SHARD, 1
 	setflag FLAG_DOUBLE_EXP
+	setflag FLAG_FORCE_BATTLE_ANIM_OFF
 	msgbox gText_Lelouch_PayRed, MSGBOX_AUTOCLOSE
 	msgbox gText_Lelouch_LetBeginTraining, MSGBOX_AUTOCLOSE
 	goto EventScript_Shop_Lelouch_TrainSwitcher
@@ -2073,6 +2074,7 @@ EventScript_Shop_LelouchSeriousMint:
 EventScript_Shop_LelouchLeave:
 	msgbox gText_Lelouch_Leave, MSGBOX_AUTOCLOSE
 	clearflag FLAG_DOUBLE_EXP
+	clearflag FLAG_FORCE_BATTLE_ANIM_OFF
 	release
 	end
 
