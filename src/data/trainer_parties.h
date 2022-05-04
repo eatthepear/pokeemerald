@@ -2225,8 +2225,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialAttack[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BEAUTIFLY,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_ALAKAZAM,
+    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -2234,8 +2234,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialAttack[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BEAUTIFLY,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_ALAKAZAM,
+    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -2243,8 +2243,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialAttack[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BEAUTIFLY,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_ALAKAZAM,
+    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -2252,8 +2252,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialAttack[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BEAUTIFLY,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_ALAKAZAM,
+    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -2264,8 +2264,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialDefense[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_DUSTOX,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_BLASTOISE,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -2273,8 +2273,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialDefense[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_DUSTOX,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_BLASTOISE,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -2282,8 +2282,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialDefense[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_DUSTOX,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_BLASTOISE,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -2291,8 +2291,8 @@ static const struct TrainerMon sParty_LelouchEVSpecialDefense[] = {
     .nature = NATURE_BASHFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1,
-    .species = SPECIES_DUSTOX,
-    .moves = {MOVE_HARDEN, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .species = SPECIES_BLASTOISE,
+    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
