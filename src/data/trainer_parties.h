@@ -2656,7 +2656,7 @@ static const struct TrainerMon sParty_Audrey[] = {
     {
     .iv = 20,
     .lvl = 34,
-    .species = SPECIES_GRANBULL,
+    .species = SPECIES_GLOOM,
     },
     {
     .iv = 20,
@@ -2666,7 +2666,7 @@ static const struct TrainerMon sParty_Audrey[] = {
     {
     .iv = 20,
     .lvl = 34,
-    .species = SPECIES_ARBOK,
+    .species = SPECIES_GRANBULL,
     }
 };
 
@@ -3359,7 +3359,7 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {//Leviathan 9, Do
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Chlorophyll
-    .species = SPECIES_GLOOM,
+    .species = SPECIES_WEEPINBELL,
     .heldItem = ITEM_MIRACLE_SEED,
     .moves = {MOVE_GIGA_DRAIN, MOVE_VENOSHOCK, MOVE_KNOCK_OFF, MOVE_GROWTH}
     },
