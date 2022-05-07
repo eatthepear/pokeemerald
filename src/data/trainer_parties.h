@@ -33,19 +33,29 @@ static const struct TrainerMon sParty_Corey[] = {
     .lvl = 3,
     .species = SPECIES_RATTATA,
     .ability = ABILITY_SLOT_2, //Guts
+    },
+    {
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_BUNEARY,
     }
 };
 
 static const struct TrainerMon sParty_Mariam[] = {
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 4,
     .species = SPECIES_STARLY,
     },
     {
     .iv = 0,
     .lvl = 4,
     .species = SPECIES_AZURILL,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_POOCHYENA,
     }
 };
 
@@ -66,6 +76,18 @@ static const struct TrainerMon sParty_Oscar[] = {
     .species = SPECIES_FLETCHLING,
     }
 };
+
+// static const struct TrainerMon sParty_Corey[] = {//Leviathan, Default
+//     {
+//     .iv = 31,
+//     .lvl = 8,
+//     .nature = NATURE_ADAMANT,
+//     .gender = TRAINER_MON_MALE,
+//     .ability = ABILITY_SLOT_1, //Cheek Pouch
+//     .species = SPECIES_SKWOVET,
+//     .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_STUFF_CHEEKS, MOVE_TAIL_WHIP}
+//     }
+// };
 
 /* ------------------- Zone 2 ------------------- */
 
