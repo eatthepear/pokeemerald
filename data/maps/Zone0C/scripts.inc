@@ -1,61 +1,6 @@
 Zone0C_MapScripts::
 	.byte 0
 
-Zone0C_EventScript_Jaya::
-	lock
-	faceplayer
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
-	compare VAR_HEAL_SHOP_USED, 0
-	goto_if_eq Zone0C_EventScript_JayaDeny
-	compare VAR_TEMP_0, 1
-	goto_if_eq Zone0C_EventScript_JayaIntro
-	msgbox Zone0C_EventScript_Jaya_Sorry, MSGBOX_AUTOCLOSE
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_1, 9
-	goto_if_eq Zone0C_EventScript_JayaWalkRight
-	applymovement 2, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement 2, Common_Movement_FaceDown
-	waitmovement 0
-	setvar VAR_TEMP_0, 1
-	release
-	end
-
-Zone0C_EventScript_JayaWalkRight:
-	applymovement 2, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement 2, Common_Movement_FaceDown
-	waitmovement 0
-	setvar VAR_TEMP_0, 1
-	release
-	end
-
-Zone0C_EventScript_JayaDeny:
-	msgbox Zone0C_Text_Jaya_Deny, MSGBOX_AUTOCLOSE
-	applymovement 2, Common_Movement_FaceUp
-	waitmovement 0
-	release
-	end
-
-Zone0C_Text_Jaya_Deny:
-	.string "{COLOR BLUE}Jaya{COLOR DARK_GRAY}: It looks like the PC won't\n"
-	.string "boot up if you haven't used\l"
-	.string "Joy's Healing Shop recently...$"
-
-Zone0C_EventScript_JayaIntro:
-	setflag FLAG_SYS_PC_LANETTE
-	msgbox Zone0C_Text_Jaya_Intro, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone0C_EventScript_Jaya_Sorry:
-	.string "{COLOR BLUE}Jaya{COLOR DARK_GRAY}: Alright, I guess I'm done.$"
-
-Zone0C_Text_Jaya_Intro:
-	.string "{COLOR BLUE}Jaya{COLOR DARK_GRAY}: My name is Jaya.\p"
-	.string "I'm actually one of the scientists\n"
-	.string "who worked on the original PSS.$"
-
 Zone0C_EventScript_EeveeGirl::
 	lock
 	faceplayer
@@ -145,7 +90,7 @@ Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone0C_PokemonDayCare_EventScript_Closed
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
+	goto_if_set FLAG_NUZLOCKE_ON, Zone0C_PokemonDayCare_EventScript_Closed
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
 	goto_if_eq Zone0C_PokemonDayCare_EventScript_EggWaiting
@@ -172,7 +117,6 @@ Zone0C_PokemonDayCare_Text_Closed:
 	.string "care of your Pokémon at this time.$"
 
 Zone0C_PokemonDayCare_EventScript_GiveMonToRaise:
-	call_if_set FLAG_NUZLOCKE_ON, Zone0C_PokemonDayCare_EventScript_NuzlockeDialog
 	specialvar VAR_RESULT, CountPartyNonEggMons
 	compare VAR_RESULT, 1
 	goto_if_eq Zone0C_PokemonDayCare_EventScript_OnlyOneMon
@@ -200,15 +144,6 @@ Zone0C_PokemonDayCare_EventScript_GiveMonToRaise:
 	goto_if_eq Zone0C_PokemonDayCare_EventScript_CanRaiseOneMore
 	release
 	end
-
-Zone0C_PokemonDayCare_EventScript_NuzlockeDialog:
-	msgbox Zone0C_PokemonDayCare_Text_FirstTakeFallen, MSGBOX_DEFAULT
-	call EventScript_DeleteFaintedPartyPokemon
-	return
-
-Zone0C_PokemonDayCare_Text_FirstTakeFallen:
-	.string "First, I'll take any fallen\n"
-	.string "Pokémon away...$"
 
 Zone0C_PokemonDayCare_EventScript_ComeAgain:
 	msgbox Zone0C_PokemonDayCare_Text_ComeAgain, MSGBOX_DEFAULT

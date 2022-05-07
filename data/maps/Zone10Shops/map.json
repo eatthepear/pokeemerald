@@ -141,24 +141,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 21,
-      "y": 17,
-      "elevation": 0,
-      "var": "VAR_HEAL_SHOP_USED",
-      "var_value": "0",
-      "script": "EventScript_Joy_DenyPC"
-    },
-    {
-      "type": "trigger",
-      "x": 18,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_ZHULI_INTRO",
-      "var_value": "0",
-      "script": "EventScript_Shop_ZhuLiIntro"
-    },
-    {
-      "type": "trigger",
       "x": 19,
       "y": 6,
       "elevation": 0,
@@ -170,6 +152,15 @@
       "type": "trigger",
       "x": 20,
       "y": 7,
+      "elevation": 0,
+      "var": "VAR_ZHULI_INTRO",
+      "var_value": "0",
+      "script": "EventScript_Shop_ZhuLiIntro"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_ZHULI_INTRO",
       "var_value": "0",

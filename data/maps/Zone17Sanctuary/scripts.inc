@@ -8,7 +8,6 @@ Zone17Sanctuary_OnFrame:
 
 Zone17Sanctuary_EventScript_Intro:
 	lockall
-	setvar VAR_HEAL_SHOP_USED, 0
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark

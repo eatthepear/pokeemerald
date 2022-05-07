@@ -2067,17 +2067,6 @@ EventScript_Shop_LelouchLeave:
 	release
 	end
 
-EventScript_Joy_DenyPC::
-	lockall
-	applymovement 4, Common_Movement_FaceRight
-	msgbox gText_Joy_CantUse, MSGBOX_DEFAULT
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement 4, Common_Movement_FaceDown
-	waitmovement 0
-	releaseall
-	end
-
 EventScript_Shop_JoyIntroCheck::
 	lock
 	faceplayer
@@ -2091,7 +2080,6 @@ EventScript_Shop_JoyIntroCheck::
 EventScript_Joy_Welcome:
 	lockall
 	msgbox gText_Joy_Welcome, MSGBOX_AUTOCLOSE
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_Joy_Nuzlocke
 	showmoneybox 0, 0, 0
 	msgbox gText_Joy_WouldYouLikeToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, 1
@@ -2127,20 +2115,14 @@ EventScript_Joy_Heal:
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_HEAL
 	waitfanfare
-	call_if_set FLAG_NUZLOCKE_ON, EventScript_DeleteFaintedPartyPokemon
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
-	setvar VAR_HEAL_SHOP_USED, 1
 	msgbox gText_Joy_PartyHealed, MSGBOX_AUTOCLOSE
 	closemessage
 	hidemoneybox
 	msgbox gText_Joy_WonderfulDay, MSGBOX_AUTOCLOSE
 	releaseall
 	end
-
-EventScript_DeleteFaintedPartyPokemon:
-	callnative DeleteFaintedPartyPokemon
-	return
 
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
@@ -2192,7 +2174,6 @@ EventScript_WhenUReady:
 	end
 
 EventScript_WarpZone0:
-	setvar VAR_HEAL_SHOP_USED, 0
 	clearflag FLAG_IS_REVISITING_ZONE
 	warpteleport MAP_ZONE0D, 255, 2, 32
 	end

@@ -558,13 +558,8 @@ gText_Joy_Intro:
 
 gText_Joy_Welcome:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Welcome to Joy's Healing Shop.\p"
-	.string "We heal your Pokemon for a flat\n"
-	.string "¥1000 fee, which also comes with\l"
-	.string "complimentary access to the PC.$"
-
-gText_Joy_Nuzlocke:
-	.string "I will also remove any fallen\n"
-	.string "Pokémon in your party.$"
+	.string "We heal your entire party for a\n"
+	.string "flat ¥1000 fee.$"
 
 gText_Joy_WouldYouLikeToHeal:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Should I heal your Pokémon?$"
