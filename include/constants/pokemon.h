@@ -181,6 +181,8 @@
 #define MON_DATA_SPECIES2          65
 #define MON_DATA_IVS               66
 #define MON_DATA_KNOWN_MOVES       81
+#define MON_DATA_STATUS2           82
+#define MON_DATA_HP2               83
 #define MON_DATA_ATK2              84
 #define MON_DATA_DEF2              85
 #define MON_DATA_SPEED2            86

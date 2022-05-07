@@ -5446,14 +5446,61 @@ void CalculateMonStats(struct Pokemon *mon)
 
 void BoxMonToMon(const struct BoxPokemon *src, struct Pokemon *dest)
 {
-    u32 value = 0;
+    struct Pokemon *mon = dest;
+    s32 oldMaxHP;
+    s32 currentHP;
+    s32 hpIV;
+    s32 hpEV;
+    s32 attackIV;
+    s32 attackEV;
+    s32 defenseIV;
+    s32 defenseEV;
+    s32 speedIV;
+    s32 speedEV;
+    s32 spAttackIV;
+    s32 spAttackEV;
+    s32 spDefenseIV;
+    s32 spDefenseEV;
+    u16 species;
+    s32 level;
+    s32 newMaxHP;
+    s32 n;
+    s32 i;
+    u32 currentStatus;
+    u8 pp[MAX_MON_MOVES];
     dest->box = *src;
-    SetMonData(dest, MON_DATA_STATUS, &value);
-    SetMonData(dest, MON_DATA_HP, &value);
-    SetMonData(dest, MON_DATA_MAX_HP, &value);
-    // value = MAIL_NONE;
-    // SetMonData(dest, MON_DATA_MAIL, &value);
-    CalculateMonStats(dest);
+    currentStatus = GetMonData(mon, MON_DATA_STATUS2, NULL);
+    currentHP = GetMonData(mon, MON_DATA_HP2, NULL);
+    hpIV = GetMonData(mon, MON_DATA_HP_IV, NULL);
+    hpEV = GetMonData(mon, MON_DATA_HP_EV, NULL);
+    attackIV = GetMonData(mon, MON_DATA_ATK_IV, NULL);
+    attackEV = GetMonData(mon, MON_DATA_ATK_EV, NULL);
+    defenseIV = GetMonData(mon, MON_DATA_DEF_IV, NULL);
+    defenseEV = GetMonData(mon, MON_DATA_DEF_EV, NULL);
+    speedIV = GetMonData(mon, MON_DATA_SPEED_IV, NULL);
+    speedEV = GetMonData(mon, MON_DATA_SPEED_EV, NULL);
+    spAttackIV = GetMonData(mon, MON_DATA_SPATK_IV, NULL);
+    spAttackEV = GetMonData(mon, MON_DATA_SPATK_EV, NULL);
+    spDefenseIV = GetMonData(mon, MON_DATA_SPDEF_IV, NULL);
+    spDefenseEV = GetMonData(mon, MON_DATA_SPDEF_EV, NULL);
+    species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    level = GetLevelFromMonExp(mon);
+
+    SetMonData(mon, MON_DATA_LEVEL, &level);
+
+    n = 2 * gBaseStats[species].baseHP + hpIV;
+    newMaxHP = (((n + hpEV / 4) * level) / 100) + level + 10;
+
+    SetMonData(mon, MON_DATA_MAX_HP, &newMaxHP);
+
+    CALC_STAT(baseAttack, attackIV, attackEV, STAT_ATK, MON_DATA_ATK)
+    CALC_STAT(baseDefense, defenseIV, defenseEV, STAT_DEF, MON_DATA_DEF)
+    CALC_STAT(baseSpeed, speedIV, speedEV, STAT_SPEED, MON_DATA_SPEED)
+    CALC_STAT(baseSpAttack, spAttackIV, spAttackEV, STAT_SPATK, MON_DATA_SPATK)
+    CALC_STAT(baseSpDefense, spDefenseIV, spDefenseEV, STAT_SPDEF, MON_DATA_SPDEF)
+
+    SetMonData(mon, MON_DATA_HP, &currentHP);
+    SetMonData(mon, MON_DATA_STATUS, &currentStatus);
 }
 
 u8 GetLevelFromMonExp(struct Pokemon *mon)
@@ -6085,6 +6132,12 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
             }
         }
         break;
+    case MON_DATA_STATUS2:
+        retVal = boxMon->status;
+        break;
+    case MON_DATA_HP2:
+        retVal = boxMon->hp;
+        break;
     default:
         break;
     }
@@ -6104,12 +6157,14 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     {
     case MON_DATA_STATUS:
         SET32(mon->status);
+        SET32(mon->box.status);
         break;
     case MON_DATA_LEVEL:
         SET8(mon->level);
         break;
     case MON_DATA_HP:
         SET16(mon->hp);
+        SET16(mon->box.hp);
         break;
     case MON_DATA_MAX_HP:
         SET16(mon->maxHP);
@@ -6346,7 +6401,7 @@ u8 SendMonToPC(struct Pokemon* mon)
             struct BoxPokemon* checkingMon = GetBoxedMonPtr(boxNo, boxPos);
             if (GetBoxMonData(checkingMon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
             {
-                MonRestorePP(mon);
+                // MonRestorePP(mon);
                 CopyMon(checkingMon, &mon->box, sizeof(mon->box));
                 gSpecialVar_MonBoxId = boxNo;
                 gSpecialVar_MonBoxPos = boxPos;
