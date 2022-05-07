@@ -1314,7 +1314,7 @@ static bool8 SetupContestGraphics(u8 *stateVar)
         break;
     case 2:
         LZDecompressVram(gContestAudienceGfx, (void *)(BG_SCREEN_ADDR(4)));
-        DmaCopyLarge32(3, (void *)(BG_SCREEN_ADDR(4)), eUnzippedContestAudience_Gfx, 0x2000, 0x1000);
+        // DmaCopyLarge32(3, (void *)(BG_SCREEN_ADDR(4)), eUnzippedContestAudience_Gfx, 0x2000, 0x1000);
         break;
     case 3:
         CopyToBgTilemapBuffer(3, gContestAudienceTilemap, 0, 0);
@@ -1324,7 +1324,7 @@ static bool8 SetupContestGraphics(u8 *stateVar)
         CopyToBgTilemapBuffer(2, gContestInterfaceTilemap, 0, 0);
         CopyBgTilemapBufferToVram(2);
         // This is a bug, and copies random junk. savedJunk is never read.
-        DmaCopy32Defvars(3, gContestResources->contestBgTilemaps[2], eContestTempSave.savedJunk, sizeof(eContestTempSave.savedJunk));
+        // DmaCopy32Defvars(3, gContestResources->contestBgTilemaps[2], eContestTempSave.savedJunk, sizeof(eContestTempSave.savedJunk));
         break;
     case 5:
         LoadCompressedPalette(gContestInterfaceAudiencePalette, 0, 0x200);
@@ -1332,7 +1332,7 @@ static bool8 SetupContestGraphics(u8 *stateVar)
         CpuCopy32(gPlttBufferUnfaded + (5 + gContestPlayerMonIndex) * 16, tempPalette2, 16 * sizeof(u16));
         CpuCopy32(tempPalette2, gPlttBufferUnfaded + 128, 16 * sizeof(u16));
         CpuCopy32(tempPalette1, gPlttBufferUnfaded + (5 + gContestPlayerMonIndex) * 16, 16 * sizeof(u16));
-        DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedWindowPalettes, sizeof(eContestTempSave.cachedWindowPalettes));
+        // DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedWindowPalettes, sizeof(eContestTempSave.cachedWindowPalettes));
         LoadContestPalettes();
         break;
     case 6:
@@ -1467,30 +1467,30 @@ static void VBlankCB_Contest(void)
 
 static void Task_DisplayAppealNumberText(u8 taskId)
 {
-    if (gTasks[taskId].data[0] == 0)
-    {
-        gBattle_BG0_Y = 0;
-        gBattle_BG2_Y = 0;
-        ContestDebugDoPrint();
-        DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedPlttBufferUnfaded, PLTT_BUFFER_SIZE * 2);
-        ConvertIntToDecimalStringN(gStringVar1, eContest.appealNumber + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
-        if (!Contest_IsMonsTurnDisabled(gContestPlayerMonIndex))
-            StringCopy(gDisplayedStringBattle, gText_AppealNumWhichMoveWillBePlayed);
-        else
-            StringCopy(gDisplayedStringBattle, gText_AppealNumButItCantParticipate);
-        ContestClearGeneralTextWindow();
-        StringExpandPlaceholders(gStringVar4, gDisplayedStringBattle);
-        Contest_StartTextPrinter(gStringVar4, TRUE);
-        gTasks[taskId].data[0]++;
-    }
-    else
-    {
-        if (!Contest_RunTextPrinters())
-        {
-            gTasks[taskId].data[0] = 0;
-            gTasks[taskId].func = Task_TryShowMoveSelectScreen;
-        }
-    }
+    // if (gTasks[taskId].data[0] == 0)
+    // {
+    //     gBattle_BG0_Y = 0;
+    //     gBattle_BG2_Y = 0;
+    //     ContestDebugDoPrint();
+    //     DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedPlttBufferUnfaded, PLTT_BUFFER_SIZE * 2);
+    //     ConvertIntToDecimalStringN(gStringVar1, eContest.appealNumber + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
+    //     if (!Contest_IsMonsTurnDisabled(gContestPlayerMonIndex))
+    //         StringCopy(gDisplayedStringBattle, gText_AppealNumWhichMoveWillBePlayed);
+    //     else
+    //         StringCopy(gDisplayedStringBattle, gText_AppealNumButItCantParticipate);
+    //     ContestClearGeneralTextWindow();
+    //     StringExpandPlaceholders(gStringVar4, gDisplayedStringBattle);
+    //     Contest_StartTextPrinter(gStringVar4, TRUE);
+    //     gTasks[taskId].data[0]++;
+    // }
+    // else
+    // {
+    //     if (!Contest_RunTextPrinters())
+    //     {
+    //         gTasks[taskId].data[0] = 0;
+    //         gTasks[taskId].func = Task_TryShowMoveSelectScreen;
+    //     }
+    // }
 }
 
 static void Task_TryShowMoveSelectScreen(u8 taskId)
@@ -1656,26 +1656,26 @@ static void Task_EndCommunicateMoveSelections(u8 taskId)
 
 static void Task_HideMoveSelectScreen(u8 taskId)
 {
-    s32 i;
+    // s32 i;
 
-    ContestClearGeneralTextWindow();
-    gBattle_BG0_Y = 0;
-    gBattle_BG2_Y = 0;
-    SetBottomSliderHeartsInvisibility(FALSE);
+    // ContestClearGeneralTextWindow();
+    // gBattle_BG0_Y = 0;
+    // gBattle_BG2_Y = 0;
+    // SetBottomSliderHeartsInvisibility(FALSE);
 
-    for (i = 0; i < MAX_MON_MOVES; i++)
-    {
-        FillWindowPixelBuffer(MOVE_WINDOWS_START + i, PIXEL_FILL(0));
-        PutWindowTilemap(MOVE_WINDOWS_START + i);
-        CopyWindowToVram(MOVE_WINDOWS_START + i, COPYWIN_GFX);
-    }
-    Contest_SetBgCopyFlags(0);
-    // This seems to be a bug; it should have just copied PLTT_BUFFER_SIZE.
-    DmaCopy32Defvars(3, gPlttBufferFaded, eContestTempSave.cachedPlttBufferFaded, PLTT_BUFFER_SIZE * 2);
-    LoadPalette(eContestTempSave.cachedPlttBufferUnfaded, 0, PLTT_BUFFER_SIZE * 2);
-    gTasks[taskId].data[0] = 0;
-    gTasks[taskId].data[1] = 0;
-    gTasks[taskId].func = Task_HideApplauseMeterForAppealStart;
+    // for (i = 0; i < MAX_MON_MOVES; i++)
+    // {
+    //     FillWindowPixelBuffer(MOVE_WINDOWS_START + i, PIXEL_FILL(0));
+    //     PutWindowTilemap(MOVE_WINDOWS_START + i);
+    //     CopyWindowToVram(MOVE_WINDOWS_START + i, COPYWIN_GFX);
+    // }
+    // Contest_SetBgCopyFlags(0);
+    // // This seems to be a bug; it should have just copied PLTT_BUFFER_SIZE.
+    // DmaCopy32Defvars(3, gPlttBufferFaded, eContestTempSave.cachedPlttBufferFaded, PLTT_BUFFER_SIZE * 2);
+    // LoadPalette(eContestTempSave.cachedPlttBufferUnfaded, 0, PLTT_BUFFER_SIZE * 2);
+    // gTasks[taskId].data[0] = 0;
+    // gTasks[taskId].data[1] = 0;
+    // gTasks[taskId].func = Task_HideApplauseMeterForAppealStart;
 }
 
 static void Task_HideApplauseMeterForAppealStart(u8 taskId)
@@ -2558,10 +2558,10 @@ static void Task_WaitForHeartSliders(u8 taskId)
 
 static void Task_RestorePlttBufferUnfaded(u8 taskId)
 {
-    DmaCopy32Defvars(3, eContestTempSave.cachedPlttBufferUnfaded, gPlttBufferUnfaded, PLTT_BUFFER_SIZE * 2);
-    gTasks[taskId].data[0] = 0;
-    gTasks[taskId].data[1] = 2;
-    gTasks[taskId].func = Task_WaitPrintRoundResult;
+    // DmaCopy32Defvars(3, eContestTempSave.cachedPlttBufferUnfaded, gPlttBufferUnfaded, PLTT_BUFFER_SIZE * 2);
+    // gTasks[taskId].data[0] = 0;
+    // gTasks[taskId].data[1] = 2;
+    // gTasks[taskId].func = Task_WaitPrintRoundResult;
 }
 
 static void Task_WaitPrintRoundResult(u8 taskId)
@@ -2801,12 +2801,12 @@ void CreateContestMonFromParty(u8 partyIndex)
     }
     memcpy(gContestMons[gContestPlayerMonIndex].nickname, name, POKEMON_NAME_LENGTH + 1);
     StringCopy(gContestMons[gContestPlayerMonIndex].nickname, name);
-    gContestMons[gContestPlayerMonIndex].cool = GetMonData(&gPlayerParty[partyIndex], MON_DATA_COOL);
-    gContestMons[gContestPlayerMonIndex].beauty = GetMonData(&gPlayerParty[partyIndex], MON_DATA_BEAUTY);
-    gContestMons[gContestPlayerMonIndex].cute = GetMonData(&gPlayerParty[partyIndex], MON_DATA_CUTE);
-    gContestMons[gContestPlayerMonIndex].smart = GetMonData(&gPlayerParty[partyIndex], MON_DATA_SMART);
-    gContestMons[gContestPlayerMonIndex].tough = GetMonData(&gPlayerParty[partyIndex], MON_DATA_TOUGH);
-    gContestMons[gContestPlayerMonIndex].sheen = GetMonData(&gPlayerParty[partyIndex], MON_DATA_SHEEN);
+    // gContestMons[gContestPlayerMonIndex].cool = GetMonData(&gPlayerParty[partyIndex], MON_DATA_COOL);
+    // gContestMons[gContestPlayerMonIndex].beauty = GetMonData(&gPlayerParty[partyIndex], MON_DATA_BEAUTY);
+    // gContestMons[gContestPlayerMonIndex].cute = GetMonData(&gPlayerParty[partyIndex], MON_DATA_CUTE);
+    // gContestMons[gContestPlayerMonIndex].smart = GetMonData(&gPlayerParty[partyIndex], MON_DATA_SMART);
+    // gContestMons[gContestPlayerMonIndex].tough = GetMonData(&gPlayerParty[partyIndex], MON_DATA_TOUGH);
+    // gContestMons[gContestPlayerMonIndex].sheen = GetMonData(&gPlayerParty[partyIndex], MON_DATA_SHEEN);
     gContestMons[gContestPlayerMonIndex].moves[0] = GetMonData(&gPlayerParty[partyIndex], MON_DATA_MOVE1);
     gContestMons[gContestPlayerMonIndex].moves[1] = GetMonData(&gPlayerParty[partyIndex], MON_DATA_MOVE2);
     gContestMons[gContestPlayerMonIndex].moves[2] = GetMonData(&gPlayerParty[partyIndex], MON_DATA_MOVE3);
@@ -2962,26 +2962,26 @@ u8 GetContestEntryEligibility(struct Pokemon *pkmn)
         return CANT_ENTER_CONTEST_EGG;
     if (GetMonData(pkmn, MON_DATA_HP) == 0)
         return CANT_ENTER_CONTEST_FAINTED;
-    switch (gSpecialVar_ContestCategory)
-    {
-    case CONTEST_CATEGORY_COOL:
-        ribbon = GetMonData(pkmn, MON_DATA_COOL_RIBBON);
-        break;
-    case CONTEST_CATEGORY_BEAUTY:
-        ribbon = GetMonData(pkmn, MON_DATA_BEAUTY_RIBBON);
-        break;
-    case CONTEST_CATEGORY_CUTE:
-        ribbon = GetMonData(pkmn, MON_DATA_CUTE_RIBBON);
-        break;
-    case CONTEST_CATEGORY_SMART:
-        ribbon = GetMonData(pkmn, MON_DATA_SMART_RIBBON);
-        break;
-    case CONTEST_CATEGORY_TOUGH:
-        ribbon = GetMonData(pkmn, MON_DATA_TOUGH_RIBBON);
-        break;
-    default:
+    // switch (gSpecialVar_ContestCategory)
+    // {
+    // case CONTEST_CATEGORY_COOL:
+    //     ribbon = GetMonData(pkmn, MON_DATA_COOL_RIBBON);
+    //     break;
+    // case CONTEST_CATEGORY_BEAUTY:
+    //     ribbon = GetMonData(pkmn, MON_DATA_BEAUTY_RIBBON);
+    //     break;
+    // case CONTEST_CATEGORY_CUTE:
+    //     ribbon = GetMonData(pkmn, MON_DATA_CUTE_RIBBON);
+    //     break;
+    // case CONTEST_CATEGORY_SMART:
+    //     ribbon = GetMonData(pkmn, MON_DATA_SMART_RIBBON);
+    //     break;
+    // case CONTEST_CATEGORY_TOUGH:
+    //     ribbon = GetMonData(pkmn, MON_DATA_TOUGH_RIBBON);
+    //     break;
+    // default:
         return CANT_ENTER_CONTEST;
-    }
+    // }
 
     // Couldn't get this to match any other way.
     // Returns 2, 1, or 0 respectively if ribbon's rank is above, equal, or below
@@ -4055,21 +4055,21 @@ static void UpdateBlendTaskContestantsData(void)
 
 static void UpdateBlendTaskContestantData(u8 contestant)
 {
-    u32 palOffset1;
-    u32 palOffset2;
+    // u32 palOffset1;
+    // u32 palOffset2;
 
-    InitUnusedBlendTaskData(contestant);
+    // InitUnusedBlendTaskData(contestant);
 
-    palOffset1 = contestant + 5;
-    DmaCopy16Defvars(3,
-                     gPlttBufferUnfaded + palOffset1 * 16 + 10,
-                     gPlttBufferFaded   + palOffset1 * 16 + 10,
-                     2);
-    palOffset2 = (contestant + 5) * 16 + 12 + contestant;
-    DmaCopy16Defvars(3,
-                     gPlttBufferUnfaded + palOffset2,
-                     gPlttBufferFaded + palOffset2,
-                     2);
+    // palOffset1 = contestant + 5;
+    // DmaCopy16Defvars(3,
+    //                  gPlttBufferUnfaded + palOffset1 * 16 + 10,
+    //                  gPlttBufferFaded   + palOffset1 * 16 + 10,
+    //                  2);
+    // palOffset2 = (contestant + 5) * 16 + 12 + contestant;
+    // DmaCopy16Defvars(3,
+    //                  gPlttBufferUnfaded + palOffset2,
+    //                  gPlttBufferFaded + palOffset2,
+    //                  2);
 }
 
 // See comments on CreateUnusedBlendTask

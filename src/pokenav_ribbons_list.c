@@ -247,29 +247,29 @@ static u32 GetMonRibbonListLoopTaskFunc(s32 state)
 
 static u32 BuildPartyMonRibbonList(s32 state)
 {
-    s32 i;
-    struct PokenavMonListItem item;
-    struct Pokenav_RibbonsMonList * list = GetSubstructPtr(POKENAV_SUBSTRUCT_RIBBONS_MON_LIST);
+    // s32 i;
+    // struct PokenavMonListItem item;
+    // struct Pokenav_RibbonsMonList * list = GetSubstructPtr(POKENAV_SUBSTRUCT_RIBBONS_MON_LIST);
 
-    list->monList->listCount = 0;
-    list->monList->currIndex = 0;
-    item.boxId = TOTAL_BOXES_COUNT;
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        struct Pokemon * pokemon = &gPlayerParty[i];
-        if (!GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES))
-            return LT_INC_AND_CONTINUE;
-        if (!GetMonData(pokemon, MON_DATA_SANITY_IS_EGG) && !GetMonData(pokemon, MON_DATA_SANITY_IS_BAD_EGG))
-        {
-            u32 ribbonCount = GetMonData(pokemon, MON_DATA_RIBBON_COUNT);
-            if (ribbonCount != 0)
-            {
-                item.monId = i;
-                item.data = ribbonCount;
-                InsertMonListItem(list, &item);
-            }
-        }
-    }
+    // list->monList->listCount = 0;
+    // list->monList->currIndex = 0;
+    // item.boxId = TOTAL_BOXES_COUNT;
+    // for (i = 0; i < PARTY_SIZE; i++)
+    // {
+    //     struct Pokemon * pokemon = &gPlayerParty[i];
+    //     if (!GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES))
+    //         return LT_INC_AND_CONTINUE;
+    //     if (!GetMonData(pokemon, MON_DATA_SANITY_IS_EGG) && !GetMonData(pokemon, MON_DATA_SANITY_IS_BAD_EGG))
+    //     {
+    //         u32 ribbonCount = GetMonData(pokemon, MON_DATA_RIBBON_COUNT);
+    //         if (ribbonCount != 0)
+    //         {
+    //             item.monId = i;
+    //             item.data = ribbonCount;
+    //             InsertMonListItem(list, &item);
+    //         }
+    //     }
+    // }
 
     return LT_INC_AND_CONTINUE;
 }
@@ -290,33 +290,33 @@ static u32 BuildBoxMonRibbonList(s32 state)
     s32 boxCount = 0;
     struct PokenavMonListItem item;
 
-    while (boxId < TOTAL_BOXES_COUNT)
-    {
-        while (monId < IN_BOX_COUNT)
-        {
-            if (CheckBoxMonSanityAt(boxId, monId))
-            {
-                u32 ribbonCount = GetBoxMonDataAt(boxId, monId, MON_DATA_RIBBON_COUNT);
-                if (ribbonCount != 0)
-                {
-                    item.boxId = boxId;
-                    item.monId = monId;
-                    item.data = ribbonCount;
-                    InsertMonListItem(list, &item);
-                }
-            }
-            boxCount++;
-            monId++;
-            if (boxCount > TOTAL_BOXES_COUNT)
-            {
-                list->boxId = boxId;
-                list->monId = monId;
-                return LT_CONTINUE;
-            }
-        }
-        monId = 0;
-        boxId++;
-    }
+    // while (boxId < TOTAL_BOXES_COUNT)
+    // {
+    //     while (monId < IN_BOX_COUNT)
+    //     {
+    //         if (CheckBoxMonSanityAt(boxId, monId))
+    //         {
+    //             u32 ribbonCount = GetBoxMonDataAt(boxId, monId, MON_DATA_RIBBON_COUNT);
+    //             if (ribbonCount != 0)
+    //             {
+    //                 item.boxId = boxId;
+    //                 item.monId = monId;
+    //                 item.data = ribbonCount;
+    //                 InsertMonListItem(list, &item);
+    //             }
+    //         }
+    //         boxCount++;
+    //         monId++;
+    //         if (boxCount > TOTAL_BOXES_COUNT)
+    //         {
+    //             list->boxId = boxId;
+    //             list->monId = monId;
+    //             return LT_CONTINUE;
+    //         }
+    //     }
+    //     monId = 0;
+    //     boxId++;
+    // }
 
     list->changeBgs = 1;
     return LT_FINISH;
@@ -345,29 +345,29 @@ static void InsertMonListItem(struct Pokenav_RibbonsMonList *list, struct Pokena
 // Unused
 static bool32 PlayerHasRibbonsMon(void)
 {
-    s32 i, j;
+    // s32 i, j;
 
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        struct Pokemon *mon = &gPlayerParty[i];
-        if (!GetMonData(mon, MON_DATA_SANITY_HAS_SPECIES))
-            continue;
-        if (GetMonData(mon, MON_DATA_SANITY_IS_EGG))
-            continue;
-        if (GetMonData(mon, MON_DATA_RIBBONS))
-            return TRUE;
-    }
+    // for (i = 0; i < PARTY_SIZE; i++)
+    // {
+    //     struct Pokemon *mon = &gPlayerParty[i];
+    //     if (!GetMonData(mon, MON_DATA_SANITY_HAS_SPECIES))
+    //         continue;
+    //     if (GetMonData(mon, MON_DATA_SANITY_IS_EGG))
+    //         continue;
+    //     if (GetMonData(mon, MON_DATA_RIBBONS))
+    //         return TRUE;
+    // }
 
-    for (i = 0; i < TOTAL_BOXES_COUNT; i++)
-    {
-        for (j = 0; j < IN_BOX_COUNT; j++)
-        {
-            if (!CheckBoxMonSanityAt(i, j))
-                continue;
-            if (GetBoxMonDataAt(i, j, MON_DATA_RIBBONS))
-                return TRUE;
-        }
-    }
+    // for (i = 0; i < TOTAL_BOXES_COUNT; i++)
+    // {
+    //     for (j = 0; j < IN_BOX_COUNT; j++)
+    //     {
+    //         if (!CheckBoxMonSanityAt(i, j))
+    //             continue;
+    //         if (GetBoxMonDataAt(i, j, MON_DATA_RIBBONS))
+    //             return TRUE;
+    //     }
+    // }
 
     return FALSE;
 }
