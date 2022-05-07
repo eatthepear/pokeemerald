@@ -3954,7 +3954,7 @@ static void Cmd_getexp(void)
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
                 calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
             #else
-                calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+                calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 3;
             #endif
 
             #if B_SPLIT_EXP < GEN_6
@@ -4040,8 +4040,8 @@ static void Cmd_getexp(void)
                         gBattleMoveDamage += gExpShareExp * expMultiplier;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
-                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && B_TRAINER_EXP_MULTIPLIER <= GEN_7)
-                        gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                    // if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && B_TRAINER_EXP_MULTIPLIER <= GEN_7)
+                    //     gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
                     {
                         // Note: There is an edge case where if a pokemon receives a large amount of exp, it wouldn't be properly calculated
