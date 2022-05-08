@@ -12,44 +12,46 @@
 
 struct BoxPokemon
 {
-    /*0x00*/ u32 personality;
-    /*0x04*/ u32 otId;
-    /*0x08*/ u8 nickname[POKEMON_NAME_LENGTH];
-    /*0x12*/ u8 language;
-    /*0x13*/ u8 isBadEgg:1;
-             u8 hasSpecies:1;
-             u8 isEgg:1;
-             u8 unused:5;
-    /*0x14*/ u8 otName[PLAYER_NAME_LENGTH];
-    /*0x1B*/ u8 markings;
+    u32 personality;
+    u32 otId;
+    u8 nickname[POKEMON_NAME_LENGTH];
+    u8 language:3;
+    u8 pokerus:5;
 
-    /*0x50*/ u32 status;
-    /*0x56*/ u16 hp;
-    /*0x00*/ u16 species;
-    /*0x02*/ u16 heldItem;
-    /*0x04*/ u32 experience;
-    /*0x08*/ u8 ppBonuses;
-    /*0x09*/ u8 friendship;
-    /*0x0A*/ u16 pokeball:7;
+    u8 isBadEgg:1;
+    u8 hasSpecies:1;
+    u8 isEgg:1;
+    u8 markings:4;
 
-    /*0x00*/ u16 moves[MAX_MON_MOVES];
-    /*0x08*/ u8 pp[MAX_MON_MOVES];
-    /*0x00*/ u8 hpEV;
-    /*0x01*/ u8 attackEV;
-    /*0x02*/ u8 defenseEV;
-    /*0x03*/ u8 speedEV;
-    /*0x04*/ u8 spAttackEV;
-    /*0x05*/ u8 spDefenseEV;
-    /* 0x00 */ u8 pokerus;
-    /* 0x01 */ u8 metLocation;
-    /* 0x02 */ u16 metLevel:7;
-    /* 0x04 */ u32 hpIV:5;
-    /* 0x04 */ u32 attackIV:5;
-    /* 0x05 */ u32 defenseIV:5;
-    /* 0x05 */ u32 speedIV:5;
-    /* 0x05 */ u32 spAttackIV:5;
-    /* 0x06 */ u32 spDefenseIV:5;
-    /* 0x0B */ u32 abilityNum:2;
+    u8 otName[PLAYER_NAME_LENGTH];
+    u8 metLocation;
+
+    u16 species:11;
+    u16 heldItem:10;
+    u16 metLevel:7;
+
+    u32 experience:21;
+    u32 status;
+    u16 hp;
+    u8 ppBonuses;
+    u8 friendship;
+    u16 pokeball:7;
+
+    u16 moves[MAX_MON_MOVES];
+    u8 pp[MAX_MON_MOVES];
+    u8 hpEV;
+    u8 attackEV;
+    u8 defenseEV;
+    u8 speedEV;
+    u8 spAttackEV;
+    u8 spDefenseEV;
+    u32 hpIV:5;
+    u32 attackIV:5;
+    u32 defenseIV:5;
+    u32 speedIV:5;
+    u32 spAttackIV:5;
+    u32 spDefenseIV:5;
+    u32 abilityNum:2;
 }; /* size = 80 */
 
 struct Pokemon
