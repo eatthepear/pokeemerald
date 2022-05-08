@@ -1287,41 +1287,42 @@ void BufferEReaderTrainerName(void)
 
 u16 GetSlotMachineId(void)
 {
-    static const u8 sSlotMachineRandomSeeds[SLOT_MACHINE_COUNT] = {12, 2, 4, 5, 1, 8, 7, 11, 3, 10, 9, 6};
-    static const u8 sSlotMachineIds[SLOT_MACHINE_COUNT] = {
-        SLOT_MACHINE_UNLUCKIEST,
-        SLOT_MACHINE_UNLUCKIER,
-        SLOT_MACHINE_UNLUCKIER,
-        SLOT_MACHINE_UNLUCKY,
-        SLOT_MACHINE_UNLUCKY,
-        SLOT_MACHINE_UNLUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKIER,
-        SLOT_MACHINE_LUCKIER,
-        SLOT_MACHINE_LUCKIEST
-    };
-    static const u8 sSlotMachineServiceDayIds[SLOT_MACHINE_COUNT] = {
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKY,
-        SLOT_MACHINE_LUCKIER,
-        SLOT_MACHINE_LUCKIER,
-        SLOT_MACHINE_LUCKIER,
-        SLOT_MACHINE_LUCKIER,
-        SLOT_MACHINE_LUCKIEST,
-        SLOT_MACHINE_LUCKIEST
-    };
+    // static const u8 sSlotMachineRandomSeeds[SLOT_MACHINE_COUNT] = {12, 2, 4, 5, 1, 8, 7, 11, 3, 10, 9, 6};
+    // static const u8 sSlotMachineIds[SLOT_MACHINE_COUNT] = {
+    //     SLOT_MACHINE_UNLUCKIEST,
+    //     SLOT_MACHINE_UNLUCKIER,
+    //     SLOT_MACHINE_UNLUCKIER,
+    //     SLOT_MACHINE_UNLUCKY,
+    //     SLOT_MACHINE_UNLUCKY,
+    //     SLOT_MACHINE_UNLUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKIER,
+    //     SLOT_MACHINE_LUCKIER,
+    //     SLOT_MACHINE_LUCKIEST
+    // };
+    // static const u8 sSlotMachineServiceDayIds[SLOT_MACHINE_COUNT] = {
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKY,
+    //     SLOT_MACHINE_LUCKIER,
+    //     SLOT_MACHINE_LUCKIER,
+    //     SLOT_MACHINE_LUCKIER,
+    //     SLOT_MACHINE_LUCKIER,
+    //     SLOT_MACHINE_LUCKIEST,
+    //     SLOT_MACHINE_LUCKIEST
+    // };
 
-    u32 rnd = gSaveBlock1Ptr->dewfordTrends[0].trendiness + gSaveBlock1Ptr->dewfordTrends[0].rand + sSlotMachineRandomSeeds[gSpecialVar_0x8004];
-    if (IsPokeNewsActive(POKENEWS_GAME_CORNER))
-        return sSlotMachineServiceDayIds[rnd % SLOT_MACHINE_COUNT];
+    // u32 rnd = gSaveBlock1Ptr->dewfordTrends[0].trendiness + gSaveBlock1Ptr->dewfordTrends[0].rand + sSlotMachineRandomSeeds[gSpecialVar_0x8004];
+    // if (IsPokeNewsActive(POKENEWS_GAME_CORNER))
+    //     return sSlotMachineServiceDayIds[rnd % SLOT_MACHINE_COUNT];
 
-    return sSlotMachineIds[rnd % SLOT_MACHINE_COUNT];
+    // return sSlotMachineIds[rnd % SLOT_MACHINE_COUNT];
+    return 0;
 }
 
 bool8 FoundAbandonedShipRoom1Key(void)
@@ -3826,8 +3827,8 @@ void GetBattlePyramidHint(void)
 // Used to avoid a potential softlock if the player respawns on Dewford with no way off
 void ResetHealLocationFromDewford(void)
 {
-    if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(DEWFORD_TOWN) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(DEWFORD_TOWN))
-        SetLastHealLocationWarp(HEAL_LOCATION_PETALBURG_CITY);
+    // if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(DEWFORD_TOWN) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(DEWFORD_TOWN))
+    //     SetLastHealLocationWarp(HEAL_LOCATION_PETALBURG_CITY);
 }
 
 bool8 InPokemonCenter(void)
@@ -4116,38 +4117,38 @@ static void SetInitialFansOfPlayer(void)
 
 void BufferFanClubTrainerName(void)
 {
-    u8 whichLinkTrainer = 0;
-    u8 whichNPCTrainer = 0;
-    switch (gSpecialVar_0x8004)
-    {
-    case FANCLUB_MEMBER1:
-        break;
-    case FANCLUB_MEMBER2:
-        break;
-    case FANCLUB_MEMBER3:
-        whichLinkTrainer = 0;
-        whichNPCTrainer = 3;
-        break;
-    case FANCLUB_MEMBER4:
-        whichLinkTrainer = 0;
-        whichNPCTrainer = 1;
-        break;
-    case FANCLUB_MEMBER5:
-        whichLinkTrainer = 1;
-        whichNPCTrainer = 0;
-        break;
-    case FANCLUB_MEMBER6:
-        whichLinkTrainer = 0;
-        whichNPCTrainer = 4;
-        break;
-    case FANCLUB_MEMBER7:
-        whichLinkTrainer = 1;
-        whichNPCTrainer = 5;
-        break;
-    case FANCLUB_MEMBER8:
-        break;
-    }
-    BufferFanClubTrainerName_(&gSaveBlock1Ptr->linkBattleRecords, whichLinkTrainer, whichNPCTrainer);
+    // u8 whichLinkTrainer = 0;
+    // u8 whichNPCTrainer = 0;
+    // switch (gSpecialVar_0x8004)
+    // {
+    // case FANCLUB_MEMBER1:
+    //     break;
+    // case FANCLUB_MEMBER2:
+    //     break;
+    // case FANCLUB_MEMBER3:
+    //     whichLinkTrainer = 0;
+    //     whichNPCTrainer = 3;
+    //     break;
+    // case FANCLUB_MEMBER4:
+    //     whichLinkTrainer = 0;
+    //     whichNPCTrainer = 1;
+    //     break;
+    // case FANCLUB_MEMBER5:
+    //     whichLinkTrainer = 1;
+    //     whichNPCTrainer = 0;
+    //     break;
+    // case FANCLUB_MEMBER6:
+    //     whichLinkTrainer = 0;
+    //     whichNPCTrainer = 4;
+    //     break;
+    // case FANCLUB_MEMBER7:
+    //     whichLinkTrainer = 1;
+    //     whichNPCTrainer = 5;
+    //     break;
+    // case FANCLUB_MEMBER8:
+    //     break;
+    // }
+    // BufferFanClubTrainerName_(&gSaveBlock1Ptr->linkBattleRecords, whichLinkTrainer, whichNPCTrainer);
 }
 
 static void BufferFanClubTrainerName_(struct LinkBattleRecords *linkRecords, u8 whichLinkTrainer, u8 whichNPCTrainer)

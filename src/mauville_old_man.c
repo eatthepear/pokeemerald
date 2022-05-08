@@ -73,23 +73,23 @@ static const u8 * const sGiddyQuestions[GIDDY_MAX_QUESTIONS] = {
 
 static void SetupBard(void)
 {
-    u16 i;
-    struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    // u16 i;
+    // struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
 
-    bard->id = MAUVILLE_MAN_BARD;
-    bard->hasChangedSong = FALSE;
-    bard->language = gGameLanguage;
-    for (i = 0; i < BARD_SONG_LENGTH; i++)
-        bard->songLyrics[i] = sDefaultBardSongLyrics[i];
+    // bard->id = MAUVILLE_MAN_BARD;
+    // bard->hasChangedSong = FALSE;
+    // bard->language = gGameLanguage;
+    // for (i = 0; i < BARD_SONG_LENGTH; i++)
+    //     bard->songLyrics[i] = sDefaultBardSongLyrics[i];
 }
 
 static void SetupHipster(void)
 {
-    struct MauvilleManHipster *hipster = &gSaveBlock1Ptr->oldMan.hipster;
+    // struct MauvilleManHipster *hipster = &gSaveBlock1Ptr->oldMan.hipster;
 
-    hipster->id = MAUVILLE_MAN_HIPSTER;
-    hipster->alreadySpoken = FALSE;
-    hipster->language = gGameLanguage;
+    // hipster->id = MAUVILLE_MAN_HIPSTER;
+    // hipster->alreadySpoken = FALSE;
+    // hipster->language = gGameLanguage;
 }
 
 static void SetupStoryteller(void)
@@ -99,11 +99,11 @@ static void SetupStoryteller(void)
 
 static void SetupGiddy(void)
 {
-    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    // struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
-    giddy->id = MAUVILLE_MAN_GIDDY;
-    giddy->taleCounter = 0;
-    giddy->language = gGameLanguage;
+    // giddy->id = MAUVILLE_MAN_GIDDY;
+    // giddy->taleCounter = 0;
+    // giddy->language = gGameLanguage;
 }
 
 static void SetupTrader(void)
@@ -140,7 +140,8 @@ void SetMauvilleOldMan(void)
 
 u8 GetCurrentMauvilleOldMan(void)
 {
-    return gSaveBlock1Ptr->oldMan.common.id;
+    // return gSaveBlock1Ptr->oldMan.common.id;
+    return 0;
 }
 
 void Script_GetCurrentMauvilleMan(void)
@@ -150,73 +151,73 @@ void Script_GetCurrentMauvilleMan(void)
 
 void HasBardSongBeenChanged(void)
 {
-    gSpecialVar_Result = (&gSaveBlock1Ptr->oldMan.bard)->hasChangedSong;
+    // gSpecialVar_Result = (&gSaveBlock1Ptr->oldMan.bard)->hasChangedSong;
 }
 
 void SaveBardSongLyrics(void)
 {
-    u16 i;
-    struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    // u16 i;
+    // struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
 
-    StringCopy(bard->playerName, gSaveBlock2Ptr->playerName);
+    // StringCopy(bard->playerName, gSaveBlock2Ptr->playerName);
 
-    for (i = 0; i < TRAINER_ID_LENGTH; i++)
-        bard->playerTrainerId[i] = gSaveBlock2Ptr->playerTrainerId[i];
+    // for (i = 0; i < TRAINER_ID_LENGTH; i++)
+    //     bard->playerTrainerId[i] = gSaveBlock2Ptr->playerTrainerId[i];
 
-    for (i = 0; i < BARD_SONG_LENGTH; i++)
-        bard->songLyrics[i] = bard->temporaryLyrics[i];
+    // for (i = 0; i < BARD_SONG_LENGTH; i++)
+    //     bard->songLyrics[i] = bard->temporaryLyrics[i];
 
-    bard->hasChangedSong = TRUE;
+    // bard->hasChangedSong = TRUE;
 }
 
 // Copies lyrics into gStringVar4
 static void PrepareSongText(void)
 {
-    struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
-    u16 * lyrics = gSpecialVar_0x8004 == 0 ? bard->songLyrics : bard->temporaryLyrics;
-    u8 * wordEnd = gStringVar4;
-    u8 * str = wordEnd;
-    u16 lineNum;
+    // struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    // u16 * lyrics = gSpecialVar_0x8004 == 0 ? bard->songLyrics : bard->temporaryLyrics;
+    // u8 * wordEnd = gStringVar4;
+    // u8 * str = wordEnd;
+    // u16 lineNum;
 
-    // Put three words on each line
-    for (lineNum = 0; lineNum < 2; lineNum++)
-    {
-        wordEnd = CopyEasyChatWord(wordEnd, *(lyrics++));
-        while (wordEnd != str)
-        {
-            if (*str == CHAR_SPACE)
-                *str = CHAR_BARD_WORD_DELIMIT;
-            str++;
-        }
+    // // Put three words on each line
+    // for (lineNum = 0; lineNum < 2; lineNum++)
+    // {
+    //     wordEnd = CopyEasyChatWord(wordEnd, *(lyrics++));
+    //     while (wordEnd != str)
+    //     {
+    //         if (*str == CHAR_SPACE)
+    //             *str = CHAR_BARD_WORD_DELIMIT;
+    //         str++;
+    //     }
 
-        str++;
-        *(wordEnd++) = CHAR_SPACE;
+    //     str++;
+    //     *(wordEnd++) = CHAR_SPACE;
 
-        wordEnd = CopyEasyChatWord(wordEnd, *(lyrics++));
-        while (wordEnd != str)
-        {
-            if (*str == CHAR_SPACE)
-                *str = CHAR_BARD_WORD_DELIMIT;
-            str++;
-        }
+    //     wordEnd = CopyEasyChatWord(wordEnd, *(lyrics++));
+    //     while (wordEnd != str)
+    //     {
+    //         if (*str == CHAR_SPACE)
+    //             *str = CHAR_BARD_WORD_DELIMIT;
+    //         str++;
+    //     }
 
-        str++;
-        *(wordEnd++) = CHAR_NEWLINE;
+    //     str++;
+    //     *(wordEnd++) = CHAR_NEWLINE;
 
-        wordEnd = CopyEasyChatWord(wordEnd, *(lyrics++));
-        while (wordEnd != str)
-        {
-            if (*str == CHAR_SPACE)
-                *str = CHAR_BARD_WORD_DELIMIT;
-            str++;
-        }
+    //     wordEnd = CopyEasyChatWord(wordEnd, *(lyrics++));
+    //     while (wordEnd != str)
+    //     {
+    //         if (*str == CHAR_SPACE)
+    //             *str = CHAR_BARD_WORD_DELIMIT;
+    //         str++;
+    //     }
 
-        if (lineNum == 0)
-        {
-            *(wordEnd++) = EXT_CTRL_CODE_BEGIN;
-            *(wordEnd++) = EXT_CTRL_CODE_FILL_WINDOW;
-        }
-    }
+    //     if (lineNum == 0)
+    //     {
+    //         *(wordEnd++) = EXT_CTRL_CODE_BEGIN;
+    //         *(wordEnd++) = EXT_CTRL_CODE_FILL_WINDOW;
+    //     }
+    // }
 }
 
 void PlayBardSong(void)
@@ -227,12 +228,12 @@ void PlayBardSong(void)
 
 void GetHipsterSpokenFlag(void)
 {
-    gSpecialVar_Result = (&gSaveBlock1Ptr->oldMan.hipster)->alreadySpoken;
+    // gSpecialVar_Result = (&gSaveBlock1Ptr->oldMan.hipster)->alreadySpoken;
 }
 
 void SetHipsterSpokenFlag(void)
 {
-    (&gSaveBlock1Ptr->oldMan.hipster)->alreadySpoken = TRUE;
+    // (&gSaveBlock1Ptr->oldMan.hipster)->alreadySpoken = TRUE;
 }
 
 void HipsterTryTeachWord(void)
@@ -252,124 +253,124 @@ void HipsterTryTeachWord(void)
 
 void GiddyShouldTellAnotherTale(void)
 {
-    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    // struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
-    if (giddy->taleCounter == GIDDY_MAX_TALES)
-    {
-        gSpecialVar_Result = FALSE;
-        giddy->taleCounter = 0;
-    }
-    else
-    {
-        gSpecialVar_Result = TRUE;
-    }
+    // if (giddy->taleCounter == GIDDY_MAX_TALES)
+    // {
+    //     gSpecialVar_Result = FALSE;
+    //     giddy->taleCounter = 0;
+    // }
+    // else
+    // {
+    //     gSpecialVar_Result = TRUE;
+    // }
 }
 
 void GenerateGiddyLine(void)
 {
-    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    // struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
-    if (giddy->taleCounter == 0)
-        InitGiddyTaleList();
+    // if (giddy->taleCounter == 0)
+    //     InitGiddyTaleList();
 
-    // A line from Giddy is either a line following this format:
-    // "{random word} is so {adjective}! Don't you agree?",
-    // or one of the texts in sGiddyQuestions.
-    if (giddy->randomWords[giddy->taleCounter] != EC_EMPTY_WORD)
-    {
-        u8 *stringPtr;
-        u32 adjective = Random();
-        adjective %= ARRAY_COUNT(sGiddyAdjectives);
+    // // A line from Giddy is either a line following this format:
+    // // "{random word} is so {adjective}! Don't you agree?",
+    // // or one of the texts in sGiddyQuestions.
+    // if (giddy->randomWords[giddy->taleCounter] != EC_EMPTY_WORD)
+    // {
+    //     u8 *stringPtr;
+    //     u32 adjective = Random();
+    //     adjective %= ARRAY_COUNT(sGiddyAdjectives);
 
-        stringPtr = CopyEasyChatWord(gStringVar4, giddy->randomWords[giddy->taleCounter]);
-        stringPtr = StringCopy(stringPtr, GiddyText_Is);
-        stringPtr = StringCopy(stringPtr, sGiddyAdjectives[adjective]);
-        StringCopy(stringPtr, GiddyText_DontYouAgree);
-    }
-    else
-    {
-        StringCopy(gStringVar4, sGiddyQuestions[giddy->questionList[giddy->questionNum++]]);
-    }
+    //     stringPtr = CopyEasyChatWord(gStringVar4, giddy->randomWords[giddy->taleCounter]);
+    //     stringPtr = StringCopy(stringPtr, GiddyText_Is);
+    //     stringPtr = StringCopy(stringPtr, sGiddyAdjectives[adjective]);
+    //     StringCopy(stringPtr, GiddyText_DontYouAgree);
+    // }
+    // else
+    // {
+    //     StringCopy(gStringVar4, sGiddyQuestions[giddy->questionList[giddy->questionNum++]]);
+    // }
 
-    // 10% chance for Giddy to stop telling tales.
-    if (!(Random() % 10))
-        giddy->taleCounter = GIDDY_MAX_TALES;
-    else
-        giddy->taleCounter++;
+    // // 10% chance for Giddy to stop telling tales.
+    // if (!(Random() % 10))
+    //     giddy->taleCounter = GIDDY_MAX_TALES;
+    // else
+    //     giddy->taleCounter++;
 
-    gSpecialVar_Result = TRUE;
+    // gSpecialVar_Result = TRUE;
 }
 
 static void InitGiddyTaleList(void)
 {
-    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
-    u16 wordGroupsAndCount[][2] = {
-        {EC_GROUP_POKEMON,   0},
-        {EC_GROUP_LIFESTYLE, 0},
-        {EC_GROUP_HOBBIES,   0},
-        {EC_GROUP_MOVE_1,    0},
-        {EC_GROUP_MOVE_2,    0},
-        {EC_GROUP_POKEMON_NATIONAL, 0}
-    };
-    u16 i;
-    u16 totalWords;
-    u16 temp;
-    u16 var; // re-used
+    // struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    // u16 wordGroupsAndCount[][2] = {
+    //     {EC_GROUP_POKEMON,   0},
+    //     {EC_GROUP_LIFESTYLE, 0},
+    //     {EC_GROUP_HOBBIES,   0},
+    //     {EC_GROUP_MOVE_1,    0},
+    //     {EC_GROUP_MOVE_2,    0},
+    //     {EC_GROUP_POKEMON_NATIONAL, 0}
+    // };
+    // u16 i;
+    // u16 totalWords;
+    // u16 temp;
+    // u16 var; // re-used
 
-    // Shuffle question list
-    for (i = 0; i < GIDDY_MAX_QUESTIONS; i++)
-        giddy->questionList[i] = i;
-    for (i = 0; i < GIDDY_MAX_QUESTIONS; i++)
-    {
-        var = Random() % (i + 1);
-        SWAP(giddy->questionList[i], giddy->questionList[var], temp);
-    }
+    // // Shuffle question list
+    // for (i = 0; i < GIDDY_MAX_QUESTIONS; i++)
+    //     giddy->questionList[i] = i;
+    // for (i = 0; i < GIDDY_MAX_QUESTIONS; i++)
+    // {
+    //     var = Random() % (i + 1);
+    //     SWAP(giddy->questionList[i], giddy->questionList[var], temp);
+    // }
 
-    // Count total number of words in above word groups
-    totalWords = 0;
-    for (i = 0; i < ARRAY_COUNT(wordGroupsAndCount); i++)
-    {
-        wordGroupsAndCount[i][1] = EasyChat_GetNumWordsInGroup(wordGroupsAndCount[i][0]);
-        totalWords += wordGroupsAndCount[i][1];
-    }
+    // // Count total number of words in above word groups
+    // totalWords = 0;
+    // for (i = 0; i < ARRAY_COUNT(wordGroupsAndCount); i++)
+    // {
+    //     wordGroupsAndCount[i][1] = EasyChat_GetNumWordsInGroup(wordGroupsAndCount[i][0]);
+    //     totalWords += wordGroupsAndCount[i][1];
+    // }
 
-    giddy->questionNum = 0;
-    temp = 0;
-    for (i = 0; i < GIDDY_MAX_TALES; i++)
-    {
-        var = Random() % 10;
-        if (var < 3 && temp < GIDDY_MAX_QUESTIONS)
-        {
-            // 30% chance for word to be empty (in which case Giddy
-            // will say one of his non-random questions), unless
-            // the limit for questions has been reached already.
-            giddy->randomWords[i] = EC_EMPTY_WORD;
-            temp++;
-        }
-        else
-        {
-            // Pick a random word id, then advance through the word
-            // groups until the group where that id landed.
-            s16 randWord = Random() % totalWords;
-            for (var = 0; i < ARRAY_COUNT(wordGroupsAndCount); var++)
-                if ((randWord -= wordGroupsAndCount[var][1]) <= 0)
-                    break;
-            if (var == ARRAY_COUNT(wordGroupsAndCount))
-                var = 0;
+    // giddy->questionNum = 0;
+    // temp = 0;
+    // for (i = 0; i < GIDDY_MAX_TALES; i++)
+    // {
+    //     var = Random() % 10;
+    //     if (var < 3 && temp < GIDDY_MAX_QUESTIONS)
+    //     {
+    //         // 30% chance for word to be empty (in which case Giddy
+    //         // will say one of his non-random questions), unless
+    //         // the limit for questions has been reached already.
+    //         giddy->randomWords[i] = EC_EMPTY_WORD;
+    //         temp++;
+    //     }
+    //     else
+    //     {
+    //         // Pick a random word id, then advance through the word
+    //         // groups until the group where that id landed.
+    //         s16 randWord = Random() % totalWords;
+    //         for (var = 0; i < ARRAY_COUNT(wordGroupsAndCount); var++)
+    //             if ((randWord -= wordGroupsAndCount[var][1]) <= 0)
+    //                 break;
+    //         if (var == ARRAY_COUNT(wordGroupsAndCount))
+    //             var = 0;
 
-            // Save the randomly selected word
-            giddy->randomWords[i] = GetRandomEasyChatWordFromUnlockedGroup(wordGroupsAndCount[var][0]);
-        }
-    }
+    //         // Save the randomly selected word
+    //         giddy->randomWords[i] = GetRandomEasyChatWordFromUnlockedGroup(wordGroupsAndCount[var][0]);
+    //     }
+    // }
 }
 static void ResetBardFlag(void)
 {
-    (&gSaveBlock1Ptr->oldMan.bard)->hasChangedSong = FALSE;
+    // (&gSaveBlock1Ptr->oldMan.bard)->hasChangedSong = FALSE;
 }
 
 static void ResetHipsterFlag(void)
 {
-    (&gSaveBlock1Ptr->oldMan.hipster)->alreadySpoken = FALSE;
+    // (&gSaveBlock1Ptr->oldMan.hipster)->alreadySpoken = FALSE;
 }
 
 static void ResetTraderFlag(void)
@@ -453,243 +454,243 @@ static void DrawSongTextWindow(const u8 * str)
 
 static void BardSing(struct Task *task, struct BardSong *song)
 {
-    switch (task->tState)
-    {
-    case BARD_STATE_INIT:
-    {
-        struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
-        u16 *lyrics;
-        s32 i;
+    // switch (task->tState)
+    // {
+    // case BARD_STATE_INIT:
+    // {
+    //     struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    //     u16 *lyrics;
+    //     s32 i;
 
-        // Copy lyrics
-        if (gSpecialVar_0x8004 == 0)
-            lyrics = bard->songLyrics;
-        else
-            lyrics = bard->temporaryLyrics;
-        for (i = 0; i < BARD_SONG_LENGTH; i++)
-            song->lyrics[i] = lyrics[i];
-        song->currWord = 0;
-    }
-        break;
-    case BARD_STATE_WAIT_BGM:
-        break;
-    case BARD_STATE_GET_WORD:
-    {
-        u16 word = song->lyrics[song->currWord];
-        song->sound = GetWordSounds(word);
-        GetWordPhonemes(song, MACRO1(word));
-        song->currWord++;
-        if (song->sound->var00 != 0xFF)
-            song->state = 0;
-        else
-        {
-            song->state = 3;
-            song->phonemeTimer = 2;
-        }
-        break;
-    }
-    case BARD_STATE_HANDLE_WORD:
-    case BARD_STATE_WAIT_WORD:
-    {
-        const struct BardSound *sound = &song->sound[song->currPhoneme];
+    //     // Copy lyrics
+    //     if (gSpecialVar_0x8004 == 0)
+    //         lyrics = bard->songLyrics;
+    //     else
+    //         lyrics = bard->temporaryLyrics;
+    //     for (i = 0; i < BARD_SONG_LENGTH; i++)
+    //         song->lyrics[i] = lyrics[i];
+    //     song->currWord = 0;
+    // }
+    //     break;
+    // case BARD_STATE_WAIT_BGM:
+    //     break;
+    // case BARD_STATE_GET_WORD:
+    // {
+    //     u16 word = song->lyrics[song->currWord];
+    //     song->sound = GetWordSounds(word);
+    //     GetWordPhonemes(song, MACRO1(word));
+    //     song->currWord++;
+    //     if (song->sound->var00 != 0xFF)
+    //         song->state = 0;
+    //     else
+    //     {
+    //         song->state = 3;
+    //         song->phonemeTimer = 2;
+    //     }
+    //     break;
+    // }
+    // case BARD_STATE_HANDLE_WORD:
+    // case BARD_STATE_WAIT_WORD:
+    // {
+    //     const struct BardSound *sound = &song->sound[song->currPhoneme];
 
-        switch (song->state)
-        {
-        case 0:
-            song->phonemeTimer = song->phonemes[song->currPhoneme].length;
-            if (sound->var00 <= 50)
-            {
-                u8 num = sound->var00 / 3;
-                m4aSongNumStart(PH_TRAP_HELD + 3 * num);
-            }
-            song->state = 2;
-            song->phonemeTimer--;
-            break;
-        case 2:
-            song->state = 1;
-            if (sound->var00 <= 50)
-            {
-                song->volume = 0x100 + sound->volume * 16;
-                m4aMPlayVolumeControl(&gMPlayInfo_SE2, TRACKS_ALL, song->volume);
-                song->pitch = 0x200 + song->phonemes[song->currPhoneme].pitch;
-                m4aMPlayPitchControl(&gMPlayInfo_SE2, TRACKS_ALL, song->pitch);
-            }
-            break;
-        case 1:
-            if (song->voiceInflection > 10)
-                song->volume -= 2;
-            if (song->voiceInflection & 1)
-                song->pitch += 64;
-            else
-                song->pitch -= 64;
-            m4aMPlayVolumeControl(&gMPlayInfo_SE2, TRACKS_ALL, song->volume);
-            m4aMPlayPitchControl(&gMPlayInfo_SE2, TRACKS_ALL, song->pitch);
-            song->voiceInflection++;
-            song->phonemeTimer--;
-            if (song->phonemeTimer == 0)
-            {
-                song->currPhoneme++;
-                if (song->currPhoneme != 6 && song->sound[song->currPhoneme].var00 != 0xFF)
-                    song->state = 0;
-                else
-                {
-                    song->state = 3;
-                    song->phonemeTimer = 2;
-                }
-            }
-            break;
-        case 3:
-            song->phonemeTimer--;
-            if (song->phonemeTimer == 0)
-            {
-                m4aMPlayStop(&gMPlayInfo_SE2);
-                song->state = 4;
-            }
-            break;
-        }
-    }
-        break;
-    case BARD_STATE_PAUSE:
-        break;
-    }
+    //     switch (song->state)
+    //     {
+    //     case 0:
+    //         song->phonemeTimer = song->phonemes[song->currPhoneme].length;
+    //         if (sound->var00 <= 50)
+    //         {
+    //             u8 num = sound->var00 / 3;
+    //             m4aSongNumStart(PH_TRAP_HELD + 3 * num);
+    //         }
+    //         song->state = 2;
+    //         song->phonemeTimer--;
+    //         break;
+    //     case 2:
+    //         song->state = 1;
+    //         if (sound->var00 <= 50)
+    //         {
+    //             song->volume = 0x100 + sound->volume * 16;
+    //             m4aMPlayVolumeControl(&gMPlayInfo_SE2, TRACKS_ALL, song->volume);
+    //             song->pitch = 0x200 + song->phonemes[song->currPhoneme].pitch;
+    //             m4aMPlayPitchControl(&gMPlayInfo_SE2, TRACKS_ALL, song->pitch);
+    //         }
+    //         break;
+    //     case 1:
+    //         if (song->voiceInflection > 10)
+    //             song->volume -= 2;
+    //         if (song->voiceInflection & 1)
+    //             song->pitch += 64;
+    //         else
+    //             song->pitch -= 64;
+    //         m4aMPlayVolumeControl(&gMPlayInfo_SE2, TRACKS_ALL, song->volume);
+    //         m4aMPlayPitchControl(&gMPlayInfo_SE2, TRACKS_ALL, song->pitch);
+    //         song->voiceInflection++;
+    //         song->phonemeTimer--;
+    //         if (song->phonemeTimer == 0)
+    //         {
+    //             song->currPhoneme++;
+    //             if (song->currPhoneme != 6 && song->sound[song->currPhoneme].var00 != 0xFF)
+    //                 song->state = 0;
+    //             else
+    //             {
+    //                 song->state = 3;
+    //                 song->phonemeTimer = 2;
+    //             }
+    //         }
+    //         break;
+    //     case 3:
+    //         song->phonemeTimer--;
+    //         if (song->phonemeTimer == 0)
+    //         {
+    //             m4aMPlayStop(&gMPlayInfo_SE2);
+    //             song->state = 4;
+    //         }
+    //         break;
+    //     }
+    // }
+    //     break;
+    // case BARD_STATE_PAUSE:
+    //     break;
+    // }
 }
 
 static void Task_BardSong(u8 taskId)
 {
-    struct Task *task = &gTasks[taskId];
+    // struct Task *task = &gTasks[taskId];
 
-    BardSing(task, &gBardSong);
+    // BardSing(task, &gBardSong);
 
-    switch (task->tState)
-    {
-    case BARD_STATE_INIT:
-        PrepareSongText();
-        DrawSongTextWindow(gStringVar4);
-        task->tWordState = 0;
-        task->tDelay = 0;
-        task->tCharIndex = 0;
-        task->tCurrWord = 0;
-        FadeOutBGMTemporarily(4);
-        task->tState = BARD_STATE_WAIT_BGM;
-        break;
-    case BARD_STATE_WAIT_BGM:
-        if (IsBGMPausedOrStopped())
-            task->tState = BARD_STATE_GET_WORD;
-        break;
-    case BARD_STATE_GET_WORD:
-    {
-        struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
-        u8 *str = &gStringVar4[task->tCharIndex];
-        u16 wordLen = 0;
+    // switch (task->tState)
+    // {
+    // case BARD_STATE_INIT:
+    //     PrepareSongText();
+    //     DrawSongTextWindow(gStringVar4);
+    //     task->tWordState = 0;
+    //     task->tDelay = 0;
+    //     task->tCharIndex = 0;
+    //     task->tCurrWord = 0;
+    //     FadeOutBGMTemporarily(4);
+    //     task->tState = BARD_STATE_WAIT_BGM;
+    //     break;
+    // case BARD_STATE_WAIT_BGM:
+    //     if (IsBGMPausedOrStopped())
+    //         task->tState = BARD_STATE_GET_WORD;
+    //     break;
+    // case BARD_STATE_GET_WORD:
+    // {
+    //     struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    //     u8 *str = &gStringVar4[task->tCharIndex];
+    //     u16 wordLen = 0;
 
-        // Read letters until delimiter
-        while (*str != CHAR_SPACE
-            && *str != CHAR_NEWLINE
-            && *str != EXT_CTRL_CODE_BEGIN
-            && *str != EOS)
-        {
-            str++;
-            wordLen++;
-        }
+    //     // Read letters until delimiter
+    //     while (*str != CHAR_SPACE
+    //         && *str != CHAR_NEWLINE
+    //         && *str != EXT_CTRL_CODE_BEGIN
+    //         && *str != EOS)
+    //     {
+    //         str++;
+    //         wordLen++;
+    //     }
 
-        if (!task->tUseTemporaryLyrics)
-            sUnknownBardRelated = MACRO2(bard->songLyrics[task->tCurrWord]);
-        else
-            sUnknownBardRelated = MACRO2(bard->temporaryLyrics[task->tCurrWord]);
+    //     if (!task->tUseTemporaryLyrics)
+    //         sUnknownBardRelated = MACRO2(bard->songLyrics[task->tCurrWord]);
+    //     else
+    //         sUnknownBardRelated = MACRO2(bard->temporaryLyrics[task->tCurrWord]);
 
-        gBardSong.length /= wordLen;
-        if (gBardSong.length <= 0)
-            gBardSong.length = 1;
-        task->tCurrWord++;
+    //     gBardSong.length /= wordLen;
+    //     if (gBardSong.length <= 0)
+    //         gBardSong.length = 1;
+    //     task->tCurrWord++;
 
-        if (task->tDelay == 0)
-        {
-            task->tState = BARD_STATE_HANDLE_WORD;
-            task->tWordState = 0;
-        }
-        else
-        {
-            task->tState = BARD_STATE_PAUSE;
-            task->tWordState = 0;
-        }
-    }
-        break;
-    case BARD_STATE_PAUSE:
-        // Wait before singing next word
-        if (task->tDelay == 0)
-            task->tState = BARD_STATE_HANDLE_WORD;
-        else
-            task->tDelay--;
-        break;
-    case BARD_STATE_HANDLE_WORD:
-        if (gStringVar4[task->tCharIndex] == EOS)
-        {
-            // End song
-            FadeInBGM(6);
-            m4aMPlayFadeOutTemporarily(&gMPlayInfo_SE2, 2);
-            EnableBothScriptContexts();
-            DestroyTask(taskId);
-        }
-        else if (gStringVar4[task->tCharIndex] == CHAR_SPACE)
-        {
-            // Handle space
-            EnableTextPrinters();
-            task->tCharIndex++;
-            task->tState = BARD_STATE_GET_WORD;
-            task->tDelay = 0;
-        }
-        else if (gStringVar4[task->tCharIndex] == CHAR_NEWLINE)
-        {
-            // Handle newline
-            task->tCharIndex++;
-            task->tState = BARD_STATE_GET_WORD;
-            task->tDelay = 0;
-        }
-        else if (gStringVar4[task->tCharIndex] == EXT_CTRL_CODE_BEGIN)
-        {
-            // Handle ctrl code
-            task->tCharIndex += 2;  // skip over control codes
-            task->tState = BARD_STATE_GET_WORD;
-            task->tDelay = 8;
-        }
-        else if (gStringVar4[task->tCharIndex] == CHAR_BARD_WORD_DELIMIT)
-        {
-            // Handle word boundary
-            gStringVar4[task->tCharIndex] = CHAR_SPACE;  // Replace with a real space
-            EnableTextPrinters();
-            task->tCharIndex++;
-            task->tDelay = 0;
-        }
-        else
-        {
-            // Handle regular word
-            switch (task->tWordState)
-            {
-            case 0:
-                EnableTextPrinters();
-                task->tWordState++;
-                break;
-            case 1:
-                task->tWordState++;
-                break;
-            case 2:
-                task->tCharIndex++;
-                task->tWordState = 0;
-                task->tDelay = gBardSong.length;
-                task->tState = BARD_STATE_WAIT_WORD;
-                break;
-            }
-        }
-        break;
-    case BARD_STATE_WAIT_WORD:
-        // Wait for word to finish being sung.
-        // BardSing will continue to play it.
-        task->tDelay--;
-        if (task->tDelay == 0)
-            task->tState = BARD_STATE_HANDLE_WORD;
-        break;
-    }
-    RunTextPrintersAndIsPrinter0Active();
+    //     if (task->tDelay == 0)
+    //     {
+    //         task->tState = BARD_STATE_HANDLE_WORD;
+    //         task->tWordState = 0;
+    //     }
+    //     else
+    //     {
+    //         task->tState = BARD_STATE_PAUSE;
+    //         task->tWordState = 0;
+    //     }
+    // }
+    //     break;
+    // case BARD_STATE_PAUSE:
+    //     // Wait before singing next word
+    //     if (task->tDelay == 0)
+    //         task->tState = BARD_STATE_HANDLE_WORD;
+    //     else
+    //         task->tDelay--;
+    //     break;
+    // case BARD_STATE_HANDLE_WORD:
+    //     if (gStringVar4[task->tCharIndex] == EOS)
+    //     {
+    //         // End song
+    //         FadeInBGM(6);
+    //         m4aMPlayFadeOutTemporarily(&gMPlayInfo_SE2, 2);
+    //         EnableBothScriptContexts();
+    //         DestroyTask(taskId);
+    //     }
+    //     else if (gStringVar4[task->tCharIndex] == CHAR_SPACE)
+    //     {
+    //         // Handle space
+    //         EnableTextPrinters();
+    //         task->tCharIndex++;
+    //         task->tState = BARD_STATE_GET_WORD;
+    //         task->tDelay = 0;
+    //     }
+    //     else if (gStringVar4[task->tCharIndex] == CHAR_NEWLINE)
+    //     {
+    //         // Handle newline
+    //         task->tCharIndex++;
+    //         task->tState = BARD_STATE_GET_WORD;
+    //         task->tDelay = 0;
+    //     }
+    //     else if (gStringVar4[task->tCharIndex] == EXT_CTRL_CODE_BEGIN)
+    //     {
+    //         // Handle ctrl code
+    //         task->tCharIndex += 2;  // skip over control codes
+    //         task->tState = BARD_STATE_GET_WORD;
+    //         task->tDelay = 8;
+    //     }
+    //     else if (gStringVar4[task->tCharIndex] == CHAR_BARD_WORD_DELIMIT)
+    //     {
+    //         // Handle word boundary
+    //         gStringVar4[task->tCharIndex] = CHAR_SPACE;  // Replace with a real space
+    //         EnableTextPrinters();
+    //         task->tCharIndex++;
+    //         task->tDelay = 0;
+    //     }
+    //     else
+    //     {
+    //         // Handle regular word
+    //         switch (task->tWordState)
+    //         {
+    //         case 0:
+    //             EnableTextPrinters();
+    //             task->tWordState++;
+    //             break;
+    //         case 1:
+    //             task->tWordState++;
+    //             break;
+    //         case 2:
+    //             task->tCharIndex++;
+    //             task->tWordState = 0;
+    //             task->tDelay = gBardSong.length;
+    //             task->tState = BARD_STATE_WAIT_WORD;
+    //             break;
+    //         }
+    //     }
+    //     break;
+    // case BARD_STATE_WAIT_WORD:
+    //     // Wait for word to finish being sung.
+    //     // BardSing will continue to play it.
+    //     task->tDelay--;
+    //     if (task->tDelay == 0)
+    //         task->tState = BARD_STATE_HANDLE_WORD;
+    //     break;
+    // }
+    // RunTextPrintersAndIsPrinter0Active();
 }
 
 void SetMauvilleOldManObjEventGfx(void)
@@ -1148,24 +1149,24 @@ static const u32 sUnused = 8;
 
 static void StorytellerSetup(void)
 {
-    s32 i;
-    sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
+    // s32 i;
+    // sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
 
-    sStorytellerPtr->id = MAUVILLE_MAN_STORYTELLER;
-    sStorytellerPtr->alreadyRecorded = FALSE;
-    for (i = 0; i < NUM_STORYTELLER_TALES; i++)
-    {
-        sStorytellerPtr->gameStatIDs[i] = 0;
-        sStorytellerPtr->trainerNames[0][i] = EOS;  // Maybe they meant storyteller->trainerNames[i][0] instead?
-    }
+    // sStorytellerPtr->id = MAUVILLE_MAN_STORYTELLER;
+    // sStorytellerPtr->alreadyRecorded = FALSE;
+    // for (i = 0; i < NUM_STORYTELLER_TALES; i++)
+    // {
+    //     sStorytellerPtr->gameStatIDs[i] = 0;
+    //     sStorytellerPtr->trainerNames[0][i] = EOS;  // Maybe they meant storyteller->trainerNames[i][0] instead?
+    // }
 }
 
 static void Storyteller_ResetFlag(void)
 {
-    sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
+    // sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
 
-    sStorytellerPtr->id = MAUVILLE_MAN_STORYTELLER;
-    sStorytellerPtr->alreadyRecorded = FALSE;
+    // sStorytellerPtr->id = MAUVILLE_MAN_STORYTELLER;
+    // sStorytellerPtr->alreadyRecorded = FALSE;
 }
 
 static u32 StorytellerGetGameStat(u8 stat)
@@ -1393,38 +1394,38 @@ void Script_StorytellerDisplayStory(void)
 
 u8 StorytellerGetFreeStorySlot(void)
 {
-    sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
+    // sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
     return GetFreeStorySlot();
 }
 
 // Returns TRUE if stat has increased
 bool8 StorytellerUpdateStat(void)
 {
-    u8 stat;
-    sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
-    stat = sStorytellerPtr->gameStatIDs[sSelectedStory];
+    // u8 stat;
+    // sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
+    // stat = sStorytellerPtr->gameStatIDs[sSelectedStory];
 
-    if (HasTrainerStatIncreased(sSelectedStory) == TRUE)
-    {
-        StorytellerRecordNewStat(sSelectedStory, stat);
-        return TRUE;
-    }
+    // if (HasTrainerStatIncreased(sSelectedStory) == TRUE)
+    // {
+    //     StorytellerRecordNewStat(sSelectedStory, stat);
+    //     return TRUE;
+    // }
     return FALSE;
 }
 
 bool8 HasStorytellerAlreadyRecorded(void)
 {
-    sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
+    // sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
 
-    if (sStorytellerPtr->alreadyRecorded == FALSE)
-        return FALSE;
-    else
+    // if (sStorytellerPtr->alreadyRecorded == FALSE)
+    //     return FALSE;
+    // else
         return TRUE;
 }
 
 bool8 Script_StorytellerInitializeRandomStat(void)
 {
-    sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
+    // sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
     return StorytellerInitializeRandomStat();
 }
 

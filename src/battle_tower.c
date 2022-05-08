@@ -2209,12 +2209,12 @@ static void SaveBattleTowerRecord(void)
     StringCopy_PlayerName(playerRecord->name, gSaveBlock2Ptr->playerName);
     playerRecord->winStreak = GetCurrentBattleTowerWinStreak(lvlMode, battleMode);
 
-    for (i = 0; i < EASY_CHAT_BATTLE_WORDS_COUNT; i++)
-    {
-        playerRecord->greeting[i] = gSaveBlock1Ptr->easyChatBattleStart[i];
-        playerRecord->speechWon[i] = gSaveBlock1Ptr->easyChatBattleWon[i];
-        playerRecord->speechLost[i] = gSaveBlock1Ptr->easyChatBattleLost[i];
-    }
+    // for (i = 0; i < EASY_CHAT_BATTLE_WORDS_COUNT; i++)
+    // {
+    //     playerRecord->greeting[i] = gSaveBlock1Ptr->easyChatBattleStart[i];
+    //     playerRecord->speechWon[i] = gSaveBlock1Ptr->easyChatBattleWon[i];
+    //     playerRecord->speechLost[i] = gSaveBlock1Ptr->easyChatBattleLost[i];
+    // }
 
     for (i = 0; i < MAX_FRONTIER_PARTY_SIZE; i++)
     {
@@ -2862,38 +2862,38 @@ static void AwardBattleTowerRibbons(void)
 // trainer with the player's current data.
 static void FillEReaderTrainerWithPlayerData(void)
 {
-    struct BattleTowerEReaderTrainer *ereaderTrainer = &gSaveBlock2Ptr->frontier.ereaderTrainer;
-    s32 i, j;
+    // struct BattleTowerEReaderTrainer *ereaderTrainer = &gSaveBlock2Ptr->frontier.ereaderTrainer;
+    // s32 i, j;
 
-    if (gSaveBlock2Ptr->playerGender != MALE)
-    {
-        ereaderTrainer->facilityClass = gTowerFemaleFacilityClasses[(gSaveBlock2Ptr->playerTrainerId[0] + gSaveBlock2Ptr->playerTrainerId[1]
-                                                        + gSaveBlock2Ptr->playerTrainerId[2] + gSaveBlock2Ptr->playerTrainerId[3]) % ARRAY_COUNT(gTowerFemaleFacilityClasses)];
-    }
-    else
-    {
-        ereaderTrainer->facilityClass = gTowerMaleFacilityClasses[(gSaveBlock2Ptr->playerTrainerId[0] + gSaveBlock2Ptr->playerTrainerId[1]
-                                                        + gSaveBlock2Ptr->playerTrainerId[2] + gSaveBlock2Ptr->playerTrainerId[3]) % ARRAY_COUNT(gTowerMaleFacilityClasses)];
-    }
+    // if (gSaveBlock2Ptr->playerGender != MALE)
+    // {
+    //     ereaderTrainer->facilityClass = gTowerFemaleFacilityClasses[(gSaveBlock2Ptr->playerTrainerId[0] + gSaveBlock2Ptr->playerTrainerId[1]
+    //                                                     + gSaveBlock2Ptr->playerTrainerId[2] + gSaveBlock2Ptr->playerTrainerId[3]) % ARRAY_COUNT(gTowerFemaleFacilityClasses)];
+    // }
+    // else
+    // {
+    //     ereaderTrainer->facilityClass = gTowerMaleFacilityClasses[(gSaveBlock2Ptr->playerTrainerId[0] + gSaveBlock2Ptr->playerTrainerId[1]
+    //                                                     + gSaveBlock2Ptr->playerTrainerId[2] + gSaveBlock2Ptr->playerTrainerId[3]) % ARRAY_COUNT(gTowerMaleFacilityClasses)];
+    // }
 
-    CopyTrainerId(ereaderTrainer->trainerId, gSaveBlock2Ptr->playerTrainerId);
-    StringCopy_PlayerName(ereaderTrainer->name, gSaveBlock2Ptr->playerName);
+    // CopyTrainerId(ereaderTrainer->trainerId, gSaveBlock2Ptr->playerTrainerId);
+    // StringCopy_PlayerName(ereaderTrainer->name, gSaveBlock2Ptr->playerName);
 
-    ereaderTrainer->winStreak = 1;
+    // ereaderTrainer->winStreak = 1;
 
-    j = 7;
-    for (i = 0; i < 6; i++)
-    {
-        ereaderTrainer->greeting[i] = gSaveBlock1Ptr->easyChatBattleStart[i];
-        ereaderTrainer->farewellPlayerLost[i] = j;
-        ereaderTrainer->farewellPlayerWon[i] = j + 6;
-        j++;
-    }
+    // j = 7;
+    // for (i = 0; i < 6; i++)
+    // {
+    //     ereaderTrainer->greeting[i] = gSaveBlock1Ptr->easyChatBattleStart[i];
+    //     ereaderTrainer->farewellPlayerLost[i] = j;
+    //     ereaderTrainer->farewellPlayerWon[i] = j + 6;
+    //     j++;
+    // }
 
-    for (i = 0; i < 3; i++)
-        ConvertPokemonToBattleTowerPokemon(&gPlayerParty[i], &ereaderTrainer->party[i]);
+    // for (i = 0; i < 3; i++)
+    //     ConvertPokemonToBattleTowerPokemon(&gPlayerParty[i], &ereaderTrainer->party[i]);
 
-    SetEReaderTrainerChecksum(ereaderTrainer);
+    // SetEReaderTrainerChecksum(ereaderTrainer);
 }
 
 u8 GetEreaderTrainerFrontSpriteId(void)

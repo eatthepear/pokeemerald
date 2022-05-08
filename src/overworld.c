@@ -671,14 +671,14 @@ void SetWarpDestinationToHealLocation(u8 healLocationId)
 
 void SetWarpDestinationToLastHealLocation(void)
 {
-    sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
+    // sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
 }
 
 void SetLastHealLocationWarp(u8 healLocationId)
 {
-    const struct HealLocation *healLocation = GetHealLocation(healLocationId);
-    if (healLocation)
-        SetWarpData(&gSaveBlock1Ptr->lastHealLocation, healLocation->group, healLocation->map, WARP_ID_NONE, healLocation->x, healLocation->y);
+    // const struct HealLocation *healLocation = GetHealLocation(healLocationId);
+    // if (healLocation)
+    //     SetWarpData(&gSaveBlock1Ptr->lastHealLocation, healLocation->group, healLocation->map, WARP_ID_NONE, healLocation->x, healLocation->y);
 }
 
 void UpdateEscapeWarp(s16 x, s16 y)

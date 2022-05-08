@@ -222,7 +222,7 @@ static void UpdateLinkBattleRecords(struct LinkBattleRecords *records, const u8 
 
 void ClearPlayerLinkBattleRecords(void)
 {
-    ClearLinkBattleRecords(gSaveBlock1Ptr->linkBattleRecords.entries);
+    // ClearLinkBattleRecords(gSaveBlock1Ptr->linkBattleRecords.entries);
 }
 
 static void IncTrainerCardWins(s32 battlerId)
@@ -258,16 +258,16 @@ static void UpdateTrainerCardWinsLosses(s32 battlerId)
 
 void UpdatePlayerLinkBattleRecords(s32 battlerId)
 {
-    if (InUnionRoom() != TRUE)
-    {
-        UpdateTrainerCardWinsLosses(battlerId);
-        UpdateLinkBattleRecords(
-            &gSaveBlock1Ptr->linkBattleRecords,
-            gTrainerCards[battlerId].playerName,
-            gTrainerCards[battlerId].trainerId,
-            gBattleOutcome,
-            battlerId);
-    }
+    // if (InUnionRoom() != TRUE)
+    // {
+    //     UpdateTrainerCardWinsLosses(battlerId);
+    //     UpdateLinkBattleRecords(
+    //         &gSaveBlock1Ptr->linkBattleRecords,
+    //         gTrainerCards[battlerId].playerName,
+    //         gTrainerCards[battlerId].trainerId,
+    //         gBattleOutcome,
+    //         battlerId);
+    // }
 }
 
 static void PrintLinkBattleWinsLossesDraws(struct LinkBattleRecord *records)
@@ -314,27 +314,27 @@ static void PrintLinkBattleRecord(struct LinkBattleRecord *record, u8 y, s32 lan
 
 void ShowLinkBattleRecords(void)
 {
-    s32 i, x;
+    // s32 i, x;
 
-    gRecordsWindowId = AddWindow(&sLinkBattleRecordsWindow);
-    DrawStdWindowFrame(gRecordsWindowId, FALSE);
-    FillWindowPixelBuffer(gRecordsWindowId, PIXEL_FILL(1));
-    StringExpandPlaceholders(gStringVar4, gText_PlayersBattleResults);
+    // gRecordsWindowId = AddWindow(&sLinkBattleRecordsWindow);
+    // DrawStdWindowFrame(gRecordsWindowId, FALSE);
+    // FillWindowPixelBuffer(gRecordsWindowId, PIXEL_FILL(1));
+    // StringExpandPlaceholders(gStringVar4, gText_PlayersBattleResults);
 
-    x = GetStringCenterAlignXOffset(FONT_NORMAL, gStringVar4, 208);
-    AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x, 1, 0, NULL);
-    PrintLinkBattleWinsLossesDraws(gSaveBlock1Ptr->linkBattleRecords.entries);
+    // x = GetStringCenterAlignXOffset(FONT_NORMAL, gStringVar4, 208);
+    // AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x, 1, 0, NULL);
+    // PrintLinkBattleWinsLossesDraws(gSaveBlock1Ptr->linkBattleRecords.entries);
 
-    StringExpandPlaceholders(gStringVar4, gText_WinLoseDraw);
-    AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, 0, 41, 0, NULL);
+    // StringExpandPlaceholders(gStringVar4, gText_WinLoseDraw);
+    // AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, 0, 41, 0, NULL);
 
-    for (i = 0; i < LINK_B_RECORDS_COUNT; i++)
-    {
-        PrintLinkBattleRecord(&gSaveBlock1Ptr->linkBattleRecords.entries[i], 7 + (i * 2), gSaveBlock1Ptr->linkBattleRecords.languages[i]);
-    }
+    // for (i = 0; i < LINK_B_RECORDS_COUNT; i++)
+    // {
+    //     PrintLinkBattleRecord(&gSaveBlock1Ptr->linkBattleRecords.entries[i], 7 + (i * 2), gSaveBlock1Ptr->linkBattleRecords.languages[i]);
+    // }
 
-    PutWindowTilemap(gRecordsWindowId);
-    CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
+    // PutWindowTilemap(gRecordsWindowId);
+    // CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
 
 void RemoveRecordsWindow(void)

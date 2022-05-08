@@ -10,27 +10,27 @@
 
 void ClearAllMail(void)
 {
-    u8 i;
+    // u8 i;
 
-    for (i = 0; i < MAIL_COUNT; i++)
-        ClearMail(&gSaveBlock1Ptr->mail[i]);
+    // for (i = 0; i < MAIL_COUNT; i++)
+    //     ClearMail(&gSaveBlock1Ptr->mail[i]);
 }
 
 void ClearMail(struct Mail *mail)
 {
-    s32 i;
+    // s32 i;
 
-    for (i = 0; i < MAIL_WORDS_COUNT; i++)
-        mail->words[i] = EC_EMPTY_WORD;
+    // for (i = 0; i < MAIL_WORDS_COUNT; i++)
+    //     mail->words[i] = EC_EMPTY_WORD;
 
-    for (i = 0; i < PLAYER_NAME_LENGTH + 1; i++)
-        mail->playerName[i] = EOS;
+    // for (i = 0; i < PLAYER_NAME_LENGTH + 1; i++)
+    //     mail->playerName[i] = EOS;
 
-    for (i = 0; i < TRAINER_ID_LENGTH; i++)
-        mail->trainerId[i] = 0;
+    // for (i = 0; i < TRAINER_ID_LENGTH; i++)
+    //     mail->trainerId[i] = 0;
 
-    mail->species = SPECIES_BULBASAUR;
-    mail->itemId = ITEM_NONE;
+    // mail->species = SPECIES_BULBASAUR;
+    // mail->itemId = ITEM_NONE;
 }
 
 bool8 MonHasMail(struct Pokemon *mon)
@@ -154,7 +154,7 @@ void TakeMailFromMon(struct Pokemon *mon)
 
 void ClearMailItemId(u8 mailId)
 {
-    gSaveBlock1Ptr->mail[mailId].itemId = ITEM_NONE;
+    // gSaveBlock1Ptr->mail[mailId].itemId = ITEM_NONE;
 }
 
 u8 TakeMailFromMonAndSave(struct Pokemon *mon)

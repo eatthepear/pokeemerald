@@ -233,9 +233,9 @@ void LoadPlayerBag(void)
     for (i = 0; i < BAG_BERRIES_COUNT; i++)
         gLoadedSaveData.berries[i] = gSaveBlock1Ptr->bagPocket_Berries[i];
 
-    // load mail.
-    for (i = 0; i < MAIL_COUNT; i++)
-        gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
+    // // load mail.
+    // for (i = 0; i < MAIL_COUNT; i++)
+    //     gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
 
     // load player medicine.
     for (i = 0; i < BAG_MEDICINE_COUNT; i++)
@@ -277,9 +277,9 @@ void SavePlayerBag(void)
     for (i = 0; i < BAG_BERRIES_COUNT; i++)
         gSaveBlock1Ptr->bagPocket_Berries[i] = gLoadedSaveData.berries[i];
 
-    // save mail.
-    for (i = 0; i < MAIL_COUNT; i++)
-        gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
+    // // save mail.
+    // for (i = 0; i < MAIL_COUNT; i++)
+    //     gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
 
     // save player medicine.
     for (i = 0; i < BAG_MEDICINE_COUNT; i++)

@@ -137,7 +137,7 @@ static bool8 CheckFeebas(void)
         if (Random() % 100 > 49)
             return FALSE;
 
-        FeebasSeedRng(gSaveBlock1Ptr->dewfordTrends[0].rand);
+        // FeebasSeedRng(gSaveBlock1Ptr->dewfordTrends[0].rand);
 
         // Assign each Feebas spot to a random fishing spot.
         // Randomness is fixed depending on the seed above.
@@ -486,27 +486,27 @@ static u16 GenerateFishingWildMon(const struct WildPokemonInfo *wildMonInfo, u8 
 
 static bool8 SetUpMassOutbreakEncounter(u8 flags)
 {
-    u16 i;
+    // u16 i;
 
-    if (flags & WILD_CHECK_REPEL && !IsWildLevelAllowedByRepel(gSaveBlock1Ptr->outbreakPokemonLevel))
-        return FALSE;
+    // if (flags & WILD_CHECK_REPEL && !IsWildLevelAllowedByRepel(gSaveBlock1Ptr->outbreakPokemonLevel))
+    //     return FALSE;
 
-    CreateWildMon(gSaveBlock1Ptr->outbreakPokemonSpecies, gSaveBlock1Ptr->outbreakPokemonLevel);
-    for (i = 0; i < MAX_MON_MOVES; i++)
-        SetMonMoveSlot(&gEnemyParty[0], gSaveBlock1Ptr->outbreakPokemonMoves[i], i);
+    // CreateWildMon(gSaveBlock1Ptr->outbreakPokemonSpecies, gSaveBlock1Ptr->outbreakPokemonLevel);
+    // for (i = 0; i < MAX_MON_MOVES; i++)
+    //     SetMonMoveSlot(&gEnemyParty[0], gSaveBlock1Ptr->outbreakPokemonMoves[i], i);
 
     return TRUE;
 }
 
 static bool8 DoMassOutbreakEncounterTest(void)
 {
-    if (gSaveBlock1Ptr->outbreakPokemonSpecies != SPECIES_NONE
-     && gSaveBlock1Ptr->location.mapNum == gSaveBlock1Ptr->outbreakLocationMapNum
-     && gSaveBlock1Ptr->location.mapGroup == gSaveBlock1Ptr->outbreakLocationMapGroup)
-    {
-        if (Random() % 100 < gSaveBlock1Ptr->outbreakPokemonProbability)
-            return TRUE;
-    }
+    // if (gSaveBlock1Ptr->outbreakPokemonSpecies != SPECIES_NONE
+    //  && gSaveBlock1Ptr->location.mapNum == gSaveBlock1Ptr->outbreakLocationMapNum
+    //  && gSaveBlock1Ptr->location.mapGroup == gSaveBlock1Ptr->outbreakLocationMapGroup)
+    // {
+    //     if (Random() % 100 < gSaveBlock1Ptr->outbreakPokemonProbability)
+    //         return TRUE;
+    // }
     return FALSE;
 }
 

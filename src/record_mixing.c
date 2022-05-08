@@ -100,8 +100,8 @@ static u8 sDaycareMailRandSum;
 static struct PlayerHallRecords *sPartnerHallRecords[HALL_RECORDS_COUNT];
 
 static EWRAM_DATA struct RecordMixingDaycareMail sRecordMixMail = {0};
-static EWRAM_DATA union PlayerRecord *sReceivedRecords = NULL;
-static EWRAM_DATA union PlayerRecord *sSentRecord = NULL;
+// static EWRAM_DATA union PlayerRecord *sReceivedRecords = NULL;
+// static EWRAM_DATA union PlayerRecord *sSentRecord = NULL;
 
 static void Task_RecordMixing_Main(u8);
 static void Task_MixingRecordsRecv(u8);
@@ -171,116 +171,116 @@ void RecordMixingPlayerSpotTriggered(void)
 // these variables were const in R/S, but had to become changeable because of saveblocks changing RAM position
 static void SetSrcLookupPointers(void)
 {
-    sSecretBasesSave = gSaveBlock1Ptr->secretBases;
-    sTvShowsSave = gSaveBlock1Ptr->tvShows;
-    sPokeNewsSave = gSaveBlock1Ptr->pokeNews;
-    sOldManSave = &gSaveBlock1Ptr->oldMan;
-    sDewfordTrendsSave = gSaveBlock1Ptr->dewfordTrends;
-    sRecordMixMailSave = &sRecordMixMail;
-    sBattleTowerSave = &gSaveBlock2Ptr->frontier.towerPlayer;
-    sLilycoveLadySave = &gSaveBlock1Ptr->lilycoveLady;
-    sApprenticesSave = gSaveBlock2Ptr->apprentices;
-    sBattleTowerSave_Duplicate = &gSaveBlock2Ptr->frontier.towerPlayer;
+    // sSecretBasesSave = gSaveBlock1Ptr->secretBases;
+    // sTvShowsSave = gSaveBlock1Ptr->tvShows;
+    // sPokeNewsSave = gSaveBlock1Ptr->pokeNews;
+    // sOldManSave = &gSaveBlock1Ptr->oldMan;
+    // sDewfordTrendsSave = gSaveBlock1Ptr->dewfordTrends;
+    // sRecordMixMailSave = &sRecordMixMail;
+    // sBattleTowerSave = &gSaveBlock2Ptr->frontier.towerPlayer;
+    // sLilycoveLadySave = &gSaveBlock1Ptr->lilycoveLady;
+    // sApprenticesSave = gSaveBlock2Ptr->apprentices;
+    // sBattleTowerSave_Duplicate = &gSaveBlock2Ptr->frontier.towerPlayer;
 }
 
 static void PrepareUnknownExchangePacket(struct PlayerRecordRS *dest)
 {
-    memcpy(dest->secretBases, sSecretBasesSave, sizeof(dest->secretBases));
-    memcpy(dest->tvShows, sTvShowsSave, sizeof(dest->tvShows));
-    SanitizeTVShowLocationsForRuby(dest->tvShows);
-    memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
-    memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
-    memcpy(dest->dewfordTrends, sDewfordTrendsSave, sizeof(dest->dewfordTrends));
-    GetRecordMixingDaycareMail(&dest->daycareMail);
-    EmeraldBattleTowerRecordToRuby(sBattleTowerSave, &dest->battleTowerRecord);
+    // memcpy(dest->secretBases, sSecretBasesSave, sizeof(dest->secretBases));
+    // memcpy(dest->tvShows, sTvShowsSave, sizeof(dest->tvShows));
+    // SanitizeTVShowLocationsForRuby(dest->tvShows);
+    // memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
+    // memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
+    // memcpy(dest->dewfordTrends, sDewfordTrendsSave, sizeof(dest->dewfordTrends));
+    // GetRecordMixingDaycareMail(&dest->daycareMail);
+    // EmeraldBattleTowerRecordToRuby(sBattleTowerSave, &dest->battleTowerRecord);
 
-    if (GetMultiplayerId() == 0)
-        dest->giftItem = GetRecordMixingGift();
+    // if (GetMultiplayerId() == 0)
+    //     dest->giftItem = GetRecordMixingGift();
 }
 
 static void PrepareExchangePacketForRubySapphire(struct PlayerRecordRS *dest)
 {
-    memcpy(dest->secretBases, sSecretBasesSave, sizeof(dest->secretBases));
-    ClearJapaneseSecretBases(dest->secretBases);
-    memcpy(dest->tvShows, sTvShowsSave, sizeof(dest->tvShows));
-    SanitizeTVShowsForRuby(dest->tvShows);
-    memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
-    memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
-    SanitizeMauvilleOldManForRuby(&dest->oldMan);
-    memcpy(dest->dewfordTrends, sDewfordTrendsSave, sizeof(dest->dewfordTrends));
-    GetRecordMixingDaycareMail(&dest->daycareMail);
-    SanitizeDaycareMailForRuby(&dest->daycareMail);
-    EmeraldBattleTowerRecordToRuby(sBattleTowerSave, &dest->battleTowerRecord);
-    SanitizeRubyBattleTowerRecord(&dest->battleTowerRecord);
+    // memcpy(dest->secretBases, sSecretBasesSave, sizeof(dest->secretBases));
+    // ClearJapaneseSecretBases(dest->secretBases);
+    // memcpy(dest->tvShows, sTvShowsSave, sizeof(dest->tvShows));
+    // SanitizeTVShowsForRuby(dest->tvShows);
+    // memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
+    // memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
+    // SanitizeMauvilleOldManForRuby(&dest->oldMan);
+    // memcpy(dest->dewfordTrends, sDewfordTrendsSave, sizeof(dest->dewfordTrends));
+    // GetRecordMixingDaycareMail(&dest->daycareMail);
+    // SanitizeDaycareMailForRuby(&dest->daycareMail);
+    // EmeraldBattleTowerRecordToRuby(sBattleTowerSave, &dest->battleTowerRecord);
+    // SanitizeRubyBattleTowerRecord(&dest->battleTowerRecord);
 
-    if (GetMultiplayerId() == 0)
-        dest->giftItem = GetRecordMixingGift();
+    // if (GetMultiplayerId() == 0)
+    //     dest->giftItem = GetRecordMixingGift();
 }
 
 static void PrepareExchangePacket(void)
 {
-    SetPlayerSecretBaseParty();
-    DeactivateAllNormalTVShows();
-    SetSrcLookupPointers();
+    // SetPlayerSecretBaseParty();
+    // DeactivateAllNormalTVShows();
+    // SetSrcLookupPointers();
 
-    if (Link_AnyPartnersPlayingRubyOrSapphire())
-    {
-        if (LinkDummy_Return2() == 0)
-            PrepareUnknownExchangePacket(&sSentRecord->ruby);
-        else
-            PrepareExchangePacketForRubySapphire(&sSentRecord->ruby);
-    }
-    else
-    {
-        memcpy(sSentRecord->emerald.secretBases, sSecretBasesSave, sizeof(sSentRecord->emerald.secretBases));
-        memcpy(sSentRecord->emerald.tvShows, sTvShowsSave, sizeof(sSentRecord->emerald.tvShows));
-        memcpy(sSentRecord->emerald.pokeNews, sPokeNewsSave, sizeof(sSentRecord->emerald.pokeNews));
-        memcpy(&sSentRecord->emerald.oldMan, sOldManSave, sizeof(sSentRecord->emerald.oldMan));
-        memcpy(&sSentRecord->emerald.lilycoveLady, sLilycoveLadySave, sizeof(sSentRecord->emerald.lilycoveLady));
-        memcpy(sSentRecord->emerald.dewfordTrends, sDewfordTrendsSave, sizeof(sSentRecord->emerald.dewfordTrends));
-        GetRecordMixingDaycareMail(&sSentRecord->emerald.daycareMail);
-        memcpy(&sSentRecord->emerald.battleTowerRecord, sBattleTowerSave, sizeof(sSentRecord->emerald.battleTowerRecord));
-        SanitizeEmeraldBattleTowerRecord(&sSentRecord->emerald.battleTowerRecord);
+    // if (Link_AnyPartnersPlayingRubyOrSapphire())
+    // {
+    //     if (LinkDummy_Return2() == 0)
+    //         PrepareUnknownExchangePacket(&sSentRecord->ruby);
+    //     else
+    //         PrepareExchangePacketForRubySapphire(&sSentRecord->ruby);
+    // }
+    // else
+    // {
+    //     memcpy(sSentRecord->emerald.secretBases, sSecretBasesSave, sizeof(sSentRecord->emerald.secretBases));
+    //     memcpy(sSentRecord->emerald.tvShows, sTvShowsSave, sizeof(sSentRecord->emerald.tvShows));
+    //     memcpy(sSentRecord->emerald.pokeNews, sPokeNewsSave, sizeof(sSentRecord->emerald.pokeNews));
+    //     memcpy(&sSentRecord->emerald.oldMan, sOldManSave, sizeof(sSentRecord->emerald.oldMan));
+    //     memcpy(&sSentRecord->emerald.lilycoveLady, sLilycoveLadySave, sizeof(sSentRecord->emerald.lilycoveLady));
+    //     memcpy(sSentRecord->emerald.dewfordTrends, sDewfordTrendsSave, sizeof(sSentRecord->emerald.dewfordTrends));
+    //     GetRecordMixingDaycareMail(&sSentRecord->emerald.daycareMail);
+    //     memcpy(&sSentRecord->emerald.battleTowerRecord, sBattleTowerSave, sizeof(sSentRecord->emerald.battleTowerRecord));
+    //     SanitizeEmeraldBattleTowerRecord(&sSentRecord->emerald.battleTowerRecord);
 
-        if (GetMultiplayerId() == 0)
-            sSentRecord->emerald.giftItem = GetRecordMixingGift();
+    //     if (GetMultiplayerId() == 0)
+    //         sSentRecord->emerald.giftItem = GetRecordMixingGift();
 
-        GetSavedApprentices(sSentRecord->emerald.apprentices, sApprenticesSave);
-        GetPlayerHallRecords(&sSentRecord->emerald.hallRecords);
-    }
+    //     GetSavedApprentices(sSentRecord->emerald.apprentices, sApprenticesSave);
+    //     GetPlayerHallRecords(&sSentRecord->emerald.hallRecords);
+    // }
 }
 
 static void ReceiveExchangePacket(u32 multiplayerId)
 {
-    if (Link_AnyPartnersPlayingRubyOrSapphire())
-    {
-        // Ruby/Sapphire
-        CalculateDaycareMailRandSum((void *)sReceivedRecords->ruby.tvShows);
-        ReceiveSecretBasesData(sReceivedRecords->ruby.secretBases, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceiveDaycareMailData(&sReceivedRecords->ruby.daycareMail, sizeof(sReceivedRecords->ruby), multiplayerId, sReceivedRecords->ruby.tvShows);
-        ReceiveBattleTowerData(&sReceivedRecords->ruby.battleTowerRecord, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceiveTvShowsData(sReceivedRecords->ruby.tvShows, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceivePokeNewsData(sReceivedRecords->ruby.pokeNews, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceiveOldManData(&sReceivedRecords->ruby.oldMan, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceiveDewfordTrendData(sReceivedRecords->ruby.dewfordTrends, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceiveGiftItem(&sReceivedRecords->ruby.giftItem, multiplayerId);
-    }
-    else
-    {
-        // Emerald
-        CalculateDaycareMailRandSum((void *)sReceivedRecords->emerald.tvShows);
-        ReceiveSecretBasesData(sReceivedRecords->emerald.secretBases, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveTvShowsData(sReceivedRecords->emerald.tvShows, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceivePokeNewsData(sReceivedRecords->emerald.pokeNews, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveOldManData(&sReceivedRecords->emerald.oldMan, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveDewfordTrendData(sReceivedRecords->emerald.dewfordTrends, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveDaycareMailData(&sReceivedRecords->emerald.daycareMail, sizeof(sReceivedRecords->emerald), multiplayerId, sReceivedRecords->emerald.tvShows);
-        ReceiveBattleTowerData(&sReceivedRecords->emerald.battleTowerRecord, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveGiftItem(&sReceivedRecords->emerald.giftItem, multiplayerId);
-        ReceiveLilycoveLadyData(&sReceivedRecords->emerald.lilycoveLady, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveApprenticeData(sReceivedRecords->emerald.apprentices, sizeof(sReceivedRecords->emerald), (u8)multiplayerId);
-        ReceiveRankingHallRecords(&sReceivedRecords->emerald.hallRecords, sizeof(sReceivedRecords->emerald), (u8)multiplayerId);
-    }
+    // if (Link_AnyPartnersPlayingRubyOrSapphire())
+    // {
+    //     // Ruby/Sapphire
+    //     CalculateDaycareMailRandSum((void *)sReceivedRecords->ruby.tvShows);
+    //     ReceiveSecretBasesData(sReceivedRecords->ruby.secretBases, sizeof(sReceivedRecords->ruby), multiplayerId);
+    //     ReceiveDaycareMailData(&sReceivedRecords->ruby.daycareMail, sizeof(sReceivedRecords->ruby), multiplayerId, sReceivedRecords->ruby.tvShows);
+    //     ReceiveBattleTowerData(&sReceivedRecords->ruby.battleTowerRecord, sizeof(sReceivedRecords->ruby), multiplayerId);
+    //     ReceiveTvShowsData(sReceivedRecords->ruby.tvShows, sizeof(sReceivedRecords->ruby), multiplayerId);
+    //     ReceivePokeNewsData(sReceivedRecords->ruby.pokeNews, sizeof(sReceivedRecords->ruby), multiplayerId);
+    //     ReceiveOldManData(&sReceivedRecords->ruby.oldMan, sizeof(sReceivedRecords->ruby), multiplayerId);
+    //     ReceiveDewfordTrendData(sReceivedRecords->ruby.dewfordTrends, sizeof(sReceivedRecords->ruby), multiplayerId);
+    //     ReceiveGiftItem(&sReceivedRecords->ruby.giftItem, multiplayerId);
+    // }
+    // else
+    // {
+    //     // Emerald
+    //     CalculateDaycareMailRandSum((void *)sReceivedRecords->emerald.tvShows);
+    //     ReceiveSecretBasesData(sReceivedRecords->emerald.secretBases, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceiveTvShowsData(sReceivedRecords->emerald.tvShows, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceivePokeNewsData(sReceivedRecords->emerald.pokeNews, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceiveOldManData(&sReceivedRecords->emerald.oldMan, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceiveDewfordTrendData(sReceivedRecords->emerald.dewfordTrends, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceiveDaycareMailData(&sReceivedRecords->emerald.daycareMail, sizeof(sReceivedRecords->emerald), multiplayerId, sReceivedRecords->emerald.tvShows);
+    //     ReceiveBattleTowerData(&sReceivedRecords->emerald.battleTowerRecord, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceiveGiftItem(&sReceivedRecords->emerald.giftItem, multiplayerId);
+    //     ReceiveLilycoveLadyData(&sReceivedRecords->emerald.lilycoveLady, sizeof(sReceivedRecords->emerald), multiplayerId);
+    //     ReceiveApprenticeData(sReceivedRecords->emerald.apprentices, sizeof(sReceivedRecords->emerald), (u8)multiplayerId);
+    //     ReceiveRankingHallRecords(&sReceivedRecords->emerald.hallRecords, sizeof(sReceivedRecords->emerald), (u8)multiplayerId);
+    // }
 }
 
 static void PrintTextOnRecordMixing(const u8 *src)
@@ -310,65 +310,65 @@ static void Task_RecordMixing_SoundEffect(u8 taskId)
 // Note: gSpecialVar_0x8005 here contains the player's spot id.
 static void Task_RecordMixing_Main(u8 taskId)
 {
-    s16 *data = gTasks[taskId].data;
+    // s16 *data = gTasks[taskId].data;
 
-    switch (tState)
-    {
-    case 0: // init
-        sSentRecord = malloc(sizeof(*sSentRecord));
-        sReceivedRecords = malloc(sizeof(*sReceivedRecords) * MAX_LINK_PLAYERS);
-        SetLocalLinkPlayerId(gSpecialVar_0x8005);
-        VarSet(VAR_TEMP_0, 1);
-        sReadyToReceive = FALSE;
-        PrepareExchangePacket();
-        CreateRecordMixingLights();
-        tState = 1;
-        tLinkTaskId = CreateTask(Task_MixingRecordsRecv, 80);
-        tSoundTaskId = CreateTask(Task_RecordMixing_SoundEffect, 81);
-        break;
-    case 1: // wait for Task_MixingRecordsRecv
-        if (!gTasks[tLinkTaskId].isActive)
-        {
-            tState = 2;
-            FlagSet(FLAG_SYS_MIX_RECORD);
-            DestroyRecordMixingLights();
-            DestroyTask(tSoundTaskId);
-        }
-        break;
-    case 2:
-        tLinkTaskId = CreateTask(Task_DoRecordMixing, 10);
-        tState = 3;
-        PlaySE(SE_M_BATON_PASS);
-        break;
-    case 3: // wait for Task_DoRecordMixing
-        if (!gTasks[tLinkTaskId].isActive)
-        {
-            tState = 4;
-            if (gWirelessCommType == 0)
-                tLinkTaskId = CreateTask_ReestablishCableClubLink();
+    // switch (tState)
+    // {
+    // case 0: // init
+    //     sSentRecord = malloc(sizeof(*sSentRecord));
+    //     sReceivedRecords = malloc(sizeof(*sReceivedRecords) * MAX_LINK_PLAYERS);
+    //     SetLocalLinkPlayerId(gSpecialVar_0x8005);
+    //     VarSet(VAR_TEMP_0, 1);
+    //     sReadyToReceive = FALSE;
+    //     PrepareExchangePacket();
+    //     CreateRecordMixingLights();
+    //     tState = 1;
+    //     tLinkTaskId = CreateTask(Task_MixingRecordsRecv, 80);
+    //     tSoundTaskId = CreateTask(Task_RecordMixing_SoundEffect, 81);
+    //     break;
+    // case 1: // wait for Task_MixingRecordsRecv
+    //     if (!gTasks[tLinkTaskId].isActive)
+    //     {
+    //         tState = 2;
+    //         FlagSet(FLAG_SYS_MIX_RECORD);
+    //         DestroyRecordMixingLights();
+    //         DestroyTask(tSoundTaskId);
+    //     }
+    //     break;
+    // case 2:
+    //     tLinkTaskId = CreateTask(Task_DoRecordMixing, 10);
+    //     tState = 3;
+    //     PlaySE(SE_M_BATON_PASS);
+    //     break;
+    // case 3: // wait for Task_DoRecordMixing
+    //     if (!gTasks[tLinkTaskId].isActive)
+    //     {
+    //         tState = 4;
+    //         if (gWirelessCommType == 0)
+    //             tLinkTaskId = CreateTask_ReestablishCableClubLink();
 
-            PrintTextOnRecordMixing(gText_RecordMixingComplete);
-            tTimer = 0;
-        }
-        break;
-    case 4: // wait 60 frames
-        if (++tTimer > 60)
-            tState = 5;
-        break;
-    case 5: // Wait for the task created by CreateTask_ReestablishCableClubLink
-        if (!gTasks[tLinkTaskId].isActive)
-        {
-            free(sReceivedRecords);
-            free(sSentRecord);
-            SetLinkWaitingForScript();
-            if (gWirelessCommType != 0)
-                CreateTask(Task_ReturnToFieldRecordMixing, 10);
-            ClearDialogWindowAndFrame(0, 1);
-            DestroyTask(taskId);
-            EnableBothScriptContexts();
-        }
-        break;
-    }
+    //         PrintTextOnRecordMixing(gText_RecordMixingComplete);
+    //         tTimer = 0;
+    //     }
+    //     break;
+    // case 4: // wait 60 frames
+    //     if (++tTimer > 60)
+    //         tState = 5;
+    //     break;
+    // case 5: // Wait for the task created by CreateTask_ReestablishCableClubLink
+    //     if (!gTasks[tLinkTaskId].isActive)
+    //     {
+    //         free(sReceivedRecords);
+    //         free(sSentRecord);
+    //         SetLinkWaitingForScript();
+    //         if (gWirelessCommType != 0)
+    //             CreateTask(Task_ReturnToFieldRecordMixing, 10);
+    //         ClearDialogWindowAndFrame(0, 1);
+    //         DestroyTask(taskId);
+    //         EnableBothScriptContexts();
+    //     }
+    //     break;
+    // }
 }
 
 #undef tTimer
@@ -388,104 +388,104 @@ static void Task_RecordMixing_Main(u8 taskId)
 
 static void Task_MixingRecordsRecv(u8 taskId)
 {
-    struct Task *task = &gTasks[taskId];
+    // struct Task *task = &gTasks[taskId];
 
-    switch (task->tState)
-    {
-    case 0:
-        PrintTextOnRecordMixing(gText_MixingRecords);
-        task->data[8] = 0x708;
-        task->tState = 400;
-        ClearLinkCallback_2();
-        break;
-    case 100: // wait 20 frames
-        if (++task->data[12] > 20)
-        {
-            task->data[12] = 0;
-            task->tState = 101;
-        }
-        break;
-    case 101:
-        {
-            u8 players = GetLinkPlayerCount_2();
-            if (IsLinkMaster() == TRUE)
-            {
-                if (players == GetSavedPlayerCount())
-                {
-                    PlaySE(SE_PIN);
-                    task->tState = 201;
-                    task->data[12] = 0;
-                }
-            }
-            else
-            {
-                PlaySE(SE_BOO);
-                task->tState = 301;
-            }
-        }
-        break;
-    case 201:
-        // We're the link master. Delay for 30 frames per connected player.
-        if (GetSavedPlayerCount() == GetLinkPlayerCount_2() && ++task->data[12] > (GetLinkPlayerCount_2() * 30))
-        {
-            CheckShouldAdvanceLinkState();
-            task->tState = 1;
-        }
-        break;
-    case 301:
-        if (GetSavedPlayerCount() == GetLinkPlayerCount_2())
-            task->tState = 1;
-        break;
-    case 400: // wait 20 frames
-        if (++task->data[12] > 20)
-        {
-            task->tState = 1;
-            task->data[12] = 0;
-        }
-        break;
-    case 1: // wait for handshake
-        if (gReceivedRemoteLinkPlayers != 0)
-        {
-            ConvertIntToDecimalStringN(gStringVar1, GetMultiplayerId_(), STR_CONV_MODE_LEADING_ZEROS, 2);
-            task->tState = 5;
-        }
-        break;
-    case 2:
-        {
-            u8 subTaskId;
+    // switch (task->tState)
+    // {
+    // case 0:
+    //     PrintTextOnRecordMixing(gText_MixingRecords);
+    //     task->data[8] = 0x708;
+    //     task->tState = 400;
+    //     ClearLinkCallback_2();
+    //     break;
+    // case 100: // wait 20 frames
+    //     if (++task->data[12] > 20)
+    //     {
+    //         task->data[12] = 0;
+    //         task->tState = 101;
+    //     }
+    //     break;
+    // case 101:
+    //     {
+    //         u8 players = GetLinkPlayerCount_2();
+    //         if (IsLinkMaster() == TRUE)
+    //         {
+    //             if (players == GetSavedPlayerCount())
+    //             {
+    //                 PlaySE(SE_PIN);
+    //                 task->tState = 201;
+    //                 task->data[12] = 0;
+    //             }
+    //         }
+    //         else
+    //         {
+    //             PlaySE(SE_BOO);
+    //             task->tState = 301;
+    //         }
+    //     }
+    //     break;
+    // case 201:
+    //     // We're the link master. Delay for 30 frames per connected player.
+    //     if (GetSavedPlayerCount() == GetLinkPlayerCount_2() && ++task->data[12] > (GetLinkPlayerCount_2() * 30))
+    //     {
+    //         CheckShouldAdvanceLinkState();
+    //         task->tState = 1;
+    //     }
+    //     break;
+    // case 301:
+    //     if (GetSavedPlayerCount() == GetLinkPlayerCount_2())
+    //         task->tState = 1;
+    //     break;
+    // case 400: // wait 20 frames
+    //     if (++task->data[12] > 20)
+    //     {
+    //         task->tState = 1;
+    //         task->data[12] = 0;
+    //     }
+    //     break;
+    // case 1: // wait for handshake
+    //     if (gReceivedRemoteLinkPlayers != 0)
+    //     {
+    //         ConvertIntToDecimalStringN(gStringVar1, GetMultiplayerId_(), STR_CONV_MODE_LEADING_ZEROS, 2);
+    //         task->tState = 5;
+    //     }
+    //     break;
+    // case 2:
+    //     {
+    //         u8 subTaskId;
 
-            task->data[6] = GetLinkPlayerCount_2();
-            task->tState = 0;
-            task->tMultiplayerId = GetMultiplayerId_();
-            task->func = Task_SendPacket;
-            if (Link_AnyPartnersPlayingRubyOrSapphire())
-            {
-                StorePtrInTaskData(sSentRecord, &task->tSentRecord);
-                subTaskId = CreateTask(Task_CopyReceiveBuffer, 80);
-                task->tCopyTaskId = subTaskId;
-                gTasks[subTaskId].tParentTaskId = taskId;
-                StorePtrInTaskData(sReceivedRecords, &gTasks[subTaskId].tRecvRecords);
-                sRecordStructSize = sizeof(struct PlayerRecordRS);
-            }
-            else
-            {
-                StorePtrInTaskData(sSentRecord, &task->tSentRecord);
-                subTaskId = CreateTask(Task_CopyReceiveBuffer, 80);
-                task->tCopyTaskId = subTaskId;
-                gTasks[subTaskId].tParentTaskId = taskId;
-                StorePtrInTaskData(sReceivedRecords, &gTasks[subTaskId].tRecvRecords);
-                sRecordStructSize = sizeof(struct PlayerRecordEmerald);
-            }
-        }
-        break;
-    case 5: // wait 60 frames
-        if (++task->data[10] > 60)
-        {
-            task->data[10] = 0;
-            task->tState = 2;
-        }
-        break;
-    }
+    //         task->data[6] = GetLinkPlayerCount_2();
+    //         task->tState = 0;
+    //         task->tMultiplayerId = GetMultiplayerId_();
+    //         task->func = Task_SendPacket;
+    //         if (Link_AnyPartnersPlayingRubyOrSapphire())
+    //         {
+    //             StorePtrInTaskData(sSentRecord, &task->tSentRecord);
+    //             subTaskId = CreateTask(Task_CopyReceiveBuffer, 80);
+    //             task->tCopyTaskId = subTaskId;
+    //             gTasks[subTaskId].tParentTaskId = taskId;
+    //             StorePtrInTaskData(sReceivedRecords, &gTasks[subTaskId].tRecvRecords);
+    //             sRecordStructSize = sizeof(struct PlayerRecordRS);
+    //         }
+    //         else
+    //         {
+    //             StorePtrInTaskData(sSentRecord, &task->tSentRecord);
+    //             subTaskId = CreateTask(Task_CopyReceiveBuffer, 80);
+    //             task->tCopyTaskId = subTaskId;
+    //             gTasks[subTaskId].tParentTaskId = taskId;
+    //             StorePtrInTaskData(sReceivedRecords, &gTasks[subTaskId].tRecvRecords);
+    //             sRecordStructSize = sizeof(struct PlayerRecordEmerald);
+    //         }
+    //     }
+    //     break;
+    // case 5: // wait 60 frames
+    //     if (++task->data[10] > 60)
+    //     {
+    //         task->data[10] = 0;
+    //         task->tState = 2;
+    //     }
+    //     break;
+    // }
 }
 
 static void Task_SendPacket(u8 taskId)
@@ -759,210 +759,210 @@ static u8 GetDaycareMailRandSum(void)
 
 static void ReceiveDaycareMailData(struct RecordMixingDaycareMail *records, size_t recordSize, u8 multiplayerId, TVShow *shows)
 {
-    u16 i, j;
-    u8 linkPlayerCount;
-    u8 tableId;
-    struct RecordMixingDaycareMail *mixMail;
-    u8 playerSlot1, playerSlot2;
-    void *ptr;
-    u8 unusedArr1[MAX_LINK_PLAYERS];
-    u8 unusedArr2[MAX_LINK_PLAYERS];
-    struct RecordMixingDaycareMail *unusedMixMail[MAX_LINK_PLAYERS];
-    bool8 canHoldItem[MAX_LINK_PLAYERS][DAYCARE_MON_COUNT];
-    u8 idxs[MAX_LINK_PLAYERS][2];
-    u8 numDaycareCanHold;
-    u16 oldSeed;
-    bool32 anyRS;
+    // u16 i, j;
+    // u8 linkPlayerCount;
+    // u8 tableId;
+    // struct RecordMixingDaycareMail *mixMail;
+    // u8 playerSlot1, playerSlot2;
+    // void *ptr;
+    // u8 unusedArr1[MAX_LINK_PLAYERS];
+    // u8 unusedArr2[MAX_LINK_PLAYERS];
+    // struct RecordMixingDaycareMail *unusedMixMail[MAX_LINK_PLAYERS];
+    // bool8 canHoldItem[MAX_LINK_PLAYERS][DAYCARE_MON_COUNT];
+    // u8 idxs[MAX_LINK_PLAYERS][2];
+    // u8 numDaycareCanHold;
+    // u16 oldSeed;
+    // bool32 anyRS;
 
-    // Seed RNG to the first player's trainer id so that
-    // every player has the same random swap occur
-    // (see the other use of Random2 in this function)
-    oldSeed = Random2();
-    SeedRng2(gLinkPlayers[0].trainerId);
-    linkPlayerCount = GetLinkPlayerCount();
-    for (i = 0; i < MAX_LINK_PLAYERS; i++)
-    {
-        unusedArr1[i] = 0xFF;
-        unusedArr2[i] = 0;
-        canHoldItem[i][0] = FALSE;
-        canHoldItem[i][1] = FALSE;
-    }
+    // // Seed RNG to the first player's trainer id so that
+    // // every player has the same random swap occur
+    // // (see the other use of Random2 in this function)
+    // oldSeed = Random2();
+    // SeedRng2(gLinkPlayers[0].trainerId);
+    // linkPlayerCount = GetLinkPlayerCount();
+    // for (i = 0; i < MAX_LINK_PLAYERS; i++)
+    // {
+    //     unusedArr1[i] = 0xFF;
+    //     unusedArr2[i] = 0;
+    //     canHoldItem[i][0] = FALSE;
+    //     canHoldItem[i][1] = FALSE;
+    // }
 
-    // Handle language differences if RS / Japanese players are present
-    anyRS = Link_AnyPartnersPlayingRubyOrSapphire();
-    for (i = 0; i < GetLinkPlayerCount(); i++)
-    {
-        u32 language, version;
+    // // Handle language differences if RS / Japanese players are present
+    // anyRS = Link_AnyPartnersPlayingRubyOrSapphire();
+    // for (i = 0; i < GetLinkPlayerCount(); i++)
+    // {
+    //     u32 language, version;
 
-        mixMail = (void *)records + i * recordSize;
-        language = gLinkPlayers[i].language;
-        version = gLinkPlayers[i].version & 0xFF;
+    //     mixMail = (void *)records + i * recordSize;
+    //     language = gLinkPlayers[i].language;
+    //     version = gLinkPlayers[i].version & 0xFF;
 
-        for (j = 0; j < mixMail->numDaycareMons; j++)
-        {
-            u16 otNameLanguage, nicknameLanguage;
-            struct DaycareMail *daycareMail = &mixMail->mail[j];
+    //     for (j = 0; j < mixMail->numDaycareMons; j++)
+    //     {
+    //         u16 otNameLanguage, nicknameLanguage;
+    //         struct DaycareMail *daycareMail = &mixMail->mail[j];
 
-            if (daycareMail->message.itemId == ITEM_NONE)
-                continue;
+    //         if (daycareMail->message.itemId == ITEM_NONE)
+    //             continue;
 
-            if (anyRS)
-            {
-                // Handle OT name language
-                if (StringLength(daycareMail->otName) <= 5)
-                {
-                    otNameLanguage = LANGUAGE_JAPANESE;
-                }
-                else
-                {
-                    StripExtCtrlCodes(daycareMail->otName);
-                    otNameLanguage = language;
-                }
+    //         if (anyRS)
+    //         {
+    //             // Handle OT name language
+    //             if (StringLength(daycareMail->otName) <= 5)
+    //             {
+    //                 otNameLanguage = LANGUAGE_JAPANESE;
+    //             }
+    //             else
+    //             {
+    //                 StripExtCtrlCodes(daycareMail->otName);
+    //                 otNameLanguage = language;
+    //             }
 
-                // Handle nickname langugae
-                if (daycareMail->monName[0] == EXT_CTRL_CODE_BEGIN && daycareMail->monName[1] == EXT_CTRL_CODE_JPN)
-                {
-                    StripExtCtrlCodes(daycareMail->monName);
-                    nicknameLanguage = LANGUAGE_JAPANESE;
-                }
-                else
-                {
-                    nicknameLanguage = language;
-                }
+    //             // Handle nickname langugae
+    //             if (daycareMail->monName[0] == EXT_CTRL_CODE_BEGIN && daycareMail->monName[1] == EXT_CTRL_CODE_JPN)
+    //             {
+    //                 StripExtCtrlCodes(daycareMail->monName);
+    //                 nicknameLanguage = LANGUAGE_JAPANESE;
+    //             }
+    //             else
+    //             {
+    //                 nicknameLanguage = language;
+    //             }
 
-                // Set languages
-                if (version == VERSION_RUBY || version == VERSION_SAPPHIRE)
-                {
-                    daycareMail->gameLanguage = otNameLanguage;
-                    daycareMail->monLanguage = nicknameLanguage;
-                }
-            }
-            else if (language == LANGUAGE_JAPANESE)
-            {
-                if (IsStringJapanese(daycareMail->otName))
-                    daycareMail->gameLanguage = LANGUAGE_JAPANESE;
-                else
-                    daycareMail->gameLanguage = GAME_LANGUAGE;
+    //             // Set languages
+    //             if (version == VERSION_RUBY || version == VERSION_SAPPHIRE)
+    //             {
+    //                 daycareMail->gameLanguage = otNameLanguage;
+    //                 daycareMail->monLanguage = nicknameLanguage;
+    //             }
+    //         }
+    //         else if (language == LANGUAGE_JAPANESE)
+    //         {
+    //             if (IsStringJapanese(daycareMail->otName))
+    //                 daycareMail->gameLanguage = LANGUAGE_JAPANESE;
+    //             else
+    //                 daycareMail->gameLanguage = GAME_LANGUAGE;
 
-                if (IsStringJapanese(daycareMail->monName))
-                    daycareMail->monLanguage = LANGUAGE_JAPANESE;
-                else
-                    daycareMail->monLanguage = GAME_LANGUAGE;
-            }
-        }
-    }
+    //             if (IsStringJapanese(daycareMail->monName))
+    //                 daycareMail->monLanguage = LANGUAGE_JAPANESE;
+    //             else
+    //                 daycareMail->monLanguage = GAME_LANGUAGE;
+    //         }
+    //     }
+    // }
 
-    // For each player, get which of their daycare Pokémon can hold items
-    // (can't hold items if already holding one, or if daycare slot is empty).
-    // Note that when deposited in the daycare, Pokémon have their mail taken
-    // from them and returned upon withdrawal, which means daycare Pokémon that
-    // have associated mail do not have a held item.
-    // Because not holding an item is the only determination for a swap, this also
-    // means that a "swap" can occur even if neither Pokémon has associated mail.
-    numDaycareCanHold = 0;
-    for (i = 0; i < linkPlayerCount; i++)
-    {
-        mixMail = (void *)records + i * recordSize;
-        if (mixMail->numDaycareMons == 0)
-            continue;
+    // // For each player, get which of their daycare Pokémon can hold items
+    // // (can't hold items if already holding one, or if daycare slot is empty).
+    // // Note that when deposited in the daycare, Pokémon have their mail taken
+    // // from them and returned upon withdrawal, which means daycare Pokémon that
+    // // have associated mail do not have a held item.
+    // // Because not holding an item is the only determination for a swap, this also
+    // // means that a "swap" can occur even if neither Pokémon has associated mail.
+    // numDaycareCanHold = 0;
+    // for (i = 0; i < linkPlayerCount; i++)
+    // {
+    //     mixMail = (void *)records + i * recordSize;
+    //     if (mixMail->numDaycareMons == 0)
+    //         continue;
 
-        for (j = 0; j < mixMail->numDaycareMons; j++)
-        {
-            if (!mixMail->cantHoldItem[j])
-                canHoldItem[i][j] = TRUE;
-        }
-    }
+    //     for (j = 0; j < mixMail->numDaycareMons; j++)
+    //     {
+    //         if (!mixMail->cantHoldItem[j])
+    //             canHoldItem[i][j] = TRUE;
+    //     }
+    // }
 
-    // Fill the idxs array with data about which players
-    // and which daycare slots should swap mail.
-    j = 0;
-    for (i = 0; i < linkPlayerCount; i++)
-    {
-        mixMail = (void *)records + i * recordSize;
+    // // Fill the idxs array with data about which players
+    // // and which daycare slots should swap mail.
+    // j = 0;
+    // for (i = 0; i < linkPlayerCount; i++)
+    // {
+    //     mixMail = (void *)records + i * recordSize;
         
-        // Count number of players that have at least
-        // one daycare Pokémon with no held item
-        if (canHoldItem[i][0] == TRUE || canHoldItem[i][1] == TRUE)
-            numDaycareCanHold++;
+    //     // Count number of players that have at least
+    //     // one daycare Pokémon with no held item
+    //     if (canHoldItem[i][0] == TRUE || canHoldItem[i][1] == TRUE)
+    //         numDaycareCanHold++;
 
-        if (canHoldItem[i][0] == TRUE && canHoldItem[i][1] == FALSE)
-        {
-            // Only daycare slot 0 can hold an item for this player, record it
-            idxs[j][MULTIPLAYER_ID] = i;
-            idxs[j][DAYCARE_SLOT] = 0;
-            j++;
-        }
-        else if (canHoldItem[i][0] == FALSE && canHoldItem[i][1] == TRUE)
-        {
-            // Only daycare slot 1 can hold an item for this player, record it
-            idxs[j][MULTIPLAYER_ID] = i;
-            idxs[j][DAYCARE_SLOT] = 1;
-            j++;
-        }
-        else if (canHoldItem[i][0] == TRUE && canHoldItem[i][1] == TRUE)
-        {
-            // Both daycare slots can hold an item, choose which one to use.
-            // If either one is the only one to have associated mail, use that one.
-            // If both do or don't have associated mail, choose one randomly.
-            u32 itemId1, itemId2;
-            idxs[j][MULTIPLAYER_ID] = i;
-            itemId1 = GetDaycareMailItemId(&mixMail->mail[0]);
-            itemId2 = GetDaycareMailItemId(&mixMail->mail[1]);
+    //     if (canHoldItem[i][0] == TRUE && canHoldItem[i][1] == FALSE)
+    //     {
+    //         // Only daycare slot 0 can hold an item for this player, record it
+    //         idxs[j][MULTIPLAYER_ID] = i;
+    //         idxs[j][DAYCARE_SLOT] = 0;
+    //         j++;
+    //     }
+    //     else if (canHoldItem[i][0] == FALSE && canHoldItem[i][1] == TRUE)
+    //     {
+    //         // Only daycare slot 1 can hold an item for this player, record it
+    //         idxs[j][MULTIPLAYER_ID] = i;
+    //         idxs[j][DAYCARE_SLOT] = 1;
+    //         j++;
+    //     }
+    //     else if (canHoldItem[i][0] == TRUE && canHoldItem[i][1] == TRUE)
+    //     {
+    //         // Both daycare slots can hold an item, choose which one to use.
+    //         // If either one is the only one to have associated mail, use that one.
+    //         // If both do or don't have associated mail, choose one randomly.
+    //         u32 itemId1, itemId2;
+    //         idxs[j][MULTIPLAYER_ID] = i;
+    //         itemId1 = GetDaycareMailItemId(&mixMail->mail[0]);
+    //         itemId2 = GetDaycareMailItemId(&mixMail->mail[1]);
 
-            if ((!itemId1 && !itemId2) || (itemId1 && itemId2))
-                idxs[j][DAYCARE_SLOT] = Random2() % 2;
-            else if (itemId1 && !itemId2)
-                idxs[j][DAYCARE_SLOT] = 0;
-            else if (!itemId1 && itemId2)
-                 idxs[j][DAYCARE_SLOT] = 1;
+    //         if ((!itemId1 && !itemId2) || (itemId1 && itemId2))
+    //             idxs[j][DAYCARE_SLOT] = Random2() % 2;
+    //         else if (itemId1 && !itemId2)
+    //             idxs[j][DAYCARE_SLOT] = 0;
+    //         else if (!itemId1 && itemId2)
+    //              idxs[j][DAYCARE_SLOT] = 1;
 
-            j++;
-        }
-    }
+    //         j++;
+    //     }
+    // }
 
-    // Copy the player's record mix mail 4 times to an array that's never read.
-    for (i = 0; i < MAX_LINK_PLAYERS; i++)
-    {
-        mixMail = &records[multiplayerId * recordSize];
-        unusedMixMail[i] = mixMail;
-    }
+    // // Copy the player's record mix mail 4 times to an array that's never read.
+    // for (i = 0; i < MAX_LINK_PLAYERS; i++)
+    // {
+    //     mixMail = &records[multiplayerId * recordSize];
+    //     unusedMixMail[i] = mixMail;
+    // }
 
-    // Choose a random table id to determine who will
-    // swap if there are more than 2 candidate players.
-    tableId = GetDaycareMailRandSum() % NUM_SWAP_COMBOS;
-    switch (numDaycareCanHold)
-    {
-    case 2:
-        // 2 players can swap, just perform swap.
-        SwapDaycareMail(records, recordSize, idxs, 0, 1);
-        break;
-    case 3:
-        // 3 players can swap, select 2 and leave the 3rd out
-        playerSlot1 = sDaycareMailSwapIds_3Player[tableId][0];
-        playerSlot2 = sDaycareMailSwapIds_3Player[tableId][1];
-        SwapDaycareMail(records, recordSize, idxs, playerSlot1, playerSlot2);
-        break;
-    case 4:
-        // 4 players can swap, select which 2 pairings will swap
-        ptr = idxs;
+    // // Choose a random table id to determine who will
+    // // swap if there are more than 2 candidate players.
+    // tableId = GetDaycareMailRandSum() % NUM_SWAP_COMBOS;
+    // switch (numDaycareCanHold)
+    // {
+    // case 2:
+    //     // 2 players can swap, just perform swap.
+    //     SwapDaycareMail(records, recordSize, idxs, 0, 1);
+    //     break;
+    // case 3:
+    //     // 3 players can swap, select 2 and leave the 3rd out
+    //     playerSlot1 = sDaycareMailSwapIds_3Player[tableId][0];
+    //     playerSlot2 = sDaycareMailSwapIds_3Player[tableId][1];
+    //     SwapDaycareMail(records, recordSize, idxs, playerSlot1, playerSlot2);
+    //     break;
+    // case 4:
+    //     // 4 players can swap, select which 2 pairings will swap
+    //     ptr = idxs;
         
-        // Swap pair 1
-        playerSlot1 = sDaycareMailSwapIds_4Player[tableId][0];
-        playerSlot2 = sDaycareMailSwapIds_4Player[tableId][1];
-        SwapDaycareMail(records, recordSize, ptr, playerSlot1, playerSlot2);
+    //     // Swap pair 1
+    //     playerSlot1 = sDaycareMailSwapIds_4Player[tableId][0];
+    //     playerSlot2 = sDaycareMailSwapIds_4Player[tableId][1];
+    //     SwapDaycareMail(records, recordSize, ptr, playerSlot1, playerSlot2);
 
-        // Swap pair 2
-        playerSlot1 = sDaycareMailSwapIds_4Player[tableId][2];
-        playerSlot2 = sDaycareMailSwapIds_4Player[tableId][3];
-        SwapDaycareMail(records, recordSize, ptr, playerSlot1, playerSlot2);
-        break;
-    }
+    //     // Swap pair 2
+    //     playerSlot1 = sDaycareMailSwapIds_4Player[tableId][2];
+    //     playerSlot2 = sDaycareMailSwapIds_4Player[tableId][3];
+    //     SwapDaycareMail(records, recordSize, ptr, playerSlot1, playerSlot2);
+    //     break;
+    // }
 
-    // Save player's record mixed mail to the daycare (in case it has changed)
-    mixMail = (void *)records + multiplayerId * recordSize;
-    memcpy(&gSaveBlock1Ptr->daycare.mons[0].mail, &mixMail->mail[0], sizeof(struct DaycareMail));
-    memcpy(&gSaveBlock1Ptr->daycare.mons[1].mail, &mixMail->mail[1], sizeof(struct DaycareMail));
-    SeedRng(oldSeed);
+    // // Save player's record mixed mail to the daycare (in case it has changed)
+    // mixMail = (void *)records + multiplayerId * recordSize;
+    // memcpy(&gSaveBlock1Ptr->daycare.mons[0].mail, &mixMail->mail[0], sizeof(struct DaycareMail));
+    // memcpy(&gSaveBlock1Ptr->daycare.mons[1].mail, &mixMail->mail[1], sizeof(struct DaycareMail));
+    // SeedRng(oldSeed);
 }
 
 
@@ -1285,58 +1285,58 @@ static void GetNewHallRecords(struct RecordMixingHallRecords *dst, void *records
 
 static void FillWinStreakRecords1P(struct RankingHall1P *playerRecords, struct RankingHall1P *mixRecords)
 {
-    s32 i, j;
+    // s32 i, j;
 
-    // Fill the player's 1P records with the highest win streaks from the mixed records
-    for (i = 0; i < HALL_RECORDS_COUNT; i++)
-    {
-        // Get the highest remaining win streak in the mixed hall records
-        s32 highestWinStreak = 0;
-        s32 highestId = -1;
-        for (j = 0; j < HALL_RECORDS_COUNT * 2; j++)
-        {
-            if (mixRecords[j].winStreak > highestWinStreak)
-            {
-                highestId = j;
-                highestWinStreak = mixRecords[j].winStreak;
-            }
-        }
+    // // Fill the player's 1P records with the highest win streaks from the mixed records
+    // for (i = 0; i < HALL_RECORDS_COUNT; i++)
+    // {
+    //     // Get the highest remaining win streak in the mixed hall records
+    //     s32 highestWinStreak = 0;
+    //     s32 highestId = -1;
+    //     for (j = 0; j < HALL_RECORDS_COUNT * 2; j++)
+    //     {
+    //         if (mixRecords[j].winStreak > highestWinStreak)
+    //         {
+    //             highestId = j;
+    //             highestWinStreak = mixRecords[j].winStreak;
+    //         }
+    //     }
 
-        // Save the win streak to the player's records, then clear it from the mixed records
-        if (highestId >= 0)
-        {
-            playerRecords[i] = mixRecords[highestId];
-            mixRecords[highestId].winStreak = 0;
-        }
-    }
+    //     // Save the win streak to the player's records, then clear it from the mixed records
+    //     if (highestId >= 0)
+    //     {
+    //         playerRecords[i] = mixRecords[highestId];
+    //         mixRecords[highestId].winStreak = 0;
+    //     }
+    // }
 }
 
 static void FillWinStreakRecords2P(struct RankingHall2P *playerRecords, struct RankingHall2P *mixRecords)
 {
-    s32 i, j;
+    // s32 i, j;
 
-    // Fill the player's 2P records with the highest win streaks from the mixed records
-    for (i = 0; i < HALL_RECORDS_COUNT; i++)
-    {
-        // Get the highest remaining win streak in the mixed hall records
-        s32 highestWinStreak = 0;
-        s32 highestId = -1;
-        for (j = 0; j < HALL_RECORDS_COUNT * 2; j++)
-        {
-            if (mixRecords[j].winStreak > highestWinStreak)
-            {
-                highestId = j;
-                highestWinStreak = mixRecords[j].winStreak;
-            }
-        }
+    // // Fill the player's 2P records with the highest win streaks from the mixed records
+    // for (i = 0; i < HALL_RECORDS_COUNT; i++)
+    // {
+    //     // Get the highest remaining win streak in the mixed hall records
+    //     s32 highestWinStreak = 0;
+    //     s32 highestId = -1;
+    //     for (j = 0; j < HALL_RECORDS_COUNT * 2; j++)
+    //     {
+    //         if (mixRecords[j].winStreak > highestWinStreak)
+    //         {
+    //             highestId = j;
+    //             highestWinStreak = mixRecords[j].winStreak;
+    //         }
+    //     }
 
-        // Save the win streak to the player's records, then clear it from the mixed records
-        if (highestId >= 0)
-        {
-            playerRecords[i] = mixRecords[highestId];
-            mixRecords[highestId].winStreak = 0;
-        }
-    }
+    //     // Save the win streak to the player's records, then clear it from the mixed records
+    //     if (highestId >= 0)
+    //     {
+    //         playerRecords[i] = mixRecords[highestId];
+    //         mixRecords[highestId].winStreak = 0;
+    //     }
+    // }
 }
 
 static void SaveHighestWinStreakRecords(struct RecordMixingHallRecords *mixHallRecords)
@@ -1365,10 +1365,10 @@ static void ReceiveRankingHallRecords(struct PlayerHallRecords *records, size_t 
 
 static void GetRecordMixingDaycareMail(struct RecordMixingDaycareMail *dst)
 {
-    sRecordMixMail.mail[0] = gSaveBlock1Ptr->daycare.mons[0].mail;
-    sRecordMixMail.mail[1] = gSaveBlock1Ptr->daycare.mons[1].mail;
-    InitDaycareMailRecordMixing(&gSaveBlock1Ptr->daycare, &sRecordMixMail);
-    *dst = *sRecordMixMailSave;
+    // sRecordMixMail.mail[0] = gSaveBlock1Ptr->daycare.mons[0].mail;
+    // sRecordMixMail.mail[1] = gSaveBlock1Ptr->daycare.mons[1].mail;
+    // InitDaycareMailRecordMixing(&gSaveBlock1Ptr->daycare, &sRecordMixMail);
+    // *dst = *sRecordMixMailSave;
 }
 
 static void SanitizeDaycareMailForRuby(struct RecordMixingDaycareMail *src)

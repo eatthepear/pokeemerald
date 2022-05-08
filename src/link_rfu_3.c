@@ -907,80 +907,80 @@ static bool32 NameIsNotEmpty(const u8 *name)
 // Save the currently connected players into the trainer records, shifting all previous records down.
 void SaveLinkTrainerNames(void)
 {
-    if (gWirelessCommType != 0)
-    {
-        s32 i;
-        s32 j;
-        s32 nextSpace;
-        s32 connectedTrainerRecordIndices[MAX_RFU_PLAYERS];
-        struct TrainerNameRecord *newRecords = calloc(ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords), sizeof(struct TrainerNameRecord));
+    // if (gWirelessCommType != 0)
+    // {
+    //     s32 i;
+    //     s32 j;
+    //     s32 nextSpace;
+    //     s32 connectedTrainerRecordIndices[MAX_RFU_PLAYERS];
+    //     struct TrainerNameRecord *newRecords = calloc(ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords), sizeof(struct TrainerNameRecord));
 
-        // Check if we already have a record saved for connected trainers.
-        for (i = 0; i < GetLinkPlayerCount(); i++)
-        {
-            connectedTrainerRecordIndices[i] = -1;
-            for (j = 0; j < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); j++)
-            {
-                if ((u16)gLinkPlayers[i].trainerId ==  gSaveBlock1Ptr->trainerNameRecords[j].trainerId && StringCompare(gLinkPlayers[i].name, gSaveBlock1Ptr->trainerNameRecords[j].trainerName) == 0)
-                    connectedTrainerRecordIndices[i] = j;
-            }
-        }
+    //     // Check if we already have a record saved for connected trainers.
+    //     for (i = 0; i < GetLinkPlayerCount(); i++)
+    //     {
+    //         connectedTrainerRecordIndices[i] = -1;
+    //         for (j = 0; j < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); j++)
+    //         {
+    //             if ((u16)gLinkPlayers[i].trainerId ==  gSaveBlock1Ptr->trainerNameRecords[j].trainerId && StringCompare(gLinkPlayers[i].name, gSaveBlock1Ptr->trainerNameRecords[j].trainerName) == 0)
+    //                 connectedTrainerRecordIndices[i] = j;
+    //         }
+    //     }
 
-        // Save the connected trainers first, at the top of the list.
-        nextSpace = 0;
-        for (i = 0; i < GetLinkPlayerCount(); i++)
-        {
-            if (i != GetMultiplayerId() && gLinkPlayers[i].language != LANGUAGE_JAPANESE)
-            {
-                CopyTrainerRecord(&newRecords[nextSpace], (u16)gLinkPlayers[i].trainerId, gLinkPlayers[i].name);
+    //     // Save the connected trainers first, at the top of the list.
+    //     nextSpace = 0;
+    //     for (i = 0; i < GetLinkPlayerCount(); i++)
+    //     {
+    //         if (i != GetMultiplayerId() && gLinkPlayers[i].language != LANGUAGE_JAPANESE)
+    //         {
+    //             CopyTrainerRecord(&newRecords[nextSpace], (u16)gLinkPlayers[i].trainerId, gLinkPlayers[i].name);
 
-                // If we already had a record for this trainer, wipe it so that the next step doesn't duplicate it.
-                if (connectedTrainerRecordIndices[i] >= 0)
-                    memset(gSaveBlock1Ptr->trainerNameRecords[connectedTrainerRecordIndices[i]].trainerName, 0, PLAYER_NAME_LENGTH + 1);
-                nextSpace++;
-            }
-        }
+    //             // If we already had a record for this trainer, wipe it so that the next step doesn't duplicate it.
+    //             if (connectedTrainerRecordIndices[i] >= 0)
+    //                 memset(gSaveBlock1Ptr->trainerNameRecords[connectedTrainerRecordIndices[i]].trainerName, 0, PLAYER_NAME_LENGTH + 1);
+    //             nextSpace++;
+    //         }
+    //     }
 
-        // Copy all non-empty records to the new list, in the order they appear on the old list. If the list is full,
-        // the last (oldest) records will be dropped.
-        for (i = 0; i < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); i++)
-        {
-            if (NameIsNotEmpty(gSaveBlock1Ptr->trainerNameRecords[i].trainerName))
-            {
-                CopyTrainerRecord(&newRecords[nextSpace], gSaveBlock1Ptr->trainerNameRecords[i].trainerId, gSaveBlock1Ptr->trainerNameRecords[i].trainerName);
-                if (++nextSpace >= (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords))
-                    break;
-            }
-        }
+    //     // Copy all non-empty records to the new list, in the order they appear on the old list. If the list is full,
+    //     // the last (oldest) records will be dropped.
+    //     for (i = 0; i < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); i++)
+    //     {
+    //         if (NameIsNotEmpty(gSaveBlock1Ptr->trainerNameRecords[i].trainerName))
+    //         {
+    //             CopyTrainerRecord(&newRecords[nextSpace], gSaveBlock1Ptr->trainerNameRecords[i].trainerId, gSaveBlock1Ptr->trainerNameRecords[i].trainerName);
+    //             if (++nextSpace >= (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords))
+    //                 break;
+    //         }
+    //     }
 
-        // Finalize the new list, and clean up.
-        memcpy(gSaveBlock1Ptr->trainerNameRecords, newRecords, sizeof(gSaveBlock1Ptr->trainerNameRecords));
-        free(newRecords);
-    }
+    //     // Finalize the new list, and clean up.
+    //     memcpy(gSaveBlock1Ptr->trainerNameRecords, newRecords, sizeof(gSaveBlock1Ptr->trainerNameRecords));
+    //     free(newRecords);
+    // }
 }
 
 bool32 PlayerHasMetTrainerBefore(u16 id, u8 *name)
 {
-    s32 i;
+    // s32 i;
 
-    for (i = 0; i < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); i++)
-    {
-        if (StringCompare(gSaveBlock1Ptr->trainerNameRecords[i].trainerName, name) == 0 && gSaveBlock1Ptr->trainerNameRecords[i].trainerId == id)
-            return TRUE;
+    // for (i = 0; i < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); i++)
+    // {
+    //     if (StringCompare(gSaveBlock1Ptr->trainerNameRecords[i].trainerName, name) == 0 && gSaveBlock1Ptr->trainerNameRecords[i].trainerId == id)
+    //         return TRUE;
 
-        if (!NameIsNotEmpty(gSaveBlock1Ptr->trainerNameRecords[i].trainerName))
-            return FALSE;
-    }
+    //     if (!NameIsNotEmpty(gSaveBlock1Ptr->trainerNameRecords[i].trainerName))
+    //         return FALSE;
+    // }
     return FALSE;
 }
 
 void WipeTrainerNameRecords(void)
 {
-    s32 i;
+    // s32 i;
 
-    for (i = 0; i < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); i++)
-    {
-        gSaveBlock1Ptr->trainerNameRecords[i].trainerId = 0;
-        CpuFill16(0, gSaveBlock1Ptr->trainerNameRecords[i].trainerName, PLAYER_NAME_LENGTH + 1);
-    }
+    // for (i = 0; i < (int)ARRAY_COUNT(gSaveBlock1Ptr->trainerNameRecords); i++)
+    // {
+    //     gSaveBlock1Ptr->trainerNameRecords[i].trainerId = 0;
+    //     CpuFill16(0, gSaveBlock1Ptr->trainerNameRecords[i].trainerName, PLAYER_NAME_LENGTH + 1);
+    // }
 }
