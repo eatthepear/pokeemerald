@@ -571,8 +571,7 @@ gText_Joy_ThankYou:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: That will be ¥1000, thank you…$"
 
 gText_Joy_PartyHealed:
-	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.\n"
-	.string "You also now have access to the PC.$"
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.$"
 
 gText_Joy_WonderfulDay:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Have a wonderful day!$"

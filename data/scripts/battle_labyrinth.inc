@@ -2080,10 +2080,6 @@ EventScript_Joy_Welcome:
 	releaseall
 	end
 
-EventScript_Joy_Nuzlocke:
-	msgbox gText_Joy_Nuzlocke, MSGBOX_AUTOCLOSE
-	return
-
 EventScript_Joy_CheckMoney:
 	checkmoney 1000, 0
 	compare VAR_RESULT, FALSE

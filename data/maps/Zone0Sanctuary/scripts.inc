@@ -12,6 +12,7 @@ Zone0Sanctuary_EventScript_Intro:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_PC_LANETTE
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -244,7 +245,6 @@ Zone0Sanctuary_EventScript_Tour:
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
 	msgbox Zone0Sanctuary_Text_Colress_Healing, MSGBOX_AUTOCLOSE
-	call_if_set FLAG_NUZLOCKE_ON, Zone0Sanctuary_EventScript_NuzlockeDialog
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -786,12 +786,6 @@ Zone0Sanctuary_Text_Colress_YouSureStarterSobble:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"
 	.string "Sobble?$"
 
-Zone0Sanctuary_EventScript_NuzlockeDialog:
-	delay 24
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeHealing, MSGBOX_AUTOCLOSE
-	delay 24
-	return
-
 Zone0Sanctuary_EventScript_RandomizerStarter:
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerStarter, MSGBOX_AUTOCLOSE
 	callnative GiveRandomStarter
@@ -1043,14 +1037,7 @@ Zone0Sanctuary_Text_Colress_Healing:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is\n"
 	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
 	.string "For ¥1000, they will heal your\n"
-	.string "entire party and also grant\l"
-	.string "complimentary access to the\l"
-	.string "Pokémon Storage System.$"
-
-Zone0Sanctuary_Text_Colress_NuzlockeHealing:
-	.string "They will also take away your\n"
-	.string "fallen Pokémon before healing your\l"
-	.string "surviving party.$"
+	.string "entire party.$"
 
 Zone0Sanctuary_Text_Colress_TourDone:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
