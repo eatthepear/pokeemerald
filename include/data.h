@@ -64,6 +64,7 @@ struct Trainer
     /*0x20*/ u8 partySize;
     u8 transition:7;
     u8 hasCustomTransition:1;
+    bool8 shouldShuffle;
     /*0x24*/ union TrainerMonPtr party;
 };
 
