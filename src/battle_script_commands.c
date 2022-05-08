@@ -6768,7 +6768,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     
     if (FlagGet(FLAG_BRUTAL_MODE_ON))
     {
-        scale = 3;
+        scale = 2;
     }
 
     if (trainerId == TRAINER_SECRET_BASE)

@@ -30,7 +30,6 @@ Zone2Sanctuary_EventScript_Intro:
 	setvar VAR_ZONE, 3
 	setflag FLAG_HIDE_LEVIATHAN1
 	removeobject 4, MAP_ZONE3A
-	msgbox Zone2Sanctuary_Text_Colress_ExplainLeviathans, MSGBOX_AUTOCLOSE
 	delay 96
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -65,16 +64,6 @@ Zone2Sanctuary_EventScript_Leave:
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE3A, 255, 38, 25
 	end
-
-Zone2Sanctuary_Text_Colress_ExplainLeviathans:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next Zone will contain\n"
-	.string "a {COLOR RED}Leviathan{COLOR DARK_GRAY}.\p"
-	.string "{COLOR RED}Leviathans{COLOR DARK_GRAY} are difficult bosses\n"
-	.string "that appear in some Zones.\p"
-	.string "Defeating a Leviathan yields\n"
-	.string "great rewards.\p"
-	.string "However, typically you will not be\n"
-	.string "warned of them in advance.$"
 
 Zone2Sanctuary_Text_Reward:
 	.string "TM01 - Protect!$"

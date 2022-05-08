@@ -189,9 +189,9 @@ gText_Colress_Rules:
 	.string "Once you enter a new Zone, you will\n"
 	.string "not be able to access a Sanctuary\l"
 	.string "until you exit that Zone.\p"
-	.string "In order to prevent soft locks,\n"
-	.string "you will only be allowed to save\l"
-	.string "your game in a Sanctuary.$"
+	.string "Each Zone contains at least one\n"
+	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields\l"
+	.string "great rewards if defeated.$"
 
 gText_Colress_DontLose:
 	.string "You must progress through all Zones\n"
