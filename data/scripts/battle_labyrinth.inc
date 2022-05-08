@@ -1225,61 +1225,51 @@ EventScript_Shop_LelouchTraining4Brutal:
 
 EventScript_Shop_LelouchExp1:
 	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchExp2:
 	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchExp3:
 	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchExp4:
 	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVHP:
 	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVAtk:
 	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVDef:
 	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVSpA:
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVSpD:
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
 EventScript_Shop_LelouchEVSpe:
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
-	special HealPlayerParty
 	goto EventScript_Shop_Lelouch_TrainSwitcher
 	end
 
