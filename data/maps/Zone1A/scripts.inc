@@ -9,18 +9,18 @@ Zone1A_EventScript_Exit::
 	releaseall
 	end
 
-Zone1A_EventScript_Corey::
-	trainerbattle_single TRAINER_COREY, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
-	msgbox Zone1A_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
+Zone1A_EventScript_Nina::
+	trainerbattle_single TRAINER_NINA, Zone1A_Text_NinaIntro, Zone1A_Text_NinaDefeat
+	msgbox Zone1A_Text_NinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone1A_Text_CoreyIntro:
+Zone1A_Text_NinaIntro:
 	.string "Hey, you! Let's battle!$"
 
-Zone1A_Text_CoreyDefeat:
+Zone1A_Text_NinaDefeat:
 	.string "Aww... Come on!$"
 
-Zone1A_Text_CoreyPostBattle:
+Zone1A_Text_NinaPostBattle:
 	.string "I always lose...$"
 
 Zone1A_EventScript_Mariam::
@@ -51,6 +51,20 @@ Zone1A_Text_OscarDefeat:
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
 
+Zone1A_EventScript_Corey::
+	trainerbattle_single TRAINER_COREY, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
+	msgbox Zone1A_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone1A_Text_CoreyIntro:
+	.string "Fear my might!$"
+
+Zone1A_Text_CoreyDefeat:
+	.string "Beaten! Disgrace!$"
+
+Zone1A_Text_CoreyPostBattle:
+	.string "I must reclaim my honor...$"
+
 Zone1A_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
@@ -58,3 +72,5 @@ Zone1A_EventScript_ItemPotion::
 Zone1A_EventScript_ItemQuickClaw::
 	finditem ITEM_QUICK_CLAW
 	end
+
+

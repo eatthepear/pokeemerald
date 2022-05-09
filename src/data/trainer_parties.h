@@ -17,12 +17,14 @@
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
+ * Some trainers will randomly lead with one of their party Pokemon. This will be included in the comments next to the trainer.
+ * 
  * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. 
  * On Brutal, the trainer AI knows your moveset. */
 
 /* ------------------- Zone 1 ------------------- */
 
-static const struct TrainerMon sParty_Corey[] = {
+static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
     .lvl = 3,
@@ -77,17 +79,18 @@ static const struct TrainerMon sParty_Oscar[] = {
     }
 };
 
-// static const struct TrainerMon sParty_Corey[] = {//Leviathan, Default
-//     {
-//     .iv = 31,
-//     .lvl = 8,
-//     .nature = NATURE_ADAMANT,
-//     .gender = TRAINER_MON_MALE,
-//     .ability = ABILITY_SLOT_1, //Cheek Pouch
-//     .species = SPECIES_SKWOVET,
-//     .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_STUFF_CHEEKS, MOVE_TAIL_WHIP}
-//     }
-// };
+static const struct TrainerMon sParty_Corey[] = {//Leviathan, Default
+    {
+    .iv = 31,
+    .lvl = 7,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Cheek Pouch
+    .species = SPECIES_SKWOVET,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_STUFF_CHEEKS, MOVE_TAIL_WHIP}
+    }
+};
 
 /* ------------------- Zone 2 ------------------- */
 
@@ -3669,14 +3672,6 @@ static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, 
     .species = SPECIES_PINSIR,
     .heldItem = ITEM_PINSIRITE,
     .moves = {MOVE_RETURN, MOVE_CLOSE_COMBAT, MOVE_SWORDS_DANCE, MOVE_HIGH_HORSEPOWER}
-    }
-};
-
-static const struct TrainerMon sParty_Unused1[] = {
-    {
-    .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_PELIPPER,
     }
 };
 

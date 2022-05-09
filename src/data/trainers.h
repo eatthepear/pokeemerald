@@ -12,17 +12,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = NULL},
     },
 
-    [TRAINER_COREY] =
+    [TRAINER_NINA] =
     {
         .trainerClass = TRAINER_CLASS_SCHOOL_KID,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_SCHOOL_KID_F,
-        .trainerName = _("Corey"),
+        .trainerName = _("Nina"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Corey),
-        .party = {.TrainerMon = sParty_Corey},
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Nina),
+        .party = {.TrainerMon = sParty_Nina},
     },
 
     [TRAINER_MARIAM] =
@@ -33,7 +33,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Mariam"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Mariam),
         .party = {.TrainerMon = sParty_Mariam},
     },
@@ -46,9 +46,22 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Oscar"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Oscar),
         .party = {.TrainerMon = sParty_Oscar},
+    },
+
+    [TRAINER_COREY] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_M,
+        .trainerName = _("Corey"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_Corey),
+        .party = {.TrainerMon = sParty_Corey},
     },
 
     [TRAINER_HARPER] =
@@ -2147,19 +2160,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Zone25LMiragesBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
-    },
-
-    [TRAINER_UNUSED1] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Unused"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Unused1),
-        .party = {.TrainerMon = sParty_Unused1},
     },
 
     [TRAINER_UNUSED2] =
