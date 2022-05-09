@@ -52,7 +52,7 @@ Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
 
 Zone1A_EventScript_Corey::
-	trainerbattle_single TRAINER_COREY, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
+	trainerbattle_single TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
 	msgbox Zone1A_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

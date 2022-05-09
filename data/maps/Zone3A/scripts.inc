@@ -31,7 +31,7 @@ Zone3A_EventScript_Exit::
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_REMI
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_RemiBrutal
-	trainerbattle_no_intro TRAINER_LEVIATHAN1, Zone3A_Text_Leviathan1Defeat
+	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan1Defeat
 	goto Zone3A_EventScript_Leviathan1Defeated
 	end
 
