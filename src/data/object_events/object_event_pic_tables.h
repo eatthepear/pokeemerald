@@ -1924,15 +1924,15 @@ static const struct SpriteFrameImage sPicTable_Pikachu[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Azumarill[] = {
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Azumarill, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_Wingull[] = {
