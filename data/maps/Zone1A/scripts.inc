@@ -1,13 +1,21 @@
 Zone1A_MapScripts::
 	.byte 0
 
+
 Zone1A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 1
-	goto_if_gt EventScript_WarpZone0
+	goto_if_gt Zone1A_EventScript_Exit_2
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
+Zone1A_EventScript_Exit_1:
 	releaseall
 	end
+
+Zone1A_EventScript_Exit_2:
+	clearflag FLAG_IS_REVISITING_ZONE
+	warpteleport MAP_ZONE0D, 255, 2, 32
+	goto Zone1A_EventScript_Exit_1
+
 
 Zone1A_EventScript_Corey::
 	trainerbattle_single TRAINER_COREY, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
