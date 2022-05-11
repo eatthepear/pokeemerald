@@ -1,13 +1,21 @@
 Zone1A_MapScripts::
 	.byte 0
 
+
 Zone1A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 1
-	goto_if_gt EventScript_WarpZone0
+	goto_if_gt Zone1A_EventScript_Exit_2
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
+Zone1A_EventScript_Exit_1:
 	releaseall
 	end
+
+Zone1A_EventScript_Exit_2:
+	clearflag FLAG_IS_REVISITING_ZONE
+	warpteleport MAP_ZONE0D, 255, 2, 32
+	goto Zone1A_EventScript_Exit_1
+
 
 Zone1A_EventScript_Nina::
 	trainerbattle_single TRAINER_NINA, Zone1A_Text_NinaIntro, Zone1A_Text_NinaDefeat
@@ -57,13 +65,13 @@ Zone1A_EventScript_Corey::
 	end
 
 Zone1A_Text_CoreyIntro:
-	.string "Fear my might!$"
+	.string "Hey, you! Let's battle!$"
 
 Zone1A_Text_CoreyDefeat:
-	.string "Beaten! Disgrace!$"
+	.string "Aww... Come on!$"
 
 Zone1A_Text_CoreyPostBattle:
-	.string "I must reclaim my honor...$"
+	.string "I always lose...$"
 
 Zone1A_EventScript_ItemPotion::
 	finditem ITEM_POTION
@@ -72,5 +80,3 @@ Zone1A_EventScript_ItemPotion::
 Zone1A_EventScript_ItemQuickClaw::
 	finditem ITEM_QUICK_CLAW
 	end
-
-

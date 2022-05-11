@@ -48,3 +48,4 @@ log.txt
 *.diff
 *.sym
 *.js
+tools/poryscript
