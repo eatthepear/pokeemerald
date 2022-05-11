@@ -19,9 +19,27 @@ Zone1A_EventScript_Exit_2:
 
 Zone1A_EventScript_LeviathanBattle::
 	lock
+	fadeoutbgm 1
+	msgbox Zone1A_Text_Leviathan1Intro
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone1A_EventScript_LeviathanBattle_2
+	setvar VAR_MUGSHOT_ID, MUGSHOT_COREY
+	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat
+Zone1A_EventScript_LeviathanBattle_1:
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_0
+	giveitem ITEM_ORAN_BERRY, 10
+	msgbox Zone1A_EventScript_LeviathanBattle_Text_1
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject 6
+	fadescreen FADE_FROM_BLACK
 	release
 	end
+
+Zone1A_EventScript_LeviathanBattle_2:
+	totemboost_speed1 B_POSITION_OPPONENT_LEFT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_COREY
+	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat
+	goto Zone1A_EventScript_LeviathanBattle_1
 
 
 Zone1A_EventScript_Nina::
@@ -66,20 +84,6 @@ Zone1A_Text_OscarDefeat:
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
 
-Zone1A_EventScript_Corey::
-	trainerbattle_single TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
-	msgbox Zone1A_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone1A_Text_CoreyIntro:
-	.string "Hey, you! Let's battle!$"
-
-Zone1A_Text_CoreyDefeat:
-	.string "Aww... Come on!$"
-
-Zone1A_Text_CoreyPostBattle:
-	.string "I always lose...$"
-
 Zone1A_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
@@ -89,4 +93,26 @@ Zone1A_EventScript_ItemQuickClaw::
 	end
 
 Zone1A_EventScript_LeviathanBattle_Text_0:
-	.string "bro whatupppp$"
+	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet\n"
+	.string "an Oran Berry, I would be able to win.\l"
+	.string "Oran Berries really are the best!\p"
+	.string "Here, let me share some with you and\n"
+	.string "your Pokémon!$"
+
+Zone1A_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run\n"
+	.string "now.\p"
+	.string "Bye bye!$"
+
+Zone1A_Text_Leviathan1Intro::
+	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: Hi! My name's Corey.\n"
+	.string "I'm the resident Leviathan around here.\p"
+	.string "If you want to go forward, you'll have\n"
+	.string "to beat me!\p"
+	.string "So, let's get right to it!\p"
+	.string "I, {COLOR BLUE}Leviathan Corey{COLOR DARK_GRAY}, challenge you to a\n"
+	.string "battle!$"
+
+Zone1A_Text_Leviathan1Defeat::
+	.string "Drats! Even the Oran Berry wasn't\n"
+	.string "enough!$"

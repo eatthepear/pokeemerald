@@ -14,9 +14,37 @@ script Zone1A_EventScript_Exit {
 
 script Zone1A_EventScript_LeviathanBattle {
 	lock
-	msgbox("bro whatupppp")
+	fadeoutbgm(1)
+	msgbox(Zone1A_Text_Leviathan1Intro)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		totemboost_speed1(B_POSITION_OPPONENT_LEFT)
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_COREY)
+		trainerbattle_no_intro(TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat)
+	} else {
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_COREY)
+		trainerbattle_no_intro(TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat)
+	}
+	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet an Oran Berry, I would be able to win. Oran Berries really are the best!\p Here, let me share some with you and your Pokémon!"))
+	giveitem(ITEM_ORAN_BERRY, 10)
+	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run now.\pBye bye!"))
+	closemessage
+	fadescreen(FADE_TO_BLACK)
+	removeobject(6)
+	fadescreen(FADE_FROM_BLACK)
 	release
 	end
+}
+
+text Zone1A_Text_Leviathan1Intro {
+	format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: Hi! My name's Corey.\n"
+		   "I'm the resident Leviathan around here.\p"
+		   "If you want to go forward, you'll have to beat me!\p"
+		   "So, let's get right to it!\p"
+		   "I, {COLOR BLUE}Leviathan Corey{COLOR DARK_GRAY}, challenge you to a battle!")
+}
+
+text Zone1A_Text_Leviathan1Defeat {
+	format("Drats! Even the Oran Berry wasn't enough!")
 }
 
 raw `
@@ -61,20 +89,6 @@ Zone1A_Text_OscarDefeat:
 
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
-
-Zone1A_EventScript_Corey::
-	trainerbattle_single TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_CoreyIntro, Zone1A_Text_CoreyDefeat
-	msgbox Zone1A_Text_CoreyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone1A_Text_CoreyIntro:
-	.string "Hey, you! Let's battle!$"
-
-Zone1A_Text_CoreyDefeat:
-	.string "Aww... Come on!$"
-
-Zone1A_Text_CoreyPostBattle:
-	.string "I always lose...$"
 
 Zone1A_EventScript_ItemPotion::
 	finditem ITEM_POTION

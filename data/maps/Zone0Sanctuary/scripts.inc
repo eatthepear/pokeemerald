@@ -811,6 +811,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 	msgbox Zone0Sanctuary_Text_Colress_Freebies, MSGBOX_AUTOCLOSE
 	giveitem ITEM_POKE_BALL, 30
 	giveitem ITEM_POTION, 10
+	giveitem ITEM_EXP_SHARE, 1
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone0Sanctuary_Text_ReceivedMoney, MSGBOX_DEFAULT
 	waitfanfare
@@ -839,6 +840,7 @@ Zone0Sanctuary_EventScript_Colress_EndIntro:
 Zone0Sanctuary_EventScript_Colress_EndIntroSkip:
 	additem ITEM_POKE_BALL, 30
 	additem ITEM_POTION, 10
+	additem ITEM_EXP_SHARE, 1
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex

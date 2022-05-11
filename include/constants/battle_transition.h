@@ -19,8 +19,9 @@
 #define MUGSHOT_JULIE       15
 #define MUGSHOT_PAM_AND_CAM 16
 #define MUGSHOT_MIRAGES     17
+#define MUGSHOT_COREY       18
 
 
-#define MUGSHOTS_COUNT      18
+#define MUGSHOTS_COUNT      19
 
 #endif //GUARD_CONSTANTS_BATTLE_TRANSITION_H

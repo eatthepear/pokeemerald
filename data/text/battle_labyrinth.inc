@@ -181,6 +181,9 @@ gText_Colress_Rules:
 	.string "In these Zones, you might encounter\n"
 	.string "wild Pokémon, great treasures,\l"
 	.string "tough trainers, and more.\p"
+	.string "Each Zone contains at least one\n"
+	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields\l"
+	.string "great rewards if defeated.\p"
 	.string "At the end of each Zone and before\n"
 	.string "the next Zone begins, you will find\l"
 	.string "a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with\l"
@@ -188,10 +191,7 @@ gText_Colress_Rules:
 	.string "your Pokémon, and other benefits.\p"
 	.string "Once you enter a new Zone, you will\n"
 	.string "not be able to access a Sanctuary\l"
-	.string "until you exit that Zone.\p"
-	.string "Each Zone contains at least one\n"
-	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields\l"
-	.string "great rewards if defeated.$"
+	.string "until you exit that Zone.$"
 
 gText_Colress_DontLose:
 	.string "You must progress through all Zones\n"
