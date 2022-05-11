@@ -17,6 +17,13 @@ Zone1A_EventScript_Exit_2:
 	goto Zone1A_EventScript_Exit_1
 
 
+Zone1A_EventScript_LeviathanBattle::
+	lock
+	msgbox Zone1A_EventScript_LeviathanBattle_Text_0
+	release
+	end
+
+
 Zone1A_EventScript_Nina::
 	trainerbattle_single TRAINER_NINA, Zone1A_Text_NinaIntro, Zone1A_Text_NinaDefeat
 	msgbox Zone1A_Text_NinaPostBattle, MSGBOX_AUTOCLOSE
@@ -80,3 +87,6 @@ Zone1A_EventScript_ItemPotion::
 Zone1A_EventScript_ItemQuickClaw::
 	finditem ITEM_QUICK_CLAW
 	end
+
+Zone1A_EventScript_LeviathanBattle_Text_0:
+	.string "bro whatupppp$"

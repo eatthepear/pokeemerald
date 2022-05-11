@@ -195,7 +195,7 @@ struct ObjectEvent
     /*0x04*/ u8 spriteId;
     /*0x05*/ u8 graphicsId;
     /*0x06*/ u8 movementType;
-    /*0x07*/ u8 trainerType;
+    /*0x07*/ u16 trainerType;
     /*0x08*/ u8 localId;
     /*0x09*/ u8 mapNum;
     /*0x0A*/ u8 mapGroup;

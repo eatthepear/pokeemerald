@@ -12,6 +12,13 @@ script Zone1A_EventScript_Exit {
     end
 }
 
+script Zone1A_EventScript_LeviathanBattle {
+	lock
+	msgbox("bro whatupppp")
+	release
+	end
+}
+
 raw `
 Zone1A_EventScript_Nina::
 	trainerbattle_single TRAINER_NINA, Zone1A_Text_NinaIntro, Zone1A_Text_NinaDefeat
