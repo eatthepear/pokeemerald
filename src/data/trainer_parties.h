@@ -272,17 +272,17 @@ static const struct TrainerMon sParty_Ralph[] = {
     {
     .iv = 0,
     .lvl = 9,
+    .species = SPECIES_CORPHISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
     .species = SPECIES_BONSLY,
     },
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_ELECTRIKE,
-    },
-    {
-    .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_FOONGUS,
+    .species = SPECIES_SHROOMISH,
     }
 };
 
@@ -309,14 +309,6 @@ static const struct TrainerMon sParty_ChloeAndKaya[] = {//Double Battle
     .iv = 0,
     .lvl = 9,
     .species = SPECIES_PETILIL,
-    }
-};
-
-static const struct TrainerMon sParty_Lucia[] = {
-    {
-    .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_PONYTA_GALARIAN,
     },
     {
     .iv = 0,
@@ -326,7 +318,26 @@ static const struct TrainerMon sParty_Lucia[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_SHROOMISH,
+    .species = SPECIES_STUNKY,
+    .ability = ABILITY_SLOT_2, //Aftermath
+    }
+};
+
+static const struct TrainerMon sParty_Lucia[] = {
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_PHANTUMP,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_IMPIDIMP,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_EKANS,
     }
 };
 
@@ -334,8 +345,7 @@ static const struct TrainerMon sParty_Fred[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_STUNKY,
-    .ability = ABILITY_SLOT_2, //Aftermath
+    .species = SPECIES_TYMPOLE,
     },
     {
     .iv = 0,
