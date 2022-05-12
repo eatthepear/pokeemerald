@@ -109,14 +109,14 @@ static const struct TrainerMon sParty_Harper[] = {
 
 static const struct TrainerMon sParty_Dexter[] = {
     {
-    .ivs = {1, 1, 0, 1, 1, 1}, //Hidden Power Dragon
-    .lvl = 6,
-    .species = SPECIES_ABRA,
-    },
-    {
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_SNUBBULL,
+    },
+    {
+    .ivs = {1, 1, 0, 1, 1, 1}, //Hidden Power Dragon
+    .lvl = 6,
+    .species = SPECIES_ABRA,
     },
     {
     .iv = 0,
