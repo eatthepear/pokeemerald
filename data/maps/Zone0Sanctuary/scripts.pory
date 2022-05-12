@@ -1,6 +1,6 @@
 mapscripts Zone0Sanctuary_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE [
-		VAR_TEMP_0, 0: Zone0Sanctuary_EventScript_Intro
+		VAR_ZONE, 0: Zone0Sanctuary_EventScript_Intro
 	]
 }
 
@@ -86,7 +86,6 @@ script Zone0Sanctuary_EventScript_Intro {
 		waitse
 		closemessage
 	} else {
-		setflag(FLAG_NUZLOCKE_ON)
 		playse(SE_PC_LOGIN)
 		msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled."), MSGBOX_DEFAULT)
 		waitse

@@ -3,7 +3,7 @@ Zone0Sanctuary_MapScripts::
 	.byte 0
 
 Zone0Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_TEMP_0, 0, Zone0Sanctuary_EventScript_Intro
+	map_script_2 VAR_ZONE, 0, Zone0Sanctuary_EventScript_Intro
 	.2byte 0
 
 
