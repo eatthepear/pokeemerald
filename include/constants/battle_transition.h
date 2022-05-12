@@ -21,8 +21,9 @@
 #define MUGSHOT_MIRAGES     17
 #define MUGSHOT_COREY       18
 #define MUGSHOT_JOEY        19
+#define MUGSHOT_PHILLIPA    20
 
 
-#define MUGSHOTS_COUNT      20
+#define MUGSHOTS_COUNT      21
 
 #endif //GUARD_CONSTANTS_BATTLE_TRANSITION_H

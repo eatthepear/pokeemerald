@@ -22,13 +22,11 @@ BattleFrontier_BattleTowerLobby_OnTransition:
 	goto_if_eq VAR_0x8004, FALSE, BattleFrontier_BattleTowerLobby_EventScript_ShowApprentice  @ VAR_0x8004 always TRUE here
 	goto_if_set FLAG_DAILY_APPRENTICE_LEAVES, BattleFrontier_BattleTowerLobby_EventScript_HideApprentice
 BattleFrontier_BattleTowerLobby_EventScript_ShowApprentice::
-	clearflag FLAG_HIDE_APPRENTICE
 	apprentice_setgfx
 BattleFrontier_BattleTowerLobby_EventScript_EndShowOrHideApprentice::
 	end
 
 BattleFrontier_BattleTowerLobby_EventScript_HideApprentice::
-	setflag FLAG_HIDE_APPRENTICE
 	goto BattleFrontier_BattleTowerLobby_EventScript_EndShowOrHideApprentice
 
 BattleFrontier_BattleTowerLobby_OnWarp:

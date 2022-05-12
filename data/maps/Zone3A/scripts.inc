@@ -1,19 +1,42 @@
 Zone3A_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Zone3A_OnTransition
 	.byte 0
 
-Zone3A_OnTransition:
-	goto_if_unset FLAG_BEATLEVIATHAN1, Zone3A_EventScript_MoveLeviathan
-	end
-
-Zone3A_EventScript_MoveLeviathan:
-	setobjectxyperm 4, 29, 5
-	end
 
 Zone3A_EventScript_Exit::
 	lockall
-	goto_if_set FLAG_BEATLEVIATHAN1, Zone3A_EventScript_Warp
-	fadeoutbgm 1
+	goto_if_unset FLAG_BEATLEVIATHAN3, Zone3A_EventScript_Exit_2
+Zone3A_EventScript_Exit_1:
+	compare VAR_ZONE, 3
+	goto_if_gt Zone3A_EventScript_Exit_5
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_Exit_10
+Zone3A_EventScript_Exit_8:
+	warp MAP_ZONE3SANCTUARY, 255, 22, 7
+Zone3A_EventScript_Exit_4:
+	releaseall
+	end
+
+Zone3A_EventScript_Exit_2:
+	goto Zone3A_EventScript_LeviathanBattle
+	goto Zone3A_EventScript_Exit_1
+
+Zone3A_EventScript_Exit_5:
+	clearflag FLAG_IS_REVISITING_ZONE
+	warpteleport MAP_ZONE0D, 255, 2, 32
+	goto Zone3A_EventScript_Exit_4
+
+Zone3A_EventScript_Exit_9:
+	goto EventScript_BrutalExitNotSatisfied
+	goto Zone3A_EventScript_Exit_8
+
+Zone3A_EventScript_Exit_10:
+	checktrainerflag TRAINER_RICHARD
+	goto_if 0, Zone3A_EventScript_Exit_9
+	checktrainerflag TRAINER_ANNABELLE
+	goto_if 0, Zone3A_EventScript_Exit_9
+	goto Zone3A_EventScript_Exit_8
+
+
+Zone3A_EventScript_LeviathanBattle::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
@@ -21,75 +44,50 @@ Zone3A_EventScript_Exit::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	addobject 4
-	clearflag FLAG_HIDE_LEVIATHAN1
-	applymovement 4, Common_Movement_WalkDown
+	addobject 10
+	clearflag FLAG_HIDE_ZONE3A_PHILLIPA
+	applymovement 10, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	msgbox Zone3A_Text_Leviathan1Intro, MSGBOX_AUTOCLOSE
+	msgbox Zone3A_Text_Leviathan3Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_REMI
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_RemiBrutal
-	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan1Defeat
-	goto Zone3A_EventScript_Leviathan1Defeated
-	end
-
-Zone3A_EventScript_RemiBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN1_BRUTAL, Zone3A_Text_Leviathan1Defeat
-	goto Zone3A_EventScript_Leviathan1Defeated
-	end
-
-Zone3A_EventScript_Leviathan1Defeated:
-	setflag FLAG_BEATLEVIATHAN1
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_LeviathanBattle_2
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA
+	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat
+Zone3A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone3A_Text_Leviathan1Reward, MSGBOX_AUTOCLOSE
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_0
+	applymovement 10, Zone3A_Movement_Phillipa_RunAway
+	waitmovement 0
+	addobject 4
+	clearflag FLAG_HIDE_ZONE3A_REMI
+	applymovement 4, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
 	giveitem ITEM_GOOD_ROD, 1
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_1
 	closemessage
-	applymovement 4, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement 4, Common_Movement_FaceDown
-	waitmovement 0
-	setobjectxyperm 4, 28, 6
+	setflag FLAG_BEATLEVIATHAN3
 	release
 	end
 
-Zone3A_EventScript_Leviathan1::
-	lock
-	faceplayer
-	msgbox Zone3A_Text_Leviathan1Text, MSGBOX_AUTOCLOSE
-	release
-	end
+Zone3A_EventScript_LeviathanBattle_2:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA
+	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat
+	goto Zone3A_EventScript_LeviathanBattle_1
 
-Zone3A_Text_Leviathan1Text:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: That's my favorite\n"
-	.string "Fishing Rod. Don't lose it!$"
 
-Zone3A_EventScript_Warp:
-	compare VAR_ZONE, 3
-	goto_if_gt EventScript_WarpZone0
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_CheckBrutal
-	warp MAP_ZONE3SANCTUARY, 255, 22, 7
-	releaseall
-	end
-
-Zone3A_EventScript_CheckBrutal:
-	goto_if_not_defeated TRAINER_BORIS, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_ANNABELLE, EventScript_BrutalExitNotSatisfied
-	return
-
-Zone3A_Text_Leviathan1Intro:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: You! How dare you intrude on\n"
-	.string "my house, my home! Begone!\l"
-	.string "I am {COLOR BLUE}Leviathan Remi{COLOR DARK_GRAY}, all powerful!$"
-
-Zone3A_Text_Leviathan1Defeat:
-	.string "Remi: Do a Marill roll!$"
-
-Zone3A_Text_Leviathan1Reward:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: You have bested me.\n"
-	.string "I grant you the Fishing Rod,\l"
-	.string "a way to fish for Water Pokémon.$"
+Zone3A_Movement_Phillipa_RunAway:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
 
 Zone3A_EventScript_Jemma::
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat
@@ -164,3 +162,21 @@ Zone3A_EventScript_ItemParalyzeHeal::
 Zone3A_EventScript_ItemHyperPotion::
 	finditem ITEM_HYPER_POTION
 	end
+
+Zone3A_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! I lost!$"
+
+Zone3A_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in\n"
+	.string "order to battle better?\p"
+	.string "No!\n"
+	.string "I'm sticking with this one no matter\l"
+	.string "what!$"
+
+Zone3A_Text_Leviathan3Intro::
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: You! How dare you intrude on\n"
+	.string "my home!\p"
+	.string "I am {COLOR BLUE}Leviathan Phillipa{COLOR DARK_GRAY}, all powerful!$"
+
+Zone3A_Text_Leviathan3Defeat::
+	.string "Wah!!!$"
