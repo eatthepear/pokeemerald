@@ -25,7 +25,7 @@ Zone2Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone2Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM01
+	giveitem ITEM_SILK_SCARF, 1
 	closemessage
 	setvar VAR_ZONE, 3
 	setflag FLAG_HIDE_LEVIATHAN1
@@ -66,4 +66,4 @@ Zone2Sanctuary_EventScript_Leave:
 	end
 
 Zone2Sanctuary_Text_Reward:
-	.string "TM01 - Protect!$"
+	.string "The Silk Scarf!$"

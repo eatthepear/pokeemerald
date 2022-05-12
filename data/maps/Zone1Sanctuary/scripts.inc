@@ -25,7 +25,7 @@ Zone1Sanctuary_EventScript_Intro:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
 	msgbox Zone1Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_EXP_SHARE, 1
+	giveitem ITEM_TM01
 	setvar VAR_ZONE, 2
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
@@ -62,4 +62,4 @@ Zone1Sanctuary_EventScript_Leave:
 	end
 
 Zone1Sanctuary_Text_Reward:
-	.string "The Exp. Share!$"
+	.string "TM01 - Protect!$"

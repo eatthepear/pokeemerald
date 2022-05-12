@@ -26,12 +26,43 @@ Zone0Sanctuary_EventScript_Intro:
 	msgbox Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_DifficultySkipTutorial
 	delay 96
-	msgbox gText_Colress_Rules, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_Rules, MSGBOX_AUTOCLOSE
 	delay 48
-	msgbox gText_Colress_DontLose, MSGBOX_AUTOCLOSE
+	msgbox Zone0Sanctuary_Text_Colress_ExplainLeviathans, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox Zone0Sanctuary_Text_Colress_DontLose, MSGBOX_AUTOCLOSE
 	delay 96
 	goto Zone0Sanctuary_EventScript_PickDifficulty
 	end
+
+
+Zone0Sanctuary_Text_Colress_Rules:
+	.string "The Battle Labyrinth is comprised\n"
+	.string "of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
+	.string "In these Zones, you might encounter\n"
+	.string "wild Pokémon, great treasures,\l"
+	.string "tough trainers, and more.\p"
+	.string "At the end of each Zone and before\n"
+	.string "the next Zone begins, you will find\l"
+	.string "a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with\l"
+	.string "shops to purchase supplies, heal\l"
+	.string "your Pokémon, and other benefits.\p"
+	.string "Once you enter a new Zone, you will\n"
+	.string "not be able to access a Sanctuary\l"
+	.string "until you exit that Zone.$"
+
+Zone0Sanctuary_Text_Colress_ExplainLeviathans:
+	.string "Each Zone typically contains a\n"
+	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields\l"
+	.string "great rewards if defeated.\p"
+	.string "Some Leviathans are optional,\n"
+	.string "while others are not!$"
+
+Zone0Sanctuary_Text_Colress_DontLose:
+	.string "You must progress through all Zones\n"
+	.string "without losing a battle, which\l"
+	.string "would result in an automatic\l"
+	.string "reset of the simulation.$"
 
 Zone0Sanctuary_EventScript_DifficultySkipTutorial:
 	setvar VAR_ZONE, 2 @this is to skip dialogue
