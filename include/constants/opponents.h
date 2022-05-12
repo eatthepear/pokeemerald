@@ -167,7 +167,7 @@
 #define TRAINER_UNUSED3              	163
 #define TRAINER_UNUSED4                       	164
 #define TRAINER_UNUSED5                      	165
-#define TRAINER_RICHARD                     166
+#define TRAINER_UNUSED1                     166
 #define TRAINER_HERMAN                      167
 #define TRAINER_SANTIAGO                    168
 #define TRAINER_GILBERT                     169
