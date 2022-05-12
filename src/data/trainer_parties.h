@@ -33,8 +33,7 @@ static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_RATTATA,
-    .ability = ABILITY_SLOT_2, //Guts
+    .species = SPECIES_LILLIPUP,
     }
 };
 
@@ -70,7 +69,7 @@ static const struct TrainerMon sParty_Oscar[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_LILLIPUP,
+    .species = SPECIES_EEVEE,
     }
 };
 
@@ -169,37 +168,17 @@ static const struct TrainerMon sParty_Arthur[] = {
 };
 
 
-static const struct TrainerMon sParty_Nate[] = {//Leviathan, Default, optional
+static const struct TrainerMon sParty_Joey[] = {//Leviathan, Default, optional
     {
     .iv = 31,
     .lvl = 9,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Overgrow
-    .species = SPECIES_SNIVY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_VINE_WHIP, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_WRAP}
+    .ability = ABILITY_SLOT_1, //Hustle
+    .species = SPECIES_RATTATA,
+    .heldItem = ITEM_CHOPLE_BERRY,
+    .moves = {MOVE_HEADBUTT, MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_SLEEP_TALK}
     },
-    {
-    .iv = 31,
-    .lvl = 9,
-    .nature = NATURE_BRAVE,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Blaze
-    .species = SPECIES_TEPIG,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_EMBER, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_DEFENSE_CURL}
-    },
-    {
-    .iv = 31,
-    .lvl = 9,
-    .nature = NATURE_QUIET,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Torrent
-    .species = SPECIES_OSHAWOTT,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_WATER_GUN, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_FURY_CUTTER}
-    }
 };
 
 /* ------------------- Zone 3 ------------------- */
@@ -5981,7 +5960,7 @@ static const struct TrainerMon sParty_Tommy[] = {
     }
 };
 
-static const struct TrainerMon sParty_Joey[] = {
+static const struct TrainerMon sParty_Nate[] = {
     {
     .iv = 0,
     .lvl = 9,

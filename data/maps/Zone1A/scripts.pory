@@ -16,6 +16,7 @@ script Zone1A_EventScript_LeviathanBattle {
 	lock
 	fadeoutbgm(1)
 	msgbox(Zone1A_Text_Leviathan1Intro)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
 		totemboost_speed1(B_POSITION_OPPONENT_LEFT)
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_COREY)
@@ -24,6 +25,7 @@ script Zone1A_EventScript_LeviathanBattle {
 		setvar(VAR_MUGSHOT_ID, MUGSHOT_COREY)
 		trainerbattle_no_intro(TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat)
 	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet an Oran Berry, I would be able to win. Oran Berries really are the best!\p Here, let me share some with you and your Pokémon!"))
 	giveitem(ITEM_ORAN_BERRY, 10)
 	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run now.\pBye bye!"))

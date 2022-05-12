@@ -568,6 +568,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_PAM_AND_CAM] = TRAINER_PIC_YOUNG_COUPLE,
     [MUGSHOT_MIRAGES] = TRAINER_PIC_MIRAGES,
     [MUGSHOT_COREY] = TRAINER_PIC_SCHOOL_KID_M,
+    [MUGSHOT_JOEY] = TRAINER_PIC_YOUNGSTER,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -590,6 +591,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_PAM_AND_CAM] = {0x200, 0x200},
     [MUGSHOT_MIRAGES] = {0x200, 0x200},
     [MUGSHOT_COREY] = {0x200, 0x200},
+    [MUGSHOT_JOEY] = {0x200, 0x200},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
@@ -612,6 +614,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_PAM_AND_CAM] = {0,     0},
     [MUGSHOT_MIRAGES] = {0,     0},
     [MUGSHOT_COREY] = {0,     0},
+    [MUGSHOT_JOEY] = {0,     0},
 };
 
 static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =
@@ -963,6 +966,7 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_PAM_AND_CAM] = sMugshotPal_Glacia,
     [MUGSHOT_MIRAGES] = sMugshotPal_Drake,
     [MUGSHOT_COREY] = sMugshotPal_Glacia,
+    [MUGSHOT_JOEY] = sMugshotPal_Glacia,
     
 };
 

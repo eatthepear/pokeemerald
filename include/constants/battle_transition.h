@@ -20,8 +20,9 @@
 #define MUGSHOT_PAM_AND_CAM 16
 #define MUGSHOT_MIRAGES     17
 #define MUGSHOT_COREY       18
+#define MUGSHOT_JOEY        19
 
 
-#define MUGSHOTS_COUNT      19
+#define MUGSHOTS_COUNT      20
 
 #endif //GUARD_CONSTANTS_BATTLE_TRANSITION_H

@@ -21,10 +21,12 @@ Zone1A_EventScript_LeviathanBattle::
 	lock
 	fadeoutbgm 1
 	msgbox Zone1A_Text_Leviathan1Intro
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone1A_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_COREY
 	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat
 Zone1A_EventScript_LeviathanBattle_1:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_0
 	giveitem ITEM_ORAN_BERRY, 10
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_1

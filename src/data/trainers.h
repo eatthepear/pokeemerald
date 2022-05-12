@@ -118,17 +118,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Arthur},
     },
 
-    [TRAINER_NATE_LEVIATHAN_2] =
+    [TRAINER_JOEY_LEVIATHAN_2] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .trainerName = _("Nate"),
+        .trainerName = _("Joey"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_Nate),
-        .party = {.TrainerMon = sParty_Nate},
+        .partySize = ARRAY_COUNT(sParty_Joey),
+        .party = {.TrainerMon = sParty_Joey},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_JEMMA] =
@@ -4244,17 +4246,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Tommy},
     },
 
-    [TRAINER_JOEY] =
+    [TRAINER_NATE] =
     {
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .trainerName = _("JOEY"),
+        .trainerName = _("Nate"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Joey),
-        .party = {.TrainerMon = sParty_Joey},
+        .partySize = ARRAY_COUNT(sParty_Nate),
+        .party = {.TrainerMon = sParty_Nate},
     },
 
     [TRAINER_BEN] =

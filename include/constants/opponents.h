@@ -10,7 +10,7 @@
 #define TRAINER_DEXTER                        	6
 #define TRAINER_JEREMIAH                      	7
 #define TRAINER_ARTHUR                        	8
-#define TRAINER_NATE_LEVIATHAN_2               	9
+#define TRAINER_JOEY_LEVIATHAN_2               	9
 #define TRAINER_JEMMA                         	10
 #define TRAINER_BORIS                         	11
 #define TRAINER_ANNABELLE                    	12
@@ -323,7 +323,7 @@
 #define TRAINER_BILLY                       319
 #define TRAINER_JOSH                        320
 #define TRAINER_TOMMY                       321
-#define TRAINER_JOEY                        322
+#define TRAINER_NATE                        322
 #define TRAINER_BEN                         323
 #define TRAINER_QUINCY                      324
 #define TRAINER_KATELYNN                    325
