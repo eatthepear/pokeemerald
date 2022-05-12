@@ -27,12 +27,12 @@
 static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 4,
     .species = SPECIES_SENTRET,
     },
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 4,
     .species = SPECIES_RATTATA,
     .ability = ABILITY_SLOT_2, //Guts
     }
@@ -65,12 +65,12 @@ static const struct TrainerMon sParty_Oscar[] = {
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_LILLIPUP,
+    .species = SPECIES_FLETCHLING,
     },
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_FLETCHLING,
+    .lvl = 5,
+    .species = SPECIES_LILLIPUP,
     }
 };
 
@@ -83,7 +83,7 @@ static const struct TrainerMon sParty_Corey[] = {//Leviathan, Default
     .ability = ABILITY_SLOT_1, //Cheek Pouch
     .species = SPECIES_SKWOVET,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_STUFF_CHEEKS, MOVE_TAIL_WHIP}
+    .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_TAIL_WHIP, MOVE_NONE}
     }
 };
 
@@ -92,17 +92,17 @@ static const struct TrainerMon sParty_Corey[] = {//Leviathan, Default
 static const struct TrainerMon sParty_Harper[] = {
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_SHINX,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_PIDGEY,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_NIDORAN_F,
     .ability = ABILITY_SLOT_2, //Rivalry
     }
@@ -111,17 +111,17 @@ static const struct TrainerMon sParty_Harper[] = {
 static const struct TrainerMon sParty_Dexter[] = {
     {
     .ivs = {1, 1, 0, 1, 1, 1}, //Hidden Power Dragon
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_ABRA,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_SNUBBULL,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_NIDORAN_M,
     .ability = ABILITY_SLOT_2, //Rivalry
     },
@@ -137,6 +137,11 @@ static const struct TrainerMon sParty_Jeremiah[] = {
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_CATERPIE,
+    },
+    {
+    .iv = 0,
+    .lvl = 6,
+    .species = SPECIES_SNOM,
     }
 };
 

@@ -55,7 +55,6 @@ Zone0Sanctuary_EventScript_Intro_18:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_22
-	setflag FLAG_NUZLOCKE_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_11, MSGBOX_DEFAULT
 	waitse

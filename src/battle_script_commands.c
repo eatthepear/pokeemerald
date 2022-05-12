@@ -584,7 +584,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
     FLAG_BEATLEVIATHAN15
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 7, 15, 17, 19, 22, 24, 28, 28, 28, 30, 33, 34, 38, 42, 45};
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 7, 9, 17, 19, 22, 24, 28, 28, 28, 30, 33, 34, 38, 42, 45};
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -3893,7 +3893,7 @@ double GetPkmnExpMultiplier(u8 level)
     {
         if (!FlagGet(sLevelCapFlags[i]) && level >= sLevelCaps[i])
         {
-            if (FlagGet(FLAG_BRUTAL_MODE_ON) || !((i == 3) || (i == 7) || (i == 8) || (i == 11)))
+            if (FlagGet(FLAG_BRUTAL_MODE_ON) || !((i == 2) || (i == 6) || (i == 7) || (i == 11)))
             {
                 lvlCapMultiplier = 0.05;
                 break;
@@ -3961,7 +3961,7 @@ static void Cmd_getexp(void)
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
                 calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
             #else
-                calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level;
+                calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 2;
             #endif
 
             #if B_SPLIT_EXP < GEN_6
