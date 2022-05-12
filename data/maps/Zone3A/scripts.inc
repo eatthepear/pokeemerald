@@ -133,6 +133,22 @@ Zone3A_Text_AnnabelleDefeat:
 Zone3A_Text_AnnabellePostBattle:
 	.string "Tomorrow will be another day.$"
 
+Zone3A_EventScript_Richard::
+	trainerbattle_single TRAINER_RICHARD, Zone3A_Text_RichardIntro, Zone3A_Text_RichardDefeat
+	msgbox Zone3A_Text_RichardPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone3A_Text_RichardIntro:
+	.string "I have far too much money to deal\n"
+	.string "with the likes of you!$"
+
+Zone3A_Text_RichardDefeat:
+	.string "Agh! My money!$"
+
+Zone3A_Text_RichardPostBattle:
+	.string "Do you think I can buy humility\n"
+	.string "with my money?$"
+
 Zone3A_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
 	end

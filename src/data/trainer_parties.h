@@ -186,55 +186,74 @@ static const struct TrainerMon sParty_Joey[] = {//Leviathan, Default, optional
 static const struct TrainerMon sParty_Jemma[] = {
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 9,
     .species = SPECIES_WINGULL,
     },
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 9,
     .species = SPECIES_BIDOOF,
     .ability = ABILITY_SLOT_2, //Unaware
     },
     {
     .iv = 0,
-    .lvl = 7,
-    .species = SPECIES_BUDEW,
+    .lvl = 9,
+    .species = SPECIES_ROCKRUFF,
     }
 };
 
 static const struct TrainerMon sParty_Boris[] = {
     {
     .iv = 0,
-    .lvl = 7,
-    .species = SPECIES_CLEFFA,
+    .lvl = 9,
+    .species = SPECIES_PIDOVE,
     },
     {
     .iv = 0,
-    .lvl = 7,
-    .species = SPECIES_PICHU,
+    .lvl = 9,
+    .species = SPECIES_BUIZEL,
     },
     {
     .iv = 0,
-    .lvl = 7,
-    .species = SPECIES_ROCKRUFF,
+    .lvl = 9,
+    .species = SPECIES_CRABRAWLER,
     }
 };
 
 static const struct TrainerMon sParty_Annabelle[] = {
     {
     .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_PIDOVE,
+    .lvl = 9,
+    .species = SPECIES_FOONGUS,
     },
     {
     .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_WOOLOO,
-    },
-    {
-    .iv = 0,
-    .lvl = 8,
+    .lvl = 9,
     .species = SPECIES_MANKEY,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_WOOLOO,
+    }
+};
+
+static const struct TrainerMon sParty_Richard[] = {
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_EKANS,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_VULPIX,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_PACHIRISU,
+    .ability = ABILITY_SLOT_2, //Volt Absorb
     },
 };
 
@@ -244,7 +263,7 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default
     .lvl = 11,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Frisk
+    .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
     .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_DEFENSE_CURL}
     }

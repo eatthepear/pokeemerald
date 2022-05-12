@@ -172,6 +172,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Annabelle},
     },
 
+    [TRAINER_RICHARD] =
+    {
+        .trainerClass = TRAINER_CLASS_RICH_BOY,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Richard),
+        .party = {.TrainerMon = sParty_Richard},
+    },
+
     [TRAINER_PHILLIPA_LEVIATHAN_3] =
     {
         .trainerClass = TRAINER_CLASS_SCHOOL_KID,
@@ -2177,21 +2190,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Zone25LMiragesBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
-    },
-
-    [TRAINER_UNUSED3] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
-        .trainerName = _("Unused"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Unused),
-        // .partySize = ARRAY_COUNT(sParty_Unused3),
-        .party = {.TrainerMon = sParty_Unused},
-        // .party = {.TrainerMon = sParty_Unused3},
     },
 
     [TRAINER_UNUSED4] =
