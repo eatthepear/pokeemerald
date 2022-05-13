@@ -1,3 +1,18 @@
+EventScript_EnterSanctuary::
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	call EventScript_MoveCameraUp
+	applymovement 1, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	call EventScript_MoveCameraDown
+	applymovement 1, Common_Movement_Colress_WalkDown
+	waitmovement 0
+	playfanfare MUS_OBTAIN_BADGE
+	return
+
+
 EventScript_MoveCameraUp::
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
@@ -1373,6 +1388,7 @@ EventScript_BrutalExitNotSatisfied::
 
 
 EventScript_LeavingSetup::
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	msgbox gText_Colress_Empower
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 21

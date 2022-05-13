@@ -1,10 +1,10 @@
-mapscripts Zone1Sanctuary_MapScripts {
+mapscripts Zone2Sanctuary_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE [
-		VAR_ZONE, 1: Zone1Sanctuary_EventScript_Intro
+		VAR_ZONE, 2: Zone2Sanctuary_EventScript_Intro
 	]
 }
 
-script Zone1Sanctuary_EventScript_Intro {
+script Zone2Sanctuary_EventScript_Intro {
     lockall
 	call(EventScript_EnterSanctuary)
 	buffernumberstring(0, VAR_ZONE)
@@ -12,9 +12,9 @@ script Zone1Sanctuary_EventScript_Intro {
 	waitfanfare
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_RewardClear)
-	msgbox(Zone1Sanctuary_Text_Reward)
+	msgbox(Zone2Sanctuary_Text_Reward)
 	giveitem(ITEM_TM01)
-	setvar(VAR_ZONE, 2)
+	setvar(VAR_ZONE, 3)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)
@@ -23,7 +23,7 @@ script Zone1Sanctuary_EventScript_Intro {
 	end
 }
 
-script Zone1Sanctuary_EventScript_NextZone {
+script Zone2Sanctuary_EventScript_NextZone {
 	lock
 	faceplayer
 	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
@@ -34,7 +34,7 @@ script Zone1Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				warp(MAP_ZONE2A, 255, 4, 3)
+				warp(MAP_ZONE3A, 255, 38, 25)
 			}
 			goto(EventScript_WhenUReady)
 		case 1:
@@ -50,6 +50,6 @@ script Zone1Sanctuary_EventScript_NextZone {
 	end
 }
 
-text Zone1Sanctuary_Text_Reward {
+text Zone2Sanctuary_Text_Reward {
 	format("TM01 - Protect!$")
 }

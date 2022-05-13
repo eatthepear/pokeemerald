@@ -619,25 +619,45 @@ Zone0Sanctuary_EventScript_NextZone::
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Advice
-	case 2, EventScript_Settings
-	case 3, EventScript_WhenUReady
-	case MULTI_B_PRESSED, EventScript_WhenUReady
+	case 0, Zone0Sanctuary_EventScript_NextZone_3
+	case 1, Zone0Sanctuary_EventScript_NextZone_4
+	case 2, Zone0Sanctuary_EventScript_NextZone_5
+	case 3, Zone0Sanctuary_EventScript_NextZone_6
+	case MULTI_B_PRESSED, Zone0Sanctuary_EventScript_NextZone_7
+Zone0Sanctuary_EventScript_NextZone_1:
+	release
 	end
 
-Zone0Sanctuary_EventScript_NextZoneCheck:
+Zone0Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Zone0Sanctuary_EventScript_Leave
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_NextZone_9
+Zone0Sanctuary_EventScript_NextZone_8:
 	goto EventScript_WhenUReady
-	end
+	goto Zone0Sanctuary_EventScript_NextZone_1
 
-Zone0Sanctuary_EventScript_Leave:
+Zone0Sanctuary_EventScript_NextZone_4:
+	goto EventScript_Advice
+	goto Zone0Sanctuary_EventScript_NextZone_1
+
+Zone0Sanctuary_EventScript_NextZone_5:
+	goto EventScript_Settings
+	goto Zone0Sanctuary_EventScript_NextZone_1
+
+Zone0Sanctuary_EventScript_NextZone_6:
+	goto EventScript_WhenUReady
+	goto Zone0Sanctuary_EventScript_NextZone_1
+
+Zone0Sanctuary_EventScript_NextZone_7:
+	goto EventScript_WhenUReady
+	goto Zone0Sanctuary_EventScript_NextZone_1
+
+Zone0Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE1A, 255, 16, 28
-	end
+	goto Zone0Sanctuary_EventScript_NextZone_8
+
 
 Zone0Sanctuary_Movement_Colress_FirstShop:
 	walk_left

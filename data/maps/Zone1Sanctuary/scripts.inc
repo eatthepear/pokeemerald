@@ -9,17 +9,7 @@ Zone1Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 Zone1Sanctuary_EventScript_Intro::
 	lockall
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	call EventScript_MoveCameraUp
-	applymovement 1, Common_Movement_ExclamationMark
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Colress_WalkDown
-	waitmovement 0
-	playfanfare MUS_OBTAIN_BADGE
+	call EventScript_EnterSanctuary
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
@@ -78,7 +68,6 @@ Zone1Sanctuary_EventScript_NextZone_7:
 
 Zone1Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE2A, 255, 4, 3
 	goto Zone1Sanctuary_EventScript_NextZone_8
 
