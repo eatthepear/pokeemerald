@@ -1,0 +1,65 @@
+mapscripts Zone1Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 1: Zone1Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone1Sanctuary_EventScript_Intro {
+    lockall
+	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+	call(EventScript_MoveCameraUp)
+	applymovement(1, Common_Movement_ExclamationMark)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	playse(SE_PIN)
+	waitmovement(0)
+	waitse
+	call(EventScript_MoveCameraDown)
+	applymovement(1, Common_Movement_Colress_WalkDown)
+	waitmovement(0)
+	playfanfare(MUS_OBTAIN_BADGE)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_RewardClear)
+	msgbox(Zone1Sanctuary_Text_Reward)
+	giveitem(ITEM_TM01)
+	setvar(VAR_ZONE, 2)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script Zone1Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			buffernumberstring(0, VAR_ZONE)
+			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+				warp(MAP_ZONE2A, 255, 4, 3)
+			}
+			goto(EventScript_WhenUReady)
+		case 1:
+			goto(EventScript_Advice)
+		case 2:
+			goto(EventScript_Settings)
+		case 3:
+			goto(EventScript_WhenUReady)
+		case MULTI_B_PRESSED:
+			goto(EventScript_WhenUReady)
+	}
+	release
+	end
+}
+text Zone1Sanctuary_Text_Reward {
+	format("TM01 - Protect!$")
+}
