@@ -421,20 +421,8 @@ gText_Lelouch_NotEnoughColor:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\n"
 	.string "of that color.$"
 
-gText_Lelouch_ExplainRed:
+gText_Lelouch_CostsRedShards:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Each training session\n"
-	.string "costs one Red Shard.\p"
-	.string "You may train one Pokémon\n"
-	.string "as many times as you want.$"
-
-gText_Lelouch_SoloTrainingOnly:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You can only train one\n"
-	.string "Pokémon at a time.\p"
-	.string "Make sure there is only one Pokémon\n"
-	.string "in your party.$"
-
-gText_Lelouch_TrainingCost:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: A training session\n"
 	.string "costs one Red Shard, are you sure?$"
 
 gText_Lelouch_PayRed:
@@ -442,10 +430,6 @@ gText_Lelouch_PayRed:
 
 gText_Lelouch_LetBeginTraining:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Let us begin the training.$"
-
-gText_Lelouch_ChooseTraining:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You are training\n"
-	.string "{STR_VAR_2} the {STR_VAR_1}.$"
 
 gText_LelouchDefeated:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Excellent work.\n"
