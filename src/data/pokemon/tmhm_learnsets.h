@@ -23,7 +23,6 @@ static const u8 sNoneTMHMLearnset[] =
 static const u8 sBulbasaurTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -45,7 +44,6 @@ static const u8 sBulbasaurTMHMLearnset[] =
 static const u8 sIvysaurTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -66,7 +64,6 @@ static const u8 sIvysaurTMHMLearnset[] =
 static const u8 sVenusaurTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -170,6 +167,7 @@ static const u8 sCharizardTMHMLearnset[] =
 static const u8 sSquirtleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -193,6 +191,7 @@ static const u8 sSquirtleTMHMLearnset[] =
 static const u8 sWartortleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -216,6 +215,7 @@ static const u8 sWartortleTMHMLearnset[] =
 static const u8 sBlastoiseTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -254,7 +254,6 @@ static const u8 sButterfreeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
     TMHM(TM02_ELECTROWEB),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -294,7 +293,6 @@ static const u8 sBeedrillTMHMLearnset[] =
     TMHM(TM01_PROTECT),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM02_ELECTROWEB),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -464,7 +462,6 @@ static const u8 sFearowTMHMLearnset[] =
 static const u8 sEkansTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -486,7 +483,6 @@ static const u8 sEkansTMHMLearnset[] =
 static const u8 sArbokTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -610,7 +606,7 @@ static const u8 sSandslashTMHMLearnset[] =
 static const u8 sNidoranFTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -635,7 +631,7 @@ static const u8 sNidoranFTMHMLearnset[] =
 static const u8 sNidorinaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -660,7 +656,7 @@ static const u8 sNidorinaTMHMLearnset[] =
 static const u8 sNidoqueenTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -698,7 +694,7 @@ static const u8 sNidoqueenTMHMLearnset[] =
 static const u8 sNidoranMTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -722,7 +718,7 @@ static const u8 sNidoranMTMHMLearnset[] =
 static const u8 sNidorinoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -746,7 +742,7 @@ static const u8 sNidorinoTMHMLearnset[] =
 static const u8 sNidokingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -783,6 +779,7 @@ static const u8 sNidokingTMHMLearnset[] =
 static const u8 sClefairyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -817,6 +814,7 @@ static const u8 sClefairyTMHMLearnset[] =
 static const u8 sClefableTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -953,7 +951,6 @@ static const u8 sWigglytuffTMHMLearnset[] =
 static const u8 sZubatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -975,7 +972,6 @@ static const u8 sZubatTMHMLearnset[] =
 static const u8 sGolbatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -997,7 +993,6 @@ static const u8 sGolbatTMHMLearnset[] =
 static const u8 sOddishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -1017,7 +1012,6 @@ static const u8 sOddishTMHMLearnset[] =
 static const u8 sGloomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -1037,7 +1031,6 @@ static const u8 sGloomTMHMLearnset[] =
 static const u8 sVileplumeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -1225,6 +1218,7 @@ static const u8 sPersianTMHMLearnset[] =
 static const u8 sPsyduckTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -1252,6 +1246,7 @@ static const u8 sPsyduckTMHMLearnset[] =
 static const u8 sGolduckTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -1385,6 +1380,7 @@ static const u8 sArcanineTMHMLearnset[] =
 static const u8 sPoliwagTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1406,6 +1402,7 @@ static const u8 sPoliwagTMHMLearnset[] =
 static const u8 sPoliwhirlTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1429,6 +1426,7 @@ static const u8 sPoliwhirlTMHMLearnset[] =
 static const u8 sPoliwrathTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -1612,7 +1610,6 @@ static const u8 sMachampTMHMLearnset[] =
 static const u8 sBellsproutTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -1633,7 +1630,6 @@ static const u8 sBellsproutTMHMLearnset[] =
 static const u8 sWeepinbellTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -1654,7 +1650,6 @@ static const u8 sWeepinbellTMHMLearnset[] =
 static const u8 sVictreebelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -1675,7 +1670,7 @@ static const u8 sVictreebelTMHMLearnset[] =
 static const u8 sTentacoolTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1697,7 +1692,7 @@ static const u8 sTentacoolTMHMLearnset[] =
 static const u8 sTentacruelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -1826,6 +1821,7 @@ static const u8 sRapidashTMHMLearnset[] =
 static const u8 sSlowpokeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -1856,6 +1852,7 @@ static const u8 sSlowpokeTMHMLearnset[] =
 static const u8 sSlowbroTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -1983,6 +1980,7 @@ static const u8 sDodrioTMHMLearnset[] =
 static const u8 sSeelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2002,6 +2000,7 @@ static const u8 sSeelTMHMLearnset[] =
 static const u8 sDewgongTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2021,7 +2020,6 @@ static const u8 sDewgongTMHMLearnset[] =
 static const u8 sGrimerTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -2046,7 +2044,6 @@ static const u8 sGrimerTMHMLearnset[] =
 static const u8 sMukTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -2072,6 +2069,7 @@ static const u8 sMukTMHMLearnset[] =
 static const u8 sShellderTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -2091,6 +2089,7 @@ static const u8 sShellderTMHMLearnset[] =
 static const u8 sCloysterTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -2110,7 +2109,6 @@ static const u8 sCloysterTMHMLearnset[] =
 static const u8 sGastlyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2133,7 +2131,6 @@ static const u8 sGastlyTMHMLearnset[] =
 static const u8 sHaunterTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2157,7 +2154,6 @@ static const u8 sHaunterTMHMLearnset[] =
 static const u8 sGengarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2245,6 +2241,7 @@ static const u8 sHypnoTMHMLearnset[] =
 static const u8 sKrabbyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -2268,6 +2265,7 @@ static const u8 sKrabbyTMHMLearnset[] =
 static const u8 sKinglerTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -2507,7 +2505,6 @@ static const u8 sLickitungTMHMLearnset[] =
 static const u8 sKoffingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM10_THIEF),
@@ -2530,7 +2527,6 @@ static const u8 sKoffingTMHMLearnset[] =
 static const u8 sWeezingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2613,6 +2609,7 @@ static const u8 sRhydonTMHMLearnset[] =
 static const u8 sChanseyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -2669,6 +2666,7 @@ static const u8 sTangelaTMHMLearnset[] =
 static const u8 sKangaskhanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -2704,6 +2702,7 @@ static const u8 sKangaskhanTMHMLearnset[] =
 static const u8 sHorseaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -2722,6 +2721,7 @@ static const u8 sHorseaTMHMLearnset[] =
 static const u8 sSeadraTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -2778,6 +2778,7 @@ static const u8 sSeakingTMHMLearnset[] =
 static const u8 sStaryuTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -2803,6 +2804,7 @@ static const u8 sStaryuTMHMLearnset[] =
 static const u8 sStarmieTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -2877,6 +2879,7 @@ static const u8 sScytherTMHMLearnset[] =
 static const u8 sJynxTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -2978,6 +2981,7 @@ static const u8 sPinsirTMHMLearnset[] =
 static const u8 sTaurosTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -3012,6 +3016,7 @@ static const u8 sMagikarpTMHMLearnset[] =
 static const u8 sGyaradosTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -3039,6 +3044,7 @@ static const u8 sGyaradosTMHMLearnset[] =
 static const u8 sLaprasTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -3086,6 +3092,7 @@ static const u8 sEeveeTMHMLearnset[] =
 static const u8 sVaporeonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -3185,6 +3192,7 @@ static const u8 sPorygonTMHMLearnset[] =
 static const u8 sOmanyteTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -3208,6 +3216,7 @@ static const u8 sOmanyteTMHMLearnset[] =
 static const u8 sOmastarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -3231,6 +3240,7 @@ static const u8 sOmastarTMHMLearnset[] =
 static const u8 sKabutoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -3256,6 +3266,7 @@ static const u8 sKabutoTMHMLearnset[] =
 static const u8 sKabutopsTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -3309,6 +3320,7 @@ static const u8 sAerodactylTMHMLearnset[] =
 static const u8 sSnorlaxTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -3406,6 +3418,7 @@ static const u8 sMoltresTMHMLearnset[] =
 static const u8 sDratiniTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -3433,6 +3446,7 @@ static const u8 sDratiniTMHMLearnset[] =
 static const u8 sDragonairTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -3460,6 +3474,7 @@ static const u8 sDragonairTMHMLearnset[] =
 static const u8 sDragoniteTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -3708,6 +3723,7 @@ static const u8 sTyphlosionTMHMLearnset[] =
 static const u8 sTotodileTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -3733,6 +3749,7 @@ static const u8 sTotodileTMHMLearnset[] =
 static const u8 sCroconawTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -3758,6 +3775,7 @@ static const u8 sCroconawTMHMLearnset[] =
 static const u8 sFeraligatrTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -3785,6 +3803,7 @@ static const u8 sFeraligatrTMHMLearnset[] =
 static const u8 sSentretTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -3811,6 +3830,7 @@ static const u8 sSentretTMHMLearnset[] =
 static const u8 sFurretTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -3953,7 +3973,6 @@ static const u8 sAriadosTMHMLearnset[] =
 static const u8 sCrobatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -3976,6 +3995,7 @@ static const u8 sCrobatTMHMLearnset[] =
 static const u8 sChinchouTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -3997,6 +4017,7 @@ static const u8 sChinchouTMHMLearnset[] =
 static const u8 sLanturnTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -4038,6 +4059,7 @@ static const u8 sPichuTMHMLearnset[] =
 static const u8 sCleffaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -4087,6 +4109,7 @@ static const u8 sIgglybuffTMHMLearnset[] =
 static const u8 sTogepiTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -4112,6 +4135,7 @@ static const u8 sTogepiTMHMLearnset[] =
 static const u8 sTogeticTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -4255,7 +4279,6 @@ static const u8 sAmpharosTMHMLearnset[] =
 static const u8 sBellossomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -4274,6 +4297,7 @@ static const u8 sBellossomTMHMLearnset[] =
 static const u8 sMarillTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -4296,6 +4320,7 @@ static const u8 sMarillTMHMLearnset[] =
 static const u8 sAzumarillTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -4340,6 +4365,7 @@ static const u8 sSudowoodoTMHMLearnset[] =
 static const u8 sPolitoedTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -4420,6 +4446,7 @@ static const u8 sJumpluffTMHMLearnset[] =
 static const u8 sAipomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -4501,6 +4528,7 @@ static const u8 sYanmaTMHMLearnset[] =
 static const u8 sWooperTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -4523,6 +4551,7 @@ static const u8 sWooperTMHMLearnset[] =
 static const u8 sQuagsireTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -4617,6 +4646,7 @@ static const u8 sMurkrowTMHMLearnset[] =
 static const u8 sSlowkingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -4708,7 +4738,6 @@ static const u8 sGirafarigTMHMLearnset[] =
 static const u8 sPinecoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -4731,7 +4760,6 @@ static const u8 sPinecoTMHMLearnset[] =
 static const u8 sForretressTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -4781,7 +4809,6 @@ static const u8 sDunsparceTMHMLearnset[] =
 static const u8 sGligarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -4831,6 +4858,7 @@ static const u8 sSteelixTMHMLearnset[] =
 static const u8 sSnubbullTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -4861,6 +4889,7 @@ static const u8 sSnubbullTMHMLearnset[] =
 static const u8 sGranbullTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -4894,7 +4923,7 @@ static const u8 sGranbullTMHMLearnset[] =
 static const u8 sQwilfishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -4917,7 +4946,6 @@ static const u8 sQwilfishTMHMLearnset[] =
 static const u8 sScizorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -4960,7 +4988,6 @@ static const u8 sShuckleTMHMLearnset[] =
 static const u8 sHeracrossTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETALIATE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
@@ -5189,6 +5216,7 @@ static const u8 sCorsolaTMHMLearnset[] =
 static const u8 sRemoraidTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -5214,6 +5242,7 @@ static const u8 sRemoraidTMHMLearnset[] =
 static const u8 sOctilleryTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -5261,6 +5290,7 @@ static const u8 sDelibirdTMHMLearnset[] =
 static const u8 sMantineTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM06_BULLET_SEED),
@@ -5354,6 +5384,7 @@ static const u8 sHoundoomTMHMLearnset[] =
 static const u8 sKingdraTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -5520,6 +5551,7 @@ static const u8 sHitmontopTMHMLearnset[] =
 static const u8 sSmoochumTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -5589,6 +5621,7 @@ static const u8 sMagbyTMHMLearnset[] =
 static const u8 sMiltankTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -5618,6 +5651,7 @@ static const u8 sMiltankTMHMLearnset[] =
 static const u8 sBlisseyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -5765,6 +5799,7 @@ static const u8 sPupitarTMHMLearnset[] =
 static const u8 sTyranitarTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -6026,6 +6061,7 @@ static const u8 sBlazikenTMHMLearnset[] =
 static const u8 sMudkipTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -6047,6 +6083,7 @@ static const u8 sMudkipTMHMLearnset[] =
 static const u8 sMarshtompTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -6070,6 +6107,7 @@ static const u8 sMarshtompTMHMLearnset[] =
 static const u8 sSwampertTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -6198,7 +6236,6 @@ static const u8 sBeautiflyTMHMLearnset[] =
     TMHM(TM01_PROTECT),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM02_ELECTROWEB),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6228,7 +6265,6 @@ static const u8 sDustoxTMHMLearnset[] =
     TMHM(TM01_PROTECT),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM02_ELECTROWEB),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -6251,6 +6287,7 @@ static const u8 sDustoxTMHMLearnset[] =
 static const u8 sLotadTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -6274,6 +6311,7 @@ static const u8 sLotadTMHMLearnset[] =
 static const u8 sLombreTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -6299,6 +6337,7 @@ static const u8 sLombreTMHMLearnset[] =
 static const u8 sLudicoloTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM10_THIEF),
@@ -6435,6 +6474,7 @@ static const u8 sSwellowTMHMLearnset[] =
 static const u8 sWingullTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -6456,6 +6496,7 @@ static const u8 sWingullTMHMLearnset[] =
 static const u8 sPelipperTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -6555,6 +6596,7 @@ static const u8 sGardevoirTMHMLearnset[] =
 static const u8 sSurskitTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -6575,6 +6617,7 @@ static const u8 sSurskitTMHMLearnset[] =
 static const u8 sMasquerainTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -6598,7 +6641,6 @@ static const u8 sMasquerainTMHMLearnset[] =
 static const u8 sShroomishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -6617,7 +6659,6 @@ static const u8 sShroomishTMHMLearnset[] =
 static const u8 sBreloomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -6642,6 +6683,7 @@ static const u8 sBreloomTMHMLearnset[] =
 static const u8 sSlakothTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -6672,6 +6714,7 @@ static const u8 sSlakothTMHMLearnset[] =
 static const u8 sVigorothTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -6704,6 +6747,7 @@ static const u8 sVigorothTMHMLearnset[] =
 static const u8 sSlakingTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -6910,6 +6954,7 @@ static const u8 sHariyamaTMHMLearnset[] =
 static const u8 sAzurillTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -6994,6 +7039,7 @@ static const u8 sDelcattyTMHMLearnset[] =
 static const u8 sSableyeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -7044,6 +7090,7 @@ static const u8 sMawileTMHMLearnset[] =
 static const u8 sAronTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7065,6 +7112,7 @@ static const u8 sAronTMHMLearnset[] =
 static const u8 sLaironTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7086,6 +7134,7 @@ static const u8 sLaironTMHMLearnset[] =
 static const u8 sAggronTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7295,7 +7344,6 @@ static const u8 sIllumiseTMHMLearnset[] =
 static const u8 sRoseliaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -7354,6 +7402,7 @@ static const u8 sSwalotTMHMLearnset[] =
 static const u8 sCarvanhaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -7374,6 +7423,7 @@ static const u8 sCarvanhaTMHMLearnset[] =
 static const u8 sSharpedoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -7396,6 +7446,7 @@ static const u8 sSharpedoTMHMLearnset[] =
 static const u8 sWailmerTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7416,6 +7467,7 @@ static const u8 sWailmerTMHMLearnset[] =
 static const u8 sWailordTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7646,7 +7698,6 @@ static const u8 sFlygonTMHMLearnset[] =
 static const u8 sCacneaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM07_SCORCHING_SANDS),
@@ -7667,7 +7718,6 @@ static const u8 sCacneaTMHMLearnset[] =
 static const u8 sCacturneTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
@@ -7834,6 +7884,7 @@ static const u8 sSolrockTMHMLearnset[] =
 static const u8 sBarboachTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7855,6 +7906,7 @@ static const u8 sBarboachTMHMLearnset[] =
 static const u8 sWhiscashTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7876,6 +7928,7 @@ static const u8 sWhiscashTMHMLearnset[] =
 static const u8 sCorphishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -7901,6 +7954,7 @@ static const u8 sCorphishTMHMLearnset[] =
 static const u8 sCrawdauntTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -8027,6 +8081,7 @@ static const u8 sCradilyTMHMLearnset[] =
 static const u8 sAnorithTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -8048,6 +8103,7 @@ static const u8 sAnorithTMHMLearnset[] =
 static const u8 sArmaldoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -8071,6 +8127,7 @@ static const u8 sArmaldoTMHMLearnset[] =
 static const u8 sFeebasTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -8090,6 +8147,7 @@ static const u8 sFeebasTMHMLearnset[] =
 static const u8 sMiloticTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -8292,6 +8350,7 @@ static const u8 sChimechoTMHMLearnset[] =
 static const u8 sAbsolTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -8331,6 +8390,7 @@ static const u8 sWynautTMHMLearnset[] =
 static const u8 sSnoruntTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM48_BLIZZARD),
@@ -8349,6 +8409,7 @@ static const u8 sSnoruntTMHMLearnset[] =
 static const u8 sGlalieTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM48_BLIZZARD),
@@ -8368,6 +8429,7 @@ static const u8 sGlalieTMHMLearnset[] =
 static const u8 sSphealTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8389,6 +8451,7 @@ static const u8 sSphealTMHMLearnset[] =
 static const u8 sSealeoTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8410,6 +8473,7 @@ static const u8 sSealeoTMHMLearnset[] =
 static const u8 sWalreinTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8431,6 +8495,7 @@ static const u8 sWalreinTMHMLearnset[] =
 static const u8 sClamperlTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -8449,6 +8514,7 @@ static const u8 sClamperlTMHMLearnset[] =
 static const u8 sHuntailTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -8468,6 +8534,7 @@ static const u8 sHuntailTMHMLearnset[] =
 static const u8 sGorebyssTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -8488,6 +8555,7 @@ static const u8 sGorebyssTMHMLearnset[] =
 static const u8 sRelicanthTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -9064,6 +9132,7 @@ static const u8 sInfernapeTMHMLearnset[] =
 static const u8 sPiplupTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -9088,6 +9157,7 @@ static const u8 sPiplupTMHMLearnset[] =
 static const u8 sPrinplupTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -9113,6 +9183,7 @@ static const u8 sPrinplupTMHMLearnset[] =
 static const u8 sEmpoleonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -9226,6 +9297,7 @@ static const u8 sBidoofTMHMLearnset[] =
 static const u8 sBibarelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
@@ -9329,7 +9401,6 @@ static const u8 sLuxrayTMHMLearnset[] =
 static const u8 sBudewTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -9351,7 +9422,6 @@ static const u8 sBudewTMHMLearnset[] =
 static const u8 sRoseradeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -9523,7 +9593,6 @@ static const u8 sCombeeTMHMLearnset[] =
 static const u8 sVespiquenTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -9565,6 +9634,7 @@ static const u8 sPachirisuTMHMLearnset[] =
 static const u8 sBuizelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -9587,6 +9657,7 @@ static const u8 sBuizelTMHMLearnset[] =
 static const u8 sFloatzelTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -9637,6 +9708,7 @@ static const u8 sCherrimTMHMLearnset[] =
 static const u8 sShellosTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM48_BLIZZARD),
@@ -9654,6 +9726,7 @@ static const u8 sShellosTMHMLearnset[] =
 static const u8 sGastrodonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -9678,6 +9751,7 @@ static const u8 sGastrodonTMHMLearnset[] =
 static const u8 sAmbipomTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -9750,6 +9824,7 @@ static const u8 sDrifblimTMHMLearnset[] =
 static const u8 sBunearyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -9773,6 +9848,7 @@ static const u8 sBunearyTMHMLearnset[] =
 static const u8 sLopunnyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -9908,7 +9984,6 @@ static const u8 sChinglingTMHMLearnset[] =
 static const u8 sStunkyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -9931,7 +10006,6 @@ static const u8 sStunkyTMHMLearnset[] =
 static const u8 sSkuntankTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -10052,6 +10126,7 @@ static const u8 sMimeJrTMHMLearnset[] =
 static const u8 sHappinyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -10094,6 +10169,7 @@ static const u8 sChatotTMHMLearnset[] =
 static const u8 sSpiritombTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -10193,6 +10269,7 @@ static const u8 sGarchompTMHMLearnset[] =
 static const u8 sMunchlaxTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -10248,6 +10325,7 @@ static const u8 sRioluTMHMLearnset[] =
 static const u8 sLucarioTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -10274,6 +10352,7 @@ static const u8 sLucarioTMHMLearnset[] =
 static const u8 sHippopotasTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -10294,6 +10373,7 @@ static const u8 sHippopotasTMHMLearnset[] =
 static const u8 sHippowdonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -10364,7 +10444,6 @@ static const u8 sDrapionTMHMLearnset[] =
 static const u8 sCroagunkTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -10391,7 +10470,6 @@ static const u8 sCroagunkTMHMLearnset[] =
 static const u8 sToxicroakTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -10472,6 +10550,7 @@ static const u8 sLumineonTMHMLearnset[] =
 static const u8 sMantykeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM20_AERIAL_ACE),
@@ -10493,6 +10572,7 @@ static const u8 sMantykeTMHMLearnset[] =
 static const u8 sSnoverTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM06_BULLET_SEED),
     TMHM(TM08_SUBSTITUTE),
@@ -10515,6 +10595,7 @@ static const u8 sSnoverTMHMLearnset[] =
 static const u8 sAbomasnowTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM06_BULLET_SEED),
@@ -10736,6 +10817,7 @@ static const u8 sMagmortarTMHMLearnset[] =
 static const u8 sTogekissTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
@@ -10812,6 +10894,7 @@ static const u8 sLeafeonTMHMLearnset[] =
 static const u8 sGlaceonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -10834,7 +10917,6 @@ static const u8 sGlaceonTMHMLearnset[] =
 static const u8 sGliscorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -10993,6 +11075,7 @@ static const u8 sDusknoirTMHMLearnset[] =
 static const u8 sFroslassTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM31_AURORA_VEIL),
@@ -11546,6 +11629,7 @@ static const u8 sEmboarTMHMLearnset[] =
 static const u8 sOshawottTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -11569,6 +11653,7 @@ static const u8 sOshawottTMHMLearnset[] =
 static const u8 sDewottTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -11592,6 +11677,7 @@ static const u8 sDewottTMHMLearnset[] =
 static const u8 sSamurottTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -12289,6 +12375,7 @@ static const u8 sConkeldurrTMHMLearnset[] =
 static const u8 sTympoleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM18_HAIL),
@@ -12305,6 +12392,7 @@ static const u8 sTympoleTMHMLearnset[] =
 static const u8 sPalpitoadTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM18_HAIL),
@@ -12321,7 +12409,7 @@ static const u8 sPalpitoadTMHMLearnset[] =
 static const u8 sSeismitoadTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12455,7 +12543,6 @@ static const u8 sLeavannyTMHMLearnset[] =
 static const u8 sVenipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -12472,7 +12559,6 @@ static const u8 sVenipedeTMHMLearnset[] =
 static const u8 sWhirlipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -12489,7 +12575,6 @@ static const u8 sWhirlipedeTMHMLearnset[] =
 static const u8 sScolipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -12903,6 +12988,7 @@ static const u8 sCofagrigusTMHMLearnset[] =
 static const u8 sTirtougaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12925,6 +13011,7 @@ static const u8 sTirtougaTMHMLearnset[] =
 static const u8 sCarracostaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -12994,7 +13081,6 @@ static const u8 sArcheopsTMHMLearnset[] =
 static const u8 sTrubbishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -13012,7 +13098,6 @@ static const u8 sTrubbishTMHMLearnset[] =
 static const u8 sGarbodorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -13282,6 +13367,7 @@ static const u8 sReuniclusTMHMLearnset[] =
 static const u8 sDucklettTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -13302,6 +13388,7 @@ static const u8 sDucklettTMHMLearnset[] =
 static const u8 sSwannaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -13322,6 +13409,7 @@ static const u8 sSwannaTMHMLearnset[] =
 static const u8 sVanilliteTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM31_AURORA_VEIL),
@@ -13340,6 +13428,7 @@ static const u8 sVanilliteTMHMLearnset[] =
 static const u8 sVanillishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM31_AURORA_VEIL),
@@ -13358,6 +13447,7 @@ static const u8 sVanillishTMHMLearnset[] =
 static const u8 sVanilluxeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM31_AURORA_VEIL),
@@ -13476,7 +13566,6 @@ static const u8 sEscavalierTMHMLearnset[] =
 static const u8 sFoongusTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -13495,7 +13584,6 @@ static const u8 sFoongusTMHMLearnset[] =
 static const u8 sAmoongussTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -13514,6 +13602,7 @@ static const u8 sAmoongussTMHMLearnset[] =
 static const u8 sFrillishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM21_WILL_O_WISP),
@@ -13537,6 +13626,7 @@ static const u8 sFrillishTMHMLearnset[] =
 static const u8 sJellicentTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM21_WILL_O_WISP),
@@ -13560,6 +13650,7 @@ static const u8 sJellicentTMHMLearnset[] =
 static const u8 sAlomomolaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -13950,6 +14041,7 @@ static const u8 sHaxorusTMHMLearnset[] =
 static const u8 sCubchooTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -13972,6 +14064,7 @@ static const u8 sCubchooTMHMLearnset[] =
 static const u8 sBearticTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -13998,6 +14091,7 @@ static const u8 sBearticTMHMLearnset[] =
 static const u8 sCryogonalTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM48_BLIZZARD),
@@ -14018,7 +14112,6 @@ static const u8 sCryogonalTMHMLearnset[] =
 static const u8 sShelmetTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -14035,7 +14128,6 @@ static const u8 sShelmetTMHMLearnset[] =
 static const u8 sAccelgorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -14932,6 +15024,7 @@ static const u8 sDelphoxTMHMLearnset[] =
 static const u8 sFroakieTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -14954,6 +15047,7 @@ static const u8 sFroakieTMHMLearnset[] =
 static const u8 sFrogadierTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -14976,6 +15070,7 @@ static const u8 sFrogadierTMHMLearnset[] =
 static const u8 sGreninjaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -15627,6 +15722,7 @@ static const u8 sMalamarTMHMLearnset[] =
 static const u8 sBinacleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -15654,6 +15750,7 @@ static const u8 sBinacleTMHMLearnset[] =
 static const u8 sBarbaracleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -15683,7 +15780,7 @@ static const u8 sBarbaracleTMHMLearnset[] =
 static const u8 sSkrelpTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15703,7 +15800,7 @@ static const u8 sSkrelpTMHMLearnset[] =
 static const u8 sDragalgeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15725,7 +15822,7 @@ static const u8 sDragalgeTMHMLearnset[] =
 static const u8 sClauncherTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15744,7 +15841,7 @@ static const u8 sClauncherTMHMLearnset[] =
 static const u8 sClawitzerTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM25_WATERFALL),
@@ -15859,6 +15956,7 @@ static const u8 sTyrantrumTMHMLearnset[] =
 static const u8 sAmauraTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -15885,6 +15983,7 @@ static const u8 sAmauraTMHMLearnset[] =
 static const u8 sAurorusTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -16003,6 +16102,7 @@ static const u8 sCarbinkTMHMLearnset[] =
 static const u8 sGoomyTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM17_HIDDEN_POWER),
@@ -16020,6 +16120,7 @@ static const u8 sGoomyTMHMLearnset[] =
 static const u8 sSliggooTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM48_BLIZZARD),
@@ -16039,6 +16140,7 @@ static const u8 sSliggooTMHMLearnset[] =
 static const u8 sGoodraTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM48_BLIZZARD),
@@ -16191,6 +16293,7 @@ static const u8 sGourgeistTMHMLearnset[] =
 static const u8 sBergmiteTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -16211,6 +16314,7 @@ static const u8 sBergmiteTMHMLearnset[] =
 static const u8 sAvaluggTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -16233,6 +16337,7 @@ static const u8 sAvaluggTMHMLearnset[] =
 static const u8 sNoibatTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -16256,6 +16361,7 @@ static const u8 sNoibatTMHMLearnset[] =
 static const u8 sNoivernTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -16537,6 +16643,7 @@ static const u8 sIncineroarTMHMLearnset[] =
 static const u8 sPopplioTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16556,6 +16663,7 @@ static const u8 sPopplioTMHMLearnset[] =
 static const u8 sBrionneTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16575,6 +16683,7 @@ static const u8 sBrionneTMHMLearnset[] =
 static const u8 sPrimarinaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16899,6 +17008,7 @@ static const u8 sLycanrocTMHMLearnset[] =
 static const u8 sWishiwashiTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16918,7 +17028,7 @@ static const u8 sWishiwashiTMHMLearnset[] =
 static const u8 sMareanieTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16938,7 +17048,7 @@ static const u8 sMareanieTMHMLearnset[] =
 static const u8 sToxapexTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -16995,6 +17105,7 @@ static const u8 sMudsdaleTMHMLearnset[] =
 static const u8 sDewpiderTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -17014,6 +17125,7 @@ static const u8 sDewpiderTMHMLearnset[] =
 static const u8 sAraquanidTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -17102,7 +17214,6 @@ static const u8 sShiinoticTMHMLearnset[] =
 static const u8 sSalanditTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -17125,7 +17236,6 @@ static const u8 sSalanditTMHMLearnset[] =
 static const u8 sSalazzleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -17340,7 +17450,7 @@ static const u8 sWimpodTMHMLearnset[] =
 static const u8 sGolisopodTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
@@ -17515,7 +17625,6 @@ static const u8 sKomalaTMHMLearnset[] =
 static const u8 sTurtonatorTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM07_SCORCHING_SANDS),
@@ -17583,7 +17692,7 @@ static const u8 sMimikyuTMHMLearnset[] =
 static const u8 sBruxishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     // TMHM(TM20_AERIAL_ACE),
@@ -17607,6 +17716,7 @@ static const u8 sBruxishTMHMLearnset[] =
 static const u8 sDrampaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM16_STEEL_WING),
@@ -18277,6 +18387,7 @@ static const u8 sCinderaceTMHMLearnset[] =
 static const u8 sSobbleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM09_COVET),
     TMHM(TM13_REST),
@@ -18293,6 +18404,7 @@ static const u8 sSobbleTMHMLearnset[] =
 static const u8 sDrizzileTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -18311,6 +18423,7 @@ static const u8 sDrizzileTMHMLearnset[] =
 static const u8 sInteleonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM09_COVET),
@@ -18559,6 +18672,7 @@ static const u8 sDubwoolTMHMLearnset[] =
 static const u8 sChewtleTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -18574,6 +18688,7 @@ static const u8 sChewtleTMHMLearnset[] =
 static const u8 sDrednawTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -18782,6 +18897,7 @@ static const u8 sSandacondaTMHMLearnset[] =
 static const u8 sCramorantTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     // TMHM(TM02_PLUCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
@@ -18805,6 +18921,7 @@ static const u8 sCramorantTMHMLearnset[] =
 static const u8 sArrokudaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -18821,6 +18938,7 @@ static const u8 sArrokudaTMHMLearnset[] =
 static const u8 sBarraskewdaTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -18850,7 +18968,6 @@ static const u8 sToxelTMHMLearnset[] =
 static const u8 sToxtricityTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -18868,7 +18985,6 @@ static const u8 sToxtricityTMHMLearnset[] =
 static const u8 sSizzlipedeTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM07_SCORCHING_SANDS),
@@ -18886,7 +19002,6 @@ static const u8 sSizzlipedeTMHMLearnset[] =
 static const u8 sCentiskorchTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     // TMHM(TM03_BUG_BITE),
     TMHM(TM39_RETURN),
     TMHM(TM07_SCORCHING_SANDS),
@@ -18908,6 +19023,7 @@ static const u8 sCentiskorchTMHMLearnset[] =
 static const u8 sClobbopusTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -18924,6 +19040,7 @@ static const u8 sClobbopusTMHMLearnset[] =
 static const u8 sGrapploctTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM04_RETALIATE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
@@ -19299,7 +19416,6 @@ static const u8 sFalinksTMHMLearnset[] =
 static const u8 sPincurchinTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -19367,6 +19483,7 @@ static const u8 sStonjournerTMHMLearnset[] =
 static const u8 sEiscueTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM13_REST),
@@ -19512,6 +19629,7 @@ static const u8 sArctozoltTMHMLearnset[] =
 static const u8 sDracovishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -19529,6 +19647,7 @@ static const u8 sDracovishTMHMLearnset[] =
 static const u8 sArctovishTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM08_SUBSTITUTE),
@@ -20082,7 +20201,6 @@ static const u8 sGolemAlolanTMHMLearnset[] =
 static const u8 sGrimerAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -20101,7 +20219,6 @@ static const u8 sGrimerAlolanTMHMLearnset[] =
 static const u8 sMukAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM05_ROCK_TOMB),
     TMHM(TM10_THIEF),
@@ -20229,6 +20346,7 @@ static const u8 sRapidashGalarianTMHMLearnset[] =
 static const u8 sSlowpokeGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -20258,7 +20376,7 @@ static const u8 sSlowpokeGalarianTMHMLearnset[] =
 static const u8 sSlowbroGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),
@@ -20310,7 +20428,6 @@ static const u8 sFarfetchdGalarianTMHMLearnset[] =
 static const u8 sWeezingGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
     TMHM(TM39_RETURN),
     TMHM(TM10_THIEF),
     TMHM(TM08_SUBSTITUTE),
@@ -20410,7 +20527,7 @@ static const u8 sMoltresGalarianTMHMLearnset[] =
 static const u8 sSlowkingGalarianTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
-    TMHM(TM03_VENOSHOCK),
+    TMHM(TM03_WATER_PULSE),
     TMHM(TM39_RETURN),
     TMHM(TM08_SUBSTITUTE),
     TMHM(TM11_TELEPORT),

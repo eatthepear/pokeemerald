@@ -3021,9 +3021,9 @@ static const u8 sTM02Desc[] = _(
     "lowering speed.");
 
 static const u8 sTM03Desc[] = _(
-    "Deals double\n"
-    "damage if the foe\n"
-    "is poisoned.");
+    "Generates an\n"
+    "ultrasonic wave\n"
+    "that may confuse.");
 
 static const u8 sTM04Desc[] = _(
     "An attack that does\n"

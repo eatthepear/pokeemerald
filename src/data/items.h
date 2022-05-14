@@ -7830,10 +7830,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM03_VENOSHOCK] =
+    [ITEM_TM03_WATER_PULSE] =
     {
         .name = _("TM03"),
-        .itemId = ITEM_TM03_VENOSHOCK,
+        .itemId = ITEM_TM03_WATER_PULSE,
         .price = 3000,
         .description = sTM03Desc,
         .pocket = POCKET_TM_HM,

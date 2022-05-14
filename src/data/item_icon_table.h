@@ -624,7 +624,7 @@ const u32 *const gItemIconTable[][2] =
     // TMs/HMs
     [ITEM_TM01] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},
     [ITEM_TM02] = {gItemIcon_TM, gItemIconPalette_ElectricTMHM},
-    [ITEM_TM03] = {gItemIcon_TM, gItemIconPalette_PoisonTMHM},
+    [ITEM_TM03] = {gItemIcon_TM, gItemIconPalette_WaterTMHM},
     [ITEM_TM04] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},
     [ITEM_TM05] = {gItemIcon_TM, gItemIconPalette_RockTMHM},
     [ITEM_TM06] = {gItemIcon_TM, gItemIconPalette_GrassTMHM},
