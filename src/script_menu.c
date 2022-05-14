@@ -830,7 +830,7 @@ static const u8 sText_PsychicGem[] = _("Psychic Gem");
 static const u8 sText_FairyGem[] = _("Fairy Gem");
 static const u8 sText_IceGem[] = _("Ice Gem");
 static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
-static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
+static const u8 sText_MoveTutorGrassKnot[] = _("Grass Knot");
 static const u8 sText_MoveTutorLowKick[] = _("Low Kick");
 static const u8 sText_MoveTutorHealBell[] = _("Heal Bell");
 static const u8 sText_MoveTutorHelpingHand[] = _("Helping Hand");
@@ -842,25 +842,25 @@ static const u8 sText_MoveTutorIcePunch[] = _("Ice Punch");
 static const u8 sText_MoveTutorThunderPunch[] = _("Thunder Punch");
 static const u8 sText_MoveTutorUTurn[] = _("U-Turn");
 static const u8 sText_MoveTutorVoltSwitch[] = _("Volt Switch");
-static const u8 sText_MoveTutorMagicCoat[] = _("Magic Coat");
+static const u8 sText_MoveTutorDefog[] = _("Defog");
 static const u8 sText_MoveTutorPainSplit[] = _("Pain Split");
 static const u8 sText_MoveTutorTrick[] = _("Trick");
 static const u8 sText_MoveTutorBounce[] = _("Bounce");
 static const u8 sText_MoveTutorFlipTurn[] = _("Flip Turn");
 static const u8 sText_MoveTutorIronHead[] = _("Iron Head");
-static const u8 sText_MoveTutorGigaDrain[] = _("Giga Drain");
+static const u8 sText_MoveTutorKnockOff[] = _("Knock Off");
 static const u8 sText_MoveTutorZenHeadbutt[] = _("Zen Headbutt");
 static const u8 sText_MoveTutorRoost[] = _("Roost");
 static const u8 sText_MoveTutorSynthesis[] = _("Synthesis");
 static const u8 sText_MoveTutorTailwind[] = _("Tailwind");
-static const u8 sText_MoveTutorAquaTail[] = _("Aqua Tail");
-static const u8 sText_MoveTutorDragonPulse[] = _("Dragon Pulse");
-static const u8 sText_MoveTutorEarthPower[] = _("Earth Power");
+static const u8 sText_MoveTutorDracoMeteor[] = _("Draco Meteor");
 static const u8 sText_MoveTutorExpandingForce[] = _("Expanding Force");
-static const u8 sText_MoveTutorGrassKnot[] = _("Grass Knot");
 static const u8 sText_MoveTutorHeatWave[] = _("Heat Wave");
 static const u8 sText_MoveTutorPoltergeist[] = _("Poltergeist");
+static const u8 sText_MoveTutorPowerWhip[] = _("Power Whip");
 static const u8 sText_MoveTutorSuperpower[] = _("Superpower");
+static const u8 sText_MoveTutorSwordsDance[] = _("Swords Dance");
+static const u8 sText_MoveTutorNastyPlot[] = _("Nasty Plot");
 static const u8 sText_Exp1[] =_("Experience Training 1");
 static const u8 sText_Exp2[] =_("Experience Training 2");
 static const u8 sText_Exp3[] =_("Experience Training 3");
@@ -940,7 +940,7 @@ static const struct ListMenuItem EvolutionaryGems[] =
 static const struct ListMenuItem MoveTutorLevel1[] =
 {
     {sText_MoveTutorIcyWind, 0},
-    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorGrassKnot, 1},
     {sText_MoveTutorLowKick, 2},
     {sText_MoveTutorHealBell, 3},
     {sText_MoveTutorHelpingHand, 4},
@@ -952,7 +952,7 @@ static const struct ListMenuItem MoveTutorLevel1[] =
 static const struct ListMenuItem MoveTutorLevel2[] =
 {
     {sText_MoveTutorIcyWind, 0},
-    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorGrassKnot, 1},
     {sText_MoveTutorLowKick, 2},
     {sText_MoveTutorHealBell, 3},
     {sText_MoveTutorHelpingHand, 4},
@@ -964,7 +964,7 @@ static const struct ListMenuItem MoveTutorLevel2[] =
     {sText_MoveTutorThunderPunch, 10},
     {sText_MoveTutorFlipTurn, 11},
     {sText_MoveTutorUTurn, 12},
-    {sText_MoveTutorMagicCoat, 13},
+    {sText_MoveTutorDefog, 13},
     {sText_MoveTutorPainSplit, 14},
     {sText_MoveTutorTrick, 15},
 };
@@ -972,7 +972,7 @@ static const struct ListMenuItem MoveTutorLevel2[] =
 static const struct ListMenuItem MoveTutorLevel3[] =
 {
     {sText_MoveTutorIcyWind, 0},
-    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorGrassKnot, 1},
     {sText_MoveTutorLowKick, 2},
     {sText_MoveTutorHealBell, 3},
     {sText_MoveTutorHelpingHand, 4},
@@ -984,12 +984,12 @@ static const struct ListMenuItem MoveTutorLevel3[] =
     {sText_MoveTutorThunderPunch, 10},
     {sText_MoveTutorFlipTurn, 11},
     {sText_MoveTutorUTurn, 12},
-    {sText_MoveTutorMagicCoat, 13},
+    {sText_MoveTutorDefog, 13},
     {sText_MoveTutorPainSplit, 14},
     {sText_MoveTutorTrick, 15},
     {sText_MoveTutorBounce, 16},
     {sText_MoveTutorIronHead, 17},
-    {sText_MoveTutorGigaDrain, 18},
+    {sText_MoveTutorKnockOff, 18},
     {sText_MoveTutorVoltSwitch, 19},
     {sText_MoveTutorZenHeadbutt, 20},
     {sText_MoveTutorRoost, 21},
@@ -1000,7 +1000,7 @@ static const struct ListMenuItem MoveTutorLevel3[] =
 static const struct ListMenuItem MoveTutorLevel4[] =
 {
     {sText_MoveTutorIcyWind, 0},
-    {sText_MoveTutorKnockOff, 1},
+    {sText_MoveTutorGrassKnot, 1},
     {sText_MoveTutorLowKick, 2},
     {sText_MoveTutorHealBell, 3},
     {sText_MoveTutorHelpingHand, 4},
@@ -1012,25 +1012,25 @@ static const struct ListMenuItem MoveTutorLevel4[] =
     {sText_MoveTutorThunderPunch, 10},
     {sText_MoveTutorFlipTurn, 11},
     {sText_MoveTutorUTurn, 12},
-    {sText_MoveTutorMagicCoat, 13},
+    {sText_MoveTutorDefog, 13},
     {sText_MoveTutorPainSplit, 14},
     {sText_MoveTutorTrick, 15},
     {sText_MoveTutorBounce, 16},
     {sText_MoveTutorIronHead, 17},
-    {sText_MoveTutorGigaDrain, 18},
+    {sText_MoveTutorKnockOff, 18},
     {sText_MoveTutorVoltSwitch, 19},
     {sText_MoveTutorZenHeadbutt, 20},
     {sText_MoveTutorRoost, 21},
     {sText_MoveTutorSynthesis, 22},
     {sText_MoveTutorTailwind, 23},
-    {sText_MoveTutorAquaTail, 24},
-    {sText_MoveTutorDragonPulse, 25},
-    {sText_MoveTutorEarthPower, 26},
-    {sText_MoveTutorExpandingForce, 27},
-    {sText_MoveTutorGrassKnot, 28},
-    {sText_MoveTutorHeatWave, 29},
-    {sText_MoveTutorPoltergeist, 30},
-    {sText_MoveTutorSuperpower, 31},
+    {sText_MoveTutorDracoMeteor, 24},
+    {sText_MoveTutorExpandingForce, 25},
+    {sText_MoveTutorHeatWave, 26},
+    {sText_MoveTutorPoltergeist, 27},
+    {sText_MoveTutorPowerWhip, 28},
+    {sText_MoveTutorSuperpower, 29},
+    {sText_MoveTutorSwordsDance, 30},
+    {sText_MoveTutorNastyPlot, 31},
 };
 
 static const struct ListMenuItem Exp3[] =

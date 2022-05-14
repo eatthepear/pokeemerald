@@ -780,8 +780,8 @@ EventScript_Shop_Lelouch_MoveTutor_18:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_19:
-	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
-	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
+	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_20:
@@ -840,8 +840,8 @@ EventScript_Shop_Lelouch_MoveTutor_30:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_31:
-	setvar VAR_TEMP_0, MOVE_MAGIC_COAT
-	setvar VAR_0x8005, TUTOR_MOVE_MAGIC_COAT
+	setvar VAR_TEMP_0, MOVE_DEFOG
+	setvar VAR_0x8005, TUTOR_MOVE_DEFOG
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_32:
@@ -865,8 +865,8 @@ EventScript_Shop_Lelouch_MoveTutor_35:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_36:
-	setvar VAR_TEMP_0, MOVE_GIGA_DRAIN
-	setvar VAR_0x8005, TUTOR_MOVE_GIGA_DRAIN
+	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
+	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_37:
@@ -895,43 +895,43 @@ EventScript_Shop_Lelouch_MoveTutor_41:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_42:
-	setvar VAR_TEMP_0, MOVE_AQUA_TAIL
-	setvar VAR_0x8005, TUTOR_MOVE_AQUA_TAIL
+	setvar VAR_TEMP_0, MOVE_DRACO_METEOR
+	setvar VAR_0x8005, TUTOR_MOVE_DRACO_METEOR
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_43:
-	setvar VAR_TEMP_0, MOVE_DRAGON_PULSE
-	setvar VAR_0x8005, TUTOR_MOVE_DRAGON_PULSE
-	goto EventScript_Shop_Lelouch_MoveTutor_6
-
-EventScript_Shop_Lelouch_MoveTutor_44:
-	setvar VAR_TEMP_0, MOVE_EARTH_POWER
-	setvar VAR_0x8005, TUTOR_MOVE_EARTH_POWER
-	goto EventScript_Shop_Lelouch_MoveTutor_6
-
-EventScript_Shop_Lelouch_MoveTutor_45:
 	setvar VAR_TEMP_0, MOVE_EXPANDING_FORCE
 	setvar VAR_0x8005, TUTOR_MOVE_EXPANDING_FORCE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
-EventScript_Shop_Lelouch_MoveTutor_46:
+EventScript_Shop_Lelouch_MoveTutor_44:
 	setvar VAR_TEMP_0, MOVE_HEAT_WAVE
 	setvar VAR_0x8005, TUTOR_MOVE_HEAT_WAVE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
-EventScript_Shop_Lelouch_MoveTutor_47:
-	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
-	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
-	goto EventScript_Shop_Lelouch_MoveTutor_6
-
-EventScript_Shop_Lelouch_MoveTutor_48:
+EventScript_Shop_Lelouch_MoveTutor_45:
 	setvar VAR_TEMP_0, MOVE_POLTERGEIST
 	setvar VAR_0x8005, TUTOR_MOVE_POLTERGEIST
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
-EventScript_Shop_Lelouch_MoveTutor_49:
+EventScript_Shop_Lelouch_MoveTutor_46:
+	setvar VAR_TEMP_0, MOVE_POWER_WHIP
+	setvar VAR_0x8005, TUTOR_MOVE_POWER_WHIP
+	goto EventScript_Shop_Lelouch_MoveTutor_6
+
+EventScript_Shop_Lelouch_MoveTutor_47:
 	setvar VAR_TEMP_0, MOVE_SUPERPOWER
 	setvar VAR_0x8005, TUTOR_MOVE_SUPERPOWER
+	goto EventScript_Shop_Lelouch_MoveTutor_6
+
+EventScript_Shop_Lelouch_MoveTutor_48:
+	setvar VAR_TEMP_0, MOVE_SWORDS_DANCE
+	setvar VAR_0x8005, TUTOR_MOVE_SWORDS_DANCE
+	goto EventScript_Shop_Lelouch_MoveTutor_6
+
+EventScript_Shop_Lelouch_MoveTutor_49:
+	setvar VAR_TEMP_0, MOVE_NASTY_PLOT
+	setvar VAR_0x8005, TUTOR_MOVE_NASTY_PLOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_50:
@@ -943,8 +943,8 @@ EventScript_Shop_Lelouch_MoveTutor_52:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_53:
-	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
-	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
+	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_54:
@@ -1003,8 +1003,8 @@ EventScript_Shop_Lelouch_MoveTutor_64:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_65:
-	setvar VAR_TEMP_0, MOVE_MAGIC_COAT
-	setvar VAR_0x8005, TUTOR_MOVE_MAGIC_COAT
+	setvar VAR_TEMP_0, MOVE_DEFOG
+	setvar VAR_0x8005, TUTOR_MOVE_DEFOG
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_66:
@@ -1028,8 +1028,8 @@ EventScript_Shop_Lelouch_MoveTutor_69:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_70:
-	setvar VAR_TEMP_0, MOVE_GIGA_DRAIN
-	setvar VAR_0x8005, TUTOR_MOVE_GIGA_DRAIN
+	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
+	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_71:
@@ -1066,8 +1066,8 @@ EventScript_Shop_Lelouch_MoveTutor_78:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_79:
-	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
-	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
+	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_80:
@@ -1126,8 +1126,8 @@ EventScript_Shop_Lelouch_MoveTutor_90:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_91:
-	setvar VAR_TEMP_0, MOVE_MAGIC_COAT
-	setvar VAR_0x8005, TUTOR_MOVE_MAGIC_COAT
+	setvar VAR_TEMP_0, MOVE_DEFOG
+	setvar VAR_0x8005, TUTOR_MOVE_DEFOG
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_92:
@@ -1149,8 +1149,8 @@ EventScript_Shop_Lelouch_MoveTutor_96:
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_97:
-	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
-	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
+	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_98:

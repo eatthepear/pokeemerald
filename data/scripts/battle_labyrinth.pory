@@ -426,8 +426,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
 					setvar(VAR_0x8005, TUTOR_MOVE_ICY_WIND)
 				case 1:
-					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
-					setvar(VAR_0x8005, TUTOR_MOVE_KNOCK_OFF)
+					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
+					setvar(VAR_0x8005, TUTOR_MOVE_GRASS_KNOT)
 				case 2:
 					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
 					setvar(VAR_0x8005, TUTOR_MOVE_LOW_KICK)
@@ -462,8 +462,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_U_TURN)
 					setvar(VAR_0x8005, TUTOR_MOVE_U_TURN)
 				case 13:
-					setvar(VAR_TEMP_0, MOVE_MAGIC_COAT)
-					setvar(VAR_0x8005, TUTOR_MOVE_MAGIC_COAT)
+					setvar(VAR_TEMP_0, MOVE_DEFOG)
+					setvar(VAR_0x8005, TUTOR_MOVE_DEFOG)
 				case 14:
 					setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
 					setvar(VAR_0x8005, TUTOR_MOVE_PAIN_SPLIT)
@@ -477,8 +477,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_IRON_HEAD)
 					setvar(VAR_0x8005, TUTOR_MOVE_IRON_HEAD)
 				case 18:
-					setvar(VAR_TEMP_0, MOVE_GIGA_DRAIN)
-					setvar(VAR_0x8005, TUTOR_MOVE_GIGA_DRAIN)
+					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
+					setvar(VAR_0x8005, TUTOR_MOVE_KNOCK_OFF)
 				case 19:
 					setvar(VAR_TEMP_0, MOVE_VOLT_SWITCH)
 					setvar(VAR_0x8005, TUTOR_MOVE_VOLT_SWITCH)
@@ -495,29 +495,29 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_TAILWIND)
 					setvar(VAR_0x8005, TUTOR_MOVE_TAILWIND)
 				case 24:
-					setvar(VAR_TEMP_0, MOVE_AQUA_TAIL)
-					setvar(VAR_0x8005, TUTOR_MOVE_AQUA_TAIL)
+					setvar(VAR_TEMP_0, MOVE_DRACO_METEOR)
+					setvar(VAR_0x8005, TUTOR_MOVE_DRACO_METEOR)
 				case 25:
-					setvar(VAR_TEMP_0, MOVE_DRAGON_PULSE)
-					setvar(VAR_0x8005, TUTOR_MOVE_DRAGON_PULSE)
-				case 26:
-					setvar(VAR_TEMP_0, MOVE_EARTH_POWER)
-					setvar(VAR_0x8005, TUTOR_MOVE_EARTH_POWER)
-				case 27:
 					setvar(VAR_TEMP_0, MOVE_EXPANDING_FORCE)
 					setvar(VAR_0x8005, TUTOR_MOVE_EXPANDING_FORCE)
-				case 28:
+				case 26:
 					setvar(VAR_TEMP_0, MOVE_HEAT_WAVE)
 					setvar(VAR_0x8005, TUTOR_MOVE_HEAT_WAVE)
-				case 29:
-					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
-					setvar(VAR_0x8005, TUTOR_MOVE_GRASS_KNOT)
-				case 30:
+				case 27:
 					setvar(VAR_TEMP_0, MOVE_POLTERGEIST)
 					setvar(VAR_0x8005, TUTOR_MOVE_POLTERGEIST)
-				case 31:
+				case 28:
+					setvar(VAR_TEMP_0, MOVE_POWER_WHIP)
+					setvar(VAR_0x8005, TUTOR_MOVE_POWER_WHIP)
+				case 29:
 					setvar(VAR_TEMP_0, MOVE_SUPERPOWER)
 					setvar(VAR_0x8005, TUTOR_MOVE_SUPERPOWER)
+				case 30:
+					setvar(VAR_TEMP_0, MOVE_SWORDS_DANCE)
+					setvar(VAR_0x8005, TUTOR_MOVE_SWORDS_DANCE)
+				case 31:
+					setvar(VAR_TEMP_0, MOVE_NASTY_PLOT)
+					setvar(VAR_0x8005, TUTOR_MOVE_NASTY_PLOT)
 				case MULTI_B_PRESSED:
 					return
 			}
@@ -528,8 +528,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
 					setvar(VAR_0x8005, TUTOR_MOVE_ICY_WIND)
 				case 1:
-					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
-					setvar(VAR_0x8005, TUTOR_MOVE_KNOCK_OFF)
+					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
+					setvar(VAR_0x8005, TUTOR_MOVE_GRASS_KNOT)
 				case 2:
 					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
 					setvar(VAR_0x8005, TUTOR_MOVE_LOW_KICK)
@@ -564,8 +564,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_U_TURN)
 					setvar(VAR_0x8005, TUTOR_MOVE_U_TURN)
 				case 13:
-					setvar(VAR_TEMP_0, MOVE_MAGIC_COAT)
-					setvar(VAR_0x8005, TUTOR_MOVE_MAGIC_COAT)
+					setvar(VAR_TEMP_0, MOVE_DEFOG)
+					setvar(VAR_0x8005, TUTOR_MOVE_DEFOG)
 				case 14:
 					setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
 					setvar(VAR_0x8005, TUTOR_MOVE_PAIN_SPLIT)
@@ -579,8 +579,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_IRON_HEAD)
 					setvar(VAR_0x8005, TUTOR_MOVE_IRON_HEAD)
 				case 18:
-					setvar(VAR_TEMP_0, MOVE_GIGA_DRAIN)
-					setvar(VAR_0x8005, TUTOR_MOVE_GIGA_DRAIN)
+					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
+					setvar(VAR_0x8005, TUTOR_MOVE_KNOCK_OFF)
 				case 19:
 					setvar(VAR_TEMP_0, MOVE_VOLT_SWITCH)
 					setvar(VAR_0x8005, TUTOR_MOVE_VOLT_SWITCH)
@@ -606,8 +606,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
 					setvar(VAR_0x8005, TUTOR_MOVE_ICY_WIND)
 				case 1:
-					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
-					setvar(VAR_0x8005, TUTOR_MOVE_KNOCK_OFF)
+					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
+					setvar(VAR_0x8005, TUTOR_MOVE_GRASS_KNOT)
 				case 2:
 					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
 					setvar(VAR_0x8005, TUTOR_MOVE_LOW_KICK)
@@ -642,8 +642,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_U_TURN)
 					setvar(VAR_0x8005, TUTOR_MOVE_U_TURN)
 				case 13:
-					setvar(VAR_TEMP_0, MOVE_MAGIC_COAT)
-					setvar(VAR_0x8005, TUTOR_MOVE_MAGIC_COAT)
+					setvar(VAR_TEMP_0, MOVE_DEFOG)
+					setvar(VAR_0x8005, TUTOR_MOVE_DEFOG)
 				case 14:
 					setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
 					setvar(VAR_0x8005, TUTOR_MOVE_PAIN_SPLIT)
@@ -660,8 +660,8 @@ script EventScript_Shop_Lelouch_MoveTutor {
 					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
 					setvar(VAR_0x8005, TUTOR_MOVE_ICY_WIND)
 				case 1:
-					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
-					setvar(VAR_0x8005, TUTOR_MOVE_KNOCK_OFF)
+					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
+					setvar(VAR_0x8005, TUTOR_MOVE_GRASS_KNOT)
 				case 2:
 					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
 					setvar(VAR_0x8005, TUTOR_MOVE_LOW_KICK)
