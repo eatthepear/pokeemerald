@@ -5371,7 +5371,7 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
         tutorMoveId = 0xFF;
         for (i = 0; i < TUTOR_MOVE_COUNT; i++)
         {
-            if(move == gTutorMoves[i])
+            if (move == gTutorMoves[i])
             {
                 tutorMoveId = i;
                 break;
@@ -5381,7 +5381,7 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
         tmMoveId = 0xFF;
         for (i = 0; i < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; i++)
         {
-            if(move == ItemIdToBattleMoveId(ITEM_TM01_PROTECT + i))
+            if (move == ItemIdToBattleMoveId(ITEM_TM01_PROTECT + i))
             {
                 tmMoveId = (ITEM_TM01_PROTECT + i);
                 break;
@@ -5400,21 +5400,21 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                 continue;
             }
             //TMHM
-            if(CanSpeciesLearnTMHM(species, tmMoveId))
+            if (CanSpeciesLearnTMHM(species, tmMoveId))
             {
                 sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                 resultsCount++;
                 continue;
             }
             //Tutor
-            if(CanLearnTutorMove(species, tutorMoveId))
+            if (CanLearnTutorMove(species, tutorMoveId))
             {
                 sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                 resultsCount++;
                 continue;
             }
             //EGGs
-            if(SpeciesCanLearnEggMove(species, move))
+            if (SpeciesCanLearnEggMove(species, move))
             {
                 sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                 resultsCount++;
@@ -6511,7 +6511,7 @@ static void Task_LoadStatsScreen(u8 taskId)
         sPokedexView->numEggMoves = 0;
         sPokedexView->numLevelUpMoves = 0;
         sPokedexView->numTMHMMoves = 0;
-        if(CalculateMoves())
+        if (CalculateMoves())
             gMain.state++;
         break;
     case 5:
@@ -6726,7 +6726,7 @@ static bool8 CalculateMoves(void)
     //TMHM moves
     for (j = 0; j < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; j++)
     {
-        if(CanSpeciesLearnTMHM(species, j))
+        if (CanSpeciesLearnTMHM(species, j))
         {
             sStatsMoves[movesTotal] = ItemIdToBattleMoveId(ITEM_TM01_PROTECT + j);
             movesTotal++;
@@ -7878,7 +7878,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
 }
 static void HandleTargetSpeciesPrint(u8 taskId, u16 targetSpecies, u16 previousTargetSpecies, u8 base_x, u8 base_y, u8 base_y_offset, u8 base_i, bool8 isEevee)
 {
-    u8 maxI = 6;
+    u8 iterations = 6;
     bool8 seen = GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_GET_SEEN);
 
     if (seen || !HGSS_HIDE_UNSEEN_EVOLUTION_NAMES)
@@ -7891,7 +7891,7 @@ static void HandleTargetSpeciesPrint(u8 taskId, u16 targetSpecies, u16 previousT
     //Print mon icon in the top row
     if (isEevee)
     {
-        maxI = 9;
+        iterations = 9;
         if (targetSpecies == previousTargetSpecies)
             return;
         #ifdef POKEMON_EXPANSION
@@ -7902,7 +7902,7 @@ static void HandleTargetSpeciesPrint(u8 taskId, u16 targetSpecies, u16 previousT
         #endif
     }
 
-    if(base_i < maxI) 
+    if (base_i < iterations) 
     {
         LoadMonIconPalette(targetSpecies); //Loads pallete for current mon
         #ifndef POKEMON_EXPANSION
@@ -7954,7 +7954,7 @@ static void HandlePreEvolutionSpeciesPrint(u8 taskId, u16 preSpecies, u16 specie
 
     PrintInfoScreenTextSmall(gStringVar3, base_x, base_y + base_y_offset*base_i); //evolution mon name
 
-    if(base_i < 3) 
+    if (base_i < 3) 
     {
         LoadMonIconPalette(preSpecies); //Loads pallete for current mon
         #ifndef POKEMON_EXPANSION
@@ -8015,16 +8015,16 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
     }
 
     #ifdef POKEMON_EXPANSION
-        if (isMega)
-        {
-            sPokedexView->numPreEvolutions = numPreEvolutions;
-            sPokedexView->sEvoScreenData.numAllEvolutions += numPreEvolutions;
-            sPokedexView->sEvoScreenData.isMega = isMega;
+    if (isMega)
+    {
+        sPokedexView->numPreEvolutions = numPreEvolutions;
+        sPokedexView->sEvoScreenData.numAllEvolutions += numPreEvolutions;
+        sPokedexView->sEvoScreenData.isMega = isMega;
 
-            CreateCaughtBallEvolutionScreen(preEvolutionOne, base_x - 9 - 8, base_y + base_y_offset*(numPreEvolutions - 1), 0);
-            HandlePreEvolutionSpeciesPrint(taskId, preEvolutionOne, species, base_x - 8, base_y, base_y_offset, numPreEvolutions - 1);
-            return numPreEvolutions;
-        }
+        CreateCaughtBallEvolutionScreen(preEvolutionOne, base_x - 9 - 8, base_y + base_y_offset*(numPreEvolutions - 1), 0);
+        HandlePreEvolutionSpeciesPrint(taskId, preEvolutionOne, species, base_x - 8, base_y, base_y_offset, numPreEvolutions - 1);
+        return numPreEvolutions;
+    }
     #endif
 
     //Calculate if previous evolution also has a previous evolution
@@ -8094,8 +8094,8 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
     bool8 isEevee = FALSE;
 
     #ifdef POKEMON_EXPANSION
-        if (sPokedexView->sEvoScreenData.isMega)
-            return 0;
+    if (sPokedexView->sEvoScreenData.isMega)
+        return 0;
     #endif
 
     StringCopy(gStringVar1, gSpeciesNames[species]);
@@ -8106,10 +8106,11 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
     //Calculate number of possible direct evolutions (e.g. Eevee has 5 but torchic has 1)
     for (i = 0; i < EVOS_PER_MON; i++)
     {
-            if(gEvolutionTable[species][i].method != 0 && gEvolutionTable[species][i].method != EVO_MEGA_EVOLUTION)
+            if (gEvolutionTable[species][i].method != 0 && gEvolutionTable[species][i].method != EVO_MEGA_EVOLUTION)
                 times += 1;
     }
     gTasks[taskId].data[3] = times;
+    sPokedexView->sEvoScreenData.numAllEvolutions += times;
 
     //If there are no evolutions print text
     if (times == 0 && depth == 0)
@@ -8126,11 +8127,7 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
 
         previousTargetSpecies = targetSpecies;
         targetSpecies = gEvolutionTable[species][i].targetSpecies;
-        sPokedexView->sEvoScreenData.targetSpecies[sPokedexView->sEvoScreenData.numAllEvolutions++] = targetSpecies;
-        #ifdef TX_DIFFICULTY_CHALLENGES_USED
-            if (gSaveBlock1Ptr->txRandEvolutions && targetSpecies != SPECIES_NONE) //tx_difficulty_challenges
-                targetSpecies = GetSpeciesRandomSeeded(targetSpecies, TX_RANDOM_T_EVO);
-        #endif
+        sPokedexView->sEvoScreenData.targetSpecies[base_i] = targetSpecies;
         CreateCaughtBallEvolutionScreen(targetSpecies, base_x + depth_x*depth-9, base_y + base_y_offset*base_i, 0);
         HandleTargetSpeciesPrint(taskId, targetSpecies, previousTargetSpecies, base_x + depth_x*depth, base_y, base_y_offset, base_i, isEevee); //evolution mon name
 
