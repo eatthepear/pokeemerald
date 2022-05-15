@@ -187,7 +187,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_PHILLIPA_LEVIATHAN_3] =
     {
-        .trainerClass = TRAINER_CLASS_SCHOOL_KID,
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_SCHOOL_KID_F,
         .trainerName = _("Phillipa"),

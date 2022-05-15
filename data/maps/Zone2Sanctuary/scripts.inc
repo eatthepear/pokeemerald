@@ -68,6 +68,8 @@ Zone2Sanctuary_EventScript_NextZone_7:
 
 Zone2Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
+	setflag FLAG_HIDE_ZONE3A_PHILLIPA
+	setflag FLAG_HIDE_ZONE3A_REMI
 	warp MAP_ZONE3A, 255, 38, 25
 	goto Zone2Sanctuary_EventScript_NextZone_8
 

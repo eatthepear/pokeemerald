@@ -43,9 +43,9 @@ Zone3A_EventScript_LeviathanBattle::
 	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	addobject 10
 	clearflag FLAG_HIDE_ZONE3A_PHILLIPA
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	applymovement 10, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -71,6 +71,10 @@ Zone3A_EventScript_LeviathanBattle_1:
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_1
 	closemessage
 	setflag FLAG_BEATLEVIATHAN3
+	setflag FLAG_HIDE_ZONE3A_REMI
+	removeobject 4
+	setflag FLAG_HIDE_ZONE3A_PHILLIPA
+	removeobject 10
 	release
 	end
 
