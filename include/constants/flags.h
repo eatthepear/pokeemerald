@@ -1050,7 +1050,7 @@
 #define FLAG_ITEM_ZONE1A_QUICK_CLAW                                 0x3E9
 #define FLAG_ITEM_ZONE2A_ANTIDOTE                                   0x3EA
 #define FLAG_ITEM_ZONE2B_POTION                                     0x3EB
-#define FLAG_ITEM_ZONE3A_SUPER_POTION                               0x3EC
+#define FLAG_ITEM_ZONE3A_TM03                                       0x3EC
 #define FLAG_ITEM_ZONE3A_POTION                                     0x3ED
 #define FLAG_ITEM_ZONE3A_PARALYZE_HEAL                              0x3EE
 #define FLAG_ITEM_ZONE4A_BURN_HEAL                                  0x3EF
