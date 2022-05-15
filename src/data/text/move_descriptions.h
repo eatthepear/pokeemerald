@@ -1919,7 +1919,7 @@ static const u8 sSoakDescription[] = _(
 
 static const u8 sFlameChargeDescription[] = _(
     "Attacks in a cloak of\n"
-    "flames. Raises Speed.");
+    "flames. May raise Speed.");
 
 static const u8 sCoilDescription[] = _(
     "Coils up to raise Attack\n"

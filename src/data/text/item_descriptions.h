@@ -3067,8 +3067,8 @@ static const u8 sTM11Desc[] = _(
 
 static const u8 sTM12Desc[] = _(
     "Attacks in a cloak\n"
-    "of flames, raising\n"
-    "the user's Speed.");
+    "of flames. May\n"
+    "raise user's Speed.");
 
 static const u8 sTM13Desc[] = _(
     "The user goes to\n"
