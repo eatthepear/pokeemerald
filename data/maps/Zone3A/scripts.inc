@@ -60,21 +60,59 @@ Zone3A_EventScript_LeviathanBattle_1:
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_0
 	applymovement 10, Zone3A_Movement_Phillipa_RunAway
 	waitmovement 0
-	addobject 4
-	clearflag FLAG_HIDE_ZONE3A_REMI
-	applymovement 4, Common_Movement_WalkDown
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
+	addobject 4
+	clearflag FLAG_HIDE_ZONE3A_REMI
+	applymovement 4, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_2
+	applymovement 4, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 32
+	applymovement 4, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_3
+	applymovement 4, Zone3A_Movement_Remi_WalkToPhillipa
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_4
+	applymovement 10, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_5
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_6
+	delay 32
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_7
+	applymovement 4, Zone3A_Movement_Remi_WalkBack
+	applymovement 10, Zone3A_Movement_Phillipa_WalkBack
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_8
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_9
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_10
+	applymovement 4, Zone3A_Movement_Remi_WalkToPlayer
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_11
 	giveitem ITEM_GOOD_ROD, 1
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_1
+	applymovement 4, Zone3A_Movement_Remi_WalkBackToPhillipa
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_12
+	applymovement 10, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_13
 	closemessage
-	setflag FLAG_BEATLEVIATHAN3
-	setflag FLAG_HIDE_ZONE3A_REMI
-	removeobject 4
+	applymovement 10, Common_Movement_WalkUp
+	waitmovement 0
 	setflag FLAG_HIDE_ZONE3A_PHILLIPA
 	removeobject 10
+	applymovement 4, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkUp
+	waitmovement 0
+	setflag FLAG_HIDE_ZONE3A_REMI
+	removeobject 4
+	setflag FLAG_BEATLEVIATHAN3
 	release
 	end
 
@@ -91,6 +129,44 @@ Zone3A_Movement_Phillipa_RunAway:
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
+	step_end
+
+Zone3A_Movement_Remi_WalkToPhillipa:
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	step_end
+
+Zone3A_Movement_Remi_WalkBack:
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+Zone3A_Movement_Phillipa_WalkBack:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+Zone3A_Movement_Remi_WalkToPlayer:
+	walk_down
+	face_left
+	step_end
+
+Zone3A_Movement_Remi_WalkBackToPhillipa:
+	walk_up
+	face_left
 	step_end
 
 Zone3A_EventScript_Jemma::
@@ -168,14 +244,56 @@ Zone3A_EventScript_ItemHyperPotion::
 	end
 
 Zone3A_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! I lost!$"
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!$"
 
 Zone3A_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in\n"
-	.string "order to battle better?\p"
-	.string "No!\n"
-	.string "I'm sticking with this one no matter\l"
-	.string "what!$"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Phillipa? Are you ok?$"
+
+Zone3A_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Oh!$"
+
+Zone3A_EventScript_LeviathanBattle_Text_3:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: I see.\p"
+	.string "You must have defeated my daughter in\n"
+	.string "battle.\p"
+	.string "Don't worry, I'll go talk to her.$"
+
+Zone3A_EventScript_LeviathanBattle_Text_4:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Hey, kiddo.$"
+
+Zone3A_EventScript_LeviathanBattle_Text_5:
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! Daddy! I lost!$"
+
+Zone3A_EventScript_LeviathanBattle_Text_6:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: I know, love, but sometimes we\n"
+	.string "lose, and that's life. We have to face\l"
+	.string "our losses with honor, right?$"
+
+Zone3A_EventScript_LeviathanBattle_Text_7:
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff…\p"
+	.string "Okay…$"
+
+Zone3A_EventScript_LeviathanBattle_Text_8:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: What do you say?$"
+
+Zone3A_EventScript_LeviathanBattle_Text_9:
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff… Thank you very much\n"
+	.string "for the battle!$"
+
+Zone3A_EventScript_LeviathanBattle_Text_10:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: I'm proud of you, kiddo.$"
+
+Zone3A_EventScript_LeviathanBattle_Text_11:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Thanks for being a good sport.\p"
+	.string "Here, I want you to have this.$"
+
+Zone3A_EventScript_LeviathanBattle_Text_12:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement\n"
+	.string "for one day.\p"
+	.string "It's dinner time.$"
+
+Zone3A_EventScript_LeviathanBattle_Text_13:
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Food!$"
 
 Zone3A_Text_Leviathan3Intro::
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: You! How dare you intrude on\n"

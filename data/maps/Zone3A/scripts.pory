@@ -44,24 +44,62 @@ script Zone3A_EventScript_LeviathanBattle {
 		trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! I lost!"))
+	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!"))
 	applymovement(10, Zone3A_Movement_Phillipa_RunAway)
 	waitmovement(0)
-	addobject(4)
-	clearflag(FLAG_HIDE_ZONE3A_REMI)
-	applymovement(4, Common_Movement_WalkDown)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Phillipa? Are you ok?"))
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
+	addobject(4)
+	clearflag(FLAG_HIDE_ZONE3A_REMI)
+	applymovement(4, Common_Movement_WalkDown)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Oh!"))
+	applymovement(4, Common_Movement_FaceLeft)
+	waitmovement(0)
+	delay(32)
+	applymovement(4, Common_Movement_FaceDown)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I see.\pYou must have defeated my daughter in battle.\pDon't worry, I'll go talk to her."))
+	applymovement(4, Zone3A_Movement_Remi_WalkToPhillipa)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Hey, kiddo."))
+	applymovement(10, Common_Movement_FaceDown)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! Daddy! I lost!"))
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I know, love, but sometimes we lose, and that's life. We have to face our losses with honor, right?"))
+	delay(32)
+	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff…\pOkay…"))
+	applymovement(4, Zone3A_Movement_Remi_WalkBack)
+	applymovement(10, Zone3A_Movement_Phillipa_WalkBack)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: What do you say?"))
+	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff… Thank you very much for the battle!"))
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I'm proud of you, kiddo."))
+	applymovement(4, Zone3A_Movement_Remi_WalkToPlayer)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Thanks for being a good sport.\pHere, I want you to have this."))
 	giveitem(ITEM_GOOD_ROD, 1)
-	msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in order to battle better?\pNo!\nI'm sticking with this one no matter what!"))
+	applymovement(4, Zone3A_Movement_Remi_WalkBackToPhillipa)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement for one day.\pIt's dinner time."))
+	applymovement(10, Common_Movement_FaceRight)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Food!"))
 	closemessage
-	setflag(FLAG_BEATLEVIATHAN3)
-	setflag(FLAG_HIDE_ZONE3A_REMI)
-	removeobject(4)
+	applymovement(10, Common_Movement_WalkUp)
+	waitmovement(0)
 	setflag(FLAG_HIDE_ZONE3A_PHILLIPA)
 	removeobject(10)
+	applymovement(4, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(4, Common_Movement_WalkUp)
+	waitmovement(0)
+	setflag(FLAG_HIDE_ZONE3A_REMI)
+	removeobject(4)
+	setflag(FLAG_BEATLEVIATHAN3)
 	release
 	end
 }
@@ -78,6 +116,33 @@ text Zone3A_Text_Leviathan3Defeat {
 movement Zone3A_Movement_Phillipa_RunAway {
 	walk_fast_left * 3
 	walk_fast_up * 3
+}
+
+movement Zone3A_Movement_Remi_WalkToPhillipa {
+	walk_left * 3
+	walk_up * 2
+}
+
+movement Zone3A_Movement_Remi_WalkBack {
+	walk_down * 2
+	walk_right * 4
+	face_down
+}
+
+movement Zone3A_Movement_Phillipa_WalkBack {
+	walk_down * 3
+	walk_right * 3
+	face_down
+}
+
+movement Zone3A_Movement_Remi_WalkToPlayer {
+	walk_down
+	face_left
+}
+
+movement Zone3A_Movement_Remi_WalkBackToPhillipa {
+	walk_up
+	face_left
 }
 
 raw `

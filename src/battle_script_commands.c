@@ -584,7 +584,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
     FLAG_BEATLEVIATHAN15
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 7, 9, 17, 19, 22, 24, 28, 28, 28, 30, 33, 34, 38, 42, 45};
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 7, 9, 11, 19, 22, 24, 28, 28, 28, 30, 33, 34, 38, 42, 45};
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
