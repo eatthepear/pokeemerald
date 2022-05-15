@@ -25,6 +25,7 @@
 #include "pokemon_icon.h"
 #include "pokemon_summary_screen.h"
 #include "region_map.h"
+#include "pokemon.h"
 #include "reset_rtc_screen.h"
 #include "scanline_effect.h"
 #include "shop.h"
@@ -4407,7 +4408,7 @@ static void HighlightSubmenuScreenSelectBarItem(u8 a, u16 b)
 }
 
 #define tState         data[0]
-#define tDexNum        data[1]
+#define tSpecies       data[1]
 #define tPalTimer      data[2]
 #define tMonSpriteId   data[3]
 #define tOtIdLo        data[12]
@@ -4415,12 +4416,12 @@ static void HighlightSubmenuScreenSelectBarItem(u8 a, u16 b)
 #define tPersonalityLo data[14]
 #define tPersonalityHi data[15]
 
-u8 DisplayCaughtMonDexPage(u16 dexNum, u32 otId, u32 personality)
+u8 DisplayCaughtMonDexPage(u16 species, u32 otId, u32 personality)
 {
     u8 taskId = CreateTask(Task_DisplayCaughtMonDexPage, 0);
 
     gTasks[taskId].tState = 0;
-    gTasks[taskId].tDexNum = dexNum;
+    gTasks[taskId].tSpecies = species;
     gTasks[taskId].tOtIdLo = otId;
     gTasks[taskId].tOtIdHi = otId >> 16;
     gTasks[taskId].tPersonalityLo = personality;
@@ -4431,7 +4432,8 @@ u8 DisplayCaughtMonDexPage(u16 dexNum, u32 otId, u32 personality)
 static void Task_DisplayCaughtMonDexPage(u8 taskId)
 {
     u8 spriteId;
-    u16 dexNum = gTasks[taskId].tDexNum;
+    u16 species = gTasks[taskId].tSpecies;
+    u16 dexNum = SpeciesToNationalPokedexNum(species);
 
     switch (gTasks[taskId].tState)
     {
@@ -4455,11 +4457,16 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
         sPokedexView = AllocZeroed(sizeof(struct PokedexView)); //for type icons
         ResetPokedexView(sPokedexView);
 
+        if (gFormSpeciesIdTables[species] != NULL)
+            sPokedexView->formSpecies = species;
+        else
+            sPokedexView->formSpecies = 0;
+
         LoadTilesetTilemapHGSS(INFO_SCREEN);
         FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
         PutWindowTilemap(WIN_INFO);
         PutWindowTilemap(WIN_FOOTPRINT);
-        DrawFootprint(WIN_FOOTPRINT, gTasks[taskId].tDexNum);
+        DrawFootprint(WIN_FOOTPRINT, dexNum);
         CopyWindowToVram(WIN_FOOTPRINT, COPYWIN_GFX);
         ResetPaletteFade();
         LoadPokedexBgPalette(FALSE);
@@ -4479,7 +4486,7 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
         gTasks[taskId].tState++;
         break;
     case 4:
-        spriteId = CreateMonPicSprite(NationalPokedexNumToSpecies(dexNum), 0, ((u16)gTasks[taskId].tPersonalityHi << 16) | (u16)gTasks[taskId].tPersonalityLo, TRUE, MON_PAGE_X, MON_PAGE_Y, 0, TAG_NONE);
+        spriteId = CreateMonPicSprite(species, 0, ((u16)gTasks[taskId].tPersonalityHi << 16) | (u16)gTasks[taskId].tPersonalityLo, TRUE, MON_PAGE_X, MON_PAGE_Y, 0, TAG_NONE);
         gSprites[spriteId].oam.priority = 0;
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0x10, 0, RGB_BLACK);
         SetVBlankCallback(gPokedexVBlankCB);
@@ -4553,7 +4560,7 @@ static void Task_ExitCaughtMonPage(u8 taskId)
         if (buffer)
             Free(buffer);
 
-        species = NationalPokedexNumToSpecies(gTasks[taskId].tDexNum);
+        species = gTasks[taskId].tSpecies;
         otId = ((u16)gTasks[taskId].tOtIdHi << 16) | (u16)gTasks[taskId].tOtIdLo;
         personality = ((u16)gTasks[taskId].tPersonalityHi << 16) | (u16)gTasks[taskId].tPersonalityLo;
         paletteNum = gSprites[gTasks[taskId].tMonSpriteId].oam.paletteNum;
@@ -4644,7 +4651,7 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
         dexNum = SpeciesToNationalPokedexNum(species);
     }
     //type icon(s)
-    #ifdef TX_DIFFICULTY_CHALLENGES_USED
+    #ifdef TX_RANDOMIZER_AND_CHALLENGES
         type1 = GetTypeBySpecies(species, 1);
         type2 = GetTypeBySpecies(species, 2);
     #else
@@ -5218,8 +5225,9 @@ static u32 GetPokedexMonPersonality(u16 species)
 
 u16 CreateMonSpriteFromNationalDexNumber(u16 nationalNum, s16 x, s16 y, u16 paletteSlot)
 {
-    nationalNum = NationalPokedexNumToSpecies(nationalNum);
+    nationalNum = NationalPokedexNumToSpeciesHGSS(nationalNum);
     return CreateMonPicSprite(nationalNum, SHINY_ODDS, GetPokedexMonPersonality(nationalNum), TRUE, x, y, paletteSlot, TAG_NONE);
+
 }
 
 static u16 CreateSizeScreenTrainerPic(u16 species, s16 x, s16 y, s8 paletteSlot)
@@ -5234,7 +5242,7 @@ bool8  SpeciesCanLearnLvlUpMove(u16 species, u16 move) //Move search PokedexPlus
     #if defined (BATTLE_ENGINE) || defined (POKEMON_EXPANSION)
         for (j = 0; j < MAX_LEVEL_UP_MOVES && gLevelUpLearnsets[species][j].move != LEVEL_UP_END; j++)
         {
-            if (move == (gLevelUpLearnsets[species][j].move & LEVEL_UP_MOVE_ID))
+            if (move == (gLevelUpLearnsets[species][j].move))
             {
                 return TRUE;
             }
@@ -6390,6 +6398,7 @@ static void StatsPage_PrintNavigationButtons(void)
     PutWindowTilemap(WIN_STATS_NAVIGATION_BUTTONS);
     CopyWindowToVram(WIN_STATS_NAVIGATION_BUTTONS, 3);
 }
+
 static void ResetStatsWindows(void)
 {
     u8 i;
@@ -6404,6 +6413,7 @@ static void ResetStatsWindows(void)
         CopyWindowToVram(i, 3);
     }
 }
+
 static void SaveMonDataInStruct(void)
 {
     u16 species = NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum);
@@ -7781,6 +7791,59 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
         }
     }
 
+    if (sPokedexView->sEvoScreenData.numAllEvolutions != 0 && sPokedexView->sEvoScreenData.numSeen != 0)
+    {
+        u8 i;
+        u8 base_y = 58;
+        u8 base_y_offset = 9;
+        u8 pos = sPokedexView->sEvoScreenData.menuPos;
+        u8 max = sPokedexView->sEvoScreenData.numAllEvolutions;
+        if (JOY_NEW(DPAD_DOWN))
+        {
+            while (TRUE)
+            {
+                pos += 1;
+                if (pos >= max)
+                    pos = 0;
+                
+                if (sPokedexView->sEvoScreenData.seen[pos] == TRUE)
+                    break;
+            }
+            gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].y = base_y + base_y_offset * pos;
+            sPokedexView->sEvoScreenData.menuPos = pos;
+        }
+        else if (JOY_NEW(DPAD_UP))
+        {
+            if (sPokedexView->sEvoScreenData.menuPos == 0)
+                sPokedexView->sEvoScreenData.menuPos = sPokedexView->sEvoScreenData.numAllEvolutions - 1;
+            else
+                sPokedexView->sEvoScreenData.menuPos -= 1;
+
+            gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].y = base_y + base_y_offset * sPokedexView->sEvoScreenData.menuPos;
+        }
+
+        if (JOY_NEW(A_BUTTON))
+        {
+            u16 targetSpecies   = sPokedexView->sEvoScreenData.targetSpecies[sPokedexView->sEvoScreenData.menuPos];
+            u16 dexNum          = SpeciesToNationalPokedexNum(targetSpecies);
+            sPokedexListItem->dexNum = dexNum;
+            sPokedexListItem->seen   = GetSetPokedexFlag(dexNum, FLAG_GET_SEEN);
+            sPokedexListItem->owned  = GetSetPokedexFlag(dexNum, FLAG_GET_CAUGHT);
+
+            #ifdef POKEMON_EXPANSION
+                if (gFormSpeciesIdTables[targetSpecies] != NULL)
+                    sPokedexView->formSpecies = targetSpecies;
+                else
+                    sPokedexView->formSpecies = 0;
+            #endif
+
+            sPokedexView->sEvoScreenData.fromEvoPage = TRUE;
+            PlaySE(SE_PIN);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_LoadInfoScreenWaitForFade;
+        }
+    }
+
     //Exit to overview
     if (JOY_NEW(B_BUTTON))
     {
@@ -7920,9 +7983,15 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
     u8 numPreEvolutions = 0;
 
     #ifdef POKEMON_EXPANSION
-        bool8 isMega = FALSE;
-        sPokedexView->sEvoScreenData.isMega = FALSE;
+    bool8 isMega = FALSE;
+    sPokedexView->sEvoScreenData.isMega = FALSE;
     #endif
+    
+    #ifdef TX_RANDOMIZER_AND_CHALLENGES
+    if (gSaveBlock1Ptr->tx_Random_Evolutions || gSaveBlock1Ptr->tx_Random_EvolutionMethods)
+        return 0;
+    #endif
+
 
     //Calculate previous evolution
     for (i = 0; i < NUM_SPECIES; i++)
@@ -8002,6 +8071,7 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
 
     return numPreEvolutions;
 }
+
 #define EVO_SCREEN_LVL_DIGITS 2
 static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth, u8 depth_i)
 {
@@ -8033,15 +8103,6 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
     if (species == SPECIES_EEVEE)
         isEevee = TRUE;
 
-    #ifdef TX_DIFFICULTY_CHALLENGES_USED
-        if (gSaveBlock1Ptr->txRandEvolutionMethodes) //tx_difficulty_challenges
-        {
-            species = GetEvolutionTargetSpeciesRandom(species, gSaveBlock1Ptr->txRandEvolutions, !gSaveBlock1Ptr->txRandChaos);
-            if (species == SPECIES_NONE)
-                return SPECIES_NONE;
-        }
-    #endif
-
     //Calculate number of possible direct evolutions (e.g. Eevee has 5 but torchic has 1)
     for (i = 0; i < EVOS_PER_MON; i++)
     {
@@ -8068,7 +8129,7 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
         sPokedexView->sEvoScreenData.targetSpecies[sPokedexView->sEvoScreenData.numAllEvolutions++] = targetSpecies;
         #ifdef TX_DIFFICULTY_CHALLENGES_USED
             if (gSaveBlock1Ptr->txRandEvolutions && targetSpecies != SPECIES_NONE) //tx_difficulty_challenges
-                targetSpecies = GetSpeciesRandomSeeded(targetSpecies, TX_RANDOM_OFFSET_EVOLUTION, TRUE, !gSaveBlock1Ptr->txRandChaos);
+                targetSpecies = GetSpeciesRandomSeeded(targetSpecies, TX_RANDOM_T_EVO);
         #endif
         CreateCaughtBallEvolutionScreen(targetSpecies, base_x + depth_x*depth-9, base_y + base_y_offset*base_i, 0);
         HandleTargetSpeciesPrint(taskId, targetSpecies, previousTargetSpecies, base_x + depth_x*depth, base_y, base_y_offset, base_i, isEevee); //evolution mon name
@@ -8567,7 +8628,7 @@ static void Task_HandleFormsScreenInput(u8 taskId)
     u8 offset_y = 34;
     if (!sPokedexView->sFormScreenData.inSubmenu)
     {
-        if (JOY_NEW(A_BUTTON))
+        if (JOY_NEW(A_BUTTON) && sPokedexView->sFormScreenData.numForms != 0)
         {
             sPokedexView->sFormScreenData.inSubmenu = TRUE;
             sPokedexView->sFormScreenData.arrowSpriteId = CreateSprite(&sSpriteTemplate_Arrow, base_x + offset_x, base_y, 0);
