@@ -216,6 +216,9 @@ bool8 CheckForTrainersWantingBattle(void)
             continue;
 
         numTrainers = CheckTrainer(i);
+        if (numTrainers == 0xFF)    //run script
+            break;
+
         if (numTrainers == 2)
             break;
 
@@ -312,15 +315,19 @@ static u8 CheckTrainer(u8 objectEventId)
                 return 0;
             }
         }
-        else if (scriptPtr[1] == TRAINER_BATTLE_DOUBLE
+        else 
+        {
+            if (scriptPtr[1] == TRAINER_BATTLE_DOUBLE
             || scriptPtr[1] == TRAINER_BATTLE_REMATCH_DOUBLE
             || scriptPtr[1] == TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE)
-        {
-            if (GetMonsStateToDoubles_2() != 0)
-                return 0;
+            {
+                if (GetMonsStateToDoubles_2() != 0)
+                    return 0;
 
-            numTrainers = 2;
+                numTrainers = 2;
+            }
         }
+        
 
         gApproachingTrainers[gNoOfApproachingTrainers].objectEventId = objectEventId;
         gApproachingTrainers[gNoOfApproachingTrainers].trainerScriptPtr = scriptPtr;
