@@ -1,0 +1,87 @@
+mapscripts Zone3Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 3: Zone3Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone3Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_RewardClear)
+	msgbox(Zone3Sanctuary_Text_Reward)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(Zone3Sanctuary_Text_RewardReceived, MSGBOX_DEFAULT)
+	waitfanfare
+	closemessage
+	additem(ITEM_NORMAL_GEM)
+	additem(ITEM_FIRE_GEM)
+	additem(ITEM_WATER_GEM)
+	additem(ITEM_ELECTRIC_GEM)
+	additem(ITEM_GRASS_GEM)
+	additem(ITEM_ICE_GEM)
+	additem(ITEM_FIGHTING_GEM)
+	additem(ITEM_POISON_GEM)
+	additem(ITEM_GROUND_GEM)
+	additem(ITEM_FLYING_GEM)
+	additem(ITEM_PSYCHIC_GEM)
+	additem(ITEM_BUG_GEM)
+	additem(ITEM_ROCK_GEM)
+	additem(ITEM_GHOST_GEM)
+	additem(ITEM_DRAGON_GEM)
+	additem(ITEM_DARK_GEM)
+	additem(ITEM_STEEL_GEM)
+	additem(ITEM_FAIRY_GEM)
+	msgbox(gText_Colress_Unlocked)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT)
+	waitfanfare
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedUnique, MSGBOX_DEFAULT)
+	waitfanfare
+	setvar(VAR_ZONE, 4)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script Zone3Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			buffernumberstring(0, VAR_ZONE)
+			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				warp(MAP_ZONE4A, 255, 4, 3)
+			}
+			goto(EventScript_WhenUReady)
+		case 1:
+			goto(EventScript_Advice)
+		case 2:
+			goto(EventScript_Settings)
+		case 3:
+			goto(EventScript_WhenUReady)
+		case MULTI_B_PRESSED:
+			goto(EventScript_WhenUReady)
+	}
+	release
+	end
+}
+
+text Zone3Sanctuary_Text_Reward {
+	format("Elemental Gems!$")
+}
+
+text Zone3Sanctuary_Text_RewardReceived {
+	format("{PLAYER} received Gems!")
+}

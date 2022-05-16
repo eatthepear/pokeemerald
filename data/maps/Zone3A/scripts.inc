@@ -37,6 +37,7 @@ Zone3A_EventScript_Exit_10:
 
 
 Zone3A_EventScript_LeviathanBattle::
+	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
