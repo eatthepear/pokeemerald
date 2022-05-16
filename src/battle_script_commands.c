@@ -3883,10 +3883,9 @@ u8 GetTeamLevel(void)
     return partyLevel;
 }
 
-double GetPkmnExpMultiplier(u8 level)
+bool8 IsOverLevelLimit(u8 level)
 {
     u8 i;
-    double lvlCapMultiplier = 1.0;
     
     // multiply the usual exp yield by the soft cap multiplier
     for (i = 0; i < NUM_SOFT_CAPS; i++)
@@ -3895,13 +3894,12 @@ double GetPkmnExpMultiplier(u8 level)
         {
             if (FlagGet(FLAG_BRUTAL_MODE_ON) || !((i == 2) || (i == 6) || (i == 7) || (i == 11)))
             {
-                lvlCapMultiplier = 0.05;
-                break;
+                return TRUE;
             }
         }
     }
     
-    return lvlCapMultiplier;
+    return FALSE;
 }
 
 static void Cmd_getexp(void)
@@ -4011,7 +4009,8 @@ static void Cmd_getexp(void)
                 gBattleMoveDamage = 0; // used for exp
             }
             else if ((gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && gBattleStruct->expGetterMonId >= 3)
-                  || GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL)
+                  || (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL)
+                  || IsOverLevelLimit(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL)))
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
@@ -4036,15 +4035,14 @@ static void Cmd_getexp(void)
 
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP))
                 {
-                    double expMultiplier = GetPkmnExpMultiplier(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL));
                     if (gBattleStruct->sentInPokes & 1)
-                        gBattleMoveDamage = *exp * expMultiplier;
+                        gBattleMoveDamage = *exp;
                     else
                         gBattleMoveDamage = 0;
 
                     // only give exp share bonus in later gens if the mon wasn't sent out
                     if ((holdEffect == HOLD_EFFECT_EXP_SHARE) && ((gBattleMoveDamage == 0) || (B_SPLIT_EXP < GEN_6)))
-                        gBattleMoveDamage += gExpShareExp * expMultiplier;
+                        gBattleMoveDamage += gExpShareExp;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && B_TRAINER_EXP_MULTIPLIER <= GEN_7)
@@ -4126,7 +4124,7 @@ static void Cmd_getexp(void)
         if (gBattleControllerExecFlags == 0)
         {
             gBattleResources->bufferB[gBattleStruct->expGetterBattlerId][0] = 0;
-            if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP) && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) != MAX_LEVEL)
+            if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP) && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) != MAX_LEVEL && !IsOverLevelLimit(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL)))
             {
                 gBattleResources->beforeLvlUp->stats[STAT_HP]    = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_MAX_HP);
                 gBattleResources->beforeLvlUp->stats[STAT_ATK]   = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_ATK);
