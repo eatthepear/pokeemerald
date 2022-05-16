@@ -8726,7 +8726,7 @@ static const struct LevelUpMove sStaraptorLevelUpLearnset[] = {
 
 static const struct LevelUpMove sBidoofLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-	LEVEL_UP_MOVE( 1, MOVE_GROWL),
+	LEVEL_UP_MOVE( 3, MOVE_GROWL),
 	LEVEL_UP_MOVE( 5, MOVE_DEFENSE_CURL),
 	LEVEL_UP_MOVE( 8, MOVE_HEADBUTT),
 	LEVEL_UP_MOVE(11, MOVE_ROLLOUT),
@@ -8746,7 +8746,7 @@ static const struct LevelUpMove sBidoofLevelUpLearnset[] = {
 static const struct LevelUpMove sBibarelLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 0, MOVE_WATER_GUN),
 	LEVEL_UP_MOVE( 1, MOVE_ROTOTILLER),
-	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+	LEVEL_UP_MOVE( 3, MOVE_TACKLE),
 	LEVEL_UP_MOVE( 1, MOVE_GROWL),
 	LEVEL_UP_MOVE( 5, MOVE_DEFENSE_CURL),
 	LEVEL_UP_MOVE( 8, MOVE_HEADBUTT),

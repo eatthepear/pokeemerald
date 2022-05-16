@@ -192,8 +192,7 @@ static const struct TrainerMon sParty_Jemma[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_BIDOOF,
-    .ability = ABILITY_SLOT_2, //Unaware
+    .species = SPECIES_ELECTRIKE,
     },
     {
     .iv = 0,
@@ -261,11 +260,30 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default
     {
     .iv = 31,
     .lvl = 11,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_CAREFUL,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Unaware
+    .species = SPECIES_BIDOOF,
+    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_GROWL, MOVE_DEFENSE_CURL}
+    },
+    {
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
     .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_DEFENSE_CURL}
+    },
+    {
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_QUIET,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Thick Fat
+    .species = SPECIES_SPHEAL,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_ICE_BALL, MOVE_WATER_PULSE, MOVE_ROLLOUT, MOVE_DEFENSE_CURL}
     }
 };
 
