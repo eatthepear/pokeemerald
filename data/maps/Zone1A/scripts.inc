@@ -33,6 +33,7 @@ Zone1A_EventScript_LeviathanBattle_1:
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject 6
+	setflag FLAG_BEATLEVIATHAN1
 	fadescreen FADE_FROM_BLACK
 	release
 	end

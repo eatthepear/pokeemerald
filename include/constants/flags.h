@@ -46,18 +46,18 @@
 #define FLAG_VARRICK_INTRO   0x21 // First time intro for Varrick
 #define FLAG_LELOUCH_INTRO   0x22 // First time intro for Lelouch
 #define FLAG_JOY_INTRO       0x23 // First time intro for Joy
-#define FLAG_HIDE_LEVIATHAN1 0x24
-#define FLAG_LELOUCH_SHARDS  0x25 // First time talking to Lelouch with shards
-#define FLAG_ZONE7_HEAL_USED 0x26
-#define FLAG_HIDE_ZONE8D_WALLY    0x27
-#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE       0x28
-#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE    0x29
-#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE 0x2A
-#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE   0x2B
-#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE     0x2C
-#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2D // gift Shiny Zorua from Erica
-#define FLAG_HIDE_ZONE9A_MAN    0x2E // Man blocks exit
-#define FLAG_HIDE_LEVIATHAN5 0x2F
+#define FLAG_RECEIVED_ZONE0C_EEVEE 0x24
+#define FLAG_LEVIATHAN_1_TRAINER_SCRIPT  0x25 // First time talking to Lelouch with shards
+#define FLAG_LELOUCH_SHARDS 0x26
+#define FLAG_ZONE7_HEAL_USED    0x27
+#define FLAG_HIDE_ZONE8D_WALLY       0x28
+#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE    0x29
+#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE 0x2A
+#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE   0x2B
+#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE     0x2C
+#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE    0x2D // gift Shiny Zorua from Erica
+#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2E // Man blocks exit
+#define FLAG_HIDE_ZONE9A_MAN 0x2F
 #define FLAG_ADAMINA_WARP_INTRO  0x30
 #define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x31 // Substitute Sidequest
 #define FLAG_HIDE_ZONE10B_BERRYMAN 0x32 // Status Berry Exchange Sidequest
@@ -77,7 +77,7 @@
 #define FLAG_HIDE_ZONE19D_PIRATES    0x40 
 #define FLAG_RECEIVED_ZONE21A_TM29    0x41 // Unused Flag
 #define FLAG_RECEIVED_ZONE21C_HAPPINY    0x42 
-#define FLAG_RECEIVED_ZONE0C_EEVEE    0x43 
+#define FLAG_UNUSED_0x43    0x43 
 #define FLAG_HIDE_CAM_AND_PAM    0x44
 #define FLAG_RECEIVED_ZONE23A_TM31    0x45 // Unused Flag
 #define FLAG_RECEIVED_ZONE24A_TM34    0x46 // Unused Flag

@@ -74,7 +74,6 @@ Zone10A_Text_Leviathan5Defeat:
 	.string "Adamina: Fine. A win is a win.$"
 
 Zone10A_EventScript_Leviathan5Defeated:
-	setflag FLAG_BEATLEVIATHAN5
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone10A_Text_HeadInside, MSGBOX_AUTOCLOSE
 	applymovement 6, Common_Movement_FaceUp
@@ -84,7 +83,7 @@ Zone10A_EventScript_Leviathan5Defeated:
 	applymovement 6, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	setflag FLAG_HIDE_LEVIATHAN5
+	setflag FLAG_BEATLEVIATHAN5
 	closedoor 47, 27
 	waitdooranim
 	releaseall
