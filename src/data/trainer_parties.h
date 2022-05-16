@@ -175,10 +175,20 @@ static const struct TrainerMon sParty_Joey[] = {//Leviathan, Default, optional
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Hustle
-    .species = SPECIES_RATTATA,
-    .heldItem = ITEM_CHOPLE_BERRY,
-    .moves = {MOVE_HEADBUTT, MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_SLEEP_TALK}
-    },
+    .species = SPECIES_RATTATA, //Starts with aura +1 Accuracy
+    .heldItem = ITEM_SILK_SCARF,
+    .moves = {MOVE_HEADBUTT, MOVE_BITE, MOVE_NONE, MOVE_NONE}
+    }
+    // {
+    // .iv = 31,
+    // .lvl = 9,
+    // .nature = NATURE_ADAMANT,
+    // .gender = TRAINER_MON_FEMALE,
+    // .ability = ABILITY_HIDDEN, //Run Away
+    // .species = SPECIES_RATTATA,
+    // .heldItem = ITEM_SILK_SCARF,
+    // .moves = {MOVE_HEADBUTT, MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_SLEEP_TALK}
+    // }
 };
 
 /* ------------------- Zone 3 ------------------- */
