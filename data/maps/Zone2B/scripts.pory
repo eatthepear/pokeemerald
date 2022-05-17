@@ -70,19 +70,20 @@ text Zone2B_Text_Leviathan2Defeat {
 }
 
 raw `
-Zone2B_EventScript_Jeremiah::
-	trainerbattle_single TRAINER_JEREMIAH, Zone2B_Text_JeremiahIntro, Zone2B_Text_JeremiahDefeat
-	msgbox Zone2B_Text_JeremiahPostBattle, MSGBOX_AUTOCLOSE
+Zone2B_EventScript_Harper::
+	trainerbattle_single TRAINER_HARPER, Zone2B_Text_HarperIntro, Zone2B_Text_HarperDefeat
+	msgbox Zone2B_Text_HarperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone2B_Text_JeremiahIntro:
-	.string "The more legs, the better!$"
+Zone2B_Text_HarperIntro:
+	.string "Surprise! Battle time!$"
 
-Zone2B_Text_JeremiahDefeat:
-	.string "Oh... Come on!$"
+Zone2B_Text_HarperDefeat:
+	.string "My spirit, crushed!$"
 
-Zone2B_Text_JeremiahPostBattle:
-	.string "Just wait till my Bugs are all evolved!$"
+Zone2B_Text_HarperPostBattle:
+	.string "I don't know if I can ever\n"
+	.string "come back from this loss...$"
 
 Zone2B_EventScript_Arthur::
 	trainerbattle_single TRAINER_ARTHUR, Zone2B_Text_ArthurIntro, Zone2B_Text_ArthurDefeat

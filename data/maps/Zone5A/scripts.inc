@@ -43,6 +43,21 @@ Zone5A_Text_AnneAndJunePostBattle:
 	.string "June: Coordination?\p"
 	.string "Anne: Yeah, exactly that!$"
 
+Zone5A_EventScript_Gilbert::
+	trainerbattle_single TRAINER_GILBERT, Zone5A_Text_GilbertIntro, Zone5A_Text_GilbertDefeat
+	msgbox Zone5A_Text_GilbertPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_GilbertIntro:
+	.string "I've fished up a wild Trainer!$"
+
+Zone5A_Text_GilbertDefeat:
+	.string "You're too tough to take down!$"
+
+Zone5A_Text_GilbertPostBattle:
+	.string "I can't seem to catch a break!\p"
+	.string "Get it? Catch?$"
+
 Zone5A_EventScript_Rebecca::
 	trainerbattle_single TRAINER_REBECCA, Zone5A_Text_RebeccaIntro, Zone5A_Text_RebeccaDefeat
 	msgbox Zone5A_Text_RebeccaPostBattle, MSGBOX_AUTOCLOSE
@@ -105,7 +120,7 @@ Zone5A_EventScript_InitiateLeviathanBattle::
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_DeclanBrutal
 	totemboost_def1 B_POSITION_OPPONENT_LEFT
-	trainerbattle_no_intro TRAINER_LEVIATHAN2, Zone5A_Text_Leviathan2Defeat
+	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan2Defeat
 	goto Zone5A_EventScript_Leviathan2Defeated
 	end
 

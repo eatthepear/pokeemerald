@@ -148,6 +148,21 @@ movement Zone3A_Movement_Remi_WalkBackToPhillipa {
 
 raw `
 
+Zone3A_EventScript_Patrick::
+	trainerbattle_single TRAINER_PATRICK, Zone3A_Text_PatrickIntro, Zone3A_Text_PatrickDefeat
+	msgbox Zone3A_Text_PatrickPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone3A_Text_PatrickIntro:
+	.string "My friends call me the free Exp guy,\n"
+	.string "but I'll prove them wrong!$"
+
+Zone3A_Text_PatrickDefeat:
+	.string "Oops, guess not...$"
+
+Zone3A_Text_PatrickPostBattle:
+	.string "I guess I am the free Exp guy...$"
+
 Zone3A_EventScript_Jemma::
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat
 	msgbox Zone3A_Text_JemmaPostBattle, MSGBOX_AUTOCLOSE
