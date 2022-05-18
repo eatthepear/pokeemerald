@@ -251,6 +251,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regidrago;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regieleki;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FairyTaleGirl;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -500,6 +501,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_REGIDRAGO] =                &gObjectEventGraphicsInfo_Regidrago,
     [OBJ_EVENT_GFX_REGIELEKI] =                &gObjectEventGraphicsInfo_Regieleki,
     [OBJ_EVENT_GFX_BUG_MANIAC] =               &gObjectEventGraphicsInfo_BugManiac,
+    [OBJ_EVENT_GFX_FAIRY_TALE_GIRL] =          &gObjectEventGraphicsInfo_FairyTaleGirl,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
