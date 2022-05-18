@@ -7,8 +7,8 @@ script Zone2B_EventScript_Exit {
 	    warpteleport(MAP_ZONE0D, 255, 2, 32)
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-			(!defeated(TRAINER_DEXTER) ||
-			!defeated(TRAINER_JEREMIAH) ||
+			(!defeated(TRAINER_JEREMIAH) ||
+			!defeated(TRAINER_HARPER) ||
 			!defeated(TRAINER_ARTHUR) ||
 			(flag(FLAG_BEATLEVIATHAN2) == false))) {
 			goto(EventScript_BrutalExitNotSatisfied)

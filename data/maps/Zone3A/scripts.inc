@@ -29,6 +29,8 @@ Zone3A_EventScript_Exit_9:
 	goto Zone3A_EventScript_Exit_8
 
 Zone3A_EventScript_Exit_10:
+	checktrainerflag TRAINER_PATRICK
+	goto_if 0, Zone3A_EventScript_Exit_9
 	checktrainerflag TRAINER_RICHARD
 	goto_if 0, Zone3A_EventScript_Exit_9
 	checktrainerflag TRAINER_ANNABELLE

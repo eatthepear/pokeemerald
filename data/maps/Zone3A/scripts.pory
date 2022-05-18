@@ -10,7 +10,8 @@ script Zone3A_EventScript_Exit {
 	    warpteleport(MAP_ZONE0D, 255, 2, 32)
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-			(!defeated(TRAINER_RICHARD) ||
+			(!defeated(TRAINER_PATRICK) ||
+			!defeated(TRAINER_RICHARD) ||
 			!defeated(TRAINER_ANNABELLE))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}

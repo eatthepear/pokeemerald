@@ -23,9 +23,9 @@ Zone2B_EventScript_Exit_6:
 	goto Zone2B_EventScript_Exit_5
 
 Zone2B_EventScript_Exit_7:
-	checktrainerflag TRAINER_DEXTER
-	goto_if 0, Zone2B_EventScript_Exit_6
 	checktrainerflag TRAINER_JEREMIAH
+	goto_if 0, Zone2B_EventScript_Exit_6
+	checktrainerflag TRAINER_HARPER
 	goto_if 0, Zone2B_EventScript_Exit_6
 	checktrainerflag TRAINER_ARTHUR
 	goto_if 0, Zone2B_EventScript_Exit_6
