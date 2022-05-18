@@ -293,17 +293,17 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ISABELLA_LEVIATHAN_4] =
     {
-        .trainerClass = TRAINER_CLASS_TRIATHLETE,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
-        .trainerName = _("ISABELLA"),
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_FAIRY_TALE_GIRL,
+        .trainerName = _("Isabella"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Unused),
-        // .partySize = ARRAY_COUNT(sParty_Isabella),
-        .party = {.TrainerMon = sParty_Unused},
-        // .party = {.TrainerMon = sParty_Isabella},
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_Isabella),
+        .party = {.TrainerMon = sParty_Isabella},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_ANNE_AND_JUNE] =

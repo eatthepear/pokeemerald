@@ -1,0 +1,68 @@
+mapscripts Zone4E_MapScripts {}
+
+script Zone4E_EventScript_Exit {
+    lockall
+    if (var(VAR_ZONE) > 4) {
+	    clearflag(FLAG_IS_REVISITING_ZONE)
+	    warpteleport(MAP_ZONE0D, 255, 2, 32)
+    } else {
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
+			(!defeated(TRAINER_HERMAN) ||
+			!defeated(TRAINER_RALPH) ||
+			!defeated(TRAINER_SANTIAGO) ||
+			!defeated(TRAINER_CHLOE_AND_KAYA) ||
+			!defeated(TRAINER_LUCIA) ||
+			!defeated(TRAINER_FRED))) {
+			goto(EventScript_BrutalExitNotSatisfied)
+		}
+        warp(MAP_ZONE4SANCTUARY, 255, 22, 7)
+    }
+    releaseall
+    end
+}
+
+script Zone4E_EventScript_LeviathanBattle {
+	lock
+	faceplayer
+	fadeoutbgm(1)
+	msgbox(Zone4E_Text_Leviathan4Intro)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1)
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_ISABELLA)
+		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
+	} else {
+		totemboost_spatk1(B_POSITION_OPPONENT_LEFT)
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_ISABELLA)
+		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: Did you like my enchantment?\pThose little aura boosts sure pack a punch, don't they?\pAnyways, you can have some Sitrus Berries, if you want;\nPonyta and I spent some time gathering them earlier, but we've got too many and we want to share."))
+	giveitem(ITEM_SITRUS_BERRY, 5)
+	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: I'm gonna go finish reading my story now.\pI do hope your story has a happy ending."))
+	closemessage
+	fadescreen(FADE_TO_BLACK)
+	removeobject(2)
+	setflag(FLAG_BEATLEVIATHAN4)
+	fadescreen(FADE_FROM_BLACK)
+	release
+	end
+}
+
+text Zone4E_Text_Leviathan4Intro {
+	format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: And the prince saw her from across the room, clad in her light pink dress, looking around as if she was searching for someone she had only seen in a dream.\p"
+	"That's just a bit from my story that I've been reading, 'The Shining Honedge'.\p"
+	"I just love fables; they're so magical!\n"
+	"I hope our battle is just as special.\p"
+	"I, {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}, accept your challenge!")
+}
+
+text Zone4E_Text_Leviathan4Defeat {
+	format("It seems your story is only just beginning!")
+}
+
+raw `
+Zone4E_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+`
