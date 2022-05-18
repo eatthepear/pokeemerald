@@ -114,6 +114,7 @@
 #define TRAINER_PIC_WAITER                94
 #define TRAINER_PIC_WAITRESS              95
 #define TRAINER_PIC_MIRAGES               96
+#define TRAINER_PIC_FAIRY_TALE_GIRL       97
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -359,6 +360,7 @@
 #define TRAINER_CLASS_SCIENTIST      0x42
 #define TRAINER_CLASS_WAITER         0x43
 #define TRAINER_CLASS_WAITRESS       0x44
+#define TRAINER_CLASS_FAIRY_TALE_GIRL 0x45
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
