@@ -1054,7 +1054,7 @@
 #define FLAG_ITEM_ZONE3A_POTION                                     0x3ED
 #define FLAG_ITEM_ZONE3A_PARALYZE_HEAL                              0x3EE
 #define FLAG_ITEM_ZONE4A_BURN_HEAL                                  0x3EF
-#define FLAG_ITEM_ZONE4B_SILK_SCARF                                 0x3F0
+#define FLAG_ITEM_ZONE4B_AWAKENING                                  0x3F0
 #define FLAG_ITEM_ZONE4C_MUSCLE_BAND                                0x3F1
 #define FLAG_ITEM_ZONE4D_WISE_GLASSES                               0x3F2
 #define FLAG_ITEM_ZONE4E_SUPER_POTION                               0x3F3

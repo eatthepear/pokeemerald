@@ -17,6 +17,6 @@ Zone4B_Text_RalphPostBattle:
 	.string "I guess the more important question is\n"
 	.string "where am I going?$"
 
-Zone4B_EventScript_ItemSilkScarf::
-	finditem ITEM_SILK_SCARF
+Zone4B_EventScript_ItemAwakening::
+	finditem ITEM_AWAKENING
 	end

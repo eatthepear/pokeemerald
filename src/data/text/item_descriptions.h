@@ -3026,9 +3026,13 @@ static const u8 sTM03Desc[] = _(
     "that may confuse.");
 
 static const u8 sTM04Desc[] = _(
-    "An attack that does\n"
-    "more damage if an\n"
-    "ally fainted.");
+    "Yells at foes,\n"
+    "lowering their\n"
+    "Special Attack.");
+    // Retaliate
+    // "An attack that does\n"
+    // "more damage if an\n"
+    // "ally fainted.");
 
 static const u8 sTM05Desc[] = _(
     "Hurls boulders to\n"

@@ -37,8 +37,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone4B_EventScript_ItemSilkScarf",
-      "flag": "FLAG_ITEM_ZONE4B_SILK_SCARF"
+      "script": "Zone4B_EventScript_ItemAwakening",
+      "flag": "FLAG_ITEM_ZONE4B_AWAKENING"
     }
   ],
   "warp_events": [

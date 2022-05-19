@@ -1,0 +1,55 @@
+mapscripts Zone4Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 4: Zone4Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone4Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_RewardClear)
+	msgbox(Zone4Sanctuary_Text_Reward)
+	giveitem(ITEM_TM04)
+	setvar(VAR_ZONE, 4)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script Zone4Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			buffernumberstring(0, VAR_ZONE)
+			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				warp(MAP_ZONE5A, 255, 43, 31)
+			}
+			goto(EventScript_WhenUReady)
+		case 1:
+			goto(EventScript_Advice)
+		case 2:
+			goto(EventScript_Settings)
+		case 3:
+			goto(EventScript_WhenUReady)
+		case MULTI_B_PRESSED:
+			goto(EventScript_WhenUReady)
+	}
+	release
+	end
+}
+
+text Zone4Sanctuary_Text_Reward {
+	format("TM04 - Snarl!$")
+}

@@ -1,42 +1,30 @@
 Zone4Sanctuary_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone4Sanctuary_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone4Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-Zone4Sanctuary_OnFrame:
+Zone4Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_ZONE, 4, Zone4Sanctuary_EventScript_Intro
 	.2byte 0
 
-Zone4Sanctuary_EventScript_Intro:
+
+Zone4Sanctuary_EventScript_Intro::
 	lockall
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	call EventScript_MoveCameraUp
-	applymovement 1, Common_Movement_ExclamationMark
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Colress_WalkDown
-	waitmovement 0
-	playfanfare MUS_OBTAIN_BADGE
+	call EventScript_EnterSanctuary
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM02
-	closemessage
-	setvar VAR_ZONE, 5
+	msgbox gText_RewardClear
+	msgbox Zone4Sanctuary_Text_Reward
+	giveitem ITEM_TM04
+	setvar VAR_ZONE, 4
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
 
-Zone4Sanctuary_Text_Reward:
-	.string "TM02 - Electroweb!$"
 
 Zone4Sanctuary_EventScript_NextZone::
 	lock
@@ -44,23 +32,45 @@ Zone4Sanctuary_EventScript_NextZone::
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
-	case 0, Zone4Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Advice
-	case 2, EventScript_Settings
-	case 3, EventScript_WhenUReady
-	case MULTI_B_PRESSED, EventScript_WhenUReady
+	case 0, Zone4Sanctuary_EventScript_NextZone_3
+	case 1, Zone4Sanctuary_EventScript_NextZone_4
+	case 2, Zone4Sanctuary_EventScript_NextZone_5
+	case 3, Zone4Sanctuary_EventScript_NextZone_6
+	case MULTI_B_PRESSED, Zone4Sanctuary_EventScript_NextZone_7
+Zone4Sanctuary_EventScript_NextZone_1:
+	release
 	end
 
-Zone4Sanctuary_EventScript_NextZoneCheck:
+Zone4Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone4Sanctuary_EventScript_Leave
+	goto_if_eq Zone4Sanctuary_EventScript_NextZone_9
+Zone4Sanctuary_EventScript_NextZone_8:
 	goto EventScript_WhenUReady
-	end
+	goto Zone4Sanctuary_EventScript_NextZone_1
 
-Zone4Sanctuary_EventScript_Leave:
+Zone4Sanctuary_EventScript_NextZone_4:
+	goto EventScript_Advice
+	goto Zone4Sanctuary_EventScript_NextZone_1
+
+Zone4Sanctuary_EventScript_NextZone_5:
+	goto EventScript_Settings
+	goto Zone4Sanctuary_EventScript_NextZone_1
+
+Zone4Sanctuary_EventScript_NextZone_6:
+	goto EventScript_WhenUReady
+	goto Zone4Sanctuary_EventScript_NextZone_1
+
+Zone4Sanctuary_EventScript_NextZone_7:
+	goto EventScript_WhenUReady
+	goto Zone4Sanctuary_EventScript_NextZone_1
+
+Zone4Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE5A, 255, 43, 31
-	end
+	goto Zone4Sanctuary_EventScript_NextZone_8
+
+
+Zone4Sanctuary_Text_Reward::
+	.string "TM04 - Snarl!$"
