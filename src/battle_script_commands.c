@@ -565,26 +565,14 @@ static void Cmd_trygetbaddreamstarget(void);
 static void Cmd_tryworryseed(void);
 static void Cmd_metalburstdamagecalculator(void);
 
-const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
-{
-    FLAG_BEATLEVIATHAN1,
-    FLAG_BEATLEVIATHAN2,
-    FLAG_BEATLEVIATHAN3,
-    FLAG_BEATLEVIATHAN4,
-    FLAG_BEATLEVIATHAN5,
-    FLAG_BEATLEVIATHAN6,
-    FLAG_BEATLEVIATHAN7,
-    FLAG_BEATLEVIATHAN8,
-    FLAG_BEATLEVIATHAN9,
-    FLAG_BEATLEVIATHAN10,
-    FLAG_BEATLEVIATHAN11,
-    FLAG_BEATLEVIATHAN12,
-    FLAG_BEATLEVIATHAN13,
-    FLAG_BEATLEVIATHAN14,
-    FLAG_BEATLEVIATHAN15
-};
-
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 7, 9, 11, 19, 22, 24, 28, 28, 28, 30, 33, 34, 38, 42, 45};
+const u16 sLevelCaps[NUM_CAPS] = {
+    5,
+    7, 9, 11, 13, 15,
+    17, 19, 19, 21, 23,
+    25, 27, 29, 29, 30,
+    32, 33, 35, 37, 38,
+    40, 42, 44, 48, 48,
+    50};
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -3886,17 +3874,10 @@ u8 GetTeamLevel(void)
 bool8 IsOverLevelLimit(u8 level)
 {
     u8 i;
-    
-    // multiply the usual exp yield by the soft cap multiplier
-    for (i = 0; i < NUM_SOFT_CAPS; i++)
+
+    if (level >= sLevelCaps[VarGet(VAR_ZONE)])
     {
-        if (!FlagGet(sLevelCapFlags[i]) && level >= sLevelCaps[i])
-        {
-            if (FlagGet(FLAG_BRUTAL_MODE_ON) || !((i == 2) || (i == 6) || (i == 7) || (i == 11)))
-            {
-                return TRUE;
-            }
-        }
+        return TRUE;
     }
     
     return FALSE;
