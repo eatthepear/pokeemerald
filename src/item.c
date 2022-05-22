@@ -86,8 +86,8 @@ void DeserializeTmHmItemSlots(void)
 
 void SetBagItemsPointers(void)
 {
-    gBagPockets[ITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Items;
-    gBagPockets[ITEMS_POCKET].capacity = BAG_ITEMS_COUNT;
+    gBagPockets[TREASURES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Treasures;
+    gBagPockets[TREASURES_POCKET].capacity = BAG_TREASURES_COUNT;
 
     gBagPockets[KEYITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_KeyItems;
     gBagPockets[KEYITEMS_POCKET].capacity = BAG_KEYITEMS_COUNT;
@@ -107,8 +107,8 @@ void SetBagItemsPointers(void)
     gBagPockets[BATTLEITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_BattleItems;
     gBagPockets[BATTLEITEMS_POCKET].capacity = BAG_BATTLEITEMS_COUNT;
 
-    gBagPockets[POWERUP_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_PowerUp;
-    gBagPockets[POWERUP_POCKET].capacity = BAG_POWERUP_COUNT;
+    gBagPockets[CONSUMABLES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Consumables;
+    gBagPockets[CONSUMABLES_POCKET].capacity = BAG_CONSUMABLES_COUNT;
 }
 
 void CopyItemName(u16 itemId, u8 *dst)

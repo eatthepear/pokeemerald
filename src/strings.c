@@ -280,23 +280,23 @@ const u8 *const gPyramidBagMenu_ReturnToStrings[] =
 };
 
 const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
-const u8 gText_ItemsPocket[] = _("Items");
+const u8 gText_TreasuresPocket[] = _("Treasures");
 const u8 gText_PokeBallsPocket[] = _("Poké Balls");
 const u8 gText_TMHMPocket[] = _("TMs");
 const u8 gText_BerriesPocket[] = _("Berries");
 const u8 gText_KeyItemsPocket[] = _("Key items");
 const u8 gText_MedicinePocket[] = _("Medicine");
 const u8 gText_BattleItemsPocket[] = _("Battle Item");
-const u8 gText_PowerUpPocket[] = _("Power-Up");
+const u8 gText_ConsumablesPocket[] = _("Consumables");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
-    [ITEMS_POCKET] = gText_ItemsPocket,
+    [TREASURES_POCKET] = gText_TreasuresPocket,
     [MEDICINE_POCKET] = gText_MedicinePocket,
     [BALLS_POCKET] = gText_PokeBallsPocket,
     [BATTLEITEMS_POCKET] = gText_BattleItemsPocket,
     [BERRIES_POCKET] = gText_BerriesPocket,
-    [POWERUP_POCKET] = gText_PowerUpPocket,
+    [CONSUMABLES_POCKET] = gText_ConsumablesPocket,
     [TMHM_POCKET] = gText_TMHMPocket,
     [KEYITEMS_POCKET] = gText_KeyItemsPocket
 };
@@ -708,14 +708,14 @@ const u8 gText_Beauty2[] = _("Beauty");
 const u8 gText_Cute2[] = _("Cute");
 const u8 gText_Smart2[] = _("Smart");
 const u8 gText_Tough2[] = _("Tough");
-const u8 gText_Items[] = _("Items");
+const u8 gText_Treasures[] = _("Treasures");
 const u8 gText_Key_Items[] = _("Key Items");
 const u8 gText_Poke_Balls[] = _("Poké Balls");
 const u8 gText_TMs_Hms[] = _("TMs");
 const u8 gText_Berries2[] = _("Berries");
 const u8 gText_Medicine[] = _("Medicine");
 const u8 gText_BattleItems[] = _("Battle Item");
-const u8 gText_PowerUp[] = _("Power-Up");
+const u8 gText_Consumables[] = _("Consumables");
 const u8 gText_SomeonesPC[] = _("Someone's PC");
 const u8 gText_LanettesPC[] = _("Colress's PC");
 const u8 gText_PlayersPC[] = _("{PLAYER}'s PC");

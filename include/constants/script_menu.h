@@ -148,7 +148,7 @@
 #define STDSTRING_CUTE2            11
 #define STDSTRING_SMART2           12
 #define STDSTRING_TOUGH2           13
-#define STDSTRING_ITEMS            14
+#define STDSTRING_TREASURES        14
 #define STDSTRING_KEYITEMS         15
 #define STDSTRING_POKEBALLS        16
 #define STDSTRING_TMHMS            17
@@ -167,6 +167,6 @@
 
 #define STDSTRING_MEDICINE         30
 #define STDSTRING_BATTLEITEMS      31
-#define STDSTRING_POWERUP          32
+#define STDSTRING_CONSUMABLES      32
 
 #endif //GUARD_SCRIPT_MENU_CONSTANTS_H

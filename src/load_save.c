@@ -20,7 +20,7 @@ static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 
 struct LoadedSaveData
 {
- /*0x0000*/ struct ItemSlot items[BAG_ITEMS_COUNT];
+ /*0x0000*/ struct ItemSlot treasures[BAG_TREASURES_COUNT];
  /*0x0078*/ struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
  /*0x00F0*/ struct ItemSlot pokeBalls[BAG_POKEBALLS_COUNT];
  /*0x0130*/ struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
@@ -28,7 +28,7 @@ struct LoadedSaveData
  /*0x02E8*/ struct Mail mail[MAIL_COUNT];
  /*0x0230*/ struct ItemSlot medicine[BAG_MEDICINE_COUNT];
  /*0x0230*/ struct ItemSlot battleItems[BAG_BATTLEITEMS_COUNT];
- /*0x0230*/ struct ItemSlot powerUp[BAG_POWERUP_COUNT];
+ /*0x0230*/ struct ItemSlot consumables[BAG_CONSUMABLES_COUNT];
 };
 
 // EWRAM DATA
@@ -214,8 +214,8 @@ void LoadPlayerBag(void)
     int i;
 
     // load player items.
-    for (i = 0; i < BAG_ITEMS_COUNT; i++)
-        gLoadedSaveData.items[i] = gSaveBlock1Ptr->bagPocket_Items[i];
+    for (i = 0; i < BAG_TREASURES_COUNT; i++)
+        gLoadedSaveData.treasures[i] = gSaveBlock1Ptr->bagPocket_Treasures[i];
 
     // load player key items.
     for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
@@ -246,8 +246,8 @@ void LoadPlayerBag(void)
         gLoadedSaveData.battleItems[i] = gSaveBlock1Ptr->bagPocket_BattleItems[i];
 
     // load player power up.
-    for (i = 0; i < BAG_POWERUP_COUNT; i++)
-        gLoadedSaveData.powerUp[i] = gSaveBlock1Ptr->bagPocket_PowerUp[i];
+    for (i = 0; i < BAG_CONSUMABLES_COUNT; i++)
+        gLoadedSaveData.consumables[i] = gSaveBlock1Ptr->bagPocket_Consumables[i];
 
     gLastEncryptionKey = gSaveBlock2Ptr->encryptionKey;
 }
@@ -258,8 +258,8 @@ void SavePlayerBag(void)
     u32 encryptionKeyBackup;
 
     // save player items.
-    for (i = 0; i < BAG_ITEMS_COUNT; i++)
-        gSaveBlock1Ptr->bagPocket_Items[i] = gLoadedSaveData.items[i];
+    for (i = 0; i < BAG_TREASURES_COUNT; i++)
+        gSaveBlock1Ptr->bagPocket_Treasures[i] = gLoadedSaveData.treasures[i];
 
     // save player key items.
     for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
@@ -290,8 +290,8 @@ void SavePlayerBag(void)
         gSaveBlock1Ptr->bagPocket_BattleItems[i] = gLoadedSaveData.battleItems[i];
 
     // save player power up.
-    for (i = 0; i < BAG_POWERUP_COUNT; i++)
-        gSaveBlock1Ptr->bagPocket_PowerUp[i] = gLoadedSaveData.powerUp[i];
+    for (i = 0; i < BAG_CONSUMABLES_COUNT; i++)
+        gSaveBlock1Ptr->bagPocket_Consumables[i] = gLoadedSaveData.consumables[i];
 
     encryptionKeyBackup = gSaveBlock2Ptr->encryptionKey;
     gSaveBlock2Ptr->encryptionKey = gLastEncryptionKey;

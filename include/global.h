@@ -951,7 +951,7 @@ struct SaveBlock1
     /*0x494*/ u16 coins;
     /*0x496*/ u16 registeredItem; // registered for use with SELECT button
     /*0x498*/ struct ItemSlot pcItems[PC_ITEMS_COUNT];
-    /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
+    /*0x560*/ struct ItemSlot bagPocket_Treasures[BAG_TREASURES_COUNT];
     /*0x5D8*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
     /*0x650*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
     /*0x690*/ //struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
@@ -960,8 +960,7 @@ struct SaveBlock1
     /*0x790*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
               struct ItemSlot bagPocket_Medicine[BAG_MEDICINE_COUNT];
               struct ItemSlot bagPocket_BattleItems[BAG_BATTLEITEMS_COUNT];
-              struct ItemSlot bagPocket_PowerUp[BAG_POWERUP_COUNT];
-              // PowerUp is at the bottomish, no space here
+              struct ItemSlot bagPocket_Consumables[BAG_CONSUMABLES_COUNT];
               // each ItemSlot is 4 bytes, each u8 is 1 byte
     // /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     // /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
