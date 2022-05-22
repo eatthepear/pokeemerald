@@ -14,7 +14,7 @@ script Zone4Sanctuary_EventScript_Intro {
 	msgbox(gText_RewardClear)
 	msgbox(Zone4Sanctuary_Text_Reward)
 	giveitem(ITEM_TM04)
-	setvar(VAR_ZONE, 4)
+	setvar(VAR_ZONE, 5)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)

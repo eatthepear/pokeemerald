@@ -77,8 +77,8 @@ Zone4E_EventScript_LeviathanBattle_Text_0:
 	.string "Those little aura boosts sure pack a\n"
 	.string "punch, don't they?\p"
 	.string "Anyways, you can have some Sitrus\n"
-	.string "Berries, if you want;\n"
-	.string "Ponyta and I spent some time gathering\l"
+	.string "Berries, if you want.\p"
+	.string "Ponyta and I spent some time gathering\n"
 	.string "them earlier, but we've got too many\l"
 	.string "and we want to share.$"
 

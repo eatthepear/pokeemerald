@@ -37,7 +37,7 @@ script Zone4E_EventScript_LeviathanBattle {
 		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: Did you like my enchantment?\pThose little aura boosts sure pack a punch, don't they?\pAnyways, you can have some Sitrus Berries, if you want;\nPonyta and I spent some time gathering them earlier, but we've got too many and we want to share."))
+	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: Did you like my enchantment?\pThose little aura boosts sure pack a punch, don't they?\pAnyways, you can have some Sitrus Berries, if you want.\pPonyta and I spent some time gathering them earlier, but we've got too many and we want to share."))
 	giveitem(ITEM_SITRUS_BERRY, 5)
 	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: I'm gonna go finish reading my story now.\pI do hope your story has a happy ending."))
 	closemessage
