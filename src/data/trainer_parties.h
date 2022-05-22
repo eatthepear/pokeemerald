@@ -545,10 +545,21 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan 2, Default
     .nature = NATURE_JOLLY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Sniper
-    .species = SPECIES_BEEDRILL, //Starts with aura +1 Defense
+    .species = SPECIES_BEEDRILL, //Starts with aura +1 Attack
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_TWINEEDLE, MOVE_POISON_TAIL, MOVE_FURY_ATTACK, MOVE_FOCUS_ENERGY}
+    .moves = {MOVE_BUG_BITE, MOVE_POISON_TAIL, MOVE_FURY_ATTACK, MOVE_FOCUS_ENERGY}
+    },
+    {
+    .iv = 31,
+    .lvl = 15,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Compound Eyes
+    .species = SPECIES_BUTTERFREE, //Starts with aura +1 Special Attack
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_STRUGGLE_BUG, MOVE_GUST, MOVE_SLEEP_POWDER, MOVE_CONFUSION}
     }
+    
 };
 
 /* ------------------- Lelouch Training ------------------- */
