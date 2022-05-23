@@ -3,7 +3,7 @@ ZoneB1_MapScripts::
 	.byte 0
 
 ZoneB1_OnFrame:
-	map_script_2 VAR_ZONEB1_STATE, 2, ZoneB1_EventScript_Intro
+	map_script_2 VAR_ZONE_B1_STATE, 2, ZoneB1_EventScript_Intro
 	.2byte 0
 
 ZoneB1_EventScript_Intro:
@@ -23,7 +23,7 @@ ZoneB1_EventScript_Intro:
 	removeobject 3
 	removeobject 4
 	removeobject 5
-	setvar VAR_ZONEB1_STATE, 3
+	setvar VAR_ZONE_B1_STATE, 3
 	setflag FLAG_ZONE_B1_PORYGON_1
 	setflag FLAG_ZONE_B1_PORYGON_3
 	setflag FLAG_ZONE_B1_PORYGON_4
@@ -48,7 +48,7 @@ ZoneB1_EventScript_Interact2::
 	waitmoncry
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 2
-	setvar VAR_ZONEB1_STATE, 4
+	setvar VAR_ZONE_B1_STATE, 4
 	setflag FLAG_ZONE_B1_PORYGON_2
 	clearflag FLAG_ZONE_B1_PORYGON_3
 	delay 40
@@ -68,7 +68,7 @@ ZoneB1_EventScript_Interact3::
 	waitmoncry
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 3
-	setvar VAR_ZONEB1_STATE, 5
+	setvar VAR_ZONE_B1_STATE, 5
 	setflag FLAG_ZONE_B1_PORYGON_3
 	clearflag FLAG_ZONE_B1_PORYGON_4
 	delay 40
@@ -91,7 +91,7 @@ ZoneB1_EventScript_Interact4::
 	waitmoncry
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 4
-	setvar VAR_ZONEB1_STATE, 6
+	setvar VAR_ZONE_B1_STATE, 6
 	setflag FLAG_ZONE_B1_PORYGON_4
 	clearflag FLAG_ZONE_B1_PORYGON_5
 	delay 40
@@ -173,7 +173,7 @@ ZoneB1_EventScript_ReceivedPorygon::
 	fadescreenswapbuffers FADE_TO_BLACK
 	setflag FLAG_RECEIVED_PORYGON
 	removeobject 5
-	setvar VAR_ZONEB1_STATE, 7
+	setvar VAR_ZONE_B1_STATE, 7
 	setflag FLAG_ZONE_B1_PORYGON_5
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox ZoneB1_Text_Holding, MSGBOX_AUTOCLOSE

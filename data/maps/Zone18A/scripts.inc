@@ -49,7 +49,7 @@ Zone18A_EventScript_PirateEvent:
 	clearflag FLAG_HIDE_ZONE18B_ODYSSEUS
 	setflag FLAG_HIDE_ZONE18B_MAN
 	setflag FLAG_HIDE_ZONE19D_PIRATES
-	setvar VAR_ZONE18B_STATE, 2
+	setvar VAR_ZONE_18_STATE, 2
 	releaseall
 	end
 

@@ -82,7 +82,7 @@
       "x": 9,
       "y": 2,
       "elevation": 0,
-      "var": "VAR_ZONE18B_STATE",
+      "var": "VAR_ZONE_18_STATE",
       "var_value": "2",
       "script": "Zone19D_EventScript_InitiatePirateBattles"
     },

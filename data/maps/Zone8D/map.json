@@ -82,7 +82,7 @@
       "x": 8,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_ZONE8D_STATE",
+      "var": "VAR_ZONE_8_STATE",
       "var_value": "1",
       "script": "Zone8D_EventScript_GoWithWally"
     },
@@ -91,7 +91,7 @@
       "x": 7,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_ZONE8D_STATE",
+      "var": "VAR_ZONE_8_STATE",
       "var_value": "1",
       "script": "Zone8D_EventScript_GoWithWally"
     },
@@ -100,7 +100,7 @@
       "x": 10,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_ZONE8D_STATE",
+      "var": "VAR_ZONE_8_STATE",
       "var_value": "1",
       "script": "Zone8D_EventScript_GoWithWally"
     },
@@ -109,7 +109,7 @@
       "x": 6,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_ZONE8D_STATE",
+      "var": "VAR_ZONE_8_STATE",
       "var_value": "1",
       "script": "Zone8D_EventScript_GoWithWally"
     },
@@ -118,7 +118,7 @@
       "x": 4,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_ZONE8D_STATE",
+      "var": "VAR_ZONE_8_STATE",
       "var_value": "1",
       "script": "Zone8D_EventScript_GoWithWally"
     },

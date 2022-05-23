@@ -127,7 +127,7 @@
       "x": 27,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_ZONE18B_STATE",
+      "var": "VAR_ZONE_18_STATE",
       "var_value": "1",
       "script": "Zone18A_EventScript_PirateEventLeft"
     },
@@ -136,7 +136,7 @@
       "x": 28,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_ZONE18B_STATE",
+      "var": "VAR_ZONE_18_STATE",
       "var_value": "1",
       "script": "Zone18A_EventScript_PirateEventMiddle"
     },
@@ -145,7 +145,7 @@
       "x": 29,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_ZONE18B_STATE",
+      "var": "VAR_ZONE_18_STATE",
       "var_value": "1",
       "script": "Zone18A_EventScript_PirateEventRight"
     }

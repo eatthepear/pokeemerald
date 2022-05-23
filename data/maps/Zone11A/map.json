@@ -193,7 +193,7 @@
       "x": 21,
       "y": 40,
       "elevation": 0,
-      "var": "VAR_ZONE11A_STATE",
+      "var": "VAR_ZONE_11_STATE",
       "var_value": "0",
       "script": "Zone11A_EventScript_LeviathanIntro"
     },

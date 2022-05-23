@@ -146,7 +146,6 @@ Route119_EventScript_RivalExitScottArrive::
 	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_RivalExit1
 	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_RivalExit2
 	removeobject LOCALID_RIVAL_ON_BIKE
-	setvar VAR_ROUTE119_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	delay 60

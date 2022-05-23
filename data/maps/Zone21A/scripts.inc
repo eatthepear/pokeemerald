@@ -30,7 +30,7 @@ Zone21A_EventScript_BrutalExitNotSatisfied:
 
 Zone21A_EventScript_SecretWarp::
 	lockall
-	compare VAR_ZONE21A_STATE, 1
+	compare VAR_ZONE_21_STATE, 1
 	goto_if_eq Zone21A_EventScript_EndWarp
 	warp MAP_ZONE21D, 255, 2, 28
 	releaseall
@@ -42,13 +42,13 @@ Zone21A_EventScript_EndWarp:
 
 Zone21A_EventScript_SetState1::
 	lockall
-	setvar VAR_ZONE21A_STATE, 1
+	setvar VAR_ZONE_21_STATE, 1
 	releaseall
 	end
 
 Zone21A_EventScript_SetState0::
 	lockall
-	setvar VAR_ZONE21A_STATE, 0
+	setvar VAR_ZONE_21_STATE, 0
 	releaseall
 	end
 

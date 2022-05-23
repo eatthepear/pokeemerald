@@ -31,7 +31,7 @@ Zone25L_EventScript_LeftMost::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	setvar VAR_ZONE25L_STATE, 2
+	setvar VAR_ZONE_25_STATE, 1
 	goto Zone25L_EventScript_InitiateLeviathanBattle
 	end
 
@@ -41,7 +41,7 @@ Zone25L_EventScript_Left::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	setvar VAR_ZONE25L_STATE, 2
+	setvar VAR_ZONE_25_STATE, 1
 	goto Zone25L_EventScript_InitiateLeviathanBattle
 	end
 
@@ -49,7 +49,7 @@ Zone25L_EventScript_Middle::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	setvar VAR_ZONE25L_STATE, 2
+	setvar VAR_ZONE_25_STATE, 1
 	goto Zone25L_EventScript_InitiateLeviathanBattle
 	end
 
@@ -59,7 +59,7 @@ Zone25L_EventScript_Right::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	setvar VAR_ZONE25L_STATE, 2
+	setvar VAR_ZONE_25_STATE, 1
 	goto Zone25L_EventScript_InitiateLeviathanBattle
 	end
 
@@ -73,7 +73,7 @@ Zone25L_EventScript_RightMost::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	setvar VAR_ZONE25L_STATE, 2
+	setvar VAR_ZONE_25_STATE, 1
 	goto Zone25L_EventScript_InitiateLeviathanBattle
 	end
 
@@ -168,7 +168,7 @@ Zone25L_EventScript_DontHaveEnoughMons:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	setvar VAR_ZONE25L_STATE, 0
+	setvar VAR_ZONE_25_STATE, 0
 	releaseall
 	end
 

@@ -12,7 +12,7 @@ Zone21D_EventScript_SetFlashRadius:
 
 Zone21D_EventScript_SecretWarp::
 	lockall
-	setvar VAR_ZONE21A_STATE, 0
-        warp MAP_ZONE21A, 255, 39, 54
-        releaseall
-        end
+	setvar VAR_ZONE_21_STATE, 0
+    warp MAP_ZONE21A, 255, 39, 54
+    releaseall
+    end

@@ -3,7 +3,7 @@ Zone17A_MapScripts::
 	.byte 0
 
 Zone17A_OnFrame:
-	map_script_2 VAR_ZONE17A_STATE, 0, Zone17A_EventScript_Intro
+	map_script_2 VAR_ZONE_17_STATE, 0, Zone17A_EventScript_Intro
 	.2byte 0
 
 Zone17A_EventScript_Intro:
@@ -44,7 +44,7 @@ Zone17A_EventScript_Intro:
 	addobject 1
 	delay 48
 	msgbox Zone17A_Text_Intro, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 1
+	setvar VAR_ZONE_17_STATE, 1
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
@@ -90,7 +90,7 @@ Zone17A_EventScript_Intro:
 
 Zone17A_EventScript_CheckLeave::
 	lockall
-	compare VAR_ZONE17A_STATE, 30
+	compare VAR_ZONE_17_STATE, 30
 	goto_if_eq Zone17A_EventScript_Leave
 	warp MAP_ZONE17A, 255, 11, 39
 	releaseall
@@ -114,7 +114,7 @@ Zone17A_EventScript_RiddleSign::
 	checkitem ITEM_ODD_KEYSTONE, 1
 	compare VAR_RESULT, TRUE
 	call_if_eq Zone17A_EventScript_PlaceOddKeystone
-	compare VAR_ZONE17A_STATE, 29
+	compare VAR_ZONE_17_STATE, 29
 	goto_if_eq Zone17A_EventScript_Released
 	msgbox Zone17A_Text_RiddleSign, MSGBOX_SIGN
 	release
@@ -173,7 +173,7 @@ Zone17A_EventScript_Released:
 	setobjectxy 1, 11, 7
 	delay 48
 	msgbox Zone17A_Text_Released, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 30
+	setvar VAR_ZONE_17_STATE, 30
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
@@ -275,9 +275,9 @@ Zone17A_Text_SpiritombDisappeared:
 Zone17A_EventScript_Sign1::
 	lock
 	msgbox Zone17A_Text_Sign1, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 16
+	compare VAR_ZONE_17_STATE, 16
 	call_if_eq Zone17A_EventScript_PayRespects16
-	compare VAR_ZONE17A_STATE, 19
+	compare VAR_ZONE_17_STATE, 19
 	call_if_eq Zone17A_EventScript_PayRespects19
 	release
 	end
@@ -285,9 +285,9 @@ Zone17A_EventScript_Sign1::
 Zone17A_EventScript_Sign2::
 	lock
 	msgbox Zone17A_Text_Sign2, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 24
+	compare VAR_ZONE_17_STATE, 24
 	call_if_eq Zone17A_EventScript_PayRespects24
-	compare VAR_ZONE17A_STATE, 9
+	compare VAR_ZONE_17_STATE, 9
 	call_if_eq Zone17A_EventScript_PayRespects9
 	release
 	end
@@ -295,9 +295,9 @@ Zone17A_EventScript_Sign2::
 Zone17A_EventScript_Sign3::
 	lock
 	msgbox Zone17A_Text_Sign3, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 27
+	compare VAR_ZONE_17_STATE, 27
 	call_if_eq Zone17A_EventScript_PayRespects27
-	compare VAR_ZONE17A_STATE, 15
+	compare VAR_ZONE_17_STATE, 15
 	call_if_eq Zone17A_EventScript_PayRespects15
 	release
 	end
@@ -305,9 +305,9 @@ Zone17A_EventScript_Sign3::
 Zone17A_EventScript_Sign4::
 	lock
 	msgbox Zone17A_Text_Sign4, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 4
+	compare VAR_ZONE_17_STATE, 4
 	call_if_eq Zone17A_EventScript_PayRespects4
-	compare VAR_ZONE17A_STATE, 13
+	compare VAR_ZONE_17_STATE, 13
 	call_if_eq Zone17A_EventScript_PayRespects13
 	release
 	end
@@ -315,9 +315,9 @@ Zone17A_EventScript_Sign4::
 Zone17A_EventScript_Sign5::
 	lock
 	msgbox Zone17A_Text_Sign5, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 7
+	compare VAR_ZONE_17_STATE, 7
 	call_if_eq Zone17A_EventScript_PayRespects7
-	compare VAR_ZONE17A_STATE, 22
+	compare VAR_ZONE_17_STATE, 22
 	call_if_eq Zone17A_EventScript_PayRespects22
 	release
 	end
@@ -325,9 +325,9 @@ Zone17A_EventScript_Sign5::
 Zone17A_EventScript_Sign6::
 	lock
 	msgbox Zone17A_Text_Sign6, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 1
+	compare VAR_ZONE_17_STATE, 1
 	call_if_eq Zone17A_EventScript_PayRespects1
-	compare VAR_ZONE17A_STATE, 17
+	compare VAR_ZONE_17_STATE, 17
 	call_if_eq Zone17A_EventScript_PayRespects17
 	release
 	end
@@ -335,9 +335,9 @@ Zone17A_EventScript_Sign6::
 Zone17A_EventScript_Sign7::
 	lock
 	msgbox Zone17A_Text_Sign7, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 23
+	compare VAR_ZONE_17_STATE, 23
 	call_if_eq Zone17A_EventScript_PayRespects23
-	compare VAR_ZONE17A_STATE, 3
+	compare VAR_ZONE_17_STATE, 3
 	call_if_eq Zone17A_EventScript_PayRespects3
 	release
 	end
@@ -345,9 +345,9 @@ Zone17A_EventScript_Sign7::
 Zone17A_EventScript_Sign8::
 	lock
 	msgbox Zone17A_Text_Sign8, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 5
+	compare VAR_ZONE_17_STATE, 5
 	call_if_eq Zone17A_EventScript_PayRespects5
-	compare VAR_ZONE17A_STATE, 25
+	compare VAR_ZONE_17_STATE, 25
 	call_if_eq Zone17A_EventScript_PayRespects25
 	release
 	end
@@ -355,9 +355,9 @@ Zone17A_EventScript_Sign8::
 Zone17A_EventScript_Sign9::
 	lock
 	msgbox Zone17A_Text_Sign9, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 18
+	compare VAR_ZONE_17_STATE, 18
 	call_if_eq Zone17A_EventScript_PayRespects18
-	compare VAR_ZONE17A_STATE, 2
+	compare VAR_ZONE_17_STATE, 2
 	call_if_eq Zone17A_EventScript_PayRespects2
 	release
 	end
@@ -365,9 +365,9 @@ Zone17A_EventScript_Sign9::
 Zone17A_EventScript_Sign10::
 	lock
 	msgbox Zone17A_Text_Sign10, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 10
+	compare VAR_ZONE_17_STATE, 10
 	call_if_eq Zone17A_EventScript_PayRespects10
-	compare VAR_ZONE17A_STATE, 14
+	compare VAR_ZONE_17_STATE, 14
 	call_if_eq Zone17A_EventScript_PayRespects14
 	release
 	end
@@ -375,9 +375,9 @@ Zone17A_EventScript_Sign10::
 Zone17A_EventScript_Sign11::
 	lock
 	msgbox Zone17A_Text_Sign11, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 28
+	compare VAR_ZONE_17_STATE, 28
 	call_if_eq Zone17A_EventScript_PayRespects28
-	compare VAR_ZONE17A_STATE, 11
+	compare VAR_ZONE_17_STATE, 11
 	call_if_eq Zone17A_EventScript_PayRespects11
 	release
 	end
@@ -385,9 +385,9 @@ Zone17A_EventScript_Sign11::
 Zone17A_EventScript_Sign12::
 	lock
 	msgbox Zone17A_Text_Sign12, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 20
+	compare VAR_ZONE_17_STATE, 20
 	call_if_eq Zone17A_EventScript_PayRespects20
-	compare VAR_ZONE17A_STATE, 6
+	compare VAR_ZONE_17_STATE, 6
 	call_if_eq Zone17A_EventScript_PayRespects6
 	release
 	end
@@ -395,9 +395,9 @@ Zone17A_EventScript_Sign12::
 Zone17A_EventScript_Sign13::
 	lock
 	msgbox Zone17A_Text_Sign13, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 26
+	compare VAR_ZONE_17_STATE, 26
 	call_if_eq Zone17A_EventScript_PayRespects26
-	compare VAR_ZONE17A_STATE, 12
+	compare VAR_ZONE_17_STATE, 12
 	call_if_eq Zone17A_EventScript_PayRespects12
 	release
 	end
@@ -405,9 +405,9 @@ Zone17A_EventScript_Sign13::
 Zone17A_EventScript_Sign14::
 	lock
 	msgbox Zone17A_Text_Sign14, MSGBOX_SIGN
-	compare VAR_ZONE17A_STATE, 8
+	compare VAR_ZONE_17_STATE, 8
 	call_if_eq Zone17A_EventScript_PayRespects8
-	compare VAR_ZONE17A_STATE, 21
+	compare VAR_ZONE_17_STATE, 21
 	call_if_eq Zone17A_EventScript_PayRespects21
 	release
 	end
@@ -420,7 +420,7 @@ Zone17A_EventScript_PayRespects1:
 
 Zone17A_EventScript_PaidRespects1:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 2
+	setvar VAR_ZONE_17_STATE, 2
 	return
 
 Zone17A_EventScript_PayRespects2:
@@ -431,7 +431,7 @@ Zone17A_EventScript_PayRespects2:
 
 Zone17A_EventScript_PaidRespects2:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 3
+	setvar VAR_ZONE_17_STATE, 3
 	return
 
 Zone17A_EventScript_PayRespects3:
@@ -442,7 +442,7 @@ Zone17A_EventScript_PayRespects3:
 
 Zone17A_EventScript_PaidRespects3:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 4
+	setvar VAR_ZONE_17_STATE, 4
 	return
 
 Zone17A_EventScript_PayRespects4:
@@ -453,7 +453,7 @@ Zone17A_EventScript_PayRespects4:
 
 Zone17A_EventScript_PaidRespects4:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 5
+	setvar VAR_ZONE_17_STATE, 5
 	return
 
 Zone17A_EventScript_PayRespects5:
@@ -464,7 +464,7 @@ Zone17A_EventScript_PayRespects5:
 
 Zone17A_EventScript_PaidRespects5:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 6
+	setvar VAR_ZONE_17_STATE, 6
 	return
 
 Zone17A_EventScript_PayRespects6:
@@ -475,7 +475,7 @@ Zone17A_EventScript_PayRespects6:
 
 Zone17A_EventScript_PaidRespects6:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 7
+	setvar VAR_ZONE_17_STATE, 7
 	return
 
 Zone17A_EventScript_PayRespects7:
@@ -486,7 +486,7 @@ Zone17A_EventScript_PayRespects7:
 
 Zone17A_EventScript_PaidRespects7:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 8
+	setvar VAR_ZONE_17_STATE, 8
 	return
 
 Zone17A_EventScript_PayRespects8:
@@ -497,7 +497,7 @@ Zone17A_EventScript_PayRespects8:
 
 Zone17A_EventScript_PaidRespects8:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 9
+	setvar VAR_ZONE_17_STATE, 9
 	return
 
 Zone17A_EventScript_PayRespects9:
@@ -508,7 +508,7 @@ Zone17A_EventScript_PayRespects9:
 
 Zone17A_EventScript_PaidRespects9:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 10
+	setvar VAR_ZONE_17_STATE, 10
 	return
 
 Zone17A_EventScript_PayRespects10:
@@ -519,7 +519,7 @@ Zone17A_EventScript_PayRespects10:
 
 Zone17A_EventScript_PaidRespects10:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 11
+	setvar VAR_ZONE_17_STATE, 11
 	return
 
 Zone17A_EventScript_PayRespects11:
@@ -530,7 +530,7 @@ Zone17A_EventScript_PayRespects11:
 
 Zone17A_EventScript_PaidRespects11:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 12
+	setvar VAR_ZONE_17_STATE, 12
 	return
 
 Zone17A_EventScript_PayRespects12:
@@ -541,7 +541,7 @@ Zone17A_EventScript_PayRespects12:
 
 Zone17A_EventScript_PaidRespects12:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 13
+	setvar VAR_ZONE_17_STATE, 13
 	return
 
 Zone17A_EventScript_PayRespects13:
@@ -552,7 +552,7 @@ Zone17A_EventScript_PayRespects13:
 
 Zone17A_EventScript_PaidRespects13:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 14
+	setvar VAR_ZONE_17_STATE, 14
 	return
 
 Zone17A_EventScript_PayRespects14:
@@ -563,7 +563,7 @@ Zone17A_EventScript_PayRespects14:
 
 Zone17A_EventScript_PaidRespects14:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 15
+	setvar VAR_ZONE_17_STATE, 15
 	return
 
 Zone17A_EventScript_PayRespects15:
@@ -574,7 +574,7 @@ Zone17A_EventScript_PayRespects15:
 
 Zone17A_EventScript_PaidRespects15:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 16
+	setvar VAR_ZONE_17_STATE, 16
 	return
 
 Zone17A_EventScript_PayRespects16:
@@ -585,7 +585,7 @@ Zone17A_EventScript_PayRespects16:
 
 Zone17A_EventScript_PaidRespects16:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 17
+	setvar VAR_ZONE_17_STATE, 17
 	return
 
 Zone17A_EventScript_PayRespects17:
@@ -596,7 +596,7 @@ Zone17A_EventScript_PayRespects17:
 
 Zone17A_EventScript_PaidRespects17:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 18
+	setvar VAR_ZONE_17_STATE, 18
 	return
 
 Zone17A_EventScript_PayRespects18:
@@ -607,7 +607,7 @@ Zone17A_EventScript_PayRespects18:
 
 Zone17A_EventScript_PaidRespects18:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 19
+	setvar VAR_ZONE_17_STATE, 19
 	return
 
 Zone17A_EventScript_PayRespects19:
@@ -618,7 +618,7 @@ Zone17A_EventScript_PayRespects19:
 
 Zone17A_EventScript_PaidRespects19:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 20
+	setvar VAR_ZONE_17_STATE, 20
 	return
 
 Zone17A_EventScript_PayRespects20:
@@ -629,7 +629,7 @@ Zone17A_EventScript_PayRespects20:
 
 Zone17A_EventScript_PaidRespects20:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 21
+	setvar VAR_ZONE_17_STATE, 21
 	return
 
 Zone17A_EventScript_PayRespects21:
@@ -640,7 +640,7 @@ Zone17A_EventScript_PayRespects21:
 
 Zone17A_EventScript_PaidRespects21:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 22
+	setvar VAR_ZONE_17_STATE, 22
 	return
 
 Zone17A_EventScript_PayRespects22:
@@ -651,7 +651,7 @@ Zone17A_EventScript_PayRespects22:
 
 Zone17A_EventScript_PaidRespects22:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 23
+	setvar VAR_ZONE_17_STATE, 23
 	return
 
 Zone17A_EventScript_PayRespects23:
@@ -662,7 +662,7 @@ Zone17A_EventScript_PayRespects23:
 
 Zone17A_EventScript_PaidRespects23:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 24
+	setvar VAR_ZONE_17_STATE, 24
 	return
 
 Zone17A_EventScript_PayRespects24:
@@ -673,7 +673,7 @@ Zone17A_EventScript_PayRespects24:
 
 Zone17A_EventScript_PaidRespects24:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 25
+	setvar VAR_ZONE_17_STATE, 25
 	return
 
 Zone17A_EventScript_PayRespects25:
@@ -684,7 +684,7 @@ Zone17A_EventScript_PayRespects25:
 
 Zone17A_EventScript_PaidRespects25:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 26
+	setvar VAR_ZONE_17_STATE, 26
 	return
 
 Zone17A_EventScript_PayRespects26:
@@ -695,7 +695,7 @@ Zone17A_EventScript_PayRespects26:
 
 Zone17A_EventScript_PaidRespects26:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 27
+	setvar VAR_ZONE_17_STATE, 27
 	return
 
 Zone17A_EventScript_PayRespects27:
@@ -706,7 +706,7 @@ Zone17A_EventScript_PayRespects27:
 
 Zone17A_EventScript_PaidRespects27:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 28
+	setvar VAR_ZONE_17_STATE, 28
 	return
 
 Zone17A_EventScript_PayRespects28:
@@ -717,7 +717,7 @@ Zone17A_EventScript_PayRespects28:
 
 Zone17A_EventScript_PaidRespects28:
 	msgbox Zone17A_Text_PaidRespects, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE17A_STATE, 29
+	setvar VAR_ZONE_17_STATE, 29
 	return
 
 Zone17A_Text_PayRespects:

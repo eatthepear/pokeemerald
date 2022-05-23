@@ -56,7 +56,7 @@
       "x": 4,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_ZONE14C_STATE",
+      "var": "VAR_ZONE_14_STATE",
       "var_value": "0",
       "script": "Zone14C_EventScript_LeftMost"
     },
@@ -65,7 +65,7 @@
       "x": 6,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_ZONE14C_STATE",
+      "var": "VAR_ZONE_14_STATE",
       "var_value": "0",
       "script": "Zone14C_EventScript_Left"
     },
@@ -74,7 +74,7 @@
       "x": 7,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_ZONE14C_STATE",
+      "var": "VAR_ZONE_14_STATE",
       "var_value": "0",
       "script": "Zone14C_EventScript_Middle"
     },
@@ -83,7 +83,7 @@
       "x": 8,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_ZONE14C_STATE",
+      "var": "VAR_ZONE_14_STATE",
       "var_value": "0",
       "script": "Zone14C_EventScript_Right"
     },
@@ -92,7 +92,7 @@
       "x": 10,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_ZONE14C_STATE",
+      "var": "VAR_ZONE_14_STATE",
       "var_value": "0",
       "script": "Zone14C_EventScript_RightMost"
     },

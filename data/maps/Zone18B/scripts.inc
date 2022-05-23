@@ -3,9 +3,9 @@ Zone18B_MapScripts::
 	.byte 0
 
 Zone18B_OnLoad:
-	compare VAR_ZONE18B_STATE, 0
+	compare VAR_ZONE_18_STATE, 0
 	goto_if_eq Zone18B_EventScript_OpenUnlockedDoors
-	compare VAR_ZONE18B_STATE, 1
+	compare VAR_ZONE_18_STATE, 1
 	call_if_ge Zone18B_EventScript_UnlockAllDoors
 	end
 
@@ -80,7 +80,7 @@ Zone18B_EventScript_PlayerLeft::
 	end
 
 Zone18B_EventScript_LeviathanOptions:
-	switch VAR_ZONE18B_STATE
+	switch VAR_ZONE_18_STATE
 	case 0, Zone18B_EventScript_InitiatePirateSequence
 	case 2, Zone18B_EventScript_FindPirates
 	case 3, Zone18B_EventScript_ThankForPirates
@@ -133,7 +133,7 @@ Zone18B_EventScript_InitiatePirateSequence:
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	waitmovement 0
 	special RemoveCameraObject
-	setvar VAR_ZONE18B_STATE, 1
+	setvar VAR_ZONE_18_STATE, 1
 	release
 	end
 
@@ -166,7 +166,7 @@ Zone18B_EventScript_ThankForPirates:
 	msgbox Zone18B_Odysseus_ThankYou, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FOCUS_SASH, 1
 	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE18B_STATE, 4
+	setvar VAR_ZONE_18_STATE, 4
 	goto Zone18B_EventScript_WantBattleOrLeave
 	release
 	end
@@ -230,7 +230,7 @@ Zone18B_EventScript_Leviathan11Defeated:
 	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM25
 	msgbox Zone18B_Text_Odysseus_ExplainItem2, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE18B_STATE, 5
+	setvar VAR_ZONE_18_STATE, 5
 	resetweather
 	doweather
 	msgbox Zone18B_Text_StoppedRaining, MSGBOX_AUTOCLOSE

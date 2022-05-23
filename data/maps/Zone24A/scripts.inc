@@ -3,12 +3,12 @@ Zone24A_MapScripts::
 	.byte 0
 
 Zone24A_OnFrame:
-	map_script_2 VAR_ZONE25L_STATE, 0, Zone24A_EventScript_Intro
+	map_script_2 VAR_ZONE_24_STATE, 0, Zone24A_EventScript_Intro
 	.2byte 0
 
 Zone24A_EventScript_Intro:
 	lockall
-	setvar VAR_ZONE25L_STATE, 1
+	setvar VAR_ZONE_24_STATE, 1
 	goto Zone24A_EventScript_LookDown
 	end
 

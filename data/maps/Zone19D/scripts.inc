@@ -110,7 +110,7 @@ Zone19D_EventScript_InitiatePirateBattles::
 	setflag FLAG_HIDE_ZONE19D_PIRATES
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadedefaultbgm
-	setvar VAR_ZONE18B_STATE, 3
+	setvar VAR_ZONE_18_STATE, 3
 	msgbox Zone19D_Text_ReturnToDojo, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone19D_EventScript_ReturnToDojo

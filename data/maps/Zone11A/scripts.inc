@@ -96,7 +96,7 @@ Zone11A_EventScript_Leviathan6Defeated:
 	removeobject 6
 	setflag FLAG_HIDE_LEVIATHAN6
 	fadescreenswapbuffers FADE_FROM_BLACK
-	setvar VAR_ZONE11A_STATE, 1
+	setvar VAR_ZONE_11_STATE, 1
 	releaseall
 	end
 

@@ -3,7 +3,7 @@ Zone8D_MapScripts::
 	.byte 0
 
 Zone8D_OnFrame:
-	map_script_2 VAR_ZONE8D_STATE, 0, Zone8D_EventScript_WallyIntro
+	map_script_2 VAR_ZONE_8_STATE, 0, Zone8D_EventScript_WallyIntro
 	.2byte 0
 
 Zone8D_EventScript_WallyIntro:
@@ -26,7 +26,7 @@ Zone8D_EventScript_WallyIntro:
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox Zone8D_Text_Wally_Intro2, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE8D_STATE, 1
+	setvar VAR_ZONE_8_STATE, 1
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoDown
 	waitmovement 0
@@ -288,7 +288,7 @@ Zone8D_EventScript_Conclusion:
 	waitmovement 0
 	setflag FLAG_HIDE_ZONE8D_WALLY
 	removeobject 4
-	setvar VAR_ZONE8D_STATE, 2
+	setvar VAR_ZONE_8_STATE, 2
 	releaseall
 	end
 	

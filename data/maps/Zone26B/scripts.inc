@@ -3,8 +3,8 @@ Zone26B_MapScripts::
 
 Zone26B_EventScript_InteractComputer::
 	lockall
-	goto_if_eq VAR_ZONE26_STATE, 1, Zone26B_EventScript_SingleRotomFight
-	goto_if_eq VAR_ZONE26_STATE, 2, Zone26B_EventScript_NoRotom
+	goto_if_eq VAR_ZONE_26_STATE, 1, Zone26B_EventScript_SingleRotomFight
+	goto_if_eq VAR_ZONE_26_STATE, 2, Zone26B_EventScript_NoRotom
 	msgbox Zone26B_Text_Flickering, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Zone26B_EventScript_StartRotomBattles
 	releaseall
@@ -37,7 +37,7 @@ Zone26B_EventScript_StartRotomSingleBattle:
 	waitmoncry
 	delay 40
 	dowildbattle
-	setvar VAR_ZONE26_STATE, 2
+	setvar VAR_ZONE_26_STATE, 2
 	releaseall
 	end
 
@@ -171,7 +171,7 @@ Zone26B_EventScript_StartRotomBattles:
 	waitmoncry
 	delay 40
 	msgbox Zone26B_Text_RotomCalmedDown, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE26_STATE, 1
+	setvar VAR_ZONE_26_STATE, 1
 	releaseall
 	end
 

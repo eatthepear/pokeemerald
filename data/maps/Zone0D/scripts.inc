@@ -3,8 +3,8 @@ Zone0D_MapScripts::
 	.byte 0
 
 Zone0D_OnFrame:
-	map_script_2 VAR_ZONE0_STATE, 1, Zone0D_EventScript_Intro
-	map_script_2 VAR_ZONEB1_STATE, 1, Zone0D_EventScript_B1WarpIntro
+	map_script_2 VAR_ZONE_0_STATE, 1, Zone0D_EventScript_Intro
+	map_script_2 VAR_ZONE_B1_STATE, 1, Zone0D_EventScript_B1WarpIntro
 	.2byte 0
 
 Zone0D_EventScript_Intro:
@@ -21,7 +21,7 @@ Zone0D_EventScript_Intro:
 	msgbox Zone0D_Text_Intro2, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
-	setvar VAR_ZONE0_STATE, 2
+	setvar VAR_ZONE_0_STATE, 2
 	releaseall
 	end
 
@@ -73,7 +73,7 @@ Zone0D_EventScript_B1WarpIntro:
 	msgbox Zone0D_Text_ExplainSpecialZones2, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
-	setvar VAR_ZONEB1_STATE, 2
+	setvar VAR_ZONE_B1_STATE, 2
 	releaseall
 	end
 
@@ -241,7 +241,7 @@ Zone0D_Text_DoesntWork:
 
 Zone0D_EventScript_WarpZoneB1::
 	lockall
-	compare VAR_ZONEB1_STATE, 2
+	compare VAR_ZONE_B1_STATE, 2
 	goto_if_lt Zone0D_EventScript_DenyWarp
 	setflag FLAG_IS_REVISITING_ZONE
 	warpteleport MAP_ZONE_B1, 255, 11, 0

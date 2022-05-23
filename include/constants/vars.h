@@ -50,8 +50,8 @@
 #define VAR_REPEL_STEP_COUNT                 0x4021
 #define VAR_ICE_STEP_COUNT                   0x4022
 #define VAR_STARTER_MON                      0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip
-#define VAR_MIRAGE_RND_H                     0x4024
-#define VAR_MIRAGE_RND_L                     0x4025
+#define VAR_CURRENT_SECRET_BASE              0x4024
+#define VAR_PETALBURG_CITY_STATE             0x4025
 #define VAR_SECRET_BASE_MAP                  0x4026
 #define VAR_CYCLING_ROAD_RECORD_COLLISIONS   0x4027
 #define VAR_CYCLING_ROAD_RECORD_TIME_L       0x4028
@@ -61,13 +61,11 @@
 #define VAR_RESET_RTC_ENABLE                 0x402C
 #define VAR_ENIGMA_BERRY_AVAILABLE           0x402D
 #define VAR_WONDER_NEWS_COUNTER              0x402E
-
 #define VAR_FRONTIER_MANIAC_FACILITY         0x402F
 #define VAR_FRONTIER_GAMBLER_CHALLENGE       0x4030
 #define VAR_FRONTIER_GAMBLER_SET_CHALLENGE   0x4031
 #define VAR_FRONTIER_GAMBLER_AMOUNT_BET      0x4032
 #define VAR_FRONTIER_GAMBLER_STATE           0x4033
-
 #define VAR_DEOXYS_ROCK_STEP_COUNT           0x4034
 #define VAR_DEOXYS_ROCK_LEVEL                0x4035
 #define VAR_PC_BOX_TO_SEND_MON               0x4036
@@ -79,7 +77,7 @@
 #define VAR_REGICE_STEPS_2                   0x403C
 #define VAR_REGICE_STEPS_3                   0x403D
 #define VAR_ALTERING_CAVE_WILD_SET           0x403E
-#define VAR_DISTRIBUTE_EON_TICKET            0x403F // This var is read and written, but is always zero. The only way to obtain the Eon Ticket in Emerald is via Record Mixing
+#define VAR_SOOTOPOLIS_CITY_STATE            0x403F // This var is read and written, but is always zero. The only way to obtain the Eon Ticket in Emerald is via Record Mixing
 #define VAR_DAYS                             0x4040
 #define VAR_FANCLUB_FAN_COUNTER              0x4041
 #define VAR_FANCLUB_LOSE_FAN_TIMER           0x4042
@@ -93,75 +91,80 @@
 #define VAR_CRUISE_STEP_COUNT                0x404A
 #define VAR_POKELOT_RND1                     0x404B
 #define VAR_POKELOT_RND2                     0x404C
-#define VAR_POKELOT_PRIZE_PLACE              0x404D
-#define VAR_GENERIC                          0x404E //custom var
-#define VAR_LOTAD_SIZE_RECORD                0x404F
-#define VAR_LITTLEROOT_TOWN_STATE            0x4050
-#define VAR_OLDALE_TOWN_STATE                0x4051
-#define VAR_HEAL_SHOP_USED                   0x4052 // custom var
-#define VAR_LAVARIDGE_TOWN_STATE             0x4053
-#define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_ZONE                             0x4055 // custom Var
-#define VAR_ZHULI_INTRO                      0x4056 // custom var
-#define VAR_PETALBURG_CITY_STATE             0x4057
-#define VAR_SLATEPORT_CITY_STATE             0x4058
-#define VAR_ADVICE                           0x4059 // custom var
-#define VAR_RUSTBORO_CITY_STATE              0x405A
-#define VAR_ZONE0_STATE                      0x405B // custom Var
-#define VAR_ZONE6A_STATE                     0x405C // custom Var
-#define VAR_MOSSDEEP_CITY_STATE              0x405D
-#define VAR_SOOTOPOLIS_CITY_STATE            0x405E
-#define VAR_UNUSED_0x405F                    0x405F // unused Var
-#define VAR_ROUTE101_STATE                   0x4060
-#define VAR_ZONE8D_STATE                     0x4061 // custom Var
-#define VAR_ZONE11A_STATE                    0x4062 // custom Var
-#define VAR_ROUTE104_STATE                   0x4063
-#define VAR_ZONE14C_STATE                    0x4064 // custom Var
-#define VAR_ZONE15B_STATE                    0x4065 // Unused Var
-#define VAR_ZONE10A_STATE                    0x4066 // Unused Var
-#define VAR_ZONE17A_STATE                    0x4067 // Unused Var
-#define VAR_ZONE18B_STATE                    0x4068 // Unused Var
-#define VAR_ROUTE110_STATE                   0x4069
-#define VAR_ZONE21A_STATE                    0x406A // Unused Var
-#define VAR_ZONE25L_STATE                    0x406B // Unused Var
-#define VAR_WILD_MUSIC                       0x406C // Unused Var
-#define VAR_TRAINER_MUSIC                    0x406D // Unused Var
-#define VAR_LEVIATHAN_MUSIC                  0x406E // Unused Var
-#define VAR_ROUTE116_STATE                   0x406F
-#define VAR_ZONEB1_STATE                     0x4070 // Unused Var
-#define VAR_ROUTE118_STATE                   0x4071
-#define VAR_ROUTE119_STATE                   0x4072
-#define VAR_ZONE26_STATE                     0x4073 // Unused Var
-#define VAR_ROUTE121_STATE                   0x4074
-#define VAR_ROUTE122_STATE                   0x4075 // Unused Var
-#define VAR_ROUTE123_STATE                   0x4076 // Unused Var
-#define VAR_ROUTE124_STATE                   0x4077 // Unused Var
-#define VAR_ROUTE125_STATE                   0x4078 // Unused Var
-#define VAR_ROUTE126_STATE                   0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                   0x407A // Unused Var
-#define VAR_ROUTE128_STATE                   0x407B
-#define VAR_ROUTE129_STATE                   0x407C // Unused Var
-#define VAR_ROUTE130_STATE                   0x407D // Unused Var
-#define VAR_ROUTE131_STATE                   0x407E // Unused Var
-#define VAR_ROUTE132_STATE                   0x407F // Unused Var
-#define VAR_ROUTE133_STATE                   0x4080 // Unused Var
-#define VAR_ROUTE134_STATE                   0x4081 // Unused Var
-#define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082
-#define VAR_UNUSED_0x4083                    0x4083 // Unused Var
-#define VAR_BIRCH_LAB_STATE                  0x4084
-#define VAR_PETALBURG_GYM_STATE              0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
-#define VAR_CONTEST_HALL_STATE               0x4086
-#define VAR_CABLE_CLUB_STATE                 0x4087
-#define VAR_CONTEST_TYPE                     0x4088
-#define VAR_SECRET_BASE_INITIALIZED          0x4089
-#define VAR_CONTEST_PRIZE_PICKUP             0x408A
-#define VAR_UNUSED_0x408B                    0x408B // Unused Var
+#define VAR_ROUTE104_STATE                   0x404D
+#define VAR_RUSTBORO_CITY_STATE              0x404E
+#define VAR_MOSSDEEP_CITY_STATE              0x404F
+
+
+// custom vars
+#define VAR_ZONE                             0x4050
+#define VAR_ZONE_0_STATE                     0x4051
+#define VAR_ZONE_1_STATE                     0x4052
+#define VAR_ZONE_2_STATE                     0x4053
+#define VAR_ZONE_3_STATE                     0x4054
+#define VAR_ZONE_4_STATE                     0x4055
+#define VAR_ZONE_5_STATE                     0x4056
+#define VAR_ZONE_6_STATE                     0x4057
+#define VAR_ZONE_7_STATE                     0x4058
+#define VAR_ZONE_8_STATE                     0x4059
+#define VAR_ZONE_9_STATE                     0x405A
+#define VAR_ZONE_10_STATE                    0x405B
+#define VAR_ZONE_11_STATE                    0x405C
+#define VAR_ZONE_12_STATE                    0x405D
+#define VAR_ZONE_13_STATE                    0x405E
+#define VAR_ZONE_14_STATE                    0x405F
+#define VAR_ZONE_15_STATE                    0x4060
+#define VAR_ZONE_16_STATE                    0x4061
+#define VAR_ZONE_17_STATE                    0x4062
+#define VAR_ZONE_18_STATE                    0x4063
+#define VAR_ZONE_19_STATE                    0x4064
+#define VAR_ZONE_20_STATE                    0x4065
+#define VAR_ZONE_21_STATE                    0x4066
+#define VAR_ZONE_22_STATE                    0x4067
+#define VAR_ZONE_23_STATE                    0x4068
+#define VAR_ZONE_24_STATE                    0x4069
+#define VAR_ZONE_25_STATE                    0x406A
+#define VAR_ZONE_26_STATE                    0x406B
+#define VAR_ZONE_27_STATE                    0x406C
+#define VAR_ZONE_28_STATE                    0x406D
+#define VAR_ZONE_29_STATE                    0x406E
+#define VAR_ZONE_30_STATE                    0x406F
+#define VAR_ZONE_31_STATE                    0x4070
+#define VAR_ZONE_32_STATE                    0x4071
+#define VAR_ZONE_33_STATE                    0x4072
+#define VAR_ZONE_34_STATE                    0x4073
+#define VAR_ZONE_35_STATE                    0x4074
+#define VAR_ZONE_36_STATE                    0x4075
+#define VAR_ZONE_37_STATE                    0x4076
+#define VAR_ZONE_38_STATE                    0x4077
+#define VAR_ZONE_39_STATE                    0x4078
+#define VAR_ZONE_40_STATE                    0x4079
+#define VAR_ZONE_41_STATE                    0x407A
+#define VAR_ZONE_42_STATE                    0x407B
+#define VAR_ZONE_43_STATE                    0x407C
+#define VAR_ZONE_44_STATE                    0x407D
+#define VAR_ZONE_45_STATE                    0x407E
+#define VAR_ZONE_46_STATE                    0x407F
+#define VAR_ZONE_47_STATE                    0x4080
+#define VAR_ZONE_48_STATE                    0x4081
+#define VAR_ZONE_49_STATE                    0x4082
+#define VAR_ZONE_50_STATE                    0x4083
+#define VAR_ZONE_B1_STATE                    0x4084
+#define VAR_UNUSED_0x4085                    0x4085
+#define VAR_UNUSED_0x4086                    0x4086
+#define VAR_UNUSED_0x4087                    0x4087
+#define VAR_ZHULI_INTRO                      0x4088
+#define VAR_UNUSED_0x4089                    0x4089
+#define VAR_UNUSED_0x408A                    0x408A
+#define VAR_UNUSED_0x408B                    0x408B
+
+// general purpose vars part 2
 #define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN  0x408C
 #define VAR_LITTLEROOT_RIVAL_STATE           0x408D
 #define VAR_BOARD_BRINEY_BOAT_STATE          0x408E
 #define VAR_DEVON_CORP_3F_STATE              0x408F
 #define VAR_BRINEY_HOUSE_STATE               0x4090
-#define VAR_UNUSED_0x4091                    0x4091 // Unused Var
+#define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4091
 #define VAR_LITTLEROOT_INTRO_STATE           0x4092
 #define VAR_MAUVILLE_GYM_STATE               0x4093
 #define VAR_LILYCOVE_MUSEUM_2F_STATE         0x4094
@@ -171,20 +174,20 @@
 #define VAR_PETALBURG_WOODS_STATE            0x4098
 #define VAR_LILYCOVE_CONTEST_LOBBY_STATE     0x4099
 #define VAR_RUSTURF_TUNNEL_STATE             0x409A
-#define VAR_UNUSED_0x409B                    0x409B // Unused Var
+#define VAR_BIRCH_LAB_STATE                  0x409B
 #define VAR_ELITE_4_STATE                    0x409C
-#define VAR_UNUSED_0x409D                    0x409D // Unused Var
+#define VAR_PETALBURG_GYM_STATE              0x409D
 #define VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE    0x409E
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE      0x409F
 #define VAR_SLATEPORT_HARBOR_STATE           0x40A0
-#define VAR_UNUSED_0x40A1                    0x40A1 // Unused var
+#define VAR_CONTEST_HALL_STATE               0x40A1
 #define VAR_SEAFLOOR_CAVERN_STATE            0x40A2
 #define VAR_CABLE_CAR_STATION_STATE          0x40A3
 #define VAR_SAFARI_ZONE_STATE                0x40A4  // 0: In or out of SZ, 1: Player exiting SZ, 2: Player entering SZ
 #define VAR_TRICK_HOUSE_BEING_WATCHED_STATE  0x40A5
 #define VAR_TRICK_HOUSE_FOUND_TRICK_MASTER   0x40A6
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE       0x40A7
-#define VAR_UNUSED_0x40A8                    0x40A8 // Unused Var
+#define VAR_CABLE_CLUB_STATE                 0x40A8
 #define VAR_CYCLING_CHALLENGE_STATE          0x40A9
 #define VAR_SLATEPORT_MUSEUM_1F_STATE        0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE       0x40AB
@@ -200,10 +203,10 @@
 #define VAR_TRICK_HOUSE_ENTER_FROM_CORRIDOR  0x40B5
 #define VAR_TRICK_HOUSE_PUZZLE_7_STATE_2     0x40B6 // Leftover from RS, never set
 #define VAR_SLATEPORT_FAN_CLUB_STATE         0x40B7
-#define VAR_UNUSED_0x40B8                    0x40B8 // Unused Var
+#define VAR_CONTEST_TYPE                     0x40B8
 #define VAR_MT_PYRE_STATE                    0x40B9
 #define VAR_NEW_MAUVILLE_STATE               0x40BA
-#define VAR_UNUSED_0x40BB                    0x40BB // Unused Var
+#define VAR_SECRET_BASE_INITIALIZED          0x40BB
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON    0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER          0x40BD
 #define VAR_GLASS_WORKSHOP_STATE             0x40BE
@@ -235,7 +238,7 @@
 #define VAR_SOOTOPOLIS_WALLACE_STATE         0x40D8
 #define VAR_HAS_TALKED_TO_SEAFLOOR_CAVERN_ENTRANCE_GRUNT 0x40D9
 #define VAR_REGISTER_BIRCH_STATE             0x40DA
-#define VAR_UNUSED_0x40DB                    0x40DB // Unused Var
+#define VAR_CONTEST_PRIZE_PICKUP             0x40DB
 #define VAR_UNUSED_0x40DC                    0x40DC // Unused Var
 #define VAR_GIFT_PICHU_SLOT                  0x40DD
 #define VAR_GIFT_UNUSED_1                    0x40DE // Var is written to, but never read
@@ -263,15 +266,17 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER        0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER       0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER 0x40F6
-#define VAR_UNUSED_0x40F7                    0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                    0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                    0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                    0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                    0x40FB // Unused Var
-#define VAR_MON_TO_PC                        0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                    0x40FE // Unused Var
-#define VAR_MUGSHOT_ID                    0x40FF // Mugshot ID Var
+
+// More custom vars
+#define VAR_GENERIC                          0x40F7
+#define VAR_ADVICE                           0x40F8
+#define VAR_WILD_MUSIC                       0x40F9 
+#define VAR_TRAINER_MUSIC                    0x40FA
+#define VAR_LEVIATHAN_MUSIC                  0x40FB
+#define VAR_MON_TO_PC                        0x40FC
+#define VAR_UNUSED_0x40FD                    0x40FD
+#define VAR_UNUSED_0x40FE                    0x40FE
+#define VAR_MUGSHOT_ID                       0x40FF // Mugshot ID Var
 
 #define VARS_END                             0x40FF
 #define VARS_COUNT                           (VARS_END - VARS_START + 1)

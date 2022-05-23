@@ -3577,10 +3577,10 @@ bool32 IsTrainerRegistered(void)
 // Always returns FALSE
 bool32 ShouldDistributeEonTicket(void)
 {
-    if (!VarGet(VAR_DISTRIBUTE_EON_TICKET))
+    // if (!VarGet(VAR_DISTRIBUTE_EON_TICKET))
         return FALSE;
 
-    return TRUE;
+    // return TRUE;
 }
 
 #define tState data[0]

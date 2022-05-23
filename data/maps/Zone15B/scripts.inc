@@ -3,7 +3,7 @@ Zone15B_MapScripts::
 	.byte 0
 
 Zone15B_OnFrame:
-	map_script_2 VAR_ZONE15B_STATE, 0, Zone15B_EventScript_Intro
+	map_script_2 VAR_ZONE_15_STATE, 0, Zone15B_EventScript_Intro
 	.2byte 0
 
 Zone15B_EventScript_Intro:
@@ -63,7 +63,7 @@ Zone15B_EventScript_Intro:
 	msgbox Zone15B_Text_Colress_TooLate, MSGBOX_AUTOCLOSE
 	delay 48
 	msgbox Zone15B_Text_Colress_Sanctuary, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE15B_STATE, 1
+	setvar VAR_ZONE_15_STATE, 1
 	releaseall
 	end
 

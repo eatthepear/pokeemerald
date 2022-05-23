@@ -4,7 +4,7 @@ Zone0A_MapScripts::
 	.byte 0
 
 Zone0A_OnFrame:
-	map_script_2 VAR_ZONE0_STATE, 0, Zone0A_EventScript_Intro
+	map_script_2 VAR_ZONE_0_STATE, 0, Zone0A_EventScript_Intro
 	.2byte 0
 
 Zone0A_OnTransition: @ 81F3983
@@ -43,13 +43,13 @@ Zone0A_EventScript_Intro:
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	goto_if_eq VAR_ZONEB1_STATE, 1, Zone0A_EventScript_SetZoneB1
-	setvar VAR_ZONE0_STATE, 1
+	goto_if_eq VAR_ZONE_B1_STATE, 1, Zone0A_EventScript_SetZoneB1
+	setvar VAR_ZONE_0_STATE, 1
 	releaseall
 	end
 
 Zone0A_EventScript_SetZoneB1:
-	setvar VAR_ZONE0_STATE, 2
+	setvar VAR_ZONE_0_STATE, 2
 	releaseall
 	end
 
