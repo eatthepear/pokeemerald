@@ -60,8 +60,23 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_Corey),
-        .party = {.TrainerMon = sParty_Corey},
+        .partySize = ARRAY_COUNT(sParty_CoreyDefault),
+        .party = {.TrainerMon = sParty_CoreyDefault},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+    },
+
+    [TRAINER_COREY_LEVIATHAN_1_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_M,
+        .trainerName = _("Corey"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_CoreyBrutal),
+        .party = {.TrainerMon = sParty_CoreyBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
@@ -2034,21 +2049,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_LelouchExp4),
         .party = {.TrainerMon = sParty_LelouchExp4},
-    },
-
-    [TRAINER_LEVIATHAN1_BRUTAL] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_FISHERMAN,
-        .trainerName = _("Remi"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_RemiBrutal),
-        .party = {.TrainerMon = sParty_RemiBrutal},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_LEVIATHAN2_BRUTAL] =

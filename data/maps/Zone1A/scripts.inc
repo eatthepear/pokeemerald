@@ -19,6 +19,7 @@ Zone1A_EventScript_Exit_2:
 
 Zone1A_EventScript_LeviathanBattle::
 	lock
+	faceplayer
 	fadeoutbgm 1
 	msgbox Zone1A_Text_Leviathan1Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -39,9 +40,8 @@ Zone1A_EventScript_LeviathanBattle_1:
 	end
 
 Zone1A_EventScript_LeviathanBattle_2:
-	totemboost_speed1 B_POSITION_OPPONENT_LEFT
 	setvar VAR_MUGSHOT_ID, MUGSHOT_COREY
-	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat
+	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1_BRUTAL, Zone1A_Text_Leviathan1Defeat
 	goto Zone1A_EventScript_LeviathanBattle_1
 
 

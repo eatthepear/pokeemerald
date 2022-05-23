@@ -3,7 +3,7 @@
  * 
  * Trainers are arranged in the order it is possible to battle them. There are Zone tags that divide up where the trainers are located.
  * 
- * Some trainers are battled in different ways, be it aura boosts or tag battles or 2 on 1 battles.
+ * Some trainers are battled in different ways, be it double battles, tag battles, gauntlets, or battles that start with certain conditions.
  * These are included in the comments next to each trainer.
  * 
  * Some trainers have different parties on Default and Brutal.
@@ -73,7 +73,20 @@ static const struct TrainerMon sParty_Oscar[] = {
     }
 };
 
-static const struct TrainerMon sParty_Corey[] = {//Leviathan, Default
+static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
+    {
+    .iv = 31,
+    .lvl = 7,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_HIDDEN, //Gluttony
+    .species = SPECIES_SKWOVET,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_TAIL_WHIP, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_CoreyBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 7,
