@@ -82,8 +82,8 @@ static const u8 sBindDescription[] = _(
     "for 2 to 5 turns.");
 
 static const u8 sSlamDescription[] = _(
-    "Slams the foe with a long\n"
-    "tail, vine, etc.");
+    "Slams with a long tail,\n"
+    "vine, etc. Never misses.");
 
 static const u8 sVineWhipDescription[] = _(
     "Strikes the foe with\n"
