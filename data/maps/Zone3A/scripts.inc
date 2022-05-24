@@ -96,8 +96,12 @@ Zone3A_EventScript_LeviathanBattle_1:
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_10
 	applymovement 4, Zone3A_Movement_Remi_WalkToPlayer
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_11
 	giveitem ITEM_GOOD_ROD, 1
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
 	applymovement 4, Zone3A_Movement_Remi_WalkBackToPhillipa
 	waitmovement 0
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_12
@@ -121,7 +125,7 @@ Zone3A_EventScript_LeviathanBattle_1:
 
 Zone3A_EventScript_LeviathanBattle_2:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA
-	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat
+	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3_BRUTAL, Zone3A_Text_Leviathan3Defeat
 	goto Zone3A_EventScript_LeviathanBattle_1
 
 

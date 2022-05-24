@@ -53,7 +53,7 @@ Zone6A_EventScript_Rita::
 	goto_if_not_defeated TRAINER_CONSTANCE, Zone6A_EventScript_RitaSaysNo
 	goto_if_not_defeated TRAINER_RONAN, Zone6A_EventScript_RitaSaysNo
 	goto_if_defeated TRAINER_LEVIATHAN3, Zone6A_EventScript_RitaAlreadyDefeated
-	goto_if_defeated TRAINER_LEVIATHAN3_BRUTAL, Zone6A_EventScript_RitaAlreadyDefeated
+	goto_if_defeated TRAINER_LEVIATHAN3, Zone6A_EventScript_RitaAlreadyDefeated
 	msgbox Zone6A_Text_Rita_ReadyToBattle, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone6A_EventScript_RitaBattle
@@ -77,7 +77,7 @@ Zone6A_EventScript_RitaBattle:
 	end
 
 Zone6A_EventScript_RitaBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN3_BRUTAL, Zone6A_Text_Leviathan3Defeat
+	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
 	goto Zone6A_EventScript_Leviathan3Defeated
 	end
 

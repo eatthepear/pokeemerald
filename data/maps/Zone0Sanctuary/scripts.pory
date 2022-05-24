@@ -388,7 +388,7 @@ script Zone0Sanctuary_EventScript_HandleStarterSelection {
 			case 1:
 				setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
 			case 2:
-				setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+				setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
 			case 3:
 				setvar(VAR_TEMP_2, SPECIES_CHIKORITA)
 			case 4:
@@ -441,7 +441,9 @@ script Zone0Sanctuary_EventScript_HandleStarterSelection {
 	if (var(VAR_RESULT) == NO) {
 		goto(Zone0Sanctuary_EventScript_HandleStarterSelection)
 	}
+	setflag(FLAG_BOOSTED_IVS)
 	givemon(VAR_TEMP_2, 5, ITEM_NONE)
+	clearflag(FLAG_BOOSTED_IVS)
 	hidemonpic
 	playfanfare(MUS_OBTAIN_ITEM)
 	message(format("{PLAYER} received the {STR_VAR_1}!"))

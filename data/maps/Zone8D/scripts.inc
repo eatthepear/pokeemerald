@@ -141,7 +141,7 @@ Zone8D_EventScript_BattleSetup:
 Zone8D_EventScript_MirageBrutal:
 	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4_BRUTAL, 0, NULL, Zone8D_Text_MirageDefeat
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_Text_MirageDefeat
 	compare VAR_RESULT, 0
 	goto_if_ne Zone8D_EventScript_LeviathanBattle
 	special LoadPlayerParty

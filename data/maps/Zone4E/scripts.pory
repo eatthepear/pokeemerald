@@ -28,16 +28,15 @@ script Zone4E_EventScript_LeviathanBattle {
 	msgbox(Zone4E_Text_Leviathan4Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-		settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1)
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_ISABELLA)
-		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
+		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat)
 	} else {
 		totemboost_spatk1(B_POSITION_OPPONENT_LEFT)
 		setvar(VAR_MUGSHOT_ID, MUGSHOT_ISABELLA)
 		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: Did you like my enchantment?\pThose little aura boosts sure pack a punch, don't they?\pAnyways, you can have some Sitrus Berries, if you want.\pPonyta and I spent some time gathering them earlier, but we've got too many and we want to share."))
+	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: That battle was magical!\pFor your victory, take these Sitrus Berries.\pPonyta and I spent some time gathering them earlier, but we've got too many and we want to share."))
 	giveitem(ITEM_SITRUS_BERRY, 5)
 	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: I'm gonna go finish reading my story now.\pI do hope your story has a happy ending."))
 	closemessage
@@ -52,9 +51,10 @@ script Zone4E_EventScript_LeviathanBattle {
 text Zone4E_Text_Leviathan4Intro {
 	format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: And the prince saw her from across the room, clad in her light pink dress, looking around as if she was searching for someone she had only seen in a dream.\p"
 	"That's just a bit from my story that I've been reading, 'The Shining Honedge'.\p"
-	"I just love fables; they're so magical!\n"
+	"I'm {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}.\n"
+	"I just love fables; they're so magical!\l"
 	"I hope our battle is just as special.\p"
-	"I, {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}, accept your challenge!")
+	"Bring it on!")
 }
 
 text Zone4E_Text_Leviathan4Defeat {

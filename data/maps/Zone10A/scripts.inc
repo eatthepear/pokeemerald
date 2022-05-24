@@ -54,7 +54,7 @@ Zone10A_EventScript_InitiateLeviathanBattle:
 	end
 
 Zone10A_EventScript_AdaminaBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN5_BRUTAL, Zone10A_Text_Leviathan5Defeat
+	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
 	goto Zone10A_EventScript_Leviathan5Defeated
 	end
 

@@ -40,7 +40,7 @@ script Zone3A_EventScript_LeviathanBattle {
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA)
-		trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat)
+		trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3_BRUTAL, Zone3A_Text_Leviathan3Defeat)
 	} else {
 		setvar(VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA)
 		trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat)
@@ -82,8 +82,12 @@ script Zone3A_EventScript_LeviathanBattle {
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I'm proud of you, kiddo."))
 	applymovement(4, Zone3A_Movement_Remi_WalkToPlayer)
 	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Thanks for being a good sport.\pHere, I want you to have this."))
 	giveitem(ITEM_GOOD_ROD, 1)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	waitmovement(0)
 	applymovement(4, Zone3A_Movement_Remi_WalkBackToPhillipa)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement for one day.\pIt's dinner time."))

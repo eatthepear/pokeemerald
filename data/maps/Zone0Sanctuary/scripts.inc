@@ -319,7 +319,9 @@ Zone0Sanctuary_EventScript_HandleStarterSelection_28:
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_HandleStarterSelection_32
 Zone0Sanctuary_EventScript_HandleStarterSelection_31:
+	setflag FLAG_BOOSTED_IVS
 	givemon VAR_TEMP_2, 5, ITEM_NONE
+	clearflag FLAG_BOOSTED_IVS
 	hidemonpic
 	playfanfare MUS_OBTAIN_ITEM
 	message Zone0Sanctuary_EventScript_Intro_Text_17
@@ -479,7 +481,7 @@ Zone0Sanctuary_EventScript_HandleStarterSelection_36:
 	goto Zone0Sanctuary_EventScript_HandleStarterSelection_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelection_37:
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
+	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
 	goto Zone0Sanctuary_EventScript_HandleStarterSelection_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelection_38:

@@ -16,7 +16,9 @@ Zone0C_EventScript_EeveeGirl::
 
 Zone0C_EventScript_SendEeveeParty::
 	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
+	setflag FLAG_BOOSTED_IVS
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	clearflag FLAG_BOOSTED_IVS
 	callnative SetEeveeGivenAtEncounter
 	setvar VAR_TEMP_1, SPECIES_EEVEE
 	call Zone0C_EventScript_ReceivedEeveeFanfare

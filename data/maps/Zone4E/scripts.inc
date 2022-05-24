@@ -62,9 +62,8 @@ Zone4E_EventScript_LeviathanBattle_1:
 	end
 
 Zone4E_EventScript_LeviathanBattle_2:
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ISABELLA
-	trainerbattle_no_intro TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat
+	trainerbattle_no_intro TRAINER_ISABELLA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat
 	goto Zone4E_EventScript_LeviathanBattle_1
 
 
@@ -73,11 +72,9 @@ Zone4E_EventScript_ItemSuperPotion::
 	end
 
 Zone4E_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Isabella{COLOR DARK_GRAY}: Did you like my enchantment?\p"
-	.string "Those little aura boosts sure pack a\n"
-	.string "punch, don't they?\p"
-	.string "Anyways, you can have some Sitrus\n"
-	.string "Berries, if you want.\p"
+	.string "{COLOR BLUE}Isabella{COLOR DARK_GRAY}: That battle was magical!\p"
+	.string "For your victory, take these Sitrus\n"
+	.string "Berries.\p"
 	.string "Ponyta and I spent some time gathering\n"
 	.string "them earlier, but we've got too many\l"
 	.string "and we want to share.$"
@@ -97,10 +94,10 @@ Zone4E_Text_Leviathan4Intro::
 	.string "That's just a bit from my story that\n"
 	.string "I've been reading, 'The Shining\l"
 	.string "Honedge'.\p"
-	.string "I just love fables; they're so magical!\n"
+	.string "I'm {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}.\n"
+	.string "I just love fables; they're so magical!\l"
 	.string "I hope our battle is just as special.\p"
-	.string "I, {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}, accept your\n"
-	.string "challenge!$"
+	.string "Bring it on!$"
 
 Zone4E_Text_Leviathan4Defeat::
 	.string "It seems your story is only just\n"

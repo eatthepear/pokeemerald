@@ -57,10 +57,8 @@ Zone5A_EventScript_LeviathanBattle_1:
 	end
 
 Zone5A_EventScript_LeviathanBattle_2:
-	totemboost_atk1 B_POSITION_OPPONENT_LEFT
-	totemboost_spatk1 B_POSITION_OPPONENT_RIGHT
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
-	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat
+	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5_BRUTAL, Zone5A_Text_Leviathan5Defeat
 	goto Zone5A_EventScript_LeviathanBattle_1
 
 
