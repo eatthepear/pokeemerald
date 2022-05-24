@@ -47,7 +47,7 @@ Zone5A_EventScript_LeviathanBattle::
 Zone5A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_2
-	giveitem ITEM_TM05, 1
+	giveitem ITEM_TM06, 1
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject 4
@@ -146,22 +146,9 @@ Zone5A_EventScript_ItemQuickBall::
 	finditem ITEM_QUICK_BALL
 	end
 
-Zone5A_EventScript_Item1000::
-	lock
-	showmoneybox 0, 0, 0
-	addmoney 1000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone5A_Text_Found1000, MSGBOX_DEFAULT
-	updatemoneybox
-	waitfanfare
-	hidemoneybox
-	setflag FLAG_ITEM_ZONE5A_1000
-	removeobject 6
-	release
+Zone5A_EventScript_ItemTM05::
+	finditem ITEM_TM05
 	end
-
-Zone5A_Text_Found1000:
-	.string "Found ¥1000!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"

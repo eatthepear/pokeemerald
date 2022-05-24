@@ -3035,14 +3035,26 @@ static const u8 sTM04Desc[] = _(
     // "ally fainted.");
 
 static const u8 sTM05Desc[] = _(
-    "Hurls boulders to\n"
-    "damage the foe and\n"
-    "lower their Speed.");
+    "An extremely fast\n"
+    "attack that can't\n"
+    "be avoided.");
+    // Rock Tomb
+    // "Hurls boulders to\n"
+    // "damage the foe and\n"
+    // "lower their Speed.");
 
 static const u8 sTM06Desc[] = _(
-    "Shoots 2 to 5 seeds\n"
-    "in a row to strike\n"
-    "the foe.");
+    "Bites and eats the\n"
+    "foe's held Berry,\n"
+    "gaining its effect.");
+    // Bullet Seed
+    // "Shoots 2 to 5 seeds\n"
+    // "in a row to strike\n"
+    // "the foe.");
+    // Pluck
+    // "Pecks and eats the\n"
+    // "foe's held Berry,\n"
+    // "gaining its effect.");
 
 static const u8 sTM07Desc[] = _(
     "Throws scorching\n"
