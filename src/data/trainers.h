@@ -142,12 +142,27 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_Joey),
-        .party = {.TrainerMon = sParty_Joey},
+        .partySize = ARRAY_COUNT(sParty_JoeyDefault),
+        .party = {.TrainerMon = sParty_JoeyDefault},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
     
+    [TRAINER_JOEY_LEVIATHAN_2_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Joey"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_JoeyBrutal),
+        .party = {.TrainerMon = sParty_JoeyBrutal},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+    },
+
     [TRAINER_JEMMA] =
     {
         .trainerClass = TRAINER_CLASS_LASS,
@@ -2049,21 +2064,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_LelouchExp4),
         .party = {.TrainerMon = sParty_LelouchExp4},
-    },
-
-    [TRAINER_LEVIATHAN2_BRUTAL] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BUG_MANIAC,
-        .trainerName = _("Declan"),
-        .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_DeclanBrutal),
-        .party = {.TrainerMon = sParty_DeclanBrutal},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_LEVIATHAN3_BRUTAL] =

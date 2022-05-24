@@ -175,8 +175,20 @@ static const struct TrainerMon sParty_Arthur[] = {
     }
 };
 
+static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, optional
+    {
+    .iv = 31,
+    .lvl = 9,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_HIDDEN, //Run Away
+    .species = SPECIES_RATTATA,
+    .heldItem = ITEM_SILK_SCARF,
+    .moves = {MOVE_SLAM, MOVE_FEINT_ATTACK, MOVE_NONE, MOVE_NONE}
+    }
+};
 
-static const struct TrainerMon sParty_Joey[] = {//Leviathan, Default, optional
+static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 9,
@@ -187,16 +199,6 @@ static const struct TrainerMon sParty_Joey[] = {//Leviathan, Default, optional
     .heldItem = ITEM_SILK_SCARF,
     .moves = {MOVE_SLAM, MOVE_FEINT_ATTACK, MOVE_NONE, MOVE_NONE}
     }
-    // {
-    // .iv = 31,
-    // .lvl = 9,
-    // .nature = NATURE_ADAMANT,
-    // .gender = TRAINER_MON_FEMALE,
-    // .ability = ABILITY_HIDDEN, //Run Away
-    // .species = SPECIES_RATTATA,
-    // .heldItem = ITEM_SILK_SCARF,
-    // .moves = {MOVE_SLAM, MOVE_FEINT_ATTACK, MOVE_NONE, MOVE_NONE}
-    // }
 };
 
 /* ------------------- Zone 3 ------------------- */

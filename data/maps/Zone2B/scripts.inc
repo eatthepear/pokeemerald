@@ -66,9 +66,8 @@ Zone2B_EventScript_LeviathanBattle_5:
 	end
 
 Zone2B_EventScript_LeviathanBattle_8:
-	totemboost_acc1 B_POSITION_OPPONENT_LEFT
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOEY
-	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat
+	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2_BRUTAL, Zone2B_Text_Leviathan2Defeat
 	goto Zone2B_EventScript_LeviathanBattle_7
 
 
