@@ -444,9 +444,19 @@ static const struct TrainerMon sParty_Isabella[] = {//Leviathan, Default
     .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Pastel Veil
-    .species = SPECIES_PONYTA_GALARIAN, //Starts with aura +1 Special Attack
+    .species = SPECIES_PONYTA_GALARIAN,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_PSYBEAM, MOVE_DOUBLE_KICK, MOVE_FAIRY_WIND, MOVE_MORNING_SUN}
+    },
+    {
+    .iv = 31,
+    .lvl = 13,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Strong Jaw
+    .species = SPECIES_SNUBBULL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_COVET, MOVE_BITE, MOVE_FIRE_FANG, MOVE_THUNDER_FANG}
     }
 };
 
