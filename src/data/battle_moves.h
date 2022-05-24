@@ -321,7 +321,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SLAM] =
     {
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 80,
         .type = TYPE_NORMAL,
         .accuracy = 0,
         .pp = 20,
