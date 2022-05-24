@@ -10612,9 +10612,9 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_PACHIRISU] =
     {
-        .baseHP        = 70,
+        .baseHP        = 75,
         // .baseHP        = 60,
-        .baseAttack    = 85,
+        .baseAttack    = 75,
         // .baseAttack    = 45,
         .baseDefense   = 70,
         .baseSpeed     = 95,
@@ -10631,7 +10631,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FAIRY,
-        .abilities = {ABILITY_FUR_COAT, ABILITY_VOLT_ABSORB},
+        .abilities = {ABILITY_PRANKSTER, ABILITY_NONE},
         // .abilities = {ABILITY_RUN_AWAY, ABILITY_PICKUP, ABILITY_VOLT_ABSORB},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
