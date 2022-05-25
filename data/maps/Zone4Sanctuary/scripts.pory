@@ -51,5 +51,5 @@ script Zone4Sanctuary_EventScript_NextZone {
 }
 
 text Zone4Sanctuary_Text_Reward {
-	format("TM04 - Snarl!$")
+	format("TM04 - Snarl!")
 }

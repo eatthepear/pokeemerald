@@ -53,5 +53,5 @@ script Zone2Sanctuary_EventScript_NextZone {
 }
 
 text Zone2Sanctuary_Text_Reward {
-	format("TM02 - Electroweb!$")
+	format("TM02 - Electroweb!")
 }

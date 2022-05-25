@@ -79,7 +79,7 @@ script Zone3Sanctuary_EventScript_NextZone {
 }
 
 text Zone3Sanctuary_Text_Reward {
-	format("Elemental Gems!$")
+	format("Elemental Gems!")
 }
 
 text Zone3Sanctuary_Text_RewardReceived {
