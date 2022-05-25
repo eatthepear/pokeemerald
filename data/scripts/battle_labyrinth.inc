@@ -356,6 +356,8 @@ EventScript_Shop_Lelouch_8:
 
 EventScript_Shop_Lelouch_12:
 	call EventScript_Shop_Lelouch_Training
+	clearflag FLAG_DOUBLE_EXP
+	clearflag FLAG_FORCE_BATTLE_ANIM_OFF
 	goto EventScript_Shop_Lelouch_10
 
 EventScript_Shop_Lelouch_13:
@@ -375,221 +377,445 @@ EventScript_Shop_Lelouch_Training::
 	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_Lelouch_Training_2
-	msgbox gText_Lelouch_CostsRedShards, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_Lelouch_Training_5
-	removeitem ITEM_RED_SHARD, 1
 	setflag FLAG_DOUBLE_EXP
 	setflag FLAG_FORCE_BATTLE_ANIM_OFF
-	msgbox gText_Lelouch_PayRed
-	msgbox gText_Lelouch_LetBeginTraining, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	switch VAR_ZONE
-	case 6, EventScript_Shop_Lelouch_Training_9
-	case 7, EventScript_Shop_Lelouch_Training_9
-	case 9, EventScript_Shop_Lelouch_Training_9
-	case 10, EventScript_Shop_Lelouch_Training_9
-	case 11, EventScript_Shop_Lelouch_Training_9
-	case 12, EventScript_Shop_Lelouch_Training_9
-	case 13, EventScript_Shop_Lelouch_Training_9
-	case 15, EventScript_Shop_Lelouch_Training_9
-	case 16, EventScript_Shop_Lelouch_Training_10
-	case 17, EventScript_Shop_Lelouch_Training_10
-	case 18, EventScript_Shop_Lelouch_Training_10
-	case 20, EventScript_Shop_Lelouch_Training_10
-	case 21, EventScript_Shop_Lelouch_Training_11
-	case 22, EventScript_Shop_Lelouch_Training_11
-	case 23, EventScript_Shop_Lelouch_Training_11
-	case 24, EventScript_Shop_Lelouch_Training_11
-	case 25, EventScript_Shop_Lelouch_Training_11
-	case 26, EventScript_Shop_Lelouch_Training_12
-EventScript_Shop_Lelouch_Training_7:
-	clearflag FLAG_DOUBLE_EXP
-	clearflag FLAG_FORCE_BATTLE_ANIM_OFF
+	case 6, EventScript_Shop_Lelouch_Training_6
+	case 7, EventScript_Shop_Lelouch_Training_6
+	case 9, EventScript_Shop_Lelouch_Training_6
+	case 10, EventScript_Shop_Lelouch_Training_6
+	case 11, EventScript_Shop_Lelouch_Training_6
+	case 12, EventScript_Shop_Lelouch_Training_6
+	case 13, EventScript_Shop_Lelouch_Training_6
+	case 15, EventScript_Shop_Lelouch_Training_6
+	case 16, EventScript_Shop_Lelouch_Training_7
+	case 17, EventScript_Shop_Lelouch_Training_7
+	case 18, EventScript_Shop_Lelouch_Training_7
+	case 20, EventScript_Shop_Lelouch_Training_7
+	case 21, EventScript_Shop_Lelouch_Training_8
+	case 22, EventScript_Shop_Lelouch_Training_8
+	case 23, EventScript_Shop_Lelouch_Training_8
+	case 24, EventScript_Shop_Lelouch_Training_8
+	case 25, EventScript_Shop_Lelouch_Training_8
+	case 26, EventScript_Shop_Lelouch_Training_9
+EventScript_Shop_Lelouch_Training_4:
 	return
 
 EventScript_Shop_Lelouch_Training_2:
 	msgbox gText_Lelouch_NotEnoughColor
 	return
 
-EventScript_Shop_Lelouch_Training_5:
-	return
-
-EventScript_Shop_Lelouch_Training_9:
+EventScript_Shop_Lelouch_Training_6:
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING1, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_14
-	goto EventScript_Shop_Lelouch_Training_7
+	case 0, EventScript_Shop_Lelouch_Training_11
+	goto EventScript_Shop_Lelouch_Training_4
 
-EventScript_Shop_Lelouch_Training_10:
+EventScript_Shop_Lelouch_Training_7:
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING2, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_16
-	case 1, EventScript_Shop_Lelouch_Training_17
-	goto EventScript_Shop_Lelouch_Training_7
+	case 0, EventScript_Shop_Lelouch_Training_13
+	case 1, EventScript_Shop_Lelouch_Training_14
+	goto EventScript_Shop_Lelouch_Training_4
 
-EventScript_Shop_Lelouch_Training_11:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_Training_18
+EventScript_Shop_Lelouch_Training_8:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_Training_15
 	scrollingmultichoice 6, 0, 0, 5, TRUE
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_29
-	case 1, EventScript_Shop_Lelouch_Training_30
-	case 2, EventScript_Shop_Lelouch_Training_31
-	case 3, EventScript_Shop_Lelouch_Training_32
-	case 4, EventScript_Shop_Lelouch_Training_33
-	case 5, EventScript_Shop_Lelouch_Training_34
-	case 6, EventScript_Shop_Lelouch_Training_35
-	case 7, EventScript_Shop_Lelouch_Training_36
-	case 8, EventScript_Shop_Lelouch_Training_37
-	goto EventScript_Shop_Lelouch_Training_7
+	case 0, EventScript_Shop_Lelouch_Training_32
+	case 1, EventScript_Shop_Lelouch_Training_33
+	case 2, EventScript_Shop_Lelouch_Training_34
+	case 3, EventScript_Shop_Lelouch_Training_35
+	case 4, EventScript_Shop_Lelouch_Training_36
+	case 5, EventScript_Shop_Lelouch_Training_37
+	case 6, EventScript_Shop_Lelouch_Training_38
+	case 7, EventScript_Shop_Lelouch_Training_39
+	case 8, EventScript_Shop_Lelouch_Training_40
+	goto EventScript_Shop_Lelouch_Training_4
 
-EventScript_Shop_Lelouch_Training_12:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_Training_21
+EventScript_Shop_Lelouch_Training_9:
+	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_Training_18
 	scrollingmultichoice 7, 0, 0, 5, TRUE
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_44
-	case 1, EventScript_Shop_Lelouch_Training_45
-	case 2, EventScript_Shop_Lelouch_Training_46
-	case 3, EventScript_Shop_Lelouch_Training_47
-	case 4, EventScript_Shop_Lelouch_Training_48
-	case 5, EventScript_Shop_Lelouch_Training_49
-	case 6, EventScript_Shop_Lelouch_Training_50
-	case 7, EventScript_Shop_Lelouch_Training_51
-	case 8, EventScript_Shop_Lelouch_Training_52
-	case 9, EventScript_Shop_Lelouch_Training_53
-	goto EventScript_Shop_Lelouch_Training_7
+	case 0, EventScript_Shop_Lelouch_Training_47
+	case 1, EventScript_Shop_Lelouch_Training_48
+	case 2, EventScript_Shop_Lelouch_Training_49
+	case 3, EventScript_Shop_Lelouch_Training_50
+	case 4, EventScript_Shop_Lelouch_Training_51
+	case 5, EventScript_Shop_Lelouch_Training_52
+	case 6, EventScript_Shop_Lelouch_Training_53
+	case 7, EventScript_Shop_Lelouch_Training_54
+	case 8, EventScript_Shop_Lelouch_Training_55
+	case 9, EventScript_Shop_Lelouch_Training_56
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_11:
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_21
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_13:
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_23
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_14:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp2, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_25
+	goto EventScript_Shop_Lelouch_Training_4
 
-EventScript_Shop_Lelouch_Training_16:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
-
-EventScript_Shop_Lelouch_Training_17:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
-
-EventScript_Shop_Lelouch_Training_18:
+EventScript_Shop_Lelouch_Training_15:
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING3, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_25
-	case 1, EventScript_Shop_Lelouch_Training_26
-	case 2, EventScript_Shop_Lelouch_Training_27
-	goto EventScript_Shop_Lelouch_Training_7
+	case 0, EventScript_Shop_Lelouch_Training_28
+	case 1, EventScript_Shop_Lelouch_Training_29
+	case 2, EventScript_Shop_Lelouch_Training_30
+	goto EventScript_Shop_Lelouch_Training_4
 
-EventScript_Shop_Lelouch_Training_21:
+EventScript_Shop_Lelouch_Training_18:
 	multichoice 0, 0, MULTI_LELOUCH_TRAINING4, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_39
-	case 1, EventScript_Shop_Lelouch_Training_40
-	case 2, EventScript_Shop_Lelouch_Training_41
-	case 3, EventScript_Shop_Lelouch_Training_42
-	goto EventScript_Shop_Lelouch_Training_7
+	case 0, EventScript_Shop_Lelouch_Training_42
+	case 1, EventScript_Shop_Lelouch_Training_43
+	case 2, EventScript_Shop_Lelouch_Training_44
+	case 3, EventScript_Shop_Lelouch_Training_45
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_21:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_23:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	return
 
 EventScript_Shop_Lelouch_Training_25:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
-
-EventScript_Shop_Lelouch_Training_26:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
 	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	return
 
-EventScript_Shop_Lelouch_Training_27:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+EventScript_Shop_Lelouch_Training_28:
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_57
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_29:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp2, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_59
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_30:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
-
-EventScript_Shop_Lelouch_Training_31:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_61
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_32:
-	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_63
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_33:
-	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp2, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_65
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_34:
-	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_67
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_35:
-	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_HP, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_69
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_36:
-	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_Atk, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_71
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_37:
-	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_Def, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_73
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_38:
+	msgbox gText_Lelouch_EV_SpA, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_75
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_39:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_SpD, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_77
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_40:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
-
-EventScript_Shop_Lelouch_Training_41:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_Spe, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_79
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_42:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_81
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_43:
+	msgbox gText_Lelouch_Exp2, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_83
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_44:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_85
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_45:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
-
-EventScript_Shop_Lelouch_Training_46:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp4, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_87
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_47:
-	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_89
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_48:
-	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp2, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_91
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_49:
-	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_93
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_50:
-	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_Exp4, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_95
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_51:
-	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_HP, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_97
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_52:
-	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	msgbox gText_Lelouch_EV_Atk, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_99
+	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_53:
+	msgbox gText_Lelouch_EV_Def, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_101
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_54:
+	msgbox gText_Lelouch_EV_SpA, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_103
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_55:
+	msgbox gText_Lelouch_EV_SpD, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_105
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_56:
+	msgbox gText_Lelouch_EV_Spe, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_107
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_57:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_59:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_61:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_63:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_65:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_67:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_69:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_71:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_73:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_75:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_77:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_79:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
 	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
-	goto EventScript_Shop_Lelouch_Training_7
+	return
+
+EventScript_Shop_Lelouch_Training_81:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_83:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_85:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_87:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_89:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP1, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_91:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP2, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_93:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP3, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_95:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEXP4, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_97:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVHP, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_99:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVATK, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_101:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVDEF, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_103:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPA, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_105:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPD, gText_LelouchDefeated
+	return
+
+EventScript_Shop_Lelouch_Training_107:
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	trainerbattle_no_intro TRAINER_LELOUCHEVSPE, gText_LelouchDefeated
+	return
 
 
 EventScript_Shop_Lelouch_MoveReminder::

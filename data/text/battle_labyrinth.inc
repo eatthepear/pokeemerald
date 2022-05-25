@@ -421,15 +421,81 @@ gText_Lelouch_NotEnoughColor:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\n"
 	.string "of that color.$"
 
-gText_Lelouch_CostsRedShards:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Each training session\n"
+gText_Lelouch_Exp1:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 1\n"
+	.string "is two level 10 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp2:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 2\n"
+	.string "is two level 20 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp3:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 3\n"
+	.string "is two level 30 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp4:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 4\n"
+	.string "is two level 40 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp5:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 5\n"
+	.string "is two level 50 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp6:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 6\n"
+	.string "is two level 60 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp7:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 7\n"
+	.string "is two level 70 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp8:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 8\n"
+	.string "is two level 80 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_Exp9:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 9\n"
+	.string "is two level 90 Audino and costs\l"
+	.string "one Red Shard, are you sure?$"
+
+gText_Lelouch_EV_HP:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: HP EV Training\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EV_Atk:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Atk EV Training\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EV_Def:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Def EV Training\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EV_SpA:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Sp. Atk EV Training\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EV_SpD:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Sp. Def EV Training\n"
+	.string "costs one Red Shard, are you sure?$"
+
+gText_Lelouch_EV_Spe:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Speed EV Training\n"
 	.string "costs one Red Shard, are you sure?$"
 
 gText_Lelouch_PayRed:
 	.string "{PLAYER} handed over 1 Red Shard.$"
 
-gText_Lelouch_LetBeginTraining:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Let us begin the training.$"
+gText_Lelouch_ChooseTraining:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\n"
+	.string "regiment you would like.$"
 
 gText_LelouchDefeated:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Excellent work.\n"
