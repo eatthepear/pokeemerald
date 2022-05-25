@@ -33,8 +33,8 @@
 #define TRAINER_REBECCA                      	29
 #define TRAINER_CAITLYN                      	30
 #define TRAINER_RYAN                         	31
-#define TRAINER_DECLAN_LEVIATHAN_5            	32
-#define TRAINER_DECLAN_LEVIATHAN_5_BRUTAL     	33
+#define TRAINER_KEVIN                        	32
+#define TRAINER_DECLAN_LEVIATHAN_5            	33
 #define TRAINER_LELOUCHEXP1                  	34
 #define TRAINER_FRANK                        	35
 #define TRAINER_MELANIE                      	36
@@ -171,8 +171,8 @@
 #define TRAINER_LEVIATHAN14_BRUTAL                        	167
 #define TRAINER_UNUSED                      168
 #define TRAINER_UNUSED2                     169
-#define TRAINER_FRANKLIN                    170
-#define TRAINER_KEVIN                       171
+#define TRAINER_UNUSED3                     170
+#define TRAINER_UNUSED4                     171
 #define TRAINER_JACK                        172
 #define TRAINER_DUDLEY                      173
 #define TRAINER_CHAD                        174
@@ -596,7 +596,7 @@
 #define TRAINER_BRENDAN_RUSTBORO_TREECKO    592
 #define TRAINER_BRENDAN_RUSTBORO_MUDKIP     593
 #define TRAINER_PAXTON                      594
-#define TRAINER_UNUSED3                     595
+#define TRAINER_UNUSED5                     595
 #define TRAINER_GRUNT_WEATHER_INST_5        596
 #define TRAINER_TABITHA_MT_CHIMNEY          597
 #define TRAINER_JONATHAN                    598

@@ -1603,7 +1603,11 @@ static void ChangeSummaryState (s16 *taskData, u8 taskId)
     switch (taskData[3])
     {
         case 0:
-            taskData[3] = 1;
+            if (FlagGet(FLAG_BRUTAL_MODE_ON)) {
+                taskData[3] = 2;
+            } else {
+                taskData[3] = 1;
+            }
             break;
         case 1:
             taskData[3] = 2;

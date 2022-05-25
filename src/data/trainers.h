@@ -431,6 +431,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Ryan},
     },
 
+    [TRAINER_KEVIN] =
+    {
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Kevin"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Kevin),
+        .party = {.TrainerMon = sParty_Kevin},
+    },
+
     [TRAINER_DECLAN_LEVIATHAN_5] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
@@ -440,23 +453,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_DeclanDefault),
-        .party = {.TrainerMon = sParty_DeclanDefault},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
-    },
-
-    [TRAINER_DECLAN_LEVIATHAN_5_BRUTAL] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BUG_MANIAC,
-        .trainerName = _("Declan"),
-        .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_DeclanBrutal),
-        .party = {.TrainerMon = sParty_DeclanBrutal},
+        .partySize = ARRAY_COUNT(sParty_Declan),
+        .party = {.TrainerMon = sParty_Declan},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },

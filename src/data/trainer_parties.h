@@ -612,30 +612,37 @@ static const struct TrainerMon sParty_Ryan[] = {
     }
 };
 
-static const struct TrainerMon sParty_DeclanDefault[] = {//Leviathan, Double Battle, Default
+// You fight Kevin then immediately fight Declan afterwards.
+// On Default, your party is fully healed in between fights, while on Brutal your party is not
+static const struct TrainerMon sParty_Kevin[] = {
     {
-    .iv = 30,
+    .iv = 10,
     .lvl = 15,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_2, //Sniper
-    .species = SPECIES_BEEDRILL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BUG_BITE, MOVE_POISON_TAIL, MOVE_FURY_ATTACK, MOVE_FOCUS_ENERGY}
+    .species = SPECIES_SURSKIT,
     },
     {
-    .iv = 30,
+    .iv = 10,
     .lvl = 15,
-    .nature = NATURE_TIMID,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Compound Eyes
-    .species = SPECIES_BUTTERFREE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRUGGLE_BUG, MOVE_GUST, MOVE_SLEEP_POWDER, MOVE_CONFUSION}
+    .species = SPECIES_PINECO,
+    },
+    {
+    .iv = 10,
+    .lvl = 15,
+    .species = SPECIES_KARRABLAST,
+    },
+    {
+    .iv = 10,
+    .lvl = 15,
+    .species = SPECIES_SHELMET,
+    },
+    {
+    .iv = 10,
+    .lvl = 15,
+    .species = SPECIES_GRUBBIN,
     }
 };
 
-static const struct TrainerMon sParty_DeclanBrutal[] = {//Leviathan, Double Battle, Brutal
+static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle
     {
     .iv = 31,
     .lvl = 15,

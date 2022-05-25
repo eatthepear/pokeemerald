@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone5A_EventScript_LeviathanBattle",
+      "script": "NULL",
       "flag": "FLAG_BEATLEVIATHAN5"
     },
     {
@@ -130,6 +130,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone5A_EventScript_Gilbert",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 28,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_BEATLEVIATHAN5"
     }
   ],
   "warp_events": [
@@ -144,6 +157,33 @@
       "var": "VAR_GENERIC",
       "var_value": "0",
       "script": "Zone5A_EventScript_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ZONE_5_STATE",
+      "var_value": "0",
+      "script": "Zone5A_EventScript_LeviathanBattle"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ZONE_5_STATE",
+      "var_value": "0",
+      "script": "Zone5A_EventScript_LeviathanBattle"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ZONE_5_STATE",
+      "var_value": "0",
+      "script": "Zone5A_EventScript_LeviathanBattle"
     }
   ],
   "bg_events": [

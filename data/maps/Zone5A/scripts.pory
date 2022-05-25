@@ -18,37 +18,95 @@ script Zone5A_EventScript_Exit {
 }
 
 script Zone5A_EventScript_LeviathanBattle {
-	lock
-	fadeoutbgm(1)
+	lockall
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 29) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 27) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	}
+	msgbox(format(
+		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… if it isn't the trainer who's been beating all my fellow club members.\pWell then. Would you like to challenge the final member of the Fearsome Foursome?"
+	), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?"))
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		releaseall
+		end
+	}
+	msgbox(format(
+		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Finally! My Bugs are writhing with excitement!"
+	))
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	trainerbattle_no_intro(TRAINER_KEVIN, format("It can't be!"))
+	applymovement(10, Common_Movement_FaceRight)
+	waitmovement(0)
+	msgbox(format(
+		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, man, if only you had joined our club!\pWe could have been the Fearsome Fivesome!"
+	))
+	applymovement(4, Common_Movement_FaceLeft)
+	waitmovement(0)
 	msgbox(format(
 		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"
 		"…\l"
-		"Stupid kids…\l"
-		"…\l"
+		"I told you already, Kevin.\l"
 		"I don't want to be part of that nonsense Fearsome Foursome club…\l"
 		"…\l"
-		"My club is the only club for me…$"))
+		"My club is the only club for me…"))
+	fadeoutbgm(1)
 	applymovement(4, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
-	faceplayer
+	msgbox(format("{COLOR BLUE}Declan{COLOR DARK_GRAY}: Ah! Another person! Hey you!"))
+	applymovement(4, Common_Movement_WalkDown)
+	waitmovement(0)
+	applymovement(4, Common_Movement_FaceLeft)
+	waitmovement(0)
+	applymovement(10, Common_Movement_FaceDown)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+	waitmovement(0)
 	msgbox(format(
-		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Hey you! Want to join my club? The name: The Bug Maniacs!\p"
-		"… You don't?!\p"
-		"You'll change your mind after {COLOR BLUE}Leviathan Declan{COLOR DARK_GRAY} beats you with his fabulous Bug Pokémon!$"))
-	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-    	setvar(VAR_MUGSHOT_ID, MUGSHOT_DECLAN)
-		trainerbattle_no_intro(TRAINER_DECLAN_LEVIATHAN_5_BRUTAL, Zone5A_Text_Leviathan5Defeat)
-	} else {
-		setvar(VAR_MUGSHOT_ID, MUGSHOT_DECLAN)
-		trainerbattle_no_intro(TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat)
+		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Want to join my club? The name: The Bug Maniacs!\p"
+		"…\n"
+		"…\l"
+		"You don't?!\p"
+		"You'll change your mind after {COLOR BLUE}Leviathan Declan{COLOR DARK_GRAY} beats you with his fabulous Bug Pokémon!"))
+	if (flag(FLAG_BRUTAL_MODE_ON) == false) {	
+		special(HealPlayerParty)
 	}
+	setvar(VAR_MUGSHOT_ID, MUGSHOT_DECLAN)
+	trainerbattle_no_intro(TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat)
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	applymovement(10, Common_Movement_WalkRight)
+	waitmovement(0)
+	applymovement(10, Common_Movement_FaceDown)
+	waitmovement(0)
 	msgbox(format(
-		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You got me. You don't have to join my club.\p"
-		"A reward?\n"
+		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, dude, I get it.\pYou don't want to join the Fearsome Fivesome.\pMaybe it doesn't have the right ring or something.\pBut at least let's train together. Maybe we can beat this trainer next time."
+	))
+	applymovement(4, Common_Movement_FaceUp)
+	waitmovement(0)
+	msgbox(format(
+		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You're right, you're right."
+	))
+	delay(64)
+	applymovement(4, Common_Movement_FaceLeft)
+	waitmovement(0)
+	msgbox(format(
+		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh! Right. I forgot you're here.\p"
+		"…\n"
+		"…\l"
+		"…\l"
+		"A reward?\l"
 		"…\l"
 		"Look, I don't go around giving out sweet rewards to non-club members.\l"
 		"…\l"
@@ -57,10 +115,20 @@ script Zone5A_EventScript_LeviathanBattle {
 	))
 	giveitem(ITEM_TM06, 1)
 	closemessage
+	msgbox(format(
+		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Sheesh. Harsh, much?"
+	))
+	applymovement(4, Common_Movement_FaceUp)
+	waitmovement(0)
+	msgbox(format(
+		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh, shut it. Let's just get out of here."
+	))
 	fadescreen(FADE_TO_BLACK)
 	removeobject(4)
 	setflag(FLAG_BEATLEVIATHAN5)
+	removeobject(10)
 	fadescreen(FADE_FROM_BLACK)
+	setvar(VAR_ZONE_5_STATE, 1)
 	release
 	end
 }
