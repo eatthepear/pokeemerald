@@ -49,7 +49,7 @@
 #define VAR_RECYCLE_GOODS                    0x4020
 #define VAR_REPEL_STEP_COUNT                 0x4021
 #define VAR_ICE_STEP_COUNT                   0x4022
-#define VAR_STARTER_MON                      0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip
+#define VAR_STARTER_MON                      0x4023
 #define VAR_CURRENT_SECRET_BASE              0x4024
 #define VAR_PETALBURG_CITY_STATE             0x4025
 #define VAR_SECRET_BASE_MAP                  0x4026
@@ -58,7 +58,7 @@
 #define VAR_CYCLING_ROAD_RECORD_TIME_H       0x4029
 #define VAR_FRIENDSHIP_STEP_COUNTER          0x402A
 #define VAR_POISON_STEP_COUNTER              0x402B
-#define VAR_RESET_RTC_ENABLE                 0x402C
+#define VAR_RAND_STARTER_SEED                0x402C
 #define VAR_ENIGMA_BERRY_AVAILABLE           0x402D
 #define VAR_WONDER_NEWS_COUNTER              0x402E
 #define VAR_FRONTIER_MANIAC_FACILITY         0x402F

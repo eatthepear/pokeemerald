@@ -115,11 +115,40 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
     {8, 4},
 };
 
-static const u16 sStarterMon[STARTER_MON_COUNT] =
+static const u16 sStarterMonGrass[8] =
 {
+    SPECIES_BULBASAUR,
+    SPECIES_CHIKORITA,
     SPECIES_TREECKO,
+    SPECIES_TURTWIG,
+    SPECIES_SNIVY,
+    SPECIES_CHESPIN,
+    SPECIES_ROWLET,
+    SPECIES_GROOKEY,
+};
+
+static const u16 sStarterMonFire[8] =
+{
+    SPECIES_CHARMANDER,
+    SPECIES_CYNDAQUIL,
     SPECIES_TORCHIC,
+    SPECIES_CHIMCHAR,
+    SPECIES_TEPIG,
+    SPECIES_FENNEKIN,
+    SPECIES_LITTEN,
+    SPECIES_SCORBUNNY,
+};
+
+static const u16 sStarterMonWater[8] =
+{
+    SPECIES_SQUIRTLE,
+    SPECIES_TOTODILE,
     SPECIES_MUDKIP,
+    SPECIES_PIPLUP,
+    SPECIES_OSHAWOTT,
+    SPECIES_FROAKIE,
+    SPECIES_POPPLIO,
+    SPECIES_SOBBLE,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
@@ -355,9 +384,20 @@ static const struct SpriteTemplate sSpriteTemplate_StarterCircle =
 // .text
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
+    u16 grassIndex = VarGet(VAR_RAND_STARTER_SEED) % 8;
+    u16 fireIndex = ((VarGet(VAR_RAND_STARTER_SEED) % 64) - grassIndex) / 8;
+    u16 waterIndex = (VarGet(VAR_RAND_STARTER_SEED) - fireIndex * 8 - grassIndex) / 64;
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+    switch (chosenStarterId)
+    {
+    case 0: // Grass Starter
+        return sStarterMonGrass[grassIndex];
+    case 1: // Fire Starter
+        return sStarterMonFire[fireIndex];
+    case 2: // Water Starter
+        return sStarterMonWater[waterIndex];
+    }
 }
 
 static void VblankCB_StarterChoose(void)
@@ -404,7 +444,7 @@ void CB2_ChooseStarter(void)
 
     LZ77UnCompVram(gBirchHelpGfx, (void *)VRAM);
     LZ77UnCompVram(gBirchBagTilemap, (void *)(BG_SCREEN_ADDR(6)));
-    LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(7)));
+    // LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(7)));
 
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
