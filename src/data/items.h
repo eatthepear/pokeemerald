@@ -95,7 +95,7 @@ const struct Item gItems[] =
     {
         .name = _("Net Ball"),
         .itemId = ITEM_NET_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sNetBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_NET_BALL - FIRST_BALL,
@@ -108,7 +108,7 @@ const struct Item gItems[] =
     {
         .name = _("Nest Ball"),
         .itemId = ITEM_NEST_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sNestBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_NEST_BALL - FIRST_BALL,
@@ -121,7 +121,7 @@ const struct Item gItems[] =
     {
         .name = _("Dive Ball"),
         .itemId = ITEM_DIVE_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sDiveBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_DIVE_BALL - FIRST_BALL,
@@ -173,7 +173,7 @@ const struct Item gItems[] =
     {
         .name = _("Repeat Ball"),
         .itemId = ITEM_REPEAT_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sRepeatBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_REPEAT_BALL - FIRST_BALL,
@@ -186,7 +186,7 @@ const struct Item gItems[] =
     {
         .name = _("Luxury Ball"),
         .itemId = ITEM_LUXURY_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sLuxuryBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_LUXURY_BALL - FIRST_BALL,
@@ -199,7 +199,7 @@ const struct Item gItems[] =
     {
         .name = _("Level Ball"),
         .itemId = ITEM_LEVEL_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sLevelBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_LEVEL_BALL - FIRST_BALL,
@@ -212,7 +212,7 @@ const struct Item gItems[] =
     {
         .name = _("Lure Ball"),
         .itemId = ITEM_LURE_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sLureBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_LURE_BALL - FIRST_BALL,
@@ -225,7 +225,7 @@ const struct Item gItems[] =
     {
         .name = _("Moon Ball"),
         .itemId = ITEM_MOON_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sMoonBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_MOON_BALL - FIRST_BALL,
@@ -238,7 +238,7 @@ const struct Item gItems[] =
     {
         .name = _("Friend Ball"),
         .itemId = ITEM_FRIEND_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sFriendBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_FRIEND_BALL - FIRST_BALL,
@@ -251,7 +251,7 @@ const struct Item gItems[] =
     {
         .name = _("Love Ball"),
         .itemId = ITEM_LOVE_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sLoveBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_LOVE_BALL - FIRST_BALL,
@@ -264,7 +264,7 @@ const struct Item gItems[] =
     {
         .name = _("Fast Ball"),
         .itemId = ITEM_FAST_BALL,
-        .price = 500,
+        .price = 1000,
         .description = sFastBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_FAST_BALL - FIRST_BALL,
@@ -277,7 +277,7 @@ const struct Item gItems[] =
     {
         .name = _("Heavy Ball"),
         .itemId = ITEM_HEAVY_BALL,
-        .price = 0,
+        .price = 1000,
         .description = sHeavyBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_HEAVY_BALL - FIRST_BALL,
@@ -290,7 +290,7 @@ const struct Item gItems[] =
     {
         .name = _("Dream Ball"),
         .itemId = ITEM_DREAM_BALL,
-        .price = 0,
+        .price = 1000,
         .description = sDreamBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_DREAM_BALL - FIRST_BALL,
