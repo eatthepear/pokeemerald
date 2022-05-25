@@ -537,3 +537,4 @@ gSpecials::
 	def_special TrySetBattleTowerLinkType
 	def_special GetCaughtSpeciesCount
 	def_special SetTotemBoost
+	def_special TrySpecialOverworldEvo
