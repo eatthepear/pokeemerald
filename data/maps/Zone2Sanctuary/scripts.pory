@@ -20,7 +20,6 @@ script Zone2Sanctuary_EventScript_Intro {
 	applymovement(1, Common_Movement_Colress_WalkUp)
 	waitmovement(0)
 	releaseall
-	end
 }
 
 script Zone2Sanctuary_EventScript_NextZone {
@@ -37,19 +36,14 @@ script Zone2Sanctuary_EventScript_NextZone {
 				setflag(FLAG_HIDE_ZONE3A_PHILLIPA)
 				setflag(FLAG_HIDE_ZONE3A_REMI)
 				warp(MAP_ZONE3A, 255, 38, 25)
+				waitstate
 			}
-			goto(EventScript_WhenUReady)
 		case 1:
 			goto(EventScript_Advice)
 		case 2:
 			goto(EventScript_Settings)
-		case 3:
-			goto(EventScript_WhenUReady)
-		case MULTI_B_PRESSED:
-			goto(EventScript_WhenUReady)
 	}
-	release
-	end
+	goto(EventScript_WhenUReady)
 }
 
 text Zone2Sanctuary_Text_Reward {

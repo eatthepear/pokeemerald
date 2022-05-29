@@ -35,17 +35,12 @@ script Zone6Sanctuary_EventScript_NextZone {
 				warp(MAP_ZONE7A, 255, 5, 34)
 				waitstate
 			}
-			goto(EventScript_WhenUReady)
 		case 1:
 			goto(EventScript_Advice)
 		case 2:
 			goto(EventScript_Settings)
-		case 3:
-			goto(EventScript_WhenUReady)
-		case MULTI_B_PRESSED:
-			goto(EventScript_WhenUReady)
 	}
-	release
+	goto(EventScript_WhenUReady)
 }
 
 text Zone6Sanctuary_Text_Reward {

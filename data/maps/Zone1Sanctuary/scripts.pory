@@ -35,19 +35,14 @@ script Zone1Sanctuary_EventScript_NextZone {
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
 				warp(MAP_ZONE2A, 255, 4, 3)
+				waitstate
 			}
-			goto(EventScript_WhenUReady)
 		case 1:
 			goto(EventScript_Advice)
 		case 2:
 			goto(EventScript_Settings)
-		case 3:
-			goto(EventScript_WhenUReady)
-		case MULTI_B_PRESSED:
-			goto(EventScript_WhenUReady)
 	}
-	release
-	end
+	goto(EventScript_WhenUReady)
 }
 
 text Zone1Sanctuary_Text_Reward {

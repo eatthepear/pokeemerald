@@ -30,13 +30,13 @@ script Zone5Sanctuary_EventScript_Intro {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: It seems you haven't entered Zone 0 yet.\pZone 0 holds many useful areas that are helpful to challengers.\pYou can typically access it using the warp pad in a Sanctuary, but just this once I will warp you there myself."))
 		setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 		warpteleport(MAP_ZONE0A, 255, 17, 10)
+		waitstate
 	}
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)
 	waitmovement(0)
 	releaseall
-	end
 }
 
 script Zone5Sanctuary_EventScript_NextZone {
@@ -50,20 +50,15 @@ script Zone5Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				warp(MAP_ZONE6A, 255, 27, 30)
+				warp(MAP_ZONE6A, 255, 19, 22)
+				waitstate
 			}
-			goto(EventScript_WhenUReady)
 		case 1:
 			goto(EventScript_Advice)
 		case 2:
 			goto(EventScript_Settings)
-		case 3:
-			goto(EventScript_WhenUReady)
-		case MULTI_B_PRESSED:
-			goto(EventScript_WhenUReady)
 	}
-	release
-	end
+	goto(EventScript_WhenUReady)
 }
 
 text Zone5Sanctuary_Text_Reward {

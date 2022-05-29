@@ -51,7 +51,7 @@ Zone3Sanctuary_EventScript_Intro::
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
-	end
+	return
 
 
 Zone3Sanctuary_EventScript_NextZone::
@@ -63,19 +63,15 @@ Zone3Sanctuary_EventScript_NextZone::
 	case 0, Zone3Sanctuary_EventScript_NextZone_3
 	case 1, Zone3Sanctuary_EventScript_NextZone_4
 	case 2, Zone3Sanctuary_EventScript_NextZone_5
-	case 3, Zone3Sanctuary_EventScript_NextZone_6
-	case MULTI_B_PRESSED, Zone3Sanctuary_EventScript_NextZone_7
 Zone3Sanctuary_EventScript_NextZone_1:
-	release
-	end
+	goto EventScript_WhenUReady
+	return
 
 Zone3Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone3Sanctuary_EventScript_NextZone_9
-Zone3Sanctuary_EventScript_NextZone_8:
-	goto EventScript_WhenUReady
+	goto_if_eq Zone3Sanctuary_EventScript_NextZone_6
 	goto Zone3Sanctuary_EventScript_NextZone_1
 
 Zone3Sanctuary_EventScript_NextZone_4:
@@ -87,17 +83,10 @@ Zone3Sanctuary_EventScript_NextZone_5:
 	goto Zone3Sanctuary_EventScript_NextZone_1
 
 Zone3Sanctuary_EventScript_NextZone_6:
-	goto EventScript_WhenUReady
-	goto Zone3Sanctuary_EventScript_NextZone_1
-
-Zone3Sanctuary_EventScript_NextZone_7:
-	goto EventScript_WhenUReady
-	goto Zone3Sanctuary_EventScript_NextZone_1
-
-Zone3Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
 	warp MAP_ZONE4A, 255, 4, 3
-	goto Zone3Sanctuary_EventScript_NextZone_8
+	waitstate
+	goto Zone3Sanctuary_EventScript_NextZone_1
 
 
 Zone3Sanctuary_Text_Reward::

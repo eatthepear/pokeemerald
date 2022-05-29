@@ -23,7 +23,7 @@ Zone2Sanctuary_EventScript_Intro::
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
-	end
+	return
 
 
 Zone2Sanctuary_EventScript_NextZone::
@@ -35,19 +35,15 @@ Zone2Sanctuary_EventScript_NextZone::
 	case 0, Zone2Sanctuary_EventScript_NextZone_3
 	case 1, Zone2Sanctuary_EventScript_NextZone_4
 	case 2, Zone2Sanctuary_EventScript_NextZone_5
-	case 3, Zone2Sanctuary_EventScript_NextZone_6
-	case MULTI_B_PRESSED, Zone2Sanctuary_EventScript_NextZone_7
 Zone2Sanctuary_EventScript_NextZone_1:
-	release
-	end
+	goto EventScript_WhenUReady
+	return
 
 Zone2Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone2Sanctuary_EventScript_NextZone_9
-Zone2Sanctuary_EventScript_NextZone_8:
-	goto EventScript_WhenUReady
+	goto_if_eq Zone2Sanctuary_EventScript_NextZone_6
 	goto Zone2Sanctuary_EventScript_NextZone_1
 
 Zone2Sanctuary_EventScript_NextZone_4:
@@ -59,19 +55,12 @@ Zone2Sanctuary_EventScript_NextZone_5:
 	goto Zone2Sanctuary_EventScript_NextZone_1
 
 Zone2Sanctuary_EventScript_NextZone_6:
-	goto EventScript_WhenUReady
-	goto Zone2Sanctuary_EventScript_NextZone_1
-
-Zone2Sanctuary_EventScript_NextZone_7:
-	goto EventScript_WhenUReady
-	goto Zone2Sanctuary_EventScript_NextZone_1
-
-Zone2Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
 	setflag FLAG_HIDE_ZONE3A_PHILLIPA
 	setflag FLAG_HIDE_ZONE3A_REMI
 	warp MAP_ZONE3A, 255, 38, 25
-	goto Zone2Sanctuary_EventScript_NextZone_8
+	waitstate
+	goto Zone2Sanctuary_EventScript_NextZone_1
 
 
 Zone2Sanctuary_Text_Reward::

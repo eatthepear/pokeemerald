@@ -33,7 +33,7 @@ Zone5Sanctuary_EventScript_Intro_1:
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
-	end
+	return
 
 Zone5Sanctuary_EventScript_Intro_2:
 	applymovement 1, Common_Movement_ExclamationMark
@@ -43,6 +43,7 @@ Zone5Sanctuary_EventScript_Intro_2:
 	msgbox Zone5Sanctuary_EventScript_Intro_Text_0
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warpteleport MAP_ZONE0A, 255, 17, 10
+	waitstate
 	goto Zone5Sanctuary_EventScript_Intro_1
 
 
@@ -55,19 +56,15 @@ Zone5Sanctuary_EventScript_NextZone::
 	case 0, Zone5Sanctuary_EventScript_NextZone_3
 	case 1, Zone5Sanctuary_EventScript_NextZone_4
 	case 2, Zone5Sanctuary_EventScript_NextZone_5
-	case 3, Zone5Sanctuary_EventScript_NextZone_6
-	case MULTI_B_PRESSED, Zone5Sanctuary_EventScript_NextZone_7
 Zone5Sanctuary_EventScript_NextZone_1:
-	release
-	end
+	goto EventScript_WhenUReady
+	return
 
 Zone5Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone5Sanctuary_EventScript_NextZone_9
-Zone5Sanctuary_EventScript_NextZone_8:
-	goto EventScript_WhenUReady
+	goto_if_eq Zone5Sanctuary_EventScript_NextZone_6
 	goto Zone5Sanctuary_EventScript_NextZone_1
 
 Zone5Sanctuary_EventScript_NextZone_4:
@@ -79,17 +76,10 @@ Zone5Sanctuary_EventScript_NextZone_5:
 	goto Zone5Sanctuary_EventScript_NextZone_1
 
 Zone5Sanctuary_EventScript_NextZone_6:
-	goto EventScript_WhenUReady
-	goto Zone5Sanctuary_EventScript_NextZone_1
-
-Zone5Sanctuary_EventScript_NextZone_7:
-	goto EventScript_WhenUReady
-	goto Zone5Sanctuary_EventScript_NextZone_1
-
-Zone5Sanctuary_EventScript_NextZone_9:
 	call EventScript_LeavingSetup
-	warp MAP_ZONE6A, 255, 27, 30
-	goto Zone5Sanctuary_EventScript_NextZone_8
+	warp MAP_ZONE6A, 255, 19, 22
+	waitstate
+	goto Zone5Sanctuary_EventScript_NextZone_1
 
 
 Zone5Sanctuary_EventScript_Intro_Text_0:
