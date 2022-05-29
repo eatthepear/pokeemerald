@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 30,
-      "y": 30,
+      "x": 22,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 42,
-      "y": 22,
+      "x": 34,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 20,
-      "y": 22,
+      "x": 12,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 26,
-      "y": 36,
+      "x": 18,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -68,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
-      "x": 33,
-      "y": 15,
+      "x": 25,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -81,8 +81,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 31,
-      "y": 39,
+      "x": 23,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -94,8 +94,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 36,
-      "y": 20,
+      "x": 28,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -107,8 +107,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 13,
-      "y": 27,
+      "x": 5,
+      "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -125,8 +125,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 28,
-      "y": 27,
+      "x": 20,
+      "y": 19,
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
@@ -136,56 +136,56 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 29,
-      "y": 28,
+      "x": 21,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_ExitSign"
     },
     {
       "type": "hidden_item",
-      "x": 22,
-      "y": 16,
+      "x": 14,
+      "y": 8,
       "elevation": 3,
       "item": "ITEM_ORAN_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_ORAN_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 27,
-      "y": 33,
+      "x": 19,
+      "y": 25,
       "elevation": 3,
       "item": "ITEM_CHERI_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHERI_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 36,
-      "y": 14,
+      "x": 28,
+      "y": 6,
       "elevation": 3,
       "item": "ITEM_PECHA_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_PECHA_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 33,
+      "x": 7,
+      "y": 25,
       "elevation": 3,
       "item": "ITEM_RAWST_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_RAWST_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 18,
-      "y": 27,
+      "x": 10,
+      "y": 19,
       "elevation": 3,
       "item": "ITEM_PERSIM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_PERSIM_BERRY"
     },
     {
       "type": "hidden_item",
-      "x": 44,
-      "y": 23,
+      "x": 36,
+      "y": 15,
       "elevation": 3,
       "item": "ITEM_CHESTO_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHESTO_BERRY"

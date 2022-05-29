@@ -4544,8 +4544,8 @@
     {
       "id": "LAYOUT_ZONE6A",
       "name": "Zone6A_Layout",
-      "width": 55,
-      "height": 55,
+      "width": 42,
+      "height": 43,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone6A/border.bin",
@@ -4564,8 +4564,8 @@
     {
       "id": "LAYOUT_ZONE8A",
       "name": "Zone8A_Layout",
-      "width": 47,
-      "height": 48,
+      "width": 43,
+      "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone8A/border.bin",
