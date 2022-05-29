@@ -479,8 +479,8 @@ text Zone0Sanctuary_Text_Colress_Starters {
 
 text Zone0Sanctuary_Text_Colress_StartersBrutal {
 	format("As a new challenger, you will receive a starter Pokémon.\p"
-	"On Brutal difficulty, your choice is limited from the pool of possible starters.\p"
-	"Open this briefcase for your starter!")
+	"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
+	"Choose carefully as these Pokémon are very rare.")
 }
 
 text Zone0Sanctuary_Text_Colress_NiceChoice {

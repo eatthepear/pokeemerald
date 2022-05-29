@@ -1231,8 +1231,9 @@ Zone0Sanctuary_Text_Colress_StartersBrutal::
 	.string "starter Pokémon.\p"
 	.string "On Brutal difficulty, your choice is\n"
 	.string "limited from the pool of possible\l"
-	.string "starters.\p"
-	.string "Open this briefcase for your starter!$"
+	.string "starters to only three options.\p"
+	.string "Choose carefully as these Pokémon are\n"
+	.string "very rare.$"
 
 Zone0Sanctuary_Text_Colress_NiceChoice::
 	.string "Excellent choice.\p"
