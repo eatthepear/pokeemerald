@@ -22,6 +22,15 @@ script Zone5Sanctuary_EventScript_Intro {
 	msgbox(gText_Colress_UnlockedServices, MSGBOX_DEFAULT)
 	waitfanfare
 	setvar(VAR_ZONE, 6)
+	if (var(VAR_ZONE_0_STATE) == 0) {
+		applymovement(1, Common_Movement_ExclamationMark)
+		playse(SE_PIN)
+		waitmovement(0)
+		waitse
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: It seems you haven't entered Zone 0 yet.\pZone 0 holds many useful areas that are helpful to challengers.\pYou can typically access it using the warp pad in a Sanctuary, but just this once I will warp you there myself."))
+		setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+		warpteleport(MAP_ZONE0A, 255, 17, 10)
+	}
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)

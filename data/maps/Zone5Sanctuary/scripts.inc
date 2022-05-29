@@ -25,12 +25,25 @@ Zone5Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
 	setvar VAR_ZONE, 6
+	compare VAR_ZONE_0_STATE, 0
+	goto_if_eq Zone5Sanctuary_EventScript_Intro_2
+Zone5Sanctuary_EventScript_Intro_1:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
+
+Zone5Sanctuary_EventScript_Intro_2:
+	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	msgbox Zone5Sanctuary_EventScript_Intro_Text_0
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
+	warpteleport MAP_ZONE0A, 255, 17, 10
+	goto Zone5Sanctuary_EventScript_Intro_1
 
 
 Zone5Sanctuary_EventScript_NextZone::
@@ -78,6 +91,15 @@ Zone5Sanctuary_EventScript_NextZone_9:
 	warp MAP_ZONE6A, 255, 27, 30
 	goto Zone5Sanctuary_EventScript_NextZone_8
 
+
+Zone5Sanctuary_EventScript_Intro_Text_0:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: It seems you haven't entered\n"
+	.string "Zone 0 yet.\p"
+	.string "Zone 0 holds many useful areas that are\n"
+	.string "helpful to challengers.\p"
+	.string "You can typically access it using the\n"
+	.string "warp pad in a Sanctuary, but just this\l"
+	.string "once I will warp you there myself.$"
 
 Zone5Sanctuary_Text_Reward::
 	.string "5 Red Shards!$"
