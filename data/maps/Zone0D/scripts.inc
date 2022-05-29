@@ -3,7 +3,7 @@ Zone0D_MapScripts::
 	.byte 0
 
 Zone0D_OnFrame:
-	map_script_2 VAR_ZONE_0_STATE, 1, Zone0D_EventScript_Intro
+	map_script_2 VAR_ZONE_0_STATE, 2, Zone0D_EventScript_Intro
 	map_script_2 VAR_ZONE_B1_STATE, 1, Zone0D_EventScript_B1WarpIntro
 	.2byte 0
 
@@ -21,7 +21,7 @@ Zone0D_EventScript_Intro:
 	msgbox Zone0D_Text_Intro2, MSGBOX_AUTOCLOSE
 	applymovement 1, Zone0D_Movement_PostIntro
 	waitmovement 0
-	setvar VAR_ZONE_0_STATE, 2
+	setvar VAR_ZONE_0_STATE, 3
 	releaseall
 	end
 

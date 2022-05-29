@@ -212,7 +212,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ZONE_0_STATE",
+      "var_value": "1",
+      "script": "Zone0A_EventScript_Porygon"
+    }
   ],
   "bg_events": [
     {

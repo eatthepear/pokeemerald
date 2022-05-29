@@ -1,3 +1,30 @@
+Zone0A_EventScript_Porygon::
+	lockall
+	fadeoutbgm 1
+	delay 64
+	playmoncry SPECIES_PORYGON, 2
+	delay 40
+	waitmoncry
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	delay 40
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 40
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	delay 40
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone0A_EventScript_Porygon_Text_0
+	setvar VAR_ZONE_0_STATE, 2
+	fadeinbgm 1
+	releaseall
+	return
+
+
 Zone0A_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone0A_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, Zone0A_OnTransition
@@ -198,3 +225,7 @@ Zone0A_Text_DayCareSign:
 Zone0A_Text_TPISign:
 	.string "Teleport Institue\n"
 	.string "Getting around, easy peasy.$"
+
+Zone0A_EventScript_Porygon_Text_0:
+	.string "There seemed to be some noise, but it's\n"
+	.string "gone now.$"
