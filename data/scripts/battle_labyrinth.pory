@@ -99,7 +99,6 @@ script EventScript_Shop_General {
 	}
 	msgbox(gText_Tim_Leave, MSGBOX_DEFAULT)
 	release
-	end
 }
 
 script EventScript_Shop_Unique_Varrick {
@@ -151,7 +150,6 @@ script EventScript_Shop_Unique_Varrick {
 	}
 	msgbox(gText_Varrick_Leave, MSGBOX_DEFAULT)
 	release
-	end
 }
 
 script EventScript_Shop_Unique_ZhuLi {
@@ -181,7 +179,6 @@ script EventScript_Shop_Unique_ZhuLi {
 	}
 	msgbox(gText_ZhuLi_Leave, MSGBOX_DEFAULT)
 	release
-	end
 }
 
 script EventScript_Shop_ZhuLiIntro {
@@ -212,7 +209,6 @@ script EventScript_Shop_ZhuLiIntro {
 	setvar(VAR_ZHULI_INTRO, 1)
 	setflag(FLAG_VARRICK_INTRO)
 	releaseall
-	end
 }
 
 script EventScript_Shop_Lelouch {
@@ -249,7 +245,6 @@ script EventScript_Shop_Lelouch {
 	}
 	msgbox(gText_Lelouch_Leave)
 	release
-	end
 }
 
 script EventScript_Shop_Lelouch_Training {
@@ -983,19 +978,14 @@ script EventScript_Shop_Joy {
 	hidemoneybox
 	msgbox(gText_Joy_WonderfulDay)
 	releaseall
-	end
 }
-
-
 
 script EventScript_BrutalExitNotSatisfied {
 	msgbox(gText_BrutalExitNotSatisfied)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 	waitmovement(0)
 	releaseall
-	end
 }
-
 
 script EventScript_LeavingSetup {
 	setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
@@ -1029,7 +1019,8 @@ script EventScript_LeavingSetup {
 
 script EventScript_WhenUReady {
 	if (var(VAR_ZONE) == 7) {
-		goto(Zone6Sanctuary_EventScript_WhenUReady)
+		msgbox(Zone6Sanctuary_Text_Colress_WhenUReady)
+		release
 	} elif (var(VAR_ZONE) == 13) {
 		goto(Zone12Sanctuary_EventScript_WhenUReady)
 	} elif (var(VAR_ZONE) == 18) {
@@ -1041,14 +1032,13 @@ script EventScript_WhenUReady {
 		msgbox(gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE)
 		release
 	}
-	end
 }
 
 script EventScript_SanctuaryToZone0 {
 	lockall
 	setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	warpteleport(MAP_ZONE0A, 255, 17, 10)
-	end
+	waitstate
 }
 
 script EventScript_Advice {
@@ -1098,9 +1088,7 @@ script EventScript_Advice {
 		}
 	}
 	goto(EventScript_WhenUReady)
-	end
 }
-
 
 script EventScript_Settings {
 	while {
@@ -1443,6 +1431,7 @@ raw `
 EventScript_WarpZone0:
 	clearflag FLAG_IS_REVISITING_ZONE
 	warpteleport MAP_ZONE0D, 255, 2, 32
+	waitstate
 	end
 
 EventScript_ExitSign::

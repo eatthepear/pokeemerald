@@ -70,7 +70,7 @@ EventScript_Shop_General_4:
 EventScript_Shop_General_9:
 	msgbox gText_Tim_Leave, MSGBOX_DEFAULT
 	release
-	end
+	return
 
 EventScript_Shop_General_2:
 	msgbox gText_Tim_Intro
@@ -190,7 +190,7 @@ EventScript_Shop_Unique_Varrick_1:
 EventScript_Shop_Unique_Varrick_4:
 	msgbox gText_Varrick_Leave, MSGBOX_DEFAULT
 	release
-	end
+	return
 
 EventScript_Shop_Unique_Varrick_2:
 	msgbox gText_Varrick_Intro
@@ -262,7 +262,7 @@ EventScript_Shop_Unique_ZhuLi::
 EventScript_Shop_Unique_ZhuLi_1:
 	msgbox gText_ZhuLi_Leave, MSGBOX_DEFAULT
 	release
-	end
+	return
 
 EventScript_Shop_Unique_ZhuLi_3:
 	pokemart Shop_Unique_ZhuLi_11to14
@@ -306,7 +306,7 @@ EventScript_Shop_ZhuLiIntro_1:
 	setvar VAR_ZHULI_INTRO, 1
 	setflag FLAG_VARRICK_INTRO
 	releaseall
-	end
+	return
 
 EventScript_Shop_ZhuLiIntro_2:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -335,7 +335,7 @@ EventScript_Shop_Lelouch_7:
 EventScript_Shop_Lelouch_10:
 	msgbox gText_Lelouch_Leave
 	release
-	end
+	return
 
 EventScript_Shop_Lelouch_2:
 	msgbox gText_Lelouch_Intro1
@@ -1583,7 +1583,7 @@ EventScript_Shop_Joy_1:
 	hidemoneybox
 	msgbox gText_Joy_WonderfulDay
 	releaseall
-	end
+	return
 
 EventScript_Shop_Joy_2:
 	setflag FLAG_JOY_INTRO
@@ -1610,7 +1610,7 @@ EventScript_BrutalExitNotSatisfied::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	releaseall
-	end
+	return
 
 
 EventScript_LeavingSetup::
@@ -1657,41 +1657,42 @@ EventScript_LeavingSetup_8:
 
 EventScript_WhenUReady::
 	compare VAR_ZONE, 7
-	goto_if_eq EventScript_WhenUReady_2
+	goto_if_eq EventScript_WhenUReady_1
 	compare VAR_ZONE, 13
-	goto_if_eq EventScript_WhenUReady_3
+	goto_if_eq EventScript_WhenUReady_2
 	compare VAR_ZONE, 18
-	goto_if_eq EventScript_WhenUReady_4
+	goto_if_eq EventScript_WhenUReady_3
 	compare VAR_ZONE, 24
-	goto_if_eq EventScript_WhenUReady_5
+	goto_if_eq EventScript_WhenUReady_4
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
 	release
+	return
+
 EventScript_WhenUReady_1:
-	end
+	msgbox Zone6Sanctuary_Text_Colress_WhenUReady
+	release
+	return
 
 EventScript_WhenUReady_2:
-	goto Zone6Sanctuary_EventScript_WhenUReady
-	goto EventScript_WhenUReady_1
+	goto Zone12Sanctuary_EventScript_WhenUReady
+	return
 
 EventScript_WhenUReady_3:
-	goto Zone12Sanctuary_EventScript_WhenUReady
-	goto EventScript_WhenUReady_1
+	goto Zone17Sanctuary_EventScript_WhenUReady
+	return
 
 EventScript_WhenUReady_4:
-	goto Zone17Sanctuary_EventScript_WhenUReady
-	goto EventScript_WhenUReady_1
-
-EventScript_WhenUReady_5:
 	goto Zone23Sanctuary_EventScript_WhenUReady
-	goto EventScript_WhenUReady_1
+	return
 
 
 EventScript_SanctuaryToZone0::
 	lockall
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warpteleport MAP_ZONE0A, 255, 17, 10
-	end
+	waitstate
+	return
 
 
 EventScript_Advice::
@@ -1718,7 +1719,7 @@ EventScript_Advice_4:
 
 EventScript_Advice_1:
 	goto EventScript_WhenUReady
-	end
+	return
 
 EventScript_Advice_6:
 	msgbox gText_Advice0
@@ -2473,6 +2474,7 @@ EventScript_MusicMenu_64:
 EventScript_WarpZone0:
 	clearflag FLAG_IS_REVISITING_ZONE
 	warpteleport MAP_ZONE0D, 255, 2, 32
+	waitstate
 	end
 
 EventScript_ExitSign::
