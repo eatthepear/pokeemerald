@@ -1652,13 +1652,13 @@ static void Task_HandleInput(u8 taskId)
                 ChangeSummaryState(data, taskId);
                 BufferIvOrEvStats(data[3]);
             }
-            else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
-            {
-                StopPokemonAnimations();
-                PlaySE(SE_SELECT);
-                BeginCloseSummaryScreen(taskId);
-            }
-            else // Contest or Battle Moves
+            else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            // {
+            //     StopPokemonAnimations();
+            //     PlaySE(SE_SELECT);
+            //     BeginCloseSummaryScreen(taskId);
+            // }
+            // else // Contest or Battle Moves
             {
                 PlaySE(SE_SELECT);
                 SwitchToMoveSelection(taskId);
