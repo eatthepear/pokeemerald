@@ -2471,11 +2471,368 @@ EventScript_MusicMenu_64:
 	goto EventScript_MusicMenu_14
 
 
-EventScript_WarpZone0:
+EventScript_WarpZone0::
 	clearflag FLAG_IS_REVISITING_ZONE
-	warpteleport MAP_ZONE0D, 255, 2, 32
+	switch VAR_REVISITING_ZONE
+	case 1, EventScript_WarpZone0_2
+	case 2, EventScript_WarpZone0_3
+	case 3, EventScript_WarpZone0_4
+	case 4, EventScript_WarpZone0_5
+	case 5, EventScript_WarpZone0_6
+	case 6, EventScript_WarpZone0_7
+	case 7, EventScript_WarpZone0_8
+	case 8, EventScript_WarpZone0_9
+	case 9, EventScript_WarpZone0_10
+	case 10, EventScript_WarpZone0_11
+	case 11, EventScript_WarpZone0_12
+	case 12, EventScript_WarpZone0_13
+	case 13, EventScript_WarpZone0_14
+	case 14, EventScript_WarpZone0_15
+	case 15, EventScript_WarpZone0_16
+	case 16, EventScript_WarpZone0_17
+	case 17, EventScript_WarpZone0_18
+	case 18, EventScript_WarpZone0_19
+	case 19, EventScript_WarpZone0_20
+	case 20, EventScript_WarpZone0_21
+	case 21, EventScript_WarpZone0_22
+	case 22, EventScript_WarpZone0_23
+	case 23, EventScript_WarpZone0_24
+	case 24, EventScript_WarpZone0_25
+	case 25, EventScript_WarpZone0_26
+	case 26, EventScript_WarpZone0_27
+	case 27, EventScript_WarpZone0_28
+	case 28, EventScript_WarpZone0_29
+	case 29, EventScript_WarpZone0_30
+	case 30, EventScript_WarpZone0_31
+	case 31, EventScript_WarpZone0_32
+	case 32, EventScript_WarpZone0_33
+	case 33, EventScript_WarpZone0_34
+	case 34, EventScript_WarpZone0_35
+	case 35, EventScript_WarpZone0_36
+	case 36, EventScript_WarpZone0_37
+	case 37, EventScript_WarpZone0_38
+	case 38, EventScript_WarpZone0_39
+	case 39, EventScript_WarpZone0_40
+	case 40, EventScript_WarpZone0_41
+	case 41, EventScript_WarpZone0_42
+	case 42, EventScript_WarpZone0_43
+	case 43, EventScript_WarpZone0_44
+	case 44, EventScript_WarpZone0_45
+	case 45, EventScript_WarpZone0_46
+	case 46, EventScript_WarpZone0_47
+	case 47, EventScript_WarpZone0_48
+	case 48, EventScript_WarpZone0_49
+	case 49, EventScript_WarpZone0_50
+	case 50, EventScript_WarpZone0_51
+	case 51, EventScript_WarpZone0_52
+	return
+
+EventScript_WarpZone0_2:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 15, 32
 	waitstate
-	end
+	return
+
+EventScript_WarpZone0_3:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 19, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_4:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 23, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_5:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 27, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_6:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_7:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 35, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_8:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 39, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_9:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 43, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_10:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 47, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_11:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 51, 32
+	waitstate
+	return
+
+EventScript_WarpZone0_12:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 15, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_13:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 19, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_14:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 23, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_15:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 27, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_16:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_17:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 35, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_18:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 39, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_19:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 43, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_20:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 47, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_21:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 51, 25
+	waitstate
+	return
+
+EventScript_WarpZone0_22:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 15, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_23:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 19, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_24:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 23, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_25:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 27, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_26:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_27:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 35, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_28:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 39, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_29:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 43, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_30:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 47, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_31:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 51, 18
+	waitstate
+	return
+
+EventScript_WarpZone0_32:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 15, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_33:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 19, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_34:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 23, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_35:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 27, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_36:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_37:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 35, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_38:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 39, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_39:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 43, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_40:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 47, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_41:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 51, 11
+	waitstate
+	return
+
+EventScript_WarpZone0_42:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 15, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_43:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 19, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_44:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 23, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_45:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 27, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_46:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_47:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 35, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_48:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 39, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_49:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 43, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_50:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 47, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_51:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 51, 4
+	waitstate
+	return
+
+EventScript_WarpZone0_52:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 2, 25
+	waitstate
+	return
+
 
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN

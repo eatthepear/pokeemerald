@@ -52,7 +52,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE1"
+      "script": "Zone0D_EventScript_WarpZone1"
     },
     {
       "type": "trigger",
@@ -61,7 +61,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE2"
+      "script": "Zone0D_EventScript_WarpZone2"
     },
     {
       "type": "trigger",
@@ -70,7 +70,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE3"
+      "script": "Zone0D_EventScript_WarpZone3"
     },
     {
       "type": "trigger",
@@ -79,7 +79,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE4"
+      "script": "Zone0D_EventScript_WarpZone4"
     },
     {
       "type": "trigger",
@@ -88,7 +88,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE5"
+      "script": "Zone0D_EventScript_WarpZone5"
     },
     {
       "type": "trigger",
@@ -97,7 +97,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE6"
+      "script": "Zone0D_EventScript_WarpZone6"
     },
     {
       "type": "trigger",
@@ -106,7 +106,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE7"
+      "script": "Zone0D_EventScript_WarpZone7"
     },
     {
       "type": "trigger",
@@ -115,7 +115,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE8"
+      "script": "Zone0D_EventScript_WarpZone8"
     },
     {
       "type": "trigger",
@@ -124,7 +124,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE9"
+      "script": "Zone0D_EventScript_WarpZone9"
     },
     {
       "type": "trigger",
@@ -133,7 +133,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE10"
+      "script": "Zone0D_EventScript_WarpZone10"
     },
     {
       "type": "trigger",
@@ -151,7 +151,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE11"
+      "script": "Zone0D_EventScript_WarpZone11"
     },
     {
       "type": "trigger",
@@ -160,7 +160,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE12"
+      "script": "Zone0D_EventScript_WarpZone12"
     },
     {
       "type": "trigger",
@@ -169,7 +169,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE13"
+      "script": "Zone0D_EventScript_WarpZone13"
     },
     {
       "type": "trigger",
@@ -178,7 +178,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE14"
+      "script": "Zone0D_EventScript_WarpZone14"
     },
     {
       "type": "trigger",
@@ -187,7 +187,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE15"
+      "script": "Zone0D_EventScript_WarpZone15"
     },
     {
       "type": "trigger",
@@ -196,7 +196,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE16"
+      "script": "Zone0D_EventScript_WarpZone16"
     },
     {
       "type": "trigger",
@@ -205,7 +205,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE17"
+      "script": "Zone0D_EventScript_WarpZone17"
     },
     {
       "type": "trigger",
@@ -214,7 +214,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE18"
+      "script": "Zone0D_EventScript_WarpZone18"
     },
     {
       "type": "trigger",
@@ -223,7 +223,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE19"
+      "script": "Zone0D_EventScript_WarpZone19"
     },
     {
       "type": "trigger",
@@ -232,7 +232,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE20"
+      "script": "Zone0D_EventScript_WarpZone20"
     },
     {
       "type": "trigger",
@@ -277,7 +277,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE21"
+      "script": "Zone0D_EventScript_WarpZone21"
     },
     {
       "type": "trigger",
@@ -286,7 +286,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE22"
+      "script": "Zone0D_EventScript_WarpZone22"
     },
     {
       "type": "trigger",
@@ -295,7 +295,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE23"
+      "script": "Zone0D_EventScript_WarpZone23"
     },
     {
       "type": "trigger",
@@ -304,7 +304,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE24"
+      "script": "Zone0D_EventScript_WarpZone24"
     },
     {
       "type": "trigger",
@@ -313,7 +313,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE25"
+      "script": "Zone0D_EventScript_WarpZone25"
     },
     {
       "type": "trigger",
@@ -322,7 +322,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE26"
+      "script": "Zone0D_EventScript_WarpZone26"
     },
     {
       "type": "trigger",
@@ -331,7 +331,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE27"
+      "script": "Zone0D_EventScript_WarpZone27"
     },
     {
       "type": "trigger",
@@ -340,7 +340,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE28"
+      "script": "Zone0D_EventScript_WarpZone28"
     },
     {
       "type": "trigger",
@@ -349,7 +349,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE29"
+      "script": "Zone0D_EventScript_WarpZone29"
     },
     {
       "type": "trigger",
@@ -358,7 +358,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE30"
+      "script": "Zone0D_EventScript_WarpZone30"
     },
     {
       "type": "trigger",
@@ -367,7 +367,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE31"
+      "script": "Zone0D_EventScript_WarpZone31"
     },
     {
       "type": "trigger",
@@ -376,7 +376,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE32"
+      "script": "Zone0D_EventScript_WarpZone32"
     },
     {
       "type": "trigger",
@@ -385,7 +385,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE33"
+      "script": "Zone0D_EventScript_WarpZone33"
     },
     {
       "type": "trigger",
@@ -394,7 +394,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE34"
+      "script": "Zone0D_EventScript_WarpZone34"
     },
     {
       "type": "trigger",
@@ -403,7 +403,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE35"
+      "script": "Zone0D_EventScript_WarpZone35"
     },
     {
       "type": "trigger",
@@ -412,7 +412,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE36"
+      "script": "Zone0D_EventScript_WarpZone36"
     },
     {
       "type": "trigger",
@@ -421,7 +421,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE37"
+      "script": "Zone0D_EventScript_WarpZone37"
     },
     {
       "type": "trigger",
@@ -430,7 +430,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE38"
+      "script": "Zone0D_EventScript_WarpZone38"
     },
     {
       "type": "trigger",
@@ -439,7 +439,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE39"
+      "script": "Zone0D_EventScript_WarpZone39"
     },
     {
       "type": "trigger",
@@ -448,7 +448,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE40"
+      "script": "Zone0D_EventScript_WarpZone40"
     },
     {
       "type": "trigger",
@@ -457,7 +457,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE41"
+      "script": "Zone0D_EventScript_WarpZone41"
     },
     {
       "type": "trigger",
@@ -466,7 +466,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE42"
+      "script": "Zone0D_EventScript_WarpZone42"
     },
     {
       "type": "trigger",
@@ -475,7 +475,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE43"
+      "script": "Zone0D_EventScript_WarpZone43"
     },
     {
       "type": "trigger",
@@ -484,7 +484,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE44"
+      "script": "Zone0D_EventScript_WarpZone44"
     },
     {
       "type": "trigger",
@@ -493,7 +493,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE45"
+      "script": "Zone0D_EventScript_WarpZone45"
     },
     {
       "type": "trigger",
@@ -502,7 +502,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE46"
+      "script": "Zone0D_EventScript_WarpZone46"
     },
     {
       "type": "trigger",
@@ -511,7 +511,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE47"
+      "script": "Zone0D_EventScript_WarpZone47"
     },
     {
       "type": "trigger",
@@ -520,7 +520,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE48"
+      "script": "Zone0D_EventScript_WarpZone48"
     },
     {
       "type": "trigger",
@@ -529,7 +529,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE49"
+      "script": "Zone0D_EventScript_WarpZone49"
     },
     {
       "type": "trigger",
@@ -538,7 +538,7 @@
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
-      "script": "Zone0D_EventScript_WarpZONE50"
+      "script": "Zone0D_EventScript_WarpZone50"
     }
   ],
   "bg_events": [

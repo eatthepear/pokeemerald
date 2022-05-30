@@ -12,8 +12,9 @@ Zone1A_EventScript_Exit_1:
 	end
 
 Zone1A_EventScript_Exit_2:
-	clearflag FLAG_IS_REVISITING_ZONE
-	warpteleport MAP_ZONE0D, 255, 2, 32
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 15, 32
+	waitstate
 	goto Zone1A_EventScript_Exit_1
 
 

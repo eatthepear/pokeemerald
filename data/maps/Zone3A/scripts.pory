@@ -6,8 +6,9 @@ script Zone3A_EventScript_Exit {
 		goto(Zone3A_EventScript_LeviathanBattle)
 	}
     if (var(VAR_ZONE) > 3) {
-	    clearflag(FLAG_IS_REVISITING_ZONE)
-	    warpteleport(MAP_ZONE0D, 255, 2, 32)
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 23, 32)
+		waitstate
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
 			(!defeated(TRAINER_PATRICK) ||

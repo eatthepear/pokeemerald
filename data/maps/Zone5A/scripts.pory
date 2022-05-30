@@ -3,8 +3,9 @@ mapscripts Zone5A_MapScripts {}
 script Zone5A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 5) {
-	    clearflag(FLAG_IS_REVISITING_ZONE)
-	    warpteleport(MAP_ZONE0D, 255, 2, 32)
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 31, 32)
+		waitstate
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
 			(!defeated(TRAINER_ANNE_AND_JUNE) ||

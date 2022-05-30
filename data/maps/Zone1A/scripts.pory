@@ -3,8 +3,9 @@ mapscripts Zone1A_MapScripts {}
 script Zone1A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 1) {
-	    clearflag(FLAG_IS_REVISITING_ZONE)
-	    warpteleport(MAP_ZONE0D, 255, 2, 32)
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 15, 32)
+		waitstate
     } else {
         warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
     }
