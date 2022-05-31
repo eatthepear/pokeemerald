@@ -538,3 +538,4 @@ gSpecials::
 	def_special GetCaughtSpeciesCount
 	def_special SetTotemBoost
 	def_special TrySpecialOverworldEvo
+	def_special HeadbuttWildEncounter
