@@ -289,7 +289,7 @@ bool8 FldEff_UseCutOnGrass(void)
 static void FieldCallback_CutTree(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
-    ScriptContext1_SetupScript(EventScript_UseCut);
+    // ScriptContext1_SetupScript(EventScript_UseCut);
 }
 
 bool8 FldEff_UseCutOnTree(void)
