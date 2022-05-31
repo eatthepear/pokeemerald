@@ -1,0 +1,78 @@
+mapscripts Zone8Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 7: Zone8Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone8Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	msgbox(Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	msgbox(Zone8Sanctuary_Text_RewardClear7)
+	msgbox(Zone8Sanctuary_Text_7Reward)
+	giveitem(ITEM_BLUE_SHARD, 3)
+	msgbox(Zone8Sanctuary_Text_RewardClear8)
+	msgbox(Zone8Sanctuary_Text_8Reward)
+	giveitem(ITEM_TM05)
+	closemessage
+	setvar(VAR_ZONE, 9)
+	msgbox(gText_Colress_Unlocked)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT)
+	waitfanfare
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedUnique, MSGBOX_DEFAULT)
+	waitfanfare
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedServices, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+}
+
+script Zone8Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			buffernumberstring(0, VAR_ZONE)
+			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				warp(MAP_ZONE9A, 255, 23, 13)
+				waitstate
+			}
+		case 1:
+			goto(EventScript_Advice)
+		case 2:
+			goto(EventScript_Settings)
+	}
+	goto(EventScript_WhenUReady)
+}
+
+text Zone8Sanctuary_Text_Colress_ReachedZone {
+	"{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
+	"You have cleared {COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}.$"
+}
+
+text Zone8Sanctuary_Text_RewardClear7 {
+	"Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is...$"
+}
+
+text Zone8Sanctuary_Text_7Reward {
+	"3 Blue Shards!$"
+}
+
+text Zone8Sanctuary_Text_RewardClear8 {
+	"Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is...$"
+}
+
+text Zone8Sanctuary_Text_8Reward {
+	"TM05 - Rock Tomb!$"
+}

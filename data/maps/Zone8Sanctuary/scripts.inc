@@ -1,35 +1,26 @@
 Zone8Sanctuary_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone8Sanctuary_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone8Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-Zone8Sanctuary_OnFrame:
+Zone8Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_ZONE, 7, Zone8Sanctuary_EventScript_Intro
 	.2byte 0
 
-Zone8Sanctuary_EventScript_Intro:
+
+Zone8Sanctuary_EventScript_Intro::
 	lockall
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	call EventScript_MoveCameraUp
-	applymovement 1, Common_Movement_ExclamationMark
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Colress_WalkDown
-	waitmovement 0
-	playfanfare MUS_OBTAIN_BADGE
+	call EventScript_EnterSanctuary
 	msgbox Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
-	msgbox Zone8Sanctuary_Text_RewardClear7, MSGBOX_AUTOCLOSE
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone8Sanctuary_EventScript_7RewardBrutal
-	call_if_unset FLAG_BRUTAL_MODE_ON, Zone8Sanctuary_EventScript_7RewardDefault
-	msgbox Zone8Sanctuary_Text_RewardClear8, MSGBOX_AUTOCLOSE
-	msgbox Zone8Sanctuary_Text_8Reward, MSGBOX_AUTOCLOSE
+	msgbox Zone8Sanctuary_Text_RewardClear7
+	msgbox Zone8Sanctuary_Text_7Reward
+	giveitem ITEM_BLUE_SHARD, 3
+	msgbox Zone8Sanctuary_Text_RewardClear8
+	msgbox Zone8Sanctuary_Text_8Reward
 	giveitem ITEM_TM05
 	closemessage
 	setvar VAR_ZONE, 9
-	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_Unlocked
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
 	waitfanfare
@@ -40,21 +31,12 @@ Zone8Sanctuary_EventScript_Intro:
 	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
-	end
-
-Zone8Sanctuary_EventScript_7RewardBrutal:
-	msgbox Zone8Sanctuary_Text_7RewardBrutal, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BLUE_SHARD, 2
 	return
 
-Zone8Sanctuary_EventScript_7RewardDefault:
-	msgbox Zone8Sanctuary_Text_7RewardDefault, MSGBOX_AUTOCLOSE
-	giveitem ITEM_BLUE_SHARD, 5
-	return
 
 Zone8Sanctuary_EventScript_NextZone::
 	lock
@@ -62,42 +44,47 @@ Zone8Sanctuary_EventScript_NextZone::
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
-	case 0, Zone8Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Advice
-	case 2, EventScript_Settings
-	case 3, EventScript_WhenUReady
-	case MULTI_B_PRESSED, EventScript_WhenUReady
-	end
+	case 0, Zone8Sanctuary_EventScript_NextZone_3
+	case 1, Zone8Sanctuary_EventScript_NextZone_4
+	case 2, Zone8Sanctuary_EventScript_NextZone_5
+Zone8Sanctuary_EventScript_NextZone_1:
+	goto EventScript_WhenUReady
+	return
 
-Zone8Sanctuary_EventScript_NextZoneCheck:
+Zone8Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone8Sanctuary_EventScript_Leave
-	goto EventScript_WhenUReady
-	end
+	goto_if_eq Zone8Sanctuary_EventScript_NextZone_6
+	goto Zone8Sanctuary_EventScript_NextZone_1
 
-Zone8Sanctuary_EventScript_Leave:
+Zone8Sanctuary_EventScript_NextZone_4:
+	goto EventScript_Advice
+	goto Zone8Sanctuary_EventScript_NextZone_1
+
+Zone8Sanctuary_EventScript_NextZone_5:
+	goto EventScript_Settings
+	goto Zone8Sanctuary_EventScript_NextZone_1
+
+Zone8Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE9A, 255, 23, 13
-	end
+	waitstate
+	goto Zone8Sanctuary_EventScript_NextZone_1
 
-Zone8Sanctuary_Text_Colress_ReachedZone:
+
+Zone8Sanctuary_Text_Colress_ReachedZone::
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
 	.string "You have cleared {COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}.$"
 
-Zone8Sanctuary_Text_RewardClear7:
+Zone8Sanctuary_Text_RewardClear7::
 	.string "Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is...$"
 
-Zone8Sanctuary_Text_7RewardDefault:
-	.string "5 Blue Shards!$"
+Zone8Sanctuary_Text_7Reward::
+	.string "3 Blue Shards!$"
 
-Zone8Sanctuary_Text_7RewardBrutal:
-	.string "2 Blue Shards!$"
-
-Zone8Sanctuary_Text_RewardClear8:
+Zone8Sanctuary_Text_RewardClear8::
 	.string "Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is...$"
 
-Zone8Sanctuary_Text_8Reward:
+Zone8Sanctuary_Text_8Reward::
 	.string "TM05 - Rock Tomb!$"
