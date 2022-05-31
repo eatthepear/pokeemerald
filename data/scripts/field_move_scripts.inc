@@ -500,7 +500,9 @@ EventScript_Headbutt::
 	setvar VAR_0x8006, 8  @ num shakes
 	setvar VAR_0x8007, 5  @ shake delay
 	special ShakeCamera
+	playse SE_M_BIND
 	waitstate
+	waitse
 	special HeadbuttWildEncounter
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_EndHeadbutt
