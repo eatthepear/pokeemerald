@@ -105,6 +105,14 @@ Zone2B_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
 
+Zone2B_EventScript_Sign::
+	msgbox Zone2B_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone2B_Text_Sign:
+	.string "Golden Trees often have Berries\n"
+	.string "or wild Pokémon!$"
+
 Zone2B_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in\n"
 	.string "order to battle better?\p"
