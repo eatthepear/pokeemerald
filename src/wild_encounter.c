@@ -206,12 +206,8 @@ static u8 ChooseWildMonIndex_Land(void)
         return 9;
     else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_9 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_10)
         return 10;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_10 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_11)
-        return 11;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_11 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_12)
-        return 12;
     else
-        return 13;
+        return 11;
 }
 
 static u8 ChooseWildMonIndex_Water(void)
@@ -224,20 +220,8 @@ static u8 ChooseWildMonIndex_Water(void)
         return 1;
     else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_2)
         return 2;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_3)
-        return 3;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_3 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_4)
-        return 4;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_4 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_5)
-        return 5;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_5 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_6)
-        return 6;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_6 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_7)
-        return 7;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_7 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_8)
-        return 8;
     else
-        return 9;
+        return 3;
 }
 
 // FISH_WILD_COUNT
