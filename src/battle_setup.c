@@ -109,8 +109,7 @@ EWRAM_DATA static u8 *sTrainerABattleScriptRetAddr = NULL;
 EWRAM_DATA static u8 *sTrainerBBattleScriptRetAddr = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
-EWRAM_DATA u8 IsCaptureBlockedByNuzlocke = 0;
-EWRAM_DATA u8 IsSpeciesClauseActive = 0;
+EWRAM_DATA u8 ShouldSkipEncounterNuzlocke = 0;
 
 // The first transition is used if the enemy pokemon are lower level than our pokemon.
 // Otherwise, the second transition is used.
@@ -418,26 +417,20 @@ void BattleSetup_StartWildBattle(void)
     else
         if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH))
         {
-            IsSpeciesClauseActive = IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
-            if (IsMonShiny(&gEnemyParty[0]))
-            {
-                IsSpeciesClauseActive = 0;
-                IsCaptureBlockedByNuzlocke = 0;
-            }
-            else if (NuzlockeFlagGet(GetCurrentRegionMapSectionId()) == 0)
-                IsCaptureBlockedByNuzlocke = 0;
-            else
-                IsCaptureBlockedByNuzlocke = 1;
-        }
-        else
-        {
-            IsCaptureBlockedByNuzlocke = 0;
+            ShouldSkipEncounterNuzlocke = IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
         }
         DoStandardWildBattle(FALSE);
 }
 
 void BattleSetup_StartDoubleWildBattle(void)
 {
+    if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH))
+    {
+        ShouldSkipEncounterNuzlocke = IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)) && IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[1], MON_DATA_SPECIES));
+        // if you can catch both, should be 0 & 0 = 0 - no skip
+        // if you can only catch one, should be 0 & 1 = 0 - no skip
+        // if you can't catch either, should be 1 & 1 = 1 - skip because you can't catch either
+    }
     DoStandardWildBattle(TRUE);
 }
 

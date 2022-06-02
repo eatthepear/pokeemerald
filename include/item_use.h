@@ -50,5 +50,7 @@ enum {
 };
 
 bool32 CanThrowBall(void);
+extern u8 IsCaptureBlockedByNuzlocke;
+extern u8 IsSpeciesClauseActive;
 
 #endif // GUARD_ITEM_USE_H

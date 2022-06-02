@@ -5265,8 +5265,7 @@ static void HandleEndTurn_FinishBattle(void)
             TryPutBreakingNewsOnAir();
         }
 
-        if (!(gBattleTypeFlags & (BATTLE_TYPE_DOUBLE
-                                  | BATTLE_TYPE_LINK
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                   | BATTLE_TYPE_TRAINER
                                   | BATTLE_TYPE_FIRST_BATTLE
                                   | BATTLE_TYPE_LINK_IN_BATTLE
@@ -5282,7 +5281,7 @@ static void HandleEndTurn_FinishBattle(void)
         {
             if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) == 1)
             {
-                if (IsSpeciesClauseActive == 0)
+                if (ShouldSkipEncounterNuzlocke == 0)
                 {
                     if (NuzlockeFlagGet(GetCurrentRegionMapSectionId()) == 0)
                         NuzlockeFlagSet(GetCurrentRegionMapSectionId());

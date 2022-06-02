@@ -333,7 +333,7 @@ static const u8 gDebugText_Flags_SwitchCollision[] =        _("Collision ON/OFF"
 static const u8 gDebugText_Flags_SwitchEncounter[] =        _("Encounter ON/OFF");
 static const u8 gDebugText_Flags_SwitchTrainerSee[] =       _("TrainerSee ON/OFF");
 static const u8 gDebugText_Flags_SwitchBagUse[] =           _("BagUse ON/OFF");
-static const u8 gDebugText_Flags_SwitchCatching[] =         _("Catching ON/OFF");
+static const u8 gDebugText_Flags_SwitchCatching[] =         _("Double Wilds ON/OFF");
 static const u8 gDebugText_Flags_Flag[] =                   _("Flag: {STR_VAR_1}   \n{STR_VAR_2}                   \n{STR_VAR_3}");
 static const u8 gDebugText_Flags_FlagHex[] =                _("{STR_VAR_1}           \n0x{STR_VAR_2}             ");
 static const u8 gDebugText_Flags_FlagSet[] =                _("TRUE");
@@ -1464,12 +1464,12 @@ static void DebugAction_Flags_BagUseOnOff(u8 taskId)
 }
 static void DebugAction_Flags_CatchingOnOff(u8 taskId)
 {
-    if(FlagGet(FLAG_SYS_NO_CATCHING))
+    if(FlagGet(FLAG_FORCE_DOUBLE_WILD))
     {
-        FlagClear(FLAG_SYS_NO_CATCHING);
+        FlagClear(FLAG_FORCE_DOUBLE_WILD);
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SYS_NO_CATCHING);
+        FlagSet(FLAG_FORCE_DOUBLE_WILD);
         PlaySE(SE_PC_LOGIN);
     }
 }

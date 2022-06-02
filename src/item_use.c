@@ -78,6 +78,9 @@ static void CB2_OpenPokeblockFromBag(void);
 // EWRAM variables
 EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
 
+EWRAM_DATA u8 IsCaptureBlockedByNuzlocke = 0;
+EWRAM_DATA u8 IsSpeciesClauseActive = 0;
+
 // Below is set TRUE by UseRegisteredKeyItemOnField
 #define tUsingRegisteredKeyItem  data[3]
 
@@ -981,13 +984,35 @@ static u32 GetBallThrowableState(void)
     {
         return BALL_THROW_UNABLE_NO_ROOM;   // No room for mon
     }
-    else if (IsCaptureBlockedByNuzlocke == 1)
+    else if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH))
     {
-        return BALL_THROW_UNABLE_NUZLOCKE_ALREADY_CAUGHT; // Already got Nuzlocke encounter
-    }
-    else if (IsSpeciesClauseActive == 1)
-    {
-        return BALL_THROW_UNABLE_NUZLOCKE_SPECIES_CLAUSE; // Nuzlocke Species Clause
+        u8 battler;
+        if (IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)))
+        {
+            battler = 0;
+        }
+        else
+        {
+            battler = 1;
+        }
+        IsSpeciesClauseActive = IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[battler], MON_DATA_SPECIES));
+        if (IsMonShiny(&gEnemyParty[battler]))
+        {
+            IsSpeciesClauseActive = 0;
+            IsCaptureBlockedByNuzlocke = 0;
+        }
+        else if (NuzlockeFlagGet(GetCurrentRegionMapSectionId()) == 0)
+            IsCaptureBlockedByNuzlocke = 0;
+        else
+            IsCaptureBlockedByNuzlocke = 1;
+        if (IsCaptureBlockedByNuzlocke == 1)
+        {
+            return BALL_THROW_UNABLE_NUZLOCKE_ALREADY_CAUGHT; // Already got Nuzlocke encounter
+        }
+        else if (IsSpeciesClauseActive == 1)
+        {
+            return BALL_THROW_UNABLE_NUZLOCKE_SPECIES_CLAUSE; // Nuzlocke Species Clause
+        }
     }
 #if B_SEMI_INVULNERABLE_CATCH >= GEN_4
     else if (gStatuses3[GetCatchingBattler()] & STATUS3_SEMI_INVULNERABLE)

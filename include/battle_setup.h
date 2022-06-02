@@ -17,8 +17,7 @@ extern const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES];
 extern u16 gTrainerBattleOpponent_A;
 extern u16 gTrainerBattleOpponent_B;
 extern u16 gPartnerTrainerId;
-extern u8 IsCaptureBlockedByNuzlocke;
-extern u8 IsSpeciesClauseActive;
+extern u8 ShouldSkipEncounterNuzlocke;
 
 void BattleSetup_StartWildBattle(void);
 void BattleSetup_StartDoubleWildBattle(void);
