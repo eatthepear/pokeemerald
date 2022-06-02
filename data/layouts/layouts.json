@@ -4544,10 +4544,10 @@
     {
       "id": "LAYOUT_ZONE6A",
       "name": "Zone6A_Layout",
-      "width": 42,
-      "height": 43,
+      "width": 65,
+      "height": 39,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Unused1",
       "border_filepath": "data/layouts/Zone6A/border.bin",
       "blockdata_filepath": "data/layouts/Zone6A/map.bin"
     },
