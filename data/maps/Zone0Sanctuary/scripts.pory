@@ -541,9 +541,9 @@ script Zone0Sanctuary_EventScript_NextZone {
 				waitstate
 			}
 		case 1:
-			goto(EventScript_Advice)
-		case 2:
 			goto(EventScript_Settings)
+		case 2:
+			goto(EventScript_Documentation)
 	}
 	goto(EventScript_WhenUReady)
 }

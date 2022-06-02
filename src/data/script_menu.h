@@ -807,8 +807,8 @@ static const struct MenuAction MultichoiceList_ColressSettings[] =
 static const struct MenuAction MultichoiceList_ColressMenu[] =
 {
     {gText_NextZone},
-    {gText_Advice},
     {gText_Settings},
+    {gText_Documentation},
     {gText_Exit},
 };
 

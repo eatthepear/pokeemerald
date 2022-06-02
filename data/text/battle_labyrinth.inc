@@ -216,77 +216,11 @@ gText_Colress_UnlockedWarp:
 	.string "you have unlocked a special warp in\l"
 	.string "Zone 0.$"
 
-gText_Colress_HeresAPieceofAdvice:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Here's a piece of advice.$"
-
-gText_Colress_WantMoreAdvice:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Do you want more advice?$"
-
-gText_Advice0:
+gText_Version:
 	.string "This is version 1.3.1 of the\n"
 	.string "Pokémon Battle Labyrinth.\p"
 	.string "Make sure you're playing the\n"
 	.string "most up to date version!$"
-
-gText_Advice1:
-	.string "Press the R key to enable\n"
-	.string "or disable Auto Run.\l"
-	.string "Trust me, it's a lifesaver!$"
-
-gText_Advice2:
-	.string "Though it costs money,\n"
-	.string "Joy's Healing Shop is often the\l"
-	.string "most cost-effective means to heal\l"
-	.string "your Pokémon.$"
-
-gText_Advice3:
-	.string "Remember to stock up on supplies at\n"
-	.string "Tim's General Purpose Shop before\l"
-	.string "heading out into the next Zone.\p"
-	.string "You do not want to be unable to\n"
-	.string "heal your Pokémon.$"
-
-gText_Advice4:
-	.string "Antidotes are crucial for curing\n"
-	.string "Poison, as your Pokémon can faint\l"
-	.string "from it in the overworld.$"
-
-gText_Advice5:
-	.string "Brutal difficulty can be turned off\n"
-	.string "by talking to me at any point.\p"
-	.string "Nuzlocke mode can also be turned\n"
-	.string "off by talking to me at any point.$"
-
-gText_Advice6:
-	.string "Silph Unique Item Shop hosts a huge\n"
-	.string "variety of items, but they are\l"
-	.string "often overpriced. Make sure to\l"
-	.string "spend your money carefully.$"
-
-gText_Advice7:
-	.string "Lelouch's Special Services Shop\n"
-	.string "is a powerful resource,\l"
-	.string "but be sure to use it sparingly.$"
-
-gText_Advice8:
-	.string "If you're unsure, you can always\n"
-	.string "check the documentation for\l"
-	.string "information on nearly everything.$"
-
-gText_Advice9:
-	.string "It is more advantageous to have a\n"
-	.string "full party of well trained Pokémon\l"
-	.string "than a few higher leveled Pokémon.$"
-
-gText_Advice10:
-	.string "While you are on the Pokémon stats\n"
-	.string "screen, you can press the A button\l"
-	.string "to cycle through screens that show\l"
-	.string "the Pokémon's IVs, EVs, or stats.$"
-
-gText_Advice11:
-	.string "You can press the Start button\n"
-	.string "while in the Bag to sort items.$"
 
 gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"

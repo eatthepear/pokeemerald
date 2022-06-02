@@ -1695,94 +1695,10 @@ EventScript_SanctuaryToZone0::
 	return
 
 
-EventScript_Advice::
-EventScript_Advice_2:
-	msgbox gText_Colress_HeresAPieceofAdvice
-	switch VAR_ADVICE
-	case 0, EventScript_Advice_6
-	case 1, EventScript_Advice_7
-	case 2, EventScript_Advice_8
-	case 3, EventScript_Advice_9
-	case 4, EventScript_Advice_10
-	case 5, EventScript_Advice_11
-	case 6, EventScript_Advice_12
-	case 7, EventScript_Advice_13
-	case 8, EventScript_Advice_14
-	case 9, EventScript_Advice_15
-	case 10, EventScript_Advice_16
-	case 11, EventScript_Advice_17
-EventScript_Advice_4:
-	msgbox gText_Colress_WantMoreAdvice, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Advice_18
-	goto EventScript_Advice_2
-
-EventScript_Advice_1:
+EventScript_Documentation::
+	msgbox gText_Version
 	goto EventScript_WhenUReady
 	return
-
-EventScript_Advice_6:
-	msgbox gText_Advice0
-	setvar VAR_ADVICE, 1
-	goto EventScript_Advice_4
-
-EventScript_Advice_7:
-	msgbox gText_Advice1
-	setvar VAR_ADVICE, 2
-	goto EventScript_Advice_4
-
-EventScript_Advice_8:
-	msgbox gText_Advice2
-	setvar VAR_ADVICE, 3
-	goto EventScript_Advice_4
-
-EventScript_Advice_9:
-	msgbox gText_Advice3
-	setvar VAR_ADVICE, 4
-	goto EventScript_Advice_4
-
-EventScript_Advice_10:
-	msgbox gText_Advice4
-	setvar VAR_ADVICE, 5
-	goto EventScript_Advice_4
-
-EventScript_Advice_11:
-	msgbox gText_Advice5
-	setvar VAR_ADVICE, 6
-	goto EventScript_Advice_4
-
-EventScript_Advice_12:
-	msgbox gText_Advice6
-	setvar VAR_ADVICE, 7
-	goto EventScript_Advice_4
-
-EventScript_Advice_13:
-	msgbox gText_Advice7
-	setvar VAR_ADVICE, 8
-	goto EventScript_Advice_4
-
-EventScript_Advice_14:
-	msgbox gText_Advice8
-	setvar VAR_ADVICE, 9
-	goto EventScript_Advice_4
-
-EventScript_Advice_15:
-	msgbox gText_Advice9
-	setvar VAR_ADVICE, 10
-	goto EventScript_Advice_4
-
-EventScript_Advice_16:
-	msgbox gText_Advice10
-	setvar VAR_ADVICE, 11
-	goto EventScript_Advice_4
-
-EventScript_Advice_17:
-	msgbox gText_Advice11
-	setvar VAR_ADVICE, 0
-	goto EventScript_Advice_4
-
-EventScript_Advice_18:
-	goto EventScript_Advice_1
 
 
 EventScript_Settings::

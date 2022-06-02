@@ -3154,8 +3154,8 @@ extern const u8 gText_SaveMenuRandomlocke[];
 extern const u8 gText_SaveMenuDefault[];
 extern const u8 gText_SaveMenuBrutal[];
 extern const u8 gText_NextZone[];
-extern const u8 gText_Advice[];
 extern const u8 gText_Settings[];
+extern const u8 gText_Documentation[];
 
 extern const u8 gText_TrainingService[];
 extern const u8 gText_MoveReminderService[];

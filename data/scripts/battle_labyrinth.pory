@@ -1041,52 +1041,8 @@ script EventScript_SanctuaryToZone0 {
 	waitstate
 }
 
-script EventScript_Advice {
-	while {
-		msgbox(gText_Colress_HeresAPieceofAdvice)
-		switch (var(VAR_ADVICE)) {
-			case 0:
-				msgbox(gText_Advice0)
-				setvar(VAR_ADVICE, 1)
-			case 1:
-				msgbox(gText_Advice1)
-				setvar(VAR_ADVICE, 2)
-			case 2:
-				msgbox(gText_Advice2)
-				setvar(VAR_ADVICE, 3)
-			case 3:
-				msgbox(gText_Advice3)
-				setvar(VAR_ADVICE, 4)
-			case 4:
-				msgbox(gText_Advice4)
-				setvar(VAR_ADVICE, 5)
-			case 5:
-				msgbox(gText_Advice5)
-				setvar(VAR_ADVICE, 6)
-			case 6:
-				msgbox(gText_Advice6)
-				setvar(VAR_ADVICE, 7)
-			case 7:
-				msgbox(gText_Advice7)
-				setvar(VAR_ADVICE, 8)
-			case 8:
-				msgbox(gText_Advice8)
-				setvar(VAR_ADVICE, 9)
-			case 9:
-				msgbox(gText_Advice9)
-				setvar(VAR_ADVICE, 10)
-			case 10:
-				msgbox(gText_Advice10)
-				setvar(VAR_ADVICE, 11)
-			case 11:
-				msgbox(gText_Advice11)
-				setvar(VAR_ADVICE, 0)
-		}
-		msgbox(gText_Colress_WantMoreAdvice, MSGBOX_YESNO)
-		if (var(VAR_RESULT) == NO) {
-			break
-		}
-	}
+script EventScript_Documentation {
+	msgbox(gText_Version)
 	goto(EventScript_WhenUReady)
 }
 

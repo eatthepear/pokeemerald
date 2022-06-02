@@ -46,11 +46,11 @@ Zone6Sanctuary_EventScript_NextZone_3:
 	goto Zone6Sanctuary_EventScript_NextZone_1
 
 Zone6Sanctuary_EventScript_NextZone_4:
-	goto EventScript_Advice
+	goto EventScript_Settings
 	goto Zone6Sanctuary_EventScript_NextZone_1
 
 Zone6Sanctuary_EventScript_NextZone_5:
-	goto EventScript_Settings
+	goto EventScript_Documentation
 	goto Zone6Sanctuary_EventScript_NextZone_1
 
 Zone6Sanctuary_EventScript_NextZone_6:
