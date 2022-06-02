@@ -1881,6 +1881,7 @@ s32 CalcCritChanceStage(u8 battlerAtk, u8 battlerDef, u32 move, bool32 recordAbi
     }
     else if (gStatuses3[battlerAtk] & STATUS3_LASER_FOCUS
              || gBattleMoves[move].effect == EFFECT_ALWAYS_CRIT
+             || gBattleMoves[move].effect == EFFECT_EXPLOSION
              || (abilityAtk == ABILITY_MERCILESS && gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY)
              || move == MOVE_SURGING_STRIKES)
     {
