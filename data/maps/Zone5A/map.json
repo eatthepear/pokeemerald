@@ -194,6 +194,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_ExitSign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Zone5A_EventScript_Sign"
     }
   ]
 }

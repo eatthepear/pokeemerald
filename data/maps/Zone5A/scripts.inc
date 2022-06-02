@@ -215,6 +215,14 @@ Zone5A_EventScript_ItemTM05::
 	finditem ITEM_TM05
 	end
 
+Zone5A_EventScript_Sign::
+	msgbox Zone5A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone5A_Text_Sign:
+	.string "You can sort items in the Bag\n"
+	.string "using {START_BUTTON}.$"
+
 Zone5A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… if it isn't the trainer who's\n"
 	.string "been beating all my fellow club\l"

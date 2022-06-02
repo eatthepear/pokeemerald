@@ -20,3 +20,12 @@ Zone4B_Text_RalphPostBattle:
 Zone4B_EventScript_ItemAwakening::
 	finditem ITEM_AWAKENING
 	end
+
+Zone4B_EventScript_Sign::
+	msgbox Zone4B_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone4B_Text_Sign:
+	.string "You can see detailed information\n"
+	.string "about a Pokémon species in its\l"
+	.string "Pokédex entry after capturing it.$"

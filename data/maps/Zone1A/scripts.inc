@@ -96,6 +96,14 @@ Zone1A_EventScript_ItemQuickClaw::
 	finditem ITEM_QUICK_CLAW
 	end
 
+Zone1A_EventScript_Sign::
+	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone1A_Text_Sign:
+	.string "Press {R_BUTTON} to enable\n"
+	.string "or disable Auto Run.$"
+
 Zone1A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet\n"
 	.string "an Oran Berry, I would be able to win.\l"

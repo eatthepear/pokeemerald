@@ -101,4 +101,12 @@ Zone1A_EventScript_ItemPotion::
 Zone1A_EventScript_ItemQuickClaw::
 	finditem ITEM_QUICK_CLAW
 	end
+
+Zone1A_EventScript_Sign::
+	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone1A_Text_Sign:
+	.string "Press {R_BUTTON} to enable\n"
+	.string "or disable Auto Run.$"
 `

@@ -38,3 +38,11 @@ Zone4C_Text_ChloeandKayaPostBattle:
 Zone4C_EventScript_ItemMuscleBand::
 	finditem ITEM_MUSCLE_BAND
 	end
+
+Zone4C_EventScript_Sign::
+	msgbox Zone4C_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone4C_Text_Sign:
+	.string "There is a 20% chance to encounter\n"
+	.string "wild Pokémon in a Double Battle.$"

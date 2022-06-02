@@ -10,7 +10,7 @@ Zone4A_EventScript_ItemBurnHeal::
 	end
 
 Zone4A_Text_Sign:
-	.string "These woods are enchanted...\n"
+	.string "These woods are enchanted…\n"
 	.string "Don't get lost!$"
 
 Zone4A_EventScript_Herman::

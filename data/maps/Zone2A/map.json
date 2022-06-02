@@ -67,6 +67,21 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Zone2A_EventScript_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 15,
+      "elevation": 3,
+      "item": "ITEM_ORAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE2A_ORAN_BERRY"
+    }
   ]
 }

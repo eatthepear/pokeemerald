@@ -32,3 +32,11 @@ Zone2A_Text_JeremiahDefeat:
 
 Zone2A_Text_JeremiahPostBattle:
 	.string "Just wait till my Bugs are all evolved!$"
+
+Zone2A_EventScript_Sign::
+	msgbox Zone2A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone2A_Text_Sign:
+	.string "You may find hidden items by\n"
+	.string "checking certain tiles with {A_BUTTON}.$"

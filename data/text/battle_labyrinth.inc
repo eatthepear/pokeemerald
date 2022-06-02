@@ -603,8 +603,7 @@ gText_Joy_WonderfulDay:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Have a wonderful day!$"
 
 gText_ExitSign:
-	.string "This is the exit!\n"
-	.string "If you leave, you can't come back.$"
+	.string "This is the exit!$"
 
 gText_BrutalExitNotSatisfied:
 	.string "You haven't defeated all the\n"

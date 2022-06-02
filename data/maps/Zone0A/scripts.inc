@@ -218,6 +218,10 @@ Zone0A_EventScript_TPISign::
 	msgbox Zone0A_Text_TPISign, MSGBOX_SIGN
 	end
 
+Zone0A_EventScript_CaptureSign::
+	msgbox Zone0A_Text_CaptureSign, MSGBOX_SIGN
+	end
+
 Zone0A_Text_DayCareSign:
 	.string "Pokémon Day Care\n"
 	.string "8 Generations and counting!$"
@@ -225,6 +229,11 @@ Zone0A_Text_DayCareSign:
 Zone0A_Text_TPISign:
 	.string "Teleport Institue\n"
 	.string "Getting around, easy peasy.$"
+
+Zone0A_Text_CaptureSign:
+	.string "Pokémon found here are extremely\n"
+	.string "friendly and will not break out of\l"
+	.string "Pokéballs.$"
 
 Zone0A_EventScript_Porygon_Text_0:
 	.string "There seemed to be some noise, but it's\n"

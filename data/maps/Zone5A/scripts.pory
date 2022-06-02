@@ -230,4 +230,11 @@ Zone5A_EventScript_ItemTM05::
 	finditem ITEM_TM05
 	end
 
+Zone5A_EventScript_Sign::
+	msgbox Zone5A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone5A_Text_Sign:
+	.string "You can sort items in the Bag\n"
+	.string "using {START_BUTTON}.$"
 `

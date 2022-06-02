@@ -144,6 +144,14 @@
       "elevation": 3,
       "item": "ITEM_RAWST_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE4C_RAWST_BERRY"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Zone4C_EventScript_Sign"
     }
   ]
 }

@@ -39,3 +39,11 @@ Zone4D_EventScript_ItemWiseGlasses::
 Zone4D_EventScript_ItemBeedrillite::
 	finditem ITEM_BEEDRILLITE
 	end
+
+Zone4D_EventScript_Sign::
+	msgbox Zone4D_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone4D_Text_Sign:
+	.string "Some areas require backtracking\n"
+	.string "later on in order to access them.$"
