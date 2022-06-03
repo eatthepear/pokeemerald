@@ -52,9 +52,6 @@ script Zone5A_EventScript_LeviathanBattle {
 	msgbox(format(
 		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, man, if only you had joined our club!\pWe could have been the Fearsome Fivesome!"
 	))
-	setweather(WEATHER_RAIN)
-	doweather
-	msgbox(format("It suddenly began to rain!"))
 	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox(format(
