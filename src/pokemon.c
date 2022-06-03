@@ -9947,6 +9947,14 @@ u16 GetRandomSpecies(u8 wildMonLevel)
         species = SPECIES_KOFFING;
     } else if (species == SPECIES_GLALIE) {
         species = SPECIES_SNORUNT;
+    } else if (species == SPECIES_LYCANROC) {
+        species = SPECIES_ROCKRUFF;
+    } else if (species == SPECIES_SLIGGOO) {
+        species = SPECIES_GOOMY;
+    } else if (species == SPECIES_AVALUGG) {
+        species = SPECIES_BERGMITE;
+    } else if (species == SPECIES_BRAVIARY) {
+        species = SPECIES_RUFFLET;
     }
     
     return species;
