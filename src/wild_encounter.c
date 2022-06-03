@@ -1038,7 +1038,17 @@ bool8 TryDoDoubleWildBattle(void)
         return TRUE;
     #if B_DOUBLE_WILD_CHANCE != 0
     else if ((Random() % 100) + 1 < B_DOUBLE_WILD_CHANCE)
-        return TRUE;
+    {
+        // You can't get wild Double Battles until you clear the first Zone
+        if (VarGet(VAR_ZONE) == 1) 
+        {
+            return FALSE;
+        }
+        else
+        {
+            return TRUE;
+        }
+    }
     #endif
     return FALSE;
 }
