@@ -471,50 +471,70 @@ static const struct TrainerMon sParty_Fred[] = {
     }
 };
 
-static const struct TrainerMon sParty_IsabellaDefault[] = {//Leviathan, Double Battle, Default
-    {
-    .iv = 30,
-    .lvl = 13,
-    .nature = NATURE_NAIVE,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Pastel Veil
-    .species = SPECIES_PONYTA_GALARIAN,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PSYBEAM, MOVE_DOUBLE_KICK, MOVE_NONE, MOVE_NONE}
-    },
+static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battle, Default
     {
     .iv = 30,
     .lvl = 13,
     .nature = NATURE_BRAVE,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Huge Power
+    .species = SPECIES_MARILL,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TACKLE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 13,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Prankster
-    .species = SPECIES_IMPIDIMP,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BITE, MOVE_FAKE_OUT, MOVE_NONE, MOVE_NONE}
+    .ability = ABILITY_SLOT_1, //Static
+    .species = SPECIES_PIKACHU,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_ELECTROWEB, MOVE_HELPING_HAND, MOVE_QUICK_ATTACK, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 13,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Poison Point
+    .species = SPECIES_ROSELIA,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_MEGA_DRAIN, MOVE_GROWTH, MOVE_POISON_STING, MOVE_NONE}
     }
 };
 
 
-static const struct TrainerMon sParty_IsabellaBrutal[] = {//Leviathan, Double Battle, Brutal
-    {
-    .ivs = {31, 31, 30, 30, 31, 30},
-    .lvl = 13,
-    .nature = NATURE_NAIVE,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Pastel Veil
-    .species = SPECIES_PONYTA_GALARIAN,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PSYBEAM, MOVE_DOUBLE_KICK, MOVE_HIDDEN_POWER, MOVE_MORNING_SUN} // Hidden Power Rock
-    },
+static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle, Brutal
     {
     .ivs = {31, 31, 31, 31, 30, 30},
     .lvl = 13,
     .nature = NATURE_BRAVE,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Huge Power
+    .species = SPECIES_MARILL,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TACKLE, MOVE_HIDDEN_POWER} // Hidden Power Ground
+    },
+    {
+    .ivs = {30, 31, 31, 31, 30, 31},
+    .lvl = 13,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Prankster
-    .species = SPECIES_IMPIDIMP,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BITE, MOVE_FAKE_OUT, MOVE_DRAINING_KISS, MOVE_HIDDEN_POWER} // Hidden Power Ground
+    .ability = ABILITY_SLOT_1, //Static
+    .species = SPECIES_PIKACHU,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_ELECTROWEB, MOVE_HELPING_HAND, MOVE_QUICK_ATTACK, MOVE_HIDDEN_POWER} // Hidden Power Grass
+    },
+    {
+    .ivs = {31, 31, 30, 30, 31, 30},
+    .lvl = 13,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Poison Point
+    .species = SPECIES_ROSELIA,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_MEGA_DRAIN, MOVE_GROWTH, MOVE_POISON_STING, MOVE_HIDDEN_POWER} // Hidden Power Rock
     }
 };
 
@@ -3403,7 +3423,7 @@ static const struct TrainerMon sParty_RemiBrutal[] = {//Leviathan 1, Brutal
 };
 
 
-static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan 3, Brutal
+static const struct TrainerMon sParty_RitaBrutala[] = {//Leviathan 3, Brutal
     {
     .iv = 31,
     .lvl = 16,

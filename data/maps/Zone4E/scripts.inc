@@ -46,13 +46,12 @@ Zone4E_EventScript_LeviathanBattle::
 	msgbox Zone4E_Text_Leviathan4Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_LeviathanBattle_2
-	totemboost_spatk1 B_POSITION_OPPONENT_LEFT
-	setvar VAR_MUGSHOT_ID, MUGSHOT_ISABELLA
-	trainerbattle_no_intro TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat
+	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
+	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat
 Zone4E_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone4E_EventScript_LeviathanBattle_Text_0
-	giveitem ITEM_SITRUS_BERRY, 5
+	giveitem ITEM_TM04
 	msgbox Zone4E_EventScript_LeviathanBattle_Text_1
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -63,8 +62,8 @@ Zone4E_EventScript_LeviathanBattle_1:
 	end
 
 Zone4E_EventScript_LeviathanBattle_2:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_ISABELLA
-	trainerbattle_no_intro TRAINER_ISABELLA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat
+	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
+	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat
 	goto Zone4E_EventScript_LeviathanBattle_1
 
 
@@ -82,33 +81,27 @@ Zone4E_Text_Sign:
 	.string "between stats, IVs, or EVs.$"
 
 Zone4E_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Isabella{COLOR DARK_GRAY}: That battle was magical!\p"
-	.string "For your victory, take these Sitrus\n"
-	.string "Berries.\p"
-	.string "Ponyta and I spent some time gathering\n"
-	.string "them earlier, but we've got too many\l"
-	.string "and we want to share.$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: That was great! I hope our\n"
+	.string "Pokémon are friends now, too!\p"
+	.string "Here, I want you to have this gift, from\n"
+	.string "me!\p"
+	.string "The best way to bring out one's inner\n"
+	.string "power is through friendship!$"
 
 Zone4E_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Isabella{COLOR DARK_GRAY}: I'm gonna go finish reading my\n"
-	.string "story now.\p"
-	.string "I do hope your story has a happy\n"
-	.string "ending.$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Alright, I'm off to go meet some\n"
+	.string "more friends!\p"
+	.string "See you around!$"
 
 Zone4E_Text_Leviathan4Intro::
-	.string "{COLOR BLUE}Isabella{COLOR DARK_GRAY}: And the prince saw her from\n"
-	.string "across the room, clad in her light pink\l"
-	.string "dress, looking around as if she was\l"
-	.string "searching for someone she had only\l"
-	.string "seen in a dream.\p"
-	.string "That's just a bit from my story that\n"
-	.string "I've been reading, 'The Shining\l"
-	.string "Honedge'.\p"
-	.string "I'm {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}.\n"
-	.string "I just love fables; they're so magical!\l"
-	.string "I hope our battle is just as special.\p"
-	.string "Bring it on!$"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey! I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GRAY}.\p"
+	.string "Nice to meet you!\p"
+	.string "People always criticize me for being too\n"
+	.string "friendly with others.\p"
+	.string "But I just find that's the best way to\n"
+	.string "make new friends!\p"
+	.string "Well, how about a battle, friend?$"
 
 Zone4E_Text_Leviathan4Defeat::
-	.string "It seems your story is only just\n"
-	.string "beginning!$"
+	.string "That was a lovely battle.\n"
+	.string "Thank you!$"

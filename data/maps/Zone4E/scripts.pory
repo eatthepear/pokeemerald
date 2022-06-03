@@ -29,17 +29,16 @@ script Zone4E_EventScript_LeviathanBattle {
 	msgbox(Zone4E_Text_Leviathan4Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-    	setvar(VAR_MUGSHOT_ID, MUGSHOT_ISABELLA)
-		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat)
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_RITA)
+		trainerbattle_no_intro(TRAINER_RITA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat)
 	} else {
-		totemboost_spatk1(B_POSITION_OPPONENT_LEFT)
-		setvar(VAR_MUGSHOT_ID, MUGSHOT_ISABELLA)
-		trainerbattle_no_intro(TRAINER_ISABELLA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_RITA)
+		trainerbattle_no_intro(TRAINER_RITA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: That battle was magical!\pFor your victory, take these Sitrus Berries.\pPonyta and I spent some time gathering them earlier, but we've got too many and we want to share."))
-	giveitem(ITEM_SITRUS_BERRY, 5)
-	msgbox(format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: I'm gonna go finish reading my story now.\pI do hope your story has a happy ending."))
+	msgbox(format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: That was great! I hope our Pokémon are friends now, too!\pHere, I want you to have this gift, from me!\pThe best way to bring out one's inner power is through friendship!"))
+	giveitem(ITEM_TM04)
+	msgbox(format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: Alright, I'm off to go meet some more friends!\pSee you around!"))
 	closemessage
 	fadescreen(FADE_TO_BLACK)
 	removeobject(2)
@@ -50,16 +49,12 @@ script Zone4E_EventScript_LeviathanBattle {
 }
 
 text Zone4E_Text_Leviathan4Intro {
-	format("{COLOR BLUE}Isabella{COLOR DARK_GRAY}: And the prince saw her from across the room, clad in her light pink dress, looking around as if she was searching for someone she had only seen in a dream.\p"
-	"That's just a bit from my story that I've been reading, 'The Shining Honedge'.\p"
-	"I'm {COLOR BLUE}Leviathan Isabella{COLOR DARK_GRAY}.\n"
-	"I just love fables; they're so magical!\l"
-	"I hope our battle is just as special.\p"
-	"Bring it on!")
+	format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey! I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GRAY}.\pNice to meet you!\pPeople always criticize me for being too friendly with others.\pBut I just find that's the best way to make new friends!\pWell, how about a battle, friend?")
 }
 
 text Zone4E_Text_Leviathan4Defeat {
-	format("It seems your story is only just beginning!")
+	"That was a lovely battle.\n"
+	"Thank you!"
 }
 
 raw `

@@ -26,8 +26,8 @@
 #define TRAINER_CHLOE_AND_KAYA               	22
 #define TRAINER_LUCIA                        	23
 #define TRAINER_FRED                         	24
-#define TRAINER_ISABELLA_LEVIATHAN_4           	25
-#define TRAINER_ISABELLA_LEVIATHAN_4_BRUTAL    	26
+#define TRAINER_RITA_LEVIATHAN_4               	25
+#define TRAINER_RITA_LEVIATHAN_4_BRUTAL        	26
 #define TRAINER_ANNE_AND_JUNE                	27
 #define TRAINER_GILBERT                      	28
 #define TRAINER_REBECCA                      	29

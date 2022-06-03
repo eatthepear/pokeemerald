@@ -336,32 +336,32 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Fred},
     },
 
-    [TRAINER_ISABELLA_LEVIATHAN_4] =
+    [TRAINER_RITA_LEVIATHAN_4] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_FAIRY_TALE_GIRL,
-        .trainerName = _("Isabella"),
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerName = _("Rita"),
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_IsabellaDefault),
-        .party = {.TrainerMon = sParty_IsabellaDefault},
+        .partySize = ARRAY_COUNT(sParty_RitaDefault),
+        .party = {.TrainerMon = sParty_RitaDefault},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
 
-    [TRAINER_ISABELLA_LEVIATHAN_4_BRUTAL] =
+    [TRAINER_RITA_LEVIATHAN_4_BRUTAL] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_FAIRY_TALE_GIRL,
-        .trainerName = _("Isabella"),
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerName = _("Rita"),
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_IsabellaBrutal),
-        .party = {.TrainerMon = sParty_IsabellaBrutal},
+        .partySize = ARRAY_COUNT(sParty_RitaBrutal),
+        .party = {.TrainerMon = sParty_RitaBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
