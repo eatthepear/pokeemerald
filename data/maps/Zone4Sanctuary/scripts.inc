@@ -16,7 +16,7 @@ Zone4Sanctuary_EventScript_Intro::
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
 	msgbox Zone4Sanctuary_Text_Reward
-	giveitem ITEM_TM04
+	giveitem ITEM_TM05
 	setvar VAR_ZONE, 5
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
@@ -62,4 +62,4 @@ Zone4Sanctuary_EventScript_NextZone_6:
 
 
 Zone4Sanctuary_Text_Reward::
-	.string "TM04 - Snarl!$"
+	.string "TM05 - Snarl!$"

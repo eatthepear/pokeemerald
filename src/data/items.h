@@ -7852,10 +7852,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM04_SNARL] =
+    [ITEM_TM04_HIDDEN_POWER] =
     {
         .name = _("TM04"),
-        .itemId = ITEM_TM04_SNARL,
+        .itemId = ITEM_TM04_HIDDEN_POWER,
         .price = 3000,
         .description = sTM04Desc,
         .pocket = POCKET_TM_HM,
@@ -7864,10 +7864,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM05_AERIAL_ACE] =
+    [ITEM_TM05_SNARL] =
     {
         .name = _("TM05"),
-        .itemId = ITEM_TM05_AERIAL_ACE,
+        .itemId = ITEM_TM05_SNARL,
         .price = 1000,
         .description = sTM05Desc,
         .pocket = POCKET_TM_HM,
@@ -7876,10 +7876,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM06_BUG_BITE] =
+    [ITEM_TM06_AERIAL_ACE] =
     {
         .name = _("TM06"),
-        .itemId = ITEM_TM06_BUG_BITE,
+        .itemId = ITEM_TM06_AERIAL_ACE,
         .price = 3000,
         .description = sTM06Desc,
         .pocket = POCKET_TM_HM,
@@ -7888,10 +7888,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM07_SCORCHING_SANDS] =
+    [ITEM_TM07_BUG_BITE] =
     {
         .name = _("TM07"),
-        .itemId = ITEM_TM07_SCORCHING_SANDS,
+        .itemId = ITEM_TM07_BUG_BITE,
         .price = 3000,
         .description = sTM07Desc,
         .pocket = POCKET_TM_HM,

@@ -1059,7 +1059,7 @@
 #define FLAG_ITEM_ZONE4D_WISE_GLASSES                               0x3F2
 #define FLAG_ITEM_ZONE4E_SUPER_POTION                               0x3F3
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
-#define FLAG_ITEM_ZONE5A_TM05                                       0x3F5
+#define FLAG_ITEM_ZONE5A_TM06                                       0x3F5
 #define FLAG_ITEM_ZONE6A_NET_BALL                                   0x3F6
 #define FLAG_ITEM_ZONE6A_POTION                                     0x3F7
 #define FLAG_ITEM_ZONE6A_NEST_BALL                                  0x3F8

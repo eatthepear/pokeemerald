@@ -3026,27 +3026,27 @@ static const u8 sTM03Desc[] = _(
     "that may confuse.");
 
 static const u8 sTM04Desc[] = _(
-    "Yells at foes,\n"
-    "lowering their\n"
-    "Special Attack.");
+    "The attack type\n"
+    "varies among\n"
+    "different Pokémon.");
     // Retaliate
     // "An attack that does\n"
     // "more damage if an\n"
     // "ally fainted.");
 
 static const u8 sTM05Desc[] = _(
-    "An extremely fast\n"
-    "attack that can't\n"
-    "be avoided.");
+    "Yells at foes,\n"
+    "lowering their\n"
+    "Special Attack.");
     // Rock Tomb
     // "Hurls boulders to\n"
     // "damage the foe and\n"
     // "lower their Speed.");
 
 static const u8 sTM06Desc[] = _(
-    "Bites and eats the\n"
-    "foe's held Berry,\n"
-    "gaining its effect.");
+    "An extremely fast\n"
+    "attack that can't\n"
+    "be avoided.");
     // Bullet Seed
     // "Shoots 2 to 5 seeds\n"
     // "in a row to strike\n"
@@ -3057,9 +3057,13 @@ static const u8 sTM06Desc[] = _(
     // "gaining its effect.");
 
 static const u8 sTM07Desc[] = _(
-    "Throws scorching\n"
-    "sand at the target.\n"
-    "May leave a burn.");
+    "Bites and eats the\n"
+    "foe's held Berry,\n"
+    "gaining its effect.");
+    // Scorching Sands
+    // "Throws scorching\n"
+    // "sand at the target.\n"
+    // "May leave a burn.");
 
 static const u8 sTM08Desc[] = _(
     "1/4 of the user's\n"
