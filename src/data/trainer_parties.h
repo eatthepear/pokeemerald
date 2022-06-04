@@ -479,7 +479,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_MARILL,
-    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TACKLE, MOVE_NONE}
+    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 30,
@@ -511,7 +511,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_MARILL,
-    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_TACKLE, MOVE_HIDDEN_POWER} // Hidden Power Ground
+    .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_HIDDEN_POWER, MOVE_NONE} // Hidden Power Ground
     },
     {
     .ivs = {30, 31, 31, 31, 30, 31},

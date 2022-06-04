@@ -13906,14 +13906,12 @@ static void Cmd_givecaughtmon(void)
         position = VarGet(VAR_MON_TO_PC);
         pokemon = &gPlayerParty[position]; //the Pokémon to be sent to PC
         monItem = GetMonData(pokemon, MON_DATA_HELD_ITEM, NULL);
-        if (!NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) || (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) && GetMonData(pokemon, MON_DATA_HP, NULL) != 0 && (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES, NULL) && !GetMonData(pokemon, MON_DATA_IS_EGG, NULL))))
-        {
-            if (monItem != ITEM_NONE)
-                AddBagItem(monItem, 1);
-            monItem = 0;
-            SetMonData(pokemon, MON_DATA_HELD_ITEM, &monItem);
-            GiveMonToPlayer(pokemon);//sends the mon to the PC if it's either not nuzlocke mode or if it is nuzlocke mode but the mon has more than 0 hp
-        
+        if (monItem != ITEM_NONE)
+            AddBagItem(monItem, 1);
+        monItem = 0;
+        SetMonData(pokemon, MON_DATA_HELD_ITEM, &monItem);
+        GiveMonToPlayer(pokemon);
+    
             /*if (!ShouldShowBoxWasFullMessage())
             {
                 gBattleCommunication[MULTISTRING_CHOOSER] = 0;
@@ -13930,11 +13928,6 @@ static void Cmd_givecaughtmon(void)
 
             if (FlagGet(FLAG_SYS_PC_LANETTE))
                 gBattleCommunication[MULTISTRING_CHOOSER]++;*/
-        
-        }else{
-            if (monItem != ITEM_NONE)
-                AddBagItem(monItem, 1);
-        }
         DeletePartyMon(position);
         pokemon = &gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]];
         GiveMonToPlayer(pokemon); //Deletes the mon that you sent to the PC from your party, then adds the caught mon to your party
