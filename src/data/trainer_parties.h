@@ -307,7 +307,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_GROWL}
+    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 30,
@@ -317,7 +317,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_HEADBUTT}
+    .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -330,7 +330,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_GROWL}
+    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 31,
@@ -340,7 +340,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_HEADBUTT}
+    .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_NONE}
     },
     {
     .iv = 31,
@@ -350,7 +350,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Thick Fat
     .species = SPECIES_SPHEAL,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ICE_BALL, MOVE_WATER_PULSE, MOVE_ROLLOUT, MOVE_DEFENSE_CURL}
+    .moves = {MOVE_ICE_BALL, MOVE_WATER_PULSE, MOVE_ROLLOUT, MOVE_NONE}
     }
 };
 
