@@ -1930,21 +1930,24 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)),
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_ZEN_HEADBUTT)),
 
     [SPECIES_LOUDRED]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_LOW_KICK)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)),
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_ZEN_HEADBUTT)),
 
     [SPECIES_EXPLOUD]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_LOW_KICK)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)),
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_ZEN_HEADBUTT)),
 
     [SPECIES_MAKUHITA]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_LOW_KICK)
@@ -5756,9 +5759,11 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_POLTERGEIST)
                                             | TUTOR(MOVE_NASTY_PLOT)),
 
-    [SPECIES_MILCERY]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_MILCERY]       = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
 
-    [SPECIES_ALCREMIE]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_ALCREMIE]      = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
+                                            | TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_FALINKS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_IRON_HEAD)
