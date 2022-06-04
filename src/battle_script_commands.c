@@ -1741,6 +1741,8 @@ static void Cmd_ppreduce(void)
             case EFFECT_LEECH_SEED:
             case EFFECT_PROTECT:
             case EFFECT_SUBSTITUTE:
+            case EFFECT_JUNGLE_HEALING:
+            case EFFECT_HEAL_PULSE:
                 ppToDeduct = 2; // divide PP by 2
                 break;
             case EFFECT_ATTACK_UP:
