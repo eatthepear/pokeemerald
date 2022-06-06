@@ -397,6 +397,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_SCIENTIST, 9},
     {TRAINER_CLASS_WAITER, 8},
     {TRAINER_CLASS_WAITRESS, 8},
+    {TRAINER_CLASS_SOCIALITE, 20},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 
@@ -461,6 +462,8 @@ const struct TrainerBall gTrainerBallTable[] = {
     {TRAINER_CLASS_SCIENTIST, ITEM_REPEAT_BALL},
     {TRAINER_CLASS_WAITER, ITEM_LUXURY_BALL},
     {TRAINER_CLASS_WAITRESS, ITEM_LUXURY_BALL},
+    {TRAINER_CLASS_FAIRY_TALE_GIRL, ITEM_FRIEND_BALL},
+    {TRAINER_CLASS_SOCIALITE, ITEM_LUXURY_BALL},
     {0xFF, ITEM_POKE_BALL},
 };
 

@@ -98,6 +98,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_WAITRESS] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_MIRAGES] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_FAIRY_TALE_GIRL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SOCIALITE] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -202,6 +203,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(WAITRESS, gTrainerFrontPic_Waitress, 0x800),
     TRAINER_SPRITE(MIRAGES, gTrainerFrontPic_Mirages, 0x800),
     TRAINER_SPRITE(FAIRY_TALE_GIRL, gTrainerFrontPic_FairyTaleGirl, 0x800),
+    TRAINER_SPRITE(SOCIALITE, gTrainerFrontPic_Socialite, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -306,4 +308,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(WAITRESS, gTrainerPalette_Waitress),
     TRAINER_PAL(MIRAGES, gTrainerPalette_DomeAceTucker),
     TRAINER_PAL(FAIRY_TALE_GIRL, gTrainerPalette_FairyTaleGirl),
+    TRAINER_PAL(SOCIALITE, gTrainerPalette_Socialite),
 };

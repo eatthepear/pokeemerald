@@ -302,3 +302,6 @@ const u32 gTrainerFrontPic_Mirages[] = INCBIN_U32("graphics/trainers/front_pics/
 
 const u32 gTrainerFrontPic_FairyTaleGirl[] = INCBIN_U32("graphics/trainers/front_pics/fairy_tale_girl_front_pic.4bpp.lz");
 const u32 gTrainerPalette_FairyTaleGirl[] = INCBIN_U32("graphics/trainers/palettes/fairy_tale_girl.gbapal.lz");
+
+const u32 gTrainerFrontPic_Socialite[] = INCBIN_U32("graphics/trainers/front_pics/socialite_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Socialite[] = INCBIN_U32("graphics/trainers/palettes/socialite.gbapal.lz");

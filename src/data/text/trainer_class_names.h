@@ -69,4 +69,5 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_WAITER] = _("Waiter"),
     [TRAINER_CLASS_WAITRESS] = _("Waitress"),
     [TRAINER_CLASS_FAIRY_TALE_GIRL] = _("Fable Girl"),
+    [TRAINER_CLASS_SOCIALITE] = _("Socialite"),
 };
