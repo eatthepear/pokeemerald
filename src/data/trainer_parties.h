@@ -19,6 +19,8 @@
  * 
  * Some trainers will randomly lead with one of their party Pokemon. This will be included in the comments next to the trainer.
  * 
+ * You can ignore the .ball lines. These are just for setting what Pokeball each Pokemon is in, and is mainly for cosmetic purposes.
+ * 
  * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. 
  * On Brutal, the trainer AI knows your moveset. */
 
@@ -75,9 +77,10 @@ static const struct TrainerMon sParty_Oscar[] = {
 
 static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
     {
-    .iv = 31,
+    .ball = ITEM_POKE_BALL,
+    .iv = 30,
     .lvl = 7,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Gluttony
     .species = SPECIES_SKWOVET,
@@ -88,6 +91,7 @@ static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
 
 static const struct TrainerMon sParty_CoreyBrutal[] = {//Leviathan, Brutal
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 7,
     .nature = NATURE_ADAMANT,
@@ -182,6 +186,7 @@ static const struct TrainerMon sParty_Arthur[] = {
 
 static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, optional
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 30,
     .lvl = 9,
     .nature = NATURE_ADAMANT,
@@ -195,6 +200,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, opt
 
 static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 9,
     .nature = NATURE_ADAMANT,
@@ -300,6 +306,7 @@ static const struct TrainerMon sParty_Richard[] = {
 
 static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 30,
     .lvl = 11,
     .nature = NATURE_SASSY,
@@ -310,6 +317,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
     },
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 30,
     .lvl = 11,
     .nature = NATURE_BRAVE,
@@ -323,6 +331,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
 
 static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_CAREFUL,
@@ -333,6 +342,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
     },
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_ADAMANT,
@@ -343,6 +353,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_NONE}
     },
     {
+    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_SERIOUS,
@@ -473,6 +484,7 @@ static const struct TrainerMon sParty_Fred[] = {
 
 static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battle, Default
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 30,
     .lvl = 12,
     .nature = NATURE_BRAVE,
@@ -482,6 +494,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_NONE, MOVE_NONE}
     },
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 30,
     .lvl = 12,
     .nature = NATURE_MODEST,
@@ -491,6 +504,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .moves = {MOVE_ELECTROWEB, MOVE_HELPING_HAND, MOVE_QUICK_ATTACK, MOVE_NONE}
     },
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 30,
     .lvl = 13,
     .nature = NATURE_TIMID,
@@ -505,6 +519,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
 
 static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle, Brutal
     {
+    .ball = ITEM_LUXURY_BALL,
     .ivs = {31, 31, 31, 31, 30, 30},
     .lvl = 12,
     .nature = NATURE_BRAVE,
@@ -514,6 +529,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_HIDDEN_POWER, MOVE_NONE} // Hidden Power Ground
     },
     {
+    .ball = ITEM_LUXURY_BALL,
     .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 12,
     .nature = NATURE_MODEST,
@@ -523,6 +539,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .moves = {MOVE_ELECTROWEB, MOVE_HELPING_HAND, MOVE_QUICK_ATTACK, MOVE_HIDDEN_POWER} // Hidden Power Grass
     },
     {
+    .ball = ITEM_LUXURY_BALL,
     .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 13,
     .nature = NATURE_TIMID,
@@ -657,8 +674,9 @@ static const struct TrainerMon sParty_Kevin[] = {
     }
 };
 
-static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle
+static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, Default and Brutal
     {
+    .ball = ITEM_NET_BALL,
     .iv = 31,
     .lvl = 15,
     .nature = NATURE_ADAMANT,
@@ -669,6 +687,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle
     .moves = {MOVE_BUG_BITE, MOVE_POISON_TAIL, MOVE_FURY_ATTACK, MOVE_FOCUS_ENERGY}
     },
     {
+    .ball = ITEM_NET_BALL,
     .iv = 31,
     .lvl = 15,
     .nature = NATURE_TIMID,

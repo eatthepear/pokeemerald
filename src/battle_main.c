@@ -2023,9 +2023,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
             }
 
-            if (partyData[l].ball > 0)
-                SetMonData(&party[i], MON_DATA_POKEBALL, &partyData[l].ball);
-
             if (partyData[l].heldItem > 0)
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[l].heldItem);
 
@@ -2069,16 +2066,24 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[l].evs[j]);
             }
 
+            if (partyData[l].ball > 0)
+            {
+                SetMonData(&party[i], MON_DATA_POKEBALL, &partyData[l].ball);
+            }
+            else
+            {
+                for (j = 0; gTrainerBallTable[j].classId != 0xFF; j++)
+                {
+                    if (gTrainerBallTable[j].classId == gTrainers[trainerNum].trainerClass)
+                        break;
+                }
+                SetMonData(&party[i], MON_DATA_POKEBALL, &gTrainerBallTable[j].Ball);
+            }
+
             StringCopy(trainerName, gTrainers[trainerNum].trainerName);
             SetMonData(&party[i], MON_DATA_OT_NAME, trainerName);
             CalculateMonStats(&party[i]);
             
-            for (j = 0; gTrainerBallTable[j].classId != 0xFF; j++)
-            {
-                if (gTrainerBallTable[j].classId == gTrainers[trainerNum].trainerClass)
-                    break;
-            }
-            SetMonData(&party[i], MON_DATA_POKEBALL, &gTrainerBallTable[j].Ball);
         }
 
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
