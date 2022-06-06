@@ -444,6 +444,9 @@ $(OBJEVENTGFXDIR)/people/dragon_tamer.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/fairy_tale_girl.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/socialite.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 $(OBJEVENTGFXDIR)/pokemon/azumarill.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
