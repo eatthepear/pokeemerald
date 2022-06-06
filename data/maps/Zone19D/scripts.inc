@@ -28,7 +28,7 @@ Zone19D_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_PAM, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_WILLIE, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_DORIS, EventScript_BrutalExitNotSatisfied
-	goto_if_unset FLAG_BEATLEVIATHAN11, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEAT_LEVIATHAN_11, EventScript_BrutalExitNotSatisfied
 	return
 
 Zone19D_EventScript_InitiatePirateBattles::

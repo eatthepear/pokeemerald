@@ -3,7 +3,6 @@ Route116_TunnelersRestHouse_MapScripts::
 	.byte 0
 
 Route116_TunnelersRestHouse_OnTransition:
-	setflag FLAG_LANDMARK_TUNNELERS_REST_HOUSE
 	end
 
 Route116_TunnelersRestHouse_EventScript_Tunneler1::

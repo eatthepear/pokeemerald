@@ -29,7 +29,6 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis, MSGBOX_DEFAULT
-	setflag FLAG_DEFEATED_FORTREE_GYM
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
@@ -99,7 +98,6 @@ FortreeCity_Gym_EventScript_Darius::
 FortreeCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_FORTREE_GYM, FortreeCity_Gym_EventScript_GymGuidePostVictory
 	msgbox FortreeCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end

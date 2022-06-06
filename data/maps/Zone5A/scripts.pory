@@ -126,7 +126,7 @@ script Zone5A_EventScript_LeviathanBattle {
 	))
 	fadescreen(FADE_TO_BLACK)
 	removeobject(4)
-	setflag(FLAG_BEATLEVIATHAN5)
+	setflag(FLAG_BEAT_LEVIATHAN_5)
 	removeobject(10)
 	fadescreen(FADE_FROM_BLACK)
 	setvar(VAR_ZONE_5_STATE, 1)

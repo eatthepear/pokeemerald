@@ -162,8 +162,8 @@ Zone26B_EventScript_StartRotomBattles:
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq Zone26B_EventScript_RestartRotomBattles
 	clearflag FLAG_DISABLE_CATCHING
-	call_if_unset FLAG_BRUTAL_MODE_ON Zone26B_EventScript_RemoveSmartWildAI
-	call_if_set FLAG_BRUTAL_MODE_ON Zone26B_EventScript_EnableBag
+	call_if_unset FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_RemoveSmartWildAI
+	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_EnableBag
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	playmoncry SPECIES_ROTOM, 2

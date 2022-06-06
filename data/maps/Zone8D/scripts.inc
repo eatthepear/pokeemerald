@@ -180,7 +180,7 @@ Zone8D_EventScript_PlayerWon:
 	removeobject 1
 	removeobject 2
 	removeobject 3
-	setflag FLAG_BEATLEVIATHAN4
+	setflag FLAG_BEAT_LEVIATHAN_4
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Zone8D_EventScript_Conclusion

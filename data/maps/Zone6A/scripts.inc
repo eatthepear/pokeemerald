@@ -42,7 +42,7 @@ Zone6A_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_MELANIE, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_CONSTANCE, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_RONAN, EventScript_BrutalExitNotSatisfied
-	goto_if_unset FLAG_BEATLEVIATHAN3, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEAT_LEVIATHAN_3, EventScript_BrutalExitNotSatisfied
 	return
 
 Zone6A_EventScript_Rita::
@@ -82,7 +82,7 @@ Zone6A_EventScript_RitaBrutal:
 	end
 
 Zone6A_EventScript_Leviathan3Defeated:
-	setflag FLAG_BEATLEVIATHAN3
+	setflag FLAG_BEAT_LEVIATHAN_3
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM04, 1

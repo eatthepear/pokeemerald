@@ -3,7 +3,7 @@ Zone13C_MapScripts::
 	.byte 0
 
 Zone13C_OnTransition:
-	goto_if_unset FLAG_BEATLEVIATHAN7, Zone13C_EventScript_HideLeviathan8
+	goto_if_unset FLAG_BEAT_LEVIATHAN_7, Zone13C_EventScript_HideLeviathan8
 	goto Zone13C_EventScript_HideLeviathan7
 	end
 
@@ -22,7 +22,7 @@ Zone13C_EventScript_HideLeviathan8:
 Zone13C_EventScript_KaizenBlackBelt::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN7, Zone13C_EventScript_KaizenBlackBelt_ComeBack
+	goto_if_set FLAG_BEAT_LEVIATHAN_7, Zone13C_EventScript_KaizenBlackBelt_ComeBack
 	msgbox Zone13C_Text_KaizenBlackBelt_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone13C_EventScript_Kaizen_ISee
@@ -62,7 +62,7 @@ Zone13C_Text_Kaizen_ISee:
 	.string "I see.$"
 
 Zone13C_EventScript_Leviathan7Defeated:
-	setflag FLAG_BEATLEVIATHAN7
+	setflag FLAG_BEAT_LEVIATHAN_7
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone13C_Text_KaizenBlackBelt_HereTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM14
@@ -90,7 +90,7 @@ Zone13C_Text_KaizenBlackBelt_ComeBack:
 Zone13C_EventScript_KaizenPsychic::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN8, Zone13C_EventScript_KaizenPsychic_LikeHome
+	goto_if_set FLAG_BEAT_LEVIATHAN_8, Zone13C_EventScript_KaizenPsychic_LikeHome
 	msgbox Zone13C_Text_KaizenPsychic_Battle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone13C_EventScript_Kaizen_ISee
@@ -122,7 +122,7 @@ Zone13C_Text_Leviathan8Defeat:
 	.string "Well matched.$"
 
 Zone13C_EventScript_Leviathan8Defeated:
-	setflag FLAG_BEATLEVIATHAN8
+	setflag FLAG_BEAT_LEVIATHAN_8
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone13C_Text_KaizenPsychic_HereTM, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM15

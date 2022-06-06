@@ -28,7 +28,6 @@ IslandCave_EventScript_HideRegiEntrance::
 	return
 
 IslandCave_OnTransition:
-	setflag FLAG_LANDMARK_ISLAND_CAVE
 	call IslandCave_EventScript_ClearSteps
 	call_if_unset FLAG_DEFEATED_REGICE, IslandCave_EventScript_ShowRegice
 	end

@@ -3,7 +3,6 @@ Route114_LanettesHouse_MapScripts::
 	.byte 0
 
 Route114_LanettesHouse_OnTransition:
-	setflag FLAG_LANDMARK_LANETTES_HOUSE
 	end
 
 Route114_LanettesHouse_EventScript_Lanette::

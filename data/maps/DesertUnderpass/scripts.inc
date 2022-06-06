@@ -5,7 +5,6 @@ DesertUnderpass_MapScripts::
 	.byte 0
 
 DesertUnderpass_OnTransition:
-	setflag FLAG_LANDMARK_DESERT_UNDERPASS
 	end
 
 DesertUnderpass_EventScript_Fossil::

@@ -8,7 +8,6 @@ BattleFrontier_ReceptionGate_MapScripts::
 	.byte 0
 
 BattleFrontier_ReceptionGate_OnTransition:
-	setflag FLAG_LANDMARK_BATTLE_FRONTIER
 	end
 
 BattleFrontier_ReceptionGate_OnFrame:

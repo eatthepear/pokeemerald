@@ -196,7 +196,7 @@ Zone25L_EventScript_Leviathan14Defeated:
 	removeobject 2
 	removeobject 3
 	removeobject 4
-	setflag FLAG_BEATLEVIATHAN14
+	setflag FLAG_BEAT_LEVIATHAN_14
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone25L_Text_FoundBag, MSGBOX_AUTOCLOSE

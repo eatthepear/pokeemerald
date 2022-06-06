@@ -3,7 +3,6 @@ Route123_BerryMastersHouse_MapScripts::
 	.byte 0
 
 Route123_BerryMastersHouse_OnTransition:
-	setflag FLAG_LANDMARK_BERRY_MASTERS_HOUSE
 	end
 
 Route123_BerryMastersHouse_EventScript_BerryMaster::

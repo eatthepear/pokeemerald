@@ -11,7 +11,7 @@ script Zone2B_EventScript_Exit {
 			(!defeated(TRAINER_JEREMIAH) ||
 			!defeated(TRAINER_HARPER) ||
 			!defeated(TRAINER_ARTHUR) ||
-			(flag(FLAG_BEATLEVIATHAN2) == false))) {
+			(flag(FLAG_BEAT_LEVIATHAN_2) == false))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
         warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
@@ -23,7 +23,7 @@ script Zone2B_EventScript_Exit {
 script Zone2B_EventScript_LeviathanBattle {
 	lock
 	faceplayer
-	if (flag(FLAG_BEATLEVIATHAN2) == true) {
+	if (flag(FLAG_BEAT_LEVIATHAN_2) == true) {
 		msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in order to battle better?\pNo!\nI'm sticking with this one no matter what!"))
 		release
 		end
@@ -48,7 +48,7 @@ script Zone2B_EventScript_LeviathanBattle {
 	giveitem(ITEM_SILK_SCARF, 1)
 	msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in order to battle better?\pNo!\nI'm sticking with this one no matter what!"))
 	closemessage
-	setflag(FLAG_BEATLEVIATHAN2)
+	setflag(FLAG_BEAT_LEVIATHAN_2)
 	release
 	end
 }

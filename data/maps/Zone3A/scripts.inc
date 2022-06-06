@@ -4,7 +4,7 @@ Zone3A_MapScripts::
 
 Zone3A_EventScript_Exit::
 	lockall
-	goto_if_unset FLAG_BEATLEVIATHAN3, Zone3A_EventScript_Exit_2
+	goto_if_unset FLAG_BEAT_LEVIATHAN_3, Zone3A_EventScript_Exit_2
 Zone3A_EventScript_Exit_1:
 	compare VAR_ZONE, 3
 	goto_if_gt Zone3A_EventScript_Exit_5
@@ -120,7 +120,7 @@ Zone3A_EventScript_LeviathanBattle_1:
 	waitmovement 0
 	setflag FLAG_HIDE_ZONE3A_REMI
 	removeobject 4
-	setflag FLAG_BEATLEVIATHAN3
+	setflag FLAG_BEAT_LEVIATHAN_3
 	release
 	end
 

@@ -3,7 +3,7 @@ Zone16A_MapScripts::
 	.byte 0
 
 Zone16A_OnTransition:
-	goto_if_unset FLAG_BEATLEVIATHAN10, Zone16A_EventScript_MoveLeviathan
+	goto_if_unset FLAG_BEAT_LEVIATHAN_10, Zone16A_EventScript_MoveLeviathan
 	end
 
 Zone16A_EventScript_MoveLeviathan:
@@ -13,7 +13,7 @@ Zone16A_EventScript_MoveLeviathan:
 Zone16A_EventScript_InitiateLeviathanBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN10, Zone16A_EventScript_ByeBye
+	goto_if_set FLAG_BEAT_LEVIATHAN_10, Zone16A_EventScript_ByeBye
 	fadeoutbgm 1
 	msgbox Zone16A_Text_Leviathan10Intro, MSGBOX_AUTOCLOSE
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -29,7 +29,7 @@ Zone16A_EventScript_SophiaBrutal:
 	end
 
 Zone16A_EventScript_Leviathan10Defeated:
-	setflag FLAG_BEATLEVIATHAN10
+	setflag FLAG_BEAT_LEVIATHAN_10
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone16A_Text_Leviathan10Reward, MSGBOX_AUTOCLOSE
 	giveitem ITEM_BLUE_SHARD, 10

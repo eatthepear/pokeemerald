@@ -2,7 +2,7 @@ mapscripts Zone3A_MapScripts {}
 
 script Zone3A_EventScript_Exit {
     lockall
-	if (flag(FLAG_BEATLEVIATHAN3) == false) {
+	if (flag(FLAG_BEAT_LEVIATHAN_3) == false) {
 		goto(Zone3A_EventScript_LeviathanBattle)
 	}
     if (var(VAR_ZONE) > 3) {
@@ -106,7 +106,7 @@ script Zone3A_EventScript_LeviathanBattle {
 	waitmovement(0)
 	setflag(FLAG_HIDE_ZONE3A_REMI)
 	removeobject(4)
-	setflag(FLAG_BEATLEVIATHAN3)
+	setflag(FLAG_BEAT_LEVIATHAN_3)
 	release
 	end
 }

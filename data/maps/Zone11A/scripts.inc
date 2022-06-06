@@ -87,7 +87,7 @@ Zone11A_Text_Leviathan6Defeat:
 	.string "Jake: Your music was inspiring!$"
 
 Zone11A_EventScript_Leviathan6Defeated:
-	setflag FLAG_BEATLEVIATHAN6
+	setflag FLAG_BEAT_LEVIATHAN_6
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone11A_Text_TakeIt, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM11

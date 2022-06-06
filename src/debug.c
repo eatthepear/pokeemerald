@@ -890,8 +890,6 @@ static void DebugAction_Util_HealParty(u8 taskId)
 }
 static void DebugAction_Util_Fly(u8 taskId)
 {
-    FlagSet(FLAG_LANDMARK_POKEMON_LEAGUE);
-    FlagSet(FLAG_LANDMARK_BATTLE_FRONTIER);
     Debug_DestroyMenu(taskId);
     SetMainCallback2(CB2_OpenFlyMap);
 }
@@ -1393,30 +1391,24 @@ static void DebugAction_Flags_SwitchPokeNav(u8 taskId)
 static void DebugAction_Flags_ToggleFlyFlags(u8 taskId)
 {
     // Sound effect
-    if(FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER))
-        PlaySE(SE_PC_OFF);
-    else
-        PlaySE(SE_PC_LOGIN);
-    FlagToggle(FLAG_LANDMARK_POKEMON_LEAGUE);
-    FlagToggle(FLAG_LANDMARK_BATTLE_FRONTIER);
 }
 static void DebugAction_Flags_ToggleBadgeFlags(u8 taskId)
 {
     // Sound effect
     PlaySE(SE_PC_LOGIN);
-    FlagToggle(FLAG_BEATLEVIATHAN1);
-    FlagToggle(FLAG_BEATLEVIATHAN2);
-    FlagToggle(FLAG_BEATLEVIATHAN3);
-    FlagToggle(FLAG_BEATLEVIATHAN4);
-    FlagToggle(FLAG_BEATLEVIATHAN5);
-    FlagToggle(FLAG_BEATLEVIATHAN6);
-    FlagToggle(FLAG_BEATLEVIATHAN7);
-    FlagToggle(FLAG_BEATLEVIATHAN8);
-    FlagToggle(FLAG_BEATLEVIATHAN9);
-    FlagToggle(FLAG_BEATLEVIATHAN10);
-    FlagToggle(FLAG_BEATLEVIATHAN11);
-    FlagToggle(FLAG_BEATLEVIATHAN12);
-    FlagToggle(FLAG_BEATLEVIATHAN13);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_1);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_2);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_3);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_4);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_5);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_6);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_7);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_8);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_9);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_10);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_11);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_12);
+    FlagToggle(FLAG_BEAT_LEVIATHAN_13);
 }
 static void DebugAction_Flags_CollisionOnOff(u8 taskId)
 {

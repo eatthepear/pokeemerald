@@ -55,7 +55,7 @@ Zone20A_EventScript_Leviathan12Defeated:
 	msgbox Zone20A_Text_Leviathan2Karen, MSGBOX_AUTOCLOSE
 	delay 128
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	setflag FLAG_BEATLEVIATHAN12
+	setflag FLAG_BEAT_LEVIATHAN_12
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	removeobject 2
 	waitmovement 0

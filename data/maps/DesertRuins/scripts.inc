@@ -28,7 +28,6 @@ DesertRuins_EventScript_HideRegiEntrance::
 	return
 
 DesertRuins_OnTransition:
-	setflag FLAG_LANDMARK_DESERT_RUINS
 	call_if_unset FLAG_DEFEATED_REGIROCK, DesertRuins_EventScript_ShowRegirock
 	end
 

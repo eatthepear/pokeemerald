@@ -51,7 +51,6 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_WHITEOUT_TO_LAVARIDGE
-	setflag FLAG_DEFEATED_LAVARIDGE_GYM
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 4
@@ -100,7 +99,6 @@ LavaridgeTown_Gym_EventScript_CheckTrainerScript::
 LavaridgeTown_Gym_1F_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, LavaridgeTown_Gym_1F_EventScript_GymGuidePostVictory
 	msgbox LavaridgeTown_Gym_1F_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end

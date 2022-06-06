@@ -10,7 +10,6 @@ SealedChamber_OuterRoom_OnResume:
 	end
 
 SealedChamber_OuterRoom_OnTransition:
-	setflag FLAG_LANDMARK_SEALED_CHAMBER
 	end
 
 SealedChamber_OuterRoom_OnLoad:

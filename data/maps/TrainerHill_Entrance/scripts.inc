@@ -12,7 +12,6 @@ TrainerHill_Entrance_MapScripts::
 	.byte 0
 
 TrainerHill_Entrance_OnTransition:
-	setflag FLAG_LANDMARK_TRAINER_HILL
 	getplayerxy VAR_TEMP_D, VAR_RESULT
 	end
 

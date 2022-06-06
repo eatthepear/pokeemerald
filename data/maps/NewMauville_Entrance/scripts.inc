@@ -17,7 +17,6 @@ NewMauville_Entrance_EventScript_CloseDoor:: @ 82372C4
 	return
 
 NewMauville_Entrance_OnTransition:
-	setflag FLAG_LANDMARK_NEW_MAUVILLE
 	end
 
 NewMauville_Entrance_EventScript_Door::

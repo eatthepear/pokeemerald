@@ -13,8 +13,8 @@ Zone14C_EventScript_Exit::
 Zone14C_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_JAN_AND_ERIN, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_AMBER_AND_KIM, EventScript_BrutalExitNotSatisfied
-	goto_if_unset FLAG_BEATLEVIATHAN7, EventScript_BrutalExitNotSatisfied
-	goto_if_unset FLAG_BEATLEVIATHAN8, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEAT_LEVIATHAN_7, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEAT_LEVIATHAN_8, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_LOLA, EventScript_BrutalExitNotSatisfied
 	return
 
@@ -144,7 +144,7 @@ Zone14C_EventScript_Leviathan9Defeated:
 	waitmoncry
 	removeobject 1
 	removeobject 2
-	setflag FLAG_BEATLEVIATHAN9
+	setflag FLAG_BEAT_LEVIATHAN_9
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone14C_Text_FoundBag, MSGBOX_AUTOCLOSE

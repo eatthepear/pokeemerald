@@ -30,14 +30,14 @@ Zone2B_EventScript_Exit_7:
 	goto_if 0, Zone2B_EventScript_Exit_6
 	checktrainerflag TRAINER_ARTHUR
 	goto_if 0, Zone2B_EventScript_Exit_6
-	goto_if_unset FLAG_BEATLEVIATHAN2, Zone2B_EventScript_Exit_6
+	goto_if_unset FLAG_BEAT_LEVIATHAN_2, Zone2B_EventScript_Exit_6
 	goto Zone2B_EventScript_Exit_5
 
 
 Zone2B_EventScript_LeviathanBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEATLEVIATHAN2, Zone2B_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_BEAT_LEVIATHAN_2, Zone2B_EventScript_LeviathanBattle_2
 	msgbox Zone2B_Text_Leviathan2WantBattle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone2B_EventScript_LeviathanBattle_5
@@ -53,7 +53,7 @@ Zone2B_EventScript_LeviathanBattle_7:
 	giveitem ITEM_SILK_SCARF, 1
 	msgbox Zone2B_EventScript_LeviathanBattle_Text_0
 	closemessage
-	setflag FLAG_BEATLEVIATHAN2
+	setflag FLAG_BEAT_LEVIATHAN_2
 	release
 	end
 

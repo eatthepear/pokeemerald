@@ -317,17 +317,17 @@ EventScript_SmashItems:
 	return
 	
 EventScript_SmashYellowShard:
-	goto_if_unset FLAG_BEATLEVIATHAN5, EventScript_EndSmash
+	goto_if_unset FLAG_BEAT_LEVIATHAN_5, EventScript_EndSmash
 	finditem ITEM_YELLOW_SHARD, 1
 	return
 	
 EventScript_SmashGreenShard:
-	goto_if_unset FLAG_BEATLEVIATHAN14, EventScript_EndSmash
+	goto_if_unset FLAG_BEAT_LEVIATHAN_14, EventScript_EndSmash
 	finditem ITEM_GREEN_SHARD, 1
 	return
 	
 EventScript_SmashBlueShard:
-	goto_if_unset FLAG_BEATLEVIATHAN4, EventScript_EndSmash
+	goto_if_unset FLAG_BEAT_LEVIATHAN_4, EventScript_EndSmash
 	finditem ITEM_BLUE_SHARD, 1
 	return
 	

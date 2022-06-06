@@ -225,7 +225,7 @@ Zone18B_Text_LeviathanDefeat:
 	.string "Well met. Congratulations.$"
 
 Zone18B_EventScript_Leviathan11Defeated:
-	setflag FLAG_BEATLEVIATHAN11
+	setflag FLAG_BEAT_LEVIATHAN_11
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
 	giveitem ITEM_TM25
@@ -293,7 +293,7 @@ Zone18B_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_PAM, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_WILLIE, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_DORIS, EventScript_BrutalExitNotSatisfied
-	goto_if_unset FLAG_BEATLEVIATHAN11, EventScript_BrutalExitNotSatisfied
+	goto_if_unset FLAG_BEAT_LEVIATHAN_11, EventScript_BrutalExitNotSatisfied
 	return
 
 Zone18B_Odysseus_Goodbye:

@@ -24,7 +24,6 @@ EverGrandeCity_GlaciasRoom_EventScript_WalkInCloseDoor::
 	end
 
 EverGrandeCity_GlaciasRoom_OnLoad:
-	call_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_ResetAdvanceToNextRoom
 	call_if_eq VAR_ELITE_4_STATE, 3, EverGrandeCity_GlaciasRoom_EventScript_CloseDoor
 	end
 
@@ -39,7 +38,6 @@ EverGrandeCity_GlaciasRoom_EventScript_CloseDoor::
 EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
@@ -52,7 +50,6 @@ EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech::
 	end
 
 EverGrandeCity_GlaciasRoom_EventScript_Defeated::
-	setflag FLAG_DEFEATED_ELITE_4_GLACIA
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release

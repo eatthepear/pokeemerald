@@ -15,7 +15,6 @@ AncientTomb_EventScript_TryRemoveRegisteel::
 	return
 
 AncientTomb_OnTransition:
-	setflag FLAG_LANDMARK_ANCIENT_TOMB
 	call_if_unset FLAG_DEFEATED_REGISTEEL, AncientTomb_EventScript_ShowRegisteel
 	end
 

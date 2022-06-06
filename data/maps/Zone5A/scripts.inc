@@ -91,7 +91,7 @@ Zone5A_EventScript_LeviathanBattle_9:
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_12
 	fadescreen FADE_TO_BLACK
 	removeobject 4
-	setflag FLAG_BEATLEVIATHAN5
+	setflag FLAG_BEAT_LEVIATHAN_5
 	removeobject 10
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_ZONE_5_STATE, 1

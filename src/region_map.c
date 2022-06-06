@@ -352,7 +352,7 @@ static const struct MultiNameFlyDest sMultiNameFlyDestinations[] =
     {
         .name = sEverGrandeCityNames,
         .mapSecId = MAPSEC_EVER_GRANDE_CITY,
-        .flag = FLAG_LANDMARK_POKEMON_LEAGUE
+        .flag = 0xFFFF
     }
 };
 
@@ -425,7 +425,8 @@ static const struct SpritePalette sFlyTargetIconsSpritePalette =
 static const u16 sRedOutlineFlyDestinations[][2] =
 {
     {
-        FLAG_LANDMARK_BATTLE_FRONTIER,
+        // FLAG_LANDMARK_BATTLE_FRONTIER,
+        -1,
         MAPSEC_BATTLE_FRONTIER
     },
     {
@@ -1881,32 +1882,32 @@ static void CreateFlyDestIcons(void)
 // Only used for Battle Frontier, but set up to handle more
 static void TryCreateRedOutlineFlyDestIcons(void)
 {
-    u16 i;
-    u16 x;
-    u16 y;
-    u16 width;
-    u16 height;
-    u16 mapSecId;
-    u8 spriteId;
+    // u16 i;
+    // u16 x;
+    // u16 y;
+    // u16 width;
+    // u16 height;
+    // u16 mapSecId;
+    // u8 spriteId;
 
-    for (i = 0; sRedOutlineFlyDestinations[i][1] != MAPSEC_NONE; i++)
-    {
-        if (FlagGet(sRedOutlineFlyDestinations[i][0]))
-        {
-            mapSecId = sRedOutlineFlyDestinations[i][1];
-            GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
-            x = (x + MAPCURSOR_X_MIN) * 8;
-            y = (y + MAPCURSOR_Y_MIN) * 8;
-            spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x, y, 10);
-            if (spriteId != MAX_SPRITES)
-            {
-                gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);
-                gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
-                StartSpriteAnim(&gSprites[spriteId], FLYDESTICON_RED_OUTLINE);
-                gSprites[spriteId].sIconMapSec = mapSecId;
-            }
-        }
-    }
+    // for (i = 0; sRedOutlineFlyDestinations[i][1] != MAPSEC_NONE; i++)
+    // {
+    //     if (FlagGet(sRedOutlineFlyDestinations[i][0]))
+    //     {
+    //         mapSecId = sRedOutlineFlyDestinations[i][1];
+    //         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
+    //         x = (x + MAPCURSOR_X_MIN) * 8;
+    //         y = (y + MAPCURSOR_Y_MIN) * 8;
+    //         spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x, y, 10);
+    //         if (spriteId != MAX_SPRITES)
+    //         {
+    //             gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);
+    //             gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
+    //             StartSpriteAnim(&gSprites[spriteId], FLYDESTICON_RED_OUTLINE);
+    //             gSprites[spriteId].sIconMapSec = mapSecId;
+    //         }
+    //     }
+    // }
 }
 
 // Flickers fly destination icon color (by hiding the fly icon sprite) if the cursor is currently on it
@@ -2003,7 +2004,7 @@ static void CB_ExitFlyMap(void)
                     SetWarpDestinationToHealLocation(gSaveBlock2Ptr->playerGender == MALE ? HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE : HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE);
                     break;
                 case MAPSEC_EVER_GRANDE_CITY:
-                    SetWarpDestinationToHealLocation(FlagGet(FLAG_LANDMARK_POKEMON_LEAGUE) && sFlyMap->regionMap.posWithinMapSec == 0 ? HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE : HEAL_LOCATION_EVER_GRANDE_CITY);
+                    SetWarpDestinationToHealLocation(sFlyMap->regionMap.posWithinMapSec == 0 ? HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE : HEAL_LOCATION_EVER_GRANDE_CITY);
                     break;
                 default:
                     if (sMapHealLocations[sFlyMap->regionMap.mapSecId][2] != 0)

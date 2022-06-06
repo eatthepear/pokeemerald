@@ -3,6 +3,5 @@ Route117_PokemonDayCare_MapScripts::
 	.byte 0
 
 Route117_PokemonDayCare_OnTransition:
-	setflag FLAG_LANDMARK_POKEMON_DAYCARE
 	end
 

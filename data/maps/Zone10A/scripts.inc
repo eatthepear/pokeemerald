@@ -83,7 +83,7 @@ Zone10A_EventScript_Leviathan5Defeated:
 	applymovement 6, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	setflag FLAG_BEATLEVIATHAN5
+	setflag FLAG_BEAT_LEVIATHAN_5
 	closedoor 47, 27
 	waitdooranim
 	releaseall

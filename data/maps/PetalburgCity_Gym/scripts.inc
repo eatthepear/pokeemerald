@@ -371,7 +371,6 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis, MSGBOX_DEFAULT
-	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
@@ -1029,7 +1028,6 @@ PetalburgCity_Gym_EventScript_UnlockRoomDoors::
 PetalburgCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_GymGuidePostVictory
 	msgbox PetalburgCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end

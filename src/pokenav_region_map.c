@@ -649,17 +649,17 @@ static void DrawCityMap(struct Pokenav_RegionMapGfx *state, int mapSecId, int po
 
 static void PrintLandmarkNames(struct Pokenav_RegionMapGfx *state, int mapSecId, int pos)
 {
-    int i = 0;
-    while (1)
-    {
-        const u8 *landmarkName = GetLandmarkName(mapSecId, pos, i);
-        if (!landmarkName)
-            break;
+    // int i = 0;
+    // while (1)
+    // {
+    //     const u8 *landmarkName = GetLandmarkName(mapSecId, pos, i);
+    //     if (!landmarkName)
+    //         break;
 
-        StringCopyPadded(gStringVar1, landmarkName, CHAR_SPACE, 12);
-        AddTextPrinterParameterized(state->infoWindowId, FONT_NARROW, gStringVar1, 0, i * 16 + 17, TEXT_SKIP_DRAW, NULL);
-        i++;
-    }
+    //     StringCopyPadded(gStringVar1, landmarkName, CHAR_SPACE, 12);
+    //     AddTextPrinterParameterized(state->infoWindowId, FONT_NARROW, gStringVar1, 0, i * 16 + 17, TEXT_SKIP_DRAW, NULL);
+    //     i++;
+    // }
 }
 
 static void CreateCityZoomTextSprites(void)

@@ -3,5 +3,4 @@ Route124_DivingTreasureHuntersHouse_MapScripts::
 	.byte 0
 
 Route124_DivingTreasureHuntersHouse_OnTransition:
-	setflag FLAG_LANDMARK_HUNTERS_HOUSE
 	end

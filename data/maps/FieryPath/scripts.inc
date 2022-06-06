@@ -3,8 +3,6 @@ FieryPath_MapScripts::
 	.byte 0
 
 FieryPath_OnTransition:
-	call_if_unset FLAG_LANDMARK_FIERY_PATH, FieryPath_EventScript_MoveScottToFallarbor
-	setflag FLAG_LANDMARK_FIERY_PATH
 	end
 
 FieryPath_EventScript_MoveScottToFallarbor::

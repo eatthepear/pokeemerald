@@ -70,9 +70,7 @@ EventScript_PkmnCenterNurse_ReturnPkmn2::
 	return
 
 EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
-	goto_if_set FLAG_NURSE_UNION_ROOM_REMINDER, EventScript_PkmnCenterNurse_ReturnPkmn
 	msgbox gText_RestoredPkmnToFullHealth, MSGBOX_DEFAULT
-	setflag FLAG_NURSE_UNION_ROOM_REMINDER
 	message CableClub_Text_PlayerIsWaiting
 	waitmessage
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
