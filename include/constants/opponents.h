@@ -35,10 +35,10 @@
 #define TRAINER_RYAN                         	31
 #define TRAINER_KEVIN                        	32
 #define TRAINER_DECLAN_LEVIATHAN_5            	33
-#define TRAINER_FRANK                        	34
+#define TRAINER_RONAN                        	34
 #define TRAINER_MELANIE                      	35
 #define TRAINER_CONSTANCE                    	36
-#define TRAINER_RONAN                        	37
+#define TRAINER_FRANK                        	37
 #define TRAINER_BETTY_LEVIATHAN_6             	38
 #define TRAINER_BETTY_LEVIATHAN_6_BRUTAL      	39
 #define TRAINER_MILLIE                       	40
