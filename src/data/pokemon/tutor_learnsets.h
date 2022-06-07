@@ -5795,6 +5795,7 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_ZEN_HEADBUTT)),
 
     [SPECIES_INDEEDEE]      = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TRICK)
                                             | TUTOR(MOVE_ZEN_HEADBUTT)
@@ -6243,6 +6244,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_ALCREMIE_RAINBOW_SWIRL]= TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
     [SPECIES_INDEEDEE_FEMALE]= TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TRICK)
                                             | TUTOR(MOVE_ZEN_HEADBUTT)

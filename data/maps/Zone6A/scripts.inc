@@ -1,98 +1,67 @@
 Zone6A_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone6A_OnFrame
 	.byte 0
 
-Zone6A_OnFrame:
-	map_script_2 VAR_ZONE_6_STATE, 0, Zone6A_EventScript_Intro
-	.2byte 0
-
-Zone6A_EventScript_Intro:
-	lockall
-	applymovement 1, Common_Movement_ExclamationMark
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	applymovement 1, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement 1, Common_Movement_WalkLeft
-	waitmovement 0
-	msgbox Zone6A_Text_Rita_Intro, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement 1, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement 1, Common_Movement_FaceDown
-	waitmovement 0
-	setvar VAR_ZONE_6_STATE, 1
-	releaseall
-	end
 
 Zone6A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 6
-	goto_if_gt EventScript_WarpZone0
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_CheckBrutal
+	goto_if_gt Zone6A_EventScript_Exit_2
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_Exit_7
+Zone6A_EventScript_Exit_5:
 	warp MAP_ZONE6SANCTUARY, 255, 22, 7
+Zone6A_EventScript_Exit_1:
 	releaseall
 	end
 
-Zone6A_EventScript_CheckBrutal:
-	goto_if_not_defeated TRAINER_FRANK, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_MELANIE, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_CONSTANCE, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_RONAN, EventScript_BrutalExitNotSatisfied
-	goto_if_unset FLAG_BEAT_LEVIATHAN_3, EventScript_BrutalExitNotSatisfied
-	return
+Zone6A_EventScript_Exit_2:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 32
+	waitstate
+	goto Zone6A_EventScript_Exit_1
 
-Zone6A_EventScript_Rita::
+Zone6A_EventScript_Exit_6:
+	goto EventScript_BrutalExitNotSatisfied
+	goto Zone6A_EventScript_Exit_5
+
+Zone6A_EventScript_Exit_7:
+	checktrainerflag TRAINER_FRANK
+	goto_if 0, Zone6A_EventScript_Exit_6
+	checktrainerflag TRAINER_MELANIE
+	goto_if 0, Zone6A_EventScript_Exit_6
+	checktrainerflag TRAINER_CONSTANCE
+	goto_if 0, Zone6A_EventScript_Exit_6
+	checktrainerflag TRAINER_RONAN
+	goto_if 0, Zone6A_EventScript_Exit_6
+	goto Zone6A_EventScript_Exit_5
+
+
+Zone6A_EventScript_LeviathanBattle::
 	lock
 	faceplayer
-	goto_if_not_defeated TRAINER_FRANK, Zone6A_EventScript_RitaSaysNo
-	goto_if_not_defeated TRAINER_MELANIE, Zone6A_EventScript_RitaSaysNo
-	goto_if_not_defeated TRAINER_CONSTANCE, Zone6A_EventScript_RitaSaysNo
-	goto_if_not_defeated TRAINER_RONAN, Zone6A_EventScript_RitaSaysNo
-	goto_if_defeated TRAINER_LEVIATHAN3, Zone6A_EventScript_RitaAlreadyDefeated
-	goto_if_defeated TRAINER_LEVIATHAN3, Zone6A_EventScript_RitaAlreadyDefeated
-	msgbox Zone6A_Text_Rita_ReadyToBattle, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone6A_EventScript_RitaBattle
-	msgbox Zone6A_Text_Rita_IWait, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone6A_EventScript_RitaSaysNo:
-	msgbox Zone6A_Text_Rita_HaventDefeatedEveryone, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone6A_EventScript_RitaBattle:
 	fadeoutbgm 1
-	msgbox Zone6A_Text_Rita_IWillWin, MSGBOX_AUTOCLOSE
+	msgbox Zone6A_Text_Leviathan6Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_RitaBrutal
-	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
-	goto Zone6A_EventScript_Leviathan3Defeated
-	end
-
-Zone6A_EventScript_RitaBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN3, Zone6A_Text_Leviathan3Defeat
-	goto Zone6A_EventScript_Leviathan3Defeated
-	end
-
-Zone6A_EventScript_Leviathan3Defeated:
-	setflag FLAG_BEAT_LEVIATHAN_3
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_2
+	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
+	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat
+Zone6A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone6A_Text_Rita_HereReward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM04, 1
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_0
+	giveitem ITEM_SITRUS_BERRY, 5
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_1
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject 1
+	setflag FLAG_BEAT_LEVIATHAN_6
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
-Zone6A_EventScript_RitaAlreadyDefeated:
-	msgbox Zone6A_Text_Rita_GoodLuck, MSGBOX_AUTOCLOSE
-	release
-	end
+Zone6A_EventScript_LeviathanBattle_2:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
+	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat
+	goto Zone6A_EventScript_LeviathanBattle_1
+
 
 Zone6A_EventScript_Frank::
 	trainerbattle_single TRAINER_FRANK, Zone6A_Text_FrankIntro, Zone6A_Text_FrankDefeat
@@ -164,39 +133,27 @@ Zone6A_EventScript_ItemNestBall::
 	finditem ITEM_NEST_BALL
 	end
 
-Zone6A_Text_Rita_Intro:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey. I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GRAY}.\n"
-	.string "Welcome to our humble island.\p"
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: You can challenge me, if you\n"
-	.string "want. I'm pretty tough.\l"
-	.string "But you have to show your strength.\p"
-	.string "Beat all the other Trainers on the\n"
-	.string "island, then come back here.$"
+Zone6A_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, while your battling skills\n"
+	.string "are certainly up to par, might I\l"
+	.string "suggest a little more…{PAUSE_UNTIL_PRESS}effort into your\l"
+	.string "outfit?\p"
+	.string "Aside from that, I'd like to give you\n"
+	.string "these Berries.\p"
+	.string "Very, very expensive, or so my butler\n"
+	.string "tells me.$"
 
-Zone6A_Text_Rita_HaventDefeatedEveryone:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: You haven't beaten everyone.\n"
-	.string "Come on, where's your spirit?$"
+Zone6A_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: It seems it's time for my\n"
+	.string "afternoon bath.\p"
+	.string "Goodbye.$"
 
-Zone6A_Text_Rita_ReadyToBattle:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Wow, you beat everyone.\n"
-	.string "Want to challenge me now?$"
+Zone6A_Text_Leviathan6Intro::
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, your clothes are all\n"
+	.string "covered in sand.\p"
+	.string "I suppose {COLOR BLUE}Leviathan Betty{COLOR DARK_GRAY} had ought to\n"
+	.string "give you a lesson in proper etiquette!$"
 
-Zone6A_Text_Rita_IWait:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: I'll wait for your challenge.$"
-
-Zone6A_Text_Rita_IWillWin:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: I will defeat you using the\n"
-	.string "power of my Pokémon!$"
-
-Zone6A_Text_Leviathan3Defeat:
-	.string "That was a lovely battle.\n"
-	.string "Thank you!$"
-
-Zone6A_Text_Rita_HereReward:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: For your victory, have the\n"
-	.string "TM for Retaliate. It grows stronger if\l"
-	.string "an ally was KOed the previous turn.$"
-
-Zone6A_Text_Rita_GoodLuck:
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Good luck on your journey.\n"
-	.string "You'll need it!$"
+Zone6A_Text_Leviathan6Defeat::
+	.string "It seems I was the one who ended\n"
+	.string "up being humbled…$"

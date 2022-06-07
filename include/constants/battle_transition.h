@@ -23,8 +23,9 @@
 #define MUGSHOT_JOEY        19
 #define MUGSHOT_PHILLIPA    20
 #define MUGSHOT_ISABELLA    21
+#define MUGSHOT_BETTY       22
 
 
-#define MUGSHOTS_COUNT      22
+#define MUGSHOTS_COUNT      23
 
 #endif //GUARD_CONSTANTS_BATTLE_TRANSITION_H

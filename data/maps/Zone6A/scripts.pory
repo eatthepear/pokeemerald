@@ -1,0 +1,129 @@
+mapscripts Zone6A_MapScripts {}
+
+script Zone6A_EventScript_Exit {
+    lockall
+    if (var(VAR_ZONE) > 6) {
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 31, 32)
+		waitstate
+    } else {
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
+			(!defeated(TRAINER_FRANK) ||
+			!defeated(TRAINER_MELANIE) ||
+			!defeated(TRAINER_CONSTANCE) ||
+			!defeated(TRAINER_RONAN))) {
+			goto(EventScript_BrutalExitNotSatisfied)
+		}
+        warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
+    }
+    releaseall
+    end
+}
+
+script Zone6A_EventScript_LeviathanBattle {
+	lock
+	faceplayer
+	fadeoutbgm(1)
+	msgbox(Zone6A_Text_Leviathan6Intro)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_BETTY)
+		trainerbattle_no_intro(TRAINER_BETTY_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat)
+	} else {
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_BETTY)
+		trainerbattle_no_intro(TRAINER_BETTY_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox(format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, while your battling skills are certainly up to par, might I suggest a little more…{PAUSE_UNTIL_PRESS}effort into your outfit?\pAside from that, I'd like to give you these Berries.\pVery, very expensive, or so my butler tells me."))
+	giveitem(ITEM_SITRUS_BERRY, 5)
+	msgbox(format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: It seems it's time for my afternoon bath.\pGoodbye."))
+	closemessage
+	fadescreen(FADE_TO_BLACK)
+	removeobject(1)
+	setflag(FLAG_BEAT_LEVIATHAN_6)
+	fadescreen(FADE_FROM_BLACK)
+	release
+	end
+}
+
+text Zone6A_Text_Leviathan6Intro {
+	format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, your clothes are all covered in sand.\pI suppose {COLOR BLUE}Leviathan Betty{COLOR DARK_GRAY} had ought to give you a lesson in proper etiquette!")
+}
+
+text Zone6A_Text_Leviathan6Defeat {
+	"It seems I was the one who ended\n"
+	"up being humbled…"
+}
+
+raw `
+
+Zone6A_EventScript_Frank::
+	trainerbattle_single TRAINER_FRANK, Zone6A_Text_FrankIntro, Zone6A_Text_FrankDefeat
+	msgbox Zone6A_Text_FrankPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_FrankIntro:
+	.string "I love it! I love it!$"
+
+Zone6A_Text_FrankDefeat:
+	.string "I love camping, of course!$"
+
+Zone6A_Text_FrankPostBattle:
+	.string "It's my favorite activity!$"
+
+Zone6A_EventScript_Melanie::
+	trainerbattle_single TRAINER_MELANIE, Zone6A_Text_MelanieIntro, Zone6A_Text_MelanieDefeat
+	msgbox Zone6A_Text_MelaniePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_MelanieIntro:
+	.string "Watch where you're going!$"
+
+Zone6A_Text_MelanieDefeat:
+	.string "Sorry I yelled at you...$"
+
+Zone6A_Text_MelaniePostBattle:
+	.string "I also need to be careful about\n"
+	.string "where I'm going.$"
+
+Zone6A_EventScript_Constance::
+	trainerbattle_single TRAINER_CONSTANCE, Zone6A_Text_ConstanceIntro, Zone6A_Text_ConstanceDefeat
+	msgbox Zone6A_Text_ConstancePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_ConstanceIntro:
+	.string "Want to join my picnic?$"
+
+Zone6A_Text_ConstanceDefeat:
+	.string "Oops, I forgot to pack food!$"
+
+Zone6A_Text_ConstancePostBattle:
+	.string "I can look for some Berries or something...$"
+
+Zone6A_EventScript_Ronan::
+	trainerbattle_single TRAINER_RONAN, Zone6A_Text_RonanIntro, Zone6A_Text_RonanDefeat
+	msgbox Zone6A_Text_RonanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_RonanIntro:
+	.string "Ah, a plebeian.\n"
+	.string "Want to have a go?$"
+
+Zone6A_Text_RonanDefeat:
+	.string "My honor, tainted...$"
+
+Zone6A_Text_RonanPostBattle:
+	.string "Beaten by a mere commoner...$"
+
+Zone6A_EventScript_ItemNetBall::
+	finditem ITEM_NET_BALL
+	end
+
+Zone6A_EventScript_ItemPotion::
+	finditem ITEM_POTION
+	end
+
+Zone6A_EventScript_ItemNestBall::
+	finditem ITEM_NEST_BALL
+	end
+`

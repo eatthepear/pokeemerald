@@ -801,33 +801,49 @@ static const struct TrainerMon sParty_Ronan[] = {
     }
 };
 
-static const struct TrainerMon sParty_Rita[] = {//Leviathan 3, optional, Default
+static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 6, Double Battle, Default
     {
-    .iv = 31,
-    .lvl = 15,
-    .nature = NATURE_TIMID,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Natural Cure
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_VENOSHOCK, MOVE_GROWTH, MOVE_MEGA_DRAIN}
-    },
-    {
-    .iv = 31,
-    .lvl = 15,
+    .iv = 30,
+    .lvl = 17,
     .nature = NATURE_MILD,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_2, //Cloud Nine
-    .species = SPECIES_PSYDUCK,
-    .moves = {MOVE_WATER_PULSE, MOVE_CONFUSION, MOVE_TAIL_WHIP, MOVE_FURY_SWIPES}
+    .ability = ABILITY_SLOT_2, //Synchronize
+    .species = SPECIES_INDEEDEE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 17,
+    .nature = NATURE_MILD,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Synchronize
+    .species = SPECIES_INDEEDEE_FEMALE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 6, Double Battle, Brutal
+    {
+    .iv = 31,
+    .lvl = 17,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_HIDDEN, //Psychic Surge
+    .species = SPECIES_INDEEDEE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 31,
-    .lvl = 16,
-    .nature = NATURE_NAIVE,
+    .lvl = 17,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Fur Coat
-    .species = SPECIES_FURRET,
-    .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_THIEF}
+    .ability = ABILITY_HIDDEN, //Psychic Surge
+    .species = SPECIES_INDEEDEE_FEMALE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
     }
 };
 
