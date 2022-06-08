@@ -220,6 +220,8 @@ struct FormChange {
 
 #define GET_SHINY_VALUE(otId, personality)HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality)
 
+#define NUM_CAPS 27
+
 extern u8 gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];
 extern u8 gEnemyPartyCount;
@@ -406,5 +408,8 @@ u16 GetFormChangeTargetSpecies(struct Pokemon *mon, u16 method, u32 arg);
 u8 SendMonToPC(struct Pokemon* mon);
 u16 GetFormChangeTargetSpeciesBoxMon(struct BoxPokemon *mon, u16 method, u32 arg);
 u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove);
+bool8 IsOverLevelLimit(u8 level);
+
+extern const u16 sLevelCaps[NUM_CAPS];
 
 #endif // GUARD_POKEMON_H
