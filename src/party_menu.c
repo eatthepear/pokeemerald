@@ -7139,20 +7139,9 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
             DisplayReachedLevelCapMessage(&gPlayerParty[gPartyMenu.slotId], TRUE);
             gTasks[taskId].func = Task_WaitForTextTrainingEvolution;
             PartyMenuTryEvolution(taskId);
-            // gFieldCallback2 = CB2_FadeFromPartyMenu;
-            // SetMainCallback2(CB2_ReturnToField);
         }
     }
 }
-
-// static void Task_SwitchHoldItemsPrompt(u8 taskId)
-// {
-//     if (!gPaletteFade.active)
-//     {
-//         DisplayAlreadyHoldingItemSwitchMessage(&gPlayerParty[gPartyMenu.slotId], sPartyMenuItemId, TRUE);
-//         gTasks[taskId].func = Task_SwitchItemsYesNo;
-//     }
-// }
 
 static void Task_WaitForTextTrainingEvolution(u8 taskId)
 {
@@ -7179,7 +7168,7 @@ static void Task_HandleTrainingYesNoInput(u8 taskId)
     s16 *arrayPtr = ptr->data;
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
-    case 0: // Yes, switch items
+    case 0: // Yes
         nextLevelExperience = gExperienceTables[gBaseStats[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
         SetMonData(mon, MON_DATA_EXP, &nextLevelExperience);
         CalculateMonStats(mon);
@@ -7202,159 +7191,6 @@ static void Task_HandleTrainingYesNoInput(u8 taskId)
     case 1: // No
         FlagClear(FLAG_IS_RARE_CANDY);
         PartyMenuTryEvolution(taskId);
-        // gFieldCallback2 = CB2_FadeFromPartyMenu;
-        // SetMainCallback2(CB2_ReturnToField);
         break;
     }
 }
-
-// static void Task_DisplayLevelUpStatsPg1(u8 taskId)
-// {
-//     if (WaitFanfare(FALSE) && IsPartyMenuTextPrinterActive() != TRUE && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
-//     {
-//         PlaySE(SE_SELECT);
-//         DisplayLevelUpStatsPg1(taskId);
-//         gTasks[taskId].func = Task_DisplayLevelUpStatsPg2;
-//     }
-// }
-
-// static void Task_DisplayLevelUpStatsPg2(u8 taskId)
-// {
-//     if ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON)))
-//     {
-//         PlaySE(SE_SELECT);
-//         DisplayLevelUpStatsPg2(taskId);
-//         gTasks[taskId].func = Task_TryLearnNewMoves;
-//     }
-// }
-
-// static void Task_TryLearnNewMoves(u8 taskId)
-// {
-//     u16 learnMove;
-
-//     if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
-//     {
-//         RemoveLevelUpStatsWindow();
-//         learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
-//         gPartyMenu.learnMoveState = 1;
-//         switch (learnMove)
-//         {
-//         case 0: // No moves to learn
-//             PartyMenuTryEvolution(taskId);
-//             break;
-//         case MON_HAS_MAX_MOVES:
-//             DisplayMonNeedsToReplaceMove(taskId);
-//             break;
-//         case MON_ALREADY_KNOWS_MOVE:
-//             gTasks[taskId].func = Task_TryLearningNextMove;
-//             break;
-//         default:
-//             DisplayMonLearnedMove(taskId, learnMove);
-//             break;
-//         }
-//     }
-// }
-
-// static void Task_TryLearningNextMove(u8 taskId)
-// {
-//     u16 result = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], FALSE);
-
-//     switch (result)
-//     {
-//     case 0: // No moves to learn
-//         PartyMenuTryEvolution(taskId);
-//         break;
-//     case MON_HAS_MAX_MOVES:
-//         DisplayMonNeedsToReplaceMove(taskId);
-//         break;
-//     case MON_ALREADY_KNOWS_MOVE:
-//         return;
-//     default:
-//         DisplayMonLearnedMove(taskId, result);
-//         break;
-//     }
-// }
-
-// static void Task_TryLearningNextMove(u8 taskId)
-// {
-//     u16 result = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], FALSE);
-
-//     switch (result)
-//     {
-//     case 0: // No moves to learn
-//         PartyMenuTryEvolution(taskId);
-//         break;
-//     case MON_HAS_MAX_MOVES:
-//         DisplayMonNeedsToReplaceMove(taskId);
-//         break;
-//     case MON_ALREADY_KNOWS_MOVE:
-//         return;
-//     default:
-//         DisplayMonLearnedMove(taskId, result);
-//         break;
-//     }
-// }
-
-// static void PartyMenuTryEvolution(u8 taskId)
-// {
-//     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
-//     u16 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL);
-
-//     if (targetSpecies != SPECIES_NONE)
-//     {
-//         FreePartyPointers();
-//         gCB2_AfterEvolution = gPartyMenu.exitCallback;
-//         BeginEvolutionScene(mon, targetSpecies, TRUE, gPartyMenu.slotId);
-//         DestroyTask(taskId);
-//     }
-//     else
-//     {
-//         gTasks[taskId].func = Task_ClosePartyMenuAfterText;
-//     }
-// }
-
-// static void DisplayMonNeedsToReplaceMove(u8 taskId)
-// {
-//     GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
-//     StringCopy(gStringVar2, gMoveNames[gMoveToLearn]);
-//     StringExpandPlaceholders(gStringVar4, gText_PkmnNeedsToReplaceMove);
-//     DisplayPartyMenuMessage(gStringVar4, TRUE);
-//     ScheduleBgCopyTilemapToVram(2);
-//     gPartyMenu.data1 = gMoveToLearn;
-//     gTasks[taskId].func = Task_ReplaceMoveYesNo;
-// }
-
-// static void DisplayMonLearnedMove(u8 taskId, u16 move)
-// {
-//     GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
-//     StringCopy(gStringVar2, gMoveNames[move]);
-//     StringExpandPlaceholders(gStringVar4, gText_PkmnLearnedMove3);
-//     DisplayPartyMenuMessage(gStringVar4, TRUE);
-//     ScheduleBgCopyTilemapToVram(2);
-//     gPartyMenu.data1 = move;
-//     gTasks[taskId].func = Task_DoLearnedMoveFanfareAfterText;
-// }
-
-// static void Task_DoLearnedMoveFanfareAfterText(u8 taskId)
-// {
-//     if (IsPartyMenuTextPrinterActive() != TRUE)
-//     {
-//         PlayFanfare(MUS_LEVEL_UP);
-//         gTasks[taskId].func = Task_LearnNextMoveOrClosePartyMenu;
-//     }
-// }
-
-// static void Task_LearnNextMoveOrClosePartyMenu(u8 taskId)
-// {
-//     if (IsFanfareTaskInactive() && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
-//     {
-//         if (gPartyMenu.learnMoveState == 1)
-//             Task_TryLearningNextMove(taskId);
-//         else
-//         {
-//             if (gPartyMenu.learnMoveState == 2) // never occurs
-//                 gSpecialVar_Result = TRUE;
-//             Task_ClosePartyMenu(taskId);
-//         }
-//     }
-// }
