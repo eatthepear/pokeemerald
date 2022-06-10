@@ -3178,6 +3178,7 @@ extern const u8 gText_OneFreshWater[];
 extern const u8 gText_TenFreshWater[];
 
 extern const u8 gText_LelouchShouldTrain[];
+extern const u8 gText_LelouchReachedLevelCap[];
 
 extern const u8 gMenuText_Move[];
 extern const u8 gText_MoveItemWhere[];

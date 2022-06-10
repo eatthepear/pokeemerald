@@ -416,7 +416,9 @@ void TryItemHoldFormChange(struct Pokemon *mon);
 static bool8 SetUpFieldMove_RockClimb(void);
 static void Task_ChoosePartyMonForTraining(u8 taskId);
 static void CB2_ChoosePartyMonForTraining(void);
-static void DisplayShouldTrainMessage(struct Pokemon *mon, u16 item, bool8 keepOpen);
+static void DisplayShouldTrainMessage(struct Pokemon *mon, bool8 keepOpen);
+static void DisplayReachedLevelCapMessage(struct Pokemon *mon, bool8 keepOpen);
+static void Task_WaitForTextTrainingEvolution(u8 taskId);
 static void TryDoTrainingToSelectedMon(u8 taskId);
 static void Task_DoTrainingToSelectedMonYesNo(u8 taskId);
 static void Task_HandleTrainingYesNoInput(u8 taskId);
@@ -7103,10 +7105,18 @@ static void CB2_ChoosePartyMonForTraining(void)
     SetMainCallback2(CB2_ReturnToField);
 }
 
-static void DisplayShouldTrainMessage(struct Pokemon *mon, u16 item, bool8 keepOpen)
+static void DisplayShouldTrainMessage(struct Pokemon *mon, bool8 keepOpen)
 {
     GetMonNickname(mon, gStringVar1);
     StringExpandPlaceholders(gStringVar4, gText_LelouchShouldTrain);
+    DisplayPartyMenuMessage(gStringVar4, keepOpen);
+    ScheduleBgCopyTilemapToVram(2);
+}
+
+static void DisplayReachedLevelCapMessage(struct Pokemon *mon, bool8 keepOpen)
+{
+    GetMonNickname(mon, gStringVar1);
+    StringExpandPlaceholders(gStringVar4, gText_LelouchReachedLevelCap);
     DisplayPartyMenuMessage(gStringVar4, keepOpen);
     ScheduleBgCopyTilemapToVram(2);
 }
@@ -7120,12 +7130,14 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
     {
         if ((currentLevel != MAX_LEVEL) && !IsOverLevelLimit(currentLevel))
         {
-            DisplayShouldTrainMessage(&gPlayerParty[gPartyMenu.slotId], ITEM_MASTER_BALL, TRUE);
+            DisplayShouldTrainMessage(&gPlayerParty[gPartyMenu.slotId], TRUE);
             gTasks[taskId].func = Task_DoTrainingToSelectedMonYesNo;
         }
         else
         {
             FlagClear(FLAG_IS_RARE_CANDY);
+            DisplayReachedLevelCapMessage(&gPlayerParty[gPartyMenu.slotId], TRUE);
+            gTasks[taskId].func = Task_WaitForTextTrainingEvolution;
             PartyMenuTryEvolution(taskId);
             // gFieldCallback2 = CB2_FadeFromPartyMenu;
             // SetMainCallback2(CB2_ReturnToField);
@@ -7141,6 +7153,14 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
 //         gTasks[taskId].func = Task_SwitchItemsYesNo;
 //     }
 // }
+
+static void Task_WaitForTextTrainingEvolution(u8 taskId)
+{
+    if (IsPartyMenuTextPrinterActive() != TRUE)
+    {
+        PartyMenuTryEvolution(taskId);
+    }
+}
 
 static void Task_DoTrainingToSelectedMonYesNo(u8 taskId)
 {

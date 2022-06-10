@@ -2014,4 +2014,5 @@ const u8 gText_FORMS_NONE[]                         = _("{STR_VAR_1} has no alte
 const u8 gText_OneFreshWater[]                      = _("One Fresh Water - ¥200");
 const u8 gText_TenFreshWater[]                      = _("Ten Fresh Water - ¥2000");
 
-const u8 gText_LelouchShouldTrain[] = _("Lelouch: Would you like me to\nincrease {STR_VAR_1}'s level by 1?");
+const u8 gText_LelouchShouldTrain[] = _("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Would you like me to\nincrease {STR_VAR_1}'s level by 1?");
+const u8 gText_LelouchReachedLevelCap[] = _("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: {STR_VAR_1} has reached\nthe level cap.{PAUSE_UNTIL_PRESS}");
