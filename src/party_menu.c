@@ -416,6 +416,7 @@ void TryItemHoldFormChange(struct Pokemon *mon);
 static bool8 SetUpFieldMove_RockClimb(void);
 static void Task_ChoosePartyMonForTraining(u8 taskId);
 static void CB2_ChoosePartyMonForTraining(void);
+static void DisplayShouldTrainMessage(struct Pokemon *mon, u16 item, bool8 keepOpen);
 static void TryDoTrainingToSelectedMon(u8 taskId);
 static void Task_DoTrainingToSelectedMonYesNo(u8 taskId);
 static void Task_HandleTrainingYesNoInput(u8 taskId);
@@ -7102,6 +7103,14 @@ static void CB2_ChoosePartyMonForTraining(void)
     SetMainCallback2(CB2_ReturnToField);
 }
 
+static void DisplayShouldTrainMessage(struct Pokemon *mon, u16 item, bool8 keepOpen)
+{
+    GetMonNickname(mon, gStringVar1);
+    StringExpandPlaceholders(gStringVar4, gText_LelouchShouldTrain);
+    DisplayPartyMenuMessage(gStringVar4, keepOpen);
+    ScheduleBgCopyTilemapToVram(2);
+}
+
 static void TryDoTrainingToSelectedMon(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
@@ -7111,7 +7120,7 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
     {
         if ((currentLevel != MAX_LEVEL) && !IsOverLevelLimit(currentLevel))
         {
-            DisplayAlreadyHoldingItemSwitchMessage(&gPlayerParty[gPartyMenu.slotId], ITEM_MASTER_BALL, TRUE);
+            DisplayShouldTrainMessage(&gPlayerParty[gPartyMenu.slotId], ITEM_MASTER_BALL, TRUE);
             gTasks[taskId].func = Task_DoTrainingToSelectedMonYesNo;
         }
         else

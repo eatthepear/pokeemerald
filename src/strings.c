@@ -2013,3 +2013,5 @@ const u8 gText_FORMS_NONE[]                         = _("{STR_VAR_1} has no alte
 
 const u8 gText_OneFreshWater[]                      = _("One Fresh Water - ¥200");
 const u8 gText_TenFreshWater[]                      = _("Ten Fresh Water - ¥2000");
+
+const u8 gText_LelouchShouldTrain[] = _("Lelouch: Would you like me to\nincrease {STR_VAR_1}'s level by 1?");
