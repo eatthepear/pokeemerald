@@ -355,6 +355,15 @@ gText_Lelouch_NotEnoughColor:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\n"
 	.string "of that color.$"
 
+gText_Lelouch_ExpTrainingFinished:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: The training session has\n"
+	.string "finished.\p"
+	.string "Your Pokémon has grown stronger.$"
+
+gText_Lelouch_DidNotExpTrain:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you do want to\n"
+	.string "train your Pokémon, I'll be here.$"
+
 gText_Lelouch_Exp1:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 1\n"
 	.string "is two level 10 Audino and costs\l"

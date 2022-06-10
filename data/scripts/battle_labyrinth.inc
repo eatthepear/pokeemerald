@@ -379,11 +379,21 @@ EventScript_Shop_Lelouch_Training::
 	goto_if_eq EventScript_Shop_Lelouch_Training_2
 	special ChoosePartyMonForTraining
 	waitstate
+	compare VAR_0x8004, 1
+	goto_if_eq EventScript_Shop_Lelouch_Training_5
+	msgbox gText_Lelouch_DidNotExpTrain
+EventScript_Shop_Lelouch_Training_4:
 	return
 
 EventScript_Shop_Lelouch_Training_2:
 	msgbox gText_Lelouch_NotEnoughColor
 	return
+
+EventScript_Shop_Lelouch_Training_5:
+	msgbox gText_Lelouch_ExpTrainingFinished
+	msgbox gText_Lelouch_PayRed
+	removeitem ITEM_RED_SHARD, 1
+	goto EventScript_Shop_Lelouch_Training_4
 
 
 EventScript_Shop_Lelouch_MoveReminder::

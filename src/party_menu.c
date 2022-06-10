@@ -7135,7 +7135,15 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
         }
         else
         {
-            FlagClear(FLAG_IS_RARE_CANDY);
+            if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+            {
+                gSpecialVar_0x8004 = 1;
+                FlagClear(FLAG_IS_RARE_CANDY);
+            }
+            else
+            {
+                gSpecialVar_0x8004 = 2;
+            }
             DisplayReachedLevelCapMessage(&gPlayerParty[gPartyMenu.slotId], TRUE);
             gTasks[taskId].func = Task_WaitForTextTrainingEvolution;
             PartyMenuTryEvolution(taskId);
@@ -7189,7 +7197,15 @@ static void Task_HandleTrainingYesNoInput(u8 taskId)
         PlaySE(SE_SELECT);
         // fallthrough
     case 1: // No
-        FlagClear(FLAG_IS_RARE_CANDY);
+        if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+        {
+            gSpecialVar_0x8004 = 1;
+            FlagClear(FLAG_IS_RARE_CANDY);
+        }
+        else
+        {
+            gSpecialVar_0x8004 = 2;
+        }
         PartyMenuTryEvolution(taskId);
         break;
     }

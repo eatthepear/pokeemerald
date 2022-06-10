@@ -255,6 +255,13 @@ script EventScript_Shop_Lelouch_Training {
 	}
 	special(ChoosePartyMonForTraining)
 	waitstate
+	if (var(VAR_0x8004) == 1) {
+		msgbox(gText_Lelouch_ExpTrainingFinished)
+		msgbox(gText_Lelouch_PayRed)
+		removeitem(ITEM_RED_SHARD, 1)
+	} else {
+		msgbox(gText_Lelouch_DidNotExpTrain)
+	}
 	return
 	setflag(FLAG_DOUBLE_EXP)
 	setflag(FLAG_FORCE_BATTLE_ANIM_OFF)
