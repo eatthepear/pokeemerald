@@ -1677,7 +1677,6 @@ EventScript_Documentation::
 
 EventScript_Settings::
 EventScript_Settings_1:
-	setflag FLAG_IS_DEBUGGING_SAVEFILE
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Settings_41
 EventScript_Settings_37:
 	goto_if_unset FLAG_BRUTAL_MODE_ON, EventScript_Settings_36

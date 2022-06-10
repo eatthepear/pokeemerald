@@ -1031,7 +1031,6 @@ script EventScript_Documentation {
 
 script EventScript_Settings {
 	while {
-		setflag(FLAG_IS_DEBUGGING_SAVEFILE)
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
 			msgbox(gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)

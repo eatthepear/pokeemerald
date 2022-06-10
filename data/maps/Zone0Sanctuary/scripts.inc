@@ -613,6 +613,7 @@ Zone0Sanctuary_EventScript_EndIntro_1:
 	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 1
+	setflag FLAG_IS_DEBUGGING_SAVEFILE
 	releaseall
 	end
 
