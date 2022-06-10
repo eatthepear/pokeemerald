@@ -5407,18 +5407,18 @@ static void PartyMenuTryEvolution(u8 taskId)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL);
 
-    if (targetSpecies != SPECIES_NONE)
+    if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
     {
-        FreePartyPointers();
-        gCB2_AfterEvolution = gPartyMenu.exitCallback;
-        BeginEvolutionScene(mon, targetSpecies, TRUE, gPartyMenu.slotId);
-        DestroyTask(taskId);
+        TryDoTrainingToSelectedMon(taskId);
     }
     else
     {
-        if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+        if (targetSpecies != SPECIES_NONE)
         {
-            TryDoTrainingToSelectedMon(taskId);
+            FreePartyPointers();
+            gCB2_AfterEvolution = gPartyMenu.exitCallback;
+            BeginEvolutionScene(mon, targetSpecies, TRUE, gPartyMenu.slotId);
+            DestroyTask(taskId);
         }
         else
         {
@@ -7117,8 +7117,9 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
         else
         {
             FlagClear(FLAG_IS_RARE_CANDY);
-            gFieldCallback2 = CB2_FadeFromPartyMenu;
-            SetMainCallback2(CB2_ReturnToField);
+            PartyMenuTryEvolution(taskId);
+            // gFieldCallback2 = CB2_FadeFromPartyMenu;
+            // SetMainCallback2(CB2_ReturnToField);
         }
     }
 }
@@ -7171,8 +7172,9 @@ static void Task_HandleTrainingYesNoInput(u8 taskId)
         // fallthrough
     case 1: // No
         FlagClear(FLAG_IS_RARE_CANDY);
-        gFieldCallback2 = CB2_FadeFromPartyMenu;
-        SetMainCallback2(CB2_ReturnToField);
+        PartyMenuTryEvolution(taskId);
+        // gFieldCallback2 = CB2_FadeFromPartyMenu;
+        // SetMainCallback2(CB2_ReturnToField);
         break;
     }
 }
