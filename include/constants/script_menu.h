@@ -66,7 +66,7 @@
 #define MULTI_GAME_CORNER_TMS              55
 #define MULTI_SSTIDAL_SLATEPORT_NO_BF      56
 #define MULTI_FLOORS                       57 
-#define MULTI_LELOUCH_TRAINING1            58
+#define MULTI_LELOUCH_TRAINING             58
 #define MULTI_LELOUCH_TRAINING2            59
 #define MULTI_FRESH_WATER                  60
 #define MULTI_LELOUCH_TRAINING3            61

@@ -253,16 +253,6 @@ script EventScript_Shop_Lelouch_Training {
 		msgbox(gText_Lelouch_NotEnoughColor)
 		return
 	}
-	special(ChoosePartyMonForTraining)
-	waitstate
-	if (var(VAR_0x8004) == 1) {
-		msgbox(gText_Lelouch_ExpTrainingFinished)
-		msgbox(gText_Lelouch_PayRed)
-		removeitem(ITEM_RED_SHARD, 1)
-	} else {
-		msgbox(gText_Lelouch_DidNotExpTrain)
-	}
-	return
 	setflag(FLAG_DOUBLE_EXP)
 	setflag(FLAG_FORCE_BATTLE_ANIM_OFF)
 	msgbox(gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT)
@@ -275,37 +265,24 @@ script EventScript_Shop_Lelouch_Training {
 		case 12:
 		case 13:
 		case 15:
-			multichoice(0, 0, MULTI_LELOUCH_TRAINING1, 0)
-			switch(var(VAR_RESULT)) {
-				case 0:
-					msgbox(gText_Lelouch_Exp1, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Lelouch_PayRed)
-						removeitem(ITEM_RED_SHARD, 1)
-						trainerbattle_no_intro(TRAINER_LELOUCHEXP1, gText_LelouchDefeated)
-						return
-					}
-			}
 		case 16:
 		case 17:
 		case 18:
 		case 20:
-			multichoice(0, 0, MULTI_LELOUCH_TRAINING2, 0)
+			multichoice(0, 0, MULTI_LELOUCH_TRAINING, 0)
 			switch(var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Lelouch_Exp1, MSGBOX_YESNO)
+					msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Lelouch_PayRed)
-						removeitem(ITEM_RED_SHARD, 1)
-						trainerbattle_no_intro(TRAINER_LELOUCHEXP1, gText_LelouchDefeated)
-						return
-					}
-				case 1:
-					msgbox(gText_Lelouch_Exp2, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Lelouch_PayRed)
-						removeitem(ITEM_RED_SHARD, 1)
-						trainerbattle_no_intro(TRAINER_LELOUCHEXP2, gText_LelouchDefeated)
+						special(ChoosePartyMonForTraining)
+						waitstate
+						if (var(VAR_0x8004) == 1) {
+							msgbox(gText_Lelouch_ExpTrainingFinished)
+							msgbox(gText_Lelouch_PayRed)
+							removeitem(ITEM_RED_SHARD, 1)
+						} else {
+							msgbox(gText_Lelouch_DidNotExpTrain)
+						}
 						return
 					}
 			}
@@ -318,7 +295,7 @@ script EventScript_Shop_Lelouch_Training {
 				multichoice(0, 0, MULTI_LELOUCH_TRAINING3, 0)
 				switch(var(VAR_RESULT)) {
 					case 0:
-						msgbox(gText_Lelouch_Exp1, MSGBOX_YESNO)
+						msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							msgbox(gText_Lelouch_PayRed)
 							removeitem(ITEM_RED_SHARD, 1)
@@ -346,7 +323,7 @@ script EventScript_Shop_Lelouch_Training {
 				scrollingmultichoice(6, 0, 0, 5, TRUE)
 				switch(var(VAR_RESULT)) {
 					case 0:
-						msgbox(gText_Lelouch_Exp1, MSGBOX_YESNO)
+						msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							msgbox(gText_Lelouch_PayRed)
 							removeitem(ITEM_RED_SHARD, 1)
@@ -424,7 +401,7 @@ script EventScript_Shop_Lelouch_Training {
 				multichoice(0, 0, MULTI_LELOUCH_TRAINING4, 0)
 				switch(var(VAR_RESULT)) {
 					case 0:
-						msgbox(gText_Lelouch_Exp1, MSGBOX_YESNO)
+						msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							msgbox(gText_Lelouch_PayRed)
 							removeitem(ITEM_RED_SHARD, 1)
@@ -462,7 +439,7 @@ script EventScript_Shop_Lelouch_Training {
 				scrollingmultichoice(7, 0, 0, 5, TRUE)
 				switch(var(VAR_RESULT)) {
 					case 0:
-						msgbox(gText_Lelouch_Exp1, MSGBOX_YESNO)
+						msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							msgbox(gText_Lelouch_PayRed)
 							removeitem(ITEM_RED_SHARD, 1)

@@ -364,10 +364,13 @@ gText_Lelouch_DidNotExpTrain:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you do want to\n"
 	.string "train your Pokémon, I'll be here.$"
 
-gText_Lelouch_Exp1:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 1\n"
-	.string "is two level 10 Audino and costs\l"
-	.string "one Red Shard, are you sure?$"
+gText_Lelouch_Exp:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: In Experience Training,\n"
+	.string "you can train one Pokémon to any\l"
+	.string "level up to the level cap,\l"
+	.string "at the cost of one Red Shard.\p"
+	.string "Would you like to start an\n"
+	.string "Experience Training session?$"
 
 gText_Lelouch_Exp2:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Experience Training 2\n"

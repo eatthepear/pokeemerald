@@ -344,16 +344,15 @@ static const struct MenuAction MultichoiceList_Floors[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_LelouchTraining1[] =
+static const struct MenuAction MultichoiceList_LelouchTraining[] =
 {
-    {gText_ExpTraining1},
+    {gText_ExpTraining},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_LelouchTraining2[] =
 {
-    {gText_ExpTraining1},
-    {gText_ExpTraining2},
+    {gText_ExpTraining},
     {gText_Exit},
 };
 
@@ -366,18 +365,13 @@ static const struct MenuAction MultichoiceList_FreshWater[] =
 
 static const struct MenuAction MultichoiceList_LelouchTraining3Brutal[] =
 {
-    {gText_ExpTraining1},
-    {gText_ExpTraining2},
-    {gText_ExpTraining3},
+    {gText_ExpTraining},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_LelouchTraining4Brutal[] =
 {
-    {gText_ExpTraining1},
-    {gText_ExpTraining2},
-    {gText_ExpTraining3},
-    {gText_ExpTraining4},
+    {gText_ExpTraining},
     {gText_Exit},
 };
 
@@ -898,7 +892,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_TMS]            = MULTICHOICE(MultichoiceList_GameCornerTMs),
     [MULTI_SSTIDAL_SLATEPORT_NO_BF]    = MULTICHOICE(MultichoiceList_SSTidalSlateportNoBF),
     [MULTI_FLOORS]                     = MULTICHOICE(MultichoiceList_Floors),
-    [MULTI_LELOUCH_TRAINING1]          = MULTICHOICE(MultichoiceList_LelouchTraining1),
+    [MULTI_LELOUCH_TRAINING]           = MULTICHOICE(MultichoiceList_LelouchTraining),
     [MULTI_LELOUCH_TRAINING2]          = MULTICHOICE(MultichoiceList_LelouchTraining2),
     [MULTI_FRESH_WATER]                = MULTICHOICE(MultichoiceList_FreshWater),
     [MULTI_LELOUCH_TRAINING3]          = MULTICHOICE(MultichoiceList_LelouchTraining3Brutal),

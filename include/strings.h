@@ -3162,10 +3162,7 @@ extern const u8 gText_MoveReminderService[];
 extern const u8 gText_MoveTutorService[];
 extern const u8 gText_OtherService[];
 
-extern const u8 gText_ExpTraining1[];
-extern const u8 gText_ExpTraining2[];
-extern const u8 gText_ExpTraining3[];
-extern const u8 gText_ExpTraining4[];
+extern const u8 gText_ExpTraining[];
 
 extern const u8 gText_AttackMints[];
 extern const u8 gText_DefenseMints[];
