@@ -365,7 +365,7 @@ gText_Lelouch_DidNotExpTrain:
 	.string "train your Pokémon, I'll be here.$"
 
 gText_Lelouch_Exp:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: In Experience Training,\n"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: With Experience Training,\n"
 	.string "you can train one Pokémon to any\l"
 	.string "level up to the level cap,\l"
 	.string "at the cost of one Red Shard.\p"

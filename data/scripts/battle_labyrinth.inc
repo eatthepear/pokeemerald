@@ -356,8 +356,6 @@ EventScript_Shop_Lelouch_8:
 
 EventScript_Shop_Lelouch_12:
 	call EventScript_Shop_Lelouch_Training
-	clearflag FLAG_DOUBLE_EXP
-	clearflag FLAG_FORCE_BATTLE_ANIM_OFF
 	goto EventScript_Shop_Lelouch_10
 
 EventScript_Shop_Lelouch_13:
@@ -377,8 +375,6 @@ EventScript_Shop_Lelouch_Training::
 	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_Lelouch_Training_2
-	setflag FLAG_DOUBLE_EXP
-	setflag FLAG_FORCE_BATTLE_ANIM_OFF
 	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
 	switch VAR_ZONE
 	case 6, EventScript_Shop_Lelouch_Training_6

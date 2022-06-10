@@ -4047,15 +4047,7 @@ static void Cmd_getexp(void)
                         gBattleMoveDamage = value + 1;
                     }
                     #endif
-                    if (FlagGet(FLAG_DOUBLE_EXP))
-                    {
-                        gBattleMoveDamage = (gBattleMoveDamage * 200) / 100;
-                        i = STRINGID_ABOOSTED;
-                    }
-                    else
-                    {
-                        i = STRINGID_EMPTYSTRING4;
-                    }
+                    i = STRINGID_EMPTYSTRING4;
 
                     // if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId]))
                     // {

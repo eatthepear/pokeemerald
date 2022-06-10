@@ -234,8 +234,6 @@ script EventScript_Shop_Lelouch {
 	switch (var(VAR_RESULT)) {
 		case 0:
 			call(EventScript_Shop_Lelouch_Training)
-			clearflag(FLAG_DOUBLE_EXP)
-			clearflag(FLAG_FORCE_BATTLE_ANIM_OFF)
 		case 1:
 			call(EventScript_Shop_Lelouch_MoveReminder)
 		case 2:
@@ -253,8 +251,6 @@ script EventScript_Shop_Lelouch_Training {
 		msgbox(gText_Lelouch_NotEnoughColor)
 		return
 	}
-	setflag(FLAG_DOUBLE_EXP)
-	setflag(FLAG_FORCE_BATTLE_ANIM_OFF)
 	msgbox(gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT)
 	switch (var(VAR_ZONE)) {
 		case 6:
