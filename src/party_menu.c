@@ -417,6 +417,8 @@ static bool8 SetUpFieldMove_RockClimb(void);
 static void Task_ChoosePartyMonForTraining(u8 taskId);
 static void CB2_ChoosePartyMonForTraining(void);
 static void TryDoTrainingToSelectedMon(u8 taskId);
+static void Task_DoTrainingToSelectedMonYesNo(u8 taskId);
+static void Task_HandleTrainingYesNoInput(u8 taskId);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -7103,36 +7105,75 @@ static void CB2_ChoosePartyMonForTraining(void)
 static void TryDoTrainingToSelectedMon(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
-    struct PartyMenuInternal *ptr = sPartyMenuInternal;
-    s16 *arrayPtr = ptr->data;
     u32 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
-    u32 nextLevelExperience;
 
     if (!gPaletteFade.active)
     {
         if ((currentLevel != MAX_LEVEL) && !IsOverLevelLimit(currentLevel))
         {
-            nextLevelExperience = gExperienceTables[gBaseStats[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
-            SetMonData(mon, MON_DATA_EXP, &nextLevelExperience);
-            CalculateMonStats(mon);
-            BufferMonStatsToTaskData(mon, arrayPtr);
-            BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
-            gPartyMenuUseExitCallback = TRUE;
-            PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
-            UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
-            GetMonNickname(mon, gStringVar1);
-            ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
-            StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
-            DisplayPartyMenuMessage(gStringVar4, TRUE);
-            ScheduleBgCopyTilemapToVram(2);
-            FlagSet(FLAG_IS_RARE_CANDY);
-            gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
+            DisplayAlreadyHoldingItemSwitchMessage(&gPlayerParty[gPartyMenu.slotId], ITEM_MASTER_BALL, TRUE);
+            gTasks[taskId].func = Task_DoTrainingToSelectedMonYesNo;
         }
         else
         {
             FlagClear(FLAG_IS_RARE_CANDY);
-            ScheduleBgCopyTilemapToVram(2);
+            gFieldCallback2 = CB2_FadeFromPartyMenu;
+            SetMainCallback2(CB2_ReturnToField);
         }
+    }
+}
+
+// static void Task_SwitchHoldItemsPrompt(u8 taskId)
+// {
+//     if (!gPaletteFade.active)
+//     {
+//         DisplayAlreadyHoldingItemSwitchMessage(&gPlayerParty[gPartyMenu.slotId], sPartyMenuItemId, TRUE);
+//         gTasks[taskId].func = Task_SwitchItemsYesNo;
+//     }
+// }
+
+static void Task_DoTrainingToSelectedMonYesNo(u8 taskId)
+{
+    if (IsPartyMenuTextPrinterActive() != TRUE)
+    {
+        PartyMenuDisplayYesNoMenu();
+        gTasks[taskId].func = Task_HandleTrainingYesNoInput;
+    }
+}
+
+static void Task_HandleTrainingYesNoInput(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u32 nextLevelExperience;
+    struct PartyMenuInternal *ptr = sPartyMenuInternal;
+    s16 *arrayPtr = ptr->data;
+    switch (Menu_ProcessInputNoWrapClearOnChoose())
+    {
+    case 0: // Yes, switch items
+        nextLevelExperience = gExperienceTables[gBaseStats[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
+        SetMonData(mon, MON_DATA_EXP, &nextLevelExperience);
+        CalculateMonStats(mon);
+        BufferMonStatsToTaskData(mon, arrayPtr);
+        BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
+        gPartyMenuUseExitCallback = TRUE;
+        PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
+        UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
+        GetMonNickname(mon, gStringVar1);
+        ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        FlagSet(FLAG_IS_RARE_CANDY);
+        gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
+        break;
+    case MENU_B_PRESSED:
+        PlaySE(SE_SELECT);
+        // fallthrough
+    case 1: // No
+        FlagClear(FLAG_IS_RARE_CANDY);
+        gFieldCallback2 = CB2_FadeFromPartyMenu;
+        SetMainCallback2(CB2_ReturnToField);
+        break;
     }
 }
 
