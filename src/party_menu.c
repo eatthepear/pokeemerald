@@ -414,6 +414,9 @@ static void Task_ChooseSendMonToPC(u8 taskId);
 static void CB2_ChooseSendMonToPC(void);
 void TryItemHoldFormChange(struct Pokemon *mon);
 static bool8 SetUpFieldMove_RockClimb(void);
+static void Task_ChoosePartyMonForTraining(u8 taskId);
+static void CB2_ChoosePartyMonForTraining(void);
+static void TryDoTrainingToSelectedMon(u8 taskId);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -1290,6 +1293,14 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             if (IsSelectedMonNotEgg((u8*)slotPtr))
             {
                 TryEnterMonForMinigame(taskId, (u8)*slotPtr);
+            }
+            break;
+        case PARTY_ACTION_TRAINING:
+            if (IsSelectedMonNotEgg((u8*)slotPtr))
+            {
+                PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+                TryDoTrainingToSelectedMon(taskId);
+                // gItemUseCB(taskId, Task_ClosePartyMenuAfterText);
             }
             break;
         default:
@@ -7049,4 +7060,103 @@ static bool8 SetUpFieldMove_RockClimb(void)
     }
     
     return FALSE;
+}
+
+// Used as a script special
+void ChoosePartyMonForTraining(void)
+{
+    ScriptContext2_Enable();
+    FadeScreen(FADE_TO_BLACK, 0);
+    CreateTask(Task_ChoosePartyMonForTraining, 10);
+}
+
+static void Task_ChoosePartyMonForTraining(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_TRAINING, TRUE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChoosePartyMonForTraining);
+        DestroyTask(taskId);
+    }
+}
+
+static void CB2_ChoosePartyMonForTraining(void)
+{
+    // gSpecialVar_0x8004 = GetCursorSelectionMonId();
+    // if (gSpecialVar_0x8004 >= PARTY_SIZE)
+    //     gSpecialVar_0x8004 = PARTY_NOTHING_CHOSEN;
+    gFieldCallback2 = CB2_FadeFromPartyMenu;
+    SetMainCallback2(CB2_ReturnToField);
+}
+
+// void CB2_ShowPartyMenuForItemUse(void)
+// {
+//     MainCallback callback = CB2_ReturnToField;
+//     u8 partyLayout;
+//     u8 menuType;
+//     u8 i;
+//     u8 msgId;
+
+//     menuType = PARTY_MENU_TYPE_FIELD;
+//     partyLayout = PARTY_LAYOUT_SINGLE;
+
+//     msgId = PARTY_MSG_USE_ON_WHICH_MON;
+
+//     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_TRAINING, TRUE, msgId, Task_HandleChooseMonInput, callback);
+// }
+
+static void TryDoTrainingToSelectedMon(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    struct PartyMenuInternal *ptr = sPartyMenuInternal;
+    s16 *arrayPtr = ptr->data;
+    u16 *itemPtr = &gSpecialVar_ItemId;
+    bool8 cannotUseEffect;
+    u32 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
+    u32 nextLevelExperience;
+
+    if (!gPaletteFade.active)
+    {
+        if ((currentLevel != MAX_LEVEL) && !IsOverLevelLimit(currentLevel))
+        {
+            nextLevelExperience = gExperienceTables[gBaseStats[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
+            SetMonData(mon, MON_DATA_EXP, &nextLevelExperience);
+            CalculateMonStats(mon);
+            BufferMonStatsToTaskData(mon, arrayPtr);
+            BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
+        }
+        // else
+        // {
+        //     cannotUseEffect = TRUE;
+        // }
+        PlaySE(SE_SELECT);
+        // if (cannotUseEffect)
+        // {
+        //     gPartyMenuUseExitCallback = FALSE;
+        //     DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        //     // ScheduleBgCopyTilemapToVram(2);
+        //     // gPartyMenu.action = 0;
+        //     DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
+        //     gTasks[taskId].func = Task_HandleChooseMonInput;
+        // }
+        // else
+        // {
+        gPartyMenuUseExitCallback = TRUE;
+        PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
+        UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
+        GetMonNickname(mon, gStringVar1);
+        ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
+        // }
+
+        // item = gPartyMenu.bagItem;
+        // DisplayGaveHeldItemMessage(&gPlayerParty[gPartyMenu.slotId], item, FALSE, 1);
+        // GiveItemToMon(&gPlayerParty[gPartyMenu.slotId], item);
+        // RemoveItemToGiveFromBag(item);
+        // gTasks[taskId].func = Task_UpdateHeldItemSpriteAndClosePartyMenu;
+    }
+    
 }

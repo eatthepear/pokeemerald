@@ -253,6 +253,9 @@ script EventScript_Shop_Lelouch_Training {
 		msgbox(gText_Lelouch_NotEnoughColor)
 		return
 	}
+	special(ChoosePartyMonForTraining)
+	waitstate
+	return
 	setflag(FLAG_DOUBLE_EXP)
 	setflag(FLAG_FORCE_BATTLE_ANIM_OFF)
 	msgbox(gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT)
