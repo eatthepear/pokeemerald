@@ -5103,7 +5103,14 @@ static void Task_LearnNextMoveOrClosePartyMenu(u8 taskId)
         {
             if (gPartyMenu.learnMoveState == 2) // never occurs
                 gSpecialVar_Result = TRUE;
-            Task_ClosePartyMenu(taskId);
+            if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+            {
+                TryDoTrainingToSelectedMon(taskId);
+            }
+            else
+            {
+                Task_ClosePartyMenu(taskId);
+            }
         }
     }
 }
@@ -5407,7 +5414,14 @@ static void PartyMenuTryEvolution(u8 taskId)
     }
     else
     {
-        gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+        if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+        {
+            TryDoTrainingToSelectedMon(taskId);
+        }
+        else
+        {
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+        }
     }
 }
 
@@ -7082,36 +7096,15 @@ static void Task_ChoosePartyMonForTraining(u8 taskId)
 
 static void CB2_ChoosePartyMonForTraining(void)
 {
-    // gSpecialVar_0x8004 = GetCursorSelectionMonId();
-    // if (gSpecialVar_0x8004 >= PARTY_SIZE)
-    //     gSpecialVar_0x8004 = PARTY_NOTHING_CHOSEN;
     gFieldCallback2 = CB2_FadeFromPartyMenu;
     SetMainCallback2(CB2_ReturnToField);
 }
-
-// void CB2_ShowPartyMenuForItemUse(void)
-// {
-//     MainCallback callback = CB2_ReturnToField;
-//     u8 partyLayout;
-//     u8 menuType;
-//     u8 i;
-//     u8 msgId;
-
-//     menuType = PARTY_MENU_TYPE_FIELD;
-//     partyLayout = PARTY_LAYOUT_SINGLE;
-
-//     msgId = PARTY_MSG_USE_ON_WHICH_MON;
-
-//     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_TRAINING, TRUE, msgId, Task_HandleChooseMonInput, callback);
-// }
 
 static void TryDoTrainingToSelectedMon(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     struct PartyMenuInternal *ptr = sPartyMenuInternal;
     s16 *arrayPtr = ptr->data;
-    u16 *itemPtr = &gSpecialVar_ItemId;
-    bool8 cannotUseEffect;
     u32 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
     u32 nextLevelExperience;
 
@@ -7124,39 +7117,172 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
             CalculateMonStats(mon);
             BufferMonStatsToTaskData(mon, arrayPtr);
             BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
+            gPartyMenuUseExitCallback = TRUE;
+            PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
+            UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
+            GetMonNickname(mon, gStringVar1);
+            ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
+            StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+            DisplayPartyMenuMessage(gStringVar4, TRUE);
+            ScheduleBgCopyTilemapToVram(2);
+            FlagSet(FLAG_IS_RARE_CANDY);
+            gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
         }
-        // else
-        // {
-        //     cannotUseEffect = TRUE;
-        // }
-        PlaySE(SE_SELECT);
-        // if (cannotUseEffect)
-        // {
-        //     gPartyMenuUseExitCallback = FALSE;
-        //     DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
-        //     // ScheduleBgCopyTilemapToVram(2);
-        //     // gPartyMenu.action = 0;
-        //     DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
-        //     gTasks[taskId].func = Task_HandleChooseMonInput;
-        // }
-        // else
-        // {
-        gPartyMenuUseExitCallback = TRUE;
-        PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
-        UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
-        GetMonNickname(mon, gStringVar1);
-        ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
-        StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
-        DisplayPartyMenuMessage(gStringVar4, TRUE);
-        ScheduleBgCopyTilemapToVram(2);
-        gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
-        // }
-
-        // item = gPartyMenu.bagItem;
-        // DisplayGaveHeldItemMessage(&gPlayerParty[gPartyMenu.slotId], item, FALSE, 1);
-        // GiveItemToMon(&gPlayerParty[gPartyMenu.slotId], item);
-        // RemoveItemToGiveFromBag(item);
-        // gTasks[taskId].func = Task_UpdateHeldItemSpriteAndClosePartyMenu;
+        else
+        {
+            FlagClear(FLAG_IS_RARE_CANDY);
+            ScheduleBgCopyTilemapToVram(2);
+        }
     }
-    
 }
+
+// static void Task_DisplayLevelUpStatsPg1(u8 taskId)
+// {
+//     if (WaitFanfare(FALSE) && IsPartyMenuTextPrinterActive() != TRUE && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+//     {
+//         PlaySE(SE_SELECT);
+//         DisplayLevelUpStatsPg1(taskId);
+//         gTasks[taskId].func = Task_DisplayLevelUpStatsPg2;
+//     }
+// }
+
+// static void Task_DisplayLevelUpStatsPg2(u8 taskId)
+// {
+//     if ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON)))
+//     {
+//         PlaySE(SE_SELECT);
+//         DisplayLevelUpStatsPg2(taskId);
+//         gTasks[taskId].func = Task_TryLearnNewMoves;
+//     }
+// }
+
+// static void Task_TryLearnNewMoves(u8 taskId)
+// {
+//     u16 learnMove;
+
+//     if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+//     {
+//         RemoveLevelUpStatsWindow();
+//         learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
+//         gPartyMenu.learnMoveState = 1;
+//         switch (learnMove)
+//         {
+//         case 0: // No moves to learn
+//             PartyMenuTryEvolution(taskId);
+//             break;
+//         case MON_HAS_MAX_MOVES:
+//             DisplayMonNeedsToReplaceMove(taskId);
+//             break;
+//         case MON_ALREADY_KNOWS_MOVE:
+//             gTasks[taskId].func = Task_TryLearningNextMove;
+//             break;
+//         default:
+//             DisplayMonLearnedMove(taskId, learnMove);
+//             break;
+//         }
+//     }
+// }
+
+// static void Task_TryLearningNextMove(u8 taskId)
+// {
+//     u16 result = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], FALSE);
+
+//     switch (result)
+//     {
+//     case 0: // No moves to learn
+//         PartyMenuTryEvolution(taskId);
+//         break;
+//     case MON_HAS_MAX_MOVES:
+//         DisplayMonNeedsToReplaceMove(taskId);
+//         break;
+//     case MON_ALREADY_KNOWS_MOVE:
+//         return;
+//     default:
+//         DisplayMonLearnedMove(taskId, result);
+//         break;
+//     }
+// }
+
+// static void Task_TryLearningNextMove(u8 taskId)
+// {
+//     u16 result = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], FALSE);
+
+//     switch (result)
+//     {
+//     case 0: // No moves to learn
+//         PartyMenuTryEvolution(taskId);
+//         break;
+//     case MON_HAS_MAX_MOVES:
+//         DisplayMonNeedsToReplaceMove(taskId);
+//         break;
+//     case MON_ALREADY_KNOWS_MOVE:
+//         return;
+//     default:
+//         DisplayMonLearnedMove(taskId, result);
+//         break;
+//     }
+// }
+
+// static void PartyMenuTryEvolution(u8 taskId)
+// {
+//     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+//     u16 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL);
+
+//     if (targetSpecies != SPECIES_NONE)
+//     {
+//         FreePartyPointers();
+//         gCB2_AfterEvolution = gPartyMenu.exitCallback;
+//         BeginEvolutionScene(mon, targetSpecies, TRUE, gPartyMenu.slotId);
+//         DestroyTask(taskId);
+//     }
+//     else
+//     {
+//         gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+//     }
+// }
+
+// static void DisplayMonNeedsToReplaceMove(u8 taskId)
+// {
+//     GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+//     StringCopy(gStringVar2, gMoveNames[gMoveToLearn]);
+//     StringExpandPlaceholders(gStringVar4, gText_PkmnNeedsToReplaceMove);
+//     DisplayPartyMenuMessage(gStringVar4, TRUE);
+//     ScheduleBgCopyTilemapToVram(2);
+//     gPartyMenu.data1 = gMoveToLearn;
+//     gTasks[taskId].func = Task_ReplaceMoveYesNo;
+// }
+
+// static void DisplayMonLearnedMove(u8 taskId, u16 move)
+// {
+//     GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+//     StringCopy(gStringVar2, gMoveNames[move]);
+//     StringExpandPlaceholders(gStringVar4, gText_PkmnLearnedMove3);
+//     DisplayPartyMenuMessage(gStringVar4, TRUE);
+//     ScheduleBgCopyTilemapToVram(2);
+//     gPartyMenu.data1 = move;
+//     gTasks[taskId].func = Task_DoLearnedMoveFanfareAfterText;
+// }
+
+// static void Task_DoLearnedMoveFanfareAfterText(u8 taskId)
+// {
+//     if (IsPartyMenuTextPrinterActive() != TRUE)
+//     {
+//         PlayFanfare(MUS_LEVEL_UP);
+//         gTasks[taskId].func = Task_LearnNextMoveOrClosePartyMenu;
+//     }
+// }
+
+// static void Task_LearnNextMoveOrClosePartyMenu(u8 taskId)
+// {
+//     if (IsFanfareTaskInactive() && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+//     {
+//         if (gPartyMenu.learnMoveState == 1)
+//             Task_TryLearningNextMove(taskId);
+//         else
+//         {
+//             if (gPartyMenu.learnMoveState == 2) // never occurs
+//                 gSpecialVar_Result = TRUE;
+//             Task_ClosePartyMenu(taskId);
+//         }
+//     }
+// }
