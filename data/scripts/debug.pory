@@ -1,0 +1,351 @@
+raw `
+
+Debug_ShowFieldMessageStringVar4::
+	special ShowFieldMessageStringVar4
+	waitmessage
+	waitbuttonpress
+	releaseall
+	end
+	
+Debug_Script_1::
+	end
+
+Debug_Script_2::
+	end
+
+Debug_Script_3::
+	end
+
+Debug_Script_4::
+	end
+
+Debug_Script_5::
+	end
+
+Debug_Script_6::
+	end
+
+Debug_Script_7::
+	end
+
+Debug_Script_8::
+	end
+
+`
+
+script Debug_CheatStart {
+	lockall
+	random(24)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_TEMP_0, SPECIES_BULBASAUR)
+		case 1:
+			setvar(VAR_TEMP_0, SPECIES_CHARMANDER)
+		case 2:
+			setvar(VAR_TEMP_0, SPECIES_SQUIRTLE)
+		case 3:
+			setvar(VAR_TEMP_0, SPECIES_CHIKORITA)
+		case 4:
+			setvar(VAR_TEMP_0, SPECIES_QUILAVA)
+		case 5:
+			setvar(VAR_TEMP_0, SPECIES_TOTODILE)
+		case 6:
+			setvar(VAR_TEMP_0, SPECIES_TREECKO)
+		case 7:
+			setvar(VAR_TEMP_0, SPECIES_TORCHIC)
+		case 8:
+			setvar(VAR_TEMP_0, SPECIES_MUDKIP)
+		case 9:
+			setvar(VAR_TEMP_0, SPECIES_TURTWIG)
+		case 10:
+			setvar(VAR_TEMP_0, SPECIES_CHIMCHAR)
+		case 11:
+			setvar(VAR_TEMP_0, SPECIES_PIPLUP)
+		case 12:
+			setvar(VAR_TEMP_0, SPECIES_SNIVY)
+		case 13:
+			setvar(VAR_TEMP_0, SPECIES_TEPIG)
+		case 14:
+			setvar(VAR_TEMP_0, SPECIES_OSHAWOTT)
+		case 15:
+			setvar(VAR_TEMP_0, SPECIES_CHESPIN)
+		case 16:
+			setvar(VAR_TEMP_0, SPECIES_FENNEKIN)
+		case 17:
+			setvar(VAR_TEMP_0, SPECIES_FROAKIE)
+		case 18:
+			setvar(VAR_TEMP_0, SPECIES_ROWLET)
+		case 19:
+			setvar(VAR_TEMP_0, SPECIES_LITTEN)
+		case 20:
+			setvar(VAR_TEMP_0, SPECIES_POPPLIO)
+		case 21:
+			setvar(VAR_TEMP_0, SPECIES_GROOKEY)
+		case 22:
+			setvar(VAR_TEMP_0, SPECIES_SCORBUNNY)
+		case 23:
+			setvar(VAR_TEMP_0, SPECIES_SOBBLE)
+	}
+	setflag(FLAG_BOOSTED_IVS)
+	givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	givemon(SPECIES_EEVEE, 15, ITEM_NONE)
+	clearflag(FLAG_BOOSTED_IVS)
+	random(20)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_TEMP_0, SPECIES_ABRA)
+		case 1:
+			setvar(VAR_TEMP_0, SPECIES_ABRA)
+		case 2:
+			setvar(VAR_TEMP_0, SPECIES_MARILL)
+		case 3:
+			setvar(VAR_TEMP_0, SPECIES_MARILL)
+		case 4:
+			setvar(VAR_TEMP_0, SPECIES_ROSELIA)
+		case 5:
+			setvar(VAR_TEMP_0, SPECIES_ROSELIA)
+		case 6:
+			setvar(VAR_TEMP_0, SPECIES_CLEFFA)
+		case 7:
+			setvar(VAR_TEMP_0, SPECIES_CLEFFA)
+		case 8:
+			setvar(VAR_TEMP_0, SPECIES_FLETCHLING)
+		case 9:
+			setvar(VAR_TEMP_0, SPECIES_FLETCHLING)
+		case 10:
+			setvar(VAR_TEMP_0, SPECIES_LILLIPUP)
+		case 11:
+			setvar(VAR_TEMP_0, SPECIES_LILLIPUP)
+		case 12:
+			setvar(VAR_TEMP_0, SPECIES_FLAAFFY)
+		case 13:
+			setvar(VAR_TEMP_0, SPECIES_FLAAFFY)
+		case 14:
+			setvar(VAR_TEMP_0, SPECIES_STARAVIA)
+		case 15:
+			setvar(VAR_TEMP_0, SPECIES_STARAVIA)
+	}
+	givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	random(20)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_TEMP_0, SPECIES_PHANPY)
+		case 1:
+			setvar(VAR_TEMP_0, SPECIES_PHANPY)
+		case 2:
+			setvar(VAR_TEMP_0, SPECIES_POOCHYENA)
+		case 3:
+			setvar(VAR_TEMP_0, SPECIES_POOCHYENA)
+		case 4:
+			setvar(VAR_TEMP_0, SPECIES_RATTATA)
+		case 5:
+			setvar(VAR_TEMP_0, SPECIES_RATTATA)
+		case 6:
+			setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+		case 7:
+			setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+		case 8:
+			setvar(VAR_TEMP_0, SPECIES_FURRET)
+		case 9:
+			setvar(VAR_TEMP_0, SPECIES_FURRET)
+		case 10:
+			setvar(VAR_TEMP_0, SPECIES_LUXIO)
+		case 11:
+			setvar(VAR_TEMP_0, SPECIES_LUXIO)
+		case 12:
+			setvar(VAR_TEMP_0, SPECIES_PIDGEY)
+		case 13:
+			setvar(VAR_TEMP_0, SPECIES_PIDGEY)
+		case 14:
+			setvar(VAR_TEMP_0, SPECIES_SNUBBULL)
+		case 15:
+			setvar(VAR_TEMP_0, SPECIES_SNUBBULL)
+		case 16:
+			setvar(VAR_TEMP_0, SPECIES_WOOLOO)
+		case 17:
+			setvar(VAR_TEMP_0, SPECIES_WOOLOO)
+		case 18:
+			setvar(VAR_TEMP_0, SPECIES_NIDORAN_F)
+		case 19:
+			setvar(VAR_TEMP_0, SPECIES_NIDORAN_M)
+	}
+	givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	random(20)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_TEMP_0, SPECIES_SUDOWOODO)
+		case 1:
+			setvar(VAR_TEMP_0, SPECIES_SUDOWOODO)
+		case 2:
+			setvar(VAR_TEMP_0, SPECIES_BUTTERFREE)
+		case 3:
+			setvar(VAR_TEMP_0, SPECIES_BUTTERFREE)
+		case 4:
+			setvar(VAR_TEMP_0, SPECIES_MANKEY)
+		case 5:
+			setvar(VAR_TEMP_0, SPECIES_MANKEY)
+		case 6:
+			setvar(VAR_TEMP_0, SPECIES_PETILIL)
+		case 7:
+			setvar(VAR_TEMP_0, SPECIES_PETILIL)
+		case 8:
+			setvar(VAR_TEMP_0, SPECIES_COTTONEE)
+		case 9:
+			setvar(VAR_TEMP_0, SPECIES_COTTONEE)
+		case 10:
+			setvar(VAR_TEMP_0, SPECIES_PIKACHU)
+		case 11:
+			setvar(VAR_TEMP_0, SPECIES_PIKACHU)
+		case 12:
+			setvar(VAR_TEMP_0, SPECIES_PANCHAM)
+		case 13:
+			setvar(VAR_TEMP_0, SPECIES_PANCHAM)
+		case 14:
+			setvar(VAR_TEMP_0, SPECIES_VOLTORB)
+		case 15:
+			setvar(VAR_TEMP_0, SPECIES_VOLTORB)
+		case 16:
+			setvar(VAR_TEMP_0, SPECIES_BUNEARY)
+		case 17:
+			setvar(VAR_TEMP_0, SPECIES_BUNEARY)
+		case 18:
+			setvar(VAR_TEMP_0, SPECIES_BEEDRILL)
+		case 19:
+			setvar(VAR_TEMP_0, SPECIES_BEEDRILL)
+	}
+	givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	// random(20)
+	// switch (var(VAR_RESULT)) {
+	// 	case 0:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 1:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 2:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 3:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 4:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 5:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 6:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 7:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 8:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 9:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 10:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 11:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 12:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 13:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 14:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 15:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 16:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 17:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 18:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 19:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// }
+	// givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	// random(20)
+	// switch (var(VAR_RESULT)) {
+	// 	case 0:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 1:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 2:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 3:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 4:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 5:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 6:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 7:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 8:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 9:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 10:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 11:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 12:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 13:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 14:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 15:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 16:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 17:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 18:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 19:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// }
+	// givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	// random(20)
+	// switch (var(VAR_RESULT)) {
+	// 	case 0:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 1:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 2:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 3:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 4:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 5:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 6:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 7:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 8:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 9:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 10:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 11:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 12:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 13:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 14:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 15:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 16:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 17:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 18:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// 	case 19:
+	// 		setvar(VAR_TEMP_0, SPECIES_)
+	// }
+	// givemon(VAR_TEMP_0, 15, ITEM_NONE)
+	release
+	end
+}
