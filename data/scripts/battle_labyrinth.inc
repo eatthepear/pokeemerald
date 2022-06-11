@@ -1971,7 +1971,7 @@ EventScript_Settings_73:
 	goto EventScript_Settings_1
 
 EventScript_Settings_74:
-	msgbox EventScript_Settings_Text_0
+	msgbox EventScript_Settings_Text_5
 	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_118
 	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -3715,3 +3715,13 @@ EventScript_Settings_Text_3:
 
 EventScript_Settings_Text_4:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on.$"
+
+EventScript_Settings_Text_5:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned\n"
+	.string "on, gives members of your party that\l"
+	.string "don't participate in battle 25%\l"
+	.string "experience.\p"
+	.string "The game's experience curve is balanced\n"
+	.string "around the Exp. All being turned on,\l"
+	.string "though you may turn it off if you\l"
+	.string "choose.$"
