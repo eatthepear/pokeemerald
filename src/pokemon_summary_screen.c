@@ -3215,35 +3215,35 @@ static void BufferMonTrainerMemo(void)
             DynamicPlaceholderTextUtil_SetPlaceholderPtr(4, metLocationString);
         }
 
-        if (DoesMonOTMatchOwner() == TRUE)
-        {
-            if (sum->metLevel == 0)
-                text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
-            else
-            {
-                if (sum->metLocation == METLOC_DAYCARE_GIVEAWAY)
-                {
-                    text = gText_XNatureGivenAt;
-                }
-                else
-                {
-                    text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
-                }
-            }
-        }
-        else if (sum->metLocation == METLOC_FATEFUL_ENCOUNTER)
-        {
-            text = gText_XNatureFatefulEncounter;
-        }
-        
-        else if (sum->metLocation != METLOC_IN_GAME_TRADE && DidMonComeFromGBAGames())
-        {
-            text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureObtainedInTrade : gText_XNatureProbablyMetAt;
-        }
+        // if (DoesMonOTMatchOwner() == TRUE)
+        // {
+        if (sum->metLevel == 0)
+            text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
         else
         {
-            text = gText_XNatureObtainedInTrade;
+            if (sum->metLocation == METLOC_DAYCARE_GIVEAWAY)
+            {
+                text = gText_XNatureGivenAt;
+            }
+            else
+            {
+                text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
+            }
         }
+        // }
+        // else if (sum->metLocation == METLOC_FATEFUL_ENCOUNTER)
+        // {
+        //     text = gText_XNatureFatefulEncounter;
+        // }
+        
+        // else if (sum->metLocation != METLOC_IN_GAME_TRADE && DidMonComeFromGBAGames())
+        // {
+        //     text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureObtainedInTrade : gText_XNatureProbablyMetAt;
+        // }
+        // else
+        // {
+        //     text = gText_XNatureObtainedInTrade;
+        // }
 
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, text);
         Free(metLevelString);
