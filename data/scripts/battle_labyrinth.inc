@@ -1694,11 +1694,12 @@ EventScript_Settings_10:
 	msgbox gText_Colress_DefaultVanillaMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_82
-	case 1, EventScript_Settings_83
-	case 2, EventScript_Settings_84
-	case 3, EventScript_Settings_85
-	case MULTI_B_PRESSED, EventScript_Settings_85
+	case 0, EventScript_Settings_89
+	case 1, EventScript_Settings_90
+	case 2, EventScript_Settings_91
+	case 3, EventScript_Settings_92
+	case 4, EventScript_Settings_93
+	case MULTI_B_PRESSED, EventScript_Settings_93
 	goto EventScript_Settings_1
 
 EventScript_Settings_3:
@@ -1709,73 +1710,80 @@ EventScript_Settings_3:
 	case 1, EventScript_Settings_48
 	case 2, EventScript_Settings_49
 	case 3, EventScript_Settings_50
-	case MULTI_B_PRESSED, EventScript_Settings_50
+	case 4, EventScript_Settings_51
+	case MULTI_B_PRESSED, EventScript_Settings_51
 	goto EventScript_Settings_1
 
 EventScript_Settings_4:
 	msgbox gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_52
-	case 1, EventScript_Settings_53
-	case 2, EventScript_Settings_54
-	case 3, EventScript_Settings_55
-	case MULTI_B_PRESSED, EventScript_Settings_55
+	case 0, EventScript_Settings_53
+	case 1, EventScript_Settings_54
+	case 2, EventScript_Settings_55
+	case 3, EventScript_Settings_56
+	case 4, EventScript_Settings_57
+	case MULTI_B_PRESSED, EventScript_Settings_57
 	goto EventScript_Settings_1
 
 EventScript_Settings_5:
 	msgbox gText_Colress_BrutalRandomizerMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_57
-	case 1, EventScript_Settings_58
-	case 2, EventScript_Settings_59
-	case 3, EventScript_Settings_60
-	case MULTI_B_PRESSED, EventScript_Settings_60
+	case 0, EventScript_Settings_59
+	case 1, EventScript_Settings_60
+	case 2, EventScript_Settings_61
+	case 3, EventScript_Settings_62
+	case 4, EventScript_Settings_63
+	case MULTI_B_PRESSED, EventScript_Settings_63
 	goto EventScript_Settings_1
 
 EventScript_Settings_6:
 	msgbox gText_Colress_DefaultRandomizerMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_62
-	case 1, EventScript_Settings_63
-	case 2, EventScript_Settings_64
-	case 3, EventScript_Settings_65
-	case MULTI_B_PRESSED, EventScript_Settings_65
+	case 0, EventScript_Settings_65
+	case 1, EventScript_Settings_66
+	case 2, EventScript_Settings_67
+	case 3, EventScript_Settings_68
+	case 4, EventScript_Settings_69
+	case MULTI_B_PRESSED, EventScript_Settings_69
 	goto EventScript_Settings_1
 
 EventScript_Settings_7:
 	msgbox gText_Colress_BrutalNuzlockeMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_67
-	case 1, EventScript_Settings_68
-	case 2, EventScript_Settings_69
-	case 3, EventScript_Settings_70
-	case MULTI_B_PRESSED, EventScript_Settings_70
+	case 0, EventScript_Settings_71
+	case 1, EventScript_Settings_72
+	case 2, EventScript_Settings_73
+	case 3, EventScript_Settings_74
+	case 4, EventScript_Settings_75
+	case MULTI_B_PRESSED, EventScript_Settings_75
 	goto EventScript_Settings_1
 
 EventScript_Settings_8:
 	msgbox gText_Colress_DefaultNuzlockeMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_72
-	case 1, EventScript_Settings_73
-	case 2, EventScript_Settings_74
-	case 3, EventScript_Settings_75
-	case MULTI_B_PRESSED, EventScript_Settings_75
+	case 0, EventScript_Settings_77
+	case 1, EventScript_Settings_78
+	case 2, EventScript_Settings_79
+	case 3, EventScript_Settings_80
+	case 4, EventScript_Settings_81
+	case MULTI_B_PRESSED, EventScript_Settings_81
 	goto EventScript_Settings_1
 
 EventScript_Settings_9:
 	msgbox gText_Colress_BrutalVanillaMsg, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_77
-	case 1, EventScript_Settings_78
-	case 2, EventScript_Settings_79
-	case 3, EventScript_Settings_80
-	case MULTI_B_PRESSED, EventScript_Settings_80
+	case 0, EventScript_Settings_83
+	case 1, EventScript_Settings_84
+	case 2, EventScript_Settings_85
+	case 3, EventScript_Settings_86
+	case 4, EventScript_Settings_87
+	case MULTI_B_PRESSED, EventScript_Settings_87
 	goto EventScript_Settings_1
 
 EventScript_Settings_11:
@@ -1838,7 +1846,7 @@ EventScript_Settings_47:
 	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
 	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_86
+	goto_if_eq EventScript_Settings_94
 	goto EventScript_Settings_1
 
 EventScript_Settings_48:
@@ -1846,7 +1854,7 @@ EventScript_Settings_48:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_88
+	goto_if_eq EventScript_Settings_96
 	goto EventScript_Settings_1
 
 EventScript_Settings_49:
@@ -1854,99 +1862,120 @@ EventScript_Settings_49:
 	goto EventScript_Settings_1
 
 EventScript_Settings_50:
-	goto EventScript_WhenUReady
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_98
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_140
 	goto EventScript_Settings_1
 
-EventScript_Settings_52:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
+EventScript_Settings_51:
+	goto EventScript_WhenUReady
 	goto EventScript_Settings_1
 
 EventScript_Settings_53:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_90
+	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
 	goto EventScript_Settings_1
 
 EventScript_Settings_54:
-	call EventScript_MusicMenu
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_101
 	goto EventScript_Settings_1
 
 EventScript_Settings_55:
-	goto EventScript_WhenUReady
+	call EventScript_MusicMenu
+	goto EventScript_Settings_1
+
+EventScript_Settings_56:
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_103
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_146
 	goto EventScript_Settings_1
 
 EventScript_Settings_57:
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_92
-	goto EventScript_Settings_1
-
-EventScript_Settings_58:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
+	goto EventScript_WhenUReady
 	goto EventScript_Settings_1
 
 EventScript_Settings_59:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_1
-
-EventScript_Settings_60:
-	goto EventScript_WhenUReady
-	goto EventScript_Settings_1
-
-EventScript_Settings_62:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
-	goto EventScript_Settings_1
-
-EventScript_Settings_63:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
-	goto EventScript_Settings_1
-
-EventScript_Settings_64:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_1
-
-EventScript_Settings_65:
-	goto EventScript_WhenUReady
-	goto EventScript_Settings_1
-
-EventScript_Settings_67:
 	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
 	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_94
+	goto_if_eq EventScript_Settings_106
 	goto EventScript_Settings_1
 
-EventScript_Settings_68:
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_96
+EventScript_Settings_60:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
 	goto EventScript_Settings_1
 
-EventScript_Settings_69:
+EventScript_Settings_61:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_1
 
-EventScript_Settings_70:
+EventScript_Settings_62:
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_108
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_152
+	goto EventScript_Settings_1
+
+EventScript_Settings_63:
 	goto EventScript_WhenUReady
 	goto EventScript_Settings_1
 
-EventScript_Settings_72:
+EventScript_Settings_65:
 	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
 	goto EventScript_Settings_1
 
-EventScript_Settings_73:
+EventScript_Settings_66:
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
+	goto EventScript_Settings_1
+
+EventScript_Settings_67:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_1
+
+EventScript_Settings_68:
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_111
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_156
+	goto EventScript_Settings_1
+
+EventScript_Settings_69:
+	goto EventScript_WhenUReady
+	goto EventScript_Settings_1
+
+EventScript_Settings_71:
+	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
+	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_114
+	goto EventScript_Settings_1
+
+EventScript_Settings_72:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_98
+	goto_if_eq EventScript_Settings_116
+	goto EventScript_Settings_1
+
+EventScript_Settings_73:
+	call EventScript_MusicMenu
 	goto EventScript_Settings_1
 
 EventScript_Settings_74:
-	call EventScript_MusicMenu
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_118
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_164
 	goto EventScript_Settings_1
 
 EventScript_Settings_75:
@@ -1954,14 +1983,14 @@ EventScript_Settings_75:
 	goto EventScript_Settings_1
 
 EventScript_Settings_77:
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_100
+	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
 	goto EventScript_Settings_1
 
 EventScript_Settings_78:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_121
 	goto EventScript_Settings_1
 
 EventScript_Settings_79:
@@ -1969,123 +1998,294 @@ EventScript_Settings_79:
 	goto EventScript_Settings_1
 
 EventScript_Settings_80:
-	goto EventScript_WhenUReady
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_123
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_170
 	goto EventScript_Settings_1
 
-EventScript_Settings_82:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
+EventScript_Settings_81:
+	goto EventScript_WhenUReady
 	goto EventScript_Settings_1
 
 EventScript_Settings_83:
-	msgbox gText_Colress_VanillaExplanation
+	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
+	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_126
 	goto EventScript_Settings_1
 
 EventScript_Settings_84:
-	call EventScript_MusicMenu
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
 	goto EventScript_Settings_1
 
 EventScript_Settings_85:
-	goto EventScript_WhenUReady
+	call EventScript_MusicMenu
 	goto EventScript_Settings_1
 
 EventScript_Settings_86:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_128
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_102
+	goto_if_eq EventScript_Settings_176
 	goto EventScript_Settings_1
 
-EventScript_Settings_88:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_104
+EventScript_Settings_87:
+	goto EventScript_WhenUReady
+	goto EventScript_Settings_1
+
+EventScript_Settings_89:
+	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
 	goto EventScript_Settings_1
 
 EventScript_Settings_90:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_106
+	msgbox gText_Colress_VanillaExplanation
+	goto EventScript_Settings_1
+
+EventScript_Settings_91:
+	call EventScript_MusicMenu
 	goto EventScript_Settings_1
 
 EventScript_Settings_92:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_0
+	goto_if_set FLAG_EXP_ALL_ON, EventScript_Settings_131
+	msgbox EventScript_Settings_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_108
+	goto_if_eq EventScript_Settings_180
+	goto EventScript_Settings_1
+
+EventScript_Settings_93:
+	goto EventScript_WhenUReady
 	goto EventScript_Settings_1
 
 EventScript_Settings_94:
 	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_110
+	goto_if_eq EventScript_Settings_134
 	goto EventScript_Settings_1
 
 EventScript_Settings_96:
 	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_112
+	goto_if_eq EventScript_Settings_136
 	goto EventScript_Settings_1
 
 EventScript_Settings_98:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_138
+	goto EventScript_Settings_1
+
+EventScript_Settings_101:
 	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_114
+	goto_if_eq EventScript_Settings_142
 	goto EventScript_Settings_1
 
-EventScript_Settings_100:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+EventScript_Settings_103:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_116
-	goto EventScript_Settings_1
-
-EventScript_Settings_102:
-	msgbox gText_Colress_BrutalOff
-	clearflag FLAG_BRUTAL_MODE_ON
-	clearflag FLAG_SMART_WILD_AI_ON
-	goto EventScript_Settings_1
-
-EventScript_Settings_104:
-	msgbox gText_Colress_NuzlockeOffRandomizer
-	clearflag FLAG_NUZLOCKE_ON
-	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
-	callnative GlobalNuzlockeClear
+	goto_if_eq EventScript_Settings_144
 	goto EventScript_Settings_1
 
 EventScript_Settings_106:
+	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_148
+	goto EventScript_Settings_1
+
+EventScript_Settings_108:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_150
+	goto EventScript_Settings_1
+
+EventScript_Settings_111:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_154
+	goto EventScript_Settings_1
+
+EventScript_Settings_114:
+	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_158
+	goto EventScript_Settings_1
+
+EventScript_Settings_116:
+	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_160
+	goto EventScript_Settings_1
+
+EventScript_Settings_118:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_162
+	goto EventScript_Settings_1
+
+EventScript_Settings_121:
+	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_166
+	goto EventScript_Settings_1
+
+EventScript_Settings_123:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_168
+	goto EventScript_Settings_1
+
+EventScript_Settings_126:
+	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_172
+	goto EventScript_Settings_1
+
+EventScript_Settings_128:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_174
+	goto EventScript_Settings_1
+
+EventScript_Settings_131:
+	msgbox EventScript_Settings_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_178
+	goto EventScript_Settings_1
+
+EventScript_Settings_134:
+	msgbox gText_Colress_BrutalOff
+	clearflag FLAG_BRUTAL_MODE_ON
+	clearflag FLAG_SMART_WILD_AI_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_136:
 	msgbox gText_Colress_NuzlockeOffRandomizer
 	clearflag FLAG_NUZLOCKE_ON
 	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	goto EventScript_Settings_1
 
-EventScript_Settings_108:
+EventScript_Settings_138:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_140:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_142:
+	msgbox gText_Colress_NuzlockeOffRandomizer
+	clearflag FLAG_NUZLOCKE_ON
+	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
+	callnative GlobalNuzlockeClear
+	goto EventScript_Settings_1
+
+EventScript_Settings_144:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_146:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_148:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
 	goto EventScript_Settings_1
 
-EventScript_Settings_110:
+EventScript_Settings_150:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_152:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_154:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_156:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_158:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
 	goto EventScript_Settings_1
 
-EventScript_Settings_112:
+EventScript_Settings_160:
 	msgbox gText_Colress_NuzlockeOff
 	clearflag FLAG_NUZLOCKE_ON
 	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	goto EventScript_Settings_1
 
-EventScript_Settings_114:
+EventScript_Settings_162:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_164:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_166:
 	msgbox gText_Colress_NuzlockeOff
 	clearflag FLAG_NUZLOCKE_ON
 	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	goto EventScript_Settings_1
 
-EventScript_Settings_116:
+EventScript_Settings_168:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_170:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_172:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_174:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_176:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_178:
+	msgbox EventScript_Settings_Text_2
+	clearflag FLAG_EXP_ALL_ON
+	goto EventScript_Settings_1
+
+EventScript_Settings_180:
+	msgbox EventScript_Settings_Text_4
+	setflag FLAG_EXP_ALL_ON
 	goto EventScript_Settings_1
 
 
@@ -3491,3 +3691,27 @@ Shop_Unique_ZhuLi_24to30:
 	.2byte ITEM_NONE
 	release
 	end
+
+EventScript_Settings_Text_0:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned\n"
+	.string "on, gives members of your party that\l"
+	.string "don't participate in battle 50%\l"
+	.string "experience.\p"
+	.string "The game's experience curve is balanced\n"
+	.string "around the Exp. All being turned on,\l"
+	.string "though you may turn it off if you\l"
+	.string "choose.$"
+
+EventScript_Settings_Text_1:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on.\n"
+	.string "Would you like to turn it off?$"
+
+EventScript_Settings_Text_2:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off.$"
+
+EventScript_Settings_Text_3:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off.\n"
+	.string "Would you like to turn it on?$"
+
+EventScript_Settings_Text_4:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on.$"

@@ -1524,7 +1524,7 @@
 #define FLAG_UNUSED_0x912                           (SYSTEM_FLAGS + 0xB2)
 #define FLAG_UNUSED_0x913                           (SYSTEM_FLAGS + 0xB3)
 #define FLAG_UNUSED_0x914                           (SYSTEM_FLAGS + 0xB4)
-#define FLAG_UNUSED_0x915                           (SYSTEM_FLAGS + 0xB5)
+#define FLAG_EXP_ALL_ON                             (SYSTEM_FLAGS + 0xB5)
 #define FLAG_IS_RARE_CANDY                          (SYSTEM_FLAGS + 0xB6)
 #define FLAG_SMART_WILD_AI_ON                       (SYSTEM_FLAGS + 0xB7)
 #define FLAG_DISABLE_CATCHING                       (SYSTEM_FLAGS + 0xB8)

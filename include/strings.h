@@ -3129,6 +3129,7 @@ extern const u8 gText_Beauty3[];
 extern const u8 gText_Difficulty[];
 extern const u8 gText_Mode[];
 extern const u8 gText_Music[];
+extern const u8 gText_ExpAll[];
 extern const u8 gText_WildBattle[];
 extern const u8 gText_TrainerBattle[];
 extern const u8 gText_LeviathanBattle[];

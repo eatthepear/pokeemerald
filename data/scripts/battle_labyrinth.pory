@@ -1062,6 +1062,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1087,6 +1102,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1110,6 +1140,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1124,6 +1169,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1157,6 +1217,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1181,6 +1256,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1204,6 +1294,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}
@@ -1218,6 +1323,21 @@ script EventScript_Settings {
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
+					msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+					if (flag(FLAG_EXP_ALL_ON) == true) {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."))
+							clearflag(FLAG_EXP_ALL_ON)
+						}
+					} else {
+						msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."))
+							setflag(FLAG_EXP_ALL_ON)
+						}
+					}
+				case 4:
 				case MULTI_B_PRESSED:
 					goto(EventScript_WhenUReady)
 			}

@@ -1911,6 +1911,7 @@ const u8 gText_Nickname[] = _("Nickname");
 const u8 gText_Difficulty[] = _("Difficulty");
 const u8 gText_Mode[] = _("Mode");
 const u8 gText_Music[] = _("Music");
+const u8 gText_ExpAll[] = _("Exp. All");
 const u8 gText_WildBattle[] = _("Wild Battles");
 const u8 gText_TrainerBattle[] = _("Trainer Battles");
 const u8 gText_LeviathanBattle[] = _("Leviathan Battles");
