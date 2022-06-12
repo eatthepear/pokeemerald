@@ -2464,10 +2464,6 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
               || GetHealthPercentage(battlerAtk) > 50)
                 score -= 4;
             break;
-        case EFFECT_ROLLOUT:
-            if (IsTruantMonVulnerable(battlerAtk, battlerDef))
-                score -= 6;
-            break;
         //TODO
         //case EFFECT_PLASMA_FISTS:
             //break;
@@ -3913,17 +3909,9 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         }
         break;
     case EFFECT_DEFENSE_CURL:
-        if (HasMoveEffect(battlerAtk, EFFECT_ROLLOUT) && !(gBattleMons[battlerAtk].status2 & STATUS2_DEFENSE_CURL) && !IsTruantMonVulnerable(battlerAtk, battlerDef))
+        if (HasMoveEffect(battlerAtk, EFFECT_ROLLOUT) && !(gBattleMons[battlerAtk].status2 & STATUS2_DEFENSE_CURL))
             score++;
-        if (HasMoveWithSplit(battlerDef, SPLIT_SPECIAL))
-            score -= 4;
-            break;
-        if (atkHpPercent > 90 && AI_RandLessThan(128))
-            score += 2;
-        else if (atkHpPercent > 70 && AI_RandLessThan(200))
-            break;
-        else if (atkHpPercent < 40)
-            score -= 2;
+        IncreaseStatUpScore(battlerAtk, battlerDef, STAT_DEF, &score);
         break;
     case EFFECT_FAKE_OUT:
         if (move == MOVE_FAKE_OUT    // filter out first impression
