@@ -7816,10 +7816,10 @@ const struct Item gItems[] =
 
 // TMs/HMs
 
-    [ITEM_TM01_PROTECT] =
+    [ITEM_TM01_HOLD_BACK] =
     {
         .name = _("TM01"),
-        .itemId = ITEM_TM01_PROTECT,
+        .itemId = ITEM_TM01_HOLD_BACK,
         .price = 3000,
         .description = sTM01Desc,
         .pocket = POCKET_TM_HM,

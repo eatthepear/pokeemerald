@@ -62,4 +62,4 @@ Zone1Sanctuary_EventScript_NextZone_6:
 
 
 Zone1Sanctuary_Text_Reward::
-	.string "TM01 - Protect!$"
+	.string "TM01 - Hold Back!$"

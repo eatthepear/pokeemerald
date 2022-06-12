@@ -46,5 +46,5 @@ script Zone1Sanctuary_EventScript_NextZone {
 }
 
 text Zone1Sanctuary_Text_Reward {
-	format("TM01 - Protect!")
+	format("TM01 - Hold Back!")
 }

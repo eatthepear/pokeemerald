@@ -2391,8 +2391,8 @@ static const u8 sWhiteHerbDesc[] = _(
     "lowered stat.");
 
 static const u8 sExpShareDesc[] = _(
-    "A hold item that\n"
-    "gets Exp. points\n"
+    "Gives the holder\n"
+    "full Exp. points\n"
     "from battles.");
 
 static const u8 sQuickClawDesc[] = _(
@@ -3011,9 +3011,13 @@ static const u8 sEnigmaBerryEReaderDesc[] = _(
 
 // TMs/HMs
 static const u8 sTM01Desc[] = _(
-    "Negates all damage,\n"
-    "but may fail if used\n"
-    "in succession.");
+    "The user holds back,\n"
+    "leaving the target\n"
+    "with at least 1 HP.");
+    // Protect
+    // "Negates all damage,\n"
+    // "but may fail if used\n"
+    // "in succession.");
 
 static const u8 sTM02Desc[] = _(
     "Snares foes with\n"
