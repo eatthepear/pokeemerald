@@ -544,3 +544,4 @@ gSpecials::
 	def_special SetSeenMon
 	def_special SetCaughtMon
 	def_special ChoosePartyMonForTraining
+	def_special ReverseHiddenItemFlags

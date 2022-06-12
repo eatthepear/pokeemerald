@@ -1044,6 +1044,7 @@ script EventScript_Settings {
 							msgbox(gText_Colress_BrutalOff)
 							clearflag(FLAG_BRUTAL_MODE_ON)
 							clearflag(FLAG_SMART_WILD_AI_ON)
+							special(ReverseHiddenItemFlags)
 						}
 					}
 				case 1:
@@ -1133,6 +1134,7 @@ script EventScript_Settings {
 							msgbox(gText_Colress_BrutalOff)
 							clearflag(FLAG_BRUTAL_MODE_ON)
 							clearflag(FLAG_SMART_WILD_AI_ON)
+							special(ReverseHiddenItemFlags)
 						}
 					}
 				case 1:
@@ -1200,6 +1202,7 @@ script EventScript_Settings {
 							msgbox(gText_Colress_BrutalOff)
 							clearflag(FLAG_BRUTAL_MODE_ON)
 							clearflag(FLAG_SMART_WILD_AI_ON)
+							special(ReverseHiddenItemFlags)
 						}
 					}
 				case 1:
@@ -1287,6 +1290,7 @@ script EventScript_Settings {
 							msgbox(gText_Colress_BrutalOff)
 							clearflag(FLAG_BRUTAL_MODE_ON)
 							clearflag(FLAG_SMART_WILD_AI_ON)
+							special(ReverseHiddenItemFlags)
 						}
 					}
 				case 1:

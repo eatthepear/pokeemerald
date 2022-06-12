@@ -52,6 +52,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/species.h"
+#include "field_specials.h"
 
 
 // *******************************
@@ -1325,16 +1326,17 @@ static void DebugAction_Flags_SetPokedexFlags(u8 taskId)
     // }
     // Debug_DestroyMenu(taskId);
     // EnableBothScriptContexts();
-    if(FlagGet(FLAG_BRUTAL_MODE_ON))
+    if (FlagGet(FLAG_BRUTAL_MODE_ON))
     {
         FlagClear(FLAG_BRUTAL_MODE_ON);
         FlagClear(FLAG_SMART_WILD_AI_ON);
         PlaySE(SE_PC_OFF);
-    }else{
+    } else {
         FlagSet(FLAG_BRUTAL_MODE_ON);
         FlagSet(FLAG_SMART_WILD_AI_ON);
         PlaySE(SE_PC_LOGIN);
     }
+	ReverseHiddenItemFlags();
 
 }
 static void DebugAction_Flags_SwitchDex(u8 taskId)

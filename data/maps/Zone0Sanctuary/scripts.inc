@@ -106,6 +106,7 @@ Zone0Sanctuary_EventScript_Intro_10:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_DEFAULT
 	waitse
 	closemessage
+	special ReverseHiddenItemFlags
 	goto Zone0Sanctuary_EventScript_Intro_7
 
 Zone0Sanctuary_EventScript_Intro_12:

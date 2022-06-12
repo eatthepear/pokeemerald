@@ -56,6 +56,7 @@ script Zone0Sanctuary_EventScript_Intro {
 			msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
+			special(ReverseHiddenItemFlags)
 	}
 	if (var(VAR_TEMP_1) == 1) {
 		msgbox(Zone0Sanctuary_Text_Colress_GameModes)

@@ -35,8 +35,3 @@ gText_ObtainedTheItems::
 
 gText_PlayerFoundItems::
     .string "{PLAYER} found {STR_VAR_1} {STR_VAR_2}!$"
-
-gText_CantPickupHiddenBecauseBrutal::
-	.string "It looks like there's something\n"
-	.string "here, but it's covered in too much\l"
-	.string "gunk to dig out.$"

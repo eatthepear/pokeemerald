@@ -2160,6 +2160,7 @@ EventScript_Settings_134:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
+	special ReverseHiddenItemFlags
 	goto EventScript_Settings_1
 
 EventScript_Settings_136:
@@ -2200,6 +2201,7 @@ EventScript_Settings_148:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
+	special ReverseHiddenItemFlags
 	goto EventScript_Settings_1
 
 EventScript_Settings_150:
@@ -2226,6 +2228,7 @@ EventScript_Settings_158:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
+	special ReverseHiddenItemFlags
 	goto EventScript_Settings_1
 
 EventScript_Settings_160:
@@ -2266,6 +2269,7 @@ EventScript_Settings_172:
 	msgbox gText_Colress_BrutalOff
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
+	special ReverseHiddenItemFlags
 	goto EventScript_Settings_1
 
 EventScript_Settings_174:

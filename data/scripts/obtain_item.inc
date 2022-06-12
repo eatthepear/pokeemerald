@@ -178,15 +178,9 @@ EventScript_NoRoomToPickUpItem::
 	setvar VAR_RESULT, FALSE
 	return
 
-EventScript_CantPickupHiddenItemBecauseBrutal:
-	msgbox gText_CantPickupHiddenBecauseBrutal, MSGBOX_AUTOCLOSE
-	releaseall
-	end
-
 EventScript_HiddenItemScript::
 	lockall
 	waitse
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_CantPickupHiddenItemBecauseBrutal
 	additem VAR_0x8005
 	copyvar VAR_0x8007, VAR_RESULT
 	bufferitemnameplural STR_VAR_2, VAR_0x8005, 1
