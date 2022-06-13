@@ -124,6 +124,49 @@ Zone5A_EventScript_LeviathanBattle_10:
 	goto Zone5A_EventScript_LeviathanBattle_9
 
 
+Zone5A_EventScript_Breeder::
+	lock
+	faceplayer
+	goto_if_unset FLAG_RECEIVED_ZONE0C_EEVEE, Zone5A_EventScript_Breeder_2
+	msgbox Zone5A_EventScript_Breeder_Text_1
+	switch VAR_STARTER_MON
+	case 0, Zone5A_EventScript_Breeder_6
+	case 1, Zone5A_EventScript_Breeder_7
+	case 2, Zone5A_EventScript_Breeder_8
+Zone5A_EventScript_Breeder_4:
+	msgbox Zone5A_EventScript_Breeder_Text_5
+	msgbox Zone5A_EventScript_Breeder_Text_6
+	fadescreen FADE_TO_BLACK
+	removeobject 11
+	setflag FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM
+	fadescreen FADE_FROM_BLACK
+	release
+	return
+
+Zone5A_EventScript_Breeder_2:
+	msgbox Zone5A_EventScript_Breeder_Text_0
+	release
+	end
+
+Zone5A_EventScript_Breeder_6:
+	msgbox Zone5A_EventScript_Breeder_Text_2
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_WATER_GEM
+	goto Zone5A_EventScript_Breeder_4
+
+Zone5A_EventScript_Breeder_7:
+	msgbox Zone5A_EventScript_Breeder_Text_3
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_ELECTRIC_GEM
+	goto Zone5A_EventScript_Breeder_4
+
+Zone5A_EventScript_Breeder_8:
+	msgbox Zone5A_EventScript_Breeder_Text_4
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_FIRE_GEM
+	goto Zone5A_EventScript_Breeder_4
+
+
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons
 	msgbox Zone5A_Text_AnneAndJunePostBattle, MSGBOX_DEFAULT
@@ -299,5 +342,47 @@ Zone5A_EventScript_LeviathanBattle_Text_12:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh, shut it. Let's just get out\n"
 	.string "of here.$"
 
+Zone5A_EventScript_Breeder_Text_0:
+	.string "Hello, {PLAYER}!\n"
+	.string "I work at the Pokémon Day-Care.\p"
+	.string "There's a special Eevee giveaway at the\n"
+	.string "Day-Care, so go check that out!$"
+
+Zone5A_EventScript_Breeder_Text_1:
+	.string "Hello, {PLAYER}!\n"
+	.string "I work at the Pokémon Day-Care.\p"
+	.string "We've been studying how Eevee evolves\n"
+	.string "differently based on which elemental\l"
+	.string "Gem it holds when it levels up.\p"
+	.string "Say, what type was your starter?$"
+
+Zone5A_EventScript_Breeder_Text_2:
+	.string "Oh, it seems like it was a Grass-type\n"
+	.string "starter!\p"
+	.string "Meaning it's weak to Fire-types!$"
+
+Zone5A_EventScript_Breeder_Text_3:
+	.string "Oh, it seems like it was a Fire-type\n"
+	.string "starter!\p"
+	.string "Meaning it's weak to Water-types!$"
+
+Zone5A_EventScript_Breeder_Text_4:
+	.string "Oh, it seems like it was a Water-type\n"
+	.string "starter!\p"
+	.string "Meaning it's weak to Grass-types!$"
+
+Zone5A_EventScript_Breeder_Text_5:
+	.string "This way, your Eevee can have a\n"
+	.string "favorable type matchup against types\l"
+	.string "your starter is weak to!$"
+
+Zone5A_EventScript_Breeder_Text_6:
+	.string "Well, I'm off to help other trainers.\p"
+	.string "See you!$"
+
 Zone5A_Text_Leviathan5Defeat::
 	.string "But how?! My Bugs!$"
+
+Zone5A_Text_HereGem::
+	.string "Then I suppose this would be of good\n"
+	.string "use to you!$"

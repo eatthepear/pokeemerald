@@ -138,6 +138,42 @@ text Zone5A_Text_Leviathan5Defeat {
 	format("But how?! My Bugs!")
 }
 
+script Zone5A_EventScript_Breeder {
+	lock
+	faceplayer
+	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE) == false) {
+		msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pThere's a special Eevee giveaway at the Day-Care, so go check that out!"))
+		release
+		end
+	}
+	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up.\pSay, what type was your starter?"))
+	switch (var(VAR_STARTER_MON)) {
+		case 0:
+			msgbox(format("Oh, it seems like it was a Grass-type starter!\pMeaning it's weak to Fire-types!"))
+			msgbox(Zone5A_Text_HereGem)
+			giveitem(ITEM_WATER_GEM)
+		case 1:
+			msgbox(format("Oh, it seems like it was a Fire-type starter!\pMeaning it's weak to Water-types!"))
+			msgbox(Zone5A_Text_HereGem)
+			giveitem(ITEM_ELECTRIC_GEM)
+		case 2:
+			msgbox(format("Oh, it seems like it was a Water-type starter!\pMeaning it's weak to Grass-types!"))
+			msgbox(Zone5A_Text_HereGem)
+			giveitem(ITEM_FIRE_GEM)
+	}
+	msgbox(format("This way, your Eevee can have a favorable type matchup against types your starter is weak to!"))
+	msgbox(format("Well, I'm off to help other trainers.\pSee you!"))
+	fadescreen(FADE_TO_BLACK)
+	removeobject(11)
+	setflag(FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM)
+	fadescreen(FADE_FROM_BLACK)
+	release
+}
+
+text Zone5A_Text_HereGem {
+	format("Then I suppose this would be of good use to you!")
+}
+
 raw `
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons

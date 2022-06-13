@@ -47,7 +47,7 @@
 #define FLAG_LELOUCH_INTRO   0x22 // First time intro for Lelouch
 #define FLAG_JOY_INTRO       0x23 // First time intro for Joy
 #define FLAG_RECEIVED_ZONE0C_EEVEE 0x24
-#define FLAG_LEVIATHAN_1_TRAINER_SCRIPT  0x25 // First time talking to Lelouch with shards
+#define FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM  0x25 // First time talking to Lelouch with shards
 #define FLAG_LELOUCH_SHARDS 0x26
 #define FLAG_ZONE7_HEAL_USED    0x27
 #define FLAG_HIDE_ZONE8D_WALLY       0x28
