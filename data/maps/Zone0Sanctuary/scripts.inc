@@ -356,98 +356,122 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_59:
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_3:
 	setvar VAR_TEMP_2, SPECIES_BULBASAUR
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_4:
 	setvar VAR_TEMP_2, SPECIES_CHARMANDER
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_5:
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
+	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_6:
 	setvar VAR_TEMP_2, SPECIES_CHIKORITA
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_7:
 	setvar VAR_TEMP_2, SPECIES_CYNDAQUIL
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_8:
 	setvar VAR_TEMP_2, SPECIES_TOTODILE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_9:
 	setvar VAR_TEMP_2, SPECIES_TREECKO
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_10:
 	setvar VAR_TEMP_2, SPECIES_TORCHIC
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_11:
 	setvar VAR_TEMP_2, SPECIES_MUDKIP
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_12:
 	setvar VAR_TEMP_2, SPECIES_TURTWIG
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_13:
 	setvar VAR_TEMP_2, SPECIES_CHIMCHAR
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_14:
 	setvar VAR_TEMP_2, SPECIES_PIPLUP
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_15:
 	setvar VAR_TEMP_2, SPECIES_SNIVY
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_16:
 	setvar VAR_TEMP_2, SPECIES_TEPIG
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_17:
 	setvar VAR_TEMP_2, SPECIES_OSHAWOTT
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_18:
 	setvar VAR_TEMP_2, SPECIES_CHESPIN
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_19:
 	setvar VAR_TEMP_2, SPECIES_FENNEKIN
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_20:
 	setvar VAR_TEMP_2, SPECIES_FROAKIE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_21:
 	setvar VAR_TEMP_2, SPECIES_ROWLET
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_22:
 	setvar VAR_TEMP_2, SPECIES_LITTEN
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_23:
 	setvar VAR_TEMP_2, SPECIES_POPPLIO
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_24:
 	setvar VAR_TEMP_2, SPECIES_GROOKEY
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_25:
 	setvar VAR_TEMP_2, SPECIES_SCORBUNNY
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_26:
 	setvar VAR_TEMP_2, SPECIES_SOBBLE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_27:
@@ -494,98 +518,122 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_32:
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_35:
 	setvar VAR_TEMP_2, SPECIES_BULBASAUR
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_36:
 	setvar VAR_TEMP_2, SPECIES_CHARMANDER
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_37:
 	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_38:
 	setvar VAR_TEMP_2, SPECIES_CHIKORITA
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_39:
 	setvar VAR_TEMP_2, SPECIES_CYNDAQUIL
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_40:
 	setvar VAR_TEMP_2, SPECIES_TOTODILE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_41:
 	setvar VAR_TEMP_2, SPECIES_TREECKO
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_42:
 	setvar VAR_TEMP_2, SPECIES_TORCHIC
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_43:
 	setvar VAR_TEMP_2, SPECIES_MUDKIP
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_44:
 	setvar VAR_TEMP_2, SPECIES_TURTWIG
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_45:
 	setvar VAR_TEMP_2, SPECIES_CHIMCHAR
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_46:
 	setvar VAR_TEMP_2, SPECIES_PIPLUP
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_47:
 	setvar VAR_TEMP_2, SPECIES_SNIVY
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_48:
 	setvar VAR_TEMP_2, SPECIES_TEPIG
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_49:
 	setvar VAR_TEMP_2, SPECIES_OSHAWOTT
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_50:
 	setvar VAR_TEMP_2, SPECIES_CHESPIN
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_51:
 	setvar VAR_TEMP_2, SPECIES_FENNEKIN
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_52:
 	setvar VAR_TEMP_2, SPECIES_FROAKIE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_53:
 	setvar VAR_TEMP_2, SPECIES_ROWLET
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_54:
 	setvar VAR_TEMP_2, SPECIES_LITTEN
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_55:
 	setvar VAR_TEMP_2, SPECIES_POPPLIO
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_56:
 	setvar VAR_TEMP_2, SPECIES_GROOKEY
+	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_57:
 	setvar VAR_TEMP_2, SPECIES_SCORBUNNY
+	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_58:
 	setvar VAR_TEMP_2, SPECIES_SOBBLE
+	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_60:

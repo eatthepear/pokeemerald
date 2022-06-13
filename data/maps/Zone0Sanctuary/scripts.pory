@@ -340,52 +340,76 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 	switch (var(VAR_RESULT)) {
 		case 0:
 			setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+			setvar(VAR_STARTER_MON, 0)
 		case 1:
 			setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+			setvar(VAR_STARTER_MON, 1)
 		case 2:
-			setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+			setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+			setvar(VAR_STARTER_MON, 2)
 		case 3:
 			setvar(VAR_TEMP_2, SPECIES_CHIKORITA)
+			setvar(VAR_STARTER_MON, 0)
 		case 4:
 			setvar(VAR_TEMP_2, SPECIES_CYNDAQUIL)
+			setvar(VAR_STARTER_MON, 1)
 		case 5:
 			setvar(VAR_TEMP_2, SPECIES_TOTODILE)
+			setvar(VAR_STARTER_MON, 2)
 		case 6:
 			setvar(VAR_TEMP_2, SPECIES_TREECKO)
+			setvar(VAR_STARTER_MON, 0)
 		case 7:
 			setvar(VAR_TEMP_2, SPECIES_TORCHIC)
+			setvar(VAR_STARTER_MON, 1)
 		case 8:
 			setvar(VAR_TEMP_2, SPECIES_MUDKIP)
+			setvar(VAR_STARTER_MON, 2)
 		case 9:
 			setvar(VAR_TEMP_2, SPECIES_TURTWIG)
+			setvar(VAR_STARTER_MON, 0)
 		case 10:
 			setvar(VAR_TEMP_2, SPECIES_CHIMCHAR)
+			setvar(VAR_STARTER_MON, 1)
 		case 11:
 			setvar(VAR_TEMP_2, SPECIES_PIPLUP)
+			setvar(VAR_STARTER_MON, 2)
 		case 12:
 			setvar(VAR_TEMP_2, SPECIES_SNIVY)
+			setvar(VAR_STARTER_MON, 0)
 		case 13:
 			setvar(VAR_TEMP_2, SPECIES_TEPIG)
+			setvar(VAR_STARTER_MON, 1)
 		case 14:
 			setvar(VAR_TEMP_2, SPECIES_OSHAWOTT)
+			setvar(VAR_STARTER_MON, 2)
 		case 15:
 			setvar(VAR_TEMP_2, SPECIES_CHESPIN)
+			setvar(VAR_STARTER_MON, 0)
 		case 16:
 			setvar(VAR_TEMP_2, SPECIES_FENNEKIN)
+			setvar(VAR_STARTER_MON, 1)
 		case 17:
 			setvar(VAR_TEMP_2, SPECIES_FROAKIE)
+			setvar(VAR_STARTER_MON, 2)
 		case 18:
 			setvar(VAR_TEMP_2, SPECIES_ROWLET)
+			setvar(VAR_STARTER_MON, 0)
 		case 19:
 			setvar(VAR_TEMP_2, SPECIES_LITTEN)
+			setvar(VAR_STARTER_MON, 1)
 		case 20:
 			setvar(VAR_TEMP_2, SPECIES_POPPLIO)
+			setvar(VAR_STARTER_MON, 2)
 		case 21:
 			setvar(VAR_TEMP_2, SPECIES_GROOKEY)
+			setvar(VAR_STARTER_MON, 0)
 		case 22:
 			setvar(VAR_TEMP_2, SPECIES_SCORBUNNY)
+			setvar(VAR_STARTER_MON, 1)
 		case 23:
 			setvar(VAR_TEMP_2, SPECIES_SOBBLE)
+			setvar(VAR_STARTER_MON, 2)
 		case 24:
 			setvar(VAR_TEMP_2, 0)
 	}
@@ -399,52 +423,76 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 		switch (var(VAR_RESULT)) {
 			case 0:
 				setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+				setvar(VAR_STARTER_MON, 0)
 			case 1:
 				setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+				setvar(VAR_STARTER_MON, 1)
 			case 2:
 				setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+				setvar(VAR_STARTER_MON, 2)
 			case 3:
 				setvar(VAR_TEMP_2, SPECIES_CHIKORITA)
+				setvar(VAR_STARTER_MON, 0)
 			case 4:
 				setvar(VAR_TEMP_2, SPECIES_CYNDAQUIL)
+				setvar(VAR_STARTER_MON, 1)
 			case 5:
 				setvar(VAR_TEMP_2, SPECIES_TOTODILE)
+				setvar(VAR_STARTER_MON, 2)
 			case 6:
 				setvar(VAR_TEMP_2, SPECIES_TREECKO)
+				setvar(VAR_STARTER_MON, 0)
 			case 7:
 				setvar(VAR_TEMP_2, SPECIES_TORCHIC)
+				setvar(VAR_STARTER_MON, 1)
 			case 8:
 				setvar(VAR_TEMP_2, SPECIES_MUDKIP)
+				setvar(VAR_STARTER_MON, 2)
 			case 9:
 				setvar(VAR_TEMP_2, SPECIES_TURTWIG)
+				setvar(VAR_STARTER_MON, 0)
 			case 10:
 				setvar(VAR_TEMP_2, SPECIES_CHIMCHAR)
+				setvar(VAR_STARTER_MON, 1)
 			case 11:
 				setvar(VAR_TEMP_2, SPECIES_PIPLUP)
+				setvar(VAR_STARTER_MON, 2)
 			case 12:
 				setvar(VAR_TEMP_2, SPECIES_SNIVY)
+				setvar(VAR_STARTER_MON, 0)
 			case 13:
 				setvar(VAR_TEMP_2, SPECIES_TEPIG)
+				setvar(VAR_STARTER_MON, 1)
 			case 14:
 				setvar(VAR_TEMP_2, SPECIES_OSHAWOTT)
+				setvar(VAR_STARTER_MON, 2)
 			case 15:
 				setvar(VAR_TEMP_2, SPECIES_CHESPIN)
+				setvar(VAR_STARTER_MON, 0)
 			case 16:
 				setvar(VAR_TEMP_2, SPECIES_FENNEKIN)
+				setvar(VAR_STARTER_MON, 1)
 			case 17:
 				setvar(VAR_TEMP_2, SPECIES_FROAKIE)
+				setvar(VAR_STARTER_MON, 2)
 			case 18:
 				setvar(VAR_TEMP_2, SPECIES_ROWLET)
+				setvar(VAR_STARTER_MON, 0)
 			case 19:
 				setvar(VAR_TEMP_2, SPECIES_LITTEN)
+				setvar(VAR_STARTER_MON, 1)
 			case 20:
 				setvar(VAR_TEMP_2, SPECIES_POPPLIO)
+				setvar(VAR_STARTER_MON, 2)
 			case 21:
 				setvar(VAR_TEMP_2, SPECIES_GROOKEY)
+				setvar(VAR_STARTER_MON, 0)
 			case 22:
 				setvar(VAR_TEMP_2, SPECIES_SCORBUNNY)
+				setvar(VAR_STARTER_MON, 1)
 			case 23:
 				setvar(VAR_TEMP_2, SPECIES_SOBBLE)
+				setvar(VAR_STARTER_MON, 2)
 		}
 	}
 	bufferspeciesname(0, VAR_TEMP_2)
