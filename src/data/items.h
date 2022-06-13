@@ -7900,10 +7900,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM08_SUBSTITUTE] =
+    [ITEM_TM08_DRAINING_KISS] =
     {
         .name = _("TM08"),
-        .itemId = ITEM_TM08_SUBSTITUTE,
+        .itemId = ITEM_TM08_DRAINING_KISS,
         .price = 3000,
         .description = sTM08Desc,
         .pocket = POCKET_TM_HM,

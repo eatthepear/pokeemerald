@@ -3070,9 +3070,13 @@ static const u8 sTM07Desc[] = _(
     // "May leave a burn.");
 
 static const u8 sTM08Desc[] = _(
-    "1/4 of the user's\n"
-    "maximum HP is used\n"
-    "to make a decoy.");
+    "Absorbs target's HP\n"
+    "and heals over half\n"
+    "the damage done.");
+    // Substitute
+    // "1/4 of the user's\n"
+    // "maximum HP is used\n"
+    // "to make a decoy.");
 
 static const u8 sTM09Desc[] = _(
     "Approaches cutely,\n"
