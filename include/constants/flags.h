@@ -12,18 +12,18 @@
 #define FLAG_TEMP_2      (TEMP_FLAGS_START + 0x2)
 #define FLAG_TEMP_3      (TEMP_FLAGS_START + 0x3)
 #define FLAG_TEMP_4      (TEMP_FLAGS_START + 0x4)
-#define FLAG_TEMP_5      (TEMP_FLAGS_START + 0x5)  // Unused Flag
-#define FLAG_TEMP_6      (TEMP_FLAGS_START + 0x6)  // Unused Flag
-#define FLAG_TEMP_7      (TEMP_FLAGS_START + 0x7)  // Unused Flag
-#define FLAG_TEMP_8      (TEMP_FLAGS_START + 0x8)  // Unused Flag
-#define FLAG_TEMP_9      (TEMP_FLAGS_START + 0x9)  // Unused Flag
-#define FLAG_TEMP_A      (TEMP_FLAGS_START + 0xA)  // Unused Flag
-#define FLAG_TEMP_B      (TEMP_FLAGS_START + 0xB)  // Unused Flag
-#define FLAG_TEMP_C      (TEMP_FLAGS_START + 0xC)  // Unused Flag
-#define FLAG_TEMP_D      (TEMP_FLAGS_START + 0xD)  // Unused Flag
-#define FLAG_TEMP_E      (TEMP_FLAGS_START + 0xE)  // Unused Flag
-#define FLAG_TEMP_F      (TEMP_FLAGS_START + 0xF)  // Unused Flag
-#define FLAG_TEMP_10     (TEMP_FLAGS_START + 0x10) // Unused Flag
+#define FLAG_TEMP_5      (TEMP_FLAGS_START + 0x5)
+#define FLAG_TEMP_6      (TEMP_FLAGS_START + 0x6)
+#define FLAG_TEMP_7      (TEMP_FLAGS_START + 0x7)
+#define FLAG_TEMP_8      (TEMP_FLAGS_START + 0x8)
+#define FLAG_TEMP_9      (TEMP_FLAGS_START + 0x9)
+#define FLAG_TEMP_A      (TEMP_FLAGS_START + 0xA)
+#define FLAG_TEMP_B      (TEMP_FLAGS_START + 0xB)
+#define FLAG_TEMP_C      (TEMP_FLAGS_START + 0xC)
+#define FLAG_TEMP_D      (TEMP_FLAGS_START + 0xD)
+#define FLAG_TEMP_E      (TEMP_FLAGS_START + 0xE)
+#define FLAG_TEMP_F      (TEMP_FLAGS_START + 0xF)
+#define FLAG_TEMP_10     (TEMP_FLAGS_START + 0x10)
 #define FLAG_TEMP_11     (TEMP_FLAGS_START + 0x11)
 #define FLAG_TEMP_12     (TEMP_FLAGS_START + 0x12)
 #define FLAG_TEMP_13     (TEMP_FLAGS_START + 0x13)
@@ -47,7 +47,7 @@
 #define FLAG_LELOUCH_INTRO   0x22 // First time intro for Lelouch
 #define FLAG_JOY_INTRO       0x23 // First time intro for Joy
 #define FLAG_RECEIVED_ZONE0C_EEVEE 0x24
-#define FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM  0x25 // First time talking to Lelouch with shards
+#define FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM  0x25
 #define FLAG_LELOUCH_SHARDS 0x26
 #define FLAG_ZONE7_HEAL_USED    0x27
 #define FLAG_HIDE_ZONE8D_WALLY       0x28
@@ -55,8 +55,8 @@
 #define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE 0x2A
 #define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE   0x2B
 #define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE     0x2C
-#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE    0x2D // gift Shiny Zorua from Erica
-#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2E // Man blocks exit
+#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE    0x2D
+#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2E
 #define FLAG_HIDE_ZONE9A_MAN 0x2F
 #define FLAG_ADAMINA_WARP_INTRO  0x30
 #define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x31 // Substitute Sidequest
@@ -75,21 +75,21 @@
 #define FLAG_HIDE_ZONE18B_MAN    0x3E 
 #define FLAG_HIDE_ZONE18B_ODYSSEUS    0x3F 
 #define FLAG_HIDE_ZONE19D_PIRATES    0x40 
-#define FLAG_RECEIVED_ZONE21A_TM29    0x41 // Unused Flag
+#define FLAG_RECEIVED_ZONE21A_TM29    0x41
 #define FLAG_RECEIVED_ZONE21C_HAPPINY    0x42 
 #define FLAG_UNUSED_0x43    0x43 
 #define FLAG_HIDE_CAM_AND_PAM    0x44
-#define FLAG_RECEIVED_ZONE23A_TM31    0x45 // Unused Flag
-#define FLAG_RECEIVED_ZONE24A_TM34    0x46 // Unused Flag
-#define FLAG_RECEIVED_ZONE24B_TM35    0x47 // Unused Flag
-#define FLAG_HIDE_ZONE25L_COLRESS    0x48 // Unused Flag
-#define FLAG_TIM_SUPER_POTION_INTRO    0x49 // Unused Flag
-#define FLAG_ZONE_B1_PORYGON_1     0x4A // Unused Flag
-#define FLAG_ZONE_B1_PORYGON_2     0x4B // Unused Flag
-#define FLAG_ZONE_B1_PORYGON_3     0x4C // Unused Flag
-#define FLAG_ZONE_B1_PORYGON_4     0x4D // Unused Flag
-#define FLAG_ZONE_B1_PORYGON_5     0x4E // Unused Flag
-#define FLAG_RECEIVED_PORYGON     0x4F // Unused Flag
+#define FLAG_RECEIVED_ZONE23A_TM31    0x45
+#define FLAG_RECEIVED_ZONE24A_TM34    0x46
+#define FLAG_RECEIVED_ZONE24B_TM35    0x47
+#define FLAG_HIDE_ZONE25L_COLRESS    0x48
+#define FLAG_TIM_SUPER_POTION_INTRO    0x49
+#define FLAG_ZONE_B1_PORYGON_1     0x4A
+#define FLAG_ZONE_B1_PORYGON_2     0x4B
+#define FLAG_ZONE_B1_PORYGON_3     0x4C
+#define FLAG_ZONE_B1_PORYGON_4     0x4D
+#define FLAG_ZONE_B1_PORYGON_5     0x4E
+#define FLAG_RECEIVED_PORYGON     0x4F
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
