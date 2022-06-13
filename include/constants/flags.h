@@ -1060,8 +1060,8 @@
 #define FLAG_ITEM_ZONE4E_SUPER_POTION                               0x3F3
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
 #define FLAG_ITEM_ZONE5A_TM06                                       0x3F5
-#define FLAG_ITEM_ZONE6A_NET_BALL                                   0x3F6
-#define FLAG_ITEM_ZONE6A_POTION                                     0x3F7
+#define FLAG_ITEM_ZONE6A_TM08                                       0x3F6
+#define FLAG_ITEM_ZONE6A_NET_BALL                                   0x3F7
 #define FLAG_ITEM_ZONE6A_NEST_BALL                                  0x3F8
 #define FLAG_ITEM_ZONE7A_SHARP_BEAK                                 0x3F9
 #define FLAG_ITEM_ZONE7A_SUPER_POTION                               0x3FA
