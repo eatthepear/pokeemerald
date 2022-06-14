@@ -57,9 +57,9 @@ struct BoxPokemon
 struct Pokemon
 {
     /*0x00*/ struct BoxPokemon box;
-    /*0x50*/ u32 status;
+    // /*0x50*/ u32 status;
     /*0x54*/ u8 level;
-    /*0x56*/ u16 hp;
+    // /*0x56*/ u16 hp;
     /*0x58*/ u16 maxHP;
     /*0x5A*/ u16 attack;
     /*0x5C*/ u16 defense;

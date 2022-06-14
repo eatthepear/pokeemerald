@@ -5881,13 +5881,13 @@ u32 GetMonData(struct Pokemon *mon, s32 field, u8* data)
     switch (field)
     {
     case MON_DATA_STATUS:
-        ret = mon->status;
+        ret = mon->box.status;
         break;
     case MON_DATA_LEVEL:
         ret = mon->level;
         break;
     case MON_DATA_HP:
-        ret = mon->hp;
+        ret = mon->box.hp;
         break;
     case MON_DATA_MAX_HP:
         ret = mon->maxHP;
@@ -6157,14 +6157,14 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     switch (field)
     {
     case MON_DATA_STATUS:
-        SET32(mon->status);
+        // SET32(mon->status);
         SET32(mon->box.status);
         break;
     case MON_DATA_LEVEL:
         SET8(mon->level);
         break;
     case MON_DATA_HP:
-        SET16(mon->hp);
+        // SET16(mon->hp);
         SET16(mon->box.hp);
         break;
     case MON_DATA_MAX_HP:
