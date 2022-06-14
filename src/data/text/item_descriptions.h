@@ -3079,34 +3079,54 @@ static const u8 sTM08Desc[] = _(
     // "to make a decoy.");
 
 static const u8 sTM09Desc[] = _(
-    "Approaches cutely,\n"
-    "then steals the\n"
-    "foe's held item.");
+    "Strikes the opponent\n"
+    "with its fists,\n"
+    "raising Attack.");
+    // Covet
+    // "Approaches cutely,\n"
+    // "then steals the\n"
+    // "foe's held item.");
 
 static const u8 sTM10Desc[] = _(
-    "Attacks and steals\n"
-    "the target's held\n"
-    "item.");
+    "Attacks with an\n"
+    "electric charge,\n"
+    "raising Sp. Attack.");
+    // Thief
+    // "Attacks and steals\n"
+    // "the target's held\n"
+    // "item.");
 
 static const u8 sTM11Desc[] = _(
-    "Switches places\n"
-    "with a party\n"
-    "Pokémon in waiting.");
-
-static const u8 sTM12Desc[] = _(
     "Attacks in a cloak\n"
     "of flames. May\n"
     "raise user's Speed.");
+    // Teleport
+    // "Switches places\n"
+    // "with a party\n"
+    // "Pokémon in waiting.");
+
+static const u8 sTM12Desc[] = _(
+    "The user sharpens\n"
+    "its claws, raising\n"
+    "Attack and Accuracy.");
 
 static const u8 sTM13Desc[] = _(
-    "The user goes to\n"
-    "sleep to restore\n"
-    "health and status.");
+    "Hardens the body's\n"
+    "surface to sharply\n"
+    "raise Defense.");
+    // Rest
+    // "The user goes to\n"
+    // "sleep to restore\n"
+    // "health and status.");
 
 static const u8 sTM14Desc[] = _(
-    "Bulks up the body\n"
-    "to boost both\n"
-    "Attack & Defense.");
+    "Empties its mind,\n"
+    "sharply raising\n"
+    "Sp. Defense.");
+    // Bulk Up
+    // "Bulks up the body\n"
+    // "to boost both\n"
+    // "Attack & Defense.");
 
 static const u8 sTM15Desc[] = _(
     "Raises Sp. Atk and\n"
