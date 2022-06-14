@@ -40,6 +40,7 @@ static const u8 sBulbasaurTMHMLearnset[] =
     TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -61,6 +62,7 @@ static const u8 sIvysaurTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -84,6 +86,7 @@ static const u8 sVenusaurTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -204,6 +207,7 @@ static const u8 sSquirtleTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -232,6 +236,7 @@ static const u8 sWartortleTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -264,6 +269,7 @@ static const u8 sBlastoiseTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -278,6 +284,7 @@ static const u8 sMetapodTMHMLearnset[] =
 {
     TMHM(TM07_BUG_BITE),
     TMHM(TM02_ELECTROWEB),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -305,6 +312,7 @@ static const u8 sButterfreeTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -319,6 +327,7 @@ static const u8 sKakunaTMHMLearnset[] =
 {
     TMHM(TM07_BUG_BITE),
     TMHM(TM02_ELECTROWEB),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -345,6 +354,7 @@ static const u8 sBeedrillTMHMLearnset[] =
     TMHM(TM32_X_SCISSOR),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -366,6 +376,7 @@ static const u8 sPidgeyTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -387,6 +398,7 @@ static const u8 sPidgeottoTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -408,6 +420,7 @@ static const u8 sPidgeotTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -584,6 +597,7 @@ static const u8 sPikachuTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -611,6 +625,7 @@ static const u8 sRaichuTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -643,6 +658,8 @@ static const u8 sSandshrewTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -675,6 +692,8 @@ static const u8 sSandslashTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -703,6 +722,7 @@ static const u8 sNidoranFTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -731,6 +751,7 @@ static const u8 sNidorinaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -774,6 +795,7 @@ static const u8 sNidoqueenTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -801,6 +823,7 @@ static const u8 sNidoranMTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -828,6 +851,7 @@ static const u8 sNidorinoTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -870,6 +894,7 @@ static const u8 sNidokingTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -911,6 +936,7 @@ static const u8 sClefairyTMHMLearnset[] =
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -952,6 +978,7 @@ static const u8 sClefableTMHMLearnset[] =
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -977,6 +1004,7 @@ static const u8 sVulpixTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -1006,6 +1034,7 @@ static const u8 sNinetalesTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -1087,6 +1116,7 @@ static const u8 sZubatTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -1110,6 +1140,7 @@ static const u8 sGolbatTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -1383,6 +1414,7 @@ static const u8 sPsyduckTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -1416,6 +1448,7 @@ static const u8 sGolduckTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -1510,6 +1543,7 @@ static const u8 sGrowlitheTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -1540,6 +1574,7 @@ static const u8 sArcanineTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -1958,6 +1993,8 @@ static const u8 sGeodudeTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -1984,6 +2021,8 @@ static const u8 sGravelerTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -2010,6 +2049,8 @@ static const u8 sGolemTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -2032,6 +2073,7 @@ static const u8 sPonytaTMHMLearnset[] =
     TMHM(TM37_HIGH_HORSEPOWER),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2057,6 +2099,7 @@ static const u8 sRapidashTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2091,6 +2134,7 @@ static const u8 sSlowpokeTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -2128,6 +2172,8 @@ static const u8 sSlowbroTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2153,6 +2199,7 @@ static const u8 sMagnemiteTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2178,6 +2225,7 @@ static const u8 sMagnetonTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2215,6 +2263,7 @@ static const u8 sDoduoTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2234,6 +2283,7 @@ static const u8 sDodrioTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2353,6 +2403,7 @@ static const u8 sShellderTMHMLearnset[] =
     TMHM(TM13_REST),
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2375,6 +2426,7 @@ static const u8 sCloysterTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2482,6 +2534,7 @@ static const u8 sOnixTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -2555,6 +2608,9 @@ static const u8 sKrabbyTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2583,6 +2639,9 @@ static const u8 sKinglerTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2707,6 +2766,7 @@ static const u8 sCuboneTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2738,6 +2798,7 @@ static const u8 sMarowakTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -2794,6 +2855,7 @@ static const u8 sHitmonchanTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -2905,6 +2967,7 @@ static const u8 sRhyhornTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -2941,6 +3004,8 @@ static const u8 sRhydonTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -3007,6 +3072,7 @@ static const u8 sTangelaTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -3068,6 +3134,7 @@ static const u8 sHorseaTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3089,6 +3156,7 @@ static const u8 sSeadraTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3190,6 +3258,7 @@ static const u8 sStarmieTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3240,6 +3309,7 @@ static const u8 sScytherTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     TMHM(TM32_X_SCISSOR),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3356,6 +3426,7 @@ static const u8 sPinsirTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -3530,6 +3601,7 @@ static const u8 sJolteonTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3585,6 +3657,7 @@ static const u8 sPorygonTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3612,6 +3685,8 @@ static const u8 sOmanyteTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -3639,6 +3714,8 @@ static const u8 sOmastarTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -3669,6 +3746,8 @@ static const u8 sKabutoTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -3701,6 +3780,8 @@ static const u8 sKabutopsTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -3730,6 +3811,8 @@ static const u8 sAerodactylTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -3769,6 +3852,7 @@ static const u8 sSnorlaxTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -3864,6 +3948,7 @@ static const u8 sDratiniTMHMLearnset[] =
     // TMHM(TM53_THUNDER),
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3893,6 +3978,7 @@ static const u8 sDragonairTMHMLearnset[] =
     // TMHM(TM53_THUNDER),
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -3934,6 +4020,7 @@ static const u8 sDragoniteTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4257,6 +4344,7 @@ static const u8 sFeraligatrTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4288,6 +4376,7 @@ static const u8 sSentretTMHMLearnset[] =
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4321,6 +4410,7 @@ static const u8 sFurretTMHMLearnset[] =
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4341,6 +4431,8 @@ static const u8 sHoothootTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4361,6 +4453,8 @@ static const u8 sNoctowlTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4466,6 +4560,7 @@ static const u8 sCrobatTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4493,6 +4588,8 @@ static const u8 sChinchouTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4520,6 +4617,8 @@ static const u8 sLanturnTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4572,6 +4671,7 @@ static const u8 sCleffaTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4742,6 +4842,7 @@ static const u8 sMareepTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4765,6 +4866,7 @@ static const u8 sFlaaffyTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4789,6 +4891,7 @@ static const u8 sAmpharosTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -4837,6 +4940,7 @@ static const u8 sMarillTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4865,6 +4969,7 @@ static const u8 sAzumarillTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4890,6 +4995,8 @@ static const u8 sSudowoodoTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -4939,6 +5046,7 @@ static const u8 sHoppipTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4960,6 +5068,7 @@ static const u8 sSkiploomTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -4981,6 +5090,7 @@ static const u8 sJumpluffTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -5013,6 +5123,7 @@ static const u8 sAipomTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -5097,6 +5208,7 @@ static const u8 sWooperTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -5129,6 +5241,7 @@ static const u8 sQuagsireTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -5241,6 +5354,8 @@ static const u8 sSlowkingTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -5333,6 +5448,7 @@ static const u8 sPinecoTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -5358,6 +5474,8 @@ static const u8 sForretressTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -5419,6 +5537,8 @@ static const u8 sGligarTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -5444,6 +5564,8 @@ static const u8 sSteelixTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -5572,6 +5694,8 @@ static const u8 sScizorTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     TMHM(TM32_X_SCISSOR),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -5623,6 +5747,7 @@ static const u8 sHeracrossTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -5659,6 +5784,7 @@ static const u8 sSneaselTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -5789,6 +5915,7 @@ static const u8 sSwinubTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -5815,6 +5942,7 @@ static const u8 sPiloswineTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -5954,6 +6082,8 @@ static const u8 sMantineTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -5978,6 +6108,8 @@ static const u8 sSkarmoryTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6050,6 +6182,7 @@ static const u8 sKingdraTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6095,6 +6228,8 @@ static const u8 sDonphanTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -6125,6 +6260,7 @@ static const u8 sPorygon2TMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6215,6 +6351,7 @@ static const u8 sHitmontopTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6472,6 +6609,8 @@ static const u8 sLarvitarTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -6498,6 +6637,8 @@ static const u8 sPupitarTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -6539,6 +6680,8 @@ static const u8 sTyranitarTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -6647,6 +6790,7 @@ static const u8 sTreeckoTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6674,6 +6818,7 @@ static const u8 sGrovyleTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6707,6 +6852,7 @@ static const u8 sSceptileTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6731,6 +6877,7 @@ static const u8 sTorchicTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6761,6 +6908,7 @@ static const u8 sCombuskenTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6794,6 +6942,7 @@ static const u8 sBlazikenTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -6818,6 +6967,7 @@ static const u8 sMudkipTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -6846,6 +6996,7 @@ static const u8 sMarshtompTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -6875,6 +7026,7 @@ static const u8 sSwampertTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7128,6 +7280,7 @@ static const u8 sLudicoloTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7149,6 +7302,7 @@ static const u8 sSeedotTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7178,6 +7332,7 @@ static const u8 sNuzleafTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7210,6 +7365,7 @@ static const u8 sShiftryTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7230,6 +7386,7 @@ static const u8 sTaillowTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -7250,6 +7407,7 @@ static const u8 sSwellowTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -7274,6 +7432,7 @@ static const u8 sWingullTMHMLearnset[] =
     TMHM(TM13_REST),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -7300,6 +7459,7 @@ static const u8 sPelipperTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -7411,6 +7571,7 @@ static const u8 sSurskitTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -7437,6 +7598,7 @@ static const u8 sMasquerainTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -7517,6 +7679,7 @@ static const u8 sSlakothTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7554,6 +7717,7 @@ static const u8 sVigorothTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7592,6 +7756,7 @@ static const u8 sSlakingTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -7834,6 +7999,8 @@ static const u8 sNosepassTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -7947,6 +8114,7 @@ static const u8 sMawileTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -7972,6 +8140,8 @@ static const u8 sAronTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -7997,6 +8167,8 @@ static const u8 sLaironTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -8037,6 +8209,8 @@ static const u8 sAggronTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -8120,6 +8294,7 @@ static const u8 sElectrikeTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -8143,6 +8318,7 @@ static const u8 sManectricTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -8320,6 +8496,7 @@ static const u8 sCarvanhaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -8349,6 +8526,7 @@ static const u8 sSharpedoTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -8373,6 +8551,7 @@ static const u8 sWailmerTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -8397,6 +8576,7 @@ static const u8 sWailordTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -8422,6 +8602,7 @@ static const u8 sNumelTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -8449,6 +8630,8 @@ static const u8 sCameruptTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -8475,6 +8658,8 @@ static const u8 sTorkoalTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -8699,6 +8884,7 @@ static const u8 sSwabluTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -8728,6 +8914,7 @@ static const u8 sAltariaTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -8910,6 +9097,7 @@ static const u8 sCorphishTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -8942,6 +9130,7 @@ static const u8 sCrawdauntTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -8975,6 +9164,7 @@ static const u8 sBaltoyTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9009,6 +9199,8 @@ static const u8 sClaydolTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9031,6 +9223,8 @@ static const u8 sLileepTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9055,6 +9249,8 @@ static const u8 sCradilyTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9079,6 +9275,8 @@ static const u8 sAnorithTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9106,6 +9304,8 @@ static const u8 sArmaldoTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9540,6 +9740,7 @@ static const u8 sClamperlTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -9562,6 +9763,7 @@ static const u8 sHuntailTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -9586,6 +9788,9 @@ static const u8 sGorebyssTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -9613,6 +9818,9 @@ static const u8 sRelicanthTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9656,6 +9864,7 @@ static const u8 sBagonTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -9680,6 +9889,7 @@ static const u8 sShelgonTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -9709,11 +9919,13 @@ static const u8 sSalamenceTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
 static const u8 sBeldumTMHMLearnset[] =
 {
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -9745,6 +9957,9 @@ static const u8 sMetangTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -9776,6 +9991,9 @@ static const u8 sMetagrossTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -10072,6 +10290,7 @@ static const u8 sTurtwigTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10093,6 +10312,7 @@ static const u8 sGrotleTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10119,6 +10339,8 @@ static const u8 sTorterraTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -10242,6 +10464,7 @@ static const u8 sPiplupTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10271,6 +10494,7 @@ static const u8 sPrinplupTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10305,6 +10529,7 @@ static const u8 sEmpoleonTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10325,6 +10550,7 @@ static const u8 sStarlyTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10346,6 +10572,7 @@ static const u8 sStaraviaTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10367,6 +10594,7 @@ static const u8 sStaraptorTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10394,6 +10622,7 @@ static const u8 sBidoofTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10426,6 +10655,7 @@ static const u8 sBibarelTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10515,6 +10745,7 @@ static const u8 sLuxrayTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10789,6 +11020,7 @@ static const u8 sBuizelTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10815,6 +11047,7 @@ static const u8 sFloatzelTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10865,6 +11098,7 @@ static const u8 sShellosTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10893,6 +11127,7 @@ static const u8 sGastrodonTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10926,6 +11161,7 @@ static const u8 sAmbipomTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -10951,6 +11187,7 @@ static const u8 sDrifloonTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -10976,6 +11213,7 @@ static const u8 sDrifblimTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -11005,6 +11243,7 @@ static const u8 sBunearyTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11036,6 +11275,7 @@ static const u8 sLopunnyTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11247,6 +11487,8 @@ static const u8 sBronzorTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -11277,6 +11519,8 @@ static const u8 sBronzongTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -11299,6 +11543,8 @@ static const u8 sBonslyTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -11372,6 +11618,7 @@ static const u8 sChatotTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11523,6 +11770,7 @@ static const u8 sMunchlaxTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -11552,6 +11800,8 @@ static const u8 sRioluTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11587,6 +11837,8 @@ static const u8 sLucarioTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11610,6 +11862,7 @@ static const u8 sHippopotasTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -11633,6 +11886,7 @@ static const u8 sHippowdonTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -11660,6 +11914,7 @@ static const u8 sSkorupiTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11694,6 +11949,8 @@ static const u8 sDrapionTMHMLearnset[] =
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11842,6 +12099,8 @@ static const u8 sMantykeTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11931,6 +12190,7 @@ static const u8 sWeavileTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -11956,6 +12216,7 @@ static const u8 sMagnezoneTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -12022,6 +12283,8 @@ static const u8 sRhyperiorTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -12050,6 +12313,7 @@ static const u8 sTangrowthTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -12156,6 +12420,7 @@ static const u8 sTogekissTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -12261,6 +12526,8 @@ static const u8 sGliscorTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -12287,6 +12554,7 @@ static const u8 sMamoswineTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -12317,6 +12585,7 @@ static const u8 sPorygonZTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -12384,6 +12653,8 @@ static const u8 sProbopassTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -13423,6 +13694,7 @@ static const u8 sMunnaTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -13451,6 +13723,7 @@ static const u8 sMusharnaTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -13470,6 +13743,7 @@ static const u8 sPidoveTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -13489,6 +13763,7 @@ static const u8 sTranquillTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -13508,6 +13783,7 @@ static const u8 sUnfezantTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -13568,6 +13844,8 @@ static const u8 sRoggenrolaTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -13586,6 +13864,8 @@ static const u8 sBoldoreTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -13606,6 +13886,8 @@ static const u8 sGigalithTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -13635,6 +13917,7 @@ static const u8 sWoobatTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -13664,6 +13947,7 @@ static const u8 sSwoobatTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -13692,6 +13976,7 @@ static const u8 sDrilburTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -13720,6 +14005,7 @@ static const u8 sExcadrillTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -13760,6 +14046,7 @@ static const u8 sAudinoTMHMLearnset[] =
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -14048,6 +14335,8 @@ static const u8 sVenipedeTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -14067,6 +14356,8 @@ static const u8 sWhirlipedeTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -14093,6 +14384,8 @@ static const u8 sScolipedeTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -14339,6 +14632,7 @@ static const u8 sDarmanitanTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14381,6 +14675,8 @@ static const u8 sDwebbleTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14407,6 +14703,8 @@ static const u8 sCrustleTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14438,6 +14736,8 @@ static const u8 sScraggyTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14470,6 +14770,8 @@ static const u8 sScraftyTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14523,6 +14825,7 @@ static const u8 sYamaskTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14545,6 +14848,7 @@ static const u8 sCofagrigusTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14571,6 +14875,8 @@ static const u8 sTirtougaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14597,6 +14903,8 @@ static const u8 sCarracostaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14623,6 +14931,9 @@ static const u8 sArchenTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14650,6 +14961,9 @@ static const u8 sArcheopsTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14670,6 +14984,7 @@ static const u8 sTrubbishTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -14693,6 +15008,8 @@ static const u8 sGarbodorTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -14718,6 +15035,7 @@ static const u8 sZoruaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -14748,6 +15066,7 @@ static const u8 sZoroarkTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -14916,6 +15235,7 @@ static const u8 sSolosisTMHMLearnset[] =
     // TMHM(TM53_THUNDER),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14943,6 +15263,7 @@ static const u8 sDuosionTMHMLearnset[] =
     // TMHM(TM53_THUNDER),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -14972,6 +15293,7 @@ static const u8 sReuniclusTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -15038,6 +15360,7 @@ static const u8 sVanilliteTMHMLearnset[] =
     TMHM(TM33_RAIN_DANCE),
     TMHM(TM13_REST),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -15058,6 +15381,7 @@ static const u8 sVanillishTMHMLearnset[] =
     TMHM(TM33_RAIN_DANCE),
     TMHM(TM13_REST),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -15078,6 +15402,7 @@ static const u8 sVanilluxeTMHMLearnset[] =
     TMHM(TM33_RAIN_DANCE),
     TMHM(TM13_REST),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -15102,6 +15427,7 @@ static const u8 sDeerlingTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15151,6 +15477,7 @@ static const u8 sEmolgaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15170,6 +15497,7 @@ static const u8 sKarrablastTMHMLearnset[] =
     TMHM(TM32_X_SCISSOR),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -15189,6 +15517,8 @@ static const u8 sEscavalierTMHMLearnset[] =
     TMHM(TM32_X_SCISSOR),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15334,6 +15664,7 @@ static const u8 sJoltikTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15362,6 +15693,7 @@ static const u8 sGalvantulaTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15385,6 +15717,8 @@ static const u8 sFerroseedTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -15413,6 +15747,8 @@ static const u8 sFerrothornTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -15431,6 +15767,8 @@ static const u8 sKlinkTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -15449,6 +15787,8 @@ static const u8 sKlangTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -15468,6 +15808,8 @@ static const u8 sKlinklangTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -15556,6 +15898,7 @@ static const u8 sElgyemTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15586,6 +15929,7 @@ static const u8 sBeheeyemTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15820,6 +16164,7 @@ static const u8 sCryogonalTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -15858,6 +16203,7 @@ static const u8 sAccelgorTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15910,6 +16256,7 @@ static const u8 sMienfooTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -15939,6 +16286,7 @@ static const u8 sMienshaoTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -16000,6 +16348,8 @@ static const u8 sGolettTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -16032,6 +16382,8 @@ static const u8 sGolurkTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -16063,6 +16415,8 @@ static const u8 sPawniardTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -16095,6 +16449,8 @@ static const u8 sBisharpTMHMLearnset[] =
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -16121,6 +16477,7 @@ static const u8 sBouffalantTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -16146,6 +16503,7 @@ static const u8 sRuffletTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -16171,6 +16529,7 @@ static const u8 sBraviaryTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -16196,6 +16555,7 @@ static const u8 sVullabyTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -16221,6 +16581,7 @@ static const u8 sMandibuzzTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -16251,6 +16612,7 @@ static const u8 sHeatmorTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -16276,6 +16638,9 @@ static const u8 sDurantTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -16371,6 +16736,7 @@ static const u8 sLarvestaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -16398,6 +16764,7 @@ static const u8 sVolcaronaTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -16695,6 +17062,7 @@ static const u8 sChespinTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -16731,6 +17099,7 @@ static const u8 sQuilladinTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -16770,6 +17139,7 @@ static const u8 sChesnaughtTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -17002,6 +17372,7 @@ static const u8 sFletchlingTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -17025,6 +17396,7 @@ static const u8 sFletchinderTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -17051,6 +17423,7 @@ static const u8 sTalonflameTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -17434,6 +17807,7 @@ static const u8 sHonedgeTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -17455,6 +17829,7 @@ static const u8 sDoubladeTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -17478,6 +17853,7 @@ static const u8 sAegislashTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -17560,6 +17936,7 @@ static const u8 sSwirlixTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -17587,6 +17964,7 @@ static const u8 sSlurpuffTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -17678,6 +18056,8 @@ static const u8 sBinacleTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -17715,6 +18095,8 @@ static const u8 sBarbaracleTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -17837,6 +18219,7 @@ static const u8 sHelioptileTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -17867,6 +18250,7 @@ static const u8 sHelioliskTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -17893,6 +18277,8 @@ static const u8 sTyruntTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -17920,6 +18306,8 @@ static const u8 sTyrantrumTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -17951,6 +18339,8 @@ static const u8 sAmauraTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -17985,6 +18375,8 @@ static const u8 sAurorusTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -18041,6 +18433,7 @@ static const u8 sHawluchaTMHMLearnset[] =
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -18090,6 +18483,8 @@ static const u8 sCarbinkTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -18183,6 +18578,7 @@ static const u8 sKlefkiTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -18325,6 +18721,8 @@ static const u8 sBergmiteTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -18351,6 +18749,8 @@ static const u8 sAvaluggTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -18379,6 +18779,7 @@ static const u8 sNoibatTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -18410,6 +18811,7 @@ static const u8 sNoivernTMHMLearnset[] =
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -18709,6 +19111,7 @@ static const u8 sPopplioTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -18732,6 +19135,7 @@ static const u8 sBrionneTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -18761,6 +19165,7 @@ static const u8 sPrimarinaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -18907,6 +19312,7 @@ static const u8 sCharjabugTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -18935,6 +19341,8 @@ static const u8 sVikavoltTMHMLearnset[] =
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -18962,6 +19370,8 @@ static const u8 sCrabrawlerTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -18992,6 +19402,8 @@ static const u8 sCrabominableTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19012,6 +19424,7 @@ static const u8 sOricorioTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM35_SANDSTORM),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -19084,6 +19497,8 @@ static const u8 sRockruffTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -19103,6 +19518,9 @@ static const u8 sLycanrocTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -19149,6 +19567,7 @@ static const u8 sMareanieTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19173,6 +19592,7 @@ static const u8 sToxapexTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19193,6 +19613,7 @@ static const u8 sMudbrayTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19213,6 +19634,7 @@ static const u8 sMudsdaleTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19237,6 +19659,7 @@ static const u8 sDewpiderTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19262,6 +19685,7 @@ static const u8 sAraquanidTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19319,6 +19743,7 @@ static const u8 sMorelullTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -19342,6 +19767,7 @@ static const u8 sShiinoticTMHMLearnset[] =
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -19530,6 +19956,7 @@ static const u8 sComfeyTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -19644,6 +20071,7 @@ static const u8 sGolisopodTMHMLearnset[] =
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19666,6 +20094,9 @@ static const u8 sSandygastTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -19689,6 +20120,9 @@ static const u8 sPalossandTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -19727,6 +20161,7 @@ static const u8 sTypeNullTMHMLearnset[] =
     TMHM(TM32_X_SCISSOR),
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19758,6 +20193,7 @@ static const u8 sSilvallyTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19779,6 +20215,7 @@ static const u8 sMiniorTMHMLearnset[] =
     TMHM(TM35_SANDSTORM),
     // TMHM(TM51_SOLAR_BEAM),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -19828,6 +20265,8 @@ static const u8 sTurtonatorTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19852,6 +20291,7 @@ static const u8 sTogedemaruTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -19946,6 +20386,7 @@ static const u8 sDrampaTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -19973,6 +20414,7 @@ static const u8 sDhelmiseTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -19999,6 +20441,7 @@ static const u8 sJangmooTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -20027,6 +20470,7 @@ static const u8 sHakamooTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -20057,6 +20501,8 @@ static const u8 sKommooTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -20592,6 +21038,7 @@ static const u8 sScorbunnyTMHMLearnset[] =
     // TMHM(TM35_FLAMETHROWER),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20612,6 +21059,7 @@ static const u8 sRabootTMHMLearnset[] =
     // TMHM(TM35_FLAMETHROWER),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20635,6 +21083,7 @@ static const u8 sCinderaceTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20699,6 +21148,7 @@ static const u8 sInteleonTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20717,6 +21167,7 @@ static const u8 sSkwovetTMHMLearnset[] =
     // TMHM(TM28_DIG),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -20738,6 +21189,7 @@ static const u8 sGreedentTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -20756,6 +21208,7 @@ static const u8 sRookideeTMHMLearnset[] =
     TMHM(TM20_DUAL_WINGBEAT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20774,6 +21227,7 @@ static const u8 sCorvisquireTMHMLearnset[] =
     TMHM(TM20_DUAL_WINGBEAT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20796,6 +21250,8 @@ static const u8 sCorviknightTMHMLearnset[] =
     // TMHM(TM33_REFLECT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20824,6 +21280,7 @@ static const u8 sDottlerTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -20847,6 +21304,8 @@ static const u8 sOrbeetleTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20932,6 +21391,7 @@ static const u8 sWoolooTMHMLearnset[] =
     TMHM(TM26_THUNDER_WAVE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20948,6 +21408,7 @@ static const u8 sDubwoolTMHMLearnset[] =
     TMHM(TM26_THUNDER_WAVE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -20995,6 +21456,8 @@ static const u8 sDrednawTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -21040,6 +21503,7 @@ static const u8 sBoltundTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21060,6 +21524,8 @@ static const u8 sRolycolyTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -21086,6 +21552,8 @@ static const u8 sCarkolTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -21115,6 +21583,8 @@ static const u8 sCoalossalTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -21140,6 +21610,7 @@ static const u8 sFlappleTMHMLearnset[] =
     // TMHM(TM51_SOLAR_BEAM),
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21164,6 +21635,8 @@ static const u8 sAppletunTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21203,6 +21676,7 @@ static const u8 sSandacondaTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21229,6 +21703,8 @@ static const u8 sCramorantTMHMLearnset[] =
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21249,6 +21725,7 @@ static const u8 sArrokudaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21270,6 +21747,7 @@ static const u8 sBarraskewdaTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21612,6 +22090,7 @@ static const u8 sObstagoonTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DUAL_CHOP),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21640,6 +22119,8 @@ static const u8 sPerrserkerTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21674,6 +22155,8 @@ static const u8 sCursolaTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_LEECH_LIFE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21696,6 +22179,7 @@ static const u8 sSirfetchdTMHMLearnset[] =
     TMHM(TM23_SUNNY_DAY),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21731,6 +22215,7 @@ static const u8 sMrRimeTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21758,6 +22243,8 @@ static const u8 sRunerigusTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -21815,6 +22302,8 @@ static const u8 sFalinksTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21912,6 +22401,9 @@ static const u8 sEiscueTMHMLearnset[] =
     // TMHM(HM03_SURF),
     TMHM(TM25_WATERFALL),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21959,6 +22451,7 @@ static const u8 sMorpekoTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -21979,6 +22472,7 @@ static const u8 sCufantTMHMLearnset[] =
     // TMHM(TM28_DIG),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -22001,6 +22495,7 @@ static const u8 sCopperajahTMHMLearnset[] =
     // TMHM(TM54_EARTHQUAKE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -22129,6 +22624,7 @@ static const u8 sDuraludonTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -22169,6 +22665,7 @@ static const u8 sDrakloakTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22198,6 +22695,7 @@ static const u8 sDragapultTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22455,6 +22953,7 @@ static const u8 sRaichuAlolanTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22484,6 +22983,9 @@ static const u8 sSandshrewAlolanTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22512,6 +23014,9 @@ static const u8 sSandslashAlolanTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_LEECH_LIFE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22533,6 +23038,7 @@ static const u8 sVulpixAlolanTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22556,6 +23062,7 @@ static const u8 sNinetalesAlolanTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DAZZLING_GLEAM),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22648,6 +23155,8 @@ static const u8 sGeodudeAlolanTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -22674,6 +23183,8 @@ static const u8 sGravelerAlolanTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -22701,6 +23212,8 @@ static const u8 sGolemAlolanTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
     // TMHM(TM00_CHARGE_BEAM),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -22723,6 +23236,7 @@ static const u8 sGrimerAlolanTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -22747,6 +23261,7 @@ static const u8 sMukAlolanTMHMLearnset[] =
     // TMHM(TM00_POISON_JAB),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -22806,6 +23321,7 @@ static const u8 sMarowakAlolanTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -22835,6 +23351,8 @@ static const u8 sMeowthGalarianTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DARK_PULSE),
     // TMHM(TM00_HONE_CLAWS),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -22853,6 +23371,7 @@ static const u8 sPonytaGalarianTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22871,6 +23390,7 @@ static const u8 sRapidashGalarianTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_WILD_CHARGE),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
@@ -22904,6 +23424,7 @@ static const u8 sSlowpokeGalarianTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
     0xFF,
 };
 
@@ -22941,6 +23462,8 @@ static const u8 sSlowbroGalarianTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23024,6 +23547,7 @@ static const u8 sMrMimeGalarianTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_DAZZLING_GLEAM),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23108,6 +23632,8 @@ static const u8 sSlowkingGalarianTMHMLearnset[] =
     // TMHM(TM00_SCALD),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23140,6 +23666,8 @@ static const u8 sCorsolaGalarianTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_AMNESIA),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23256,6 +23784,7 @@ static const u8 sDarmanitanGalarianTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_BULLDOZE),
     // TMHM(TM00_POWER_UP_PUNCH),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23281,6 +23810,7 @@ static const u8 sYamaskGalarianTMHMLearnset[] =
     // TMHM(TM30_SHADOW_BALL),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23305,6 +23835,7 @@ static const u8 sStunfiskGalarianTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_SCALD),
     // TMHM(TM00_BULLDOZE),
+    // TMHM(TM00_IRON_DEFENSE),
     0xFF,
 };
 
@@ -23599,6 +24130,8 @@ static const u8 sLycanrocMidnightTMHMLearnset[] =
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DUAL_CHOP),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -23618,6 +24151,8 @@ static const u8 sLycanrocDuskTMHMLearnset[] =
     TMHM(TM13_REST),
     TMHM(TM38_ROCK_SLIDE),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_IRON_DEFENSE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
