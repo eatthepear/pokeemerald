@@ -3856,37 +3856,15 @@ static void Cmd_jumpbasedontype(void)
     }
 }
 
-u8 GetTeamLevel(void)
+bool8 ShouldPrintExpAllMsg(void)
 {
     u8 i;
-    u16 partyLevel = 0;
-    u16 threshold = 0;
-    
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE)
-            partyLevel += gPlayerParty[i].level;
-        else
-            break;
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE) && (GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0) && !(IsOverLevelLimit(GetMonData(&gPlayerParty[i], MON_DATA_LEVEL))))
+            return TRUE;
     }
-    partyLevel /= i;
-    
-    threshold = partyLevel * .8;
-    partyLevel = 0;
-    
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE)
-        {
-            if (gPlayerParty[i].level >= threshold)
-                partyLevel += gPlayerParty[i].level;
-        }
-        else
-            break;
-    }
-    partyLevel /= i;
-    
-    return partyLevel;
+    return FALSE;
 }
 
 static void Cmd_getexp(void)
@@ -3917,7 +3895,7 @@ static void Cmd_getexp(void)
         }
         else
         {
-            if (FlagGet(FLAG_EXP_ALL_ON))
+            if (FlagGet(FLAG_EXP_ALL_ON) && ShouldPrintExpAllMsg())
                 PrepareStringBattle(STRINGID_COINSSCATTERED, gBattleStruct->expGetterBattlerId);
             gBattleScripting.getexpState++;
             gBattleStruct->givenExpMons |= gBitTable[gBattlerPartyIndexes[gBattlerFainted]];
