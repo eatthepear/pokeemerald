@@ -87,7 +87,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		waitse
 		closemessage
 	} else {
-		playse(SE_PC_LOGIN)
+		playse(SE_PC_OFF)
 		msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled."), MSGBOX_DEFAULT)
 		waitse
 		closemessage
@@ -285,7 +285,7 @@ text Zone0Sanctuary_Text_Colress_BrutalExplained {
 	"Many helpful NPCs are unavailable.\p"
 	"Some moves use more PP than normal and opponents do not use PP.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
-	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
+	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }
 
 text Zone0Sanctuary_Text_Colress_GameModes {

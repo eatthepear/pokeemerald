@@ -55,7 +55,7 @@ Zone0Sanctuary_EventScript_Intro_18:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_22
-	playse SE_PC_LOGIN
+	playse SE_PC_OFF
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_11, MSGBOX_DEFAULT
 	waitse
 	closemessage
@@ -1189,8 +1189,8 @@ Zone0Sanctuary_Text_Colress_BrutalExplained::
 	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
-	.string "unless you are familiar with {COLOR RED}Pokémon\l"
-	.string "Battle Labyrinth{COLOR DARK_GRAY} already.$"
+	.string "unless you are familiar with\n"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.$"
 
 Zone0Sanctuary_Text_Colress_GameModes::
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
