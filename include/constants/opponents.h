@@ -7,7 +7,7 @@
 #define TRAINER_OSCAR                         	3
 #define TRAINER_COREY_LEVIATHAN_1             	4
 #define TRAINER_COREY_LEVIATHAN_1_BRUTAL      	5
-#define TRAINER_DEXTER                        	6
+#define TRAINER_POLLY                         	6
 #define TRAINER_JEREMIAH                      	7
 #define TRAINER_HARPER                        	8
 #define TRAINER_ARTHUR                        	9

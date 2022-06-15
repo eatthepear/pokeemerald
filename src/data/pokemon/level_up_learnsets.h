@@ -1259,7 +1259,6 @@ static const struct LevelUpMove sPoliwrathLevelUpLearnset[] = {
 
 static const struct LevelUpMove sAbraLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TELEPORT),
-	LEVEL_UP_MOVE( 1, MOVE_HIDDEN_POWER),
 	LEVEL_UP_MOVE(10, MOVE_ENCORE),
 	LEVEL_UP_END
 };
@@ -16617,7 +16616,6 @@ static const struct LevelUpMove sJangmooLevelUpLearnset[] = {
 
 static const struct LevelUpMove sHakamooLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 0, MOVE_SKY_UPPERCUT),
-	LEVEL_UP_MOVE( 1, MOVE_AUTOTOMIZE),
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_MOVE( 4, MOVE_LEER),
 	LEVEL_UP_MOVE( 7, MOVE_BIDE),
@@ -16644,7 +16642,6 @@ static const struct LevelUpMove sKommooLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_BELLY_DRUM),
 	LEVEL_UP_MOVE( 1, MOVE_SKY_UPPERCUT),
 	LEVEL_UP_MOVE( 1, MOVE_AURA_SPHERE),
-	LEVEL_UP_MOVE( 1, MOVE_AUTOTOMIZE),
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_MOVE( 4, MOVE_LEER),
 	LEVEL_UP_MOVE( 7, MOVE_BIDE),

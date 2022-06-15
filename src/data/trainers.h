@@ -94,17 +94,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Harper},
     },
 
-    [TRAINER_DEXTER] =
+    [TRAINER_POLLY] =
     {
-        .trainerClass = TRAINER_CLASS_YOUNGSTER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .trainerName = _("Dexter"),
+        .trainerClass = TRAINER_CLASS_FAIRY_TALE_GIRL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_FAIRY_TALE_GIRL,
+        .trainerName = _("Polly"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Dexter),
-        .party = {.TrainerMon = sParty_Dexter},
+        .partySize = ARRAY_COUNT(sParty_Polly),
+        .party = {.TrainerMon = sParty_Polly},
     },
 
     [TRAINER_JEREMIAH] =
@@ -312,9 +312,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LUCIA] =
     {
-        .trainerClass = TRAINER_CLASS_LASS,
+        .trainerClass = TRAINER_CLASS_FAIRY_TALE_GIRL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_LASS,
+        .trainerPic = TRAINER_PIC_FAIRY_TALE_GIRL,
         .trainerName = _("Lucia"),
         .items = {},
         .doubleBattle = FALSE,

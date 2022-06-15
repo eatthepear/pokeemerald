@@ -5,19 +5,20 @@ Zone2A_EventScript_ItemAntidote::
 	finditem ITEM_ANTIDOTE
 	end
 
-Zone2A_EventScript_Dexter::
-	trainerbattle_single TRAINER_DEXTER, Zone2A_Text_DexterIntro, Zone2A_Text_DexterDefeat
-	msgbox Zone2A_Text_DexterPostBattle, MSGBOX_AUTOCLOSE
+Zone2A_EventScript_Polly::
+	trainerbattle_single TRAINER_POLLY, Zone2A_Text_PollyIntro, Zone2A_Text_PollyDefeat
+	msgbox Zone2A_Text_PollyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone2A_Text_DexterIntro:
-	.string "It's so dark here!$"
+Zone2A_Text_PollyIntro:
+	.string "Don't you just love magic?$"
 
-Zone2A_Text_DexterDefeat:
-	.string "Not fair!$"
+Zone2A_Text_PollyDefeat:
+	.string "Absolutely magical!$"
 
-Zone2A_Text_DexterPostBattle:
-	.string "I couldn't see clearly!$"
+Zone2A_Text_PollyPostBattle:
+	.string "I'm glad I live in as magical a\n"
+	.string "world as this one!$"
 
 Zone2A_EventScript_Jeremiah::
 	trainerbattle_single TRAINER_JEREMIAH, Zone2A_Text_JeremiahIntro, Zone2A_Text_JeremiahDefeat
