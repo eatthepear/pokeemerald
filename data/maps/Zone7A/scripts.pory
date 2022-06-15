@@ -1,18 +1,16 @@
-Zone7A_MapScripts::
-	.byte 0
+mapscripts Zone7A_MapScripts {}
 
-
-Zone7A_EventScript_TMShop::
+script Zone7A_EventScript_TMShop {
 	lock
 	faceplayer
-	message Zone7A_EventScript_TMShop_Text_0
+	message(format("Hello! Welcome to my TM shop!"))
 	waitmessage
-	pokemart Shop_TMShop_Zone7A
-	msgbox Zone7A_EventScript_TMShop_Text_1
+	pokemart(Shop_TMShop_Zone7A)
+	msgbox(format("Goodbye!"))
 	release
-	return
+}
 
-
+raw `
 	.align 2
 Shop_TMShop_Zone7A:
 	.2byte ITEM_TM09
@@ -112,9 +110,4 @@ Zone7A_EventScript_NoFish::
 Zone7A_Text_NoFish:
 	.string "Due to nitrogen runoff, there are\n"
 	.string "no Pokémon living in the water.$"
-
-Zone7A_EventScript_TMShop_Text_0:
-	.string "Hello! Welcome to my TM shop!$"
-
-Zone7A_EventScript_TMShop_Text_1:
-	.string "Goodbye!$"
+`

@@ -3079,7 +3079,7 @@ static const u8 sTM08Desc[] = _(
     // "to make a decoy.");
 
 static const u8 sTM09Desc[] = _(
-    "Strikes the opponent\n"
+    "Strikes the foe\n"
     "with its fists,\n"
     "raising Attack.");
     // Covet
@@ -3108,7 +3108,7 @@ static const u8 sTM11Desc[] = _(
 static const u8 sTM12Desc[] = _(
     "The user sharpens\n"
     "its claws, raising\n"
-    "Attack and Accuracy.");
+    "Attack & Accuracy.");
 
 static const u8 sTM13Desc[] = _(
     "Hardens the body's\n"
