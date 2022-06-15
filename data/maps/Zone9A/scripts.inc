@@ -1,80 +1,48 @@
 Zone9A_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Zone9A_OnTransition
 	.byte 0
 
-Zone9A_OnTransition:
-	goto_if_not_defeated TRAINER_ERICA, Zone9A_EventScript_SetWinstratesNotDefeated
-	goto_if_defeated TRAINER_ERICA, Zone9A_EventScript_SetWinstratesDefeated
-	end
-
-Zone9A_EventScript_SetWinstratesDefeated:
-	setflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
-	setflag FLAG_HIDE_ZONE9A_MAN
-	end
-
-Zone9A_EventScript_SetWinstratesNotDefeated:
-	clearflag FLAG_HIDE_ZONE9A_MAN
-	clearflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
-	setflag FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE
-	setflag FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE
-	setflag FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE
-	setflag FLAG_HIDE_ZONE9A_ERICA_WINSTRATE
-	cleartrainerflag TRAINER_ARI
-	cleartrainerflag TRAINER_BERTHA
-	cleartrainerflag TRAINER_CASSANDRA
-	cleartrainerflag TRAINER_DOMINIC
-	end
 
 Zone9A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 9
-	goto_if_gt EventScript_WarpZone0
+	goto_if_gt Zone9A_EventScript_Exit_2
 	warp MAP_ZONE9SANCTUARY, 255, 22, 7
+Zone9A_EventScript_Exit_1:
 	releaseall
 	end
 
+Zone9A_EventScript_Exit_2:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 47, 32
+	waitstate
+	goto Zone9A_EventScript_Exit_1
+
+
 Zone9A_EventScript_HerbalSign::
-	msgbox Zone9A_Text_HerbalSign, MSGBOX_SIGN
+	msgbox Zone9A_EventScript_HerbalSign_Text_0, MSGBOX_SIGN
 	end
 
-Zone9A_Text_HerbalSign:
-	.string "Herbal Shop and\n"
-	.string "Incense Shop$"
-
-Zone9A_EventScript_BigRoot::
-	finditem ITEM_BIG_ROOT
-	end
 
 Zone9A_EventScript_Man::
 	lock
 	faceplayer
-	msgbox Zone9A_Text_ShouldChallenge, MSGBOX_AUTOCLOSE
+	msgbox Zone9A_EventScript_Man_Text_0
 	release
 	end
 
-Zone9A_Text_ShouldChallenge:
-	.string "Hey there, champ!\p"
-	.string "In our modest village, there is\n"
-	.string "a family of strong Trainers.\l"
-	.string "Why don't you go spar with them?$"
 
 Zone9A_EventScript_Ari::
 	lock
 	faceplayer
-	msgbox Zone9A_Text_BattleOurFamily, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone9A_EventScript_BattleWinstrates
-	msgbox Zone9A_Text_Chicken, MSGBOX_DEFAULT
-	release
-	end
-
-Zone9A_EventScript_BattleWinstrates::
-	msgbox Zone9A_Text_AriIntro, MSGBOX_DEFAULT
+	msgbox Zone9A_EventScript_Ari_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone9A_EventScript_Ari_1
+	msgbox Zone9A_EventScript_Ari_Text_2, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	trainerbattle_no_intro TRAINER_ARI, Zone9A_Text_AriDefeat
+	trainerbattle_no_intro TRAINER_ARI, Zone9A_EventScript_Ari_Text_3
 	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox Zone9A_Text_AriPostBattle, MSGBOX_DEFAULT
+	msgbox Zone9A_EventScript_Ari_Text_4, MSGBOX_DEFAULT
 	closemessage
 	applymovement 1, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
@@ -82,13 +50,13 @@ Zone9A_EventScript_BattleWinstrates::
 	applymovement OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate
 	waitmovement 0
 	addobject 2
-	applymovement 2, Zone9A_Movement_WinstrateExitHouse
+	applymovement 2, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone9A_Text_BerthaIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_BERTHA, Zone9A_Text_BerthaDefeat
+	msgbox Zone9A_EventScript_Ari_Text_5, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BERTHA, Zone9A_EventScript_Ari_Text_6
 	applymovement 2, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox Zone9A_Text_BerthaPostBattle, MSGBOX_DEFAULT
+	msgbox Zone9A_EventScript_Ari_Text_7, MSGBOX_DEFAULT
 	closemessage
 	applymovement 2, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
@@ -96,13 +64,13 @@ Zone9A_EventScript_BattleWinstrates::
 	applymovement OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate
 	waitmovement 0
 	addobject 3
-	applymovement 3, Zone9A_Movement_WinstrateExitHouse
+	applymovement 3, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone9A_Text_CassandraIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_CASSANDRA, Zone9A_Text_CassandraDefeat
+	msgbox Zone9A_EventScript_Ari_Text_8, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CASSANDRA, Zone9A_EventScript_Ari_Text_9
 	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox Zone9A_Text_CassandraPostBattle, MSGBOX_DEFAULT
+	msgbox Zone9A_EventScript_Ari_Text_10, MSGBOX_DEFAULT
 	closemessage
 	applymovement 3, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
@@ -110,11 +78,11 @@ Zone9A_EventScript_BattleWinstrates::
 	applymovement OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate
 	waitmovement 0
 	addobject 4
-	applymovement 4, Zone9A_Movement_WinstrateExitHouse
+	applymovement 4, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone9A_Text_DominicIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_DOMINIC, Zone9A_Text_DominicDefeat
-	msgbox Zone9A_Text_DominicPostBattle, MSGBOX_DEFAULT
+	msgbox Zone9A_EventScript_Ari_Text_11, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_DOMINIC, Zone9A_EventScript_Ari_Text_12
+	msgbox Zone9A_EventScript_Ari_Text_13, MSGBOX_DEFAULT
 	closemessage
 	applymovement 4, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -124,13 +92,13 @@ Zone9A_EventScript_BattleWinstrates::
 	applymovement OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate
 	waitmovement 0
 	addobject 5
-	applymovement 5, Zone9A_Movement_WinstrateExitHouse
+	applymovement 5, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone9A_Text_EricaIntro, MSGBOX_DEFAULT
+	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ERICA, Zone9A_Text_EricaDefeat
-	setflag FLAG_HIDE_ZONE9A_MAN
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_NoZorua
-	msgbox Zone9A_Text_EricaPostBattle, MSGBOX_DEFAULT
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_5
+	msgbox Zone9A_EventScript_Ari_Text_16, MSGBOX_DEFAULT
+Zone9A_EventScript_Ari_4:
 	closemessage
 	applymovement 5, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -138,16 +106,25 @@ Zone9A_EventScript_BattleWinstrates::
 	waitmovement 0
 	removeobject 5
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	setflag FLAG_HIDE_ZONE9A_MAN
+	setflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
+	setvar VAR_ZONE_9_STATE, 1
 	release
 	end
+
+Zone9A_EventScript_Ari_1:
+	msgbox Zone9A_EventScript_Ari_Text_1, MSGBOX_DEFAULT
+	release
+	end
+
+Zone9A_EventScript_Ari_5:
+	msgbox Zone9A_EventScript_Ari_Text_15, MSGBOX_DEFAULT
+	goto Zone9A_EventScript_Ari_4
+
 
 Zone9A_Movement_WinstrateEnterHouse:
 	walk_in_place_faster_up
 	walk_up
-	step_end
-
-Zone9A_Movement_WinstrateExitHouse:
-	walk_down
 	step_end
 
 Zone9A_Movement_WaitForNextWinstrate:
@@ -156,103 +133,84 @@ Zone9A_Movement_WaitForNextWinstrate:
 	delay_16
 	step_end
 
-Zone9A_Text_BattleOurFamily:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\p"
-	.string "Oh, you're a traveler!\n"
-	.string "You might be strong enough...\p"
-	.string "I bet you can't defeat the five\n"
-	.string "members of my family in a row.\l"
-	.string "What do you say to my little wager?$"
-
-Zone9A_Text_Chicken:
-	.string "Ah, so you're a chicken. Well, if\n"
-	.string "you change your mind, I'll be here.$"
-
-Zone9A_Text_AriIntro:
-	.string "Alright, well, best of luck!$"
-
-Zone9A_Text_AriDefeat:
-	.string "What!? How!?\n"
-	.string "You're tougher than I thought!$"
-
-Zone9A_Text_AriPostBattle:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Hey, everyone!\n"
-	.string "I've found a pretty strong Trainer!$"
-
-Zone9A_Text_BerthaIntro:
-	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: You beat my brother?\n"
-	.string "Ugh. Such a brat.\p"
-	.string "Let's just get this over with.$"
-
-Zone9A_Text_BerthaDefeat:
-	.string "Sigh...\n"
-	.string "I thought this would happen...$"
-
-Zone9A_Text_BerthaPostBattle:
-	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: Mom! It's your turn!$"
-
-Zone9A_Text_CassandraIntro:
-	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: Oh! I am so excited!\p"
-	.string "Finally, a challenger who got past\n"
-	.string "both of my children!\p"
-	.string "It's Momma's time to shine!$"
-
-Zone9A_Text_CassandraDefeat:
-	.string "It was you who shined instead!$"
-
-Zone9A_Text_CassandraPostBattle:
-	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: It's all you, baby!$"
-
-Zone9A_Text_DominicIntro:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Guess what time it is?\n"
-	.string "It's time to take out the trash!$"
-
-Zone9A_Text_DominicDefeat:
-	.string "Sorry, sorry!\n"
-	.string "I didn't realize you were so strong!$"
-
-Zone9A_Text_DominicPostBattle:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Kids!\n"
-	.string "Wake your grandma up!$"
-
-Zone9A_Text_EricaIntro:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from\n"
-	.string "my slumber?$"
-
-Zone9A_Text_EricaDefeat:
-	.string "Oh... You are the one...$"
-
-Zone9A_Text_EricaPostBattle:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\n"
-	.string "I have a request for you.$"
-
-Zone9A_EventScript_NoZorua:
-	msgbox Zone9A_Text_EricaPostBattleNoZorua, MSGBOX_DEFAULT
-	closemessage
-	applymovement 5, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	applymovement 5, Zone9A_Movement_WinstrateEnterHouse
-	waitmovement 0
-	removeobject 5
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	release
-	end
-
-Zone9A_Text_EricaPostBattleNoZorua:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\p"
-	.string "Well done, young one.$"
-
 Zone9A_EventScript_Anita::
 	trainerbattle_single TRAINER_ANITA, Zone9A_Text_AnitaIntro, Zone9A_Text_AnitaDefeat
 	msgbox Zone9A_Text_AnitaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Zone9A_Text_AnitaIntro:
-	.string "The vegetation is so thick!$"
+	.string "The vegetation is so thick!"
 
 Zone9A_Text_AnitaDefeat:
-	.string "I can barely see past my nose!$"
+	.string "I can barely see past my nose!"
 
 Zone9A_Text_AnitaPostBattle:
 	.string "Okay, maybe that was a bit of\n"
-	.string "an exaggeration…$"
+	.string "an exaggeration…"
+
+Zone9A_EventScript_BigRoot::
+	finditem ITEM_BIG_ROOT
+	end
+
+Zone9A_EventScript_HerbalSign_Text_0:
+	.string "Herbal and Incense Shop$"
+
+Zone9A_EventScript_Man_Text_0:
+	.string "Hey there, champ!\p"
+	.string "In our modest village, there is a family\n"
+	.string "of strong Trainers.\p"
+	.string "Why don't you go spar with them?$"
+
+Zone9A_EventScript_Ari_Text_0:
+	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row.\lWhat do you say to my little wager?$"
+
+Zone9A_EventScript_Ari_Text_1:
+	.string "Ah, so you're a chicken. Well, if\nyou change your mind, I'll be here.$"
+
+Zone9A_EventScript_Ari_Text_2:
+	.string "Alright, well, best of luck!$"
+
+Zone9A_EventScript_Ari_Text_3:
+	.string "What!? How!?\nYou're tougher than I thought!$"
+
+Zone9A_EventScript_Ari_Text_4:
+	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Hey, everyone!\nI've found a pretty strong Trainer!$"
+
+Zone9A_EventScript_Ari_Text_5:
+	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: You beat my brother?\nUgh. Such a brat.\pLet's just get this over with.$"
+
+Zone9A_EventScript_Ari_Text_6:
+	.string "Sigh…\nI thought this would happen…$"
+
+Zone9A_EventScript_Ari_Text_7:
+	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: Mom! It's your turn!$"
+
+Zone9A_EventScript_Ari_Text_8:
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: Oh! I am so excited!\pFinally, a challenger who got past\nboth of my children!\pIt's Momma's time to shine!$"
+
+Zone9A_EventScript_Ari_Text_9:
+	.string "It was you who shined instead!$"
+
+Zone9A_EventScript_Ari_Text_10:
+	.string "{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: It's all you, baby!$"
+
+Zone9A_EventScript_Ari_Text_11:
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Guess what time it is?\nIt's time to take out the trash!$"
+
+Zone9A_EventScript_Ari_Text_12:
+	.string "Sorry, sorry!\nI didn't realize you were so strong!$"
+
+Zone9A_EventScript_Ari_Text_13:
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Kids!\nWake your grandma up!$"
+
+Zone9A_EventScript_Ari_Text_14:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from\nmy slumber?$"
+
+Zone9A_EventScript_Ari_Text_15:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\nI have a request for you.$"
+
+Zone9A_EventScript_Ari_Text_16:
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.$"
+
+Zone9A_Text_EricaDefeat::
+	.string "Oh… You are the one…$"

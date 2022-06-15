@@ -1,0 +1,149 @@
+mapscripts Zone9A_MapScripts {}
+
+script Zone9A_EventScript_Exit {
+	lockall
+    if (var(VAR_ZONE) > 9) {
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 47, 32)
+		waitstate
+    } else {
+        warp(MAP_ZONE9SANCTUARY, 255, 22, 7)
+    }
+    releaseall
+    end
+}
+
+script Zone9A_EventScript_HerbalSign {
+	msgbox(format("Herbal and Incense Shop"), MSGBOX_SIGN)
+	end
+}
+
+script Zone9A_EventScript_Man {
+	lock
+	faceplayer
+	msgbox(format("Hey there, champ!\pIn our modest village, there is a family of strong Trainers.\pWhy don't you go spar with them?"))
+	release
+	end
+}
+
+script Zone9A_EventScript_Ari {
+	lock
+	faceplayer
+	msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row.\lWhat do you say to my little wager?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		msgbox("Ah, so you're a chicken. Well, if\nyou change your mind, I'll be here.", MSGBOX_DEFAULT)
+		release
+		end
+	} else {
+		msgbox(format("Alright, well, best of luck!"), MSGBOX_DEFAULT)
+		setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+		trainerbattle_no_intro(TRAINER_ARI, "What!? How!?\nYou're tougher than I thought!")
+		applymovement(1, Common_Movement_WalkInPlaceFasterUp)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Hey, everyone!\nI've found a pretty strong Trainer!", MSGBOX_DEFAULT)
+		closemessage
+		applymovement(1, Zone9A_Movement_WinstrateEnterHouse)
+		waitmovement(0)
+		removeobject(1)
+		applymovement(OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate)
+		waitmovement(0)
+		addobject(2)
+		applymovement(2, Common_Movement_WalkDown)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Bertha{COLOR DARK_GRAY}: You beat my brother?\nUgh. Such a brat.\pLet's just get this over with.", MSGBOX_DEFAULT)
+		trainerbattle_no_intro(TRAINER_BERTHA, "Sigh…\nI thought this would happen…")
+		applymovement(2, Common_Movement_WalkInPlaceFasterUp)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Bertha{COLOR DARK_GRAY}: Mom! It's your turn!", MSGBOX_DEFAULT)
+		closemessage
+		applymovement(2, Zone9A_Movement_WinstrateEnterHouse)
+		waitmovement(0)
+		removeobject(2)
+		applymovement(OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate)
+		waitmovement(0)
+		addobject(3)
+		applymovement(3, Common_Movement_WalkDown)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: Oh! I am so excited!\pFinally, a challenger who got past\nboth of my children!\pIt's Momma's time to shine!", MSGBOX_DEFAULT)
+		trainerbattle_no_intro(TRAINER_CASSANDRA, "It was you who shined instead!")
+		applymovement(3, Common_Movement_WalkInPlaceFasterUp)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: It's all you, baby!", MSGBOX_DEFAULT)
+		closemessage
+		applymovement(3, Zone9A_Movement_WinstrateEnterHouse)
+		waitmovement(0)
+		removeobject(3)
+		applymovement(OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate)
+		waitmovement(0)
+		addobject(4)
+		applymovement(4, Common_Movement_WalkDown)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Guess what time it is?\nIt's time to take out the trash!", MSGBOX_DEFAULT)
+		trainerbattle_no_intro(TRAINER_DOMINIC, "Sorry, sorry!\nI didn't realize you were so strong!")
+		msgbox("{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Kids!\nWake your grandma up!", MSGBOX_DEFAULT)
+		closemessage
+		applymovement(4, Common_Movement_WalkInPlaceFasterUp)
+		waitmovement(0)
+		applymovement(4, Zone9A_Movement_WinstrateEnterHouse)
+		waitmovement(0)
+		removeobject(4)
+		applymovement(OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate)
+		waitmovement(0)
+		addobject(5)
+		applymovement(5, Common_Movement_WalkDown)
+		waitmovement(0)
+		msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from\nmy slumber?", MSGBOX_DEFAULT)
+		trainerbattle_no_intro(TRAINER_ERICA, Zone9A_Text_EricaDefeat)
+		if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\nI have a request for you.", MSGBOX_DEFAULT)
+		} else {
+			msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.", MSGBOX_DEFAULT)
+		}
+		closemessage
+		applymovement(5, Common_Movement_WalkInPlaceFasterUp)
+		waitmovement(0)
+		applymovement(5, Zone9A_Movement_WinstrateEnterHouse)
+		waitmovement(0)
+		removeobject(5)
+		clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+		setflag(FLAG_HIDE_ZONE9A_MAN)
+		setflag(FLAG_HIDE_ZONE9A_ARI_WINSTRATE)
+		setvar(VAR_ZONE_9_STATE, 1)
+		release
+		end
+	}
+}
+
+movement Zone9A_Movement_WinstrateEnterHouse {
+	walk_in_place_faster_up
+	walk_up
+}
+
+movement Zone9A_Movement_WaitForNextWinstrate {
+	delay_16 * 3
+}
+
+text Zone9A_Text_EricaDefeat {
+	"Oh… You are the one…"
+}
+
+raw `
+Zone9A_EventScript_Anita::
+	trainerbattle_single TRAINER_ANITA, Zone9A_Text_AnitaIntro, Zone9A_Text_AnitaDefeat
+	msgbox Zone9A_Text_AnitaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone9A_Text_AnitaIntro:
+	.string "The vegetation is so thick!"
+
+Zone9A_Text_AnitaDefeat:
+	.string "I can barely see past my nose!"
+
+Zone9A_Text_AnitaPostBattle:
+	.string "Okay, maybe that was a bit of\n"
+	.string "an exaggeration…"
+
+Zone9A_EventScript_BigRoot::
+	finditem ITEM_BIG_ROOT
+	end
+`

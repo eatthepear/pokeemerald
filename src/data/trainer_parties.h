@@ -1080,7 +1080,8 @@ static const struct TrainerMon sParty_Anita[] = {
     }
 };
 
-//You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
+// You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
+// Accordingly, this gauntlet means there is no Leviathan in this Zone
 static const struct TrainerMon sParty_Ari[] = {
     {
     .iv = 20,

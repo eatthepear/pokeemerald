@@ -68,6 +68,10 @@ Zone8Sanctuary_EventScript_NextZone_5:
 
 Zone8Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
+	setflag FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE
+	setflag FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE
+	setflag FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE
+	setflag FLAG_HIDE_ZONE9A_ERICA_WINSTRATE
 	warp MAP_ZONE9A, 255, 23, 13
 	waitstate
 	goto Zone8Sanctuary_EventScript_NextZone_1

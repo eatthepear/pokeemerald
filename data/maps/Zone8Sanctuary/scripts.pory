@@ -45,6 +45,10 @@ script Zone8Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
+				setflag(FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE)
+				setflag(FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE)
+				setflag(FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE)
+				setflag(FLAG_HIDE_ZONE9A_ERICA_WINSTRATE)
 				warp(MAP_ZONE9A, 255, 23, 13)
 				waitstate
 			}
