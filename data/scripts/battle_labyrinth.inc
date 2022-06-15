@@ -2849,6 +2849,7 @@ Shop_General_1to3:
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 	release
 	end

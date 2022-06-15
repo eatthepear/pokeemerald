@@ -1,18 +1,20 @@
 script Zone0C_EventScript_EeveeGirl {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE)) {
+	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE) == true) {
 		goto(Zone0C_EventScript_EeveeUnique)
 	}
-	goto_if_mon_caught(SPECIES_EEVEE, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_VAPOREON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_JOLTEON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_FLAREON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_ESPEON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_UMBREON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_LEAFEON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_GLACEON, Zone0C_EventScript_EeveeUnique)
-	goto_if_mon_caught(SPECIES_SYLVEON, Zone0C_EventScript_EeveeUnique)
+	if (flag(FLAG_RANDOMIZER_ON) == false) {
+		goto_if_mon_caught(SPECIES_EEVEE, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_VAPOREON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_JOLTEON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_FLAREON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_ESPEON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_UMBREON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_LEAFEON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_GLACEON, Zone0C_EventScript_EeveeUnique)
+		goto_if_mon_caught(SPECIES_SYLVEON, Zone0C_EventScript_EeveeUnique)
+	}
 	msgbox(Zone0C_Text_EeveeGiveaway, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
 		msgbox(Zone0C_Text_NoThanks)

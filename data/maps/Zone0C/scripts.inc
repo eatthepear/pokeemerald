@@ -3,21 +3,14 @@ Zone0C_EventScript_EeveeGirl::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_ZONE0C_EEVEE, Zone0C_EventScript_EeveeGirl_2
 Zone0C_EventScript_EeveeGirl_1:
-	goto_if_mon_caught SPECIES_EEVEE, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_VAPOREON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_JOLTEON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_FLAREON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_ESPEON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_UMBREON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_LEAFEON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_GLACEON, Zone0C_EventScript_EeveeUnique
-	goto_if_mon_caught SPECIES_SYLVEON, Zone0C_EventScript_EeveeUnique
+	goto_if_unset FLAG_RANDOMIZER_ON, Zone0C_EventScript_EeveeGirl_5
+Zone0C_EventScript_EeveeGirl_4:
 	msgbox Zone0C_Text_EeveeGiveaway, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Zone0C_EventScript_EeveeGirl_5
+	goto_if_eq Zone0C_EventScript_EeveeGirl_8
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq Zone0C_EventScript_EeveeGirl_8
+	goto_if_eq Zone0C_EventScript_EeveeGirl_11
 	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
 	setflag FLAG_BOOSTED_IVS
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
@@ -31,8 +24,8 @@ Zone0C_EventScript_EeveeGirl_1:
 	bufferspeciesname 0, SPECIES_EEVEE
 	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0C_EventScript_EeveeGirl_11
-Zone0C_EventScript_EeveeGirl_10:
+	goto_if_eq Zone0C_EventScript_EeveeGirl_14
+Zone0C_EventScript_EeveeGirl_13:
 	setflag FLAG_RECEIVED_ZONE0C_EEVEE
 	goto Zone0C_EventScript_EeveeUnique
 	return
@@ -42,19 +35,31 @@ Zone0C_EventScript_EeveeGirl_2:
 	goto Zone0C_EventScript_EeveeGirl_1
 
 Zone0C_EventScript_EeveeGirl_5:
+	goto_if_mon_caught SPECIES_EEVEE, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_VAPOREON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_JOLTEON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_FLAREON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_ESPEON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_UMBREON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_LEAFEON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_GLACEON, Zone0C_EventScript_EeveeUnique
+	goto_if_mon_caught SPECIES_SYLVEON, Zone0C_EventScript_EeveeUnique
+	goto Zone0C_EventScript_EeveeGirl_4
+
+Zone0C_EventScript_EeveeGirl_8:
 	msgbox Zone0C_Text_NoThanks
 	release
 	end
 
-Zone0C_EventScript_EeveeGirl_8:
+Zone0C_EventScript_EeveeGirl_11:
 	msgbox Zone0C_Text_CantGive
 	release
 	end
 
-Zone0C_EventScript_EeveeGirl_11:
+Zone0C_EventScript_EeveeGirl_14:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0C_EventScript_EeveeGirl_10
+	goto Zone0C_EventScript_EeveeGirl_13
 
 
 Zone0C_EventScript_EeveeUnique::
