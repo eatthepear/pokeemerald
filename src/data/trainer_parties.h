@@ -987,53 +987,76 @@ static const struct TrainerMon sParty_Neil[] = {
 static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in a 2v1 tag battle with Zone8DWally, Default
     {
     .iv = 31,
-    .lvl = 19,
-    .nature = NATURE_JOLLY,
+    .lvl = 20,
+    .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_STARAVIA, //Starts with aura +1 Speed
+    .species = SPECIES_HITMONTOP,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_RETURN, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR}
+    .moves = {MOVE_ROLLING_KICK, MOVE_FAKE_OUT, MOVE_AERIAL_ACE, MOVE_PURSUIT}
     },
     {
     .iv = 31,
-    .lvl = 19,
-    .nature = NATURE_ADAMANT,
+    .lvl = 20,
+    .nature = NATURE_CALM,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_MAWILE, //Starts with aura +1 Attack
+    .ability = ABILITY_SLOT_1, //Quick Draw
+    .species = SPECIES_SLOWBRO_GALARIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_ICE_FANG, MOVE_FIRE_FANG}
+    .moves = {MOVE_SHELL_SIDE_ARM, MOVE_CONFUSION, MOVE_WATER_PULSE, MOVE_HIDDEN_POWER} // HP Ground
+    },
+    {
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_IMPISH,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Rough Skin
+    .species = SPECIES_DRUDDIGON,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_GLARE}
+    },
+    {
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
+    .species = SPECIES_SABLEYE, //Starts with aura +1 all stats
+    .heldItem = ITEM_SABLENITE,
+    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_SLEEP_TALK}
     }
 };
 
 static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     {
     .iv = 20,
-    .lvl = 18,
-    .nature = NATURE_NAUGHTY,
-    .ability = ABILITY_HIDDEN, //Gale Wings
+    .lvl = 20,
+    .nature = NATURE_IMPISH,
+    .ability = ABILITY_SLOT_1, //Flame Body
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_FLETCHINDER,
-    .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_EMBER, MOVE_GROWL}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_AERIAL_ACE, MOVE_FLAME_CHARGE, MOVE_ROOST, MOVE_FEATHER_DANCE}
     },
     {
     .iv = 20,
-    .lvl = 18,
-    .nature = NATURE_LONELY,
+    .lvl = 20,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_AZUMARILL,
-    .moves = {MOVE_AQUA_JET, MOVE_CHARM, MOVE_BUBBLE_BEAM, MOVE_COVET}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_AQUA_TAIL, MOVE_COVET, MOVE_CHARM}
     },
     {
     .iv = 20,
-    .lvl = 18,
+    .lvl = 20,
     .nature = NATURE_BOLD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Trace
-    .species = SPECIES_RALTS,
-    .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_GROWL, MOVE_WILL_O_WISP}
+    .species = SPECIES_KIRLIA,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_GROWL}
     }
 };
 
@@ -3479,23 +3502,43 @@ static const struct TrainerMon sParty_RitaBrutala[] = {//Leviathan 3, Brutal
 static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan 4, fought in a 2v1 tag battle with Zone8DWally, Brutal
     {
     .iv = 31,
-    .lvl = 19,
-    .nature = NATURE_JOLLY,
+    .lvl = 20,
+    .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_STARAVIA, //Starts with aura +1 all stats
+    .species = SPECIES_HITMONTOP,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_RETURN, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR}
+    .moves = {MOVE_ROLLING_KICK, MOVE_FAKE_OUT, MOVE_AERIAL_ACE, MOVE_PURSUIT}
     },
     {
     .iv = 31,
-    .lvl = 19,
-    .nature = NATURE_ADAMANT,
+    .lvl = 20,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_MAWILE, //Starts with aura +1 all stats
+    .ability = ABILITY_SLOT_1, //Quick Draw
+    .species = SPECIES_SLOWBRO_GALARIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_ICE_FANG, MOVE_FIRE_FANG}
+    .moves = {MOVE_SHELL_SIDE_ARM, MOVE_CONFUSION, MOVE_WATER_PULSE, MOVE_HIDDEN_POWER} // HP Ground
+    },
+    {
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_IMPISH,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Rough Skin
+    .species = SPECIES_DRUDDIGON,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_GLARE}
+    },
+    {
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
+    .species = SPECIES_SABLEYE, //Starts with aura +1 all stats
+    .heldItem = ITEM_SABLENITE,
+    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_SLEEP_TALK}
     }
 };
 

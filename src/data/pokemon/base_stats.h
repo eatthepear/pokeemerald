@@ -7140,12 +7140,17 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_KIRLIA] =
     {
-        .baseHP        = 38,
+        .baseHP        = 68,
+        // .baseHP        = 38,
         .baseAttack    = 35,
-        .baseDefense   = 35,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 55,
+        .baseDefense   = 45,
+        // .baseDefense   = 35,
+        .baseSpeed     = 60,
+        // .baseSpeed     = 50,
+        .baseSpAttack  = 75,
+        // .baseSpAttack  = 65,
+        .baseSpDefense = 65,
+        // .baseSpDefense = 55,
         .type1 = TYPE_PSYCHIC,
         .type2 = TYPE_FAIRY,
         .catchRate = 120,
