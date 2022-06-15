@@ -1,54 +1,91 @@
-Zone10A_MapScripts::
-	.byte 0
+mapscripts Zone10A_MapScripts {}
 
-
-Zone10A_EventScript_Adamina::
+script Zone10A_EventScript_Adamina {
 	lock
 	faceplayer
-	goto_if_unset FLAG_ADAMINA_INTRO, Zone10A_EventScript_Adamina_2
-Zone10A_EventScript_Adamina_1:
-	msgbox Zone10A_Text_Explain
-	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1, Zone10A_EventScript_Adamina_5
-	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2, Zone10A_EventScript_Adamina_5
-	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3, Zone10A_EventScript_Adamina_5
-	fadeoutbgm 1
-	msgbox Zone10A_Text_FoundEm
-	delay 96
-	msgbox Zone10A_Text_CrushYou
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_ADAMINA
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10A_EventScript_Adamina_12
-	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
-Zone10A_EventScript_Adamina_11:
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone10A_Text_HeadInside
-	applymovement 6, Common_Movement_FaceUp
-	waitmovement 0
-	opendoor 47, 27
+	if (flag(FLAG_ADAMINA_INTRO) == false) {
+		msgbox(Zone10A_Text_NoChance)
+		setflag(FLAG_ADAMINA_INTRO)
+	}
+	msgbox(Zone10A_Text_Explain)
+	if ((flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1) == false) ||
+	(flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2) == false) ||
+	(flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3) == false)) {
+		release
+		end
+	}
+	fadeoutbgm(1)
+	msgbox(Zone10A_Text_FoundEm)
+	delay(96)
+	msgbox(Zone10A_Text_CrushYou)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	setvar(VAR_MUGSHOT_ID, MUGSHOT_ADAMINA)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		trainerbattle_no_intro(TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat)
+	} else {
+		trainerbattle_no_intro(TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox(Zone10A_Text_HeadInside)
+	applymovement(6, Common_Movement_FaceUp)
+	waitmovement(0)
+	opendoor(47, 27)
 	waitdooranim
-	applymovement 6, Common_Movement_WalkUp
-	waitmovement 0
-	removeobject VAR_LAST_TALKED
-	setflag FLAG_BEAT_LEVIATHAN_5
-	closedoor 47, 27
+	applymovement(6, Common_Movement_WalkUp)
+	waitmovement(0)
+	removeobject(VAR_LAST_TALKED)
+	setflag(FLAG_BEAT_LEVIATHAN_5)
+	closedoor(47, 27)
 	waitdooranim
 	release
 	end
+}
 
-Zone10A_EventScript_Adamina_2:
-	msgbox Zone10A_Text_NoChance
-	setflag FLAG_ADAMINA_INTRO
-	goto Zone10A_EventScript_Adamina_1
+text Zone10A_Text_NoChance {
+	"{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Nope.\n"
+	"No chance you're getting in.\p"
+	"Zero.\n"
+	"Zip.\l"
+	"Zilch.\l"
+	"...\l"
+	"...\l"
+	"...\l"
+	"Fine."
+}
 
-Zone10A_EventScript_Adamina_5:
-	release
-	end
+text Zone10A_Text_Explain {
+	"If you really want to get in,\n"
+	"you have to earn your place.\p"
+	"In the desert, there are 3 hidden\n"
+	"Yellow Shards.\p"
+	"Find them and bring them to me.\n"
+	"Then we'll see."
+}
 
-Zone10A_EventScript_Adamina_12:
-	trainerbattle_no_intro TRAINER_LEVIATHAN5, Zone10A_Text_Leviathan5Defeat
-	goto Zone10A_EventScript_Adamina_11
+text Zone10A_Text_FoundEm {
+	"{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, wow, you actually\n"
+	"found them? What a surprise."
+}
 
+text Zone10A_Text_CrushYou {
+	"{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, were you expecting me\n"
+	"to let you in just because you\l"
+	"found some scraps? No way.\p"
+	"You'll have to beat me in a battle\n"
+	"to earn my respect!\l"
+	"I'm gonna crush you!$"
+}
 
+text Zone10A_Text_Leviathan5Defeat {
+	"Adamina: Fine. A win is a win."
+}
+
+text Zone10A_Text_HeadInside {
+	"{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Go on, head inside.\n"
+	"I've got nothing for you.$"
+}
+
+raw `
 Zone10A_EventScript_Pearlie::
 	trainerbattle_single TRAINER_PEARLIE, Zone10A_Text_PearlieIntro, Zone10A_Text_PearlieDefeat
 	msgbox Zone10A_Text_PearliePostBattle, MSGBOX_AUTOCLOSE
@@ -152,41 +189,4 @@ Zone10A_EventScript_SuperPotion::
 Zone10A_EventScript_SuperRepel::
 	finditem ITEM_SUPER_REPEL
 	end
-
-Zone10A_Text_NoChance::
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Nope.\n"
-	.string "No chance you're getting in.\p"
-	.string "Zero.\n"
-	.string "Zip.\l"
-	.string "Zilch.\l"
-	.string "...\l"
-	.string "...\l"
-	.string "...\l"
-	.string "Fine.$"
-
-Zone10A_Text_Explain::
-	.string "If you really want to get in,\n"
-	.string "you have to earn your place.\p"
-	.string "In the desert, there are 3 hidden\n"
-	.string "Yellow Shards.\p"
-	.string "Find them and bring them to me.\n"
-	.string "Then we'll see.$"
-
-Zone10A_Text_FoundEm::
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, wow, you actually\n"
-	.string "found them? What a surprise.$"
-
-Zone10A_Text_CrushYou::
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Oh, were you expecting me\n"
-	.string "to let you in just because you\l"
-	.string "found some scraps? No way.\p"
-	.string "You'll have to beat me in a battle\n"
-	.string "to earn my respect!\l"
-	.string "I'm gonna crush you!$"
-
-Zone10A_Text_Leviathan5Defeat::
-	.string "Adamina: Fine. A win is a win.$"
-
-Zone10A_Text_HeadInside::
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Go on, head inside.\n"
-	.string "I've got nothing for you.$"
+`
