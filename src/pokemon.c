@@ -7765,7 +7765,9 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 break;
             case EVO_LEVEL_ATK_EQ_DEF:
                 if (gEvolutionTable[species][i].param <= level)
-                    if (GetMonData(mon, MON_DATA_ATK, 0) == GetMonData(mon, MON_DATA_DEF, 0))
+                    if ((GetMonData(mon, MON_DATA_ATK, 0) == GetMonData(mon, MON_DATA_DEF, 0))
+                    || (GetMonData(mon, MON_DATA_ATK, 0) + 1 == GetMonData(mon, MON_DATA_DEF, 0))
+                    || (GetMonData(mon, MON_DATA_ATK, 0) - 1 == GetMonData(mon, MON_DATA_DEF, 0)))
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_ATK_LT_DEF:
