@@ -1,0 +1,260 @@
+mapscripts Zone8D_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE_8_STATE, 0: Zone8D_EventScript_WallyIntro
+	]
+}
+
+script Zone8D_EventScript_WallyIntro {
+	lockall
+	applymovement(4, Common_Movement_FaceDown)
+	waitmovement(0)
+	applymovement(4, Common_Movement_ExclamationMark)
+	playse(SE_PIN)
+	waitmovement(0)
+	waitse
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Um… E-excuse me…\pI'm Wally… and I…"))
+	applymovement(4, Common_Movement_FaceUp)
+	waitmovement(0)
+	special(SpawnCameraObject)
+	applymovement(OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoUp)
+	waitmovement(0)
+	special(RemoveCameraObject)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I need to pass through, b-but they've been blocking the passage.\pI tried to beat them in b-battle, but I wasn't strong enough to beat even one of them."))
+	setvar(VAR_ZONE_8_STATE, 1)
+	special(SpawnCameraObject)
+	applymovement(OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoDown)
+	waitmovement(0)
+	special(RemoveCameraObject)
+	applymovement(4, Common_Movement_FaceDown)
+	waitmovement(0)
+	msgbox(Zone8D_Text_Wally_YesNo, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		goto(Zone8D_EventScript_InitiateLeviathan8)
+	}
+	msgbox(Zone8D_Text_Wally_Preparations)
+	releaseall
+	end
+}
+
+script Zone8D_EventScript_WallyYesNo {
+	lock
+	faceplayer
+	msgbox(Zone8D_Text_Wally_YesNo, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		goto(Zone8D_EventScript_InitiateLeviathan8)
+	}
+	msgbox(Zone8D_Text_Wally_Preparations)
+	release
+	end
+
+}
+
+text Zone8D_Text_Wally_YesNo {
+	format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Will you join forces with me to defeat them?")
+}
+
+text Zone8D_Text_Wally_Preparations {
+	format("You… must have preparations to do.\pI-I'll just be waiting here, for you. Let me know when you're ready.")
+}
+
+script Zone8D_EventScript_GoWithWally {
+	lockall
+	msgbox(format("You don't want to battle without Wally. His aid will be invaluable."))
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script Zone8D_EventScript_InitiateLeviathan8 {
+	msgbox(format("Thank you. What's your name?"))
+	delay(48)
+	msgbox(format("{PLAYER}. I'll remember that."))
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 6) {
+		applymovement(4, Common_Movement_WalkUp)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(4, Common_Movement_WalkUp)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 7) {
+		if (var(VAR_TEMP_1) == 10) {
+			applymovement(4, Common_Movement_WalkUp)
+			applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+			waitmovement(0)
+			applymovement(4, Common_Movement_WalkUp)
+			applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+			waitmovement(0)
+		} else {
+			applymovement(4, Common_Movement_WalkUp)
+			applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+			waitmovement(0)
+			applymovement(4, Common_Movement_WalkUp)
+			applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+			waitmovement(0)
+		}
+	} else {
+		applymovement(4, Common_Movement_WalkUp)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+		applymovement(4, Common_Movement_WalkUp)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+		waitmovement(0)
+	}
+	applymovement(4, Zone8D_Movement_Wally_WalkUp)
+	applymovement(OBJ_EVENT_ID_PLAYER, Zone8D_Movement_Player_WalkUp)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: E-excuse me! I would like to pass through!"))
+	applymovement(2, Common_Movement_ExclamationMark)
+	applymovement(3, Common_Movement_ExclamationMark)
+	playse(SE_PIN)
+	waitmovement(0)
+	fadeoutbgm(1)
+	applymovement(2, Common_Movement_FaceDown)
+	applymovement(3, Common_Movement_FaceDown)
+	waitmovement(0)
+	delay(96)
+	applymovement(2, Common_Movement_FaceRight)
+	applymovement(3, Common_Movement_FaceLeft)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: It is back again.\nWith a friend this time."))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: This should be... entertaining.\pDeal with them."))
+	applymovement(3, Common_Movement_FaceDown)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: At once."))
+	applymovement(2, Common_Movement_FaceUp)
+	waitmovement(0)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	while {
+		msgbox(gText_PleasePick3Mons)
+		special(SavePlayerParty)
+		fadescreen(FADE_TO_BLACK)
+		special(ChooseHalfPartyForBattle)
+		waitstate
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+		if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, "…")
+			if (var(VAR_RESULT) != 0) {
+				break
+			}
+			special(LoadPlayerParty)
+		} else {
+			trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, "…")
+			if (var(VAR_RESULT) != 0) {
+				break
+			}
+			special(LoadPlayerParty)
+		}
+	}
+	special(ReducePlayerPartyToSelectedMons)
+	frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
+	setvar(VAR_0x8004, SPECIAL_BATTLE_MULTI)
+	setvar(VAR_0x8005, MULTI_BATTLE_2_VS_1 | MULTI_BATTLE_CHOOSE_MONS)
+	setvar(VAR_0x8006, TRAINER_ZONE8D_WALLY)
+	setvar(VAR_0x8007, TRAINER_BACK_PIC_WALLY)
+	special(DoSpecialTrainerBattle)
+	waitstate
+	frontier_saveparty
+	special(LoadPlayerParty)
+	if (var(VAR_RESULT) != 1) {
+		fadescreen(FADE_TO_BLACK)
+		special(SetCB2WhiteOut)
+		waitstate
+	}
+	applymovement(3, Common_Movement_FaceLeft)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: I was defeated…"))
+	applymovement(2, Common_Movement_FaceRight)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. It's done."))
+	fadescreenswapbuffers(FADE_TO_BLACK)
+	playmoncry(SPECIES_PORYGON, 2)
+	delay(40)
+	waitmoncry
+	removeobject(1)
+	removeobject(2)
+	removeobject(3)
+	setflag(FLAG_BEAT_LEVIATHAN_8)
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
+	applymovement(4, Common_Movement_WalkUp)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Where did they go?"))
+	waitmovement(0)
+	applymovement(4, Common_Movement_WalkDown)
+	waitmovement(0)
+	applymovement(4, Common_Movement_FaceRight)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I d-don't understand.\pHow could they have just vanished?"))
+	applymovement(4, Common_Movement_FaceUp)
+	waitmovement(0)
+	delay(32)
+	applymovement(4, Common_Movement_FaceRight)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Did you see that Pokémon with them?\pI'm not sure what that was about, either."))
+	delay(96)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Um… anyways, thanks for your help, {PLAYER}.\pI um… I want you to have this."))
+	giveitem(ITEM_EVIOLITE, 1)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: It's not… the flashiest item, but I'm sure it'll be useful."))
+	applymovement(4, Common_Movement_WalkUp)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(4, Common_Movement_WalkUp)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	waitmovement(0)
+	applymovement(4, Common_Movement_FaceDown)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I hope we meet again.\pGoodbye, {PLAYER}."))
+	applymovement(4, Common_Movement_WalkUp)
+	waitmovement(0)
+	setflag(FLAG_HIDE_ZONE8D_WALLY)
+	removeobject(4)
+	setvar(VAR_ZONE_8_STATE, 2)
+	releaseall
+	end
+}
+
+script Zone8D_EventScript_Exit {
+	lockall
+    if (var(VAR_ZONE) > 8) {
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 43, 32)
+		waitstate
+    } else {
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
+			(!defeated(TRAINER_MILLIE) ||
+			!defeated(TRAINER_PAIGE) ||
+			!defeated(TRAINER_EMILIANO) ||
+			!defeated(TRAINER_MARCUS) ||
+			!defeated(TRAINER_JAYDEN) ||
+			!defeated(TRAINER_NEIL))) {
+			goto(EventScript_BrutalExitNotSatisfied)
+		}
+        warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
+    }
+    releaseall
+    end
+}
+
+movement Zone8D_Movement_Camera_GoUp {
+	walk_up * 5
+}
+
+movement Zone8D_Movement_Camera_GoDown {
+	walk_down * 5
+}
+
+movement Zone8D_Movement_Wally_WalkUp {
+	walk_up * 3
+}
+movement Zone8D_Movement_Player_WalkUp {
+	walk_up * 3
+	walk_right
+	walk_up
+}
