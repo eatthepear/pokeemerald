@@ -18,8 +18,8 @@
   ],
   "warp_events": [
     {
-      "x": 26,
-      "y": 21,
+      "x": 3,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_ZONE23SANCTUARY",
       "dest_warp_id": 0
