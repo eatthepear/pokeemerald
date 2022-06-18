@@ -438,7 +438,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_COLRESS                 0x1124
-#define OBJ_EVENT_PAL_TAG_SHADOW                  0x1125
+#define OBJ_EVENT_PAL_TAG_MIRAGE                  0x1125
 #define OBJ_EVENT_PAL_TAG_RANGER                  0x1126
 #define OBJ_EVENT_PAL_TAG_REGIDRAGO               0x1127
 #define OBJ_EVENT_PAL_TAG_REGIELEKI               0x1128
@@ -503,7 +503,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
     {gObjectEventPal_Colress,               OBJ_EVENT_PAL_TAG_COLRESS},
-    {gObjectEventPal_Shadow,                OBJ_EVENT_PAL_TAG_SHADOW},
+    {gObjectEventPal_Mirage,                OBJ_EVENT_PAL_TAG_MIRAGE},
     {gObjectEventPal_Ranger,                OBJ_EVENT_PAL_TAG_RANGER},
     {gObjectEventPal_Regidrago,             OBJ_EVENT_PAL_TAG_REGIDRAGO},
     {gObjectEventPal_Regieleki,             OBJ_EVENT_PAL_TAG_REGIELEKI},
@@ -516,7 +516,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RunningTriathleteF,    OBJ_EVENT_PAL_TAG_RUNNING_TRIATHLETE_F},
     {gObjectEventPal_PsychicF,              OBJ_EVENT_PAL_TAG_PSYCHIC_F},
     {gObjectEventPal_DragonTamer,           OBJ_EVENT_PAL_TAG_DRAGON_TAMER},
-    {gObjectEventPal_Azumarill,             OBJ_EVENT_PAL_TAG_PORYGON},
+    {gObjectEventPal_Porygon,               OBJ_EVENT_PAL_TAG_PORYGON},
     {gObjectEventPal_SchoolKidM,            OBJ_EVENT_PAL_TAG_SCHOOL_KID_M},
     {gObjectEventPal_SchoolKidF,            OBJ_EVENT_PAL_TAG_SCHOOL_KID_F},
     {gObjectEventPal_FairyTaleGirl,         OBJ_EVENT_PAL_TAG_FAIRY_TALE_GIRL},

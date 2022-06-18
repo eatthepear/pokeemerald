@@ -1923,16 +1923,16 @@ static const struct SpriteFrameImage sPicTable_Pikachu[] = {
     overworld_frame(gObjectEventPic_Pikachu, 2, 2, 2),
 };
 
-static const struct SpriteFrameImage sPicTable_Azumarill[] = {
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 2),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 2),
-    overworld_frame(gObjectEventPic_Azumarill, 4, 4, 2),
+static const struct SpriteFrameImage sPicTable_Porygon[] = {
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Porygon, 4, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_Wingull[] = {
@@ -2135,16 +2135,16 @@ static const struct SpriteFrameImage sPicTable_Anabel[] = {
     overworld_frame(gObjectEventPic_Anabel, 2, 4, 8),
 };
 
-static const struct SpriteFrameImage sPicTable_Tucker[] = {
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Tucker, 2, 4, 8),
+static const struct SpriteFrameImage sPicTable_Mirage[] = {
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Mirage, 2, 4, 8),
 };
 const struct SpriteFrameImage sPicTable_Colress[] = {
     overworld_frame(gObjectEventPic_Colress, 2, 4, 0),
