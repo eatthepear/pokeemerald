@@ -162,6 +162,9 @@ script Zone5A_EventScript_Breeder {
 			giveitem(ITEM_FIRE_GEM)
 	}
 	msgbox(format("This way, your Eevee can have a favorable type matchup against types your starter is weak to!"))
+	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
+		msgbox(format("If you wanted to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"))
+	}
 	msgbox(format("Well, I'm off to help other trainers.\pSee you!"))
 	fadescreen(FADE_TO_BLACK)
 	removeobject(11)

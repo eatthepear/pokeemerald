@@ -135,7 +135,9 @@ Zone5A_EventScript_Breeder::
 	case 2, Zone5A_EventScript_Breeder_8
 Zone5A_EventScript_Breeder_4:
 	msgbox Zone5A_EventScript_Breeder_Text_5
-	msgbox Zone5A_EventScript_Breeder_Text_6
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_Breeder_10
+Zone5A_EventScript_Breeder_9:
+	msgbox Zone5A_EventScript_Breeder_Text_7
 	fadescreen FADE_TO_BLACK
 	removeobject 11
 	setflag FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM
@@ -165,6 +167,10 @@ Zone5A_EventScript_Breeder_8:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_FIRE_GEM
 	goto Zone5A_EventScript_Breeder_4
+
+Zone5A_EventScript_Breeder_10:
+	msgbox Zone5A_EventScript_Breeder_Text_6
+	goto Zone5A_EventScript_Breeder_9
 
 
 Zone5A_EventScript_AnneAndJune::
@@ -377,6 +383,12 @@ Zone5A_EventScript_Breeder_Text_5:
 	.string "your starter is weak to!$"
 
 Zone5A_EventScript_Breeder_Text_6:
+	.string "If you wanted to evolve your Eevee into\n"
+	.string "a different evolution, you can always\l"
+	.string "find Gems by smashing rocks with a\l"
+	.string "Sledgehammer!$"
+
+Zone5A_EventScript_Breeder_Text_7:
 	.string "Well, I'm off to help other trainers.\p"
 	.string "See you!$"
 
