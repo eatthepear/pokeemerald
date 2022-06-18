@@ -407,3 +407,4 @@ const u32 gObjectEventPic_FairyTaleGirl[] = INCBIN_U32("graphics/object_events/p
 const u16 gObjectEventPal_FairyTaleGirl[] = INCBIN_U16("graphics/object_events/pics/people/fairy_tale_girl.gbapal");
 const u32 gObjectEventPic_Socialite[] = INCBIN_U32("graphics/object_events/pics/people/socialite.4bpp");
 const u16 gObjectEventPal_Socialite[] = INCBIN_U16("graphics/object_events/pics/people/socialite.gbapal");
+const u16 gObjectEventPal_Lady[] = INCBIN_U16("graphics/object_events/pics/people/woman_2.gbapal");
