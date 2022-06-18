@@ -504,7 +504,6 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     }
 };
 
-
 static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle, Brutal
     {
     .ball = ITEM_LUXURY_BALL,
@@ -990,20 +989,20 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in
     .lvl = 20,
     .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_HITMONTOP,
+    .ability = ABILITY_SLOT_1, //Receiver
+    .species = SPECIES_PASSIMIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ROLLING_KICK, MOVE_FAKE_OUT, MOVE_AERIAL_ACE, MOVE_PURSUIT}
+    .moves = {MOVE_LOW_SWEEP, MOVE_ROCK_TOMB, MOVE_POWER_UP_PUNCH, MOVE_FACADE}
     },
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_CALM,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Quick Draw
-    .species = SPECIES_SLOWBRO_GALARIAN,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_QWILFISH,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SHELL_SIDE_ARM, MOVE_CONFUSION, MOVE_WATER_PULSE, MOVE_HIDDEN_POWER} // HP Ground
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_SLEEP_TALK}
     },
     {
     .iv = 31,
@@ -1013,21 +1012,31 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in
     .ability = ABILITY_SLOT_2, //Rough Skin
     .species = SPECIES_DRUDDIGON,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_GLARE}
+    .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_FIRE_FANG}
     },
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
     .species = SPECIES_SABLEYE, //Starts with aura +1 all stats
     .heldItem = ITEM_SABLENITE,
-    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_SLEEP_TALK}
+    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_HIDDEN_POWER} // HP Poison
     }
 };
 
 static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
+    {
+    .iv = 20,
+    .lvl = 20,
+    .nature = NATURE_BOLD,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Trace
+    .species = SPECIES_KIRLIA,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_GROWL}
+    },
     {
     .iv = 20,
     .lvl = 20,
@@ -1047,16 +1056,6 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .species = SPECIES_AZUMARILL,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_AQUA_JET, MOVE_AQUA_TAIL, MOVE_COVET, MOVE_CHARM}
-    },
-    {
-    .iv = 20,
-    .lvl = 20,
-    .nature = NATURE_BOLD,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Trace
-    .species = SPECIES_KIRLIA,
-    .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_GROWL}
     }
 };
 
@@ -1262,7 +1261,7 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     .ability = ABILITY_SLOT_1, //Sturdy
     .gender = TRAINER_MON_MALE,
     .species = SPECIES_DWEBBLE,
-    .moves = {MOVE_ROCK_BLAST, MOVE_SKITTER_SMACK, MOVE_FEINT_ATTACK, MOVE_STEALTH_ROCK}
+    .moves = {MOVE_ROCK_BLAST, MOVE_BUG_BITE, MOVE_AERIAL_ACE, MOVE_STEALTH_ROCK}
     },
     {
     .iv = 31,
@@ -1276,11 +1275,12 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_JOLLY,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Defiant
-    .species = SPECIES_PASSIMIAN,
-    .moves = {MOVE_BRICK_BREAK, MOVE_ROCK_TOMB, MOVE_RETALIATE, MOVE_SLEEP_TALK}
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Sturdy
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SUDOWOODO,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_LOW_KICK}
     },
     {
     .iv = 31,
@@ -1289,17 +1289,27 @@ static const struct TrainerMon sParty_Adamina[] = {//Leviathan 5, Battle starts 
     .ability = ABILITY_SLOT_2, //Water Absorb
     .gender = TRAINER_MON_MALE,
     .species = SPECIES_QUAGSIRE,
-    .moves = {MOVE_WATER_PULSE, MOVE_MUD_BOMB, MOVE_YAWN, MOVE_RECOVER}
+    .moves = {MOVE_WATER_PULSE, MOVE_MUD_BOMB, MOVE_ICY_WIND, MOVE_RECOVER}
     },
     {
     .iv = 31,
     .lvl = 22,
-    .nature = NATURE_BRAVE,
-    .ability = ABILITY_SLOT_1, //Sturdy
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Sand Rush
     .gender = TRAINER_MON_MALE,
-    .species = SPECIES_SUDOWOODO,
+    .species = SPECIES_SANDSLASH,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_CURSE}
+    .moves = {MOVE_BULLDOZE, MOVE_ROCK_TOMB, MOVE_AERIAL_ACE, MOVE_HONE_CLAWS}
+    },
+    {
+    .iv = 31,
+    .lvl = 22,
+    .nature = NATURE_IMPISH,
+    .ability = ABILITY_HIDDEN, //Clear Body
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_DURALUDON,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_DRAGON_TAIL, MOVE_METAL_CLAW, MOVE_HONE_CLAWS, MOVE_REST}
     }
 };
 

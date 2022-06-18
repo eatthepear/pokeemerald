@@ -1400,6 +1400,7 @@ static const u32 sTutorLearnsets[] =
     [SPECIES_QWILFISH]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FLIP_TURN)
                                             | TUTOR(MOVE_PAIN_SPLIT)
                                             | TUTOR(MOVE_BOUNCE)
                                             | TUTOR(MOVE_SWORDS_DANCE)),

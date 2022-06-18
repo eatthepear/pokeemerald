@@ -20016,6 +20016,7 @@ static const u8 sPassimianTMHMLearnset[] =
     // TMHM(TM00_GYRO_BALL),
     // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_BULLDOZE),
+    TMHM(TM09_POWER_UP_PUNCH),
     0xFF,
 };
 
