@@ -129,15 +129,14 @@ Zone5A_EventScript_Breeder::
 	faceplayer
 	goto_if_unset FLAG_RECEIVED_ZONE0C_EEVEE, Zone5A_EventScript_Breeder_2
 	msgbox Zone5A_EventScript_Breeder_Text_1
-	switch VAR_STARTER_MON
-	case 0, Zone5A_EventScript_Breeder_6
-	case 1, Zone5A_EventScript_Breeder_7
-	case 2, Zone5A_EventScript_Breeder_8
-Zone5A_EventScript_Breeder_4:
-	msgbox Zone5A_EventScript_Breeder_Text_5
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_Breeder_10
-Zone5A_EventScript_Breeder_9:
-	msgbox Zone5A_EventScript_Breeder_Text_7
+Zone5A_EventScript_Breeder_5:
+	compare VAR_TEMP_0, 1
+	goto_if_ne Zone5A_EventScript_Breeder_6
+	msgbox Zone5A_EventScript_Breeder_Text_11
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_Breeder_9
+Zone5A_EventScript_Breeder_8:
+	delay 16
+	msgbox Zone5A_EventScript_Breeder_Text_13
 	fadescreen FADE_TO_BLACK
 	removeobject 11
 	setflag FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM
@@ -151,26 +150,118 @@ Zone5A_EventScript_Breeder_2:
 	end
 
 Zone5A_EventScript_Breeder_6:
-	msgbox Zone5A_EventScript_Breeder_Text_2
+	msgbox Zone5A_EventScript_Breeder_Text_2, MSGBOX_DEFAULT
+	scrollingmultichoice 1, 0, 0, 5, 0
+	switch VAR_RESULT
+	case 0, Zone5A_EventScript_Breeder_12
+	case 1, Zone5A_EventScript_Breeder_13
+	case 2, Zone5A_EventScript_Breeder_14
+	case 3, Zone5A_EventScript_Breeder_15
+	case 4, Zone5A_EventScript_Breeder_16
+	case 5, Zone5A_EventScript_Breeder_17
+	case 6, Zone5A_EventScript_Breeder_18
+	case 7, Zone5A_EventScript_Breeder_19
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_9:
+	msgbox Zone5A_EventScript_Breeder_Text_12
+	goto Zone5A_EventScript_Breeder_8
+
+Zone5A_EventScript_Breeder_12:
+	msgbox Zone5A_EventScript_Breeder_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_20
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_13:
+	msgbox Zone5A_EventScript_Breeder_Text_4, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_22
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_14:
+	msgbox Zone5A_EventScript_Breeder_Text_5, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_24
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_15:
+	msgbox Zone5A_EventScript_Breeder_Text_6, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_26
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_16:
+	msgbox Zone5A_EventScript_Breeder_Text_7, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_28
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_17:
+	msgbox Zone5A_EventScript_Breeder_Text_8, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_30
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_18:
+	msgbox Zone5A_EventScript_Breeder_Text_9, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_32
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_19:
+	msgbox Zone5A_EventScript_Breeder_Text_10, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone5A_EventScript_Breeder_34
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_20:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_WATER_GEM
-	goto Zone5A_EventScript_Breeder_4
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
 
-Zone5A_EventScript_Breeder_7:
-	msgbox Zone5A_EventScript_Breeder_Text_3
+Zone5A_EventScript_Breeder_22:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_ELECTRIC_GEM
-	goto Zone5A_EventScript_Breeder_4
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
 
-Zone5A_EventScript_Breeder_8:
-	msgbox Zone5A_EventScript_Breeder_Text_4
+Zone5A_EventScript_Breeder_24:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_FIRE_GEM
-	goto Zone5A_EventScript_Breeder_4
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
 
-Zone5A_EventScript_Breeder_10:
-	msgbox Zone5A_EventScript_Breeder_Text_6
-	goto Zone5A_EventScript_Breeder_9
+Zone5A_EventScript_Breeder_26:
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_PSYCHIC_GEM
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_28:
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_DARK_GEM
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_30:
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_GRASS_GEM
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_32:
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_ICE_GEM
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
+
+Zone5A_EventScript_Breeder_34:
+	msgbox Zone5A_Text_HereGem
+	giveitem ITEM_FAIRY_GEM
+	setvar VAR_TEMP_0, 1
+	goto Zone5A_EventScript_Breeder_5
 
 
 Zone5A_EventScript_AnneAndJune::
@@ -359,36 +450,47 @@ Zone5A_EventScript_Breeder_Text_1:
 	.string "I work at the Pokémon Day-Care.\p"
 	.string "We've been studying how Eevee evolves\n"
 	.string "differently based on which elemental\l"
-	.string "Gem it holds when it levels up.\p"
-	.string "Say, what type was your starter?$"
+	.string "Gem it holds when it levels up.$"
 
 Zone5A_EventScript_Breeder_Text_2:
-	.string "Oh, it seems like it was a Grass-type\n"
-	.string "starter!\p"
-	.string "Meaning it's weak to Fire-types!$"
+	.string "What's your favorite evolution of\n"
+	.string "Eevee?$"
 
 Zone5A_EventScript_Breeder_Text_3:
-	.string "Oh, it seems like it was a Fire-type\n"
-	.string "starter!\p"
-	.string "Meaning it's weak to Water-types!$"
+	.string "Oh, so you like Vaporeon?$"
 
 Zone5A_EventScript_Breeder_Text_4:
-	.string "Oh, it seems like it was a Water-type\n"
-	.string "starter!\p"
-	.string "Meaning it's weak to Grass-types!$"
+	.string "Oh, so you like Jolteon?$"
 
 Zone5A_EventScript_Breeder_Text_5:
-	.string "This way, your Eevee can have a\n"
-	.string "favorable type matchup against types\l"
-	.string "your starter is weak to!$"
+	.string "Oh, so you like Flareon?$"
 
 Zone5A_EventScript_Breeder_Text_6:
-	.string "If you wanted to evolve your Eevee into\n"
-	.string "a different evolution, you can always\l"
+	.string "Oh, so you like Espeon?$"
+
+Zone5A_EventScript_Breeder_Text_7:
+	.string "Oh, so you like Umbreon?$"
+
+Zone5A_EventScript_Breeder_Text_8:
+	.string "Oh, so you like Leafeon?$"
+
+Zone5A_EventScript_Breeder_Text_9:
+	.string "Oh, so you like Glaceon?$"
+
+Zone5A_EventScript_Breeder_Text_10:
+	.string "Oh, so you like Sylveon?$"
+
+Zone5A_EventScript_Breeder_Text_11:
+	.string "I hope you can put that Gem to good\n"
+	.string "use.$"
+
+Zone5A_EventScript_Breeder_Text_12:
+	.string "If you want to evolve your Eevee into a\n"
+	.string "different evolution, you can always\l"
 	.string "find Gems by smashing rocks with a\l"
 	.string "Sledgehammer!$"
 
-Zone5A_EventScript_Breeder_Text_7:
+Zone5A_EventScript_Breeder_Text_13:
 	.string "Well, I'm off to help other trainers.\p"
 	.string "See you!$"
 

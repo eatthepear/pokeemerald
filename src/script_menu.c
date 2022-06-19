@@ -821,14 +821,14 @@ static const u8 sText_Grookey[] = _("Grookey");
 static const u8 sText_Scorbunny[] = _("Scorbunny");
 static const u8 sText_Sobble[] = _("Sobble");
 static const u8 sText_Random[] = _("Random");
-static const u8 sText_FireGem[] = _("Fire Gem");
-static const u8 sText_WaterGem[] = _("Water Gem");
-static const u8 sText_ElectricGem[] = _("Electric Gem");
-static const u8 sText_GrassGem[] = _("Grass Gem");
-static const u8 sText_DarkGem[] = _("Dark Gem");
-static const u8 sText_PsychicGem[] = _("Psychic Gem");
-static const u8 sText_FairyGem[] = _("Fairy Gem");
-static const u8 sText_IceGem[] = _("Ice Gem");
+static const u8 sText_Vaporeon[] = _("Vaporeon");
+static const u8 sText_Jolteon[] = _("Jolteon");
+static const u8 sText_Flareon[] = _("Flareon");
+static const u8 sText_Espeon[] = _("Espeon");
+static const u8 sText_Umbreon[] = _("Umbreon");
+static const u8 sText_Leafeon[] = _("Leafeon");
+static const u8 sText_Glaceon[] = _("Glaceon");
+static const u8 sText_Sylveon[] = _("Sylveon");
 static const u8 sText_MoveTutorIcyWind[] = _("Icy Wind");
 static const u8 sText_MoveTutorGrassKnot[] = _("Grass Knot");
 static const u8 sText_MoveTutorLowKick[] = _("Low Kick");
@@ -927,14 +927,14 @@ static const struct ListMenuItem Starters[] =
 
 static const struct ListMenuItem EvolutionaryGems[] =
 {
-    {sText_FireGem, 0},
-    {sText_WaterGem, 1},
-    {sText_ElectricGem, 2},
-    {sText_GrassGem, 3},
-    {sText_DarkGem, 4},
-    {sText_PsychicGem, 5},
-    {sText_FairyGem, 6},
-    {sText_IceGem, 7},
+    {sText_Vaporeon, 0},
+    {sText_Jolteon, 1},
+    {sText_Flareon, 2},
+    {sText_Espeon, 3},
+    {sText_Umbreon, 4},
+    {sText_Leafeon, 5},
+    {sText_Glaceon, 6},
+    {sText_Sylveon, 7},
 };
 
 static const struct ListMenuItem MoveTutorLevel1[] =

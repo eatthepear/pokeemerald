@@ -146,25 +146,74 @@ script Zone5A_EventScript_Breeder {
 		release
 		end
 	}
-	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up.\pSay, what type was your starter?"))
-	switch (var(VAR_STARTER_MON)) {
-		case 0:
-			msgbox(format("Oh, it seems like it was a Grass-type starter!\pMeaning it's weak to Fire-types!"))
-			msgbox(Zone5A_Text_HereGem)
-			giveitem(ITEM_WATER_GEM)
-		case 1:
-			msgbox(format("Oh, it seems like it was a Fire-type starter!\pMeaning it's weak to Water-types!"))
-			msgbox(Zone5A_Text_HereGem)
-			giveitem(ITEM_ELECTRIC_GEM)
-		case 2:
-			msgbox(format("Oh, it seems like it was a Water-type starter!\pMeaning it's weak to Grass-types!"))
-			msgbox(Zone5A_Text_HereGem)
-			giveitem(ITEM_FIRE_GEM)
+	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up."))
+	while (var(VAR_TEMP_0) != 1) {
+		msgbox(format("What's your favorite evolution of Eevee?"), MSGBOX_DEFAULT)
+		scrollingmultichoice(1, 0, 0, 5, 0)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				msgbox(format("Oh, so you like Vaporeon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_WATER_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 1:
+				msgbox(format("Oh, so you like Jolteon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_ELECTRIC_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 2:
+				msgbox(format("Oh, so you like Flareon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_FIRE_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 3:
+				msgbox(format("Oh, so you like Espeon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_PSYCHIC_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 4:
+				msgbox(format("Oh, so you like Umbreon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_DARK_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 5:
+				msgbox(format("Oh, so you like Leafeon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_GRASS_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 6:
+				msgbox(format("Oh, so you like Glaceon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_ICE_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 7:
+				msgbox(format("Oh, so you like Sylveon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone5A_Text_HereGem)
+					giveitem(ITEM_FAIRY_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+		}
 	}
-	msgbox(format("This way, your Eevee can have a favorable type matchup against types your starter is weak to!"))
+	msgbox(format("I hope you can put that Gem to good use."))
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
-		msgbox(format("If you wanted to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"))
+		msgbox(format("If you want to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"))
 	}
+	delay(16)
 	msgbox(format("Well, I'm off to help other trainers.\pSee you!"))
 	fadescreen(FADE_TO_BLACK)
 	removeobject(11)
