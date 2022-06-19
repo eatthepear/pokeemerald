@@ -346,6 +346,16 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_SERIOUS,
+    .ability = ABILITY_HIDDEN, //Aftermath
+    .species = SPECIES_VOLTORB,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_LEAFAGE, MOVE_THUNDER_SHOCK}
+    },
+    {
+    .ball = ITEM_POKE_BALL,
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_SERIOUS,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Thick Fat
     .species = SPECIES_SPHEAL,
