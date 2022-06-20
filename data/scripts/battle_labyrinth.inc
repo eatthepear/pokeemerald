@@ -1629,16 +1629,12 @@ Zone3A_Shop_TMShop:
 
 	.align 2
 Zone6A_Shop_TMShop:
-	.2byte ITEM_TM01
 	.2byte ITEM_TM05
 	.2byte ITEM_TM06
 	.2byte ITEM_NONE
 
 	.align 2
 Zone7A_Shop_TMShop:
-	.2byte ITEM_TM01
-	.2byte ITEM_TM05
-	.2byte ITEM_TM06
 	.2byte ITEM_TM09
 	.2byte ITEM_TM10
 	.2byte ITEM_TM11
@@ -3660,8 +3656,10 @@ EventScript_Max_Text_1:
 	.string "special Technical Machines for you to\l"
 	.string "use!\p"
 	.string "I travel a lot, never going to the same\n"
-	.string "place again, but I'll always have more\l"
-	.string "TMs to sell by the next time you see me!$"
+	.string "place again.\p"
+	.string "I'll have different wares every time you\n"
+	.string "see me, so be sure to buy whatever TMs\l"
+	.string "you deem important!$"
 
 EventScript_Max_Text_2:
 	.string "{COLOR BLUE}Max{COLOR DARK_GRAY}: Hi {PLAYER}! Long time no see!\p"

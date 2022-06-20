@@ -975,7 +975,7 @@ script EventScript_Max {
 	faceplayer
 	if (flag(FLAG_MAX_INTRO) == false) {
 		msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: By my calculations, you should be {PLAYER}!\pHi, {PLAYER}! My name is {COLOR BLUE}Max{COLOR DARK_GRAY}."))
-		msgbox(format("{COLOR BLUE}Max{COLOR DARK_GRAY}: I am a traveling merchant, selling special Technical Machines for you to use!\pI travel a lot, never going to the same place again, but I'll always have more TMs to sell by the next time you see me!"))
+		msgbox(format("{COLOR BLUE}Max{COLOR DARK_GRAY}: I am a traveling merchant, selling special Technical Machines for you to use!\pI travel a lot, never going to the same place again.\pI'll have different wares every time you see me, so be sure to buy whatever TMs you deem important!"))
 		setflag(FLAG_MAX_INTRO)
 	}
 	message(format("{COLOR BLUE}Max{COLOR DARK_GRAY}: Hi {PLAYER}! Long time no see!\pWelcome to my TM shop!"))
@@ -997,15 +997,11 @@ mart Zone3A_Shop_TMShop {
 }
 
 mart Zone6A_Shop_TMShop {
-	ITEM_TM01
 	ITEM_TM05
 	ITEM_TM06
 }
 
 mart Zone7A_Shop_TMShop {
-	ITEM_TM01
-	ITEM_TM05
-	ITEM_TM06
 	ITEM_TM09
 	ITEM_TM10
 	ITEM_TM11
