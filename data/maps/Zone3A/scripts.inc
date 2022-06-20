@@ -20,6 +20,7 @@ Zone3A_EventScript_Exit_2:
 	goto Zone3A_EventScript_Exit_1
 
 Zone3A_EventScript_Exit_5:
+	setflag FLAG_HIDE_MAX_1
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 23, 32
 	waitstate

@@ -254,6 +254,7 @@ Zone8D_EventScript_Exit_1:
 	end
 
 Zone8D_EventScript_Exit_2:
+	setflag FLAG_HIDE_MAX_3
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 43, 32
 	waitstate

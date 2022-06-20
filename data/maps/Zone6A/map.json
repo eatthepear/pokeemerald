@@ -117,6 +117,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone6A_EventScript_ItemNestBall",
       "flag": "FLAG_ITEM_ZONE6A_NEST_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 48,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Max",
+      "flag": "FLAG_HIDE_MAX_2"
     }
   ],
   "warp_events": [

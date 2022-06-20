@@ -2,29 +2,6 @@ Zone7A_MapScripts::
 	.byte 0
 
 
-Zone7A_EventScript_TMShop::
-	lock
-	faceplayer
-	message Zone7A_EventScript_TMShop_Text_0
-	waitmessage
-	pokemart Shop_TMShop_Zone7A
-	msgbox Zone7A_EventScript_TMShop_Text_1
-	release
-	return
-
-
-	.align 2
-Shop_TMShop_Zone7A:
-	.2byte ITEM_TM09
-	.2byte ITEM_TM10
-	.2byte ITEM_TM11
-	.2byte ITEM_TM12
-	.2byte ITEM_TM13
-	.2byte ITEM_TM14
-	.2byte ITEM_NONE
-	release
-	end
-
 Zone7A_EventScript_Millie::
 	trainerbattle_single TRAINER_MILLIE, Zone7A_Text_MillieIntro, Zone7A_Text_MillieDefeat
 	msgbox Zone7A_Text_MilliePostBattle, MSGBOX_AUTOCLOSE
@@ -112,9 +89,3 @@ Zone7A_EventScript_NoFish::
 Zone7A_Text_NoFish:
 	.string "Due to nitrogen runoff, there are\n"
 	.string "no Pokémon living in the water.$"
-
-Zone7A_EventScript_TMShop_Text_0:
-	.string "Hello! Welcome to my TM shop!$"
-
-Zone7A_EventScript_TMShop_Text_1:
-	.string "Goodbye!$"

@@ -91,8 +91,7 @@
 #define FLAG_ZONE_B1_PORYGON_5     0x4E
 #define FLAG_RECEIVED_PORYGON     0x4F
 
-// Scripts
-#define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
+#define FLAG_MAX_INTRO  0x50
 #define FLAG_SET_WALL_CLOCK                      0x51
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
@@ -110,6 +109,8 @@
 #define FLAG_UNUSEDLEVI7                     0x5D
 #define FLAG_UNUSEDLEVI8                     0x5E
 #define FLAG_UNUSEDLEVI9                     0x5F
+
+// Scripts
 #define FLAG_RECEIVED_SECRET_POWER           0x60
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61
 #define FLAG_TV_EXPLAINED                    0x62
@@ -339,16 +340,18 @@
 #define FLAG_RECEIVED_AURORA_TICKET          0x13A
 #define FLAG_RECEIVED_MYSTIC_TICKET          0x13B
 #define FLAG_RECEIVED_OLD_SEA_MAP            0x13C
-#define FLAG_WONDER_CARD_UNUSED_1            0x13D // These Wonder Card flags are referenced but never set
-#define FLAG_WONDER_CARD_UNUSED_2            0x13E
-#define FLAG_WONDER_CARD_UNUSED_3            0x13F
-#define FLAG_WONDER_CARD_UNUSED_4            0x140
-#define FLAG_WONDER_CARD_UNUSED_5            0x141
-#define FLAG_WONDER_CARD_UNUSED_6            0x142
-#define FLAG_WONDER_CARD_UNUSED_7            0x143
-#define FLAG_WONDER_CARD_UNUSED_8            0x144
-#define FLAG_WONDER_CARD_UNUSED_9            0x145
-#define FLAG_WONDER_CARD_UNUSED_10           0x146
+
+// Max Hide Flags
+#define FLAG_HIDE_MAX_1                      0x13D
+#define FLAG_HIDE_MAX_2                      0x13E
+#define FLAG_HIDE_MAX_3                      0x13F
+#define FLAG_HIDE_MAX_4                      0x140
+#define FLAG_HIDE_MAX_5                      0x141
+#define FLAG_HIDE_MAX_6                      0x142
+#define FLAG_HIDE_MAX_7                      0x143
+#define FLAG_HIDE_MAX_8                      0x144
+#define FLAG_HIDE_MAX_9                      0x145
+#define FLAG_HIDE_MAX_10                     0x146
 #define FLAG_WONDER_CARD_UNUSED_11           0x147
 #define FLAG_WONDER_CARD_UNUSED_12           0x148
 #define FLAG_WONDER_CARD_UNUSED_13           0x149

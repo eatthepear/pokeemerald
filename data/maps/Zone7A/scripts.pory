@@ -1,27 +1,6 @@
 mapscripts Zone7A_MapScripts {}
 
-script Zone7A_EventScript_TMShop {
-	lock
-	faceplayer
-	message(format("Hello! Welcome to my TM shop!"))
-	waitmessage
-	pokemart(Shop_TMShop_Zone7A)
-	msgbox(format("Goodbye!"))
-	release
-}
-
 raw `
-	.align 2
-Shop_TMShop_Zone7A:
-	.2byte ITEM_TM09
-	.2byte ITEM_TM10
-	.2byte ITEM_TM11
-	.2byte ITEM_TM12
-	.2byte ITEM_TM13
-	.2byte ITEM_TM14
-	.2byte ITEM_NONE
-	release
-	end
 
 Zone7A_EventScript_Millie::
 	trainerbattle_single TRAINER_MILLIE, Zone7A_Text_MillieIntro, Zone7A_Text_MillieDefeat

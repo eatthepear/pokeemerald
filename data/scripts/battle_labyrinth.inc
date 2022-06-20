@@ -1587,6 +1587,63 @@ EventScript_BrutalExitNotSatisfied::
 	return
 
 
+EventScript_Max::
+	lock
+	faceplayer
+	goto_if_unset FLAG_MAX_INTRO, EventScript_Max_2
+EventScript_Max_1:
+	message EventScript_Max_Text_2
+	waitmessage
+	switch VAR_ZONE
+	case 3, EventScript_Max_6
+	case 6, EventScript_Max_7
+	case 7, EventScript_Max_8
+EventScript_Max_4:
+	msgbox EventScript_Max_Text_3
+	release
+	return
+
+EventScript_Max_2:
+	msgbox EventScript_Max_Text_0
+	msgbox EventScript_Max_Text_1
+	setflag FLAG_MAX_INTRO
+	goto EventScript_Max_1
+
+EventScript_Max_6:
+	pokemart Zone3A_Shop_TMShop
+	goto EventScript_Max_4
+
+EventScript_Max_7:
+	pokemart Zone6A_Shop_TMShop
+	goto EventScript_Max_4
+
+EventScript_Max_8:
+	pokemart Zone7A_Shop_TMShop
+	goto EventScript_Max_4
+
+
+	.align 2
+Zone3A_Shop_TMShop:
+	.2byte ITEM_TM01
+	.2byte ITEM_NONE
+
+	.align 2
+Zone6A_Shop_TMShop:
+	.2byte ITEM_TM01
+	.2byte ITEM_TM05
+	.2byte ITEM_TM06
+	.2byte ITEM_NONE
+
+	.align 2
+Zone7A_Shop_TMShop:
+	.2byte ITEM_TM01
+	.2byte ITEM_TM05
+	.2byte ITEM_TM06
+	.2byte ITEM_TM09
+	.2byte ITEM_TM10
+	.2byte ITEM_TM11
+	.2byte ITEM_NONE
+
 EventScript_LeavingSetup::
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	msgbox gText_Colress_Empower
@@ -3592,6 +3649,26 @@ Shop_Unique_ZhuLi_24to30:
 	.2byte ITEM_NONE
 	release
 	end
+
+EventScript_Max_Text_0:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: By my calculations, you should be\n"
+	.string "{PLAYER}!\p"
+	.string "Hi, {PLAYER}! My name is {COLOR BLUE}Max{COLOR DARK_GRAY}.$"
+
+EventScript_Max_Text_1:
+	.string "{COLOR BLUE}Max{COLOR DARK_GRAY}: I am a traveling merchant, selling\n"
+	.string "special Technical Machines for you to\l"
+	.string "use!\p"
+	.string "I travel a lot, never going to the same\n"
+	.string "place again, but I'll always have more\l"
+	.string "TMs to sell by the next time you see me!$"
+
+EventScript_Max_Text_2:
+	.string "{COLOR BLUE}Max{COLOR DARK_GRAY}: Hi {PLAYER}! Long time no see!\p"
+	.string "Welcome to my TM shop!$"
+
+EventScript_Max_Text_3:
+	.string "{COLOR BLUE}Max{COLOR DARK_GRAY}: Goodbye!$"
 
 EventScript_ExpAll_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned\n"
