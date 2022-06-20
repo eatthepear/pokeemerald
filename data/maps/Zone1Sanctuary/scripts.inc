@@ -16,7 +16,7 @@ Zone1Sanctuary_EventScript_Intro::
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
 	msgbox Zone1Sanctuary_Text_Reward
-	giveitem ITEM_TM01
+	giveitem ITEM_EXP_SHARE
 	setvar VAR_ZONE, 2
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
@@ -62,4 +62,4 @@ Zone1Sanctuary_EventScript_NextZone_6:
 
 
 Zone1Sanctuary_Text_Reward::
-	.string "TM01 - Hold Back!$"
+	.string "The Experience Share!$"

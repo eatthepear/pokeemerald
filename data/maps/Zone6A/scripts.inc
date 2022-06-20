@@ -126,8 +126,8 @@ Zone6A_EventScript_ItemNetBall::
 	finditem ITEM_NET_BALL
 	end
 
-Zone6A_EventScript_ItemTM08::
-	finditem ITEM_TM08
+Zone6A_EventScript_ItemTM07::
+	finditem ITEM_TM07
 	end
 
 Zone6A_EventScript_ItemNestBall::

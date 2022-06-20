@@ -3011,46 +3011,42 @@ static const u8 sEnigmaBerryEReaderDesc[] = _(
 
 // TMs/HMs
 static const u8 sTM01Desc[] = _(
-    "The user holds back,\n"
-    "leaving the target\n"
-    "with at least 1 HP.");
-    // Protect
-    // "Negates all damage,\n"
-    // "but may fail if used\n"
-    // "in succession.");
+    "Negates all damage,\n"
+    "but may fail if used\n"
+    "in succession.");
 
 static const u8 sTM02Desc[] = _(
-    "Snares foes with\n"
-    "an electric web,\n"
-    "lowering speed.");
-
-static const u8 sTM03Desc[] = _(
-    "Generates an\n"
-    "ultrasonic wave\n"
-    "that may confuse.");
-
-static const u8 sTM04Desc[] = _(
     "The attack type\n"
     "varies among\n"
     "different Pokémon.");
+
+static const u8 sTM03Desc[] = _(
+    "An extremely fast\n"
+    "attack that can't\n"
+    "be avoided.");
+
+static const u8 sTM04Desc[] = _(
+    "Bites and eats the\n"
+    "foe's held Berry,\n"
+    "gaining its effect.");
     // Retaliate
     // "An attack that does\n"
     // "more damage if an\n"
     // "ally fainted.");
 
 static const u8 sTM05Desc[] = _(
-    "Yells at foes,\n"
-    "lowering their\n"
-    "Special Attack.");
+    "Snares foes with\n"
+    "an electric web,\n"
+    "lowering speed.");
     // Rock Tomb
     // "Hurls boulders to\n"
     // "damage the foe and\n"
     // "lower their Speed.");
 
 static const u8 sTM06Desc[] = _(
-    "An extremely fast\n"
-    "attack that can't\n"
-    "be avoided.");
+    "Yells at foes,\n"
+    "lowering their\n"
+    "Special Attack.");
     // Bullet Seed
     // "Shoots 2 to 5 seeds\n"
     // "in a row to strike\n"
@@ -3061,18 +3057,18 @@ static const u8 sTM06Desc[] = _(
     // "gaining its effect.");
 
 static const u8 sTM07Desc[] = _(
-    "Bites and eats the\n"
-    "foe's held Berry,\n"
-    "gaining its effect.");
+    "Absorbs target's HP\n"
+    "and heals over half\n"
+    "the damage done.");
     // Scorching Sands
     // "Throws scorching\n"
     // "sand at the target.\n"
     // "May leave a burn.");
 
 static const u8 sTM08Desc[] = _(
-    "Absorbs target's HP\n"
-    "and heals over half\n"
-    "the damage done.");
+    "Generates an\n"
+    "ultrasonic wave\n"
+    "that may confuse.");
     // Substitute
     // "1/4 of the user's\n"
     // "maximum HP is used\n"

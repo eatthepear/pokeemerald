@@ -37,7 +37,7 @@ script Zone4E_EventScript_LeviathanBattle {
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: That was great! I hope our Pokémon are friends now, too!\pHere, I want you to have this gift, from me!\pThe best way to bring out one's inner power is through friendship!"))
-	giveitem(ITEM_TM04)
+	giveitem(ITEM_TM02)
 	msgbox(format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: Alright, I'm off to go meet some more friends!\pSee you around!"))
 	closemessage
 	fadescreen(FADE_TO_BLACK)

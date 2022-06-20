@@ -1053,7 +1053,7 @@
 #define FLAG_ITEM_ZONE1A_QUICK_CLAW                                 0x3E9
 #define FLAG_ITEM_ZONE2A_ANTIDOTE                                   0x3EA
 #define FLAG_ITEM_ZONE2B_POTION                                     0x3EB
-#define FLAG_ITEM_ZONE3A_TM03                                       0x3EC
+#define FLAG_ITEM_ZONE3A_SUPER_POTION                               0x3EC
 #define FLAG_ITEM_ZONE3A_POTION                                     0x3ED
 #define FLAG_ITEM_ZONE3A_PARALYZE_HEAL                              0x3EE
 #define FLAG_ITEM_ZONE4A_BURN_HEAL                                  0x3EF
@@ -1062,8 +1062,8 @@
 #define FLAG_ITEM_ZONE4D_WISE_GLASSES                               0x3F2
 #define FLAG_ITEM_ZONE4E_SUPER_POTION                               0x3F3
 #define FLAG_ITEM_ZONE5A_QUICK_BALL                                 0x3F4
-#define FLAG_ITEM_ZONE5A_TM06                                       0x3F5
-#define FLAG_ITEM_ZONE6A_TM08                                       0x3F6
+#define FLAG_ITEM_ZONE5A_TM03                                       0x3F5
+#define FLAG_ITEM_ZONE6A_TM07                                       0x3F6
 #define FLAG_ITEM_ZONE6A_NET_BALL                                   0x3F7
 #define FLAG_ITEM_ZONE6A_NEST_BALL                                  0x3F8
 #define FLAG_ITEM_ZONE7A_SHARP_BEAK                                 0x3F9

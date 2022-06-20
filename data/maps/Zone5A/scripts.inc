@@ -83,7 +83,7 @@ Zone5A_EventScript_LeviathanBattle_9:
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_10
-	giveitem ITEM_TM07, 1
+	giveitem ITEM_TM04, 1
 	closemessage
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_11
 	applymovement 4, Common_Movement_FaceUp
@@ -348,8 +348,8 @@ Zone5A_EventScript_ItemQuickBall::
 	finditem ITEM_QUICK_BALL
 	end
 
-Zone5A_EventScript_ItemTM06::
-	finditem ITEM_TM06
+Zone5A_EventScript_ItemTM03::
+	finditem ITEM_TM03
 	end
 
 Zone5A_EventScript_Sign::

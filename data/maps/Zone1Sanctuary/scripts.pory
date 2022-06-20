@@ -13,7 +13,7 @@ script Zone1Sanctuary_EventScript_Intro {
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_RewardClear)
 	msgbox(Zone1Sanctuary_Text_Reward)
-	giveitem(ITEM_TM01)
+	giveitem(ITEM_EXP_SHARE)
 	setvar(VAR_ZONE, 2)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
@@ -46,5 +46,5 @@ script Zone1Sanctuary_EventScript_NextZone {
 }
 
 text Zone1Sanctuary_Text_Reward {
-	format("TM01 - Hold Back!")
+	format("The Experience Share!")
 }

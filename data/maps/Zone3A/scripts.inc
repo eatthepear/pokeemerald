@@ -251,8 +251,8 @@ Zone3A_Text_RichardPostBattle:
 	.string "Do you think I can buy humility\n"
 	.string "with my money?$"
 
-Zone3A_EventScript_ItemTM03::
-	finditem ITEM_TM03
+Zone3A_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
 	end
 
 Zone3A_EventScript_ItemPotion::

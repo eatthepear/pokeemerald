@@ -51,7 +51,7 @@ Zone4E_EventScript_LeviathanBattle::
 Zone4E_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone4E_EventScript_LeviathanBattle_Text_0
-	giveitem ITEM_TM04
+	giveitem ITEM_TM02
 	msgbox Zone4E_EventScript_LeviathanBattle_Text_1
 	closemessage
 	fadescreen FADE_TO_BLACK
