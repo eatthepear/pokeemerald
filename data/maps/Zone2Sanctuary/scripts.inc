@@ -16,7 +16,7 @@ Zone2Sanctuary_EventScript_Intro::
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
 	msgbox Zone2Sanctuary_Text_Reward
-	giveitem ITEM_TM02
+	giveitem ITEM_HEAL_BALL, 10
 	setvar VAR_ZONE, 3
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
@@ -64,4 +64,4 @@ Zone2Sanctuary_EventScript_NextZone_6:
 
 
 Zone2Sanctuary_Text_Reward::
-	.string "TM02 - Electroweb!$"
+	.string "10 Heal Balls!$"

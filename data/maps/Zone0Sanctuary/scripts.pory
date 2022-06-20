@@ -284,6 +284,7 @@ text Zone0Sanctuary_Text_Colress_BrutalExplained {
 	"The Daycare cannot be used.\p"
 	"Many helpful NPCs are unavailable.\p"
 	"Some moves use more PP than normal and opponents do not use PP.\p"
+	"Some items are more expensive than normal.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }

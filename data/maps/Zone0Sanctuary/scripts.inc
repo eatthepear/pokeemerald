@@ -1186,6 +1186,8 @@ Zone0Sanctuary_Text_Colress_BrutalExplained::
 	.string "Many helpful NPCs are unavailable.\p"
 	.string "Some moves use more PP than normal and\n"
 	.string "opponents do not use PP.\p"
+	.string "Some items are more expensive than\n"
+	.string "normal.\p"
 	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"

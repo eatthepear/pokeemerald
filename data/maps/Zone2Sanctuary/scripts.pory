@@ -13,7 +13,7 @@ script Zone2Sanctuary_EventScript_Intro {
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_RewardClear)
 	msgbox(Zone2Sanctuary_Text_Reward)
-	giveitem(ITEM_TM02)
+	giveitem(ITEM_HEAL_BALL, 10)
 	setvar(VAR_ZONE, 3)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
@@ -47,5 +47,5 @@ script Zone2Sanctuary_EventScript_NextZone {
 }
 
 text Zone2Sanctuary_Text_Reward {
-	format("TM02 - Electroweb!")
+	format("10 Heal Balls!")
 }
