@@ -186,7 +186,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, opt
     .ability = ABILITY_HIDDEN, //Run Away
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_HEADBUTT, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_RETALIATE, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
     }
 };
 
@@ -200,7 +200,7 @@ static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Hustle
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_HEADBUTT, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_RETALIATE, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
     }
 };
 
