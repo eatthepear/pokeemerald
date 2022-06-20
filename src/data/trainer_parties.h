@@ -376,7 +376,7 @@ static const struct TrainerMon sParty_Herman[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .species = SPECIES_VENIPEDE,
+    .species = SPECIES_PHANTUMP,
     },
     {
     .iv = 0,
