@@ -427,10 +427,13 @@ Shop_Unique_Varrick_1to3:
 	.align 2
 Shop_Unique_Varrick_4to5:
 	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_HEAL_BALL
-	.2byte ITEM_MIRACLE_SEED
-	.2byte ITEM_CHARCOAL
-	.2byte ITEM_MYSTIC_WATER
 	.2byte ITEM_NONE
 
 	.align 2
@@ -447,9 +450,6 @@ Shop_Unique_Varrick_6to8:
 	.2byte ITEM_NEST_BALL
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
-	.2byte ITEM_MIRACLE_SEED
-	.2byte ITEM_CHARCOAL
-	.2byte ITEM_MYSTIC_WATER
 	.2byte ITEM_NONE
 
 	.align 2
