@@ -991,7 +991,22 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_YAMASK_GALARIAN] = sYamaskGalarianLevelUpLearnset,
     [SPECIES_STUNFISK_GALARIAN] = sStunfiskGalarianLevelUpLearnset,
     // Hisuian Forms
+    [SPECIES_GROWLITHE_HISUIAN] = sGrowlitheHisuianLevelUpLearnset,
+    [SPECIES_ARCANINE_HISUIAN] = sArcanineHisuianLevelUpLearnset,
     [SPECIES_VOLTORB_HISUIAN] = sVoltorbHisuianLevelUpLearnset,
+    [SPECIES_ELECTRODE_HISUIAN] = sElectrodeHisuianLevelUpLearnset,
+    [SPECIES_TYPHLOSION_HISUIAN] = sTyphlosionHisuianLevelUpLearnset,
+    [SPECIES_QWILFISH_HISUIAN] = sQwilfishHisuianLevelUpLearnset,
+    [SPECIES_SNEASEL_HISUIAN] = sSneaselHisuianLevelUpLearnset,
+    [SPECIES_SAMUROTT_HISUIAN] = sSamurottHisuianLevelUpLearnset,
+    [SPECIES_LILLIGANT_HISUIAN] = sLilligantHisuianLevelUpLearnset,
+    [SPECIES_ZORUA_HISUIAN] = sZoruaHisuianLevelUpLearnset,
+    [SPECIES_ZOROARK_HISUIAN] = sZoroarkHisuianLevelUpLearnset,
+    [SPECIES_BRAVIARY_HISUIAN] = sBraviaryHisuianLevelUpLearnset,
+    [SPECIES_SLIGGOO_HISUIAN] = sSliggooHisuianLevelUpLearnset,
+    [SPECIES_GOODRA_HISUIAN] = sGoodraHisuianLevelUpLearnset,
+    [SPECIES_AVALUGG_HISUIAN] = sAvaluggHisuianLevelUpLearnset,
+    [SPECIES_DECIDUEYE_HISUIAN] = sDecidueyeHisuianLevelUpLearnset,
     // Misc Forms
     // Cosplay Pikachu
     [SPECIES_PIKACHU_COSPLAY] = sPikachuLevelUpLearnset,

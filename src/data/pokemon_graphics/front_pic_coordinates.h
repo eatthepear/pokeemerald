@@ -4938,10 +4938,86 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(48, 40),
         .y_offset = 14,
     },
+    // Hisuian Forms
+    [SPECIES_GROWLITHE_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_ARCANINE_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
     [SPECIES_VOLTORB_HISUIAN] =
     {
         .size = MON_COORDS_SIZE(48, 40),
-        .y_offset = 0,
+        .y_offset = 9,
+    },
+    [SPECIES_ELECTRODE_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_TYPHLOSION_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_QWILFISH_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_SNEASEL_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_SAMUROTT_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_LILLIGANT_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_ZORUA_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_ZOROARK_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_BRAVIARY_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_SLIGGOO_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_GOODRA_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_AVALUGG_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
+    },
+    [SPECIES_DECIDUEYE_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 9,
     },
     // Misc Forms
     // Cosplay Pikachu

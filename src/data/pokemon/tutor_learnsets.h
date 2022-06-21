@@ -6155,10 +6155,120 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_PAIN_SPLIT)
                                             | TUTOR(MOVE_BOUNCE)),
 
+    [SPECIES_GROWLITHE_HISUIAN]     = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_HEAT_WAVE)),
+
+    [SPECIES_ARCANINE_HISUIAN]      = TUTOR_LEARNSET(TUTOR(MOVE_HELPING_HAND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_IRON_HEAD)
+                                            | TUTOR(MOVE_HEAT_WAVE)),
+
     [SPECIES_VOLTORB_HISUIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TAUNT)
                                             | TUTOR(MOVE_VOLT_SWITCH)),
-    
+
+    [SPECIES_ELECTRODE_HISUIAN]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_VOLT_SWITCH)),
+
+    [SPECIES_TYPHLOSION_HISUIAN]    = TUTOR_LEARNSET(TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_HEAT_WAVE)),
+
+    [SPECIES_QWILFISH_HISUIAN]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FLIP_TURN)
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
+
+    [SPECIES_SNEASEL_HISUIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_ICE_PUNCH)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
+
+    [SPECIES_SAMUROTT_HISUIAN]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_HELPING_HAND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_FLIP_TURN)
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_SUPERPOWER)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
+
+    [SPECIES_LILLIGANT_HISUIAN]     = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
+                                            | TUTOR(MOVE_HELPING_HAND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_SYNTHESIS)
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
+
+    [SPECIES_ZORUA_HISUIAN]         = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_SWORDS_DANCE)
+                                            | TUTOR(MOVE_NASTY_PLOT)),
+
+    [SPECIES_ZOROARK_HISUIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
+                                            | TUTOR(MOVE_LOW_KICK)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_TRICK)
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_SWORDS_DANCE)
+                                            | TUTOR(MOVE_NASTY_PLOT)),
+
+    [SPECIES_BRAVIARY_HISUIAN]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_DEFOG)
+                                            | TUTOR(MOVE_IRON_HEAD)
+                                            | TUTOR(MOVE_ZEN_HEADBUTT)
+                                            | TUTOR(MOVE_ROOST)
+                                            | TUTOR(MOVE_TAILWIND)
+                                            | TUTOR(MOVE_HEAT_WAVE)
+                                            | TUTOR(MOVE_SUPERPOWER)),
+
+    [SPECIES_SLIGGOO_HISUIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_DRACO_METEOR)),
+
+    [SPECIES_GOODRA_HISUIAN]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_FIRE_PUNCH)
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_DRACO_METEOR)
+                                            | TUTOR(MOVE_POWER_WHIP)
+                                            | TUTOR(MOVE_SUPERPOWER)),
+
+    [SPECIES_AVALUGG_HISUIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_IRON_HEAD)
+                                            | TUTOR(MOVE_SUPERPOWER)),
+
+    [SPECIES_DECIDUEYE_HISUIAN]     = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_DEFOG)
+                                            | TUTOR(MOVE_ROOST)
+                                            | TUTOR(MOVE_SYNTHESIS)
+                                            | TUTOR(MOVE_TAILWIND)
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_POLTERGEIST)
+                                            | TUTOR(MOVE_SWORDS_DANCE)
+                                            | TUTOR(MOVE_NASTY_PLOT)),
+
     [SPECIES_BURMY_SANDY_CLOAK]   = TUTOR_LEARNSET(0),
 
     [SPECIES_BURMY_TRASH_CLOAK]   = TUTOR_LEARNSET(0),
