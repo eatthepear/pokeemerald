@@ -9049,6 +9049,12 @@ static const union AnimCmd sAnim_STUNFISK_GALARIAN_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_VOLTORB_HISUIAN_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_SHAYMIN_SKY_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -14476,6 +14482,11 @@ static const union AnimCmd *const sAnims_STUNFISK_GALARIAN[] ={
     sAnim_STUNFISK_GALARIAN_1,
 };
 
+static const union AnimCmd *const sAnims_VOLTORB_HISUIAN[] ={
+    sAnim_GeneralFrame0,
+    sAnim_VOLTORB_HISUIAN_1,
+};
+
 static const union AnimCmd *const sAnims_SHAYMIN_SKY[] ={
     sAnim_GeneralFrame0,
     sAnim_SHAYMIN_SKY_1,
@@ -15660,6 +15671,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(DARMANITAN_GALARIAN),
     ANIM_CMD(YAMASK_GALARIAN),
     ANIM_CMD(STUNFISK_GALARIAN),
+    ANIM_CMD(VOLTORB_HISUIAN),
     ANIM_CMD(PIKACHU_COSPLAY),
     ANIM_CMD(PIKACHU_ROCK_STAR),
     ANIM_CMD(PIKACHU_BELLE),

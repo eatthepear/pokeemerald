@@ -22927,6 +22927,27 @@ static const u8 sStunfiskGalarianTMHMLearnset[] =
     0xFF,
 };
 
+static const u8 sVoltorbHisuianTMHMLearnset[] =
+{
+    TMHM(TM01_PROTECT),
+    TMHM(TM39_RETURN),
+    // TMHM(TM10_THIEF),
+    // TMHM(TM08_SUBSTITUTE),
+    TMHM(TM02_HIDDEN_POWER),
+    TMHM(TM28_FACADE),
+    // TMHM(TM49_LIGHT_SCREEN),
+    TMHM(TM33_RAIN_DANCE),
+    // TMHM(TM33_REFLECT),
+    // TMHM(TM13_REST),
+    // TMHM(TM53_THUNDER),
+    // TMHM(TM52_THUNDERBOLT),
+    // TMHM(TM50_TOXIC),
+    // TMHM(TM00_WILD_CHARGE),
+    // TMHM(TM00_GYRO_BALL),
+    TMHM(TM10_CHARGE_BEAM),
+    0xFF,
+};
+
 static const u8 sDeoxysAttackTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
@@ -24327,6 +24348,8 @@ const u8 *const gTMHMLearnsets[] =
     [SPECIES_DARMANITAN_GALARIAN] = sDarmanitanGalarianTMHMLearnset,
     [SPECIES_YAMASK_GALARIAN] = sYamaskGalarianTMHMLearnset,
     [SPECIES_STUNFISK_GALARIAN] = sStunfiskGalarianTMHMLearnset,
+    // Hisuian Forms
+    [SPECIES_VOLTORB_HISUIAN] = sVoltorbHisuianTMHMLearnset,
     // Misc Forms
     // Cosplay Pikachu
     [SPECIES_PIKACHU_COSPLAY] = sPikachuTMHMLearnset,

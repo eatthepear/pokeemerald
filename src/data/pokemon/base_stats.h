@@ -25017,6 +25017,31 @@ const struct BaseStats gBaseStats[] =
         .flags = FLAG_GALARIAN_FORM,
     },
 
+    [SPECIES_VOLTORB_HISUIAN] =
+    {
+        .baseHP        = 40,
+        .baseAttack    = 30,
+        .baseDefense   = 50,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 55,
+        .type1 = TYPE_ELECTRIC,
+        .type2 = TYPE_GRASS,
+        .catchRate = 190,
+        .expYield = 60,
+        .evYield_Speed        = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 0,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_MINERAL,
+        .eggGroup2 = EGG_GROUP_MINERAL,
+        .abilities = {ABILITY_SOUNDPROOF, ABILITY_STATIC, ABILITY_AFTERMATH},
+        .bodyColor = BODY_COLOR_YELLOW,
+        .noFlip = FALSE,
+        .flags = FLAG_HISUIAN_FORM,
+    },
+
     [SPECIES_PIKACHU_COSPLAY] =
     {
         .baseHP        = 35,

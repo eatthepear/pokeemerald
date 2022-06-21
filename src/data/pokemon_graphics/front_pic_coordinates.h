@@ -4938,6 +4938,11 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(48, 40),
         .y_offset = 14,
     },
+    [SPECIES_VOLTORB_HISUIAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 40),
+        .y_offset = 0,
+    },
     // Misc Forms
     // Cosplay Pikachu
     [SPECIES_PIKACHU_COSPLAY] =

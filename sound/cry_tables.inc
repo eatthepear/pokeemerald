@@ -989,6 +989,8 @@ gCryTable::
 	cry Cry_Darmanitan
 	cry Cry_Yamask
 	cry Cry_Stunfisk
+	@ Hisuian Forms
+	cry Cry_Voltorb
 	@ Misc Forms
 	@ Cosplay Pikachu
 	cry Cry_Pikachu

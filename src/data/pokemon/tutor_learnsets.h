@@ -6154,6 +6154,10 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_STEALTH_ROCK)
                                             | TUTOR(MOVE_PAIN_SPLIT)
                                             | TUTOR(MOVE_BOUNCE)),
+
+    [SPECIES_VOLTORB_HISUIAN]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_TAUNT)
+                                            | TUTOR(MOVE_VOLT_SWITCH)),
     
     [SPECIES_BURMY_SANDY_CLOAK]   = TUTOR_LEARNSET(0),
 
