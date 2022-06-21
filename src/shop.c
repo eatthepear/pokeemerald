@@ -561,7 +561,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
     {
         if (sMartInfo.martType == MART_TYPE_NORMAL)
         {
-            if ((ItemId_GetPocket(itemId) == POCKET_TM_HM) || (ItemId_GetPocket(itemId) == POCKET_CONSUMABLES))
+            if (ItemId_GetPocket(itemId) == POCKET_TM_HM)
             {
                 ConvertIntToDecimalStringN(
                     gStringVar1,
@@ -969,7 +969,7 @@ static void Task_BuyMenu(u8 taskId)
 
             if (sMartInfo.martType == MART_TYPE_NORMAL)
             {
-                if ((ItemId_GetPocket(itemId) == POCKET_TM_HM) || (ItemId_GetPocket(itemId) == POCKET_CONSUMABLES))
+                if (ItemId_GetPocket(itemId) == POCKET_TM_HM)
                 {
                     sShopData->totalCost = (ItemId_GetPrice(itemId) << FlagGet(FLAG_BRUTAL_MODE_ON));
                 }
@@ -1063,7 +1063,7 @@ static void Task_BuyHowManyDialogueHandleInput(u8 taskId)
 
     if (AdjustQuantityAccordingToDPadInput(&tItemCount, sShopData->maxQuantity) == TRUE)
     {
-        if ((ItemId_GetPocket(tItemId) == POCKET_TM_HM) || (ItemId_GetPocket(tItemId) == POCKET_CONSUMABLES))
+        if (ItemId_GetPocket(tItemId) == POCKET_TM_HM)
         {
             sShopData->totalCost = (ItemId_GetPrice(tItemId) << FlagGet(FLAG_BRUTAL_MODE_ON)) * tItemCount;
         }
