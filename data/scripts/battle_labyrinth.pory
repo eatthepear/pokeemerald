@@ -1691,7 +1691,8 @@ script EventScript_Documentation {
 }
 
 script EventScript_Settings {
-	while {
+	setvar(VAR_TEMP_1, 0)
+	while (var(VAR_TEMP_1) == 0) {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
 			msgbox(gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
@@ -1733,7 +1734,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
 			msgbox(gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_DEFAULT)
@@ -1763,7 +1764,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == true)) {
 			msgbox(gText_Colress_BrutalRandomizerMsg, MSGBOX_DEFAULT)
@@ -1792,7 +1793,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == true)) {
 			msgbox(gText_Colress_DefaultRandomizerMsg, MSGBOX_DEFAULT)
@@ -1808,7 +1809,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == false)) {
 			msgbox(gText_Colress_BrutalNuzlockeMsg, MSGBOX_DEFAULT)
@@ -1850,7 +1851,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == false)) {
 			msgbox(gText_Colress_DefaultNuzlockeMsg, MSGBOX_DEFAULT)
@@ -1879,7 +1880,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == false)) {
 			msgbox(gText_Colress_BrutalVanillaMsg, MSGBOX_DEFAULT)
@@ -1908,7 +1909,7 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		} else {
 			msgbox(gText_Colress_DefaultVanillaMsg, MSGBOX_DEFAULT)
@@ -1924,10 +1925,11 @@ script EventScript_Settings {
 					call(EventScript_ExpAll)
 				case 4:
 				case MULTI_B_PRESSED:
-					goto(EventScript_WhenUReady)
+					setvar(VAR_TEMP_1, 1)
 			}
 		}
 	}
+	goto(EventScript_WhenUReady)
 }
 
 script EventScript_MusicMenu {
@@ -2019,7 +2021,6 @@ script EventScript_MusicMenu {
 							setvar(VAR_TEMP_0, 0)
 					}
 				}
-
 			case 2:
 				setvar(VAR_TEMP_0, 1)
 				while (var(VAR_TEMP_0) == 1) {
@@ -2064,7 +2065,7 @@ script EventScript_MusicMenu {
 				}
 			case 3:
 			case MULTI_B_PRESSED:
-				goto(EventScript_Settings)
+				return
 		}
 	}
 }
