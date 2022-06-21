@@ -16,7 +16,7 @@ Zone3Sanctuary_EventScript_Intro::
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
 	msgbox Zone3Sanctuary_Text_Reward
-	giveitem ITEM_SLEDGEHAMMER
+	giveitem ITEM_ROCKY_HELMET
 	msgbox gText_Colress_Unlocked
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
@@ -69,4 +69,4 @@ Zone3Sanctuary_EventScript_NextZone_6:
 
 
 Zone3Sanctuary_Text_Reward::
-	.string "The Sledgehammer!$"
+	.string "The Rocky Helmet!$"
