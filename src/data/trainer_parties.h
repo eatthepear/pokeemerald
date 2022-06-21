@@ -347,7 +347,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .lvl = 11,
     .nature = NATURE_SERIOUS,
     .ability = ABILITY_HIDDEN, //Aftermath
-    .species = SPECIES_VOLTORB,
+    .species = SPECIES_VOLTORB_HISUIAN,
     .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_LEAFAGE, MOVE_THUNDER_SHOCK}
     },
