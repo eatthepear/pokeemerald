@@ -15,14 +15,8 @@ Zone4Sanctuary_EventScript_Intro::
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
-	msgbox Zone4Sanctuary_Text_Reward
-	showmoneybox 0, 0, 0
-	addmoney 3000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone4Sanctuary_Text_Received3000, MSGBOX_DEFAULT
-	updatemoneybox
-	waitfanfare
-	hidemoneybox
+	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	giveitem ITEM_REVIVE, 3
 	setvar VAR_ZONE, 5
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
@@ -68,7 +62,4 @@ Zone4Sanctuary_EventScript_NextZone_6:
 
 
 Zone4Sanctuary_Text_Reward::
-	.string "¥3000!$"
-
-Zone4Sanctuary_Text_Received3000::
-	.string "Received ¥3000!$"
+	.string "3 Revives!$"

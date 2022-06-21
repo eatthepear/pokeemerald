@@ -87,11 +87,7 @@ script EventScript_Shop_General {
 				pokemart(Shop_General_17to25)
 			}
 		case 26:
-			if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true)) {
-				pokemart(Shop_General_26to30_BrutalNuzlocke)
-			} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true)) {
-				pokemart(Shop_General_26to30Nuzlocke)
-			} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false)) {
+			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
 				pokemart(Shop_General_26to30_Brutal)
 			} else {
 				pokemart(Shop_General_26to30)
@@ -276,39 +272,6 @@ mart Shop_General_26to30 {
 	ITEM_CARBOS
 }
 
-mart Shop_General_26to30Nuzlocke {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_ULTRA_BALL
-	ITEM_POTION
-	ITEM_SUPER_POTION
-	ITEM_HYPER_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_BURN_HEAL
-	ITEM_ICE_HEAL
-	ITEM_FULL_HEAL
-	ITEM_REPEL
-	ITEM_SUPER_REPEL
-	ITEM_X_ATTACK
-	ITEM_X_DEFENSE
-	ITEM_X_SP_ATK
-	ITEM_X_SP_DEF
-	ITEM_X_SPEED
-	ITEM_X_ACCURACY
-	ITEM_DIRE_HIT
-	ITEM_GUARD_SPEC
-	ITEM_ETHER
-	ITEM_ELIXIR
-	ITEM_HP_UP
-	ITEM_PROTEIN
-	ITEM_IRON
-	ITEM_CALCIUM
-	ITEM_ZINC
-	ITEM_CARBOS
-}
-
 mart Shop_General_26to30_Brutal {
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
@@ -323,25 +286,6 @@ mart Shop_General_26to30_Brutal {
 	ITEM_ICE_HEAL
 	ITEM_FULL_HEAL
 	ITEM_REVIVE
-	ITEM_REPEL
-	ITEM_SUPER_REPEL
-	ITEM_ETHER
-	ITEM_ELIXIR
-}
-
-mart Shop_General_26to30_BrutalNuzlocke {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_ULTRA_BALL
-	ITEM_POTION
-	ITEM_SUPER_POTION
-	ITEM_HYPER_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_BURN_HEAL
-	ITEM_ICE_HEAL
-	ITEM_FULL_HEAL
 	ITEM_REPEL
 	ITEM_SUPER_REPEL
 	ITEM_ETHER

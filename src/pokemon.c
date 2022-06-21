@@ -7102,6 +7102,11 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                                 itemEffectParam++;
                                 break;
                             }
+                            if (FlagGet(FLAG_NUZLOCKE_ON))
+                            {
+                                itemEffectParam++;
+                                break;
+                            }
                             if (gMain.inBattle)
                             {
                                 if (battlerId != MAX_BATTLERS_COUNT)
