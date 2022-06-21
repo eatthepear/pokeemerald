@@ -104,12 +104,14 @@ Zone3A_EventScript_LeviathanBattle_1:
 	giveitem ITEM_GOOD_ROD, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_12
+	giveitem ITEM_METRONOME, 1
 	applymovement 4, Zone3A_Movement_Remi_WalkBackToPhillipa
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_12
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_13
 	applymovement 10, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_13
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_14
 	closemessage
 	applymovement 10, Common_Movement_WalkUp
 	waitmovement 0
@@ -323,11 +325,15 @@ Zone3A_EventScript_LeviathanBattle_Text_11:
 	.string "Here, I want you to have this.$"
 
 Zone3A_EventScript_LeviathanBattle_Text_12:
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Oh, oh! I want to give you this!\p"
+	.string "It works well with Rollout!$"
+
+Zone3A_EventScript_LeviathanBattle_Text_13:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement\n"
 	.string "for one day.\p"
 	.string "It's dinner time.$"
 
-Zone3A_EventScript_LeviathanBattle_Text_13:
+Zone3A_EventScript_LeviathanBattle_Text_14:
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Food!$"
 
 Zone3A_Text_Leviathan3Intro::

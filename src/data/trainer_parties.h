@@ -186,7 +186,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, opt
     .ability = ABILITY_HIDDEN, //Run Away
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_RETALIATE, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_HYPER_FANG, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
     }
 };
 
@@ -200,7 +200,7 @@ static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Hustle
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_RETALIATE, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_HYPER_FANG, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
     }
 };
 
@@ -297,24 +297,32 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     {
     .ball = ITEM_POKE_BALL,
     .iv = 30,
-    .lvl = 11,
+    .lvl = 10,
     .nature = NATURE_SASSY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .ball = ITEM_POKE_BALL,
     .iv = 30,
-    .lvl = 11,
+    .lvl = 10,
     .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .ball = ITEM_POKE_BALL,
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_HIDDEN, //Aftermath
+    .species = SPECIES_VOLTORB_HISUIAN,
+    .heldItem = ITEM_METRONOME,
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -322,45 +330,43 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
     .ball = ITEM_POKE_BALL,
     .iv = 31,
-    .lvl = 11,
+    .lvl = 10,
     .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_HEADBUTT, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .ball = ITEM_POKE_BALL,
+    .iv = 31,
+    .lvl = 10,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Sturdy
+    .species = SPECIES_PHANPY,
+    .moves = {MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_NONE, MOVE_NONE}
     },
     {
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .species = SPECIES_PHANPY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_BULLDOZE, MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_NONE}
-    },
-    {
-    .ball = ITEM_POKE_BALL,
-    .iv = 31,
-    .lvl = 11,
-    .nature = NATURE_SERIOUS,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_LEAFAGE, MOVE_THUNDER_SHOCK}
+    .heldItem = ITEM_METRONOME,
+    .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE}
     },
     {
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
-    .nature = NATURE_SERIOUS,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Thick Fat
     .species = SPECIES_SPHEAL,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ICE_BALL, MOVE_WATER_PULSE, MOVE_ROLLOUT, MOVE_NONE}
+    .heldItem = ITEM_METRONOME,
+    .moves = {MOVE_ICE_BALL, MOVE_WATER_GUN, MOVE_NONE, MOVE_NONE}
     }
 };
 
