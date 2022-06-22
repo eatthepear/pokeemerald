@@ -50,7 +50,7 @@ script Zone5Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				warp(MAP_ZONE6A, 255, 51, 20)
+				warp(MAP_ZONE6A, 255, 51, 22)
 				waitstate
 			}
 		case 1:

@@ -733,80 +733,113 @@ static const struct TrainerMon sParty_LelouchExp1[] = {
 
 /* ------------------- Zone 6 ------------------- */
 
-static const struct TrainerMon sParty_Frank[] = {
+static const struct TrainerMon sParty_Ronan[] = {
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_GROWLITHE,
+    .lvl = 15,
+    .species = SPECIES_MEOWTH_GALARIAN,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_TIMBURR,
+    .lvl = 15,
+    .species = SPECIES_RALTS,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_DEWPIDER,
+    .lvl = 15,
+    .species = SPECIES_FLABEBE,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_HOPPIP,
     }
 };
 
 static const struct TrainerMon sParty_Melanie[] = {
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_LOTAD,
+    .lvl = 15,
+    .species = SPECIES_SHELLOS,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_CUTIEFLY,
+    .lvl = 15,
+    .species = SPECIES_SLOWPOKE_GALARIAN,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_FLABEBE,
-    },
-    {
-    .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_HOPPIP,
+    .lvl = 15,
+    .species = SPECIES_EMOLGA,
     }
 };
 
 static const struct TrainerMon sParty_Constance[] = {
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_POLIWAG,
+    .lvl = 15,
+    .species = SPECIES_TYNAMO,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 15,
+    .species = SPECIES_WAILMER,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_MILCERY,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_TOXEL,
+    }
+};
+
+static const struct TrainerMon sParty_Frank[] = {
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_MANTYKE,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_TRUBBISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_SANDYGAST,
+    }
+};
+
+static const struct TrainerMon sParty_Dudley[] = {
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_CLAUNCHER,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_REMORAID,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_CLOBBOPUS,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
     .species = SPECIES_MAGIKARP,
     },
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 15,
     .species = SPECIES_FEEBAS,
-    }
-};
-
-static const struct TrainerMon sParty_Ronan[] = {
-    {
-    .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_MAGNEMITE,
-    },
-    {
-    .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_CORPHISH,
-    },
-    {
-    .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_AXEW,
     }
 };
 
@@ -831,7 +864,7 @@ static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan 6, Brutal
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Schooling
     .species = SPECIES_WISHIWASHI,
-    .heldItem = ITEM_LEFTOVERS,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_REST, MOVE_SLEEP_TALK}
     }
 };

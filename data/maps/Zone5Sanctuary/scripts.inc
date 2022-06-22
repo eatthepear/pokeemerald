@@ -77,7 +77,7 @@ Zone5Sanctuary_EventScript_NextZone_5:
 
 Zone5Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
-	warp MAP_ZONE6A, 255, 51, 20
+	warp MAP_ZONE6A, 255, 51, 22
 	waitstate
 	goto Zone5Sanctuary_EventScript_NextZone_1
 

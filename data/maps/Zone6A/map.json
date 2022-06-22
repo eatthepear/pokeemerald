@@ -2,7 +2,7 @@
   "id": "MAP_ZONE6A",
   "name": "Zone6A",
   "layout": "LAYOUT_ZONE6A",
-  "music": "MUS_DP_SEQ_TOWN03_D",
+  "music": "MUS_DEWFORD",
   "region_map_section": "MAPSEC_ZONE_6",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -130,6 +130,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_Max",
       "flag": "FLAG_HIDE_MAX_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 31,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone6A_EventScript_Dudley",
+      "flag": "0"
     }
   ],
   "warp_events": [

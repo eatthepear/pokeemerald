@@ -128,6 +128,22 @@ Zone6A_Text_RonanDefeat:
 Zone6A_Text_RonanPostBattle:
 	.string "Beaten by a mere commoner...$"
 
+Zone6A_EventScript_Dudley::
+	trainerbattle_single TRAINER_DUDLEY, Zone6A_Text_DudleyIntro, Zone6A_Text_DudleyDefeat
+	msgbox Zone6A_Text_DudleyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_DudleyIntro:
+	.string "You made me miss my catch!$"
+
+Zone6A_Text_DudleyDefeat:
+	.string "Argh, there was no catch!\n"
+	.string "I'm just frustrated!$"
+
+Zone6A_Text_DudleyPostBattle:
+	.string "Sorry for taking out my fishing\n"
+	.string "frustration out on you.$"
+
 Zone6A_EventScript_ItemNetBall::
 	finditem ITEM_NET_BALL
 	end
