@@ -12,7 +12,8 @@ script Zone6A_EventScript_Exit {
 			(!defeated(TRAINER_FRANK) ||
 			!defeated(TRAINER_MELANIE) ||
 			!defeated(TRAINER_CONSTANCE) ||
-			!defeated(TRAINER_RONAN))) {
+			!defeated(TRAINER_RONAN) ||
+			!flag(FLAG_BEAT_LEVIATHAN_6))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
         warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
@@ -24,36 +25,39 @@ script Zone6A_EventScript_Exit {
 script Zone6A_EventScript_LeviathanBattle {
 	lock
 	faceplayer
+	if (flag(FLAG_BEAT_LEVIATHAN_6) == true) {
+		msgbox(Zone6A_Text_Zack_PostBattle)
+		closemessage
+		release
+		end
+	}
+	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!"))
 	fadeoutbgm(1)
-	msgbox(Zone6A_Text_Leviathan6Intro)
+	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Who do you think you are?\pI'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!"))
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-    	setvar(VAR_MUGSHOT_ID, MUGSHOT_BETTY)
-		trainerbattle_no_intro(TRAINER_BETTY_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat)
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_ZACK)
+		trainerbattle_no_intro(TRAINER_ZACK_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat)
 	} else {
-		setvar(VAR_MUGSHOT_ID, MUGSHOT_BETTY)
-		trainerbattle_no_intro(TRAINER_BETTY_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat)
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_ZACK)
+		trainerbattle_no_intro(TRAINER_ZACK_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, while your battling skills are certainly up to par, might I suggest a little more…{PAUSE_UNTIL_PRESS}effort into your outfit?\pAside from that, I'd like to give you these Berries.\pVery, very expensive, or so my butler tells me."))
-	giveitem(ITEM_SITRUS_BERRY, 5)
-	msgbox(format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: It seems it's time for my afternoon bath.\pGoodbye."))
+	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!\pYou're pretty good!\pHere, take this!"))
+	giveitem(ITEM_TM08)
+	msgbox(Zone6A_Text_Zack_PostBattle)
 	closemessage
-	fadescreen(FADE_TO_BLACK)
-	removeobject(1)
 	setflag(FLAG_BEAT_LEVIATHAN_6)
-	fadescreen(FADE_FROM_BLACK)
 	release
 	end
 }
 
-text Zone6A_Text_Leviathan6Intro {
-	format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, your clothes are all covered in sand.\pI suppose {COLOR BLUE}Leviathan Betty{COLOR DARK_GRAY} had ought to give you a lesson in proper etiquette!")
+text Zone6A_Text_Leviathan6Defeat {
+	"What's wishy-washy mean anyway?"
 }
 
-text Zone6A_Text_Leviathan6Defeat {
-	"It seems I was the one who ended\n"
-	"up being humbled…"
+text Zone6A_Text_Zack_PostBattle {
+	format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: I love leaving footprints in the sand.")
 }
 
 raw `

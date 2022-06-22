@@ -33,35 +33,41 @@ Zone6A_EventScript_Exit_7:
 	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_RONAN
 	goto_if 0, Zone6A_EventScript_Exit_6
+	goto_if_unset FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_Exit_6
 	goto Zone6A_EventScript_Exit_5
 
 
 Zone6A_EventScript_LeviathanBattle::
 	lock
 	faceplayer
-	fadeoutbgm 1
-	msgbox Zone6A_Text_Leviathan6Intro
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_2
-	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
-	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat
-Zone6A_EventScript_LeviathanBattle_1:
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_2
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_0
-	giveitem ITEM_SITRUS_BERRY, 5
+	fadeoutbgm 1
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_1
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_5
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
+	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat
+Zone6A_EventScript_LeviathanBattle_4:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_2
+	giveitem ITEM_TM08
+	msgbox Zone6A_Text_Zack_PostBattle
 	closemessage
-	fadescreen FADE_TO_BLACK
-	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_6
-	fadescreen FADE_FROM_BLACK
 	release
 	end
 
 Zone6A_EventScript_LeviathanBattle_2:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
-	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat
-	goto Zone6A_EventScript_LeviathanBattle_1
+	msgbox Zone6A_Text_Zack_PostBattle
+	closemessage
+	release
+	end
+
+Zone6A_EventScript_LeviathanBattle_5:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
+	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat
+	goto Zone6A_EventScript_LeviathanBattle_4
 
 
 Zone6A_EventScript_Frank::
@@ -135,26 +141,20 @@ Zone6A_EventScript_ItemNestBall::
 	end
 
 Zone6A_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, while your battling skills\n"
-	.string "are certainly up to par, might I\l"
-	.string "suggest a little more…{PAUSE_UNTIL_PRESS}effort into your\l"
-	.string "outfit?\p"
-	.string "Aside from that, I'd like to give you\n"
-	.string "these Berries.\p"
-	.string "Very, very expensive, or so my butler\n"
-	.string "tells me.$"
+	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"
 
 Zone6A_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: It seems it's time for my\n"
-	.string "afternoon bath.\p"
-	.string "Goodbye.$"
+	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Who do you think you are?\p"
+	.string "I'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!$"
 
-Zone6A_Text_Leviathan6Intro::
-	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, your clothes are all\n"
-	.string "covered in sand.\p"
-	.string "I suppose {COLOR BLUE}Leviathan Betty{COLOR DARK_GRAY} had ought to\n"
-	.string "give you a lesson in proper etiquette!$"
+Zone6A_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!\p"
+	.string "You're pretty good!\p"
+	.string "Here, take this!$"
 
 Zone6A_Text_Leviathan6Defeat::
-	.string "It seems I was the one who ended\n"
-	.string "up being humbled…$"
+	.string "What's wishy-washy mean anyway?$"
+
+Zone6A_Text_Zack_PostBattle::
+	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: I love leaving footprints in the\n"
+	.string "sand.$"

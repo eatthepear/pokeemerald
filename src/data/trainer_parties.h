@@ -810,51 +810,32 @@ static const struct TrainerMon sParty_Ronan[] = {
     }
 };
 
-static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 6, Double Battle, Default
+static const struct TrainerMon sParty_ZackDefault[] = {//Leviathan 6, Default
     {
     .iv = 30,
-    .lvl = 17,
-    .nature = NATURE_MILD,
+    .lvl = 20,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_2, //Synchronize
-    .species = SPECIES_INDEEDEE,
+    .ability = ABILITY_SLOT_1, //Schooling
+    .species = SPECIES_WISHIWASHI,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 30,
-    .lvl = 17,
-    .nature = NATURE_MILD,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Synchronize
-    .species = SPECIES_INDEEDEE_FEMALE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_WATER_PULSE, MOVE_REST, MOVE_NONE, MOVE_NONE}
     }
 };
 
-static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 6, Double Battle, Brutal
+static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan 6, Brutal
     {
     .iv = 31,
-    .lvl = 17,
+    .lvl = 20,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_HIDDEN, //Psychic Surge
-    .species = SPECIES_INDEEDEE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 31,
-    .lvl = 17,
-    .nature = NATURE_MODEST,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_HIDDEN, //Psychic Surge
-    .species = SPECIES_INDEEDEE_FEMALE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
+    .ability = ABILITY_SLOT_1, //Schooling
+    .species = SPECIES_WISHIWASHI,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_REST, MOVE_SLEEP_TALK}
     }
 };
+
 
 /* ------------------- Zone 7 & 8 ------------------- */
 
@@ -914,6 +895,52 @@ static const struct TrainerMon sParty_Jamal[] = {
     .iv = 0,
     .lvl = 14,
     .species = SPECIES_ZIGZAGOON_GALARIAN,
+    }
+};
+
+static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 6, Double Battle, Default
+    {
+    .iv = 30,
+    .lvl = 17,
+    .nature = NATURE_MILD,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2, //Synchronize
+    .species = SPECIES_INDEEDEE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 17,
+    .nature = NATURE_MILD,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Synchronize
+    .species = SPECIES_INDEEDEE_FEMALE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 6, Double Battle, Brutal
+    {
+    .iv = 31,
+    .lvl = 17,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_HIDDEN, //Psychic Surge
+    .species = SPECIES_INDEEDEE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 31,
+    .lvl = 17,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_HIDDEN, //Psychic Surge
+    .species = SPECIES_INDEEDEE_FEMALE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
     }
 };
 

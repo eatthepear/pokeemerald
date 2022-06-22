@@ -1,5 +1,39 @@
 mapscripts Zone7A_MapScripts {}
 
+script Zone7A_EventScript_LeviathanBattle {
+	lock
+	faceplayer
+	fadeoutbgm(1)
+	msgbox(Zone7A_Text_Leviathan7Intro)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_BETTY)
+		trainerbattle_no_intro(TRAINER_BETTY_LEVIATHAN_7_BRUTAL, Zone7A_Text_Leviathan7Defeat)
+	} else {
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_BETTY)
+		trainerbattle_no_intro(TRAINER_BETTY_LEVIATHAN_7, Zone7A_Text_Leviathan7Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox(format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, while your battling skills are certainly up to par, might I suggest a little more…{PAUSE_UNTIL_PRESS}effort into your outfit?\pAside from that, I'd like to give you these Berries.\pVery, very expensive, or so my butler tells me."))
+	giveitem(ITEM_SITRUS_BERRY, 5)
+	msgbox(format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: It seems it's time for my afternoon bath.\pGoodbye."))
+	closemessage
+	fadescreen(FADE_TO_BLACK)
+	removeobject(1)
+	setflag(FLAG_BEAT_LEVIATHAN_7)
+	fadescreen(FADE_FROM_BLACK)
+	release
+	end
+}
+
+text Zone7A_Text_Leviathan7Intro {
+	format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: Child, your clothes are all covered in dirt.\pI suppose {COLOR BLUE}Leviathan Betty{COLOR DARK_GRAY} had ought to give you a lesson in proper etiquette!")
+}
+
+text Zone7A_Text_Leviathan7Defeat {
+	"It seems I was the one who ended\n"
+	"up being humbled…"
+}
 raw `
 
 Zone7A_EventScript_Millie::
