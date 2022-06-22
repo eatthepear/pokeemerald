@@ -59,6 +59,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteM
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemChest;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTree;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeEarlyStages;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeLateStages;
@@ -504,6 +505,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BUG_MANIAC] =               &gObjectEventGraphicsInfo_BugManiac,
     [OBJ_EVENT_GFX_FAIRY_TALE_GIRL] =          &gObjectEventGraphicsInfo_FairyTaleGirl,
     [OBJ_EVENT_GFX_SOCIALITE] =                &gObjectEventGraphicsInfo_Socialite,
+    [OBJ_EVENT_GFX_ITEM_CHEST] =               &gObjectEventGraphicsInfo_ItemChest,
+    [OBJ_EVENT_GFX_ITEM_CHEST_OPEN] =          &gObjectEventGraphicsInfo_ItemChestOpen,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

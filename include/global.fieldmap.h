@@ -192,6 +192,7 @@ struct ObjectEvent
              u32 disableJumpLandingGroundEffect:1;
              u32 fixedPriority:1;
              u32 hideReflection:1;
+             u32 isTreasureChestOpened:1;
     /*0x04*/ u16 graphicsId;
     /*0x06*/ u8 movementType;
     /*0x07*/ u16 trainerType;

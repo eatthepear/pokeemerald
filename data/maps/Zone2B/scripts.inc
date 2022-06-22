@@ -1,5 +1,15 @@
 Zone2B_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE2B_POTION, Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone2B_EventScript_Exit::
@@ -72,6 +82,17 @@ Zone2B_EventScript_LeviathanBattle_8:
 	goto Zone2B_EventScript_LeviathanBattle_7
 
 
+Zone2B_EventScript_ItemPotion::
+	lock
+	removeobject 3
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE2B_POTION
+	addobject 3
+	giveitem ITEM_POTION, 2
+	release
+	end
+
+
 Zone2B_EventScript_Harper::
 	trainerbattle_single TRAINER_HARPER, Zone2B_Text_HarperIntro, Zone2B_Text_HarperDefeat
 	msgbox Zone2B_Text_HarperPostBattle, MSGBOX_AUTOCLOSE
@@ -100,10 +121,6 @@ Zone2B_Text_ArthurDefeat:
 
 Zone2B_Text_ArthurPostBattle:
 	.string "Sorry about earlier.$"
-
-Zone2B_EventScript_ItemPotion::
-	finditem ITEM_POTION
-	end
 
 Zone2B_EventScript_Sign::
 	msgbox Zone2B_Text_Sign, MSGBOX_SIGN

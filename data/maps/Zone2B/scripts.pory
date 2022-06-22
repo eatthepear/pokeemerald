@@ -1,4 +1,12 @@
-mapscripts Zone2B_MapScripts {}
+mapscripts Zone2B_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE2B_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
 
 script Zone2B_EventScript_Exit {
     lockall
@@ -69,6 +77,17 @@ text Zone2B_Text_Leviathan2Defeat {
 	format("Ack! I lost again!\pDoggone it!")
 }
 
+script Zone2B_EventScript_ItemPotion {
+	lock
+	removeobject(3)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE2B_POTION)
+	addobject(3)
+	giveitem(ITEM_POTION, 2)
+	release
+	end
+}
+
 raw `
 Zone2B_EventScript_Harper::
 	trainerbattle_single TRAINER_HARPER, Zone2B_Text_HarperIntro, Zone2B_Text_HarperDefeat
@@ -98,10 +117,6 @@ Zone2B_Text_ArthurDefeat:
 
 Zone2B_Text_ArthurPostBattle:
 	.string "Sorry about earlier.$"
-
-Zone2B_EventScript_ItemPotion::
-	finditem ITEM_POTION
-	end
 
 Zone2B_EventScript_Sign::
 	msgbox Zone2B_Text_Sign, MSGBOX_SIGN
