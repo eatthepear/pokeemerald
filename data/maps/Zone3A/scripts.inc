@@ -41,6 +41,7 @@ Zone3A_EventScript_Exit_1:
 	goto_if_gt Zone3A_EventScript_Exit_5
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_Exit_10
 Zone3A_EventScript_Exit_8:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE3SANCTUARY, 255, 22, 7
 Zone3A_EventScript_Exit_4:
 	releaseall
@@ -51,6 +52,7 @@ Zone3A_EventScript_Exit_2:
 	goto Zone3A_EventScript_Exit_1
 
 Zone3A_EventScript_Exit_5:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_HIDE_MAX_1
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 23, 32

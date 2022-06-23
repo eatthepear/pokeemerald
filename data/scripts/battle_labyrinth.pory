@@ -1,6 +1,6 @@
 script EventScript_EnterSanctuary {
 	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-	checkmoney(0)
+	setvar(VAR_TRAINER_MONEY, 0)
 	call(EventScript_MoveCameraUp)
 	applymovement(1, Common_Movement_ExclamationMark)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
@@ -1681,7 +1681,6 @@ script EventScript_WhenUReady {
 
 script EventScript_SanctuaryToZone0 {
 	lockall
-	setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	warpteleport(MAP_ZONE0A, 255, 17, 10)
 	waitstate
 }
@@ -2096,6 +2095,7 @@ script EventScript_ExpAll {
 }
 
 script EventScript_WarpZone0 {
+	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	clearflag(FLAG_IS_REVISITING_ZONE)
 	switch(var(VAR_REVISITING_ZONE)) {
 		case 1:
@@ -2312,7 +2312,7 @@ text gText_ItemChestIsEmpty {
 script Zone_EventScript_RetirePrompt {
 	lockall
 	showmoneybox(0, 0, 0)
-	msgbox(format("Would you like to retire your attempt at this Zone?\pYou will lose all your progress so far, as well as half of your money.\pAre you sure you want to return to the Sanctuary?"), MSGBOX_YESNO)
+	msgbox(format("Would you like to retire your attempt at this Zone?\pYou will lose all your progress so far and any money you received from trainers, as well as half of your remaining money.\pAre you sure you want to return to the Sanctuary?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
 		closemessage
 		hidemoneybox
@@ -2324,21 +2324,61 @@ script Zone_EventScript_RetirePrompt {
 	msgbox(format("Warping now…"))
 	switch (var(VAR_ZONE)) {
 		case 1:
+			cleartrainerflag(TRAINER_NINA)
+			cleartrainerflag(TRAINER_MARIAM)
+			cleartrainerflag(TRAINER_OSCAR)
+			clearflag(FLAG_BEAT_LEVIATHAN_1)
+			setvar(VAR_ZONE_1_STATE, 0)
 			warpteleport(MAP_ZONE0SANCTUARY, 255, 22, 7)
 			waitstate
 		case 2:
+			cleartrainerflag(TRAINER_POLLY)
+			cleartrainerflag(TRAINER_JEREMIAH)
+			cleartrainerflag(TRAINER_HARPER)
+			cleartrainerflag(TRAINER_ARTHUR)
+			clearflag(FLAG_BEAT_LEVIATHAN_2)
+			setvar(VAR_ZONE_2_STATE, 0)
 			warpteleport(MAP_ZONE1SANCTUARY, 255, 22, 7)
 			waitstate
 		case 3:
+			cleartrainerflag(TRAINER_JEMMA)
+			cleartrainerflag(TRAINER_PATRICK)
+			cleartrainerflag(TRAINER_BORIS)
+			cleartrainerflag(TRAINER_ANNABELLE)
+			cleartrainerflag(TRAINER_RICHARD)
+			clearflag(FLAG_BEAT_LEVIATHAN_3)
+			setvar(VAR_ZONE_3_STATE, 0)
 			warpteleport(MAP_ZONE2SANCTUARY, 255, 22, 7)
 			waitstate
 		case 4:
+			cleartrainerflag(TRAINER_HERMAN)
+			cleartrainerflag(TRAINER_RALPH)
+			cleartrainerflag(TRAINER_SANTIAGO)
+			cleartrainerflag(TRAINER_CHLOE_AND_KAYA)
+			cleartrainerflag(TRAINER_LUCIA)
+			cleartrainerflag(TRAINER_FRED)
+			clearflag(FLAG_BEAT_LEVIATHAN_4)
+			setvar(VAR_ZONE_4_STATE, 0)
 			warpteleport(MAP_ZONE3SANCTUARY, 255, 22, 7)
 			waitstate
 		case 5:
+			cleartrainerflag(TRAINER_ANNE_AND_JUNE)
+			cleartrainerflag(TRAINER_GILBERT)
+			cleartrainerflag(TRAINER_REBECCA)
+			cleartrainerflag(TRAINER_CAITLYN)
+			cleartrainerflag(TRAINER_RYAN)
+			clearflag(FLAG_BEAT_LEVIATHAN_5)
+			setvar(VAR_ZONE_5_STATE, 0)
 			warpteleport(MAP_ZONE4SANCTUARY, 255, 22, 7)
 			waitstate
 		case 6:
+			cleartrainerflag(TRAINER_RONAN)
+			cleartrainerflag(TRAINER_MELANIE)
+			cleartrainerflag(TRAINER_CONSTANCE)
+			cleartrainerflag(TRAINER_FRANK)
+			cleartrainerflag(TRAINER_DUDLEY)
+			clearflag(FLAG_BEAT_LEVIATHAN_6)
+			setvar(VAR_ZONE_6_STATE, 0)
 			warpteleport(MAP_ZONE5SANCTUARY, 255, 22, 7)
 			waitstate
 		case 7:

@@ -1,6 +1,6 @@
 EventScript_EnterSanctuary::
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	checkmoney 0
+	setvar VAR_TRAINER_MONEY, 0
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -2337,7 +2337,6 @@ EventScript_WhenUReady_4:
 
 EventScript_SanctuaryToZone0::
 	lockall
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warpteleport MAP_ZONE0A, 255, 17, 10
 	waitstate
 	return
@@ -3141,6 +3140,7 @@ EventScript_ExpAll_7:
 
 
 EventScript_WarpZone0::
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	clearflag FLAG_IS_REVISITING_ZONE
 	switch VAR_REVISITING_ZONE
 	case 1, EventScript_WarpZone0_2
@@ -3546,31 +3546,71 @@ Zone_EventScript_RetirePrompt_2:
 	end
 
 Zone_EventScript_RetirePrompt_6:
+	cleartrainerflag TRAINER_NINA
+	cleartrainerflag TRAINER_MARIAM
+	cleartrainerflag TRAINER_OSCAR
+	clearflag FLAG_BEAT_LEVIATHAN_1
+	setvar VAR_ZONE_1_STATE, 0
 	warpteleport MAP_ZONE0SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_7:
+	cleartrainerflag TRAINER_POLLY
+	cleartrainerflag TRAINER_JEREMIAH
+	cleartrainerflag TRAINER_HARPER
+	cleartrainerflag TRAINER_ARTHUR
+	clearflag FLAG_BEAT_LEVIATHAN_2
+	setvar VAR_ZONE_2_STATE, 0
 	warpteleport MAP_ZONE1SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_8:
+	cleartrainerflag TRAINER_JEMMA
+	cleartrainerflag TRAINER_PATRICK
+	cleartrainerflag TRAINER_BORIS
+	cleartrainerflag TRAINER_ANNABELLE
+	cleartrainerflag TRAINER_RICHARD
+	clearflag FLAG_BEAT_LEVIATHAN_3
+	setvar VAR_ZONE_3_STATE, 0
 	warpteleport MAP_ZONE2SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_9:
+	cleartrainerflag TRAINER_HERMAN
+	cleartrainerflag TRAINER_RALPH
+	cleartrainerflag TRAINER_SANTIAGO
+	cleartrainerflag TRAINER_CHLOE_AND_KAYA
+	cleartrainerflag TRAINER_LUCIA
+	cleartrainerflag TRAINER_FRED
+	clearflag FLAG_BEAT_LEVIATHAN_4
+	setvar VAR_ZONE_4_STATE, 0
 	warpteleport MAP_ZONE3SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_10:
+	cleartrainerflag TRAINER_ANNE_AND_JUNE
+	cleartrainerflag TRAINER_GILBERT
+	cleartrainerflag TRAINER_REBECCA
+	cleartrainerflag TRAINER_CAITLYN
+	cleartrainerflag TRAINER_RYAN
+	clearflag FLAG_BEAT_LEVIATHAN_5
+	setvar VAR_ZONE_5_STATE, 0
 	warpteleport MAP_ZONE4SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_11:
+	cleartrainerflag TRAINER_RONAN
+	cleartrainerflag TRAINER_MELANIE
+	cleartrainerflag TRAINER_CONSTANCE
+	cleartrainerflag TRAINER_FRANK
+	cleartrainerflag TRAINER_DUDLEY
+	clearflag FLAG_BEAT_LEVIATHAN_6
+	setvar VAR_ZONE_6_STATE, 0
 	warpteleport MAP_ZONE5SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
@@ -3725,8 +3765,10 @@ EventScript_ExpAll_Text_4:
 Zone_EventScript_RetirePrompt_Text_0:
 	.string "Would you like to retire your attempt at\n"
 	.string "this Zone?\p"
-	.string "You will lose all your progress so far,\n"
-	.string "as well as half of your money.\p"
+	.string "You will lose all your progress so far\n"
+	.string "and any money you received from\l"
+	.string "trainers, as well as half of your\l"
+	.string "remaining money.\p"
 	.string "Are you sure you want to return to the\n"
 	.string "Sanctuary?$"
 

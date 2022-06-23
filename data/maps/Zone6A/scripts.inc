@@ -32,12 +32,14 @@ Zone6A_EventScript_Exit::
 	goto_if_gt Zone6A_EventScript_Exit_2
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_Exit_7
 Zone6A_EventScript_Exit_5:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE6SANCTUARY, 255, 22, 7
 Zone6A_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone6A_EventScript_Exit_2:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_HIDE_MAX_2
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 31, 32

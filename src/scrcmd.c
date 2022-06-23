@@ -1774,14 +1774,7 @@ bool8 ScrCmd_checkmoney(struct ScriptContext *ctx)
     u8 ignore = ScriptReadByte(ctx);
 
     if (!ignore)
-    {
-        if (amount == 0) {
-            VarSet(VAR_TRAINER_MONEY, 0);
-        }
-        else {
-            gSpecialVar_Result = IsEnoughMoney(&gSaveBlock1Ptr->money, amount);
-        }
-    }
+        gSpecialVar_Result = IsEnoughMoney(&gSaveBlock1Ptr->money, amount);
     return FALSE;
 }
 

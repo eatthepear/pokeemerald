@@ -16,10 +16,12 @@ mapscripts Zone1A_MapScripts {
 script Zone1A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 1) {
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 		setvar(VAR_REVISITING_ZONE, 0)
 		warpteleport(MAP_ZONE0D, 255, 15, 32)
 		waitstate
     } else {
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
         warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
     }
     releaseall

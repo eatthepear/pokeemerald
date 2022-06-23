@@ -16,6 +16,7 @@ mapscripts Zone5A_MapScripts {
 script Zone5A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 5) {
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 		setvar(VAR_REVISITING_ZONE, 0)
 		warpteleport(MAP_ZONE0D, 255, 31, 32)
 		waitstate
@@ -25,6 +26,7 @@ script Zone5A_EventScript_Exit {
 			!defeated(TRAINER_GILBERT))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
         warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
     }
     releaseall

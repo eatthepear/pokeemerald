@@ -177,6 +177,7 @@ Zone0D_EventScript_VerifyDestination::
 	msgbox Zone0D_EventScript_VerifyDestination_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0D_EventScript_VerifyDestination_2
+	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	return
 
 Zone0D_EventScript_VerifyDestination_2:

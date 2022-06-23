@@ -18,12 +18,14 @@ Zone4E_EventScript_Exit::
 	goto_if_gt Zone4E_EventScript_Exit_2
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_7
 Zone4E_EventScript_Exit_5:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE4SANCTUARY, 255, 22, 7
 Zone4E_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone4E_EventScript_Exit_2:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 27, 32
 	waitstate

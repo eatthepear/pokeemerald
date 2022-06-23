@@ -154,6 +154,7 @@ script Zone0D_EventScript_VerifyDestination {
 		releaseall
 		end
 	}
+	setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	return
 }
 
