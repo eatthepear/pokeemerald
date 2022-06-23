@@ -1753,9 +1753,17 @@ bool8 ScrCmd_removemoney(struct ScriptContext *ctx)
 {
     u32 amount = ScriptReadWord(ctx);
     u8 ignore = ScriptReadByte(ctx);
+    u32 halfMoney = GetMoney(&gSaveBlock1Ptr->money) / 2;
 
     if (!ignore)
-        RemoveMoney(&gSaveBlock1Ptr->money, amount);
+    {
+        if (amount == 0) {
+            RemoveMoney(&gSaveBlock1Ptr->money, halfMoney);
+        }
+        else {
+            RemoveMoney(&gSaveBlock1Ptr->money, amount);
+        }
+    }
     return FALSE;
 }
 

@@ -2308,6 +2308,91 @@ text gText_ItemChestIsEmpty {
 	format("The item chest is empty.")
 }
 
+script Zone_EventScript_RetirePrompt {
+	lockall
+	showmoneybox(0, 0, 0)
+	msgbox(format("Would you like to retire your attempt at this Zone?\pYou will lose all your progress so far, as well as half of your money.\pAre you sure you want to return to the Sanctuary?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		closemessage
+		hidemoneybox
+		releaseall
+		end
+	}
+	removemoney(0)
+	updatemoneybox
+	msgbox(format("Warping now…"))
+	switch (var(VAR_ZONE)) {
+		case 1:
+			warpteleport(MAP_ZONE0SANCTUARY, 255, 22, 7)
+			waitstate
+		case 2:
+			warpteleport(MAP_ZONE1SANCTUARY, 255, 22, 7)
+			waitstate
+		case 3:
+			warpteleport(MAP_ZONE2SANCTUARY, 255, 22, 7)
+			waitstate
+		case 4:
+			warpteleport(MAP_ZONE3SANCTUARY, 255, 22, 7)
+			waitstate
+		case 5:
+			warpteleport(MAP_ZONE4SANCTUARY, 255, 22, 7)
+			waitstate
+		case 6:
+			warpteleport(MAP_ZONE5SANCTUARY, 255, 22, 7)
+			waitstate
+		case 7:
+			warpteleport(MAP_ZONE6SANCTUARY, 255, 22, 7)
+			waitstate
+		case 9:
+			warpteleport(MAP_ZONE8SANCTUARY, 255, 22, 7)
+			waitstate
+		case 10:
+			warpteleport(MAP_ZONE9SANCTUARY, 255, 22, 7)
+			waitstate
+		case 11:
+			warpteleport(MAP_ZONE10SANCTUARY, 255, 22, 7)
+			waitstate
+		case 12:
+			warpteleport(MAP_ZONE11SANCTUARY, 255, 22, 7)
+			waitstate
+		case 13:
+			warpteleport(MAP_ZONE12SANCTUARY, 255, 22, 7)
+			waitstate
+		case 15:
+			warpteleport(MAP_ZONE14SANCTUARY, 255, 22, 7)
+			waitstate
+		case 16:
+			warpteleport(MAP_ZONE15SANCTUARY, 255, 22, 7)
+			waitstate
+		case 17:
+			warpteleport(MAP_ZONE16SANCTUARY, 255, 22, 7)
+			waitstate
+		case 18:
+			warpteleport(MAP_ZONE17SANCTUARY, 255, 22, 7)
+			waitstate
+		case 20:
+			warpteleport(MAP_ZONE20SANCTUARY, 255, 22, 7)
+			waitstate
+		case 21:
+			warpteleport(MAP_ZONE20SANCTUARY, 255, 22, 7)
+			waitstate
+		case 22:
+			warpteleport(MAP_ZONE21SANCTUARY, 255, 22, 7)
+			waitstate
+		case 23:
+			warpteleport(MAP_ZONE22SANCTUARY, 255, 22, 7)
+			waitstate
+		case 24:
+			warpteleport(MAP_ZONE23SANCTUARY, 255, 22, 7)
+			waitstate
+		case 26:
+			warpteleport(MAP_ZONE25SANCTUARY, 255, 22, 7)
+			waitstate
+	}
+	releaseall
+	end
+}
+
 raw `
 
 EventScript_ExitSign::

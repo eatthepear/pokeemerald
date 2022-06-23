@@ -58,12 +58,13 @@ enum
     MENU_ACTION_SAVE,
     MENU_ACTION_OPTION,
     MENU_ACTION_EXIT,
-    MENU_ACTION_RETIRE_SAFARI,
+    MENU_ACTION_RETURN_TO_ZONE_0,
     MENU_ACTION_PLAYER_LINK,
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
+    MENU_ACTION_RETIRE_ZONE,
 };
 
 // Save status
@@ -105,6 +106,7 @@ static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
+static bool8 StartMenuZoneRetireCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -168,12 +170,13 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuSave, {.u8_void = StartMenuSaveCallback}},
     {gText_MenuOption, {.u8_void = StartMenuOptionCallback}},
     {gText_MenuExit, {.u8_void = StartMenuExitCallback}},
-    {gText_MenuRetire, {.u8_void = StartMenuSafariZoneRetireCallback}},
+    {gText_MenuReturn, {.u8_void = StartMenuSafariZoneRetireCallback}},
     {gText_MenuPlayer, {.u8_void = StartMenuLinkModePlayerNameCallback}},
     {gText_MenuRest, {.u8_void = StartMenuSaveCallback}},
     {gText_MenuRetire, {.u8_void = StartMenuBattlePyramidRetireCallback}},
     {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}},
     {gText_MenuDebug, {.u8_void = StartMenuDebugCallback}},
+    {gText_MenuRetire, {.u8_void = StartMenuZoneRetireCallback}},
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -338,7 +341,11 @@ static void BuildZoneStartMenu(void)
 {
     if (FlagGet(FLAG_IS_REVISITING_ZONE) == TRUE)
     {
-        AddStartMenuAction(MENU_ACTION_RETIRE_SAFARI);
+        AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
+    }
+    else
+    {
+        AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
     }
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
@@ -355,10 +362,7 @@ static void BuildZoneStartMenu(void)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
     // }
-    if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_SAVE);
-    }
+    AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
@@ -396,7 +400,7 @@ static void BuildDebugStartMenu(void)
 
 static void BuildSafariZoneStartMenu(void)
 {
-    AddStartMenuAction(MENU_ACTION_RETIRE_SAFARI);
+    AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_BAG);
@@ -677,7 +681,8 @@ static bool8 HandleStartMenuInput(void)
             && gMenuCallback != StartMenuExitCallback
             && gMenuCallback != StartMenuDebugCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
-            && gMenuCallback != StartMenuBattlePyramidRetireCallback)
+            && gMenuCallback != StartMenuBattlePyramidRetireCallback
+            && gMenuCallback != StartMenuZoneRetireCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -828,6 +833,15 @@ static bool8 StartMenuSafariZoneRetireCallback(void)
     RemoveExtraStartMenuWindows();
     HideStartMenu();
     SafariZoneRetirePrompt();
+
+    return TRUE;
+}
+
+static bool8 StartMenuZoneRetireCallback(void)
+{
+    RemoveExtraStartMenuWindows();
+    HideStartMenu();
+    ZoneRetirePrompt();
 
     return TRUE;
 }

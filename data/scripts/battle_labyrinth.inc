@@ -3502,6 +3502,159 @@ EventScript_WarpZone0_52:
 	return
 
 
+Zone_EventScript_RetirePrompt::
+	lockall
+	showmoneybox 0, 0, 0
+	msgbox Zone_EventScript_RetirePrompt_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone_EventScript_RetirePrompt_2
+	removemoney 0
+	updatemoneybox
+	msgbox Zone_EventScript_RetirePrompt_Text_1
+	switch VAR_ZONE
+	case 1, Zone_EventScript_RetirePrompt_6
+	case 2, Zone_EventScript_RetirePrompt_7
+	case 3, Zone_EventScript_RetirePrompt_8
+	case 4, Zone_EventScript_RetirePrompt_9
+	case 5, Zone_EventScript_RetirePrompt_10
+	case 6, Zone_EventScript_RetirePrompt_11
+	case 7, Zone_EventScript_RetirePrompt_12
+	case 9, Zone_EventScript_RetirePrompt_13
+	case 10, Zone_EventScript_RetirePrompt_14
+	case 11, Zone_EventScript_RetirePrompt_15
+	case 12, Zone_EventScript_RetirePrompt_16
+	case 13, Zone_EventScript_RetirePrompt_17
+	case 15, Zone_EventScript_RetirePrompt_18
+	case 16, Zone_EventScript_RetirePrompt_19
+	case 17, Zone_EventScript_RetirePrompt_20
+	case 18, Zone_EventScript_RetirePrompt_21
+	case 20, Zone_EventScript_RetirePrompt_22
+	case 21, Zone_EventScript_RetirePrompt_23
+	case 22, Zone_EventScript_RetirePrompt_24
+	case 23, Zone_EventScript_RetirePrompt_25
+	case 24, Zone_EventScript_RetirePrompt_26
+	case 26, Zone_EventScript_RetirePrompt_27
+Zone_EventScript_RetirePrompt_4:
+	releaseall
+	end
+
+Zone_EventScript_RetirePrompt_2:
+	closemessage
+	hidemoneybox
+	releaseall
+	end
+
+Zone_EventScript_RetirePrompt_6:
+	warpteleport MAP_ZONE0SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_7:
+	warpteleport MAP_ZONE1SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_8:
+	warpteleport MAP_ZONE2SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_9:
+	warpteleport MAP_ZONE3SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_10:
+	warpteleport MAP_ZONE4SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_11:
+	warpteleport MAP_ZONE5SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_12:
+	warpteleport MAP_ZONE6SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_13:
+	warpteleport MAP_ZONE8SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_14:
+	warpteleport MAP_ZONE9SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_15:
+	warpteleport MAP_ZONE10SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_16:
+	warpteleport MAP_ZONE11SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_17:
+	warpteleport MAP_ZONE12SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_18:
+	warpteleport MAP_ZONE14SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_19:
+	warpteleport MAP_ZONE15SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_20:
+	warpteleport MAP_ZONE16SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_21:
+	warpteleport MAP_ZONE17SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_22:
+	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_23:
+	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_24:
+	warpteleport MAP_ZONE21SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_25:
+	warpteleport MAP_ZONE22SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_26:
+	warpteleport MAP_ZONE23SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+Zone_EventScript_RetirePrompt_27:
+	warpteleport MAP_ZONE25SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone_EventScript_RetirePrompt_4
+
+
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
@@ -3567,6 +3720,17 @@ EventScript_ExpAll_Text_3:
 
 EventScript_ExpAll_Text_4:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on.$"
+
+Zone_EventScript_RetirePrompt_Text_0:
+	.string "Would you like to retire your attempt at\n"
+	.string "this Zone?\p"
+	.string "You will lose all your progress so far,\n"
+	.string "as well as half of your money.\p"
+	.string "Are you sure you want to return to the\n"
+	.string "Sanctuary?$"
+
+Zone_EventScript_RetirePrompt_Text_1:
+	.string "Warping now…$"
 
 gText_ItemChestIsEmpty::
 	.string "The item chest is empty.$"
