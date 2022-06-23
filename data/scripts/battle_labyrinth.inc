@@ -1,5 +1,6 @@
 EventScript_EnterSanctuary::
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	checkmoney 0
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp

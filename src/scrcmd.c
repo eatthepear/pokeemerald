@@ -1753,12 +1753,13 @@ bool8 ScrCmd_removemoney(struct ScriptContext *ctx)
 {
     u32 amount = ScriptReadWord(ctx);
     u8 ignore = ScriptReadByte(ctx);
-    u32 halfMoney = GetMoney(&gSaveBlock1Ptr->money) / 2;
 
     if (!ignore)
     {
         if (amount == 0) {
-            RemoveMoney(&gSaveBlock1Ptr->money, halfMoney);
+            RemoveMoney(&gSaveBlock1Ptr->money, VarGet(VAR_TRAINER_MONEY));
+            VarSet(VAR_TRAINER_MONEY, 0);
+            RemoveMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
         }
         else {
             RemoveMoney(&gSaveBlock1Ptr->money, amount);
@@ -1773,7 +1774,14 @@ bool8 ScrCmd_checkmoney(struct ScriptContext *ctx)
     u8 ignore = ScriptReadByte(ctx);
 
     if (!ignore)
-        gSpecialVar_Result = IsEnoughMoney(&gSaveBlock1Ptr->money, amount);
+    {
+        if (amount == 0) {
+            VarSet(VAR_TRAINER_MONEY, 0);
+        }
+        else {
+            gSpecialVar_Result = IsEnoughMoney(&gSaveBlock1Ptr->money, amount);
+        }
+    }
     return FALSE;
 }
 

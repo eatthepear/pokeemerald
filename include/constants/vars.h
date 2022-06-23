@@ -275,7 +275,7 @@
 #define VAR_LEVIATHAN_MUSIC                  0x40FB
 #define VAR_MON_TO_PC                        0x40FC
 #define VAR_REVISITING_ZONE                  0x40FD
-#define VAR_UNUSED_0x40FE                    0x40FE
+#define VAR_TRAINER_MONEY                    0x40FE
 #define VAR_MUGSHOT_ID                       0x40FF // Mugshot ID Var
 
 #define VARS_END                             0x40FF

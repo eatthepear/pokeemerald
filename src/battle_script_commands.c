@@ -6794,6 +6794,7 @@ static void Cmd_getmoneyreward(void)
         moneyReward += GetTrainerMoneyToGive(gTrainerBattleOpponent_B);
 
     AddMoney(&gSaveBlock1Ptr->money, moneyReward);
+    VarSet(VAR_TRAINER_MONEY, VarGet(VAR_TRAINER_MONEY) + moneyReward);
     PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 5, moneyReward);
 
     gBattlescriptCurrInstr++;
