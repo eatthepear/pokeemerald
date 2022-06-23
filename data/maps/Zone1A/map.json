@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 19,
       "y": 18,
       "elevation": 3,
@@ -64,10 +64,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone1A_EventScript_ItemPotion",
-      "flag": "FLAG_ITEM_ZONE1A_POTION"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
       "x": 0,
       "y": 2,
       "elevation": 3,
@@ -77,7 +77,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone1A_EventScript_ItemQuickClaw",
-      "flag": "FLAG_ITEM_ZONE1A_QUICK_CLAW"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",

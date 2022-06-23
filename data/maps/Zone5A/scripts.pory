@@ -1,4 +1,17 @@
-mapscripts Zone5A_MapScripts {}
+mapscripts Zone5A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE5A_QUICK_BALL)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE5A_TM03)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
 
 script Zone5A_EventScript_Exit {
     lockall
@@ -226,6 +239,40 @@ text Zone5A_Text_HereGem {
 	format("Then I suppose this would be of good use to you!")
 }
 
+script Zone5A_EventScript_ItemQuickBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE5A_QUICK_BALL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE5A_QUICK_BALL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_QUICK_BALL, 1)
+	release
+	end
+}
+
+script Zone5A_EventScript_ItemTM03 {
+	lock
+	if (flag(FLAG_ITEM_ZONE5A_TM03)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE5A_TM03)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TM03)
+	release
+	end
+}
+
 raw `
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons
@@ -306,14 +353,6 @@ Zone5A_Text_RyanDefeat:
 
 Zone5A_Text_RyanPostBattle:
 	.string "There's only one left. Don't be afraid!$"
-
-Zone5A_EventScript_ItemQuickBall::
-	finditem ITEM_QUICK_BALL
-	end
-
-Zone5A_EventScript_ItemTM03::
-	finditem ITEM_TM03
-	end
 
 Zone5A_EventScript_Sign::
 	msgbox Zone5A_Text_Sign, MSGBOX_SIGN

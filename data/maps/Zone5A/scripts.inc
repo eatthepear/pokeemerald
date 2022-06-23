@@ -1,5 +1,22 @@
 Zone5A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE5A_QUICK_BALL, Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE5A_TM03, Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone5A_EventScript_Exit::
@@ -264,6 +281,42 @@ Zone5A_EventScript_Breeder_34:
 	goto Zone5A_EventScript_Breeder_5
 
 
+Zone5A_EventScript_ItemQuickBall::
+	lock
+	goto_if_set FLAG_ITEM_ZONE5A_QUICK_BALL, Zone5A_EventScript_ItemQuickBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE5A_QUICK_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_QUICK_BALL, 1
+	release
+	end
+
+Zone5A_EventScript_ItemQuickBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone5A_EventScript_ItemTM03::
+	lock
+	goto_if_set FLAG_ITEM_ZONE5A_TM03, Zone5A_EventScript_ItemTM03_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE5A_TM03
+	addobject VAR_LAST_TALKED
+	finditem ITEM_TM03
+	release
+	end
+
+Zone5A_EventScript_ItemTM03_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons
 	msgbox Zone5A_Text_AnneAndJunePostBattle, MSGBOX_DEFAULT
@@ -343,14 +396,6 @@ Zone5A_Text_RyanDefeat:
 
 Zone5A_Text_RyanPostBattle:
 	.string "There's only one left. Don't be afraid!$"
-
-Zone5A_EventScript_ItemQuickBall::
-	finditem ITEM_QUICK_BALL
-	end
-
-Zone5A_EventScript_ItemTM03::
-	finditem ITEM_TM03
-	end
 
 Zone5A_EventScript_Sign::
 	msgbox Zone5A_Text_Sign, MSGBOX_SIGN

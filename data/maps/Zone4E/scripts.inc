@@ -1,5 +1,15 @@
 Zone4E_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone4E_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone4E_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE4E_SUPER_POTION, Zone4E_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone4E_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone4E_EventScript_Exit::
@@ -68,8 +78,22 @@ Zone4E_EventScript_LeviathanBattle_2:
 
 
 Zone4E_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
+	lock
+	goto_if_set FLAG_ITEM_ZONE4E_SUPER_POTION, Zone4E_EventScript_ItemSuperPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE4E_SUPER_POTION
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUPER_POTION, 1
+	release
 	end
+
+Zone4E_EventScript_ItemSuperPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone4E_EventScript_Sign::
 	msgbox Zone4E_Text_Sign, MSGBOX_SIGN

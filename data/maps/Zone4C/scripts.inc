@@ -1,5 +1,34 @@
 Zone4C_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone4C_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone4C_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE4C_MUSCLE_BAND, Zone4C_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone4C_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+
+Zone4C_EventScript_ItemMuscleBand::
+	lock
+	goto_if_set FLAG_ITEM_ZONE4C_MUSCLE_BAND, Zone4C_EventScript_ItemMuscleBand_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE4C_MUSCLE_BAND
+	addobject VAR_LAST_TALKED
+	finditem ITEM_MUSCLE_BAND, 1
+	release
+	end
+
+Zone4C_EventScript_ItemMuscleBand_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone4C_EventScript_Santiago::
 	trainerbattle_single TRAINER_SANTIAGO, Zone4C_Text_SantiagoIntro, Zone4C_Text_SantiagoDefeat
@@ -34,10 +63,6 @@ Zone4C_Text_ChloeandKayaDefeat:
 Zone4C_Text_ChloeandKayaPostBattle:
 	.string "Chloe: Twin power!\p"
 	.string "Kaya: Twin power!$"
-
-Zone4C_EventScript_ItemMuscleBand::
-	finditem ITEM_MUSCLE_BAND
-	end
 
 Zone4C_EventScript_Sign::
 	msgbox Zone4C_Text_Sign, MSGBOX_SIGN

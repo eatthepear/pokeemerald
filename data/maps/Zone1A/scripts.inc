@@ -1,5 +1,22 @@
 Zone1A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE1A_POTION, Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE1A_QUICK_CLAW, Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone1A_EventScript_Exit::
@@ -30,7 +47,7 @@ Zone1A_EventScript_LeviathanBattle::
 Zone1A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_0
-	giveitem ITEM_ORAN_BERRY, 10
+	finditem ITEM_ORAN_BERRY, 10
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_1
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -44,6 +61,42 @@ Zone1A_EventScript_LeviathanBattle_2:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_COREY
 	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1_BRUTAL, Zone1A_Text_Leviathan1Defeat
 	goto Zone1A_EventScript_LeviathanBattle_1
+
+
+Zone1A_EventScript_ItemPotion::
+	lock
+	goto_if_set FLAG_ITEM_ZONE1A_POTION, Zone1A_EventScript_ItemPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE1A_POTION
+	addobject VAR_LAST_TALKED
+	finditem ITEM_POTION, 1
+	release
+	end
+
+Zone1A_EventScript_ItemPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone1A_EventScript_ItemQuickClaw::
+	lock
+	goto_if_set FLAG_ITEM_ZONE1A_QUICK_CLAW, Zone1A_EventScript_ItemQuickClaw_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE1A_QUICK_CLAW
+	addobject VAR_LAST_TALKED
+	finditem ITEM_QUICK_CLAW, 1
+	release
+	end
+
+Zone1A_EventScript_ItemQuickClaw_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
 
 
 Zone1A_EventScript_Nina::
@@ -87,14 +140,6 @@ Zone1A_Text_OscarDefeat:
 
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
-
-Zone1A_EventScript_ItemPotion::
-	finditem ITEM_POTION
-	end
-
-Zone1A_EventScript_ItemQuickClaw::
-	finditem ITEM_QUICK_CLAW
-	end
 
 Zone1A_EventScript_Sign::
 	msgbox Zone1A_Text_Sign, MSGBOX_SIGN

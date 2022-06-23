@@ -1,5 +1,36 @@
 Zone3A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE3A_SUPER_POTION, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE3A_POTION_X2, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE3A_PARALYZE_HEAL, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_10
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	goto_if_set FLAG_ITEM_ZONE3A_HYPER_POTION, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_13
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_10:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+
+Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone3A_EventScript_Exit::
@@ -180,6 +211,78 @@ Zone3A_Movement_Remi_WalkBackToPhillipa:
 	face_left
 	step_end
 
+Zone3A_EventScript_ItemSuperPotion::
+	lock
+	goto_if_set FLAG_ITEM_ZONE3A_SUPER_POTION, Zone3A_EventScript_ItemSuperPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE3A_SUPER_POTION
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUPER_POTION, 1
+	release
+	end
+
+Zone3A_EventScript_ItemSuperPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone3A_EventScript_ItemPotion::
+	lock
+	goto_if_set FLAG_ITEM_ZONE3A_POTION_X2, Zone3A_EventScript_ItemPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE3A_POTION_X2
+	addobject VAR_LAST_TALKED
+	finditem ITEM_POTION, 2
+	release
+	end
+
+Zone3A_EventScript_ItemPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone3A_EventScript_ItemParalyzeHeal::
+	lock
+	goto_if_set FLAG_ITEM_ZONE3A_PARALYZE_HEAL, Zone3A_EventScript_ItemParalyzeHeal_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE3A_PARALYZE_HEAL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_PARALYZE_HEAL, 1
+	release
+	end
+
+Zone3A_EventScript_ItemParalyzeHeal_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone3A_EventScript_ItemHyperPotion::
+	lock
+	goto_if_set FLAG_ITEM_ZONE3A_HYPER_POTION, Zone3A_EventScript_ItemHyperPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE3A_HYPER_POTION
+	addobject VAR_LAST_TALKED
+	finditem ITEM_HYPER_POTION, 1
+	release
+	end
+
+Zone3A_EventScript_ItemHyperPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
 Zone3A_EventScript_Patrick::
 	trainerbattle_single TRAINER_PATRICK, Zone3A_Text_PatrickIntro, Zone3A_Text_PatrickDefeat
 	msgbox Zone3A_Text_PatrickPostBattle, MSGBOX_AUTOCLOSE
@@ -252,22 +355,6 @@ Zone3A_Text_RichardDefeat:
 Zone3A_Text_RichardPostBattle:
 	.string "Do you think I can buy humility\n"
 	.string "with my money?$"
-
-Zone3A_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
-	end
-
-Zone3A_EventScript_ItemPotion::
-	finditem ITEM_POTION
-	end
-
-Zone3A_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
-	end
-
-Zone3A_EventScript_ItemHyperPotion::
-	finditem ITEM_HYPER_POTION
-	end
 
 Zone3A_EventScript_Sign::
 	msgbox Zone3A_Text_Sign, MSGBOX_SIGN

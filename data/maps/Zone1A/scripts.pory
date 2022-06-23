@@ -1,4 +1,17 @@
-mapscripts Zone1A_MapScripts {}
+mapscripts Zone1A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE1A_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE1A_QUICK_CLAW)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
 
 script Zone1A_EventScript_Exit {
     lockall
@@ -28,7 +41,7 @@ script Zone1A_EventScript_LeviathanBattle {
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet an Oran Berry, I would be able to win. Oran Berries really are the best!\p Here, let me share some with you and your Pokémon!"))
-	giveitem(ITEM_ORAN_BERRY, 10)
+	finditem(ITEM_ORAN_BERRY, 10)
 	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run now.\pBye bye!"))
 	closemessage
 	fadescreen(FADE_TO_BLACK)
@@ -49,6 +62,40 @@ text Zone1A_Text_Leviathan1Intro {
 
 text Zone1A_Text_Leviathan1Defeat {
 	format("Drats! Even the Oran Berry wasn't enough!")
+}
+
+script Zone1A_EventScript_ItemPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE1A_POTION)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE1A_POTION)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_POTION, 1)
+	release
+	end
+}
+
+script Zone1A_EventScript_ItemQuickClaw {
+	lock
+	if (flag(FLAG_ITEM_ZONE1A_QUICK_CLAW)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE1A_QUICK_CLAW)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_QUICK_CLAW, 1)
+	release
+	end
 }
 
 raw `
@@ -93,14 +140,6 @@ Zone1A_Text_OscarDefeat:
 
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor...$"
-
-Zone1A_EventScript_ItemPotion::
-	finditem ITEM_POTION
-	end
-
-Zone1A_EventScript_ItemQuickClaw::
-	finditem ITEM_QUICK_CLAW
-	end
 
 Zone1A_EventScript_Sign::
 	msgbox Zone1A_Text_Sign, MSGBOX_SIGN

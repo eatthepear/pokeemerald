@@ -1,12 +1,37 @@
 Zone4A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone4A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone4A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE4A_BURN_HEAL, Zone4A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone4A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+
+Zone4A_EventScript_ItemBurnHeal::
+	lock
+	goto_if_set FLAG_ITEM_ZONE4A_BURN_HEAL, Zone4A_EventScript_ItemBurnHeal_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE4A_BURN_HEAL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_BURN_HEAL, 1
+	release
+	end
+
+Zone4A_EventScript_ItemBurnHeal_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone4A_EventScript_Sign::
 	msgbox Zone4A_Text_Sign, MSGBOX_SIGN
-	end
-
-Zone4A_EventScript_ItemBurnHeal::
-	finditem ITEM_BURN_HEAL
 	end
 
 Zone4A_Text_Sign:

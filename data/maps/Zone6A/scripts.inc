@@ -1,5 +1,29 @@
 Zone6A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE6A_NET_BALL, Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE6A_TM07, Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE6A_NEST_BALL, Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone6A_EventScript_Exit::
@@ -68,6 +92,60 @@ Zone6A_EventScript_LeviathanBattle_5:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
 	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat
 	goto Zone6A_EventScript_LeviathanBattle_4
+
+
+Zone6A_EventScript_ItemNetBall::
+	lock
+	goto_if_set FLAG_ITEM_ZONE6A_NET_BALL, Zone6A_EventScript_ItemNetBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE6A_NET_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_NET_BALL, 1
+	release
+	end
+
+Zone6A_EventScript_ItemNetBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone6A_EventScript_ItemTM07::
+	lock
+	goto_if_set FLAG_ITEM_ZONE6A_TM07, Zone6A_EventScript_ItemTM07_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE6A_TM07
+	addobject VAR_LAST_TALKED
+	finditem ITEM_TM07
+	release
+	end
+
+Zone6A_EventScript_ItemTM07_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone6A_EventScript_ItemNestBall::
+	lock
+	goto_if_set FLAG_ITEM_ZONE6A_NEST_BALL, Zone6A_EventScript_ItemNestBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE6A_NEST_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_NEST_BALL, 1
+	release
+	end
+
+Zone6A_EventScript_ItemNestBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
 
 
 Zone6A_EventScript_Frank::
@@ -143,18 +221,6 @@ Zone6A_Text_DudleyDefeat:
 Zone6A_Text_DudleyPostBattle:
 	.string "Sorry for taking out my fishing\n"
 	.string "frustration out on you.$"
-
-Zone6A_EventScript_ItemNetBall::
-	finditem ITEM_NET_BALL
-	end
-
-Zone6A_EventScript_ItemTM07::
-	finditem ITEM_TM07
-	end
-
-Zone6A_EventScript_ItemNestBall::
-	finditem ITEM_NEST_BALL
-	end
 
 Zone6A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"

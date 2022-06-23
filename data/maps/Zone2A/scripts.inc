@@ -1,9 +1,34 @@
 Zone2A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone2A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
 
+Zone2A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE2A_ANTIDOTE, Zone2A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone2A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+
 Zone2A_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+	lock
+	goto_if_set FLAG_ITEM_ZONE2A_ANTIDOTE, Zone2A_EventScript_ItemAntidote_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE2A_ANTIDOTE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_ANTIDOTE, 1
+	release
 	end
+
+Zone2A_EventScript_ItemAntidote_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone2A_EventScript_Polly::
 	trainerbattle_single TRAINER_POLLY, Zone2A_Text_PollyIntro, Zone2A_Text_PollyDefeat

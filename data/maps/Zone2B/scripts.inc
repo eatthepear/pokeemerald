@@ -3,7 +3,7 @@ Zone2B_MapScripts::
 	.byte 0
 
 Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME:
-	goto_if_set FLAG_ITEM_ZONE2B_POTION, Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	goto_if_set FLAG_ITEM_ZONE2B_POTION_X2, Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
 	return
 
@@ -84,13 +84,13 @@ Zone2B_EventScript_LeviathanBattle_8:
 
 Zone2B_EventScript_ItemPotion::
 	lock
-	goto_if_set FLAG_ITEM_ZONE2B_POTION, Zone2B_EventScript_ItemPotion_2
+	goto_if_set FLAG_ITEM_ZONE2B_POTION_X2, Zone2B_EventScript_ItemPotion_2
 	waitse
 	removeobject VAR_LAST_TALKED
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE2B_POTION
+	setflag FLAG_ITEM_ZONE2B_POTION_X2
 	addobject VAR_LAST_TALKED
-	giveitem ITEM_POTION, 2
+	finditem ITEM_POTION, 2
 	release
 	end
 

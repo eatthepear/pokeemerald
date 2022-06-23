@@ -1,4 +1,27 @@
-mapscripts Zone3A_MapScripts {}
+mapscripts Zone3A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE3A_SUPER_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE3A_POTION_X2)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE3A_PARALYZE_HEAL)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE3A_HYPER_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
 
 script Zone3A_EventScript_Exit {
     lockall
@@ -155,6 +178,74 @@ movement Zone3A_Movement_Remi_WalkBackToPhillipa {
 	face_left
 }
 
+script Zone3A_EventScript_ItemSuperPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE3A_SUPER_POTION)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE3A_SUPER_POTION)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SUPER_POTION, 1)
+	release
+	end
+}
+
+script Zone3A_EventScript_ItemPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE3A_POTION_X2)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE3A_POTION_X2)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_POTION, 2)
+	release
+	end
+}
+
+script Zone3A_EventScript_ItemParalyzeHeal {
+	lock
+	if (flag(FLAG_ITEM_ZONE3A_PARALYZE_HEAL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE3A_PARALYZE_HEAL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_PARALYZE_HEAL, 1)
+	release
+	end
+}
+
+script Zone3A_EventScript_ItemHyperPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE3A_HYPER_POTION)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE3A_HYPER_POTION)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_HYPER_POTION, 1)
+	release
+	end
+}
+
 raw `
 
 Zone3A_EventScript_Patrick::
@@ -230,22 +321,6 @@ Zone3A_Text_RichardPostBattle:
 	.string "Do you think I can buy humility\n"
 	.string "with my money?$"
 
-Zone3A_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
-	end
-
-Zone3A_EventScript_ItemPotion::
-	finditem ITEM_POTION
-	end
-
-Zone3A_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
-	end
-
-Zone3A_EventScript_ItemHyperPotion::
-	finditem ITEM_HYPER_POTION
-	end
-
 Zone3A_EventScript_Sign::
 	msgbox Zone3A_Text_Sign, MSGBOX_SIGN
 	end
@@ -256,3 +331,4 @@ Zone3A_Text_Sign:
 	.string "newly caught Pokémon to your party\l"
 	.string "and send a current party member to\l"
 	.string "the PC.$"
+`

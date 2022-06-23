@@ -1,5 +1,59 @@
 Zone4D_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE4D_WISE_GLASSES, Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE4D_BEEDRILLITE, Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME_5
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone4D_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+
+Zone4D_EventScript_ItemWiseGlasses::
+	lock
+	goto_if_set FLAG_ITEM_ZONE4D_WISE_GLASSES, Zone4D_EventScript_ItemWiseGlasses_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE4D_WISE_GLASSES
+	addobject VAR_LAST_TALKED
+	finditem ITEM_WISE_GLASSES, 1
+	release
+	end
+
+Zone4D_EventScript_ItemWiseGlasses_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone4D_EventScript_ItemBeedrillite::
+	lock
+	goto_if_set FLAG_ITEM_ZONE4D_BEEDRILLITE, Zone4D_EventScript_ItemBeedrillite_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE4D_BEEDRILLITE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_BEEDRILLITE, 1
+	release
+	end
+
+Zone4D_EventScript_ItemBeedrillite_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone4D_EventScript_Lucia::
 	trainerbattle_single TRAINER_LUCIA, Zone4D_Text_LuciaIntro, Zone4D_Text_LuciaDefeat
@@ -31,14 +85,6 @@ Zone4D_Text_FredDefeat:
 Zone4D_Text_FredPostBattle:
 	.string "Just keep swimming,\n"
 	.string "just keep swimming.$"
-
-Zone4D_EventScript_ItemWiseGlasses::
-	finditem ITEM_WISE_GLASSES
-	end
-
-Zone4D_EventScript_ItemBeedrillite::
-	finditem ITEM_BEEDRILLITE
-	end
 
 Zone4D_EventScript_Sign::
 	msgbox Zone4D_Text_Sign, MSGBOX_SIGN

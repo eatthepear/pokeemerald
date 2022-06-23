@@ -1,6 +1,6 @@
 mapscripts Zone2B_MapScripts {
 	MAP_SCRIPT_ON_RESUME {
-		if (flag(FLAG_ITEM_ZONE2B_POTION)) {
+		if (flag(FLAG_ITEM_ZONE2B_POTION_X2)) {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
 		} else {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
@@ -79,7 +79,7 @@ text Zone2B_Text_Leviathan2Defeat {
 
 script Zone2B_EventScript_ItemPotion {
 	lock
-	if (flag(FLAG_ITEM_ZONE2B_POTION)) {
+	if (flag(FLAG_ITEM_ZONE2B_POTION_X2)) {
 		msgbox(gText_ItemChestIsEmpty)
 		release
 		end
@@ -87,9 +87,9 @@ script Zone2B_EventScript_ItemPotion {
 	waitse
 	removeobject(VAR_LAST_TALKED)
 	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-	setflag(FLAG_ITEM_ZONE2B_POTION)
+	setflag(FLAG_ITEM_ZONE2B_POTION_X2)
 	addobject(VAR_LAST_TALKED)
-	giveitem(ITEM_POTION, 2)
+	finditem(ITEM_POTION, 2)
 	release
 	end
 }
@@ -131,3 +131,4 @@ Zone2B_EventScript_Sign::
 Zone2B_Text_Sign:
 	.string "Golden Trees often have Berries\n"
 	.string "or wild Pokémon!$"
+`

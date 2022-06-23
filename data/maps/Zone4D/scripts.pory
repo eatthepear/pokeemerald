@@ -1,0 +1,91 @@
+mapscripts Zone4D_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE4D_WISE_GLASSES)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE4D_BEEDRILLITE)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
+
+script Zone4D_EventScript_ItemWiseGlasses {
+	lock
+	if (flag(FLAG_ITEM_ZONE4D_WISE_GLASSES)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE4D_WISE_GLASSES)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_WISE_GLASSES, 1)
+	release
+	end
+}
+
+script Zone4D_EventScript_ItemBeedrillite {
+	lock
+	if (flag(FLAG_ITEM_ZONE4D_BEEDRILLITE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE4D_BEEDRILLITE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_BEEDRILLITE, 1)
+	release
+	end
+}
+
+raw `
+
+Zone4D_EventScript_Lucia::
+	trainerbattle_single TRAINER_LUCIA, Zone4D_Text_LuciaIntro, Zone4D_Text_LuciaDefeat
+	msgbox Zone4D_Text_LuciaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone4D_Text_LuciaIntro:
+	.string "I think the exit is near here...$"
+
+Zone4D_Text_LuciaDefeat:
+	.string "Oh?$"
+
+Zone4D_Text_LuciaPostBattle:
+	.string "I think I see the exit!$"
+
+Zone4D_EventScript_Fred::
+	trainerbattle_single TRAINER_FRED, Zone4D_Text_FredIntro, Zone4D_Text_FredDefeat
+	msgbox Zone4D_Text_FredPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone4D_Text_FredIntro:
+	.string "The most important character\n"
+	.string "trait someone can have is to\l"
+	.string "have perseverance.$"
+
+Zone4D_Text_FredDefeat:
+	.string "I can make it through anything!$"
+
+Zone4D_Text_FredPostBattle:
+	.string "Just keep swimming,\n"
+	.string "just keep swimming.$"
+
+Zone4D_EventScript_Sign::
+	msgbox Zone4D_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone4D_Text_Sign:
+	.string "Some areas require backtracking\n"
+	.string "later on in order to access them.$"
+
+`
