@@ -3567,3 +3567,6 @@ EventScript_ExpAll_Text_3:
 
 EventScript_ExpAll_Text_4:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on.$"
+
+gText_ItemChestIsEmpty::
+	.string "The item chest is empty.$"

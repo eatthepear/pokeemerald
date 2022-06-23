@@ -84,11 +84,18 @@ Zone2B_EventScript_LeviathanBattle_8:
 
 Zone2B_EventScript_ItemPotion::
 	lock
-	removeobject 3
+	goto_if_set FLAG_ITEM_ZONE2B_POTION, Zone2B_EventScript_ItemPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	setflag FLAG_ITEM_ZONE2B_POTION
-	addobject 3
+	addobject VAR_LAST_TALKED
 	giveitem ITEM_POTION, 2
+	release
+	end
+
+Zone2B_EventScript_ItemPotion_2:
+	msgbox gText_ItemChestIsEmpty
 	release
 	end
 
