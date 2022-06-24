@@ -80,8 +80,8 @@
       "x": 2,
       "y": 15,
       "elevation": 3,
-      "item": "ITEM_ORAN_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE2A_ORAN_BERRY"
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE2A_CHERI_BERRY"
     }
   ]
 }

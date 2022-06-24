@@ -4258,7 +4258,7 @@ void ReverseHiddenItemFlags(void)
 
     if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
     {
-        for (flag = FLAG_HIDDEN_ITEM_ZONE2A_ORAN_BERRY; flag <= FLAG_UNUSED_0x2BB; flag++)
+        for (flag = FLAG_HIDDEN_ITEM_ZONE2A_CHERI_BERRY; flag <= FLAG_UNUSED_0x2BB; flag++)
         {
             if ((flag != FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1) && (flag != FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2) && (flag != FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3))
                 FlagSet(flag);
@@ -4266,7 +4266,7 @@ void ReverseHiddenItemFlags(void)
     }
     else
     {
-        for (flag = FLAG_HIDDEN_ITEM_ZONE2A_ORAN_BERRY; flag <= FLAG_UNUSED_0x2BB; flag++)
+        for (flag = FLAG_HIDDEN_ITEM_ZONE2A_CHERI_BERRY; flag <= FLAG_UNUSED_0x2BB; flag++)
         {
             if ((flag != FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1) && (flag != FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2) && (flag != FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3))
                 FlagClear(flag);

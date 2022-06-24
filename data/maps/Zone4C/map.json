@@ -134,8 +134,8 @@
       "x": 8,
       "y": 8,
       "elevation": 3,
-      "item": "ITEM_ORAN_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE4C_ORAN_BERRY"
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE4C_CHESTO_BERRY"
     },
     {
       "type": "hidden_item",
