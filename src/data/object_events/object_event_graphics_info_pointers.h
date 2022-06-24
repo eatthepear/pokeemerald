@@ -254,6 +254,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regieleki;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FairyTaleGirl;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Socialite;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AromaLady;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -507,6 +508,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SOCIALITE] =                &gObjectEventGraphicsInfo_Socialite,
     [OBJ_EVENT_GFX_ITEM_CHEST] =               &gObjectEventGraphicsInfo_ItemChest,
     [OBJ_EVENT_GFX_ITEM_CHEST_OPEN] =          &gObjectEventGraphicsInfo_ItemChestOpen,
+    [OBJ_EVENT_GFX_AROMA_LADY] =               &gObjectEventGraphicsInfo_AromaLady,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

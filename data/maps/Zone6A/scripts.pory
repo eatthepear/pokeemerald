@@ -217,7 +217,7 @@ Zone6A_EventScript_Daisy::
 
 Zone6A_Text_DaisyIntro:
 	.string "Sometimes, it's just nice to smell\n"
-	.string "the flowers$"
+	.string "the flowers!$"
 
 Zone6A_Text_DaisyDefeat:
 	.string "But there's no flowers to smell\n"

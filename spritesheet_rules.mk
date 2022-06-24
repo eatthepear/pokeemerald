@@ -447,6 +447,9 @@ $(OBJEVENTGFXDIR)/people/fairy_tale_girl.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/socialite.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/aroma_lady.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 $(OBJEVENTGFXDIR)/pokemon/porygon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
