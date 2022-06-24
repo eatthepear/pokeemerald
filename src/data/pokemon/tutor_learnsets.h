@@ -726,7 +726,9 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_THUNDER_PUNCH)
-                                            | TUTOR(MOVE_ZEN_HEADBUTT)),
+                                            | TUTOR(MOVE_ZEN_HEADBUTT)
+                                            | TUTOR(MOVE_POWER_WHIP)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
 
     [SPECIES_KOFFING]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TAUNT)
@@ -2380,7 +2382,14 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_TRICK)
                                             | TUTOR(MOVE_POLTERGEIST)),
 
-    [SPECIES_TROPIUS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
+    [SPECIES_TROPIUS]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_DEFOG)
+                                            | TUTOR(MOVE_ROOST)
+                                            | TUTOR(MOVE_SYNTHESIS)
+                                            | TUTOR(MOVE_TAILWIND)
+                                            | TUTOR(MOVE_DRACO_METEOR)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
 
     [SPECIES_CHIMECHO]      = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_KNOCK_OFF)
@@ -3046,7 +3055,9 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
-                                            | TUTOR(MOVE_THUNDER_PUNCH)),
+                                            | TUTOR(MOVE_THUNDER_PUNCH)
+                                            | TUTOR(MOVE_POWER_WHIP)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
 
     [SPECIES_RHYPERIOR]     = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)

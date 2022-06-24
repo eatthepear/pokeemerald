@@ -59,6 +59,10 @@ Zone6A_EventScript_Exit_7:
 	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_RONAN
 	goto_if 0, Zone6A_EventScript_Exit_6
+	checktrainerflag TRAINER_DUDLEY
+	goto_if 0, Zone6A_EventScript_Exit_6
+	checktrainerflag TRAINER_DAISY
+	goto_if 0, Zone6A_EventScript_Exit_6
 	goto_if_unset FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_Exit_6
 	goto Zone6A_EventScript_Exit_5
 
@@ -223,6 +227,23 @@ Zone6A_Text_DudleyDefeat:
 Zone6A_Text_DudleyPostBattle:
 	.string "Sorry for taking out my fishing\n"
 	.string "frustration out on you.$"
+
+Zone6A_EventScript_Daisy::
+	trainerbattle_single TRAINER_DAISY, Zone6A_Text_DaisyIntro, Zone6A_Text_DaisyDefeat
+	msgbox Zone6A_Text_DaisyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_DaisyIntro:
+	.string "Sometimes, it's just nice to smell\n"
+	.string "the flowers$"
+
+Zone6A_Text_DaisyDefeat:
+	.string "But there's no flowers to smell\n"
+	.string "here!$"
+
+Zone6A_Text_DaisyPostBattle:
+	.string "Maybe I'll have better luck finding\n"
+	.string "flowers elsewhere.$"
 
 Zone6A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"

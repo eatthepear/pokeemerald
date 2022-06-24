@@ -10865,62 +10865,122 @@
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_CHEWTLE"
+                "species": "SPECIES_CHATOT"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_CUTIEFLY"
+                "species": "SPECIES_CRAMORANT"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_FLABEBE"
+                "species": "SPECIES_MEOWTH_GALARIAN"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_ZIGZAGOON_GALARIAN"
+                "species": "SPECIES_SLOWPOKE_GALARIAN"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_HOPPIP"
+                "species": "SPECIES_LICKITUNG"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_LOTAD"
+                "species": "SPECIES_MORPEKO"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_ORICORIO"
+                "species": "SPECIES_SANDYGAST"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_ORICORIO_PAU"
+                "species": "SPECIES_SHELLOS"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_SOBBLE"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_TOTODILE"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_TEDDIURSA"
+                "species": "SPECIES_OSHAWOTT"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_TEDDIURSA"
+                "species": "SPECIES_POPPLIO"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_CLAUNCHER"
+              },
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_MANTYKE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_WAILMER"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_CLAUNCHER"
+              },
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_MANTYKE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 14,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_NONE"
               }
             ]
           }

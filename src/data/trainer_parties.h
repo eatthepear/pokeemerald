@@ -737,7 +737,7 @@ static const struct TrainerMon sParty_Ronan[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_MEOWTH_GALARIAN,
+    .species = SPECIES_WAILMER,
     },
     {
     .iv = 0,
@@ -747,12 +747,12 @@ static const struct TrainerMon sParty_Ronan[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_FLABEBE,
+    .species = SPECIES_TYNAMO,
     },
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_HOPPIP,
+    .species = SPECIES_FEEBAS,
     }
 };
 
@@ -778,17 +778,17 @@ static const struct TrainerMon sParty_Constance[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_TYNAMO,
-    },
-    {
-    .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_WAILMER,
-    },
-    {
-    .iv = 0,
-    .lvl = 15,
     .species = SPECIES_MILCERY,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_MEOWTH_GALARIAN,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_MAGIKARP,
     },
     {
     .iv = 0,
@@ -801,17 +801,17 @@ static const struct TrainerMon sParty_Frank[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_MANTYKE,
-    },
-    {
-    .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_TRUBBISH,
-    },
-    {
-    .iv = 0,
-    .lvl = 15,
     .species = SPECIES_SANDYGAST,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_LICKITUNG,
+    },
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_MORPEKO,
     }
 };
 
@@ -829,17 +829,25 @@ static const struct TrainerMon sParty_Dudley[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_CLOBBOPUS,
+    .species = SPECIES_MANTYKE,
+    }
+};
+
+static const struct TrainerMon sParty_Daisy[] = {
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_FLABEBE,
     },
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_MAGIKARP,
+    .species = SPECIES_HOPPIP,
     },
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_FEEBAS,
+    .species = SPECIES_APPLIN,
     }
 };
 

@@ -32,6 +32,8 @@ script Zone6A_EventScript_Exit {
 			!defeated(TRAINER_MELANIE) ||
 			!defeated(TRAINER_CONSTANCE) ||
 			!defeated(TRAINER_RONAN) ||
+			!defeated(TRAINER_DUDLEY) ||
+			!defeated(TRAINER_DAISY) ||
 			!flag(FLAG_BEAT_LEVIATHAN_6))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
@@ -207,4 +209,21 @@ Zone6A_Text_DudleyDefeat:
 Zone6A_Text_DudleyPostBattle:
 	.string "Sorry for taking out my fishing\n"
 	.string "frustration out on you.$"
+
+Zone6A_EventScript_Daisy::
+	trainerbattle_single TRAINER_DAISY, Zone6A_Text_DaisyIntro, Zone6A_Text_DaisyDefeat
+	msgbox Zone6A_Text_DaisyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone6A_Text_DaisyIntro:
+	.string "Sometimes, it's just nice to smell\n"
+	.string "the flowers$"
+
+Zone6A_Text_DaisyDefeat:
+	.string "But there's no flowers to smell\n"
+	.string "here!$"
+
+Zone6A_Text_DaisyPostBattle:
+	.string "Maybe I'll have better luck finding\n"
+	.string "flowers elsewhere.$"
 `

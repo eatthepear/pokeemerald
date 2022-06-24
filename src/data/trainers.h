@@ -568,6 +568,20 @@ const struct Trainer gTrainers[] = {
         .shouldShuffle = TRUE,
     },
 
+    [TRAINER_DAISY] =
+    {
+        .trainerClass = TRAINER_CLASS_AROMA_LADY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerName = _("Daisy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Daisy),
+        .party = {.TrainerMon = sParty_Daisy},
+        .shouldShuffle = TRUE,
+    },
+
     [TRAINER_ZACK_LEVIATHAN_6] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
