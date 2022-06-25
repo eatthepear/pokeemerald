@@ -224,6 +224,8 @@ struct FormChange {
 
 extern u8 gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];
+extern struct Pokemon gPlayerPartyTemp[PARTY_SIZE];
+extern bool8 enemyPartyPreview;
 extern u8 gEnemyPartyCount;
 extern struct Pokemon gEnemyParty[PARTY_SIZE];
 extern struct SpriteTemplate gMultiuseSpriteTemplate;

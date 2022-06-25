@@ -62,6 +62,7 @@ bool32 IsAffectedByFollowMe(u32 battlerAtk, u32 defSide, u32 move);
 void HandleAction_UseMove(void);
 void HandleAction_Switch(void);
 void HandleAction_UseItem(void);
+void HandleAction_ViewEnemyParty(void);
 void HandleAction_Run(void);
 void HandleAction_WatchesCarefully(void);
 void HandleAction_SafariZoneBallThrow(void);

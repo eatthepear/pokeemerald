@@ -261,7 +261,14 @@ static void HandleInputChooseAction(void)
             BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_SWITCH, 0);
             break;
         case 3: // Bottom right
-            BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_RUN, 0);
+            if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+            {
+                BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_VIEW_ENEMY_PARTY, 0);
+            }
+            else
+            {
+                BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_RUN, 0);
+            }
             break;
         }
         PlayerBufferExecCompleted();
@@ -2681,7 +2688,14 @@ static void PlayerHandleChooseAction(void)
 
     gBattlerControllerFuncs[gActiveBattler] = HandleChooseActionAfterDma3;
     BattleTv_ClearExplosionFaintCause();
-    BattlePutTextOnWindow(gText_BattleMenu, B_WIN_ACTION_MENU);
+    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+    {
+        BattlePutTextOnWindow(gText_TrainerBattleMenu, B_WIN_ACTION_MENU);
+    }
+    else
+    {
+        BattlePutTextOnWindow(gText_BattleMenu, B_WIN_ACTION_MENU);
+    }
 
     for (i = 0; i < 4; i++)
         ActionSelectionDestroyCursorAt(i);

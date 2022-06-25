@@ -486,6 +486,7 @@ static void (* const sTurnActionsFuncsTable[])(void) =
     [B_ACTION_FINISHED]               = HandleAction_ActionFinished,
     [B_ACTION_NOTHING_FAINTED]        = HandleAction_NothingIsFainted,
     [B_ACTION_THROW_BALL]             = HandleAction_ThrowBall,
+    [B_ACTION_VIEW_ENEMY_PARTY]       = HandleAction_ViewEnemyParty,
 };
 
 static void (* const sEndTurnFuncsTable[])(void) =
@@ -4179,6 +4180,21 @@ static void HandleTurnActionSelectionState(void)
                         MarkBattlerForControllerExec(gActiveBattler);
                     }
                     break;
+                case B_ACTION_VIEW_ENEMY_PARTY:
+                    if (TRUE)
+                    {
+                        for (i = 0; i < PARTY_SIZE; i++)
+                        {
+                            gPlayerPartyTemp[i] = gPlayerParty[i];
+                            gPlayerParty[i] = gEnemyParty[i];
+                        }
+
+                        enemyPartyPreview = TRUE;
+
+                        BtlController_EmitChoosePokemon(BUFFER_A, PARTY_ACTION_CHOOSE_MON, PARTY_SIZE, ABILITY_NONE, gBattleStruct->battlerPartyOrders[gActiveBattler]);
+                        MarkBattlerForControllerExec(gActiveBattler);
+                    }
+                    break;
                 case B_ACTION_SWITCH:
                     *(gBattleStruct->battlerPartyIndexes + gActiveBattler) = gBattlerPartyIndexes[gActiveBattler];
                     if (gBattleTypeFlags & BATTLE_TYPE_ARENA
@@ -4361,6 +4377,8 @@ static void HandleTurnActionSelectionState(void)
                         gBattleCommunication[gActiveBattler]++;
                     }
                     break;
+                case B_ACTION_VIEW_ENEMY_PARTY:
+                    enemyPartyPreview = FALSE;
                 case B_ACTION_SWITCH:
                     if (gBattleResources->bufferB[gActiveBattler][1] == PARTY_SIZE)
                     {

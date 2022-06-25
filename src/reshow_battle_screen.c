@@ -41,9 +41,17 @@ void ReshowBattleScreenAfterMenu(void)
 
 static void CB2_ReshowBattleScreenAfterMenu(void)
 {
+    u8 i;
     switch (gBattleScripting.reshowMainState)
     {
     case 0:
+        if (enemyPartyPreview)
+        {
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                gPlayerParty[i] = gPlayerPartyTemp[i];
+            }
+        }
         ScanlineEffect_Clear();
         BattleInitBgsAndWindows();
         SetBgAttribute(1, BG_ATTR_CHARBASEINDEX, 0);
