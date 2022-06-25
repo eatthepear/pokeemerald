@@ -1733,6 +1733,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1763,6 +1765,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1792,6 +1796,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1808,6 +1814,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1850,6 +1858,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1879,6 +1889,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1908,6 +1920,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -1924,6 +1938,8 @@ script EventScript_Settings {
 				case 3:
 					call(EventScript_ExpAll)
 				case 4:
+					call(EventScript_Surveillance)
+				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
@@ -2089,6 +2105,30 @@ script EventScript_ExpAll {
 			waitse
 			closemessage
 			setflag(FLAG_EXP_ALL_ON)
+		}
+	}
+	return
+}
+
+script EventScript_Surveillance {
+	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: In trainer battles, you can Surveil the opposing party to gain more information."))
+	if (flag(FLAG_FULL_PREVIEW_ON) == true) {
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals all information about the opposing party.\pWould you like to decrease the amount of information it reveals?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			playse(SE_PC_OFF)
+			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Lowered the power of Surveil.\pYou will only be able to view the opposing team's Pokémon and their health."), MSGBOX_DEFAULT)
+			waitse
+			closemessage
+			clearflag(FLAG_FULL_PREVIEW_ON)
+		}
+	} else {
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals only the opposing team's Pokémon and their health.\pWould you like to increase the amount of information it reveals?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			playse(SE_PC_ON)
+			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Increased the power of Surveil.\pYou will be able to view all information about the opposing party."), MSGBOX_DEFAULT)
+			waitse
+			closemessage
+			setflag(FLAG_FULL_PREVIEW_ON)
 		}
 	}
 	return
