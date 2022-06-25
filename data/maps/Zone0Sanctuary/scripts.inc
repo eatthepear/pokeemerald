@@ -1150,7 +1150,7 @@ Zone0Sanctuary_Text_Colress_ExplainLeviathans::
 	.string "Zones are designed to test your\n"
 	.string "capabilities at braving different\l"
 	.string "environments.\p"
-	.string "Each Zone typically contains a unique\n"
+	.string "Each Zone typically contains a\n"
 	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great\l"
 	.string "rewards if defeated.\p"
 	.string "Some Leviathans are optional, but many\n"
@@ -1239,7 +1239,9 @@ Zone0Sanctuary_Text_Colress_Healing::
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is\n"
 	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
 	.string "At the low cost of ¥1000, they will heal\n"
-	.string "your entire party.$"
+	.string "your entire party.\p"
+	.string "Note that the Pokémon Storage System\n"
+	.string "does not heal your Pokémon.$"
 
 Zone0Sanctuary_Text_Colress_Services::
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is\n"

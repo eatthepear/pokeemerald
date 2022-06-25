@@ -258,7 +258,7 @@ text Zone0Sanctuary_Text_Colress_Rules {
 
 text Zone0Sanctuary_Text_Colress_ExplainLeviathans {
 	format("Zones are designed to test your capabilities at braving different environments.\p"
-	"Each Zone typically contains a unique {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
+	"Each Zone typically contains a {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
 	"Some Leviathans are optional, but many are required to progress.")
 }
 
@@ -319,7 +319,8 @@ text Zone0Sanctuary_Text_Colress_Item {
 
 text Zone0Sanctuary_Text_Colress_Healing {
 	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is\n{COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
-	"At the low cost of ¥1000, they will heal your entire party.")
+	"At the low cost of ¥1000, they will heal your entire party.\p"
+	"Note that the Pokémon Storage System does not heal your Pokémon.")
 }
 
 text Zone0Sanctuary_Text_Colress_Services {
