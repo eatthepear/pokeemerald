@@ -2071,7 +2071,7 @@ script EventScript_MusicMenu {
 }
 
 script EventScript_ExpAll {
-	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 50% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
+	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 25% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
 	if (flag(FLAG_EXP_ALL_ON) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
@@ -2319,6 +2319,7 @@ script Zone_EventScript_RetirePrompt {
 		releaseall
 		end
 	}
+	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	removemoney(0)
 	updatemoneybox
 	msgbox(format("Warping now…"))

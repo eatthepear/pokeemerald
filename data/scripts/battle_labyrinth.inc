@@ -3509,6 +3509,7 @@ Zone_EventScript_RetirePrompt::
 	msgbox Zone_EventScript_RetirePrompt_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone_EventScript_RetirePrompt_2
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	removemoney 0
 	updatemoneybox
 	msgbox Zone_EventScript_RetirePrompt_Text_1
@@ -3741,7 +3742,7 @@ EventScript_Max_Text_3:
 EventScript_ExpAll_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned\n"
 	.string "on, gives members of your party that\l"
-	.string "don't participate in battle 50%\l"
+	.string "don't participate in battle 25%\l"
 	.string "experience.\p"
 	.string "The game's experience curve is balanced\n"
 	.string "around the Exp. All being turned on,\l"

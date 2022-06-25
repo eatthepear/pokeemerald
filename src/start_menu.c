@@ -339,14 +339,6 @@ static void BuildNormalStartMenu(void)
 
 static void BuildZoneStartMenu(void)
 {
-    if (FlagGet(FLAG_IS_REVISITING_ZONE) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
-    }
-    else
-    {
-        AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
-    }
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_POKEDEX);
@@ -365,6 +357,14 @@ static void BuildZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    if (FlagGet(FLAG_IS_REVISITING_ZONE) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
+    }
+    else
+    {
+        AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
+    }
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_DEBUG);
