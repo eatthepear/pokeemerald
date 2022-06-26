@@ -130,8 +130,163 @@ script EventScript_CutTree {
 	removeobject(VAR_LAST_TALKED)
 	releaseall
 }
-	
+
+
+script EventScript_RockSmash {
+	lockall
+	checkitem(ITEM_SLEDGEHAMMER, 1)
+	if (var(VAR_RESULT) == FALSE) {
+		msgbox(Text_CantSmash, MSGBOX_DEFAULT)
+		releaseall
+		end
+	}
+	msgbox(Text_WantToSmash, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		releaseall
+		end
+	}
+	setitemarg(ITEM_SLEDGEHAMMER)
+	dofieldeffect(FLDEFF_USE_ROCK_SMASH)
+	waitstate
+	applymovement(VAR_LAST_TALKED, Movement_SmashRock)
+	waitmovement(0)
+	removeobject(VAR_LAST_TALKED)
+	special(RockSmashWildEncounter)
+	if (var(VAR_RESULT) == TRUE) {
+		waitstate
+		releaseall
+		end
+	}
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		releaseall
+		end
+	}
+	random(100)
+	switch(var(VAR_RESULT)) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+			finditem(ITEM_RED_SHARD, 1)
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+		case 32:
+		case 33:
+		case 34:
+		case 35:
+		case 36:
+			if (var(VAR_ZONE) > 8) {
+				finditem(ITEM_BLUE_SHARD, 1)
+			}
+		case 37:
+		case 38:
+		case 39:
+		case 40:
+		case 41:
+		case 42:
+		case 43:
+		case 44:
+		case 45:
+		case 46:
+			if (var(VAR_ZONE) > 10) {
+				finditem(ITEM_YELLOW_SHARD, 1)
+			}
+		case 47:
+		case 48:
+		case 49:
+		case 50:
+		case 51:
+			if (var(VAR_ZONE) > 25) {
+				finditem(ITEM_GREEN_SHARD, 1)
+			}
+		case 52:
+			finditem(ITEM_NORMAL_GEM, 1)
+		case 53:
+			finditem(ITEM_FIRE_GEM, 1)
+		case 54:
+			finditem(ITEM_WATER_GEM, 1)
+		case 55:
+			finditem(ITEM_ELECTRIC_GEM, 1)
+		case 56:
+			finditem(ITEM_GRASS_GEM, 1)
+		case 57:
+			finditem(ITEM_ICE_GEM, 1)
+		case 58:
+			finditem(ITEM_FIGHTING_GEM, 1)
+		case 59:
+			finditem(ITEM_POISON_GEM, 1)
+		case 60:
+			finditem(ITEM_GROUND_GEM, 1)
+		case 61:
+			finditem(ITEM_FLYING_GEM, 1)
+		case 62:
+			finditem(ITEM_PSYCHIC_GEM, 1)
+		case 63:
+			finditem(ITEM_BUG_GEM, 1)
+		case 64:
+			finditem(ITEM_ROCK_GEM, 1)
+		case 65:
+			finditem(ITEM_GHOST_GEM, 1)
+		case 66:
+			finditem(ITEM_DRAGON_GEM, 1)
+		case 67:
+			finditem(ITEM_DARK_GEM, 1)
+		case 68:
+			finditem(ITEM_STEEL_GEM, 1)
+		case 69:
+			finditem(ITEM_FAIRY_GEM, 1)
+	}
+	releaseall
+	end
+
+}
+
+
+
 raw `
+@ Use rock smash from party menu
+EventScript_UseRockSmash::
+	lockall
+	releaseall
+	end
+
+Movement_SmashRock: @ 829082B
+	rock_smash_break
+	step_end
+
+Text_WantToSmash:
+	.string "This rock appears to be breakable.\n"
+	.string "Use the Sledgehammer to smash it?$"
+
+Text_CantSmash:
+	.string "It's a rugged rock.$"
+
 Movement_CutTreeDown:
 	cut_tree
 	step_end
@@ -145,231 +300,6 @@ Text_MonUsedFieldMove:
 
 Text_CantCut:
 	.string "This shrub is blocking the way.$"
-
-@ Interact with smashable rock
-EventScript_RockSmash::
-	lockall
-	checkitem ITEM_SLEDGEHAMMER, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_CantSmashRock
-	msgbox Text_WantToSmash, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndSmash
-	setitemarg ITEM_SLEDGEHAMMER
-	dofieldeffect FLDEFF_USE_ROCK_SMASH
-	waitstate
-	goto EventScript_SmashRock
-	end
-
-@ Use rock smash from party menu
-EventScript_UseRockSmash::
-	lockall
-	dofieldeffect FLDEFF_USE_ROCK_SMASH
-	waitstate
-	goto EventScript_SmashRock
-	end
-
-EventScript_SmashRock::
-	applymovement VAR_LAST_TALKED, Movement_SmashRock
-	waitmovement 0
-	removeobject VAR_LAST_TALKED
-	call EventScript_SmashItems
-	special RockSmashWildEncounter
-	goto_if_eq VAR_RESULT, FALSE, EventScript_EndSmash
-	waitstate
-	releaseall
-	end
-
-EventScript_EndSmash::
-	releaseall
-	end
-
-EventScript_SmashItems:
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_EndSmash
-	random 100
-	call_if_eq VAR_RESULT, 1, EventScript_SmashBUGGem
-	call_if_eq VAR_RESULT, 2, EventScript_SmashDARKGem
-	call_if_eq VAR_RESULT, 3, EventScript_SmashDRAGONGem
-	call_if_eq VAR_RESULT, 4, EventScript_SmashELECTRICGem
-	call_if_eq VAR_RESULT, 5, EventScript_SmashFAIRYGem
-	call_if_eq VAR_RESULT, 6, EventScript_SmashFIGHTINGGem
-	call_if_eq VAR_RESULT, 7, EventScript_SmashFIREGem
-	call_if_eq VAR_RESULT, 8, EventScript_SmashFLYINGGem
-	call_if_eq VAR_RESULT, 9, EventScript_SmashGHOSTGem
-	call_if_eq VAR_RESULT, 10, EventScript_SmashGRASSGem
-	call_if_eq VAR_RESULT, 11, EventScript_SmashGROUNDGem
-	call_if_eq VAR_RESULT, 12, EventScript_SmashICEGem
-	call_if_eq VAR_RESULT, 13, EventScript_SmashNORMALGem
-	call_if_eq VAR_RESULT, 14, EventScript_SmashPOISONGem
-	call_if_eq VAR_RESULT, 15, EventScript_SmashPSYCHICGem
-	call_if_eq VAR_RESULT, 16, EventScript_SmashROCKGem
-	call_if_eq VAR_RESULT, 17, EventScript_SmashSTEELGem
-	call_if_eq VAR_RESULT, 18, EventScript_SmashWATERGem
-	call_if_eq VAR_RESULT, 19, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 20, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 21, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 22, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 23, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 24, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 25, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 26, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 27, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 28, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 29, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 30, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 31, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 32, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 33, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 34, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 35, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 36, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 37, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 38, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 39, EventScript_SmashRedShard
-	call_if_eq VAR_RESULT, 40, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 41, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 42, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 43, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 44, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 45, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 46, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 47, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 48, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 49, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 50, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 51, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 52, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 53, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 54, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 55, EventScript_SmashBlueShard
-	call_if_eq VAR_RESULT, 56, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 57, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 58, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 59, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 60, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 61, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 62, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 63, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 64, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 65, EventScript_SmashYellowShard
-	call_if_eq VAR_RESULT, 66, EventScript_SmashGreenShard
-	call_if_eq VAR_RESULT, 67, EventScript_SmashGreenShard
-	call_if_eq VAR_RESULT, 68, EventScript_SmashGreenShard
-	call_if_eq VAR_RESULT, 69, EventScript_SmashGreenShard
-	call_if_eq VAR_RESULT, 70, EventScript_SmashGreenShard
-	return
-	
-EventScript_SmashYellowShard:
-	goto_if_unset FLAG_BEAT_LEVIATHAN_5, EventScript_EndSmash
-	finditem ITEM_YELLOW_SHARD, 1
-	return
-	
-EventScript_SmashGreenShard:
-	goto_if_unset FLAG_BEAT_LEVIATHAN_14, EventScript_EndSmash
-	finditem ITEM_GREEN_SHARD, 1
-	return
-	
-EventScript_SmashBlueShard:
-	goto_if_unset FLAG_BEAT_LEVIATHAN_4, EventScript_EndSmash
-	finditem ITEM_BLUE_SHARD, 1
-	return
-	
-EventScript_SmashRedShard:
-	finditem ITEM_RED_SHARD, 1
-	return
-	
-EventScript_SmashWATERGem:
-	finditem ITEM_WATER_GEM, 1
-	return
-	
-EventScript_SmashSTEELGem:
-	finditem ITEM_STEEL_GEM, 1
-	return
-	
-EventScript_SmashROCKGem:
-	finditem ITEM_ROCK_GEM, 1
-	return
-	
-EventScript_SmashPSYCHICGem:
-	finditem ITEM_PSYCHIC_GEM, 1
-	return
-	
-EventScript_SmashPOISONGem:
-	finditem ITEM_POISON_GEM, 1
-	return
-	
-EventScript_SmashNORMALGem:
-	finditem ITEM_NORMAL_GEM, 1
-	return
-	
-EventScript_SmashICEGem:
-	finditem ITEM_ICE_GEM, 1
-	return
-	
-EventScript_SmashGROUNDGem:
-	finditem ITEM_GROUND_GEM, 1
-	return
-	
-EventScript_SmashGRASSGem:
-	finditem ITEM_GRASS_GEM, 1
-	return
-	
-EventScript_SmashGHOSTGem:
-	finditem ITEM_GHOST_GEM, 1
-	return
-	
-EventScript_SmashFLYINGGem:
-	finditem ITEM_FLYING_GEM, 1
-	return
-	
-EventScript_SmashFIREGem:
-	finditem ITEM_FIRE_GEM, 1
-	return
-	
-EventScript_SmashFIGHTINGGem:
-	finditem ITEM_FIGHTING_GEM, 1
-	return
-	
-EventScript_SmashFAIRYGem:
-	finditem ITEM_FAIRY_GEM, 1
-	return
-	
-EventScript_SmashELECTRICGem:
-	finditem ITEM_ELECTRIC_GEM, 1
-	return
-	
-EventScript_SmashDRAGONGem:
-	finditem ITEM_DRAGON_GEM, 1
-	return
-	
-EventScript_SmashDARKGem:
-	finditem ITEM_DARK_GEM, 1
-	return
-	
-EventScript_SmashBUGGem:
-	finditem ITEM_BUG_GEM, 1
-	return
-
-Movement_SmashRock: @ 829082B
-	rock_smash_break
-	step_end
-
-EventScript_CantSmashRock::
-	msgbox Text_CantSmash, MSGBOX_DEFAULT
-	releaseall
-	end
-
-EventScript_CancelSmash::
-	closemessage
-	releaseall
-	end
-
-Text_WantToSmash:
-	.string "This rock appears to be breakable.\n"
-	.string "Use the Sledgehammer to smash it?$"
-
-Text_CantSmash:
-	.string "It's a rugged rock.$"
 
 EventScript_StrengthBoulder::
 	lockall
