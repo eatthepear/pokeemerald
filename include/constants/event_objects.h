@@ -252,9 +252,10 @@
 #define OBJ_EVENT_GFX_ITEM_CHEST                 248
 #define OBJ_EVENT_GFX_ITEM_CHEST_OPEN            249
 #define OBJ_EVENT_GFX_AROMA_LADY                 250
+#define OBJ_EVENT_GFX_BACKPACKER_F               251
 
 
-#define NUM_OBJ_EVENT_GFX                        251
+#define NUM_OBJ_EVENT_GFX                        252
 
 
 // These are dynamic object gfx ids.
