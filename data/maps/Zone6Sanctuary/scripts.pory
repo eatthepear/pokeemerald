@@ -32,7 +32,7 @@ script Zone6Sanctuary_EventScript_NextZone {
 			msgbox(Zone6Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				warp(MAP_ZONE7A, 255, 5, 34)
+				warp(MAP_ZONE7A, 255, 10, 33)
 				waitstate
 			}
 		case 1:
