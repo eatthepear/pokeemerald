@@ -82,7 +82,6 @@ text Zone6A_Text_Zack_PostBattle {
 	format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: I love leaving footprints in the sand.")
 }
 
-
 script Zone6A_EventScript_ItemNetBall {
 	lock
 	if (flag(FLAG_ITEM_ZONE6A_NET_BALL)) {

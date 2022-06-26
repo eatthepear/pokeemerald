@@ -1,4 +1,161 @@
-mapscripts Zone7A_MapScripts {}
+mapscripts Zone7A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE7A_SHARP_BEAK)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE7A_TWISTED_SPOON)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE7A_POISON_BARB)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE7A_SILVER_POWDER)) {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE7A_BLACK_BELT)) {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE7A_SUPER_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE7A_GREAT_BALL_X2)) {
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
+
+script Zone7A_EventScript_ItemSharpBeak {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_SHARP_BEAK)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_SHARP_BEAK)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SHARP_BEAK, 1)
+	release
+	end
+}
+
+script Zone7A_EventScript_ItemTwistedSpoon {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_TWISTED_SPOON)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_TWISTED_SPOON)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TWISTED_SPOON, 1)
+	release
+	end
+}
+
+script Zone7A_EventScript_ItemPoisonBarb {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_POISON_BARB)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_POISON_BARB)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_POISON_BARB, 1)
+	release
+	end
+}
+
+script Zone7A_EventScript_ItemSilverPowder {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_SILVER_POWDER)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_SILVER_POWDER)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SILVER_POWDER, 1)
+	release
+	end
+}
+
+script Zone7A_EventScript_ItemBlackBelt {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_BLACK_BELT)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_BLACK_BELT)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_BLACK_BELT, 1)
+	release
+	end
+}
+
+script Zone7A_EventScript_ItemSuperPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_SUPER_POTION)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_SUPER_POTION)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SUPER_POTION, 1)
+	release
+	end
+}
+
+script Zone7A_EventScript_ItemGreatBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE7A_GREAT_BALL_X2)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE7A_GREAT_BALL_X2)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_GREAT_BALL, 2)
+	release
+	end
+}
 
 raw `
 
@@ -95,34 +252,6 @@ Zone7A_Text_ChadDefeat:
 Zone7A_Text_ChadPostBattle:
 	.string "Writing music is hard work!\n"
 	.string "Thanks for the inspiration!$"
-
-Zone7A_EventScript_ItemSharpBeak::
-	finditem ITEM_SHARP_BEAK
-	end
-
-Zone7A_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
-	end
-
-Zone7A_EventScript_ItemTwistedSpoon::
-	finditem ITEM_TWISTED_SPOON
-	end
-
-Zone7A_EventScript_ItemRockyHelmet::
-	finditem ITEM_ROCKY_HELMET
-	end
-
-Zone7A_EventScript_ItemPoisonBarb::
-	finditem ITEM_POISON_BARB
-	end
-
-Zone7A_EventScript_ItemNestBall::
-	finditem ITEM_NEST_BALL
-	end
-
-Zone7A_EventScript_ItemSilverPowder::
-	finditem ITEM_SILVER_POWDER
-	end
 
 Zone7A_EventScript_HealSign::
 	msgbox Zone7A_Text_HealSign, MSGBOX_SIGN
