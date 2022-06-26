@@ -1,5 +1,84 @@
 Zone8A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE8A_MAGNET, Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE8A_SPELL_TAG, Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE8A_BLACK_GLASSES, Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone8A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+
+Zone8A_EventScript_ItemMagnet::
+	lock
+	goto_if_set FLAG_ITEM_ZONE8A_MAGNET, Zone8A_EventScript_ItemMagnet_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE8A_MAGNET
+	addobject VAR_LAST_TALKED
+	finditem ITEM_MAGNET, 1
+	release
+	end
+
+Zone8A_EventScript_ItemMagnet_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone8A_EventScript_ItemSpellTag::
+	lock
+	goto_if_set FLAG_ITEM_ZONE8A_SPELL_TAG, Zone8A_EventScript_ItemSpellTag_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE8A_SPELL_TAG
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SPELL_TAG, 1
+	release
+	end
+
+Zone8A_EventScript_ItemSpellTag_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone8A_EventScript_ItemBlackGlasses::
+	lock
+	goto_if_set FLAG_ITEM_ZONE8A_BLACK_GLASSES, Zone8A_EventScript_ItemBlackGlasses_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE8A_BLACK_GLASSES
+	addobject VAR_LAST_TALKED
+	finditem ITEM_BLACK_GLASSES, 1
+	release
+	end
+
+Zone8A_EventScript_ItemBlackGlasses_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone8A_EventScript_Jimmy::
 	trainerbattle_single TRAINER_JIMMY, Zone8A_Text_JimmyIntro, Zone8A_Text_JimmyDefeat
@@ -45,15 +124,3 @@ Zone8A_Text_MarcusDefeat:
 Zone8A_Text_MarcusPostBattle:
 	.string "It's my destiny to wander this cave\n"
 	.string "forever…$"
-
-Zone8A_EventScript_ItemMagnet::
-	finditem ITEM_MAGNET
-	end
-
-Zone8A_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
-	end
-
-Zone8A_EventScript_ItemSoftSand::
-	finditem ITEM_SOFT_SAND
-	end

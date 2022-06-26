@@ -1,0 +1,103 @@
+mapscripts Zone8C_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE8C_NEVER_MELT_ICE)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE8C_FULL_HEAL)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE8C_SUPER_REPEL)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
+
+script Zone8C_EventScript_ItemNeverMeltIce {
+	lock
+	if (flag(FLAG_ITEM_ZONE8C_NEVER_MELT_ICE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE8C_NEVER_MELT_ICE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_NEVER_MELT_ICE, 1)
+	release
+	end
+}
+
+script Zone8C_EventScript_ItemFullHeal {
+	lock
+	if (flag(FLAG_ITEM_ZONE8C_FULL_HEAL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE8C_FULL_HEAL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_FULL_HEAL, 1)
+	release
+	end
+}
+
+script Zone8C_EventScript_ItemSuperRepel {
+	lock
+	if (flag(FLAG_ITEM_ZONE8C_SUPER_REPEL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE8C_SUPER_REPEL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SUPER_REPEL, 1)
+	release
+	end
+}
+
+raw `
+Zone8C_EventScript_Neil::
+       trainerbattle_single TRAINER_NEIL, Zone8C_Text_NeilIntro, Zone8C_Text_NeilDefeat
+       msgbox Zone8C_Text_NeilPostBattle, MSGBOX_AUTOCLOSE
+       end
+	   
+Zone8C_Text_NeilIntro:
+       .string "I'm looking for another path down...$"
+
+Zone8C_Text_NeilDefeat:
+       .string "But all I found is you.$"
+
+Zone8C_Text_NeilPostBattle:
+       .string "Maybe it's on the other side\n"
+       .string "of the mountain?$"
+
+Zone8C_EventScript_Tamara::
+       trainerbattle_single TRAINER_TAMARA, Zone8C_Text_TamaraIntro, Zone8C_Text_TamaraDefeat
+       msgbox Zone8C_Text_TamaraPostBattle, MSGBOX_AUTOCLOSE
+
+Zone8C_Text_TamaraIntro:
+       .string "Ah, I'm hopelessly lost…$"
+
+Zone8C_Text_TamaraDefeat:
+       .string "Now I can add defeat to my\n"
+       .string "list of misfortunes…$"
+
+Zone8C_Text_TamaraPostBattle:
+       .string "I should really drop my pessimistic\n"
+       .string "attitude, I know.$"
+
+`

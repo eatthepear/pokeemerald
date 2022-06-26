@@ -28,7 +28,20 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 10,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Zone8C_EventScript_Tamara",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 14,
       "y": 17,
       "elevation": 3,
@@ -37,24 +50,24 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone8C_EventScript_ItemSuperPotion",
-      "flag": "FLAG_ITEM_ZONE8C_SUPER_POTION"
+      "script": "Zone8C_EventScript_ItemNeverMeltIce",
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 17,
-      "y": 5,
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 35,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone8C_EventScript_ItemGreatBall",
-      "flag": "FLAG_ITEM_ZONE8C_GREAT_BALL"
+      "script": "Zone8C_EventScript_ItemFullHeal",
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_2",
       "x": 38,
       "y": 19,
       "elevation": 3,
@@ -63,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone8C_EventScript_ItemPotion",
-      "flag": "FLAG_ITEM_ZONE8C_POTION"
+      "script": "Zone8C_EventScript_ItemSuperRepel",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
@@ -78,19 +91,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_F"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 10,
-      "y": 11,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "Zone8C_EventScript_Tamara",
-      "flag": "0"
     }
   ],
   "warp_events": [
