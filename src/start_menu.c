@@ -309,10 +309,6 @@ static void AddStartMenuAction(u8 action)
 
 static void BuildNormalStartMenu(void)
 {
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKEDEX);
-    }
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_POKEMON);
@@ -320,11 +316,15 @@ static void BuildNormalStartMenu(void)
 
     AddStartMenuAction(MENU_ACTION_BAG);
 
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_POKEDEX);
+    }
+
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
     // }
-
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -339,9 +339,9 @@ static void BuildNormalStartMenu(void)
 
 static void BuildZoneStartMenu(void)
 {
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    if (FlagGet(FLAG_IS_REVISITING_ZONE) == TRUE)
     {
-        AddStartMenuAction(MENU_ACTION_POKEDEX);
+        AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
     }
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
     {
@@ -349,6 +349,11 @@ static void BuildZoneStartMenu(void)
     }
     
     AddStartMenuAction(MENU_ACTION_BAG);
+
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_POKEDEX);
+    }
     
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
@@ -357,11 +362,7 @@ static void BuildZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
-    if (FlagGet(FLAG_IS_REVISITING_ZONE) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
-    }
-    else
+    if (FlagGet(FLAG_IS_REVISITING_ZONE) == FALSE)
     {
         AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
     }
