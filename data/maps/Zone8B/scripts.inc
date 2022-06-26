@@ -16,6 +16,22 @@ Zone8B_Text_JaydenDefeat:
 Zone8B_Text_JaydenPostBattle:
 	.string "Next time, I'll be a winner too!$"
 
+Zone8B_EventScript_Karen::
+	trainerbattle_single TRAINER_KAREN, Zone8B_Text_KarenIntro, Zone8B_Text_KarenDefeat
+	msgbox Zone8B_Text_KarenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone8B_Text_KarenIntro:
+	.string "Can I speak to your manager?$"
+
+Zone8B_Text_KarenDefeat:
+	.string "What do you mean you don't have a\n"
+	.string "manager?$"
+
+Zone8B_Text_KarenPostBattle:
+	.string "Argh! You're a cheapskate,\n"
+	.string "just like the rest of them!$"
+
 Zone8B_EventScript_ItemDuskBall::
 	finditem ITEM_DUSK_BALL
 	end

@@ -120,7 +120,7 @@ Zone8D_EventScript_InitiateLeviathan8_8:
 	waitstate
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_InitiateLeviathan8_16
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_EventScript_InitiateLeviathan8_Text_6
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MIRAGE_LEVIATHAN_8, 0, NULL, Zone8D_EventScript_InitiateLeviathan8_Text_6
 	compare VAR_RESULT, 0
 	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_23
 	special LoadPlayerParty
@@ -151,7 +151,7 @@ Zone8D_EventScript_InitiateLeviathan8_7:
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
 	setvar VAR_0x8004, SPECIAL_BATTLE_MULTI
 	setvar VAR_0x8005, MULTI_BATTLE_2_VS_1 | MULTI_BATTLE_CHOOSE_MONS
-	setvar VAR_0x8006, TRAINER_ZONE8D_WALLY
+	setvar VAR_0x8006, TRAINER_WALLY_ZONE8D
 	setvar VAR_0x8007, TRAINER_BACK_PIC_WALLY
 	special DoSpecialTrainerBattle
 	waitstate
@@ -229,7 +229,7 @@ Zone8D_EventScript_InitiateLeviathan8_14:
 	goto Zone8D_EventScript_InitiateLeviathan8_13
 
 Zone8D_EventScript_InitiateLeviathan8_16:
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, Zone8D_EventScript_InitiateLeviathan8_Text_6
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MIRAGE_LEVIATHAN_8_BRUTAL, 0, NULL, Zone8D_EventScript_InitiateLeviathan8_Text_6
 	compare VAR_RESULT, 0
 	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_20
 	special LoadPlayerParty
@@ -267,16 +267,31 @@ Zone8D_EventScript_Exit_6:
 Zone8D_EventScript_Exit_7:
 	checktrainerflag TRAINER_MILLIE
 	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_JAMAL
+	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_PAIGE
+	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_SETH
+	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_CONNIE
+	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_CHAD
+	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_JIMMY
 	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_EMILIANO
 	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_MARCUS
 	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_KAREN
+	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_JAYDEN
 	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_NEIL
 	goto_if 0, Zone8D_EventScript_Exit_6
+	checktrainerflag TRAINER_TAMARA
+	goto_if 0, Zone8D_EventScript_Exit_6
+	goto_if_unset FLAG_BEAT_LEVIATHAN_7, Zone8D_EventScript_Exit_6
 	goto Zone8D_EventScript_Exit_5
 
 

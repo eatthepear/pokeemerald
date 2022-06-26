@@ -77,6 +77,7 @@ Zone2B_EventScript_LeviathanBattle_2:
 
 Zone2B_EventScript_LeviathanBattle_5:
 	msgbox Zone2B_Text_Leviathan2DenyBattle
+	release
 	end
 
 Zone2B_EventScript_LeviathanBattle_8:

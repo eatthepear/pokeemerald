@@ -625,6 +625,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Millie},
     },
 
+    [TRAINER_JAMAL] =
+    {
+        .trainerClass = TRAINER_CLASS_CAMPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerName = _("Jamal"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Jamal),
+        .party = {.TrainerMon = sParty_Jamal},
+    },
+
     [TRAINER_PAIGE] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
@@ -638,17 +651,43 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Paige},
     },
 
-    [TRAINER_JAMAL] =
+    [TRAINER_SETH] =
     {
-        .trainerClass = TRAINER_CLASS_CAMPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CAMPER,
-        .trainerName = _("Jamal"),
+        .trainerClass = TRAINER_CLASS_RICH_BOY,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Seth"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Jamal),
-        .party = {.TrainerMon = sParty_Jamal},
+        .partySize = ARRAY_COUNT(sParty_Seth),
+        .party = {.TrainerMon = sParty_Seth},
+    },
+
+    [TRAINER_CONNIE] =
+    {
+        .trainerClass = TRAINER_CLASS_BACKPACKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_BACKPACKER_F,
+        .trainerName = _("Connie"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Connie),
+        .party = {.TrainerMon = sParty_Connie},
+    },
+
+    [TRAINER_CHAD] =
+    {
+        .trainerClass = TRAINER_CLASS_GUITARIST,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_GUITARIST,
+        .trainerName = _("Chad"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Chad),
+        .party = {.TrainerMon = sParty_Chad},
     },
 
     [TRAINER_BETTY_LEVIATHAN_7] =
@@ -681,6 +720,19 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
+    [TRAINER_JIMMY] =
+    {
+        .trainerClass = TRAINER_CLASS_COLLECTOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_COLLECTOR,
+        .trainerName = _("Jimmy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Jimmy),
+        .party = {.TrainerMon = sParty_Jimmy},
+    },
+
     [TRAINER_EMILIANO] =
     {
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -707,6 +759,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Marcus},
     },
 
+    [TRAINER_KAREN] =
+    {
+        .trainerClass = TRAINER_CLASS_BACKPACKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_BACKPACKER_F,
+        .trainerName = _("Karen"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Karen),
+        .party = {.TrainerMon = sParty_Karen},
+    },
+
     [TRAINER_JAYDEN] =
     {
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -722,9 +787,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_NEIL] =
     {
-        .trainerClass = TRAINER_CLASS_HIKER,
+        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
         .trainerName = _("Neil"),
         .items = {},
         .doubleBattle = FALSE,
@@ -733,7 +798,20 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Neil},
     },
 
-    [TRAINER_LEVIATHAN4] =
+    [TRAINER_TAMARA] =
+    {
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Tamara"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Tamara),
+        .party = {.TrainerMon = sParty_Tamara},
+    },
+
+    [TRAINER_MIRAGE_LEVIATHAN_8] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -747,8 +825,23 @@ const struct Trainer gTrainers[] = {
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
-    
-    [TRAINER_ZONE8D_WALLY] =
+
+    [TRAINER_MIRAGE_LEVIATHAN_8_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
+        .trainerName = _("Mirage"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_Zone8DMirageBrutal),
+        .party = {.TrainerMon = sParty_Zone8DMirageBrutal},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+    },
+
+    [TRAINER_WALLY_ZONE8D] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,

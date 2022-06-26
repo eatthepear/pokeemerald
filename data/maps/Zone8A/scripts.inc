@@ -1,6 +1,21 @@
 Zone8A_MapScripts::
 	.byte 0
 
+Zone8A_EventScript_Jimmy::
+	trainerbattle_single TRAINER_JIMMY, Zone8A_Text_JimmyIntro, Zone8A_Text_JimmyDefeat
+	msgbox Zone8A_Text_JimmyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone8A_Text_JimmyIntro:
+	.string "Rare Pokémon… Do you have them?$"
+
+Zone8A_Text_JimmyDefeat:
+	.string "You do! You do have rare Pokémon!$"
+
+Zone8A_Text_JimmyPostBattle:
+	.string "I want to collect all the rare\n"
+	.string "Pokémon in the world!$"
+
 Zone8A_EventScript_Emiliano::
 	trainerbattle_single TRAINER_EMILIANO, Zone8A_Text_EmilianoIntro, Zone8A_Text_EmilianoDefeat
 	msgbox Zone8A_Text_EmilianoPostBattle, MSGBOX_AUTOCLOSE

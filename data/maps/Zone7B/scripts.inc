@@ -1,6 +1,46 @@
 Zone7B_MapScripts::
 	.byte 0
 
+
+Zone7B_EventScript_LeviathanBattle::
+	lock
+	faceplayer
+	goto_if_set FLAG_BEAT_LEVIATHAN_7, Zone7B_EventScript_LeviathanBattle_2
+	msgbox Zone7B_Text_Leviathan7WantBattle, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone7B_EventScript_LeviathanBattle_5
+	fadeoutbgm 1
+	msgbox Zone7B_EventScript_LeviathanBattle_Text_1
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone7B_EventScript_LeviathanBattle_8
+	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
+	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_7, Zone7B_Text_Leviathan7Defeat
+Zone7B_EventScript_LeviathanBattle_7:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone7B_EventScript_LeviathanBattle_Text_2
+	giveitem ITEM_SITRUS_BERRY, 5
+	msgbox Zone7B_Text_LeviathanPost
+	closemessage
+	setflag FLAG_BEAT_LEVIATHAN_7
+	release
+	end
+
+Zone7B_EventScript_LeviathanBattle_2:
+	msgbox Zone7B_Text_LeviathanPost
+	release
+	end
+
+Zone7B_EventScript_LeviathanBattle_5:
+	msgbox Zone7B_EventScript_LeviathanBattle_Text_0
+	release
+	end
+
+Zone7B_EventScript_LeviathanBattle_8:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
+	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_7_BRUTAL, Zone7B_Text_Leviathan7Defeat
+	goto Zone7B_EventScript_LeviathanBattle_7
+
+
 Zone7B_EventScript_Lady::
 	lock
 	faceplayer
@@ -45,3 +85,36 @@ Zone7B_Text_GoodLuck:
 
 Zone7B_Text_ComeBack:
 	.string "Come back when you need to rest, child.$"
+
+Zone7B_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Well, I will be here, if you change\n"
+	.string "your mind.$"
+
+Zone7B_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: {COLOR BLUE}Leviathan Betty{COLOR DARK_GRAY} will show you\n"
+	.string "how to behave in the prim and proper\l"
+	.string "way!$"
+
+Zone7B_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Your battling skills are\n"
+	.string "certainly up to par. Excellent form.\p"
+	.string "Aside from that, I'd like to give you\n"
+	.string "these Berries.\p"
+	.string "Very, very expensive, or so my butler\n"
+	.string "tells me.$"
+
+Zone7B_Text_Leviathan7WantBattle::
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: Your clothes are all covered in\n"
+	.string "dirt.\p"
+	.string "I think you could use a lesson in proper\n"
+	.string "etiquette, what do you say?$"
+
+Zone7B_Text_Leviathan7Defeat::
+	.string "It seems I was the one who ended\n"
+	.string "up being humbled…$"
+
+Zone7B_Text_LeviathanPost::
+	.string "{COLOR BLUE}Betty{COLOR DARK_GRAY}: I've been staying here at my\n"
+	.string "friend's house while our new mansion\l"
+	.string "gets renovated.\p"
+	.string "Isn't that exciting?$"

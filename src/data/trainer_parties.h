@@ -883,66 +883,105 @@ static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan 6, Brutal
 static const struct TrainerMon sParty_Millie[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_TEDDIURSA,
+    .lvl = 17,
+    .species = SPECIES_GROWLITHE_HISUIAN,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_DRIFLOON,
+    .lvl = 17,
+    .species = SPECIES_VULLABY,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_SURSKIT,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_WOOPER,
-    }
-};
-
-static const struct TrainerMon sParty_Paige[] = {
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_SKIDDO,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_TYMPOLE,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ORICORIO,
+    .lvl = 17,
+    .species = SPECIES_SLAKOTH,
     }
 };
 
 static const struct TrainerMon sParty_Jamal[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_SANDSHREW,
+    .lvl = 17,
+    .species = SPECIES_MEDITITE,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_MINCCINO,
+    .lvl = 17,
+    .species = SPECIES_TEDDIURSA,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZIGZAGOON_GALARIAN,
+    .lvl = 17,
+    .species = SPECIES_WOOBAT,
     }
 };
 
-static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 6, Double Battle, Default
+static const struct TrainerMon sParty_Paige[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_TYROGUE,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_TOGEPI,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_HAPPINY,
+    }
+};
+
+static const struct TrainerMon sParty_Seth[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_GIBLE,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_GASTLY,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_VULPIX_ALOLAN,
+    }
+};
+
+static const struct TrainerMon sParty_Connie[] = {
+    {
+    .iv = 0,
+    .lvl = 18,
+    .species = SPECIES_TROPIUS,
+    }
+};
+
+static const struct TrainerMon sParty_Chad[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_ZUBAT,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_WHISMUR,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_TYMPOLE,
+    }
+};
+
+static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 7, Double Battle, Default
     {
     .iv = 30,
-    .lvl = 17,
+    .lvl = 19,
     .nature = NATURE_MILD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Synchronize
@@ -952,7 +991,7 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 6, Double Ba
     },
     {
     .iv = 30,
-    .lvl = 17,
+    .lvl = 19,
     .nature = NATURE_MILD,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Synchronize
@@ -962,10 +1001,10 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 6, Double Ba
     }
 };
 
-static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 6, Double Battle, Brutal
+static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 7, Double Battle, Brutal
     {
     .iv = 31,
-    .lvl = 17,
+    .lvl = 19,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Psychic Surge
@@ -975,99 +1014,166 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 6, Double Bat
     },
     {
     .iv = 31,
-    .lvl = 17,
+    .lvl = 19,
     .nature = NATURE_MODEST,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Psychic Surge
     .species = SPECIES_INDEEDEE_FEMALE,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_Jimmy[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_ZORUA,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_MUNCHLAX,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_MAREANIE,
     }
 };
 
 static const struct TrainerMon sParty_Emiliano[] = {
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 17,
+    .species = SPECIES_MAKUHITA,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
     .species = SPECIES_ONIX,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_BELDUM,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_MAKUHITA,
+    .lvl = 17,
+    .species = SPECIES_ARON,
     }
 };
 
 static const struct TrainerMon sParty_Marcus[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_VULLABY,
+    .lvl = 17,
+    .species = SPECIES_DRIFLOON,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_TYROGUE,
+    .lvl = 17,
+    .species = SPECIES_ZIGZAGOON_GALARIAN,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_MACHOP,
+    .lvl = 17,
+    .species = SPECIES_SMOOCHUM,
+    }
+};
+
+static const struct TrainerMon sParty_Karen[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_MAWILE,
     }
 };
 
 static const struct TrainerMon sParty_Jayden[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ARON,
+    .lvl = 17,
+    .species = SPECIES_MACHOP,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CHEWTLE,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
+    .lvl = 17,
     .species = SPECIES_DRILBUR,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_ROLYCOLY,
     }
 };
 
 static const struct TrainerMon sParty_Neil[] = {
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 17,
     .species = SPECIES_GEODUDE,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_SIZZLIPEDE,
+    .lvl = 17,
+    .species = SPECIES_BRONZOR,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_MEDITITE,
-    },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ROLYCOLY,
+    .lvl = 17,
+    .species = SPECIES_BELDUM,
     }
 };
 
-static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in a 2v1 tag battle with Zone8DWally, Default
+static const struct TrainerMon sParty_Tamara[] = {
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_MIENFOO,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_GLAMEOW,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_SWINUB,
+    }
+};
+
+static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 8, fought in a 2v1 tag battle with Zone8DWally, Default
+    {
+    .iv = 30,
+    .lvl = 20,
+    .nature = NATURE_CAREFUL,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Receiver
+    .species = SPECIES_PASSIMIAN,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LOW_SWEEP, MOVE_ROCK_TOMB, MOVE_POWER_UP_PUNCH, MOVE_FACADE}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .nature = NATURE_ADAMANT,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_SLEEP_TALK}
+    },
+    {
+    .ivs = {31, 31, 30, 31, 30, 30},
+    .lvl = 20,
+    .nature = NATURE_BRAVE,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_SABLENITE,
+    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_HIDDEN_POWER} // HP Poison
+    }
+};
+
+static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan 8, fought in a 2v1 tag battle with Zone8DWally, Brutal
     {
     .iv = 31,
     .lvl = 20,
@@ -1099,12 +1205,12 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan 4, fought in
     .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_FIRE_FANG}
     },
     {
-    .iv = 31,
+    .ivs = {31, 31, 30, 31, 30, 30},
     .lvl = 20,
     .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
-    .species = SPECIES_SABLEYE, //Starts with aura +1 all stats
+    .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SABLENITE,
     .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_HIDDEN_POWER} // HP Poison
     }
@@ -3591,49 +3697,6 @@ static const struct TrainerMon sParty_RitaBrutala[] = {//Leviathan 3, Brutal
     .species = SPECIES_FURRET,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_RETALIATE, MOVE_COIL, MOVE_QUICK_ATTACK, MOVE_THIEF}
-    }
-};
-
-static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan 4, fought in a 2v1 tag battle with Zone8DWally, Brutal
-    {
-    .iv = 31,
-    .lvl = 20,
-    .nature = NATURE_CAREFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_HITMONTOP,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ROLLING_KICK, MOVE_FAKE_OUT, MOVE_AERIAL_ACE, MOVE_PURSUIT}
-    },
-    {
-    .iv = 31,
-    .lvl = 20,
-    .nature = NATURE_MODEST,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Quick Draw
-    .species = SPECIES_SLOWBRO_GALARIAN,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SHELL_SIDE_ARM, MOVE_CONFUSION, MOVE_WATER_PULSE, MOVE_HIDDEN_POWER} // HP Ground
-    },
-    {
-    .iv = 31,
-    .lvl = 20,
-    .nature = NATURE_IMPISH,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Rough Skin
-    .species = SPECIES_DRUDDIGON,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_GLARE}
-    },
-    {
-    .iv = 31,
-    .lvl = 20,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
-    .species = SPECIES_SABLEYE, //Starts with aura +1 all stats
-    .heldItem = ITEM_SABLENITE,
-    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_SLEEP_TALK}
     }
 };
 

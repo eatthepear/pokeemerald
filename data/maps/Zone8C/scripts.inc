@@ -16,6 +16,22 @@ Zone8C_Text_NeilPostBattle:
 	.string "Maybe it's on the other side\n"
 	.string "of the mountain?$"
 
+Zone8C_EventScript_Tamara::
+	trainerbattle_single TRAINER_TAMARA, Zone8C_Text_TamaraIntro, Zone8C_Text_TamaraDefeat
+	msgbox Zone8C_Text_TamaraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone8C_Text_TamaraIntro:
+	.string "Ah, I'm hopelessly lost…$"
+
+Zone8C_Text_TamaraDefeat:
+	.string "Now I can add defeat to my\n"
+	.string "list of misfortunes…$"
+
+Zone8C_Text_TamaraPostBattle:
+	.string "I should really drop my pessimistic\n"
+	.string "attitude, I know.$"
+
 Zone8C_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
 	end

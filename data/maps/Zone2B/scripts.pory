@@ -42,6 +42,7 @@ script Zone2B_EventScript_LeviathanBattle {
 	msgbox(Zone2B_Text_Leviathan2WantBattle, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
 		msgbox(Zone2B_Text_Leviathan2DenyBattle)
+		release
 		end
 	}
 	fadeoutbgm(1)

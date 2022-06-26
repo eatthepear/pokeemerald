@@ -138,13 +138,13 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 		waitstate
 		setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
 		if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-			trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, "…")
+			trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MIRAGE_LEVIATHAN_8_BRUTAL, 0, NULL, "…")
 			if (var(VAR_RESULT) != 0) {
 				break
 			}
 			special(LoadPlayerParty)
 		} else {
-			trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_LEVIATHAN4, 0, NULL, "…")
+			trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MIRAGE_LEVIATHAN_8, 0, NULL, "…")
 			if (var(VAR_RESULT) != 0) {
 				break
 			}
@@ -155,7 +155,7 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 	frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
 	setvar(VAR_0x8004, SPECIAL_BATTLE_MULTI)
 	setvar(VAR_0x8005, MULTI_BATTLE_2_VS_1 | MULTI_BATTLE_CHOOSE_MONS)
-	setvar(VAR_0x8006, TRAINER_ZONE8D_WALLY)
+	setvar(VAR_0x8006, TRAINER_WALLY_ZONE8D)
 	setvar(VAR_0x8007, TRAINER_BACK_PIC_WALLY)
 	special(DoSpecialTrainerBattle)
 	waitstate
@@ -230,11 +230,19 @@ script Zone8D_EventScript_Exit {
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
 			(!defeated(TRAINER_MILLIE) ||
+			!defeated(TRAINER_JAMAL) ||
 			!defeated(TRAINER_PAIGE) ||
+			!defeated(TRAINER_SETH) ||
+			!defeated(TRAINER_CONNIE) ||
+			!defeated(TRAINER_CHAD) ||
+			!defeated(TRAINER_JIMMY) ||
 			!defeated(TRAINER_EMILIANO) ||
 			!defeated(TRAINER_MARCUS) ||
+			!defeated(TRAINER_KAREN) ||
 			!defeated(TRAINER_JAYDEN) ||
-			!defeated(TRAINER_NEIL))) {
+			!defeated(TRAINER_NEIL) ||
+			!defeated(TRAINER_TAMARA) ||
+			!flag(FLAG_BEAT_LEVIATHAN_7))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
         warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
