@@ -647,6 +647,7 @@ Zone0Sanctuary_EventScript_EndIntro::
 	goto_if_eq Zone0Sanctuary_EventScript_EndIntro_2
 	additem ITEM_POKE_BALL, 30
 	additem ITEM_POTION, 10
+	additem ITEM_REPEL, 3
 Zone0Sanctuary_EventScript_EndIntro_1:
 	setflag FLAG_EXP_ALL_ON
 	setflag FLAG_SYS_POKEDEX_GET
@@ -672,6 +673,7 @@ Zone0Sanctuary_EventScript_EndIntro_2:
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_0
 	giveitem ITEM_POKE_BALL, 30
 	giveitem ITEM_POTION, 10
+	giveitem ITEM_REPEL, 3
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_1, MSGBOX_DEFAULT
 	waitfanfare

@@ -546,6 +546,7 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		msgbox(format("I also have a beginner's kit with items and cash to get you started."))
 		giveitem(ITEM_POKE_BALL, 30)
 		giveitem(ITEM_POTION, 10)
+		giveitem(ITEM_REPEL, 3)
 		playfanfare(MUS_OBTAIN_ITEM)
 		msgbox(format("Received ¥5000!"), MSGBOX_DEFAULT)
 		waitfanfare
@@ -557,6 +558,7 @@ script Zone0Sanctuary_EventScript_EndIntro {
 	} else {
 		additem(ITEM_POKE_BALL, 30)
 		additem(ITEM_POTION, 10)
+		additem(ITEM_REPEL, 3)
 	}
 	setflag(FLAG_EXP_ALL_ON)
 	setflag(FLAG_SYS_POKEDEX_GET)
