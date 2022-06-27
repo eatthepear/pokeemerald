@@ -64,5 +64,6 @@ Zone2A_EventScript_Sign::
 	end
 
 Zone2A_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "You may find hidden items by\n"
 	.string "checking certain tiles with {A_BUTTON}.$"

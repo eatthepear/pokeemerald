@@ -148,6 +148,7 @@ Zone1A_EventScript_Sign::
 	end
 
 Zone1A_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "Press {R_BUTTON} to enable\n"
 	.string "or disable Auto Run.$"
 `

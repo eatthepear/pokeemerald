@@ -91,5 +91,6 @@ Zone4D_EventScript_Sign::
 	end
 
 Zone4D_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "Some areas require backtracking\n"
 	.string "later on in order to access them.$"

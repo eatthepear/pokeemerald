@@ -47,6 +47,7 @@ Zone4B_EventScript_Sign::
 	end
 
 Zone4B_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "You can see detailed information\n"
 	.string "about a Pokémon species in its\l"
 	.string "Pokédex entry after capturing it.$"

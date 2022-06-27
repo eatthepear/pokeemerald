@@ -404,6 +404,7 @@ Zone5A_EventScript_Sign::
 	end
 
 Zone5A_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "You can sort items in the Bag\n"
 	.string "using {START_BUTTON}.$"
 

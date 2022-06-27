@@ -138,6 +138,7 @@ Zone2B_EventScript_Sign::
 	end
 
 Zone2B_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "Golden Trees often have Berries\n"
 	.string "or wild Pokémon!$"
 

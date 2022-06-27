@@ -102,6 +102,7 @@ Zone4E_EventScript_Sign::
 	end
 
 Zone4E_Text_Sign:
+	.string "Trainer Tips!\p"
 	.string "While you are on the Pokémon stats\n"
 	.string "screen, you can press {A_BUTTON} to switch\l"
 	.string "between stats, IVs, or EVs.$"

@@ -358,17 +358,6 @@ Zone3A_Text_RichardPostBattle:
 	.string "Do you think I can buy humility\n"
 	.string "with my money?$"
 
-Zone3A_EventScript_Sign::
-	msgbox Zone3A_Text_Sign, MSGBOX_SIGN
-	end
-
-Zone3A_Text_Sign:
-	.string "If you capture a Pokémon while you\n"
-	.string "have a full party, you may add the\l"
-	.string "newly caught Pokémon to your party\l"
-	.string "and send a current party member to\l"
-	.string "the PC.$"
-
 Zone3A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!$"
 
