@@ -366,19 +366,19 @@
     },
     {
       "type": "hidden_item",
-      "x": 59,
-      "y": 31,
+      "x": 15,
+      "y": 37,
       "elevation": 3,
-      "item": "ITEM_CHESTO_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_CHESTO_BERRY"
+      "item": "ITEM_RAWST_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_RAWST_BERRY"
     },
     {
       "type": "hidden_item",
       "x": 44,
       "y": 28,
       "elevation": 3,
-      "item": "ITEM_CHERI_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_CHERI_BERRY"
+      "item": "ITEM_PERSIM_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ZONE7A_PERSIM_BERRY"
     },
     {
       "type": "hidden_item",

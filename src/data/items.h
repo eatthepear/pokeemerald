@@ -7948,10 +7948,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM12_HONE_CLAWS] =
+    [ITEM_TM12_ROCK_TOMB] =
     {
         .name = _("TM12"),
-        .itemId = ITEM_TM12_HONE_CLAWS,
+        .itemId = ITEM_TM12_ROCK_TOMB,
         .price = 10000,
         .description = sTM12Desc,
         .pocket = POCKET_TM_HM,

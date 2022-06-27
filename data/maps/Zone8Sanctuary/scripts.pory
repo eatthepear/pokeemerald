@@ -14,7 +14,7 @@ script Zone8Sanctuary_EventScript_Intro {
 	giveitem(ITEM_BLUE_SHARD, 3)
 	msgbox(Zone8Sanctuary_Text_RewardClear8)
 	msgbox(Zone8Sanctuary_Text_8Reward)
-	giveitem(ITEM_TM05)
+	giveitem(ITEM_TM12)
 	closemessage
 	setvar(VAR_ZONE, 9)
 	msgbox(gText_Colress_Unlocked)
@@ -78,5 +78,5 @@ text Zone8Sanctuary_Text_RewardClear8 {
 }
 
 text Zone8Sanctuary_Text_8Reward {
-	"TM05 - Rock Tomb!$"
+	"TM12 - Rock Tomb!$"
 }

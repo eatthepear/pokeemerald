@@ -3038,10 +3038,6 @@ static const u8 sTM05Desc[] = _(
     "Snares foes with\n"
     "an electric web,\n"
     "lowering speed.");
-    // Rock Tomb
-    // "Hurls boulders to\n"
-    // "damage the foe and\n"
-    // "lower their Speed.");
 
 static const u8 sTM06Desc[] = _(
     "Yells at foes,\n"
@@ -3102,9 +3098,13 @@ static const u8 sTM11Desc[] = _(
     // "Pokémon in waiting.");
 
 static const u8 sTM12Desc[] = _(
-    "The user sharpens\n"
-    "its claws, raising\n"
-    "Attack & Accuracy.");
+    "Hurls boulders to\n"
+    "damage the foe and\n"
+    "lower their Speed.");
+    // Hone Claws
+    // "The user sharpens\n"
+    // "its claws, raising\n"
+    // "Attack & Accuracy.");
 
 static const u8 sTM13Desc[] = _(
     "Hardens the body's\n"
