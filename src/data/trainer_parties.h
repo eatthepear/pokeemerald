@@ -1087,7 +1087,7 @@ static const struct TrainerMon sParty_Marcus[] = {
 static const struct TrainerMon sParty_Karen[] = {
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 18,
     .species = SPECIES_MAWILE,
     }
 };
@@ -1257,24 +1257,6 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
 
 /* ------------------- Zone 9 ------------------- */
 
-static const struct TrainerMon sParty_Anita[] = {
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_GRUBBIN,
-    },
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_WOOBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_SLAKOTH,
-    }
-};
-
 // You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
 // Accordingly, this gauntlet means there is no Leviathan in this Zone
 static const struct TrainerMon sParty_Ari[] = {
@@ -1334,7 +1316,25 @@ static const struct TrainerMon sParty_Dominic[] = {
     }
 };
 
-static const struct TrainerMon sParty_Erica[] = {
+static const struct TrainerMon sParty_EricaDefault[] = {
+    {
+    .iv = 20,
+    .lvl = 19,
+    .species = SPECIES_CROAGUNK,
+    },
+    {
+    .iv = 20,
+    .lvl = 19,
+    .species = SPECIES_GIBLE,
+    },
+    {
+    .iv = 20,
+    .lvl = 19,
+    .species = SPECIES_KOMALA,
+    }
+};
+
+static const struct TrainerMon sParty_EricaBrutal[] = {
     {
     .iv = 20,
     .lvl = 19,
@@ -2440,7 +2440,7 @@ static const struct TrainerMon sParty_Desiree[] = {//Zone 18 Speed Room, Double 
     }
 };
 
-static const struct TrainerMon sParty_Pam[] = {//Zone 18 Support Room, Double Battle
+static const struct TrainerMon sParty_Anita[] = {//Zone 18 Support Room, Double Battle
     {
     .iv = 10,
     .lvl = 29,

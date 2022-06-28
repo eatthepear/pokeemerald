@@ -23,7 +23,7 @@ Zone18B_EventScript_OpenUnlockedDoors:: @ 82048B5
 	call_if_defeated TRAINER_MELINDA, Zone18B_EventScript_OpenHailRoomDoors
 	call_if_defeated TRAINER_LOUIS, Zone18B_EventScript_OpenBuffRoomDoors
 	call_if_defeated TRAINER_DESIREE, Zone18B_EventScript_OpenSpeedRoomDoors
-	call_if_defeated TRAINER_PAM, Zone18B_EventScript_OpenSupportRoomDoors
+	call_if_defeated TRAINER_ANITA, Zone18B_EventScript_OpenSupportRoomDoors
 	call_if_defeated TRAINER_WILLIE, Zone18B_EventScript_OpenStatsRoomDoors
 	call_if_defeated TRAINER_DORIS, Zone18B_EventScript_OpenAbilityRoomDoors
 	end
@@ -290,7 +290,7 @@ Zone18B_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_MELINDA, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_LOUIS, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_DESIREE, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_PAM, EventScript_BrutalExitNotSatisfied
+	goto_if_not_defeated TRAINER_ANITA, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_WILLIE, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_DORIS, EventScript_BrutalExitNotSatisfied
 	goto_if_unset FLAG_BEAT_LEVIATHAN_11, EventScript_BrutalExitNotSatisfied
@@ -689,7 +689,7 @@ Zone18B_EventScript_EnterLeftAbilityRoom:
 
 Zone18B_EventScript_RightAbilityRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_PAM, Zone18B_EventScript_DoorLocked
+	goto_if_not_defeated TRAINER_ANITA, Zone18B_EventScript_DoorLocked
 	msgbox Zone18B_Text_EnterAbilityRoom, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone18B_EventScript_EnterRightAbilityRoom
@@ -913,18 +913,18 @@ Zone18B_Text_DesireePostBattle:
 	.string "Discharge plus Earthquake is\n"
 	.string "a nice combo.$"
 
-Zone18B_EventScript_Pam::
-	trainerbattle_single TRAINER_PAM, Zone18B_Text_PamIntro, Zone18B_Text_PamDefeat, Zone18B_EventScript_SlideOpenSupportRoomDoors
-	msgbox Zone18B_Text_PamPostBattle, MSGBOX_AUTOCLOSE
+Zone18B_EventScript_Anita::
+	trainerbattle_single TRAINER_ANITA, Zone18B_Text_AnitaIntro, Zone18B_Text_AnitaDefeat, Zone18B_EventScript_SlideOpenSupportRoomDoors
+	msgbox Zone18B_Text_AnitaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone18B_Text_PamIntro:
+Zone18B_Text_AnitaIntro:
 	.string "My Pokémon, lend me a Helping Hand!$"
 
-Zone18B_Text_PamDefeat:
+Zone18B_Text_AnitaDefeat:
 	.string "Drats.$"
 
-Zone18B_Text_PamPostBattle:
+Zone18B_Text_AnitaPostBattle:
 	.string "I think I just need more Pokémon.$"
 
 Zone18B_EventScript_Willie::

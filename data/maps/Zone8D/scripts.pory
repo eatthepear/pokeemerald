@@ -224,6 +224,7 @@ script Zone8D_EventScript_Exit {
 	lockall
     if (var(VAR_ZONE) > 8) {
 		setflag(FLAG_HIDE_MAX_3)
+		setflag(FLAG_ZONE7_HEAL_USED)
 		setvar(VAR_REVISITING_ZONE, 0)
 		warpteleport(MAP_ZONE0D, 255, 43, 32)
 		waitstate

@@ -93,7 +93,7 @@ script Zone9A_EventScript_Ari {
 		applymovement(5, Common_Movement_WalkDown)
 		waitmovement(0)
 		msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from\nmy slumber?", MSGBOX_DEFAULT)
-		trainerbattle_no_intro(TRAINER_ERICA, Zone9A_Text_EricaDefeat)
+		trainerbattle_no_intro(TRAINER_ERICA_LEVIATHAN_9, Zone9A_Text_EricaDefeat)
 		if (flag(FLAG_BRUTAL_MODE_ON) == true) {
 			msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\nI have a request for you.", MSGBOX_DEFAULT)
 		} else {
@@ -128,21 +128,6 @@ text Zone9A_Text_EricaDefeat {
 }
 
 raw `
-Zone9A_EventScript_Anita::
-	trainerbattle_single TRAINER_ANITA, Zone9A_Text_AnitaIntro, Zone9A_Text_AnitaDefeat
-	msgbox Zone9A_Text_AnitaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone9A_Text_AnitaIntro:
-	.string "The vegetation is so thick!"
-
-Zone9A_Text_AnitaDefeat:
-	.string "I can barely see past my nose!"
-
-Zone9A_Text_AnitaPostBattle:
-	.string "Okay, maybe that was a bit of\n"
-	.string "an exaggeration…"
-
 Zone9A_EventScript_BigRoot::
 	finditem ITEM_BIG_ROOT
 	end

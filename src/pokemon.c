@@ -10062,7 +10062,7 @@ void TrySpecialOverworldEvo(void)
 const u16 sLevelCaps[NUM_CAPS] = {
     5,
     7, 9, 11, 13, 15,
-    17, 19, 19, 21, 23,
+    17, 20, 20, 21, 23,
     25, 27, 29, 29, 30,
     32, 33, 35, 37, 38,
     40, 42, 44, 48, 48,

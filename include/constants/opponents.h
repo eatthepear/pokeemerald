@@ -61,12 +61,12 @@
 #define TRAINER_MIRAGE_LEVIATHAN_8            	57
 #define TRAINER_MIRAGE_LEVIATHAN_8_BRUTAL     	58
 #define TRAINER_WALLY_ZONE8D                 	59
-#define TRAINER_ANITA                        	60
-#define TRAINER_ARI                          	61
-#define TRAINER_BERTHA                       	62
-#define TRAINER_CASSANDRA                    	63
-#define TRAINER_DOMINIC                      	64
-#define TRAINER_ERICA                        	65
+#define TRAINER_ARI                          	60
+#define TRAINER_BERTHA                       	61
+#define TRAINER_CASSANDRA                    	62
+#define TRAINER_DOMINIC                      	63
+#define TRAINER_ERICA_LEVIATHAN_9             	64
+#define TRAINER_ERICA_LEVIATHAN_9_BRUTAL      	65
 #define TRAINER_PEARLIE                      	66
 #define TRAINER_KYLE                         	67
 #define TRAINER_ALANA                        	68
@@ -117,7 +117,7 @@
 #define TRAINER_MELINDA                       	113
 #define TRAINER_LOUIS                         	114
 #define TRAINER_DESIREE                       	115
-#define TRAINER_PAM                           	116
+#define TRAINER_ANITA                         	116
 #define TRAINER_WILLIE                        	117
 #define TRAINER_DORIS                         	118
 #define TRAINER_PIRATE_1                      	119

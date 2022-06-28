@@ -95,7 +95,7 @@ Zone9A_EventScript_Ari::
 	applymovement 5, Common_Movement_WalkDown
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_ERICA, Zone9A_Text_EricaDefeat
+	trainerbattle_no_intro TRAINER_ERICA_LEVIATHAN_9, Zone9A_Text_EricaDefeat
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_5
 	msgbox Zone9A_EventScript_Ari_Text_16, MSGBOX_DEFAULT
 Zone9A_EventScript_Ari_4:
@@ -132,21 +132,6 @@ Zone9A_Movement_WaitForNextWinstrate:
 	delay_16
 	delay_16
 	step_end
-
-Zone9A_EventScript_Anita::
-	trainerbattle_single TRAINER_ANITA, Zone9A_Text_AnitaIntro, Zone9A_Text_AnitaDefeat
-	msgbox Zone9A_Text_AnitaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone9A_Text_AnitaIntro:
-	.string "The vegetation is so thick!"
-
-Zone9A_Text_AnitaDefeat:
-	.string "I can barely see past my nose!"
-
-Zone9A_Text_AnitaPostBattle:
-	.string "Okay, maybe that was a bit of\n"
-	.string "an exaggeration…"
 
 Zone9A_EventScript_BigRoot::
 	finditem ITEM_BIG_ROOT
