@@ -690,7 +690,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
     .lvl = 15,
     .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_2, //Sniper
+    .ability = ABILITY_SLOT_1, //Swarm
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BUG_BITE, MOVE_POISON_TAIL, MOVE_FURY_ATTACK, MOVE_FOCUS_ENERGY}
@@ -806,7 +806,7 @@ static const struct TrainerMon sParty_Frank[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_LICKITUNG,
+    .species = SPECIES_SLAKOTH,
     },
     {
     .iv = 0,
@@ -853,6 +853,7 @@ static const struct TrainerMon sParty_Daisy[] = {
 
 static const struct TrainerMon sParty_ZackDefault[] = {//Leviathan 6, Default
     {
+    .ball = ITEM_DIVE_BALL,
     .iv = 30,
     .lvl = 20,
     .nature = NATURE_MODEST,
@@ -866,6 +867,7 @@ static const struct TrainerMon sParty_ZackDefault[] = {//Leviathan 6, Default
 
 static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan 6, Brutal
     {
+    .ball = ITEM_DIVE_BALL,
     .iv = 31,
     .lvl = 20,
     .nature = NATURE_MODEST,
@@ -894,7 +896,7 @@ static const struct TrainerMon sParty_Millie[] = {
     {
     .iv = 0,
     .lvl = 17,
-    .species = SPECIES_SLAKOTH,
+    .species = SPECIES_LICKITUNG,
     }
 };
 
@@ -980,6 +982,7 @@ static const struct TrainerMon sParty_Chad[] = {
 
 static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 7, Double Battle, Default
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 30,
     .lvl = 19,
     .nature = NATURE_MILD,
@@ -990,6 +993,7 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 7, Double Ba
     .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
     },
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 30,
     .lvl = 19,
     .nature = NATURE_MILD,
@@ -1003,6 +1007,7 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan 7, Double Ba
 
 static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 7, Double Battle, Brutal
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 31,
     .lvl = 19,
     .nature = NATURE_MODEST,
@@ -1013,6 +1018,7 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan 7, Double Bat
     .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
     },
     {
+    .ball = ITEM_LUXURY_BALL,
     .iv = 31,
     .lvl = 19,
     .nature = NATURE_MODEST,
