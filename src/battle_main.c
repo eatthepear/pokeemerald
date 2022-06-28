@@ -4193,7 +4193,7 @@ static void HandleTurnActionSelectionState(void)
 
                         enemyPartyPreview = TRUE;
 
-                        BtlController_EmitChoosePokemon(BUFFER_A, PARTY_ACTION_CHOOSE_MON, PARTY_SIZE, ABILITY_NONE, gBattleStruct->battlerPartyOrders[gActiveBattler]);
+                        BtlController_EmitChoosePokemon(BUFFER_A, PARTY_ACTION_CHOOSE_MON, PARTY_SIZE, ABILITY_NONE, gBattleStruct->battlerPartyOrders[gActiveBattler+1]);
                         MarkBattlerForControllerExec(gActiveBattler);
                     }
                     break;
@@ -4381,6 +4381,9 @@ static void HandleTurnActionSelectionState(void)
                     break;
                 case B_ACTION_VIEW_ENEMY_PARTY:
                     enemyPartyPreview = FALSE;
+                    gBattleCommunication[gActiveBattler] = STATE_BEFORE_ACTION_CHOSEN;
+                    RecordedBattle_ClearBattlerAction(gActiveBattler, 1);
+                    break;
                 case B_ACTION_SWITCH:
                     if (gBattleResources->bufferB[gActiveBattler][1] == PARTY_SIZE)
                     {
