@@ -72,7 +72,7 @@ Zone8Sanctuary_EventScript_NextZone_6:
 	setflag FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE
 	setflag FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE
 	setflag FLAG_HIDE_ZONE9A_ERICA_WINSTRATE
-	warp MAP_ZONE9A, 255, 23, 13
+	warp MAP_ZONE9A, 255, 18, 11
 	waitstate
 	goto Zone8Sanctuary_EventScript_NextZone_1
 

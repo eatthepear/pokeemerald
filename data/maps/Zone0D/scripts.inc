@@ -310,7 +310,7 @@ Zone0D_EventScript_WarpZone7_1:
 	call Zone0D_EventScript_VerifyDestination
 	setflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 7
-	warpteleport MAP_ZONE7A, 255, 5, 34
+	warpteleport MAP_ZONE7A, 255, 10, 33
 	waitstate
 	return
 
@@ -328,7 +328,7 @@ Zone0D_EventScript_WarpZone8_1:
 	call Zone0D_EventScript_VerifyDestination
 	setflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 8
-	warpteleport MAP_ZONE8A, 255, 19, 4
+	warpteleport MAP_ZONE8A, 255, 19, 5
 	waitstate
 	return
 
@@ -346,7 +346,7 @@ Zone0D_EventScript_WarpZone9_1:
 	call Zone0D_EventScript_VerifyDestination
 	setflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 9
-	warpteleport MAP_ZONE9A, 255, 23, 13
+	warpteleport MAP_ZONE9A, 255, 18, 11
 	waitstate
 	return
 

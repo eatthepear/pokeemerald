@@ -4614,8 +4614,8 @@
     {
       "id": "LAYOUT_ZONE9A",
       "name": "Zone9A_Layout",
-      "width": 36,
-      "height": 35,
+      "width": 32,
+      "height": 29,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Zone9A/border.bin",
