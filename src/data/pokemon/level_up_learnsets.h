@@ -1229,6 +1229,7 @@ static const struct LevelUpMove sPoliwagLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sPoliwhirlLevelUpLearnset[] = {
+	LEVEL_UP_MOVE( 1, MOVE_ROUND),
 	LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
 	LEVEL_UP_MOVE( 4, MOVE_MUD_SHOT),
 	LEVEL_UP_MOVE( 6, MOVE_HYPNOSIS),
