@@ -49,7 +49,7 @@ script Zone8Sanctuary_EventScript_NextZone {
 				setflag(FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE)
 				setflag(FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE)
 				setflag(FLAG_HIDE_ZONE9A_ERICA_WINSTRATE)
-				warp(MAP_ZONE9A, 255, 18, 11)
+				warp(MAP_ZONE9A, 255, 41, 22)
 				waitstate
 			}
 		case 1:
