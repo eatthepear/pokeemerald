@@ -70,7 +70,7 @@ text Zone2B_Text_Leviathan2WantBattle {
 }
 
 text Zone2B_Text_Leviathan2Intro {
-	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!\p{COLOR BLUE}Leviathan Joey{COLOR DARK_GRAY}, incoming!")
+	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!")
 }
 
 text Zone2B_Text_Leviathan2DenyBattle {

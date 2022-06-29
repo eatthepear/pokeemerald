@@ -95,7 +95,7 @@ script Zone5A_EventScript_LeviathanBattle {
 		"…\n"
 		"…\l"
 		"You don't?!\p"
-		"You'll change your mind after {COLOR BLUE}Leviathan Declan{COLOR DARK_GRAY} beats you with his fabulous Bug Pokémon!"))
+		"You'll change your mind after I beat you with my fabulous Bug Pokémon!"))
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {	
 		special(HealPlayerParty)
 	}

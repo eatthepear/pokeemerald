@@ -450,9 +450,8 @@ Zone5A_EventScript_LeviathanBattle_Text_7:
 	.string "…\n"
 	.string "…\l"
 	.string "You don't?!\p"
-	.string "You'll change your mind after {COLOR BLUE}Leviathan\n"
-	.string "Declan{COLOR DARK_GRAY} beats you with his fabulous Bug\l"
-	.string "Pokémon!$"
+	.string "You'll change your mind after I beat you\n"
+	.string "with my fabulous Bug Pokémon!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_8:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, dude, I get it.\p"

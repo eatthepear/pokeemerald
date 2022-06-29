@@ -121,7 +121,7 @@ Zone4E_EventScript_LeviathanBattle_Text_1:
 	.string "See you around!$"
 
 Zone4E_Text_Leviathan4Intro::
-	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey! I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GRAY}.\p"
+	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey! I'm {COLOR BLUE}Rita{COLOR DARK_GRAY}.\p"
 	.string "Nice to meet you!\p"
 	.string "People always criticize me for being too\n"
 	.string "friendly with others.\p"

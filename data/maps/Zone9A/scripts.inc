@@ -89,16 +89,18 @@ Zone9A_EventScript_Ari::
 	applymovement 4, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
 	removeobject 4
+	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate
 	waitmovement 0
 	addobject 5
 	applymovement 5, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_ERICA_LEVIATHAN_9, Zone9A_Text_EricaDefeat
+	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_AUTOCLOSE
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_5
-	msgbox Zone9A_EventScript_Ari_Text_16, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ERICA_LEVIATHAN_9, Zone9A_Text_EricaDefeat
 Zone9A_EventScript_Ari_4:
+	msgbox Zone9A_EventScript_Ari_Text_15
+	giveitem ITEM_TM14
 	closemessage
 	applymovement 5, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -118,7 +120,7 @@ Zone9A_EventScript_Ari_1:
 	end
 
 Zone9A_EventScript_Ari_5:
-	msgbox Zone9A_EventScript_Ari_Text_15, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ERICA_LEVIATHAN_9_BRUTAL, Zone9A_Text_EricaDefeat
 	goto Zone9A_EventScript_Ari_4
 
 
@@ -189,13 +191,11 @@ Zone9A_EventScript_Ari_Text_13:
 	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Kids!\nWake your grandma up!$"
 
 Zone9A_EventScript_Ari_Text_14:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from\nmy slumber?$"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from my\n"
+	.string "slumber?$"
 
 Zone9A_EventScript_Ari_Text_15:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Please, come inside.\nI have a request for you.$"
-
-Zone9A_EventScript_Ari_Text_16:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.$"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you completing this trial.$"
 
 Zone9A_Text_EricaDefeat::
 	.string "Oh… You are the one…$"

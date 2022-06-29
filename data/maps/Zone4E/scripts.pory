@@ -59,7 +59,7 @@ script Zone4E_EventScript_LeviathanBattle {
 }
 
 text Zone4E_Text_Leviathan4Intro {
-	format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey! I'm {COLOR BLUE}Leviathan Rita{COLOR DARK_GRAY}.\pNice to meet you!\pPeople always criticize me for being too friendly with others.\pBut I just find that's the best way to make new friends!\pWell, how about a battle, friend?")
+	format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: Hey! I'm {COLOR BLUE}Rita{COLOR DARK_GRAY}.\pNice to meet you!\pPeople always criticize me for being too friendly with others.\pBut I just find that's the best way to make new friends!\pWell, how about a battle, friend?")
 }
 
 text Zone4E_Text_Leviathan4Defeat {

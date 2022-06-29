@@ -162,8 +162,7 @@ Zone2B_Text_Leviathan2WantBattle::
 	.string "percentage of Rattata! Want to see?$"
 
 Zone2B_Text_Leviathan2Intro::
-	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!\p"
-	.string "{COLOR BLUE}Leviathan Joey{COLOR DARK_GRAY}, incoming!$"
+	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!$"
 
 Zone2B_Text_Leviathan2DenyBattle::
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Oh, all right…$"
