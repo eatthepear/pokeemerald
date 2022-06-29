@@ -573,6 +573,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_ISABELLA] = TRAINER_PIC_FAIRY_TALE_GIRL,
     [MUGSHOT_BETTY] = TRAINER_PIC_SOCIALITE,
     [MUGSHOT_ZACK] = TRAINER_PIC_TUBER_M,
+    [MUGSHOT_ERICA] = TRAINER_PIC_EXPERT_F,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -600,6 +601,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_ISABELLA] = {0x200, 0x200},
     [MUGSHOT_BETTY] = {0x200, 0x200},
     [MUGSHOT_ZACK] = {0x200, 0x200},
+    [MUGSHOT_ERICA] = {0x200, 0x200},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
@@ -627,6 +629,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_ISABELLA] = {0,     0},
     [MUGSHOT_BETTY] = {0,     0},
     [MUGSHOT_ZACK] = {0,     0},
+    [MUGSHOT_ERICA] = {0,     0},
 };
 
 static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =
@@ -983,6 +986,7 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_ISABELLA] = sMugshotPal_Glacia,
     [MUGSHOT_BETTY] = sMugshotPal_Glacia,
     [MUGSHOT_ZACK] = sMugshotPal_Glacia,
+    [MUGSHOT_ERICA] = sMugshotPal_Glacia,
     
 };
 

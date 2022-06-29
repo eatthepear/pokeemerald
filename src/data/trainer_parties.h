@@ -1258,97 +1258,145 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
 /* ------------------- Zone 9 ------------------- */
 
 // You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
-// Accordingly, this gauntlet means there is no Leviathan in this Zone
 static const struct TrainerMon sParty_Ari[] = {
     {
     .iv = 20,
-    .lvl = 17,
-    .species = SPECIES_BELLSPROUT,
+    .lvl = 19,
+    .species = SPECIES_ODDISH,
     },
     {
     .iv = 20,
-    .lvl = 17,
-    .species = SPECIES_REMORAID,
+    .lvl = 19,
+    .species = SPECIES_BELLSPROUT,
     }
 };
 
 static const struct TrainerMon sParty_Bertha[] = {
     {
     .iv = 20,
-    .lvl = 17,
-    .species = SPECIES_PAWNIARD,
+    .lvl = 19,
+    .species = SPECIES_LITWICK,
     },
     {
     .iv = 20,
-    .lvl = 17,
-    .species = SPECIES_SLOWPOKE,
+    .lvl = 19,
+    .species = SPECIES_DEWPIDER,
     },
     {
     .iv = 20,
-    .lvl = 17,
-    .species = SPECIES_MAGBY,
+    .lvl = 19,
+    .species = SPECIES_VANILLITE,
     }
 };
 
 static const struct TrainerMon sParty_Cassandra[] = {
     {
     .iv = 20,
-    .lvl = 18,
-    .species = SPECIES_GASTLY,
+    .lvl = 20,
+    .species = SPECIES_GLAMEOW,
     },
     {
     .iv = 20,
-    .lvl = 18,
-    .species = SPECIES_ELEKID,
+    .lvl = 20,
+    .species = SPECIES_SMOOCHUM,
     },
     {
     .iv = 20,
-    .lvl = 18,
+    .lvl = 20,
+    .species = SPECIES_ARROKUDA,
+    },
+    {
+    .iv = 20,
+    .lvl = 20,
     .species = SPECIES_CUFANT,
-    },
+    }
 };
 
 static const struct TrainerMon sParty_Dominic[] = {
     {
     .iv = 20,
-    .lvl = 19,
-    .species = SPECIES_SABLEYE,
+    .lvl = 21,
+    .species = SPECIES_CRAMORANT,
     }
 };
 
-static const struct TrainerMon sParty_EricaDefault[] = {
+static const struct TrainerMon sParty_EricaDefault[] = {//Leviathan 9, Default
     {
-    .iv = 20,
-    .lvl = 19,
-    .species = SPECIES_CROAGUNK,
+    .iv = 30,
+    .lvl = 20,
+    .nature = NATURE_LONELY,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2, //Skill Link
+    .species = SPECIES_AIPOM,
+    .moves = {MOVE_RETALIATE, MOVE_FAKE_OUT, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 20,
-    .lvl = 19,
-    .species = SPECIES_GIBLE,
+    .iv = 30,
+    .lvl = 20,
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_STANTLER,
+    .moves = {MOVE_RETALIATE, MOVE_ZEN_HEADBUTT, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 20,
-    .lvl = 19,
+    .iv = 30,
+    .lvl = 20,
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Skill Link
+    .species = SPECIES_TRUMBEAK,
+    .moves = {MOVE_RETALIATE, MOVE_AERIAL_ACE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 21,
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Comatose
     .species = SPECIES_KOMALA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_RETALIATE, MOVE_SHADOW_CLAW, MOVE_NONE, MOVE_NONE}
     }
 };
 
-static const struct TrainerMon sParty_EricaBrutal[] = {
+static const struct TrainerMon sParty_EricaBrutal[] = {//Leviathan 9, Brutal
     {
-    .iv = 20,
-    .lvl = 19,
-    .species = SPECIES_CROAGUNK,
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_LONELY,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_2, //Skill Link
+    .species = SPECIES_AIPOM,
+    .moves = {MOVE_RETALIATE, MOVE_FAKE_OUT, MOVE_WATER_PULSE, MOVE_NONE}
     },
     {
-    .iv = 20,
-    .lvl = 19,
-    .species = SPECIES_GIBLE,
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_STANTLER,
+    .moves = {MOVE_RETALIATE, MOVE_ZEN_HEADBUTT, MOVE_DOUBLE_KICK, MOVE_NONE}
     },
     {
-    .iv = 20,
-    .lvl = 19,
+    .iv = 31,
+    .lvl = 20,
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Skill Link
+    .species = SPECIES_TRUMBEAK,
+    .moves = {MOVE_RETALIATE, MOVE_AERIAL_ACE, MOVE_BULLET_SEED, MOVE_NONE}
+    },
+    {
+    .iv = 31,
+    .lvl = 21,
+    .nature = NATURE_JOLLY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Comatose
     .species = SPECIES_KOMALA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_RETALIATE, MOVE_SHADOW_CLAW, MOVE_BRICK_BREAK, MOVE_NONE}
     }
 };
 
