@@ -56,7 +56,7 @@
 #define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE   0x2B
 #define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE     0x2C
 #define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE    0x2D
-#define FLAG_RECEIVED_ZONE9F_ZORUA    0x2E
+#define FLAG_RECEIVED_ZONE9D_MYSTIC_WATER    0x2E
 #define FLAG_HIDE_ZONE9A_MAN 0x2F
 #define FLAG_ADAMINA_WARP_INTRO  0x30
 #define FLAG_RECEIVED_ZONE10B_SUBSTITUTE    0x31 // Substitute Sidequest
@@ -1082,13 +1082,13 @@
 #define FLAG_ITEM_ZONE8C_NEVER_MELT_ICE                             0x406
 #define FLAG_ITEM_ZONE8C_FULL_HEAL                                  0x407
 #define FLAG_ITEM_ZONE8C_SUPER_REPEL                                0x408
-#define FLAG_ITEM_ZONE9G_MIRACLE_SEED                               0x409
-#define FLAG_ITEM_ZONE9D_MYSTIC_WATER                               0x40A
-#define FLAG_ITEM_ZONE9A_BIG_ROOT                                   0x40B
-#define FLAG_ITEM_ZONE10A_BLACK_GLASSES                             0x40C
-#define FLAG_ITEM_ZONE10A_BLACK_BELT                                0x40D
-#define FLAG_ITEM_ZONE10A_TIMER_BALL                                0x40E
-#define FLAG_ITEM_ZONE10A_CHARCOAL                                  0x40F
+#define FLAG_ITEM_ZONE9A_MIRACLE_SEED                               0x409
+#define FLAG_ITEM_ZONE9A_BIG_ROOT                                   0x40A
+#define FLAG_ITEM_ZONE9A_TM13                                       0x40B
+#define FLAG_ITEM_ZONE9G_CHARCOAL                                   0x40C
+#define FLAG_ITEM_ZONE10A_BLACK_GLASSES                             0x40D
+#define FLAG_ITEM_ZONE10A_BLACK_BELT                                0x40E
+#define FLAG_ITEM_ZONE10A_TIMER_BALL                                0x40F
 #define FLAG_ITEM_ZONE10A_SUPER_POTION                              0x410
 #define FLAG_ITEM_ZONE10A_SUPER_REPEL                               0x411
 #define FLAG_ITEM_ZONE11A_SPELL_TAG                                 0x412

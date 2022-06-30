@@ -1,5 +1,29 @@
 Zone9A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE9A_BIG_ROOT, Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE9A_MIRACLE_SEED, Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE9A_TM13, Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone9A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone9A_EventScript_Exit::
@@ -135,9 +159,59 @@ Zone9A_Movement_WaitForNextWinstrate:
 	delay_16
 	step_end
 
-Zone9A_EventScript_BigRoot::
-	finditem ITEM_BIG_ROOT
+Zone9A_EventScript_ItemBigRoot::
+	lock
+	goto_if_set FLAG_ITEM_ZONE9A_BIG_ROOT, Zone9A_EventScript_ItemBigRoot_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE9A_BIG_ROOT
+	addobject VAR_LAST_TALKED
+	finditem ITEM_BIG_ROOT, 1
+	release
 	end
+
+Zone9A_EventScript_ItemBigRoot_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone9A_EventScript_ItemTM13::
+	lock
+	goto_if_set FLAG_ITEM_ZONE9A_TM13, Zone9A_EventScript_ItemTM13_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE9A_TM13
+	addobject VAR_LAST_TALKED
+	finditem ITEM_TM13, 1
+	release
+	end
+
+Zone9A_EventScript_ItemTM13_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone9A_EventScript_ItemMiracleSeed::
+	lock
+	goto_if_set FLAG_ITEM_ZONE9A_MIRACLE_SEED, Zone9A_EventScript_ItemMiracleSeed_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE9A_MIRACLE_SEED
+	addobject VAR_LAST_TALKED
+	finditem ITEM_MIRACLE_SEED, 1
+	release
+	end
+
+Zone9A_EventScript_ItemMiracleSeed_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone9A_EventScript_HerbalSign_Text_0:
 	.string "Herbal and Incense Shop$"

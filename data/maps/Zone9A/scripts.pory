@@ -1,4 +1,22 @@
-mapscripts Zone9A_MapScripts {}
+mapscripts Zone9A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE9A_BIG_ROOT)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE9A_MIRACLE_SEED)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE9A_TM13)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
 
 script Zone9A_EventScript_Exit {
 	lockall
@@ -129,8 +147,53 @@ text Zone9A_Text_EricaDefeat {
 	"Oh… You are the one…"
 }
 
-raw `
-Zone9A_EventScript_BigRoot::
-	finditem ITEM_BIG_ROOT
+script Zone9A_EventScript_ItemBigRoot {
+	lock
+	if (flag(FLAG_ITEM_ZONE9A_BIG_ROOT)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE9A_BIG_ROOT)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_BIG_ROOT, 1)
+	release
 	end
-`
+}
+
+script Zone9A_EventScript_ItemTM13 {
+	lock
+	if (flag(FLAG_ITEM_ZONE9A_TM13)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE9A_TM13)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TM13, 1)
+	release
+	end
+}
+
+script Zone9A_EventScript_ItemMiracleSeed {
+	lock
+	if (flag(FLAG_ITEM_ZONE9A_MIRACLE_SEED)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE9A_MIRACLE_SEED)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_MIRACLE_SEED, 1)
+	release
+	end
+}

@@ -4,7 +4,7 @@ Zone9D_MapScripts::
 Zone9D_EventScript_Man::
 	lock
 	faceplayer
-	goto_if_set FLAG_ITEM_ZONE9D_MYSTIC_WATER, Zone9D_EventScript_ManFarewell
+	goto_if_set FLAG_RECEIVED_ZONE9D_MYSTIC_WATER, Zone9D_EventScript_ManFarewell
 	msgbox Zone9D_Text_Man_Listen, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone9D_EventScript_ManFarewell
@@ -12,7 +12,7 @@ Zone9D_EventScript_Man::
 	delay 96
 	msgbox Zone9D_Text_Man_HereGift, MSGBOX_AUTOCLOSE
 	giveitem ITEM_MYSTIC_WATER, 1
-	setflag FLAG_ITEM_ZONE9D_MYSTIC_WATER
+	setflag FLAG_RECEIVED_ZONE9D_MYSTIC_WATER
 	goto Zone9D_EventScript_ManFarewell
 	release
 	end
