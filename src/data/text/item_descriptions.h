@@ -3029,10 +3029,6 @@ static const u8 sTM04Desc[] = _(
     "Bites and eats the\n"
     "foe's held Berry,\n"
     "gaining its effect.");
-    // Retaliate
-    // "An attack that does\n"
-    // "more damage if an\n"
-    // "ally fainted.");
 
 static const u8 sTM05Desc[] = _(
     "Snares foes with\n"
@@ -3043,10 +3039,6 @@ static const u8 sTM06Desc[] = _(
     "Yells at foes,\n"
     "lowering their\n"
     "Special Attack.");
-    // Bullet Seed
-    // "Shoots 2 to 5 seeds\n"
-    // "in a row to strike\n"
-    // "the foe.");
     // Pluck
     // "Pecks and eats the\n"
     // "foe's held Berry,\n"
@@ -3083,10 +3075,6 @@ static const u8 sTM10Desc[] = _(
     "Attacks with an\n"
     "electric charge,\n"
     "raising Sp. Attack.");
-    // Thief
-    // "Attacks and steals\n"
-    // "the target's held\n"
-    // "item.");
 
 static const u8 sTM11Desc[] = _(
     "Attacks in a cloak\n"
@@ -3107,27 +3095,39 @@ static const u8 sTM12Desc[] = _(
     // "Attack & Accuracy.");
 
 static const u8 sTM13Desc[] = _(
-    "Hardens the body's\n"
-    "surface to sharply\n"
-    "raise Defense.");
+    "Attacks and steals\n"
+    "the target's held\n"
+    "item.");
+    // Iron Defense
+    // "Hardens the body's\n"
+    // "surface to sharply\n"
+    // "raise Defense.");
     // Rest
     // "The user goes to\n"
     // "sleep to restore\n"
     // "health and status.");
 
 static const u8 sTM14Desc[] = _(
-    "Empties its mind,\n"
-    "sharply raising\n"
-    "Sp. Defense.");
+    "An attack that does\n"
+    "more damage if an\n"
+    "ally fainted.");
+    // Amnesia
+    // "Empties its mind,\n"
+    // "sharply raising\n"
+    // "Sp. Defense.");
     // Bulk Up
     // "Bulks up the body\n"
     // "to boost both\n"
     // "Attack & Defense.");
 
 static const u8 sTM15Desc[] = _(
-    "Raises Sp. Atk and\n"
-    "Sp. Def by focusing\n"
-    "the mind.");
+    "Shoots 2 to 5 seeds\n"
+    "in a row to strike\n"
+    "the foe.");
+    // Calm Mind
+    // "Raises Sp. Atk and\n"
+    // "Sp. Def by focusing\n"
+    // "the mind.");
 
 static const u8 sTM16Desc[] = _(
     "Spreads hard-\n"

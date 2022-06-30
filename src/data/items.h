@@ -7960,10 +7960,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM13_IRON_DEFENSE] =
+    [ITEM_TM13_THIEF] =
     {
         .name = _("TM13"),
-        .itemId = ITEM_TM13_IRON_DEFENSE,
+        .itemId = ITEM_TM13_THIEF,
         .price = 10000,
         .description = sTM13Desc,
         .pocket = POCKET_TM_HM,
@@ -7972,10 +7972,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM14_AMNESIA] =
+    [ITEM_TM14_RETALIATE] =
     {
         .name = _("TM14"),
-        .itemId = ITEM_TM14_AMNESIA,
+        .itemId = ITEM_TM14_RETALIATE,
         .price = 10000,
         .description = sTM14Desc,
         .pocket = POCKET_TM_HM,
@@ -7984,10 +7984,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM15_CALM_MIND] =
+    [ITEM_TM15_BULLET_SEED] =
     {
         .name = _("TM15"),
-        .itemId = ITEM_TM15_CALM_MIND,
+        .itemId = ITEM_TM15_BULLET_SEED,
         .price = 7500,
         .description = sTM15Desc,
         .pocket = POCKET_TM_HM,
