@@ -788,7 +788,7 @@ static const struct TrainerMon sParty_Frank[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_MORPEKO,
+    .species = SPECIES_CUTIEFLY,
     }
 };
 
@@ -873,7 +873,7 @@ static const struct TrainerMon sParty_Millie[] = {
     {
     .iv = 0,
     .lvl = 17,
-    .species = SPECIES_LICKITUNG,
+    .species = SPECIES_MORELULL,
     }
 };
 
