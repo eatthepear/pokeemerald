@@ -1961,39 +1961,22 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
             fixedIV = partyData[l].iv;
 
-            if (gTrainers[trainerNum].doubleBattle == TRUE)
-                personalityValue = 0x80;
-            else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-            {
-                personalityValue = 0x78;
-                gender = MON_MALE;
-            }
-            else
-            {
-                 personalityValue = 0x88;
-                 gender = MON_FEMALE;
-            }
+            gender = ((Random() % 2) ? MON_MALE : MON_FEMALE);
+            // if (gTrainers[trainerNum].doubleBattle == TRUE)
+            //     personalityValue = 0x80;
+            // else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+            // {
+            //     personalityValue = 0x78;
+            //     gender = MON_MALE;
+            // }
+            // else
+            // {
+            //      personalityValue = 0x88;
+            //      gender = MON_FEMALE;
+            // }
 
             for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
                 nameHash += gTrainers[trainerNum].trainerName[j];
-
-            if (partyData[l].gender == TRAINER_MON_MALE)
-                gender = MON_MALE;
-            else if (partyData[l].gender == TRAINER_MON_FEMALE)
-                gender = MON_FEMALE;
-
-            if (gTrainers[trainerNum].doubleBattle == TRUE)
-                personalityValue = 0x80;
-            else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
-            {
-                personalityValue = 0x78;
-                gender = MON_MALE;
-            }
-            else
-            {
-                 personalityValue = 0x88;
-                 gender = MON_FEMALE;
-            }
 
             if (partyData[l].gender == TRAINER_MON_MALE)
                 gender = MON_MALE;
@@ -2004,7 +1987,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 CreateMonWithGenderNatureLetter(&party[i], partyData[l].species, partyData[l].lvl, fixedIV, gender, partyData[l].nature, 0, partyData[l].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
             else
             {
-                CreateMon(&party[i], partyData[l].species, partyData[l].lvl, fixedIV, TRUE, personalityValue, partyData[l].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
+                CreateMonWithGenderNatureLetter(&party[i], partyData[l].species, partyData[l].lvl, fixedIV, gender, NATURE_SERIOUS, 0, partyData[l].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
+                // CreateMon(&party[i], partyData[l].species, partyData[l].lvl, fixedIV, TRUE, personalityValue, partyData[l].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
             }
 
             if (partyData[l].friendship > 0)
