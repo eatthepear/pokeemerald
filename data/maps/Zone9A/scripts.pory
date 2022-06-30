@@ -111,13 +111,9 @@ script Zone9A_EventScript_Ari {
 		addobject(5)
 		applymovement(5, Common_Movement_WalkDown)
 		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from my slumber?"), MSGBOX_AUTOCLOSE)
-		if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-			trainerbattle_no_intro(TRAINER_ERICA_LEVIATHAN_9_BRUTAL, Zone9A_Text_EricaDefeat)
-		} else {
-			trainerbattle_no_intro(TRAINER_ERICA_LEVIATHAN_9, Zone9A_Text_EricaDefeat)
-		}
-		msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you completing this trial.")
+		msgbox(format("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Who dares disturb me from my slumber?"))
+		trainerbattle_no_intro(TRAINER_ERICA, Zone9A_Text_EricaDefeat)
+		msgbox("{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you completing my family's trial.")
 		giveitem(ITEM_TM14)
 		closemessage
 		applymovement(5, Common_Movement_WalkInPlaceFasterUp)
@@ -164,23 +160,6 @@ script Zone9A_EventScript_ItemBigRoot {
 	end
 }
 
-script Zone9A_EventScript_ItemTM13 {
-	lock
-	if (flag(FLAG_ITEM_ZONE9A_TM13)) {
-		msgbox(gText_ItemChestIsEmpty)
-		release
-		end
-	}
-	waitse
-	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-	setflag(FLAG_ITEM_ZONE9A_TM13)
-	addobject(VAR_LAST_TALKED)
-	finditem(ITEM_TM13, 1)
-	release
-	end
-}
-
 script Zone9A_EventScript_ItemMiracleSeed {
 	lock
 	if (flag(FLAG_ITEM_ZONE9A_MIRACLE_SEED)) {
@@ -190,10 +169,27 @@ script Zone9A_EventScript_ItemMiracleSeed {
 	}
 	waitse
 	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
 	setflag(FLAG_ITEM_ZONE9A_MIRACLE_SEED)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_MIRACLE_SEED, 1)
+	release
+	end
+}
+
+script Zone9A_EventScript_ItemTM13 {
+	lock
+	if (flag(FLAG_ITEM_ZONE9A_TM13)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE9A_TM13)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TM13, 1)
 	release
 	end
 }

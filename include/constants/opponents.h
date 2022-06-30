@@ -65,7 +65,7 @@
 #define TRAINER_BERTHA                       	61
 #define TRAINER_CASSANDRA                    	62
 #define TRAINER_DOMINIC                      	63
-#define TRAINER_ERICA_LEVIATHAN_9             	64
+#define TRAINER_ERICA                        	64
 #define TRAINER_ERICA_LEVIATHAN_9_BRUTAL      	65
 #define TRAINER_PEARLIE                      	66
 #define TRAINER_KYLE                         	67

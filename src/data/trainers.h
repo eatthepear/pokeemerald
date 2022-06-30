@@ -919,19 +919,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dominic},
     },
 
-    [TRAINER_ERICA_LEVIATHAN_9] =
+    [TRAINER_ERICA] =
     {
-        .trainerClass = TRAINER_CLASS_LEADER,
+        .trainerClass = TRAINER_CLASS_WINSTRATE,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_EXPERT_F,
         .trainerName = _("Erica"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_EricaDefault),
-        .party = {.TrainerMon = sParty_EricaDefault},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
+        .partySize = ARRAY_COUNT(sParty_Erica),
+        .party = {.TrainerMon = sParty_Erica},
     },
 
     [TRAINER_ERICA_LEVIATHAN_9_BRUTAL] =

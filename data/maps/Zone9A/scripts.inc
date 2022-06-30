@@ -119,10 +119,8 @@ Zone9A_EventScript_Ari::
 	addobject 5
 	applymovement 5, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_AUTOCLOSE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_5
-	trainerbattle_no_intro TRAINER_ERICA_LEVIATHAN_9, Zone9A_Text_EricaDefeat
-Zone9A_EventScript_Ari_4:
+	msgbox Zone9A_EventScript_Ari_Text_14
+	trainerbattle_no_intro TRAINER_ERICA, Zone9A_Text_EricaDefeat
 	msgbox Zone9A_EventScript_Ari_Text_15
 	giveitem ITEM_TM14
 	closemessage
@@ -142,10 +140,6 @@ Zone9A_EventScript_Ari_1:
 	msgbox Zone9A_EventScript_Ari_Text_1, MSGBOX_DEFAULT
 	release
 	end
-
-Zone9A_EventScript_Ari_5:
-	trainerbattle_no_intro TRAINER_ERICA_LEVIATHAN_9_BRUTAL, Zone9A_Text_EricaDefeat
-	goto Zone9A_EventScript_Ari_4
 
 
 Zone9A_Movement_WinstrateEnterHouse:
@@ -177,30 +171,12 @@ Zone9A_EventScript_ItemBigRoot_2:
 	end
 
 
-Zone9A_EventScript_ItemTM13::
-	lock
-	goto_if_set FLAG_ITEM_ZONE9A_TM13, Zone9A_EventScript_ItemTM13_2
-	waitse
-	removeobject VAR_LAST_TALKED
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE9A_TM13
-	addobject VAR_LAST_TALKED
-	finditem ITEM_TM13, 1
-	release
-	end
-
-Zone9A_EventScript_ItemTM13_2:
-	msgbox gText_ItemChestIsEmpty
-	release
-	end
-
-
 Zone9A_EventScript_ItemMiracleSeed::
 	lock
 	goto_if_set FLAG_ITEM_ZONE9A_MIRACLE_SEED, Zone9A_EventScript_ItemMiracleSeed_2
 	waitse
 	removeobject VAR_LAST_TALKED
-	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	setflag FLAG_ITEM_ZONE9A_MIRACLE_SEED
 	addobject VAR_LAST_TALKED
 	finditem ITEM_MIRACLE_SEED, 1
@@ -208,6 +184,24 @@ Zone9A_EventScript_ItemMiracleSeed::
 	end
 
 Zone9A_EventScript_ItemMiracleSeed_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone9A_EventScript_ItemTM13::
+	lock
+	goto_if_set FLAG_ITEM_ZONE9A_TM13, Zone9A_EventScript_ItemTM13_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE9A_TM13
+	addobject VAR_LAST_TALKED
+	finditem ITEM_TM13, 1
+	release
+	end
+
+Zone9A_EventScript_ItemTM13_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end
@@ -269,7 +263,7 @@ Zone9A_EventScript_Ari_Text_14:
 	.string "slumber?$"
 
 Zone9A_EventScript_Ari_Text_15:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you completing this trial.$"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you completing my family's trial.$"
 
 Zone9A_Text_EricaDefeat::
 	.string "Oh… You are the one…$"
