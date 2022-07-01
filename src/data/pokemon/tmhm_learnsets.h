@@ -4823,6 +4823,7 @@ static const u8 sSudowoodoTMHMLearnset[] =
     // TMHM(TM00_BULLDOZE),
     TMHM(TM09_POWER_UP_PUNCH),
     // TMHM(TM13_IRON_DEFENSE),
+    // TMHM(TM00_DRAIN_PUNCH),
     // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
