@@ -1,380 +1,249 @@
 Zone10B_MapScripts::
 	.byte 0
 
+
 Zone10B_EventScript_Adamina::
 	lock
 	faceplayer
 	goto Zone10B_EventScript_AdaminaStuff
-	end
-	
-Zone10B_EventScript_AdaminaStuff:
-	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaLeave
-	msgbox Zone10B_Text_Adamina_Sorry, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM07
-	msgbox Zone10B_Text_Adamina_SafeSpace, MSGBOX_DEFAULT
-	delay 96
-	msgbox Zone10B_Text_Adamina_TellYouWhat, MSGBOX_AUTOCLOSE
-	setflag FLAG_ADAMINA_WARP_INTRO
-	release
-	end
+	return
+
 
 Zone10B_EventScript_Kirlia::
 	lock
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 6
-	call_if_eq Zone10B_EventScript_Down
 	compare VAR_TEMP_0, 7
-	call_if_eq Zone10B_EventScript_Right
-	goto Zone10B_EventScript_AdaminaStuff
-	end
-
-Zone10B_EventScript_Down:
+	goto_if_eq Zone10B_EventScript_Kirlia_2
+Zone10B_EventScript_Kirlia_1:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
+	goto Zone10B_EventScript_AdaminaStuff
 	return
 
-Zone10B_EventScript_Right:
+Zone10B_EventScript_Kirlia_2:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	call Zone10B_EventScript_Down
+	goto Zone10B_EventScript_Kirlia_1
+
+
+Zone10B_EventScript_AdaminaStuff::
+	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaStuff_2
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_4
+	giveitem ITEM_TM07
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_5, MSGBOX_DEFAULT
+	delay 96
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_6
+	setflag FLAG_ADAMINA_WARP_INTRO
+	release
 	return
 
-Zone10B_Text_Adamina_Sorry:
-	.string "You...\n"
-	.string "...\p"
-	.string "Look.\n"
-	.string "I said some harsh words earlier.\l"
-	.string "Consider this part of my apology.$"
-
-Zone10B_Text_Adamina_SafeSpace:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: This is my tavern.\n"
-	.string "It's my safe space.\p"
-	.string "All the people from around here\n"
-	.string "gather for shelter from the\l"
-	.string "sandstorm.\p"
-	.string "I just... feel defensive around\n"
-	.string "outsiders. Because it feels like\l"
-	.string "family here, you know?$"
-
-Zone10B_Text_Adamina_TellYouWhat:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Tell you what, you can\n"
-	.string "stay as long as you like to chat\l"
-	.string "with the people here.\p"
-	.string "When you're ready to leave,\n"
-	.string "come speak to me.$"
-
-Zone10B_EventScript_AdaminaLeave:
-	msgbox Zone10B_Text_Adamina_AreYouLeaving, MSGBOX_YESNO
+Zone10B_EventScript_AdaminaStuff_2:
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone10B_EventScript_Exit
-	msgbox Zone10B_Text_Adamina_WhenReady, MSGBOX_AUTOCLOSE
+	goto_if_eq Zone10B_EventScript_AdaminaStuff_5
+Zone10B_EventScript_AdaminaStuff_4:
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_3
 	release
 	end
 
-Zone10B_Text_Adamina_AreYouLeaving:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving here?$"
-
-Zone10B_Text_Adamina_WhenReady:
-	.string "Come speak to me when you're ready.$"
-
-Zone10B_EventScript_Exit:
+Zone10B_EventScript_AdaminaStuff_5:
 	compare VAR_ZONE, 10
-	goto_if_gt EventScript_WarpZone0
-	call_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_CheckBrutal
-	msgbox Zone10B_Text_Adamina_SafeTravels, MSGBOX_AUTOCLOSE
+	goto_if_gt Zone10B_EventScript_AdaminaStuff_7
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_AdaminaStuff_12
+Zone10B_EventScript_AdaminaStuff_10:
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_1
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0
-	msgbox Zone10B_Text_Adamina_UseTeleport, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_2
 	waitmoncry
-	warpteleport MAP_ZONE10SANCTUARY, 255, 22, 7
-	release
-	end
+	warp MAP_ZONE10SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone10B_EventScript_AdaminaStuff_4
 
-Zone10B_EventScript_CheckBrutal:
-	goto_if_not_defeated TRAINER_PEARLIE, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_KYLE, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_ALANA, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_DEWEY, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_CONRAD, EventScript_BrutalExitNotSatisfied
-	return
+Zone10B_EventScript_AdaminaStuff_7:
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 51, 32
+	waitstate
+	goto Zone10B_EventScript_AdaminaStuff_4
 
-Zone10B_Text_Adamina_SafeTravels:
-	.string "Safe travels.$"
+Zone10B_EventScript_AdaminaStuff_11:
+	goto EventScript_BrutalExitNotSatisfied
+	goto Zone10B_EventScript_AdaminaStuff_10
 
-Zone10B_Text_Adamina_UseTeleport:
-	.string "Kirlia, use Teleport!$"
+Zone10B_EventScript_AdaminaStuff_12:
+	checktrainerflag TRAINER_MILLIE
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_JAMAL
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_PAIGE
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_SETH
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_CONNIE
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_CHAD
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_JIMMY
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_EMILIANO
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_MARCUS
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_KAREN
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_JAYDEN
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_NEIL
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	checktrainerflag TRAINER_TAMARA
+	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	goto Zone10B_EventScript_AdaminaStuff_10
+
 
 Zone10B_EventScript_SideQuestLuckyEgg::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_ZONE10B_LUCKY_EGG, Zone10B_EventScript_LuckyEggFinished
-	msgbox Zone10B_Text_LuckyEggIntro, MSGBOX_AUTOCLOSE
+	goto_if_unset FLAG_RECEIVED_ZONE10B_LUCKY_EGG, Zone10B_EventScript_SideQuestLuckyEgg_2
+Zone10B_EventScript_SideQuestLuckyEgg_1:
+	msgbox Zone10B_EventScript_SideQuestLuckyEgg_Text_2
+	applymovement 3, Common_Movement_FaceRight
+	waitmovement 0
+	release
+	return
+
+Zone10B_EventScript_SideQuestLuckyEgg_2:
+	msgbox Zone10B_EventScript_SideQuestLuckyEgg_Text_0
 	specialvar VAR_RESULT, GetCaughtSpeciesCount
-	compare VAR_RESULT, 50
-	goto_if_ge Zone10B_EventScript_GiveLuckyEgg @go to if greater than or equal
+	compare VAR_RESULT, 49
+	goto_if_gt Zone10B_EventScript_SideQuestLuckyEgg_4
 	applymovement 3, Common_Movement_FaceRight
 	waitmovement 0
 	release
 	end
 
-Zone10B_Text_LuckyEggIntro:
-	.string "You know what would make a\n"
-	.string "Collector like me happy? Meeting\l"
-	.string "someone who has caught 50 different\l"
-	.string "species of Pokémon. Now, that\l"
-	.string "person is someone I'd like to meet!$"
-
-Zone10B_EventScript_GiveLuckyEgg:
-	msgbox Zone10B_Text_GiveLuckyEgg, MSGBOX_AUTOCLOSE
+Zone10B_EventScript_SideQuestLuckyEgg_4:
+	msgbox Zone10B_EventScript_SideQuestLuckyEgg_Text_1
 	setflag FLAG_RECEIVED_ZONE10B_LUCKY_EGG
 	giveitem ITEM_LUCKY_EGG, 1
-	goto Zone10B_EventScript_LuckyEggFinished
-	end
+	goto Zone10B_EventScript_SideQuestLuckyEgg_1
 
-Zone10B_Text_GiveLuckyEgg:
-	.string "Whoah, you've caught 50 species of\n"
-	.string "Pokémon? That's amazing.\p"
-	.string "I aspire to be like you. Here, I\n"
-	.string "want you to have this.$"
-
-Zone10B_EventScript_LuckyEggFinished:
-	msgbox Zone10B_Text_Maybe50, MSGBOX_AUTOCLOSE
-	applymovement 3, Common_Movement_FaceRight
-	waitmovement 0
-	release
-	end
-
-Zone10B_Text_Maybe50:
-	.string "Maybe I can catch 50 species of\n"
-	.string "Pokémon some day too.$"
 
 Zone10B_EventScript_SideQuestSubstitute::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_ZONE10B_SUBSTITUTE, Zone10B_EventScript_GaveSubstitute
-	msgbox Zone10B_Text_SubstituteIntro, MSGBOX_AUTOCLOSE
-	goto_if_not_defeated TRAINER_HARPER, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_POLLY, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_JEREMIAH, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_ARTHUR, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_JEMMA, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_BORIS, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_ANNABELLE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_RALPH, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_CHLOE_AND_KAYA, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_LUCIA, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_FRED, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_FRANK, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_MELANIE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_CONSTANCE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_RONAN, Zone10B_EventScript_NoSubstitute
-	goto_if_unset FLAG_BEAT_LEVIATHAN_3, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_MILLIE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_PAIGE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_JAMAL, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_EMILIANO, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_MARCUS, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_JAYDEN, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_ANITA, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_NEIL, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_PEARLIE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_KYLE, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_ALANA, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_DEWEY, Zone10B_EventScript_NoSubstitute
-	goto_if_not_defeated TRAINER_CONRAD, Zone10B_EventScript_NoSubstitute
+	goto_if_unset FLAG_RECEIVED_ZONE10B_SUBSTITUTE, Zone10B_EventScript_SideQuestSubstitute_2
+Zone10B_EventScript_SideQuestSubstitute_1:
+	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_3
+	applymovement 4, Common_Movement_FaceLeft
+	waitmovement 0
+	release
+	end
+
+Zone10B_EventScript_SideQuestSubstitute_2:
+	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_0
+	specialvar VAR_RESULT, GetCaughtSpeciesCount
+	checktrainerflag TRAINER_MILLIE
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_JAMAL
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_PAIGE
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_SETH
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_CONNIE
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_CHAD
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_JIMMY
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_EMILIANO
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_MARCUS
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_KAREN
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_JAYDEN
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_NEIL
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	checktrainerflag TRAINER_TAMARA
+	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
 	setflag FLAG_RECEIVED_ZONE10B_SUBSTITUTE
-	msgbox Zone10B_Text_GiveSubstitute, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_2
 	giveitem ITEM_TM08
-	goto Zone10B_EventScript_GaveSubstitute
-	end
+	goto Zone10B_EventScript_SideQuestSubstitute_1
 
-Zone10B_Text_SubstituteIntro:
-	.string "Greetings, young one. In my\n"
-	.string "possession, I hold a useful TM for\l"
-	.string "your Pokémon, but only if you have\l"
-	.string "proven yourself in battle.\p"
-	.string "You must have defeated all\n"
-	.string "Trainers available thus far.$"
-
-Zone10B_Text_GiveSubstitute:
-	.string "Impressive, young one. I see you\n"
-	.string "have defeated all those trainers.\p"
-	.string "Here is the TM08 - Substitute.$"
-
-Zone10B_EventScript_NoSubstitute:
-	msgbox Zone10B_Text_NoSubstitute, MSGBOX_AUTOCLOSE
+Zone10B_EventScript_SideQuestSubstitute_4:
+	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_1
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	release
 	end
 
-Zone10B_Text_NoSubstitute:
-	.string "You still have trainers to defeat.$"
-
-Zone10B_EventScript_GaveSubstitute:
-	msgbox Zone10B_Text_SubstituteExplain, MSGBOX_AUTOCLOSE
-	applymovement 4, Common_Movement_FaceLeft
-	waitmovement 0
-	release
-	end
-
-Zone10B_Text_SubstituteExplain:
-	.string "The move Substitute is a unique\n"
-	.string "move with many applications.\l"
-	.string "Use it cleverly, young one.$"
 
 Zone10B_EventScript_BerryExchange::
 	lock
 	faceplayer
-	goto_if_set FLAG_NUZLOCKE_ON, Zone10B_EventScript_BerryExchangeNuzlocke
-	msgbox Zone10B_Text_BerriesOfferVanilla, MSGBOX_YESNO
+	msgbox Zone10B_EventScript_BerryExchange_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone10B_EventScript_BerryCheck
-	msgbox Zone10B_Text_BerriesTooBad, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
+	goto_if_eq Zone10B_EventScript_BerryExchange_2
+	msgbox Zone10B_EventScript_BerryExchange_Text_8
+Zone10B_EventScript_BerryExchange_1:
+	applymovement 5, Common_Movement_FaceLeft
+	waitmovement 0
+	release
 	end
 
-Zone10B_EventScript_BerryExchangeNuzlocke:
-	msgbox Zone10B_Text_BerriesOfferNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone10B_EventScript_BerryCheck
-	msgbox Zone10B_Text_BerriesTooBad, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-
-Zone10B_Text_BerriesOfferVanilla:
-	.string "Listen, you know how some berries\n"
-	.string "can treat status conditions?\p"
-	.string "Well, I'm looking to start a Berry\n"
-	.string "farm. If you have 10 of each of\l"
-	.string "those Berries, I'll trade them\l"
-	.string "for 5 Revives. How about it?$"
-
-Zone10B_Text_BerriesOfferNuzlocke:
-	.string "Listen, you know how some berries\n"
-	.string "can treat status conditions?\p"
-	.string "Well, I'm looking to start a Berry\n"
-	.string "farm. If you have 10 of each of\l"
-	.string "those Berries, I'll pay you ¥5000\l"
-	.string "for them. How about it?$"
-
-Zone10B_Text_BerriesTooBad:
-	.string "Aw, that's too bad.\n"
-	.string "It's a good offer though!$"
-
-Zone10B_EventScript_BerryCheck:
+Zone10B_EventScript_BerryExchange_2:
 	checkitem ITEM_CHERI_BERRY, 10
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_NotEnoughCheri
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_BerryExchange_5
+	msgbox Zone10B_EventScript_BerryExchange_Text_7
+	goto Zone10B_EventScript_BerryExchange_1
+
+Zone10B_EventScript_BerryExchange_5:
 	checkitem ITEM_CHESTO_BERRY, 10
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_NotEnoughChesto
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_BerryExchange_8
+	msgbox Zone10B_EventScript_BerryExchange_Text_6
+	goto Zone10B_EventScript_BerryExchange_1
+
+Zone10B_EventScript_BerryExchange_8:
 	checkitem ITEM_PECHA_BERRY, 10
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_NotEnoughPecha
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_BerryExchange_11
+	msgbox Zone10B_EventScript_BerryExchange_Text_5
+	goto Zone10B_EventScript_BerryExchange_1
+
+Zone10B_EventScript_BerryExchange_11:
 	checkitem ITEM_RAWST_BERRY, 10
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_NotEnoughRawst
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_BerryExchange_14
+	msgbox Zone10B_EventScript_BerryExchange_Text_4
+	goto Zone10B_EventScript_BerryExchange_1
+
+Zone10B_EventScript_BerryExchange_14:
 	checkitem ITEM_ASPEAR_BERRY, 10
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_NotEnoughAspear
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone10B_EventScript_BerryExchange_17
+	msgbox Zone10B_EventScript_BerryExchange_Text_3
+	goto Zone10B_EventScript_BerryExchange_1
+
+Zone10B_EventScript_BerryExchange_17:
 	removeitem ITEM_CHERI_BERRY, 10
 	removeitem ITEM_CHESTO_BERRY, 10
 	removeitem ITEM_PECHA_BERRY, 10
 	removeitem ITEM_RAWST_BERRY, 10
 	removeitem ITEM_ASPEAR_BERRY, 10
-	goto_if_set FLAG_NUZLOCKE_ON, Zone10B_EventScript_BerryNuzlockeMoney
-	msgbox Zone10B_Text_BerryCraftingVanilla, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_BerryExchange_Text_1
 	giveitem ITEM_REVIVE, 5
-	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-	
-Zone10B_EventScript_BerryNuzlockeMoney:
-	showmoneybox 0, 0, 0
-	msgbox Zone10B_Text_BerryCraftingNuzlocke, MSGBOX_AUTOCLOSE
-	addmoney 5000, 0
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone10B_Text_Received5000, MSGBOX_AUTOCLOSE
-	updatemoneybox
-	waitfanfare
-	hidemoneybox
-	msgbox Zone10B_Text_GoodDay, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject 5
-	setflag FLAG_HIDE_ZONE10B_BERRYMAN
-	fadescreenswapbuffers FADE_FROM_BLACK
-	release
-	end
+	msgbox Zone10B_EventScript_BerryExchange_Text_2
+	goto Zone10B_EventScript_BerryExchange_1
 
-Zone10B_Text_BerryCraftingVanilla:
-	.string "Alright... Here we go...\n"
-	.string "And bam! 5 Revives!$"
-
-Zone10B_Text_BerryCraftingNuzlocke:
-	.string "Thank you, and here is your ¥5000.$"
-
-Zone10B_Text_Received5000:
-	.string "Received ¥5000!$"
-
-Zone10B_Text_GoodDay:
-	.string "Thank you.\n"
-	.string "I'll be seeing you around!$"
-
-Zone10B_EventScript_NotEnoughAspear:
-	msgbox Zone10B_Text_NotEnoughAspear, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-	
-Zone10B_Text_NotEnoughAspear:
-	.string "It looks like you don't have enough\n"
-	.string "Aspear Berries.$"
-
-Zone10B_EventScript_NotEnoughRawst:
-	msgbox Zone10B_Text_NotEnoughRawst, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-	
-Zone10B_Text_NotEnoughRawst:
-	.string "It looks like you don't have enough\n"
-	.string "Rawst Berries.$"
-
-Zone10B_EventScript_NotEnoughPecha:
-	msgbox Zone10B_Text_NotEnoughPecha, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-	
-Zone10B_Text_NotEnoughPecha:
-	.string "It looks like you don't have enough\n"
-	.string "Pecha Berries.$"
-
-Zone10B_EventScript_NotEnoughChesto:
-	msgbox Zone10B_Text_NotEnoughChesto, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-	
-Zone10B_Text_NotEnoughChesto:
-	.string "It looks like you don't have enough\n"
-	.string "Chesto Berries.$"
-
-Zone10B_EventScript_NotEnoughCheri:
-	msgbox Zone10B_Text_NotEnoughCheri, MSGBOX_AUTOCLOSE
-	goto Zone10B_EventScript_BerryEnd
-	end
-	
-Zone10B_Text_NotEnoughCheri:
-	.string "It looks like you don't have enough\n"
-	.string "Cheri Berries.$"
-
-Zone10B_EventScript_BerryEnd:
-	applymovement 5, Common_Movement_FaceLeft
-	waitmovement 0
-	release
-	end
 
 Zone10B_EventScript_FossilScientist::
 	lock
@@ -382,399 +251,556 @@ Zone10B_EventScript_FossilScientist::
 	setvar VAR_TEMP_2, 0
 	checkitem ITEM_HELIX_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveOmanyte
+	goto_if_eq Zone10B_EventScript_FossilScientist_2
+Zone10B_EventScript_FossilScientist_1:
 	checkitem ITEM_DOME_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveKabuto
+	goto_if_eq Zone10B_EventScript_FossilScientist_5
+Zone10B_EventScript_FossilScientist_4:
 	checkitem ITEM_OLD_AMBER, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveAerodactyl
+	goto_if_eq Zone10B_EventScript_FossilScientist_11
+Zone10B_EventScript_FossilScientist_10:
 	checkitem ITEM_ROOT_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveLileep
+	goto_if_eq Zone10B_EventScript_FossilScientist_20
+Zone10B_EventScript_FossilScientist_19:
 	checkitem ITEM_CLAW_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveAnorith
-	checkitem ITEM_SKULL_FOSSIL, 1
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveCranidos
-	checkitem ITEM_ARMOR_FOSSIL, 1
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveShieldon
+	goto_if_eq Zone10B_EventScript_FossilScientist_32
+Zone10B_EventScript_FossilScientist_31:
 	checkitem ITEM_COVER_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveTirtouga
+	goto_if_eq Zone10B_EventScript_FossilScientist_44
+Zone10B_EventScript_FossilScientist_43:
 	checkitem ITEM_PLUME_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveArchen
+	goto_if_eq Zone10B_EventScript_FossilScientist_56
+Zone10B_EventScript_FossilScientist_55:
 	checkitem ITEM_JAW_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveTyrunt
+	goto_if_eq Zone10B_EventScript_FossilScientist_68
+Zone10B_EventScript_FossilScientist_67:
 	checkitem ITEM_SAIL_FOSSIL, 1
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone10B_EventScript_GiveAmaura
-	msgbox Zone10B_Text_NoFossils, MSGBOX_AUTOCLOSE
+	goto_if_eq Zone10B_EventScript_FossilScientist_80
+Zone10B_EventScript_FossilScientist_79:
+	msgbox Zone10B_EventScript_FossilScientist_Text_0
 	goto Zone10B_EventScript_FossilDone
-	end
+	return
 
-Zone10B_EventScript_GiveOmanyte:
+Zone10B_EventScript_FossilScientist_2:
 	bufferitemname 0, ITEM_HELIX_FOSSIL
 	bufferspeciesname 1, SPECIES_OMANYTE
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_HELIX_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_8
+Zone10B_EventScript_FossilScientist_7:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_17
+Zone10B_EventScript_FossilScientist_16:
 	givemon SPECIES_OMANYTE, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_OMANYTE
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_28
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_1
 
-Zone10B_EventScript_GiveKabuto:
+Zone10B_EventScript_FossilScientist_5:
 	bufferitemname 0, ITEM_DOME_FOSSIL
 	bufferspeciesname 1, SPECIES_KABUTO
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_DOME_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_14
+Zone10B_EventScript_FossilScientist_13:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_26
+Zone10B_EventScript_FossilScientist_25:
 	givemon SPECIES_KABUTO, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_KABUTO
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_40
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_4
 
-Zone10B_EventScript_GiveAerodactyl:
+Zone10B_EventScript_FossilScientist_8:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_7
+
+Zone10B_EventScript_FossilScientist_11:
 	bufferitemname 0, ITEM_OLD_AMBER
 	bufferspeciesname 1, SPECIES_AERODACTYL
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_OLD_AMBER
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_23
+Zone10B_EventScript_FossilScientist_22:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_38
+Zone10B_EventScript_FossilScientist_37:
 	givemon SPECIES_AERODACTYL, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_AERODACTYL
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_52
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_10
 
-Zone10B_EventScript_GiveLileep:
+Zone10B_EventScript_FossilScientist_14:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_13
+
+Zone10B_EventScript_FossilScientist_17:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_16
+
+Zone10B_EventScript_FossilScientist_20:
 	bufferitemname 0, ITEM_ROOT_FOSSIL
 	bufferspeciesname 1, SPECIES_LILEEP
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_ROOT_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_35
+Zone10B_EventScript_FossilScientist_34:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_50
+Zone10B_EventScript_FossilScientist_49:
 	givemon SPECIES_LILEEP, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_LILEEP
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_64
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_19
 
-Zone10B_EventScript_GiveAnorith:
+Zone10B_EventScript_FossilScientist_23:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_22
+
+Zone10B_EventScript_FossilScientist_26:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_25
+
+Zone10B_EventScript_FossilScientist_28:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_1
+
+Zone10B_EventScript_FossilScientist_32:
 	bufferitemname 0, ITEM_CLAW_FOSSIL
 	bufferspeciesname 1, SPECIES_ANORITH
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_CLAW_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_47
+Zone10B_EventScript_FossilScientist_46:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_62
+Zone10B_EventScript_FossilScientist_61:
 	givemon SPECIES_ANORITH, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_ANORITH
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_76
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_31
 
-Zone10B_EventScript_GiveCranidos:
-	bufferitemname 0, ITEM_SKULL_FOSSIL
-	bufferspeciesname 1, SPECIES_CRANIDOS
-	call Zone10B_EventScript_CommonFossilIntro
-	removeitem ITEM_SKULL_FOSSIL
-	getpartysize
-	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
-	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
-	givemon SPECIES_CRANIDOS, 20, ITEM_NONE
-	setvar VAR_TEMP_1, SPECIES_CRANIDOS
-	call Zone10B_EventScript_ReceivedFossilMonFanfare
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
-	goto Zone10B_EventScript_SendFossilMonParty
-	end
+Zone10B_EventScript_FossilScientist_35:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_34
 
-Zone10B_EventScript_GiveShieldon:
-	bufferitemname 0, ITEM_ARMOR_FOSSIL
-	bufferspeciesname 1, SPECIES_SHIELDON
-	call Zone10B_EventScript_CommonFossilIntro
-	removeitem ITEM_ARMOR_FOSSIL
-	getpartysize
-	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
-	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
-	givemon SPECIES_SHIELDON, 20, ITEM_NONE
-	setvar VAR_TEMP_1, SPECIES_SHIELDON
-	call Zone10B_EventScript_ReceivedFossilMonFanfare
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
-	goto Zone10B_EventScript_SendFossilMonParty
-	end
+Zone10B_EventScript_FossilScientist_38:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_37
 
-Zone10B_EventScript_GiveTirtouga:
+Zone10B_EventScript_FossilScientist_40:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_4
+
+Zone10B_EventScript_FossilScientist_44:
 	bufferitemname 0, ITEM_COVER_FOSSIL
 	bufferspeciesname 1, SPECIES_TIRTOUGA
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_COVER_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_59
+Zone10B_EventScript_FossilScientist_58:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_74
+Zone10B_EventScript_FossilScientist_73:
 	givemon SPECIES_TIRTOUGA, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_TIRTOUGA
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_88
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_43
 
-Zone10B_EventScript_GiveArchen:
+Zone10B_EventScript_FossilScientist_47:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_46
+
+Zone10B_EventScript_FossilScientist_50:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_49
+
+Zone10B_EventScript_FossilScientist_52:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_10
+
+Zone10B_EventScript_FossilScientist_56:
 	bufferitemname 0, ITEM_PLUME_FOSSIL
 	bufferspeciesname 1, SPECIES_ARCHEN
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_PLUME_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_71
+Zone10B_EventScript_FossilScientist_70:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_86
+Zone10B_EventScript_FossilScientist_85:
 	givemon SPECIES_ARCHEN, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_ARCHEN
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_97
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_55
 
-Zone10B_EventScript_GiveTyrunt:
+Zone10B_EventScript_FossilScientist_59:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_58
+
+Zone10B_EventScript_FossilScientist_62:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_61
+
+Zone10B_EventScript_FossilScientist_64:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_19
+
+Zone10B_EventScript_FossilScientist_68:
 	bufferitemname 0, ITEM_JAW_FOSSIL
 	bufferspeciesname 1, SPECIES_TYRUNT
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_JAW_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_83
+Zone10B_EventScript_FossilScientist_82:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_95
+Zone10B_EventScript_FossilScientist_94:
 	givemon SPECIES_TYRUNT, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_TYRUNT
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_103
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_67
 
-Zone10B_EventScript_GiveAmaura:
+Zone10B_EventScript_FossilScientist_71:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_70
+
+Zone10B_EventScript_FossilScientist_74:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_73
+
+Zone10B_EventScript_FossilScientist_76:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_31
+
+Zone10B_EventScript_FossilScientist_80:
 	bufferitemname 0, ITEM_SAIL_FOSSIL
 	bufferspeciesname 1, SPECIES_AMAURA
 	call Zone10B_EventScript_CommonFossilIntro
 	removeitem ITEM_SAIL_FOSSIL
 	getpartysize
 	compare VAR_RESULT, PARTY_SIZE
-	call_if_eq Zone10B_EventScript_SetupPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_92
+Zone10B_EventScript_FossilScientist_91:
 	compare VAR_TEMP_2, 0
-	call_if_eq Zone10B_EventScript_SetupParty
+	goto_if_eq Zone10B_EventScript_FossilScientist_101
+Zone10B_EventScript_FossilScientist_100:
 	givemon SPECIES_AMAURA, 20, ITEM_NONE
 	setvar VAR_TEMP_1, SPECIES_AMAURA
 	call Zone10B_EventScript_ReceivedFossilMonFanfare
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone10B_EventScript_SendFossilMonPC
+	goto_if_eq Zone10B_EventScript_FossilScientist_106
 	goto Zone10B_EventScript_SendFossilMonParty
-	end
+	goto Zone10B_EventScript_FossilScientist_79
 
-Zone10B_EventScript_SetupPC:
+Zone10B_EventScript_FossilScientist_83:
 	setvar VAR_TEMP_2, 1
-	return
+	goto Zone10B_EventScript_FossilScientist_82
 
-Zone10B_EventScript_SetupParty:
+Zone10B_EventScript_FossilScientist_86:
 	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_85
+
+Zone10B_EventScript_FossilScientist_88:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_43
+
+Zone10B_EventScript_FossilScientist_92:
+	setvar VAR_TEMP_2, 1
+	goto Zone10B_EventScript_FossilScientist_91
+
+Zone10B_EventScript_FossilScientist_95:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_94
+
+Zone10B_EventScript_FossilScientist_97:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_55
+
+Zone10B_EventScript_FossilScientist_101:
+	setvar VAR_TEMP_2, 2
+	goto Zone10B_EventScript_FossilScientist_100
+
+Zone10B_EventScript_FossilScientist_103:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_67
+
+Zone10B_EventScript_FossilScientist_106:
+	goto Zone10B_EventScript_SendFossilMonPC
+	goto Zone10B_EventScript_FossilScientist_79
+
+
+Zone10B_EventScript_SendFossilMonParty::
+	msgbox Zone10B_EventScript_SendFossilMonParty_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone10B_EventScript_SendFossilMonParty_2
+Zone10B_EventScript_SendFossilMonParty_1:
+	goto Zone10B_EventScript_FossilDone
 	return
 
-Zone10B_EventScript_SendFossilMonParty:
-	msgbox Zone10B_Text_GiveNickname, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone10B_EventScript_FossilDone
+Zone10B_EventScript_SendFossilMonParty_2:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone10B_EventScript_FossilDone
-	end
+	goto Zone10B_EventScript_SendFossilMonParty_1
 
-Zone10B_EventScript_SendFossilMonPC:
-	msgbox Zone10B_Text_GiveNickname, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone10B_EventScript_FossilMonTransferredToPC
-	call Common_EventScript_NameReceivedBoxMon
-	goto Zone10B_EventScript_FossilMonTransferredToPC
-	end
 
-Zone10B_EventScript_FossilMonTransferredToPC::
+Zone10B_EventScript_SendFossilMonPC::
+	msgbox Zone10B_EventScript_SendFossilMonParty_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone10B_EventScript_SendFossilMonPC_2
+Zone10B_EventScript_SendFossilMonPC_1:
 	call Common_EventScript_TransferredToPC
 	goto Zone10B_EventScript_FossilDone
-	end
+	return
 
-Zone10B_EventScript_ReceivedFossilMonFanfare:
+Zone10B_EventScript_SendFossilMonPC_2:
+	call Common_EventScript_NameReceivedBoxMon
+	goto Zone10B_EventScript_SendFossilMonPC_1
+
+
+Zone10B_EventScript_ReceivedFossilMonFanfare::
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone10B_Text_ReceivedFossilMon
+	message Zone10B_EventScript_ReceivedFossilMonFanfare_Text_0
 	waitmessage
 	waitfanfare
 	return
 
-Zone10B_Text_ReceivedFossilMon:
-	.string "Received the Fossil Pokémon {STR_VAR_2}!$"
 
-Zone10B_Text_GiveNickname:
-	.string "You want to give it a nickname?$"
-
-Zone10B_EventScript_CommonFossilIntro:
+Zone10B_EventScript_CommonFossilIntro::
 	applymovement 6, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
 	applymovement 6, Common_Movement_Delay48
 	waitmovement 0
-	msgbox Zone10B_Text_WantReviveFossil, MSGBOX_YESNO
+	msgbox Zone10B_EventScript_CommonFossilIntro_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Zone10B_EventScript_FossilDone
-	msgbox Zone10B_Text_GimmeMoment, MSGBOX_AUTOCLOSE
+	goto_if_eq Zone10B_EventScript_CommonFossilIntro_2
+Zone10B_EventScript_CommonFossilIntro_1:
+	msgbox Zone10B_EventScript_CommonFossilIntro_Text_1
 	applymovement 6, Common_Movement_FaceLeft
 	waitmovement 0
 	delay 192
 	faceplayer
-	msgbox Zone10B_Text_HerePokemon, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_CommonFossilIntro_Text_2
 	return
 
-Zone10B_Text_GimmeMoment:
-	.string "Alright. Gimme a moment...$"
+Zone10B_EventScript_CommonFossilIntro_2:
+	goto Zone10B_EventScript_FossilDone
+	goto Zone10B_EventScript_CommonFossilIntro_1
 
-Zone10B_Text_HerePokemon:
-	.string "There. Here's your Pokémon.$"
 
-Zone10B_Text_WantReviveFossil:
-	.string "Hmm? What do you want?\p"
-	.string "Oh, gotcha.\p"
-	.string "You want me to turn that\n"
-	.string "{STR_VAR_1} back into a Pokémon?$"
-
-Zone10B_Text_NoFossils:
-	.string "You got fossils? No?$"
-	
-Zone10B_Text_BackToDrink:
-	.string "Ok, back to my drink.$"
-
-Zone10B_EventScript_FossilDone:
-	msgbox Zone10B_Text_BackToDrink, MSGBOX_AUTOCLOSE
+Zone10B_EventScript_FossilDone::
+	msgbox Zone10B_EventScript_FossilDone_Text_0
 	applymovement 6, Common_Movement_FaceLeft
 	waitmovement 0
 	release
 	end
 
+
 Zone10B_EventScript_WaterMerchant::
 	lock
 	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_DontSell
 	showmoneybox 0, 0, 0
-	msgbox Zone10B_Text_WaterOffer, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_WaterMerchant_Text_0
 	closemessage
 	multichoice 0, 12, MULTI_FRESH_WATER, 0
 	switch VAR_RESULT
-	case 0, Zone10B_EventScript_WaterCheckMoneyOne
-	case 1, Zone10B_EventScript_WaterCheckMoneyTen
+	case 0, Zone10B_EventScript_WaterMerchant_3
+	case 1, Zone10B_EventScript_WaterMerchant_4
+Zone10B_EventScript_WaterMerchant_1:
 	closemessage
 	hidemoneybox
-	msgbox Zone10B_Text_NoWater, MSGBOX_AUTOCLOSE
-	releaseall
-	end
+	msgbox Zone10B_EventScript_WaterMerchant_Text_2
+	release
+	return
 
-Zone10B_EventScript_DontSell:
-	msgbox Zone10B_Text_DontSell, MSGBOX_AUTOCLOSE
-	releaseall
-	end
-
-Zone10B_Text_DontSell:
-	.string "Sorry, I'm out of stock.$"
-
-Zone10B_Text_WaterOffer:
-	.string "In the desert, it's supply and\n"
-	.string "demand. And the demand is water.\p"
-	.string "¥200 for Fresh Water.\n"
-	.string "Restores 30 HP each.$"
-
-Zone10B_Text_NoWater:
-	.string "Ah, fine.$"
-
-Zone10B_EventScript_WaterCheckMoneyOne:
+Zone10B_EventScript_WaterMerchant_3:
 	checkmoney 200, 0
 	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_WaterNotEnough
-	goto Zone10B_EventScript_BuyOneWater
-	end
-
-Zone10B_EventScript_WaterCheckMoneyTen:
-	checkmoney 2000, 0
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_WaterNotEnough
-	goto Zone10B_EventScript_BuyTenWater
-	end
-
-Zone10B_EventScript_WaterNotEnough:
-	msgbox Zone10B_Text_NotEnough, MSGBOX_AUTOCLOSE
-	hidemoneybox
-	releaseall
-	end
-
-Zone10B_Text_NotEnough:
-	.string "You don't have enough money.$"
-
-Zone10B_EventScript_BuyOneWater:
+	goto_if_eq Zone10B_EventScript_WaterMerchant_5
 	removemoney 200, 0
 	updatemoneybox
-	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_WaterMerchant_Text_1
 	giveitem ITEM_FRESH_WATER, 1
 	hidemoneybox
 	release
 	end
 
-Zone10B_EventScript_BuyTenWater:
+Zone10B_EventScript_WaterMerchant_4:
+	checkmoney 2000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone10B_EventScript_WaterMerchant_8
 	removemoney 2000, 0
 	updatemoneybox
-	msgbox Zone10B_Text_GiveWater, MSGBOX_AUTOCLOSE
+	msgbox Zone10B_EventScript_WaterMerchant_Text_1
 	giveitem ITEM_FRESH_WATER, 10
 	hidemoneybox
 	release
 	end
 
-Zone10B_Text_GiveWater:
+Zone10B_EventScript_WaterMerchant_5:
+	goto Zone10B_EventScript_WaterNotEnough
+	goto Zone10B_EventScript_WaterMerchant_1
+
+Zone10B_EventScript_WaterMerchant_8:
+	goto Zone10B_EventScript_WaterNotEnough
+	goto Zone10B_EventScript_WaterMerchant_1
+
+
+Zone10B_EventScript_WaterNotEnough::
+	msgbox Zone10B_EventScript_WaterNotEnough_Text_0
+	hidemoneybox
+	releaseall
+	end
+
+
+Zone10B_EventScript_AdaminaStuff_Text_0:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving here?$"
+
+Zone10B_EventScript_AdaminaStuff_Text_1:
+	.string "Safe travels.$"
+
+Zone10B_EventScript_AdaminaStuff_Text_2:
+	.string "Kirlia, use Teleport!$"
+
+Zone10B_EventScript_AdaminaStuff_Text_3:
+	.string "Come speak to me when you're ready.$"
+
+Zone10B_EventScript_AdaminaStuff_Text_4:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: You…\n…\pLook.\nI said some harsh words earlier.\lConsider this part of my apology.$"
+
+Zone10B_EventScript_AdaminaStuff_Text_5:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: This is my tavern.\nIt's my safe space.\pAll the people from around here\ngather for shelter from the\lsandstorm.\pI just… feel defensive around\noutsiders. Because it feels like\lfamily here, you know?$"
+
+Zone10B_EventScript_AdaminaStuff_Text_6:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Tell you what, you can\nstay as long as you like to chat\lwith the people here.\pWhen you're ready to leave,\ncome speak to me.$"
+
+Zone10B_EventScript_SideQuestLuckyEgg_Text_0:
+	.string "You know what would make a\nCollector like me happy? Meeting\lsomeone who has caught 50 different\lspecies of Pokémon. Now, that\lperson is someone I'd like to meet!$"
+
+Zone10B_EventScript_SideQuestLuckyEgg_Text_1:
+	.string "Whoah, you've caught 50 species of\nPokémon? That's amazing.\pI aspire to be like you. Here, I\nwant you to have this.$"
+
+Zone10B_EventScript_SideQuestLuckyEgg_Text_2:
+	.string "Maybe I can catch 50 species of\nPokémon someday too.$"
+
+Zone10B_EventScript_SideQuestSubstitute_Text_0:
+	.string "Greetings, young one. In my\npossession, I hold a useful TM for\lyour Pokémon, but only if you have\lproven yourself in battle.\pYou must have defeated all\nTrainers available thus far.$"
+
+Zone10B_EventScript_SideQuestSubstitute_Text_1:
+	.string "You still have trainers to defeat.$"
+
+Zone10B_EventScript_SideQuestSubstitute_Text_2:
+	.string "Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM08 - Substitute.$"
+
+Zone10B_EventScript_SideQuestSubstitute_Text_3:
+	.string "The move Substitute is a unique\nmove with many applications.\lUse it cleverly, young one.$"
+
+Zone10B_EventScript_BerryExchange_Text_0:
+	.string "Listen, you know how some berries\ncan treat status conditions?\pWell, I'm looking to start a Berry\nfarm. If you have 10 of each of\lthose Berries, I'll trade them\lfor 5 Revives. How about it?$"
+
+Zone10B_EventScript_BerryExchange_Text_1:
+	.string "Alright…{PAUSE_UNTIL_PRESS} Here we go…{PAUSE_UNTIL_PRESS}\nAnd bam! 5 Revives!$"
+
+Zone10B_EventScript_BerryExchange_Text_2:
+	.string "Thank you.\nI'll be seeing you around!$"
+
+Zone10B_EventScript_BerryExchange_Text_3:
+	.string "It looks like you don't have enough\nAspear Berries.$"
+
+Zone10B_EventScript_BerryExchange_Text_4:
+	.string "It looks like you don't have enough\nRawst Berries.$"
+
+Zone10B_EventScript_BerryExchange_Text_5:
+	.string "It looks like you don't have enough\nPecha Berries.$"
+
+Zone10B_EventScript_BerryExchange_Text_6:
+	.string "It looks like you don't have enough\nChesto Berries.$"
+
+Zone10B_EventScript_BerryExchange_Text_7:
+	.string "It looks like you don't have enough\nCheri Berries.$"
+
+Zone10B_EventScript_BerryExchange_Text_8:
+	.string "Aw, that's too bad.\nIt's a good offer though!$"
+
+Zone10B_EventScript_FossilScientist_Text_0:
+	.string "You got fossils? No?$"
+
+Zone10B_EventScript_SendFossilMonParty_Text_0:
+	.string "You want to give it a nickname?$"
+
+Zone10B_EventScript_ReceivedFossilMonFanfare_Text_0:
+	.string "Received the Fossil Pokémon\n{STR_VAR_2}!$"
+
+Zone10B_EventScript_CommonFossilIntro_Text_0:
+	.string "Hmm? What do you want?\pOh, gotcha.\pYou want me to turn that\n{STR_VAR_1} back into a Pokémon?$"
+
+Zone10B_EventScript_CommonFossilIntro_Text_1:
+	.string "Alright. Gimme a moment…$"
+
+Zone10B_EventScript_CommonFossilIntro_Text_2:
+	.string "There. Here's your Pokémon.$"
+
+Zone10B_EventScript_FossilDone_Text_0:
+	.string "Ok, back to my drink.$"
+
+Zone10B_EventScript_WaterMerchant_Text_0:
+	.string "In the desert, it's supply and\ndemand. And the demand is water.\p¥200 for Fresh Water.\nRestores 30 HP each.$"
+
+Zone10B_EventScript_WaterMerchant_Text_1:
 	.string "Here you go.$"
+
+Zone10B_EventScript_WaterMerchant_Text_2:
+	.string "Ah, fine.$"
+
+Zone10B_EventScript_WaterNotEnough_Text_0:
+	.string "You don't have enough money.$"
