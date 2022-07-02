@@ -5629,7 +5629,8 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ARROKUDA]      = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)
-                                            | TUTOR(MOVE_BOUNCE)),
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_FLIP_TURN)),
 
     [SPECIES_BARRASKEWDA]   = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)
