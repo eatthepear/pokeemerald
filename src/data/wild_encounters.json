@@ -11337,64 +11337,64 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_DARUMAKA"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_DWEBBLE"
-              },
-              {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_GLIGAR"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_HELIOPTILE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_HIPPOPOTAS"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_SANDILE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_SCRAGGY"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_SCRAGGY"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_SILICOBRA"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_SILICOBRA"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_SKORUPI"
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_LARVITAR"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_SKORUPI"
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_FENNEKIN"
               }
             ]
           }
