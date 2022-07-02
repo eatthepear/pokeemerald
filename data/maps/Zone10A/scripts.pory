@@ -8,9 +8,9 @@ script Zone10A_EventScript_Adamina {
 		setflag(FLAG_ADAMINA_INTRO)
 	}
 	msgbox(Zone10A_Text_Explain)
-	if ((flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1) == false) ||
-	(flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2) == false) ||
-	(flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3) == false)) {
+	if ((flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_1) == false) ||
+	(flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_2) == false) ||
+	(flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_3) == false)) {
 		release
 		end
 	}

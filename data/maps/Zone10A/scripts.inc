@@ -8,9 +8,9 @@ Zone10A_EventScript_Adamina::
 	goto_if_unset FLAG_ADAMINA_INTRO, Zone10A_EventScript_Adamina_2
 Zone10A_EventScript_Adamina_1:
 	msgbox Zone10A_Text_Explain
-	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD1, Zone10A_EventScript_Adamina_5
-	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD2, Zone10A_EventScript_Adamina_5
-	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD3, Zone10A_EventScript_Adamina_5
+	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_1, Zone10A_EventScript_Adamina_5
+	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_2, Zone10A_EventScript_Adamina_5
+	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_3, Zone10A_EventScript_Adamina_5
 	fadeoutbgm 1
 	msgbox Zone10A_Text_FoundEm
 	delay 96
