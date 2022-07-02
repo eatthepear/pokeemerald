@@ -932,39 +932,11 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Erica},
     },
 
-    [TRAINER_ERICA_LEVIATHAN_9_BRUTAL] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_EXPERT_F,
-        .trainerName = _("Erica"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_EricaBrutal),
-        .party = {.TrainerMon = sParty_EricaBrutal},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
-    },
-
-    [TRAINER_PEARLIE] =
-    {
-        .trainerClass = TRAINER_CLASS_PICNICKER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_PICNICKER,
-        .trainerName = _("Pearlie"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Pearlie),
-        .party = {.TrainerMon = sParty_Pearlie},
-    },
-
     [TRAINER_KYLE] =
     {
-        .trainerClass = TRAINER_CLASS_CAMPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_POKEFAN_M,
         .trainerName = _("Kyle"),
         .items = {},
         .doubleBattle = FALSE,
@@ -973,17 +945,30 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Kyle},
     },
 
-    [TRAINER_ALANA] =
+    [TRAINER_CRYSTAL] =
     {
-        .trainerClass = TRAINER_CLASS_POKEFAN,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_TWINS,
-        .trainerPic = TRAINER_PIC_POKEFAN_F,
-        .trainerName = _("Alana"),
+        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_PSYCHIC_F,
+        .trainerName = _("Crystal"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Alana),
-        .party = {.TrainerMon = sParty_Alana},
+        .partySize = ARRAY_COUNT(sParty_Crystal),
+        .party = {.TrainerMon = sParty_Crystal},
+    },
+
+    [TRAINER_BELLE] =
+    {
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Belle"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Belle),
+        .party = {.TrainerMon = sParty_Belle},
     },
 
     [TRAINER_DEWEY] =
@@ -999,6 +984,72 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dewey},
     },
 
+    [TRAINER_PEARLIE] =
+    {
+        .trainerClass = TRAINER_CLASS_BACKPACKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_BACKPACKER_F,
+        .trainerName = _("Pearlie"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Pearlie),
+        .party = {.TrainerMon = sParty_Pearlie},
+    },
+
+    [TRAINER_RAPHAEL] =
+    {
+        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
+        .trainerName = _("Raphael"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Raphael),
+        .party = {.TrainerMon = sParty_Raphael},
+    },
+
+    [TRAINER_ERNEST] =
+    {
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("Ernest"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Ernest),
+        .party = {.TrainerMon = sParty_Ernest},
+    },
+
+    [TRAINER_ALANA] =
+    {
+        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_POKEFAN_F,
+        .trainerName = _("Alana"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Alana),
+        .party = {.TrainerMon = sParty_Alana},
+    },
+
+    [TRAINER_SUSAN] =
+    {
+        .trainerClass = TRAINER_CLASS_BACKPACKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_BACKPACKER_F,
+        .trainerName = _("Susan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Susan),
+        .party = {.TrainerMon = sParty_Susan},
+        .shouldShuffle = TRUE,
+    },
+
     [TRAINER_CONRAD] =
     {
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -1012,7 +1063,22 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Conrad},
     },
 
-    [TRAINER_LEVIATHAN5] =
+    [TRAINER_ADAMINA_LEVIATHAN_10] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Adamina"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_AdaminaDefault),
+        .party = {.TrainerMon = sParty_AdaminaDefault},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+    },
+
+    [TRAINER_ADAMINA_LEVIATHAN_10_BRUTAL] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1021,8 +1087,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_Adamina),
-        .party = {.TrainerMon = sParty_Adamina},
+        .partySize = ARRAY_COUNT(sParty_AdaminaBrutal),
+        .party = {.TrainerMon = sParty_AdaminaBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
