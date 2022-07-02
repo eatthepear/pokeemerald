@@ -20,7 +20,7 @@ mapscripts Zone10A_MapScripts {
 		} else {
 			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
-		if (flag(FLAG_ITEM_ZONE10A_SUPER_POTION)) {
+		if (flag(FLAG_ITEM_ZONE10A_TM16)) {
 			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
 		} else {
 			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
@@ -181,9 +181,9 @@ script Zone10A_EventScript_MetalCoat {
 	end
 }
 
-script Zone10A_EventScript_SuperPotion {
+script Zone10A_EventScript_TM16 {
 	lock
-	if (flag(FLAG_ITEM_ZONE10A_SUPER_POTION)) {
+	if (flag(FLAG_ITEM_ZONE10A_TM16)) {
 		msgbox(gText_ItemChestIsEmpty)
 		release
 		end
@@ -191,9 +191,9 @@ script Zone10A_EventScript_SuperPotion {
 	waitse
 	removeobject(VAR_LAST_TALKED)
 	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-	setflag(FLAG_ITEM_ZONE10A_SUPER_POTION)
+	setflag(FLAG_ITEM_ZONE10A_TM16)
 	addobject(VAR_LAST_TALKED)
-	finditem(ITEM_SUPER_POTION, 1)
+	finditem(ITEM_TM16, 1)
 	release
 	end
 }

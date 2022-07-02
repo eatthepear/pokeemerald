@@ -15,7 +15,7 @@ Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
 	goto_if_set FLAG_ITEM_ZONE10A_METAL_COAT, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_14
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
 Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
-	goto_if_set FLAG_ITEM_ZONE10A_SUPER_POTION, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17
+	goto_if_set FLAG_ITEM_ZONE10A_TM16, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17
 	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST
 	return
 
@@ -159,19 +159,19 @@ Zone10A_EventScript_MetalCoat_2:
 	end
 
 
-Zone10A_EventScript_SuperPotion::
+Zone10A_EventScript_TM16::
 	lock
-	goto_if_set FLAG_ITEM_ZONE10A_SUPER_POTION, Zone10A_EventScript_SuperPotion_2
+	goto_if_set FLAG_ITEM_ZONE10A_TM16, Zone10A_EventScript_TM16_2
 	waitse
 	removeobject VAR_LAST_TALKED
 	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE10A_SUPER_POTION
+	setflag FLAG_ITEM_ZONE10A_TM16
 	addobject VAR_LAST_TALKED
-	finditem ITEM_SUPER_POTION, 1
+	finditem ITEM_TM16, 1
 	release
 	end
 
-Zone10A_EventScript_SuperPotion_2:
+Zone10A_EventScript_TM16_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end
