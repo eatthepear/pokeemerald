@@ -1086,11 +1086,11 @@
 #define FLAG_ITEM_ZONE9A_BIG_ROOT                                   0x40A
 #define FLAG_ITEM_ZONE9A_TM13                                       0x40B
 #define FLAG_ITEM_ZONE9G_CHARCOAL                                   0x40C
-#define FLAG_ITEM_ZONE10A_BLACK_GLASSES                             0x40D
-#define FLAG_ITEM_ZONE10A_BLACK_BELT                                0x40E
-#define FLAG_ITEM_ZONE10A_TIMER_BALL                                0x40F
-#define FLAG_ITEM_ZONE10A_SUPER_POTION                              0x410
-#define FLAG_ITEM_ZONE10A_SUPER_REPEL                               0x411
+#define FLAG_ITEM_ZONE10A_SUN_STONE                                 0x40D
+#define FLAG_ITEM_ZONE10A_SOFT_SAND                                 0x40E
+#define FLAG_ITEM_ZONE10A_DRAGON_FANG                               0x40F
+#define FLAG_ITEM_ZONE10A_METAL_COAT                                0x410
+#define FLAG_ITEM_ZONE10A_SUPER_POTION                              0x411
 #define FLAG_ITEM_ZONE11A_SPELL_TAG                                 0x412
 #define FLAG_ITEM_ZONE11A_WIDE_LENS                                 0x413
 #define FLAG_ITEM_ZONE11A_TM09                                      0x414

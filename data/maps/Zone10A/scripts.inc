@@ -1,5 +1,43 @@
 Zone10A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE10A_SUN_STONE, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE10A_SOFT_SAND, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE10A_DRAGON_FANG, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_10
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	goto_if_set FLAG_ITEM_ZONE10A_METAL_COAT, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_14
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
+	goto_if_set FLAG_ITEM_ZONE10A_SUPER_POTION, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_10:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_14:
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_13
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17:
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
 
 Zone10A_EventScript_Adamina::
@@ -47,6 +85,96 @@ Zone10A_EventScript_Adamina_5:
 Zone10A_EventScript_Adamina_12:
 	trainerbattle_no_intro TRAINER_ADAMINA_LEVIATHAN_10_BRUTAL, Zone10A_Text_Leviathan5Defeat
 	goto Zone10A_EventScript_Adamina_11
+
+
+Zone10A_EventScript_SunStone::
+	lock
+	goto_if_set FLAG_ITEM_ZONE10A_SUN_STONE, Zone10A_EventScript_SunStone_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE10A_SUN_STONE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUN_STONE, 1
+	release
+	end
+
+Zone10A_EventScript_SunStone_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone10A_EventScript_SoftSand::
+	lock
+	goto_if_set FLAG_ITEM_ZONE10A_SOFT_SAND, Zone10A_EventScript_SoftSand_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE10A_SOFT_SAND
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SOFT_SAND, 1
+	release
+	end
+
+Zone10A_EventScript_SoftSand_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone10A_EventScript_DragonFang::
+	lock
+	goto_if_set FLAG_ITEM_ZONE10A_DRAGON_FANG, Zone10A_EventScript_DragonFang_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE10A_DRAGON_FANG
+	addobject VAR_LAST_TALKED
+	finditem ITEM_DRAGON_FANG, 1
+	release
+	end
+
+Zone10A_EventScript_DragonFang_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone10A_EventScript_MetalCoat::
+	lock
+	goto_if_set FLAG_ITEM_ZONE10A_METAL_COAT, Zone10A_EventScript_MetalCoat_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE10A_METAL_COAT
+	addobject VAR_LAST_TALKED
+	finditem ITEM_METAL_COAT, 1
+	release
+	end
+
+Zone10A_EventScript_MetalCoat_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone10A_EventScript_SuperPotion::
+	lock
+	goto_if_set FLAG_ITEM_ZONE10A_SUPER_POTION, Zone10A_EventScript_SuperPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE10A_SUPER_POTION
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUPER_POTION, 1
+	release
+	end
+
+Zone10A_EventScript_SuperPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
 
 
 Zone10A_EventScript_Kyle::
@@ -207,30 +335,6 @@ Zone10A_Text_ConradDefeat:
 Zone10A_Text_ConradPostBattle:
 	.string "Not a great first impression,\n"
 	.string "if I'm being honest.$"
-
-Zone10A_EventScript_BlackGlasses::
-	finditem ITEM_BLACK_GLASSES
-	end
-
-Zone10A_EventScript_BlackBelt::
-	finditem ITEM_BLACK_BELT
-	end
-
-Zone10A_EventScript_TimerBall::
-	finditem ITEM_TIMER_BALL
-	end
-
-Zone10A_EventScript_Charcoal::
-	finditem ITEM_CHARCOAL
-	end
-
-Zone10A_EventScript_SuperPotion::
-	finditem ITEM_SUPER_POTION
-	end
-
-Zone10A_EventScript_SuperRepel::
-	finditem ITEM_SUPER_REPEL
-	end
 
 Zone10A_Text_NoChance::
 	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Nope.\n"

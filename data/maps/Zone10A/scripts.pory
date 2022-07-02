@@ -1,4 +1,32 @@
-mapscripts Zone10A_MapScripts {}
+mapscripts Zone10A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE10A_SUN_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE10A_SOFT_SAND)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE10A_DRAGON_FANG)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE10A_METAL_COAT)) {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE10A_SUPER_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
 
 script Zone10A_EventScript_Adamina {
 	lock
@@ -83,6 +111,91 @@ text Zone10A_Text_Leviathan5Defeat {
 text Zone10A_Text_HeadInside {
 	"{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Go on, head inside.\n"
 	"I've got nothing for you.$"
+}
+
+script Zone10A_EventScript_SunStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE10A_SUN_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE10A_SUN_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SUN_STONE, 1)
+	release
+	end
+}
+
+script Zone10A_EventScript_SoftSand {
+	lock
+	if (flag(FLAG_ITEM_ZONE10A_SOFT_SAND)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE10A_SOFT_SAND)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SOFT_SAND, 1)
+	release
+	end
+}
+
+script Zone10A_EventScript_DragonFang {
+	lock
+	if (flag(FLAG_ITEM_ZONE10A_DRAGON_FANG)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE10A_DRAGON_FANG)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_DRAGON_FANG, 1)
+	release
+	end
+}
+
+script Zone10A_EventScript_MetalCoat {
+	lock
+	if (flag(FLAG_ITEM_ZONE10A_METAL_COAT)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE10A_METAL_COAT)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_METAL_COAT, 1)
+	release
+	end
+}
+
+script Zone10A_EventScript_SuperPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE10A_SUPER_POTION)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE10A_SUPER_POTION)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SUPER_POTION, 1)
+	release
+	end
 }
 
 raw `
@@ -244,28 +357,4 @@ Zone10A_Text_ConradDefeat:
 Zone10A_Text_ConradPostBattle:
 	.string "Not a great first impression,\n"
 	.string "if I'm being honest.$"
-
-Zone10A_EventScript_BlackGlasses::
-	finditem ITEM_BLACK_GLASSES
-	end
-
-Zone10A_EventScript_BlackBelt::
-	finditem ITEM_BLACK_BELT
-	end
-
-Zone10A_EventScript_TimerBall::
-	finditem ITEM_TIMER_BALL
-	end
-
-Zone10A_EventScript_Charcoal::
-	finditem ITEM_CHARCOAL
-	end
-
-Zone10A_EventScript_SuperPotion::
-	finditem ITEM_SUPER_POTION
-	end
-
-Zone10A_EventScript_SuperRepel::
-	finditem ITEM_SUPER_REPEL
-	end
 `
