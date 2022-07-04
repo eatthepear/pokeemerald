@@ -31,11 +31,11 @@
 #define TRAINER_ANNE_AND_JUNE                	27
 #define TRAINER_GILBERT                      	28
 #define TRAINER_REBECCA                      	29
-#define TRAINER_CAITLYN                      	30
-#define TRAINER_RYAN                         	31
+#define TRAINER_RYAN                         	30
+#define TRAINER_CAITLYN                      	31
 #define TRAINER_KEVIN                        	32
 #define TRAINER_DECLAN_LEVIATHAN_5            	33
-#define TRAINER_RONAN                        	34
+#define TRAINER_MINA                         	34
 #define TRAINER_MELANIE                      	35
 #define TRAINER_CONSTANCE                    	36
 #define TRAINER_FRANK                        	37

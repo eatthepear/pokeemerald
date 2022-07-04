@@ -3660,7 +3660,7 @@ Zone_EventScript_RetirePrompt_10:
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_11:
-	cleartrainerflag TRAINER_RONAN
+	cleartrainerflag TRAINER_MINA
 	cleartrainerflag TRAINER_MELANIE
 	cleartrainerflag TRAINER_CONSTANCE
 	cleartrainerflag TRAINER_FRANK

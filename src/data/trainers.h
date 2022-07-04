@@ -416,29 +416,15 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_REBECCA] =
     {
-        .trainerClass = TRAINER_CLASS_LADY,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LADY,
+        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_POKEFAN_F,
         .trainerName = _("Rebecca"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Rebecca),
         .party = {.TrainerMon = sParty_Rebecca},
-        .shouldShuffle = TRUE,
-    },
-
-    [TRAINER_CAITLYN] =
-    {
-        .trainerClass = TRAINER_CLASS_PICNICKER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_PICNICKER,
-        .trainerName = _("Caitlyn"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Caitlyn),
-        .party = {.TrainerMon = sParty_Caitlyn},
         .shouldShuffle = TRUE,
     },
 
@@ -453,6 +439,20 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Ryan),
         .party = {.TrainerMon = sParty_Ryan},
+        .shouldShuffle = TRUE,
+    },
+
+    [TRAINER_CAITLYN] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_BREEDER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_POKEMON_BREEDER_F,
+        .trainerName = _("Caitlyn"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Caitlyn),
+        .party = {.TrainerMon = sParty_Caitlyn},
         .shouldShuffle = TRUE,
     },
 
@@ -498,17 +498,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_LelouchExp1},
     },
 
-    [TRAINER_RONAN] =
+    [TRAINER_MINA] =
     {
-        .trainerClass = TRAINER_CLASS_RICH_BOY,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
-        .trainerPic = TRAINER_PIC_RICH_BOY,
-        .trainerName = _("Ronan"),
-        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .trainerClass = TRAINER_CLASS_TUBER_F,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_TUBER_F,
+        .trainerName = _("Mina"),
+        .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Ronan),
-        .party = {.TrainerMon = sParty_Ronan},
+        .partySize = ARRAY_COUNT(sParty_Mina),
+        .party = {.TrainerMon = sParty_Mina},
         .shouldShuffle = TRUE,
     },
 
@@ -570,9 +570,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DAISY] =
     {
-        .trainerClass = TRAINER_CLASS_AROMA_LADY,
+        .trainerClass = TRAINER_CLASS_PKMN_BREEDER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .trainerName = _("Daisy"),
         .items = {},
         .doubleBattle = FALSE,
@@ -642,9 +642,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_PAIGE] =
     {
-        .trainerClass = TRAINER_CLASS_LADY,
+        .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LADY,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
         .trainerName = _("Paige"),
         .items = {},
         .doubleBattle = FALSE,
@@ -1300,7 +1300,7 @@ const struct Trainer gTrainers[] = {
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
         .trainerPic = TRAINER_PIC_RICH_BOY,
         .trainerName = _("Bart"),
-        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Bart),

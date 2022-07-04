@@ -326,39 +326,39 @@ Zone5A_Text_RebeccaDefeat:
 Zone5A_Text_RebeccaPostBattle:
 	.string "Defeat leaves me in disgrace…$"
 
-Zone5A_EventScript_Caitlyn::
-	trainerbattle_single TRAINER_CAITLYN, Zone5A_Text_CaitlynIntro, Zone5A_Text_CaitlynDefeat
-	msgbox Zone5A_Text_CaitlynPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone5A_Text_CaitlynIntro:
-	.string "The second of the Fearsome Foursome!\n"
-	.string "That's me!$"
-
-Zone5A_Text_CaitlynDefeat:
-	.string "Second of the Fearsome Foursome down!$"
-
-Zone5A_Text_CaitlynPostBattle:
-	.string "They say second is the best…$"
-
 Zone5A_EventScript_Ryan::
 	trainerbattle_single TRAINER_RYAN, Zone5A_Text_RyanIntro, Zone5A_Text_RyanDefeat
 	msgbox Zone5A_Text_RyanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Zone5A_Text_RyanIntro:
-	.string "Fearsome Foursome, number three!\n"
-	.string "Be careful, I'm strong!$"
+	.string "The second of the Fearsome Foursome!\n"
+	.string "That's me!$"
 
 Zone5A_Text_RyanDefeat:
-	.string "Third of the Fearsome Foursome down!$"
+	.string "Second of the Fearsome Foursome down!$"
 
 Zone5A_Text_RyanPostBattle:
-	.string "There's only one left. Don't be afraid!$"
+	.string "They say second is the best…$"
 
 Zone5A_EventScript_Sign::
 	msgbox Zone5A_Text_Sign, MSGBOX_SIGN
 	end
+
+Zone5A_EventScript_Caitlyn::
+	trainerbattle_single TRAINER_CAITLYN, Zone5A_Text_CaitlynIntro, Zone5A_Text_CaitlynDefeat
+	msgbox Zone5A_Text_CaitlynPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_CaitlynIntro:
+	.string "Fearsome Foursome, number three!\n"
+	.string "Be careful, I'm strong!$"
+
+Zone5A_Text_CaitlynDefeat:
+	.string "Third of the Fearsome Foursome down!$"
+
+Zone5A_Text_CaitlynPostBattle:
+	.string "There's only one left. Don't be afraid!$"
 
 Zone5A_Text_Sign:
 	.string "Trainer Tips!\p"

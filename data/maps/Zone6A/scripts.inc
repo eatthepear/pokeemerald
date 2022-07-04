@@ -57,7 +57,7 @@ Zone6A_EventScript_Exit_7:
 	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_CONSTANCE
 	goto_if 0, Zone6A_EventScript_Exit_6
-	checktrainerflag TRAINER_RONAN
+	checktrainerflag TRAINER_MINA
 	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_DUDLEY
 	goto_if 0, Zone6A_EventScript_Exit_6
@@ -197,20 +197,20 @@ Zone6A_Text_ConstanceDefeat:
 Zone6A_Text_ConstancePostBattle:
 	.string "I can look for some Berries or something...$"
 
-Zone6A_EventScript_Ronan::
-	trainerbattle_single TRAINER_RONAN, Zone6A_Text_RonanIntro, Zone6A_Text_RonanDefeat
-	msgbox Zone6A_Text_RonanPostBattle, MSGBOX_AUTOCLOSE
+Zone6A_EventScript_Mina::
+	trainerbattle_single TRAINER_MINA, Zone6A_Text_MinaIntro, Zone6A_Text_MinaDefeat
+	msgbox Zone6A_Text_MinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone6A_Text_RonanIntro:
-	.string "Ah, a plebeian.\n"
-	.string "Want to have a go?$"
+Zone6A_Text_MinaIntro:
+	.string "My older brother Zack loves tubing\n"
+	.string "just as much as I do!$"
 
-Zone6A_Text_RonanDefeat:
-	.string "My honor, tainted...$"
+Zone6A_Text_MinaDefeat:
+	.string "He just won't admit it!$"
 
-Zone6A_Text_RonanPostBattle:
-	.string "Beaten by a mere commoner...$"
+Zone6A_Text_MinaPostBattle:
+	.string "Our family really loves tubing!$"
 
 Zone6A_EventScript_Dudley::
 	trainerbattle_single TRAINER_DUDLEY, Zone6A_Text_DudleyIntro, Zone6A_Text_DudleyDefeat
@@ -234,16 +234,15 @@ Zone6A_EventScript_Daisy::
 	end
 
 Zone6A_Text_DaisyIntro:
-	.string "Sometimes, it's just nice to smell\n"
-	.string "the flowers!$"
+	.string "Baby Pokémon are just so cute!$"
 
 Zone6A_Text_DaisyDefeat:
-	.string "But there's no flowers to smell\n"
-	.string "here!$"
+	.string "They're not too great in battle,\n"
+	.string "though.$"
 
 Zone6A_Text_DaisyPostBattle:
-	.string "Maybe I'll have better luck finding\n"
-	.string "flowers elsewhere.$"
+	.string "I guess these little ones need more\n"
+	.string "time to get stronger and evolve!$"
 
 Zone6A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"
