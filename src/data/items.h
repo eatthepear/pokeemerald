@@ -8008,11 +8008,11 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM17_HIDDEN_POWER] =
+    [ITEM_TM17_HONE_CLAWS] =
     {
         .name = _("TM17"),
-        .itemId = ITEM_TM17_HIDDEN_POWER,
-        .price = 3000,
+        .itemId = ITEM_TM17_HONE_CLAWS,
+        .price = 7500,
         .description = sTM17Desc,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -8020,11 +8020,11 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM18_HAIL] =
+    [ITEM_TM18_IRON_DEFENSE] =
     {
         .name = _("TM18"),
-        .itemId = ITEM_TM18_HAIL,
-        .price = 2000,
+        .itemId = ITEM_TM18_IRON_DEFENSE,
+        .price = 7500,
         .description = sTM18Desc,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -8032,11 +8032,11 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM19_LOW_SWEEP] =
+    [ITEM_TM19_AMNESIA] =
     {
         .name = _("TM19"),
-        .itemId = ITEM_TM19_LOW_SWEEP,
-        .price = 3000,
+        .itemId = ITEM_TM19_AMNESIA,
+        .price = 7500,
         .description = sTM19Desc,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -8044,10 +8044,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM20_DUAL_WINGBEAT] =
+    [ITEM_TM20_SCORCHING_SANDS] =
     {
         .name = _("TM20"),
-        .itemId = ITEM_TM20_DUAL_WINGBEAT,
+        .itemId = ITEM_TM20_SCORCHING_SANDS,
         .price = 3000,
         .description = sTM20Desc,
         .pocket = POCKET_TM_HM,
@@ -8056,10 +8056,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
 
-    [ITEM_TM21_WILL_O_WISP] =
+    [ITEM_TM21_TELEPORT] =
     {
         .name = _("TM21"),
-        .itemId = ITEM_TM21_WILL_O_WISP,
+        .itemId = ITEM_TM21_TELEPORT,
         .price = 1000,
         .description = sTM21Desc,
         .pocket = POCKET_TM_HM,

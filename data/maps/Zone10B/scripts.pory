@@ -47,6 +47,8 @@ script Zone10B_EventScript_AdaminaStuff {
 					!defeated(TRAINER_TAMARA))) {
 					goto(EventScript_BrutalExitNotSatisfied)
 				}
+				clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+				setflag(FLAG_HIDE_MAX_4)
 				msgbox("Safe travels.")
 				delay(96)
 				playmoncry(SPECIES_KIRLIA, 0)
@@ -61,7 +63,7 @@ script Zone10B_EventScript_AdaminaStuff {
 		end
 	}
 	msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: You…\n…\pLook.\nI said some harsh words earlier.\lConsider this part of my apology.")
-	giveitem(ITEM_TM07)
+	giveitem(ITEM_TM20)
 	msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: This is my tavern.\nIt's my safe space.\pAll the people from around here\ngather for shelter from the\lsandstorm.\pI just… feel defensive around\noutsiders. Because it feels like\lfamily here, you know?", MSGBOX_DEFAULT)
 	delay(96)
 	msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Tell you what, you can\nstay as long as you like to chat\lwith the people here.\pWhen you're ready to leave,\ncome speak to me.")
@@ -118,11 +120,11 @@ script Zone10B_EventScript_SideQuestSubstitute {
 			end
 		} else {
 			setflag(FLAG_RECEIVED_ZONE10B_SUBSTITUTE)
-			msgbox("Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM08 - Substitute.$")
-			giveitem(ITEM_TM08)
+			msgbox("Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM21 - Teleport.$")
+			giveitem(ITEM_TM21)
 		}
 	}
-	msgbox("The move Substitute is a unique\nmove with many applications.\lUse it cleverly, young one.")
+	msgbox("The move Teleport can help you\neasily bring in frail Pokémon\lwithout risking big damage.")
 	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
 	release

@@ -3048,10 +3048,6 @@ static const u8 sTM07Desc[] = _(
     "Absorbs target's HP\n"
     "and heals over half\n"
     "the damage done.");
-    // Scorching Sands
-    // "Throws scorching\n"
-    // "sand at the target.\n"
-    // "May leave a burn.");
 
 static const u8 sTM08Desc[] = _(
     "Generates an\n"
@@ -3080,28 +3076,16 @@ static const u8 sTM11Desc[] = _(
     "Attacks in a cloak\n"
     "of flames. May\n"
     "raise user's Speed.");
-    // Teleport
-    // "Switches places\n"
-    // "with a party\n"
-    // "Pokémon in waiting.");
 
 static const u8 sTM12Desc[] = _(
     "Hurls boulders to\n"
     "damage the foe and\n"
     "lower their Speed.");
-    // Hone Claws
-    // "The user sharpens\n"
-    // "its claws, raising\n"
-    // "Attack & Accuracy.");
 
 static const u8 sTM13Desc[] = _(
     "Attacks and steals\n"
     "the target's held\n"
     "item.");
-    // Iron Defense
-    // "Hardens the body's\n"
-    // "surface to sharply\n"
-    // "raise Defense.");
     // Rest
     // "The user goes to\n"
     // "sleep to restore\n"
@@ -3111,10 +3095,6 @@ static const u8 sTM14Desc[] = _(
     "An attack that does\n"
     "more damage if an\n"
     "ally fainted.");
-    // Amnesia
-    // "Empties its mind,\n"
-    // "sharply raising\n"
-    // "Sp. Defense.");
     // Bulk Up
     // "Bulks up the body\n"
     // "to boost both\n"
@@ -3135,29 +3115,45 @@ static const u8 sTM16Desc[] = _(
     "slams into the foe.");
 
 static const u8 sTM17Desc[] = _(
-    "The attack type\n"
-    "varies among\n"
-    "different Pokémon.");
+    "The user sharpens\n"
+    "its claws, raising\n"
+    "Attack & Accuracy.");
 
 static const u8 sTM18Desc[] = _(
-    "Creates a hailstorm\n"
-    "that damages all\n"
-    "types except Ice.");
+    "Hardens the body's\n"
+    "surface to sharply\n"
+    "raise Defense.");
+    // Hail
+    // "Creates a hailstorm\n"
+    // "that damages all\n"
+    // "types except Ice.");
 
 static const u8 sTM19Desc[] = _(
-    "Attacks the foe's\n"
-    "legs, lowering\n"
-    "its Speed.");
+    "Empties its mind,\n"
+    "sharply raising\n"
+    "Sp. Defense.");
+    // Low Sweep
+    // "Attacks the foe's\n"
+    // "legs, lowering\n"
+    // "its Speed.");
 
 static const u8 sTM20Desc[] = _(
-    "Slams the target\n"
-    "with wings and hits\n"
-    "twice in a row.");
+    "Throws scorching\n"
+    "sand at the target.\n"
+    "May leave a burn.");
+    // Dual Wingbeat
+    // "Slams the target\n"
+    // "with wings and hits\n"
+    // "twice in a row.");
 
 static const u8 sTM21Desc[] = _(
-    "Inflicts a burn on\n"
-    "the foe with\n"
-    "intense fire.");
+    "Switches places\n"
+    "with a party\n"
+    "Pokémon in waiting.");
+    // Will O Wisp
+    // "Inflicts a burn on\n"
+    // "the foe with\n"
+    // "intense fire.");
 
 static const u8 sTM22Desc[] = _(
     "Strikes with a\n"

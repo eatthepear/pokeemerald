@@ -33,7 +33,7 @@ Zone10B_EventScript_Kirlia_2:
 Zone10B_EventScript_AdaminaStuff::
 	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaStuff_2
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_4
-	giveitem ITEM_TM07
+	giveitem ITEM_TM20
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_5, MSGBOX_DEFAULT
 	delay 96
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_6
@@ -55,6 +55,8 @@ Zone10B_EventScript_AdaminaStuff_5:
 	goto_if_gt Zone10B_EventScript_AdaminaStuff_7
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_AdaminaStuff_12
 Zone10B_EventScript_AdaminaStuff_10:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	setflag FLAG_HIDE_MAX_4
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_1
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0
@@ -174,7 +176,7 @@ Zone10B_EventScript_SideQuestSubstitute_2:
 	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
 	setflag FLAG_RECEIVED_ZONE10B_SUBSTITUTE
 	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_2
-	giveitem ITEM_TM08
+	giveitem ITEM_TM21
 	goto Zone10B_EventScript_SideQuestSubstitute_1
 
 Zone10B_EventScript_SideQuestSubstitute_4:
@@ -740,10 +742,10 @@ Zone10B_EventScript_SideQuestSubstitute_Text_1:
 	.string "You still have trainers to defeat.$"
 
 Zone10B_EventScript_SideQuestSubstitute_Text_2:
-	.string "Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM08 - Substitute.$"
+	.string "Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM21 - Teleport.$"
 
 Zone10B_EventScript_SideQuestSubstitute_Text_3:
-	.string "The move Substitute is a unique\nmove with many applications.\lUse it cleverly, young one.$"
+	.string "The move Teleport can help you\neasily bring in frail Pokémon\lwithout risking big damage.$"
 
 Zone10B_EventScript_BerryExchange_Text_0:
 	.string "Listen, you know how some berries\ncan treat status conditions?\pWell, I'm looking to start a Berry\nfarm. If you have 10 of each of\lthose Berries, I'll trade them\lfor 5 Revives. How about it?$"

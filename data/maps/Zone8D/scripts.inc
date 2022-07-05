@@ -248,14 +248,16 @@ Zone8D_EventScript_Exit::
 	goto_if_gt Zone8D_EventScript_Exit_2
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_Exit_7
 Zone8D_EventScript_Exit_5:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	setflag FLAG_HIDE_MAX_3
+	setflag FLAG_ZONE7_HEAL_USED
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
 Zone8D_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone8D_EventScript_Exit_2:
-	setflag FLAG_HIDE_MAX_3
-	setflag FLAG_ZONE7_HEAL_USED
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 43, 32
 	waitstate

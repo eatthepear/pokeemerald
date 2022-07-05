@@ -1589,6 +1589,8 @@ script EventScript_Max {
 			pokemart(Zone6A_Shop_TMShop)
 		case 7:
 			pokemart(Zone7A_Shop_TMShop)
+		case 10:
+			pokemart(Zone10A_Shop_TMShop)
 	}
 	msgbox(format("{COLOR BLUE}Max{COLOR DARK_GRAY}: Goodbye!"))
 	release
@@ -1607,6 +1609,12 @@ mart Zone7A_Shop_TMShop {
 	ITEM_TM09
 	ITEM_TM10
 	ITEM_TM11
+}
+
+mart Zone10A_Shop_TMShop {
+	ITEM_TM17
+	ITEM_TM18
+	ITEM_TM19
 }
 
 script EventScript_LeavingSetup {
