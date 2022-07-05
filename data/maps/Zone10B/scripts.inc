@@ -244,6 +244,10 @@ Zone10B_EventScript_BerryExchange_17:
 	msgbox Zone10B_EventScript_BerryExchange_Text_1
 	giveitem ITEM_REVIVE, 5
 	msgbox Zone10B_EventScript_BerryExchange_Text_2
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag FLAG_HIDE_ZONE10B_BERRYMAN
+	removeobject 5
+	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Zone10B_EventScript_BerryExchange_1
 
 
