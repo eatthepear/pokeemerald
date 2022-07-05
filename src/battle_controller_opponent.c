@@ -1442,7 +1442,7 @@ static void OpponentHandlePrintSelectionString(void)
 
 static void OpponentHandleChooseAction(void)
 {
-    AI_TrySwitchOrUseItem();    // TODO consider move choice first
+    AI_TrySwitchOrUseItem();
     OpponentBufferExecCompleted();
 }
 
@@ -1466,9 +1466,8 @@ static void OpponentHandleChooseMove(void)
         if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_SAFARI | BATTLE_TYPE_ROAMER)
          || IsWildMonSmart())
         {
-            BattleAI_SetupAIData(0xF);
-            chosenMoveId = BattleAI_ChooseMoveOrAction();
-
+            chosenMoveId = gBattleStruct->aiMoveOrAction[gActiveBattler];
+            gBattlerTarget = gBattleStruct->aiChosenTarget[gActiveBattler];
             switch (chosenMoveId)
             {
             case AI_CHOICE_WATCH:
