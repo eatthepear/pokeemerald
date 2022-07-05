@@ -494,6 +494,9 @@ struct SaveBlock2
     /*0xAC*/ u32 encryptionKey;
     /*0xB0*/ struct PlayersApprentice playerApprentice;
     /*0xDC*/ struct Apprentice apprentices[APPRENTICE_COUNT];
+              u16 ItemArg;
+    /*0xF2C*/ bool8 autoRun;
+              u8 filler[1000];
     // /*0x1EC*/ struct BerryCrush berryCrush;
     // /*0x1FC*/ struct PokemonJumpRecords pokeJump;
     // /*0x20C*/ struct BerryPickingResults berryPick;
@@ -501,8 +504,6 @@ struct SaveBlock2
     // /*0x57C*/ struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
     // /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
-              u16 ItemArg;
-    /*0xF2C*/ bool8 autoRun;
 }; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
@@ -1024,6 +1025,7 @@ struct SaveBlock1
     // /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
     /*0x3D88*/ u8 NuzlockeEncounterFlags[9];
+               u8 filler[3000];
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;
