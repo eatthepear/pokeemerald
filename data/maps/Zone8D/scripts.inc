@@ -250,7 +250,7 @@ Zone8D_EventScript_Exit::
 Zone8D_EventScript_Exit_5:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_HIDE_MAX_3
-	setflag FLAG_ZONE7_HEAL_USED
+	setflag FLAG_ZONE7B_HEAL_USED
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
 Zone8D_EventScript_Exit_1:
 	releaseall

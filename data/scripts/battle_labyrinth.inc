@@ -961,7 +961,7 @@ EventScript_Shop_Lelouch::
 EventScript_Shop_Lelouch_1:
 	compare VAR_ZONE, 6
 	goto_if_lt EventScript_Shop_Lelouch_5
-	goto_if_unset FLAG_LELOUCH_SHARDS, EventScript_Shop_Lelouch_8
+	goto_if_unset FLAG_LELOUCH_SHARDS_INTRO, EventScript_Shop_Lelouch_8
 EventScript_Shop_Lelouch_7:
 	msgbox gText_Lelouch_Welcome, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
@@ -989,7 +989,7 @@ EventScript_Shop_Lelouch_5:
 
 EventScript_Shop_Lelouch_8:
 	msgbox gText_Lelouch_ExplainShards
-	setflag FLAG_LELOUCH_SHARDS
+	setflag FLAG_LELOUCH_SHARDS_INTRO
 	goto EventScript_Shop_Lelouch_7
 
 EventScript_Shop_Lelouch_12:

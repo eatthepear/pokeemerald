@@ -134,53 +134,53 @@ Zone10B_EventScript_SideQuestLuckyEgg_4:
 	goto Zone10B_EventScript_SideQuestLuckyEgg_1
 
 
-Zone10B_EventScript_SideQuestSubstitute::
+Zone10B_EventScript_SideQuestTeleport::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_ZONE10B_SUBSTITUTE, Zone10B_EventScript_SideQuestSubstitute_2
-Zone10B_EventScript_SideQuestSubstitute_1:
-	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_3
+	goto_if_unset FLAG_RECEIVED_ZONE10B_TM21_TELEPORT, Zone10B_EventScript_SideQuestTeleport_2
+Zone10B_EventScript_SideQuestTeleport_1:
+	msgbox Zone10B_EventScript_SideQuestTeleport_Text_3
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	release
 	end
 
-Zone10B_EventScript_SideQuestSubstitute_2:
-	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_0
+Zone10B_EventScript_SideQuestTeleport_2:
+	msgbox Zone10B_EventScript_SideQuestTeleport_Text_0
 	specialvar VAR_RESULT, GetCaughtSpeciesCount
 	checktrainerflag TRAINER_MILLIE
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_JAMAL
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_PAIGE
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_SETH
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_CONNIE
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_CHAD
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_JIMMY
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_EMILIANO
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_MARCUS
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_KAREN
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_JAYDEN
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_NEIL
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_TAMARA
-	goto_if 0, Zone10B_EventScript_SideQuestSubstitute_4
-	setflag FLAG_RECEIVED_ZONE10B_SUBSTITUTE
-	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_2
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	setflag FLAG_RECEIVED_ZONE10B_TM21_TELEPORT
+	msgbox Zone10B_EventScript_SideQuestTeleport_Text_2
 	giveitem ITEM_TM21
-	goto Zone10B_EventScript_SideQuestSubstitute_1
+	goto Zone10B_EventScript_SideQuestTeleport_1
 
-Zone10B_EventScript_SideQuestSubstitute_4:
-	msgbox Zone10B_EventScript_SideQuestSubstitute_Text_1
+Zone10B_EventScript_SideQuestTeleport_4:
+	msgbox Zone10B_EventScript_SideQuestTeleport_Text_1
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	release
@@ -739,16 +739,16 @@ Zone10B_EventScript_SideQuestLuckyEgg_Text_1:
 Zone10B_EventScript_SideQuestLuckyEgg_Text_2:
 	.string "Maybe I can catch 50 species of\nPokémon someday too.$"
 
-Zone10B_EventScript_SideQuestSubstitute_Text_0:
+Zone10B_EventScript_SideQuestTeleport_Text_0:
 	.string "Greetings, young one. In my\npossession, I hold a useful TM for\lyour Pokémon, but only if you have\lproven yourself in battle.\pYou must have defeated all\nTrainers available thus far.$"
 
-Zone10B_EventScript_SideQuestSubstitute_Text_1:
+Zone10B_EventScript_SideQuestTeleport_Text_1:
 	.string "You still have trainers to defeat.$"
 
-Zone10B_EventScript_SideQuestSubstitute_Text_2:
+Zone10B_EventScript_SideQuestTeleport_Text_2:
 	.string "Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM21 - Teleport.$"
 
-Zone10B_EventScript_SideQuestSubstitute_Text_3:
+Zone10B_EventScript_SideQuestTeleport_Text_3:
 	.string "The move Teleport can help you\neasily bring in frail Pokémon\lwithout risking big damage.$"
 
 Zone10B_EventScript_BerryExchange_Text_0:

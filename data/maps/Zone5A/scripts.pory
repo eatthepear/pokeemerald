@@ -232,7 +232,7 @@ script Zone5A_EventScript_Breeder {
 	msgbox(format("Well, I'm off to help other trainers.\pSee you!"))
 	fadescreen(FADE_TO_BLACK)
 	removeobject(11)
-	setflag(FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM)
+	setflag(FLAG_RECEIVED_ZONE5A_GEM)
 	fadescreen(FADE_FROM_BLACK)
 	release
 }

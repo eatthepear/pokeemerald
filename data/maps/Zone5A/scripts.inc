@@ -158,7 +158,7 @@ Zone5A_EventScript_Breeder_8:
 	msgbox Zone5A_EventScript_Breeder_Text_13
 	fadescreen FADE_TO_BLACK
 	removeobject 11
-	setflag FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM
+	setflag FLAG_RECEIVED_ZONE5A_GEM
 	fadescreen FADE_FROM_BLACK
 	release
 	return

@@ -155,7 +155,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone5A_EventScript_Breeder",
-      "flag": "FLAG_RECEIVED_ZONE5A_EEVEE_EVO_ITEM"
+      "flag": "FLAG_RECEIVED_ZONE5A_GEM"
     }
   ],
   "warp_events": [

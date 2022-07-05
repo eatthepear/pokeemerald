@@ -122,7 +122,6 @@ script Zone9A_EventScript_Ari {
 		waitmovement(0)
 		removeobject(5)
 		clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-		setflag(FLAG_HIDE_ZONE9A_MAN)
 		setflag(FLAG_HIDE_ZONE9A_ARI_WINSTRATE)
 		setvar(VAR_ZONE_9_STATE, 1)
 		release

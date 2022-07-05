@@ -861,9 +861,9 @@ script EventScript_Shop_Lelouch {
 		release
 		end
 	}
-	if (flag(FLAG_LELOUCH_SHARDS) == false) {
+	if (flag(FLAG_LELOUCH_SHARDS_INTRO) == false) {
 		msgbox(gText_Lelouch_ExplainShards)
-		setflag(FLAG_LELOUCH_SHARDS)
+		setflag(FLAG_LELOUCH_SHARDS_INTRO)
 	}
 	msgbox(gText_Lelouch_Welcome, MSGBOX_DEFAULT)
 	multichoice(0, 0, MULTI_LELOUCH_OPTIONS, 0)

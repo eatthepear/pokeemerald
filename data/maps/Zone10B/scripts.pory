@@ -94,10 +94,10 @@ script Zone10B_EventScript_SideQuestLuckyEgg {
 	release
 }
 
-script Zone10B_EventScript_SideQuestSubstitute {
+script Zone10B_EventScript_SideQuestTeleport {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE10B_SUBSTITUTE) == false) {
+	if (flag(FLAG_RECEIVED_ZONE10B_TM21_TELEPORT) == false) {
 		msgbox("Greetings, young one. In my\npossession, I hold a useful TM for\lyour Pokémon, but only if you have\lproven yourself in battle.\pYou must have defeated all\nTrainers available thus far.")
 		specialvar(VAR_RESULT, GetCaughtSpeciesCount)
 		if (!defeated(TRAINER_MILLIE) ||
@@ -119,7 +119,7 @@ script Zone10B_EventScript_SideQuestSubstitute {
 			release
 			end
 		} else {
-			setflag(FLAG_RECEIVED_ZONE10B_SUBSTITUTE)
+			setflag(FLAG_RECEIVED_ZONE10B_TM21_TELEPORT)
 			msgbox("Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM21 - Teleport.$")
 			giveitem(ITEM_TM21)
 		}
