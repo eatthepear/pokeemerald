@@ -3711,6 +3711,7 @@ Zone_EventScript_RetirePrompt_11:
 	cleartrainerflag TRAINER_CONSTANCE
 	cleartrainerflag TRAINER_FRANK
 	cleartrainerflag TRAINER_DUDLEY
+	cleartrainerflag TRAINER_DAISY
 	clearflag FLAG_BEAT_LEVIATHAN_6
 	setvar VAR_ZONE_6_STATE, 0
 	warpteleport MAP_ZONE5SANCTUARY, 255, 22, 7
@@ -3718,16 +3719,46 @@ Zone_EventScript_RetirePrompt_11:
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_12:
+	cleartrainerflag TRAINER_MILLIE
+	cleartrainerflag TRAINER_JAMAL
+	cleartrainerflag TRAINER_PAIGE
+	cleartrainerflag TRAINER_SETH
+	cleartrainerflag TRAINER_CONNIE
+	cleartrainerflag TRAINER_CHAD
+	clearflag FLAG_BEAT_LEVIATHAN_7
+	cleartrainerflag TRAINER_JIMMY
+	cleartrainerflag TRAINER_EMILIANO
+	cleartrainerflag TRAINER_MARCUS
+	cleartrainerflag TRAINER_KAREN
+	cleartrainerflag TRAINER_JAYDEN
+	cleartrainerflag TRAINER_NEIL
+	cleartrainerflag TRAINER_TAMARA
+	clearflag FLAG_BEAT_LEVIATHAN_8
+	clearflag FLAG_HIDE_ZONE8D_WALLY
+	setvar VAR_ZONE_8_STATE, 0
 	warpteleport MAP_ZONE6SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_13:
+	clearflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
+	setvar VAR_ZONE_9_STATE, 0
 	warpteleport MAP_ZONE8SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_14:
+	cleartrainerflag TRAINER_KYLE
+	cleartrainerflag TRAINER_CRYSTAL
+	cleartrainerflag TRAINER_BELLE
+	cleartrainerflag TRAINER_DEWEY
+	cleartrainerflag TRAINER_PEARLIE
+	cleartrainerflag TRAINER_RAPHAEL
+	cleartrainerflag TRAINER_ERNEST
+	cleartrainerflag TRAINER_ALANA
+	cleartrainerflag TRAINER_SUSAN
+	cleartrainerflag TRAINER_CONRAD
+	clearflag FLAG_BEAT_LEVIATHAN_9
 	warpteleport MAP_ZONE9SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4

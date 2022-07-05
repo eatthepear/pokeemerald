@@ -76,8 +76,8 @@
 #define TRAINER_ALANA                        	72
 #define TRAINER_SUSAN                       	73
 #define TRAINER_CONRAD                       	74
-#define TRAINER_ADAMINA_LEVIATHAN_10           	75
-#define TRAINER_ADAMINA_LEVIATHAN_10_BRUTAL    	76
+#define TRAINER_ADAMINA_LEVIATHAN_9            	75
+#define TRAINER_ADAMINA_LEVIATHAN_9_BRUTAL     	76
 #define TRAINER_JEANETTE                     	77
 #define TRAINER_REGINA                       	78
 #define TRAINER_EMMA_AND_LEO                 	79

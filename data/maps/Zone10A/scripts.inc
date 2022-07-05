@@ -56,7 +56,7 @@ Zone10A_EventScript_Adamina_1:
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ADAMINA
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10A_EventScript_Adamina_12
-	trainerbattle_no_intro TRAINER_ADAMINA_LEVIATHAN_10, Zone10A_Text_Leviathan5Defeat
+	trainerbattle_no_intro TRAINER_ADAMINA_LEVIATHAN_9, Zone10A_Text_Leviathan9Defeat
 Zone10A_EventScript_Adamina_11:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone10A_Text_HeadInside
@@ -67,7 +67,7 @@ Zone10A_EventScript_Adamina_11:
 	applymovement 6, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	setflag FLAG_BEAT_LEVIATHAN_5
+	setflag FLAG_BEAT_LEVIATHAN_9
 	closedoor 47, 27
 	waitdooranim
 	release
@@ -83,7 +83,7 @@ Zone10A_EventScript_Adamina_5:
 	end
 
 Zone10A_EventScript_Adamina_12:
-	trainerbattle_no_intro TRAINER_ADAMINA_LEVIATHAN_10_BRUTAL, Zone10A_Text_Leviathan5Defeat
+	trainerbattle_no_intro TRAINER_ADAMINA_LEVIATHAN_9_BRUTAL, Zone10A_Text_Leviathan9Defeat
 	goto Zone10A_EventScript_Adamina_11
 
 
@@ -367,7 +367,7 @@ Zone10A_Text_CrushYou::
 	.string "to earn my respect!\l"
 	.string "I'm gonna crush you!$"
 
-Zone10A_Text_Leviathan5Defeat::
+Zone10A_Text_Leviathan9Defeat::
 	.string "Adamina: Fine. A win is a win.$"
 
 Zone10A_Text_HeadInside::

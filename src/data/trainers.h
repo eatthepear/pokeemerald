@@ -1063,7 +1063,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Conrad},
     },
 
-    [TRAINER_ADAMINA_LEVIATHAN_10] =
+    [TRAINER_ADAMINA_LEVIATHAN_9] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -1078,7 +1078,7 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
-    [TRAINER_ADAMINA_LEVIATHAN_10_BRUTAL] =
+    [TRAINER_ADAMINA_LEVIATHAN_9_BRUTAL] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
