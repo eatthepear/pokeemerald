@@ -1,0 +1,42 @@
+mapscripts Zone9C_MapScripts {}
+
+script Zone9C_EventScript_Man {
+	lock
+	faceplayer
+	message("Welcome to my Herb shop.\nAll natural ingredients only.")
+	waitmessage
+	pokemart(Zone9C_Shop_Herbal)
+	msgbox("Take it easy, now.", MSGBOX_DEFAULT)
+	release
+	end
+}
+
+mart Zone9C_Shop_Herbal {
+	ITEM_HEAL_POWDER
+	ITEM_ENERGY_POWDER
+	ITEM_ENERGY_ROOT
+	ITEM_REVIVAL_HERB
+}
+
+script Zone9C_EventScript_Woman {
+	lock
+	faceplayer
+	message("The fragrance, the aroma…\nWelcome to my Incense shop.")
+	waitmessage
+	pokemart(Zone9C_Shop_Incense)
+	msgbox("Rest easy, now.", MSGBOX_DEFAULT)
+	release
+	end
+}
+
+mart Zone9C_Shop_Incense {
+	ITEM_SEA_INCENSE
+	ITEM_LAX_INCENSE
+	ITEM_ODD_INCENSE
+	ITEM_ROCK_INCENSE
+	ITEM_FULL_INCENSE
+	ITEM_WAVE_INCENSE
+	ITEM_ROSE_INCENSE
+	ITEM_LUCK_INCENSE
+	ITEM_PURE_INCENSE
+}

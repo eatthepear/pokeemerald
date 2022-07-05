@@ -219,7 +219,7 @@ static const u8 sEnergyPowderDesc[] = _(
     "A bitter powder\n"
     "that restores HP\n"
 #if I_HEALTH_RECOVERY >= GEN_7
-    "by 60 points.");
+    "by 90 points.");
 #else
     "by 50 points.");
 #endif

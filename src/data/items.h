@@ -533,7 +533,7 @@ const struct Item gItems[] =
     {
         .name = _("Energy Powder"),
         .itemId = ITEM_ENERGY_POWDER,
-        .price = 500,
+        .price = 1200,
         .description = sEnergyPowderDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -547,7 +547,7 @@ const struct Item gItems[] =
     {
         .name = _("Energy Root"),
         .itemId = ITEM_ENERGY_ROOT,
-        .price = 1200,
+        .price = 2000,
         .description = sEnergyRootDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -561,7 +561,7 @@ const struct Item gItems[] =
     {
         .name = _("Heal Powder"),
         .itemId = ITEM_HEAL_POWDER,
-        .price = 300,
+        .price = 600,
         .description = sHealPowderDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -575,7 +575,7 @@ const struct Item gItems[] =
     {
         .name = _("Revival Herb"),
         .itemId = ITEM_REVIVAL_HERB,
-        .price = 2800,
+        .price = 10000,
         .description = sRevivalHerbDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
