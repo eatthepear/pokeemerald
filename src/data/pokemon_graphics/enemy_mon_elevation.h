@@ -177,6 +177,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_WEEZING_GALARIAN] = 6,
     [SPECIES_ARTICUNO_GALARIAN] = 10,
     [SPECIES_YAMASK_GALARIAN] = 4,
+    // Hisuian Forms
+    [SPECIES_BRAVIARY_HISUIAN] = 3,
     // Other Forms
     [SPECIES_UNOWN_B] = 8,
     [SPECIES_UNOWN_C] = 8,

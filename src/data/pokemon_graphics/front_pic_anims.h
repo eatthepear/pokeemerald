@@ -8527,6 +8527,48 @@ static const union AnimCmd sAnim_CALYREX_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_WYRDEER_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_KLEAVOR_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_URSALUNA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BASCULEGION_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SNEASLER_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_OVERQWIL_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_ENAMORUS_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_VENUSAUR_MEGA_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -9151,6 +9193,18 @@ static const union AnimCmd sAnim_SHAYMIN_SKY_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_DIALGA_ORIGIN_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PALKIA_ORIGIN_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_GIRATINA_ORIGIN_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -9182,6 +9236,12 @@ static const union AnimCmd sAnim_THUNDURUS_THERIAN_1[] =
 };
 
 static const union AnimCmd sAnim_LANDORUS_THERIAN_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_ENAMORUS_THERIAN_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
@@ -14137,6 +14197,41 @@ static const union AnimCmd *const sAnims_CALYREX[] ={
     sAnim_CALYREX_1,
 };
 
+static const union AnimCmd *const sAnims_WYRDEER[] ={
+    sAnim_GeneralFrame0,
+    sAnim_WYRDEER_1,
+};
+
+static const union AnimCmd *const sAnims_KLEAVOR[] ={
+    sAnim_GeneralFrame0,
+    sAnim_KLEAVOR_1,
+};
+
+static const union AnimCmd *const sAnims_URSALUNA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_URSALUNA_1,
+};
+
+static const union AnimCmd *const sAnims_BASCULEGION[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BASCULEGION_1,
+};
+
+static const union AnimCmd *const sAnims_SNEASLER[] ={
+    sAnim_GeneralFrame0,
+    sAnim_SNEASLER_1,
+};
+
+static const union AnimCmd *const sAnims_OVERQWIL[] ={
+    sAnim_GeneralFrame0,
+    sAnim_OVERQWIL_1,
+};
+
+static const union AnimCmd *const sAnims_ENAMORUS[] ={
+    sAnim_GeneralFrame0,
+    sAnim_ENAMORUS_1,
+};
+
 static const union AnimCmd *const sAnims_VENUSAUR_MEGA[] ={
     sAnim_GeneralFrame0,
     sAnim_VENUSAUR_MEGA_1,
@@ -14673,6 +14768,16 @@ static const union AnimCmd *const sAnims_SHAYMIN_SKY[] ={
     sAnim_SHAYMIN_SKY_1,
 };
 
+static const union AnimCmd *const sAnims_DIALGA_ORIGIN[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DIALGA_ORIGIN_1,
+};
+
+static const union AnimCmd *const sAnims_PALKIA_ORIGIN[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PALKIA_ORIGIN_1,
+};
+
 static const union AnimCmd *const sAnims_GIRATINA_ORIGIN[] ={
     sAnim_GeneralFrame0,
     sAnim_GIRATINA_ORIGIN_1,
@@ -14701,6 +14806,11 @@ static const union AnimCmd *const sAnims_THUNDURUS_THERIAN[] ={
 static const union AnimCmd *const sAnims_LANDORUS_THERIAN[] ={
     sAnim_GeneralFrame0,
     sAnim_LANDORUS_THERIAN_1,
+};
+
+static const union AnimCmd *const sAnims_ENAMORUS_THERIAN[] ={
+    sAnim_GeneralFrame0,
+    sAnim_ENAMORUS_THERIAN_1,
 };
 
 static const union AnimCmd *const sAnims_KELDEO_RESOLUTE[] ={
@@ -15765,6 +15875,13 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(GLASTRIER),
     ANIM_CMD(SPECTRIER),
     ANIM_CMD(CALYREX),
+    ANIM_CMD(WYRDEER),
+    ANIM_CMD(KLEAVOR),
+    ANIM_CMD(URSALUNA),
+    ANIM_CMD(BASCULEGION),
+    ANIM_CMD(SNEASLER),
+    ANIM_CMD(OVERQWIL),
+    ANIM_CMD(ENAMORUS),
     ANIM_CMD(VENUSAUR_MEGA),
     ANIM_CMD(CHARIZARD_MEGA_X),
     ANIM_CMD(CHARIZARD_MEGA_Y),
@@ -15928,6 +16045,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(ROTOM_FROST),
     ANIM_CMD(ROTOM_FAN),
     ANIM_CMD(ROTOM_MOW),
+    ANIM_CMD(DIALGA_ORIGIN),
+    ANIM_CMD(PALKIA_ORIGIN),
     ANIM_CMD(GIRATINA_ORIGIN),
     ANIM_CMD(SHAYMIN_SKY),
     ANIM_CMD_FULL(ARCEUS_FIGHTING, sAnims_ARCEUS),
@@ -15948,6 +16067,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD_FULL(ARCEUS_DARK, sAnims_ARCEUS),
     ANIM_CMD_FULL(ARCEUS_FAIRY, sAnims_ARCEUS),
     ANIM_CMD_FULL(BASCULIN_BLUE_STRIPED, sAnims_BASCULIN),
+    ANIM_CMD_FULL(BASCULIN_WHITE_STRIPED, sAnims_BASCULIN),
     ANIM_CMD(DARMANITAN_ZEN_MODE),
     ANIM_CMD(DARMANITAN_ZEN_MODE_GALARIAN),
     ANIM_CMD_FULL(DEERLING_SUMMER, sAnims_DEERLING),
@@ -15959,6 +16079,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(TORNADUS_THERIAN),
     ANIM_CMD(THUNDURUS_THERIAN),
     ANIM_CMD(LANDORUS_THERIAN),
+    ANIM_CMD(ENAMORUS_THERIAN),
     ANIM_CMD(KYUREM_WHITE),
     ANIM_CMD(KYUREM_BLACK),
     ANIM_CMD(MELOETTA_PIROUETTE),

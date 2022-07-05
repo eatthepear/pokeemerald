@@ -22035,6 +22035,41 @@ static const u8 sCalyrexTMHMLearnset[] =
     0xFF,
 };
 
+static const u8 sWyrdeerTMHMLearnset[] =
+{
+    0xFF,
+};
+
+static const u8 sKleavorTMHMLearnset[] =
+{
+    0xFF,
+};
+
+static const u8 sUrsalunaTMHMLearnset[] =
+{
+    0xFF,
+};
+
+static const u8 sBasculegionTMHMLearnset[] =
+{
+    0xFF,
+};
+
+static const u8 sSneaslerTMHMLearnset[] =
+{
+    0xFF,
+};
+
+static const u8 sOverqwilTMHMLearnset[] =
+{
+    0xFF,
+};
+
+static const u8 sEnamorusTMHMLearnset[] =
+{
+    0xFF,
+};
+
 static const u8 sRattataAlolanTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
@@ -24674,6 +24709,13 @@ const u8 *const gTMHMLearnsets[] =
     [SPECIES_GLASTRIER] = sGlastrierTMHMLearnset,
     [SPECIES_SPECTRIER] = sSpectrierTMHMLearnset,
     [SPECIES_CALYREX] = sCalyrexTMHMLearnset,
+    [SPECIES_WYRDEER]  = sWyrdeerTMHMLearnset,
+    [SPECIES_KLEAVOR]  = sKleavorTMHMLearnset,
+    [SPECIES_URSALUNA]  = sUrsalunaTMHMLearnset,
+    [SPECIES_BASCULEGION]  = sBasculegionTMHMLearnset,
+    [SPECIES_SNEASLER]  = sSneaslerTMHMLearnset,
+    [SPECIES_OVERQWIL]  = sOverqwilTMHMLearnset,
+    [SPECIES_ENAMORUS]  = sEnamorusTMHMLearnset,
     // Megas
     [SPECIES_VENUSAUR_MEGA] = sVenusaurTMHMLearnset,
     [SPECIES_CHARIZARD_MEGA_X] = sCharizardTMHMLearnset,

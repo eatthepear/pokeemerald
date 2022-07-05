@@ -5915,6 +5915,20 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_CALYREX]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
+    [SPECIES_WYRDEER]          = TUTOR_LEARNSET(0),
+
+    [SPECIES_KLEAVOR]          = TUTOR_LEARNSET(0),
+
+    [SPECIES_URSALUNA]          = TUTOR_LEARNSET(0),
+
+    [SPECIES_BASCULEGION]          = TUTOR_LEARNSET(0),
+
+    [SPECIES_SNEASLER]          = TUTOR_LEARNSET(0),
+
+    [SPECIES_OVERQWIL]          = TUTOR_LEARNSET(0),
+
+    [SPECIES_ENAMORUS]          = TUTOR_LEARNSET(0),
+
     [SPECIES_RATTATA_ALOLAN] = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TAUNT)
