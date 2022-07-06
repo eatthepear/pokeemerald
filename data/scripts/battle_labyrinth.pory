@@ -1717,38 +1717,9 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
-					msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_BrutalOff, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_BRUTAL_MODE_ON)
-							clearflag(FLAG_SMART_WILD_AI_ON)
-							special(ReverseHiddenItemFlags)
-						}
-					}
+					call(EventScript_Settings_BrutalMode)
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
-					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
-					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
-					msgbox(gText_Colress_NumDeathsNuzlocke)
-					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_NUZLOCKE_ON)
-							clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
-							callnative(GlobalNuzlockeClear)
-						}
-					}
+					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1766,23 +1737,7 @@ script EventScript_Settings {
 				case 0:
 					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
-					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
-					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
-					msgbox(gText_Colress_NumDeathsNuzlocke)
-					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_NUZLOCKE_ON)
-							clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
-							callnative(GlobalNuzlockeClear)
-						}
-					}
+					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1798,20 +1753,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
-					msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_BrutalOff, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_BRUTAL_MODE_ON)
-							clearflag(FLAG_SMART_WILD_AI_ON)
-							special(ReverseHiddenItemFlags)
-						}
-					}
+					call(EventScript_Settings_BrutalMode)
 				case 1:
 					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
 				case 2:
@@ -1847,37 +1789,9 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
-					msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_BrutalOff, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_BRUTAL_MODE_ON)
-							clearflag(FLAG_SMART_WILD_AI_ON)
-							special(ReverseHiddenItemFlags)
-						}
-					}
+					call(EventScript_Settings_BrutalMode)
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
-					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
-					msgbox(gText_Colress_NumDeathsNuzlocke)
-					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_NuzlockeOff, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_NUZLOCKE_ON)
-							clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
-							callnative(GlobalNuzlockeClear)
-						}
-					}
+					call(EventScript_Settings_Nuzlocke)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1895,22 +1809,7 @@ script EventScript_Settings {
 				case 0:
 					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
-					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
-					msgbox(gText_Colress_NumDeathsNuzlocke)
-					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_NuzlockeOff, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_NUZLOCKE_ON)
-							clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
-							callnative(GlobalNuzlockeClear)
-						}
-					}
+					call(EventScript_Settings_Nuzlocke)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1926,20 +1825,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
-					msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(gText_Colress_BrutalOff, MSGBOX_DEFAULT)
-							waitse
-							closemessage
-							clearflag(FLAG_BRUTAL_MODE_ON)
-							clearflag(FLAG_SMART_WILD_AI_ON)
-							special(ReverseHiddenItemFlags)
-						}
-					}
+					call(EventScript_Settings_BrutalMode)
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation)
 				case 2:
@@ -1973,6 +1859,62 @@ script EventScript_Settings {
 		}
 	}
 	goto(EventScript_WhenUReady)
+}
+
+script EventScript_Settings_BrutalMode {
+	msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
+	msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			playse(SE_PC_OFF)
+			msgbox(gText_Colress_BrutalOff, MSGBOX_DEFAULT)
+			waitse
+			closemessage
+			clearflag(FLAG_BRUTAL_MODE_ON)
+			clearflag(FLAG_SMART_WILD_AI_ON)
+			special(ReverseHiddenItemFlags)
+		}
+	}
+}
+
+script EventScript_Settings_NuzlockeRandomizer {
+	msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
+	msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+	buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
+	msgbox(gText_Colress_NumDeathsNuzlocke)
+	msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			playse(SE_PC_OFF)
+			msgbox(gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT)
+			waitse
+			closemessage
+			clearflag(FLAG_NUZLOCKE_ON)
+			clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
+			callnative(GlobalNuzlockeClear)
+		}
+	}
+}
+
+script EventScript_Settings_Nuzlocke {
+	msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+	buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
+	msgbox(gText_Colress_NumDeathsNuzlocke)
+	msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			playse(SE_PC_OFF)
+			msgbox(gText_Colress_NuzlockeOff, MSGBOX_DEFAULT)
+			waitse
+			closemessage
+			clearflag(FLAG_NUZLOCKE_ON)
+			clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
+			callnative(GlobalNuzlockeClear)
+		}
+	}
 }
 
 text gText_Colress_NumDeathsNuzlocke {

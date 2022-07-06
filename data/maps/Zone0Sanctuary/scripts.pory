@@ -17,7 +17,7 @@ script Zone0Sanctuary_EventScript_Intro {
 	waitmovement(0)
 	waitse
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. Welcome, trainer."))
+	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. There you are."))
 	applymovement(1, Common_Movement_Colress_WalkDown)
 	call(EventScript_MoveCameraDown)
 	waitmovement(0)
@@ -243,8 +243,7 @@ script Zone0Sanctuary_EventScript_Intro {
 }
 
 text Zone0Sanctuary_Text_Colress_Welcome {
-	format("Welcome to the\n"
-	"{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\p"
+	format("Welcome, dear challenger, to the {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\p"
 	"I am your guide for braving the trials ahead.\p"
 	"Would you like to listen to the tutorial?")
 }
@@ -286,7 +285,7 @@ text Zone0Sanctuary_Text_Colress_BrutalExplained {
 	"Some moves use more PP than normal and opponents do not use PP.\p"
 	"Some items are more expensive than normal.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
-	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
+	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }
 
 text Zone0Sanctuary_Text_Colress_GameModes {
@@ -318,7 +317,7 @@ text Zone0Sanctuary_Text_Colress_Item {
 }
 
 text Zone0Sanctuary_Text_Colress_Healing {
-	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is\n{COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
+	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
 	"At the low cost of ¥1000, they will heal your entire party.\p"
 	"Note that the Pokémon Storage System does not heal your Pokémon.")
 }

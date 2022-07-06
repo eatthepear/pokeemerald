@@ -2560,20 +2560,11 @@ EventScript_Settings_45:
 	goto EventScript_Settings_39
 
 EventScript_Settings_49:
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_104
+	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
 EventScript_Settings_50:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
-	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_106
+	call EventScript_Settings_NuzlockeRandomizer
 	goto EventScript_Settings_2
 
 EventScript_Settings_51:
@@ -2597,13 +2588,7 @@ EventScript_Settings_56:
 	goto EventScript_Settings_2
 
 EventScript_Settings_57:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
-	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_108
+	call EventScript_Settings_NuzlockeRandomizer
 	goto EventScript_Settings_2
 
 EventScript_Settings_58:
@@ -2623,10 +2608,7 @@ EventScript_Settings_61:
 	goto EventScript_Settings_2
 
 EventScript_Settings_63:
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_110
+	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
 EventScript_Settings_64:
@@ -2674,19 +2656,11 @@ EventScript_Settings_75:
 	goto EventScript_Settings_2
 
 EventScript_Settings_77:
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_112
+	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
 EventScript_Settings_78:
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
-	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_114
+	call EventScript_Settings_Nuzlocke
 	goto EventScript_Settings_2
 
 EventScript_Settings_79:
@@ -2710,12 +2684,7 @@ EventScript_Settings_84:
 	goto EventScript_Settings_2
 
 EventScript_Settings_85:
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
-	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_116
+	call EventScript_Settings_Nuzlocke
 	goto EventScript_Settings_2
 
 EventScript_Settings_86:
@@ -2735,10 +2704,7 @@ EventScript_Settings_89:
 	goto EventScript_Settings_2
 
 EventScript_Settings_91:
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_118
+	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
 EventScript_Settings_92:
@@ -2785,55 +2751,21 @@ EventScript_Settings_103:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
-EventScript_Settings_104:
+
+EventScript_Settings_BrutalMode::
+	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
+	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_BrutalMode_1
+	return
+
+EventScript_Settings_BrutalMode_1:
 	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_120
-	goto EventScript_Settings_2
+	goto_if_eq EventScript_Settings_BrutalMode_3
+	return
 
-EventScript_Settings_106:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_122
-	goto EventScript_Settings_2
-
-EventScript_Settings_108:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_124
-	goto EventScript_Settings_2
-
-EventScript_Settings_110:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_126
-	goto EventScript_Settings_2
-
-EventScript_Settings_112:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_128
-	goto EventScript_Settings_2
-
-EventScript_Settings_114:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_130
-	goto EventScript_Settings_2
-
-EventScript_Settings_116:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_132
-	goto EventScript_Settings_2
-
-EventScript_Settings_118:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_134
-	goto EventScript_Settings_2
-
-EventScript_Settings_120:
+EventScript_Settings_BrutalMode_3:
 	playse SE_PC_OFF
 	msgbox gText_Colress_BrutalOff, MSGBOX_DEFAULT
 	waitse
@@ -2841,9 +2773,26 @@ EventScript_Settings_120:
 	clearflag FLAG_BRUTAL_MODE_ON
 	clearflag FLAG_SMART_WILD_AI_ON
 	special ReverseHiddenItemFlags
-	goto EventScript_Settings_2
+	return
 
-EventScript_Settings_122:
+
+EventScript_Settings_NuzlockeRandomizer::
+	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke
+	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_NuzlockeRandomizer_1
+	return
+
+EventScript_Settings_NuzlockeRandomizer_1:
+	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_NuzlockeRandomizer_3
+	return
+
+EventScript_Settings_NuzlockeRandomizer_3:
 	playse SE_PC_OFF
 	msgbox gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT
 	waitse
@@ -2851,39 +2800,25 @@ EventScript_Settings_122:
 	clearflag FLAG_NUZLOCKE_ON
 	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
-	goto EventScript_Settings_2
+	return
 
-EventScript_Settings_124:
-	playse SE_PC_OFF
-	msgbox gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_NUZLOCKE_ON
-	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
-	callnative GlobalNuzlockeClear
-	goto EventScript_Settings_2
 
-EventScript_Settings_126:
-	playse SE_PC_OFF
-	msgbox gText_Colress_BrutalOff, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_BRUTAL_MODE_ON
-	clearflag FLAG_SMART_WILD_AI_ON
-	special ReverseHiddenItemFlags
-	goto EventScript_Settings_2
+EventScript_Settings_Nuzlocke::
+	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke
+	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_Nuzlocke_1
+	return
 
-EventScript_Settings_128:
-	playse SE_PC_OFF
-	msgbox gText_Colress_BrutalOff, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_BRUTAL_MODE_ON
-	clearflag FLAG_SMART_WILD_AI_ON
-	special ReverseHiddenItemFlags
-	goto EventScript_Settings_2
+EventScript_Settings_Nuzlocke_1:
+	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_Nuzlocke_3
+	return
 
-EventScript_Settings_130:
+EventScript_Settings_Nuzlocke_3:
 	playse SE_PC_OFF
 	msgbox gText_Colress_NuzlockeOff, MSGBOX_DEFAULT
 	waitse
@@ -2891,27 +2826,7 @@ EventScript_Settings_130:
 	clearflag FLAG_NUZLOCKE_ON
 	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
-	goto EventScript_Settings_2
-
-EventScript_Settings_132:
-	playse SE_PC_OFF
-	msgbox gText_Colress_NuzlockeOff, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_NUZLOCKE_ON
-	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
-	callnative GlobalNuzlockeClear
-	goto EventScript_Settings_2
-
-EventScript_Settings_134:
-	playse SE_PC_OFF
-	msgbox gText_Colress_BrutalOff, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_BRUTAL_MODE_ON
-	clearflag FLAG_SMART_WILD_AI_ON
-	special ReverseHiddenItemFlags
-	goto EventScript_Settings_2
+	return
 
 
 EventScript_MusicMenu::

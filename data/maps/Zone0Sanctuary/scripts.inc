@@ -1031,7 +1031,7 @@ Zone0Sanctuary_Movement_Player_BackMid:
 	step_end
 
 Zone0Sanctuary_EventScript_Intro_Text_0:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. Welcome, trainer.$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. There you are.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_1:
 	.string "Would you like to listen to the\n"
@@ -1126,7 +1126,7 @@ Zone0Sanctuary_EventScript_EndIntro_Text_2:
 	.string "Received the {COLOR RED}Pokédex{COLOR DARK_GRAY}!$"
 
 Zone0Sanctuary_Text_Colress_Welcome::
-	.string "Welcome to the\n"
+	.string "Welcome, dear challenger, to the\n"
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\p"
 	.string "I am your guide for braving the trials\n"
 	.string "ahead.\p"
@@ -1193,8 +1193,8 @@ Zone0Sanctuary_Text_Colress_BrutalExplained::
 	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
-	.string "unless you are familiar with\n"
-	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.$"
+	.string "unless you are familiar with {COLOR RED}Pokémon\l"
+	.string "Battle Labyrinth{COLOR DARK_GRAY} already.$"
 
 Zone0Sanctuary_Text_Colress_GameModes::
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
@@ -1238,8 +1238,8 @@ Zone0Sanctuary_Text_Colress_Item::
 	.string "and so on.$"
 
 Zone0Sanctuary_Text_Colress_Healing::
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is\n"
-	.string "{COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's\n"
+	.string "Healing Shop{COLOR DARK_GRAY}.\p"
 	.string "At the low cost of ¥1000, they will heal\n"
 	.string "your entire party.\p"
 	.string "Note that the Pokémon Storage System\n"
