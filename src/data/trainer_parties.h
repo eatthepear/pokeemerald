@@ -1152,12 +1152,12 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_CAREFUL,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Receiver
     .species = SPECIES_PASSIMIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_LOW_SWEEP, MOVE_ROCK_TOMB, MOVE_POWER_UP_PUNCH, MOVE_FACADE}
+    .moves = {MOVE_DRAIN_PUNCH, MOVE_ROCK_SLIDE, MOVE_KNOCK_OFF, MOVE_FACADE}
     },
     {
     .iv = 31,
@@ -1167,17 +1167,17 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_QWILFISH,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AQUA_JET, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_SLEEP_TALK}
+    .moves = {MOVE_LIQUIDATION, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_AQUA_JET}
     },
     {
-    .ivs = {31, 31, 30, 31, 30, 30},
+    .iv = 31,
     .lvl = 20,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SABLENITE,
-    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_HIDDEN_POWER} // HP Poison
+    .moves = {MOVE_SHADOW_BALL, MOVE_DAZZLING_GLEAM, MOVE_CALM_MIND, MOVE_RECOVER}
     }
 };
 
@@ -1185,12 +1185,12 @@ static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan, fough
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_CAREFUL,
+    .nature = NATURE_ADAMANT,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Receiver
     .species = SPECIES_PASSIMIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_LOW_SWEEP, MOVE_ROCK_TOMB, MOVE_POWER_UP_PUNCH, MOVE_FACADE}
+    .moves = {MOVE_DRAIN_PUNCH, MOVE_ROCK_SLIDE, MOVE_KNOCK_OFF, MOVE_FACADE}
     },
     {
     .iv = 31,
@@ -1200,27 +1200,27 @@ static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan, fough
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_QWILFISH,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AQUA_JET, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_SLEEP_TALK}
+    .moves = {MOVE_LIQUIDATION, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_AQUA_JET}
+    },
+    {
+    .ivs = {31, 31, 31, 31, 30, 30},
+    .lvl = 20,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_1, //Ripen
+    .species = SPECIES_APPLETUN,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_APPLE_ACID, MOVE_DRAGON_PULSE, MOVE_REFLECT, MOVE_HIDDEN_POWER} // Hidden Power Ground
     },
     {
     .iv = 31,
     .lvl = 20,
-    .nature = NATURE_IMPISH,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Rough Skin
-    .species = SPECIES_DRUDDIGON,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BREAKING_SWIPE, MOVE_METAL_CLAW, MOVE_THUNDER_FANG, MOVE_FIRE_FANG}
-    },
-    {
-    .ivs = {31, 31, 30, 31, 30, 30},
-    .lvl = 20,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SABLENITE,
-    .moves = {MOVE_FEINT_ATTACK, MOVE_SHADOW_SNEAK, MOVE_POWER_UP_PUNCH, MOVE_HIDDEN_POWER} // HP Poison
+    .moves = {MOVE_SHADOW_BALL, MOVE_DAZZLING_GLEAM, MOVE_CALM_MIND, MOVE_RECOVER}
     }
 };
 
@@ -1233,7 +1233,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Trace
     .species = SPECIES_KIRLIA,
     .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_CONFUSION, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_GROWL}
+    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_GROWL}
     },
     {
     .iv = 20,

@@ -1982,6 +1982,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 gender = MON_MALE;
             else if (partyData[l].gender == TRAINER_MON_FEMALE)
                 gender = MON_FEMALE;
+            else if (partyData[l].gender == TRAINER_MON_GENDERLESS)
+                gender = MON_GENDERLESS;
 
             if (partyData[l].nature > 0)
                 CreateMonWithGenderNatureLetter(&party[i], partyData[l].species, partyData[l].lvl, fixedIV, gender, partyData[l].nature, 0, partyData[l].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);

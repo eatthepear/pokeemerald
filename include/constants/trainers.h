@@ -394,6 +394,7 @@
 // Use for trainer parties.
 #define TRAINER_MON_FEMALE     1
 #define TRAINER_MON_MALE       2
+#define TRAINER_MON_GENDERLESS 3
 
 #define TRAINER_MON_FRIENDLY     1
 #define TRAINER_MON_UNFRIENDLY   2
