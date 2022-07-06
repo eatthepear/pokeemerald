@@ -354,7 +354,7 @@ static void BuildZoneStartMenu(void)
     
     AddStartMenuAction(MENU_ACTION_BAG);
 
-    if (FlagGet(FLAG_IS_REVISITING_ZONE) == FALSE)
+    if ((FlagGet(FLAG_IS_REVISITING_ZONE) == FALSE) && (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE))
     {
         AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
     }
