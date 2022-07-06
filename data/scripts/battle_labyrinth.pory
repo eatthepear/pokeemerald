@@ -1734,6 +1734,8 @@ script EventScript_Settings {
 				case 1:
 					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
 					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
+					msgbox(gText_Colress_NumDeathsNuzlocke)
 					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
@@ -1766,6 +1768,8 @@ script EventScript_Settings {
 				case 1:
 					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
 					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
+					msgbox(gText_Colress_NumDeathsNuzlocke)
 					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
@@ -1859,6 +1863,8 @@ script EventScript_Settings {
 					}
 				case 1:
 					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
+					msgbox(gText_Colress_NumDeathsNuzlocke)
 					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
@@ -1890,6 +1896,8 @@ script EventScript_Settings {
 					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
 				case 1:
 					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+					buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
+					msgbox(gText_Colress_NumDeathsNuzlocke)
 					msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
@@ -1933,7 +1941,7 @@ script EventScript_Settings {
 						}
 					}
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+					msgbox(gText_Colress_VanillaExplanation)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1965,6 +1973,10 @@ script EventScript_Settings {
 		}
 	}
 	goto(EventScript_WhenUReady)
+}
+
+text gText_Colress_NumDeathsNuzlocke {
+	"So far there have been {STR_VAR_1} death(s)."
 }
 
 script EventScript_MusicMenu {

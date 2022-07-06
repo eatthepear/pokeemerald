@@ -2569,6 +2569,8 @@ EventScript_Settings_49:
 EventScript_Settings_50:
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_106
@@ -2597,6 +2599,8 @@ EventScript_Settings_56:
 EventScript_Settings_57:
 	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_108
@@ -2678,6 +2682,8 @@ EventScript_Settings_77:
 
 EventScript_Settings_78:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_114
@@ -2705,6 +2711,8 @@ EventScript_Settings_84:
 
 EventScript_Settings_85:
 	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_116
@@ -2734,7 +2742,7 @@ EventScript_Settings_91:
 	goto EventScript_Settings_2
 
 EventScript_Settings_92:
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	msgbox gText_Colress_VanillaExplanation
 	goto EventScript_Settings_2
 
 EventScript_Settings_93:
@@ -3937,6 +3945,9 @@ Zone_EventScript_RetirePrompt_Text_0:
 
 Zone_EventScript_RetirePrompt_Text_1:
 	.string "Warping now…$"
+
+gText_Colress_NumDeathsNuzlocke::
+	.string "So far there have been {STR_VAR_1} death(s).$"
 
 gText_ItemChestIsEmpty::
 	.string "The item chest is empty.$"
