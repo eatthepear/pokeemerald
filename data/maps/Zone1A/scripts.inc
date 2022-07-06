@@ -49,7 +49,7 @@ Zone1A_EventScript_LeviathanBattle::
 Zone1A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_0
-	finditem ITEM_ORAN_BERRY, 10
+	giveitem ITEM_ORAN_BERRY, 10
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_1
 	closemessage
 	fadescreen FADE_TO_BLACK

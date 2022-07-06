@@ -5038,9 +5038,11 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 60,
         .baseAttack    = 30,
-        .baseDefense   = 30,
+        .baseDefense   = 40,
+        // .baseDefense   = 30,
         .baseSpeed     = 50,
-        .baseSpAttack  = 36,
+        .baseSpAttack  = 46,
+        // .baseSpAttack  = 36,
         .baseSpDefense = 56,
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_FLYING,

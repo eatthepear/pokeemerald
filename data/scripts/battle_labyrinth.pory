@@ -38,14 +38,15 @@ script EventScript_Shop_General {
 	lock
 	faceplayer
 	if (flag(FLAG_TIM_INTRO) == false) {
-		msgbox(gText_Tim_Intro)
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\nThe name's Tim Johnson.\p{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\nPokémart Incorporated.\lYou can find all sorts of general\lsupplies for your travels.\pHere's a free sample, as a first time\ncustomer!")
+		giveitem(ITEM_REPEL)
 		setflag(FLAG_TIM_INTRO)
 	}
 	if ((var(VAR_ZONE) > 20) && (flag(FLAG_TIM_SUPER_POTION_INTRO) == false)) {
-		msgbox(gText_Tim_ExplainSuperPotionDiscount)
+		msgbox(format("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Hey! I just wanted to let you know about a new offer we have!\pI'm sure you've heard that if you buy 10 Poké Balls, you'll get a Premier Ball for free?\pWell, I've got a very similar offer for you.\pIf you buy 10 Potions, you'll get a free Super Potion!\pHow's that for a deal?\pAnyways…"))
 		setflag(FLAG_TIM_SUPER_POTION_INTRO)
 	}
-	message(gText_Tim_Welcome)
+	message("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Welcome to Tim's.\nCan I get you anything?")
 	waitmessage
 	switch (var(VAR_ZONE)) {
 		case 1:
@@ -94,7 +95,7 @@ script EventScript_Shop_General {
 				pokemart(Shop_General_26to30)
 			}
 	}
-	msgbox(gText_Tim_Leave, MSGBOX_DEFAULT)
+	msgbox("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Have a nice day.", MSGBOX_DEFAULT)
 	release
 }
 
@@ -1735,7 +1736,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained)
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
@@ -1755,7 +1756,7 @@ script EventScript_Settings {
 				case 0:
 					call(EventScript_Settings_BrutalMode)
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
+					msgbox(gText_Colress_RandomizerExplanation)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1771,9 +1772,9 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained)
 				case 1:
-					msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
+					msgbox(gText_Colress_RandomizerExplanation)
 				case 2:
 					call(EventScript_MusicMenu)
 				case 3:
@@ -1807,7 +1808,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained)
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
@@ -1843,7 +1844,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained)
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation)
 				case 2:
@@ -1861,8 +1862,50 @@ script EventScript_Settings {
 	goto(EventScript_WhenUReady)
 }
 
+
+text gText_Colress_DefaultExplained {
+	format("{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two difficulty options.\p"
+	"It is recommended for any first playthroughs.")
+}
+
+text gText_Colress_BrutalExplained {
+	format("{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the two difficulty options.\p"
+	"All Leviathans are far more challenging.\p"
+	"In addition, there are a number of rules implemented to make this mode even more difficult.\p"
+	"Defeating all trainers is required to progress to the Sanctuary.\p"
+	"Items cannot be used in battle.\p"
+	"Set mode cannot be turned off.\p"
+	"Pokémon cannot gain EVs.\p"
+	"Trainer battles give less money.\p"
+	"Items cannot be farmed from wild Pokémon or any other means.\p"
+	"The Daycare cannot be used.\p"
+	"Many helpful NPCs are unavailable.\p"
+	"Some moves use more PP than normal and opponents do not use PP.\p"
+	"Some items are more expensive than normal.\p"
+	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
+	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
+}
+
+text gText_Colress_GameModes {
+	format("{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers optional game modes.\p"
+	"If you do not choose any of them, you will play on the {COLOR RED}Vanilla{COLOR DARK_GRAY} game mode, which adds no extra modifications.")
+}
+
+text gText_Colress_RandomizerExplanation {
+	format("The {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode randomizes wild encounters and gift Pokémon, including your starter.\p"
+	"Trainer Pokémon are left unchanged.\p"
+	"Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot be turned off.")
+}
+
+text gText_Colress_NuzlockeExplained {
+	format("The {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode completely implements all standard Nuzlocke rules, such as permanent death and capture restrictions.\p"
+	"It comes with Species Clause and Shiny Clause.\p"
+	"You can turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode at any point by speaking to me.\p"
+	"It is not recommended to play {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are familiar with Nuzlockes already.")
+}
+
 script EventScript_Settings_BrutalMode {
-	msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
+	msgbox(gText_Colress_BrutalExplained)
 	msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
@@ -1879,8 +1922,8 @@ script EventScript_Settings_BrutalMode {
 }
 
 script EventScript_Settings_NuzlockeRandomizer {
-	msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
-	msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+	msgbox(gText_Colress_RandomizerExplanation)
+	msgbox(gText_Colress_NuzlockeExplained)
 	buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
 	msgbox(gText_Colress_NumDeathsNuzlocke)
 	msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
@@ -1899,7 +1942,7 @@ script EventScript_Settings_NuzlockeRandomizer {
 }
 
 script EventScript_Settings_Nuzlocke {
-	msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+	msgbox(gText_Colress_NuzlockeExplained)
 	buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
 	msgbox(gText_Colress_NumDeathsNuzlocke)
 	msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)

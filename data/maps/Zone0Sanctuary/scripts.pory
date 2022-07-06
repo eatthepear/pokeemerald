@@ -17,28 +17,33 @@ script Zone0Sanctuary_EventScript_Intro {
 	waitmovement(0)
 	waitse
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. There you are."))
+	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. You've arrived."))
 	applymovement(1, Common_Movement_Colress_WalkDown)
 	call(EventScript_MoveCameraDown)
 	waitmovement(0)
-	msgbox(Zone0Sanctuary_Text_Colress_Welcome, MSGBOX_YESNO)
+	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the challenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_0, 1)
 		delay(96)
-		msgbox(Zone0Sanctuary_Text_Colress_Rules)
+		msgbox(format("The Battle Labyrinth is comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
+		"In these Zones, you might encounter wild Pokémon, great treasures, tough trainers, and more.\p"
+		"At the end of each Zone and before the next Zone begins, you will find a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to purchase supplies, heal your Pokémon, and other benefits.\p"
+		"Once you enter a new Zone, you will not be able to access a Sanctuary until you exit that Zone."))
 		delay(48)
-		msgbox(Zone0Sanctuary_Text_Colress_ExplainLeviathans)
+		msgbox(format("Zones are designed to test your capabilities at braving different environments.\p"
+		"Each Zone typically contains a {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
+		"Some Leviathans are optional, but many are required to progress."))
 		delay(48)
-		msgbox(Zone0Sanctuary_Text_Colress_DontLose)
+		msgbox(format("In order to win, you must progress through all Zones without losing a battle."))
 		delay(96)
 	}
 	msgbox(format("Would you like to listen to the difficulty options explanation?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_1, 1)
 		msgbox(format("There are two game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}."))
-		msgbox(Zone0Sanctuary_Text_Colress_DefaultExplained)
+		msgbox(gText_Colress_DefaultExplained)
 		delay(16)
-		msgbox(Zone0Sanctuary_Text_Colress_BrutalExplained)
+		msgbox(gText_Colress_BrutalExplained)
 		delay(96)
 	}
 	msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
@@ -59,8 +64,8 @@ script Zone0Sanctuary_EventScript_Intro {
 			special(ReverseHiddenItemFlags)
 	}
 	if (var(VAR_TEMP_1) == 1) {
-		msgbox(Zone0Sanctuary_Text_Colress_GameModes)
-		msgbox(Zone0Sanctuary_Text_Colress_RandomizerExplanation)
+		msgbox(gText_Colress_GameModes)
+		msgbox(gText_Colress_RandomizerExplanation)
 	}
 	msgbox(format("Would you like to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
@@ -76,7 +81,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		closemessage
 	}
 	if (var(VAR_TEMP_1) == 1) {
-		msgbox(Zone0Sanctuary_Text_Colress_NuzlockeExplained)
+		msgbox(gText_Colress_NuzlockeExplained)
 	}
 	msgbox(format("Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
@@ -111,7 +116,8 @@ script Zone0Sanctuary_EventScript_Intro {
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
 		waitmovement(0)
-		msgbox(Zone0Sanctuary_Text_Colress_General)
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is {COLOR RED}Tim's General Purpose Shop{COLOR DARK_GRAY}.\p"
+		"Healing supplies, basic Pokéballs, and other common items are sold here."))
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
@@ -129,7 +135,8 @@ script Zone0Sanctuary_EventScript_Intro {
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
 		waitmovement(0)
-		msgbox(Zone0Sanctuary_Text_Colress_Item)
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph Unique Item Shop{COLOR DARK_GRAY}.\p"
+		"They sell a wide variety of held items and single use items such as Pokéball variations, evolution items, Berries, and so on."))
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
@@ -147,7 +154,9 @@ script Zone0Sanctuary_EventScript_Intro {
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
 		waitmovement(0)
-		msgbox(Zone0Sanctuary_Text_Colress_Healing)
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
+		"At the low cost of ¥1000, they will heal your entire party.\p"
+		"Note that the Pokémon Storage System does not heal your Pokémon."))
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
@@ -165,7 +174,8 @@ script Zone0Sanctuary_EventScript_Intro {
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
 		waitmovement(0)
-		msgbox(Zone0Sanctuary_Text_Colress_Services)
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is {COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
+		"They offer a range of Pokémon services, but only to customers who can pay the right price."))
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
@@ -206,7 +216,10 @@ script Zone0Sanctuary_EventScript_Intro {
 		applymovement(1, Zone0Sanctuary_Movement_Colress_BackMid)
 		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_BackMid)
 		waitmovement(0)
-		msgbox(Zone0Sanctuary_Text_Colress_TourDone)
+		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
+		"These four shops will be available at every Sanctuary.\p"
+		"As you progress through more Zones, more items and services will unlock.\p"
+		"Also, it is highly recommended you stock up on any supplies before entering the next Zone."))
 		delay(96)
 	}
 	if (flag(FLAG_RANDOMIZER_ON) == true) {
@@ -225,7 +238,9 @@ script Zone0Sanctuary_EventScript_Intro {
 		goto(Zone0Sanctuary_EventScript_EndIntro)
 	}
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-		msgbox(Zone0Sanctuary_Text_Colress_StartersBrutal, MSGBOX_AUTOCLOSE)
+		msgbox(format("As a new challenger, you will receive a starter Pokémon.\p"
+		"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
+		"Choose carefully as these Pokémon are very rare."))
 		setflag(FLAG_BOOSTED_IVS)
 		special(ChooseStarter)
 		waitstate
@@ -237,101 +252,11 @@ script Zone0Sanctuary_EventScript_Intro {
 		}
 		goto(Zone0Sanctuary_EventScript_EndIntro)
 	} else {
-		msgbox(Zone0Sanctuary_Text_Colress_Starters, MSGBOX_AUTOCLOSE)
+		msgbox(format("As a new challenger, you will receive a starter Pokémon.\p"
+		"You may have your choice of any of the generation 1-8 starter Pokémon.\p"
+		"Choose carefully as these Pokémon are very rare."))
 		goto(Zone0Sanctuary_EventScript_HandleStarterSelectionDefault)
 	}
-}
-
-text Zone0Sanctuary_Text_Colress_Welcome {
-	format("Welcome, dear challenger, to the {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\p"
-	"I am your guide for braving the trials ahead.\p"
-	"Would you like to listen to the tutorial?")
-}
-
-text Zone0Sanctuary_Text_Colress_Rules {
-	format("The Battle Labyrinth is comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
-	"In these Zones, you might encounter wild Pokémon, great treasures, tough trainers, and more.\p"
-	"At the end of each Zone and before the next Zone begins, you will find a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to purchase supplies, heal your Pokémon, and other benefits.\p"
-	"Once you enter a new Zone, you will not be able to access a Sanctuary until you exit that Zone.")
-}
-
-text Zone0Sanctuary_Text_Colress_ExplainLeviathans {
-	format("Zones are designed to test your capabilities at braving different environments.\p"
-	"Each Zone typically contains a {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
-	"Some Leviathans are optional, but many are required to progress.")
-}
-
-text Zone0Sanctuary_Text_Colress_DontLose {
-	format("In order to win, you must progress through all Zones without losing a battle.")
-}
-
-text Zone0Sanctuary_Text_Colress_DefaultExplained {
-	format("{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two difficulty options.\p"
-	"It is recommended for any first playthroughs.")
-}
-
-text Zone0Sanctuary_Text_Colress_BrutalExplained {
-	format("{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the two difficulty options.\p"
-	"All Leviathans are far more challenging.\p"
-	"In addition, there are a number of rules implemented to make this mode even more difficult.\p"
-	"Defeating all trainers is required to progress to the Sanctuary.\p"
-	"Items cannot be used in battle.\p"
-	"Set mode cannot be turned off.\p"
-	"Pokémon cannot gain EVs.\p"
-	"Trainer battles give less money.\p"
-	"Items cannot be farmed from wild Pokémon or any other means.\p"
-	"The Daycare cannot be used.\p"
-	"Many helpful NPCs are unavailable.\p"
-	"Some moves use more PP than normal and opponents do not use PP.\p"
-	"Some items are more expensive than normal.\p"
-	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
-	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
-}
-
-text Zone0Sanctuary_Text_Colress_GameModes {
-	format("{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers optional game modes.\p"
-	"If you do not choose any of them, you will play on the {COLOR RED}Vanilla{COLOR DARK_GRAY} game mode, which adds no extra modifications.")
-}
-
-text Zone0Sanctuary_Text_Colress_RandomizerExplanation {
-	format("The {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode randomizes wild encounters and gift Pokémon, including your starter.\p"
-	"Trainer Pokémon are left unchanged.\p"
-	"Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot be turned off.")
-}
-
-text Zone0Sanctuary_Text_Colress_NuzlockeExplained {
-	format("The {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode completely implements all standard Nuzlocke rules, such as permanent death and capture restrictions.\p"
-	"It comes with Species Clause and Shiny Clause.\p"
-	"You can turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode at any point by speaking to me.\p"
-	"It is not recommended to play {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are familiar with Nuzlockes already.")
-}
-
-text Zone0Sanctuary_Text_Colress_General {
-	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is {COLOR RED}Tim's General Purpose Shop{COLOR DARK_GRAY}.\p"
-	"Healing supplies, basic Pokéballs, and other common items are sold here.")
-}
-
-text Zone0Sanctuary_Text_Colress_Item {
-	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph Unique Item Shop{COLOR DARK_GRAY}.\p"
-	"They sell a wide variety of items: Pokéball variations, Evolution items, and so on.")
-}
-
-text Zone0Sanctuary_Text_Colress_Healing {
-	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
-	"At the low cost of ¥1000, they will heal your entire party.\p"
-	"Note that the Pokémon Storage System does not heal your Pokémon.")
-}
-
-text Zone0Sanctuary_Text_Colress_Services {
-	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is {COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
-	"They offer a range of Pokémon services, but only to customers who can pay the right price.")
-}
-
-text Zone0Sanctuary_Text_Colress_TourDone {
-	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
-	"These four shops will be available at every Sanctuary.\p"
-	"As you progress through more Zones, more items and services will unlock.\p"
-	"Also, it is highly recommended you stock up on any supplies before entering the next Zone.")
 }
 
 script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
@@ -521,31 +446,14 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 
 }
 
-text Zone0Sanctuary_Text_Colress_Starters {
-	format("As a new challenger, you will receive a starter Pokémon.\p"
-	"You may have your choice of any of the generation 1-8 starter Pokémon.\p"
-	"Choose carefully as these Pokémon are very rare.")
-}
-
-text Zone0Sanctuary_Text_Colress_StartersBrutal {
-	format("As a new challenger, you will receive a starter Pokémon.\p"
-	"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
-	"Choose carefully as these Pokémon are very rare.")
-}
-
-text Zone0Sanctuary_Text_Colress_NiceChoice {
-	format("Excellent choice.\p"
-	"You can also re-nickname your Pokémon from the party menu.")
-}
-
 script Zone0Sanctuary_EventScript_EndIntro {
 	if (var(VAR_TEMP_0) == 1) {
-		msgbox(Zone0Sanctuary_Text_Colress_NiceChoice)
+		msgbox(format("Excellent choice.\p"
+		"You can also re-nickname your Pokémon from the party menu."))
 		delay(96)
 		msgbox(format("I also have a beginner's kit with items and cash to get you started."))
-		giveitem(ITEM_POKE_BALL, 30)
+		giveitem(ITEM_POKE_BALL, 10)
 		giveitem(ITEM_POTION, 10)
-		giveitem(ITEM_REPEL, 3)
 		playfanfare(MUS_OBTAIN_ITEM)
 		msgbox(format("Received ¥5000!"), MSGBOX_DEFAULT)
 		waitfanfare
@@ -555,9 +463,8 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		waitfanfare
 		closemessage
 	} else {
-		additem(ITEM_POKE_BALL, 30)
+		additem(ITEM_POKE_BALL, 10)
 		additem(ITEM_POTION, 10)
-		additem(ITEM_REPEL, 3)
 	}
 	setflag(FLAG_EXP_ALL_ON)
 	setflag(FLAG_SYS_POKEDEX_GET)

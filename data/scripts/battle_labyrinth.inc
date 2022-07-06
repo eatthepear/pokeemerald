@@ -42,7 +42,7 @@ EventScript_Shop_General_1:
 	compare VAR_ZONE, 20
 	goto_if_gt EventScript_Shop_General_6
 EventScript_Shop_General_4:
-	message gText_Tim_Welcome
+	message EventScript_Shop_General_Text_2
 	waitmessage
 	switch VAR_ZONE
 	case 1, EventScript_Shop_General_11
@@ -69,17 +69,18 @@ EventScript_Shop_General_4:
 	case 25, EventScript_Shop_General_15
 	case 26, EventScript_Shop_General_16
 EventScript_Shop_General_9:
-	msgbox gText_Tim_Leave, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_General_Text_3, MSGBOX_DEFAULT
 	release
 	return
 
 EventScript_Shop_General_2:
-	msgbox gText_Tim_Intro
+	msgbox EventScript_Shop_General_Text_0
+	giveitem ITEM_REPEL
 	setflag FLAG_TIM_INTRO
 	goto EventScript_Shop_General_1
 
 EventScript_Shop_General_5:
-	msgbox gText_Tim_ExplainSuperPotionDiscount
+	msgbox EventScript_Shop_General_Text_1
 	setflag FLAG_TIM_SUPER_POTION_INTRO
 	goto EventScript_Shop_General_4
 
@@ -2584,7 +2585,7 @@ EventScript_Settings_54:
 	goto EventScript_Settings_2
 
 EventScript_Settings_56:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_57:
@@ -2612,7 +2613,7 @@ EventScript_Settings_63:
 	goto EventScript_Settings_2
 
 EventScript_Settings_64:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
+	msgbox gText_Colress_RandomizerExplanation
 	goto EventScript_Settings_2
 
 EventScript_Settings_65:
@@ -2632,11 +2633,11 @@ EventScript_Settings_68:
 	goto EventScript_Settings_2
 
 EventScript_Settings_70:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_71:
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
+	msgbox gText_Colress_RandomizerExplanation
 	goto EventScript_Settings_2
 
 EventScript_Settings_72:
@@ -2680,7 +2681,7 @@ EventScript_Settings_82:
 	goto EventScript_Settings_2
 
 EventScript_Settings_84:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_85:
@@ -2728,7 +2729,7 @@ EventScript_Settings_96:
 	goto EventScript_Settings_2
 
 EventScript_Settings_98:
-	msgbox Zone0Sanctuary_Text_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_99:
@@ -2753,7 +2754,7 @@ EventScript_Settings_103:
 
 
 EventScript_Settings_BrutalMode::
-	msgbox Zone0Sanctuary_Text_Colress_BrutalExplained
+	msgbox gText_Colress_BrutalExplained
 	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_BrutalMode_1
@@ -2777,8 +2778,8 @@ EventScript_Settings_BrutalMode_3:
 
 
 EventScript_Settings_NuzlockeRandomizer::
-	msgbox Zone0Sanctuary_Text_Colress_RandomizerExplanation
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	msgbox gText_Colress_RandomizerExplanation
+	msgbox gText_Colress_NuzlockeExplained
 	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
 	msgbox gText_Colress_NumDeathsNuzlocke
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
@@ -2804,7 +2805,7 @@ EventScript_Settings_NuzlockeRandomizer_3:
 
 
 EventScript_Settings_Nuzlocke::
-	msgbox Zone0Sanctuary_Text_Colress_NuzlockeExplained
+	msgbox gText_Colress_NuzlockeExplained
 	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
 	msgbox gText_Colress_NumDeathsNuzlocke
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
@@ -3772,6 +3773,28 @@ EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
 
+EventScript_Shop_General_Text_0:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\nThe name's Tim Johnson.\p{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\nPokémart Incorporated.\lYou can find all sorts of general\lsupplies for your travels.\pHere's a free sample, as a first time\ncustomer!$"
+
+EventScript_Shop_General_Text_1:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Hey! I just wanted to let you know\n"
+	.string "about a new offer we have!\p"
+	.string "I'm sure you've heard that if you buy 10\n"
+	.string "Poké Balls, you'll get a Premier Ball for\l"
+	.string "free?\p"
+	.string "Well, I've got a very similar offer for\n"
+	.string "you.\p"
+	.string "If you buy 10 Potions, you'll get a free\n"
+	.string "Super Potion!\p"
+	.string "How's that for a deal?\p"
+	.string "Anyways…$"
+
+EventScript_Shop_General_Text_2:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Welcome to Tim's.\nCan I get you anything?$"
+
+EventScript_Shop_General_Text_3:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Have a nice day.$"
+
 EventScript_Max_Text_0:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: By my calculations, you should be\n"
 	.string "{PLAYER}!\p"
@@ -3860,6 +3883,67 @@ Zone_EventScript_RetirePrompt_Text_0:
 
 Zone_EventScript_RetirePrompt_Text_1:
 	.string "Warping now…$"
+
+gText_Colress_DefaultExplained::
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two\n"
+	.string "difficulty options.\p"
+	.string "It is recommended for any first\n"
+	.string "playthroughs.$"
+
+gText_Colress_BrutalExplained::
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the two\n"
+	.string "difficulty options.\p"
+	.string "All Leviathans are far more challenging.\p"
+	.string "In addition, there are a number of rules\n"
+	.string "implemented to make this mode even\l"
+	.string "more difficult.\p"
+	.string "Defeating all trainers is required to\n"
+	.string "progress to the Sanctuary.\p"
+	.string "Items cannot be used in battle.\p"
+	.string "Set mode cannot be turned off.\p"
+	.string "Pokémon cannot gain EVs.\p"
+	.string "Trainer battles give less money.\p"
+	.string "Items cannot be farmed from wild\n"
+	.string "Pokémon or any other means.\p"
+	.string "The Daycare cannot be used.\p"
+	.string "Many helpful NPCs are unavailable.\p"
+	.string "Some moves use more PP than normal and\n"
+	.string "opponents do not use PP.\p"
+	.string "Some items are more expensive than\n"
+	.string "normal.\p"
+	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
+	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
+	.string "unless you are familiar with {COLOR RED}Pokémon\l"
+	.string "Battle Labyrinth{COLOR DARK_GRAY} already.$"
+
+gText_Colress_GameModes::
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
+	.string "optional game modes.\p"
+	.string "If you do not choose any of them, you\n"
+	.string "will play on the {COLOR RED}Vanilla{COLOR DARK_GRAY} game mode,\l"
+	.string "which adds no extra modifications.$"
+
+gText_Colress_RandomizerExplanation::
+	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode randomizes\n"
+	.string "wild encounters and gift Pokémon,\l"
+	.string "including your starter.\p"
+	.string "Trainer Pokémon are left unchanged.\p"
+	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot\n"
+	.string "be turned off.$"
+
+gText_Colress_NuzlockeExplained::
+	.string "The {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode completely\n"
+	.string "implements all standard Nuzlocke rules,\l"
+	.string "such as permanent death and capture\l"
+	.string "restrictions.\p"
+	.string "It comes with Species Clause and Shiny\n"
+	.string "Clause.\p"
+	.string "You can turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode at any\n"
+	.string "point by speaking to me.\p"
+	.string "It is not recommended to play {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
+	.string "mode unless you are familiar with\l"
+	.string "Nuzlockes already.$"
 
 gText_Colress_NumDeathsNuzlocke::
 	.string "So far there have been {STR_VAR_1} death(s).$"

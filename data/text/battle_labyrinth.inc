@@ -226,34 +226,6 @@ gText_GeneralSign:
 	.string "Tim's General Purpose Shop\n"
 	.string "Sponsored by Pokémart Inc.$"
 
-gText_Tim_Intro:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\n"
-	.string "The name's Tim Johnson.\p"
-	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\n"
-	.string "Pokémart Incorporated.\l"
-	.string "You can find all sorts of general\l"
-	.string "supplies for your travels.$"
-
-gText_Tim_ExplainSuperPotionDiscount:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Hey! I just wanted to let you\n"
-	.string "know about a new offer we have!\p"
-	.string "I'm sure you've heard that if you\n"
-	.string "buy 10 Poké Balls, you'll get a\l"
-	.string "Premier Ball for free?\p"
-	.string "Well, I've got a very similar offer\n"
-	.string "for you.\p"
-	.string "If you buy 10 Potions, you'll get a\n"
-	.string "free Super Potion!\l"
-	.string "How's that for a deal?\p"
-	.string "Anyways…$"
-
-gText_Tim_Welcome:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Welcome to Tim's.\n"
-	.string "Can I get you anything?$"
-
-gText_Tim_Leave:
-	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Have a nice day.$"
-
 gText_UniqueSign:
 	.string "Silph Unique Item Shop\n"
 	.string "Need something? We probably got it!$"
