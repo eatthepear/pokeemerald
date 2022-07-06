@@ -82,13 +82,13 @@ Zone8Sanctuary_Text_Colress_ReachedZone::
 	.string "You have cleared {COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}.$"
 
 Zone8Sanctuary_Text_RewardClear7::
-	.string "Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is…$"
 
 Zone8Sanctuary_Text_7Reward::
 	.string "3 Blue Shards!$"
 
 Zone8Sanctuary_Text_RewardClear8::
-	.string "Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is…$"
 
 Zone8Sanctuary_Text_8Reward::
 	.string "TM12 - Rock Tomb!$"

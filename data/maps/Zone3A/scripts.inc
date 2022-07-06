@@ -295,10 +295,10 @@ Zone3A_Text_PatrickIntro:
 	.string "but I'll prove them wrong!$"
 
 Zone3A_Text_PatrickDefeat:
-	.string "Oops, guess not...$"
+	.string "Oops, guess not…$"
 
 Zone3A_Text_PatrickPostBattle:
-	.string "I guess I am the free Exp guy...$"
+	.string "I guess I am the free Exp guy…$"
 
 Zone3A_EventScript_Jemma::
 	trainerbattle_single TRAINER_JEMMA, Zone3A_Text_JemmaIntro, Zone3A_Text_JemmaDefeat
@@ -309,10 +309,10 @@ Zone3A_Text_JemmaIntro:
 	.string "Hey! You have to pay to cross!$"
 
 Zone3A_Text_JemmaDefeat:
-	.string "Uh... You can go for free!$"
+	.string "Uh… You can go for free!$"
 
 Zone3A_Text_JemmaPostBattle:
-	.string "I was scamming people so well too...$"
+	.string "I was scamming people so well too…$"
 
 Zone3A_EventScript_Boris::
 	trainerbattle_single TRAINER_BORIS, Zone3A_Text_BorisIntro, Zone3A_Text_BorisDefeat
@@ -334,7 +334,7 @@ Zone3A_EventScript_Annabelle::
 	end
 
 Zone3A_Text_AnnabelleIntro:
-	.string "I wonder what day it is...$"
+	.string "I wonder what day it is…$"
 
 Zone3A_Text_AnnabelleDefeat:
 	.string "Apparently it's defeat day!$"

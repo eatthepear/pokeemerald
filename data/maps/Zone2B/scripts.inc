@@ -117,7 +117,7 @@ Zone2B_Text_HarperDefeat:
 
 Zone2B_Text_HarperPostBattle:
 	.string "I don't know if I can ever\n"
-	.string "come back from this loss...$"
+	.string "come back from this loss…$"
 
 Zone2B_EventScript_Arthur::
 	trainerbattle_single TRAINER_ARTHUR, Zone2B_Text_ArthurIntro, Zone2B_Text_ArthurDefeat

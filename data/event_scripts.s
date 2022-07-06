@@ -837,7 +837,7 @@ gText_PokemonCenterSign::
 	.string "POKéMON CENTER$"
 
 gText_MomOrDadMightLikeThisProgram::
-	.string "There's nothing on the TV...$"
+	.string "There's nothing on the TV…$"
 
 gText_WhichFloorWouldYouLike::
 	.string "Welcome to LILYCOVE DEPARTMENT STORE.\p"

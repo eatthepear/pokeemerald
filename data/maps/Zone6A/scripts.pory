@@ -158,7 +158,7 @@ Zone6A_Text_MelanieIntro:
 	.string "Watch where you're going!$"
 
 Zone6A_Text_MelanieDefeat:
-	.string "Sorry I yelled at you...$"
+	.string "Sorry I yelled at you…$"
 
 Zone6A_Text_MelaniePostBattle:
 	.string "I also need to be careful about\n"
@@ -176,7 +176,7 @@ Zone6A_Text_ConstanceDefeat:
 	.string "Oops, I forgot to pack food!$"
 
 Zone6A_Text_ConstancePostBattle:
-	.string "I can look for some Berries or something...$"
+	.string "I can look for some Berries or something…$"
 
 Zone6A_EventScript_Mina::
 	trainerbattle_single TRAINER_MINA, Zone6A_Text_MinaIntro, Zone6A_Text_MinaDefeat

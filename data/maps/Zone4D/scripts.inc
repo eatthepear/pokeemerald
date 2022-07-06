@@ -61,7 +61,7 @@ Zone4D_EventScript_Lucia::
 	end
 
 Zone4D_Text_LuciaIntro:
-	.string "I think the exit is near here...$"
+	.string "I think the exit is near here…$"
 
 Zone4D_Text_LuciaDefeat:
 	.string "Oh?$"

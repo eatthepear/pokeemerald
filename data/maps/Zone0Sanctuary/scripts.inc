@@ -1109,7 +1109,7 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_Text_0:
 	.string "Choose a starter Pokémon.$"
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_Text_1:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing...$"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing…$"
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_Text_2:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want\n"

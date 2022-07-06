@@ -86,7 +86,7 @@ Zone8C_EventScript_Neil::
        end
 	   
 Zone8C_Text_NeilIntro:
-       .string "I'm looking for another path down...$"
+       .string "I'm looking for another path down…$"
 
 Zone8C_Text_NeilDefeat:
        .string "But all I found is you.$"

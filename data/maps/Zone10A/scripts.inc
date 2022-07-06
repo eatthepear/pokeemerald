@@ -330,7 +330,7 @@ Zone10A_Text_ConradIntro:
 	.string "Have you seen her?$"
 
 Zone10A_Text_ConradDefeat:
-	.string "She probably thinks I stood her up...$"
+	.string "She probably thinks I stood her up…$"
 
 Zone10A_Text_ConradPostBattle:
 	.string "Not a great first impression,\n"
@@ -342,9 +342,9 @@ Zone10A_Text_NoChance::
 	.string "Zero.\n"
 	.string "Zip.\l"
 	.string "Zilch.\l"
-	.string "...\l"
-	.string "...\l"
-	.string "...\l"
+	.string "…\l"
+	.string "…\l"
+	.string "…\l"
 	.string "Fine.$"
 
 Zone10A_Text_Explain::

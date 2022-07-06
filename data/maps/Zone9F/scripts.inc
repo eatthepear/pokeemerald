@@ -21,7 +21,7 @@ Zone9F_EventScript_Bertha::
 
 Zone9F_Text_Bertha:
 	.string "{COLOR BLUE}Bertha{COLOR DARK_GRAY}: Why did Mom buy this house?\n"
-	.string "It's so small for the five of us...$"
+	.string "It's so small for the five of us…$"
 
 Zone9F_EventScript_Cassandra::
 	lock
@@ -43,7 +43,7 @@ Zone9F_EventScript_Dominic::
 	end
 
 Zone9F_Text_Dominic:
-	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: I wonder what's for dinner...$"
+	.string "{COLOR BLUE}Dominic{COLOR DARK_GRAY}: I wonder what's for dinner…$"
 
 Zone9F_EventScript_Erica::
 	lock

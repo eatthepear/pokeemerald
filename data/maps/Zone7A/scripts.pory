@@ -203,7 +203,7 @@ Zone7A_Text_PaigeDefeat:
 	.string "I just can't keep up!$"
 
 Zone7A_Text_PaigePostBattle:
-	.string "Maybe I'll rest in the rest house...$"
+	.string "Maybe I'll rest in the rest house…$"
 
 Zone7A_EventScript_Seth::
 	trainerbattle_single TRAINER_SETH, Zone7A_Text_SethIntro, Zone7A_Text_SethDefeat

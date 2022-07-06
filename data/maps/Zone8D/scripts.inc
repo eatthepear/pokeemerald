@@ -358,7 +358,7 @@ Zone8D_EventScript_InitiateLeviathan8_Text_3:
 	.string "With a friend this time.$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_4:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: This should be... entertaining.\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: This should be… entertaining.\p"
 	.string "Deal with them.$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_5:

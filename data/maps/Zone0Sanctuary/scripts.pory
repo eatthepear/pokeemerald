@@ -417,7 +417,7 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 	}
 	if (var(VAR_TEMP_2) == 0) {
 		playse(SE_CONTEST_PLACE)
-		message(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing..."))
+		message(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing…"))
 		delay(96)
 		waitse
 		waitmessage

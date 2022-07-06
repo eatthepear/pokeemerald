@@ -110,10 +110,10 @@ Zone1A_Text_NinaIntro:
 	.string "Hey, you! Let's battle!$"
 
 Zone1A_Text_NinaDefeat:
-	.string "Aww... Come on!$"
+	.string "Aww… Come on!$"
 
 Zone1A_Text_NinaPostBattle:
-	.string "I always lose...$"
+	.string "I always lose…$"
 
 Zone1A_EventScript_Mariam::
 	trainerbattle_single TRAINER_MARIAM, Zone1A_Text_MariamIntro, Zone1A_Text_MariamDefeat
@@ -141,7 +141,7 @@ Zone1A_Text_OscarDefeat:
 	.string "Beaten! Disgrace!$"
 
 Zone1A_Text_OscarPostBattle:
-	.string "I must reclaim my honor...$"
+	.string "I must reclaim my honor…$"
 
 Zone1A_EventScript_Sign::
 	msgbox Zone1A_Text_Sign, MSGBOX_SIGN

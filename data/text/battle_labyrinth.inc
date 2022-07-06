@@ -180,7 +180,7 @@ gText_Colress_ReachedZone:
 	.string "You have cleared {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GRAY}.$"
 
 gText_RewardClear:
-	.string "Your reward for clearing {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GRAY} is...$"
+	.string "Your reward for clearing {COLOR RED}Zone {STR_VAR_1}{COLOR DARK_GRAY} is…$"
 
 gText_Colress_WhenUReady:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to\n"
@@ -315,12 +315,12 @@ gText_ZhuLi_Leave:
 
 gText_ServicesSign:
 	.string "Lelouch's Special Services Shop\n"
-	.string "Anything for the right price...$"
+	.string "Anything for the right price…$"
 
 gText_Lelouch_Intro1:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: You... What is your name?\p"
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: {PLAYER}? Now that's a name...\n"
-	.string "I haven't heard in...$"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: You… What is your name?\p"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: {PLAYER}? Now that's a name…\n"
+	.string "I haven't heard in…$"
 
 gText_Lelouch_Intro2:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: You may call me Lelouch.\p"
@@ -333,7 +333,7 @@ gText_Lelouch_NoShards:
 	.string "cannot pay. Leave.$"
 
 gText_Lelouch_ExplainShards:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I sense...\n"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I sense…\n"
 	.string "The aura of Shards.\p"
 	.string "There are four types of Shards:\n"
 	.string "Red, Blue, Yellow, and Green,\l"
@@ -344,10 +344,10 @@ gText_Lelouch_ExplainShards:
 	.string "Move Relearning costs Blue Shards.\p"
 	.string "Move Tutoring costs Yellow Shards.\p"
 	.string "Other services cost Green Shards.\p"
-	.string "I hope they serve you well...$"
+	.string "I hope they serve you well…$"
 
 gText_Lelouch_Welcome:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: For the right price...\n"
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: For the right price…\n"
 	.string "Welcome to Lelouch's Special Services.$"
 
 gText_Lelouch_NotEnoughColor:

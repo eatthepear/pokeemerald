@@ -123,7 +123,7 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 	applymovement(3, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: It is back again.\nWith a friend this time."))
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: This should be... entertaining.\pDeal with them."))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: This should be… entertaining.\pDeal with them."))
 	applymovement(3, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: At once."))

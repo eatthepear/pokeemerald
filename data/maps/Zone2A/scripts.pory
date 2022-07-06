@@ -50,7 +50,7 @@ Zone2A_Text_JeremiahIntro:
 	.string "The more legs, the better!$"
 
 Zone2A_Text_JeremiahDefeat:
-	.string "Oh... Come on!$"
+	.string "Oh… Come on!$"
 
 Zone2A_Text_JeremiahPostBattle:
 	.string "Just wait till my Bugs are all evolved!$"

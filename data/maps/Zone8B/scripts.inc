@@ -90,7 +90,7 @@ Zone8B_Text_JaydenIntro:
 	.string "an adventurer, a Hiker!$"
 
 Zone8B_Text_JaydenDefeat:
-	.string "Also a bit of a sore loser...$"
+	.string "Also a bit of a sore loser…$"
 
 Zone8B_Text_JaydenPostBattle:
 	.string "Next time, I'll be a winner too!$"

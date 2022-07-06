@@ -75,9 +75,9 @@ text Zone10A_Text_NoChance {
 	"Zero.\n"
 	"Zip.\l"
 	"Zilch.\l"
-	"...\l"
-	"...\l"
-	"...\l"
+	"…\l"
+	"…\l"
+	"…\l"
 	"Fine."
 }
 
@@ -352,7 +352,7 @@ Zone10A_Text_ConradIntro:
 	.string "Have you seen her?$"
 
 Zone10A_Text_ConradDefeat:
-	.string "She probably thinks I stood her up...$"
+	.string "She probably thinks I stood her up…$"
 
 Zone10A_Text_ConradPostBattle:
 	.string "Not a great first impression,\n"
