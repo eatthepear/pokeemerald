@@ -9467,8 +9467,8 @@ static void Cmd_various(void)
         }
         else
         {
-            if (!(gBattleMons[gActiveBattler].status2 & STATUS2_ESCAPE_PREVENTION))
-                gDisableStructs[gActiveBattler].noRetreat = TRUE;
+            // if (!(gBattleMons[gActiveBattler].status2 & STATUS2_ESCAPE_PREVENTION))
+            //     gDisableStructs[gActiveBattler].noRetreat = TRUE;
             gBattlescriptCurrInstr += 7;
         }
         return;

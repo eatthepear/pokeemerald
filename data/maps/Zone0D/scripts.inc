@@ -36,138 +36,146 @@ Zone0D_EventScript_Scientist::
 
 Zone0D_EventScript_WarpBack::
 	lockall
+	compare VAR_ZONE_0_STATE, 3
+	goto_if_eq Zone0D_EventScript_WarpBack_2
+Zone0D_EventScript_WarpBack_1:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	switch VAR_ZONE
-	case 1, Zone0D_EventScript_WarpBack_2
-	case 2, Zone0D_EventScript_WarpBack_3
-	case 3, Zone0D_EventScript_WarpBack_4
-	case 4, Zone0D_EventScript_WarpBack_5
-	case 5, Zone0D_EventScript_WarpBack_6
-	case 6, Zone0D_EventScript_WarpBack_7
-	case 7, Zone0D_EventScript_WarpBack_8
-	case 9, Zone0D_EventScript_WarpBack_9
-	case 10, Zone0D_EventScript_WarpBack_10
-	case 11, Zone0D_EventScript_WarpBack_11
-	case 12, Zone0D_EventScript_WarpBack_12
-	case 13, Zone0D_EventScript_WarpBack_13
-	case 15, Zone0D_EventScript_WarpBack_14
-	case 16, Zone0D_EventScript_WarpBack_15
-	case 17, Zone0D_EventScript_WarpBack_16
-	case 18, Zone0D_EventScript_WarpBack_17
-	case 20, Zone0D_EventScript_WarpBack_18
-	case 21, Zone0D_EventScript_WarpBack_19
-	case 22, Zone0D_EventScript_WarpBack_20
-	case 23, Zone0D_EventScript_WarpBack_21
-	case 24, Zone0D_EventScript_WarpBack_22
-	case 26, Zone0D_EventScript_WarpBack_23
+	case 1, Zone0D_EventScript_WarpBack_5
+	case 2, Zone0D_EventScript_WarpBack_6
+	case 3, Zone0D_EventScript_WarpBack_7
+	case 4, Zone0D_EventScript_WarpBack_8
+	case 5, Zone0D_EventScript_WarpBack_9
+	case 6, Zone0D_EventScript_WarpBack_10
+	case 7, Zone0D_EventScript_WarpBack_11
+	case 9, Zone0D_EventScript_WarpBack_12
+	case 10, Zone0D_EventScript_WarpBack_13
+	case 11, Zone0D_EventScript_WarpBack_14
+	case 12, Zone0D_EventScript_WarpBack_15
+	case 13, Zone0D_EventScript_WarpBack_16
+	case 15, Zone0D_EventScript_WarpBack_17
+	case 16, Zone0D_EventScript_WarpBack_18
+	case 17, Zone0D_EventScript_WarpBack_19
+	case 18, Zone0D_EventScript_WarpBack_20
+	case 20, Zone0D_EventScript_WarpBack_21
+	case 21, Zone0D_EventScript_WarpBack_22
+	case 22, Zone0D_EventScript_WarpBack_23
+	case 23, Zone0D_EventScript_WarpBack_24
+	case 24, Zone0D_EventScript_WarpBack_25
+	case 26, Zone0D_EventScript_WarpBack_26
 	return
 
 Zone0D_EventScript_WarpBack_2:
+	setflag FLAG_ZONE0B_ABILITY_CHANGE_USED
+	setvar VAR_ZONE_0_STATE, 4
+	goto Zone0D_EventScript_WarpBack_1
+
+Zone0D_EventScript_WarpBack_5:
 	warpteleport MAP_ZONE0SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_3:
+Zone0D_EventScript_WarpBack_6:
 	warpteleport MAP_ZONE1SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_4:
+Zone0D_EventScript_WarpBack_7:
 	warpteleport MAP_ZONE2SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_5:
+Zone0D_EventScript_WarpBack_8:
 	warpteleport MAP_ZONE3SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_6:
+Zone0D_EventScript_WarpBack_9:
 	warpteleport MAP_ZONE4SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_7:
+Zone0D_EventScript_WarpBack_10:
 	warpteleport MAP_ZONE5SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_8:
+Zone0D_EventScript_WarpBack_11:
 	warpteleport MAP_ZONE6SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_9:
+Zone0D_EventScript_WarpBack_12:
 	warpteleport MAP_ZONE8SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_10:
+Zone0D_EventScript_WarpBack_13:
 	warpteleport MAP_ZONE9SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_11:
+Zone0D_EventScript_WarpBack_14:
 	warpteleport MAP_ZONE10SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_12:
+Zone0D_EventScript_WarpBack_15:
 	warpteleport MAP_ZONE11SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_13:
+Zone0D_EventScript_WarpBack_16:
 	warpteleport MAP_ZONE12SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_14:
+Zone0D_EventScript_WarpBack_17:
 	warpteleport MAP_ZONE14SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_15:
+Zone0D_EventScript_WarpBack_18:
 	warpteleport MAP_ZONE15SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_16:
+Zone0D_EventScript_WarpBack_19:
 	warpteleport MAP_ZONE16SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_17:
+Zone0D_EventScript_WarpBack_20:
 	warpteleport MAP_ZONE17SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
-Zone0D_EventScript_WarpBack_18:
-	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 12
-	waitstate
-	return
-
-Zone0D_EventScript_WarpBack_19:
-	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 12
-	waitstate
-	return
-
-Zone0D_EventScript_WarpBack_20:
-	warpteleport MAP_ZONE21SANCTUARY, 255, 22, 12
-	waitstate
-	return
-
 Zone0D_EventScript_WarpBack_21:
-	warpteleport MAP_ZONE22SANCTUARY, 255, 22, 12
+	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
 Zone0D_EventScript_WarpBack_22:
-	warpteleport MAP_ZONE23SANCTUARY, 255, 22, 12
+	warpteleport MAP_ZONE20SANCTUARY, 255, 22, 12
 	waitstate
 	return
 
 Zone0D_EventScript_WarpBack_23:
+	warpteleport MAP_ZONE21SANCTUARY, 255, 22, 12
+	waitstate
+	return
+
+Zone0D_EventScript_WarpBack_24:
+	warpteleport MAP_ZONE22SANCTUARY, 255, 22, 12
+	waitstate
+	return
+
+Zone0D_EventScript_WarpBack_25:
+	warpteleport MAP_ZONE23SANCTUARY, 255, 22, 12
+	waitstate
+	return
+
+Zone0D_EventScript_WarpBack_26:
 	warpteleport MAP_ZONE25SANCTUARY, 255, 22, 12
 	waitstate
 	return

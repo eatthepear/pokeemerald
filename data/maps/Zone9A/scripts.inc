@@ -262,7 +262,7 @@ Zone9A_EventScript_Ari_Text_14:
 	.string "slumber?$"
 
 Zone9A_EventScript_Ari_Text_15:
-	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you completing my family's trial.$"
+	.string "{COLOR BLUE}Erica{COLOR DARK_GRAY}: Good, good.\pWell done, young one.\pHere is a little reward for you\ncompleting my family's trial.$"
 
 Zone9A_Text_EricaDefeat::
 	.string "Oh… You are the one…$"

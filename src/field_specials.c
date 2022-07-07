@@ -1189,16 +1189,17 @@ void ResetTrickHouseNuggetFlag(void)
 
 bool8 CheckLeadMonCool(void)
 {
-    // if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_COOL) < 200)
-    //     return FALSE;
-
+    if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_MET_LOCATION) == METLOC_FATEFUL_ENCOUNTER)
+        return TRUE;
     return FALSE;
 }
 
 bool8 CheckLeadMonBeauty(void)
 {
-    // if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_BEAUTY) < 200)
+    // if (GetMonData(&gPlayerParty[GetLeadMonIndex(), MON_DATA_BEAUTY) < 200)
     //     return FALSE;
+    u32 abilityNum = GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_ABILITY_NUM, NULL) ^ 1;
+    SetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_ABILITY_NUM, &abilityNum);
 
     return FALSE;
 }

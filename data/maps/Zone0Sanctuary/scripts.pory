@@ -21,7 +21,7 @@ script Zone0Sanctuary_EventScript_Intro {
 	applymovement(1, Common_Movement_Colress_WalkDown)
 	call(EventScript_MoveCameraDown)
 	waitmovement(0)
-	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the challenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
+	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_0, 1)
 		delay(96)
@@ -224,6 +224,7 @@ script Zone0Sanctuary_EventScript_Intro {
 	}
 	if (flag(FLAG_RANDOMIZER_ON) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on, you get a random starter."))
+		setflag(FLAG_ZONE0B_ABILITY_CHANGE_USED)
 		callnative(GiveRandomStarter)
 		playfanfare(MUS_OBTAIN_ITEM)
 		bufferleadmonspeciesname(0)
@@ -452,7 +453,7 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		"You can also re-nickname your Pokémon from the party menu."))
 		delay(96)
 		msgbox(format("I also have a beginner's kit with items and cash to get you started."))
-		giveitem(ITEM_POKE_BALL, 10)
+		giveitem(ITEM_POKE_BALL, 15)
 		giveitem(ITEM_POTION, 10)
 		playfanfare(MUS_OBTAIN_ITEM)
 		msgbox(format("Received ¥5000!"), MSGBOX_DEFAULT)
@@ -463,7 +464,7 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		waitfanfare
 		closemessage
 	} else {
-		additem(ITEM_POKE_BALL, 10)
+		additem(ITEM_POKE_BALL, 15)
 		additem(ITEM_POTION, 10)
 	}
 	setflag(FLAG_EXP_ALL_ON)

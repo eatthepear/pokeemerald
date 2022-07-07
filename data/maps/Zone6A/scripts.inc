@@ -51,13 +51,11 @@ Zone6A_EventScript_Exit_6:
 	goto Zone6A_EventScript_Exit_5
 
 Zone6A_EventScript_Exit_7:
-	checktrainerflag TRAINER_FRANK
-	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_MELANIE
 	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_CONSTANCE
 	goto_if 0, Zone6A_EventScript_Exit_6
-	checktrainerflag TRAINER_MINA
+	checktrainerflag TRAINER_FRANK
 	goto_if 0, Zone6A_EventScript_Exit_6
 	checktrainerflag TRAINER_DUDLEY
 	goto_if 0, Zone6A_EventScript_Exit_6

@@ -237,22 +237,6 @@ Zone7A_Text_ConniePostBattle:
 	.string "Backpacking is all about packing\n"
 	.string "light!$"
 
-Zone7A_EventScript_Chad::
-	trainerbattle_single TRAINER_CHAD, Zone7A_Text_ChadIntro, Zone7A_Text_ChadDefeat
-	msgbox Zone7A_Text_ChadPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone7A_Text_ChadIntro:
-	.string "Bro! You interrupted my vibes!$"
-
-Zone7A_Text_ChadDefeat:
-	.string "I was graced with the sound of your\n"
-	.string "Pokémon!$"
-
-Zone7A_Text_ChadPostBattle:
-	.string "Writing music is hard work!\n"
-	.string "Thanks for the inspiration!$"
-
 Zone7A_EventScript_HealSign::
 	msgbox Zone7A_Text_HealSign, MSGBOX_SIGN
 	end

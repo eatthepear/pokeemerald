@@ -25,6 +25,11 @@ mapscripts Zone10A_MapScripts {
 		} else {
 			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
+		if (flag(FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS)) {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
 	}
 }
 
@@ -198,6 +203,36 @@ script Zone10A_EventScript_TM16 {
 	end
 }
 
+script Zone10A_EventScript_HeavyDutyBoots {
+	lock
+	if (flag(FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_HEAVY_DUTY_BOOTS, 1)
+	release
+	end
+}
+
+script Zone10A_EventScript_Ranger {
+	lock
+	faceplayer
+	if (flag(FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES) == false) {
+		msgbox(format("Excuse me! I'm a member of the Pokémon Ranger Corps, working to protect both people and Pokémon.\pIt's not safe to be out in the sandstorm for long periods of time, so take this!"))
+		giveitem(ITEM_SAFETY_GOGGLES)
+		setflag(FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES)
+	}
+	msgbox(format("Remember kids, safety first!"))
+	release
+	end
+}
+
 raw `
 Zone10A_EventScript_Kyle::
 	trainerbattle_single TRAINER_KYLE, Zone10A_Text_KyleIntro, Zone10A_Text_KyleDefeat
@@ -212,20 +247,6 @@ Zone10A_Text_KyleDefeat:
 
 Zone10A_Text_KylePostBattle:
 	.string "I'll be a champion some day, just you wait!$"
-
-Zone10A_EventScript_Crystal::
-	trainerbattle_single TRAINER_CRYSTAL, Zone10A_Text_CrystalIntro, Zone10A_Text_CrystalDefeat
-	msgbox Zone10A_Text_CrystalPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone10A_Text_CrystalIntro:
-	.string "I see… I see the future…$"
-
-Zone10A_Text_CrystalDefeat:
-	.string "I see myself wallowing in defeat…$"
-
-Zone10A_Text_CrystalPostBattle:
-	.string "I see you reaching great heights!$"
 
 Zone10A_EventScript_Belle::
 	trainerbattle_single TRAINER_BELLE, Zone10A_Text_BelleIntro, Zone10A_Text_BelleDefeat
@@ -275,23 +296,6 @@ Zone10A_Text_PearliePostBattle:
 	.string "I don't like sand.\n"
 	.string "It's coarse and rough and irritating and\l"
 	.string "it gets everywhere.$"
-	
-Zone10A_EventScript_Raphael::
-	trainerbattle_single TRAINER_RAPHAEL, Zone10A_Text_RaphaelIntro, Zone10A_Text_RaphaelDefeat
-	msgbox Zone10A_Text_RaphaelPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone10A_Text_RaphaelIntro:
-	.string "Have you ever faced the might of\n"
-	.string "dragons?$"
-
-Zone10A_Text_RaphaelDefeat:
-	.string "What?\n"
-	.string "You bested the might of dragons?$"
-
-Zone10A_Text_RaphaelPostBattle:
-	.string "Argh!\n"
-	.string "If only Fairy-types didn't exist!$"
 
 Zone10A_EventScript_Ernest::
 	trainerbattle_single TRAINER_ERNEST, Zone10A_Text_ErnestIntro, Zone10A_Text_ErnestDefeat

@@ -1,0 +1,50 @@
+script Zone0B_EventScript_SpecialRock {
+	lockall
+	if (flag(FLAG_ZONE0B_ABILITY_CHANGE_USED) == true) {
+		msgbox(format("It's a blue, shining rock, but it looks like other rocks have collapsed on top of it, leaving it out of reach."))
+	} else {
+		specialvar(VAR_RESULT, CheckLeadMonCool) //Checks if the lead mon is your starter
+		if (var(VAR_RESULT) == TRUE) {
+			bufferleadmonspeciesname(0)
+			msgbox(format("It's a blue, shining rock.\pWould you like to let your {STR_VAR_1} touch it?"), MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				playse(SE_EXP_MAX)
+				waitse
+				msgbox(format("…{PAUSE_UNTIL_PRESS}!\pIt seems your {STR_VAR_1} has changed its ability!"))
+				special(CheckLeadMonBeauty) //Changes your lead mon's ability
+				setflag(FLAG_ZONE0B_ABILITY_CHANGE_USED)
+				playse(SE_M_ROCK_THROW)
+				waitse
+				warp(MAP_ZONE0A, 2)
+				waitstate
+			}
+		} else {
+			msgbox(format("It's a blue, shining rock.\pIt seems your starter Pokémon might find it fascinating."))
+		}
+	}
+	releaseall
+	end
+}
+
+raw `
+Zone0B_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone0B_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, Zone0B_OnLoad
+	.byte 0
+
+Zone0B_OnLoad:
+	call_if_set FLAG_ZONE0B_ABILITY_CHANGE_USED, Zone0B_EventScript_DisableBlueRock
+	end
+
+Zone0B_EventScript_DisableBlueRock::
+	setmetatile 3, 3, METATILE_Cave_ShoalCave_BlueStone_Small, TRUE
+	return
+
+Zone0B_OnTransition:
+	call Zone0B_EventScript_SetFlashRadius
+	end
+
+Zone0B_EventScript_SetFlashRadius:
+	setflashlevel 2
+	return
+`

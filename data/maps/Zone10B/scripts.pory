@@ -32,19 +32,14 @@ script Zone10B_EventScript_AdaminaStuff {
 				waitstate
 			} else {
 				if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-					(!defeated(TRAINER_MILLIE) ||
-					!defeated(TRAINER_JAMAL) ||
-					!defeated(TRAINER_PAIGE) ||
-					!defeated(TRAINER_SETH) ||
-					!defeated(TRAINER_CONNIE) ||
-					!defeated(TRAINER_CHAD) ||
-					!defeated(TRAINER_JIMMY) ||
-					!defeated(TRAINER_EMILIANO) ||
-					!defeated(TRAINER_MARCUS) ||
-					!defeated(TRAINER_KAREN) ||
-					!defeated(TRAINER_JAYDEN) ||
-					!defeated(TRAINER_NEIL) ||
-					!defeated(TRAINER_TAMARA))) {
+				(!defeated(TRAINER_KYLE) ||
+				!defeated(TRAINER_BELLE) ||
+				!defeated(TRAINER_DEWEY) ||
+				!defeated(TRAINER_PEARLIE) ||
+				!defeated(TRAINER_ERNEST) ||
+				!defeated(TRAINER_ALANA) ||
+				!defeated(TRAINER_SUSAN) ||
+				!defeated(TRAINER_CONRAD))) {
 					goto(EventScript_BrutalExitNotSatisfied)
 				}
 				clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
@@ -99,20 +94,46 @@ script Zone10B_EventScript_SideQuestTeleport {
 	faceplayer
 	if (flag(FLAG_RECEIVED_ZONE10B_TM21_TELEPORT) == false) {
 		msgbox("Greetings, young one. In my\npossession, I hold a useful TM for\lyour Pokémon, but only if you have\lproven yourself in battle.\pYou must have defeated all\nTrainers available thus far.")
-		specialvar(VAR_RESULT, GetCaughtSpeciesCount)
-		if (!defeated(TRAINER_MILLIE) ||
+		if (!defeated(TRAINER_JEREMIAH) ||
+			!defeated(TRAINER_HARPER) ||
+			!defeated(TRAINER_ARTHUR) ||
+			!flag(FLAG_BEAT_LEVIATHAN_2) ||
+			!defeated(TRAINER_PATRICK) ||
+			!defeated(TRAINER_RICHARD) ||
+			!defeated(TRAINER_ANNABELLE) ||
+			!defeated(TRAINER_HERMAN) ||
+			!defeated(TRAINER_RALPH) ||
+			!defeated(TRAINER_SANTIAGO) ||
+			!defeated(TRAINER_CHLOE_AND_KAYA) ||
+			!defeated(TRAINER_LUCIA) ||
+			!defeated(TRAINER_FRED) ||
+			!defeated(TRAINER_ANNE_AND_JUNE) ||
+			!defeated(TRAINER_GILBERT) ||
+			!defeated(TRAINER_MELANIE) ||
+			!defeated(TRAINER_CONSTANCE) ||
+			!defeated(TRAINER_FRANK) ||
+			!defeated(TRAINER_DUDLEY) ||
+			!defeated(TRAINER_DAISY) ||
+			!flag(FLAG_BEAT_LEVIATHAN_6) ||
+			!defeated(TRAINER_MILLIE) ||
 			!defeated(TRAINER_JAMAL) ||
 			!defeated(TRAINER_PAIGE) ||
 			!defeated(TRAINER_SETH) ||
 			!defeated(TRAINER_CONNIE) ||
-			!defeated(TRAINER_CHAD) ||
 			!defeated(TRAINER_JIMMY) ||
 			!defeated(TRAINER_EMILIANO) ||
-			!defeated(TRAINER_MARCUS) ||
 			!defeated(TRAINER_KAREN) ||
 			!defeated(TRAINER_JAYDEN) ||
 			!defeated(TRAINER_NEIL) ||
-			!defeated(TRAINER_TAMARA)) {
+			!defeated(TRAINER_TAMARA) ||
+			!defeated(TRAINER_KYLE) ||
+			!defeated(TRAINER_BELLE) ||
+			!defeated(TRAINER_DEWEY) ||
+			!defeated(TRAINER_PEARLIE) ||
+			!defeated(TRAINER_ERNEST) ||
+			!defeated(TRAINER_ALANA) ||
+			!defeated(TRAINER_SUSAN) ||
+			!defeated(TRAINER_CONRAD)) {
 			msgbox("You still have trainers to defeat.")
 			applymovement(4, Common_Movement_FaceLeft)
 			waitmovement(0)

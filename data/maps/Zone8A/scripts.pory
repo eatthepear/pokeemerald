@@ -99,19 +99,4 @@ Zone8A_Text_EmilianoDefeat:
 
 Zone8A_Text_EmilianoPostBattle:
 	.string "Mmm… Pancakes…$"
-
-Zone8A_EventScript_Marcus::
-	trainerbattle_single TRAINER_MARCUS, Zone8A_Text_MarcusIntro, Zone8A_Text_MarcusDefeat
-	msgbox Zone8A_Text_MarcusPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone8A_Text_MarcusIntro:
-	.string "If I win, you have to lead me out of here!$"
-
-Zone8A_Text_MarcusDefeat:
-	.string "Wahhhhh!!!$"
-
-Zone8A_Text_MarcusPostBattle:
-	.string "It's my destiny to wander this cave\n"
-	.string "forever…$"
 `

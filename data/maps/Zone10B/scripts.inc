@@ -77,31 +77,21 @@ Zone10B_EventScript_AdaminaStuff_11:
 	goto Zone10B_EventScript_AdaminaStuff_10
 
 Zone10B_EventScript_AdaminaStuff_12:
-	checktrainerflag TRAINER_MILLIE
+	checktrainerflag TRAINER_KYLE
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_JAMAL
+	checktrainerflag TRAINER_BELLE
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_PAIGE
+	checktrainerflag TRAINER_DEWEY
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_SETH
+	checktrainerflag TRAINER_PEARLIE
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_CONNIE
+	checktrainerflag TRAINER_ERNEST
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_CHAD
+	checktrainerflag TRAINER_ALANA
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_JIMMY
+	checktrainerflag TRAINER_SUSAN
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_EMILIANO
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_MARCUS
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_KAREN
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_JAYDEN
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_NEIL
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_TAMARA
+	checktrainerflag TRAINER_CONRAD
 	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
 	goto Zone10B_EventScript_AdaminaStuff_10
 
@@ -147,7 +137,46 @@ Zone10B_EventScript_SideQuestTeleport_1:
 
 Zone10B_EventScript_SideQuestTeleport_2:
 	msgbox Zone10B_EventScript_SideQuestTeleport_Text_0
-	specialvar VAR_RESULT, GetCaughtSpeciesCount
+	checktrainerflag TRAINER_JEREMIAH
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_HARPER
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_ARTHUR
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	goto_if_unset FLAG_BEAT_LEVIATHAN_2, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_PATRICK
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_RICHARD
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_ANNABELLE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_HERMAN
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_RALPH
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_SANTIAGO
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_CHLOE_AND_KAYA
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_LUCIA
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_FRED
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_ANNE_AND_JUNE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_GILBERT
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_MELANIE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_CONSTANCE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_FRANK
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_DUDLEY
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_DAISY
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	goto_if_unset FLAG_BEAT_LEVIATHAN_6, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_MILLIE
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_JAMAL
@@ -158,13 +187,9 @@ Zone10B_EventScript_SideQuestTeleport_2:
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_CONNIE
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
-	checktrainerflag TRAINER_CHAD
-	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_JIMMY
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_EMILIANO
-	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
-	checktrainerflag TRAINER_MARCUS
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_KAREN
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
@@ -173,6 +198,22 @@ Zone10B_EventScript_SideQuestTeleport_2:
 	checktrainerflag TRAINER_NEIL
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_TAMARA
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_KYLE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_BELLE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_DEWEY
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_PEARLIE
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_ERNEST
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_ALANA
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_SUSAN
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_CONRAD
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	setflag FLAG_RECEIVED_ZONE10B_TM21_TELEPORT
 	msgbox Zone10B_EventScript_SideQuestTeleport_Text_2

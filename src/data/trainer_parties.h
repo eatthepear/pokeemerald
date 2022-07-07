@@ -186,7 +186,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, opt
     .ability = ABILITY_HIDDEN, //Run Away
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_HYPER_FANG, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_FURY_SWIPES, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
     }
 };
 
@@ -200,7 +200,7 @@ static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Hustle
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_HYPER_FANG, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_FURY_SWIPES, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
     }
 };
 
@@ -366,7 +366,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_SLOT_1, //Thick Fat
     .species = SPECIES_SPHEAL,
     .heldItem = ITEM_METRONOME,
-    .moves = {MOVE_ICE_BALL, MOVE_WATER_GUN, MOVE_DEFENSE_CURL, MOVE_POWDER_SNOW}
+    .moves = {MOVE_ICE_BALL, MOVE_WATER_GUN, MOVE_DEFENSE_CURL, MOVE_ROLLOUT}
     }
 };
 
@@ -431,22 +431,22 @@ static const struct TrainerMon sParty_Santiago[] = {
 static const struct TrainerMon sParty_ChloeAndKaya[] = {//Double Battle
     {
     .iv = 0,
-    .lvl = 11,
+    .lvl = 10,
     .species = SPECIES_LOTAD,
     },
     {
     .iv = 0,
-    .lvl = 11,
+    .lvl = 10,
     .species = SPECIES_SEEDOT,
     },
     {
     .iv = 0,
-    .lvl = 11,
+    .lvl = 10,
     .species = SPECIES_NIDORAN_F,
     },
     {
     .iv = 0,
-    .lvl = 11,
+    .lvl = 10,
     .species = SPECIES_NIDORAN_M,
     }
 };
@@ -654,7 +654,7 @@ static const struct TrainerMon sParty_Caitlyn[] = {
     {
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_TOGEPI,
+    .species = SPECIES_HAPPINY,
     },
     {
     .iv = 0,
@@ -690,11 +690,6 @@ static const struct TrainerMon sParty_Kevin[] = {
     .iv = 10,
     .lvl = 13,
     .species = SPECIES_WIMPOD,
-    },
-    {
-    .iv = 10,
-    .lvl = 13,
-    .species = SPECIES_DOTTLER,
     }
 };
 
@@ -728,58 +723,68 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
 static const struct TrainerMon sParty_Mina[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_WAILMER,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_SHELLOS,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_CLOBBOPUS,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_HORSEA,
     }
 };
 
 static const struct TrainerMon sParty_Melanie[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_HOPPIP,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_SLOWPOKE_GALARIAN,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_MEOWTH_GALARIAN,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_FOONGUS,
     }
 };
 
 static const struct TrainerMon sParty_Constance[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_MILCERY,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_APPLIN,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_RALTS,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_TYNAMO,
     }
 };
@@ -787,69 +792,79 @@ static const struct TrainerMon sParty_Constance[] = {// Random lead
 static const struct TrainerMon sParty_Frank[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_SANDYGAST,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_SLAKOTH,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_MORELULL,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_BINACLE,
     }
 };
 
 static const struct TrainerMon sParty_Dudley[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_CLAUNCHER,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_REMORAID,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_MAGIKARP,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_FEEBAS,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_KRABBY,
     }
 };
 
 static const struct TrainerMon sParty_Daisy[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_MANTYKE,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_MUNCHLAX,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_RIOLU,
     },
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_TOXEL,
     },
     {
     .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_HAPPINY,
+    .lvl = 14,
+    .species = SPECIES_TOGEPI,
     }
 };
 
@@ -887,72 +902,92 @@ static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan, Brutal
 static const struct TrainerMon sParty_Millie[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_GROWLITHE_HISUIAN,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_GASTLY,
     },
     {
     .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_TEDDIURSA,
+    .lvl = 16,
+    .species = SPECIES_INKAY,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_WHISMUR,
     }
 };
 
 static const struct TrainerMon sParty_Paige[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_FLABEBE,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_CUTIEFLY,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_SHROOMISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_WOOBAT,
     }
 };
 
 static const struct TrainerMon sParty_Seth[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_GIBLE,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_BELDUM,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_LARVESTA,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_GOOMY,
     }
 };
 
 static const struct TrainerMon sParty_Jamal[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_MEDITITE,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_ZUBAT,
     },
     {
     .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_INKAY,
+    .lvl = 16,
+    .species = SPECIES_TEDDIURSA,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_TYMPOLE,
     }
 };
 
@@ -961,24 +996,6 @@ static const struct TrainerMon sParty_Connie[] = {
     .iv = 0,
     .lvl = 18,
     .species = SPECIES_TROPIUS,
-    }
-};
-
-static const struct TrainerMon sParty_Chad[] = {// Random lead
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_WOOBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_WHISMUR,
-    },
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_TYMPOLE,
     }
 };
 
@@ -1035,22 +1052,22 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battl
 static const struct TrainerMon sParty_Jimmy[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_SANDSHREW,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_SANDSHREW_ALOLAN,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_GRIMER,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_GRIMER_ALOLAN,
     }
 };
@@ -1058,36 +1075,23 @@ static const struct TrainerMon sParty_Jimmy[] = {// Random lead
 static const struct TrainerMon sParty_Emiliano[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_MAKUHITA,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_ONIX,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_ARON,
-    }
-};
-
-static const struct TrainerMon sParty_Marcus[] = {// Random lead
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_DRIFLOON,
     },
     {
     .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_ZIGZAGOON_GALARIAN,
-    },
-    {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_SWINUB,
+    .lvl = 16,
+    .species = SPECIES_MIENFOO,
     }
 };
 
@@ -1102,30 +1106,40 @@ static const struct TrainerMon sParty_Karen[] = {
 static const struct TrainerMon sParty_Jayden[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_MACHOP,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_DRILBUR,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_ROLYCOLY,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_SWINUB,
     }
 };
 
 static const struct TrainerMon sParty_Neil[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_BRONZOR,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
+    .species = SPECIES_KLINK,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
     .species = SPECIES_MAWILE,
     }
 };
@@ -1133,18 +1147,23 @@ static const struct TrainerMon sParty_Neil[] = {// Random lead
 static const struct TrainerMon sParty_Tamara[] = {// Random lead
     {
     .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_MIENFOO,
+    .lvl = 16,
+    .species = SPECIES_DRIFLOON,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_VULPIX_ALOLAN,
     },
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_JOLTIK,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_ZIGZAGOON_GALARIAN,
     }
 };
 
@@ -1353,7 +1372,7 @@ static const struct TrainerMon sParty_Kyle[] = {// Random lead
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_SCRAGGY,
+    .species = SPECIES_SPHEAL,
     },
     {
     .iv = 0,
@@ -1364,24 +1383,11 @@ static const struct TrainerMon sParty_Kyle[] = {// Random lead
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_GLIGAR,
-    }
-};
-
-static const struct TrainerMon sParty_Crystal[] = {// Random lead
-    {
-    .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_NATU,
     },
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_MUNNA,
-    },
-    {
-    .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_BALTOY,
+    .species = SPECIES_LITWICK,
     }
 };
 
@@ -1400,6 +1406,11 @@ static const struct TrainerMon sParty_Belle[] = {// Random lead
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_TRAPINCH,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_DARUMAKA,
     }
 };
 
@@ -1407,7 +1418,7 @@ static const struct TrainerMon sParty_Dewey[] = {// Random lead
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_DARUMAKA,
+    .species = SPECIES_CORPHISH,
     },
     {
     .iv = 0,
@@ -1418,6 +1429,11 @@ static const struct TrainerMon sParty_Dewey[] = {// Random lead
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_SANDILE,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_YAMASK_GALARIAN,
     }
 };
 
@@ -1426,24 +1442,6 @@ static const struct TrainerMon sParty_Pearlie[] = {
     .iv = 0,
     .lvl = 22,
     .species = SPECIES_CRAMORANT,
-    }
-};
-
-static const struct TrainerMon sParty_Raphael[] = {// Random lead
-    {
-    .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_JANGMO_O,
-    },
-    {
-    .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_BAGON,
-    },
-    {
-    .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_DEINO,
     }
 };
 
@@ -1462,6 +1460,11 @@ static const struct TrainerMon sParty_Ernest[] = {// Random lead
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_SILICOBRA,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_CUBONE,
     }
 };
 
@@ -1474,12 +1477,17 @@ static const struct TrainerMon sParty_Alana[] = {// Random lead
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_LITWICK,
+    .species = SPECIES_POLIWAG,
     },
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_SPHEAL,
+    .species = SPECIES_SCRAGGY,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_SWABLU,
     }
 };
 
@@ -1506,6 +1514,11 @@ static const struct TrainerMon sParty_Conrad[] = {// Random lead
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_RHYHORN,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_NOSEPASS,
     }
 };
 
@@ -1611,11 +1624,11 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
     .iv = 31,
     .lvl = 23,
     .nature = NATURE_IMPISH,
-    .ability = ABILITY_HIDDEN, //Clear Body
+    .ability = ABILITY_SLOT_1, //Shell Armor
     .gender = TRAINER_MON_MALE,
-    .species = SPECIES_DURALUDON,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_DRAGON_TAIL, MOVE_METAL_CLAW, MOVE_HONE_CLAWS, MOVE_REST}
+    .species = SPECIES_FALINKS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_NO_RETREAT, MOVE_BRICK_BREAK, MOVE_REST, MOVE_SLEEP_TALK}
     }
 };
 

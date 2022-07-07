@@ -90,14 +90,12 @@ Zone8C_EventScript_Tamara::
        msgbox Zone8C_Text_TamaraPostBattle, MSGBOX_AUTOCLOSE
 
 Zone8C_Text_TamaraIntro:
-       .string "Ah, I'm hopelessly lost…$"
+	.string "If I win, you have to lead me out of here!$"
 
 Zone8C_Text_TamaraDefeat:
-       .string "Now I can add defeat to my\n"
-       .string "list of misfortunes…$"
+	.string "Wahhhhh!!!$"
 
 Zone8C_Text_TamaraPostBattle:
-       .string "I should really drop my pessimistic\n"
-       .string "attitude, I know.$"
-
+	.string "It's my destiny to wander this cave\n"
+	.string "forever…$"
 `

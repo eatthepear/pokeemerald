@@ -260,6 +260,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 
 Zone0Sanctuary_EventScript_Intro_34:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_25
+	setflag FLAG_ZONE0B_ABILITY_CHANGE_USED
 	callnative GiveRandomStarter
 	playfanfare MUS_OBTAIN_ITEM
 	bufferleadmonspeciesname 0
@@ -645,7 +646,7 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_60:
 Zone0Sanctuary_EventScript_EndIntro::
 	compare VAR_TEMP_0, 1
 	goto_if_eq Zone0Sanctuary_EventScript_EndIntro_2
-	additem ITEM_POKE_BALL, 10
+	additem ITEM_POKE_BALL, 15
 	additem ITEM_POTION, 10
 Zone0Sanctuary_EventScript_EndIntro_1:
 	setflag FLAG_EXP_ALL_ON
@@ -670,7 +671,7 @@ Zone0Sanctuary_EventScript_EndIntro_2:
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_0
 	delay 96
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_1
-	giveitem ITEM_POKE_BALL, 10
+	giveitem ITEM_POKE_BALL, 15
 	giveitem ITEM_POTION, 10
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_2, MSGBOX_DEFAULT
@@ -1032,7 +1033,7 @@ Zone0Sanctuary_EventScript_Intro_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. You've arrived.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_1:
-	.string "Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the challenges ahead.\pWould you like to listen to the tutorial?$"
+	.string "Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_2:
 	.string "The Battle Labyrinth is comprised of\n"

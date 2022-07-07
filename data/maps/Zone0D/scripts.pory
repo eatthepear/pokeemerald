@@ -76,6 +76,10 @@ text Zone0D_Text_Explain {
 
 script Zone0D_EventScript_WarpBack {
 	lockall
+	if (var(VAR_ZONE_0_STATE) == 3) {
+		setflag(FLAG_ZONE0B_ABILITY_CHANGE_USED)
+		setvar(VAR_ZONE_0_STATE, 4)
+	}
 	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	switch (var(VAR_ZONE)) {
 		case 1:

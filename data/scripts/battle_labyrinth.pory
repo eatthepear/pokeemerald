@@ -104,7 +104,6 @@ mart Shop_General_1to3 {
 	ITEM_POTION
 	ITEM_ANTIDOTE
 	ITEM_PARALYZE_HEAL
-	ITEM_REPEL
 }
 
 mart Shop_General_4to8 {
@@ -2445,11 +2444,9 @@ script Zone_EventScript_RetirePrompt {
 			cleartrainerflag(TRAINER_PAIGE)
 			cleartrainerflag(TRAINER_SETH)
 			cleartrainerflag(TRAINER_CONNIE)
-			cleartrainerflag(TRAINER_CHAD)
 			clearflag(FLAG_BEAT_LEVIATHAN_7)
 			cleartrainerflag(TRAINER_JIMMY)
 			cleartrainerflag(TRAINER_EMILIANO)
-			cleartrainerflag(TRAINER_MARCUS)
 			cleartrainerflag(TRAINER_KAREN)
 			cleartrainerflag(TRAINER_JAYDEN)
 			cleartrainerflag(TRAINER_NEIL)
@@ -2466,11 +2463,9 @@ script Zone_EventScript_RetirePrompt {
 			waitstate
 		case 10:
 			cleartrainerflag(TRAINER_KYLE)
-			cleartrainerflag(TRAINER_CRYSTAL)
 			cleartrainerflag(TRAINER_BELLE)
 			cleartrainerflag(TRAINER_DEWEY)
 			cleartrainerflag(TRAINER_PEARLIE)
-			cleartrainerflag(TRAINER_RAPHAEL)
 			cleartrainerflag(TRAINER_ERNEST)
 			cleartrainerflag(TRAINER_ALANA)
 			cleartrainerflag(TRAINER_SUSAN)

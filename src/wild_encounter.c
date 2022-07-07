@@ -1040,7 +1040,7 @@ bool8 TryDoDoubleWildBattle(void)
     else if ((Random() % 100) + 1 < B_DOUBLE_WILD_CHANCE)
     {
         // You can't get wild Double Battles until you clear Zone 3
-        if (VarGet(VAR_ZONE) < 3) 
+        if (VarGet(VAR_ZONE) < 4) 
         {
             return FALSE;
         }

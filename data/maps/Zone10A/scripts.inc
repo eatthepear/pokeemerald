@@ -15,8 +15,11 @@ Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
 	goto_if_set FLAG_ITEM_ZONE10A_METAL_COAT, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_14
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
 Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
-	goto_if_set FLAG_ITEM_ZONE10A_TM16, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17
+	goto_if_set FLAG_ITEM_ZONE10A_TM16, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_18
 	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17:
+	goto_if_set FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS, Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_21
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST
 	return
 
 Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
@@ -35,8 +38,12 @@ Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_14:
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	goto Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_13
 
-Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17:
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_18:
 	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_17
+
+Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_21:
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	return
 
 
@@ -177,6 +184,40 @@ Zone10A_EventScript_TM16_2:
 	end
 
 
+Zone10A_EventScript_HeavyDutyBoots::
+	lock
+	goto_if_set FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS, Zone10A_EventScript_HeavyDutyBoots_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS
+	addobject VAR_LAST_TALKED
+	finditem ITEM_HEAVY_DUTY_BOOTS, 1
+	release
+	end
+
+Zone10A_EventScript_HeavyDutyBoots_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone10A_EventScript_Ranger::
+	lock
+	faceplayer
+	goto_if_unset FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES, Zone10A_EventScript_Ranger_2
+Zone10A_EventScript_Ranger_1:
+	msgbox Zone10A_EventScript_Ranger_Text_1
+	release
+	end
+
+Zone10A_EventScript_Ranger_2:
+	msgbox Zone10A_EventScript_Ranger_Text_0
+	giveitem ITEM_SAFETY_GOGGLES
+	setflag FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES
+	goto Zone10A_EventScript_Ranger_1
+
+
 Zone10A_EventScript_Kyle::
 	trainerbattle_single TRAINER_KYLE, Zone10A_Text_KyleIntro, Zone10A_Text_KyleDefeat
 	msgbox Zone10A_Text_KylePostBattle, MSGBOX_AUTOCLOSE
@@ -190,20 +231,6 @@ Zone10A_Text_KyleDefeat:
 
 Zone10A_Text_KylePostBattle:
 	.string "I'll be a champion some day, just you wait!$"
-
-Zone10A_EventScript_Crystal::
-	trainerbattle_single TRAINER_CRYSTAL, Zone10A_Text_CrystalIntro, Zone10A_Text_CrystalDefeat
-	msgbox Zone10A_Text_CrystalPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone10A_Text_CrystalIntro:
-	.string "I see… I see the future…$"
-
-Zone10A_Text_CrystalDefeat:
-	.string "I see myself wallowing in defeat…$"
-
-Zone10A_Text_CrystalPostBattle:
-	.string "I see you reaching great heights!$"
 
 Zone10A_EventScript_Belle::
 	trainerbattle_single TRAINER_BELLE, Zone10A_Text_BelleIntro, Zone10A_Text_BelleDefeat
@@ -253,23 +280,6 @@ Zone10A_Text_PearliePostBattle:
 	.string "I don't like sand.\n"
 	.string "It's coarse and rough and irritating and\l"
 	.string "it gets everywhere.$"
-	
-Zone10A_EventScript_Raphael::
-	trainerbattle_single TRAINER_RAPHAEL, Zone10A_Text_RaphaelIntro, Zone10A_Text_RaphaelDefeat
-	msgbox Zone10A_Text_RaphaelPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone10A_Text_RaphaelIntro:
-	.string "Have you ever faced the might of\n"
-	.string "dragons?$"
-
-Zone10A_Text_RaphaelDefeat:
-	.string "What?\n"
-	.string "You bested the might of dragons?$"
-
-Zone10A_Text_RaphaelPostBattle:
-	.string "Argh!\n"
-	.string "If only Fairy-types didn't exist!$"
 
 Zone10A_EventScript_Ernest::
 	trainerbattle_single TRAINER_ERNEST, Zone10A_Text_ErnestIntro, Zone10A_Text_ErnestDefeat
@@ -335,6 +345,17 @@ Zone10A_Text_ConradDefeat:
 Zone10A_Text_ConradPostBattle:
 	.string "Not a great first impression,\n"
 	.string "if I'm being honest.$"
+
+Zone10A_EventScript_Ranger_Text_0:
+	.string "Excuse me! I'm a member of the Pokémon\n"
+	.string "Ranger Corps, working to protect both\l"
+	.string "people and Pokémon.\p"
+	.string "It's not safe to be out in the\n"
+	.string "sandstorm for long periods of time, so\l"
+	.string "take this!$"
+
+Zone10A_EventScript_Ranger_Text_1:
+	.string "Remember kids, safety first!$"
 
 Zone10A_Text_NoChance::
 	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Nope.\n"

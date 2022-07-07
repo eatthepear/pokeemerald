@@ -21,7 +21,7 @@ script Zone2B_EventScript_Exit {
 			(!defeated(TRAINER_JEREMIAH) ||
 			!defeated(TRAINER_HARPER) ||
 			!defeated(TRAINER_ARTHUR) ||
-			(flag(FLAG_BEAT_LEVIATHAN_2) == false))) {
+			!flag(FLAG_BEAT_LEVIATHAN_2))) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
 		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)

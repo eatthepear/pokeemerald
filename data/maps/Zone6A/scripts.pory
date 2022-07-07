@@ -27,10 +27,9 @@ script Zone6A_EventScript_Exit {
 		waitstate
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-			(!defeated(TRAINER_FRANK) ||
-			!defeated(TRAINER_MELANIE) ||
+			(!defeated(TRAINER_MELANIE) ||
 			!defeated(TRAINER_CONSTANCE) ||
-			!defeated(TRAINER_MINA) ||
+			!defeated(TRAINER_FRANK) ||
 			!defeated(TRAINER_DUDLEY) ||
 			!defeated(TRAINER_DAISY) ||
 			!flag(FLAG_BEAT_LEVIATHAN_6))) {

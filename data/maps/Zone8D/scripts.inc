@@ -278,13 +278,9 @@ Zone8D_EventScript_Exit_7:
 	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_CONNIE
 	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_CHAD
-	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_JIMMY
 	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_EMILIANO
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_MARCUS
 	goto_if 0, Zone8D_EventScript_Exit_6
 	checktrainerflag TRAINER_KAREN
 	goto_if 0, Zone8D_EventScript_Exit_6

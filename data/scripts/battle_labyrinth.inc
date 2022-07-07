@@ -139,7 +139,6 @@ Shop_General_1to3:
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 
 	.align 2
@@ -3648,11 +3647,9 @@ Zone_EventScript_RetirePrompt_12:
 	cleartrainerflag TRAINER_PAIGE
 	cleartrainerflag TRAINER_SETH
 	cleartrainerflag TRAINER_CONNIE
-	cleartrainerflag TRAINER_CHAD
 	clearflag FLAG_BEAT_LEVIATHAN_7
 	cleartrainerflag TRAINER_JIMMY
 	cleartrainerflag TRAINER_EMILIANO
-	cleartrainerflag TRAINER_MARCUS
 	cleartrainerflag TRAINER_KAREN
 	cleartrainerflag TRAINER_JAYDEN
 	cleartrainerflag TRAINER_NEIL
@@ -3673,11 +3670,9 @@ Zone_EventScript_RetirePrompt_13:
 
 Zone_EventScript_RetirePrompt_14:
 	cleartrainerflag TRAINER_KYLE
-	cleartrainerflag TRAINER_CRYSTAL
 	cleartrainerflag TRAINER_BELLE
 	cleartrainerflag TRAINER_DEWEY
 	cleartrainerflag TRAINER_PEARLIE
-	cleartrainerflag TRAINER_RAPHAEL
 	cleartrainerflag TRAINER_ERNEST
 	cleartrainerflag TRAINER_ALANA
 	cleartrainerflag TRAINER_SUSAN

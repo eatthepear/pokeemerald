@@ -234,10 +234,8 @@ script Zone8D_EventScript_Exit {
 			!defeated(TRAINER_PAIGE) ||
 			!defeated(TRAINER_SETH) ||
 			!defeated(TRAINER_CONNIE) ||
-			!defeated(TRAINER_CHAD) ||
 			!defeated(TRAINER_JIMMY) ||
 			!defeated(TRAINER_EMILIANO) ||
-			!defeated(TRAINER_MARCUS) ||
 			!defeated(TRAINER_KAREN) ||
 			!defeated(TRAINER_JAYDEN) ||
 			!defeated(TRAINER_NEIL) ||

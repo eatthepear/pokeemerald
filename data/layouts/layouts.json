@@ -4694,7 +4694,7 @@
     {
       "id": "LAYOUT_ZONE0A",
       "name": "Zone0A_Layout",
-      "width": 66,
+      "width": 82,
       "height": 15,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -4704,10 +4704,10 @@
     {
       "id": "LAYOUT_ZONE0B",
       "name": "Zone0B_Layout",
-      "width": 66,
+      "width": 13,
       "height": 13,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone0B/border.bin",
       "blockdata_filepath": "data/layouts/Zone0B/map.bin"
     },
