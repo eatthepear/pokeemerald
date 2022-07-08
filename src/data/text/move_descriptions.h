@@ -1446,8 +1446,8 @@ static const u8 sRoostDescription[] = _(
     "half of its max HP.");
 
 static const u8 sGravityDescription[] = _(
-    "Gravity is intensified\n"
-    "negating levitation.");
+    "Gravity intensifies for\n"
+    "8 turns, stops levitation.");
 
 static const u8 sMiracleEyeDescription[] = _(
     "Negate evasiveness and\n"

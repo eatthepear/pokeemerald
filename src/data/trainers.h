@@ -1029,19 +1029,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Jeanette},
     },
 
-    [TRAINER_REGINA] =
-    {
-        .trainerClass = TRAINER_CLASS_HEX_MANIAC,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_HEX_MANIAC,
-        .trainerName = _("Regina"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Regina),
-        .party = {.TrainerMon = sParty_Regina},
-    },
-
     [TRAINER_EMMA_AND_LEO] =
     {
         .trainerClass = TRAINER_CLASS_YOUNG_COUPLE,
@@ -1053,6 +1040,19 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_EmmaAndLeo),
         .party = {.TrainerMon = sParty_EmmaAndLeo},
+    },
+
+    [TRAINER_REGINA] =
+    {
+        .trainerClass = TRAINER_CLASS_HEX_MANIAC,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_HEX_MANIAC,
+        .trainerName = _("Regina"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Regina),
+        .party = {.TrainerMon = sParty_Regina},
     },
 
     [TRAINER_JOEL] =
@@ -1068,17 +1068,32 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Joel},
     },
 
-    [TRAINER_LEVIATHAN6] =
+    [TRAINER_NEWTON_LEVIATHAN_10] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_GUITARIST,
-        .trainerName = _("Jake"),
+        .trainerPic = TRAINER_PIC_SCIENTIST,
+        .trainerName = _("Newton"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_Jake),
-        .party = {.TrainerMon = sParty_Jake},
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SETUP_FIRST_TURN,
+        .partySize = ARRAY_COUNT(sParty_NewtonDefault),
+        .party = {.TrainerMon = sParty_NewtonDefault},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+    },
+
+    [TRAINER_NEWTON_LEVIATHAN_10_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_SCIENTIST,
+        .trainerName = _("Newton"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SETUP_FIRST_TURN | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_NewtonBrutal),
+        .party = {.TrainerMon = sParty_NewtonBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
     },
@@ -2307,21 +2322,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_LelouchExp4),
         .party = {.TrainerMon = sParty_LelouchExp4},
-    },
-
-    [TRAINER_LEVIATHAN6_BRUTAL] =
-    {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_GUITARIST,
-        .trainerName = _("Jake"),
-        .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
-        .partySize = ARRAY_COUNT(sParty_JakeBrutal),
-        .party = {.TrainerMon = sParty_JakeBrutal},
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_LEVIATHAN7_BRUTAL] =

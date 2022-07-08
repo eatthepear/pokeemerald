@@ -8068,10 +8068,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM22_SHADOW_CLAW] =
+    [ITEM_TM22_COVET] =
     {
         .name = _("TM22"),
-        .itemId = ITEM_TM22_SHADOW_CLAW,
+        .itemId = ITEM_TM22_COVET,
         .price = 3000,
         .description = sTM22Desc,
         .pocket = POCKET_TM_HM,
@@ -8080,10 +8080,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM23_SUNNY_DAY] =
+    [ITEM_TM23_PLUCK] =
     {
         .name = _("TM23"),
-        .itemId = ITEM_TM23_SUNNY_DAY,
+        .itemId = ITEM_TM23_PLUCK,
         .price = 3000,
         .description = sTM23Desc,
         .pocket = POCKET_TM_HM,

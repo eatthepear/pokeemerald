@@ -1085,9 +1085,9 @@
 #define FLAG_ITEM_ZONE10A_DRAGON_FANG                               0x410
 #define FLAG_ITEM_ZONE10A_METAL_COAT                                0x411
 #define FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS                          0x412
-#define FLAG_ITEM_ZONE11A_WIDE_LENS                                 0x413
-#define FLAG_ITEM_ZONE11A_TM09                                      0x414
-#define FLAG_ITEM_ZONE11A_TM10                                      0x415
+#define FLAG_ITEM_ZONE11A_TM22                                      0x413
+#define FLAG_ITEM_ZONE11A_MOON_STONE                                0x414
+#define FLAG_ITEM_ZONE11A_TIMER_BALL                                0x415
 #define FLAG_ITEM_ZONE12A_TM12                                      0x416
 #define FLAG_ITEM_ZONE12A_METRONOME                                 0x417
 #define FLAG_ITEM_ZONE12A_THUNDER_STONE                             0x418

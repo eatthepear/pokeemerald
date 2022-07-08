@@ -3039,10 +3039,6 @@ static const u8 sTM06Desc[] = _(
     "Yells at foes,\n"
     "lowering their\n"
     "Special Attack.");
-    // Pluck
-    // "Pecks and eats the\n"
-    // "foe's held Berry,\n"
-    // "gaining its effect.");
 
 static const u8 sTM07Desc[] = _(
     "Absorbs target's HP\n"
@@ -3062,10 +3058,6 @@ static const u8 sTM09Desc[] = _(
     "Strikes the foe\n"
     "with its fists,\n"
     "raising Attack.");
-    // Covet
-    // "Approaches cutely,\n"
-    // "then steals the\n"
-    // "foe's held item.");
 
 static const u8 sTM10Desc[] = _(
     "Attacks with an\n"
@@ -3156,14 +3148,22 @@ static const u8 sTM21Desc[] = _(
     // "intense fire.");
 
 static const u8 sTM22Desc[] = _(
-    "Strikes with a\n"
-    "shadow claw. High\n"
-    "critical-hit ratio.");
+    "Approaches cutely,\n"
+    "then steals the\n"
+    "foe's held item.");
+    // Shadow Claw
+    // "Strikes with a\n"
+    // "shadow claw. High\n"
+    // "critical-hit ratio.");
 
 static const u8 sTM23Desc[] = _(
-    "Raises the power of\n"
-    "Fire-type moves\n"
-    "for 5 turns.");
+    "Pecks and eats the\n"
+    "foe's held Berry,\n"
+    "gaining its effect.");
+    // Sunny Day
+    // "Raises the power of\n"
+    // "Fire-type moves\n"
+    // "for 5 turns.");
 
 static const u8 sTM24Desc[] = _(
     "Chops the throat to\n"

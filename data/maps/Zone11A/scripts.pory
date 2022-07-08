@@ -1,0 +1,237 @@
+mapscripts Zone11A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE11A_TM22)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE11A_MOON_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE11A_TIMER_BALL)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
+
+script Zone11A_EventScript_Exit {
+    lockall
+    if (var(VAR_ZONE) > 11) {
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 31, 32)
+		waitstate
+    } else {
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
+			(!defeated(TRAINER_JEANETTE) ||
+			!defeated(TRAINER_EMMA_AND_LEO) ||
+			!defeated(TRAINER_REGINA) ||
+			!defeated(TRAINER_JOEL) ||
+			!flag(FLAG_BEAT_LEVIATHAN_10))) {
+			goto(EventScript_BrutalExitNotSatisfied)
+		}
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+        warp(MAP_ZONE11SANCTUARY, 255, 22, 7)
+    }
+    releaseall
+    end
+}
+
+script Zone11A_EventScript_LeviathanIntro {
+	lockall
+	applymovement(6, Common_Movement_FaceLeft)
+	waitmovement(0)
+	applymovement(6, Common_Movement_ExclamationMark)
+	playse(SE_PIN)
+	waitmovement(0)
+	waitse
+	applymovement(6, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(6, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(6, Common_Movement_WalkLeft)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Excuse me, I realize this is rather sudden, but would you like to be a part of my experiment?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: I see."))
+		applymovement(6, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(6, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(6, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+	} else {
+		fadeoutbgm(1)
+		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Thank you! The experiment name is: Gravity and its Pokémon battle-winning properties!"))
+		setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_NEWTON)
+		if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10_BRUTAL, Zone11A_Text_Leviathan10Defeat)
+		} else {
+			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat)
+		}
+		clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Gravity is not the only way to utilize lower accuracy moves consistently.\pI'd like you to have this Wide Lens."))
+		giveitem(ITEM_WIDE_LENS)
+		msgbox(Zone11A_Text_Leviathan10Post)
+		setflag(FLAG_BEAT_LEVIATHAN_10)
+		setvar(VAR_ZONE_11_STATE, 1)
+	}
+	releaseall
+	end
+}
+
+text Zone11A_Text_Leviathan10Defeat {
+	"Alas, not even the power of Gravity is\nstrong enough to win me a battle…"
+}
+
+script Zone11A_EventScript_Leviathan {
+	lock
+	faceplayer
+	msgbox(Zone11A_Text_Leviathan10Post)
+	release
+	end
+}
+
+text Zone11A_Text_Leviathan10Post {
+	format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Unfortunately, I'm afraid the path ahead is blocked off until my experiments finish.\pPerhaps come back far in the future, when I've finished here.")
+}
+
+script Zone11A_EventScript_TM22 {
+	lock
+	if (flag(FLAG_ITEM_ZONE11A_TM22)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE11A_TM22)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TM22, 1)
+	release
+	end
+}
+
+script Zone11A_EventScript_MoonStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE11A_MOON_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE11A_MOON_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_MOON_STONE)
+	release
+	end
+}
+
+script Zone11A_EventScript_TimerBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE11A_TIMER_BALL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE11A_TIMER_BALL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TIMER_BALL, 1)
+	release
+	end
+}
+
+raw `
+Zone11A_EventScript_CelebiIntro::
+	lockall
+	goto Zone11A_EventScript_NoCelebi
+	releaseall
+	end
+
+Zone11A_EventScript_NoCelebi:
+	msgbox Zone11A_Text_SacredTree, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Zone11A_Text_SacredTree:
+	.string "This appears to be a sacred tree.$"
+
+Zone11A_EventScript_Jeanette::
+	trainerbattle_single TRAINER_JEANETTE, Zone11A_Text_JeanetteIntro, Zone11A_Text_JeanetteDefeat
+	msgbox Zone11A_Text_JeanettePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone11A_Text_JeanetteIntro:
+	.string "You snuck up on me!$"
+
+Zone11A_Text_JeanetteDefeat:
+	.string "What a shocker!$"
+
+Zone11A_Text_JeanettePostBattle:
+	.string "You had the element of surprise.$"
+
+Zone11A_EventScript_Regina::
+	trainerbattle_single TRAINER_REGINA, Zone11A_Text_ReginaIntro, Zone11A_Text_ReginaDefeat
+	msgbox Zone11A_Text_ReginaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone11A_Text_ReginaIntro:
+	.string "Do you hear the call?$"
+
+Zone11A_Text_ReginaDefeat:
+	.string "The spirits… I can hear their voices!$"
+
+Zone11A_Text_ReginaPostBattle:
+	.string "It might just be the wind whistling,\n"
+	.string "but I'm sure the voices are from the\l"
+	.string "beyond.$"
+
+Zone11A_EventScript_EmmaandLeo::
+	trainerbattle_double TRAINER_EMMA_AND_LEO, Zone11A_Text_EmmaandLeoIntro, Zone11A_Text_EmmaandLeoDefeat, gText_NotEnoughMons
+	msgbox Zone11A_Text_EmmaandLeoPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+Zone11A_Text_EmmaandLeoIntro:
+	.string "Leo: I'm gonna show my girlfriend\n"
+	.string "that I'm brave!\p"
+	.string "Emma: Ugh. Enforcing gender norms,\n"
+	.string "am I right?$"
+
+Zone11A_Text_EmmaandLeoDefeat:
+	.string "Leo: My toxic masculinity, ruined!\p"
+	.string "Emma: Maybe I need a new SO…$"
+
+Zone11A_Text_EmmaandLeoPostBattle:
+	.string "Leo: Don't talk to my girlfriend!\p"
+	.string "Emma: Pff.$"
+
+Zone11A_EventScript_Joel::
+	trainerbattle_single TRAINER_JOEL, Zone11A_Text_JoelIntro, Zone11A_Text_JoelDefeat
+	msgbox Zone11A_Text_JoelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone11A_Text_JoelIntro:
+	.string "Ugh, another forest maze?\n"
+	.string "At least this one doesn't have warps…$"
+
+Zone11A_Text_JoelDefeat:
+	.string "Another defeat?\n"
+	.string "Luck is just not on my side today…$"
+
+Zone11A_Text_JoelPostBattle:
+	.string "I'll see you another day.$"
+`
