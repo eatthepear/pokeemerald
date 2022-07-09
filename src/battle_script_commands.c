@@ -3527,7 +3527,7 @@ static void Cmd_seteffectwithchance(void)
 {
     u32 percentChance;
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE)
+    if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE) || (gBattleStruct->illusion[gBattlerAttacker].on))
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance * 2;
     else
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance;

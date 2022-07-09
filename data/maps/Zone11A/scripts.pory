@@ -77,7 +77,7 @@ script Zone11A_EventScript_LeviathanIntro {
 			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat)
 		}
 		clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Gravity is not the only way to utilize lower accuracy moves consistently.\pI'd like you to have this Wide Lens."))
+		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Gravity is not the only way to utilize lower accuracy moves consistently.\pI'd like you to have this Wide Lens."), MSGBOX_DEFAULT)
 		giveitem(ITEM_WIDE_LENS)
 		msgbox(Zone11A_Text_Leviathan10Post)
 		setflag(FLAG_BEAT_LEVIATHAN_10)

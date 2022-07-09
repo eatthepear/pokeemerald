@@ -2014,6 +2014,11 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
             }
+            else
+            {
+                ability = 0;
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
+            }
 
             if (partyData[l].heldItem > 0)
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[l].heldItem);

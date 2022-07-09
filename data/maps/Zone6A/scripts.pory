@@ -52,9 +52,9 @@ script Zone6A_EventScript_LeviathanBattle {
 		release
 		end
 	}
-	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!"))
+	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!"), MSGBOX_DEFAULT)
 	fadeoutbgm(1)
-	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Who do you think you are?\pI'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!"))
+	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Who do you think you are?\pI'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!"), MSGBOX_DEFAULT)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_ZACK)
@@ -64,7 +64,7 @@ script Zone6A_EventScript_LeviathanBattle {
 		trainerbattle_no_intro(TRAINER_ZACK_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!\pYou're pretty good!\pHere, take this!"))
+	msgbox(format("{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!\pYou're pretty good!\pHere, take this!"), MSGBOX_DEFAULT)
 	giveitem(ITEM_TM08)
 	msgbox(Zone6A_Text_Zack_PostBattle)
 	closemessage

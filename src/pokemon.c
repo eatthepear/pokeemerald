@@ -7995,7 +7995,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
             }
         }
         break;
-    #ifdef BATTLE_ENGINE
     // Battle evolution without leveling; party slot is being passed into the evolutionItem arg.
     case EVO_MODE_BATTLE_SPECIAL:
         for (i = 0; i < EVOS_PER_MON; i++)
@@ -8009,7 +8008,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
             }
         }
         break;
-    #endif
     // Overworld evolution without leveling; evolution method is being passed into the evolutionItem arg.
     case EVO_MODE_OVERWORLD_SPECIAL:
         for (i = 0; i < EVOS_PER_MON; i++)

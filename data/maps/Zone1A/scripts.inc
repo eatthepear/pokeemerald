@@ -48,7 +48,7 @@ Zone1A_EventScript_LeviathanBattle::
 	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat
 Zone1A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone1A_EventScript_LeviathanBattle_Text_0
+	msgbox Zone1A_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
 	giveitem ITEM_ORAN_BERRY, 10
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_1
 	closemessage

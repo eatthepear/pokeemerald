@@ -69,16 +69,16 @@ Zone6A_EventScript_LeviathanBattle::
 	lock
 	faceplayer
 	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_2
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_0
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
 	fadeoutbgm 1
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_1
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_5
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
 	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat
 Zone6A_EventScript_LeviathanBattle_4:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_2
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
 	giveitem ITEM_TM08
 	msgbox Zone6A_Text_Zack_PostBattle
 	closemessage

@@ -10,14 +10,14 @@ Zone7B_EventScript_LeviathanBattle::
 	compare VAR_RESULT, NO
 	goto_if_eq Zone7B_EventScript_LeviathanBattle_5
 	fadeoutbgm 1
-	msgbox Zone7B_EventScript_LeviathanBattle_Text_1
+	msgbox Zone7B_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone7B_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
 	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_7, Zone7B_Text_Leviathan7Defeat
 Zone7B_EventScript_LeviathanBattle_7:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone7B_EventScript_LeviathanBattle_Text_2
+	msgbox Zone7B_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
 	giveitem ITEM_SITRUS_BERRY, 5
 	msgbox Zone7B_Text_LeviathanPost
 	closemessage

@@ -62,7 +62,7 @@ Zone2B_EventScript_LeviathanBattle::
 	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat
 Zone2B_EventScript_LeviathanBattle_7:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone2B_EventScript_LeviathanBattle_Text_1
+	msgbox Zone2B_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
 	giveitem ITEM_SILK_SCARF, 1
 	msgbox Zone2B_EventScript_LeviathanBattle_Text_0
 	closemessage

@@ -87,7 +87,7 @@ Zone11A_EventScript_LeviathanIntro::
 	trainerbattle_no_intro TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat
 Zone11A_EventScript_LeviathanIntro_5:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone11A_EventScript_LeviathanIntro_Text_3
+	msgbox Zone11A_EventScript_LeviathanIntro_Text_3, MSGBOX_DEFAULT
 	giveitem ITEM_WIDE_LENS
 	msgbox Zone11A_Text_Leviathan10Post
 	setflag FLAG_BEAT_LEVIATHAN_10

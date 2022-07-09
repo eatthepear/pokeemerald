@@ -42,7 +42,7 @@ script Zone1A_EventScript_LeviathanBattle {
 		trainerbattle_no_intro(TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet an Oran Berry, I would be able to win. Oran Berries really are the best!\p Here, let me share some with you and your Pokémon!"))
+	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: I thought if I gave my Skwovet an Oran Berry, I would be able to win. Oran Berries really are the best!\p Here, let me share some with you and your Pokémon!"), MSGBOX_DEFAULT)
 	giveitem(ITEM_ORAN_BERRY, 10)
 	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run now.\pBye bye!"))
 	closemessage
