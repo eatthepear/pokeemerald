@@ -23,7 +23,7 @@ script Zone10B_EventScript_Kirlia {
 }
 
 script Zone10B_EventScript_AdaminaStuff {
-	if (flag(FLAG_ADAMINA_WARP_INTRO) == true) {
+	if (var(VAR_ZONE_10_STATE) == 2) {
 		msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving here?", MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			if (var(VAR_ZONE) > 10) {
@@ -62,7 +62,7 @@ script Zone10B_EventScript_AdaminaStuff {
 	msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: This is my tavern.\nIt's my safe space.\pAll the people from around here\ngather for shelter from the\lsandstorm.\pI just… feel defensive around\noutsiders. Because it feels like\lfamily here, you know?", MSGBOX_DEFAULT)
 	delay(96)
 	msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Tell you what, you can\nstay as long as you like to chat\lwith the people here.\pWhen you're ready to leave,\ncome speak to me.")
-	setflag(FLAG_ADAMINA_WARP_INTRO)
+	setvar(VAR_ZONE_10_STATE, 2)
 	release
 }
 

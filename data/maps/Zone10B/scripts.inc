@@ -31,13 +31,14 @@ Zone10B_EventScript_Kirlia_2:
 
 
 Zone10B_EventScript_AdaminaStuff::
-	goto_if_set FLAG_ADAMINA_WARP_INTRO, Zone10B_EventScript_AdaminaStuff_2
+	compare VAR_ZONE_10_STATE, 2
+	goto_if_eq Zone10B_EventScript_AdaminaStuff_2
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_4
 	giveitem ITEM_TM20
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_5, MSGBOX_DEFAULT
 	delay 96
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_6
-	setflag FLAG_ADAMINA_WARP_INTRO
+	setvar VAR_ZONE_10_STATE, 2
 	release
 	return
 

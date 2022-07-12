@@ -36,9 +36,9 @@ mapscripts Zone10A_MapScripts {
 script Zone10A_EventScript_Adamina {
 	lock
 	faceplayer
-	if (flag(FLAG_ADAMINA_INTRO) == false) {
+	if (var(VAR_ZONE_10_STATE) == 0) {
 		msgbox(Zone10A_Text_NoChance)
-		setflag(FLAG_ADAMINA_INTRO)
+		setvar(VAR_ZONE_10_STATE, 1)
 	}
 	msgbox(Zone10A_Text_Explain)
 	if ((flag(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_1) == false) ||

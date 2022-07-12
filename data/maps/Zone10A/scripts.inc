@@ -50,7 +50,8 @@ Zone10A_MapScripts_MAP_SCRIPT_ON_RESUME_21:
 Zone10A_EventScript_Adamina::
 	lock
 	faceplayer
-	goto_if_unset FLAG_ADAMINA_INTRO, Zone10A_EventScript_Adamina_2
+	compare VAR_ZONE_10_STATE, 0
+	goto_if_eq Zone10A_EventScript_Adamina_2
 Zone10A_EventScript_Adamina_1:
 	msgbox Zone10A_Text_Explain
 	goto_if_unset FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_1, Zone10A_EventScript_Adamina_5
@@ -82,7 +83,7 @@ Zone10A_EventScript_Adamina_11:
 
 Zone10A_EventScript_Adamina_2:
 	msgbox Zone10A_Text_NoChance
-	setflag FLAG_ADAMINA_INTRO
+	setvar VAR_ZONE_10_STATE, 1
 	goto Zone10A_EventScript_Adamina_1
 
 Zone10A_EventScript_Adamina_5:

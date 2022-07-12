@@ -50,6 +50,7 @@ script Zone0Sanctuary_EventScript_Intro {
 	multichoice(2, 5, MULTI_DEFAULT_BRUTAL, 1)
 	switch(var(VAR_RESULT)) {
 		case 0:
+			setflag(FLAG_FULL_PREVIEW_ON)
 			playse(SE_PC_LOGIN)
 			msgbox(format("{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
 			waitse

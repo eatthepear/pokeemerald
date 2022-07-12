@@ -93,6 +93,7 @@ Zone0Sanctuary_EventScript_Intro_5:
 	goto Zone0Sanctuary_EventScript_Intro_4
 
 Zone0Sanctuary_EventScript_Intro_9:
+	setflag FLAG_FULL_PREVIEW_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_8, MSGBOX_DEFAULT
 	waitse
