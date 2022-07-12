@@ -3169,6 +3169,21 @@ extern const u8 gText_OtherService[];
 
 extern const u8 gText_ExpTraining[];
 extern const u8 gText_EVTraining[];
+extern const u8 gText_Lelouch_HP[];
+extern const u8 gText_Lelouch_Attack[];
+extern const u8 gText_Lelouch_Defense[];
+extern const u8 gText_Lelouch_SpAtk[];
+extern const u8 gText_Lelouch_SpDef[];
+extern const u8 gText_Lelouch_Speed[];
+
+extern const u8 gText_Lelouch_252[];
+extern const u8 gText_Lelouch_200[];
+extern const u8 gText_Lelouch_100[];
+extern const u8 gText_Lelouch_4[];
+extern const u8 gText_Lelouch_0[];
+extern const u8 gText_Lelouch_31[];
+extern const u8 gText_Lelouch_30[];
+extern const u8 gText_Lelouch_1[];
 
 extern const u8 gText_LelouchShouldTrain[];
 extern const u8 gText_LelouchReachedLevelCap[];

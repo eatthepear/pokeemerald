@@ -331,7 +331,7 @@ gText_Lelouch_ExpTrainingFinished:
 	.string "finished.\p"
 	.string "Your Pokémon has grown stronger.$"
 
-gText_Lelouch_DidNotExpTrain:
+gText_Lelouch_DidNotTrain:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you do want to\n"
 	.string "train your Pokémon, I'll be here.$"
 

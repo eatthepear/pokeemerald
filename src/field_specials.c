@@ -1208,6 +1208,25 @@ bool8 CheckLeadMonCute(void)
 {
     // if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_CUTE) < 200)
     //     return FALSE;
+    u16 ev = VarGet(VAR_TEMP_9);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP_EV, &ev);
+    
+    ev = VarGet(VAR_TEMP_A);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ATK_EV, &ev);
+    
+    ev = VarGet(VAR_TEMP_B);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_DEF_EV, &ev);
+    
+    ev = VarGet(VAR_TEMP_C);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPATK_EV, &ev);
+    
+    ev = VarGet(VAR_TEMP_D);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPDEF_EV, &ev);
+    
+    ev = VarGet(VAR_TEMP_E);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPEED_EV, &ev);
+
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
 
     return FALSE;
 }

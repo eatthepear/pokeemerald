@@ -30,7 +30,7 @@
 #define MULTI_MUSIC_TYPE                   19
 #define MULTI_YESNOINFO_2                  20
 #define MULTI_MUSIC_WHICH_GAME             21
-#define MULTI_UNUSED_22                    22
+#define MULTI_FRESH_WATER                  22
 #define MULTI_CHALLENGEINFO                23
 #define MULTI_LEVEL_MODE                   24
 #define MULTI_MECHADOLL1_Q1                25
@@ -66,11 +66,11 @@
 #define MULTI_GAME_CORNER_TMS              55
 #define MULTI_SSTIDAL_SLATEPORT_NO_BF      56
 #define MULTI_FLOORS                       57 
-#define MULTI_LELOUCH_TRAINING             58
-#define MULTI_LELOUCH_TRAINING2            59
-#define MULTI_FRESH_WATER                  60
-#define MULTI_LELOUCH_TRAINING3            61
-#define MULTI_LELOUCH_TRAINING4            62
+#define MULTI_LELOUCH_EXP_ONLY             58
+#define MULTI_LELOUCH_EXP_AND_EV           59
+#define MULTI_LELOUCH_EV_NUMBERS           60
+#define MULTI_LELOUCH_STATS                61
+#define MULTI_LELOUCH_IV_NUMBERS           62
 #define MULTI_SHARDS_YB                    63
 #define MULTI_SHARDS_RYB                   64
 #define MULTI_SHARDS_G                     65

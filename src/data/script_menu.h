@@ -364,16 +364,32 @@ static const struct MenuAction MultichoiceList_FreshWater[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_LelouchTraining3Brutal[] =
+static const struct MenuAction MultichoiceList_LelouchStats[] =
 {
-    {gText_ExpTraining},
-    {gText_Exit},
+    {gText_Lelouch_HP},
+    {gText_Lelouch_Attack},
+    {gText_Lelouch_Defense},
+    {gText_Lelouch_SpAtk},
+    {gText_Lelouch_SpDef},
+    {gText_Lelouch_Speed},
 };
 
-static const struct MenuAction MultichoiceList_LelouchTraining4Brutal[] =
+static const struct MenuAction MultichoiceList_LelouchEVNumbers[] =
 {
-    {gText_ExpTraining},
-    {gText_Exit},
+    {gText_Lelouch_252},
+    {gText_Lelouch_200},
+    {gText_Lelouch_100},
+    {gText_Lelouch_4},
+    {gText_Lelouch_0},
+    {gText_Cancel2},
+};
+
+static const struct MenuAction MultichoiceList_LelouchIVNumbers[] =
+{
+    {gText_Lelouch_31},
+    {gText_Lelouch_30},
+    {gText_Lelouch_1},
+    {gText_Lelouch_0},
 };
 
 static const struct MenuAction MultichoiceList_ShardsYB[] =
@@ -859,7 +875,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_MUSIC_TYPE]                 = MULTICHOICE(MultichoiceList_MusicType),
     [MULTI_YESNOINFO_2]                = MULTICHOICE(MultichoiceList_YesNoInfo2),
     [MULTI_MUSIC_WHICH_GAME]           = MULTICHOICE(MultichoiceList_MusicWhichGame),
-    [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_FRESH_WATER]                = MULTICHOICE(MultichoiceList_FreshWater),
     [MULTI_CHALLENGEINFO]              = MULTICHOICE(MultichoiceList_ChallengeInfo),
     [MULTI_LEVEL_MODE]                 = MULTICHOICE(MultichoiceList_LevelMode),
     [MULTI_MECHADOLL1_Q1]              = MULTICHOICE(MultichoiceList_Mechadoll1_Q1),
@@ -895,11 +911,11 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_TMS]            = MULTICHOICE(MultichoiceList_GameCornerTMs),
     [MULTI_SSTIDAL_SLATEPORT_NO_BF]    = MULTICHOICE(MultichoiceList_SSTidalSlateportNoBF),
     [MULTI_FLOORS]                     = MULTICHOICE(MultichoiceList_Floors),
-    [MULTI_LELOUCH_TRAINING]           = MULTICHOICE(MultichoiceList_LelouchTraining),
-    [MULTI_LELOUCH_TRAINING2]          = MULTICHOICE(MultichoiceList_LelouchTraining2),
-    [MULTI_FRESH_WATER]                = MULTICHOICE(MultichoiceList_FreshWater),
-    [MULTI_LELOUCH_TRAINING3]          = MULTICHOICE(MultichoiceList_LelouchTraining3Brutal),
-    [MULTI_LELOUCH_TRAINING4]          = MULTICHOICE(MultichoiceList_LelouchTraining4Brutal),
+    [MULTI_LELOUCH_EXP_ONLY]           = MULTICHOICE(MultichoiceList_LelouchTraining),
+    [MULTI_LELOUCH_EXP_AND_EV]         = MULTICHOICE(MultichoiceList_LelouchTraining2),
+    [MULTI_LELOUCH_EV_NUMBERS]         = MULTICHOICE(MultichoiceList_LelouchEVNumbers),
+    [MULTI_LELOUCH_STATS]              = MULTICHOICE(MultichoiceList_LelouchStats),
+    [MULTI_LELOUCH_IV_NUMBERS]         = MULTICHOICE(MultichoiceList_LelouchIVNumbers),
     [MULTI_SHARDS_YB]                  = MULTICHOICE(MultichoiceList_ShardsYB),
     [MULTI_SHARDS_RYB]                 = MULTICHOICE(MultichoiceList_ShardsRYB),
     [MULTI_SHARDS_G]                   = MULTICHOICE(MultichoiceList_ShardsG),
