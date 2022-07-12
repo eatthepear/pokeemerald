@@ -1088,11 +1088,11 @@
 #define FLAG_ITEM_ZONE11A_TM22                                      0x413
 #define FLAG_ITEM_ZONE11A_MOON_STONE                                0x414
 #define FLAG_ITEM_ZONE11A_TIMER_BALL                                0x415
-#define FLAG_ITEM_ZONE12A_TM12                                      0x416
-#define FLAG_ITEM_ZONE12A_METRONOME                                 0x417
-#define FLAG_ITEM_ZONE12A_THUNDER_STONE                             0x418
+#define FLAG_ITEM_ZONE12A_TM24                                      0x416
+#define FLAG_ITEM_ZONE12A_THUNDER_STONE                             0x417
+#define FLAG_ITEM_ZONE12A_FIRE_STONE                                0x418
 #define FLAG_ITEM_ZONE12A_GRIP_CLAW                                 0x419
-#define FLAG_ITEM_ZONE12A_ENERGY_ROOT                               0x41A
+#define FLAG_ITEM_ZONE12A_SUPER_POTION                              0x41A
 #define FLAG_ITEM_ZONE13A_SUPER_POTION                              0x41B
 #define FLAG_ITEM_ZONE14A_GREAT_BALL                                0x41C
 #define FLAG_ITEM_ZONE14B_QUICK_BALL                                0x41D

@@ -41,7 +41,7 @@ Zone11A_EventScript_Exit_1:
 Zone11A_EventScript_Exit_2:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 31, 32
+	warpteleport MAP_ZONE0D, 255, 15, 25
 	waitstate
 	goto Zone11A_EventScript_Exit_1
 

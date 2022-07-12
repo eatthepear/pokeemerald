@@ -1784,126 +1784,231 @@ static const struct TrainerMon sParty_NewtonBrutal[] = {//Leviathan, Double Batt
 
 /* ------------------- Zone 12 ------------------- */
 
-static const struct TrainerMon sParty_Dolores[] = {
-    {
-    .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_APPLIN,
-    },
-    {
-    .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_HAPPINY,
-    },
-    {
-    .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_TOGEPI,
-    },
-    {
-    .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_TOXEL,
-    },
-    {
-    .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_LARVESTA,
-    },
-    {
-    .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_RIOLU,
-    }
-};
-
 static const struct TrainerMon sParty_Essence[] = {
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_MIENFOO,
+    .lvl = 24,
+    .species = SPECIES_GLAMEOW,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_MURKROW,
+    .lvl = 24,
+    .species = SPECIES_CLAMPERL,
     },
     {
     .iv = 10,
-    .lvl = 22,
+    .lvl = 24,
     .species = SPECIES_SKIPLOOM,
+    }
+};
+
+static const struct TrainerMon sParty_Dolores[] = {
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_SNOVER,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_CUBCHOO,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_SNORUNT,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_DARUMAKA_GALARIAN,
+    }
+};
+
+static const struct TrainerMon sParty_Trevor[] = {
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_RUFFLET,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_SWABLU,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_FARFETCHD_GALARIAN,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_STARAVIA,
     }
 };
 
 static const struct TrainerMon sParty_Randolph[] = {
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_DEERLING,
+    .lvl = 24,
+    .species = SPECIES_AMAURA,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_ARROKUDA,
+    .lvl = 24,
+    .species = SPECIES_SALANDIT,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_TORRACAT,
+    .lvl = 24,
+    .species = SPECIES_BERGMITE,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_LICKITUNG,
     }
 };
 
-static const struct TrainerMon sParty_Hilda[] = {
+static const struct TrainerMon sParty_Federico[] = {
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_DUCKLETT,
+    .lvl = 24,
+    .species = SPECIES_SKRELP,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_MUDBRAY,
+    .lvl = 24,
+    .species = SPECIES_TENTACOOL,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_PONYTA,
+    .lvl = 24,
+    .species = SPECIES_CHINCHOU,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_FARFETCHD_GALARIAN,
+    .lvl = 24,
+    .species = SPECIES_CARVANHA,
     }
 };
 
 static const struct TrainerMon sParty_Genie[] = {
     {
     .iv = 10,
-    .lvl = 22,
+    .lvl = 24,
     .species = SPECIES_DODUO,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_PANCHAM,
+    .lvl = 24,
+    .species = SPECIES_DEERLING,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_RATICATE,
+    .lvl = 24,
+    .species = SPECIES_PONYTA,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_GROVYLE,
+    }
+};
+
+static const struct TrainerMon sParty_Hilda[] = {
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_SKIDDO,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_MUDBRAY,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_DUCKLETT,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_HERDIER,
     }
 };
 
 static const struct TrainerMon sParty_Kinley[] = {
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_TRUMBEAK,
+    .lvl = 24,
+    .species = SPECIES_ZORUA,
     },
     {
     .iv = 10,
-    .lvl = 22,
-    .species = SPECIES_ZANGOOSE,
+    .lvl = 24,
+    .species = SPECIES_TANGELA,
+    },
+    {
+    .iv = 10,
+    .lvl = 24,
+    .species = SPECIES_CROCONAW,
+    }
+};
+
+static const struct TrainerMon sParty_Romulus[] = {
+    {
+    .ivs = {21, 21, 20, 20, 20, 20},
+    .lvl = 25,
+    .ability = ABILITY_SLOT_2, //Super Luck
+    .species = SPECIES_MURKROW,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_AIR_CUTTER, MOVE_FEINT_ATTACK, MOVE_STEEL_WING, MOVE_HIDDEN_POWER} // Hidden Power Fighting
+    },
+    {
+    .iv = 20,
+    .lvl = 25,
+    .ability = ABILITY_HIDDEN, //Sniper
+    .species = SPECIES_DRIZZILE,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_FOCUS_ENERGY, MOVE_HIDDEN_POWER} // Hidden Power Ice
+    },
+    {
+    .ivs = {21, 21, 21, 20, 21, 21},
+    .lvl = 26,
+    .ability = ABILITY_SLOT_2, //Steadfast
+    .species = SPECIES_SIRFETCHD,
+    .heldItem = ITEM_LEEK,
+    .moves = {MOVE_NIGHT_SLASH, MOVE_LEAF_BLADE, MOVE_BRICK_BREAK, MOVE_PLUCK}
+    }
+};
+
+static const struct TrainerMon sParty_Julie[] = {
+    {
+    .iv = 20,
+    .lvl = 25,
+    .ability = ABILITY_SLOT_1, //Battle Armor
+    .species = SPECIES_ANORITH,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_SKITTER_SMACK, MOVE_ROCK_TOMB, MOVE_AQUA_JET, MOVE_IRON_DEFENSE}
+    },
+    {
+    .iv = 20,
+    .lvl = 25,
+    .ability = ABILITY_SLOT_2, //Shell Armor
+    .species = SPECIES_GROTLE,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_BULLET_SEED, MOVE_BULLDOZE, MOVE_SYNTHESIS, MOVE_CURSE}
+    },
+    {
+    .ivs = {21, 21, 21, 21, 20, 21},
+    .lvl = 26,
+    .ability = ABILITY_SLOT_1, //Shell Armor
+    .species = SPECIES_TURTONATOR,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_INCINERATE, MOVE_DRAGON_PULSE, MOVE_SCORCHING_SANDS, MOVE_HIDDEN_POWER} // Hidden Power Electric
     }
 };
 
@@ -2774,68 +2879,6 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle start
 
 /* ------------------- Zone 20 ------------------- */
 
-static const struct TrainerMon sParty_Julie[] = {//Leviathan 12, Default
-    {
-    .iv = 31,
-    .lvl = 32,
-    .nature = NATURE_IMPISH,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .species = SPECIES_RELICANTH,
-    .heldItem = ITEM_MUSCLE_BAND,
-    .moves = {MOVE_WATERFALL, MOVE_STEALTH_ROCK, MOVE_ROCK_TOMB, MOVE_YAWN}
-    },
-    {
-    .iv = 31,
-    .lvl = 32,
-    .nature = NATURE_TIMID,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Serene Grace
-    .species = SPECIES_SWOOBAT,
-    .heldItem = ITEM_SHARP_BEAK,
-    .moves = {MOVE_NASTY_PLOT, MOVE_AIR_SLASH, MOVE_PSYBEAM, MOVE_GIGA_DRAIN}
-    },
-    {
-    .iv = 31,
-    .lvl = 32,
-    .nature = NATURE_JOLLY,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Strong Jaw
-    .species = SPECIES_MIGHTYENA,
-    .heldItem = ITEM_BLACK_GLASSES,
-    .moves = {MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_THUNDER_FANG, MOVE_FIRE_FANG}
-    },
-    {
-    .iv = 31,
-    .lvl = 32,
-    .nature = NATURE_MODEST,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Effect Spore
-    .species = SPECIES_SHIINOTIC,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_STRENGTH_SAP, MOVE_DAZZLING_GLEAM, MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER}
-    },
-    {
-    .iv = 31,
-    .lvl = 32,
-    .nature = NATURE_MILD,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Tough Claws
-    .species = SPECIES_HEATMOR,
-    .heldItem = ITEM_CHARCOAL,
-    .moves = {MOVE_FLAMETHROWER, MOVE_SHADOW_CLAW, MOVE_THUNDER_PUNCH, MOVE_GIGA_DRAIN}
-    },
-    {
-    .iv = 31,
-    .lvl = 34,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1, //Sheer Force
-    .species = SPECIES_DRUDDIGON,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_DRAGON_CLAW, MOVE_REVENGE, MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH}
-    }
-};
 
 /* ------------------- Lelouch Training ------------------- */
 

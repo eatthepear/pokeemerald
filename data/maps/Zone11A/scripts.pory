@@ -23,7 +23,7 @@ script Zone11A_EventScript_Exit {
     if (var(VAR_ZONE) > 11) {
 		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 		setvar(VAR_REVISITING_ZONE, 0)
-		warpteleport(MAP_ZONE0D, 255, 31, 32)
+		warpteleport(MAP_ZONE0D, 255, 15, 25)
 		waitstate
     } else {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
