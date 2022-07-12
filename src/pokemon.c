@@ -4945,6 +4945,8 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
     }
+    value = GetNatureFromPersonality(personality);
+    SetBoxMonData(boxMon, MON_DATA_NATURE, &value);
 
     GiveBoxMonInitialMoveset(boxMon);
 }
@@ -6194,6 +6196,9 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
     case MON_DATA_HP2:
         retVal = boxMon->hp;
         break;
+    case MON_DATA_NATURE:
+        retVal = boxMon->nature;
+        break;
     default:
         break;
     }
@@ -6410,6 +6415,9 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         boxMon->spDefenseIV = (ivs >> 25) & MAX_IV_MASK;
         break;
     }
+    case MON_DATA_NATURE:
+        SET8(boxMon->nature);
+        break;
     default:
         break;
     }
@@ -7673,7 +7681,7 @@ u8 *UseStatIncreaseItem(u16 itemId)
 
 u8 GetNature(struct Pokemon *mon)
 {
-    return GetMonData(mon, MON_DATA_PERSONALITY, 0) % NUM_NATURES;
+    return GetMonData(mon, MON_DATA_NATURE, 0);
 }
 
 u8 GetNatureFromPersonality(u32 personality)

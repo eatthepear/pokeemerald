@@ -36,6 +36,7 @@ struct BoxPokemon
     u8 ppBonuses;
     u8 friendship;
     u16 pokeball:7;
+    u8 nature:5; // 25 natures
 
     u16 moves[MAX_MON_MOVES];
     u8 pp[MAX_MON_MOVES];
