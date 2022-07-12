@@ -1089,7 +1089,7 @@ script EventScript_Shop_Lelouch_Training {
 }
 
 text gText_Lelouch_EV {
-	format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: With EV Training you can set a Pokémon's EVs at the cost of one Red Shard.\pWould you like to start an EV Training session?")
+	format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: With EV Training, you can set one Pokémon's EVs at the cost of one Red Shard.\pWould you like to start an EV Training session?")
 }
 
 text gText_Lelouch_ChooseHPEV {
@@ -1464,72 +1464,165 @@ script EventScript_Shop_Lelouch_Other {
 		msgbox(gText_Lelouch_NotEnoughColor)
 		return
 	}
-	msgbox(gText_Lelouch_CostsGreenShards, MSGBOX_DEFAULT)
-	scrollingmultichoice(8, 0, 0, 5, TRUE)
-	switch (var(VAR_RESULT)) {
-		case 0:
-			setvar(VAR_TEMP_0, ITEM_LONELY_MINT)
-		case 1:
-			setvar(VAR_TEMP_0, ITEM_ADAMANT_MINT)
-		case 2:
-			setvar(VAR_TEMP_0, ITEM_NAUGHTY_MINT)
-		case 3:
-			setvar(VAR_TEMP_0, ITEM_BRAVE_MINT)
-		case 4:
-			setvar(VAR_TEMP_0, ITEM_BOLD_MINT)
-		case 5:
-			setvar(VAR_TEMP_0, ITEM_IMPISH_MINT)
-		case 6:
-			setvar(VAR_TEMP_0, ITEM_LAX_MINT)
-		case 7:
-			setvar(VAR_TEMP_0, ITEM_RELAXED_MINT)
-		case 8:
-			setvar(VAR_TEMP_0, ITEM_MODEST_MINT)
-		case 9:
-			setvar(VAR_TEMP_0, ITEM_MILD_MINT)
-		case 10:
-			setvar(VAR_TEMP_0, ITEM_RASH_MINT)
-		case 11:
-			setvar(VAR_TEMP_0, ITEM_QUIET_MINT)
-		case 12:
-			setvar(VAR_TEMP_0, ITEM_CALM_MINT)
-		case 13:
-			setvar(VAR_TEMP_0, ITEM_GENTLE_MINT)
-		case 14:
-			setvar(VAR_TEMP_0, ITEM_CAREFUL_MINT)
-		case 15:
-			setvar(VAR_TEMP_0, ITEM_SASSY_MINT)
-		case 16:
-			setvar(VAR_TEMP_0, ITEM_TIMID_MINT)
-		case 17:
-			setvar(VAR_TEMP_0, ITEM_HASTY_MINT)
-		case 18:
-			setvar(VAR_TEMP_0, ITEM_JOLLY_MINT)
-		case 19:
-			setvar(VAR_TEMP_0, ITEM_NAIVE_MINT)
-		case 20:
-			setvar(VAR_TEMP_0, ITEM_SERIOUS_MINT)
-		case MULTI_B_PRESSED:
-			return
-	}
-	bufferitemname(0, VAR_TEMP_0)
-	msgbox(gText_Lelouch_MintCosts, MSGBOX_YESNO)
-	if (var(VAR_RESULT) == NO) {
+	msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I offer nature changing services at the cost of one Green Shard.\pFirst, choose a Pokémon."))
+	special(ChoosePartyMon)
+	waitstate
+	if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
 		return
+	} else {
+		specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+		if (var(VAR_RESULT) == SPECIES_EGG) {
+			msgbox("No eggs!")
+		} else {
+			specialvar(VAR_TEMP_1, ScriptGetPartyMonSpecies)
+			bufferspeciesname(0, VAR_TEMP_1)
+			copyvar(VAR_TEMP_1, VAR_0x8004)
+			msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which nature would you like your {STR_VAR_1} to have?"), MSGBOX_DEFAULT)
+			scrollingmultichoice(8, 0, 0, 6, TRUE)
+			switch (var(VAR_RESULT)) {
+				case 0:
+					setvar(VAR_TEMP_0, 1)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Lonely, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 1:
+					setvar(VAR_TEMP_0, 3)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Adamant, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 2:
+					setvar(VAR_TEMP_0, 4)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Naughty, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 3:
+					setvar(VAR_TEMP_0, 2)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Brave, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 4:
+					setvar(VAR_TEMP_0, 5)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Bold, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 5:
+					setvar(VAR_TEMP_0, 8)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Impish, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 6:
+					setvar(VAR_TEMP_0, 9)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Lax, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 7:
+					setvar(VAR_TEMP_0, 7)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Relaxed, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 8:
+					setvar(VAR_TEMP_0, 15)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Modest, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 9:
+					setvar(VAR_TEMP_0, 16)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Mild, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 10:
+					setvar(VAR_TEMP_0, 19)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Rash, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 11:
+					setvar(VAR_TEMP_0, 17)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Quiet, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 12:
+					setvar(VAR_TEMP_0, 20)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Calm, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 13:
+					setvar(VAR_TEMP_0, 21)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Gentle, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 14:
+					setvar(VAR_TEMP_0, 23)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Careful, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 15:
+					setvar(VAR_TEMP_0, 22)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Sassy, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 16:
+					setvar(VAR_TEMP_0, 10)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Timid, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 17:
+					setvar(VAR_TEMP_0, 11)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Hasty, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 18:
+					setvar(VAR_TEMP_0, 13)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Jolly, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 19:
+					setvar(VAR_TEMP_0, 14)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Naive, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case 20:
+					setvar(VAR_TEMP_0, 12)
+					msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your {STR_VAR_1}'s nature to Serious, it will cost one Green Shard."), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == NO) {
+						return
+					}
+				case MULTI_B_PRESSED:
+					return
+			}
+			playse(SE_EXP_MAX)
+			waitse
+			msgbox(gText_Lelouch_ChangedNature)
+			special(CheckLeadMonSmart) // sets the nature
+			msgbox(gText_Lelouch_PayGreen)
+			removeitem(ITEM_GREEN_SHARD, 1)
+		}
 	}
-	removeitem(ITEM_GREEN_SHARD, 1)
-	msgbox(gText_Lelouch_PayGreen)
-	msgbox(gText_Lelouch_OneMoment)
-	fadescreenswapbuffers(FADE_TO_BLACK)
-	delay(96)
-	playfanfare(MUS_SLOTS_WIN)
-	waitfanfare
-	fadescreenswapbuffers(FADE_FROM_BLACK)
-	msgbox(gText_Lelouch_ItsDone)
-	giveitem(VAR_TEMP_0)
 	return
 }
 
+text gText_Lelouch_ChangedNature {
+	format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I've changed your {STR_VAR_1}'s nature to the requested nature.")
+}
 
 script EventScript_Shop_Joy {
 	lock

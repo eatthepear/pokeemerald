@@ -1235,6 +1235,10 @@ bool8 CheckLeadMonSmart(void)
 {
     // if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_SMART) < 200)
     //     return FALSE;
+    u16 nature = VarGet(VAR_TEMP_0);
+    SetMonData(&gPlayerParty[VarGet(VAR_TEMP_1)], MON_DATA_NATURE, &nature);
+
+    CalculateMonStats(&gPlayerParty[VarGet(VAR_TEMP_1)]);
 
     return FALSE;
 }

@@ -464,20 +464,8 @@ gText_Lelouch_CostsGreenShards:
 	.string "in exchange for Green Shards.\l"
 	.string "What would you like?$"
 
-gText_Lelouch_MintCosts:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You want me to craft\n"
-	.string "one {STR_VAR_1}? It will\l"
-	.string "cost one Green Shard.$"
-
 gText_Lelouch_PayGreen:
 	.string "{PLAYER} handed over 1 Green Shard.$"
-
-gText_Lelouch_OneMoment:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: One moment, please.$"
-
-gText_Lelouch_ItsDone:
-	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: It's done.\p"
-	.string "Here is your requested item.$"
 
 gText_Lelouch_Leave:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Farewell.$"

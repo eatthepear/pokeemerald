@@ -871,28 +871,27 @@ static const u8 sText_EVDef[] =_("EV Training Defense");
 static const u8 sText_EVSpA[] =_("EV Training Special Attack");
 static const u8 sText_EVSpD[] =_("EV Training Special Defense");
 static const u8 sText_EVSpe[] =_("EV Training Speed");
-static const u8 sText_LonelyMint[] = _("Lonely Mint");
-static const u8 sText_AdamantMint[] = _("Adamant Mint");
-static const u8 sText_NaughtyMint[] = _("Naughty Mint");
-static const u8 sText_BraveMint[] = _("Brave Mint");
-static const u8 sText_BoldMint[] = _("Bold Mint");
-static const u8 sText_ImpishMint[] = _("Impish Mint");
-static const u8 sText_LaxMint[] = _("Lax Mint");
-static const u8 sText_RelaxedMint[] = _("Relaxed Mint");
-static const u8 sText_ModestMint[] = _("Modest Mint");
-static const u8 sText_MildMint[] = _("Mild Mint");
-static const u8 sText_RashMint[] = _("Rash Mint");
-static const u8 sText_QuietMint[] = _("Quiet Mint");
-static const u8 sText_CalmMint[] = _("Calm Mint");
-static const u8 sText_GentleMint[] = _("Gentle Mint");
-static const u8 sText_CarefulMint[] = _("Careful Mint");
-static const u8 sText_QuirkyMint[] = _("Quirky Mint");
-static const u8 sText_SassyMint[] = _("Sassy Mint");
-static const u8 sText_TimidMint[] = _("Timid Mint");
-static const u8 sText_HastyMint[] = _("Hasty Mint");
-static const u8 sText_JollyMint[] = _("Jolly Mint");
-static const u8 sText_NaiveMint[] = _("Naive Mint");
-static const u8 sText_SeriousMint[] = _("Serious Mint");
+static const u8 sText_Lonely[] = _("Lonely");
+static const u8 sText_Adamant[] = _("Adamant");
+static const u8 sText_Naughty[] = _("Naughty");
+static const u8 sText_Brave[] = _("Brave");
+static const u8 sText_Bold[] = _("Bold");
+static const u8 sText_Impish[] = _("Impish");
+static const u8 sText_Lax[] = _("Lax");
+static const u8 sText_Relaxed[] = _("Relaxed");
+static const u8 sText_Modest[] = _("Modest");
+static const u8 sText_Mild[] = _("Mild");
+static const u8 sText_Rash[] = _("Rash");
+static const u8 sText_Quiet[] = _("Quiet");
+static const u8 sText_Calm[] = _("Calm");
+static const u8 sText_Gentle[] = _("Gentle");
+static const u8 sText_Careful[] = _("Careful");
+static const u8 sText_Sassy[] = _("Sassy");
+static const u8 sText_Timid[] = _("Timid");
+static const u8 sText_Hasty[] = _("Hasty");
+static const u8 sText_Jolly[] = _("Jolly");
+static const u8 sText_Naive[] = _("Naive");
+static const u8 sText_Serious[] = _("Serious");
 static const u8 sText_Example[] = _("Example");
 
 // Sets of multichoices.
@@ -1060,29 +1059,29 @@ static const struct ListMenuItem Exp4[] =
     {sText_EVSpe, 9},
 };
 
-static const struct ListMenuItem Mints[] =
+static const struct ListMenuItem Natures[] =
 {
-    {sText_LonelyMint, 0},
-    {sText_AdamantMint, 1},
-    {sText_NaughtyMint, 2},
-    {sText_BraveMint, 3},
-    {sText_BoldMint, 4},
-    {sText_ImpishMint, 5},
-    {sText_LaxMint, 6},
-    {sText_RelaxedMint, 7},
-    {sText_ModestMint, 8},
-    {sText_MildMint, 9},
-    {sText_RashMint, 10},
-    {sText_QuietMint, 11},
-    {sText_CalmMint, 12},
-    {sText_GentleMint, 13},
-    {sText_CarefulMint, 14},
-    {sText_SassyMint, 15},
-    {sText_TimidMint, 16},
-    {sText_HastyMint, 17},
-    {sText_JollyMint, 18},
-    {sText_NaiveMint, 19},
-    {sText_SeriousMint, 20},
+    {sText_Lonely, 0},
+    {sText_Adamant, 1},
+    {sText_Naughty, 2},
+    {sText_Brave, 3},
+    {sText_Bold, 4},
+    {sText_Impish, 5},
+    {sText_Lax, 6},
+    {sText_Relaxed, 7},
+    {sText_Modest, 8},
+    {sText_Mild, 9},
+    {sText_Rash, 10},
+    {sText_Quiet, 11},
+    {sText_Calm, 12},
+    {sText_Gentle, 13},
+    {sText_Careful, 14},
+    {sText_Sassy, 15},
+    {sText_Timid, 16},
+    {sText_Hasty, 17},
+    {sText_Jolly, 18},
+    {sText_Naive, 19},
+    {sText_Serious, 20},
 };
 
 // Table of your multichoice sets.
@@ -1100,7 +1099,7 @@ struct
     {MoveTutorLevel4, ARRAY_COUNT(MoveTutorLevel4)},
     {Exp3, ARRAY_COUNT(Exp3)},
     {Exp4, ARRAY_COUNT(Exp4)},
-    {Mints, ARRAY_COUNT(Mints)},
+    {Natures, ARRAY_COUNT(Natures)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);
