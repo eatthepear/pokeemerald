@@ -1952,6 +1952,7 @@ const u8 gText_MoveReminderService[] = _("Move Reminder - Blue");
 const u8 gText_MoveTutorService[] = _("Move Tutor - Yellow");
 const u8 gText_OtherService[] = _("Other - Green");
 const u8 gText_ExpTraining[] =_("Experience Training");
+const u8 gText_EVTraining[] =_("EV Training");
 const u8 gText_AttackMints[] =_("Attack Mint");
 const u8 gText_DefenseMints[] =_("Defense Mint");
 const u8 gText_SpAttackMints[] =_("Sp. Attack Mint");

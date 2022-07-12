@@ -353,6 +353,7 @@ static const struct MenuAction MultichoiceList_LelouchTraining[] =
 static const struct MenuAction MultichoiceList_LelouchTraining2[] =
 {
     {gText_ExpTraining},
+    {gText_EVTraining},
     {gText_Exit},
 };
 

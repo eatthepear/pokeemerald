@@ -3168,6 +3168,10 @@ extern const u8 gText_MoveTutorService[];
 extern const u8 gText_OtherService[];
 
 extern const u8 gText_ExpTraining[];
+extern const u8 gText_EVTraining[];
+
+extern const u8 gText_LelouchShouldTrain[];
+extern const u8 gText_LelouchReachedLevelCap[];
 
 extern const u8 gText_AttackMints[];
 extern const u8 gText_DefenseMints[];
@@ -3178,9 +3182,6 @@ extern const u8 gText_NeutralMints[];
 
 extern const u8 gText_OneFreshWater[];
 extern const u8 gText_TenFreshWater[];
-
-extern const u8 gText_LelouchShouldTrain[];
-extern const u8 gText_LelouchReachedLevelCap[];
 
 extern const u8 gText_Vaporeon[];
 extern const u8 gText_Jolteon[];
