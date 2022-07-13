@@ -1965,7 +1965,7 @@ EventScript_Shop_Lelouch_Other::
 	bufferspeciesname 0, VAR_TEMP_1
 	copyvar VAR_TEMP_1, VAR_0x8004
 	msgbox EventScript_Shop_Lelouch_Other_Text_1, MSGBOX_DEFAULT
-	scrollingmultichoice 8, 0, 0, 6, TRUE
+	scrollingmultichoice 6, 0, 0, 6, TRUE
 	switch VAR_RESULT
 	case 0, EventScript_Shop_Lelouch_Other_13
 	case 1, EventScript_Shop_Lelouch_Other_14

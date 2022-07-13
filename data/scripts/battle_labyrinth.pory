@@ -1510,7 +1510,7 @@ script EventScript_Shop_Lelouch_Other {
 			bufferspeciesname(0, VAR_TEMP_1)
 			copyvar(VAR_TEMP_1, VAR_0x8004)
 			msgbox(format("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which nature would you like your {STR_VAR_1} to have?"), MSGBOX_DEFAULT)
-			scrollingmultichoice(8, 0, 0, 6, TRUE)
+			scrollingmultichoice(6, 0, 0, 6, TRUE)
 			switch (var(VAR_RESULT)) {
 				case 0:
 					setvar(VAR_TEMP_0, 1)
