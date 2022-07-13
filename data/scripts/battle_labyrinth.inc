@@ -342,7 +342,7 @@ EventScript_Shop_Unique_Varrick::
 	faceplayer
 	goto_if_unset FLAG_VARRICK_INTRO, EventScript_Shop_Unique_Varrick_2
 EventScript_Shop_Unique_Varrick_1:
-	message gText_Varrick_Welcome
+	message EventScript_Shop_Unique_Varrick_Text_1
 	waitmessage
 	switch VAR_ZONE
 	case 1, EventScript_Shop_Unique_Varrick_6
@@ -369,12 +369,12 @@ EventScript_Shop_Unique_Varrick_1:
 	case 25, EventScript_Shop_Unique_Varrick_13
 	case 26, EventScript_Shop_Unique_Varrick_14
 EventScript_Shop_Unique_Varrick_4:
-	msgbox gText_Varrick_Leave, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Unique_Varrick_Text_2, MSGBOX_DEFAULT
 	release
 	return
 
 EventScript_Shop_Unique_Varrick_2:
-	msgbox gText_Varrick_Intro
+	msgbox EventScript_Shop_Unique_Varrick_Text_0
 	setflag FLAG_VARRICK_INTRO
 	goto EventScript_Shop_Unique_Varrick_1
 
@@ -740,7 +740,7 @@ Shop_Unique_Varrick_26to30_Brutal:
 EventScript_Shop_Unique_ZhuLi::
 	lock
 	faceplayer
-	message gText_ZhuLi_Welcome
+	message EventScript_Shop_Unique_ZhuLi_Text_0
 	waitmessage
 	switch VAR_ZONE
 	case 11, EventScript_Shop_Unique_ZhuLi_3
@@ -758,7 +758,7 @@ EventScript_Shop_Unique_ZhuLi::
 	case 25, EventScript_Shop_Unique_ZhuLi_6
 	case 26, EventScript_Shop_Unique_ZhuLi_6
 EventScript_Shop_Unique_ZhuLi_1:
-	msgbox gText_ZhuLi_Leave, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Unique_ZhuLi_Text_1, MSGBOX_DEFAULT
 	release
 	return
 
@@ -934,13 +934,13 @@ EventScript_Shop_ZhuLiIntro_1:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	msgbox gText_Varrick_ZhuLiIntro1
-	msgbox gText_ZhuLi_ZhuLiIntro1
+	msgbox EventScript_Shop_ZhuLiIntro_Text_0
+	msgbox EventScript_Shop_ZhuLiIntro_Text_1
 	playse SE_APPLAUSE
 	waitse
-	msgbox gText_Varrick_ZhuLiIntro2
-	msgbox gText_ZhuLi_ZhuLiIntro2
-	msgbox gText_Varrick_ZhuLiIntro3
+	msgbox EventScript_Shop_ZhuLiIntro_Text_2
+	msgbox EventScript_Shop_ZhuLiIntro_Text_3
+	msgbox EventScript_Shop_ZhuLiIntro_Text_4
 	setvar VAR_ZHULI_INTRO, 1
 	setflag FLAG_VARRICK_INTRO
 	releaseall
@@ -963,7 +963,7 @@ EventScript_Shop_Lelouch_1:
 	goto_if_lt EventScript_Shop_Lelouch_5
 	goto_if_unset FLAG_LELOUCH_SHARDS_INTRO, EventScript_Shop_Lelouch_8
 EventScript_Shop_Lelouch_7:
-	msgbox gText_Lelouch_Welcome, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_Text_4, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_OPTIONS, 0
 	switch VAR_RESULT
 	case 0, EventScript_Shop_Lelouch_12
@@ -971,24 +971,24 @@ EventScript_Shop_Lelouch_7:
 	case 2, EventScript_Shop_Lelouch_14
 	case 3, EventScript_Shop_Lelouch_15
 EventScript_Shop_Lelouch_10:
-	msgbox gText_Lelouch_Leave
+	msgbox EventScript_Shop_Lelouch_Text_5
 	release
 	return
 
 EventScript_Shop_Lelouch_2:
-	msgbox gText_Lelouch_Intro1
+	msgbox EventScript_Shop_Lelouch_Text_0
 	delay 96
-	msgbox gText_Lelouch_Intro2
+	msgbox EventScript_Shop_Lelouch_Text_1
 	setflag FLAG_LELOUCH_INTRO
 	goto EventScript_Shop_Lelouch_1
 
 EventScript_Shop_Lelouch_5:
-	msgbox gText_Lelouch_NoShards
+	msgbox EventScript_Shop_Lelouch_Text_2
 	release
 	end
 
 EventScript_Shop_Lelouch_8:
-	msgbox gText_Lelouch_ExplainShards
+	msgbox EventScript_Shop_Lelouch_Text_3
 	setflag FLAG_LELOUCH_SHARDS_INTRO
 	goto EventScript_Shop_Lelouch_7
 
@@ -1013,7 +1013,7 @@ EventScript_Shop_Lelouch_Training::
 	checkitem ITEM_RED_SHARD, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_Lelouch_Training_2
-	msgbox gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_Training_Text_0, MSGBOX_DEFAULT
 	compare VAR_ZONE, 21
 	goto_if_lt EventScript_Shop_Lelouch_Training_5
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_Lelouch_Training_5
@@ -1178,7 +1178,7 @@ EventScript_Shop_Lelouch_Training_30:
 	goto EventScript_Shop_Lelouch_Training_29
 
 EventScript_Shop_Lelouch_Training_33:
-	msgbox EventScript_Shop_Lelouch_Training_Text_0
+	msgbox EventScript_Shop_Lelouch_Training_Text_1
 	goto EventScript_Shop_Lelouch_Training_29
 
 EventScript_Shop_Lelouch_Training_38:
@@ -1359,7 +1359,7 @@ EventScript_Shop_Lelouch_MoveReminder::
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_MoveReminder_5
 EventScript_Shop_Lelouch_MoveReminder_8:
-	msgbox gText_Lelouch_RemindWhichMon, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_MoveReminder_Text_0, MSGBOX_DEFAULT
 	special ChooseMonForMoveRelearner
 	waitstate
 	compare VAR_0x8004, 255
@@ -1369,7 +1369,7 @@ EventScript_Shop_Lelouch_MoveReminder_8:
 	goto_if_eq EventScript_Shop_Lelouch_MoveReminder_14
 	compare VAR_0x8005, 0
 	goto_if_eq EventScript_Shop_Lelouch_MoveReminder_17
-	msgbox gText_Lelouch_RemindWhichMove, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_MoveReminder_Text_3, MSGBOX_DEFAULT
 	special TeachMoveRelearnerMove
 	waitstate
 	compare VAR_0x8004, 0
@@ -1389,11 +1389,11 @@ EventScript_Shop_Lelouch_MoveReminder_11:
 	return
 
 EventScript_Shop_Lelouch_MoveReminder_14:
-	msgbox gText_Lelouch_CantRemindEgg, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_MoveReminder_Text_1, MSGBOX_DEFAULT
 	goto EventScript_Shop_Lelouch_MoveReminder_8
 
 EventScript_Shop_Lelouch_MoveReminder_17:
-	msgbox gText_Lelouch_CantRemindMon, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_MoveReminder_Text_2, MSGBOX_DEFAULT
 	goto EventScript_Shop_Lelouch_MoveReminder_8
 
 EventScript_Shop_Lelouch_MoveReminder_20:
@@ -1425,10 +1425,10 @@ EventScript_Shop_Lelouch_MoveTutor_4:
 	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_MoveTutor_104
 EventScript_Shop_Lelouch_MoveTutor_6:
 	buffermovename 0, VAR_TEMP_0
-	msgbox gText_TutorMove, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_MoveTutor_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_MoveTutor_15
-	msgbox gText_TutorWhichMon, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_MoveTutor_Text_1, MSGBOX_DEFAULT
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Shop_Lelouch_MoveTutor_106
@@ -2007,7 +2007,7 @@ EventScript_Shop_Lelouch_Other_5:
 	return
 
 EventScript_Shop_Lelouch_Other_8:
-	msgbox EventScript_Shop_Lelouch_Training_Text_0
+	msgbox EventScript_Shop_Lelouch_Training_Text_1
 	goto EventScript_Shop_Lelouch_Other_4
 
 EventScript_Shop_Lelouch_Other_13:
@@ -2229,9 +2229,9 @@ EventScript_Shop_Joy::
 	faceplayer
 	goto_if_unset FLAG_JOY_INTRO, EventScript_Shop_Joy_2
 EventScript_Shop_Joy_1:
-	msgbox gText_Joy_Welcome
+	msgbox EventScript_Shop_Joy_Text_1
 	showmoneybox 0, 0, 0
-	msgbox gText_Joy_WouldYouLikeToHeal, MSGBOX_YESNO
+	msgbox EventScript_Shop_Joy_Text_2, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Joy_5
 	checkmoney 1000, 0
@@ -2239,37 +2239,34 @@ EventScript_Shop_Joy_1:
 	goto_if_eq EventScript_Shop_Joy_8
 	removemoney 1000, 0
 	updatemoneybox
-	msgbox gText_Joy_ThankYou
+	msgbox EventScript_Shop_Joy_Text_4
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
-	msgbox gText_Joy_PartyHealed
+	msgbox EventScript_Shop_Joy_Text_5
 	closemessage
 	hidemoneybox
-	msgbox gText_Joy_WonderfulDay
-	releaseall
-	return
+EventScript_Shop_Joy_4:
+	msgbox EventScript_Shop_Joy_Text_6
+	release
+	end
 
 EventScript_Shop_Joy_2:
 	setflag FLAG_JOY_INTRO
-	msgbox gText_Joy_Intro
+	msgbox EventScript_Shop_Joy_Text_0
 	goto EventScript_Shop_Joy_1
 
 EventScript_Shop_Joy_5:
 	closemessage
 	hidemoneybox
-	msgbox gText_Joy_WonderfulDay
-	release
-	end
+	goto EventScript_Shop_Joy_4
 
 EventScript_Shop_Joy_8:
-	msgbox gText_Joy_NotEnough
+	msgbox EventScript_Shop_Joy_Text_3
 	hidemoneybox
-	msgbox gText_Joy_WonderfulDay
-	release
-	end
+	goto EventScript_Shop_Joy_4
 
 
 EventScript_BrutalExitNotSatisfied::
@@ -2347,7 +2344,7 @@ Zone10A_Shop_TMShop:
 
 EventScript_LeavingSetup::
 	setflag FLAG_IN_ZONE_NOT_SANCTUARY
-	msgbox gText_Colress_Empower
+	msgbox EventScript_LeavingSetup_Text_0
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 21
 	goto_if_eq EventScript_LeavingSetup_2
@@ -2455,7 +2452,7 @@ EventScript_Settings_19:
 EventScript_Settings_14:
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Settings_13
 EventScript_Settings_12:
-	msgbox gText_Colress_DefaultVanillaMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_7, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_98
@@ -2468,7 +2465,7 @@ EventScript_Settings_12:
 	goto EventScript_Settings_2
 
 EventScript_Settings_5:
-	msgbox gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_0, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_49
@@ -2481,7 +2478,7 @@ EventScript_Settings_5:
 	goto EventScript_Settings_2
 
 EventScript_Settings_6:
-	msgbox gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_1, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_56
@@ -2494,7 +2491,7 @@ EventScript_Settings_6:
 	goto EventScript_Settings_2
 
 EventScript_Settings_7:
-	msgbox gText_Colress_BrutalRandomizerMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_2, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_63
@@ -2507,7 +2504,7 @@ EventScript_Settings_7:
 	goto EventScript_Settings_2
 
 EventScript_Settings_8:
-	msgbox gText_Colress_DefaultRandomizerMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_3, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_70
@@ -2520,7 +2517,7 @@ EventScript_Settings_8:
 	goto EventScript_Settings_2
 
 EventScript_Settings_9:
-	msgbox gText_Colress_BrutalNuzlockeMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_4, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_77
@@ -2533,7 +2530,7 @@ EventScript_Settings_9:
 	goto EventScript_Settings_2
 
 EventScript_Settings_10:
-	msgbox gText_Colress_DefaultNuzlockeMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_5, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_84
@@ -2546,7 +2543,7 @@ EventScript_Settings_10:
 	goto EventScript_Settings_2
 
 EventScript_Settings_11:
-	msgbox gText_Colress_BrutalVanillaMsg, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_6, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_91
@@ -2809,20 +2806,20 @@ EventScript_Settings_103:
 
 EventScript_Settings_BrutalMode::
 	msgbox gText_Colress_BrutalExplained
-	msgbox gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO
+	msgbox EventScript_Settings_BrutalMode_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_BrutalMode_1
 	return
 
 EventScript_Settings_BrutalMode_1:
-	msgbox gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO
+	msgbox EventScript_Settings_BrutalMode_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_BrutalMode_3
 	return
 
 EventScript_Settings_BrutalMode_3:
 	playse SE_PC_OFF
-	msgbox gText_Colress_BrutalOff, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_BrutalMode_Text_2, MSGBOX_DEFAULT
 	waitse
 	closemessage
 	clearflag FLAG_BRUTAL_MODE_ON
@@ -2849,7 +2846,7 @@ EventScript_Settings_NuzlockeRandomizer_1:
 
 EventScript_Settings_NuzlockeRandomizer_3:
 	playse SE_PC_OFF
-	msgbox gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_NuzlockeRandomizer_Text_0, MSGBOX_DEFAULT
 	waitse
 	closemessage
 	clearflag FLAG_NUZLOCKE_ON
@@ -2875,7 +2872,7 @@ EventScript_Settings_Nuzlocke_1:
 
 EventScript_Settings_Nuzlocke_3:
 	playse SE_PC_OFF
-	msgbox gText_Colress_NuzlockeOff, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Nuzlocke_Text_0, MSGBOX_DEFAULT
 	waitse
 	closemessage
 	clearflag FLAG_NUZLOCKE_ON
@@ -2887,7 +2884,7 @@ EventScript_Settings_Nuzlocke_3:
 EventScript_MusicMenu::
 EventScript_MusicMenu_1:
 	fadedefaultbgm
-	msgbox gText_Colress_MusicType, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_0, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_MUSIC_TYPE, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_MusicMenu_4
@@ -2983,90 +2980,90 @@ EventScript_MusicMenu_33:
 
 EventScript_MusicMenu_19:
 	playbgm MUS_VS_WILD, FALSE
-	msgbox gText_Colress_WildMusic0Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_1, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_17
 
 EventScript_MusicMenu_20:
 	playbgm MUS_RG_VS_WILD, FALSE
-	msgbox gText_Colress_WildMusic1Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_2, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_17
 
 EventScript_MusicMenu_21:
 	playbgm MUS_DP_SEQ_BA_POKE, FALSE
-	msgbox gText_Colress_WildMusic2Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_3, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_17
 
 EventScript_MusicMenu_22:
 	playbgm MUS_HG_SEQ_GS_VS_NORAPOKE, FALSE
-	msgbox gText_Colress_WildMusic3Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_4, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_17
 
 EventScript_MusicMenu_23:
 	playbgm MUS_HG_SEQ_GS_VS_NORAPOKE_KANTO, FALSE
-	msgbox gText_Colress_WildMusic4Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_5, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_17
 
 EventScript_MusicMenu_24:
-	msgbox gText_Colress_WildMusic5Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_6, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_17
 
 EventScript_MusicMenu_27:
 	playbgm MUS_VS_TRAINER, FALSE
-	msgbox gText_Colress_TrainerMusic0Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_8, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_25
 
 EventScript_MusicMenu_28:
 	playbgm MUS_RG_VS_TRAINER, FALSE
-	msgbox gText_Colress_TrainerMusic1Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_9, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_25
 
 EventScript_MusicMenu_29:
 	playbgm MUS_DP_SEQ_BA_TRAIN, FALSE
-	msgbox gText_Colress_TrainerMusic2Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_10, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_25
 
 EventScript_MusicMenu_30:
 	playbgm MUS_HG_SEQ_GS_VS_TRAINER, FALSE
-	msgbox gText_Colress_TrainerMusic3Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_11, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_25
 
 EventScript_MusicMenu_31:
 	playbgm MUS_HG_SEQ_GS_VS_TRAINER_KANTO, FALSE
-	msgbox gText_Colress_TrainerMusic4Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_12, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_25
 
 EventScript_MusicMenu_32:
 	playbgm MUS_BW_SEQ_BGM_VS_TRAINER, FALSE
-	msgbox gText_Colress_TrainerMusic5Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_13, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_25
 
 EventScript_MusicMenu_35:
 	playbgm MUS_VS_GYM_LEADER, FALSE
-	msgbox gText_Colress_LeviathanMusic0Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_14, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_33
 
 EventScript_MusicMenu_36:
 	playbgm MUS_RG_VS_GYM_LEADER, FALSE
-	msgbox gText_Colress_LeviathanMusic1Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_15, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_33
 
 EventScript_MusicMenu_37:
 	playbgm MUS_DP_SEQ_BA_GYM, FALSE
-	msgbox gText_Colress_LeviathanMusic2Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_16, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_33
 
 EventScript_MusicMenu_38:
 	playbgm MUS_HG_SEQ_GS_VS_GYMREADER, FALSE
-	msgbox gText_Colress_LeviathanMusic3Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_17, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_33
 
 EventScript_MusicMenu_39:
 	playbgm MUS_HG_SEQ_GS_VS_GYMREADER_KANTO, FALSE
-	msgbox gText_Colress_LeviathanMusic4Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_18, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_33
 
 EventScript_MusicMenu_40:
-	msgbox gText_Colress_LeviathanMusic5Msg, MSGBOX_DEFAULT
+	msgbox EventScript_MusicMenu_Text_19, MSGBOX_DEFAULT
 	goto EventScript_MusicMenu_33
 
 EventScript_MusicMenu_42:
@@ -3090,7 +3087,7 @@ EventScript_MusicMenu_46:
 	goto EventScript_MusicMenu_8
 
 EventScript_MusicMenu_47:
-	msgbox gText_Colress_WildMusicBWNotFinished
+	msgbox EventScript_MusicMenu_Text_7
 	goto EventScript_MusicMenu_8
 
 EventScript_MusicMenu_48:
@@ -3146,7 +3143,7 @@ EventScript_MusicMenu_62:
 	goto EventScript_MusicMenu_14
 
 EventScript_MusicMenu_63:
-	msgbox gText_Colress_LeviathanMusicBWNotFinished
+	msgbox EventScript_MusicMenu_Text_20
 	goto EventScript_MusicMenu_14
 
 EventScript_MusicMenu_64:
@@ -3845,8 +3842,101 @@ EventScript_Shop_General_Text_2:
 EventScript_Shop_General_Text_3:
 	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Have a nice day.$"
 
+EventScript_Shop_Unique_Varrick_Text_0:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Wowza! Yeetastic! Blamo!\p"
+	.string "My name is Varrick,\n"
+	.string "entrepreneur extraordinaire!\p"
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GRAY}: I pitched this idea to\n"
+	.string "Silph a couple years back,\l"
+	.string "and now it's become a reality!\p"
+	.string "All the random items you can't find\n"
+	.string "in the world, you'll find here!\p"
+	.string "Fantastic evolution stones!\p"
+	.string "Countless Pokéball variations!\p"
+	.string "Delicious Berries!\p"
+	.string "The greatest held item collection\n"
+	.string "you've never seen!\p"
+	.string "Please, enjoy my shop!$"
+
+EventScript_Shop_Unique_Varrick_Text_1:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Greetings and salutations!\nWelcome to Silph Unique Item Store!$"
+
+EventScript_Shop_Unique_Varrick_Text_2:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GRAY}: A big thank you from Silph!$"
+
+EventScript_Shop_Unique_ZhuLi_Text_0:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: Welcome to Silph Unique\nItem Store. Care to buy anything?$"
+
+EventScript_Shop_Unique_ZhuLi_Text_1:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: We thank you for your\nbusiness, loyal customer.$"
+
+EventScript_Shop_ZhuLiIntro_Text_0:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Fantastic! You've arrived!\nZhu Li, do the thing!$"
+
+EventScript_Shop_ZhuLiIntro_Text_1:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: Yes, sir.$"
+
+EventScript_Shop_ZhuLiIntro_Text_2:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Zhu Li is my assistant!\pSilph gave me so many items to sell\nthat I practically begged them for\lsome extra help!\pZhu Li, introduce yourself!$"
+
+EventScript_Shop_ZhuLiIntro_Text_3:
+	.string "{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: Yes, sir.\pPleased to meet you, {PLAYER}. I'm-$"
+
+EventScript_Shop_ZhuLiIntro_Text_4:
+	.string "{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Alright, we don't have all\nday, Zhu Li! Talk to her if you\lwant to buy consumable items, while\lI'll handle all of the held items!$"
+
+EventScript_Shop_Lelouch_Text_0:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: You… What is your name?\p{COLOR BLUE}???{COLOR DARK_GRAY}: {PLAYER}? Now that's a name…\nI haven't heard in…$"
+
+EventScript_Shop_Lelouch_Text_1:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: You may call me Lelouch.\p{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I provide a variety of\nservices to improve one's Pokémon.$"
+
+EventScript_Shop_Lelouch_Text_2:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I demand a special price\nfor my services, one that I see you\lcannot pay. Leave.$"
+
+EventScript_Shop_Lelouch_Text_3:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I sense…\n"
+	.string "The aura of Shards.\p"
+	.string "There are four types of Shards:\n"
+	.string "Red, Blue, Yellow, and Green,\l"
+	.string "ranked by least to most rare.\p"
+	.string "Each can be exchanged for a certain\n"
+	.string "type of service I provide.\p"
+	.string "Pokémon training costs Red Shards.\p"
+	.string "Move Relearning costs Blue Shards.\p"
+	.string "Move Tutoring costs Yellow Shards.\p"
+	.string "Other services cost Green Shards.\p"
+	.string "I hope they serve you well…$"
+
+EventScript_Shop_Lelouch_Text_4:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: For the right price…\nWelcome to Lelouch's Special Services.$"
+
+EventScript_Shop_Lelouch_Text_5:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Farewell.$"
+
 EventScript_Shop_Lelouch_Training_Text_0:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.$"
+
+EventScript_Shop_Lelouch_Training_Text_1:
 	.string "No eggs!$"
+
+EventScript_Shop_Lelouch_MoveReminder_Text_0:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokémon should\nrelearn a move?$"
+
+EventScript_Shop_Lelouch_MoveReminder_Text_1:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: That is an Egg.$"
+
+EventScript_Shop_Lelouch_MoveReminder_Text_2:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: That Pokémon cannot\nrelearn any moves.$"
+
+EventScript_Shop_Lelouch_MoveReminder_Text_3:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which move should it\nrelearn?$"
+
+EventScript_Shop_Lelouch_MoveTutor_Text_0:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You want to teach the move\n{STR_VAR_1}?$"
+
+EventScript_Shop_Lelouch_MoveTutor_Text_1:
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokemon should learn\n{STR_VAR_1}?$"
 
 EventScript_Shop_Lelouch_Other_Text_0:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I offer nature changing\n"
@@ -3963,6 +4053,27 @@ EventScript_Shop_Lelouch_Other_Text_22:
 	.string "{STR_VAR_1}'s nature to Serious, it\l"
 	.string "will cost one Green Shard.$"
 
+EventScript_Shop_Joy_Text_0:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Welcome to the Pokémon…\nUgh. Never mind.\p{COLOR BLUE}???{COLOR DARK_GRAY}: My name is Joy. Just Joy.\p{COLOR BLUE}Joy{COLOR DARK_GRAY}: I used to work at the\nPokémon Center, but they gave\lterrible pay.\pSo I've started my own shop,\nJoy's Healing Shop!$"
+
+EventScript_Shop_Joy_Text_1:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Welcome to Joy's Healing Shop.\pWe heal your entire party for a\nflat ¥1000 fee.$"
+
+EventScript_Shop_Joy_Text_2:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Should I heal your Pokémon?$"
+
+EventScript_Shop_Joy_Text_3:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: You don't have enough money.$"
+
+EventScript_Shop_Joy_Text_4:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: That will be ¥1000, thank you…$"
+
+EventScript_Shop_Joy_Text_5:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.$"
+
+EventScript_Shop_Joy_Text_6:
+	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: See you next time.$"
+
 EventScript_Max_Text_0:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: By my calculations, you should be\n"
 	.string "{PLAYER}!\p"
@@ -3984,6 +4095,112 @@ EventScript_Max_Text_2:
 
 EventScript_Max_Text_3:
 	.string "{COLOR BLUE}Max{COLOR DARK_GRAY}: Goodbye!$"
+
+EventScript_LeavingSetup_Text_0:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Bring out the strength of you\nand your Pokémon!$"
+
+EventScript_Settings_Text_0:
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_1:
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_2:
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_3:
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_4:
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_5:
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_6:
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_7:
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_BrutalMode_Text_0:
+	.string "Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} and\n"
+	.string "switch to {COLOR RED}Default{COLOR DARK_GRAY}?$"
+
+EventScript_Settings_BrutalMode_Text_1:
+	.string "Are you sure you would like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} and switch to {COLOR RED}Default{COLOR DARK_GRAY}?$"
+
+EventScript_Settings_BrutalMode_Text_2:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty turned off.\nDifficulty set to {COLOR RED}Default{COLOR DARK_GRAY}.$"
+
+EventScript_Settings_NuzlockeRandomizer_Text_0:
+	.string "{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.$"
+
+EventScript_Settings_Nuzlocke_Text_0:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.$"
+
+EventScript_MusicMenu_Text_0:
+	.string "Please select a music setting.$"
+
+EventScript_MusicMenu_Text_1:
+	.string "The Wild Pokémon music is\ncurrently set to RSE.$"
+
+EventScript_MusicMenu_Text_2:
+	.string "The Wild Pokémon music is\ncurrently set to FRLG.$"
+
+EventScript_MusicMenu_Text_3:
+	.string "The Wild Pokémon music is\ncurrently set to DPPt.$"
+
+EventScript_MusicMenu_Text_4:
+	.string "The Wild Pokémon music is\ncurrently set to HGSS (Johto).$"
+
+EventScript_MusicMenu_Text_5:
+	.string "The Wild Pokémon music is\ncurrently set to HGSS (Kanto).$"
+
+EventScript_MusicMenu_Text_6:
+	.string "The Wild Pokémon music is\ncurrently set to BW.$"
+
+EventScript_MusicMenu_Text_7:
+	.string "The BW Wild Pokémon music is not\nfinished.$"
+
+EventScript_MusicMenu_Text_8:
+	.string "The Trainer music is\ncurrently set to RSE.$"
+
+EventScript_MusicMenu_Text_9:
+	.string "The Trainer music is\ncurrently set to FRLG.$"
+
+EventScript_MusicMenu_Text_10:
+	.string "The Trainer music is\ncurrently set to DPPt.$"
+
+EventScript_MusicMenu_Text_11:
+	.string "The Trainer music is\ncurrently set to HGSS (Johto).$"
+
+EventScript_MusicMenu_Text_12:
+	.string "The Trainer music is\ncurrently set to HGSS (Kanto).$"
+
+EventScript_MusicMenu_Text_13:
+	.string "The Trainer music is\ncurrently set to BW.$"
+
+EventScript_MusicMenu_Text_14:
+	.string "The Leviathan music is\ncurrently set to RSE.$"
+
+EventScript_MusicMenu_Text_15:
+	.string "The Leviathan music is\ncurrently set to FRLG.$"
+
+EventScript_MusicMenu_Text_16:
+	.string "The Leviathan music is\ncurrently set to DPPt.$"
+
+EventScript_MusicMenu_Text_17:
+	.string "The Leviathan music is\ncurrently set to HGSS (Johto).$"
+
+EventScript_MusicMenu_Text_18:
+	.string "The Leviathan music is\ncurrently set to HGSS (Kanto).$"
+
+EventScript_MusicMenu_Text_19:
+	.string "The Leviathan music is\ncurrently set to BW.$"
+
+EventScript_MusicMenu_Text_20:
+	.string "The BW Leviathan music is not\nfinished.$"
 
 EventScript_ExpAll_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned\n"
@@ -4052,6 +4269,12 @@ Zone_EventScript_RetirePrompt_Text_0:
 Zone_EventScript_RetirePrompt_Text_1:
 	.string "Warping now…$"
 
+gText_Lelouch_NotEnoughColor::
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\nof that color.$"
+
+gText_Lelouch_Leave::
+	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Farewell.$"
+
 gText_Lelouch_EV::
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: With EV Training, you can set\n"
 	.string "one Pokémon's EVs at the cost of one\l"
@@ -4101,6 +4324,9 @@ gText_Lelouch_ChangedNature::
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I've changed your\n"
 	.string "{STR_VAR_1}'s nature to the\l"
 	.string "requested nature.$"
+
+gText_Colress_VanillaExplanation::
+	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\nmodifications.$"
 
 gText_Colress_DefaultExplained::
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two\n"
@@ -4162,6 +4388,13 @@ gText_Colress_NuzlockeExplained::
 	.string "It is not recommended to play {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
 	.string "mode unless you are familiar with\l"
 	.string "Nuzlockes already.$"
+
+gText_Colress_WouldTurnOffNuzlocke::
+	.string "Would you like to turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\nand switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?$"
+
+gText_Colress_SureTurnOffNuzlocke::
+	.string "Are you sure you would like to turn\n"
+	.string "off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} and switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?$"
 
 gText_Colress_NumDeathsNuzlocke::
 	.string "So far there have been {STR_VAR_1} death(s).$"

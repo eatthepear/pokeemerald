@@ -297,10 +297,23 @@ script EventScript_Shop_Unique_Varrick {
 	lock
 	faceplayer
 	if (flag(FLAG_VARRICK_INTRO) == false) {
-		msgbox(gText_Varrick_Intro)
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: Wowza! Yeetastic! Blamo!\p"
+				"My name is Varrick,\n"
+				"entrepreneur extraordinaire!\p"
+				"{COLOR BLUE}Varrick{COLOR DARK_GRAY}: I pitched this idea to\n"
+				"Silph a couple years back,\l"
+				"and now it's become a reality!\p"
+				"All the random items you can't find\n"
+				"in the world, you'll find here!\p"
+				"Fantastic evolution stones!\p"
+				"Countless Pokéball variations!\p"
+				"Delicious Berries!\p"
+				"The greatest held item collection\n"
+				"you've never seen!\p"
+				"Please, enjoy my shop!")
 		setflag(FLAG_VARRICK_INTRO)
 	}
-	message(gText_Varrick_Welcome)
+	message("{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Greetings and salutations!\nWelcome to Silph Unique Item Store!")
 	waitmessage
 	switch (var(VAR_ZONE)) {
 		case 1:
@@ -340,7 +353,7 @@ script EventScript_Shop_Unique_Varrick {
 				pokemart(Shop_Unique_Varrick_26to30)
 			}
 	}
-	msgbox(gText_Varrick_Leave, MSGBOX_DEFAULT)
+	msgbox("{COLOR BLUE}Varrick{COLOR DARK_GRAY}: A big thank you from Silph!", MSGBOX_DEFAULT)
 	release
 }
 
@@ -655,7 +668,7 @@ mart Shop_Unique_Varrick_26to30_Brutal {
 script EventScript_Shop_Unique_ZhuLi {
 	lock
 	faceplayer
-	message(gText_ZhuLi_Welcome)
+	message("{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: Welcome to Silph Unique\nItem Store. Care to buy anything?")
 	waitmessage
 	switch (var(VAR_ZONE)) {
 		case 11:
@@ -677,7 +690,7 @@ script EventScript_Shop_Unique_ZhuLi {
 		case 26:
 			pokemart(Shop_Unique_ZhuLi_24to30)
 	}
-	msgbox(gText_ZhuLi_Leave, MSGBOX_DEFAULT)
+	msgbox("{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: We thank you for your\nbusiness, loyal customer.", MSGBOX_DEFAULT)
 	release
 }
 
@@ -835,13 +848,13 @@ script EventScript_Shop_ZhuLiIntro {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 	waitmovement(0)
-	msgbox(gText_Varrick_ZhuLiIntro1)
-	msgbox(gText_ZhuLi_ZhuLiIntro1)
+	msgbox("{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Fantastic! You've arrived!\nZhu Li, do the thing!")
+	msgbox("{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: Yes, sir.")
 	playse(SE_APPLAUSE)
 	waitse
-	msgbox(gText_Varrick_ZhuLiIntro2)
-	msgbox(gText_ZhuLi_ZhuLiIntro2)
-	msgbox(gText_Varrick_ZhuLiIntro3)
+	msgbox("{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Zhu Li is my assistant!\pSilph gave me so many items to sell\nthat I practically begged them for\lsome extra help!\pZhu Li, introduce yourself!")
+	msgbox("{COLOR BLUE}Zhu Li{COLOR DARK_GRAY}: Yes, sir.\pPleased to meet you, {PLAYER}. I'm-")
+	msgbox("{COLOR BLUE}Varrick{COLOR DARK_GRAY}: Alright, we don't have all\nday, Zhu Li! Talk to her if you\lwant to buy consumable items, while\lI'll handle all of the held items!")
 	setvar(VAR_ZHULI_INTRO, 1)
 	setflag(FLAG_VARRICK_INTRO)
 	releaseall
@@ -851,21 +864,32 @@ script EventScript_Shop_Lelouch {
 	lock
 	faceplayer
 	if (flag(FLAG_LELOUCH_INTRO) == false) {
-		msgbox(gText_Lelouch_Intro1)
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: You… What is your name?\p{COLOR BLUE}???{COLOR DARK_GRAY}: {PLAYER}? Now that's a name…\nI haven't heard in…")
 		delay(96)
-		msgbox(gText_Lelouch_Intro2)
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: You may call me Lelouch.\p{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I provide a variety of\nservices to improve one's Pokémon.")
 		setflag(FLAG_LELOUCH_INTRO)
 	}
 	if (var(VAR_ZONE) < 6) {
-		msgbox(gText_Lelouch_NoShards)
+		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I demand a special price\nfor my services, one that I see you\lcannot pay. Leave.")
 		release
 		end
 	}
 	if (flag(FLAG_LELOUCH_SHARDS_INTRO) == false) {
-		msgbox(gText_Lelouch_ExplainShards)
+		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I sense…\n"
+				"The aura of Shards.\p"
+				"There are four types of Shards:\n"
+				"Red, Blue, Yellow, and Green,\l"
+				"ranked by least to most rare.\p"
+				"Each can be exchanged for a certain\n"
+				"type of service I provide.\p"
+				"Pokémon training costs Red Shards.\p"
+				"Move Relearning costs Blue Shards.\p"
+				"Move Tutoring costs Yellow Shards.\p"
+				"Other services cost Green Shards.\p"
+				"I hope they serve you well…")
 		setflag(FLAG_LELOUCH_SHARDS_INTRO)
 	}
-	msgbox(gText_Lelouch_Welcome, MSGBOX_DEFAULT)
+	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: For the right price…\nWelcome to Lelouch's Special Services.", MSGBOX_DEFAULT)
 	multichoice(0, 0, MULTI_LELOUCH_OPTIONS, 0)
 	switch (var(VAR_RESULT)) {
 		case 0:
@@ -877,8 +901,16 @@ script EventScript_Shop_Lelouch {
 		case 3:
 			call(EventScript_Shop_Lelouch_Other)
 	}
-	msgbox(gText_Lelouch_Leave)
+	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Farewell.")
 	release
+}
+
+text gText_Lelouch_NotEnoughColor {
+	"{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\nof that color."
+}
+
+text gText_Lelouch_Leave {
+	"{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Farewell."
 }
 
 script EventScript_Shop_Lelouch_Training {
@@ -887,7 +919,7 @@ script EventScript_Shop_Lelouch_Training {
 		msgbox(gText_Lelouch_NotEnoughColor)
 		return
 	}
-	msgbox(gText_Lelouch_ChooseTraining, MSGBOX_DEFAULT)
+	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.", MSGBOX_DEFAULT)
 	if ((var(VAR_ZONE) < 21) || (flag(FLAG_BRUTAL_MODE_ON) == true)) {
 		multichoice(0, 0, MULTI_LELOUCH_EXP_ONLY, 0)
 		switch(var(VAR_RESULT)) {
@@ -1139,7 +1171,7 @@ script EventScript_Shop_Lelouch_MoveReminder {
 		return
 	}
 	while {
-		msgbox(gText_Lelouch_RemindWhichMon, MSGBOX_DEFAULT)
+		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokémon should\nrelearn a move?", MSGBOX_DEFAULT)
 		special(ChooseMonForMoveRelearner)
 		waitstate
 		if (var(VAR_0x8004) == 255) {
@@ -1147,14 +1179,14 @@ script EventScript_Shop_Lelouch_MoveReminder {
 		}
 		special(IsSelectedMonEgg)
 		if (var(VAR_RESULT) == TRUE) {
-			msgbox(gText_Lelouch_CantRemindEgg, MSGBOX_DEFAULT)
+			msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: That is an Egg.", MSGBOX_DEFAULT)
 			continue
 		}
 		if (var(VAR_0x8005) == 0) {
-			msgbox(gText_Lelouch_CantRemindMon, MSGBOX_DEFAULT)
+			msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: That Pokémon cannot\nrelearn any moves.", MSGBOX_DEFAULT)
 			continue
 		}
-		msgbox(gText_Lelouch_RemindWhichMove, MSGBOX_DEFAULT)
+		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which move should it\nrelearn?", MSGBOX_DEFAULT)
 		special(TeachMoveRelearnerMove)
 		waitstate
 		if (var(VAR_0x8004) == 0) {
@@ -1441,11 +1473,11 @@ script EventScript_Shop_Lelouch_MoveTutor {
 			}
 		}
 		buffermovename(0, VAR_TEMP_0)
-		msgbox(gText_TutorMove, MSGBOX_YESNO)
+		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You want to teach the move\n{STR_VAR_1}?", MSGBOX_YESNO)
 		if (var(VAR_RESULT) == NO) {
 			continue
 		}
-		msgbox(gText_TutorWhichMon, MSGBOX_DEFAULT)
+		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokemon should learn\n{STR_VAR_1}?", MSGBOX_DEFAULT)
 		// setvar(VAR_0x8005, VAR_TEMP_1)
 		call(MoveTutor_EventScript_OpenPartyMenu)
 		if (var(VAR_RESULT) == 0) {
@@ -1629,39 +1661,36 @@ script EventScript_Shop_Joy {
 	faceplayer
 	if (flag(FLAG_JOY_INTRO) == false) {
 		setflag(FLAG_JOY_INTRO)
-		msgbox(gText_Joy_Intro)
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: Welcome to the Pokémon…\nUgh. Never mind.\p{COLOR BLUE}???{COLOR DARK_GRAY}: My name is Joy. Just Joy.\p{COLOR BLUE}Joy{COLOR DARK_GRAY}: I used to work at the\nPokémon Center, but they gave\lterrible pay.\pSo I've started my own shop,\nJoy's Healing Shop!")
 	}
-	msgbox(gText_Joy_Welcome)
+	msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Welcome to Joy's Healing Shop.\pWe heal your entire party for a\nflat ¥1000 fee.")
 	showmoneybox(0, 0, 0)
-	msgbox(gText_Joy_WouldYouLikeToHeal, MSGBOX_YESNO)
+	msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Should I heal your Pokémon?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
 		closemessage
 		hidemoneybox
-		msgbox(gText_Joy_WonderfulDay)
-		release
-		end
+	} else {
+		checkmoney(1000, 0)
+		if (var(VAR_RESULT) == FALSE) {
+			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: You don't have enough money.")
+			hidemoneybox
+		} else {
+			removemoney(1000, 0)
+			updatemoneybox
+			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: That will be ¥1000, thank you…")
+			fadescreen(FADE_TO_BLACK)
+			playfanfare(MUS_HEAL)
+			waitfanfare
+			special(HealPlayerParty)
+			fadescreen(FADE_FROM_BLACK)
+			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.")
+			closemessage
+			hidemoneybox
+		}
 	}
-	checkmoney(1000, 0)
-	if (var(VAR_RESULT) == FALSE) {
-		msgbox(gText_Joy_NotEnough)
-		hidemoneybox
-		msgbox(gText_Joy_WonderfulDay)
-		release
-		end
-	}
-	removemoney(1000, 0)
-	updatemoneybox
-	msgbox(gText_Joy_ThankYou)
-	fadescreen(FADE_TO_BLACK)
-	playfanfare(MUS_HEAL)
-	waitfanfare
-	special(HealPlayerParty)
-	fadescreen(FADE_FROM_BLACK)
-	msgbox(gText_Joy_PartyHealed)
-	closemessage
-	hidemoneybox
-	msgbox(gText_Joy_WonderfulDay)
-	releaseall
+	msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: See you next time.")
+	release
+	end
 }
 
 script EventScript_BrutalExitNotSatisfied {
@@ -1718,7 +1747,7 @@ mart Zone10A_Shop_TMShop {
 
 script EventScript_LeavingSetup {
 	setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-	msgbox(gText_Colress_Empower)
+	msgbox("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Bring out the strength of you\nand your Pokémon!")
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
 	if (var(VAR_TEMP_0) == 21) {
 		applymovement(1, Common_Movement_WalkRight)
@@ -1778,7 +1807,7 @@ script EventScript_Settings {
 	setvar(VAR_TEMP_1, 0)
 	while (var(VAR_TEMP_1) == 0) {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
-			msgbox(gText_Colress_BrutalNuzlockeRandomizerMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1796,7 +1825,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
-			msgbox(gText_Colress_DefaultNuzlockeRandomizerMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1814,7 +1843,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == true)) {
-			msgbox(gText_Colress_BrutalRandomizerMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1832,7 +1861,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == true)) {
-			msgbox(gText_Colress_DefaultRandomizerMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1850,7 +1879,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == false)) {
-			msgbox(gText_Colress_BrutalNuzlockeMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1868,7 +1897,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == false)) {
-			msgbox(gText_Colress_DefaultNuzlockeMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1886,7 +1915,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == false)) {
-			msgbox(gText_Colress_BrutalVanillaMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1904,7 +1933,7 @@ script EventScript_Settings {
 					setvar(VAR_TEMP_1, 1)
 			}
 		} else {
-			msgbox(gText_Colress_DefaultVanillaMsg, MSGBOX_DEFAULT)
+			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
@@ -1926,6 +1955,9 @@ script EventScript_Settings {
 	goto(EventScript_WhenUReady)
 }
 
+text gText_Colress_VanillaExplanation {
+	"{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\nmodifications."
+}
 
 text gText_Colress_DefaultExplained {
 	format("{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two difficulty options.\p"
@@ -1970,12 +2002,12 @@ text gText_Colress_NuzlockeExplained {
 
 script EventScript_Settings_BrutalMode {
 	msgbox(gText_Colress_BrutalExplained)
-	msgbox(gText_Colress_WouldTurnOffBrutal, MSGBOX_YESNO)
+	msgbox(format("Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} and switch to {COLOR RED}Default{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
-		msgbox(gText_Colress_SureTurnOffBrutal, MSGBOX_YESNO)
+		msgbox("Are you sure you would like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} and switch to {COLOR RED}Default{COLOR DARK_GRAY}?", MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			playse(SE_PC_OFF)
-			msgbox(gText_Colress_BrutalOff, MSGBOX_DEFAULT)
+			msgbox("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty turned off.\nDifficulty set to {COLOR RED}Default{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
 			clearflag(FLAG_BRUTAL_MODE_ON)
@@ -1995,7 +2027,7 @@ script EventScript_Settings_NuzlockeRandomizer {
 		msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			playse(SE_PC_OFF)
-			msgbox(gText_Colress_NuzlockeOffRandomizer, MSGBOX_DEFAULT)
+			msgbox("{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
 			clearflag(FLAG_NUZLOCKE_ON)
@@ -2003,6 +2035,15 @@ script EventScript_Settings_NuzlockeRandomizer {
 			callnative(GlobalNuzlockeClear)
 		}
 	}
+}
+
+text gText_Colress_WouldTurnOffNuzlocke {
+	"Would you like to turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\nand switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?"
+}
+
+text gText_Colress_SureTurnOffNuzlocke {
+	"Are you sure you would like to turn\n"
+	"off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} and switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?"
 }
 
 script EventScript_Settings_Nuzlocke {
@@ -2014,7 +2055,7 @@ script EventScript_Settings_Nuzlocke {
 		msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			playse(SE_PC_OFF)
-			msgbox(gText_Colress_NuzlockeOff, MSGBOX_DEFAULT)
+			msgbox("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
 			clearflag(FLAG_NUZLOCKE_ON)
@@ -2031,7 +2072,7 @@ text gText_Colress_NumDeathsNuzlocke {
 script EventScript_MusicMenu {
 	while {
 		fadedefaultbgm
-		msgbox(gText_Colress_MusicType, MSGBOX_DEFAULT)
+		msgbox("Please select a music setting.", MSGBOX_DEFAULT)
 		multichoice(21, 0, MULTI_MUSIC_TYPE, FALSE)
 		switch (var(VAR_RESULT)) {
 			case 0:
@@ -2040,22 +2081,22 @@ script EventScript_MusicMenu {
 					switch (var(VAR_WILD_MUSIC)) {
 						case 0:
 							playbgm(MUS_VS_WILD, FALSE)
-							msgbox(gText_Colress_WildMusic0Msg, MSGBOX_DEFAULT)
+							msgbox("The Wild Pokémon music is\ncurrently set to RSE.", MSGBOX_DEFAULT)
 						case 1:
 							playbgm(MUS_RG_VS_WILD, FALSE)
-							msgbox(gText_Colress_WildMusic1Msg, MSGBOX_DEFAULT)
+							msgbox("The Wild Pokémon music is\ncurrently set to FRLG.", MSGBOX_DEFAULT)
 						case 2:
 							playbgm(MUS_DP_SEQ_BA_POKE, FALSE)
-							msgbox(gText_Colress_WildMusic2Msg, MSGBOX_DEFAULT)
+							msgbox("The Wild Pokémon music is\ncurrently set to DPPt.", MSGBOX_DEFAULT)
 						case 3:
 							playbgm(MUS_HG_SEQ_GS_VS_NORAPOKE, FALSE)
-							msgbox(gText_Colress_WildMusic3Msg, MSGBOX_DEFAULT)
+							msgbox("The Wild Pokémon music is\ncurrently set to HGSS (Johto).", MSGBOX_DEFAULT)
 						case 4:
 							playbgm(MUS_HG_SEQ_GS_VS_NORAPOKE_KANTO, FALSE)
-							msgbox(gText_Colress_WildMusic4Msg, MSGBOX_DEFAULT)
+							msgbox("The Wild Pokémon music is\ncurrently set to HGSS (Kanto).", MSGBOX_DEFAULT)
 						case 5:
 							// playbgm(MUS_BW_SEQ_BGM_VS_NORAPOKE, FALSE)
-							msgbox(gText_Colress_WildMusic5Msg, MSGBOX_DEFAULT)
+							msgbox("The Wild Pokémon music is\ncurrently set to BW.", MSGBOX_DEFAULT)
 					}
 					multichoice(21, 0, MULTI_MUSIC_WHICH_GAME, FALSE)
 					switch (var(VAR_RESULT)) {
@@ -2071,7 +2112,7 @@ script EventScript_MusicMenu {
 							setvar(VAR_WILD_MUSIC, 4)
 						case 5:
 							// setvar(VAR_WILD_MUSIC, 5)
-							msgbox(gText_Colress_WildMusicBWNotFinished)
+							msgbox("The BW Wild Pokémon music is not\nfinished.")
 						case MULTI_B_PRESSED:
 							setvar(VAR_TEMP_0, 0)
 					}
@@ -2082,22 +2123,22 @@ script EventScript_MusicMenu {
 					switch (var(VAR_TRAINER_MUSIC)) {
 						case 0:
 							playbgm(MUS_VS_TRAINER, FALSE)
-							msgbox(gText_Colress_TrainerMusic0Msg, MSGBOX_DEFAULT)
+							msgbox("The Trainer music is\ncurrently set to RSE.", MSGBOX_DEFAULT)
 						case 1:
 							playbgm(MUS_RG_VS_TRAINER, FALSE)
-							msgbox(gText_Colress_TrainerMusic1Msg, MSGBOX_DEFAULT)
+							msgbox("The Trainer music is\ncurrently set to FRLG.", MSGBOX_DEFAULT)
 						case 2:
 							playbgm(MUS_DP_SEQ_BA_TRAIN, FALSE)
-							msgbox(gText_Colress_TrainerMusic2Msg, MSGBOX_DEFAULT)
+							msgbox("The Trainer music is\ncurrently set to DPPt.", MSGBOX_DEFAULT)
 						case 3:
 							playbgm(MUS_HG_SEQ_GS_VS_TRAINER, FALSE)
-							msgbox(gText_Colress_TrainerMusic3Msg, MSGBOX_DEFAULT)
+							msgbox("The Trainer music is\ncurrently set to HGSS (Johto).", MSGBOX_DEFAULT)
 						case 4:
 							playbgm(MUS_HG_SEQ_GS_VS_TRAINER_KANTO, FALSE)
-							msgbox(gText_Colress_TrainerMusic4Msg, MSGBOX_DEFAULT)
+							msgbox("The Trainer music is\ncurrently set to HGSS (Kanto).", MSGBOX_DEFAULT)
 						case 5:
 							playbgm(MUS_BW_SEQ_BGM_VS_TRAINER, FALSE)
-							msgbox(gText_Colress_TrainerMusic5Msg, MSGBOX_DEFAULT)
+							msgbox("The Trainer music is\ncurrently set to BW.", MSGBOX_DEFAULT)
 					}
 					multichoice(21, 0, MULTI_MUSIC_WHICH_GAME, FALSE)
 					switch (var(VAR_RESULT)) {
@@ -2123,22 +2164,22 @@ script EventScript_MusicMenu {
 					switch (var(VAR_LEVIATHAN_MUSIC)) {
 						case 0:
 							playbgm(MUS_VS_GYM_LEADER, FALSE)
-							msgbox(gText_Colress_LeviathanMusic0Msg, MSGBOX_DEFAULT)
+							msgbox("The Leviathan music is\ncurrently set to RSE.", MSGBOX_DEFAULT)
 						case 1:
 							playbgm(MUS_RG_VS_GYM_LEADER, FALSE)
-							msgbox(gText_Colress_LeviathanMusic1Msg, MSGBOX_DEFAULT)
+							msgbox("The Leviathan music is\ncurrently set to FRLG.", MSGBOX_DEFAULT)
 						case 2:
 							playbgm(MUS_DP_SEQ_BA_GYM, FALSE)
-							msgbox(gText_Colress_LeviathanMusic2Msg, MSGBOX_DEFAULT)
+							msgbox("The Leviathan music is\ncurrently set to DPPt.", MSGBOX_DEFAULT)
 						case 3:
 							playbgm(MUS_HG_SEQ_GS_VS_GYMREADER, FALSE)
-							msgbox(gText_Colress_LeviathanMusic3Msg, MSGBOX_DEFAULT)
+							msgbox("The Leviathan music is\ncurrently set to HGSS (Johto).", MSGBOX_DEFAULT)
 						case 4:
 							playbgm(MUS_HG_SEQ_GS_VS_GYMREADER_KANTO, FALSE)
-							msgbox(gText_Colress_LeviathanMusic4Msg, MSGBOX_DEFAULT)
+							msgbox("The Leviathan music is\ncurrently set to HGSS (Kanto).", MSGBOX_DEFAULT)
 						case 5:
 							// playbgm(MUS_BW_SEQ_BGM_VS_GYMLEADER, FALSE)
-							msgbox(gText_Colress_LeviathanMusic5Msg, MSGBOX_DEFAULT)
+							msgbox("The Leviathan music is\ncurrently set to BW.", MSGBOX_DEFAULT)
 					}
 					multichoice(21, 0, MULTI_MUSIC_WHICH_GAME, FALSE)
 					switch (var(VAR_RESULT)) {
@@ -2154,7 +2195,7 @@ script EventScript_MusicMenu {
 							setvar(VAR_LEVIATHAN_MUSIC, 4)
 						case 5:
 							// setvar(VAR_LEVIATHAN_MUSIC, 5)
-							msgbox(gText_Colress_LeviathanMusicBWNotFinished)
+							msgbox("The BW Leviathan music is not\nfinished.")
 						case MULTI_B_PRESSED:
 							setvar(VAR_TEMP_0, 0)
 					}
