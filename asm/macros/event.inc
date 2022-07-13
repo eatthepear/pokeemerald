@@ -1734,7 +1734,7 @@
 	.2byte \item
 	.2byte \quantity
 	.endm
-
+    
 	.macro givecustommon species:req, level:req, item, ball, nature, abilityNum, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, isShiny
     .byte 0xe3
     .2byte \species
@@ -1850,6 +1850,28 @@
     
     .macro givemonmoves species:req, level:req, move1:req, move2:req, move3:req, move4:req
     customgivemon \species, \level, 0, 0, NUM_NATURES, 0xFF, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \move1, \move2, \move3, \move4, 0
+    .endm
+
+    @ sets an NPC up to follow the player
+    .macro setfollower localId:req, flags:req
+    .byte 0xe4
+    .byte \localId
+    .2byte \flags
+    .endm
+    
+    @ remove the following NPC (assumes there will only ever be one)
+    .macro destroyfollower
+    .byte 0xe5
+    .endm
+    
+    @ makes the player and follower face one another
+    .macro facefollower
+    .byte 0xe6
+    .endm
+    
+    @ checks if you have a follower. returns the result to VAR_RESULT
+    .macro checkfollower
+    .byte 0xe7
     .endm
 
 @ Supplementary

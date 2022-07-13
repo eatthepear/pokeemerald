@@ -50,6 +50,7 @@
 #include "tv.h"
 #include "window.h"
 #include "constants/event_objects.h"
+#include "follow_me.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(void);
@@ -2389,3 +2390,31 @@ bool8 ScrCmd_givecustommon(struct ScriptContext *ctx)
     gSpecialVar_Result = ScriptGiveCustomMon(species, level, item, ball, nature, abilityNum, evs, ivs, moves, isShiny);
     return FALSE;
 }
+// follow me script commands
+bool8 ScrCmd_setfollower(struct ScriptContext *ctx)
+{
+    u8 localId = ScriptReadByte(ctx);
+    u16 flags = ScriptReadHalfword(ctx);
+    
+    SetUpFollowerSprite(localId, flags);
+    return FALSE;
+}
+
+bool8 ScrCmd_destroyfollower(struct ScriptContext *ctx)
+{
+    DestroyFollower();
+    return FALSE;
+}
+
+bool8 ScrCmd_facefollower(struct ScriptContext *ctx)
+{
+    PlayerFaceFollowerSprite();
+    return FALSE;
+}
+
+bool8 ScrCmd_checkfollower(struct ScriptContext *ctx)
+{
+    CheckPlayerHasFollower();
+    return FALSE;
+}
+

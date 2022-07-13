@@ -228,6 +228,10 @@ gScriptCmdTable::
 	.4byte ScrCmd_buffercontestname         @ 0xe1
 	.4byte ScrCmd_bufferitemnameplural      @ 0xe2
     .4byte ScrCmd_givecustommon				@ 0xe3
+    .4byte ScrCmd_setfollower				@ 0xe4
+    .4byte ScrCmd_destroyfollower			@ 0xe5
+    .4byte ScrCmd_facefollower				@ 0xe6
+    .4byte ScrCmd_checkfollower				@ 0xe7
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

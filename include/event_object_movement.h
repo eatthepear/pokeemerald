@@ -195,6 +195,7 @@ void LoadObjectEventPalette(u16 paletteTag);
 u8 GetObjectEventBerryTreeId(u8 objectEventId);
 void SetBerryTreeJustPicked(u8 mapId, u8 mapNumber, u8 mapGroup);
 bool8 IsBerryTreeSparkling(u8, u8, u8);
+struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
 u8 TrySpawnObjectEventTemplate(struct ObjectEventTemplate *objectEventTemplate, u8 mapNum, u8 mapGroup, s16 cameraX, s16 cameraY);
 
 void MovementType_None(struct Sprite *);
@@ -430,5 +431,10 @@ u8 GetSidewaysStairsToLeftDirection(s16, s16, u8);
 u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 currentBehavior, u8 nextBehavior, u8 collision);
 
 u16 GetObjectEventTrainerSightFlagByObjectEventId(u8 objEventId);
+
+// NEW
+u16 GetMiniStepCount(u8 speed);
+void RunMiniStep(struct Sprite *sprite, u8 speed, u8 currentFrame);
+bool8 PlayerIsUnderWaterfall(struct ObjectEvent *objectEvent);
 
 #endif //GUARD_EVENT_OBJECT_MOVEMENT_H
