@@ -5164,8 +5164,8 @@
     {
       "id": "LAYOUT_ZONE28A",
       "name": "Zone28A_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 50,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_JungleTemple",
       "border_filepath": "data/layouts/Zone28A/border.bin",
