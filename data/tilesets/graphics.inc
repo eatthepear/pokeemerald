@@ -1789,3 +1789,23 @@ gTilesetPalettes_Marsh::
 	.align 2
 gTilesetTiles_Marsh::
 	.incbin "data/tilesets/secondary/marsh/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_JungleTemple::
+	.incbin "data/tilesets/secondary/jungletemple/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/jungletemple/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_JungleTemple::
+	.incbin "data/tilesets/secondary/jungletemple/tiles.4bpp.lz"

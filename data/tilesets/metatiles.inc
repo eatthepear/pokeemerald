@@ -579,3 +579,10 @@ gMetatiles_Marsh::
 	.align 1
 gMetatileAttributes_Marsh::
 	.incbin "data/tilesets/secondary/marsh/metatile_attributes.bin"
+	.align 1
+gMetatiles_JungleTemple::
+	.incbin "data/tilesets/secondary/jungletemple/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_JungleTemple::
+	.incbin "data/tilesets/secondary/jungletemple/metatile_attributes.bin"
