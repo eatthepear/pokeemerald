@@ -15,6 +15,32 @@
   "connections": 0,
   "object_events": [
     {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 24,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZONE12A_CAMPER_PICNICKER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 24,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZONE12A_CAMPER_PICNICKER"
+    },
+    {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 3,
       "y": 25,
@@ -182,32 +208,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone12A_EventScript_SuperPotion",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 24,
-      "y": 27,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_ZONE12A_CAMPER_PICNICKER"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 24,
-      "y": 28,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_ZONE12A_CAMPER_PICNICKER"
     }
   ],
   "warp_events": [

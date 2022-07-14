@@ -695,9 +695,9 @@ static const struct TrainerMon sParty_Kevin[] = {
 static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, Default and Brutal
     {
     .ball = ITEM_NET_BALL,
-    .iv = 30,
+    .iv = 20,
     .lvl = 15,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_JOLLY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Swarm
     .species = SPECIES_BEEDRILL,
@@ -706,7 +706,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
     },
     {
     .ball = ITEM_NET_BALL,
-    .iv = 30,
+    .iv = 20,
     .lvl = 15,
     .nature = NATURE_TIMID,
     .gender = TRAINER_MON_FEMALE,
@@ -872,7 +872,7 @@ static const struct TrainerMon sParty_ZackDefault[] = {//Leviathan, Default
     .ball = ITEM_DIVE_BALL,
     .iv = 20,
     .lvl = 20,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_CALM,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Schooling
     .species = SPECIES_WISHIWASHI,
@@ -884,14 +884,14 @@ static const struct TrainerMon sParty_ZackDefault[] = {//Leviathan, Default
 static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan, Brutal
     {
     .ball = ITEM_DIVE_BALL,
-    .iv = 31,
+    .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 20,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_CALM,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Schooling
     .species = SPECIES_WISHIWASHI,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_REST, MOVE_SLEEP_TALK}
+    .moves = {MOVE_WATER_PULSE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_HIDDEN_POWER} // Hidden Power Grass
     }
 };
 
@@ -1824,6 +1824,63 @@ static const struct TrainerMon sParty_Dolores[] = {
     }
 };
 
+
+// You fight Romulus then immediately fight Julie afterwards.
+// On Default, your party is fully healed in between fights, while on Brutal your party is not
+static const struct TrainerMon sParty_Romulus[] = {
+    {
+    .ivs = {21, 21, 20, 20, 20, 20},
+    .lvl = 24,
+    .ability = ABILITY_SLOT_2, //Super Luck
+    .species = SPECIES_MURKROW,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_AIR_CUTTER, MOVE_FEINT_ATTACK, MOVE_STEEL_WING, MOVE_HIDDEN_POWER} // Hidden Power Fighting
+    },
+    {
+    .iv = 20,
+    .lvl = 24,
+    .ability = ABILITY_HIDDEN, //Sniper
+    .species = SPECIES_DRIZZILE,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_FOCUS_ENERGY, MOVE_HIDDEN_POWER} // Hidden Power Ice
+    },
+    {
+    .ivs = {21, 21, 21, 20, 21, 21},
+    .lvl = 25,
+    .ability = ABILITY_SLOT_2, //Steadfast
+    .species = SPECIES_SIRFETCHD,
+    .heldItem = ITEM_LEEK,
+    .moves = {MOVE_NIGHT_SLASH, MOVE_LEAF_BLADE, MOVE_BRICK_BREAK, MOVE_PLUCK}
+    }
+};
+
+static const struct TrainerMon sParty_Julie[] = {
+    {
+    .iv = 20,
+    .lvl = 24,
+    .ability = ABILITY_SLOT_1, //Battle Armor
+    .species = SPECIES_ANORITH,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_SKITTER_SMACK, MOVE_ROCK_TOMB, MOVE_AQUA_JET, MOVE_IRON_DEFENSE}
+    },
+    {
+    .iv = 20,
+    .lvl = 24,
+    .ability = ABILITY_SLOT_2, //Shell Armor
+    .species = SPECIES_GROTLE,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_BULLET_SEED, MOVE_BULLDOZE, MOVE_SYNTHESIS, MOVE_CURSE}
+    },
+    {
+    .ivs = {21, 21, 21, 21, 20, 21},
+    .lvl = 25,
+    .ability = ABILITY_SLOT_1, //Shell Armor
+    .species = SPECIES_TURTONATOR,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_INCINERATE, MOVE_DRAGON_PULSE, MOVE_SCORCHING_SANDS, MOVE_HIDDEN_POWER} // Hidden Power Electric
+    }
+};
+
 static const struct TrainerMon sParty_Trevor[] = {
     {
     .iv = 10,
@@ -1957,59 +2014,6 @@ static const struct TrainerMon sParty_Kinley[] = {
     }
 };
 
-static const struct TrainerMon sParty_Romulus[] = {
-    {
-    .ivs = {21, 21, 20, 20, 20, 20},
-    .lvl = 24,
-    .ability = ABILITY_SLOT_2, //Super Luck
-    .species = SPECIES_MURKROW,
-    .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_AIR_CUTTER, MOVE_FEINT_ATTACK, MOVE_STEEL_WING, MOVE_HIDDEN_POWER} // Hidden Power Fighting
-    },
-    {
-    .iv = 20,
-    .lvl = 24,
-    .ability = ABILITY_HIDDEN, //Sniper
-    .species = SPECIES_DRIZZILE,
-    .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_FOCUS_ENERGY, MOVE_HIDDEN_POWER} // Hidden Power Ice
-    },
-    {
-    .ivs = {21, 21, 21, 20, 21, 21},
-    .lvl = 25,
-    .ability = ABILITY_SLOT_2, //Steadfast
-    .species = SPECIES_SIRFETCHD,
-    .heldItem = ITEM_LEEK,
-    .moves = {MOVE_NIGHT_SLASH, MOVE_LEAF_BLADE, MOVE_BRICK_BREAK, MOVE_PLUCK}
-    }
-};
-
-static const struct TrainerMon sParty_Julie[] = {
-    {
-    .iv = 20,
-    .lvl = 24,
-    .ability = ABILITY_SLOT_1, //Battle Armor
-    .species = SPECIES_ANORITH,
-    .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_SKITTER_SMACK, MOVE_ROCK_TOMB, MOVE_AQUA_JET, MOVE_IRON_DEFENSE}
-    },
-    {
-    .iv = 20,
-    .lvl = 24,
-    .ability = ABILITY_SLOT_2, //Shell Armor
-    .species = SPECIES_GROTLE,
-    .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_BULLET_SEED, MOVE_BULLDOZE, MOVE_SYNTHESIS, MOVE_CURSE}
-    },
-    {
-    .ivs = {21, 21, 21, 21, 20, 21},
-    .lvl = 25,
-    .ability = ABILITY_SLOT_1, //Shell Armor
-    .species = SPECIES_TURTONATOR,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_INCINERATE, MOVE_DRAGON_PULSE, MOVE_SCORCHING_SANDS, MOVE_HIDDEN_POWER} // Hidden Power Electric
-    }
-};
 
 /* ------------------- Zone 13 & 14 ------------------- */
 

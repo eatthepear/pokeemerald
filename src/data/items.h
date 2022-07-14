@@ -445,7 +445,7 @@ const struct Item gItems[] =
     {
         .name = _("Revive"),
         .itemId = ITEM_REVIVE,
-        .price = 5000,
+        .price = 2000,
         .description = sReviveDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,

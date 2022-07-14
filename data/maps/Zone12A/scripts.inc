@@ -42,31 +42,31 @@ Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_17:
 
 Zone12A_EventScript_StartGauntletBattleTop::
 	lockall
-	setobjectxyperm 14, 37, 13
-	setobjectxyperm 15, 37, 14
-	removeobject 14
-	removeobject 15
-	addobject 14
-	addobject 15
+	setobjectxyperm 1, 37, 13
+	setobjectxyperm 2, 37, 14
+	removeobject 1
+	removeobject 2
+	addobject 1
+	addobject 2
 	goto Zone12A_EventScript_InitiateRomulusJulieBattles
 	return
 
 
 Zone12A_EventScript_StartGauntletBattleBottom::
 	lockall
-	setobjectxyperm 14, 24, 27
-	setobjectxyperm 15, 24, 28
-	removeobject 14
-	removeobject 15
-	addobject 14
-	addobject 15
+	setobjectxyperm 1, 24, 27
+	setobjectxyperm 2, 24, 28
+	removeobject 1
+	removeobject 2
+	addobject 1
+	addobject 2
 	goto Zone12A_EventScript_InitiateRomulusJulieBattles
 	return
 
 
 Zone12A_EventScript_InitiateRomulusJulieBattles::
-	applymovement 14, Zone12A_Movement_Left
-	applymovement 15, Zone12A_Movement_Left
+	applymovement 1, Zone12A_Movement_Left
+	applymovement 2, Zone12A_Movement_Left
 	waitmovement 0
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_0
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_1
@@ -83,20 +83,20 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_4:
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9
 	giveitem ITEM_SCOPE_LENS
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10
-	applymovement 14, Zone12A_Movement_Right
-	applymovement 15, Zone12A_Movement_Right
+	applymovement 1, Zone12A_Movement_Right
+	applymovement 2, Zone12A_Movement_Right
 	waitmovement 0
 	setflag FLAG_HIDE_ZONE12A_CAMPER_PICNICKER
-	removeobject 14
-	removeobject 15
+	removeobject 1
+	removeobject 2
 	setvar VAR_ZONE_12_STATE, 1
 	releaseall
 	end
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_2:
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_3
-	applymovement 14, Zone12A_Movement_Right
-	applymovement 15, Zone12A_Movement_Right
+	applymovement 1, Zone12A_Movement_Right
+	applymovement 2, Zone12A_Movement_Right
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
