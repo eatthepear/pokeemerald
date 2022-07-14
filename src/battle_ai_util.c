@@ -550,16 +550,17 @@ void SetBattlerData(u8 battlerId)
         struct Pokemon *illusionMon;
         u32 i;
 
-        // Use the known battler's ability.
-        if (BATTLE_HISTORY->abilities[battlerId] != ABILITY_NONE)
-            gBattleMons[battlerId].ability = BATTLE_HISTORY->abilities[battlerId];
-        // Check if mon can only have one ability.
-        else if (gBaseStats[gBattleMons[battlerId].species].abilities[1] == ABILITY_NONE
-                 || gBaseStats[gBattleMons[battlerId].species].abilities[1] == gBaseStats[gBattleMons[battlerId].species].abilities[0])
-            gBattleMons[battlerId].ability = gBaseStats[gBattleMons[battlerId].species].abilities[0];
-        // The ability is unknown.
-        else
-            gBattleMons[battlerId].ability = ABILITY_NONE;
+        gBattleMons[battlerId].ability = AI_GetAbility(battlerId);
+        // // Use the known battler's ability.
+        // if (BATTLE_HISTORY->abilities[battlerId] != ABILITY_NONE)
+        //     gBattleMons[battlerId].ability = BATTLE_HISTORY->abilities[battlerId];
+        // // Check if mon can only have one ability.
+        // else if (gBaseStats[gBattleMons[battlerId].species].abilities[1] == ABILITY_NONE
+        //          || gBaseStats[gBattleMons[battlerId].species].abilities[1] == gBaseStats[gBattleMons[battlerId].species].abilities[0])
+        //     gBattleMons[battlerId].ability = gBaseStats[gBattleMons[battlerId].species].abilities[0];
+        // // The ability is unknown.
+        // else
+        //     gBattleMons[battlerId].ability = ABILITY_NONE;
 
         if (BATTLE_HISTORY->itemEffects[battlerId] == 0)
             gBattleMons[battlerId].item = 0;
