@@ -2025,7 +2025,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
             if ((partyData[l].moves[0] != '\0') && (FlagGet(FLAG_BRUTAL_MODE_ON)
                                                     || (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER)
-                                                    || (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL)))
+                                                    || (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL)
+                                                    || (VarGet(VAR_ZONE) > 10)))
             {
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {

@@ -1213,6 +1213,32 @@ const struct Trainer gTrainers[] = {
         .shouldShuffle = TRUE,
     },
 
+    [TRAINER_ROMULUS] =
+    {
+        .trainerClass = TRAINER_CLASS_CAMPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerName = _("Romulus"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Romulus),
+        .party = {.TrainerMon = sParty_Romulus},
+    },
+    
+    [TRAINER_JULIE] =
+    {
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Julie"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Julie),
+        .party = {.TrainerMon = sParty_Julie},
+    },
+
     [TRAINER_JAN_AND_ERIN] =
     {
         .trainerClass = TRAINER_CLASS_YOUNG_COUPLE,

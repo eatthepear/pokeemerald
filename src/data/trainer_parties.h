@@ -1961,7 +1961,7 @@ static const struct TrainerMon sParty_Kinley[] = {
 static const struct TrainerMon sParty_Romulus[] = {
     {
     .ivs = {21, 21, 20, 20, 20, 20},
-    .lvl = 25,
+    .lvl = 24,
     .ability = ABILITY_SLOT_2, //Super Luck
     .species = SPECIES_MURKROW,
     .heldItem = ITEM_SCOPE_LENS,
@@ -1969,7 +1969,7 @@ static const struct TrainerMon sParty_Romulus[] = {
     },
     {
     .iv = 20,
-    .lvl = 25,
+    .lvl = 24,
     .ability = ABILITY_HIDDEN, //Sniper
     .species = SPECIES_DRIZZILE,
     .heldItem = ITEM_SCOPE_LENS,
@@ -1977,7 +1977,7 @@ static const struct TrainerMon sParty_Romulus[] = {
     },
     {
     .ivs = {21, 21, 21, 20, 21, 21},
-    .lvl = 26,
+    .lvl = 25,
     .ability = ABILITY_SLOT_2, //Steadfast
     .species = SPECIES_SIRFETCHD,
     .heldItem = ITEM_LEEK,
@@ -1988,7 +1988,7 @@ static const struct TrainerMon sParty_Romulus[] = {
 static const struct TrainerMon sParty_Julie[] = {
     {
     .iv = 20,
-    .lvl = 25,
+    .lvl = 24,
     .ability = ABILITY_SLOT_1, //Battle Armor
     .species = SPECIES_ANORITH,
     .heldItem = ITEM_EVIOLITE,
@@ -1996,7 +1996,7 @@ static const struct TrainerMon sParty_Julie[] = {
     },
     {
     .iv = 20,
-    .lvl = 25,
+    .lvl = 24,
     .ability = ABILITY_SLOT_2, //Shell Armor
     .species = SPECIES_GROTLE,
     .heldItem = ITEM_EVIOLITE,
@@ -2004,7 +2004,7 @@ static const struct TrainerMon sParty_Julie[] = {
     },
     {
     .ivs = {21, 21, 21, 21, 20, 21},
-    .lvl = 26,
+    .lvl = 25,
     .ability = ABILITY_SLOT_1, //Shell Armor
     .species = SPECIES_TURTONATOR,
     .heldItem = ITEM_LEFTOVERS,

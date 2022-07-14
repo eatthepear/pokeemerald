@@ -65,7 +65,7 @@
 #define FLAG_RECEIVED_ZONE10B_TM21_TELEPORT               0x34
 #define FLAG_HIDE_ZONE10B_BERRYMAN                        0x35
 #define FLAG_RECEIVED_ZONE10B_LUCKY_EGG                   0x36
-#define FLAG_HIDE_LEVIATHAN6                              0x37
+#define FLAG_HIDE_ZONE12A_CAMPER_PICNICKER                0x37
 #define FLAG_ZONE13B_RECEIVED_FLASHLIGHT                  0x38
 #define FLAG_NUZLOCKE_FOSSIL_RECEIVED                     0x39
 #define FLAG_HIDE_LEVIATHAN7                              0x3A
