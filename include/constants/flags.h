@@ -1091,7 +1091,7 @@
 #define FLAG_ITEM_ZONE12A_TM24                                      0x416
 #define FLAG_ITEM_ZONE12A_THUNDER_STONE                             0x417
 #define FLAG_ITEM_ZONE12A_FIRE_STONE                                0x418
-#define FLAG_ITEM_ZONE12A_GRIP_CLAW                                 0x419
+#define FLAG_ITEM_ZONE12A_MACHO_BRACE                               0x419
 #define FLAG_ITEM_ZONE12A_SUPER_POTION                              0x41A
 #define FLAG_ITEM_ZONE13A_SUPER_POTION                              0x41B
 #define FLAG_ITEM_ZONE14A_GREAT_BALL                                0x41C

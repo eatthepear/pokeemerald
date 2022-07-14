@@ -15,7 +15,7 @@ mapscripts Zone12A_MapScripts {
 		} else {
 			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
-		if (flag(FLAG_ITEM_ZONE12A_GRIP_CLAW)) {
+		if (flag(FLAG_ITEM_ZONE12A_MACHO_BRACE)) {
 			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
 		} else {
 			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
@@ -174,9 +174,9 @@ script Zone12A_EventScript_FireStone {
 	end
 }
 
-script Zone12A_EventScript_GripClaw {
+script Zone12A_EventScript_MachoBrace {
 	lock
-	if (flag(FLAG_ITEM_ZONE12A_GRIP_CLAW)) {
+	if (flag(FLAG_ITEM_ZONE12A_MACHO_BRACE)) {
 		msgbox(gText_ItemChestIsEmpty)
 		release
 		end
@@ -184,9 +184,9 @@ script Zone12A_EventScript_GripClaw {
 	waitse
 	removeobject(VAR_LAST_TALKED)
 	setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-	setflag(FLAG_ITEM_ZONE12A_GRIP_CLAW)
+	setflag(FLAG_ITEM_ZONE12A_MACHO_BRACE)
 	addobject(VAR_LAST_TALKED)
-	finditem(ITEM_GRIP_CLAW, 1)
+	finditem(ITEM_MACHO_BRACE, 1)
 	release
 	end
 }

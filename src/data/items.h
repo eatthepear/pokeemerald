@@ -8092,10 +8092,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM24_THROAT_CHOP] =
+    [ITEM_TM24_LOW_SWEEP] =
     {
         .name = _("TM24"),
-        .itemId = ITEM_TM24_THROAT_CHOP,
+        .itemId = ITEM_TM24_LOW_SWEEP,
         .price = 3000,
         .description = sTM24Desc,
         .pocket = POCKET_TM_HM,

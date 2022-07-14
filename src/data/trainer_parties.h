@@ -13,7 +13,6 @@
  * EVs are by default set to 0.
  * Natures are by default set to Serious.
  * Most trainers use level up movesets. Some trainers have tailored movesets which are documented in this file.
- * On Default mode, these tailored movesets are ignored for all non-Leviathan and other special trainer classes.
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
@@ -224,7 +223,7 @@ static const struct TrainerMon sParty_Jemma[] = {
     }
 };
 
-static const struct TrainerMon sParty_Patrick[] = {
+static const struct TrainerMon sParty_Patrick[] = {//Uses level up movesets on Default difficulty
     {
     .iv = 0,
     .lvl = 9,
@@ -1279,7 +1278,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
 /* ------------------- Zone 9 ------------------- */
 
 // You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
-static const struct TrainerMon sParty_Ari[] = {
+static const struct TrainerMon sParty_Ari[] = {//Uses level up movesets on Default difficulty
     {
     .iv = 10,
     .lvl = 19,
@@ -1294,7 +1293,7 @@ static const struct TrainerMon sParty_Ari[] = {
     }
 };
 
-static const struct TrainerMon sParty_Bertha[] = {
+static const struct TrainerMon sParty_Bertha[] = {//Uses level up movesets on Default difficulty
     {
     .iv = 10,
     .lvl = 19,
@@ -1315,7 +1314,7 @@ static const struct TrainerMon sParty_Bertha[] = {
     }
 };
 
-static const struct TrainerMon sParty_Cassandra[] = {
+static const struct TrainerMon sParty_Cassandra[] = {//Uses level up movesets on Default difficulty
     {
     .iv = 10,
     .lvl = 20,
@@ -1336,7 +1335,7 @@ static const struct TrainerMon sParty_Cassandra[] = {
     }
 };
 
-static const struct TrainerMon sParty_Dominic[] = {
+static const struct TrainerMon sParty_Dominic[] = {//Uses level up movesets on Default difficulty
     {
     .iv = 10,
     .lvl = 21,
@@ -1345,7 +1344,7 @@ static const struct TrainerMon sParty_Dominic[] = {
     }
 };
 
-static const struct TrainerMon sParty_Erica[] = {
+static const struct TrainerMon sParty_Erica[] = {//Uses level up movesets on Default difficulty
     {
     .iv = 10,
     .lvl = 20,

@@ -3124,10 +3124,6 @@ static const u8 sTM19Desc[] = _(
     "Empties its mind,\n"
     "sharply raising\n"
     "Sp. Defense.");
-    // Low Sweep
-    // "Attacks the foe's\n"
-    // "legs, lowering\n"
-    // "its Speed.");
 
 static const u8 sTM20Desc[] = _(
     "Throws scorching\n"
@@ -3166,9 +3162,13 @@ static const u8 sTM23Desc[] = _(
     // "for 5 turns.");
 
 static const u8 sTM24Desc[] = _(
-    "Chops the throat to\n"
-    "disable sound moves\n"
-    "for a while.");
+    "Attacks the foe's\n"
+    "legs, lowering\n"
+    "its Speed.");
+    // Throat Chop
+    // "Chops the throat to\n"
+    // "disable sound moves\n"
+    // "for a while.");
 
 static const u8 sTM25Desc[] = _(
     "Attacks the foe\n"

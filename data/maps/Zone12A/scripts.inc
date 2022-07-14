@@ -12,7 +12,7 @@ Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 	goto_if_set FLAG_ITEM_ZONE12A_FIRE_STONE, Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_10
 	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
 Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
-	goto_if_set FLAG_ITEM_ZONE12A_GRIP_CLAW, Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_14
+	goto_if_set FLAG_ITEM_ZONE12A_MACHO_BRACE, Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_14
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
 Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
 	goto_if_set FLAG_ITEM_ZONE12A_SUPER_POTION, Zone12A_MapScripts_MAP_SCRIPT_ON_RESUME_17
@@ -225,19 +225,19 @@ Zone12A_EventScript_FireStone_2:
 	end
 
 
-Zone12A_EventScript_GripClaw::
+Zone12A_EventScript_MachoBrace::
 	lock
-	goto_if_set FLAG_ITEM_ZONE12A_GRIP_CLAW, Zone12A_EventScript_GripClaw_2
+	goto_if_set FLAG_ITEM_ZONE12A_MACHO_BRACE, Zone12A_EventScript_MachoBrace_2
 	waitse
 	removeobject VAR_LAST_TALKED
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE12A_GRIP_CLAW
+	setflag FLAG_ITEM_ZONE12A_MACHO_BRACE
 	addobject VAR_LAST_TALKED
-	finditem ITEM_GRIP_CLAW, 1
+	finditem ITEM_MACHO_BRACE, 1
 	release
 	end
 
-Zone12A_EventScript_GripClaw_2:
+Zone12A_EventScript_MachoBrace_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end
