@@ -1,10 +1,10 @@
-mapscripts Zone11Sanctuary_MapScripts {
+mapscripts Zone10Sanctuary_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE [
-		VAR_ZONE, 11: Zone11Sanctuary_EventScript_Intro
+		VAR_ZONE, 10: Zone10Sanctuary_EventScript_Intro
 	]
 }
 
-script Zone11Sanctuary_EventScript_Intro {
+script Zone10Sanctuary_EventScript_Intro {
     lockall
 	call(EventScript_EnterSanctuary)
 	buffernumberstring(0, VAR_ZONE)
@@ -12,9 +12,13 @@ script Zone11Sanctuary_EventScript_Intro {
 	waitfanfare
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_RewardClear)
-	msgbox(Zone11Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE)
-	giveitem(ITEM_TM23)
-	setvar(VAR_ZONE, 12)
+	msgbox(Zone10Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE)
+	giveitem(ITEM_MACHETE)
+	msgbox(gText_Colress_Unlocked)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedServices)
+	waitfanfare
+	setvar(VAR_ZONE, 11)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)
@@ -23,7 +27,7 @@ script Zone11Sanctuary_EventScript_Intro {
 	end
 }
 
-script Zone11Sanctuary_EventScript_NextZone {
+script Zone10Sanctuary_EventScript_NextZone {
 	lock
 	faceplayer
 	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
@@ -34,7 +38,7 @@ script Zone11Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				warp(MAP_ZONE12A, 255, 9, 17)
+				warp(MAP_ZONE11A, 255, 46, 2)
 				waitstate
 			}
 		case 1:
@@ -45,6 +49,6 @@ script Zone11Sanctuary_EventScript_NextZone {
 	goto(EventScript_WhenUReady)
 }
 
-text Zone11Sanctuary_Text_Reward {
-	format("TM23 - Pluck!")
+text Zone10Sanctuary_Text_Reward {
+	format("The Machete!")
 }
