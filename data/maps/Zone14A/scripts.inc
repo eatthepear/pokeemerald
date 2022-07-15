@@ -1,14 +1,39 @@
 Zone14A_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Zone14A_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, Zone14A_MapScripts_MAP_SCRIPT_ON_RESUME
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone14A_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-Zone14A_OnTransition: @ 81FC642
-	call Zone14A_EventScript_SetFlashRadius
-	end
+Zone14A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE14A_FULL_HEAL, Zone14A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
 
-Zone14A_EventScript_SetFlashRadius:
+Zone14A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+Zone14A_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setflashlevel 4
 	return
+
+
+Zone14A_EventScript_FullHeal::
+	lock
+	goto_if_set FLAG_ITEM_ZONE14A_FULL_HEAL, Zone14A_EventScript_FullHeal_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE14A_FULL_HEAL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_FULL_HEAL, 1
+	release
+	end
+
+Zone14A_EventScript_FullHeal_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone14A_EventScript_Bart::
 	trainerbattle_single TRAINER_BART, Zone14A_Text_BartIntro, Zone14A_Text_BartDefeat
@@ -33,16 +58,14 @@ Zone14A_EventScript_Nigel::
 	end
 
 Zone14A_Text_NigelIntro:
-	.string "I sympathize with the plight of\n"
-	.string "the working class, but I simply\l"
-	.string "benefit too much from inequality!$"
+	.string "SNEAK ATTACK!$"
 
 Zone14A_Text_NigelDefeat:
-	.string "Mama! Some poor person beat me!$"
+	.string "SNEAK ATTACK BAMBOOZLED!$"
 
 Zone14A_Text_NigelPostBattle:
-	.string "I already gave you money, ok?\n"
-	.string "Just scram or something.$"
+	.string "Turns out yelling sneak attack\n"
+	.string "makes it, well, not a sneak attack!$"
 
 Zone14A_EventScript_Cooper::
 	trainerbattle_single TRAINER_COOPER, Zone14A_Text_CooperIntro, Zone14A_Text_CooperDefeat
@@ -50,16 +73,13 @@ Zone14A_EventScript_Cooper::
 	end
 
 Zone14A_Text_CooperIntro:
-	.string "I sympathize with the plight of\n"
-	.string "the working class, but I simply\l"
-	.string "benefit too much from inequality!$"
+	.string "It's so dark down here…$"
 
 Zone14A_Text_CooperDefeat:
-	.string "Mama! Some poor person beat me!$"
+	.string "I can barely see you!$"
 
 Zone14A_Text_CooperPostBattle:
-	.string "I already gave you money, ok?\n"
-	.string "Just scram or something.$"
+	.string "The exit should be this way…$"
 
 Zone14A_EventScript_Lola::
 	trainerbattle_single TRAINER_LOLA, Zone14A_Text_LolaIntro, Zone14A_Text_LolaDefeat
@@ -72,8 +92,8 @@ Zone14A_Text_LolaIntro:
 	.string "place for our 1.5 month anniversary!$"
 
 Zone14A_Text_LolaDefeat:
-	.string "What kind of place to picnic is\n"
-	.string "is this anyways!?$"
+	.string "Charlie! I found you!\n"
+	.string "You are in so much trouble!$"
 
 Zone14A_Text_LolaPostBattle:
 	.string "That stupid, stupid boy!$"
@@ -84,17 +104,11 @@ Zone14A_EventScript_Charlie::
 	end
 
 Zone14A_Text_CharlieIntro:
-	.string "Seriously, when I find Charlie,\n"
-	.string "he's going to regret choosing this\l"
-	.string "place for our 1.5 month anniversary!$"
+	.string "Lola, baby, where are you?$"
 
 Zone14A_Text_CharlieDefeat:
-	.string "What kind of place to picnic is\n"
-	.string "is this anyways!?$"
+	.string "Baby, I'm so sorry!$"
 
 Zone14A_Text_CharliePostBattle:
-	.string "That stupid, stupid boy!$"
-
-Zone14A_EventScript_GreatBall::
-	finditem ITEM_GREAT_BALL
-	end
+	.string "I promise I'll pick a better spot\n"
+	.string "next time!$"

@@ -221,7 +221,7 @@ struct FormChange {
 
 #define GET_SHINY_VALUE(otId, personality)HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality)
 
-#define NUM_CAPS 27
+#define NUM_CAPS 52
 
 extern u8 gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];

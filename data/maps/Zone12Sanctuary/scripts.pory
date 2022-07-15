@@ -1,0 +1,67 @@
+mapscripts Zone12Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 12: Zone12Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone12Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_RewardClear)
+	msgbox(Zone12Sanctuary_Text_Reward)
+	giveitem(ITEM_ULTRA_BALL, 10)
+	msgbox(gText_Colress_Unlocked)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT)
+	waitfanfare
+	setvar(VAR_ZONE, 13)
+	msgbox(Zone12Sanctuary_Text_Colress_Explain)
+	msgbox(Zone12Sanctuary_Text_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+}
+
+script Zone12Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			msgbox(Zone12Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				warp(MAP_ZONE13A, 255, 26, 28)
+				waitstate
+			}
+		case 1:
+			goto(EventScript_Settings)
+		case 2:
+			goto(EventScript_Documentation)
+	}
+	goto(EventScript_WhenUReady)
+}
+
+text Zone12Sanctuary_Text_Reward {
+	format("10 Ultra Balls!")
+}
+
+text Zone12Sanctuary_Text_Colress_Explain {
+	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones, {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}, are combined.\p"
+	"You will not be able to access a Sanctuary in between the Zones.")
+}
+
+text Zone12Sanctuary_Text_Colress_WhenUReady {
+	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to enter {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}, speak to me.")
+}
+
+text Zone12Sanctuary_Text_Colress_ReadyToLeave {
+	"{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you ready to leave?\n"
+	"You will be entering\l"
+	"{COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}.$"
+}

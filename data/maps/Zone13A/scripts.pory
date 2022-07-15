@@ -1,16 +1,21 @@
 mapscripts Zone13A_MapScripts {
 	MAP_SCRIPT_ON_RESUME {
-		if (flag(FLAG_ITEM_ZONE13A_MENTAL_HERB)) {
+		if (flag(FLAG_ITEM_ZONE13A_LEAF_STONE)) {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
 		} else {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
+		if (flag(FLAG_ITEM_ZONE13A_SHINY_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
 	}
 }
 
-script Zone13A_EventScript_MentalHerb {
+script Zone13A_EventScript_LeafStone {
 	lock
-	if (flag(FLAG_ITEM_ZONE13A_MENTAL_HERB)) {
+	if (flag(FLAG_ITEM_ZONE13A_LEAF_STONE)) {
 		msgbox(gText_ItemChestIsEmpty)
 		release
 		end
@@ -18,9 +23,26 @@ script Zone13A_EventScript_MentalHerb {
 	waitse
 	removeobject(VAR_LAST_TALKED)
 	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-	setflag(FLAG_ITEM_ZONE13A_MENTAL_HERB)
+	setflag(FLAG_ITEM_ZONE13A_LEAF_STONE)
 	addobject(VAR_LAST_TALKED)
-	finditem(ITEM_MENTAL_HERB, 1)
+	finditem(ITEM_LEAF_STONE, 1)
+	release
+	end
+}
+
+script Zone13A_EventScript_ShinyStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE13A_SHINY_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE13A_SHINY_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SHINY_STONE, 1)
 	release
 	end
 }
@@ -32,15 +54,15 @@ Zone13A_EventScript_Violet::
 	end
 
 Zone13A_Text_VioletIntro:
-	.string "This grass is far too tall\n"
-	.string "for someone of my stature!$"
+	.string "Ah, finally, a pleasant aroma!$"
 
 Zone13A_Text_VioletDefeat:
-	.string "I meant financial stature!\n"
-	.string "I'm not short!$"
+	.string "I wasn't talking about you!\n"
+	.string "I meant the flowers!$"
 
 Zone13A_Text_VioletPostBattle:
-	.string "Errr… Never mind.$"
+	.string "Though, you do smell nice.\n"
+	.string "Uh, nevermind.$"
 	
 Zone13A_EventScript_Wanda::
 	trainerbattle_single TRAINER_WANDA, Zone13A_Text_WandaIntro, Zone13A_Text_WandaDefeat
@@ -48,15 +70,16 @@ Zone13A_EventScript_Wanda::
 	end
 
 Zone13A_Text_WandaIntro:
-	.string "This grass is far too tall\n"
-	.string "for someone of my stature!$"
+	.string "Would you like to see my Pokémon?\n"
+	.string "I paid big money to get them!$"
 
 Zone13A_Text_WandaDefeat:
-	.string "I meant financial stature!\n"
-	.string "I'm not short!$"
+	.string "Well, kind of.\n"
+	.string "It's a long story.$"
 
 Zone13A_Text_WandaPostBattle:
-	.string "Errr… Never mind.$"
+	.string "Have you ever heard the word\n"
+	.string "nepotism?$"
 
 Zone13A_EventScript_AmberandKim::
 	trainerbattle_double TRAINER_AMBER_AND_KIM, Zone13A_Text_AmberandKimIntro, Zone13A_Text_AmberandKimDefeat, gText_NotEnoughMons
@@ -104,15 +127,15 @@ Zone13A_EventScript_Steve::
 	end
 
 Zone13A_Text_SteveIntro:
-	.string "This grass is far too tall\n"
-	.string "for someone of my stature!$"
+	.string "I can hear them buzzing!\n"
+	.string "Where are you, my precious Bug\l"
+	.string "Pokémon?$"
 
 Zone13A_Text_SteveDefeat:
-	.string "I meant financial stature!\n"
-	.string "I'm not short!$"
+	.string "Bzzt!$"
 
 Zone13A_Text_StevePostBattle:
-	.string "Errr… Never mind.$"
+	.string "The only pest I found was you!$"
 
 Zone13A_EventScript_Sign::
 	msgbox Zone13A_Text_Sign, MSGBOX_SIGN

@@ -213,7 +213,7 @@ Zone10A_EventScript_Ranger_1:
 	end
 
 Zone10A_EventScript_Ranger_2:
-	msgbox Zone10A_EventScript_Ranger_Text_0
+	msgbox Zone10A_EventScript_Ranger_Text_0, MSGBOX_DEFAULT
 	giveitem ITEM_SAFETY_GOGGLES
 	setflag FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES
 	goto Zone10A_EventScript_Ranger_1

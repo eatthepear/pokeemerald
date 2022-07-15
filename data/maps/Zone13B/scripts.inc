@@ -47,15 +47,16 @@ Zone13B_EventScript_Gould::
 	end
 
 Zone13B_Text_GouldIntro:
-	.string "This grass is far too tall\n"
-	.string "for someone of my stature!$"
+	.string "Evolutionary biology!\n"
+	.string "The greatest of fields!$"
 
 Zone13B_Text_GouldDefeat:
-	.string "I meant financial stature!\n"
-	.string "I'm not short!$"
+	.string "Wait, I changed my mind.$"
 
 Zone13B_Text_GouldPostBattle:
-	.string "Errr… Never mind.$"
+	.string "You know the greatest field of all?\p"
+	.string "It's the one outside, with the\n"
+	.string "flowers.$"
 
 Zone13B_EventScript_Mendel::
 	trainerbattle_single TRAINER_MENDEL, Zone13B_Text_MendelIntro, Zone13B_Text_MendelDefeat
@@ -63,15 +64,16 @@ Zone13B_EventScript_Mendel::
 	end
 
 Zone13B_Text_MendelIntro:
-	.string "This grass is far too tall\n"
-	.string "for someone of my stature!$"
+	.string "What are the ethics of reviving\n"
+	.string "Pokémon from fossils?$"
 
 Zone13B_Text_MendelDefeat:
-	.string "I meant financial stature!\n"
-	.string "I'm not short!$"
+	.string "I don't even know what ethics\n"
+	.string "means!$"
 
 Zone13B_Text_MendelPostBattle:
-	.string "Errr… Never mind.$"
+	.string "Uhm, I guess I'll just fill out\n"
+	.string "this form with 'entirely ethical'?$"
 
 Zone13B_EventScript_Scientist1::
 	lock

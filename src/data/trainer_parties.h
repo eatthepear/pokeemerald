@@ -34,7 +34,7 @@ static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_LILLIPUP,
+    .species = SPECIES_POOCHYENA,
     }
 };
 
@@ -52,7 +52,7 @@ static const struct TrainerMon sParty_Mariam[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_POOCHYENA,
+    .species = SPECIES_LILLIPUP,
     }
 };
 
@@ -93,7 +93,7 @@ static const struct TrainerMon sParty_CoreyBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 7,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Cheek Pouch
     .species = SPECIES_SKWOVET,
@@ -117,7 +117,7 @@ static const struct TrainerMon sParty_Polly[] = {
     {
     .iv = 0,
     .lvl = 6,
-    .species = SPECIES_SNUBBULL,
+    .species = SPECIES_MILCERY,
     }
 };
 
@@ -171,7 +171,7 @@ static const struct TrainerMon sParty_Arthur[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_PICHU,
+    .species = SPECIES_YAMPER,
     }
 };
 
@@ -180,12 +180,12 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, opt
     .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 9,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_LONELY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Run Away
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_FURY_SWIPES, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
+    .moves = {MOVE_FURY_SWIPES, MOVE_BITE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -194,7 +194,7 @@ static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 9,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_LONELY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Hustle
     .species = SPECIES_RATTATA,
@@ -252,7 +252,7 @@ static const struct TrainerMon sParty_Boris[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_YAMPER,
+    .species = SPECIES_PICHU,
     }
 };
 
@@ -317,7 +317,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 11,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAUGHTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
     .heldItem = ITEM_METRONOME,
@@ -330,7 +330,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 10,
-    .nature = NATURE_CAREFUL,
+    .nature = NATURE_SASSY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
@@ -340,7 +340,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 10,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
@@ -350,7 +350,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
-    .nature = NATURE_SERIOUS,
+    .nature = NATURE_NAUGHTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
     .heldItem = ITEM_METRONOME,
@@ -360,7 +360,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
-    .nature = NATURE_SERIOUS,
+    .nature = NATURE_QUIET,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Thick Fat
     .species = SPECIES_SPHEAL,
@@ -405,7 +405,7 @@ static const struct TrainerMon sParty_Ralph[] = {
     {
     .iv = 0,
     .lvl = 10,
-    .species = SPECIES_COTTONEE,
+    .species = SPECIES_SNUBBULL,
     }
 };
 
@@ -477,7 +477,7 @@ static const struct TrainerMon sParty_Fred[] = {
     {
     .iv = 0,
     .lvl = 11,
-    .species = SPECIES_STUFFUL,
+    .species = SPECIES_COTTONEE,
     },
     {
     .iv = 0,
@@ -501,7 +501,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 12,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_RASH,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Static
     .species = SPECIES_PIKACHU,
@@ -511,7 +511,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 13,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Poison Point
     .species = SPECIES_ROSELIA,
@@ -535,7 +535,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .ball = ITEM_LUXURY_BALL,
     .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 12,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_RASH,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Static
     .species = SPECIES_PIKACHU,
@@ -545,7 +545,7 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .ball = ITEM_LUXURY_BALL,
     .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 13,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Poison Point
     .species = SPECIES_ROSELIA,
@@ -697,7 +697,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
     .ball = ITEM_NET_BALL,
     .iv = 20,
     .lvl = 15,
-    .nature = NATURE_JOLLY,
+    .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Swarm
     .species = SPECIES_BEEDRILL,
@@ -708,7 +708,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
     .ball = ITEM_NET_BALL,
     .iv = 20,
     .lvl = 15,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Compound Eyes
     .species = SPECIES_BUTTERFREE,
@@ -769,7 +769,7 @@ static const struct TrainerMon sParty_Constance[] = {// Random lead
     {
     .iv = 0,
     .lvl = 14,
-    .species = SPECIES_MILCERY,
+    .species = SPECIES_STUFFUL,
     },
     {
     .iv = 0,
@@ -1028,7 +1028,7 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battl
     .ball = ITEM_LUXURY_BALL,
     .iv = 31,
     .lvl = 19,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_MILD,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Psychic Surge
     .species = SPECIES_INDEEDEE,
@@ -1039,7 +1039,7 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battl
     .ball = ITEM_LUXURY_BALL,
     .iv = 31,
     .lvl = 19,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_MILD,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Psychic Surge
     .species = SPECIES_INDEEDEE_FEMALE,
@@ -1175,7 +1175,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a
     .ability = ABILITY_SLOT_1, //Receiver
     .species = SPECIES_PASSIMIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_DRAIN_PUNCH, MOVE_ROCK_SLIDE, MOVE_KNOCK_OFF, MOVE_FACADE}
+    .moves = {MOVE_DRAIN_PUNCH, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 31,
@@ -1185,7 +1185,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_QWILFISH,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_LIQUIDATION, MOVE_POISON_JAB, MOVE_FLIP_TURN, MOVE_AQUA_JET}
+    .moves = {MOVE_LIQUIDATION, MOVE_POISON_JAB, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 31,
@@ -1195,7 +1195,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a
     .ability = ABILITY_SLOT_1, //Prankster, turns into Magic Bounce after Mega Evolving
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SABLENITE,
-    .moves = {MOVE_SHADOW_BALL, MOVE_DAZZLING_GLEAM, MOVE_CALM_MIND, MOVE_RECOVER}
+    .moves = {MOVE_SHADOW_BALL, MOVE_DAZZLING_GLEAM, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -1310,7 +1310,7 @@ static const struct TrainerMon sParty_Bertha[] = {//Uses level up movesets on De
     .iv = 10,
     .lvl = 19,
     .species = SPECIES_SHUPPET,
-    .moves = {MOVE_NIGHT_SHADE, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_KNOCK_OFF}
+    .moves = {MOVE_NIGHT_SHADE, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_SCREECH}
     }
 };
 
@@ -1319,19 +1319,19 @@ static const struct TrainerMon sParty_Cassandra[] = {//Uses level up movesets on
     .iv = 10,
     .lvl = 20,
     .species = SPECIES_ARROKUDA,
-    .moves = {MOVE_AQUA_JET, MOVE_ICE_FANG, MOVE_NIGHT_SLASH, MOVE_FLIP_TURN}
+    .moves = {MOVE_AQUA_JET, MOVE_ICE_FANG, MOVE_NIGHT_SLASH, MOVE_LASER_FOCUS}
     },
     {
     .iv = 10,
     .lvl = 20,
     .species = SPECIES_CUFANT,
-    .moves = {MOVE_BULLDOZE, MOVE_IRON_HEAD, MOVE_ROCK_SMASH, MOVE_ROCK_TOMB}
+    .moves = {MOVE_BULLDOZE, MOVE_IRON_HEAD, MOVE_ROCK_SMASH, MOVE_STOMP}
     },
     {
     .iv = 10,
     .lvl = 20,
     .species = SPECIES_NOIBAT,
-    .moves = {MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_WATER_PULSE, MOVE_THIEF}
+    .moves = {MOVE_AIR_CUTTER, MOVE_ABSORB, MOVE_WATER_PULSE, MOVE_AGILITY}
     }
 };
 
@@ -1367,7 +1367,7 @@ static const struct TrainerMon sParty_Erica[] = {//Uses level up movesets on Def
 
 /* ------------------- Zone 10 ------------------- */
 
-static const struct TrainerMon sParty_Kyle[] = {// Random lead
+static const struct TrainerMon sParty_Kyle[] = {// Random lead, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1390,7 +1390,7 @@ static const struct TrainerMon sParty_Kyle[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Belle[] = {// Random lead
+static const struct TrainerMon sParty_Belle[] = {// Random lead, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1413,7 +1413,7 @@ static const struct TrainerMon sParty_Belle[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Dewey[] = {// Random lead
+static const struct TrainerMon sParty_Dewey[] = {// Random lead, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1436,7 +1436,7 @@ static const struct TrainerMon sParty_Dewey[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Pearlie[] = {
+static const struct TrainerMon sParty_Pearlie[] = {// Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 22,
@@ -1444,7 +1444,7 @@ static const struct TrainerMon sParty_Pearlie[] = {
     }
 };
 
-static const struct TrainerMon sParty_Ernest[] = {// Random lead
+static const struct TrainerMon sParty_Ernest[] = {// Random lead, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1467,7 +1467,7 @@ static const struct TrainerMon sParty_Ernest[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Alana[] = {// Random lead
+static const struct TrainerMon sParty_Alana[] = {// Random lead, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1490,7 +1490,7 @@ static const struct TrainerMon sParty_Alana[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Susan[] = {
+static const struct TrainerMon sParty_Susan[] = {// Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 22,
@@ -1498,7 +1498,7 @@ static const struct TrainerMon sParty_Susan[] = {
     }
 };
 
-static const struct TrainerMon sParty_Conrad[] = {// Random lead
+static const struct TrainerMon sParty_Conrad[] = {// Random lead, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1512,12 +1512,7 @@ static const struct TrainerMon sParty_Conrad[] = {// Random lead
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_RHYHORN,
-    },
-    {
-    .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_NOSEPASS,
+    .species = SPECIES_CARBINK,
     }
 };
 
@@ -1534,7 +1529,7 @@ static const struct TrainerMon sParty_AdaminaDefault[] = {//Leviathan, Battle st
     {
     .ivs = {21, 21, 20, 20, 20, 20},
     .lvl = 22,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Magic Guard
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRAIXEN,
@@ -1543,7 +1538,7 @@ static const struct TrainerMon sParty_AdaminaDefault[] = {//Leviathan, Battle st
     {
     .ivs = {20, 21, 21, 21, 20, 21},
     .lvl = 22,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_QUIET,
     .ability = ABILITY_SLOT_2, //Liquid Voice
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRIONNE,
@@ -1563,11 +1558,11 @@ static const struct TrainerMon sParty_AdaminaDefault[] = {//Leviathan, Battle st
     .iv = 20,
     .lvl = 23,
     .nature = NATURE_ADAMANT,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .gender = TRAINER_MON_MALE,
-    .species = SPECIES_SUDOWOODO,
+    .ability = ABILITY_SLOT_1, //Fur Coat
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_FURRET,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_DRAIN_PUNCH}
+    .moves = {MOVE_RETALIATE, MOVE_SUCKER_PUNCH, MOVE_BRICK_BREAK, MOVE_COIL}
     }
 };
 
@@ -1584,7 +1579,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
     {
     .ivs = {31, 31, 30, 30, 30, 30},
     .lvl = 22,
-    .nature = NATURE_TIMID,
+    .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Magic Guard
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRAIXEN,
@@ -1593,7 +1588,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
     {
     .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 22,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_QUIET,
     .ability = ABILITY_SLOT_2, //Liquid Voice
     .gender = TRAINER_MON_FEMALE,
     .species = SPECIES_BRIONNE,
@@ -1613,21 +1608,21 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
     .iv = 31,
     .lvl = 23,
     .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Fur Coat
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_FURRET,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_RETALIATE, MOVE_SUCKER_PUNCH, MOVE_BRICK_BREAK, MOVE_COIL}
+    },
+    {
+    .iv = 31,
+    .lvl = 23,
+    .nature = NATURE_RELAXED,
     .ability = ABILITY_SLOT_1, //Sturdy
     .gender = TRAINER_MON_MALE,
     .species = SPECIES_SUDOWOODO,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_DRAIN_PUNCH}
-    },
-    {
-    .iv = 31,
-    .lvl = 23,
-    .nature = NATURE_IMPISH,
-    .ability = ABILITY_SLOT_1, //Shell Armor
-    .gender = TRAINER_MON_MALE,
-    .species = SPECIES_FALINKS,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_NO_RETREAT, MOVE_BRICK_BREAK, MOVE_REST, MOVE_SLEEP_TALK}
     }
 };
 
@@ -1719,7 +1714,7 @@ static const struct TrainerMon sParty_NewtonDefault[] = {//Leviathan, Double Bat
     {
     .iv = 31,
     .lvl = 23,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAUGHTY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_STANTLER,
@@ -1729,7 +1724,7 @@ static const struct TrainerMon sParty_NewtonDefault[] = {//Leviathan, Double Bat
     {
     .iv = 31,
     .lvl = 24,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Hustle
     .species = SPECIES_FLAPPLE,
@@ -1752,7 +1747,7 @@ static const struct TrainerMon sParty_NewtonBrutal[] = {//Leviathan, Double Batt
     {
     .iv = 31,
     .lvl = 23,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAUGHTY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Intimidate
     .species = SPECIES_STANTLER,
@@ -1762,22 +1757,22 @@ static const struct TrainerMon sParty_NewtonBrutal[] = {//Leviathan, Double Batt
     {
     .iv = 31,
     .lvl = 24,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Intimidate
-    .species = SPECIES_ARBOK,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CRUNCH, MOVE_GUNK_SHOT, MOVE_FIRE_FANG, MOVE_THUNDER_FANG}
-    },
-    {
-    .iv = 31,
-    .lvl = 24,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_NAIVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_2, //Hustle
     .species = SPECIES_FLAPPLE,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_GRAV_APPLE, MOVE_DRAGON_RUSH, MOVE_DUAL_WINGBEAT, MOVE_STOMPING_TANTRUM}
+    },
+    {
+    .iv = 31,
+    .lvl = 24,
+    .nature = NATURE_LONELY,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_ARBOK,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CRUNCH, MOVE_GUNK_SHOT, MOVE_FIRE_FANG, MOVE_THUNDER_FANG}
     }
 };
 
@@ -2193,7 +2188,7 @@ static const struct TrainerMon sParty_JennyDefault[] = {//Leviathan, Default
     {
     .iv = 20,
     .lvl = 30,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_LONELY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Sheer Force
     .species = SPECIES_FERALIGATR,
@@ -2206,7 +2201,7 @@ static const struct TrainerMon sParty_JennyBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 30,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_LONELY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Sheer Force
     .species = SPECIES_FERALIGATR,
@@ -2360,16 +2355,6 @@ static const struct TrainerMon sParty_MiguelDefault[] = {//Leviathan, Default
     {
     .iv = 20,
     .lvl = 29,
-    .nature = NATURE_LONELY,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Iron Barbs
-    .species = SPECIES_TOGEDEMARU,
-    .heldItem = ITEM_SHUCA_BERRY,
-    .moves = {MOVE_ZING_ZAP, MOVE_SPIKY_SHIELD, MOVE_FAKE_OUT, MOVE_FELL_STINGER}
-    },
-    {
-    .iv = 20,
-    .lvl = 29,
     .nature = NATURE_SASSY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Intimidate
@@ -2403,106 +2388,161 @@ static const struct TrainerMon sParty_MiguelBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 29,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_MILD,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Infiltrator
     .species = SPECIES_JUMPLUFF,
     .heldItem = ITEM_YACHE_BERRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_AIR_CUTTER, MOVE_SLEEP_POWDER, MOVE_U_TURN}
+    .moves = {MOVE_MEGA_DRAIN, MOVE_AIR_CUTTER, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS}
     },
     {
     .iv = 31,
     .lvl = 29,
-    .nature = NATURE_ADAMANT,
+    .nature = NATURE_BRAVE,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_QUAGSIRE,
     .heldItem = ITEM_RINDO_BERRY,
-    .moves = {MOVE_BULLDOZE, MOVE_TOXIC, MOVE_WATERFALL, MOVE_ICE_PUNCH}
+    .moves = {MOVE_BULLDOZE, MOVE_YAWN, MOVE_WATER_PULSE, MOVE_RECOVER}
     },
     {
     .iv = 31,
     .lvl = 29,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Iron Barbs
-    .species = SPECIES_TOGEDEMARU,
-    .heldItem = ITEM_SHUCA_BERRY,
-    .moves = {MOVE_ZING_ZAP, MOVE_SPIKY_SHIELD, MOVE_FAKE_OUT, MOVE_IRON_HEAD}
-    },
-    {
-    .iv = 31,
-    .lvl = 29,
-    .nature = NATURE_CAREFUL,
+    .nature = NATURE_SASSY,
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_2, //Intimidate
     .species = SPECIES_VESPIQUEN,
     .heldItem = ITEM_CHARTI_BERRY,
-    .moves = {MOVE_ATTACK_ORDER, MOVE_DEFEND_ORDER, MOVE_HEAL_ORDER, MOVE_DUAL_WINGBEAT}
+    .moves = {MOVE_ATTACK_ORDER, MOVE_DEFEND_ORDER, MOVE_HEAL_ORDER, MOVE_AIR_CUTTER}
     },
     {
     .iv = 31,
     .lvl = 29,
-    .nature = NATURE_JOLLY,
+    .nature = NATURE_HASTY,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Iron Fist
     .species = SPECIES_PANGORO,
     .heldItem = ITEM_ROSELI_BERRY,
-    .moves = {MOVE_CRUNCH, MOVE_DRAIN_PUNCH, MOVE_FAKE_OUT, MOVE_BULLET_PUNCH}
+    .moves = {MOVE_CRUNCH, MOVE_VITAL_THROW, MOVE_FAKE_OUT, MOVE_BULLET_PUNCH}
     },
     {
     .iv = 31,
     .lvl = 29,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_QUIET,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_HIDDEN, //Levitate
     .species = SPECIES_PROBOPASS,
     .heldItem = ITEM_CHOPLE_BERRY,
-    .moves = {MOVE_POWER_GEM, MOVE_BODY_PRESS, MOVE_THUNDER_WAVE, MOVE_VOLT_SWITCH}
+    .moves = {MOVE_POWER_GEM, MOVE_BODY_PRESS, MOVE_THUNDER_WAVE, MOVE_MIRROR_SHOT}
+    },
+    {
+    .iv = 31,
+    .lvl = 29,
+    .nature = NATURE_LONELY,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_SLOT_2, //Iron Barbs
+    .species = SPECIES_TOGEDEMARU,
+    .heldItem = ITEM_SHUCA_BERRY,
+    .moves = {MOVE_ZING_ZAP, MOVE_SPIKY_SHIELD, MOVE_FAKE_OUT, MOVE_FELL_STINGER}
     }
 };
 
-/* ------------------- Lelouch Training ------------------- */
 
-static const struct TrainerMon sParty_LelouchExp1[] = {
+/* ------------------- Zone 15 ------------------- */
+
+static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Double Battle, Default
     {
-    .iv = 0,
-    .lvl = 10,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_HIDDEN, //Drought
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_HEAT_ROCK,
+    .moves = {MOVE_HEAT_WAVE, MOVE_DAZZLING_GLEAM, MOVE_PSYSHOCK, MOVE_SCORCHING_SANDS}
     },
     {
-    .iv = 0,
-    .lvl = 10,
-    .nature = NATURE_BASHFUL,
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .ability = ABILITY_HIDDEN, //Chlorophyll
+    .species = SPECIES_VICTREEBEL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_WEATHER_BALL, MOVE_GROWTH}
+    },
+    {
+    .ivs = {31, 31, 31, 30, 31, 31},
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_HIDDEN, //Solar Power
+    .species = SPECIES_HELIOLISK,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_VOICE, MOVE_VOLT_SWITCH, MOVE_HIDDEN_POWER} //Hidden Power Ice
+    },
+    {
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_HOUNDOOMINITE,
+    .moves = {MOVE_HEAT_WAVE, MOVE_DARK_PULSE, MOVE_SOLAR_BEAM, MOVE_SCORCHING_SANDS}
     }
 };
 
-static const struct TrainerMon sParty_LelouchExp2[] = {
+static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Double Battle, Brutal
     {
-    .iv = 0,
-    .lvl = 20,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_HIDDEN, //Drought
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_HEAT_ROCK,
+    .moves = {MOVE_HEAT_WAVE, MOVE_DAZZLING_GLEAM, MOVE_PSYSHOCK, MOVE_SCORCHING_SANDS}
     },
     {
-    .iv = 0,
-    .lvl = 20,
-    .nature = NATURE_BASHFUL,
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .ability = ABILITY_HIDDEN, //Chlorophyll
+    .species = SPECIES_VICTREEBEL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_WEATHER_BALL, MOVE_GROWTH}
+    },
+    {
+    .ivs = {31, 31, 31, 30, 31, 31},
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .gender = TRAINER_MON_FEMALE,
+    .ability = ABILITY_HIDDEN, //Solar Power
+    .species = SPECIES_HELIOLISK,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_VOICE, MOVE_VOLT_SWITCH, MOVE_HIDDEN_POWER} //Hidden Power Ice
+    },
+    {
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_HOUNDOOMINITE,
+    .moves = {MOVE_HEAT_WAVE, MOVE_DARK_PULSE, MOVE_SOLAR_BEAM, MOVE_SCORCHING_SANDS}
+    },
+    {
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .gender = TRAINER_MON_MALE,
+    .ability = ABILITY_HIDDEN, //Chlorophyll
+    .species = SPECIES_EXEGGUTOR_ALOLAN,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_DRACO_METEOR, MOVE_LEAF_STORM, MOVE_SLUDGE_BOMB, MOVE_SUNNY_DAY}
     }
 };
 
@@ -3041,263 +3081,6 @@ static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle start
 
 /* ------------------- Zone 20 ------------------- */
 
-
-/* ------------------- Lelouch Training ------------------- */
-
-static const struct TrainerMon sParty_LelouchExp3[] = {
-    {
-    .iv = 0,
-    .lvl = 30,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_AUDINO,
-    .moves = {MOVE_ENTRAINMENT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_LelouchEVHP[] = {
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOQUEEN,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOQUEEN,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOQUEEN,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOQUEEN,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_LelouchEVAttack[] = {
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOKING,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOKING,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOKING,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_NIDOKING,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_LelouchEVDefense[] = {
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_POLIWRATH,
-    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_POLIWRATH,
-    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_POLIWRATH,
-    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_POLIWRATH,
-    .moves = {MOVE_MIND_READER, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_LelouchEVSpecialAttack[] = {
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_ALAKAZAM,
-    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_ALAKAZAM,
-    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_ALAKAZAM,
-    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_ALAKAZAM,
-    .moves = {MOVE_MIRACLE_EYE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_LelouchEVSpecialDefense[] = {
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BLASTOISE,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BLASTOISE,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BLASTOISE,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1,
-    .species = SPECIES_BLASTOISE,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMon sParty_LelouchEVSpeed[] = {
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2,
-    .species = SPECIES_RAICHU,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2,
-    .species = SPECIES_RAICHU,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2,
-    .species = SPECIES_RAICHU,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 0,
-    .lvl = 1,
-    .nature = NATURE_BASHFUL,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2,
-    .species = SPECIES_RAICHU,
-    .moves = {MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
 
 /* ------------------- Zone 21 ------------------- */
 

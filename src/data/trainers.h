@@ -459,19 +459,6 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
-    [TRAINER_LELOUCHEXP1] =
-    {
-        .trainerClass = TRAINER_CLASS_LELOUCH,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_EXPERT_M,
-        .trainerName = _("Lelouch"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_LelouchExp1),
-        .party = {.TrainerMon = sParty_LelouchExp1},
-    },
-
     [TRAINER_MINA] =
     {
         .trainerClass = TRAINER_CLASS_TUBER_F,
@@ -1312,7 +1299,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_SCIENTIST,
         .trainerName = _("Gould"),
         .items = {},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Gould),
         .party = {.TrainerMon = sParty_Gould},
@@ -1325,7 +1312,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_SCIENTIST,
         .trainerName = _("Mendel"),
         .items = {},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Mendel),
         .party = {.TrainerMon = sParty_Mendel},
@@ -1338,7 +1325,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_SCIENTIST,
         .trainerName = _("Darwin"),
         .items = {},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Darwin),
         .party = {.TrainerMon = sParty_Darwin},
@@ -1485,7 +1472,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
         .trainerName = _("Miguel"),
         .items = {},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_MiguelDefault),
         .party = {.TrainerMon = sParty_MiguelDefault},
@@ -1500,7 +1487,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
         .trainerName = _("Miguel"),
         .items = {},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
         .partySize = ARRAY_COUNT(sParty_MiguelBrutal),
         .party = {.TrainerMon = sParty_MiguelBrutal},
@@ -1508,17 +1495,34 @@ const struct Trainer gTrainers[] = {
         .transition = B_TRANSITION_MUGSHOT,
     },
 
-    [TRAINER_LELOUCHEXP2] =
+    [TRAINER_MIRAGE_LEVIATHAN_13] =
     {
-        .trainerClass = TRAINER_CLASS_LELOUCH,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_EXPERT_M,
-        .trainerName = _("Lelouch"),
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
+        .trainerName = _("Mirage"),
         .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_LelouchExp2),
-        .party = {.TrainerMon = sParty_LelouchExp2},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Zone15BMirageDefault),
+        .party = {.TrainerMon = sParty_Zone15BMirageDefault},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+    },
+
+    [TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_DOME_ACE_TUCKER,
+        .trainerName = _("Mirage"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_Zone15BMirageBrutal),
+        .party = {.TrainerMon = sParty_Zone15BMirageBrutal},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_ANGUS] =

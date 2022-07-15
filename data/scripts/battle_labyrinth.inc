@@ -200,6 +200,7 @@ Shop_General_13to16:
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
@@ -225,6 +226,7 @@ Shop_General_13to16_Brutal:
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
@@ -2404,7 +2406,8 @@ EventScript_WhenUReady_1:
 	return
 
 EventScript_WhenUReady_2:
-	goto Zone12Sanctuary_EventScript_WhenUReady
+	msgbox Zone12Sanctuary_Text_Colress_WhenUReady
+	release
 	return
 
 EventScript_WhenUReady_3:

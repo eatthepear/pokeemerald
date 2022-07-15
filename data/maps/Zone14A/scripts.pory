@@ -1,0 +1,109 @@
+mapscripts Zone14A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE14A_FULL_HEAL)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+    MAP_SCRIPT_ON_TRANSITION {
+		setflashlevel(4)
+    }
+}
+
+script Zone14A_EventScript_FullHeal {
+	lock
+	if (flag(FLAG_ITEM_ZONE14A_FULL_HEAL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE14A_FULL_HEAL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_FULL_HEAL, 1)
+	release
+	end
+}
+
+raw `
+Zone14A_EventScript_Bart::
+	trainerbattle_single TRAINER_BART, Zone14A_Text_BartIntro, Zone14A_Text_BartDefeat
+	msgbox Zone14A_Text_BartPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14A_Text_BartIntro:
+	.string "I sympathize with the plight of\n"
+	.string "the working class, but I simply\l"
+	.string "benefit too much from inequality!$"
+
+Zone14A_Text_BartDefeat:
+	.string "Mama! Some poor person beat me!$"
+
+Zone14A_Text_BartPostBattle:
+	.string "I already gave you money, ok?\n"
+	.string "Just scram or something.$"
+
+Zone14A_EventScript_Nigel::
+	trainerbattle_single TRAINER_NIGEL, Zone14A_Text_NigelIntro, Zone14A_Text_NigelDefeat
+	msgbox Zone14A_Text_NigelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14A_Text_NigelIntro:
+	.string "SNEAK ATTACK!$"
+
+Zone14A_Text_NigelDefeat:
+	.string "SNEAK ATTACK BAMBOOZLED!$"
+
+Zone14A_Text_NigelPostBattle:
+	.string "Turns out yelling sneak attack\n"
+	.string "makes it, well, not a sneak attack!$"
+
+Zone14A_EventScript_Cooper::
+	trainerbattle_single TRAINER_COOPER, Zone14A_Text_CooperIntro, Zone14A_Text_CooperDefeat
+	msgbox Zone14A_Text_CooperPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14A_Text_CooperIntro:
+	.string "It's so dark down here…$"
+
+Zone14A_Text_CooperDefeat:
+	.string "I can barely see you!$"
+
+Zone14A_Text_CooperPostBattle:
+	.string "The exit should be this way…$"
+
+Zone14A_EventScript_Lola::
+	trainerbattle_single TRAINER_LOLA, Zone14A_Text_LolaIntro, Zone14A_Text_LolaDefeat
+	msgbox Zone14A_Text_LolaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14A_Text_LolaIntro:
+	.string "Seriously, when I find Charlie,\n"
+	.string "he's going to regret choosing this\l"
+	.string "place for our 1.5 month anniversary!$"
+
+Zone14A_Text_LolaDefeat:
+	.string "Charlie! I found you!\n"
+	.string "You are in so much trouble!$"
+
+Zone14A_Text_LolaPostBattle:
+	.string "That stupid, stupid boy!$"
+
+Zone14A_EventScript_Charlie::
+	trainerbattle_single TRAINER_CHARLIE, Zone14A_Text_CharlieIntro, Zone14A_Text_CharlieDefeat
+	msgbox Zone14A_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14A_Text_CharlieIntro:
+	.string "Lola, baby, where are you?$"
+
+Zone14A_Text_CharlieDefeat:
+	.string "Baby, I'm so sorry!$"
+
+Zone14A_Text_CharliePostBattle:
+	.string "I promise I'll pick a better spot\n"
+	.string "next time!$"
+`

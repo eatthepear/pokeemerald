@@ -70,15 +70,18 @@ Zone6A_EventScript_LeviathanBattle::
 	faceplayer
 	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_2
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
+	msgbox Zone6A_Text_Leviathan6WantBattle, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone6A_EventScript_LeviathanBattle_5
 	fadeoutbgm 1
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_5
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
 	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat
-Zone6A_EventScript_LeviathanBattle_4:
+Zone6A_EventScript_LeviathanBattle_7:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	giveitem ITEM_TM08
 	msgbox Zone6A_Text_Zack_PostBattle
 	closemessage
@@ -93,9 +96,14 @@ Zone6A_EventScript_LeviathanBattle_2:
 	end
 
 Zone6A_EventScript_LeviathanBattle_5:
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_1
+	release
+	end
+
+Zone6A_EventScript_LeviathanBattle_8:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
 	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat
-	goto Zone6A_EventScript_LeviathanBattle_4
+	goto Zone6A_EventScript_LeviathanBattle_7
 
 
 Zone6A_EventScript_ItemNetBall::
@@ -246,13 +254,20 @@ Zone6A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"
 
 Zone6A_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: That's what I thought!$"
+
+Zone6A_EventScript_LeviathanBattle_Text_2:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Who do you think you are?\p"
 	.string "I'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!$"
 
-Zone6A_EventScript_LeviathanBattle_Text_2:
+Zone6A_EventScript_LeviathanBattle_Text_3:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!\p"
 	.string "You're pretty good!\p"
 	.string "Here, take this!$"
+
+Zone6A_Text_Leviathan6WantBattle::
+	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Hey you! You think you're better\n"
+	.string "than me or something?$"
 
 Zone6A_Text_Leviathan6Defeat::
 	.string "What's wishy-washy mean anyway?$"

@@ -1,0 +1,158 @@
+mapscripts Zone14B_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE14B_HYPER_POTION)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE14B_DUSK_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+    MAP_SCRIPT_ON_TRANSITION {
+		setflashlevel(4)
+    }
+}
+
+
+script Zone14B_EventScript_LeviathanBattle {
+	lock
+	faceplayer
+	fadeoutbgm(1)
+	msgbox(Zone14B_Text_Leviathan12Intro)
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIGUEL)
+		trainerbattle_no_intro(TRAINER_MIGUEL_LEVIATHAN_12_BRUTAL, Zone14B_Text_Leviathan12Defeat)
+	} else {
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_MIGUEL)
+		trainerbattle_no_intro(TRAINER_MIGUEL_LEVIATHAN_12, Zone14B_Text_Leviathan12Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox(format("{COLOR BLUE}Miguel{COLOR DARK_GRAY}: Oh… You're not here to cause trouble?\pYou're just passing through?\pWell, I'm sorry about that! I get really riled up about protecting spaces for wild Pokémon.\pHere, as an apology, take these."))
+	additem(ITEM_CHILAN_BERRY)
+	additem(ITEM_OCCA_BERRY)
+	additem(ITEM_PASSHO_BERRY)
+	additem(ITEM_WACAN_BERRY)
+	additem(ITEM_RINDO_BERRY)
+	additem(ITEM_YACHE_BERRY)
+	additem(ITEM_CHOPLE_BERRY)
+	additem(ITEM_KEBIA_BERRY)
+	additem(ITEM_SHUCA_BERRY)
+	additem(ITEM_COBA_BERRY)
+	additem(ITEM_PAYAPA_BERRY)
+	additem(ITEM_TANGA_BERRY)
+	additem(ITEM_CHARTI_BERRY)
+	additem(ITEM_KASIB_BERRY)
+	additem(ITEM_HABAN_BERRY)
+	additem(ITEM_COLBUR_BERRY)
+	additem(ITEM_BABIRI_BERRY)
+	additem(ITEM_ROSELI_BERRY)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("Obtained type-resisting Berries!"), MSGBOX_DEFAULT)
+	waitfanfare
+	msgbox(format("{COLOR BLUE}Miguel{COLOR DARK_GRAY}: Those Berries are especially useful if your Pokémon has a 4x weakness to a particular type.\pAlrighty, I'm going to check on other sections of the mine, to see if I can go catch the delinquents.\pYou're free to pass through, so long as you don't disturb the wildlife."))
+	closemessage
+	fadescreen(FADE_TO_BLACK)
+	removeobject(6)
+	setflag(FLAG_BEAT_LEVIATHAN_12)
+	fadescreen(FADE_FROM_BLACK)
+	release
+	end
+}
+
+text Zone14B_Text_Leviathan12Intro {
+	format("{COLOR BLUE}Miguel{COLOR DARK_GRAY}: Hey you! You must be one of those delinquents causing trouble in this old mine!\pI've told you kids a hundred times, this area is off limits because it's a protected wild Pokémon habitat.\pAll right, here's a lesson that'll teach you to stay out of places you aren't supposed to be!")
+}
+
+text Zone14B_Text_Leviathan12Defeat {
+	"Wait, you're not a delinquent?"
+}
+
+script Zone14B_EventScript_HyperPotion {
+	lock
+	if (flag(FLAG_ITEM_ZONE14B_HYPER_POTION)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE14B_HYPER_POTION)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_HYPER_POTION, 1)
+	release
+	end
+}
+
+script Zone14B_EventScript_DuskStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE14B_DUSK_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE14B_DUSK_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_DUSK_STONE, 1)
+	release
+	end
+}
+
+raw `
+Zone14B_EventScript_Todd::
+	trainerbattle_single TRAINER_TODD, Zone14B_Text_ToddIntro, Zone14B_Text_ToddDefeat
+	msgbox Zone14B_Text_ToddPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14B_Text_ToddIntro:
+	.string "Hohoho!\n"
+	.string "What a great place to hike!$"
+
+Zone14B_Text_ToddDefeat:
+	.string "Hohoho!\n"
+	.string "What a terrible place to lose!$"
+
+Zone14B_Text_ToddPostBattle:
+	.string "Hohoho!$"
+
+Zone14B_EventScript_Russell::
+	trainerbattle_single TRAINER_RUSSELL, Zone14B_Text_RussellIntro, Zone14B_Text_RussellDefeat
+	msgbox Zone14B_Text_RussellPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14B_Text_RussellIntro:
+	.string "In this old, abandoned mine,\n"
+	.string "training is the best thing I can do\l"
+	.string "for me and my Pokémon!$"
+
+Zone14B_Text_RussellDefeat:
+	.string "I'm sorry, my Pokémon!$"
+
+Zone14B_Text_RussellPostBattle:
+	.string "We'll just have to train harder for\n"
+	.string "next time!$"
+
+Zone14B_EventScript_Otis::
+	trainerbattle_single TRAINER_OTIS, Zone14B_Text_OtisIntro, Zone14B_Text_OtisDefeat
+	msgbox Zone14B_Text_OtisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14B_Text_OtisIntro:
+	.string "It takes extreme patience to raise\n"
+	.string "Dragons.$"
+
+Zone14B_Text_OtisDefeat:
+	.string "Do you have what it takes?$"
+
+Zone14B_Text_OtisPostBattle:
+	.string "These little ones are quite the\n"
+	.string "handful. Just wait until they\l"
+	.string "evolve!$"
+`

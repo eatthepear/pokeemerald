@@ -161,6 +161,7 @@ mart Shop_General_13to16 {
 	ITEM_ULTRA_BALL
 	ITEM_POTION
 	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
 	ITEM_ANTIDOTE
 	ITEM_PARALYZE_HEAL
 	ITEM_AWAKENING
@@ -185,6 +186,7 @@ mart Shop_General_13to16_Brutal {
 	ITEM_ULTRA_BALL
 	ITEM_POTION
 	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
 	ITEM_ANTIDOTE
 	ITEM_PARALYZE_HEAL
 	ITEM_AWAKENING
@@ -1780,7 +1782,8 @@ script EventScript_WhenUReady {
 		msgbox(Zone6Sanctuary_Text_Colress_WhenUReady)
 		release
 	} elif (var(VAR_ZONE) == 13) {
-		goto(Zone12Sanctuary_EventScript_WhenUReady)
+		msgbox(Zone12Sanctuary_Text_Colress_WhenUReady)
+		release
 	} elif (var(VAR_ZONE) == 18) {
 		goto(Zone17Sanctuary_EventScript_WhenUReady)
 	} elif (var(VAR_ZONE) == 24) {

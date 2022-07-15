@@ -1912,6 +1912,8 @@ static void Cmd_critcalc(void)
 
     if (gBattleTypeFlags & (BATTLE_TYPE_WALLY_TUTORIAL | BATTLE_TYPE_FIRST_BATTLE))
         gIsCriticalHit = FALSE;
+    else if (VarGet(VAR_ZONE) == 1)
+        gIsCriticalHit = FALSE;
     else if (critChance == -1)
         gIsCriticalHit = FALSE;
     else if (critChance == -2)

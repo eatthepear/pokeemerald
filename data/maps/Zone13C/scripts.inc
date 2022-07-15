@@ -2,6 +2,46 @@ Zone13C_MapScripts::
 	.byte 0
 
 
+Zone13C_EventScript_LeviathanBattle::
+	lock
+	faceplayer
+	goto_if_set FLAG_BEAT_LEVIATHAN_11, Zone13C_EventScript_LeviathanBattle_2
+	msgbox Zone13C_Text_Leviathan11WantBattle, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone13C_EventScript_LeviathanBattle_5
+	fadeoutbgm 1
+	msgbox Zone13C_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_LeviathanBattle_8
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JENNY
+	trainerbattle_no_intro TRAINER_JENNY_LEVIATHAN_11, Zone13C_Text_Leviathan11Defeat
+Zone13C_EventScript_LeviathanBattle_7:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone13C_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
+	giveitem ITEM_WHITE_HERB
+	msgbox Zone13C_Text_Jenny_PostBattle
+	closemessage
+	setflag FLAG_BEAT_LEVIATHAN_11
+	release
+	end
+
+Zone13C_EventScript_LeviathanBattle_2:
+	msgbox Zone13C_Text_Jenny_PostBattle
+	closemessage
+	release
+	end
+
+Zone13C_EventScript_LeviathanBattle_5:
+	msgbox Zone13C_EventScript_LeviathanBattle_Text_0
+	release
+	end
+
+Zone13C_EventScript_LeviathanBattle_8:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JENNY
+	trainerbattle_no_intro TRAINER_JENNY_LEVIATHAN_11_BRUTAL, Zone13C_Text_Leviathan11Defeat
+	goto Zone13C_EventScript_LeviathanBattle_7
+
+
 Zone13C_EventScript_Fossil_Scientist::
 	lock
 	faceplayer
@@ -127,15 +167,22 @@ Zone13C_EventScript_Darwin::
 	end
 
 Zone13C_Text_DarwinIntro:
-	.string "This grass is far too tall\n"
-	.string "for someone of my stature!$"
+	.string "I've been doing research on\n"
+	.string "branched evolutions!$"
 
 Zone13C_Text_DarwinDefeat:
-	.string "I meant financial stature!\n"
-	.string "I'm not short!$"
+	.string "Even some starters have branched\n"
+	.string "evolution!$"
 
 Zone13C_Text_DarwinPostBattle:
-	.string "Errr… Never mind.$"
+	.string "According to my research:\p"
+	.string "Quilava evolves into Hisuian\n"
+	.string "Typhlosion with a Fire Stone,\p"
+	.string "Dewott evolves into Hisuian\n"
+	.string "Samurott with a Water Stone,\p"
+	.string "and Dartrix evolves into Hisuian\n"
+	.string "Decidueye when leveled up holding a\l"
+	.string "Ring Target.$"
 
 Zone13C_EventScript_Scientist1::
 	lock
@@ -175,12 +222,26 @@ Zone13C_EventScript_DeveloperEatthepear::
 	end
 
 Zone13C_Text_Eatthepear:
-	.string "Hello there. It's {COLOR BLUE}eatthepear{COLOR DARK_GRAY}, the\n"
+	.string "Hello there! It's {COLOR BLUE}eatthepear{COLOR DARK_GRAY}, the\n"
 	.string "developer of this ROM hack!\p"
 	.string "Thanks for playing and I hope\n"
 	.string "you're enjoying your time.\p"
 	.string "When you beat the game, come back\n"
 	.string "here and let's have a battle!$"
+
+Zone13C_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: Nervous about facing me?$"
+
+Zone13C_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: My battle style is quite\n"
+	.string "ferocious, despite me having only one\l"
+	.string "Pokémon!$"
+
+Zone13C_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: Here, I want you to have this\n"
+	.string "item.\p"
+	.string "It'll stop your Pokémon's stats from\n"
+	.string "being lowered, but it's only single use.$"
 
 Zone13C_EventScript_Fossil_Scientist_Text_0:
 	.string "Sorry, I just ran out of fossils.$"
@@ -203,3 +264,18 @@ Zone13C_EventScript_Scientist4_Text_1:
 	.string "The Zoom Lens boosts accuracy by 20%,\n"
 	.string "but only against opponents that have\l"
 	.string "already moved that turn.$"
+
+Zone13C_Text_Leviathan11WantBattle::
+	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: Ah, it's so nice to finally have a\n"
+	.string "resting spot from all my traveling.\p"
+	.string "What do you want?\p"
+	.string "A battle?$"
+
+Zone13C_Text_Leviathan11Defeat::
+	.string "You did great, Feraligatr!$"
+
+Zone13C_Text_Jenny_PostBattle::
+	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: I guess traveling lightly comes\n"
+	.string "with downsides, too.\p"
+	.string "I sometimes wish I could bring more\n"
+	.string "Pokémon on my travels with me.$"
