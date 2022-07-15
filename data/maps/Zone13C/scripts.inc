@@ -1,270 +1,141 @@
 Zone13C_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Zone13C_OnTransition
 	.byte 0
 
-Zone13C_OnTransition:
-	goto_if_unset FLAG_BEAT_LEVIATHAN_7, Zone13C_EventScript_HideLeviathan8
-	goto Zone13C_EventScript_HideLeviathan7
-	end
-
-Zone13C_EventScript_HideLeviathan7:
-	removeobject 1
-	setflag FLAG_HIDE_LEVIATHAN7
-	clearflag FLAG_HIDE_LEVIATHAN8
-	end
-
-Zone13C_EventScript_HideLeviathan8:
-	removeobject 2
-	setflag FLAG_HIDE_LEVIATHAN8
-	clearflag FLAG_HIDE_LEVIATHAN7
-	end
-
-Zone13C_EventScript_KaizenBlackBelt::
-	lock
-	faceplayer
-	goto_if_set FLAG_BEAT_LEVIATHAN_7, Zone13C_EventScript_KaizenBlackBelt_ComeBack
-	msgbox Zone13C_Text_KaizenBlackBelt_Battle, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone13C_EventScript_Kaizen_ISee
-	fadeoutbgm 1
-	msgbox Zone13C_Text_KaizenBlackBelt_LetsGetStarted, MSGBOX_AUTOCLOSE
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN1
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_KaizenBulkUpBrutal
-	trainerbattle_no_intro TRAINER_LEVIATHAN7, Zone13C_Text_Leviathan7Defeat
-	goto Zone13C_EventScript_Leviathan7Defeated
-	end
-
-Zone13C_EventScript_KaizenBulkUpBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN7_BRUTAL, Zone13C_Text_Leviathan7Defeat
-	goto Zone13C_EventScript_Leviathan7Defeated
-	end
-
-Zone13C_Text_KaizenBlackBelt_Battle:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Greetings.\n"
-	.string "I am {COLOR BLUE}Leviathan Kaizen{COLOR DARK_GRAY}.\p"
-	.string "Would you do me the honor of\n"
-	.string "engaging in battle?$"
-
-Zone13C_Text_KaizenBlackBelt_LetsGetStarted:
-	.string "Excellent. Let us get started.\p"
-	.string "Kiai!$"
-
-Zone13C_Text_Leviathan7Defeat:
-	.string "Well matched.$"
-
-Zone13C_EventScript_Kaizen_ISee:
-	msgbox Zone13C_Text_Kaizen_ISee, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone13C_Text_Kaizen_ISee:
-	.string "I see.$"
-
-Zone13C_EventScript_Leviathan7Defeated:
-	setflag FLAG_BEAT_LEVIATHAN_7
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone13C_Text_KaizenBlackBelt_HereTM, MSGBOX_DEFAULT
-	giveitem ITEM_TM14
-	msgbox Zone13C_Text_KaizenBlackBelt_ExplainTM, MSGBOX_DEFAULT
-	goto Zone13C_EventScript_KaizenBlackBelt_ComeBack
-	end
-
-Zone13C_Text_KaizenBlackBelt_HereTM:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: For the victor go the spoils.$"
-
-Zone13C_Text_KaizenBlackBelt_ExplainTM:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM14 - Bulk Up helps your\n"
-	.string "Pokémon grow ever stronger.$"
-
-Zone13C_EventScript_KaizenBlackBelt_ComeBack:
-	msgbox Zone13C_Text_KaizenBlackBelt_ComeBack, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone13C_Text_KaizenBlackBelt_ComeBack:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: You should come back later.\n"
-	.string "I have other strengths aside from\l"
-	.string "my karate training.$"
-
-Zone13C_EventScript_KaizenPsychic::
-	lock
-	faceplayer
-	goto_if_set FLAG_BEAT_LEVIATHAN_8, Zone13C_EventScript_KaizenPsychic_LikeHome
-	msgbox Zone13C_Text_KaizenPsychic_Battle, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone13C_EventScript_Kaizen_ISee
-	fadeoutbgm 1
-	msgbox Zone13C_Text_KaizenPsychic_FairBetter, MSGBOX_AUTOCLOSE
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_KAIZEN2
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_KaizenCalmMindBrutal
-	trainerbattle_no_intro TRAINER_LEVIATHAN8, Zone13C_Text_Leviathan8Defeat
-	goto Zone13C_EventScript_Leviathan8Defeated
-	end
-
-Zone13C_EventScript_KaizenCalmMindBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN8_BRUTAL, Zone13C_Text_Leviathan8Defeat
-	goto Zone13C_EventScript_Leviathan8Defeated
-	end
-
-Zone13C_Text_KaizenPsychic_Battle:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Yes, I am both a Psychic\n"
-	.string "and a Black Belt.\p"
-	.string "Speaking of which, I would like to\n"
-	.string "battle again, if you are up to it?$"
-
-Zone13C_Text_KaizenPsychic_FairBetter:
-	.string "Perhaps I will fair better with a\n"
-	.string "different angle of attack!$"
-
-Zone13C_Text_Leviathan8Defeat:
-	.string "Well matched.$"
-
-Zone13C_EventScript_Leviathan8Defeated:
-	setflag FLAG_BEAT_LEVIATHAN_8
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone13C_Text_KaizenPsychic_HereTM, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM15
-	msgbox Zone13C_Text_KaizenPsychic_ExplainTM, MSGBOX_AUTOCLOSE
-	goto Zone13C_EventScript_KaizenPsychic_LikeHome
-	end
-
-Zone13C_Text_KaizenPsychic_HereTM:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: Another victory, another TM.$"
-
-Zone13C_Text_KaizenPsychic_ExplainTM:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: TM15 - Calm Mind functions\n"
-	.string "similarly to Bulk Up, just as\l"
-	.string "Psychics train similarly to\l"
-	.string "Black Belts.$"
-
-Zone13C_EventScript_KaizenPsychic_LikeHome:
-	msgbox Zone13C_Text_KaizenPsychic_LikeHome, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone13C_Text_KaizenPsychic_LikeHome:
-	.string "{COLOR BLUE}Kaizen{COLOR DARK_GRAY}: It is a bit strange, but I\n"
-	.string "enjoy this place.\l"
-	.string "I can train in peace here.\p"
-	.string "It feels like home, despite all the\n"
-	.string "lab coats.$"
 
 Zone13C_EventScript_Fossil_Scientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_Fossil_NoFossil
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_VanillaReceived
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_Fossil_Scientist_2
+	goto_if_set FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_5
+Zone13C_EventScript_Fossil_Scientist_4:
+	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_8
+Zone13C_EventScript_Fossil_Scientist_7:
 	applymovement 3, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	msgbox Zone13C_Text_Fossil_YouGetAFossil, MSGBOX_AUTOCLOSE
-	call_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_SetNuzlockeFossilFlag
+	msgbox Zone13C_EventScript_Fossil_Scientist_Text_1
+	goto_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_11
+Zone13C_EventScript_Fossil_Scientist_10:
 	setflag FLAG_DAILY_FOSSIL_RECEIVED
 	random 9
-	compare VAR_RESULT, 0
-	goto_if_eq Zone13C_EventScript_Fossil_GiveDome
-	compare VAR_RESULT, 1
-	goto_if_eq Zone13C_EventScript_Fossil_GiveHelix
-	compare VAR_RESULT, 2
-	goto_if_eq Zone13C_EventScript_Fossil_GiveOldAmber
-	compare VAR_RESULT, 3
-	goto_if_eq Zone13C_EventScript_Fossil_GiveRoot
-	compare VAR_RESULT, 4
-	goto_if_eq Zone13C_EventScript_Fossil_GiveClaw
-	compare VAR_RESULT, 5
-	goto_if_eq Zone13C_EventScript_Fossil_GiveCover
-	compare VAR_RESULT, 6
-	goto_if_eq Zone13C_EventScript_Fossil_GivePlume
-	compare VAR_RESULT, 7
-	goto_if_eq Zone13C_EventScript_Fossil_GiveJaw
-	compare VAR_RESULT, 8
-	goto_if_eq Zone13C_EventScript_Fossil_GiveSail
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
+	switch VAR_RESULT
+	case 0, Zone13C_EventScript_Fossil_Scientist_15
+	case 1, Zone13C_EventScript_Fossil_Scientist_16
+	case 2, Zone13C_EventScript_Fossil_Scientist_17
+	case 3, Zone13C_EventScript_Fossil_Scientist_18
+	case 4, Zone13C_EventScript_Fossil_Scientist_19
+	case 5, Zone13C_EventScript_Fossil_Scientist_20
+	case 6, Zone13C_EventScript_Fossil_Scientist_21
+	case 7, Zone13C_EventScript_Fossil_Scientist_22
+	case 8, Zone13C_EventScript_Fossil_Scientist_23
+Zone13C_EventScript_Fossil_Scientist_13:
+	goto_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_25
 	goto Zone13C_EventScript_Fossil_VanillaReceived
+Zone13C_EventScript_Fossil_Scientist_24:
 	end
 
-Zone13C_EventScript_Fossil_SetNuzlockeFossilFlag:
-	setflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
-	return
-
-Zone13C_Text_Fossil_YouGetAFossil:
-	.string "You get a Fossil!\n"
-	.string "You get a Fossil!\l"
-	.string "Everybody gets a Fossil!$"
-
-Zone13C_EventScript_Fossil_VanillaReceived:
-	msgbox Zone13C_Text_Fossil_VanillaReceived, MSGBOX_AUTOCLOSE
+Zone13C_EventScript_Fossil_Scientist_2:
+	msgbox Zone13C_EventScript_Fossil_Scientist_Text_0
 	release
 	end
 
-Zone13C_Text_Fossil_VanillaReceived:
-	.string "Hope you enjoy your Fossil!\n"
-	.string "Come back tomorrow for another!$"
+Zone13C_EventScript_Fossil_Scientist_5:
+	goto Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_Scientist_4
 
-Zone13C_EventScript_Fossil_NuzlockeReceived:
-	msgbox Zone13C_Text_Fossil_NuzlockeReceived, MSGBOX_AUTOCLOSE
+Zone13C_EventScript_Fossil_Scientist_8:
+	goto Zone13C_EventScript_Fossil_VanillaReceived
+	goto Zone13C_EventScript_Fossil_Scientist_7
+
+Zone13C_EventScript_Fossil_Scientist_11:
+	setflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
+	goto Zone13C_EventScript_Fossil_Scientist_10
+
+Zone13C_EventScript_Fossil_Scientist_15:
+	giveitem ITEM_DOME_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_16:
+	giveitem ITEM_HELIX_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_17:
+	giveitem ITEM_OLD_AMBER
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_18:
+	giveitem ITEM_ROOT_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_19:
+	giveitem ITEM_CLAW_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_20:
+	giveitem ITEM_COVER_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_21:
+	giveitem ITEM_PLUME_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_22:
+	giveitem ITEM_JAW_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_23:
+	giveitem ITEM_SAIL_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_13
+
+Zone13C_EventScript_Fossil_Scientist_25:
+	goto Zone13C_EventScript_Fossil_NuzlockeReceived
+	goto Zone13C_EventScript_Fossil_Scientist_24
+
+
+Zone13C_EventScript_Fossil_VanillaReceived::
+	msgbox Zone13C_EventScript_Fossil_VanillaReceived_Text_0
 	release
 	end
 
-Zone13C_Text_Fossil_NuzlockeReceived:
-	.string "Hope you enjoy your Fossil!$"
 
-Zone13C_EventScript_Fossil_GiveDome:
-	giveitem ITEM_DOME_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveHelix:
-	giveitem ITEM_HELIX_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveOldAmber:
-	giveitem ITEM_OLD_AMBER, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveRoot:
-	giveitem ITEM_ROOT_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveClaw:
-	giveitem ITEM_CLAW_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveCover:
-	giveitem ITEM_COVER_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GivePlume:
-	giveitem ITEM_PLUME_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveJaw:
-	giveitem ITEM_JAW_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_GiveSail:
-	giveitem ITEM_SAIL_FOSSIL, 1
-	goto_if_set FLAG_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_VanillaReceived
-
-Zone13C_EventScript_Fossil_NoFossil:
-	msgbox Zone13C_Text_Fossil_NoFossil, MSGBOX_AUTOCLOSE
+Zone13C_EventScript_Fossil_NuzlockeReceived::
+	msgbox Zone13C_EventScript_Fossil_NuzlockeReceived_Text_0
 	release
 	end
 
-Zone13C_Text_Fossil_NoFossil:
-	.string "Sorry, I just ran out of fossils.$"
+
+Zone13C_EventScript_Scientist4::
+	lock
+	faceplayer
+	goto_if_unset FLAG_ZONE13C_RECEIVED_ZOOM_LENS, Zone13C_EventScript_Scientist4_2
+Zone13C_EventScript_Scientist4_1:
+	msgbox Zone13C_EventScript_Scientist4_Text_1
+	release
+	end
+
+Zone13C_EventScript_Scientist4_2:
+	msgbox Zone13C_EventScript_Scientist4_Text_0
+	giveitem ITEM_ZOOM_LENS
+	setflag FLAG_ZONE13C_RECEIVED_ZOOM_LENS
+	goto Zone13C_EventScript_Scientist4_1
+
+
+Zone13C_EventScript_Darwin::
+	trainerbattle_single TRAINER_DARWIN, Zone13C_Text_DarwinIntro, Zone13C_Text_DarwinDefeat
+	msgbox Zone13C_Text_DarwinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone13C_Text_DarwinIntro:
+	.string "This grass is far too tall\n"
+	.string "for someone of my stature!$"
+
+Zone13C_Text_DarwinDefeat:
+	.string "I meant financial stature!\n"
+	.string "I'm not short!$"
+
+Zone13C_Text_DarwinPostBattle:
+	.string "Errr… Never mind.$"
 
 Zone13C_EventScript_Scientist1::
 	lock
@@ -296,40 +167,6 @@ Zone13C_Text_Scientist2_GenderRoles:
 	.string "society?\p"
 	.string "Never mind. Google it.$"
 
-Zone13C_EventScript_Scientist3::
-	lock
-	msgbox Zone13C_Text_Scientist3, MSGBOX_SIGN
-	release
-	end
-
-Zone13C_Text_Scientist3:
-	.string "He's sound asleep.\n"
-	.string "Better not wake him.$"
-
-Zone13C_EventScript_Scientist4::
-	lock
-	faceplayer
-	goto_if_set FLAG_ZONE13C_RECEIVED_SCOPE_LENS, Zone13C_EventScript_GaveScopeLens
-	msgbox Zone13C_Text_Scientist4_GiveScopeLens, MSGBOX_AUTOCLOSE
-	giveitem ITEM_SCOPE_LENS	
-	setflag FLAG_ZONE13C_RECEIVED_SCOPE_LENS
-	goto Zone13C_EventScript_GaveScopeLens
-	end
-
-Zone13C_EventScript_GaveScopeLens:
-	msgbox Zone13C_Text_Scientist4_GaveScopeLens, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone13C_Text_Scientist4_GiveScopeLens:
-	.string "Your moves always miss?\n"
-	.string "No problem! Here you go!$"
-
-Zone13C_Text_Scientist4_GaveScopeLens:
-	.string "What do you mean it only\n"
-	.string "increases the critical hit ratio?\p"
-	.string "It has the word Lens in it!$"
-
 Zone13C_EventScript_DeveloperEatthepear::
 	lock
 	faceplayer
@@ -344,3 +181,25 @@ Zone13C_Text_Eatthepear:
 	.string "you're enjoying your time.\p"
 	.string "When you beat the game, come back\n"
 	.string "here and let's have a battle!$"
+
+Zone13C_EventScript_Fossil_Scientist_Text_0:
+	.string "Sorry, I just ran out of fossils.$"
+
+Zone13C_EventScript_Fossil_Scientist_Text_1:
+	.string "You get a Fossil!\nYou get a Fossil!\lEverybody gets a Fossil!$"
+
+Zone13C_EventScript_Fossil_VanillaReceived_Text_0:
+	.string "Hope you enjoy your Fossil!\nCome back tomorrow for another!$"
+
+Zone13C_EventScript_Fossil_NuzlockeReceived_Text_0:
+	.string "Hope you enjoy your Fossil!$"
+
+Zone13C_EventScript_Scientist4_Text_0:
+	.string "Sometimes you just need a little bit\n"
+	.string "more accuracy for your moves. That's\l"
+	.string "where the Zoom Lens comes in!$"
+
+Zone13C_EventScript_Scientist4_Text_1:
+	.string "The Zoom Lens boosts accuracy by 20%,\n"
+	.string "but only against opponents that have\l"
+	.string "already moved that turn.$"

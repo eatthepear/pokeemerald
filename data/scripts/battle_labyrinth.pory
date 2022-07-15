@@ -2031,7 +2031,7 @@ script EventScript_Settings_NuzlockeRandomizer {
 			waitse
 			closemessage
 			clearflag(FLAG_NUZLOCKE_ON)
-			clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
+			clearflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 			callnative(GlobalNuzlockeClear)
 		}
 	}
@@ -2059,7 +2059,7 @@ script EventScript_Settings_Nuzlocke {
 			waitse
 			closemessage
 			clearflag(FLAG_NUZLOCKE_ON)
-			clearflag(FLAG_NUZLOCKE_FOSSIL_RECEIVED)
+			clearflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 			callnative(GlobalNuzlockeClear)
 		}
 	}

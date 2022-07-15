@@ -26,18 +26,33 @@ Zone14B_Text_ToddDefeat:
 Zone14B_Text_ToddPostBattle:
 	.string "Hohoho!$"
 
-Zone14B_EventScript_Charlie::
-	trainerbattle_single TRAINER_CHARLIE, Zone14B_Text_CharlieIntro, Zone14B_Text_CharlieDefeat
-	msgbox Zone14B_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
+Zone14B_EventScript_Russell::
+	trainerbattle_single TRAINER_RUSSELL, Zone14B_Text_RussellIntro, Zone14B_Text_RussellDefeat
+	msgbox Zone14B_Text_RussellPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone14B_Text_CharlieIntro:
+Zone14B_Text_RussellIntro:
 	.string "Lola, baby, where are you?$"
 
-Zone14B_Text_CharlieDefeat:
+Zone14B_Text_RussellDefeat:
 	.string "I'm sorry, I couldn't win for you!$"
 
-Zone14B_Text_CharliePostBattle:
+Zone14B_Text_RussellPostBattle:
+	.string "Sigh. I wish NPCs got phones.\n"
+	.string "Then I could just text her.$"
+
+Zone14B_EventScript_Otis::
+	trainerbattle_single TRAINER_OTIS, Zone14B_Text_OtisIntro, Zone14B_Text_OtisDefeat
+	msgbox Zone14B_Text_OtisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14B_Text_OtisIntro:
+	.string "Lola, baby, where are you?$"
+
+Zone14B_Text_OtisDefeat:
+	.string "I'm sorry, I couldn't win for you!$"
+
+Zone14B_Text_OtisPostBattle:
 	.string "Sigh. I wish NPCs got phones.\n"
 	.string "Then I could just text her.$"
 

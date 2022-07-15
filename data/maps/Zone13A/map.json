@@ -2,7 +2,7 @@
   "id": "MAP_ZONE13A",
   "name": "Zone13A",
   "layout": "LAYOUT_ZONE13A",
-  "music": "MUS_HG_SEQ_GS_R_10_11",
+  "music": "MUS_DP_SEQ_TOWN03_D",
   "region_map_section": "MAPSEC_ZONE_13",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "x": 10,
+      "x": 27,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 11,
+      "x": 28,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -43,7 +43,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
       "x": 27,
-      "y": 21,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
       "x": 28,
-      "y": 21,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -67,23 +67,62 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 30,
-      "y": 30,
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 38,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone13A_EventScript_SuperPotion",
-      "flag": "FLAG_ITEM_ZONE13A_SUPER_POTION"
+      "script": "Zone13A_EventScript_MentalHerb",
+      "flag": "FLAG_ITEM_ZONE13A_MENTAL_HERB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 21,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Zone13A_EventScript_Wanda",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
+      "x": 32,
+      "y": 29,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Zone13A_EventScript_Violet",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 9,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Zone13A_EventScript_Steve",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 23,
-      "y": 19,
+      "x": 20,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_ZONE13B",
       "dest_warp_id": 0
@@ -95,16 +134,16 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 32,
-      "y": 16,
+      "x": 14,
+      "y": 9,
       "elevation": 3,
       "item": "ITEM_LUM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE13A_LUM_BERRY"
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 20,
+      "x": 21,
+      "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone13A_EventScript_Sign"

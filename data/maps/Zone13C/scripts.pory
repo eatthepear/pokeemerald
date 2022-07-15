@@ -1,0 +1,142 @@
+mapscripts Zone13C_MapScripts {}
+
+script Zone13C_EventScript_Fossil_Scientist {
+	lock
+	faceplayer
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		msgbox("Sorry, I just ran out of fossils.")
+		release
+		end
+	}
+	if (flag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED) == true) {
+		goto(Zone13C_EventScript_Fossil_NuzlockeReceived)
+	}
+	if (flag(FLAG_DAILY_FOSSIL_RECEIVED) == true) {
+		goto(Zone13C_EventScript_Fossil_VanillaReceived)
+	}
+	applymovement(3, Common_Movement_ExclamationMark)
+	playse(SE_PIN)
+	waitmovement(0)
+	waitse
+	msgbox("You get a Fossil!\nYou get a Fossil!\lEverybody gets a Fossil!")
+	if (flag(FLAG_NUZLOCKE_ON) == true) {
+		setflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
+	}
+	setflag(FLAG_DAILY_FOSSIL_RECEIVED)
+	random(9)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			giveitem(ITEM_DOME_FOSSIL)
+		case 1:
+			giveitem(ITEM_HELIX_FOSSIL)
+		case 2:
+			giveitem(ITEM_OLD_AMBER)
+		case 3:
+			giveitem(ITEM_ROOT_FOSSIL)
+		case 4:
+			giveitem(ITEM_CLAW_FOSSIL)
+		case 5:
+			giveitem(ITEM_COVER_FOSSIL)
+		case 6:
+			giveitem(ITEM_PLUME_FOSSIL)
+		case 7:
+			giveitem(ITEM_JAW_FOSSIL)
+		case 8:
+			giveitem(ITEM_SAIL_FOSSIL)
+	}
+	if (flag(FLAG_NUZLOCKE_ON) == true) {
+		goto(Zone13C_EventScript_Fossil_NuzlockeReceived)
+	} else {
+		goto(Zone13C_EventScript_Fossil_VanillaReceived)
+	}
+	end
+}
+
+script Zone13C_EventScript_Fossil_VanillaReceived {
+	msgbox("Hope you enjoy your Fossil!\nCome back tomorrow for another!")
+	release
+	end
+}
+
+script Zone13C_EventScript_Fossil_NuzlockeReceived {
+	msgbox("Hope you enjoy your Fossil!")
+	release
+	end
+}
+
+script Zone13C_EventScript_Scientist4 {
+	lock
+	faceplayer
+	if (flag(FLAG_ZONE13C_RECEIVED_ZOOM_LENS) == false) {
+		msgbox(format("Sometimes you just need a little bit more accuracy for your moves. That's where the Zoom Lens comes in!"))
+		giveitem(ITEM_ZOOM_LENS)
+		setflag(FLAG_ZONE13C_RECEIVED_ZOOM_LENS)
+	}
+	msgbox(format("The Zoom Lens boosts accuracy by 20%, but only against opponents that have already moved that turn."))
+	release
+	end
+}
+
+raw `
+
+Zone13C_EventScript_Darwin::
+	trainerbattle_single TRAINER_DARWIN, Zone13C_Text_DarwinIntro, Zone13C_Text_DarwinDefeat
+	msgbox Zone13C_Text_DarwinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone13C_Text_DarwinIntro:
+	.string "This grass is far too tall\n"
+	.string "for someone of my stature!$"
+
+Zone13C_Text_DarwinDefeat:
+	.string "I meant financial stature!\n"
+	.string "I'm not short!$"
+
+Zone13C_Text_DarwinPostBattle:
+	.string "Errr… Never mind.$"
+
+Zone13C_EventScript_Scientist1::
+	lock
+	msgbox Zone13C_Text_Scientist1, MSGBOX_SIGN
+	release
+	end
+
+Zone13C_Text_Scientist1:
+	.string "He's so focused on his work,\n"
+	.string "he doesn't even notice you.$"
+
+Zone13C_EventScript_Scientist2::
+	lock
+	faceplayer
+	msgbox Zone13C_Text_Scientist2_WhyMale, MSGBOX_AUTOCLOSE
+	delay 48
+	msgbox Zone13C_Text_Scientist2_GenderRoles, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone13C_Text_Scientist2_WhyMale:
+	.string "Why are all the scientists male,\n"
+	.string "you ask?$"
+
+Zone13C_Text_Scientist2_GenderRoles:
+	.string "Um... Game Freak existed a while\n"
+	.string "ago and helped perpetuate\l"
+	.string "traditional gender roles in\l"
+	.string "society?\p"
+	.string "Never mind. Google it.$"
+
+Zone13C_EventScript_DeveloperEatthepear::
+	lock
+	faceplayer
+	msgbox Zone13C_Text_Eatthepear, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone13C_Text_Eatthepear:
+	.string "Hello there. It's {COLOR BLUE}eatthepear{COLOR DARK_GRAY}, the\n"
+	.string "developer of this ROM hack!\p"
+	.string "Thanks for playing and I hope\n"
+	.string "you're enjoying your time.\p"
+	.string "When you beat the game, come back\n"
+	.string "here and let's have a battle!$"
+`

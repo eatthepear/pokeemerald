@@ -4754,10 +4754,10 @@
     {
       "id": "LAYOUT_ZONE13A",
       "name": "Zone13A_Layout",
-      "width": 40,
-      "height": 43,
+      "width": 46,
+      "height": 41,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Zone13A/border.bin",
       "blockdata_filepath": "data/layouts/Zone13A/map.bin"
     },

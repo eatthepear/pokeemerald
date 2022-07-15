@@ -95,14 +95,11 @@ Zone16A_EventScript_Exit::
 
 Zone16A_EventScript_CheckBrutal:
 	goto_if_not_defeated TRAINER_ANGUS, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_HOMER, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_IONA, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_TANISHA, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_RAFAEL, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_OTIS, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_BERKE, EventScript_BrutalExitNotSatisfied
 	goto_if_not_defeated TRAINER_GEORGINA, EventScript_BrutalExitNotSatisfied
-	goto_if_not_defeated TRAINER_RUSSELL, EventScript_BrutalExitNotSatisfied
 	return
 
 Zone16A_EventScript_Sign::
@@ -128,20 +125,6 @@ Zone16A_Text_AngusDefeat:
 Zone16A_Text_AngusPostBattle:
 	.string "Dive Balls can help capture\n"
 	.string "Pokémon while fishing.$"
-
-Zone16A_EventScript_Homer::
-	trainerbattle_single TRAINER_HOMER, Zone16A_Text_HomerIntro, Zone16A_Text_HomerDefeat
-	msgbox Zone16A_Text_HomerPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone16A_Text_HomerIntro:
-	.string "A leisurely swim in the sea...\p"
-	.string "Oh, you want to battle?\p"
-	.string "Let's get started, then!$"
-
-Zone16A_Text_HomerDefeat:
-	.string "I was a bit too sluggish\n"
-	.string "to win!$"
 
 Zone16A_Text_HomerPostBattle:
 	.string "Now, a leisurely swim to\n"
@@ -193,22 +176,6 @@ Zone16A_Text_RafaelDefeat:
 Zone16A_Text_RafaelPostBattle:
 	.string "Just floating is fun.$"
 
-Zone16A_EventScript_Otis::
-	trainerbattle_single TRAINER_OTIS, Zone16A_Text_OtisIntro, Zone16A_Text_OtisDefeat
-	msgbox Zone16A_Text_OtisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone16A_Text_OtisIntro:
-	.string "My team is impeccable!\n"
-	.string "Prepare to be crushed!$"
-
-Zone16A_Text_OtisDefeat:
-	.string "I tried to intimidate you,\n"
-	.string "but you saw through the facade!$"
-
-Zone16A_Text_OtisPostBattle:
-	.string "Can't I catch a break?$"
-
 Zone16A_EventScript_Berke::
 	trainerbattle_single TRAINER_BERKE, Zone16A_Text_BerkeIntro, Zone16A_Text_BerkeDefeat
 	msgbox Zone16A_Text_BerkePostBattle, MSGBOX_AUTOCLOSE
@@ -239,21 +206,6 @@ Zone16A_Text_GeorginaDefeat:
 Zone16A_Text_GeorginaPostBattle:
 	.string "I'm practicing for my\n"
 	.string "upcoming competition!$"
-
-Zone16A_EventScript_Russell::
-	trainerbattle_single TRAINER_RUSSELL, Zone16A_Text_RussellIntro, Zone16A_Text_RussellDefeat
-	msgbox Zone16A_Text_RussellPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone16A_Text_RussellIntro:
-	.string "The sea is my life,\n"
-	.string "and my life is the sea.$"
-
-Zone16A_Text_RussellDefeat:
-	.string "But my heart is battle!$"
-
-Zone16A_Text_RussellPostBattle:
-	.string "I'll sea you another time.$"
 
 Zone16A_EventScript_DiveBall::
 	finditem ITEM_DIVE_BALL

@@ -1,3 +1,4 @@
+raw `
 Zone13B_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Zone13B_OnTransition
 	.byte 0
@@ -9,38 +10,38 @@ Zone13B_OnTransition:
 Zone13B_EventScript_MoveScientist:
 	setobjectxyperm 1, 18, 2
 	end
+`
 
-Zone13B_EventScript_GiveFlash::
+script Zone13B_EventScript_GiveFlash {
 	lock
 	faceplayer
-	goto_if_set FLAG_ZONE13B_RECEIVED_FLASHLIGHT, Zone13B_EventScript_GiveFlash_2
-	msgbox Zone13B_EventScript_GiveFlash_Text_1
-	giveitem ITEM_FLASHLIGHT
-	setflag FLAG_ZONE13B_RECEIVED_FLASHLIGHT
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 18
-	goto_if_eq Zone13B_EventScript_GiveFlash_5
-	applymovement 1, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement 1, Common_Movement_FaceDown
-	waitmovement 0
+	if (flag(FLAG_ZONE13B_RECEIVED_FLASHLIGHT) == true) {
+		msgbox("Be careful down there.")
+		release
+		end
+	}
+	msgbox("This leads to the old mine.\pYou'll need a flashlight to\nnavigate through.")
+	giveitem(ITEM_FLASHLIGHT)
+	setflag(FLAG_ZONE13B_RECEIVED_FLASHLIGHT)
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 18) {
+		applymovement(1, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(1, Common_Movement_FaceDown)
+		waitmovement(0)
+		release
+		end
+	}
+	applymovement(1, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(1, Common_Movement_FaceDown)
+	waitmovement(0)
 	release
 	end
 
-Zone13B_EventScript_GiveFlash_2:
-	msgbox Zone13B_EventScript_GiveFlash_Text_0
-	release
-	end
+}
 
-Zone13B_EventScript_GiveFlash_5:
-	applymovement 1, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement 1, Common_Movement_FaceDown
-	waitmovement 0
-	release
-	end
-
-
+raw `
 Zone13B_EventScript_Gould::
 	trainerbattle_single TRAINER_GOULD, Zone13B_Text_GouldIntro, Zone13B_Text_GouldDefeat
 	msgbox Zone13B_Text_GouldPostBattle, MSGBOX_AUTOCLOSE
@@ -174,9 +175,4 @@ Zone13B_EventScript_Scientist5::
 Zone13B_Text_Scientist5:
 	.string "He's sound asleep.\n"
 	.string "Better not wake him.$"
-
-Zone13B_EventScript_GiveFlash_Text_0:
-	.string "Be careful down there.$"
-
-Zone13B_EventScript_GiveFlash_Text_1:
-	.string "This leads to the old mine.\pYou'll need a flashlight to\nnavigate through.$"
+`

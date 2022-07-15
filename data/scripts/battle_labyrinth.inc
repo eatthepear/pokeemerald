@@ -2850,7 +2850,7 @@ EventScript_Settings_NuzlockeRandomizer_3:
 	waitse
 	closemessage
 	clearflag FLAG_NUZLOCKE_ON
-	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
+	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	return
 
@@ -2876,7 +2876,7 @@ EventScript_Settings_Nuzlocke_3:
 	waitse
 	closemessage
 	clearflag FLAG_NUZLOCKE_ON
-	clearflag FLAG_NUZLOCKE_FOSSIL_RECEIVED
+	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	return
 
