@@ -3171,9 +3171,13 @@ static const u8 sTM24Desc[] = _(
     // "for a while.");
 
 static const u8 sTM25Desc[] = _(
-    "Attacks the foe\n"
-    "with enough power\n"
-    "to climb waterfalls.");
+    "Stomps down on the\n"
+    "ground, lowering\n"
+    "Speed.");
+    // Waterfall
+    // "Attacks the foe\n"
+    // "with enough power\n"
+    // "to climb waterfalls.");
 
 static const u8 sTM26Desc[] = _(
     "A weak jolt of\n"

@@ -7025,7 +7025,7 @@ static void Cmd_setgravity(void)
     else
     {
         gFieldStatuses |= STATUS_FIELD_GRAVITY;
-        gFieldTimers.gravityTimer = 8;
+        gFieldTimers.gravityTimer = 5;
         gBattlescriptCurrInstr += 5;
     }
 }

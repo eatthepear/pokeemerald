@@ -98,6 +98,7 @@ Zone8C_Text_NeilPostBattle:
 Zone8C_EventScript_Tamara::
        trainerbattle_single TRAINER_TAMARA, Zone8C_Text_TamaraIntro, Zone8C_Text_TamaraDefeat
        msgbox Zone8C_Text_TamaraPostBattle, MSGBOX_AUTOCLOSE
+       end
 
 Zone8C_Text_TamaraIntro:
 	.string "If I win, you have to lead me out of here!$"

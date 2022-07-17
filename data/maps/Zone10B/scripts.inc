@@ -68,6 +68,8 @@ Zone10B_EventScript_AdaminaStuff_10:
 	goto Zone10B_EventScript_AdaminaStuff_4
 
 Zone10B_EventScript_AdaminaStuff_7:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 51, 32
 	waitstate
@@ -199,6 +201,10 @@ Zone10B_EventScript_SideQuestTeleport_2:
 	checktrainerflag TRAINER_NEIL
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_TAMARA
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_COOPER
+	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
+	checktrainerflag TRAINER_CARMINE
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_KYLE
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4

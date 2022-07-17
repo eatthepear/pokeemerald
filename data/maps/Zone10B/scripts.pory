@@ -27,6 +27,8 @@ script Zone10B_EventScript_AdaminaStuff {
 		msgbox("{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving here?", MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			if (var(VAR_ZONE) > 10) {
+				clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+				clearflag(FLAG_IS_REVISITING_ZONE)
 				setvar(VAR_REVISITING_ZONE, 0)
 				warpteleport(MAP_ZONE0D, 255, 51, 32)
 				waitstate
@@ -126,6 +128,8 @@ script Zone10B_EventScript_SideQuestTeleport {
 			!defeated(TRAINER_JAYDEN) ||
 			!defeated(TRAINER_NEIL) ||
 			!defeated(TRAINER_TAMARA) ||
+			!defeated(TRAINER_COOPER) ||
+			!defeated(TRAINER_CARMINE) ||
 			!defeated(TRAINER_KYLE) ||
 			!defeated(TRAINER_BELLE) ||
 			!defeated(TRAINER_DEWEY) ||

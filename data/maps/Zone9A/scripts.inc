@@ -30,16 +30,31 @@ Zone9A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 9
 	goto_if_gt Zone9A_EventScript_Exit_2
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Exit_7
+Zone9A_EventScript_Exit_5:
 	warp MAP_ZONE9SANCTUARY, 255, 22, 7
 Zone9A_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone9A_EventScript_Exit_2:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 47, 32
 	waitstate
 	goto Zone9A_EventScript_Exit_1
+
+Zone9A_EventScript_Exit_6:
+	goto EventScript_BrutalExitNotSatisfied
+	goto Zone9A_EventScript_Exit_5
+
+Zone9A_EventScript_Exit_7:
+	checktrainerflag TRAINER_COOPER
+	goto_if 0, Zone9A_EventScript_Exit_6
+	checktrainerflag TRAINER_CARMINE
+	goto_if 0, Zone9A_EventScript_Exit_6
+	goto Zone9A_EventScript_Exit_5
 
 
 Zone9A_EventScript_HerbalSign::
@@ -205,6 +220,36 @@ Zone9A_EventScript_ItemTM13_2:
 	release
 	end
 
+
+Zone9A_EventScript_Cooper::
+       trainerbattle_single TRAINER_COOPER, Zone9A_Text_CooperIntro, Zone9A_Text_CooperDefeat
+       msgbox Zone9A_Text_CooperPostBattle, MSGBOX_AUTOCLOSE
+       end
+
+Zone9A_Text_CooperIntro:
+	.string "Bet you didn't expect me!$"
+
+Zone9A_Text_CooperDefeat:
+	.string "I didn't expect you, either!$"
+
+Zone9A_Text_CooperPostBattle:
+	.string "I just pop out occasionally in\n"
+	.string "case someone is there.$"
+
+Zone9A_EventScript_Carmine::
+       trainerbattle_single TRAINER_CARMINE, Zone9A_Text_CarmineIntro, Zone9A_Text_CarmineDefeat
+       msgbox Zone9A_Text_CarminePostBattle, MSGBOX_AUTOCLOSE
+       end
+
+Zone9A_Text_CarmineIntro:
+	.string "Whew, it's hot in the jungle!$"
+
+Zone9A_Text_CarmineDefeat:
+	.string "My Charmeleon isn't really helping\n"
+	.string "me out in that regard!$"
+
+Zone9A_Text_CarminePostBattle:
+	.string "I hope there's AC in the village.$"
 
 Zone9A_EventScript_HerbalSign_Text_0:
 	.string "Herbal and Incense Shop$"

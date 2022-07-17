@@ -41,8 +41,9 @@ Zone6A_EventScript_Exit_1:
 
 Zone6A_EventScript_Exit_2:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 31, 32
+	warpteleport MAP_ZONE0D, 255, 35, 32
 	waitstate
 	goto Zone6A_EventScript_Exit_1
 
@@ -201,7 +202,8 @@ Zone6A_Text_ConstanceDefeat:
 	.string "Oops, I forgot to pack food!$"
 
 Zone6A_Text_ConstancePostBattle:
-	.string "I can look for some Berries or something…$"
+	.string "I can look for some Berries or\n"
+	.string "something…$"
 
 Zone6A_EventScript_Mina::
 	trainerbattle_single TRAINER_MINA, Zone6A_Text_MinaIntro, Zone6A_Text_MinaDefeat

@@ -3717,6 +3717,8 @@ Zone_EventScript_RetirePrompt_12:
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_13:
+	cleartrainerflag TRAINER_COOPER
+	cleartrainerflag TRAINER_CARMINE
 	clearflag FLAG_HIDE_ZONE9A_ARI_WINSTRATE
 	setvar VAR_ZONE_9_STATE, 0
 	warpteleport MAP_ZONE8SANCTUARY, 255, 22, 7

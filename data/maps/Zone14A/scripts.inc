@@ -67,20 +67,6 @@ Zone14A_Text_NigelPostBattle:
 	.string "Turns out yelling sneak attack\n"
 	.string "makes it, well, not a sneak attack!$"
 
-Zone14A_EventScript_Cooper::
-	trainerbattle_single TRAINER_COOPER, Zone14A_Text_CooperIntro, Zone14A_Text_CooperDefeat
-	msgbox Zone14A_Text_CooperPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone14A_Text_CooperIntro:
-	.string "It's so dark down here…$"
-
-Zone14A_Text_CooperDefeat:
-	.string "I can barely see you!$"
-
-Zone14A_Text_CooperPostBattle:
-	.string "The exit should be this way…$"
-
 Zone14A_EventScript_Lola::
 	trainerbattle_single TRAINER_LOLA, Zone14A_Text_LolaIntro, Zone14A_Text_LolaDefeat
 	msgbox Zone14A_Text_LolaPostBattle, MSGBOX_AUTOCLOSE

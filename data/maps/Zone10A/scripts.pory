@@ -246,7 +246,8 @@ Zone10A_Text_KyleDefeat:
 	.string "I dream of one day winning…$"
 
 Zone10A_Text_KylePostBattle:
-	.string "I'll be a champion some day, just you wait!$"
+	.string "I'll be a champion some day,\n"
+	.string "just you wait!$"
 
 Zone10A_EventScript_Belle::
 	trainerbattle_single TRAINER_BELLE, Zone10A_Text_BelleIntro, Zone10A_Text_BelleDefeat

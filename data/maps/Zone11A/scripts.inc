@@ -40,6 +40,7 @@ Zone11A_EventScript_Exit_1:
 
 Zone11A_EventScript_Exit_2:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 15, 25
 	waitstate
@@ -86,6 +87,8 @@ Zone11A_EventScript_LeviathanIntro::
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone11A_EventScript_LeviathanIntro_6
 	trainerbattle_no_intro TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat
 Zone11A_EventScript_LeviathanIntro_5:
+	applymovement 6, Common_Movement_FaceLeft
+	waitmovement 0
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone11A_EventScript_LeviathanIntro_Text_3, MSGBOX_DEFAULT
 	giveitem ITEM_WIDE_LENS

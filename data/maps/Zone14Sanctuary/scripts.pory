@@ -1,0 +1,68 @@
+mapscripts Zone14Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 13: Zone14Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone14Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	msgbox(Zone14Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	msgbox(Zone14Sanctuary_Text_RewardClear13)
+	msgbox(Zone14Sanctuary_Text_13Reward)
+	giveitem(ITEM_MACH_BIKE)
+	msgbox(Zone14Sanctuary_Text_RewardClear14)
+	msgbox(Zone14Sanctuary_Text_14Reward)
+	giveitem(ITEM_TM25)
+	closemessage
+	setvar(VAR_ZONE, 15)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+}
+
+script Zone14Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			buffernumberstring(0, VAR_ZONE)
+			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				warp(MAP_ZONE15A, 255, 4, 4)
+				waitstate
+			}
+		case 1:
+			goto(EventScript_Settings)
+		case 2:
+			goto(EventScript_Documentation)
+	}
+	goto(EventScript_WhenUReady)
+}
+
+text Zone14Sanctuary_Text_Colress_ReachedZone {
+	"{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
+	"You have cleared {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}.$"
+}
+
+text Zone14Sanctuary_Text_RewardClear13 {
+	"Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GRAY} is…$"
+}
+
+text Zone14Sanctuary_Text_13Reward {
+	"The Mach Bike!$"
+}
+
+text Zone14Sanctuary_Text_RewardClear14 {
+	"Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GRAY} is…$"
+}
+
+text Zone14Sanctuary_Text_14Reward {
+	"TM25 - Bulldoze!$"
+}

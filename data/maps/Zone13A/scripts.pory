@@ -13,6 +13,19 @@ mapscripts Zone13A_MapScripts {
 	}
 }
 
+script Zone13A_EventScript_ParasolLady {
+	lock
+	faceplayer
+	if (flag(FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA) == false) {
+		msgbox(format("Rain or shine, it's important to protect yourself from the elements!"), MSGBOX_DEFAULT)
+		giveitem(ITEM_UTILITY_UMBRELLA)
+		setflag(FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA)
+	}
+	msgbox(format("The Utility Umbrella nullifies the effects of harsh sunlight or rain on the user.\pIsn't that neat?"))
+	release
+	end
+}
+
 script Zone13A_EventScript_LeafStone {
 	lock
 	if (flag(FLAG_ITEM_ZONE13A_LEAF_STONE)) {

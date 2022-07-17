@@ -24,6 +24,65 @@ Zone14B_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	return
 
 
+Zone14B_EventScript_Exit::
+	lockall
+	compare VAR_ZONE, 14
+	goto_if_gt Zone14B_EventScript_Exit_2
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone14B_EventScript_Exit_7
+Zone14B_EventScript_Exit_5:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	warp MAP_ZONE14SANCTUARY, 255, 22, 7
+Zone14B_EventScript_Exit_1:
+	releaseall
+	end
+
+Zone14B_EventScript_Exit_2:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 27, 25
+	waitstate
+	goto Zone14B_EventScript_Exit_1
+
+Zone14B_EventScript_Exit_6:
+	goto EventScript_BrutalExitNotSatisfied
+	goto Zone14B_EventScript_Exit_5
+
+Zone14B_EventScript_Exit_7:
+	checktrainerflag TRAINER_VIOLET
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_WANDA
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_AMBER_AND_KIM
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_JAN_AND_ERIN
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_STEVE
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_GOULD
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_MENDEL
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_DARWIN
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_BART
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_NIGEL
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_LOLA
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_CHARLIE
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_TODD
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_RUSSELL
+	goto_if 0, Zone14B_EventScript_Exit_6
+	checktrainerflag TRAINER_OTIS
+	goto_if 0, Zone14B_EventScript_Exit_6
+	goto_if_unset FLAG_BEAT_LEVIATHAN_11, Zone14B_EventScript_Exit_6
+	goto Zone14B_EventScript_Exit_5
+
+
 Zone14B_EventScript_LeviathanBattle::
 	lock
 	faceplayer
@@ -60,7 +119,7 @@ Zone14B_EventScript_LeviathanBattle_1:
 	msgbox Zone14B_EventScript_LeviathanBattle_Text_2
 	closemessage
 	fadescreen FADE_TO_BLACK
-	removeobject 6
+	removeobject 4
 	setflag FLAG_BEAT_LEVIATHAN_12
 	fadescreen FADE_FROM_BLACK
 	release

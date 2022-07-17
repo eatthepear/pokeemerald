@@ -16,6 +16,40 @@ mapscripts Zone14B_MapScripts {
     }
 }
 
+script Zone14B_EventScript_Exit {
+    lockall
+    if (var(VAR_ZONE) > 14) {
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+		clearflag(FLAG_IS_REVISITING_ZONE)
+		setvar(VAR_REVISITING_ZONE, 0)
+		warpteleport(MAP_ZONE0D, 255, 27, 25)
+		waitstate
+    } else {
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
+			(!defeated(TRAINER_VIOLET) ||
+			!defeated(TRAINER_WANDA) ||
+			!defeated(TRAINER_AMBER_AND_KIM) ||
+			!defeated(TRAINER_JAN_AND_ERIN) ||
+			!defeated(TRAINER_STEVE) ||
+			!defeated(TRAINER_GOULD) ||
+			!defeated(TRAINER_MENDEL) ||
+			!defeated(TRAINER_DARWIN) ||
+			!defeated(TRAINER_BART) ||
+			!defeated(TRAINER_NIGEL) ||
+			!defeated(TRAINER_LOLA) ||
+			!defeated(TRAINER_CHARLIE) ||
+			!defeated(TRAINER_TODD) ||
+			!defeated(TRAINER_RUSSELL) ||
+			!defeated(TRAINER_OTIS) ||
+			!flag(FLAG_BEAT_LEVIATHAN_11))) {
+			goto(EventScript_BrutalExitNotSatisfied)
+		}
+		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+        warp(MAP_ZONE14SANCTUARY, 255, 22, 7)
+    }
+    releaseall
+    end
+}
 
 script Zone14B_EventScript_LeviathanBattle {
 	lock
@@ -56,7 +90,7 @@ script Zone14B_EventScript_LeviathanBattle {
 	msgbox(format("{COLOR BLUE}Miguel{COLOR DARK_GRAY}: Those Berries are especially useful if your Pokémon has a 4x weakness to a particular type.\pAlrighty, I'm going to check on other sections of the mine, to see if I can go catch the delinquents.\pYou're free to pass through, so long as you don't disturb the wildlife."))
 	closemessage
 	fadescreen(FADE_TO_BLACK)
-	removeobject(6)
+	removeobject(4)
 	setflag(FLAG_BEAT_LEVIATHAN_12)
 	fadescreen(FADE_FROM_BLACK)
 	release

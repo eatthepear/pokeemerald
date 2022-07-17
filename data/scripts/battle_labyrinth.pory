@@ -2566,6 +2566,8 @@ script Zone_EventScript_RetirePrompt {
 			warpteleport(MAP_ZONE6SANCTUARY, 255, 22, 7)
 			waitstate
 		case 9:
+			cleartrainerflag(TRAINER_COOPER)
+			cleartrainerflag(TRAINER_CARMINE)
 			clearflag(FLAG_HIDE_ZONE9A_ARI_WINSTRATE)
 			setvar(VAR_ZONE_9_STATE, 0)
 			warpteleport(MAP_ZONE8SANCTUARY, 255, 22, 7)

@@ -168,7 +168,6 @@ Zone13B_Text_Scientist4:
 
 Zone13B_EventScript_Scientist5::
 	lock
-	faceplayer
 	msgbox Zone13B_Text_Scientist5, MSGBOX_AUTOCLOSE
 	release
 	end

@@ -73,12 +73,14 @@ Zone12A_EventScript_InitiateRomulusJulieBattles::
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_2, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone12A_EventScript_InitiateRomulusJulieBattles_2
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_4
 	trainerbattle_no_intro TRAINER_ROMULUS, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_5
 	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_InitiateRomulusJulieBattles_5
 Zone12A_EventScript_InitiateRomulusJulieBattles_4:
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_6
 	trainerbattle_no_intro TRAINER_JULIE, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_7
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9
 	giveitem ITEM_SCOPE_LENS
@@ -142,6 +144,7 @@ Zone12A_EventScript_Exit_1:
 
 Zone12A_EventScript_Exit_2:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 19, 25
 	waitstate

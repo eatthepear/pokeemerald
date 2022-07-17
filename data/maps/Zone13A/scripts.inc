@@ -19,6 +19,22 @@ Zone13A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 	return
 
 
+Zone13A_EventScript_ParasolLady::
+	lock
+	faceplayer
+	goto_if_unset FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA, Zone13A_EventScript_ParasolLady_2
+Zone13A_EventScript_ParasolLady_1:
+	msgbox Zone13A_EventScript_ParasolLady_Text_1
+	release
+	end
+
+Zone13A_EventScript_ParasolLady_2:
+	msgbox Zone13A_EventScript_ParasolLady_Text_0, MSGBOX_DEFAULT
+	giveitem ITEM_UTILITY_UMBRELLA
+	setflag FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA
+	goto Zone13A_EventScript_ParasolLady_1
+
+
 Zone13A_EventScript_LeafStone::
 	lock
 	goto_if_set FLAG_ITEM_ZONE13A_LEAF_STONE, Zone13A_EventScript_LeafStone_2
@@ -150,3 +166,13 @@ Zone13A_EventScript_Sign::
 
 Zone13A_Text_Sign:
 	.string "Mining Facility$"
+
+Zone13A_EventScript_ParasolLady_Text_0:
+	.string "Rain or shine, it's important to protect\n"
+	.string "yourself from the elements!$"
+
+Zone13A_EventScript_ParasolLady_Text_1:
+	.string "The Utility Umbrella nullifies the\n"
+	.string "effects of harsh sunlight or rain on\l"
+	.string "the user.\p"
+	.string "Isn't that neat?$"

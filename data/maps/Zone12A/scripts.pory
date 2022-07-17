@@ -67,6 +67,7 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 		releaseall
 		end
 	}
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Well then, I'm up first! Better hope luck is on your side!"))
 	trainerbattle_no_intro(TRAINER_ROMULUS, format("Romulus: The critical hits didn't come through!"))
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
@@ -74,6 +75,7 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	}
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Next up is me! I won't need any crits to beat you!"))
 	trainerbattle_no_intro(TRAINER_JULIE, format("Julie: You won even without landing a critical hit!"))
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross the river."))
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: We'll even give you this item, too!"))
 	giveitem(ITEM_SCOPE_LENS)
@@ -101,6 +103,7 @@ script Zone12A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 12) {
 		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+		clearflag(FLAG_IS_REVISITING_ZONE)
 		setvar(VAR_REVISITING_ZONE, 0)
 		warpteleport(MAP_ZONE0D, 255, 19, 25)
 		waitstate
