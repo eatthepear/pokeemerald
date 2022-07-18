@@ -11,7 +11,7 @@ script Zone14Sanctuary_EventScript_Intro {
 	waitfanfare
 	msgbox(Zone14Sanctuary_Text_RewardClear13)
 	msgbox(Zone14Sanctuary_Text_13Reward)
-	giveitem(ITEM_MACH_BIKE)
+	giveitem(ITEM_ACRO_BIKE)
 	msgbox(Zone14Sanctuary_Text_RewardClear14)
 	msgbox(Zone14Sanctuary_Text_14Reward)
 	giveitem(ITEM_TM25)
@@ -27,6 +27,8 @@ script Zone14Sanctuary_EventScript_Intro {
 script Zone14Sanctuary_EventScript_NextZone {
 	lock
 	faceplayer
+	removeitem(ITEM_MACH_BIKE)
+	additem(ITEM_ACRO_BIKE)
 	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
 	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
 	switch (var(VAR_RESULT)) {
@@ -48,21 +50,21 @@ script Zone14Sanctuary_EventScript_NextZone {
 
 text Zone14Sanctuary_Text_Colress_ReachedZone {
 	"{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
-	"You have cleared {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}.$"
+	"You have cleared {COLOR RED}Zone 13{COLOR DARK_GRAY} and {COLOR RED}Zone 14{COLOR DARK_GRAY}."
 }
 
 text Zone14Sanctuary_Text_RewardClear13 {
-	"Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GRAY} is…$"
+	"Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GRAY} is…"
 }
 
 text Zone14Sanctuary_Text_13Reward {
-	"The Mach Bike!$"
+	"The Bicycle!"
 }
 
 text Zone14Sanctuary_Text_RewardClear14 {
-	"Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GRAY} is…$"
+	"Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GRAY} is…"
 }
 
 text Zone14Sanctuary_Text_14Reward {
-	"TM25 - Bulldoze!$"
+	"TM25 - Bulldoze!"
 }

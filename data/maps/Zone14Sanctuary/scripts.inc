@@ -14,7 +14,7 @@ Zone14Sanctuary_EventScript_Intro::
 	waitfanfare
 	msgbox Zone14Sanctuary_Text_RewardClear13
 	msgbox Zone14Sanctuary_Text_13Reward
-	giveitem ITEM_MACH_BIKE
+	giveitem ITEM_ACRO_BIKE
 	msgbox Zone14Sanctuary_Text_RewardClear14
 	msgbox Zone14Sanctuary_Text_14Reward
 	giveitem ITEM_TM25
@@ -31,6 +31,8 @@ Zone14Sanctuary_EventScript_Intro::
 Zone14Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
+	removeitem ITEM_MACH_BIKE
+	additem ITEM_ACRO_BIKE
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
@@ -71,7 +73,7 @@ Zone14Sanctuary_Text_RewardClear13::
 	.string "Your reward for clearing {COLOR RED}Zone 13{COLOR DARK_GRAY} is…$"
 
 Zone14Sanctuary_Text_13Reward::
-	.string "The Mach Bike!$"
+	.string "The Bicycle!$"
 
 Zone14Sanctuary_Text_RewardClear14::
 	.string "Your reward for clearing {COLOR RED}Zone 14{COLOR DARK_GRAY} is…$"
