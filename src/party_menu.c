@@ -5134,7 +5134,7 @@ static void Task_LearnNextMoveOrClosePartyMenu(u8 taskId)
         {
             if (gPartyMenu.learnMoveState == 2) // never occurs
                 gSpecialVar_Result = TRUE;
-            if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+            if (FlagGet(FLAG_DOING_TRAINING) == TRUE)
             {
                 TryDoTrainingToSelectedMon(taskId);
             }
@@ -5221,14 +5221,25 @@ static void Task_PartyMenuReplaceMove(u8 taskId)
     
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
-        mon = &gPlayerParty[gPartyMenu.slotId];
-        RemoveMonPPBonus(mon, GetMoveSlotToReplace());
-        oldPP = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), NULL);
-        move = gPartyMenu.data1;
-        SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
-        if (GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), NULL) > oldPP)
-            SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), &oldPP);
-        Task_LearnedMove(taskId);
+        if (FlagGet(FLAG_DOING_TRAINING) == FALSE) // This should be the case for TMs only. Makes it so you don't infinitely heal PP from TMs.
+        {
+            mon = &gPlayerParty[gPartyMenu.slotId];
+            RemoveMonPPBonus(mon, GetMoveSlotToReplace());
+            oldPP = GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), NULL);
+            move = gPartyMenu.data1;
+            SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
+            if (GetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), NULL) > oldPP)
+                SetMonData(mon, MON_DATA_PP1 + GetMoveSlotToReplace(), &oldPP);
+            Task_LearnedMove(taskId);
+        }
+        else
+        {
+            mon = &gPlayerParty[gPartyMenu.slotId];
+            RemoveMonPPBonus(mon, GetMoveSlotToReplace());
+            move = gPartyMenu.data1;
+            SetMonMoveSlot(mon, move, GetMoveSlotToReplace());
+            Task_LearnedMove(taskId);
+        }
     }
 }
 
@@ -5367,7 +5378,7 @@ static void Task_DisplayLevelUpStatsPg2(u8 taskId)
 
 static void DisplayLevelUpStatsPg1(u8 taskId)
 {
-    if (FlagGet(FLAG_IS_RARE_CANDY) == FALSE)
+    if (FlagGet(FLAG_DOING_TRAINING) == FALSE)
     {
         s16 *arrayPtr = sPartyMenuInternal->data;
 
@@ -5382,7 +5393,7 @@ static void DisplayLevelUpStatsPg2(u8 taskId)
 {
     s16 *arrayPtr = sPartyMenuInternal->data;
 
-    if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+    if (FlagGet(FLAG_DOING_TRAINING) == TRUE)
     {
         arrayPtr[12] = CreateLevelUpStatsWindow();
     }
@@ -5444,7 +5455,7 @@ static void PartyMenuTryEvolution(u8 taskId)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL);
 
-    if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+    if (FlagGet(FLAG_DOING_TRAINING) == TRUE)
     {
         TryDoTrainingToSelectedMon(taskId);
     }
@@ -7169,10 +7180,10 @@ static void TryDoTrainingToSelectedMon(u8 taskId)
         }
         else
         {
-            if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+            if (FlagGet(FLAG_DOING_TRAINING) == TRUE)
             {
                 gSpecialVar_0x8004 = 1;
-                FlagClear(FLAG_IS_RARE_CANDY);
+                FlagClear(FLAG_DOING_TRAINING);
             }
             else
             {
@@ -7224,17 +7235,17 @@ static void Task_HandleTrainingYesNoInput(u8 taskId)
         StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
         DisplayPartyMenuMessage(gStringVar4, TRUE);
         ScheduleBgCopyTilemapToVram(2);
-        FlagSet(FLAG_IS_RARE_CANDY);
+        FlagSet(FLAG_DOING_TRAINING);
         gTasks[taskId].func = Task_DisplayLevelUpStatsPg1;
         break;
     case MENU_B_PRESSED:
         PlaySE(SE_SELECT);
         // fallthrough
     case 1: // No
-        if (FlagGet(FLAG_IS_RARE_CANDY) == TRUE)
+        if (FlagGet(FLAG_DOING_TRAINING) == TRUE)
         {
             gSpecialVar_0x8004 = 1;
-            FlagClear(FLAG_IS_RARE_CANDY);
+            FlagClear(FLAG_DOING_TRAINING);
         }
         else
         {

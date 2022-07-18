@@ -320,7 +320,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .nature = NATURE_NAUGHTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
-    .heldItem = ITEM_METRONOME,
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
@@ -353,7 +353,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .nature = NATURE_NAUGHTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
-    .heldItem = ITEM_METRONOME,
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_LEAFAGE, MOVE_THUNDER_SHOCK}
     },
     {
@@ -364,7 +364,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_SLOT_1, //Thick Fat
     .species = SPECIES_SPHEAL,
-    .heldItem = ITEM_METRONOME,
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_ICE_BALL, MOVE_WATER_GUN, MOVE_DEFENSE_CURL, MOVE_ROLLOUT}
     }
 };
@@ -2473,7 +2473,7 @@ static const struct TrainerMon sParty_MiguelBrutal[] = {//Leviathan, Brutal
 
 /* ------------------- Zone 15 ------------------- */
 
-static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Double Battle, Default
+static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Default
     {
     .iv = 31,
     .lvl = 30,
@@ -2481,8 +2481,8 @@ static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Dou
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Drought
     .species = SPECIES_NINETALES,
-    .heldItem = ITEM_HEAT_ROCK,
-    .moves = {MOVE_HEAT_WAVE, MOVE_DAZZLING_GLEAM, MOVE_PSYSHOCK, MOVE_SCORCHING_SANDS}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_OVERHEAT, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER}
     },
     {
     .iv = 31,
@@ -2512,11 +2512,11 @@ static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Dou
     .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
     .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_HOUNDOOMINITE,
-    .moves = {MOVE_HEAT_WAVE, MOVE_DARK_PULSE, MOVE_SOLAR_BEAM, MOVE_SCORCHING_SANDS}
+    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SCORCHING_SANDS, MOVE_NASTY_PLOT}
     }
 };
 
-static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Double Battle, Brutal
+static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Random Lead, Battle starts with permanent Sun, Brutal
     {
     .iv = 31,
     .lvl = 30,
@@ -2524,8 +2524,8 @@ static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Doub
     .gender = TRAINER_MON_FEMALE,
     .ability = ABILITY_HIDDEN, //Drought
     .species = SPECIES_NINETALES,
-    .heldItem = ITEM_HEAT_ROCK,
-    .moves = {MOVE_HEAT_WAVE, MOVE_DAZZLING_GLEAM, MOVE_PSYSHOCK, MOVE_SCORCHING_SANDS}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_OVERHEAT, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER}
     },
     {
     .iv = 31,
@@ -2555,17 +2555,7 @@ static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Doub
     .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
     .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_HOUNDOOMINITE,
-    .moves = {MOVE_HEAT_WAVE, MOVE_DARK_PULSE, MOVE_SOLAR_BEAM, MOVE_SCORCHING_SANDS}
-    },
-    {
-    .iv = 31,
-    .lvl = 30,
-    .nature = NATURE_MODEST,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_HIDDEN, //Chlorophyll
-    .species = SPECIES_EXEGGUTOR_ALOLAN,
-    .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_DRACO_METEOR, MOVE_LEAF_STORM, MOVE_SLUDGE_BOMB, MOVE_SUNNY_DAY}
+    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SCORCHING_SANDS, MOVE_NASTY_PLOT}
     }
 };
 

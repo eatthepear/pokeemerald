@@ -124,6 +124,53 @@ script Zone13C_EventScript_Scientist4 {
 	end
 }
 
+script Zone13C_EventScript_Cook {
+	lock
+	faceplayer
+	if (flag(FLAG_ZONE13C_RECEIVED_APPLES) && flag(FLAG_ZONE13C_RECEIVED_SWEETS)) {
+		msgbox(format("I already gave you all the evolution items I have!"))
+		release
+		end
+	}
+	msgbox(format("I just love Pokémon that evolve via food items!\pShow me an Applin or a Milcery, and I'll give you the corresponding evolution items!"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		special(ChoosePartyMon)
+		waitstate
+		if (var(VAR_RESULT) != 255) {
+			specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+			switch(var(VAR_RESULT)) {
+				case SPECIES_APPLIN:
+					if (flag(FLAG_ZONE13C_RECEIVED_APPLES) == false) {
+						msgbox(format("That's an Applin all right! Well, here you go!"))
+						giveitem(ITEM_SWEET_APPLE)
+						giveitem(ITEM_TART_APPLE)
+						setflag(FLAG_ZONE13C_RECEIVED_APPLES)
+					} else {
+						msgbox(format("I already gave you all the Applin evolution items I have!"))
+					}
+				case SPECIES_MILCERY:
+					if (flag(FLAG_ZONE13C_RECEIVED_SWEETS) == false) {
+						msgbox(format("That's a Milcery all right! Well, here you go!"))
+						giveitem(ITEM_STRAWBERRY_SWEET)
+						giveitem(ITEM_LOVE_SWEET)
+						giveitem(ITEM_BERRY_SWEET)
+						giveitem(ITEM_CLOVER_SWEET)
+						giveitem(ITEM_FLOWER_SWEET)
+						giveitem(ITEM_STAR_SWEET)
+						giveitem(ITEM_RIBBON_SWEET)
+						setflag(FLAG_ZONE13C_RECEIVED_SWEETS)
+					} else {
+						msgbox(format("I already gave you all the Milcery evolution items I have!"))
+					}
+				default:
+					msgbox(format("That's not an Applin nor a Milcery!"))
+			}
+		}
+	}
+	release
+	end
+}
+
 raw `
 
 Zone13C_EventScript_Darwin::

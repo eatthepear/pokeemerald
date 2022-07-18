@@ -38,7 +38,12 @@ script Zone15B_EventScript_LeviathanBattle {
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		setweather(WEATHER_DROUGHT)
+		doweather
+		msgbox("Harsh sunlight suddenly appeared!")
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat)
+		resetweather
+		doweather
 	} else {
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat)
 	}
@@ -46,13 +51,14 @@ script Zone15B_EventScript_LeviathanBattle {
 	msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: It seems I was mistaken.\nYou're no ordinary AI.")
 	applymovement(1, Common_Movement_FaceLeft)
 	waitmovement(0)
-	msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the assignment.\nRequesting immediate evac.")
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the assignment. Requesting immediate evac."))
 	fadescreenswapbuffers(FADE_TO_BLACK)
 	playmoncry(SPECIES_PORYGON, 2)
 	delay(40)
 	waitmoncry
 	removeobject(1)
 	removeobject(2)
+	special(CheckLeadMonTough) // Makes Porygon visible in the Pokedex
 	setflag(FLAG_BEAT_LEVIATHAN_13)
 	fadescreenswapbuffers(FADE_FROM_BLACK)
 	msgbox("It looks like a bag was left behind!\pInside are… Shards?")

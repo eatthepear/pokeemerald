@@ -603,7 +603,7 @@ const struct Item gItems[] =
     {
         .name = _("Paralyze Heal"),
         .itemId = ITEM_PARALYZE_HEAL,
-        .price = 300,
+        .price = 200,
         .description = sParalyzeHealDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -617,7 +617,7 @@ const struct Item gItems[] =
     {
         .name = _("Burn Heal"),
         .itemId = ITEM_BURN_HEAL,
-        .price = 300,
+        .price = 200,
         .description = sBurnHealDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -659,7 +659,7 @@ const struct Item gItems[] =
     {
         .name = _("Full Heal"),
         .itemId = ITEM_FULL_HEAL,
-        .price = 500,
+        .price = 400,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -2876,7 +2876,7 @@ const struct Item gItems[] =
     {
         .name = _("Sweet Apple"),
         .itemId = ITEM_SWEET_APPLE,
-        .price = 2000,
+        .price = 500,
         .description = sSweetAppleDesc,
         .pocket = POCKET_CONSUMABLES,
         .type = ITEM_USE_PARTY_MENU,
@@ -2888,7 +2888,7 @@ const struct Item gItems[] =
     {
         .name = _("Tart Apple"),
         .itemId = ITEM_TART_APPLE,
-        .price = 2000,
+        .price = 500,
         .description = sTartAppleDesc,
         .pocket = POCKET_CONSUMABLES,
         .type = ITEM_USE_PARTY_MENU,
@@ -8116,10 +8116,10 @@ const struct Item gItems[] =
         .importance = 1,
     },
     
-    [ITEM_TM26_THUNDER_WAVE] =
+    [ITEM_TM26_FREEZE_DRY] =
     {
         .name = _("TM26"),
-        .itemId = ITEM_TM26_THUNDER_WAVE,
+        .itemId = ITEM_TM26_FREEZE_DRY,
         .price = 3000,
         .description = sTM26Desc,
         .pocket = POCKET_TM_HM,

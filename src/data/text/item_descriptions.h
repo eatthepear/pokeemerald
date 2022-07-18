@@ -3180,9 +3180,13 @@ static const u8 sTM25Desc[] = _(
     // "to climb waterfalls.");
 
 static const u8 sTM26Desc[] = _(
-    "A weak jolt of\n"
-    "electricity that\n"
-    "paralyzes the foe.");
+    "Super effective on \n"
+    "Water-types. May\n"
+    "cause freezing.");
+    // Thunder Wave
+    // "A weak jolt of\n"
+    // "electricity that\n"
+    // "paralyzes the foe.");
 
 static const u8 sTM27Desc[] = _(
     "Hurls sludge at the\n"

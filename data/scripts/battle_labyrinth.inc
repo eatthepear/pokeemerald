@@ -58,7 +58,7 @@ EventScript_Shop_General_4:
 	case 12, EventScript_Shop_General_13
 	case 13, EventScript_Shop_General_14
 	case 15, EventScript_Shop_General_14
-	case 16, EventScript_Shop_General_14
+	case 16, EventScript_Shop_General_15
 	case 17, EventScript_Shop_General_15
 	case 18, EventScript_Shop_General_15
 	case 20, EventScript_Shop_General_15
@@ -103,12 +103,12 @@ EventScript_Shop_General_13:
 
 EventScript_Shop_General_14:
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_General_20
-	pokemart Shop_General_13to16
+	pokemart Shop_General_13to15
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_15:
 	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_Shop_General_23
-	pokemart Shop_General_17to25
+	pokemart Shop_General_16to25
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_16:
@@ -121,11 +121,11 @@ EventScript_Shop_General_17:
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_20:
-	pokemart Shop_General_13to16_Brutal
+	pokemart Shop_General_13to15_Brutal
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_23:
-	pokemart Shop_General_17to25_Brutal
+	pokemart Shop_General_16to25_Brutal
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_26:
@@ -194,7 +194,7 @@ Shop_General_9to12_Brutal:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_13to16:
+Shop_General_13to15:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
@@ -220,7 +220,7 @@ Shop_General_13to16:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_13to16_Brutal:
+Shop_General_13to15_Brutal:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
@@ -238,13 +238,14 @@ Shop_General_13to16_Brutal:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_17to25:
+Shop_General_16to25:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
@@ -265,13 +266,14 @@ Shop_General_17to25:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_17to25_Brutal:
+Shop_General_16to25_Brutal:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
@@ -359,7 +361,7 @@ EventScript_Shop_Unique_Varrick_1:
 	case 11, EventScript_Shop_Unique_Varrick_10
 	case 12, EventScript_Shop_Unique_Varrick_10
 	case 13, EventScript_Shop_Unique_Varrick_10
-	case 15, EventScript_Shop_Unique_Varrick_11
+	case 15, EventScript_Shop_Unique_Varrick_10
 	case 16, EventScript_Shop_Unique_Varrick_11
 	case 17, EventScript_Shop_Unique_Varrick_11
 	case 18, EventScript_Shop_Unique_Varrick_11
@@ -397,11 +399,11 @@ EventScript_Shop_Unique_Varrick_9:
 	goto EventScript_Shop_Unique_Varrick_4
 
 EventScript_Shop_Unique_Varrick_10:
-	pokemart Shop_Unique_Varrick_11to14
+	pokemart Shop_Unique_Varrick_11to15
 	goto EventScript_Shop_Unique_Varrick_4
 
 EventScript_Shop_Unique_Varrick_11:
-	pokemart Shop_Unique_Varrick_15to20
+	pokemart Shop_Unique_Varrick_16to20
 	goto EventScript_Shop_Unique_Varrick_4
 
 EventScript_Shop_Unique_Varrick_12:
@@ -493,7 +495,7 @@ Shop_Unique_Varrick_9to10:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_Unique_Varrick_11to14:
+Shop_Unique_Varrick_11to15:
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
 	.2byte ITEM_SILK_SCARF
@@ -516,36 +518,34 @@ Shop_Unique_Varrick_11to14:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_Unique_Varrick_15to20:
-	.2byte ITEM_ORAN_BERRY
-	.2byte ITEM_CHERI_BERRY
-	.2byte ITEM_CHESTO_BERRY
-	.2byte ITEM_PECHA_BERRY
-	.2byte ITEM_RAWST_BERRY
-	.2byte ITEM_ASPEAR_BERRY
-	.2byte ITEM_PERSIM_BERRY
+Shop_Unique_Varrick_16to20:
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_MAGNET
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_SHARP_BEAK
+	.2byte ITEM_TWISTED_SPOON
+	.2byte ITEM_SILVER_POWDER
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_SPELL_TAG
+	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_BLACK_GLASSES
+	.2byte ITEM_METAL_COAT
 	.2byte ITEM_SCOPE_LENS
 	.2byte ITEM_WIDE_LENS
 	.2byte ITEM_ZOOM_LENS
 	.2byte ITEM_METRONOME
-	.2byte ITEM_MIRACLE_SEED
-	.2byte ITEM_CHARCOAL
-	.2byte ITEM_MYSTIC_WATER
-	.2byte ITEM_SILK_SCARF
-	.2byte ITEM_SHARP_BEAK
-	.2byte ITEM_MAGNET
-	.2byte ITEM_SILVER_POWDER
-	.2byte ITEM_POISON_BARB
-	.2byte ITEM_TWISTED_SPOON
-	.2byte ITEM_SOFT_SAND
-	.2byte ITEM_HARD_STONE
-	.2byte ITEM_BLACK_GLASSES
-	.2byte ITEM_BLACK_BELT
-	.2byte ITEM_SPELL_TAG
-	.2byte ITEM_DRAGON_FANG
-	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_HEAVY_DUTY_BOOTS
+	.2byte ITEM_SAFETY_GOGGLES
+	.2byte ITEM_UTILITY_UMBRELLA
 	.2byte ITEM_NONE
 
 	.align 2
@@ -748,7 +748,7 @@ EventScript_Shop_Unique_ZhuLi::
 	case 11, EventScript_Shop_Unique_ZhuLi_3
 	case 12, EventScript_Shop_Unique_ZhuLi_3
 	case 13, EventScript_Shop_Unique_ZhuLi_3
-	case 15, EventScript_Shop_Unique_ZhuLi_4
+	case 15, EventScript_Shop_Unique_ZhuLi_3
 	case 16, EventScript_Shop_Unique_ZhuLi_4
 	case 17, EventScript_Shop_Unique_ZhuLi_4
 	case 18, EventScript_Shop_Unique_ZhuLi_4
@@ -765,11 +765,11 @@ EventScript_Shop_Unique_ZhuLi_1:
 	return
 
 EventScript_Shop_Unique_ZhuLi_3:
-	pokemart Shop_Unique_ZhuLi_11to14
+	pokemart Shop_Unique_ZhuLi_11to15
 	goto EventScript_Shop_Unique_ZhuLi_1
 
 EventScript_Shop_Unique_ZhuLi_4:
-	pokemart Shop_Unique_ZhuLi_15to20
+	pokemart Shop_Unique_ZhuLi_16to20
 	goto EventScript_Shop_Unique_ZhuLi_1
 
 EventScript_Shop_Unique_ZhuLi_5:
@@ -782,7 +782,7 @@ EventScript_Shop_Unique_ZhuLi_6:
 
 
 	.align 2
-Shop_Unique_ZhuLi_11to14:
+Shop_Unique_ZhuLi_11to15:
 	.2byte ITEM_SITRUS_BERRY
 	.2byte ITEM_ORAN_BERRY
 	.2byte ITEM_CHERI_BERRY
@@ -817,7 +817,15 @@ Shop_Unique_ZhuLi_11to14:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_Unique_ZhuLi_15to20:
+Shop_Unique_ZhuLi_16to20:
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
 	.2byte ITEM_HEAL_BALL
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_DIVE_BALL
@@ -833,14 +841,33 @@ Shop_Unique_ZhuLi_15to20:
 	.2byte ITEM_SHINY_STONE
 	.2byte ITEM_DUSK_STONE
 	.2byte ITEM_DAWN_STONE
-	.2byte ITEM_OVAL_STONE
-	.2byte ITEM_WHIPPED_DREAM
-	.2byte ITEM_TART_APPLE
 	.2byte ITEM_SWEET_APPLE
-	.2byte ITEM_RED_NECTAR
-	.2byte ITEM_YELLOW_NECTAR
-	.2byte ITEM_PINK_NECTAR
-	.2byte ITEM_PURPLE_NECTAR
+	.2byte ITEM_TART_APPLE
+	.2byte ITEM_STRAWBERRY_SWEET
+	.2byte ITEM_LOVE_SWEET
+	.2byte ITEM_BERRY_SWEET
+	.2byte ITEM_CLOVER_SWEET
+	.2byte ITEM_FLOWER_SWEET
+	.2byte ITEM_STAR_SWEET
+	.2byte ITEM_RIBBON_SWEET
+	.2byte ITEM_NORMAL_GEM
+	.2byte ITEM_FIRE_GEM
+	.2byte ITEM_WATER_GEM
+	.2byte ITEM_ELECTRIC_GEM
+	.2byte ITEM_GRASS_GEM
+	.2byte ITEM_ICE_GEM
+	.2byte ITEM_FIGHTING_GEM
+	.2byte ITEM_POISON_GEM
+	.2byte ITEM_GROUND_GEM
+	.2byte ITEM_FLYING_GEM
+	.2byte ITEM_PSYCHIC_GEM
+	.2byte ITEM_BUG_GEM
+	.2byte ITEM_ROCK_GEM
+	.2byte ITEM_GHOST_GEM
+	.2byte ITEM_DRAGON_GEM
+	.2byte ITEM_DARK_GEM
+	.2byte ITEM_STEEL_GEM
+	.2byte ITEM_FAIRY_GEM
 	.2byte ITEM_NONE
 
 	.align 2
@@ -3740,21 +3767,56 @@ Zone_EventScript_RetirePrompt_14:
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_15:
+	cleartrainerflag TRAINER_JEANETTE
+	cleartrainerflag TRAINER_EMMA_AND_LEO
+	cleartrainerflag TRAINER_REGINA
+	cleartrainerflag TRAINER_JOEL
+	clearflag FLAG_BEAT_LEVIATHAN_10
+	setvar VAR_ZONE_11_STATE, 0
 	warpteleport MAP_ZONE10SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_16:
+	cleartrainerflag TRAINER_ESSENCE
+	cleartrainerflag TRAINER_DOLORES
+	cleartrainerflag TRAINER_TREVOR
+	cleartrainerflag TRAINER_RANDOLPH
+	cleartrainerflag TRAINER_FEDERICO
+	cleartrainerflag TRAINER_GENIE
+	cleartrainerflag TRAINER_HILDA
+	cleartrainerflag TRAINER_KINLEY
+	clearflag FLAG_HIDE_ZONE12A_CAMPER_PICNICKER
+	setvar VAR_ZONE_12_STATE, 0
 	warpteleport MAP_ZONE11SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_17:
+	cleartrainerflag TRAINER_VIOLET
+	cleartrainerflag TRAINER_WANDA
+	cleartrainerflag TRAINER_AMBER_AND_KIM
+	cleartrainerflag TRAINER_JAN_AND_ERIN
+	cleartrainerflag TRAINER_STEVE
+	cleartrainerflag TRAINER_GOULD
+	cleartrainerflag TRAINER_MENDEL
+	cleartrainerflag TRAINER_DARWIN
+	cleartrainerflag TRAINER_BART
+	cleartrainerflag TRAINER_NIGEL
+	cleartrainerflag TRAINER_LOLA
+	cleartrainerflag TRAINER_CHARLIE
+	cleartrainerflag TRAINER_TODD
+	cleartrainerflag TRAINER_RUSSELL
+	cleartrainerflag TRAINER_OTIS
+	clearflag FLAG_BEAT_LEVIATHAN_11
+	clearflag FLAG_BEAT_LEVIATHAN_12
 	warpteleport MAP_ZONE12SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_18:
+	clearflag FLAG_BEAT_LEVIATHAN_13
+	setvar VAR_ZONE_15_STATE, 0
 	warpteleport MAP_ZONE14SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4

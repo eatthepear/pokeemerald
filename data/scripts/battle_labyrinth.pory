@@ -69,12 +69,12 @@ script EventScript_Shop_General {
 			}
 		case 13:
 		case 15:
-		case 16:
 			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-				pokemart(Shop_General_13to16_Brutal)
+				pokemart(Shop_General_13to15_Brutal)
 			} else {
-				pokemart(Shop_General_13to16)
+				pokemart(Shop_General_13to15)
 			}
+		case 16:
 		case 17:
 		case 18:
 		case 20:
@@ -84,9 +84,9 @@ script EventScript_Shop_General {
 		case 24:
 		case 25:
 			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-				pokemart(Shop_General_17to25_Brutal)
+				pokemart(Shop_General_16to25_Brutal)
 			} else {
-				pokemart(Shop_General_17to25)
+				pokemart(Shop_General_16to25)
 			}
 		case 26:
 			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
@@ -155,7 +155,7 @@ mart Shop_General_9to12_Brutal {
 	ITEM_SUPER_REPEL
 }
 
-mart Shop_General_13to16 {
+mart Shop_General_13to15 {
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
 	ITEM_ULTRA_BALL
@@ -180,7 +180,7 @@ mart Shop_General_13to16 {
 	ITEM_ETHER
 }
 
-mart Shop_General_13to16_Brutal {
+mart Shop_General_13to15_Brutal {
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
 	ITEM_ULTRA_BALL
@@ -197,13 +197,14 @@ mart Shop_General_13to16_Brutal {
 	ITEM_ETHER
 }	
 
-mart Shop_General_17to25 {
+mart Shop_General_16to25 {
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
 	ITEM_ULTRA_BALL
 	ITEM_POTION
 	ITEM_SUPER_POTION
 	ITEM_HYPER_POTION
+	ITEM_REVIVE
 	ITEM_ANTIDOTE
 	ITEM_PARALYZE_HEAL
 	ITEM_AWAKENING
@@ -223,13 +224,14 @@ mart Shop_General_17to25 {
 	ITEM_ETHER
 }
 
-mart Shop_General_17to25_Brutal {
+mart Shop_General_16to25_Brutal {
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
 	ITEM_ULTRA_BALL
 	ITEM_POTION
 	ITEM_SUPER_POTION
 	ITEM_HYPER_POTION
+	ITEM_REVIVE
 	ITEM_ANTIDOTE
 	ITEM_PARALYZE_HEAL
 	ITEM_AWAKENING
@@ -334,13 +336,13 @@ script EventScript_Shop_Unique_Varrick {
 		case 11:
 		case 12:
 		case 13:
-			pokemart(Shop_Unique_Varrick_11to14)
 		case 15:
+			pokemart(Shop_Unique_Varrick_11to15)
 		case 16:
 		case 17:
 		case 18:
 		case 20:
-			pokemart(Shop_Unique_Varrick_15to20)
+			pokemart(Shop_Unique_Varrick_16to20)
 		case 21:
 		case 22:
 		case 23:
@@ -426,7 +428,7 @@ mart Shop_Unique_Varrick_9to10 {
 	ITEM_FAIRY_GEM
 }
 
-mart Shop_Unique_Varrick_11to14 {
+mart Shop_Unique_Varrick_11to15 {
 	ITEM_MUSCLE_BAND
 	ITEM_WISE_GLASSES
 	ITEM_SILK_SCARF
@@ -448,36 +450,34 @@ mart Shop_Unique_Varrick_11to14 {
 	ITEM_METAL_COAT
 }
 
-mart Shop_Unique_Varrick_15to20 {
-	ITEM_ORAN_BERRY
-	ITEM_CHERI_BERRY
-	ITEM_CHESTO_BERRY
-	ITEM_PECHA_BERRY
-	ITEM_RAWST_BERRY
-	ITEM_ASPEAR_BERRY
-	ITEM_PERSIM_BERRY
+mart Shop_Unique_Varrick_16to20 {
 	ITEM_MUSCLE_BAND
 	ITEM_WISE_GLASSES
+	ITEM_SILK_SCARF
+	ITEM_CHARCOAL
+	ITEM_MYSTIC_WATER
+	ITEM_MAGNET
+	ITEM_MIRACLE_SEED
+	ITEM_NEVER_MELT_ICE
+	ITEM_BLACK_BELT
+	ITEM_POISON_BARB
+	ITEM_SOFT_SAND
+	ITEM_SHARP_BEAK
+	ITEM_TWISTED_SPOON
+	ITEM_SILVER_POWDER
+	ITEM_HARD_STONE
+	ITEM_SPELL_TAG
+	ITEM_DRAGON_FANG
+	ITEM_BLACK_GLASSES
+	ITEM_METAL_COAT
 	ITEM_SCOPE_LENS
 	ITEM_WIDE_LENS
 	ITEM_ZOOM_LENS
 	ITEM_METRONOME
-	ITEM_MIRACLE_SEED
-	ITEM_CHARCOAL
-	ITEM_MYSTIC_WATER
-	ITEM_SILK_SCARF
-	ITEM_SHARP_BEAK
-	ITEM_MAGNET
-	ITEM_SILVER_POWDER
-	ITEM_POISON_BARB
-	ITEM_TWISTED_SPOON
-	ITEM_SOFT_SAND
-	ITEM_HARD_STONE
-	ITEM_BLACK_GLASSES
-	ITEM_BLACK_BELT
-	ITEM_SPELL_TAG
-	ITEM_DRAGON_FANG
-	ITEM_NEVER_MELT_ICE
+	ITEM_ROCKY_HELMET
+	ITEM_HEAVY_DUTY_BOOTS
+	ITEM_SAFETY_GOGGLES
+	ITEM_UTILITY_UMBRELLA
 }
 
 mart Shop_Unique_Varrick_21to23 {
@@ -676,13 +676,13 @@ script EventScript_Shop_Unique_ZhuLi {
 		case 11:
 		case 12:
 		case 13:
-			pokemart(Shop_Unique_ZhuLi_11to14)
 		case 15:
+			pokemart(Shop_Unique_ZhuLi_11to15)
 		case 16:
 		case 17:
 		case 18:
 		case 20:
-			pokemart(Shop_Unique_ZhuLi_15to20)
+			pokemart(Shop_Unique_ZhuLi_16to20)
 		case 21:
 		case 22:
 		case 23:
@@ -696,7 +696,7 @@ script EventScript_Shop_Unique_ZhuLi {
 	release
 }
 
-mart Shop_Unique_ZhuLi_11to14 {
+mart Shop_Unique_ZhuLi_11to15 {
 	ITEM_SITRUS_BERRY
 	ITEM_ORAN_BERRY
 	ITEM_CHERI_BERRY
@@ -730,7 +730,15 @@ mart Shop_Unique_ZhuLi_11to14 {
 	ITEM_FAIRY_GEM
 }
 
-mart Shop_Unique_ZhuLi_15to20 {
+mart Shop_Unique_ZhuLi_16to20 {
+	ITEM_SITRUS_BERRY
+	ITEM_ORAN_BERRY
+	ITEM_CHERI_BERRY
+	ITEM_CHESTO_BERRY
+	ITEM_PECHA_BERRY
+	ITEM_RAWST_BERRY
+	ITEM_ASPEAR_BERRY
+	ITEM_PERSIM_BERRY
 	ITEM_HEAL_BALL
 	ITEM_NET_BALL
 	ITEM_DIVE_BALL
@@ -746,14 +754,33 @@ mart Shop_Unique_ZhuLi_15to20 {
 	ITEM_SHINY_STONE
 	ITEM_DUSK_STONE
 	ITEM_DAWN_STONE
-	ITEM_OVAL_STONE
-	ITEM_WHIPPED_DREAM
-	ITEM_TART_APPLE
 	ITEM_SWEET_APPLE
-	ITEM_RED_NECTAR
-	ITEM_YELLOW_NECTAR
-	ITEM_PINK_NECTAR
-	ITEM_PURPLE_NECTAR
+	ITEM_TART_APPLE
+	ITEM_STRAWBERRY_SWEET
+	ITEM_LOVE_SWEET
+	ITEM_BERRY_SWEET
+	ITEM_CLOVER_SWEET
+	ITEM_FLOWER_SWEET
+	ITEM_STAR_SWEET
+	ITEM_RIBBON_SWEET
+	ITEM_NORMAL_GEM
+	ITEM_FIRE_GEM
+	ITEM_WATER_GEM
+	ITEM_ELECTRIC_GEM
+	ITEM_GRASS_GEM
+	ITEM_ICE_GEM
+	ITEM_FIGHTING_GEM
+	ITEM_POISON_GEM
+	ITEM_GROUND_GEM
+	ITEM_FLYING_GEM
+	ITEM_PSYCHIC_GEM
+	ITEM_BUG_GEM
+	ITEM_ROCK_GEM
+	ITEM_GHOST_GEM
+	ITEM_DRAGON_GEM
+	ITEM_DARK_GEM
+	ITEM_STEEL_GEM
+	ITEM_FAIRY_GEM
 }
 
 mart Shop_Unique_ZhuLi_21to23 {
@@ -2585,15 +2612,50 @@ script Zone_EventScript_RetirePrompt {
 			warpteleport(MAP_ZONE9SANCTUARY, 255, 22, 7)
 			waitstate
 		case 11:
+			cleartrainerflag(TRAINER_JEANETTE)
+			cleartrainerflag(TRAINER_EMMA_AND_LEO)
+			cleartrainerflag(TRAINER_REGINA)
+			cleartrainerflag(TRAINER_JOEL)
+			clearflag(FLAG_BEAT_LEVIATHAN_10)
+			setvar(VAR_ZONE_11_STATE, 0)
 			warpteleport(MAP_ZONE10SANCTUARY, 255, 22, 7)
 			waitstate
 		case 12:
+			cleartrainerflag(TRAINER_ESSENCE)
+			cleartrainerflag(TRAINER_DOLORES)
+			cleartrainerflag(TRAINER_TREVOR)
+			cleartrainerflag(TRAINER_RANDOLPH)
+			cleartrainerflag(TRAINER_FEDERICO)
+			cleartrainerflag(TRAINER_GENIE)
+			cleartrainerflag(TRAINER_HILDA)
+			cleartrainerflag(TRAINER_KINLEY)
+			clearflag(FLAG_HIDE_ZONE12A_CAMPER_PICNICKER)
+			setvar(VAR_ZONE_12_STATE, 0)
 			warpteleport(MAP_ZONE11SANCTUARY, 255, 22, 7)
 			waitstate
 		case 13:
+			cleartrainerflag(TRAINER_VIOLET)
+			cleartrainerflag(TRAINER_WANDA)
+			cleartrainerflag(TRAINER_AMBER_AND_KIM)
+			cleartrainerflag(TRAINER_JAN_AND_ERIN)
+			cleartrainerflag(TRAINER_STEVE)
+			cleartrainerflag(TRAINER_GOULD)
+			cleartrainerflag(TRAINER_MENDEL)
+			cleartrainerflag(TRAINER_DARWIN)
+			cleartrainerflag(TRAINER_BART)
+			cleartrainerflag(TRAINER_NIGEL)
+			cleartrainerflag(TRAINER_LOLA)
+			cleartrainerflag(TRAINER_CHARLIE)
+			cleartrainerflag(TRAINER_TODD)
+			cleartrainerflag(TRAINER_RUSSELL)
+			cleartrainerflag(TRAINER_OTIS)
+			clearflag(FLAG_BEAT_LEVIATHAN_11)
+			clearflag(FLAG_BEAT_LEVIATHAN_12)
 			warpteleport(MAP_ZONE12SANCTUARY, 255, 22, 7)
 			waitstate
 		case 15:
+			clearflag(FLAG_BEAT_LEVIATHAN_13)
+			setvar(VAR_ZONE_15_STATE, 0)
 			warpteleport(MAP_ZONE14SANCTUARY, 255, 22, 7)
 			waitstate
 		case 16:

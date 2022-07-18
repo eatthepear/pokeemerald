@@ -1247,6 +1247,7 @@ bool8 CheckLeadMonTough(void)
 {
     // if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_TOUGH) < 200)
     //     return FALSE;
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_PORYGON), FLAG_SET_SEEN);
 
     return FALSE;
 }

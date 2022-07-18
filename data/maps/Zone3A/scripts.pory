@@ -116,8 +116,6 @@ script Zone3A_EventScript_LeviathanBattle {
 	giveitem(ITEM_GOOD_ROD, 1)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Oh, oh! I want to give you this!\pIt works well with Rollout!"))
-	giveitem(ITEM_METRONOME, 1)
 	applymovement(4, Zone3A_Movement_Remi_WalkBackToPhillipa)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement for one day.\pIt's dinner time."))

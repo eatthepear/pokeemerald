@@ -161,6 +161,72 @@ Zone13C_EventScript_Scientist4_2:
 	goto Zone13C_EventScript_Scientist4_1
 
 
+Zone13C_EventScript_Cook::
+	lock
+	faceplayer
+	goto_if_set FLAG_ZONE13C_RECEIVED_APPLES, Zone13C_EventScript_Cook_3
+Zone13C_EventScript_Cook_1:
+	msgbox Zone13C_EventScript_Cook_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone13C_EventScript_Cook_7
+Zone13C_EventScript_Cook_6:
+	release
+	end
+
+Zone13C_EventScript_Cook_2:
+	msgbox Zone13C_EventScript_Cook_Text_0
+	release
+	end
+
+Zone13C_EventScript_Cook_3:
+	goto_if_set FLAG_ZONE13C_RECEIVED_SWEETS, Zone13C_EventScript_Cook_2
+	goto Zone13C_EventScript_Cook_1
+
+Zone13C_EventScript_Cook_7:
+	special ChoosePartyMon
+	waitstate
+	compare VAR_RESULT, 255
+	goto_if_ne Zone13C_EventScript_Cook_9
+	goto Zone13C_EventScript_Cook_6
+
+Zone13C_EventScript_Cook_9:
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	switch VAR_RESULT
+	case SPECIES_APPLIN, Zone13C_EventScript_Cook_12
+	case SPECIES_MILCERY, Zone13C_EventScript_Cook_13
+	msgbox Zone13C_EventScript_Cook_Text_6
+	goto Zone13C_EventScript_Cook_6
+
+Zone13C_EventScript_Cook_12:
+	goto_if_unset FLAG_ZONE13C_RECEIVED_APPLES, Zone13C_EventScript_Cook_15
+	msgbox Zone13C_EventScript_Cook_Text_3
+	goto Zone13C_EventScript_Cook_6
+
+Zone13C_EventScript_Cook_13:
+	goto_if_unset FLAG_ZONE13C_RECEIVED_SWEETS, Zone13C_EventScript_Cook_18
+	msgbox Zone13C_EventScript_Cook_Text_5
+	goto Zone13C_EventScript_Cook_6
+
+Zone13C_EventScript_Cook_15:
+	msgbox Zone13C_EventScript_Cook_Text_2
+	giveitem ITEM_SWEET_APPLE
+	giveitem ITEM_TART_APPLE
+	setflag FLAG_ZONE13C_RECEIVED_APPLES
+	goto Zone13C_EventScript_Cook_6
+
+Zone13C_EventScript_Cook_18:
+	msgbox Zone13C_EventScript_Cook_Text_4
+	giveitem ITEM_STRAWBERRY_SWEET
+	giveitem ITEM_LOVE_SWEET
+	giveitem ITEM_BERRY_SWEET
+	giveitem ITEM_CLOVER_SWEET
+	giveitem ITEM_FLOWER_SWEET
+	giveitem ITEM_STAR_SWEET
+	giveitem ITEM_RIBBON_SWEET
+	setflag FLAG_ZONE13C_RECEIVED_SWEETS
+	goto Zone13C_EventScript_Cook_6
+
+
 Zone13C_EventScript_Darwin::
 	trainerbattle_single TRAINER_DARWIN, Zone13C_Text_DarwinIntro, Zone13C_Text_DarwinDefeat
 	msgbox Zone13C_Text_DarwinPostBattle, MSGBOX_AUTOCLOSE
@@ -264,6 +330,36 @@ Zone13C_EventScript_Scientist4_Text_1:
 	.string "The Zoom Lens boosts accuracy by 20%,\n"
 	.string "but only against opponents that have\l"
 	.string "already moved that turn.$"
+
+Zone13C_EventScript_Cook_Text_0:
+	.string "I already gave you all the evolution\n"
+	.string "items I have!$"
+
+Zone13C_EventScript_Cook_Text_1:
+	.string "I just love Pokémon that evolve via\n"
+	.string "food items!\p"
+	.string "Show me an Applin or a Milcery, and I'll\n"
+	.string "give you the corresponding evolution\l"
+	.string "items!$"
+
+Zone13C_EventScript_Cook_Text_2:
+	.string "That's an Applin all right! Well, here you\n"
+	.string "go!$"
+
+Zone13C_EventScript_Cook_Text_3:
+	.string "I already gave you all the Applin\n"
+	.string "evolution items I have!$"
+
+Zone13C_EventScript_Cook_Text_4:
+	.string "That's a Milcery all right! Well, here you\n"
+	.string "go!$"
+
+Zone13C_EventScript_Cook_Text_5:
+	.string "I already gave you all the Milcery\n"
+	.string "evolution items I have!$"
+
+Zone13C_EventScript_Cook_Text_6:
+	.string "That's not an Applin nor a Milcery!$"
 
 Zone13C_Text_Leviathan11WantBattle::
 	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: Ah, it's so nice to finally have a\n"

@@ -70,14 +70,14 @@
 #define FLAG_ZONE13B_RECEIVED_FLASHLIGHT                  0x39
 #define FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED             0x3A
 #define FLAG_ZONE13C_RECEIVED_ZOOM_LENS                   0x3B
-#define FLAG_HIDE_ZONE15B_COLRESS                         0x3C 
-#define FLAG_HIDE_ZONE15B_MIRAGE                          0x3D 
-#define FLAG_HIDE_ZONE17A_HEX_MANIAC                      0x3E 
-#define FLAG_HIDE_ZONE18B_MAN                             0x3F 
-#define FLAG_HIDE_ZONE18B_ODYSSEUS                        0x40 
+#define FLAG_ZONE13C_RECEIVED_APPLES                      0x3C
+#define FLAG_ZONE13C_RECEIVED_SWEETS                      0x3D
+#define FLAG_HIDE_ZONE17A_HEX_MANIAC                      0x3E
+#define FLAG_HIDE_ZONE18B_MAN                             0x3F
+#define FLAG_HIDE_ZONE18B_ODYSSEUS                        0x40
 #define FLAG_HIDE_ZONE19D_PIRATES                         0x41
-#define FLAG_RECEIVED_ZONE21A_TM29                        0x42 
-#define FLAG_RECEIVED_ZONE21C_HAPPINY                     0x43 
+#define FLAG_RECEIVED_ZONE21A_TM29                        0x42
+#define FLAG_RECEIVED_ZONE21C_HAPPINY                     0x43
 #define FLAG_HIDE_CAM_AND_PAM                             0x44
 #define FLAG_RECEIVED_ZONE23A_TM31                        0x45
 #define FLAG_RECEIVED_ZONE24A_TM34                        0x46
@@ -1092,7 +1092,7 @@
 #define FLAG_ITEM_ZONE12A_THUNDER_STONE                             0x417
 #define FLAG_ITEM_ZONE12A_FIRE_STONE                                0x418
 #define FLAG_ITEM_ZONE12A_MACHO_BRACE                               0x419
-#define FLAG_ITEM_ZONE12A_SUPER_POTION                              0x41A
+#define FLAG_ITEM_ZONE12A_METRONOME                                 0x41A
 #define FLAG_ITEM_ZONE13A_LEAF_STONE                                0x41B
 #define FLAG_ITEM_ZONE13A_SHINY_STONE                               0x41C
 #define FLAG_ITEM_ZONE14A_FULL_HEAL                                 0x41D
@@ -1521,7 +1521,7 @@
 #define FLAG_IN_ZONE_NOT_SANCTUARY                  (SYSTEM_FLAGS + 0xB3)
 #define FLAG_FULL_PREVIEW_ON                        (SYSTEM_FLAGS + 0xB4)
 #define FLAG_EXP_ALL_ON                             (SYSTEM_FLAGS + 0xB5)
-#define FLAG_IS_RARE_CANDY                          (SYSTEM_FLAGS + 0xB6)
+#define FLAG_DOING_TRAINING                         (SYSTEM_FLAGS + 0xB6)
 #define FLAG_SMART_WILD_AI_ON                       (SYSTEM_FLAGS + 0xB7)
 #define FLAG_DISABLE_CATCHING                       (SYSTEM_FLAGS + 0xB8)
 #define FLAG_DISABLE_BAG                            (SYSTEM_FLAGS + 0xB9)
