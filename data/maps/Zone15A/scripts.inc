@@ -1,43 +1,206 @@
 Zone15A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
 
-Zone15A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 15
-	goto_if_gt EventScript_WarpZone0
-	setflag FLAG_HIDE_ZONE15B_COLRESS
-	warp MAP_ZONE15B, 255, 7, 72
-	releaseall
-	end
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE15A_DUSK_BALL, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE15A_TIMER_BALL, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE15A_ICE_STONE, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_10
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	goto_if_set FLAG_ITEM_ZONE15A_QUICK_BALL, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_14
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
+	goto_if_set FLAG_ITEM_ZONE15A_REVIVE, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_18
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_17:
+	goto_if_set FLAG_ITEM_ZONE15A_DAWN_STONE, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_22
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_21:
+	goto_if_set FLAG_ITEM_ZONE15A_TM26, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_26
+	setvar VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_25:
+	goto_if_set FLAG_ITEM_ZONE15A_GLALITITE, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_29
+	setvar VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_ITEM_CHEST
+	return
 
-Zone15A_EventScript_TM17::
-	finditem ITEM_TM17
-	end
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_1
 
-Zone15A_EventScript_TM18::
-	finditem ITEM_TM18
-	end
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_10:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_14:
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_13
+
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_18:
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_17
+
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_22:
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_21
+
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_26:
+	setvar VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_25
+
+Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_29:
+	setvar VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
 
 Zone15A_EventScript_DuskBall::
-	finditem ITEM_DUSK_BALL
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_DUSK_BALL, Zone15A_EventScript_DuskBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_DUSK_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_DUSK_BALL, 1
+	release
 	end
 
-Zone15A_EventScript_NeverMeltIce::
-	finditem ITEM_NEVER_MELT_ICE
+Zone15A_EventScript_DuskBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
 	end
 
-Zone15A_EventScript_Glalitite::
-	finditem ITEM_GLALITITE
+
+Zone15A_EventScript_TimerBall::
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_TIMER_BALL, Zone15A_EventScript_TimerBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_TIMER_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_TIMER_BALL, 1
+	release
 	end
+
+Zone15A_EventScript_TimerBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
 
 Zone15A_EventScript_IceStone::
-	finditem ITEM_ICE_STONE
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_ICE_STONE, Zone15A_EventScript_IceStone_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_ICE_STONE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_ICE_STONE, 1
+	release
 	end
 
-Zone15A_EventScript_ZoomLens::
-	finditem ITEM_ZOOM_LENS
+Zone15A_EventScript_IceStone_2:
+	msgbox gText_ItemChestIsEmpty
+	release
 	end
 
-Zone15A_EventScript_HyperPotion::
-	finditem ITEM_HYPER_POTION
+
+Zone15A_EventScript_QuickBall::
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_QUICK_BALL, Zone15A_EventScript_QuickBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_QUICK_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_QUICK_BALL, 1
+	release
 	end
+
+Zone15A_EventScript_QuickBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone15A_EventScript_Revive::
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_REVIVE, Zone15A_EventScript_Revive_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_REVIVE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_REVIVE, 1
+	release
+	end
+
+Zone15A_EventScript_Revive_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone15A_EventScript_DawnStone::
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_DAWN_STONE, Zone15A_EventScript_DawnStone_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_DAWN_STONE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_DAWN_STONE, 1
+	release
+	end
+
+Zone15A_EventScript_DawnStone_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone15A_EventScript_TM26::
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_TM26, Zone15A_EventScript_TM26_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_TM26
+	addobject VAR_LAST_TALKED
+	finditem ITEM_TM26, 1
+	release
+	end
+
+Zone15A_EventScript_TM26_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone15A_EventScript_Glalitite::
+	lock
+	goto_if_set FLAG_ITEM_ZONE15A_GLALITITE, Zone15A_EventScript_Glalitite_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE15A_GLALITITE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_GLALITITE, 1
+	release
+	end
+
+Zone15A_EventScript_Glalitite_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+

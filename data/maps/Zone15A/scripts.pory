@@ -1,0 +1,180 @@
+mapscripts Zone15A_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE15A_DUSK_BALL)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_TIMER_BALL)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_ICE_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_QUICK_BALL)) {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_REVIVE)) {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_DAWN_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_TM26)) {
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE15A_GLALITITE)) {
+			setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
+}
+
+script Zone15A_EventScript_DuskBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_DUSK_BALL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_DUSK_BALL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_DUSK_BALL, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_TimerBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_TIMER_BALL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_TIMER_BALL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TIMER_BALL, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_IceStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_ICE_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_ICE_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_ICE_STONE, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_QuickBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_QUICK_BALL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_QUICK_BALL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_QUICK_BALL, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_Revive {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_REVIVE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_REVIVE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_REVIVE, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_DawnStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_DAWN_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_DAWN_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_DAWN_STONE, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_TM26 {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_TM26)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_TM26)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_TM26, 1)
+	release
+	end
+}
+
+script Zone15A_EventScript_Glalitite {
+	lock
+	if (flag(FLAG_ITEM_ZONE15A_GLALITITE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE15A_GLALITITE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_GLALITITE, 1)
+	release
+	end
+}

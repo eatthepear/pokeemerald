@@ -7817,6 +7817,7 @@ static const u8 sMawileTMHMLearnset[] =
     // TMHM(TM35_FLAMETHROWER),
     TMHM(TM02_HIDDEN_POWER),
     TMHM(TM28_FACADE),
+    TMHM(TM22_COVET),
     // TMHM(TM40_ICE_BEAM),
     TMHM(TM33_RAIN_DANCE),
     // TMHM(TM13_REST),

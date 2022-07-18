@@ -1,109 +1,95 @@
 Zone15B_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone15B_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone15B_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-Zone15B_OnFrame:
-	map_script_2 VAR_ZONE_15_STATE, 0, Zone15B_EventScript_Intro
+Zone15B_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+	map_script_2 VAR_ZONE_15_STATE, 0, Zone15B_EventScript_LeviathanBattle
 	.2byte 0
 
-Zone15B_EventScript_Intro:
+
+Zone15B_EventScript_Exit::
+	lockall
+	compare VAR_ZONE, 15
+	goto_if_gt Zone15B_EventScript_Exit_2
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	warp MAP_ZONE15SANCTUARY, 255, 22, 7
+Zone15B_EventScript_Exit_1:
+	releaseall
+	end
+
+Zone15B_EventScript_Exit_2:
+	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IS_REVISITING_ZONE
+	setvar VAR_REVISITING_ZONE, 0
+	warpteleport MAP_ZONE0D, 255, 31, 25
+	waitstate
+	goto Zone15B_EventScript_Exit_1
+
+
+Zone15B_EventScript_LeviathanBattle::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
-	msgbox Zone15B_Text_Mirage_Regice, MSGBOX_AUTOCLOSE
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_0
 	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	fadeoutbgm 1
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone15B_Text_Mirage_AnotherAI, MSGBOX_AUTOCLOSE
-	delay 48
-	applymovement 1, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitmovement 0
-	waitse
+	fadeoutbgm 1
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_1
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone15B_EventScript_LeviathanBattle_2
+	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat
+Zone15B_EventScript_LeviathanBattle_1:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_2
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone15B_Text_Mirage_Command, MSGBOX_AUTOCLOSE
-	applymovement 1, Common_Movement_FaceDown
-	waitmovement 0
-	msgbox Zone15B_Text_Mirage_LuckyDay, MSGBOX_AUTOCLOSE
-	delay 48
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_3
 	fadescreenswapbuffers FADE_TO_BLACK
-	playmoncry SPECIES_REGICE, 2
+	playmoncry SPECIES_PORYGON, 2
 	delay 40
 	waitmoncry
 	removeobject 1
 	removeobject 2
-	setflag FLAG_HIDE_ZONE15B_MIRAGE
+	setflag FLAG_BEAT_LEVIATHAN_13
 	fadescreenswapbuffers FADE_FROM_BLACK
-	fadeinbgm 1
-	delay 48
-	clearflag FLAG_HIDE_ZONE15B_COLRESS
-	addobject 3
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	applymovement 3, Common_Movement_WalkUp
-	waitmovement 0
-	delay 48
-	applymovement 3, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement 3, Common_Movement_FaceLeft
-	waitmovement 0
-	msgbox Zone15B_Text_Colress_TooLate, MSGBOX_AUTOCLOSE
-	delay 48
-	msgbox Zone15B_Text_Colress_Sanctuary, MSGBOX_AUTOCLOSE
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_4
+	giveitem ITEM_RED_SHARD, 20
 	setvar VAR_ZONE_15_STATE, 1
 	releaseall
 	end
 
-Zone15B_EventScript_Colress::
-	lockall
-	faceplayer
-	msgbox Zone15B_Text_Colress_OnTo, MSGBOX_AUTOCLOSE
-	warpteleport MAP_ZONE15SANCTUARY, 255, 22, 7
-	releaseall
-	end
+Zone15B_EventScript_LeviathanBattle_2:
+	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat
+	goto Zone15B_EventScript_LeviathanBattle_1
 
-Zone15B_Text_Mirage_Regice:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Regice. Finally.$"
 
-Zone15B_Text_Mirage_AnotherAI:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Another AI program, eh?\n"
-	.string "I'll take you down!$"
+Zone15B_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It appears there's nothing in this\n"
+	.string "Zone, {COLOR RED}Porygon{COLOR DARK_GRAY}.\p"
+	.string "We should head back and report.$"
 
-Zone15B_Text_Mirage_Command:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: ... Yes, sir.\n"
-	.string "I'll prepare for extraction.$"
+Zone15B_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Another AI!\p"
+	.string "Even in a place as cold and empty as\n"
+	.string "this?\p"
+	.string "No matter, my blood is boiling for a\n"
+	.string "fight!$"
 
-Zone15B_Text_Mirage_LuckyDay:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It's your lucky day, AI.\p"
-	.string "Your master rushes to save you.\n"
-	.string "And so, I'll be taking my leave.$"
+Zone15B_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It seems I was mistaken.\nYou're no ordinary AI.$"
 
-Zone15B_Text_Colress_TooLate:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: It appears I am just a\n"
-	.string "moment too late.\p"
-	.string "That was a {COLOR RED}Mirage{COLOR DARK_GRAY}, an embodiment of\n"
-	.string "malware and viruses infiltrating\l"
-	.string "this simulation.\p"
-	.string "I have been tracking them for quite\n"
-	.string "some time. Rest assured, they\l"
-	.string "will be taken care of.$"
+Zone15B_EventScript_LeviathanBattle_Text_3:
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the assignment.\nRequesting immediate evac.$"
 
-Zone15B_Text_Colress_Sanctuary:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are ready to go\n"
-	.string "to the Sanctuary, speak to me.$"
+Zone15B_EventScript_LeviathanBattle_Text_4:
+	.string "It looks like a bag was left behind!\pInside are… Shards?$"
 
-Zone15B_Text_Colress_OnTo:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Now, on to the Sanctuary.$"
+Zone15B_Text_Leviathan13Defeat::
+	.string "…$"
