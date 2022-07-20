@@ -161,10 +161,18 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_SWORDS_DANCE)),
 
     [SPECIES_SPEAROW]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
-                                            | TUTOR(MOVE_U_TURN)),
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_DEFOG)
+                                            | TUTOR(MOVE_ROOST)
+                                            | TUTOR(MOVE_TAILWIND)
+                                            | TUTOR(MOVE_HEAT_WAVE)),
 
     [SPECIES_FEAROW]        = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
-                                            | TUTOR(MOVE_U_TURN)),
+                                            | TUTOR(MOVE_U_TURN)
+                                            | TUTOR(MOVE_DEFOG)
+                                            | TUTOR(MOVE_ROOST)
+                                            | TUTOR(MOVE_TAILWIND)
+                                            | TUTOR(MOVE_HEAT_WAVE)),
 
     [SPECIES_EKANS]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
@@ -276,7 +284,9 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_THUNDER_PUNCH)
-                                            | TUTOR(MOVE_PAIN_SPLIT)),
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_GRASS_KNOT)),
 
     [SPECIES_WIGGLYTUFF]    = TUTOR_LEARNSET(TUTOR(MOVE_ICY_WIND)
                                             | TUTOR(MOVE_KNOCK_OFF)
@@ -287,7 +297,9 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_FIRE_PUNCH)
                                             | TUTOR(MOVE_ICE_PUNCH)
                                             | TUTOR(MOVE_THUNDER_PUNCH)
-                                            | TUTOR(MOVE_PAIN_SPLIT)),
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_GRASS_KNOT)),
 
     [SPECIES_ZUBAT]         = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_TAUNT)
@@ -1153,7 +1165,9 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_HEAL_BELL)
                                             | TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)
-                                            | TUTOR(MOVE_PAIN_SPLIT)),
+                                            | TUTOR(MOVE_PAIN_SPLIT)
+                                            | TUTOR(MOVE_BOUNCE)
+                                            | TUTOR(MOVE_GRASS_KNOT)),
 
     [SPECIES_TOGEPI]        = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                             | TUTOR(MOVE_SLEEP_TALK)
@@ -3663,7 +3677,8 @@ static const u32 sTutorLearnsets[] =
                                             | TUTOR(MOVE_HELPING_HAND)
                                             | TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_SYNTHESIS)
-                                            | TUTOR(MOVE_GRASS_KNOT)),
+                                            | TUTOR(MOVE_GRASS_KNOT)
+                                            | TUTOR(MOVE_SWORDS_DANCE)),
 
     [SPECIES_VENIPEDE]      = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)),
 
@@ -4653,11 +4668,13 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_SPRITZEE]      = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                             | TUTOR(MOVE_HELPING_HAND)
-                                            | TUTOR(MOVE_SLEEP_TALK)),
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_NASTY_PLOT)),
 
     [SPECIES_AROMATISSE]    = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                             | TUTOR(MOVE_HELPING_HAND)
-                                            | TUTOR(MOVE_SLEEP_TALK)),
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_NASTY_PLOT)),
 
     [SPECIES_SWIRLIX]       = TUTOR_LEARNSET(TUTOR(MOVE_HEAL_BELL)
                                             | TUTOR(MOVE_HELPING_HAND)
