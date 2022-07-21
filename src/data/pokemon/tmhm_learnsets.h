@@ -2236,6 +2236,7 @@ static const u8 sSeelTMHMLearnset[] =
     // TMHM(TM13_REST),
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
+    TMHM(TM26_FREEZE_DRY),
     0xFF,
 };
 
@@ -2256,6 +2257,7 @@ static const u8 sDewgongTMHMLearnset[] =
     // TMHM(TM13_REST),
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
+    TMHM(TM26_FREEZE_DRY),
     0xFF,
 };
 
@@ -10468,6 +10470,9 @@ static const u8 sCranidosTMHMLearnset[] =
     // TMHM(TM53_THUNDER),
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
+    TMHM(TM09_POWER_UP_PUNCH),
+    TMHM(TM25_BULLDOZE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -10495,6 +10500,9 @@ static const u8 sRampardosTMHMLearnset[] =
     // TMHM(TM53_THUNDER),
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
+    TMHM(TM09_POWER_UP_PUNCH),
+    TMHM(TM25_BULLDOZE),
+    // TMHM(TM00_ROCK_POLISH),
     0xFF,
 };
 
@@ -11646,6 +11654,7 @@ static const u8 sCarnivineTMHMLearnset[] =
 static const u8 sFinneonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM08_WATER_PULSE),
     TMHM(TM39_RETURN),
     // TMHM(TM08_SUBSTITUTE),
     // TMHM(TM25_WATERFALL),
@@ -11658,12 +11667,16 @@ static const u8 sFinneonTMHMLearnset[] =
     // TMHM(TM13_REST),
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
     0xFF,
 };
 
 static const u8 sLumineonTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM08_WATER_PULSE),
+    TMHM(TM03_AERIAL_ACE),
     TMHM(TM39_RETURN),
     // TMHM(TM08_SUBSTITUTE),
     // TMHM(TM25_WATERFALL),
@@ -11676,6 +11689,9 @@ static const u8 sLumineonTMHMLearnset[] =
     // TMHM(TM13_REST),
     // TMHM(HM03_SURF),
     // TMHM(TM50_TOXIC),
+    // TMHM(TM00_SCALD),
+    // TMHM(TM00_AGILITY),
+    // TMHM(TM00_DAZZLING_GLEAM),
     0xFF,
 };
 
@@ -17208,6 +17224,7 @@ static const u8 sMeowsticTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    TMHM(TM10_CHARGE_BEAM),
     0xFF,
 };
 
@@ -23704,6 +23721,7 @@ static const u8 sMeowsticFemaleTMHMLearnset[] =
     // TMHM(TM52_THUNDERBOLT),
     // TMHM(TM50_TOXIC),
     // TMHM(TM00_DARK_PULSE),
+    TMHM(TM10_CHARGE_BEAM),
     0xFF,
 };
 
