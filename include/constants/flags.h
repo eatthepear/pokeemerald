@@ -49,55 +49,55 @@
 #define FLAG_RECEIVED_ZONE0C_EEVEE                        0x24
 #define FLAG_ZONE0B_ABILITY_CHANGE_USED                   0x25
 #define FLAG_MAX_INTRO                                    0x26
-#define FLAG_HIDE_ZONE3A_REMI                             0x27
-#define FLAG_HIDE_ZONE3A_PHILLIPA                         0x28
-#define FLAG_RECEIVED_ZONE5A_GEM                          0x29
-#define FLAG_LELOUCH_SHARDS_INTRO                         0x2A
-#define FLAG_ZONE7B_HEAL_USED                             0x2B
-#define FLAG_HIDE_ZONE8D_WALLY                            0x2C
-#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE                    0x2D
-#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE                 0x2E
-#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE              0x2F
-#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE                0x30
-#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE                  0x31
-#define FLAG_RECEIVED_ZONE9D_MYSTIC_WATER                 0x32
-#define FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES              0x33
-#define FLAG_RECEIVED_ZONE10B_TM21_TELEPORT               0x34
-#define FLAG_HIDE_ZONE10B_BERRYMAN                        0x35
-#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG                   0x36
-#define FLAG_HIDE_ZONE12A_CAMPER_PICNICKER                0x37
-#define FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA            0x38
-#define FLAG_ZONE13B_RECEIVED_FLASHLIGHT                  0x39
-#define FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED             0x3A
-#define FLAG_ZONE13C_RECEIVED_ZOOM_LENS                   0x3B
-#define FLAG_ZONE13C_RECEIVED_APPLES                      0x3C
-#define FLAG_ZONE13C_RECEIVED_SWEETS                      0x3D
-#define FLAG_HIDE_ZONE17A_HEX_MANIAC                      0x3E
-#define FLAG_HIDE_ZONE18B_MAN                             0x3F
-#define FLAG_HIDE_ZONE18B_ODYSSEUS                        0x40
-#define FLAG_HIDE_ZONE19D_PIRATES                         0x41
-#define FLAG_RECEIVED_ZONE21A_TM29                        0x42
-#define FLAG_RECEIVED_ZONE21C_HAPPINY                     0x43
-#define FLAG_HIDE_CAM_AND_PAM                             0x44
-#define FLAG_RECEIVED_ZONE23A_TM31                        0x45
-#define FLAG_RECEIVED_ZONE24A_TM34                        0x46
-#define FLAG_RECEIVED_ZONE24B_TM35                        0x47
-#define FLAG_HIDE_ZONE25L_COLRESS                         0x48
-#define FLAG_TIM_SUPER_POTION_INTRO                       0x49
-#define FLAG_ZONE_B1_PORYGON_1                            0x4A
-#define FLAG_ZONE_B1_PORYGON_2                            0x4B
-#define FLAG_ZONE_B1_PORYGON_3                            0x4C
-#define FLAG_ZONE_B1_PORYGON_4                            0x4D
-#define FLAG_ZONE_B1_PORYGON_5                            0x4E
-#define FLAG_RECEIVED_PORYGON                             0x4F
-#define FLAG_UNUSED_0x50                                  0x50
-#define FLAG_UNUSED_0x51                                  0x51
-#define FLAG_UNUSED_0x52                                  0x52
-#define FLAG_UNUSED_0x53                                  0x53
-#define FLAG_UNUSED_0x54                                  0x54
-#define FLAG_UNUSED_0x55                                  0x55
-#define FLAG_UNUSED_0x56                                  0x56
-#define FLAG_UNUSEDLEVI1                                  0x57
+#define FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG                   0x27
+#define FLAG_HIDE_ZONE3A_MAX                              0x28
+#define FLAG_HIDE_ZONE3A_REMI                             0x29
+#define FLAG_HIDE_ZONE3A_PHILLIPA                         0x2A
+#define FLAG_RECEIVED_ZONE5A_GEM                          0x2B
+#define FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE             0x2C
+#define FLAG_LELOUCH_SHARDS_INTRO                         0x2D
+#define FLAG_HIDE_ZONE6A_MAX                              0x2E
+#define FLAG_HIDE_ZONE7A_MAX                              0x2F
+#define FLAG_ZONE7B_HEAL_USED                             0x30
+#define FLAG_HIDE_ZONE8D_WALLY                            0x31
+#define FLAG_HIDE_ZONE9A_ARI_WINSTRATE                    0x32
+#define FLAG_HIDE_ZONE9A_BERTHA_WINSTRATE                 0x33
+#define FLAG_HIDE_ZONE9A_CASSANDRA_WINSTRATE              0x34
+#define FLAG_HIDE_ZONE9A_DOMINIC_WINSTRATE                0x35
+#define FLAG_HIDE_ZONE9A_ERICA_WINSTRATE                  0x36
+#define FLAG_RECEIVED_ZONE9D_MYSTIC_WATER                 0x37
+#define FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER         0x38
+#define FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES              0x39
+#define FLAG_HIDE_ZONE10A_MAX                             0x3A
+#define FLAG_RECEIVED_ZONE10B_TM21_TELEPORT               0x3B
+#define FLAG_HIDE_ZONE10B_BERRYMAN                        0x3C
+#define FLAG_RECEIVED_ZONE10B_LUCKY_EGG                   0x3D
+#define FLAG_HIDE_ZONE12A_CAMPER_PICNICKER                0x3E
+#define FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA            0x3F
+#define FLAG_ZONE13B_RECEIVED_FLASHLIGHT                  0x40
+#define FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED             0x41
+#define FLAG_ZONE13C_RECEIVED_ZOOM_LENS                   0x42
+#define FLAG_ZONE13C_RECEIVED_APPLES                      0x43
+#define FLAG_ZONE13C_RECEIVED_SWEETS                      0x44
+#define FLAG_NUZLOCKE_ZONE15A_BOUGHT_WATER_STARTER        0x45
+#define FLAG_HIDE_ZONE17A_HEX_MANIAC                      0x46
+#define FLAG_HIDE_ZONE18B_MAN                             0x47
+#define FLAG_HIDE_ZONE18B_ODYSSEUS                        0x48
+#define FLAG_HIDE_ZONE19D_PIRATES                         0x49
+#define FLAG_RECEIVED_ZONE21A_TM29                        0x4A
+#define FLAG_RECEIVED_ZONE21C_HAPPINY                     0x4B
+#define FLAG_HIDE_CAM_AND_PAM                             0x4C
+#define FLAG_RECEIVED_ZONE23A_TM31                        0x4D
+#define FLAG_RECEIVED_ZONE24A_TM34                        0x4E
+#define FLAG_RECEIVED_ZONE24B_TM35                        0x4F
+#define FLAG_HIDE_ZONE25L_COLRESS                         0x50
+#define FLAG_TIM_SUPER_POTION_INTRO                       0x51
+#define FLAG_ZONE_B1_PORYGON_1                            0x52
+#define FLAG_ZONE_B1_PORYGON_2                            0x53
+#define FLAG_ZONE_B1_PORYGON_3                            0x54
+#define FLAG_ZONE_B1_PORYGON_4                            0x55
+#define FLAG_ZONE_B1_PORYGON_5                            0x56
+#define FLAG_RECEIVED_PORYGON                             0x57
 #define FLAG_UNUSEDLEVI2                                  0x58
 #define FLAG_UNUSEDLEVI3                                  0x59
 #define FLAG_UNUSEDLEVI4                                  0x5A
@@ -106,27 +106,27 @@
 #define FLAG_UNUSEDLEVI7                                  0x5D
 #define FLAG_UNUSEDLEVI8                                  0x5E
 #define FLAG_UNUSEDLEVI9                                  0x5F
+#define FLAG_UNUSED_0x60                                  0x60
+#define FLAG_UNUSED_0x61                                  0x61
+#define FLAG_UNUSED_0x62                                  0x62
+#define FLAG_UNUSED_0x63                                  0x63
+#define FLAG_UNUSED_0x64                                  0x64
+#define FLAG_UNUSED_0x65                                  0x65
+#define FLAG_UNUSED_0x66                                  0x66
+#define FLAG_UNUSED_0x67                                  0x67
+#define FLAG_UNUSED_0x68                                  0x68
+#define FLAG_UNUSED_0x69                                  0x69
+#define FLAG_UNUSED_0x6A                                  0x6A
+#define FLAG_UNUSED_0x6B                                  0x6B
+#define FLAG_UNUSED_0x6C                                  0x6C
+#define FLAG_UNUSED_0x6D                                  0x6D
+#define FLAG_UNUSED_0x6E                                  0x6E
+#define FLAG_UNUSED_0x6F                                  0x6F
+#define FLAG_UNUSED_0x70                                  0x70
+#define FLAG_UNUSED_0x71                                  0x71
+#define FLAG_UNUSED_0x72                                  0x72
 
-// Scripts
-#define FLAG_RECEIVED_SECRET_POWER           0x60
-#define FLAG_MET_TEAM_AQUA_HARBOR            0x61
-#define FLAG_TV_EXPLAINED                    0x62
-#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
-#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
-#define FLAG_UNUSED_0x68                     0x68
-#define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
-#define FLAG_RECEIVED_HM04                   0x6A
-#define FLAG_RECEIVED_HM06                   0x6B
-#define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
-#define FLAG_RECEIVED_HM05                   0x6D
-#define FLAG_RECEIVED_HM02                   0x6E
-#define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x6F
-#define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x70
-#define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0x71 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
-#define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
+
 #define FLAG_RECEIVED_METEORITE              0x73
 #define FLAG_ADVENTURE_STARTED               0x74 // RECEIVED Pokédex.
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
@@ -248,7 +248,7 @@
 #define FLAG_RECEIVED_TM05                   0xE7
 #define FLAG_RECEIVED_TM19                   0xE8
 
-#define FLAG_UNUSED_0xE9                     0xE9 // Unused Flag
+#define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0xE9
 
 #define FLAG_RECEIVED_TM44                   0xEA
 #define FLAG_RECEIVED_TM45                   0xEB
@@ -333,26 +333,23 @@
 #define FLAG_RECEIVED_AURORA_TICKET          0x13A
 #define FLAG_RECEIVED_MYSTIC_TICKET          0x13B
 #define FLAG_RECEIVED_OLD_SEA_MAP            0x13C
-
-// Max Hide Flags
-#define FLAG_HIDE_MAX_1                      0x13D
-#define FLAG_HIDE_MAX_2                      0x13E
-#define FLAG_HIDE_MAX_3                      0x13F
-#define FLAG_HIDE_MAX_4                      0x140
-#define FLAG_HIDE_MAX_5                      0x141
-#define FLAG_HIDE_MAX_6                      0x142
-#define FLAG_HIDE_MAX_7                      0x143
-#define FLAG_HIDE_MAX_8                      0x144
-#define FLAG_HIDE_MAX_9                      0x145
-#define FLAG_HIDE_MAX_10                     0x146
-#define FLAG_WONDER_CARD_UNUSED_11           0x147
-#define FLAG_WONDER_CARD_UNUSED_12           0x148
-#define FLAG_WONDER_CARD_UNUSED_13           0x149
-#define FLAG_WONDER_CARD_UNUSED_14           0x14A
-#define FLAG_WONDER_CARD_UNUSED_15           0x14B
-#define FLAG_WONDER_CARD_UNUSED_16           0x14C
-#define FLAG_WONDER_CARD_UNUSED_17           0x14D
-#define NUM_WONDER_CARD_FLAGS                (1 + FLAG_WONDER_CARD_UNUSED_17 - FLAG_RECEIVED_AURORA_TICKET)
+#define FLAG_RECEIVED_SECRET_POWER           0x13D
+#define FLAG_MET_TEAM_AQUA_HARBOR            0x13E
+#define FLAG_TV_EXPLAINED                    0x13F
+#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x140
+#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x141
+#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x142
+#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x143
+#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x144
+#define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x145
+#define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x146
+#define FLAG_RECEIVED_HM04                   0x147
+#define FLAG_RECEIVED_HM06                   0x148
+#define FLAG_WHITEOUT_TO_LAVARIDGE           0x149
+#define FLAG_RECEIVED_HM05                   0x14A
+#define FLAG_RECEIVED_HM02                   0x14B
+#define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x14C
+#define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x14D
 
 #define FLAG_MIRAGE_TOWER_VISIBLE            0x14E
 #define FLAG_CHOSE_ROOT_FOSSIL               0x14F

@@ -31,7 +31,7 @@ Debug_Script_8::
 
 Debug_CheatStart::
 	lockall
-	additem ITEM_RARE_CANDY
+	additem ITEM_RARE_CANDY, 999
 	additem ITEM_FIRE_GEM
 	additem ITEM_WATER_GEM
 	additem ITEM_ELECTRIC_GEM
@@ -40,6 +40,7 @@ Debug_CheatStart::
 	additem ITEM_GRASS_GEM
 	additem ITEM_ICE_GEM
 	additem ITEM_FAIRY_GEM
+	setflag FLAG_RECEIVED_ZONE5A_GEM
 	setflag FLAG_BOOSTED_IVS
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	clearflag FLAG_BOOSTED_IVS

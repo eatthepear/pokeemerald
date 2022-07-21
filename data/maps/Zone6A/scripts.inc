@@ -33,7 +33,7 @@ Zone6A_EventScript_Exit::
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_Exit_7
 Zone6A_EventScript_Exit_5:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	setflag FLAG_HIDE_MAX_2
+	setflag FLAG_HIDE_ZONE6A_MAX
 	warp MAP_ZONE6SANCTUARY, 255, 22, 7
 Zone6A_EventScript_Exit_1:
 	releaseall

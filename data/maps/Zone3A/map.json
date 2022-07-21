@@ -168,7 +168,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_Max",
-      "flag": "FLAG_HIDE_MAX_1"
+      "flag": "FLAG_HIDE_ZONE3A_MAX"
     }
   ],
   "warp_events": [

@@ -54,7 +54,7 @@ Zone3A_EventScript_Exit_2:
 Zone3A_EventScript_Exit_5:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	clearflag FLAG_IS_REVISITING_ZONE
-	setflag FLAG_HIDE_MAX_1
+	setflag FLAG_HIDE_ZONE3A_MAX
 	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0D, 255, 23, 32
 	waitstate

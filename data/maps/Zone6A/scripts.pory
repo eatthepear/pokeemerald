@@ -37,7 +37,7 @@ script Zone6A_EventScript_Exit {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
 		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-		setflag(FLAG_HIDE_MAX_2)
+		setflag(FLAG_HIDE_ZONE6A_MAX)
         warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
     }
     releaseall

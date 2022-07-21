@@ -57,7 +57,7 @@ Zone10B_EventScript_AdaminaStuff_5:
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_AdaminaStuff_12
 Zone10B_EventScript_AdaminaStuff_10:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	setflag FLAG_HIDE_MAX_4
+	setflag FLAG_HIDE_ZONE10A_MAX
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_1
 	delay 96
 	playmoncry SPECIES_KIRLIA, 0

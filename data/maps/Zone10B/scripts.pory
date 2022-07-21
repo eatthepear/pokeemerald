@@ -45,7 +45,7 @@ script Zone10B_EventScript_AdaminaStuff {
 					goto(EventScript_BrutalExitNotSatisfied)
 				}
 				clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-				setflag(FLAG_HIDE_MAX_4)
+				setflag(FLAG_HIDE_ZONE10A_MAX)
 				msgbox("Safe travels.")
 				delay(96)
 				playmoncry(SPECIES_KIRLIA, 0)

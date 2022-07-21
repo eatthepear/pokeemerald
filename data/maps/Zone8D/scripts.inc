@@ -249,7 +249,7 @@ Zone8D_EventScript_Exit::
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_Exit_7
 Zone8D_EventScript_Exit_5:
 	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	setflag FLAG_HIDE_MAX_3
+	setflag FLAG_HIDE_ZONE7A_MAX
 	setflag FLAG_ZONE7B_HEAL_USED
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
 Zone8D_EventScript_Exit_1:

@@ -285,7 +285,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_Max",
-      "flag": "FLAG_HIDE_MAX_3"
+      "flag": "FLAG_HIDE_ZONE7A_MAX"
     }
   ],
   "warp_events": [
