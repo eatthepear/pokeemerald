@@ -840,6 +840,22 @@ static const struct MenuAction MultichoiceList_LelouchOptions[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_BuyBug[] =
+{
+    {gText_Grubbin},
+    {gText_Sewaddle},
+    {gText_Venipede},
+    {gText_Blipbug},
+};
+
+static const struct MenuAction MultichoiceList_BuyPikaClone[] =
+{
+    {gText_Pachirisu},
+    {gText_Emolga},
+    {gText_Dedenne},
+    {gText_Morpeko},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -893,8 +909,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_MECHADOLL5_Q1]              = MULTICHOICE(MultichoiceList_Mechadoll5_Q1),
     [MULTI_MECHADOLL5_Q2]              = MULTICHOICE(MultichoiceList_Mechadoll5_Q2),
     [MULTI_MECHADOLL5_Q3]              = MULTICHOICE(MultichoiceList_Mechadoll5_Q3),
-    [MULTI_UNUSED_40]                  = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_41]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_BUY_BUG]                    = MULTICHOICE(MultichoiceList_BuyBug),
+    [MULTI_BUY_PIKA_CLONE]             = MULTICHOICE(MultichoiceList_BuyPikaClone),
     [MULTI_VENDING_MACHINE]            = MULTICHOICE(MultichoiceList_VendingMachine),
     [MULTI_MACH_BIKE_INFO]             = MULTICHOICE(MultichoiceList_MachBikeInfo),
     [MULTI_ACRO_BIKE_INFO]             = MULTICHOICE(MultichoiceList_AcroBikeInfo),

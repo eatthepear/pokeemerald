@@ -530,6 +530,8 @@ const u8 gText_XNatureHatchedAtYZ[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAM
 const u8 gText_XNatureObtainedInTrade[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nobtained in a trade.");
 const u8 gText_XNatureFatefulEncounter[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nobtained in a fateful\nencounter at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNatureProbablyMetAt[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nprobably met at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1},\n{DYNAMIC 0}{DYNAMIC 4}{DYNAMIC 1}.");
+const u8 gText_XNatureBoughtBug[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nbought from a Bug Catcher\nin Zone 2 at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
+const u8 gText_XNatureBoughtPikaClone[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nbought from a Poké Fan\nin Zone 5 at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNature[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature");
 const u8 gText_XNatureMetSomewhereAt[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\ngiven by Colress as a\nStarter Pokémon at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNatureGivenAt[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\ngiven by the Pokémon\nDay-Care at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
@@ -2035,3 +2037,13 @@ const u8 gText_LelouchShouldTrain[] = _("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: W
 const u8 gText_LelouchReachedLevelCap[] = _("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: {STR_VAR_1} has reached\nthe level cap.{PAUSE_UNTIL_PRESS}");
 
 const u8 gText_EnemyPreview[] = _("Revealed enemy party!");
+
+const u8 gText_Grubbin[] = _("Grubbin");
+const u8 gText_Sewaddle[] = _("Sewaddle");
+const u8 gText_Venipede[] = _("Venipede");
+const u8 gText_Blipbug[] = _("Blipbug");
+
+const u8 gText_Pachirisu[] = _("Pachirisu");
+const u8 gText_Emolga[] = _("Emolga");
+const u8 gText_Dedenne[] = _("Dedenne");
+const u8 gText_Morpeko[] = _("Morpeko");

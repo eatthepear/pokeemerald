@@ -220,6 +220,9 @@
 #define MAPSEC_SAFARI_ZONE_AREA3            0xD8
 #define MAPSEC_SAFARI_ZONE_AREA4            0xD9
 
+
+#define METLOC_BOUGHT_PIKA_CLONE            0xFA
+#define METLOC_BOUGHT_BUG                   0xFB
 #define METLOC_DAYCARE_GIVEAWAY             0xFC
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

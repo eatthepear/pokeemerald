@@ -1101,6 +1101,10 @@ extern const u8 gText_XNatureGivenAt[];
 extern const u8 gText_XNatureFatefulEncounter[];
 extern const u8 gText_XNatureProbablyMetAt[];
 extern const u8 gText_XNatureObtainedInTrade[];
+
+extern const u8 gText_XNatureBoughtBug[];
+extern const u8 gText_XNatureBoughtPikaClone[];
+
 extern const u8 gText_EmptyString5[];
 extern const u8 gText_EggWillTakeALongTime[];
 extern const u8 gText_EggAboutToHatch[];
@@ -3206,6 +3210,16 @@ extern const u8 gText_Umbreon[];
 extern const u8 gText_Leafeon[];
 extern const u8 gText_Glaceon[];
 extern const u8 gText_Sylveon[];
+
+extern const u8 gText_Grubbin[];
+extern const u8 gText_Sewaddle[];
+extern const u8 gText_Venipede[];
+extern const u8 gText_Blipbug[];
+
+extern const u8 gText_Pachirisu[];
+extern const u8 gText_Emolga[];
+extern const u8 gText_Dedenne[];
+extern const u8 gText_Morpeko[];
 
 extern const u8 gMenuText_Move[];
 extern const u8 gText_MoveItemWhere[];

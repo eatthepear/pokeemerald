@@ -82,6 +82,81 @@ text Zone2B_Text_Leviathan2Defeat {
 	format("Ack! I lost again!\pDoggone it!")
 }
 
+script Zone2B_EventScript_BuyBug {
+	lock
+	faceplayer
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG) == true) {
+		msgbox(format("Scram! I'm out of bugs for you to buy right now.\pCome back later."))
+		release
+		end
+	} else {
+		showmoneybox(0, 0, 0)
+		msgbox(format("Oh! You look like a Bug-type enthusiast.\pWould you care to buy a Bug-type Pokemon?\pI've got Grubbin, Sewaddle, Venipede, or Blipbug for only ¥1000!"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			closemessage
+			hidemoneybox
+			msgbox(format("Ugh. Fine."))
+		} else {
+			checkmoney(1000, 0)
+			if (var(VAR_RESULT) == FALSE) {
+				msgbox("You don't have enough money.")
+				hidemoneybox
+			} else {
+				specialvar(VAR_TEMP_1, CalculatePlayerPartyCount)
+				if (var(VAR_TEMP_1) == PARTY_SIZE) {
+					msgbox(format("Your party is full. Clear a party slot, then come back."))
+					hidemoneybox
+					release
+					end
+				}
+				removemoney(1000, 0)
+				updatemoneybox
+				msgbox("Ehehehe, thank you…")
+				closemessage
+				hidemoneybox
+				if (flag(FLAG_NUZLOCKE_ON) == true) {
+					random(4)
+					switch (var(VAR_RESULT)) {
+						case 0:
+							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
+						case 1:
+							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
+						case 2:
+							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
+						case 3:
+							setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
+					}
+					setflag(FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG)
+				} else {
+					msgbox(format("Choose which Bug you would like."), MSGBOX_DEFAULT)
+					multichoice(21, 0, MULTI_BUY_BUG, TRUE)
+					switch (var(VAR_RESULT)) {
+						case 0:
+							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
+						case 1:
+							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
+						case 2:
+							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
+						case 3:
+							setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
+					}
+				}
+				givemon(VAR_TEMP_0, 5, ITEM_NONE)
+				setmonmetlocation(VAR_TEMP_1, 251)
+				bufferspeciesname(0, VAR_TEMP_0)
+				msgbox("Here's your {STR_VAR_1}.")
+				playfanfare(MUS_OBTAIN_ITEM)
+				message(format("{PLAYER} received the {STR_VAR_1}!"))
+				waitmessage
+				waitfanfare
+				msgbox(format("Pleasure doing business with you."))
+			}
+		}
+	}
+	release
+	end
+}
+
 script Zone2B_EventScript_ItemPotion {
 	lock
 	if (flag(FLAG_ITEM_ZONE2B_POTION_X2)) {
@@ -128,13 +203,4 @@ Zone2B_Text_ArthurDefeat:
 
 Zone2B_Text_ArthurPostBattle:
 	.string "Sorry about earlier.$"
-
-Zone2B_EventScript_Sign::
-	msgbox Zone2B_Text_Sign, MSGBOX_SIGN
-	end
-
-Zone2B_Text_Sign:
-	.string "Trainer Tips!\p"
-	.string "Golden Trees often have Berries\n"
-	.string "or wild Pokémon!$"
 `

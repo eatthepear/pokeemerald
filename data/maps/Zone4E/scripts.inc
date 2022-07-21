@@ -104,9 +104,8 @@ Zone4E_EventScript_Sign::
 
 Zone4E_Text_Sign:
 	.string "Trainer Tips!\p"
-	.string "While you are on the Pokémon stats\n"
-	.string "screen, you can press {A_BUTTON} to switch\l"
-	.string "between stats, IVs, or EVs.$"
+	.string "Golden Trees often have Berries\n"
+	.string "or wild Pokémon!$"
 
 Zone4E_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Rita{COLOR DARK_GRAY}: That was great! I hope our\n"

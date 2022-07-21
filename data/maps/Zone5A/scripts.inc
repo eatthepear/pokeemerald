@@ -150,7 +150,7 @@ Zone5A_EventScript_Breeder::
 	goto_if_unset FLAG_RECEIVED_ZONE0C_EEVEE, Zone5A_EventScript_Breeder_2
 	msgbox Zone5A_EventScript_Breeder_Text_1
 Zone5A_EventScript_Breeder_5:
-	compare VAR_TEMP_0, 1
+	compare VAR_TEMP_1, 1
 	goto_if_ne Zone5A_EventScript_Breeder_6
 	msgbox Zone5A_EventScript_Breeder_Text_11
 	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_Breeder_9
@@ -238,50 +238,162 @@ Zone5A_EventScript_Breeder_19:
 Zone5A_EventScript_Breeder_20:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_WATER_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_22:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_ELECTRIC_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_24:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_FIRE_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_26:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_PSYCHIC_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_28:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_DARK_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_30:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_GRASS_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_32:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_ICE_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
 
 Zone5A_EventScript_Breeder_34:
 	msgbox Zone5A_Text_HereGem
 	giveitem ITEM_FAIRY_GEM
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_1, 1
 	goto Zone5A_EventScript_Breeder_5
+
+
+Zone5A_EventScript_BuyPikaClone::
+	lock
+	faceplayer
+	goto_if_set FLAG_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_4
+Zone5A_EventScript_BuyPikaClone_3:
+	showmoneybox 0, 0, 0
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_7
+	checkmoney 3000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_10
+	specialvar VAR_TEMP_3, CalculatePlayerPartyCount
+	compare VAR_TEMP_3, PARTY_SIZE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_14
+	removemoney 3000, 0
+	updatemoneybox
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_5
+	closemessage
+	hidemoneybox
+	goto_if_set FLAG_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_17
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_6, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_BUY_PIKA_CLONE, TRUE
+	switch VAR_RESULT
+	case 0, Zone5A_EventScript_BuyPikaClone_27
+	case 1, Zone5A_EventScript_BuyPikaClone_28
+	case 2, Zone5A_EventScript_BuyPikaClone_29
+	case 3, Zone5A_EventScript_BuyPikaClone_30
+Zone5A_EventScript_BuyPikaClone_16:
+	givemon VAR_TEMP_2, 10, ITEM_NONE
+	setmonmetlocation VAR_TEMP_3, 250
+	bufferspeciesname 0, VAR_TEMP_2
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_7
+	playfanfare MUS_OBTAIN_ITEM
+	message Zone5A_EventScript_BuyPikaClone_Text_8
+	waitmessage
+	waitfanfare
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_9
+Zone5A_EventScript_BuyPikaClone_1:
+	release
+	end
+
+Zone5A_EventScript_BuyPikaClone_2:
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_0
+	release
+	end
+
+Zone5A_EventScript_BuyPikaClone_4:
+	goto_if_set FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE, Zone5A_EventScript_BuyPikaClone_2
+	goto Zone5A_EventScript_BuyPikaClone_3
+
+Zone5A_EventScript_BuyPikaClone_7:
+	closemessage
+	hidemoneybox
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_2
+	goto Zone5A_EventScript_BuyPikaClone_1
+
+Zone5A_EventScript_BuyPikaClone_10:
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_3
+	hidemoneybox
+	goto Zone5A_EventScript_BuyPikaClone_1
+
+Zone5A_EventScript_BuyPikaClone_14:
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_4
+	hidemoneybox
+	release
+	end
+
+Zone5A_EventScript_BuyPikaClone_17:
+	random 4
+	switch VAR_RESULT
+	case 0, Zone5A_EventScript_BuyPikaClone_22
+	case 1, Zone5A_EventScript_BuyPikaClone_23
+	case 2, Zone5A_EventScript_BuyPikaClone_24
+	case 3, Zone5A_EventScript_BuyPikaClone_25
+Zone5A_EventScript_BuyPikaClone_20:
+	setflag FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE
+	goto Zone5A_EventScript_BuyPikaClone_16
+
+Zone5A_EventScript_BuyPikaClone_22:
+	setvar VAR_TEMP_2, SPECIES_PACHIRISU
+	goto Zone5A_EventScript_BuyPikaClone_20
+
+Zone5A_EventScript_BuyPikaClone_23:
+	setvar VAR_TEMP_2, SPECIES_EMOLGA
+	goto Zone5A_EventScript_BuyPikaClone_20
+
+Zone5A_EventScript_BuyPikaClone_24:
+	setvar VAR_TEMP_2, SPECIES_DEDENNE
+	goto Zone5A_EventScript_BuyPikaClone_20
+
+Zone5A_EventScript_BuyPikaClone_25:
+	setvar VAR_TEMP_2, SPECIES_MORPEKO
+	goto Zone5A_EventScript_BuyPikaClone_20
+
+Zone5A_EventScript_BuyPikaClone_27:
+	setvar VAR_TEMP_2, SPECIES_PACHIRISU
+	goto Zone5A_EventScript_BuyPikaClone_16
+
+Zone5A_EventScript_BuyPikaClone_28:
+	setvar VAR_TEMP_2, SPECIES_EMOLGA
+	goto Zone5A_EventScript_BuyPikaClone_16
+
+Zone5A_EventScript_BuyPikaClone_29:
+	setvar VAR_TEMP_2, SPECIES_DEDENNE
+	goto Zone5A_EventScript_BuyPikaClone_16
+
+Zone5A_EventScript_BuyPikaClone_30:
+	setvar VAR_TEMP_2, SPECIES_MORPEKO
+	goto Zone5A_EventScript_BuyPikaClone_16
 
 
 Zone5A_EventScript_ItemQuickBall::
@@ -541,6 +653,47 @@ Zone5A_EventScript_Breeder_Text_12:
 Zone5A_EventScript_Breeder_Text_13:
 	.string "Well, I'm off to help other trainers.\p"
 	.string "See you!$"
+
+Zone5A_EventScript_BuyPikaClone_Text_0:
+	.string "Sorry! I'm all out of Pikachu clones for\n"
+	.string "sale right now.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_1:
+	.string "You seem like the type that would like\n"
+	.string "Pikachu!\p"
+	.string "Now, I don't have Pikachu for sale, but I\n"
+	.string "do have Pachirisu, Emolga, Dedenne, or\l"
+	.string "Morpeko, each for only ¥3000!$"
+
+Zone5A_EventScript_BuyPikaClone_Text_2:
+	.string "Alrighty, well, you just come on back if\n"
+	.string "you change your mind.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_3:
+	.string "You don't have enough money.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_4:
+	.string "Your party is full. Clear a party slot,\n"
+	.string "then come back.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_5:
+	.string "I appreciate it!$"
+
+Zone5A_EventScript_BuyPikaClone_Text_6:
+	.string "Choose which Pikachu clone you would\n"
+	.string "like.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_7:
+	.string "Here's your {STR_VAR_1}.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_8:
+	.string "{PLAYER} received the\n"
+	.string "{STR_VAR_1}!$"
+
+Zone5A_EventScript_BuyPikaClone_Text_9:
+	.string "Take good care of your new\n"
+	.string "Electric-type, small mammal-like\l"
+	.string "Pokémon!$"
 
 Zone5A_Text_Leviathan5Defeat::
 	.string "But how?! My Bugs!$"

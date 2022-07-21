@@ -3221,13 +3221,23 @@ static void BufferMonTrainerMemo(void)
             text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
         else
         {
-            if (sum->metLocation == METLOC_DAYCARE_GIVEAWAY)
+            switch (sum->metLocation)
             {
+            case METLOC_FATEFUL_ENCOUNTER:
+                text = gText_XNatureMetSomewhereAt;
+                break;
+            case METLOC_DAYCARE_GIVEAWAY:
                 text = gText_XNatureGivenAt;
-            }
-            else
-            {
-                text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
+                break;
+            case METLOC_BOUGHT_BUG:
+                text = gText_XNatureBoughtBug;
+                break;
+            case METLOC_BOUGHT_PIKA_CLONE:
+                text = gText_XNatureBoughtPikaClone;
+                break;
+            default:
+                text = gText_XNatureMetAtYZ;
+                break;
             }
         }
         // }
