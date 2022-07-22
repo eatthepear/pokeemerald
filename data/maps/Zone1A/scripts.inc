@@ -171,8 +171,7 @@ Zone1A_Text_Leviathan1Intro::
 	.string "If you want to go forward, you'll have\n"
 	.string "to beat me!\p"
 	.string "So, let's get right to it!\p"
-	.string "I, {COLOR BLUE}Leviathan Corey{COLOR DARK_GRAY}, challenge you to a\n"
-	.string "battle!$"
+	.string "I challenge you to a battle!$"
 
 Zone1A_Text_Leviathan1Defeat::
 	.string "Drats! Even the Oran Berry wasn't\n"

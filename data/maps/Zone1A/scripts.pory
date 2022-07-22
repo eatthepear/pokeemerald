@@ -60,7 +60,7 @@ text Zone1A_Text_Leviathan1Intro {
 		   "I'm the resident Leviathan around here.\p"
 		   "If you want to go forward, you'll have to beat me!\p"
 		   "So, let's get right to it!\p"
-		   "I, {COLOR BLUE}Leviathan Corey{COLOR DARK_GRAY}, challenge you to a battle!")
+		   "I challenge you to a battle!")
 }
 
 text Zone1A_Text_Leviathan1Defeat {
