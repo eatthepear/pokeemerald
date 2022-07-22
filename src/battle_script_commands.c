@@ -1912,8 +1912,6 @@ static void Cmd_critcalc(void)
 
     if (gBattleTypeFlags & (BATTLE_TYPE_WALLY_TUTORIAL | BATTLE_TYPE_FIRST_BATTLE))
         gIsCriticalHit = FALSE;
-    else if (VarGet(VAR_ZONE) == 1)
-        gIsCriticalHit = FALSE;
     else if (critChance == -1)
         gIsCriticalHit = FALSE;
     else if (critChance == -2)
@@ -13786,6 +13784,10 @@ static void Cmd_handleballthrow(void)
                 shakes = maxShakes;
             }
             else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE0A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE0A))
+            {
+                shakes = maxShakes;
+            }
+            else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ZONE1A) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ZONE1A))
             {
                 shakes = maxShakes;
             }
