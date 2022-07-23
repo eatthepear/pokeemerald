@@ -53,7 +53,7 @@
 #define FLAG_HIDE_ZONE3A_MAX                              0x28
 #define FLAG_HIDE_ZONE3A_REMI                             0x29
 #define FLAG_HIDE_ZONE3A_PHILLIPA                         0x2A
-#define FLAG_RECEIVED_ZONE5A_GEM                          0x2B
+#define FLAG_RECEIVED_ZONE4A_GEM                          0x2B
 #define FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE             0x2C
 #define FLAG_LELOUCH_SHARDS_INTRO                         0x2D
 #define FLAG_HIDE_ZONE6A_MAX                              0x2E

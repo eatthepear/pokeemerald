@@ -34,6 +34,7 @@ static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
     .lvl = 5,
+    .nature = NATURE_CALM,
     .species = SPECIES_LILLIPUP,
     }
 };
@@ -70,6 +71,7 @@ static const struct TrainerMon sParty_Oscar[] = {
     {
     .iv = 0,
     .lvl = 5,
+    .nature = NATURE_CALM,
     .species = SPECIES_BUNEARY,
     }
 };
@@ -260,12 +262,12 @@ static const struct TrainerMon sParty_Annabelle[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_WOOPER,
+    .species = SPECIES_PANCHAM,
     },
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_PANCHAM,
+    .species = SPECIES_WOOPER,
     },
     {
     .iv = 0,
@@ -278,7 +280,7 @@ static const struct TrainerMon sParty_Richard[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_ABRA,
+    .species = SPECIES_EEVEE,
     },
     {
     .iv = 0,
@@ -288,12 +290,12 @@ static const struct TrainerMon sParty_Richard[] = {
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_EEVEE,
+    .species = SPECIES_RALTS,
     },
     {
     .iv = 0,
     .lvl = 9,
-    .species = SPECIES_RALTS,
+    .species = SPECIES_ABRA,
     }
 };
 
@@ -312,7 +314,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 10,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_RELAXED,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
@@ -322,7 +324,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 11,
-    .nature = NATURE_NAUGHTY,
+    .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
     .heldItem = ITEM_ORAN_BERRY,
@@ -345,7 +347,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 10,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_RELAXED,
     .gender = TRAINER_MON_MALE,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
@@ -355,7 +357,7 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
-    .nature = NATURE_NAUGHTY,
+    .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
     .heldItem = ITEM_ORAN_BERRY,
@@ -603,7 +605,7 @@ static const struct TrainerMon sParty_Gilbert[] = {
     {
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_FINNEON,
+    .species = SPECIES_WISHIWASHI,
     }
 };
 

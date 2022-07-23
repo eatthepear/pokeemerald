@@ -40,7 +40,7 @@ Debug_CheatStart::
 	additem ITEM_GRASS_GEM
 	additem ITEM_ICE_GEM
 	additem ITEM_FAIRY_GEM
-	setflag FLAG_RECEIVED_ZONE5A_GEM
+	setflag FLAG_RECEIVED_ZONE4A_GEM
 	setflag FLAG_BOOSTED_IVS
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	clearflag FLAG_BOOSTED_IVS

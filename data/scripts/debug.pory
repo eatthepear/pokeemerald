@@ -44,7 +44,7 @@ script Debug_CheatStart {
 	additem(ITEM_GRASS_GEM)
 	additem(ITEM_ICE_GEM)
 	additem(ITEM_FAIRY_GEM)
-	setflag(FLAG_RECEIVED_ZONE5A_GEM)
+	setflag(FLAG_RECEIVED_ZONE4A_GEM)
 	// random(24)
 	// switch (var(VAR_RESULT)) {
 	// 	case 0:

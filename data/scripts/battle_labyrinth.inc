@@ -3690,8 +3690,8 @@ Zone_EventScript_RetirePrompt_9:
 	cleartrainerflag TRAINER_RALPH
 	cleartrainerflag TRAINER_SANTIAGO
 	cleartrainerflag TRAINER_CHLOE_AND_KAYA
-	cleartrainerflag TRAINER_LUCIA
 	cleartrainerflag TRAINER_FRED
+	cleartrainerflag TRAINER_LUCIA
 	clearflag FLAG_BEAT_LEVIATHAN_4
 	setvar VAR_ZONE_4_STATE, 0
 	warpteleport MAP_ZONE3SANCTUARY, 255, 22, 7
@@ -3702,8 +3702,8 @@ Zone_EventScript_RetirePrompt_10:
 	cleartrainerflag TRAINER_ANNE_AND_JUNE
 	cleartrainerflag TRAINER_GILBERT
 	cleartrainerflag TRAINER_REBECCA
-	cleartrainerflag TRAINER_CAITLYN
 	cleartrainerflag TRAINER_RYAN
+	cleartrainerflag TRAINER_CAITLYN
 	clearflag FLAG_BEAT_LEVIATHAN_5
 	setvar VAR_ZONE_5_STATE, 0
 	warpteleport MAP_ZONE4SANCTUARY, 255, 22, 7
@@ -3725,9 +3725,9 @@ Zone_EventScript_RetirePrompt_11:
 
 Zone_EventScript_RetirePrompt_12:
 	cleartrainerflag TRAINER_MILLIE
-	cleartrainerflag TRAINER_JAMAL
 	cleartrainerflag TRAINER_PAIGE
 	cleartrainerflag TRAINER_SETH
+	cleartrainerflag TRAINER_JAMAL
 	cleartrainerflag TRAINER_CONNIE
 	clearflag FLAG_BEAT_LEVIATHAN_7
 	cleartrainerflag TRAINER_JIMMY

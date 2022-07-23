@@ -54,6 +54,16 @@ Zone0B_EventScript_SetFlashRadius:
 	setflashlevel 2
 	return
 
+Zone0B_EventScript_Sign::
+	msgbox Zone0B_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone0B_Text_Sign:
+	.string "Interacting with this rock will\n"
+	.string "change your starter's ability.\p"
+	.string "The rock will collapse if you use\n"
+	.string "it or you decide to leave.$"
+
 Zone0B_EventScript_SpecialRock_Text_0:
 	.string "It's a blue, shining rock, but it looks\n"
 	.string "like other rocks have collapsed on top\l"

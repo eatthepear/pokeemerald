@@ -183,6 +183,11 @@
               {
                 "min_level": 2,
                 "max_level": 4,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_WOOLOO"
               },
               {
@@ -193,12 +198,7 @@
               {
                 "min_level": 2,
                 "max_level": 4,
-                "species": "SPECIES_TEDDIURSA"
-              },
-              {
-                "min_level": 2,
-                "max_level": 4,
-                "species": "SPECIES_TEDDIURSA"
+                "species": "SPECIES_YAMPER"
               },
               {
                 "min_level": 2,

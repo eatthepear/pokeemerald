@@ -8,6 +8,94 @@ mapscripts Zone4A_MapScripts {
 	}
 }
 
+script Zone4A_EventScript_Breeder {
+	lock
+	faceplayer
+	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE) == false) {
+		msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pThere's a special Eevee giveaway at the Day-Care, so go check that out!"))
+		release
+		end
+	}
+	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up."))
+	while (var(VAR_TEMP_0) != 1) {
+		msgbox(format("What's your favorite evolution of Eevee?"), MSGBOX_DEFAULT)
+		scrollingmultichoice(1, 0, 0, 5, 0)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				msgbox(format("Oh, so you like Vaporeon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_WATER_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 1:
+				msgbox(format("Oh, so you like Jolteon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_ELECTRIC_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 2:
+				msgbox(format("Oh, so you like Flareon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_FIRE_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 3:
+				msgbox(format("Oh, so you like Espeon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_PSYCHIC_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 4:
+				msgbox(format("Oh, so you like Umbreon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_DARK_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 5:
+				msgbox(format("Oh, so you like Leafeon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_GRASS_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 6:
+				msgbox(format("Oh, so you like Glaceon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_ICE_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+			case 7:
+				msgbox(format("Oh, so you like Sylveon?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+					giveitem(ITEM_FAIRY_GEM)
+					setvar(VAR_TEMP_0, 1)
+				}
+		}
+	}
+	msgbox(format("I hope you can put that Gem to good use."))
+	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
+		msgbox(format("If you want to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"))
+	}
+	delay(16)
+	msgbox(format("Well, I'm off to help other trainers.\pSee you!"))
+	fadescreen(FADE_TO_BLACK)
+	removeobject(3)
+	setflag(FLAG_RECEIVED_ZONE4A_GEM)
+	fadescreen(FADE_FROM_BLACK)
+	release
+}
+
+text Zone4A_Text_HereGem {
+	format("Then I suppose this would be of good use to you!")
+}
+
 script Zone4A_EventScript_ItemBurnHeal {
 	lock
 	if (flag(FLAG_ITEM_ZONE4A_BURN_HEAL)) {

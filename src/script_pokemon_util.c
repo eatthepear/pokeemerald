@@ -38,8 +38,7 @@ void HealPlayerParty(void)
     for(i = 0; i < gPlayerPartyCount; i++)
     {
         u16 maxHP = GetMonData(&gPlayerParty[i], MON_DATA_MAX_HP);
-        u16 curHP = GetMonData(&gPlayerParty[i], MON_DATA_HP);
-        if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) && curHP == 0) {
+        if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH) && (GetMonData(&gPlayerParty[i], MON_DATA_HP) == 0)) {
             continue;
         }
         
