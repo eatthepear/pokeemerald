@@ -456,6 +456,12 @@ $(OBJEVENTGFXDIR)/people/backpacker_f.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/bird_keeper.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/worker.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/ice_worker.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 $(OBJEVENTGFXDIR)/pokemon/porygon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4

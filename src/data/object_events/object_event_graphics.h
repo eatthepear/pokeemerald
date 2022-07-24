@@ -422,3 +422,7 @@ const u32 gObjectEventPic_BackpackerF[] = INCBIN_U32("graphics/object_events/pic
 const u16 gObjectEventPal_BackpackerF[] = INCBIN_U16("graphics/object_events/pics/people/backpacker_f.gbapal");
 const u32 gObjectEventPic_BirdKeeper[] = INCBIN_U32("graphics/object_events/pics/people/bird_keeper.4bpp");
 const u16 gObjectEventPal_BirdKeeper[] = INCBIN_U16("graphics/object_events/pics/people/bird_keeper.gbapal");
+const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/worker.4bpp");
+const u16 gObjectEventPal_Worker[] = INCBIN_U16("graphics/object_events/pics/people/worker.gbapal");
+const u32 gObjectEventPic_IceWorker[] = INCBIN_U32("graphics/object_events/pics/people/ice_worker.4bpp");
+const u16 gObjectEventPal_IceWorker[] = INCBIN_U16("graphics/object_events/pics/people/ice_worker.gbapal");

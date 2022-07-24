@@ -254,9 +254,11 @@
 #define OBJ_EVENT_GFX_AROMA_LADY                 250
 #define OBJ_EVENT_GFX_BACKPACKER_F               251
 #define OBJ_EVENT_GFX_BIRD_KEEPER                252
+#define OBJ_EVENT_GFX_WORKER                     253
+#define OBJ_EVENT_GFX_ICE_WORKER                 254
 
 
-#define NUM_OBJ_EVENT_GFX                        253
+#define NUM_OBJ_EVENT_GFX                        255
 
 
 // These are dynamic object gfx ids.
