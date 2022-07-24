@@ -11,19 +11,26 @@ Zone15B_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 15
 	goto_if_gt Zone15B_EventScript_Exit_2
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone15B_EventScript_Exit_7
+Zone15B_EventScript_Exit_5:
 	warp MAP_ZONE15SANCTUARY, 255, 22, 7
 Zone15B_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone15B_EventScript_Exit_2:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 31, 25
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone15B_EventScript_Exit_1
+
+Zone15B_EventScript_Exit_6:
+	goto EventScript_BrutalExitNotSatisfied
+	goto Zone15B_EventScript_Exit_5
+
+Zone15B_EventScript_Exit_7:
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone15B_EventScript_Exit_6
+	goto Zone15B_EventScript_Exit_5
 
 
 Zone15B_EventScript_LeviathanBattle::

@@ -13,6 +13,7 @@ void ExitSafariMode(void);
 bool8 SafariZoneTakeStep(void);
 void SafariZoneRetirePrompt(void);
 void ZoneRetirePrompt(void);
+void ZoneInfo(void);
 
 void CB2_EndSafariBattle(void);
 

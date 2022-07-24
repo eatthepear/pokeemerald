@@ -41,7 +41,6 @@ Zone5Sanctuary_EventScript_Intro_2:
 	waitmovement 0
 	waitse
 	msgbox Zone5Sanctuary_EventScript_Intro_Text_0
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warpteleport MAP_ZONE0A, 255, 17, 10
 	waitstate
 	goto Zone5Sanctuary_EventScript_Intro_1

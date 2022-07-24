@@ -28,7 +28,6 @@ script Zone5Sanctuary_EventScript_Intro {
 		waitmovement(0)
 		waitse
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: It seems you haven't entered Zone 0 yet.\pZone 0 holds many useful areas that are helpful to challengers.\pYou can typically access it using the warp pad in a Sanctuary, but just this once I will warp you there myself."))
-		setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 		warpteleport(MAP_ZONE0A, 255, 17, 10)
 		waitstate
 	}

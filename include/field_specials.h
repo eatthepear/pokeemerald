@@ -32,5 +32,7 @@ void ResetFanClub(void);
 bool8 ShouldShowBoxWasFullMessage(void);
 void SetPCBoxToSendMon(u8 boxId);
 void ReverseHiddenItemFlags(void);
+u16 GetNumTrainersRemaining(void);
+u16 GetCurrentLevelCap(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

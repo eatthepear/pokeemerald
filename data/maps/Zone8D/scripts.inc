@@ -246,9 +246,9 @@ Zone8D_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 8
 	goto_if_gt Zone8D_EventScript_Exit_2
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_Exit_7
 Zone8D_EventScript_Exit_5:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_HIDE_ZONE7A_MAX
 	setflag FLAG_ZONE7B_HEAL_USED
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
@@ -257,11 +257,7 @@ Zone8D_EventScript_Exit_1:
 	end
 
 Zone8D_EventScript_Exit_2:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 43, 32
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone8D_EventScript_Exit_1
 
 Zone8D_EventScript_Exit_6:
@@ -269,29 +265,8 @@ Zone8D_EventScript_Exit_6:
 	goto Zone8D_EventScript_Exit_5
 
 Zone8D_EventScript_Exit_7:
-	checktrainerflag TRAINER_MILLIE
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_JAMAL
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_PAIGE
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_SETH
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_CONNIE
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_JIMMY
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_EMILIANO
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_KAREN
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_JAYDEN
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_NEIL
-	goto_if 0, Zone8D_EventScript_Exit_6
-	checktrainerflag TRAINER_TAMARA
-	goto_if 0, Zone8D_EventScript_Exit_6
-	goto_if_unset FLAG_BEAT_LEVIATHAN_7, Zone8D_EventScript_Exit_6
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone8D_EventScript_Exit_6
 	goto Zone8D_EventScript_Exit_5
 
 

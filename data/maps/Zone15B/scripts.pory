@@ -7,13 +7,12 @@ mapscripts Zone15B_MapScripts {
 script Zone15B_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 15) {
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-		clearflag(FLAG_IS_REVISITING_ZONE)
-		setvar(VAR_REVISITING_ZONE, 0)
-		warpteleport(MAP_ZONE0D, 255, 31, 25)
-		waitstate
+		call(EventScript_WarpZone0)
     } else {
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
+			goto(EventScript_BrutalExitNotSatisfied)
+		}
         warp(MAP_ZONE15SANCTUARY, 255, 22, 7)
     }
     releaseall

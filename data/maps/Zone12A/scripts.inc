@@ -134,20 +134,16 @@ Zone12A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 12
 	goto_if_gt Zone12A_EventScript_Exit_2
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_Exit_7
 Zone12A_EventScript_Exit_5:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE12SANCTUARY, 255, 22, 7
 Zone12A_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone12A_EventScript_Exit_2:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 19, 25
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone12A_EventScript_Exit_1
 
 Zone12A_EventScript_Exit_6:
@@ -155,22 +151,8 @@ Zone12A_EventScript_Exit_6:
 	goto Zone12A_EventScript_Exit_5
 
 Zone12A_EventScript_Exit_7:
-	checktrainerflag TRAINER_ESSENCE
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_DOLORES
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_TREVOR
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_RANDOLPH
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_FEDERICO
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_GENIE
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_HILDA
-	goto_if 0, Zone12A_EventScript_Exit_6
-	checktrainerflag TRAINER_KINLEY
-	goto_if 0, Zone12A_EventScript_Exit_6
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone12A_EventScript_Exit_6
 	goto Zone12A_EventScript_Exit_5
 
 

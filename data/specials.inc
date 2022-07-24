@@ -545,3 +545,5 @@ gSpecials::
 	def_special SetCaughtMon
 	def_special ChoosePartyMonForTraining
 	def_special ReverseHiddenItemFlags
+	def_special GetNumTrainersRemaining
+	def_special GetCurrentLevelCap

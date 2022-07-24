@@ -1514,8 +1514,8 @@
 #define FLAG_UNUSED_0x90F                           (SYSTEM_FLAGS + 0xAF)
 #define FLAG_FORCE_BATTLE_ANIM_ON                   (SYSTEM_FLAGS + 0xB0)
 #define FLAG_FORCE_BATTLE_ANIM_OFF                  (SYSTEM_FLAGS + 0xB1)
-#define FLAG_IS_REVISITING_ZONE                     (SYSTEM_FLAGS + 0xB2)
-#define FLAG_IN_ZONE_NOT_SANCTUARY                  (SYSTEM_FLAGS + 0xB3)
+#define FLAG_IS_REVISITING_ZONE                     (SYSTEM_FLAGS + 0xB2) // Currently revisiting a Zone
+#define FLAG_IN_NEW_ZONE                            (SYSTEM_FLAGS + 0xB3) // In new Zone, not a Sanctuary
 #define FLAG_FULL_PREVIEW_ON                        (SYSTEM_FLAGS + 0xB4)
 #define FLAG_EXP_ALL_ON                             (SYSTEM_FLAGS + 0xB5)
 #define FLAG_DOING_TRAINING                         (SYSTEM_FLAGS + 0xB6)

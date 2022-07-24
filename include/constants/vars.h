@@ -59,7 +59,7 @@
 #define VAR_TRAINER_MONEY                    0x402A
 #define VAR_MUGSHOT_ID                       0x402B
 #define VAR_NUZLOCKE_DEATHS                  0x402C
-#define VAR_UNUSED_0x402D                    0x402D
+#define VAR_NUM_TRAINERS_REMAINING           0x402D
 #define VAR_UNUSED_0x402E                    0x402E
 #define VAR_UNUSED_0x402F                    0x402F
 #define VAR_ZONE_0_STATE                     0x4030

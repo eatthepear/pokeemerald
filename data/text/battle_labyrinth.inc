@@ -120,10 +120,6 @@ gText_HealingSign:
 gText_ExitSign:
 	.string "This is the exit!$"
 
-gText_BrutalExitNotSatisfied:
-	.string "You haven't defeated all the\n"
-	.string "trainers in the area yet.$"
-
 gText_NotEnoughMons:
 	.string "You need at least two Pokémon to\n"
 	.string "initiate a Double Battle.$"

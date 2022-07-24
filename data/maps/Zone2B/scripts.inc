@@ -14,23 +14,18 @@ Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 
 Zone2B_EventScript_Exit::
 	lockall
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	compare VAR_ZONE, 2
 	goto_if_gt Zone2B_EventScript_Exit_2
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone2B_EventScript_Exit_7
 Zone2B_EventScript_Exit_5:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE2SANCTUARY, 255, 22, 7
 Zone2B_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone2B_EventScript_Exit_2:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 19, 32
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone2B_EventScript_Exit_1
 
 Zone2B_EventScript_Exit_6:
@@ -38,13 +33,8 @@ Zone2B_EventScript_Exit_6:
 	goto Zone2B_EventScript_Exit_5
 
 Zone2B_EventScript_Exit_7:
-	checktrainerflag TRAINER_JEREMIAH
-	goto_if 0, Zone2B_EventScript_Exit_6
-	checktrainerflag TRAINER_HARPER
-	goto_if 0, Zone2B_EventScript_Exit_6
-	checktrainerflag TRAINER_ARTHUR
-	goto_if 0, Zone2B_EventScript_Exit_6
-	goto_if_unset FLAG_BEAT_LEVIATHAN_2, Zone2B_EventScript_Exit_6
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone2B_EventScript_Exit_6
 	goto Zone2B_EventScript_Exit_5
 
 

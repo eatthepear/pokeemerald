@@ -1,5 +1,5 @@
 EventScript_EnterSanctuary::
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IN_NEW_ZONE
 	setvar VAR_TRAINER_MONEY, 0
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
@@ -2299,11 +2299,20 @@ EventScript_Shop_Joy_8:
 
 
 EventScript_BrutalExitNotSatisfied::
-	msgbox gText_BrutalExitNotSatisfied
+	buffernumberstring 0, VAR_NUM_TRAINERS_REMAINING
+	msgbox EventScript_BrutalExitNotSatisfied_Text_0
+	switch VAR_NUM_TRAINERS_REMAINING
+	case 1, EventScript_BrutalExitNotSatisfied_3
+	msgbox gText_MultipleFoesRemaining
+EventScript_BrutalExitNotSatisfied_1:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	releaseall
 	return
+
+EventScript_BrutalExitNotSatisfied_3:
+	msgbox gText_OneFoeRemaining
+	goto EventScript_BrutalExitNotSatisfied_1
 
 
 EventScript_Max::
@@ -2372,7 +2381,7 @@ Zone10A_Shop_TMShop:
 	.2byte ITEM_NONE
 
 EventScript_LeavingSetup::
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
+	setflag FLAG_IN_NEW_ZONE
 	msgbox EventScript_LeavingSetup_Text_0
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 21
@@ -3246,7 +3255,6 @@ EventScript_Surveillance_7:
 
 
 EventScript_WarpZone0::
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	clearflag FLAG_IS_REVISITING_ZONE
 	switch VAR_REVISITING_ZONE
 	case 1, EventScript_WarpZone0_2
@@ -3615,7 +3623,7 @@ Zone_EventScript_RetirePrompt::
 	msgbox Zone_EventScript_RetirePrompt_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone_EventScript_RetirePrompt_2
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
+	clearflag FLAG_IN_NEW_ZONE
 	removemoney 0
 	updatemoneybox
 	msgbox Zone_EventScript_RetirePrompt_Text_1
@@ -3865,6 +3873,30 @@ Zone_EventScript_RetirePrompt_27:
 	warpteleport MAP_ZONE25SANCTUARY, 255, 22, 7
 	waitstate
 	goto Zone_EventScript_RetirePrompt_4
+
+
+Zone_EventScript_Info::
+	lockall
+	specialvar VAR_RESULT, GetCurrentLevelCap
+	buffernumberstring 0, VAR_RESULT
+	msgbox Zone_EventScript_Info_Text_0
+	specialvar VAR_RESULT, GetNumTrainersRemaining
+	buffernumberstring 0, VAR_RESULT
+	switch VAR_RESULT
+	case 0, Zone_EventScript_Info_3
+	case 1, Zone_EventScript_Info_4
+	msgbox gText_MultipleFoesRemaining
+Zone_EventScript_Info_1:
+	releaseall
+	end
+
+Zone_EventScript_Info_3:
+	msgbox Zone_EventScript_Info_Text_1
+	goto Zone_EventScript_Info_1
+
+Zone_EventScript_Info_4:
+	msgbox gText_OneFoeRemaining
+	goto Zone_EventScript_Info_1
 
 
 EventScript_ExitSign::
@@ -4141,6 +4173,10 @@ EventScript_Shop_Joy_Text_5:
 EventScript_Shop_Joy_Text_6:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: See you next time.$"
 
+EventScript_BrutalExitNotSatisfied_Text_0:
+	.string "You haven't defeated all the opponents\n"
+	.string "in the area yet.$"
+
 EventScript_Max_Text_0:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: By my calculations, you should be\n"
 	.string "{PLAYER}!\p"
@@ -4336,6 +4372,14 @@ Zone_EventScript_RetirePrompt_Text_0:
 Zone_EventScript_RetirePrompt_Text_1:
 	.string "Warping now…$"
 
+Zone_EventScript_Info_Text_0:
+	.string "The current level cap is\n"
+	.string "{STR_VAR_1}.$"
+
+Zone_EventScript_Info_Text_1:
+	.string "There are no more foes remaining in this\n"
+	.string "area.$"
+
 gText_Lelouch_NotEnoughColor::
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\nof that color.$"
 
@@ -4468,3 +4512,10 @@ gText_Colress_NumDeathsNuzlocke::
 
 gText_ItemChestIsEmpty::
 	.string "The item chest is empty.$"
+
+gText_OneFoeRemaining::
+	.string "There is 1 foe remaining in this area.$"
+
+gText_MultipleFoesRemaining::
+	.string "There are still {STR_VAR_1} foes\n"
+	.string "remaining in the area.$"

@@ -30,6 +30,7 @@ Zone9A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 9
 	goto_if_gt Zone9A_EventScript_Exit_2
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Exit_7
 Zone9A_EventScript_Exit_5:
 	warp MAP_ZONE9SANCTUARY, 255, 22, 7
@@ -38,11 +39,7 @@ Zone9A_EventScript_Exit_1:
 	end
 
 Zone9A_EventScript_Exit_2:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 47, 32
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone9A_EventScript_Exit_1
 
 Zone9A_EventScript_Exit_6:
@@ -50,10 +47,8 @@ Zone9A_EventScript_Exit_6:
 	goto Zone9A_EventScript_Exit_5
 
 Zone9A_EventScript_Exit_7:
-	checktrainerflag TRAINER_COOPER
-	goto_if 0, Zone9A_EventScript_Exit_6
-	checktrainerflag TRAINER_CARMINE
-	goto_if 0, Zone9A_EventScript_Exit_6
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone9A_EventScript_Exit_6
 	goto Zone9A_EventScript_Exit_5
 
 

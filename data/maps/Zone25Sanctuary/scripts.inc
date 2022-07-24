@@ -8,7 +8,6 @@ Zone25Sanctuary_OnFrame:
 
 Zone25Sanctuary_EventScript_Intro:
 	lockall
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -71,7 +70,6 @@ Zone25Sanctuary_EventScript_NextZoneCheck:
 
 Zone25Sanctuary_EventScript_Leave:
 	call EventScript_LeavingSetup
-	setflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE26A, 255, 13, 29
 	release
 	end

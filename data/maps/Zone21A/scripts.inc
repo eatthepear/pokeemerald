@@ -22,7 +22,7 @@ Zone21A_EventScript_CheckBrutal:
 	return
 
 Zone21A_EventScript_BrutalExitNotSatisfied:
-	msgbox gText_BrutalExitNotSatisfied, MSGBOX_AUTOCLOSE
+	@ msgbox gText_BrutalExitNotSatisfied, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	releaseall

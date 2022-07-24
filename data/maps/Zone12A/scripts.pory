@@ -102,24 +102,12 @@ movement Zone12A_Movement_Right {
 script Zone12A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 12) {
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-		clearflag(FLAG_IS_REVISITING_ZONE)
-		setvar(VAR_REVISITING_ZONE, 0)
-		warpteleport(MAP_ZONE0D, 255, 19, 25)
-		waitstate
+		call(EventScript_WarpZone0)
     } else {
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-			(!defeated(TRAINER_ESSENCE) ||
-			!defeated(TRAINER_DOLORES) ||
-			!defeated(TRAINER_TREVOR) ||
-			!defeated(TRAINER_RANDOLPH) ||
-			!defeated(TRAINER_FEDERICO) ||
-			!defeated(TRAINER_GENIE) ||
-			!defeated(TRAINER_HILDA) ||
-			!defeated(TRAINER_KINLEY))) {
+		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
         warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
     }
     releaseall

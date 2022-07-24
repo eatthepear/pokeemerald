@@ -29,20 +29,13 @@ script Zone3A_EventScript_Exit {
 		goto(Zone3A_EventScript_LeviathanBattle)
 	}
     if (var(VAR_ZONE) > 3) {
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-		clearflag(FLAG_IS_REVISITING_ZONE)
-		setflag(FLAG_HIDE_ZONE3A_MAX)
-		setvar(VAR_REVISITING_ZONE, 0)
-		warpteleport(MAP_ZONE0D, 255, 23, 32)
-		waitstate
+		call(EventScript_WarpZone0)
     } else {
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-			(!defeated(TRAINER_PATRICK) ||
-			!defeated(TRAINER_RICHARD) ||
-			!defeated(TRAINER_ANNABELLE))) {
+		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+		setflag(FLAG_HIDE_ZONE3A_MAX)
         warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
     }
     releaseall

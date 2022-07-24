@@ -10110,7 +10110,7 @@ void TrySpecialOverworldEvo(void)
 }
 
 const u16 sLevelCaps[NUM_CAPS] = {
-    5,
+    7,
     7, 9, 11, 13, 15,
     17, 20, 20, 21, 23,
     24, 26, 30, 30, 30,
@@ -10126,12 +10126,17 @@ const u16 sLevelCaps[NUM_CAPS] = {
 
 bool8 IsOverLevelLimit(u8 level)
 {
-    u8 i;
-
-    if (level >= sLevelCaps[VarGet(VAR_ZONE)])
-    {
-        return TRUE;
+    if (FlagGet(FLAG_IN_NEW_ZONE)) {
+        if (level >= sLevelCaps[VarGet(VAR_ZONE)])
+        {
+            return TRUE;
+        }
+        return FALSE;
+    } else {
+        if (level >= sLevelCaps[VarGet(VAR_ZONE) - 1])
+        {
+            return TRUE;
+        }
+        return FALSE;
     }
-    
-    return FALSE;
 }

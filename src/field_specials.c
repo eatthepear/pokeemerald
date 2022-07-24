@@ -2,6 +2,7 @@
 #include "malloc.h"
 #include "battle.h"
 #include "battle_tower.h"
+#include "battle_setup.h"
 #include "cable_club.h"
 #include "data.h"
 #include "decoration.h"
@@ -4297,4 +4298,140 @@ void ReverseHiddenItemFlags(void)
                 FlagClear(flag);
         }
     }
+}
+
+u16 GetNumTrainersRemaining(void)
+{
+    u16 count = 0;
+    
+    switch (VarGet(VAR_ZONE))
+    {
+    case 1:
+        count += !HasTrainerBeenFought(TRAINER_NINA);
+        count += !HasTrainerBeenFought(TRAINER_MARIAM);
+        count += !HasTrainerBeenFought(TRAINER_OSCAR);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_1);
+        break;
+    case 2:
+        count += !HasTrainerBeenFought(TRAINER_POLLY);
+        count += !HasTrainerBeenFought(TRAINER_JEREMIAH);
+        count += !HasTrainerBeenFought(TRAINER_HARPER);
+        count += !HasTrainerBeenFought(TRAINER_ARTHUR);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_2);
+        break;
+    case 3:
+        count += !HasTrainerBeenFought(TRAINER_JEMMA);
+        count += !HasTrainerBeenFought(TRAINER_PATRICK);
+        count += !HasTrainerBeenFought(TRAINER_BORIS);
+        count += !HasTrainerBeenFought(TRAINER_ANNABELLE);
+        count += !HasTrainerBeenFought(TRAINER_RICHARD);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_3);
+        break;
+    case 4:
+        count += !HasTrainerBeenFought(TRAINER_HERMAN);
+        count += !HasTrainerBeenFought(TRAINER_RALPH);
+        count += !HasTrainerBeenFought(TRAINER_SANTIAGO);
+        count += !HasTrainerBeenFought(TRAINER_CHLOE_AND_KAYA);
+        count += !HasTrainerBeenFought(TRAINER_FRED);
+        count += !HasTrainerBeenFought(TRAINER_LUCIA);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_4);
+        break;
+    case 5:
+        count += !HasTrainerBeenFought(TRAINER_ANNE_AND_JUNE);
+        count += !HasTrainerBeenFought(TRAINER_GILBERT);
+        count += !HasTrainerBeenFought(TRAINER_REBECCA);
+        count += !HasTrainerBeenFought(TRAINER_RYAN);
+        count += !HasTrainerBeenFought(TRAINER_CAITLYN);
+        count += 2 * !FlagGet(FLAG_BEAT_LEVIATHAN_5);
+        break;
+    case 6:
+        count += !HasTrainerBeenFought(TRAINER_MINA);
+        count += !HasTrainerBeenFought(TRAINER_MELANIE);
+        count += !HasTrainerBeenFought(TRAINER_CONSTANCE);
+        count += !HasTrainerBeenFought(TRAINER_FRANK);
+        count += !HasTrainerBeenFought(TRAINER_DUDLEY);
+        count += !HasTrainerBeenFought(TRAINER_DAISY);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_6);
+        break;
+    case 7:
+        count += !HasTrainerBeenFought(TRAINER_MILLIE);
+        count += !HasTrainerBeenFought(TRAINER_PAIGE);
+        count += !HasTrainerBeenFought(TRAINER_SETH);
+        count += !HasTrainerBeenFought(TRAINER_JAMAL);
+        count += !HasTrainerBeenFought(TRAINER_CONNIE);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_7);
+        count += !HasTrainerBeenFought(TRAINER_JIMMY);
+        count += !HasTrainerBeenFought(TRAINER_EMILIANO);
+        count += !HasTrainerBeenFought(TRAINER_KAREN);
+        count += !HasTrainerBeenFought(TRAINER_JAYDEN);
+        count += !HasTrainerBeenFought(TRAINER_NEIL);
+        count += !HasTrainerBeenFought(TRAINER_TAMARA);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_8);
+        break;
+    case 9:
+        count += !HasTrainerBeenFought(TRAINER_COOPER);
+        count += !HasTrainerBeenFought(TRAINER_CARMINE);
+        count += 5 * !HasTrainerBeenFought(TRAINER_ERICA);
+        break;
+    case 10:
+        count += !HasTrainerBeenFought(TRAINER_KYLE);
+        count += !HasTrainerBeenFought(TRAINER_BELLE);
+        count += !HasTrainerBeenFought(TRAINER_DEWEY);
+        count += !HasTrainerBeenFought(TRAINER_PEARLIE);
+        count += !HasTrainerBeenFought(TRAINER_ERNEST);
+        count += !HasTrainerBeenFought(TRAINER_ALANA);
+        count += !HasTrainerBeenFought(TRAINER_SUSAN);
+        count += !HasTrainerBeenFought(TRAINER_CONRAD);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_9);
+        break;
+    case 11:
+        count += !HasTrainerBeenFought(TRAINER_JEANETTE);
+        count += !HasTrainerBeenFought(TRAINER_EMMA_AND_LEO);
+        count += !HasTrainerBeenFought(TRAINER_REGINA);
+        count += !HasTrainerBeenFought(TRAINER_JOEL);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_10);
+        break;
+    case 12:
+        count += !HasTrainerBeenFought(TRAINER_ESSENCE);
+        count += !HasTrainerBeenFought(TRAINER_DOLORES);
+        count += 2 * !HasTrainerBeenFought(TRAINER_JULIE);
+        count += !HasTrainerBeenFought(TRAINER_TREVOR);
+        count += !HasTrainerBeenFought(TRAINER_FEDERICO);
+        count += !HasTrainerBeenFought(TRAINER_GENIE);
+        count += !HasTrainerBeenFought(TRAINER_HILDA);
+        count += !HasTrainerBeenFought(TRAINER_KINLEY);
+        break;
+    case 13:
+        count += !HasTrainerBeenFought(TRAINER_VIOLET);
+        count += !HasTrainerBeenFought(TRAINER_WANDA);
+        count += !HasTrainerBeenFought(TRAINER_AMBER_AND_KIM);
+        count += !HasTrainerBeenFought(TRAINER_JAN_AND_ERIN);
+        count += !HasTrainerBeenFought(TRAINER_STEVE);
+        count += !HasTrainerBeenFought(TRAINER_GOULD);
+        count += !HasTrainerBeenFought(TRAINER_MENDEL);
+        count += !HasTrainerBeenFought(TRAINER_DARWIN);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_11);
+        count += !HasTrainerBeenFought(TRAINER_BART);
+        count += !HasTrainerBeenFought(TRAINER_NIGEL);
+        count += !HasTrainerBeenFought(TRAINER_LOLA);
+        count += !HasTrainerBeenFought(TRAINER_CHARLIE);
+        count += !HasTrainerBeenFought(TRAINER_RANDOLPH);
+        count += !HasTrainerBeenFought(TRAINER_TODD);
+        count += !HasTrainerBeenFought(TRAINER_RUSSELL);
+        count += !HasTrainerBeenFought(TRAINER_OTIS);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_12);
+        break;
+    case 15:
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_13);
+        break;
+    default:
+        count = 500;
+        break;
+    }
+    return count;
+}
+
+u16 GetCurrentLevelCap(void)
+{
+    return sLevelCaps[VarGet(VAR_ZONE)];
 }

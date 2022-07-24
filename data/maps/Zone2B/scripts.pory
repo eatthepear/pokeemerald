@@ -10,22 +10,13 @@ mapscripts Zone2B_MapScripts {
 
 script Zone2B_EventScript_Exit {
     lockall
-	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
     if (var(VAR_ZONE) > 2) {
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
-		clearflag(FLAG_IS_REVISITING_ZONE)
-		setvar(VAR_REVISITING_ZONE, 0)
-		warpteleport(MAP_ZONE0D, 255, 19, 32)
-		waitstate
+		call(EventScript_WarpZone0)
     } else {
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) &&
-			(!defeated(TRAINER_JEREMIAH) ||
-			!defeated(TRAINER_HARPER) ||
-			!defeated(TRAINER_ARTHUR) ||
-			!flag(FLAG_BEAT_LEVIATHAN_2))) {
+		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
+		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
-		clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
         warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
     }
     releaseall

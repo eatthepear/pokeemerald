@@ -16,20 +16,16 @@ Zone4E_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 4
 	goto_if_gt Zone4E_EventScript_Exit_2
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_7
 Zone4E_EventScript_Exit_5:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	warp MAP_ZONE4SANCTUARY, 255, 22, 7
 Zone4E_EventScript_Exit_1:
 	releaseall
 	end
 
 Zone4E_EventScript_Exit_2:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 27, 32
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone4E_EventScript_Exit_1
 
 Zone4E_EventScript_Exit_6:
@@ -37,18 +33,8 @@ Zone4E_EventScript_Exit_6:
 	goto Zone4E_EventScript_Exit_5
 
 Zone4E_EventScript_Exit_7:
-	checktrainerflag TRAINER_HERMAN
-	goto_if 0, Zone4E_EventScript_Exit_6
-	checktrainerflag TRAINER_RALPH
-	goto_if 0, Zone4E_EventScript_Exit_6
-	checktrainerflag TRAINER_SANTIAGO
-	goto_if 0, Zone4E_EventScript_Exit_6
-	checktrainerflag TRAINER_CHLOE_AND_KAYA
-	goto_if 0, Zone4E_EventScript_Exit_6
-	checktrainerflag TRAINER_LUCIA
-	goto_if 0, Zone4E_EventScript_Exit_6
-	checktrainerflag TRAINER_FRED
-	goto_if 0, Zone4E_EventScript_Exit_6
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone4E_EventScript_Exit_6
 	goto Zone4E_EventScript_Exit_5
 
 

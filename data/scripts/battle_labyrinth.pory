@@ -1,5 +1,5 @@
 script EventScript_EnterSanctuary {
-	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+	clearflag(FLAG_IN_NEW_ZONE)
 	setvar(VAR_TRAINER_MONEY, 0)
 	call(EventScript_MoveCameraUp)
 	applymovement(1, Common_Movement_ExclamationMark)
@@ -1723,7 +1723,14 @@ script EventScript_Shop_Joy {
 }
 
 script EventScript_BrutalExitNotSatisfied {
-	msgbox(gText_BrutalExitNotSatisfied)
+	buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
+	msgbox(format("You haven't defeated all the opponents in the area yet."))
+	switch(var(VAR_NUM_TRAINERS_REMAINING)) {
+		case 1:
+			msgbox(gText_OneFoeRemaining)
+		default:
+			msgbox(gText_MultipleFoesRemaining)
+	}
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 	waitmovement(0)
 	releaseall
@@ -1775,7 +1782,7 @@ mart Zone10A_Shop_TMShop {
 }
 
 script EventScript_LeavingSetup {
-	setflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+	setflag(FLAG_IN_NEW_ZONE)
 	msgbox("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Bring out the strength of you\nand your Pokémon!")
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
 	if (var(VAR_TEMP_0) == 21) {
@@ -2286,7 +2293,6 @@ script EventScript_Surveillance {
 }
 
 script EventScript_WarpZone0 {
-	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
 	clearflag(FLAG_IS_REVISITING_ZONE)
 	switch(var(VAR_REVISITING_ZONE)) {
 		case 1:
@@ -2510,7 +2516,7 @@ script Zone_EventScript_RetirePrompt {
 		releaseall
 		end
 	}
-	clearflag(FLAG_IN_ZONE_NOT_SANCTUARY)
+	clearflag(FLAG_IN_NEW_ZONE)
 	removemoney(0)
 	updatemoneybox
 	msgbox(format("Warping now…"))
@@ -2690,8 +2696,34 @@ script Zone_EventScript_RetirePrompt {
 	end
 }
 
-raw `
+script Zone_EventScript_Info {
+	lockall
+	specialvar(VAR_RESULT, GetCurrentLevelCap)
+	buffernumberstring(0, VAR_RESULT)
+	msgbox(format("The current level cap is {STR_VAR_1}."))
+	specialvar(VAR_RESULT, GetNumTrainersRemaining)
+	buffernumberstring(0, VAR_RESULT)
+	switch(var(VAR_RESULT)) {
+		case 0:
+			msgbox(format("There are no more foes remaining in this area."))
+		case 1:
+			msgbox(gText_OneFoeRemaining)
+		default:
+			msgbox(gText_MultipleFoesRemaining)
+	}
+	releaseall
+	end
+}
 
+text gText_OneFoeRemaining {
+	format("There is 1 foe remaining in this area.")
+}
+
+text gText_MultipleFoesRemaining {
+	format("There are still {STR_VAR_1} foes remaining in the area.")
+}
+
+raw `
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
@@ -2711,5 +2743,4 @@ EventScript_ServicesSign::
 EventScript_HealingSign::
 	msgbox gText_HealingSign, MSGBOX_SIGN
 	end
-
 `

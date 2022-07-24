@@ -10,7 +10,6 @@ Zone0Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 Zone0Sanctuary_EventScript_Intro::
 	lockall
 	clearflag FLAG_NUZLOCKE_ON
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_PC_LANETTE

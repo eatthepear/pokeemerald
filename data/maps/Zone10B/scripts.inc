@@ -54,9 +54,9 @@ Zone10B_EventScript_AdaminaStuff_4:
 Zone10B_EventScript_AdaminaStuff_5:
 	compare VAR_ZONE, 10
 	goto_if_gt Zone10B_EventScript_AdaminaStuff_7
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_AdaminaStuff_12
 Zone10B_EventScript_AdaminaStuff_10:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
 	setflag FLAG_HIDE_ZONE10A_MAX
 	msgbox Zone10B_EventScript_AdaminaStuff_Text_1
 	delay 96
@@ -68,11 +68,7 @@ Zone10B_EventScript_AdaminaStuff_10:
 	goto Zone10B_EventScript_AdaminaStuff_4
 
 Zone10B_EventScript_AdaminaStuff_7:
-	clearflag FLAG_IN_ZONE_NOT_SANCTUARY
-	clearflag FLAG_IS_REVISITING_ZONE
-	setvar VAR_REVISITING_ZONE, 0
-	warpteleport MAP_ZONE0D, 255, 51, 32
-	waitstate
+	call EventScript_WarpZone0
 	goto Zone10B_EventScript_AdaminaStuff_4
 
 Zone10B_EventScript_AdaminaStuff_11:
@@ -80,22 +76,8 @@ Zone10B_EventScript_AdaminaStuff_11:
 	goto Zone10B_EventScript_AdaminaStuff_10
 
 Zone10B_EventScript_AdaminaStuff_12:
-	checktrainerflag TRAINER_KYLE
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_BELLE
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_DEWEY
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_PEARLIE
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_ERNEST
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_ALANA
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_SUSAN
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
-	checktrainerflag TRAINER_CONRAD
-	goto_if 0, Zone10B_EventScript_AdaminaStuff_11
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne Zone10B_EventScript_AdaminaStuff_11
 	goto Zone10B_EventScript_AdaminaStuff_10
 
 
