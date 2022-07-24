@@ -1217,6 +1217,13 @@ void Task_HandleChooseMonInput(u8 taskId)
         case 2: // Selected Cancel
             HandleChooseMonCancel(taskId, slotPtr);
             break;
+        case 3: // Quick Swap
+            if (gPartyMenu.action != PARTY_ACTION_SWITCH
+             && *slotPtr != PARTY_SIZE + 1
+             && gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD
+             && CalculatePlayerPartyCount() >= 2)
+                gTasks[taskId].func = CursorCb_Switch;
+            break;
         case 8: // Start button
             if (sPartyMenuInternal->chooseHalf)
             {
@@ -1443,6 +1450,9 @@ static u16 PartyMenuButtonHandler(s8 *slotPtr)
 
     if (JOY_NEW(START_BUTTON))
         return 8;
+    
+    if (JOY_NEW(SELECT_BUTTON))
+        return 3;
 
     if (movementDir)
     {
