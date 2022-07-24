@@ -239,6 +239,16 @@ Zone6A_Text_DaisyPostBattle:
 	.string "I guess these little ones need more\n"
 	.string "time to get stronger and evolve!$"
 
+Zone6A_EventScript_Sign::
+	msgbox Zone6A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone6A_Text_Sign:
+	.string "Trainer Tips!\p"
+	.string "While you are on the Pokémon stats\n"
+	.string "screen, you can press {A_BUTTON} to switch\l"
+	.string "between stats, IVs, or EVs.$"
+
 Zone6A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"
 

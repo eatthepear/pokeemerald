@@ -241,6 +241,14 @@
       "elevation": 3,
       "item": "ITEM_CHESTO_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ZONE6A_CHESTO_BERRY"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Zone6A_EventScript_Sign"
     }
   ]
 }
