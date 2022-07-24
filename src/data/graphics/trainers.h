@@ -308,3 +308,9 @@ const u32 gTrainerPalette_Socialite[] = INCBIN_U32("graphics/trainers/palettes/s
 
 const u32 gTrainerFrontPic_BackpackerF[] = INCBIN_U32("graphics/trainers/front_pics/backpacker_f_front_pic.4bpp.lz");
 const u32 gTrainerPalette_BackpackerF[] = INCBIN_U32("graphics/trainers/palettes/backpacker_f.gbapal.lz");
+
+const u32 gTrainerFrontPic_Worker[] = INCBIN_U32("graphics/trainers/front_pics/worker_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Worker[] = INCBIN_U32("graphics/trainers/palettes/worker.gbapal.lz");
+
+const u32 gTrainerFrontPic_IceWorker[] = INCBIN_U32("graphics/trainers/front_pics/ice_worker_front_pic.4bpp.lz");
+const u32 gTrainerPalette_IceWorker[] = INCBIN_U32("graphics/trainers/palettes/ice_worker.gbapal.lz");
