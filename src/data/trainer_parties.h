@@ -2,17 +2,15 @@
  * Notes for documentation
  * 
  * Trainers are arranged in the order it is possible to battle them. There are Zone tags that divide up where the trainers are located.
+ * Note that some trainers have different parties on Default and Brutal.
  * 
  * Some trainers are battled in different ways, be it double battles, tag battles, gauntlets, or battles that start with certain conditions.
  * These are included in the comments next to each trainer.
  * 
- * Some trainers have different parties on Default and Brutal.
- * Some bosses are optional on Default and are commented as such. However, on Brutal, all trainers are mandatory.
- * 
- * Abilities are by default set to the first ability.
+ * Abilities are by default set to the first ability. See base_stats.h for more details.
  * EVs are by default set to 0.
  * Natures are by default set to Serious.
- * Most trainers use level up movesets. Some trainers have tailored movesets which are documented in this file.
+ * Some trainers have tailored movesets which are documented in this file. Otherwise, they use level up movesets.
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
@@ -20,7 +18,7 @@
  * 
  * You can ignore the .ball lines. These are just for setting what Pokeball each Pokemon is in, and is mainly for cosmetic purposes.
  * 
- * The trainer AI has been improved from vanilla Emerald, but it's not as smart as CFRU AI. 
+ * The trainer AI has been significantly improved from vanilla Emerald. 
  * On Brutal, the trainer AI knows your moveset. */
 
 /* ------------------- Zone 1 ------------------- */
@@ -177,7 +175,7 @@ static const struct TrainerMon sParty_Arthur[] = {
     }
 };
 
-static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default, optional
+static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default
     {
     .ball = ITEM_POKE_BALL,
     .iv = 20,
@@ -378,7 +376,6 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
 
 /* ------------------- Zone 4 ------------------- */
 
-
 static const struct TrainerMon sParty_Herman[] = {
     {
     .iv = 0,
@@ -559,7 +556,6 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .moves = {MOVE_MEGA_DRAIN, MOVE_GROWTH, MOVE_POISON_STING, MOVE_HIDDEN_POWER} // Hidden Power Rock
     }
 };
-
 
 /* ------------------- Zone 5 ------------------- */
 
@@ -911,8 +907,7 @@ static const struct TrainerMon sParty_ZackBrutal[] = {//Leviathan, Brutal
     }
 };
 
-
-/* ------------------- Zone 7 & 8 ------------------- */
+/* ------------------- Zones 7 & 8 ------------------- */
 
 static const struct TrainerMon sParty_Millie[] = {// Random lead
     {
@@ -2097,7 +2092,7 @@ static const struct TrainerMon sParty_Kinley[] = {// Random lead
 };
 
 
-/* ------------------- Zone 13 & 14 ------------------- */
+/* ------------------- Zones 13 & 14 ------------------- */
 
 static const struct TrainerMon sParty_Violet[] = {// Random lead
     {
@@ -2525,7 +2520,6 @@ static const struct TrainerMon sParty_MiguelBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_MEGA_DRAIN, MOVE_AIR_CUTTER, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS}
     }
 };
-
 
 /* ------------------- Zone 15 ------------------- */
 
