@@ -4,7 +4,7 @@ script Zone0C_EventScript_EeveeGirl {
 	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE) == true) {
 		goto(Zone0C_EventScript_EeveeUnique)
 	}
-	if (flag(FLAG_RANDOMIZER_ON) == false) {
+	if ((flag(FLAG_RANDOMIZER_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true)) {
 		goto_if_mon_caught(SPECIES_EEVEE, Zone0C_EventScript_EeveeUnique)
 		goto_if_mon_caught(SPECIES_VAPOREON, Zone0C_EventScript_EeveeUnique)
 		goto_if_mon_caught(SPECIES_JOLTEON, Zone0C_EventScript_EeveeUnique)
