@@ -3714,6 +3714,8 @@ Zone_EventScript_RetirePrompt_10:
 	cleartrainerflag TRAINER_REBECCA
 	cleartrainerflag TRAINER_RYAN
 	cleartrainerflag TRAINER_CAITLYN
+	cleartrainerflag TRAINER_KENNETH
+	cleartrainerflag TRAINER_CLINTON
 	clearflag FLAG_BEAT_LEVIATHAN_5
 	setvar VAR_ZONE_5_STATE, 0
 	warpteleport MAP_ZONE4SANCTUARY, 255, 22, 7
@@ -3721,7 +3723,7 @@ Zone_EventScript_RetirePrompt_10:
 	goto Zone_EventScript_RetirePrompt_4
 
 Zone_EventScript_RetirePrompt_11:
-	cleartrainerflag TRAINER_MINA
+	cleartrainerflag TRAINER_ZACK
 	cleartrainerflag TRAINER_MELANIE
 	cleartrainerflag TRAINER_CONSTANCE
 	cleartrainerflag TRAINER_FRANK

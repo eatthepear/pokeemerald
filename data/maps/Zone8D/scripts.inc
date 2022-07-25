@@ -252,6 +252,7 @@ Zone8D_EventScript_Exit_5:
 	setflag FLAG_HIDE_ZONE7A_MAX
 	setflag FLAG_ZONE7B_HEAL_USED
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
+	waitstate
 Zone8D_EventScript_Exit_1:
 	releaseall
 	end

@@ -87,14 +87,8 @@ Zone0A_Text_Intro:
 	.string "There are no trainers here, no\n"
 	.string "challenges to face. Everything is\l"
 	.string "meant to help you on your journey.\p"
-	.string "Zone 0 has three main attractions:\p"
-	.string "The {COLOR RED}Pokémon Day Care{COLOR DARK_GRAY}, which my wife\n"
-	.string "and I run;\p"
-	.string "the {COLOR RED}TPI{COLOR DARK_GRAY}, which gives access to\n"
-	.string "prior areas;\p"
-	.string "and the {COLOR RED}Berry fields{COLOR DARK_GRAY}.\p"
-	.string "For the Berry fields, you'll want\n"
-	.string "to have this.$"
+	.string "As a welcome gift, I'd like you to\p"
+	.string "have this.$"
 
 Zone0A_Text_End:
 	.string "Oh, yes!\p"

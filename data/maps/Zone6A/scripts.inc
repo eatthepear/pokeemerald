@@ -35,6 +35,7 @@ Zone6A_EventScript_Exit::
 Zone6A_EventScript_Exit_5:
 	setflag FLAG_HIDE_ZONE6A_MAX
 	warp MAP_ZONE6SANCTUARY, 255, 22, 7
+	waitstate
 Zone6A_EventScript_Exit_1:
 	releaseall
 	end
@@ -58,40 +59,48 @@ Zone6A_EventScript_LeviathanBattle::
 	faceplayer
 	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_2
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
-	msgbox Zone6A_Text_Leviathan6WantBattle, MSGBOX_YESNO
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone6A_EventScript_LeviathanBattle_5
 	fadeoutbgm 1
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_8
-	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
-	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6, Zone6A_Text_Leviathan6Defeat
 Zone6A_EventScript_LeviathanBattle_7:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MINA
+	trainerbattle_no_intro TRAINER_MINA_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_Text_5
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_11
+Zone6A_EventScript_LeviathanBattle_10:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_6, MSGBOX_DEFAULT
 	giveitem ITEM_TM08
-	msgbox Zone6A_Text_Zack_PostBattle
+	msgbox Zone6A_Text_Mina_PostBattle
 	closemessage
 	setflag FLAG_BEAT_LEVIATHAN_6
 	release
 	end
 
 Zone6A_EventScript_LeviathanBattle_2:
-	msgbox Zone6A_Text_Zack_PostBattle
+	msgbox Zone6A_Text_Mina_PostBattle
 	closemessage
 	release
 	end
 
 Zone6A_EventScript_LeviathanBattle_5:
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_1
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_2
 	release
 	end
 
 Zone6A_EventScript_LeviathanBattle_8:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_ZACK
-	trainerbattle_no_intro TRAINER_ZACK_LEVIATHAN_6_BRUTAL, Zone6A_Text_Leviathan6Defeat
+	setweather WEATHER_RAIN
+	doweather
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_4
 	goto Zone6A_EventScript_LeviathanBattle_7
+
+Zone6A_EventScript_LeviathanBattle_11:
+	resetweather
+	doweather
+	goto Zone6A_EventScript_LeviathanBattle_10
 
 
 Zone6A_EventScript_ItemNetBall::
@@ -148,19 +157,20 @@ Zone6A_EventScript_ItemNestBall_2:
 	end
 
 
-Zone6A_EventScript_Frank::
-	trainerbattle_single TRAINER_FRANK, Zone6A_Text_FrankIntro, Zone6A_Text_FrankDefeat
-	msgbox Zone6A_Text_FrankPostBattle, MSGBOX_AUTOCLOSE
+Zone6A_EventScript_Zack::
+	trainerbattle_single TRAINER_ZACK, Zone6A_Text_ZackIntro, Zone6A_Text_ZackDefeat
+	msgbox Zone6A_Text_ZackPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone6A_Text_FrankIntro:
-	.string "I love it! I love it!$"
+Zone6A_Text_ZackIntro:
+	.string "My twin sister Mina loves tubing\n"
+	.string "just as much as I do!$"
 
-Zone6A_Text_FrankDefeat:
-	.string "I love camping, of course!$"
+Zone6A_Text_ZackDefeat:
+	.string "She just won't admit it!$"
 
-Zone6A_Text_FrankPostBattle:
-	.string "It's my favorite activity!$"
+Zone6A_Text_ZackPostBattle:
+	.string "Our family really loves tubing!$"
 
 Zone6A_EventScript_Melanie::
 	trainerbattle_single TRAINER_MELANIE, Zone6A_Text_MelanieIntro, Zone6A_Text_MelanieDefeat
@@ -192,20 +202,19 @@ Zone6A_Text_ConstancePostBattle:
 	.string "I can look for some Berries or\n"
 	.string "something…$"
 
-Zone6A_EventScript_Mina::
-	trainerbattle_single TRAINER_MINA, Zone6A_Text_MinaIntro, Zone6A_Text_MinaDefeat
-	msgbox Zone6A_Text_MinaPostBattle, MSGBOX_AUTOCLOSE
+Zone6A_EventScript_Frank::
+	trainerbattle_single TRAINER_FRANK, Zone6A_Text_FrankIntro, Zone6A_Text_FrankDefeat
+	msgbox Zone6A_Text_FrankPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Zone6A_Text_MinaIntro:
-	.string "My older brother Zack loves tubing\n"
-	.string "just as much as I do!$"
+Zone6A_Text_FrankIntro:
+	.string "The beach is full of surprises!$"
 
-Zone6A_Text_MinaDefeat:
-	.string "He just won't admit it!$"
+Zone6A_Text_FrankDefeat:
+	.string "This time, I was surprised by you!$"
 
-Zone6A_Text_MinaPostBattle:
-	.string "Our family really loves tubing!$"
+Zone6A_Text_FrankPostBattle:
+	.string "Your skills are astounding!$"
 
 Zone6A_EventScript_Dudley::
 	trainerbattle_single TRAINER_DUDLEY, Zone6A_Text_DudleyIntro, Zone6A_Text_DudleyDefeat
@@ -250,27 +259,31 @@ Zone6A_Text_Sign:
 	.string "between stats, IVs, or EVs.$"
 
 Zone6A_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!$"
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!$"
 
 Zone6A_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: That's what I thought!$"
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Hey you! You think you're better\n"
+	.string "than me or something?$"
 
 Zone6A_EventScript_LeviathanBattle_Text_2:
-	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Who do you think you are?\p"
-	.string "I'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!$"
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: That's what I thought!$"
 
 Zone6A_EventScript_LeviathanBattle_Text_3:
-	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Woah!\p"
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Who do you think you are?\p"
+	.string "I'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!$"
+
+Zone6A_EventScript_LeviathanBattle_Text_4:
+	.string "It suddenly began to rain!$"
+
+Zone6A_EventScript_LeviathanBattle_Text_5:
+	.string "Rain, rain, go away…$"
+
+Zone6A_EventScript_LeviathanBattle_Text_6:
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!\p"
 	.string "You're pretty good!\p"
 	.string "Here, take this!$"
 
-Zone6A_Text_Leviathan6WantBattle::
-	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: Hey you! You think you're better\n"
-	.string "than me or something?$"
-
-Zone6A_Text_Leviathan6Defeat::
-	.string "What's wishy-washy mean anyway?$"
-
-Zone6A_Text_Zack_PostBattle::
-	.string "{COLOR BLUE}Zack{COLOR DARK_GRAY}: I love leaving footprints in the\n"
-	.string "sand.$"
+Zone6A_Text_Mina_PostBattle::
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: I love leaving footprints in the\n"
+	.string "sand.\p"
+	.string "And tubing! That too.$"

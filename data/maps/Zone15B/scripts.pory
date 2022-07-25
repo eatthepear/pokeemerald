@@ -14,6 +14,7 @@ script Zone15B_EventScript_Exit {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
         warp(MAP_ZONE15SANCTUARY, 255, 22, 7)
+		waitstate
     }
     releaseall
     end

@@ -16,7 +16,7 @@ script Zone4A_EventScript_Breeder {
 		release
 		end
 	}
-	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up."))
+	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up."), MSGBOX_DEFAULT)
 	while (var(VAR_TEMP_0) != 1) {
 		msgbox(format("What's your favorite evolution of Eevee?"), MSGBOX_DEFAULT)
 		scrollingmultichoice(1, 0, 0, 5, 0)
@@ -79,12 +79,12 @@ script Zone4A_EventScript_Breeder {
 				}
 		}
 	}
-	msgbox(format("I hope you can put that Gem to good use."))
+	msgbox(format("I hope you can put that Gem to good use."), MSGBOX_DEFAULT)
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
-		msgbox(format("If you want to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"))
+		msgbox(format("If you want to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"), MSGBOX_DEFAULT)
 	}
 	delay(16)
-	msgbox(format("Well, I'm off to help other trainers.\pSee you!"))
+	msgbox(format("Well, I'm off to help other trainers.\pSee you!"), MSGBOX_DEFAULT)
 	fadescreen(FADE_TO_BLACK)
 	removeobject(3)
 	setflag(FLAG_RECEIVED_ZONE4A_GEM)

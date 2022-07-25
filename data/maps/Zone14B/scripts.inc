@@ -32,6 +32,7 @@ Zone14B_EventScript_Exit::
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone14B_EventScript_Exit_7
 Zone14B_EventScript_Exit_5:
 	warp MAP_ZONE14SANCTUARY, 255, 22, 7
+	waitstate
 Zone14B_EventScript_Exit_1:
 	releaseall
 	end

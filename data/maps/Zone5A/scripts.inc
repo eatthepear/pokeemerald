@@ -27,6 +27,7 @@ Zone5A_EventScript_Exit::
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_Exit_7
 Zone5A_EventScript_Exit_5:
 	warp MAP_ZONE5SANCTUARY, 255, 22, 7
+	waitstate
 Zone5A_EventScript_Exit_1:
 	releaseall
 	end
@@ -377,18 +378,53 @@ Zone5A_Text_CaitlynDefeat:
 Zone5A_Text_CaitlynPostBattle:
 	.string "There's only one left. Don't be afraid!$"
 
+Zone5A_EventScript_Kenneth::
+	trainerbattle_single TRAINER_KENNETH, Zone5A_Text_KennethIntro, Zone5A_Text_KennethDefeat
+	msgbox Zone5A_Text_KennethPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_KennethIntro:
+	.string "Heyo, it's me!\n"
+	.string "The last Fearsome Foursome!\p"
+	.string "Face me in battle!$"
+
+Zone5A_Text_KennethDefeat:
+	.string "Well, I guess there's him over\n"
+	.string "there, too…$"
+
+Zone5A_Text_KennethPostBattle:
+	.string "Clinton isn't really part of our\n"
+	.string "group because he likes to flaunt\l"
+	.string "how rich he is.$"
+
+Zone5A_EventScript_Clinton::
+	trainerbattle_single TRAINER_CLINTON, Zone5A_Text_ClintonIntro, Zone5A_Text_ClintonDefeat
+	msgbox Zone5A_Text_ClintonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_ClintonIntro:
+	.string "Fearsome Fivesome has a nice ring,\n"
+	.string "don't you think?$"
+
+Zone5A_Text_ClintonDefeat:
+	.string "What do you mean they don't want me\n"
+	.string "as part of their group?\l"
+	.string "I can pay to join!$"
+
+Zone5A_Text_ClintonPostBattle:
+	.string "Such cheapskates!$"
+
 Zone5A_Text_Sign:
 	.string "Trainer Tips!\p"
 	.string "You can sort items in the Bag\n"
 	.string "using {START_BUTTON}.$"
 
 Zone5A_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… if it isn't the trainer who's\n"
-	.string "been beating all my fellow club\l"
-	.string "members.\p"
-	.string "Well then. Would you like to challenge\n"
-	.string "the final member of the Fearsome\l"
-	.string "Foursome?$"
+	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome\n"
+	.string "Foursome.\p"
+	.string "Well then. Would you like to face our\n"
+	.string "club in battle? You'll have to beat\l"
+	.string "both of us in a row!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_1:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?$"
@@ -401,26 +437,22 @@ Zone5A_EventScript_LeviathanBattle_Text_3:
 	.string "It can't be!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_4:
-	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, man, if only you had\n"
-	.string "joined our club!\p"
-	.string "We could have been the Fearsome\n"
-	.string "Fivesome!$"
+	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_5:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"
 	.string "…\l"
-	.string "I told you already, Kevin.\l"
-	.string "I don't want to be part of that\l"
-	.string "nonsense Fearsome Foursome club…\l"
-	.string "…\l"
-	.string "My club is the only club for me…$"
+	.string "I told you already, Kevin.\p"
+	.string "The club name has to be\n"
+	.string "The Bug Maniacs, not\l"
+	.string "The Bug Enjoyers.$"
 
 Zone5A_EventScript_LeviathanBattle_Text_6:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Ah! Another person! Hey you!$"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Huh? Oh!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_7:
-	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Want to join my club? The name:\n"
-	.string "The Bug Maniacs!\p"
+	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Want to join our club? The\n"
+	.string "name: The Bug Maniacs!\p"
 	.string "…\n"
 	.string "…\l"
 	.string "You don't?!\p"
@@ -428,13 +460,12 @@ Zone5A_EventScript_LeviathanBattle_Text_7:
 	.string "with my fabulous Bug Pokémon!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_8:
-	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, dude, I get it.\p"
-	.string "You don't want to join the Fearsome\n"
-	.string "Fivesome.\p"
+	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, it's just a name.\p"
 	.string "Maybe it doesn't have the right ring or\n"
 	.string "something.\p"
-	.string "But at least let's train together. Maybe\n"
-	.string "we can beat this trainer next time.$"
+	.string "But at least let's train more together.\n"
+	.string "Maybe we can beat this trainer next\l"
+	.string "time.$"
 
 Zone5A_EventScript_LeviathanBattle_Text_9:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You're right, you're right.$"

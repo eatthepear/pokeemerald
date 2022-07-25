@@ -16,15 +16,15 @@ Zone4A_EventScript_Breeder::
 	lock
 	faceplayer
 	goto_if_unset FLAG_RECEIVED_ZONE0C_EEVEE, Zone4A_EventScript_Breeder_2
-	msgbox Zone4A_EventScript_Breeder_Text_1
+	msgbox Zone4A_EventScript_Breeder_Text_1, MSGBOX_DEFAULT
 Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1
 	goto_if_ne Zone4A_EventScript_Breeder_6
-	msgbox Zone4A_EventScript_Breeder_Text_11
+	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_DEFAULT
 	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone4A_EventScript_Breeder_9
 Zone4A_EventScript_Breeder_8:
 	delay 16
-	msgbox Zone4A_EventScript_Breeder_Text_13
+	msgbox Zone4A_EventScript_Breeder_Text_13, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	removeobject 3
 	setflag FLAG_RECEIVED_ZONE4A_GEM
@@ -52,7 +52,7 @@ Zone4A_EventScript_Breeder_6:
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_9:
-	msgbox Zone4A_EventScript_Breeder_Text_12
+	msgbox Zone4A_EventScript_Breeder_Text_12, MSGBOX_DEFAULT
 	goto Zone4A_EventScript_Breeder_8
 
 Zone4A_EventScript_Breeder_12:

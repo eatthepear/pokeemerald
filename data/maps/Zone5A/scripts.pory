@@ -23,6 +23,7 @@ script Zone5A_EventScript_Exit {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
         warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
+		waitstate
     }
     releaseall
     end
@@ -42,9 +43,7 @@ script Zone5A_EventScript_LeviathanBattle {
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 		waitmovement(0)
 	}
-	msgbox(format(
-		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… if it isn't the trainer who's been beating all my fellow club members.\pWell then. Would you like to challenge the final member of the Fearsome Foursome?"
-	), MSGBOX_YESNO)
+	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome Foursome.\pWell then. Would you like to face our club in battle? You'll have to beat both of us in a row!"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
 		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?"))
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
@@ -59,24 +58,22 @@ script Zone5A_EventScript_LeviathanBattle {
 	trainerbattle_no_intro(TRAINER_KEVIN, format("It can't be!"))
 	applymovement(10, Common_Movement_FaceRight)
 	waitmovement(0)
-	msgbox(format(
-		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, man, if only you had joined our club!\pWe could have been the Fearsome Fivesome!"
-	))
+	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!"))
 	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
-	msgbox(format(
+	msgbox(
 		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"
 		"…\l"
-		"I told you already, Kevin.\l"
-		"I don't want to be part of that nonsense Fearsome Foursome club…\l"
-		"…\l"
-		"My club is the only club for me…"))
+		"I told you already, Kevin.\p"
+		"The club name has to be\n"
+		"The Bug Maniacs, not\l"
+		"The Bug Enjoyers.")
 	fadeoutbgm(1)
 	applymovement(4, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
-	msgbox(format("{COLOR BLUE}Declan{COLOR DARK_GRAY}: Ah! Another person! Hey you!"))
+	msgbox(format("{COLOR BLUE}Declan{COLOR DARK_GRAY}: Huh? Oh!"))
 	applymovement(4, Common_Movement_WalkDown)
 	waitmovement(0)
 	applymovement(4, Common_Movement_FaceLeft)
@@ -86,7 +83,7 @@ script Zone5A_EventScript_LeviathanBattle {
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
 	waitmovement(0)
 	msgbox(format(
-		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Want to join my club? The name: The Bug Maniacs!\p"
+		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Want to join our club? The name: The Bug Maniacs!\p"
 		"…\n"
 		"…\l"
 		"You don't?!\p"
@@ -102,7 +99,7 @@ script Zone5A_EventScript_LeviathanBattle {
 	applymovement(10, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format(
-		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, dude, I get it.\pYou don't want to join the Fearsome Fivesome.\pMaybe it doesn't have the right ring or something.\pBut at least let's train together. Maybe we can beat this trainer next time."
+		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, it's just a name.\pMaybe it doesn't have the right ring or something.\pBut at least let's train more together. Maybe we can beat this trainer next time."
 	))
 	applymovement(4, Common_Movement_FaceUp)
 	waitmovement(0)
@@ -348,6 +345,42 @@ Zone5A_Text_CaitlynDefeat:
 
 Zone5A_Text_CaitlynPostBattle:
 	.string "There's only one left. Don't be afraid!$"
+
+Zone5A_EventScript_Kenneth::
+	trainerbattle_single TRAINER_KENNETH, Zone5A_Text_KennethIntro, Zone5A_Text_KennethDefeat
+	msgbox Zone5A_Text_KennethPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_KennethIntro:
+	.string "Heyo, it's me!\n"
+	.string "The last Fearsome Foursome!\p"
+	.string "Face me in battle!$"
+
+Zone5A_Text_KennethDefeat:
+	.string "Well, I guess there's him over\n"
+	.string "there, too…$"
+
+Zone5A_Text_KennethPostBattle:
+	.string "Clinton isn't really part of our\n"
+	.string "group because he likes to flaunt\l"
+	.string "how rich he is.$"
+
+Zone5A_EventScript_Clinton::
+	trainerbattle_single TRAINER_CLINTON, Zone5A_Text_ClintonIntro, Zone5A_Text_ClintonDefeat
+	msgbox Zone5A_Text_ClintonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_ClintonIntro:
+	.string "Fearsome Fivesome has a nice ring,\n"
+	.string "don't you think?$"
+
+Zone5A_Text_ClintonDefeat:
+	.string "What do you mean they don't want me\n"
+	.string "as part of their group?\l"
+	.string "I can pay to join!$"
+
+Zone5A_Text_ClintonPostBattle:
+	.string "Such cheapskates!$"
 
 Zone5A_Text_Sign:
 	.string "Trainer Tips!\p"

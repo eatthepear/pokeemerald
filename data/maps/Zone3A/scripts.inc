@@ -44,6 +44,7 @@ Zone3A_EventScript_Exit_1:
 Zone3A_EventScript_Exit_8:
 	setflag FLAG_HIDE_ZONE3A_MAX
 	warp MAP_ZONE3SANCTUARY, 255, 22, 7
+	waitstate
 Zone3A_EventScript_Exit_4:
 	releaseall
 	end

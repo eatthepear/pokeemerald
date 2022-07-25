@@ -24,7 +24,7 @@
 #define MUGSHOT_PHILLIPA    20
 #define MUGSHOT_ISABELLA    21
 #define MUGSHOT_BETTY       22
-#define MUGSHOT_ZACK        23
+#define MUGSHOT_MINA        23
 #define MUGSHOT_NEWTON      24
 #define MUGSHOT_JENNY       25
 #define MUGSHOT_MIGUEL      26
