@@ -324,6 +324,16 @@ Zone7A_EventScript_HealSign::
 Zone7A_Text_HealSign:
 	.string "A stop for weary travelers.$"
 
+Zone7A_EventScript_Sign::
+	msgbox Zone7A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone7A_Text_Sign:
+	.string "Trainer Tips!\p"
+	.string "Due to rising costs, the Pokémon\n"
+	.string "Storage System does not heal your\l"
+	.string "Pokémon.$"
+
 Zone7A_EventScript_Beauty_Text_0:
 	.string "I already gave you all the evolution\n"
 	.string "items I have!$"
