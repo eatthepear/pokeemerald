@@ -65,7 +65,7 @@ enum
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
     MENU_ACTION_RETIRE_ZONE,
-    MENU_ACTION_ZONE_INFO,
+    MENU_ACTION_INFO,
 };
 
 // Save status
@@ -313,15 +313,13 @@ static void AddStartMenuAction(u8 action)
 static void BuildSanctuaryStartMenu(void)
 {
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEDEX);
-    }
+
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEMON);
-    }
 
     AddStartMenuAction(MENU_ACTION_BAG);
+    AddStartMenuAction(MENU_ACTION_INFO);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
@@ -329,31 +327,26 @@ static void BuildSanctuaryStartMenu(void)
     // }
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
+
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_DEBUG);
-    }
-    else {
+    else
         AddStartMenuAction(MENU_ACTION_EXIT);
-    }
 }
 
 static void BuildNewZoneStartMenu(void)
 {
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEDEX);
-    }
+    
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEMON);
-    }
+    
     AddStartMenuAction(MENU_ACTION_BAG);
-    AddStartMenuAction(MENU_ACTION_ZONE_INFO);
+    AddStartMenuAction(MENU_ACTION_INFO);
+
     if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
-    {
         AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
-    }
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
@@ -361,29 +354,25 @@ static void BuildNewZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     // AddStartMenuAction(MENU_ACTION_OPTION);
+
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_DEBUG);
-    }
     else
-    {
         AddStartMenuAction(MENU_ACTION_EXIT);
-    }
 }
 
 static void BuildRevisitingZoneStartMenu(void)
 {    
     AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
+    
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEDEX);
-    }
+
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEMON);
-    }
     
     AddStartMenuAction(MENU_ACTION_BAG);
+    AddStartMenuAction(MENU_ACTION_INFO);
     
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
@@ -391,15 +380,12 @@ static void BuildRevisitingZoneStartMenu(void)
     // }
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
-    AddStartMenuAction(MENU_ACTION_OPTION);
+    // AddStartMenuAction(MENU_ACTION_OPTION);
+
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_DEBUG);
-    }
     else
-    {
         AddStartMenuAction(MENU_ACTION_EXIT);
-    }
 }
 
 static void BuildSafariZoneStartMenu(void)

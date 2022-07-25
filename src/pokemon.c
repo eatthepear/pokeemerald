@@ -10126,17 +10126,7 @@ const u16 sLevelCaps[NUM_CAPS] = {
 
 bool8 IsOverLevelLimit(u8 level)
 {
-    if (FlagGet(FLAG_IN_NEW_ZONE)) {
-        if (level >= sLevelCaps[VarGet(VAR_ZONE)])
-        {
-            return TRUE;
-        }
-        return FALSE;
-    } else {
-        if (level >= sLevelCaps[VarGet(VAR_ZONE) - 1])
-        {
-            return TRUE;
-        }
-        return FALSE;
-    }
+    if (level >= GetCurrentLevelCap())
+        return TRUE;
+    return FALSE;
 }

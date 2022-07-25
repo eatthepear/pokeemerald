@@ -856,6 +856,14 @@ static const struct MenuAction MultichoiceList_BuyPikaClone[] =
     {gText_Morpeko},
 };
 
+static const struct MenuAction MultichoiceList_Info[] =
+{
+    {gText_LevelCap},
+    {gText_Opponents},
+    {gText_Items},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -932,7 +940,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_LELOUCH_EV_NUMBERS]         = MULTICHOICE(MultichoiceList_LelouchEVNumbers),
     [MULTI_LELOUCH_STATS]              = MULTICHOICE(MultichoiceList_LelouchStats),
     [MULTI_LELOUCH_IV_NUMBERS]         = MULTICHOICE(MultichoiceList_LelouchIVNumbers),
-    [MULTI_SHARDS_YB]                  = MULTICHOICE(MultichoiceList_ShardsYB),
+    [MULTI_INFO]                       = MULTICHOICE(MultichoiceList_Info),
     [MULTI_SHARDS_RYB]                 = MULTICHOICE(MultichoiceList_ShardsRYB),
     [MULTI_SHARDS_G]                   = MULTICHOICE(MultichoiceList_ShardsG),
     [MULTI_SHARDS_RG]                  = MULTICHOICE(MultichoiceList_ShardsRG),

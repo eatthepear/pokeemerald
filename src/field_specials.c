@@ -4303,8 +4303,14 @@ void ReverseHiddenItemFlags(void)
 u16 GetNumTrainersRemaining(void)
 {
     u16 count = 0;
-    
-    switch (VarGet(VAR_ZONE))
+    u16 zone;
+    if (FlagGet(FLAG_IN_NEW_ZONE))
+        zone = VarGet(VAR_ZONE);
+    else if (FlagGet(FLAG_IS_REVISITING_ZONE))
+        zone = VarGet(VAR_REVISITING_ZONE);
+    else
+        return 1000; //In a Sanctuary, for no opponents msg
+    switch (zone)
     {
     case 1:
         count += !HasTrainerBeenFought(TRAINER_NINA);
@@ -4354,6 +4360,7 @@ u16 GetNumTrainersRemaining(void)
         count += !FlagGet(FLAG_BEAT_LEVIATHAN_6);
         break;
     case 7:
+    case 8:
         count += !HasTrainerBeenFought(TRAINER_MILLIE);
         count += !HasTrainerBeenFought(TRAINER_PAIGE);
         count += !HasTrainerBeenFought(TRAINER_SETH);
@@ -4402,6 +4409,7 @@ u16 GetNumTrainersRemaining(void)
         count += !HasTrainerBeenFought(TRAINER_KINLEY);
         break;
     case 13:
+    case 14:
         count += !HasTrainerBeenFought(TRAINER_VIOLET);
         count += !HasTrainerBeenFought(TRAINER_WANDA);
         count += !HasTrainerBeenFought(TRAINER_AMBER_AND_KIM);
@@ -4425,7 +4433,7 @@ u16 GetNumTrainersRemaining(void)
         count += !FlagGet(FLAG_BEAT_LEVIATHAN_13);
         break;
     default:
-        count = 500;
+        count = 0;
         break;
     }
     return count;
@@ -4433,5 +4441,174 @@ u16 GetNumTrainersRemaining(void)
 
 u16 GetCurrentLevelCap(void)
 {
-    return sLevelCaps[VarGet(VAR_ZONE)];
+    if (FlagGet(FLAG_IN_NEW_ZONE)) {
+        return sLevelCaps[VarGet(VAR_ZONE)];
+    } else {
+        return sLevelCaps[VarGet(VAR_ZONE) - 1];
+    }
+}
+
+u16 GetNumChestsFound(void)
+{
+    u16 count = 0;
+    u16 zone;
+    if (FlagGet(FLAG_IN_NEW_ZONE))
+        zone = VarGet(VAR_ZONE);
+    else if (FlagGet(FLAG_IS_REVISITING_ZONE))
+        zone = VarGet(VAR_REVISITING_ZONE);
+    else
+        return 0;
+    switch (zone)
+    {
+    case 1:
+        count += FlagGet(FLAG_ITEM_ZONE1A_POTION);
+        count += FlagGet(FLAG_ITEM_ZONE1A_QUICK_CLAW);
+        break;
+    case 2:
+        count += FlagGet(FLAG_ITEM_ZONE2A_ANTIDOTE);
+        count += FlagGet(FLAG_ITEM_ZONE2B_POTION_X2);
+        break;
+    // case 3:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 4:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 5:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 6:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 7:
+    // case 8:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 9:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 10:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 11:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 12:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 13:
+    // case 14:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    // case 15:
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     count += FlagGet(FLAG_ITEM_ZONE);
+    //     break;
+    default:
+        count = 0;
+        break;
+    }
+    return count;
+}
+
+u16 GetNumChests(void)
+{
+    u16 zone;
+    if (FlagGet(FLAG_IN_NEW_ZONE))
+        zone = VarGet(VAR_ZONE);
+    else if (FlagGet(FLAG_IS_REVISITING_ZONE))
+        zone = VarGet(VAR_REVISITING_ZONE);
+    else
+        return 0;
+    switch (zone)
+    {
+    case 1:
+        return 2;
+    case 2:
+        return 2;
+    default:
+        return 0;
+    }
+}
+
+u16 GetNumHiddenItemsFound(void)
+{
+    u16 count = 0;
+    u16 zone;
+    if (FlagGet(FLAG_IN_NEW_ZONE))
+        zone = VarGet(VAR_ZONE);
+    else if (FlagGet(FLAG_IS_REVISITING_ZONE))
+        zone = VarGet(VAR_REVISITING_ZONE);
+    else
+        return 0;
+    switch (zone)
+    {
+    case 1:
+        break;
+    case 2:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE2A_CHERI_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE2B_CHESTO_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE2B_PECHA_BERRY);
+        break;
+    default:
+        count = 0;
+        break;
+    }
+    return count;
+}
+
+u16 GetNumHiddenItems(void)
+{
+    u16 zone;
+    if (FlagGet(FLAG_IN_NEW_ZONE))
+        zone = VarGet(VAR_ZONE);
+    else if (FlagGet(FLAG_IS_REVISITING_ZONE))
+        zone = VarGet(VAR_REVISITING_ZONE);
+    else
+        return 0;
+    switch (zone)
+    {
+    case 1:
+        return 0;
+    case 2:
+        return 3;
+    default:
+        return 0;
+    }
 }

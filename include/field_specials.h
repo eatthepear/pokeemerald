@@ -34,5 +34,9 @@ void SetPCBoxToSendMon(u8 boxId);
 void ReverseHiddenItemFlags(void);
 u16 GetNumTrainersRemaining(void);
 u16 GetCurrentLevelCap(void);
+u16 GetNumChestsFound(void);
+u16 GetNumChests(void);
+u16 GetNumHiddenItemsFound(void);
+u16 GetNumHiddenItems(void);
 
 #endif // GUARD_FIELD_SPECIALS_H
