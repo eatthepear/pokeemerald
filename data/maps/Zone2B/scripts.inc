@@ -99,7 +99,7 @@ Zone2B_EventScript_BuyBug_3:
 	hidemoneybox
 	goto_if_set FLAG_NUZLOCKE_ON, Zone2B_EventScript_BuyBug_17
 	msgbox Zone2B_EventScript_BuyBug_Text_6, MSGBOX_DEFAULT
-	multichoice 21, 0, MULTI_BUY_BUG, TRUE
+	multichoice2 21, 0, Zone2B_Text_BugMultichoice, TRUE
 	switch VAR_RESULT
 	case 0, Zone2B_EventScript_BuyBug_27
 	case 1, Zone2B_EventScript_BuyBug_28
@@ -157,35 +157,35 @@ Zone2B_EventScript_BuyBug_20:
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_22:
-	setvar VAR_TEMP_0, SPECIES_GRUBBIN
+	setvar VAR_TEMP_0, SPECIES_BLIPBUG
 	goto Zone2B_EventScript_BuyBug_20
 
 Zone2B_EventScript_BuyBug_23:
-	setvar VAR_TEMP_0, SPECIES_SEWADDLE
+	setvar VAR_TEMP_0, SPECIES_GRUBBIN
 	goto Zone2B_EventScript_BuyBug_20
 
 Zone2B_EventScript_BuyBug_24:
-	setvar VAR_TEMP_0, SPECIES_VENIPEDE
+	setvar VAR_TEMP_0, SPECIES_SEWADDLE
 	goto Zone2B_EventScript_BuyBug_20
 
 Zone2B_EventScript_BuyBug_25:
-	setvar VAR_TEMP_0, SPECIES_BLIPBUG
+	setvar VAR_TEMP_0, SPECIES_VENIPEDE
 	goto Zone2B_EventScript_BuyBug_20
 
 Zone2B_EventScript_BuyBug_27:
-	setvar VAR_TEMP_0, SPECIES_GRUBBIN
+	setvar VAR_TEMP_0, SPECIES_BLIPBUG
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_28:
-	setvar VAR_TEMP_0, SPECIES_SEWADDLE
+	setvar VAR_TEMP_0, SPECIES_GRUBBIN
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_29:
-	setvar VAR_TEMP_0, SPECIES_VENIPEDE
+	setvar VAR_TEMP_0, SPECIES_SEWADDLE
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_30:
-	setvar VAR_TEMP_0, SPECIES_BLIPBUG
+	setvar VAR_TEMP_0, SPECIES_VENIPEDE
 	goto Zone2B_EventScript_BuyBug_16
 
 
@@ -206,6 +206,13 @@ Zone2B_EventScript_ItemPotion_2:
 	release
 	end
 
+
+Zone2B_Text_BugMultichoice:
+    .string "Blipbug$"
+    .string "Grubbin$"
+    .string "Sewaddle$"
+    .string "Venipede$"
+    .string "$"
 
 Zone2B_EventScript_Harper::
 	trainerbattle_single TRAINER_HARPER, Zone2B_Text_HarperIntro, Zone2B_Text_HarperDefeat

@@ -109,27 +109,27 @@ script Zone2B_EventScript_BuyBug {
 					random(4)
 					switch (var(VAR_RESULT)) {
 						case 0:
-							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
-						case 1:
-							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
-						case 2:
-							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
-						case 3:
 							setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
+						case 1:
+							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
+						case 2:
+							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
+						case 3:
+							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
 					}
 					setflag(FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG)
 				} else {
 					msgbox(format("Choose which Bug you would like."), MSGBOX_DEFAULT)
-					multichoice(21, 0, MULTI_BUY_BUG, TRUE)
+					multichoice2(21, 0, Zone2B_Text_BugMultichoice, TRUE)
 					switch (var(VAR_RESULT)) {
 						case 0:
-							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
-						case 1:
-							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
-						case 2:
-							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
-						case 3:
 							setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
+						case 1:
+							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
+						case 2:
+							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
+						case 3:
+							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
 					}
 				}
 				givemon(VAR_TEMP_0, 5, ITEM_NONE)
@@ -166,6 +166,13 @@ script Zone2B_EventScript_ItemPotion {
 }
 
 raw `
+Zone2B_Text_BugMultichoice:
+    .string "Blipbug$"
+    .string "Grubbin$"
+    .string "Sewaddle$"
+    .string "Venipede$"
+    .string "$"
+
 Zone2B_EventScript_Harper::
 	trainerbattle_single TRAINER_HARPER, Zone2B_Text_HarperIntro, Zone2B_Text_HarperDefeat
 	msgbox Zone2B_Text_HarperPostBattle, MSGBOX_AUTOCLOSE

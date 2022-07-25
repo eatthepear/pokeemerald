@@ -184,33 +184,33 @@ script Zone5A_EventScript_BuyPikaClone {
 					random(4)
 					switch (var(VAR_RESULT)) {
 						case 0:
-							setvar(VAR_TEMP_2, SPECIES_PACHIRISU)
+							setvar(VAR_TEMP_2, SPECIES_DEDENNE)
 						case 1:
 							setvar(VAR_TEMP_2, SPECIES_EMOLGA)
 						case 2:
-							setvar(VAR_TEMP_2, SPECIES_DEDENNE)
-						case 3:
 							setvar(VAR_TEMP_2, SPECIES_MORPEKO)
+						case 3:
+							setvar(VAR_TEMP_2, SPECIES_PACHIRISU)
 					}
 					setflag(FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE)
 				} else {
 					msgbox(format("Choose which Pikachu clone you would like."), MSGBOX_DEFAULT)
-					multichoice(21, 0, MULTI_BUY_PIKA_CLONE, TRUE)
+					multichoice2(21, 0, Zone5A_Text_PikaCloneMultichoice, TRUE)
 					switch (var(VAR_RESULT)) {
 						case 0:
-							setvar(VAR_TEMP_2, SPECIES_PACHIRISU)
+							setvar(VAR_TEMP_2, SPECIES_DEDENNE)
 						case 1:
 							setvar(VAR_TEMP_2, SPECIES_EMOLGA)
 						case 2:
-							setvar(VAR_TEMP_2, SPECIES_DEDENNE)
-						case 3:
 							setvar(VAR_TEMP_2, SPECIES_MORPEKO)
+						case 3:
+							setvar(VAR_TEMP_2, SPECIES_PACHIRISU)
 					}
 				}
 				givemon(VAR_TEMP_2, 10, ITEM_NONE)
 				setmonmetlocation(VAR_TEMP_3, 250)
 				bufferspeciesname(0, VAR_TEMP_2)
-				msgbox("Here's your {STR_VAR_1}.")
+				msgbox("Here's your {STR_VAR_1}.", MSGBOX_DEFAULT)
 				playfanfare(MUS_OBTAIN_ITEM)
 				message(format("{PLAYER} received the {STR_VAR_1}!"))
 				waitmessage
@@ -258,6 +258,13 @@ script Zone5A_EventScript_ItemTM03 {
 }
 
 raw `
+Zone5A_Text_PikaCloneMultichoice:
+    .string "Dedenne$"
+    .string "Emolga$"
+    .string "Morpeko$"
+    .string "Pachirisu$"
+    .string "$"
+
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons
 	msgbox Zone5A_Text_AnneAndJunePostBattle, MSGBOX_DEFAULT

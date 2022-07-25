@@ -160,7 +160,7 @@ Zone5A_EventScript_BuyPikaClone_3:
 	hidemoneybox
 	goto_if_set FLAG_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_17
 	msgbox Zone5A_EventScript_BuyPikaClone_Text_6, MSGBOX_DEFAULT
-	multichoice 21, 0, MULTI_BUY_PIKA_CLONE, TRUE
+	multichoice2 21, 0, Zone5A_Text_PikaCloneMultichoice, TRUE
 	switch VAR_RESULT
 	case 0, Zone5A_EventScript_BuyPikaClone_27
 	case 1, Zone5A_EventScript_BuyPikaClone_28
@@ -170,7 +170,7 @@ Zone5A_EventScript_BuyPikaClone_16:
 	givemon VAR_TEMP_2, 10, ITEM_NONE
 	setmonmetlocation VAR_TEMP_3, 250
 	bufferspeciesname 0, VAR_TEMP_2
-	msgbox Zone5A_EventScript_BuyPikaClone_Text_7
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_7, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message Zone5A_EventScript_BuyPikaClone_Text_8
 	waitmessage
@@ -218,7 +218,7 @@ Zone5A_EventScript_BuyPikaClone_20:
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_22:
-	setvar VAR_TEMP_2, SPECIES_PACHIRISU
+	setvar VAR_TEMP_2, SPECIES_DEDENNE
 	goto Zone5A_EventScript_BuyPikaClone_20
 
 Zone5A_EventScript_BuyPikaClone_23:
@@ -226,15 +226,15 @@ Zone5A_EventScript_BuyPikaClone_23:
 	goto Zone5A_EventScript_BuyPikaClone_20
 
 Zone5A_EventScript_BuyPikaClone_24:
-	setvar VAR_TEMP_2, SPECIES_DEDENNE
-	goto Zone5A_EventScript_BuyPikaClone_20
-
-Zone5A_EventScript_BuyPikaClone_25:
 	setvar VAR_TEMP_2, SPECIES_MORPEKO
 	goto Zone5A_EventScript_BuyPikaClone_20
 
-Zone5A_EventScript_BuyPikaClone_27:
+Zone5A_EventScript_BuyPikaClone_25:
 	setvar VAR_TEMP_2, SPECIES_PACHIRISU
+	goto Zone5A_EventScript_BuyPikaClone_20
+
+Zone5A_EventScript_BuyPikaClone_27:
+	setvar VAR_TEMP_2, SPECIES_DEDENNE
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_28:
@@ -242,11 +242,11 @@ Zone5A_EventScript_BuyPikaClone_28:
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_29:
-	setvar VAR_TEMP_2, SPECIES_DEDENNE
+	setvar VAR_TEMP_2, SPECIES_MORPEKO
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_30:
-	setvar VAR_TEMP_2, SPECIES_MORPEKO
+	setvar VAR_TEMP_2, SPECIES_PACHIRISU
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 
@@ -285,6 +285,13 @@ Zone5A_EventScript_ItemTM03_2:
 	release
 	end
 
+
+Zone5A_Text_PikaCloneMultichoice:
+    .string "Dedenne$"
+    .string "Emolga$"
+    .string "Morpeko$"
+    .string "Pachirisu$"
+    .string "$"
 
 Zone5A_EventScript_AnneAndJune::
 	trainerbattle_double TRAINER_ANNE_AND_JUNE, Zone5A_Text_AnneAndJuneIntro, Zone5A_Text_AnneAndJuneDefeat, gText_NotEnoughMons

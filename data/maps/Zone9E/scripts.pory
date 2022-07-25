@@ -1,0 +1,85 @@
+mapscripts Zone9E_MapScripts {}
+
+script Zone9E_EventScript_BuyGrassStarter {
+	lock
+	faceplayer
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER) == true) {
+		msgbox(format("The rest of these Grass starters aren't for sale anymore. Sorry about that!"))
+		release
+		end
+	} else {
+		showmoneybox(0, 0, 0)
+		msgbox(format("Hello! I work with the Pokémon Day-Care.\pWe're looking for trainers to adopt starter Pokémon.\pI have here Bulbasaur, Grookey, Treecko, or Turtwig, and the adoption fee is ¥5000!"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			closemessage
+			hidemoneybox
+			msgbox(format("Well, I'll be here if you do decide to adopt a starter."))
+		} else {
+			checkmoney(5000, 0)
+			if (var(VAR_RESULT) == FALSE) {
+				msgbox("You don't have enough money.")
+				hidemoneybox
+			} else {
+				specialvar(VAR_TEMP_0, CalculatePlayerPartyCount)
+				if (var(VAR_TEMP_0) == PARTY_SIZE) {
+					msgbox(format("Your party is full. Clear a party slot, then come back."))
+					hidemoneybox
+					release
+					end
+				}
+				removemoney(5000, 0)
+				updatemoneybox
+				msgbox("All right, forms signed, and… voila!", MSGBOX_DEFAULT)
+				closemessage
+				hidemoneybox
+				if (flag(FLAG_NUZLOCKE_ON) == true) {
+					random(4)
+					switch (var(VAR_RESULT)) {
+						case 0:
+							setvar(VAR_TEMP_1, SPECIES_BULBASAUR)
+						case 1:
+							setvar(VAR_TEMP_1, SPECIES_GROOKEY)
+						case 2:
+							setvar(VAR_TEMP_1, SPECIES_TREECKO)
+						case 3:
+							setvar(VAR_TEMP_1, SPECIES_TURTWIG)
+					}
+					setflag(FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER)
+				} else {
+					msgbox(format("Choose which starter you would like."), MSGBOX_DEFAULT)
+					multichoice2(21, 0, Zone9E_Text_StarterMultichoice, TRUE)
+					switch (var(VAR_RESULT)) {
+						case 0:
+							setvar(VAR_TEMP_1, SPECIES_BULBASAUR)
+						case 1:
+							setvar(VAR_TEMP_1, SPECIES_GROOKEY)
+						case 2:
+							setvar(VAR_TEMP_1, SPECIES_TREECKO)
+						case 3:
+							setvar(VAR_TEMP_1, SPECIES_TURTWIG)
+					}
+				}
+				givemon(VAR_TEMP_1, 5, ITEM_NONE)
+				setmonmetlocation(VAR_TEMP_0, 249)
+				bufferspeciesname(0, VAR_TEMP_1)
+				msgbox("Here's your {STR_VAR_1}.", MSGBOX_DEFAULT)
+				playfanfare(MUS_OBTAIN_ITEM)
+				message(format("{PLAYER} received the {STR_VAR_1}!"))
+				waitmessage
+				waitfanfare
+				msgbox(format("Take good care of that starter Pokémon!"))
+			}
+		}
+	}
+	release
+	end
+}
+
+raw `
+Zone9E_Text_StarterMultichoice:
+    .string "Bulbasaur$"
+    .string "Grookey$"
+    .string "Treecko$"
+    .string "Turtwig$"
+    .string "$"
+`

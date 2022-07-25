@@ -3235,6 +3235,9 @@ static void BufferMonTrainerMemo(void)
             case METLOC_BOUGHT_PIKA_CLONE:
                 text = gText_XNatureBoughtPikaClone;
                 break;
+            case METLOC_ADOPTED:
+                text = gText_XNatureAdopted;
+                break;
             default:
                 text = gText_XNatureMetAtYZ;
                 break;
