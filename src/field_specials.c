@@ -4468,78 +4468,92 @@ u16 GetNumChestsFound(void)
         count += FlagGet(FLAG_ITEM_ZONE2A_ANTIDOTE);
         count += FlagGet(FLAG_ITEM_ZONE2B_POTION_X2);
         break;
-    // case 3:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 4:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 5:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 6:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 7:
-    // case 8:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 9:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 10:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 11:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 12:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 13:
-    // case 14:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
-    // case 15:
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     count += FlagGet(FLAG_ITEM_ZONE);
-    //     break;
+    case 3:
+        count += FlagGet(FLAG_ITEM_ZONE3A_HYPER_POTION);
+        count += FlagGet(FLAG_ITEM_ZONE3A_PARALYZE_HEAL);
+        count += FlagGet(FLAG_ITEM_ZONE3A_POTION_X2);
+        count += FlagGet(FLAG_ITEM_ZONE3A_SUPER_POTION);
+        break;
+    case 4:
+        count += FlagGet(FLAG_ITEM_ZONE4A_BURN_HEAL);
+        count += FlagGet(FLAG_ITEM_ZONE4B_AWAKENING);
+        count += FlagGet(FLAG_ITEM_ZONE4C_MUSCLE_BAND);
+        count += FlagGet(FLAG_ITEM_ZONE4D_BEEDRILLITE);
+        count += FlagGet(FLAG_ITEM_ZONE4D_WISE_GLASSES);
+        count += FlagGet(FLAG_ITEM_ZONE4E_SUPER_POTION);
+        break;
+    case 5:
+        count += FlagGet(FLAG_ITEM_ZONE5A_QUICK_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE5A_TM03);
+        break;
+    case 6:
+        count += FlagGet(FLAG_ITEM_ZONE6A_NEST_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE6A_NET_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE6A_TM07);
+        break;
+    case 7:
+    case 8:
+        count += FlagGet(FLAG_ITEM_ZONE7A_BLACK_BELT);
+        count += FlagGet(FLAG_ITEM_ZONE7A_GREAT_BALL_X2);
+        count += FlagGet(FLAG_ITEM_ZONE7A_POISON_BARB);
+        count += FlagGet(FLAG_ITEM_ZONE7A_SHARP_BEAK);
+        count += FlagGet(FLAG_ITEM_ZONE7A_SILVER_POWDER);
+        count += FlagGet(FLAG_ITEM_ZONE7A_SUPER_POTION);
+        count += FlagGet(FLAG_ITEM_ZONE7A_TWISTED_SPOON);
+        count += FlagGet(FLAG_ITEM_ZONE8A_BLACK_GLASSES);
+        count += FlagGet(FLAG_ITEM_ZONE8A_MAGNET);
+        count += FlagGet(FLAG_ITEM_ZONE8A_SPELL_TAG);
+        count += FlagGet(FLAG_ITEM_ZONE8B_DUSK_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE8B_HARD_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE8B_SUPER_POTION);
+        count += FlagGet(FLAG_ITEM_ZONE8C_FULL_HEAL);
+        count += FlagGet(FLAG_ITEM_ZONE8C_NEVER_MELT_ICE);
+        count += FlagGet(FLAG_ITEM_ZONE8C_SUPER_REPEL);
+        break;
+    case 9:
+        count += FlagGet(FLAG_ITEM_ZONE9A_BIG_ROOT);
+        count += FlagGet(FLAG_ITEM_ZONE9A_MIRACLE_SEED);
+        count += FlagGet(FLAG_ITEM_ZONE9A_TM13);
+        count += FlagGet(FLAG_ITEM_ZONE9G_CHARCOAL);
+        break;
+    case 10:
+        count += FlagGet(FLAG_ITEM_ZONE10A_DRAGON_FANG);
+        count += FlagGet(FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS);
+        count += FlagGet(FLAG_ITEM_ZONE10A_METAL_COAT);
+        count += FlagGet(FLAG_ITEM_ZONE10A_SOFT_SAND);
+        count += FlagGet(FLAG_ITEM_ZONE10A_SUN_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE10A_TM16);
+        break;
+    case 11:
+        count += FlagGet(FLAG_ITEM_ZONE11A_MOON_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE11A_TIMER_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE11A_TM22);
+        break;
+    case 12:
+        count += FlagGet(FLAG_ITEM_ZONE12A_FIRE_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE12A_MACHO_BRACE);
+        count += FlagGet(FLAG_ITEM_ZONE12A_METRONOME);
+        count += FlagGet(FLAG_ITEM_ZONE12A_THUNDER_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE12A_TM24);
+        break;
+    case 13:
+    case 14:
+        count += FlagGet(FLAG_ITEM_ZONE13A_LEAF_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE13A_SHINY_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE14A_FULL_HEAL);
+        count += FlagGet(FLAG_ITEM_ZONE14B_DUSK_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE14B_HYPER_POTION);
+        break;
+    case 15:
+        count += FlagGet(FLAG_ITEM_ZONE15A_DAWN_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE15A_DUSK_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE15A_GLALITITE);
+        count += FlagGet(FLAG_ITEM_ZONE15A_ICE_STONE);
+        count += FlagGet(FLAG_ITEM_ZONE15A_QUICK_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE15A_REVIVE);
+        count += FlagGet(FLAG_ITEM_ZONE15A_TIMER_BALL);
+        count += FlagGet(FLAG_ITEM_ZONE15A_TM26);
+        break;
     default:
         count = 0;
         break;
@@ -4562,6 +4576,30 @@ u16 GetNumChests(void)
         return 2;
     case 2:
         return 2;
+    case 3:
+        return 4;
+    case 4:
+        return 6;
+    case 5:
+        return 2;
+    case 6:
+        return 3;
+    case 7:
+    case 8:
+        return 16;
+    case 9:
+        return 4;
+    case 10:
+        return 6;
+    case 11:
+        return 3;
+    case 12:
+        return 5;
+    case 13:
+    case 14:
+        return 5;
+    case 15:
+        return 8;
     default:
         return 0;
     }
@@ -4586,6 +4624,68 @@ u16 GetNumHiddenItemsFound(void)
         count += FlagGet(FLAG_HIDDEN_ITEM_ZONE2B_CHESTO_BERRY);
         count += FlagGet(FLAG_HIDDEN_ITEM_ZONE2B_PECHA_BERRY);
         break;
+    case 3:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE3A_CHERI_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE3A_PECHA_BERRY);
+        break;
+    case 4:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE4A_ORAN_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE4A_PECHA_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE4C_CHESTO_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE4C_RAWST_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE4E_CHERI_BERRY);
+        break;
+    case 5:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE5A_ORAN_BERRY);
+        break;
+    case 6:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_CHESTO_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_PERSIM_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_RAWST_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_RED_SHARD_1);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_RED_SHARD_2);
+        break;
+    case 7:
+    case 8:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE7A_ASPEAR_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE7A_PERSIM_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE7A_RAWST_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE7A_SITRUS_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE8A_RED_SHARD);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE8B_RED_SHARD);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE8C_RED_SHARD);
+        break;
+    case 9:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE9A_LEPPA_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE9A_SITRUS_BERRY);
+        break;
+    case 10:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_RED_SHARD);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_1);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_2);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_3);
+        break;
+    case 11:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE11A_CHERI_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE11A_PECHA_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE11A_RAWST_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE11A_SITRUS_BERRY);
+        break;
+    case 12:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE12A_BLUE_SHARD);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE12A_LEPPA_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE12A_LUM_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE12A_RED_SHARD);
+        break;
+    case 13:
+    case 14:
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE13A_LUM_BERRY);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE14A_RED_SHARD);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE14B_BLUE_SHARD);
+        count += FlagGet(FLAG_HIDDEN_ITEM_ZONE14B_YELLOW_SHARD);
+        break;
+    case 15:
+        break;
     default:
         count = 0;
         break;
@@ -4608,6 +4708,30 @@ u16 GetNumHiddenItems(void)
         return 0;
     case 2:
         return 3;
+    case 3:
+        return 2;
+    case 4:
+        return 5;
+    case 5:
+        return 1;
+    case 6:
+        return 5;
+    case 7:
+    case 8:
+        return 7;
+    case 9:
+        return 2;
+    case 10:
+        return 4;
+    case 11:
+        return 4;
+    case 12:
+        return 4;
+    case 13:
+    case 14:
+        return 4;
+    case 15:
+        return 0;
     default:
         return 0;
     }

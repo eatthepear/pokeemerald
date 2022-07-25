@@ -204,14 +204,6 @@
     },
     {
       "type": "hidden_item",
-      "x": 22,
-      "y": 18,
-      "elevation": 3,
-      "item": "ITEM_ORAN_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ZONE6A_ORAN_BERRY"
-    },
-    {
-      "type": "hidden_item",
       "x": 33,
       "y": 23,
       "elevation": 3,
