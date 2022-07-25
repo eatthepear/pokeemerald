@@ -54,6 +54,65 @@ Zone7A_MapScripts_MAP_SCRIPT_ON_RESUME_25:
 	return
 
 
+Zone7A_EventScript_Beauty::
+	lock
+	faceplayer
+	goto_if_set FLAG_ZONE7A_RECEIVED_WHIPPED_DREAM, Zone7A_EventScript_Beauty_3
+Zone7A_EventScript_Beauty_1:
+	msgbox Zone7A_EventScript_Beauty_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone7A_EventScript_Beauty_7
+Zone7A_EventScript_Beauty_6:
+	release
+	end
+
+Zone7A_EventScript_Beauty_2:
+	msgbox Zone7A_EventScript_Beauty_Text_0
+	release
+	end
+
+Zone7A_EventScript_Beauty_3:
+	goto_if_set FLAG_ZONE7A_RECEIVED_SACHET, Zone7A_EventScript_Beauty_2
+	goto Zone7A_EventScript_Beauty_1
+
+Zone7A_EventScript_Beauty_7:
+	special ChoosePartyMon
+	waitstate
+	compare VAR_RESULT, 255
+	goto_if_ne Zone7A_EventScript_Beauty_9
+	goto Zone7A_EventScript_Beauty_6
+
+Zone7A_EventScript_Beauty_9:
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	switch VAR_RESULT
+	case SPECIES_SWIRLIX, Zone7A_EventScript_Beauty_12
+	case SPECIES_SPRITZEE, Zone7A_EventScript_Beauty_13
+	msgbox Zone7A_EventScript_Beauty_Text_5
+	goto Zone7A_EventScript_Beauty_6
+
+Zone7A_EventScript_Beauty_12:
+	goto_if_unset FLAG_ZONE7A_RECEIVED_WHIPPED_DREAM, Zone7A_EventScript_Beauty_15
+	msgbox Zone7A_EventScript_Beauty_Text_3
+	goto Zone7A_EventScript_Beauty_6
+
+Zone7A_EventScript_Beauty_13:
+	goto_if_unset FLAG_ZONE7A_RECEIVED_SACHET, Zone7A_EventScript_Beauty_18
+	msgbox Zone7A_EventScript_Beauty_Text_4
+	goto Zone7A_EventScript_Beauty_6
+
+Zone7A_EventScript_Beauty_15:
+	msgbox Zone7A_EventScript_Beauty_Text_2
+	giveitem ITEM_WHIPPED_DREAM
+	setflag FLAG_ZONE7A_RECEIVED_WHIPPED_DREAM
+	goto Zone7A_EventScript_Beauty_6
+
+Zone7A_EventScript_Beauty_18:
+	msgbox Zone7A_EventScript_Beauty_Text_2
+	giveitem ITEM_SACHET
+	setflag FLAG_ZONE7A_RECEIVED_SACHET
+	goto Zone7A_EventScript_Beauty_6
+
+
 Zone7A_EventScript_ItemSharpBeak::
 	lock
 	goto_if_set FLAG_ITEM_ZONE7A_SHARP_BEAK, Zone7A_EventScript_ItemSharpBeak_2
@@ -264,3 +323,28 @@ Zone7A_EventScript_HealSign::
 
 Zone7A_Text_HealSign:
 	.string "A stop for weary travelers.$"
+
+Zone7A_EventScript_Beauty_Text_0:
+	.string "I already gave you all the evolution\n"
+	.string "items I have!$"
+
+Zone7A_EventScript_Beauty_Text_1:
+	.string "Beautiful, Fairy-type Pokémon…\p"
+	.string "I'll give you the corresponding\n"
+	.string "evolution item if you show me a Swirlix\l"
+	.string "or a Spritzee.$"
+
+Zone7A_EventScript_Beauty_Text_2:
+	.string "That Pokémon is absolutely stunning…\n"
+	.string "Take this, as promised.$"
+
+Zone7A_EventScript_Beauty_Text_3:
+	.string "I already gave you all the Swirlix\n"
+	.string "evolution items I have!$"
+
+Zone7A_EventScript_Beauty_Text_4:
+	.string "I already gave you all the Spritzee\n"
+	.string "evolution items I have!$"
+
+Zone7A_EventScript_Beauty_Text_5:
+	.string "That's not a Swirlix nor a Spritzee!$"

@@ -11544,7 +11544,7 @@ static const struct LevelUpMove sPetililLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sLilligantLevelUpLearnset[] = {
-	LEVEL_UP_MOVE( 0, MOVE_QUIVER_DANCE),
+	LEVEL_UP_MOVE( 1, MOVE_QUIVER_DANCE),
 	LEVEL_UP_MOVE( 1, MOVE_GROWTH),
 	LEVEL_UP_MOVE( 1, MOVE_LEECH_SEED),
 	LEVEL_UP_MOVE( 1, MOVE_MEGA_DRAIN),

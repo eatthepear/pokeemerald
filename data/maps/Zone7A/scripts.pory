@@ -38,6 +38,47 @@ mapscripts Zone7A_MapScripts {
 	}
 }
 
+
+script Zone7A_EventScript_Beauty {
+	lock
+	faceplayer
+	if (flag(FLAG_ZONE7A_RECEIVED_WHIPPED_DREAM) && flag(FLAG_ZONE7A_RECEIVED_SACHET)) {
+		msgbox(format("I already gave you all the evolution items I have!"))
+		release
+		end
+	}
+	msgbox(format("Beautiful, Fairy-type Pokémon…\pI'll give you the corresponding evolution item if you show me a Swirlix or a Spritzee."), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		special(ChoosePartyMon)
+		waitstate
+		if (var(VAR_RESULT) != 255) {
+			specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+			switch(var(VAR_RESULT)) {
+				case SPECIES_SWIRLIX:
+					if (flag(FLAG_ZONE7A_RECEIVED_WHIPPED_DREAM) == false) {
+						msgbox(format("That Pokémon is absolutely stunning… Take this, as promised."))
+						giveitem(ITEM_WHIPPED_DREAM)
+						setflag(FLAG_ZONE7A_RECEIVED_WHIPPED_DREAM)
+					} else {
+						msgbox(format("I already gave you all the Swirlix evolution items I have!"))
+					}
+				case SPECIES_SPRITZEE:
+					if (flag(FLAG_ZONE7A_RECEIVED_SACHET) == false) {
+						msgbox(format("That Pokémon is absolutely stunning… Take this, as promised."))
+						giveitem(ITEM_SACHET)
+						setflag(FLAG_ZONE7A_RECEIVED_SACHET)
+					} else {
+						msgbox(format("I already gave you all the Spritzee evolution items I have!"))
+					}
+				default:
+					msgbox(format("That's not a Swirlix nor a Spritzee!"))
+			}
+		}
+	}
+	release
+	end
+}
+
 script Zone7A_EventScript_ItemSharpBeak {
 	lock
 	if (flag(FLAG_ITEM_ZONE7A_SHARP_BEAK)) {
