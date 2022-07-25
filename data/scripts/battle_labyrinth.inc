@@ -4523,7 +4523,6 @@ gText_Colress_BrutalExplained::
 	.string "Trainer battles give less money.\p"
 	.string "Items cannot be farmed from wild\n"
 	.string "Pokémon or any other means.\p"
-	.string "The Daycare cannot be used.\p"
 	.string "Many helpful NPCs are unavailable.\p"
 	.string "Some moves use more PP than normal and\n"
 	.string "opponents do not use PP.\p"

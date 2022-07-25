@@ -107,7 +107,6 @@ Zone0C_Text_ReceivedEevee:
 Zone0C_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone0C_PokemonDayCare_EventScript_Closed
 	goto_if_set FLAG_NUZLOCKE_ON, Zone0C_PokemonDayCare_EventScript_Closed
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
