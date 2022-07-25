@@ -20,82 +20,117 @@ script Zone0Sanctuary_EventScript_Intro {
 	applymovement(1, Common_Movement_Colress_WalkDown)
 	call(EventScript_MoveCameraDown)
 	waitmovement(0)
-	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
+	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}.\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_0, 1)
 		delay(96)
-		msgbox(format("The Battle Labyrinth is comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
+		msgbox(format("The Pokémon Battle Labyrinth is comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
 		"In these Zones, you might encounter wild Pokémon, great treasures, tough trainers, and more.\p"
-		"At the end of each Zone and before the next Zone begins, you will find a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to purchase supplies, heal your Pokémon, and other benefits.\p"
-		"Once you enter a new Zone, you will not be able to access a Sanctuary until you exit that Zone."))
-		delay(48)
-		msgbox(format("Zones are designed to test your capabilities at braving different environments.\p"
 		"Each Zone typically contains a {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
-		"Some Leviathans are optional, but many are required to progress."))
-		delay(48)
-		msgbox(format("In order to win, you must progress through all Zones without losing a battle."))
+		"At the end of each Zone and before the next Zone begins, you will find a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to purchase supplies, heal your Pokémon, and other benefits.\p"
+		"Once you enter a new Zone, you will not be able to access a Sanctuary until you exit that Zone.\p"
+		"In order to win, you must progress through all Zones without losing a battle."))
 		delay(96)
 	}
 	msgbox(format("Would you like to listen to the difficulty options explanation?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_1, 1)
-		msgbox(format("There are two game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}."))
-		msgbox(gText_Colress_DefaultExplained)
-		delay(16)
-		msgbox(gText_Colress_BrutalExplained)
-		delay(96)
 	}
-	msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
-	multichoice(2, 5, MULTI_DEFAULT_BRUTAL, 1)
-	switch(var(VAR_RESULT)) {
-		case 0:
-			setflag(FLAG_FULL_PREVIEW_ON)
-			playse(SE_PC_LOGIN)
-			msgbox(format("{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
-			waitse
-			closemessage
-		case 1:
-			setflag(FLAG_BRUTAL_MODE_ON)
-			setflag(FLAG_SMART_WILD_AI_ON)
-			playse(SE_PC_LOGIN)
-			msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
-			waitse
-			closemessage
-			special(ReverseHiddenItemFlags)
+	while {
+		if (var(VAR_TEMP_1) == 1) {
+			msgbox(format("There are two game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}."))
+			msgbox(gText_Colress_DefaultExplained)
+			msgbox(gText_Colress_BrutalExplained)
+			delay(96)
+		}
+		msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
+		multichoice(2, 5, MULTI_DEFAULT_BRUTAL, 1)
+		if (var(VAR_RESULT) == 0) {
+			if (var(VAR_TEMP_1) == 1) {
+				msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
+					break
+				}
+			} else {
+				call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
+				break
+			}
+		} else {
+			if (var(VAR_TEMP_1) == 1) {
+				msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
+					break
+				}
+			} else {
+				call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
+				break
+			}
+		}
 	}
-	if (var(VAR_TEMP_1) == 1) {
+	msgbox(format("Would you like to listen to the game mode options explanations?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
 		msgbox(gText_Colress_GameModes)
-		msgbox(gText_Colress_RandomizerExplanation)
+		setvar(VAR_TEMP_2, 1)
 	}
-	msgbox(format("Would you like to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
-	if (var(VAR_RESULT) == NO) {
-		setflag(FLAG_RANDOMIZER_ON)
-		playse(SE_PC_LOGIN)
-		msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled."), MSGBOX_DEFAULT)
-		waitse
-		closemessage
-	} else {
-		playse(SE_PC_OFF)
-		msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode disabled."), MSGBOX_DEFAULT)
-		waitse
-		closemessage
+	while {
+		if (var(VAR_TEMP_2) == 1) {
+			msgbox(gText_Colress_RandomizerExplanation)
+		}
+		msgbox(format("Would you like to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			if (var(VAR_TEMP_2) == 1) {
+				msgbox(format("Are you sure you want to enable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Zone0Sanctuary_EventScript_EnableRandomizer)
+					break
+				}
+			} else {
+				call(Zone0Sanctuary_EventScript_EnableRandomizer)
+				break
+			}
+		} else {
+			if (var(VAR_TEMP_2) == 1) {
+				msgbox(format("Are you sure you want to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Zone0Sanctuary_EventScript_DisableRandomizer)
+					break
+				}
+			} else {
+				call(Zone0Sanctuary_EventScript_DisableRandomizer)
+				break
+			}
+		}
 	}
-	if (var(VAR_TEMP_1) == 1) {
-		msgbox(gText_Colress_NuzlockeExplained)
-	}
-	msgbox(format("Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
-	if (var(VAR_RESULT) == NO) {
-		callnative(GlobalNuzlockeSet)
-		setflag(FLAG_NUZLOCKE_ON)
-		playse(SE_PC_LOGIN)
-		msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
-		waitse
-		closemessage
-	} else {
-		playse(SE_PC_OFF)
-		msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled."), MSGBOX_DEFAULT)
-		waitse
-		closemessage
+	while {
+		if (var(VAR_TEMP_2) == 1) {
+			msgbox(gText_Colress_NuzlockeExplained)
+		}
+		msgbox(format("Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			if (var(VAR_TEMP_2) == 1) {
+				msgbox(format("Are you sure you want to enable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Zone0Sanctuary_EventScript_EnableNuzlocke)
+					break
+				}
+			} else {
+				call(Zone0Sanctuary_EventScript_EnableNuzlocke)
+				break
+			}
+		} else {
+			if (var(VAR_TEMP_2) == 1) {
+				msgbox(format("Are you sure you want to disable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Zone0Sanctuary_EventScript_DisableNuzlocke)
+					break
+				}
+			} else {
+				call(Zone0Sanctuary_EventScript_DisableNuzlocke)
+				break
+			}
+		}
 	}
 	if (flag(FLAG_RANDOMIZER_ON) == false && flag(FLAG_NUZLOCKE_ON) == false) {
 		msgbox(format("You have chosen to disable all optional game modes."))
@@ -155,8 +190,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
 		waitmovement(0)
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
-		"At the low cost of ¥1000, they will heal your entire party.\p"
-		"Note that the Pokémon Storage System does not heal your Pokémon."))
+		"At the low cost of ¥1000, they will heal your entire party."))
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
@@ -260,87 +294,142 @@ script Zone0Sanctuary_EventScript_Intro {
 	}
 }
 
+script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
+	setflag(FLAG_FULL_PREVIEW_ON)
+	playse(SE_PC_LOGIN)
+	msgbox(format("{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
+	return
+}
+
+script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
+	setflag(FLAG_BRUTAL_MODE_ON)
+	setflag(FLAG_SMART_WILD_AI_ON)
+	playse(SE_PC_LOGIN)
+	msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
+	special(ReverseHiddenItemFlags)
+	return
+}
+
+script Zone0Sanctuary_EventScript_DisableRandomizer {
+	playse(SE_PC_OFF)
+	msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode disabled."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
+	return
+}
+
+script Zone0Sanctuary_EventScript_EnableRandomizer {
+	setflag(FLAG_RANDOMIZER_ON)
+	playse(SE_PC_LOGIN)
+	msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
+	return
+}
+
+script Zone0Sanctuary_EventScript_DisableNuzlocke {
+	playse(SE_PC_OFF)
+	msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
+	return
+}
+
+script Zone0Sanctuary_EventScript_EnableNuzlocke {
+	callnative(GlobalNuzlockeSet)
+	setflag(FLAG_NUZLOCKE_ON)
+	playse(SE_PC_LOGIN)
+	msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
+	return
+}
+
 script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 	hidemonpic
 	msgbox(format("Choose a starter Pokémon."), MSGBOX_DEFAULT)
 	scrollingmultichoice(0, 0, 0, 5, FALSE)
 	switch (var(VAR_RESULT)) {
 		case 0:
-			setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+			setvar(VAR_TEMP_3, SPECIES_BULBASAUR)
 			setvar(VAR_STARTER_MON, 0)
 		case 1:
-			setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+			setvar(VAR_TEMP_3, SPECIES_CHARMANDER)
 			setvar(VAR_STARTER_MON, 1)
 		case 2:
-			setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+			setvar(VAR_TEMP_3, SPECIES_SQUIRTLE)
 			setvar(VAR_STARTER_MON, 2)
 		case 3:
-			setvar(VAR_TEMP_2, SPECIES_CHIKORITA)
+			setvar(VAR_TEMP_3, SPECIES_CHIKORITA)
 			setvar(VAR_STARTER_MON, 0)
 		case 4:
-			setvar(VAR_TEMP_2, SPECIES_CYNDAQUIL)
+			setvar(VAR_TEMP_3, SPECIES_CYNDAQUIL)
 			setvar(VAR_STARTER_MON, 1)
 		case 5:
-			setvar(VAR_TEMP_2, SPECIES_TOTODILE)
+			setvar(VAR_TEMP_3, SPECIES_TOTODILE)
 			setvar(VAR_STARTER_MON, 2)
 		case 6:
-			setvar(VAR_TEMP_2, SPECIES_TREECKO)
+			setvar(VAR_TEMP_3, SPECIES_TREECKO)
 			setvar(VAR_STARTER_MON, 0)
 		case 7:
-			setvar(VAR_TEMP_2, SPECIES_TORCHIC)
+			setvar(VAR_TEMP_3, SPECIES_TORCHIC)
 			setvar(VAR_STARTER_MON, 1)
 		case 8:
-			setvar(VAR_TEMP_2, SPECIES_MUDKIP)
+			setvar(VAR_TEMP_3, SPECIES_MUDKIP)
 			setvar(VAR_STARTER_MON, 2)
 		case 9:
-			setvar(VAR_TEMP_2, SPECIES_TURTWIG)
+			setvar(VAR_TEMP_3, SPECIES_TURTWIG)
 			setvar(VAR_STARTER_MON, 0)
 		case 10:
-			setvar(VAR_TEMP_2, SPECIES_CHIMCHAR)
+			setvar(VAR_TEMP_3, SPECIES_CHIMCHAR)
 			setvar(VAR_STARTER_MON, 1)
 		case 11:
-			setvar(VAR_TEMP_2, SPECIES_PIPLUP)
+			setvar(VAR_TEMP_3, SPECIES_PIPLUP)
 			setvar(VAR_STARTER_MON, 2)
 		case 12:
-			setvar(VAR_TEMP_2, SPECIES_SNIVY)
+			setvar(VAR_TEMP_3, SPECIES_SNIVY)
 			setvar(VAR_STARTER_MON, 0)
 		case 13:
-			setvar(VAR_TEMP_2, SPECIES_TEPIG)
+			setvar(VAR_TEMP_3, SPECIES_TEPIG)
 			setvar(VAR_STARTER_MON, 1)
 		case 14:
-			setvar(VAR_TEMP_2, SPECIES_OSHAWOTT)
+			setvar(VAR_TEMP_3, SPECIES_OSHAWOTT)
 			setvar(VAR_STARTER_MON, 2)
 		case 15:
-			setvar(VAR_TEMP_2, SPECIES_CHESPIN)
+			setvar(VAR_TEMP_3, SPECIES_CHESPIN)
 			setvar(VAR_STARTER_MON, 0)
 		case 16:
-			setvar(VAR_TEMP_2, SPECIES_FENNEKIN)
+			setvar(VAR_TEMP_3, SPECIES_FENNEKIN)
 			setvar(VAR_STARTER_MON, 1)
 		case 17:
-			setvar(VAR_TEMP_2, SPECIES_FROAKIE)
+			setvar(VAR_TEMP_3, SPECIES_FROAKIE)
 			setvar(VAR_STARTER_MON, 2)
 		case 18:
-			setvar(VAR_TEMP_2, SPECIES_ROWLET)
+			setvar(VAR_TEMP_3, SPECIES_ROWLET)
 			setvar(VAR_STARTER_MON, 0)
 		case 19:
-			setvar(VAR_TEMP_2, SPECIES_LITTEN)
+			setvar(VAR_TEMP_3, SPECIES_LITTEN)
 			setvar(VAR_STARTER_MON, 1)
 		case 20:
-			setvar(VAR_TEMP_2, SPECIES_POPPLIO)
+			setvar(VAR_TEMP_3, SPECIES_POPPLIO)
 			setvar(VAR_STARTER_MON, 2)
 		case 21:
-			setvar(VAR_TEMP_2, SPECIES_GROOKEY)
+			setvar(VAR_TEMP_3, SPECIES_GROOKEY)
 			setvar(VAR_STARTER_MON, 0)
 		case 22:
-			setvar(VAR_TEMP_2, SPECIES_SCORBUNNY)
+			setvar(VAR_TEMP_3, SPECIES_SCORBUNNY)
 			setvar(VAR_STARTER_MON, 1)
 		case 23:
-			setvar(VAR_TEMP_2, SPECIES_SOBBLE)
+			setvar(VAR_TEMP_3, SPECIES_SOBBLE)
 			setvar(VAR_STARTER_MON, 2)
 		case 24:
-			setvar(VAR_TEMP_2, 0)
+			setvar(VAR_TEMP_3, 0)
 	}
-	if (var(VAR_TEMP_2) == 0) {
+	if (var(VAR_TEMP_3) == 0) {
 		playse(SE_CONTEST_PLACE)
 		message(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Randomizing…"))
 		delay(96)
@@ -349,89 +438,89 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 		random(24)
 		switch (var(VAR_RESULT)) {
 			case 0:
-				setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+				setvar(VAR_TEMP_3, SPECIES_BULBASAUR)
 				setvar(VAR_STARTER_MON, 0)
 			case 1:
-				setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+				setvar(VAR_TEMP_3, SPECIES_CHARMANDER)
 				setvar(VAR_STARTER_MON, 1)
 			case 2:
-				setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+				setvar(VAR_TEMP_3, SPECIES_SQUIRTLE)
 				setvar(VAR_STARTER_MON, 2)
 			case 3:
-				setvar(VAR_TEMP_2, SPECIES_CHIKORITA)
+				setvar(VAR_TEMP_3, SPECIES_CHIKORITA)
 				setvar(VAR_STARTER_MON, 0)
 			case 4:
-				setvar(VAR_TEMP_2, SPECIES_CYNDAQUIL)
+				setvar(VAR_TEMP_3, SPECIES_CYNDAQUIL)
 				setvar(VAR_STARTER_MON, 1)
 			case 5:
-				setvar(VAR_TEMP_2, SPECIES_TOTODILE)
+				setvar(VAR_TEMP_3, SPECIES_TOTODILE)
 				setvar(VAR_STARTER_MON, 2)
 			case 6:
-				setvar(VAR_TEMP_2, SPECIES_TREECKO)
+				setvar(VAR_TEMP_3, SPECIES_TREECKO)
 				setvar(VAR_STARTER_MON, 0)
 			case 7:
-				setvar(VAR_TEMP_2, SPECIES_TORCHIC)
+				setvar(VAR_TEMP_3, SPECIES_TORCHIC)
 				setvar(VAR_STARTER_MON, 1)
 			case 8:
-				setvar(VAR_TEMP_2, SPECIES_MUDKIP)
+				setvar(VAR_TEMP_3, SPECIES_MUDKIP)
 				setvar(VAR_STARTER_MON, 2)
 			case 9:
-				setvar(VAR_TEMP_2, SPECIES_TURTWIG)
+				setvar(VAR_TEMP_3, SPECIES_TURTWIG)
 				setvar(VAR_STARTER_MON, 0)
 			case 10:
-				setvar(VAR_TEMP_2, SPECIES_CHIMCHAR)
+				setvar(VAR_TEMP_3, SPECIES_CHIMCHAR)
 				setvar(VAR_STARTER_MON, 1)
 			case 11:
-				setvar(VAR_TEMP_2, SPECIES_PIPLUP)
+				setvar(VAR_TEMP_3, SPECIES_PIPLUP)
 				setvar(VAR_STARTER_MON, 2)
 			case 12:
-				setvar(VAR_TEMP_2, SPECIES_SNIVY)
+				setvar(VAR_TEMP_3, SPECIES_SNIVY)
 				setvar(VAR_STARTER_MON, 0)
 			case 13:
-				setvar(VAR_TEMP_2, SPECIES_TEPIG)
+				setvar(VAR_TEMP_3, SPECIES_TEPIG)
 				setvar(VAR_STARTER_MON, 1)
 			case 14:
-				setvar(VAR_TEMP_2, SPECIES_OSHAWOTT)
+				setvar(VAR_TEMP_3, SPECIES_OSHAWOTT)
 				setvar(VAR_STARTER_MON, 2)
 			case 15:
-				setvar(VAR_TEMP_2, SPECIES_CHESPIN)
+				setvar(VAR_TEMP_3, SPECIES_CHESPIN)
 				setvar(VAR_STARTER_MON, 0)
 			case 16:
-				setvar(VAR_TEMP_2, SPECIES_FENNEKIN)
+				setvar(VAR_TEMP_3, SPECIES_FENNEKIN)
 				setvar(VAR_STARTER_MON, 1)
 			case 17:
-				setvar(VAR_TEMP_2, SPECIES_FROAKIE)
+				setvar(VAR_TEMP_3, SPECIES_FROAKIE)
 				setvar(VAR_STARTER_MON, 2)
 			case 18:
-				setvar(VAR_TEMP_2, SPECIES_ROWLET)
+				setvar(VAR_TEMP_3, SPECIES_ROWLET)
 				setvar(VAR_STARTER_MON, 0)
 			case 19:
-				setvar(VAR_TEMP_2, SPECIES_LITTEN)
+				setvar(VAR_TEMP_3, SPECIES_LITTEN)
 				setvar(VAR_STARTER_MON, 1)
 			case 20:
-				setvar(VAR_TEMP_2, SPECIES_POPPLIO)
+				setvar(VAR_TEMP_3, SPECIES_POPPLIO)
 				setvar(VAR_STARTER_MON, 2)
 			case 21:
-				setvar(VAR_TEMP_2, SPECIES_GROOKEY)
+				setvar(VAR_TEMP_3, SPECIES_GROOKEY)
 				setvar(VAR_STARTER_MON, 0)
 			case 22:
-				setvar(VAR_TEMP_2, SPECIES_SCORBUNNY)
+				setvar(VAR_TEMP_3, SPECIES_SCORBUNNY)
 				setvar(VAR_STARTER_MON, 1)
 			case 23:
-				setvar(VAR_TEMP_2, SPECIES_SOBBLE)
+				setvar(VAR_TEMP_3, SPECIES_SOBBLE)
 				setvar(VAR_STARTER_MON, 2)
 		}
 	}
-	bufferspeciesname(0, VAR_TEMP_2)
-	showmonpic(VAR_TEMP_2, 10, 3)
-	playmoncry(VAR_TEMP_2, 0)
+	bufferspeciesname(0, VAR_TEMP_3)
+	showmonpic(VAR_TEMP_3, 10, 3)
+	playmoncry(VAR_TEMP_3, 0)
 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you sure you want {STR_VAR_1}?"), MSGBOX_YESNO)
 	waitmoncry
 	if (var(VAR_RESULT) == NO) {
 		goto(Zone0Sanctuary_EventScript_HandleStarterSelectionDefault)
 	}
 	setflag(FLAG_BOOSTED_IVS)
-	givemon(VAR_TEMP_2, 5, ITEM_NONE)
+	givemon(VAR_TEMP_3, 5, ITEM_NONE)
 	clearflag(FLAG_BOOSTED_IVS)
 	hidemonpic
 	playfanfare(MUS_OBTAIN_ITEM)

@@ -27,47 +27,57 @@ Zone0Sanctuary_EventScript_Intro::
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_2
 Zone0Sanctuary_EventScript_Intro_1:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_5
 Zone0Sanctuary_EventScript_Intro_4:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_7, MSGBOX_DEFAULT
+Zone0Sanctuary_EventScript_Intro_8:
+	compare VAR_TEMP_1, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_14
+Zone0Sanctuary_EventScript_Intro_13:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_DEFAULT
 	multichoice 2, 5, MULTI_DEFAULT_BRUTAL, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_Intro_9
-	case 1, Zone0Sanctuary_EventScript_Intro_10
-Zone0Sanctuary_EventScript_Intro_7:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_12
-Zone0Sanctuary_EventScript_Intro_11:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_10, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_15
-	playse SE_PC_OFF
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_12, MSGBOX_DEFAULT
-	waitse
-	closemessage
-Zone0Sanctuary_EventScript_Intro_14:
-	compare VAR_TEMP_1, 1
+	compare VAR_RESULT, 0
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_19
-Zone0Sanctuary_EventScript_Intro_18:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_13, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_22
-	playse SE_PC_OFF
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_15, MSGBOX_DEFAULT
-	waitse
-	closemessage
-Zone0Sanctuary_EventScript_Intro_21:
-	goto_if_unset FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Intro_27
-Zone0Sanctuary_EventScript_Intro_25:
-	compare VAR_TEMP_0, 1
+	compare VAR_TEMP_1, 1
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_31
-Zone0Sanctuary_EventScript_Intro_30:
-	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Intro_34
-Zone0Sanctuary_EventScript_Intro_33:
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_Intro_36
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_30
+	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
+Zone0Sanctuary_EventScript_Intro_7:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_8, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_11
+Zone0Sanctuary_EventScript_Intro_10:
+Zone0Sanctuary_EventScript_Intro_17:
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_26
+Zone0Sanctuary_EventScript_Intro_25:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_42
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_58
+	call Zone0Sanctuary_EventScript_DisableRandomizer
+Zone0Sanctuary_EventScript_Intro_16:
+Zone0Sanctuary_EventScript_Intro_23:
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_40
+Zone0Sanctuary_EventScript_Intro_39:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_12, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_52
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_67
+	call Zone0Sanctuary_EventScript_DisableNuzlocke
+Zone0Sanctuary_EventScript_Intro_22:
+	goto_if_unset FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Intro_36
+Zone0Sanctuary_EventScript_Intro_34:
+	compare VAR_TEMP_0, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_50
+Zone0Sanctuary_EventScript_Intro_49:
+	goto_if_set FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Intro_62
+Zone0Sanctuary_EventScript_Intro_61:
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone0Sanctuary_EventScript_Intro_74
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_29
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault
 	return
 
@@ -75,80 +85,79 @@ Zone0Sanctuary_EventScript_Intro_2:
 	setvar VAR_TEMP_0, 1
 	delay 96
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_2
-	delay 48
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_3
-	delay 48
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_4
 	delay 96
 	goto Zone0Sanctuary_EventScript_Intro_1
 
 Zone0Sanctuary_EventScript_Intro_5:
 	setvar VAR_TEMP_1, 1
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_6
-	msgbox gText_Colress_DefaultExplained
-	delay 16
-	msgbox gText_Colress_BrutalExplained
-	delay 96
 	goto Zone0Sanctuary_EventScript_Intro_4
 
-Zone0Sanctuary_EventScript_Intro_9:
-	setflag FLAG_FULL_PREVIEW_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_8, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_Intro_7
-
-Zone0Sanctuary_EventScript_Intro_10:
-	setflag FLAG_BRUTAL_MODE_ON
-	setflag FLAG_SMART_WILD_AI_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	special ReverseHiddenItemFlags
-	goto Zone0Sanctuary_EventScript_Intro_7
-
-Zone0Sanctuary_EventScript_Intro_12:
+Zone0Sanctuary_EventScript_Intro_11:
 	msgbox gText_Colress_GameModes
-	msgbox gText_Colress_RandomizerExplanation
-	goto Zone0Sanctuary_EventScript_Intro_11
+	setvar VAR_TEMP_2, 1
+	goto Zone0Sanctuary_EventScript_Intro_10
 
-Zone0Sanctuary_EventScript_Intro_15:
-	setflag FLAG_RANDOMIZER_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_11, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_Intro_14
+Zone0Sanctuary_EventScript_Intro_14:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_4
+	msgbox gText_Colress_DefaultExplained
+	msgbox gText_Colress_BrutalExplained
+	delay 96
+	goto Zone0Sanctuary_EventScript_Intro_13
 
 Zone0Sanctuary_EventScript_Intro_19:
-	msgbox gText_Colress_NuzlockeExplained
-	goto Zone0Sanctuary_EventScript_Intro_18
-
-Zone0Sanctuary_EventScript_Intro_22:
-	callnative GlobalNuzlockeSet
-	setflag FLAG_NUZLOCKE_ON
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_14, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_Intro_21
+	compare VAR_TEMP_1, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_28
+	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
+	goto Zone0Sanctuary_EventScript_Intro_7
 
 Zone0Sanctuary_EventScript_Intro_26:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_16
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_17, MSGBOX_DEFAULT
-	waitse
-	closemessage
+	msgbox gText_Colress_RandomizerExplanation
 	goto Zone0Sanctuary_EventScript_Intro_25
 
-Zone0Sanctuary_EventScript_Intro_27:
-	goto_if_unset FLAG_NUZLOCKE_ON, Zone0Sanctuary_EventScript_Intro_26
-	goto Zone0Sanctuary_EventScript_Intro_25
+Zone0Sanctuary_EventScript_Intro_28:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_6, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_45
+	goto Zone0Sanctuary_EventScript_Intro_8
 
 Zone0Sanctuary_EventScript_Intro_31:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_18
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_7, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_47
+	goto Zone0Sanctuary_EventScript_Intro_8
+
+Zone0Sanctuary_EventScript_Intro_35:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_15
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_16, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	goto Zone0Sanctuary_EventScript_Intro_34
+
+Zone0Sanctuary_EventScript_Intro_36:
+	goto_if_unset FLAG_NUZLOCKE_ON, Zone0Sanctuary_EventScript_Intro_35
+	goto Zone0Sanctuary_EventScript_Intro_34
+
+Zone0Sanctuary_EventScript_Intro_40:
+	msgbox gText_Colress_NuzlockeExplained
+	goto Zone0Sanctuary_EventScript_Intro_39
+
+Zone0Sanctuary_EventScript_Intro_42:
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_55
+	call Zone0Sanctuary_EventScript_EnableRandomizer
+	goto Zone0Sanctuary_EventScript_Intro_16
+
+Zone0Sanctuary_EventScript_Intro_45:
+	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
+	goto Zone0Sanctuary_EventScript_Intro_7
+
+Zone0Sanctuary_EventScript_Intro_47:
+	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
+	goto Zone0Sanctuary_EventScript_Intro_7
+
+Zone0Sanctuary_EventScript_Intro_50:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_17
 	applymovement 1, Zone0Sanctuary_Movement_Colress_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop
 	waitmovement 0
@@ -159,7 +168,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_19
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_18
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -177,7 +186,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_20
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_19
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -195,7 +204,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_21
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_20
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -213,7 +222,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_22
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_21
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -237,7 +246,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_23
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_22
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -254,48 +263,149 @@ Zone0Sanctuary_EventScript_Intro_31:
 	applymovement 1, Zone0Sanctuary_Movement_Colress_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_BackMid
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_24
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_23
 	delay 96
-	goto Zone0Sanctuary_EventScript_Intro_30
+	goto Zone0Sanctuary_EventScript_Intro_49
 
-Zone0Sanctuary_EventScript_Intro_34:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_25
+Zone0Sanctuary_EventScript_Intro_52:
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_64
+	call Zone0Sanctuary_EventScript_EnableNuzlocke
+	goto Zone0Sanctuary_EventScript_Intro_22
+
+Zone0Sanctuary_EventScript_Intro_55:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_10, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_70
+	goto Zone0Sanctuary_EventScript_Intro_17
+
+Zone0Sanctuary_EventScript_Intro_58:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_11, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_72
+	goto Zone0Sanctuary_EventScript_Intro_17
+
+Zone0Sanctuary_EventScript_Intro_62:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_24
 	setflag FLAG_ZONE0B_ABILITY_CHANGE_USED
 	callnative GiveRandomStarter
 	playfanfare MUS_OBTAIN_ITEM
 	bufferleadmonspeciesname 0
-	message Zone0Sanctuary_EventScript_Intro_Text_26
+	message Zone0Sanctuary_EventScript_Intro_Text_25
 	waitmessage
 	waitfanfare
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_27, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_26, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_40
-Zone0Sanctuary_EventScript_Intro_39:
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_78
+Zone0Sanctuary_EventScript_Intro_77:
 	goto Zone0Sanctuary_EventScript_EndIntro
-	goto Zone0Sanctuary_EventScript_Intro_33
+	goto Zone0Sanctuary_EventScript_Intro_61
 
-Zone0Sanctuary_EventScript_Intro_36:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_28
+Zone0Sanctuary_EventScript_Intro_64:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_13, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_80
+	goto Zone0Sanctuary_EventScript_Intro_23
+
+Zone0Sanctuary_EventScript_Intro_67:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_14, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_82
+	goto Zone0Sanctuary_EventScript_Intro_23
+
+Zone0Sanctuary_EventScript_Intro_70:
+	call Zone0Sanctuary_EventScript_EnableRandomizer
+	goto Zone0Sanctuary_EventScript_Intro_16
+
+Zone0Sanctuary_EventScript_Intro_72:
+	call Zone0Sanctuary_EventScript_DisableRandomizer
+	goto Zone0Sanctuary_EventScript_Intro_16
+
+Zone0Sanctuary_EventScript_Intro_74:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_27
 	setflag FLAG_BOOSTED_IVS
 	special ChooseStarter
 	waitstate
 	clearflag FLAG_BOOSTED_IVS
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_29, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_28, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_43
-Zone0Sanctuary_EventScript_Intro_42:
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_85
+Zone0Sanctuary_EventScript_Intro_84:
 	goto Zone0Sanctuary_EventScript_EndIntro
 	return
 
-Zone0Sanctuary_EventScript_Intro_40:
+Zone0Sanctuary_EventScript_Intro_78:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0Sanctuary_EventScript_Intro_39
+	goto Zone0Sanctuary_EventScript_Intro_77
 
-Zone0Sanctuary_EventScript_Intro_43:
+Zone0Sanctuary_EventScript_Intro_80:
+	call Zone0Sanctuary_EventScript_EnableNuzlocke
+	goto Zone0Sanctuary_EventScript_Intro_22
+
+Zone0Sanctuary_EventScript_Intro_82:
+	call Zone0Sanctuary_EventScript_DisableNuzlocke
+	goto Zone0Sanctuary_EventScript_Intro_22
+
+Zone0Sanctuary_EventScript_Intro_85:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0Sanctuary_EventScript_Intro_42
+	goto Zone0Sanctuary_EventScript_Intro_84
+
+
+Zone0Sanctuary_EventScript_SetDefaultDifficulty::
+	setflag FLAG_FULL_PREVIEW_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_EventScript_SetDefaultDifficulty_Text_0, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	return
+
+
+Zone0Sanctuary_EventScript_SetBrutalDifficulty::
+	setflag FLAG_BRUTAL_MODE_ON
+	setflag FLAG_SMART_WILD_AI_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	special ReverseHiddenItemFlags
+	return
+
+
+Zone0Sanctuary_EventScript_DisableRandomizer::
+	playse SE_PC_OFF
+	msgbox Zone0Sanctuary_EventScript_DisableRandomizer_Text_0, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	return
+
+
+Zone0Sanctuary_EventScript_EnableRandomizer::
+	setflag FLAG_RANDOMIZER_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_EventScript_EnableRandomizer_Text_0, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	return
+
+
+Zone0Sanctuary_EventScript_DisableNuzlocke::
+	playse SE_PC_OFF
+	msgbox Zone0Sanctuary_EventScript_DisableNuzlocke_Text_0, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	return
+
+
+Zone0Sanctuary_EventScript_EnableNuzlocke::
+	callnative GlobalNuzlockeSet
+	setflag FLAG_NUZLOCKE_ON
+	playse SE_PC_LOGIN
+	msgbox Zone0Sanctuary_EventScript_EnableNuzlocke_Text_0, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	return
 
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault::
@@ -329,26 +439,26 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault::
 	case 23, Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_26
 	case 24, Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_27
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1:
-	compare VAR_TEMP_2, 0
+	compare VAR_TEMP_3, 0
 	goto_if_eq Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_29
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28:
-	bufferspeciesname 0, VAR_TEMP_2
-	showmonpic VAR_TEMP_2, 10, 3
-	playmoncry VAR_TEMP_2, 0
+	bufferspeciesname 0, VAR_TEMP_3
+	showmonpic VAR_TEMP_3, 10, 3
+	playmoncry VAR_TEMP_3, 0
 	msgbox Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_Text_2, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_32
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_31:
 	setflag FLAG_BOOSTED_IVS
-	givemon VAR_TEMP_2, 5, ITEM_NONE
+	givemon VAR_TEMP_3, 5, ITEM_NONE
 	clearflag FLAG_BOOSTED_IVS
 	hidemonpic
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone0Sanctuary_EventScript_Intro_Text_26
+	message Zone0Sanctuary_EventScript_Intro_Text_25
 	waitmessage
 	waitfanfare
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_29, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_28, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_60
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_59:
@@ -356,127 +466,127 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_59:
 	return
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_3:
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
+	setvar VAR_TEMP_3, SPECIES_BULBASAUR
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_4:
-	setvar VAR_TEMP_2, SPECIES_CHARMANDER
+	setvar VAR_TEMP_3, SPECIES_CHARMANDER
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_5:
-	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
+	setvar VAR_TEMP_3, SPECIES_SQUIRTLE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_6:
-	setvar VAR_TEMP_2, SPECIES_CHIKORITA
+	setvar VAR_TEMP_3, SPECIES_CHIKORITA
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_7:
-	setvar VAR_TEMP_2, SPECIES_CYNDAQUIL
+	setvar VAR_TEMP_3, SPECIES_CYNDAQUIL
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_8:
-	setvar VAR_TEMP_2, SPECIES_TOTODILE
+	setvar VAR_TEMP_3, SPECIES_TOTODILE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_9:
-	setvar VAR_TEMP_2, SPECIES_TREECKO
+	setvar VAR_TEMP_3, SPECIES_TREECKO
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_10:
-	setvar VAR_TEMP_2, SPECIES_TORCHIC
+	setvar VAR_TEMP_3, SPECIES_TORCHIC
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_11:
-	setvar VAR_TEMP_2, SPECIES_MUDKIP
+	setvar VAR_TEMP_3, SPECIES_MUDKIP
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_12:
-	setvar VAR_TEMP_2, SPECIES_TURTWIG
+	setvar VAR_TEMP_3, SPECIES_TURTWIG
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_13:
-	setvar VAR_TEMP_2, SPECIES_CHIMCHAR
+	setvar VAR_TEMP_3, SPECIES_CHIMCHAR
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_14:
-	setvar VAR_TEMP_2, SPECIES_PIPLUP
+	setvar VAR_TEMP_3, SPECIES_PIPLUP
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_15:
-	setvar VAR_TEMP_2, SPECIES_SNIVY
+	setvar VAR_TEMP_3, SPECIES_SNIVY
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_16:
-	setvar VAR_TEMP_2, SPECIES_TEPIG
+	setvar VAR_TEMP_3, SPECIES_TEPIG
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_17:
-	setvar VAR_TEMP_2, SPECIES_OSHAWOTT
+	setvar VAR_TEMP_3, SPECIES_OSHAWOTT
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_18:
-	setvar VAR_TEMP_2, SPECIES_CHESPIN
+	setvar VAR_TEMP_3, SPECIES_CHESPIN
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_19:
-	setvar VAR_TEMP_2, SPECIES_FENNEKIN
+	setvar VAR_TEMP_3, SPECIES_FENNEKIN
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_20:
-	setvar VAR_TEMP_2, SPECIES_FROAKIE
+	setvar VAR_TEMP_3, SPECIES_FROAKIE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_21:
-	setvar VAR_TEMP_2, SPECIES_ROWLET
+	setvar VAR_TEMP_3, SPECIES_ROWLET
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_22:
-	setvar VAR_TEMP_2, SPECIES_LITTEN
+	setvar VAR_TEMP_3, SPECIES_LITTEN
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_23:
-	setvar VAR_TEMP_2, SPECIES_POPPLIO
+	setvar VAR_TEMP_3, SPECIES_POPPLIO
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_24:
-	setvar VAR_TEMP_2, SPECIES_GROOKEY
+	setvar VAR_TEMP_3, SPECIES_GROOKEY
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_25:
-	setvar VAR_TEMP_2, SPECIES_SCORBUNNY
+	setvar VAR_TEMP_3, SPECIES_SCORBUNNY
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_26:
-	setvar VAR_TEMP_2, SPECIES_SOBBLE
+	setvar VAR_TEMP_3, SPECIES_SOBBLE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_27:
-	setvar VAR_TEMP_2, 0
+	setvar VAR_TEMP_3, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_1
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_29:
@@ -518,122 +628,122 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_32:
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_31
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_35:
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
+	setvar VAR_TEMP_3, SPECIES_BULBASAUR
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_36:
-	setvar VAR_TEMP_2, SPECIES_CHARMANDER
+	setvar VAR_TEMP_3, SPECIES_CHARMANDER
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_37:
-	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
+	setvar VAR_TEMP_3, SPECIES_SQUIRTLE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_38:
-	setvar VAR_TEMP_2, SPECIES_CHIKORITA
+	setvar VAR_TEMP_3, SPECIES_CHIKORITA
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_39:
-	setvar VAR_TEMP_2, SPECIES_CYNDAQUIL
+	setvar VAR_TEMP_3, SPECIES_CYNDAQUIL
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_40:
-	setvar VAR_TEMP_2, SPECIES_TOTODILE
+	setvar VAR_TEMP_3, SPECIES_TOTODILE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_41:
-	setvar VAR_TEMP_2, SPECIES_TREECKO
+	setvar VAR_TEMP_3, SPECIES_TREECKO
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_42:
-	setvar VAR_TEMP_2, SPECIES_TORCHIC
+	setvar VAR_TEMP_3, SPECIES_TORCHIC
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_43:
-	setvar VAR_TEMP_2, SPECIES_MUDKIP
+	setvar VAR_TEMP_3, SPECIES_MUDKIP
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_44:
-	setvar VAR_TEMP_2, SPECIES_TURTWIG
+	setvar VAR_TEMP_3, SPECIES_TURTWIG
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_45:
-	setvar VAR_TEMP_2, SPECIES_CHIMCHAR
+	setvar VAR_TEMP_3, SPECIES_CHIMCHAR
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_46:
-	setvar VAR_TEMP_2, SPECIES_PIPLUP
+	setvar VAR_TEMP_3, SPECIES_PIPLUP
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_47:
-	setvar VAR_TEMP_2, SPECIES_SNIVY
+	setvar VAR_TEMP_3, SPECIES_SNIVY
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_48:
-	setvar VAR_TEMP_2, SPECIES_TEPIG
+	setvar VAR_TEMP_3, SPECIES_TEPIG
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_49:
-	setvar VAR_TEMP_2, SPECIES_OSHAWOTT
+	setvar VAR_TEMP_3, SPECIES_OSHAWOTT
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_50:
-	setvar VAR_TEMP_2, SPECIES_CHESPIN
+	setvar VAR_TEMP_3, SPECIES_CHESPIN
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_51:
-	setvar VAR_TEMP_2, SPECIES_FENNEKIN
+	setvar VAR_TEMP_3, SPECIES_FENNEKIN
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_52:
-	setvar VAR_TEMP_2, SPECIES_FROAKIE
+	setvar VAR_TEMP_3, SPECIES_FROAKIE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_53:
-	setvar VAR_TEMP_2, SPECIES_ROWLET
+	setvar VAR_TEMP_3, SPECIES_ROWLET
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_54:
-	setvar VAR_TEMP_2, SPECIES_LITTEN
+	setvar VAR_TEMP_3, SPECIES_LITTEN
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_55:
-	setvar VAR_TEMP_2, SPECIES_POPPLIO
+	setvar VAR_TEMP_3, SPECIES_POPPLIO
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_56:
-	setvar VAR_TEMP_2, SPECIES_GROOKEY
+	setvar VAR_TEMP_3, SPECIES_GROOKEY
 	setvar VAR_STARTER_MON, 0
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_57:
-	setvar VAR_TEMP_2, SPECIES_SCORBUNNY
+	setvar VAR_TEMP_3, SPECIES_SCORBUNNY
 	setvar VAR_STARTER_MON, 1
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_58:
-	setvar VAR_TEMP_2, SPECIES_SOBBLE
+	setvar VAR_TEMP_3, SPECIES_SOBBLE
 	setvar VAR_STARTER_MON, 2
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28
 
@@ -1033,14 +1143,18 @@ Zone0Sanctuary_EventScript_Intro_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Ah. You've arrived.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_1:
-	.string "Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?$"
+	.string "Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}.\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_2:
-	.string "The Battle Labyrinth is comprised of\n"
-	.string "many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
+	.string "The Pokémon Battle Labyrinth is\n"
+	.string "comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must\l"
+	.string "traverse.\p"
 	.string "In these Zones, you might encounter\n"
 	.string "wild Pokémon, great treasures, tough\l"
 	.string "trainers, and more.\p"
+	.string "Each Zone typically contains a\n"
+	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great\l"
+	.string "rewards if defeated.\p"
 	.string "At the end of each Zone and before the\n"
 	.string "next Zone begins, you will find a\l"
 	.string "{COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to\l"
@@ -1048,79 +1162,77 @@ Zone0Sanctuary_EventScript_Intro_Text_2:
 	.string "and other benefits.\p"
 	.string "Once you enter a new Zone, you will not\n"
 	.string "be able to access a Sanctuary until\l"
-	.string "you exit that Zone.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_3:
-	.string "Zones are designed to test your\n"
-	.string "capabilities at braving different\l"
-	.string "environments.\p"
-	.string "Each Zone typically contains a\n"
-	.string "{COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great\l"
-	.string "rewards if defeated.\p"
-	.string "Some Leviathans are optional, but many\n"
-	.string "are required to progress.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_4:
+	.string "you exit that Zone.\p"
 	.string "In order to win, you must progress\n"
 	.string "through all Zones without losing a\l"
 	.string "battle.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_5:
+Zone0Sanctuary_EventScript_Intro_Text_3:
 	.string "Would you like to listen to the\n"
 	.string "difficulty options explanation?$"
 
-Zone0Sanctuary_EventScript_Intro_Text_6:
+Zone0Sanctuary_EventScript_Intro_Text_4:
 	.string "There are two game difficulty options:\n"
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_7:
+Zone0Sanctuary_EventScript_Intro_Text_5:
 	.string "Which difficulty option would you like\n"
 	.string "to play on?$"
 
+Zone0Sanctuary_EventScript_Intro_Text_6:
+	.string "Are you sure you want to play on\n"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty?$"
+
+Zone0Sanctuary_EventScript_Intro_Text_7:
+	.string "Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
+	.string "difficulty?$"
+
 Zone0Sanctuary_EventScript_Intro_Text_8:
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled.$"
+	.string "Would you like to listen to the game\n"
+	.string "mode options explanations?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_9:
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_10:
 	.string "Would you like to disable the\n"
 	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?$"
 
+Zone0Sanctuary_EventScript_Intro_Text_10:
+	.string "Are you sure you want to enable the\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
+
 Zone0Sanctuary_EventScript_Intro_Text_11:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled.$"
+	.string "Are you sure you want to disable the\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_12:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode disabled.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_13:
 	.string "Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
 	.string "game mode?$"
 
+Zone0Sanctuary_EventScript_Intro_Text_13:
+	.string "Are you sure you want to enable\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
+
 Zone0Sanctuary_EventScript_Intro_Text_14:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled.$"
+	.string "Are you sure you want to disable\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_15:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_16:
 	.string "You have chosen to disable all optional\n"
 	.string "game modes.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_17:
+Zone0Sanctuary_EventScript_Intro_Text_16:
 	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_18:
+Zone0Sanctuary_EventScript_Intro_Text_17:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each of\n"
 	.string "the shops.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_19:
+Zone0Sanctuary_EventScript_Intro_Text_18:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is {COLOR RED}Tim's\n"
 	.string "General Purpose Shop{COLOR DARK_GRAY}.\p"
 	.string "Healing supplies, basic Pokéballs, and\n"
 	.string "other common items are sold here.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_20:
+Zone0Sanctuary_EventScript_Intro_Text_19:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph\n"
 	.string "Unique Item Shop{COLOR DARK_GRAY}.\p"
 	.string "They sell a wide variety of held items\n"
@@ -1128,29 +1240,27 @@ Zone0Sanctuary_EventScript_Intro_Text_20:
 	.string "variations, evolution items, Berries,\l"
 	.string "and so on.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_21:
+Zone0Sanctuary_EventScript_Intro_Text_20:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's\n"
 	.string "Healing Shop{COLOR DARK_GRAY}.\p"
 	.string "At the low cost of ¥1000, they will heal\n"
-	.string "your entire party.\p"
-	.string "Note that the Pokémon Storage System\n"
-	.string "does not heal your Pokémon.$"
+	.string "your entire party.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_22:
+Zone0Sanctuary_EventScript_Intro_Text_21:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is\n"
 	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
 	.string "They offer a range of Pokémon services,\n"
 	.string "but only to customers who can pay the\l"
 	.string "right price.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_23:
+Zone0Sanctuary_EventScript_Intro_Text_22:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you will have\n"
 	.string "access to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\p"
 	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY}, you\n"
 	.string "can access it from any Sanctuary using\l"
 	.string "this warp.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_24:
+Zone0Sanctuary_EventScript_Intro_Text_23:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
 	.string "These four shops will be available at\n"
 	.string "every Sanctuary.\p"
@@ -1160,19 +1270,19 @@ Zone0Sanctuary_EventScript_Intro_Text_24:
 	.string "up on any supplies before entering the\l"
 	.string "next Zone.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_25:
+Zone0Sanctuary_EventScript_Intro_Text_24:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on,\n"
 	.string "you get a random starter.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_26:
+Zone0Sanctuary_EventScript_Intro_Text_25:
 	.string "{PLAYER} received the\n"
 	.string "{STR_VAR_1}!$"
 
-Zone0Sanctuary_EventScript_Intro_Text_27:
+Zone0Sanctuary_EventScript_Intro_Text_26:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for your\n"
 	.string "{STR_VAR_1}?$"
 
-Zone0Sanctuary_EventScript_Intro_Text_28:
+Zone0Sanctuary_EventScript_Intro_Text_27:
 	.string "As a new challenger, you will receive a\n"
 	.string "starter Pokémon.\p"
 	.string "On Brutal difficulty, your choice is\n"
@@ -1181,17 +1291,35 @@ Zone0Sanctuary_EventScript_Intro_Text_28:
 	.string "Choose carefully as these Pokémon are\n"
 	.string "very rare.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_29:
+Zone0Sanctuary_EventScript_Intro_Text_28:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for this\n"
 	.string "wonderful Pokémon?$"
 
-Zone0Sanctuary_EventScript_Intro_Text_30:
+Zone0Sanctuary_EventScript_Intro_Text_29:
 	.string "As a new challenger, you will receive a\n"
 	.string "starter Pokémon.\p"
 	.string "You may have your choice of any of the\n"
 	.string "generation 1-8 starter Pokémon.\p"
 	.string "Choose carefully as these Pokémon are\n"
 	.string "very rare.$"
+
+Zone0Sanctuary_EventScript_SetDefaultDifficulty_Text_0:
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled.$"
+
+Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck.$"
+
+Zone0Sanctuary_EventScript_DisableRandomizer_Text_0:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode disabled.$"
+
+Zone0Sanctuary_EventScript_EnableRandomizer_Text_0:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled.$"
+
+Zone0Sanctuary_EventScript_DisableNuzlocke_Text_0:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled.$"
+
+Zone0Sanctuary_EventScript_EnableNuzlocke_Text_0:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled.$"
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_Text_0:
 	.string "Choose a starter Pokémon.$"
