@@ -87,7 +87,7 @@ Zone0A_Text_Intro:
 	.string "There are no trainers here, no\n"
 	.string "challenges to face. Everything is\l"
 	.string "meant to help you on your journey.\p"
-	.string "As a welcome gift, I'd like you to\p"
+	.string "As a welcome gift, I'd like you to\n"
 	.string "have this.$"
 
 Zone0A_Text_End:

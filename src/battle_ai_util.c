@@ -1186,7 +1186,7 @@ u16 AI_GetHoldEffect(u32 battlerId)
 {
     u32 holdEffect;
 
-    if (!IsBattlerAIControlled(battlerId))
+    if (!IsBattlerAIControlled(battlerId) && !(AI_THINKING_STRUCT->aiFlags & AI_FLAG_KNOWLEDGABLE))
         holdEffect = BATTLE_HISTORY->itemEffects[battlerId];
     else
         holdEffect = GetBattlerHoldEffect(battlerId, FALSE);

@@ -19,7 +19,7 @@ script Zone4A_EventScript_Breeder {
 	msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pWe've been studying how Eevee evolves differently based on which elemental Gem it holds when it levels up."), MSGBOX_DEFAULT)
 	while (var(VAR_TEMP_0) != 1) {
 		msgbox(format("What's your favorite evolution of Eevee?"), MSGBOX_DEFAULT)
-		scrollingmultichoice(1, 0, 0, 5, 0)
+		scrollingmultichoice(1, 0, 0, 5, 1)
 		switch (var(VAR_RESULT)) {
 			case 0:
 				msgbox(format("Oh, so you like Vaporeon?"), MSGBOX_YESNO)
@@ -71,11 +71,15 @@ script Zone4A_EventScript_Breeder {
 					setvar(VAR_TEMP_0, 1)
 				}
 			case 7:
-				msgbox(format("Oh, so you like Sylveon?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
-					giveitem(ITEM_FAIRY_GEM)
-					setvar(VAR_TEMP_0, 1)
+				if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+					msgbox(format("Unfortunately, I ran out of Fairy Gems to give out.\pYou'll have to find a way to evolve your Eevee into Sylveon elsewhere."), MSGBOX_DEFAULT)
+				} else {
+					msgbox(format("Oh, so you like Sylveon?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						msgbox(Zone4A_Text_HereGem, MSGBOX_DEFAULT)
+						giveitem(ITEM_FAIRY_GEM)
+						setvar(VAR_TEMP_0, 1)
+					}
 				}
 		}
 	}

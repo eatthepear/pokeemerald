@@ -20,11 +20,11 @@ Zone4A_EventScript_Breeder::
 Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1
 	goto_if_ne Zone4A_EventScript_Breeder_6
-	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_DEFAULT
+	msgbox Zone4A_EventScript_Breeder_Text_12, MSGBOX_DEFAULT
 	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone4A_EventScript_Breeder_9
 Zone4A_EventScript_Breeder_8:
 	delay 16
-	msgbox Zone4A_EventScript_Breeder_Text_13, MSGBOX_DEFAULT
+	msgbox Zone4A_EventScript_Breeder_Text_14, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	removeobject 3
 	setflag FLAG_RECEIVED_ZONE4A_GEM
@@ -39,7 +39,7 @@ Zone4A_EventScript_Breeder_2:
 
 Zone4A_EventScript_Breeder_6:
 	msgbox Zone4A_EventScript_Breeder_Text_2, MSGBOX_DEFAULT
-	scrollingmultichoice 1, 0, 0, 5, 0
+	scrollingmultichoice 1, 0, 0, 5, 1
 	switch VAR_RESULT
 	case 0, Zone4A_EventScript_Breeder_12
 	case 1, Zone4A_EventScript_Breeder_13
@@ -52,7 +52,7 @@ Zone4A_EventScript_Breeder_6:
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_9:
-	msgbox Zone4A_EventScript_Breeder_Text_12, MSGBOX_DEFAULT
+	msgbox Zone4A_EventScript_Breeder_Text_13, MSGBOX_DEFAULT
 	goto Zone4A_EventScript_Breeder_8
 
 Zone4A_EventScript_Breeder_12:
@@ -98,9 +98,10 @@ Zone4A_EventScript_Breeder_18:
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_19:
-	msgbox Zone4A_EventScript_Breeder_Text_10, MSGBOX_YESNO
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4A_EventScript_Breeder_34
+	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone4A_EventScript_Breeder_34
+	goto_if_eq Zone4A_EventScript_Breeder_37
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_20:
@@ -146,6 +147,10 @@ Zone4A_EventScript_Breeder_32:
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_34:
+	msgbox Zone4A_EventScript_Breeder_Text_10, MSGBOX_DEFAULT
+	goto Zone4A_EventScript_Breeder_5
+
+Zone4A_EventScript_Breeder_37:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_FAIRY_GEM
 	setvar VAR_TEMP_0, 1
@@ -233,19 +238,25 @@ Zone4A_EventScript_Breeder_Text_9:
 	.string "Oh, so you like Glaceon?$"
 
 Zone4A_EventScript_Breeder_Text_10:
-	.string "Oh, so you like Sylveon?$"
+	.string "Unfortunately, I ran out of Fairy Gems\n"
+	.string "to give out.\p"
+	.string "You'll have to find a way to evolve your\n"
+	.string "Eevee into Sylveon elsewhere.$"
 
 Zone4A_EventScript_Breeder_Text_11:
+	.string "Oh, so you like Sylveon?$"
+
+Zone4A_EventScript_Breeder_Text_12:
 	.string "I hope you can put that Gem to good\n"
 	.string "use.$"
 
-Zone4A_EventScript_Breeder_Text_12:
+Zone4A_EventScript_Breeder_Text_13:
 	.string "If you want to evolve your Eevee into a\n"
 	.string "different evolution, you can always\l"
 	.string "find Gems by smashing rocks with a\l"
 	.string "Sledgehammer!$"
 
-Zone4A_EventScript_Breeder_Text_13:
+Zone4A_EventScript_Breeder_Text_14:
 	.string "Well, I'm off to help other trainers.\p"
 	.string "See you!$"
 

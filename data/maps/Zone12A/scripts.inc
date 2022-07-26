@@ -308,20 +308,6 @@ Zone12A_Text_TrevorPostBattle:
 	.string "We'll get them next time,\n"
 	.string "my feathered friends!$"
 
-Zone12A_EventScript_Randolph::
-	trainerbattle_single TRAINER_RANDOLPH, Zone12A_Text_RandolphIntro, Zone12A_Text_RandolphDefeat
-	msgbox Zone12A_Text_RandolphPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone12A_Text_RandolphIntro:
-	.string "You distracted me from my search!$"
-
-Zone12A_Text_RandolphDefeat:
-	.string "The search for cool Pokémon!$"
-
-Zone12A_Text_RandolphPostBattle:
-	.string "I guess you have some cool Pokémon.$"
-
 Zone12A_EventScript_Federico::
 	trainerbattle_single TRAINER_FEDERICO, Zone12A_Text_FedericoIntro, Zone12A_Text_FedericoDefeat
 	msgbox Zone12A_Text_FedericoPostBattle, MSGBOX_AUTOCLOSE

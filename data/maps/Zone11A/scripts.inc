@@ -188,29 +188,14 @@ Zone11A_EventScript_Jeanette::
 	end
 
 Zone11A_Text_JeanetteIntro:
-	.string "You snuck up on me!$"
+	.string "Ah! An angry spirit!$"
 
 Zone11A_Text_JeanetteDefeat:
-	.string "What a shocker!$"
+	.string "I wasn't talking about you,\n"
+	.string "I meant behind you!$"
 
 Zone11A_Text_JeanettePostBattle:
-	.string "You had the element of surprise.$"
-
-Zone11A_EventScript_Regina::
-	trainerbattle_single TRAINER_REGINA, Zone11A_Text_ReginaIntro, Zone11A_Text_ReginaDefeat
-	msgbox Zone11A_Text_ReginaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone11A_Text_ReginaIntro:
-	.string "Do you hear the call?$"
-
-Zone11A_Text_ReginaDefeat:
-	.string "The spirits… I can hear their voices!$"
-
-Zone11A_Text_ReginaPostBattle:
-	.string "It might just be the wind whistling,\n"
-	.string "but I'm sure the voices are from the\l"
-	.string "beyond.$"
+	.string "It's gone now…$"
 
 Zone11A_EventScript_EmmaandLeo::
 	trainerbattle_double TRAINER_EMMA_AND_LEO, Zone11A_Text_EmmaandLeoIntro, Zone11A_Text_EmmaandLeoDefeat, gText_NotEnoughMons
@@ -247,6 +232,37 @@ Zone11A_Text_JoelDefeat:
 
 Zone11A_Text_JoelPostBattle:
 	.string "I'll see you another day.$"
+
+Zone11A_EventScript_Marion::
+	trainerbattle_single TRAINER_MARION, Zone11A_Text_MarionIntro, Zone11A_Text_MarionDefeat
+	msgbox Zone11A_Text_MarionPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone11A_Text_MarionIntro:
+	.string "My psychic powers have no match!$"
+
+Zone11A_Text_MarionDefeat:
+	.string "You're too powerful…$"
+
+Zone11A_Text_MarionPostBattle:
+	.string "Your power level…\n"
+	.string "It's over 9000!$"
+
+Zone11A_EventScript_Regina::
+	trainerbattle_single TRAINER_REGINA, Zone11A_Text_ReginaIntro, Zone11A_Text_ReginaDefeat
+	msgbox Zone11A_Text_ReginaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone11A_Text_ReginaIntro:
+	.string "Do you hear the call?$"
+
+Zone11A_Text_ReginaDefeat:
+	.string "The spirits… I can hear their voices!$"
+
+Zone11A_Text_ReginaPostBattle:
+	.string "It might just be the wind whistling,\n"
+	.string "but I'm sure the voices are from the\l"
+	.string "beyond.$"
 
 Zone11A_EventScript_LeviathanIntro_Text_0:
 	.string "{COLOR BLUE}Newton{COLOR DARK_GRAY}: Excuse me, I realize this is\n"

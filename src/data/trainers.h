@@ -1043,9 +1043,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_JEANETTE] =
     {
-        .trainerClass = TRAINER_CLASS_PSYCHIC,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_PSYCHIC_F,
+        .trainerClass = TRAINER_CLASS_HEX_MANIAC,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_HEX_MANIAC,
         .trainerName = _("Jeanette"),
         .items = {},
         .doubleBattle = FALSE,
@@ -1107,6 +1107,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Marion),
         .party = {.TrainerMon = sParty_Marion},
+        .shouldShuffle = TRUE,
     },
 
     [TRAINER_NEWTON_LEVIATHAN_10] =
@@ -1204,20 +1205,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Trevor),
         .party = {.TrainerMon = sParty_Trevor},
-        .shouldShuffle = TRUE,
-    },
-
-    [TRAINER_RANDOLPH] =
-    {
-        .trainerClass = TRAINER_CLASS_POKEMANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_POKEMANIAC,
-        .trainerName = _("Randolph"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Randolph),
-        .party = {.TrainerMon = sParty_Randolph},
         .shouldShuffle = TRUE,
     },
 
@@ -1470,11 +1457,25 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Charlie},
     },
 
+    [TRAINER_RANDOLPH] =
+    {
+        .trainerClass = TRAINER_CLASS_COLLECTOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_COLLECTOR,
+        .trainerName = _("Randolph"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Randolph),
+        .party = {.TrainerMon = sParty_Randolph},
+        .shouldShuffle = TRUE,
+    },
+
     [TRAINER_TODD] =
     {
-        .trainerClass = TRAINER_CLASS_HIKER,
+        .trainerClass = TRAINER_CLASS_WORKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerPic = TRAINER_PIC_WORKER,
         .trainerName = _("Todd"),
         .items = {},
         .doubleBattle = FALSE,

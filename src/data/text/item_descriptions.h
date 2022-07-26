@@ -3121,7 +3121,7 @@ static const u8 sTM18Desc[] = _(
     // "types except Ice.");
 
 static const u8 sTM19Desc[] = _(
-    "Empties its mind,\n"
+    "Empties the mind,\n"
     "sharply raising\n"
     "Sp. Defense.");
 

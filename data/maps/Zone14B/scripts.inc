@@ -135,6 +135,20 @@ Zone14B_EventScript_DuskStone_2:
 	end
 
 
+Zone14B_EventScript_Randolph::
+	trainerbattle_single TRAINER_RANDOLPH, Zone14B_Text_RandolphIntro, Zone14B_Text_RandolphDefeat
+	msgbox Zone14B_Text_RandolphPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone14B_Text_RandolphIntro:
+	.string "You distracted me from my search!$"
+
+Zone14B_Text_RandolphDefeat:
+	.string "The search for cool Pokémon!$"
+
+Zone14B_Text_RandolphPostBattle:
+	.string "I guess you have some cool Pokémon.$"
+
 Zone14B_EventScript_Todd::
 	trainerbattle_single TRAINER_TODD, Zone14B_Text_ToddIntro, Zone14B_Text_ToddDefeat
 	msgbox Zone14B_Text_ToddPostBattle, MSGBOX_AUTOCLOSE
@@ -142,7 +156,7 @@ Zone14B_EventScript_Todd::
 
 Zone14B_Text_ToddIntro:
 	.string "Hohoho!\n"
-	.string "What a great place to hike!$"
+	.string "What a great place to work!$"
 
 Zone14B_Text_ToddDefeat:
 	.string "Hohoho!\n"

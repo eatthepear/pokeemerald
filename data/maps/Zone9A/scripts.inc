@@ -241,8 +241,8 @@ Zone9A_Text_CarmineIntro:
 	.string "Whew, it's hot in the jungle!$"
 
 Zone9A_Text_CarmineDefeat:
-	.string "My Charmeleon isn't really helping\n"
-	.string "me out in that regard!$"
+	.string "I think the humidity is the worst\n"
+	.string "part!$"
 
 Zone9A_Text_CarminePostBattle:
 	.string "I hope there's AC in the village.$"

@@ -16,7 +16,7 @@ Zone2Sanctuary_EventScript_Intro::
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
 	msgbox Zone2Sanctuary_Text_Reward
-	giveitem ITEM_ROCKY_HELMET
+	giveitem ITEM_NORMAL_GEM
 	setvar VAR_ZONE, 3
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
@@ -64,4 +64,4 @@ Zone2Sanctuary_EventScript_NextZone_6:
 
 
 Zone2Sanctuary_Text_Reward::
-	.string "The Rocky Helmet!$"
+	.string "A Normal Gem!$"
