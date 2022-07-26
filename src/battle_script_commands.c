@@ -6768,6 +6768,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     else
     {
         const struct TrainerMon *party = gTrainers[trainerId].party.TrainerMon;
+        u8 classMultiplier;
         lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
  
         for (; gTrainerMoneyTable[i].classId != 0xFF; i++)
@@ -6775,13 +6776,16 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
             if (gTrainerMoneyTable[i].classId == gTrainers[trainerId].trainerClass)
                 break;
         }
+        classMultiplier = gTrainerMoneyTable[i].value;
+        if (gTrainers[trainerId].hasCustomTransition == TRUE)
+            classMultiplier = 20;
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            moneyReward = scale * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+            moneyReward = scale * lastMonLevel * gBattleStruct->moneyMultiplier * classMultiplier;
         else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-            moneyReward = scale * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * gTrainerMoneyTable[i].value;
+            moneyReward = scale * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * classMultiplier;
         else
-            moneyReward = scale * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+            moneyReward = scale * lastMonLevel * gBattleStruct->moneyMultiplier * classMultiplier;
     }
 
     return moneyReward;

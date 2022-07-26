@@ -16,8 +16,6 @@
  * 
  * Many trainers will randomly lead with one of their party Pokemon. This will be included in the comments next to the trainer.
  * 
- * You can ignore the .ball lines. These are just for setting what Pokeball each Pokemon is in, and is mainly for cosmetic purposes.
- * 
  * The trainer AI has been significantly improved from vanilla Emerald. 
  * On Brutal, the trainer AI knows your moveset. */
 
@@ -76,7 +74,6 @@ static const struct TrainerMon sParty_Oscar[] = {
 
 static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 7,
     .nature = NATURE_BRAVE,
@@ -90,7 +87,6 @@ static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
 
 static const struct TrainerMon sParty_CoreyBrutal[] = {//Leviathan, Brutal
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 7,
     .nature = NATURE_BRAVE,
@@ -177,7 +173,6 @@ static const struct TrainerMon sParty_Arthur[] = {
 
 static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 9,
     .nature = NATURE_LONELY,
@@ -191,7 +186,6 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default
 
 static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 9,
     .nature = NATURE_LONELY,
@@ -294,7 +288,6 @@ static const struct TrainerMon sParty_Richard[] = {
 
 static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 10,
     .nature = NATURE_SASSY,
@@ -304,7 +297,6 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 10,
     .nature = NATURE_RELAXED,
@@ -314,7 +306,6 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 20,
     .lvl = 11,
     .nature = NATURE_HASTY,
@@ -327,7 +318,6 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
 
 static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 10,
     .nature = NATURE_SASSY,
@@ -337,7 +327,6 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_GROWL, MOVE_DEFENSE_CURL}
     },
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 10,
     .nature = NATURE_RELAXED,
@@ -347,7 +336,6 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_BULLDOZE, MOVE_DEFENSE_CURL}
     },
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_HASTY,
@@ -357,7 +345,6 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_LEAFAGE, MOVE_THUNDER_SHOCK}
     },
     {
-    .ball = ITEM_POKE_BALL,
     .iv = 31,
     .lvl = 11,
     .nature = NATURE_QUIET,
@@ -486,7 +473,6 @@ static const struct TrainerMon sParty_Lucia[] = {
 
 static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battle, Default
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 12,
     .nature = NATURE_BRAVE,
@@ -496,7 +482,6 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_NONE, MOVE_NONE}
     },
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 12,
     .nature = NATURE_RASH,
@@ -506,7 +491,6 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     .moves = {MOVE_ELECTROWEB, MOVE_HELPING_HAND, MOVE_QUICK_ATTACK, MOVE_NONE}
     },
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 13,
     .nature = NATURE_HASTY,
@@ -520,7 +504,6 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
 
 static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle, Brutal
     {
-    .ball = ITEM_LUXURY_BALL,
     .ivs = {31, 31, 31, 31, 30, 30},
     .lvl = 12,
     .nature = NATURE_BRAVE,
@@ -530,7 +513,6 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .moves = {MOVE_AQUA_JET, MOVE_HELPING_HAND, MOVE_HIDDEN_POWER, MOVE_NONE} // Hidden Power Ground
     },
     {
-    .ball = ITEM_LUXURY_BALL,
     .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 12,
     .nature = NATURE_RASH,
@@ -540,7 +522,6 @@ static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle
     .moves = {MOVE_ELECTROWEB, MOVE_HELPING_HAND, MOVE_QUICK_ATTACK, MOVE_HIDDEN_POWER} // Hidden Power Grass
     },
     {
-    .ball = ITEM_LUXURY_BALL,
     .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 13,
     .nature = NATURE_HASTY,
@@ -717,7 +698,6 @@ static const struct TrainerMon sParty_Kevin[] = {
 
 static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, Default and Brutal
     {
-    .ball = ITEM_NET_BALL,
     .iv = 20,
     .lvl = 15,
     .nature = NATURE_NAIVE,
@@ -728,7 +708,6 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
     .moves = {MOVE_BUG_BITE, MOVE_POISON_TAIL, MOVE_FURY_ATTACK, MOVE_FOCUS_ENERGY}
     },
     {
-    .ball = ITEM_NET_BALL,
     .iv = 20,
     .lvl = 15,
     .nature = NATURE_HASTY,
@@ -887,7 +866,6 @@ static const struct TrainerMon sParty_Daisy[] = {// Random lead
 
 static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal, Battle starts with permanent Rain on Brutal
     {
-    .ball = ITEM_DIVE_BALL,
     .iv = 20,
     .lvl = 16,
     .nature = NATURE_TIMID,
@@ -897,7 +875,6 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
     .moves = {MOVE_WATER_PULSE, MOVE_AIR_CUTTER, MOVE_AQUA_RING, MOVE_CHARM}
     },
     {
-    .ball = ITEM_DIVE_BALL,
     .iv = 20,
     .lvl = 16,
     .nature = NATURE_QUIET,
@@ -907,7 +884,6 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
     .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_HYPNOSIS, MOVE_DOUBLE_SLAP}
     },
     {
-    .ball = ITEM_DIVE_BALL,
     .iv = 20,
     .lvl = 16,
     .nature = NATURE_BOLD,
@@ -917,7 +893,6 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
     .moves = {MOVE_BUBBLE_BEAM, MOVE_MUD_SHOT, MOVE_ROUND, MOVE_AQUA_RING}
     },
     {
-    .ball = ITEM_DIVE_BALL,
     .iv = 20,
     .lvl = 16,
     .nature = NATURE_BRAVE,
@@ -927,7 +902,6 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
     .moves = {MOVE_WATER_PULSE, MOVE_HEADBUTT, MOVE_BITE, MOVE_COUNTER}
     },
     {
-    .ball = ITEM_DIVE_BALL,
     .iv = 20,
     .lvl = 17,
     .nature = NATURE_CALM,
@@ -1049,7 +1023,6 @@ static const struct TrainerMon sParty_Connie[] = {
 
 static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan, Double Battle, Default
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 19,
     .nature = NATURE_QUIET,
@@ -1060,7 +1033,6 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan, Double Batt
     .moves = {MOVE_PSYBEAM, MOVE_DISARMING_VOICE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 20,
     .lvl = 19,
     .nature = NATURE_QUIET,
@@ -1074,7 +1046,6 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan, Double Batt
 
 static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battle, Brutal
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 31,
     .lvl = 19,
     .nature = NATURE_QUIET,
@@ -1085,7 +1056,6 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battl
     .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
     },
     {
-    .ball = ITEM_LUXURY_BALL,
     .iv = 31,
     .lvl = 19,
     .nature = NATURE_QUIET,
