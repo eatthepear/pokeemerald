@@ -16,7 +16,10 @@ Zone2Sanctuary_EventScript_Intro::
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
 	msgbox Zone2Sanctuary_Text_Reward
-	giveitem ITEM_NORMAL_GEM
+	setflag FLAG_SYS_DEXNAV_GET
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone2Sanctuary_EventScript_Intro_Text_0, MSGBOX_DEFAULT
+	waitfanfare
 	setvar VAR_ZONE, 3
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
@@ -62,6 +65,9 @@ Zone2Sanctuary_EventScript_NextZone_6:
 	waitstate
 	goto Zone2Sanctuary_EventScript_NextZone_1
 
+
+Zone2Sanctuary_EventScript_Intro_Text_0:
+	.string "{PLAYER} received the {COLOR RED}DexNav{COLOR DARK_GRAY}!$"
 
 Zone2Sanctuary_Text_Reward::
 	.string "A Normal Gem!$"

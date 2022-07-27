@@ -13,7 +13,10 @@ script Zone2Sanctuary_EventScript_Intro {
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_RewardClear)
 	msgbox(Zone2Sanctuary_Text_Reward)
-	giveitem(ITEM_NORMAL_GEM)
+	setflag(FLAG_SYS_DEXNAV_GET)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox("{PLAYER} received the {COLOR RED}DexNav{COLOR DARK_GRAY}!", MSGBOX_DEFAULT)
+	waitfanfare
 	setvar(VAR_ZONE, 3)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
