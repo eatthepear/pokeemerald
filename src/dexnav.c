@@ -2574,7 +2574,7 @@ bool8 TryFindHiddenPokemon(void)
                 }
                 else
                 {
-                    species = gWildMonHeaders[headerId].waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
+                    species = gWildMonHeaders[headerId].waterMonsInfo->wildPokemon[ChooseWildMonIndex_WaterRockHeadbutt()].species;
                     environment = ENCOUNTER_TYPE_WATER;
 
                 }

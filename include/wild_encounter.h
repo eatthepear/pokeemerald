@@ -44,7 +44,7 @@ bool8 TryDoDoubleWildBattle(void);
 void CreateWildMon(u16 species, u8 level);
 u16 GetCurrentMapWildMonHeaderId(void);
 u8 ChooseWildMonIndex_Land(void);
-u8 ChooseWildMonIndex_Water(void);
+u8 ChooseWildMonIndex_WaterRockHeadbutt(void);
 u8 ChooseHiddenMonIndex(void);
 
 #endif // GUARD_WILD_ENCOUNTER_H
