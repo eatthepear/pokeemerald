@@ -66,7 +66,7 @@ enum
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
     MENU_ACTION_RETIRE_ZONE,
-    MENU_ACTION_INFO,
+    MENU_ACTION_MISC,
     MENU_ACTION_DEXNAV
 };
 
@@ -110,7 +110,7 @@ static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
 static bool8 StartMenuZoneRetireCallback(void);
-static bool8 StartMenuZoneInfoCallback(void);
+static bool8 StartMenuZoneMiscCallback(void);
 static bool8 StartMenuDexNavCallback(void);
 
 // Menu callbacks
@@ -164,7 +164,7 @@ static const struct WindowTemplate sPyramidFloorWindowTemplate_2 = {0, 1, 1, 0xA
 static const struct WindowTemplate sPyramidFloorWindowTemplate_1 = {0, 1, 1, 0xC, 4, 0xF, 8};
 
 static const u8 gText_MenuDebug[] = _("DEBUG");
-static const u8 gText_MenuInfo[] = _("Info");
+static const u8 gText_MenuMisc[] = _("Misc");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -183,7 +183,7 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}},
     {gText_MenuDebug, {.u8_void = StartMenuDebugCallback}},
     {gText_MenuRetire, {.u8_void = StartMenuZoneRetireCallback}},
-    {gText_MenuInfo, {.u8_void = StartMenuZoneInfoCallback}},
+    {gText_MenuMisc, {.u8_void = StartMenuZoneMiscCallback}},
     {gText_MenuDexNav, {.u8_void = StartMenuDexNavCallback}}
 };
 
@@ -321,18 +321,20 @@ static void BuildSanctuaryStartMenu(void)
 
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
-
+    
     AddStartMenuAction(MENU_ACTION_BAG);
-    AddStartMenuAction(MENU_ACTION_INFO);
+    AddStartMenuAction(MENU_ACTION_PLAYER);
+
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
-    AddStartMenuAction(MENU_ACTION_PLAYER);
+        
+    AddStartMenuAction(MENU_ACTION_MISC);
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
     // }
     AddStartMenuAction(MENU_ACTION_SAVE);
-    AddStartMenuAction(MENU_ACTION_OPTION);
+    // AddStartMenuAction(MENU_ACTION_OPTION);
 
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
         AddStartMenuAction(MENU_ACTION_DEBUG);
@@ -344,34 +346,31 @@ static void BuildNewZoneStartMenu(void)
 {
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEDEX);
-    
+
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     
     AddStartMenuAction(MENU_ACTION_BAG);
-    AddStartMenuAction(MENU_ACTION_INFO);
+    AddStartMenuAction(MENU_ACTION_PLAYER);
+
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
+        
+    AddStartMenuAction(MENU_ACTION_MISC);
 
-    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
-        AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
-    // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    // {
-    //     AddStartMenuAction(MENU_ACTION_POKENAV);
-    // }
-    AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     // AddStartMenuAction(MENU_ACTION_OPTION);
 
+    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
+        AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
         AddStartMenuAction(MENU_ACTION_DEBUG);
-    else
-        AddStartMenuAction(MENU_ACTION_EXIT);
+    // else
+    //     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
 static void BuildRevisitingZoneStartMenu(void)
-{    
-    AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
+{
     
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEDEX);
@@ -380,22 +379,25 @@ static void BuildRevisitingZoneStartMenu(void)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     
     AddStartMenuAction(MENU_ACTION_BAG);
-    AddStartMenuAction(MENU_ACTION_INFO);
+    AddStartMenuAction(MENU_ACTION_PLAYER);
+
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
+        
+    AddStartMenuAction(MENU_ACTION_MISC);
     
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
     // }
-    AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     // AddStartMenuAction(MENU_ACTION_OPTION);
 
+    AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
         AddStartMenuAction(MENU_ACTION_DEBUG);
-    else
-        AddStartMenuAction(MENU_ACTION_EXIT);
+    // else
+    //     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
 static void BuildSafariZoneStartMenu(void)
@@ -682,7 +684,7 @@ static bool8 HandleStartMenuInput(void)
             && gMenuCallback != StartMenuSafariZoneRetireCallback
             && gMenuCallback != StartMenuBattlePyramidRetireCallback
             && gMenuCallback != StartMenuZoneRetireCallback
-            && gMenuCallback != StartMenuZoneInfoCallback)
+            && gMenuCallback != StartMenuZoneMiscCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -846,11 +848,11 @@ static bool8 StartMenuZoneRetireCallback(void)
     return TRUE;
 }
 
-static bool8 StartMenuZoneInfoCallback(void)
+static bool8 StartMenuZoneMiscCallback(void)
 {
     RemoveExtraStartMenuWindows();
     HideStartMenu();
-    ZoneInfo();
+    CreateMiscMenu();
 
     return TRUE;
 }

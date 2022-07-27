@@ -2699,7 +2699,7 @@ script Zone_EventScript_RetirePrompt {
 	end
 }
 
-script Zone_EventScript_Info {
+script Zone_EventScript_MiscMenu {
 	lockall
 	multichoice(21, 0, MULTI_INFO, FALSE)
 	switch (var(VAR_RESULT)) {

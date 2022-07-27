@@ -29,7 +29,7 @@ extern const u8 SafariZone_EventScript_OutOfBallsMidBattle[];
 extern const u8 SafariZone_EventScript_OutOfBalls[];
 
 extern const u8 Zone_EventScript_RetirePrompt[];
-extern const u8 Zone_EventScript_Info[];
+extern const u8 Zone_EventScript_MiscMenu[];
 
 EWRAM_DATA u8 gNumSafariBalls = 0;
 EWRAM_DATA static u16 sSafariZoneStepCounter = 0;
@@ -102,9 +102,9 @@ void ZoneRetirePrompt(void)
     ScriptContext1_SetupScript(Zone_EventScript_RetirePrompt);
 }
 
-void ZoneInfo(void)
+void CreateMiscMenu(void)
 {
-    ScriptContext1_SetupScript(Zone_EventScript_Info);
+    ScriptContext1_SetupScript(Zone_EventScript_MiscMenu);
 }
 
 void CB2_EndSafariBattle(void)
