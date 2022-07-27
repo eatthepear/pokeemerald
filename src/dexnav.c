@@ -177,7 +177,7 @@ static const u32 sHiddenMonIconGfx[] = INCBIN_U32("graphics/dexnav/hidden.4bpp.l
 // strings
 static const u8 sText_DexNav_NoInfo[] = _("--------");
 static const u8 sText_DexNav_CaptureToSee[] = _("Capture first!");
-static const u8 sText_DexNav_PressRToRegister[] = _("R TO REGISTER!");
+static const u8 sText_DexNav_PressLToRegister[] = _("L TO REGISTER!");
 static const u8 sText_DexNav_SearchForRegisteredSpecies[] = _("Search {STR_VAR_1}");
 static const u8 sText_DexNav_NotFoundHere[] = _("This Pokémon cannot be found here!");
 static const u8 sText_ThreeQmarks[] = _("???");
@@ -1844,10 +1844,10 @@ static void DexNavLoadCapturedAllSymbols(void)
         CreateSprite(&sCaptureAllMonsSpriteTemplate, 152, 58, 0);
 
     if (CapturedAllWaterMons(headerId))
-        CreateSprite(&sCaptureAllMonsSpriteTemplate, 139, 17, 0);
+        CreateSprite(&sCaptureAllMonsSpriteTemplate, 128, 17, 0);
     
     if (CapturedAllHiddenMons(headerId))
-        CreateSprite(&sCaptureAllMonsSpriteTemplate, 114, 123, 0);
+        CreateSprite(&sCaptureAllMonsSpriteTemplate, 128, 123, 0);
 }
 
 //#define WIN_DETAILS_TILE        0x3a3
@@ -2024,7 +2024,7 @@ static void DrawSpeciesIcons(void)
     for (i = 0; i < WATER_WILD_COUNT; i++)
     {
         species = sDexNavUiDataPtr->waterSpecies[i];
-        x = 30 + 24 * i;
+        x = ROW_WATER_ICON_X + 24 * i;
         y = ROW_WATER_ICON_Y;
         TryDrawIconInSlot(species, x, y);
     }
@@ -2211,7 +2211,7 @@ static void PrintSearchableSpecies(u16 species)
     PutWindowTilemap(WINDOW_REGISTERED);
     if (species == SPECIES_NONE)
     {
-        AddTextPrinterParameterized3(WINDOW_REGISTERED, 1, 0, 0, sFontColor_White, TEXT_SKIP_DRAW, sText_DexNav_PressRToRegister);
+        AddTextPrinterParameterized3(WINDOW_REGISTERED, 1, 0, 0, sFontColor_White, TEXT_SKIP_DRAW, sText_DexNav_PressLToRegister);
     }
     else
     {
@@ -2380,14 +2380,24 @@ static void Task_DexNavMain(u8 taskId)
         if (sDexNavUiDataPtr->cursorRow == ROW_WATER)
         {
             sDexNavUiDataPtr->cursorRow = ROW_HIDDEN;
-            if (sDexNavUiDataPtr->cursorCol >= COL_HIDDEN_COUNT)
-                sDexNavUiDataPtr->cursorCol = COL_HIDDEN_MAX;
+            // if (sDexNavUiDataPtr->cursorCol >= COL_HIDDEN_COUNT)
+            //     sDexNavUiDataPtr->cursorCol = COL_HIDDEN_MAX;
         }
         else
         {
-            if (sDexNavUiDataPtr->cursorRow == ROW_LAND_TOP && sDexNavUiDataPtr->cursorCol == COL_LAND_MAX)
-                sDexNavUiDataPtr->cursorCol = COL_WATER_MAX;
-            
+            if (sDexNavUiDataPtr->cursorRow == ROW_LAND_TOP)
+            {
+                if (sDexNavUiDataPtr->cursorCol == COL_LAND_MAX)
+                    sDexNavUiDataPtr->cursorCol = COL_WATER_MAX;
+                else if (sDexNavUiDataPtr->cursorCol == 0)
+                    sDexNavUiDataPtr->cursorCol = 0;
+                else
+                    sDexNavUiDataPtr->cursorCol--;
+            }
+            if (sDexNavUiDataPtr->cursorRow == ROW_HIDDEN)
+            {
+                sDexNavUiDataPtr->cursorCol++;
+            }
             sDexNavUiDataPtr->cursorRow--;
         }
         
@@ -2400,15 +2410,21 @@ static void Task_DexNavMain(u8 taskId)
         {
             sDexNavUiDataPtr->cursorRow = ROW_WATER;
         }
-        else if (sDexNavUiDataPtr->cursorRow == ROW_LAND_BOT)
-        {
-            if (sDexNavUiDataPtr->cursorCol >= COL_HIDDEN_COUNT)
-                sDexNavUiDataPtr->cursorCol = COL_HIDDEN_MAX;
-            
-            sDexNavUiDataPtr->cursorRow++;
-        }
         else
         {
+            if (sDexNavUiDataPtr->cursorRow == ROW_LAND_BOT)
+            {
+                if (sDexNavUiDataPtr->cursorCol == COL_LAND_MAX)
+                    sDexNavUiDataPtr->cursorCol = COL_HIDDEN_MAX;
+                else if (sDexNavUiDataPtr->cursorCol == 0)
+                    sDexNavUiDataPtr->cursorCol = 0;
+                else
+                    sDexNavUiDataPtr->cursorCol--;
+            }
+            if (sDexNavUiDataPtr->cursorRow == ROW_WATER)
+            {
+                sDexNavUiDataPtr->cursorCol++;
+            }
             sDexNavUiDataPtr->cursorRow++;
         }
         
