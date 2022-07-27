@@ -4,6 +4,7 @@
 #include "coord_event_weather.h"
 #include "daycare.h"
 #include "debug.h"
+#include "dexnav.h"
 #include "faraway_island.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -115,8 +116,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
-            if (newKeys & R_BUTTON)
-                input->pressedRButton = TRUE;
+            if (newKeys & L_BUTTON)
+                input->pressedLButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -125,7 +126,7 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
             input->heldDirection2 = TRUE;
         }
         
-        if (newKeys & L_BUTTON)
+        if (newKeys & L_BUTTON && !FlagGet(FLAG_SYS_DEXNAV_SEARCH))
             input->pressedLButton = TRUE;
     }
 
@@ -195,10 +196,17 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         ShowStartMenu();
         return TRUE;
     }
+    
+    if (input->tookStep && TryFindHiddenPokemon())
+        return TRUE;
+    
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
     if (input->pressedRButton && EnableAutoRun())
+        return TRUE;
+
+    if (input->pressedLButton && TryStartDexnavSearch())
         return TRUE;
     
     if (input->pressedLButton && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))

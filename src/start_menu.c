@@ -45,6 +45,7 @@
 #include "window.h"
 #include "constants/songs.h"
 #include "union_room.h"
+#include "dexnav.h"
 #include "constants/rgb.h"
 
 // Menu actions
@@ -66,6 +67,7 @@ enum
     MENU_ACTION_DEBUG,
     MENU_ACTION_RETIRE_ZONE,
     MENU_ACTION_INFO,
+    MENU_ACTION_DEXNAV
 };
 
 // Save status
@@ -109,6 +111,7 @@ static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
 static bool8 StartMenuZoneRetireCallback(void);
 static bool8 StartMenuZoneInfoCallback(void);
+static bool8 StartMenuDexNavCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -181,6 +184,7 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuDebug, {.u8_void = StartMenuDebugCallback}},
     {gText_MenuRetire, {.u8_void = StartMenuZoneRetireCallback}},
     {gText_MenuInfo, {.u8_void = StartMenuZoneInfoCallback}},
+    {gText_MenuDexNav, {.u8_void = StartMenuDexNavCallback}}
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -320,6 +324,8 @@ static void BuildSanctuaryStartMenu(void)
 
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_INFO);
+    if (FlagGet(FLAG_SYS_DEXNAV_GET))
+        AddStartMenuAction(MENU_ACTION_DEXNAV);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
@@ -344,6 +350,8 @@ static void BuildNewZoneStartMenu(void)
     
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_INFO);
+    if (FlagGet(FLAG_SYS_DEXNAV_GET))
+        AddStartMenuAction(MENU_ACTION_DEXNAV);
 
     if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
         AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
@@ -373,6 +381,8 @@ static void BuildRevisitingZoneStartMenu(void)
     
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_INFO);
+    if (FlagGet(FLAG_SYS_DEXNAV_GET))
+        AddStartMenuAction(MENU_ACTION_DEXNAV);
     
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
@@ -664,7 +674,6 @@ static bool8 HandleStartMenuInput(void)
             if (GetNationalPokedexCount(FLAG_GET_SEEN) == 0)
                 return FALSE;
         }
-
         gMenuCallback = sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void;
 
         if (gMenuCallback != StartMenuSaveCallback
@@ -691,7 +700,7 @@ static bool8 HandleStartMenuInput(void)
     return FALSE;
 }
 
-static bool8 StartMenuPokedexCallback(void)
+bool8 StartMenuPokedexCallback(void)
 {
     if (!gPaletteFade.active)
     {
@@ -1528,4 +1537,10 @@ void AppendToList(u8 *list, u8 *pos, u8 newEntry)
 {
     list[*pos] = newEntry;
     (*pos)++;
+}
+
+static bool8 StartMenuDexNavCallback(void)
+{
+    CreateTask(Task_OpenDexNavFromStartMenu, 0);
+    return TRUE;
 }

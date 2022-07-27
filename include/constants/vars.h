@@ -60,8 +60,8 @@
 #define VAR_MUGSHOT_ID                       0x402B
 #define VAR_NUZLOCKE_DEATHS                  0x402C
 #define VAR_NUM_TRAINERS_REMAINING           0x402D
-#define VAR_UNUSED_0x402E                    0x402E
-#define VAR_UNUSED_0x402F                    0x402F
+#define VAR_DEXNAV_SPECIES                   0x402E // Registered dexnav species
+#define VAR_DEXNAV_STEP_COUNTER              0x402F // steps for finding hidden pokemon
 #define VAR_ZONE_0_STATE                     0x4030
 #define VAR_ZONE_1_STATE                     0x4031
 #define VAR_ZONE_2_STATE                     0x4032

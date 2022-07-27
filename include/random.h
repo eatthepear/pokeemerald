@@ -20,5 +20,6 @@ u16 Random2(void);
 void SeedRng(u16 seed);
 void SeedRng2(u16 seed);
 void ShuffleList(u16 *list, u16 count);
+u16 RandRange(u16 min, u16 max);
 
 #endif // GUARD_RANDOM_H

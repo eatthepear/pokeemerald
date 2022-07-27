@@ -38,6 +38,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SmallSparkle;
 const struct SpriteTemplate gFieldEffectObjectTemplate_Rayquaza;
 const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbBlob;
 const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbDust;
+const struct SpriteTemplate gFieldEffectObjectTemplate_CaveDust;
 
 const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_SHADOW_S]              = &gFieldEffectObjectTemplate_ShadowSmall,
@@ -80,4 +81,5 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_SNOW_FOOTPRINTS]       = &gFieldEffectObjectTemplate_SnowFootprints,
     [FLDEFFOBJ_ROCK_CLIMB_BLOB]       = &gFieldEffectObjectTemplate_RockClimbBlob,
     [FLDEFFOBJ_ROCK_CLIMB_DUST]       = &gFieldEffectObjectTemplate_RockClimbDust,
+    [FLDEFFOBJ_CAVE_DUST]             = &gFieldEffectObjectTemplate_CaveDust,
 };
