@@ -185,7 +185,7 @@ static const u8 sText_SearchLevel[] = _("SEARCH {LV}. {STR_VAR_1}");
 static const u8 sText_MonLevel[] = _("{LV}. {STR_VAR_1}");
 static const u8 sText_EggMove[] = _("MOVE: {STR_VAR_1}");
 static const u8 sText_HeldItem[] = _("{STR_VAR_1}");
-static const u8 sText_StartExit[] = _("{START_BUTTON} EXIT");
+static const u8 sText_StartExit[] = _("START TO EXIT");
 static const u8 sText_DexNavChain[] = _("{NO} {STR_VAR_1}");
 static const u8 sText_DexNavChainLong[] = _("{NO}{STR_VAR_1}");
 
@@ -505,16 +505,19 @@ static void AddSearchWindowText(u16 species, u8 proximity, u8 searchLevel, bool8
     StringExpandPlaceholders(gStringVar4, sText_MonLevel);
     AddTextPrinterParameterized3(sDexNavSearchDataPtr->windowId, 0, WINDOW_COL_1, 0, sSearchFontColor, TEXT_SKIP_DRAW, gStringVar4);
     
+    StringExpandPlaceholders(gStringVar4, sText_StartExit);
+    AddTextPrinterParameterized3(windowId, 0, WINDOW_MOVE_NAME_X, 0, sSearchFontColor, TEXT_SKIP_DRAW, gStringVar4);
     if (proximity <= SNEAKING_PROXIMITY)
     {
         PlaySE(SE_POKENAV_ON);
         // move
-        if (searchLevel > 1 && sDexNavSearchDataPtr->moves[0])
-        {
-            StringCopy(gStringVar1, gMoveNames[sDexNavSearchDataPtr->moves[0]]);
-            StringExpandPlaceholders(gStringVar4, sText_EggMove);
-            AddTextPrinterParameterized3(windowId, 0, WINDOW_MOVE_NAME_X, 0, sSearchFontColor, TEXT_SKIP_DRAW, gStringVar4);
-        }
+        // if (searchLevel > 1 && sDexNavSearchDataPtr->moves[0])
+        // {
+        //     StringCopy(gStringVar1, gMoveNames[sDexNavSearchDataPtr->moves[0]]);
+        //     StringExpandPlaceholders(gStringVar4, sText_EggMove);
+        //     AddTextPrinterParameterized3(windowId, 0, WINDOW_MOVE_NAME_X, 0, sSearchFontColor, TEXT_SKIP_DRAW, gStringVar4);
+        // }
+        // StringCopy(gStringVar1, gMoveNames[sDexNavSearchDataPtr->moves[0]]);
         
         if (searchLevel > 2)
         {            
@@ -2527,126 +2530,126 @@ static void Task_DexNavMain(u8 taskId)
 /////////////////////////
 bool8 TryFindHiddenPokemon(void)
 {
-    u16 *stepPtr = GetVarPointer(VAR_DEXNAV_STEP_COUNTER);
-    u32 attempts = 0;
-    u16 currSteps;
+    // u16 *stepPtr = GetVarPointer(VAR_DEXNAV_STEP_COUNTER);
+    // u32 attempts = 0;
+    // u16 currSteps;
 
-    if (!FlagGet(FLAG_SYS_DETECTOR_MODE) || FlagGet(FLAG_SYS_DEXNAV_SEARCH) || GetFlashLevel() > 0)
-    {
-        (*stepPtr) = 0;
-        return FALSE;
-    }
+    // if (!FlagGet(FLAG_SYS_DETECTOR_MODE) || FlagGet(FLAG_SYS_DEXNAV_SEARCH) || GetFlashLevel() > 0)
+    // {
+    //     (*stepPtr) = 0;
+    //     return FALSE;
+    // }
     
-    (*stepPtr)++;
-    (*stepPtr) %= HIDDEN_MON_STEP_COUNT;
-    if ((*stepPtr) == 0 && (Random() % 100 < HIDDEN_MON_SEARCH_RATE))
-    {
-        // hidden pokemon
-        u16 headerId = GetCurrentMapWildMonHeaderId();
-        u8 index;
-        u16 species;
-        u8 environment;
-        u8 taskId;
-        u8 total;
-        const struct WildPokemonInfo* hiddenMonsInfo = gWildMonHeaders[headerId].hiddenMonsInfo;
-        bool8 isHiddenMon = FALSE;
+    // (*stepPtr)++;
+    // (*stepPtr) %= HIDDEN_MON_STEP_COUNT;
+    // if ((*stepPtr) == 0 && (Random() % 100 < HIDDEN_MON_SEARCH_RATE))
+    // {
+    //     // hidden pokemon
+    //     u16 headerId = GetCurrentMapWildMonHeaderId();
+    //     u8 index;
+    //     u16 species;
+    //     u8 environment;
+    //     u8 taskId;
+    //     u8 total;
+    //     const struct WildPokemonInfo* hiddenMonsInfo = gWildMonHeaders[headerId].hiddenMonsInfo;
+    //     bool8 isHiddenMon = FALSE;
         
-        //while you can still technically find hidden pokemon if there are not hidden-only pokemon on a map,
-        // this prevents any potential lagging on maps you dont want hidden pokemon to appear on
-        if (hiddenMonsInfo == NULL)
-            return FALSE;
+    //     //while you can still technically find hidden pokemon if there are not hidden-only pokemon on a map,
+    //     // this prevents any potential lagging on maps you dont want hidden pokemon to appear on
+    //     if (hiddenMonsInfo == NULL)
+    //         return FALSE;
         
-        //encounter rate signifies surfing (1) or land mons (0)!
-        // again, for simplicity
-        switch (hiddenMonsInfo->encounterRate)
-        {
-        case 0: //land
-            // there are surely better ways to do this, but this allows greatest flexibility
-            if (Random() % 100 < HIDDEN_MON_PROBABILTY)
-            {
-                index = ChooseHiddenMonIndex();
-                if (index == 0xFF)
-                    return FALSE;//no hidden info
-                species = hiddenMonsInfo->wildPokemon[index].species;
-                isHiddenMon = TRUE;
-                environment = ENCOUNTER_TYPE_HIDDEN;
-            }
-            else
-            {
-                species = gWildMonHeaders[headerId].landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
-                environment = ENCOUNTER_TYPE_LAND;
-            }
-            break;
-        case 1: //water
-            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-            {
-                if (Random() % 100 < HIDDEN_MON_PROBABILTY)
-                {
-                    index = ChooseHiddenMonIndex();
-                    if (index == 0xFF)
-                        return FALSE;//no hidden info
-                    species = hiddenMonsInfo->wildPokemon[index].species;
-                    isHiddenMon = TRUE;
-                    environment = ENCOUNTER_TYPE_HIDDEN;
-                }
-                else
-                {
-                    species = gWildMonHeaders[headerId].waterMonsInfo->wildPokemon[ChooseWildMonIndex_WaterRockHeadbutt()].species;
-                    environment = ENCOUNTER_TYPE_WATER;
+    //     //encounter rate signifies surfing (1) or land mons (0)!
+    //     // again, for simplicity
+    //     switch (hiddenMonsInfo->encounterRate)
+    //     {
+    //     case 0: //land
+    //         // there are surely better ways to do this, but this allows greatest flexibility
+    //         if (Random() % 100 < HIDDEN_MON_PROBABILTY)
+    //         {
+    //             index = ChooseHiddenMonIndex();
+    //             if (index == 0xFF)
+    //                 return FALSE;//no hidden info
+    //             species = hiddenMonsInfo->wildPokemon[index].species;
+    //             isHiddenMon = TRUE;
+    //             environment = ENCOUNTER_TYPE_HIDDEN;
+    //         }
+    //         else
+    //         {
+    //             species = gWildMonHeaders[headerId].landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
+    //             environment = ENCOUNTER_TYPE_LAND;
+    //         }
+    //         break;
+    //     case 1: //water
+    //         if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+    //         {
+    //             if (Random() % 100 < HIDDEN_MON_PROBABILTY)
+    //             {
+    //                 index = ChooseHiddenMonIndex();
+    //                 if (index == 0xFF)
+    //                     return FALSE;//no hidden info
+    //                 species = hiddenMonsInfo->wildPokemon[index].species;
+    //                 isHiddenMon = TRUE;
+    //                 environment = ENCOUNTER_TYPE_HIDDEN;
+    //             }
+    //             else
+    //             {
+    //                 species = gWildMonHeaders[headerId].waterMonsInfo->wildPokemon[ChooseWildMonIndex_WaterRockHeadbutt()].species;
+    //                 environment = ENCOUNTER_TYPE_WATER;
 
-                }
-            }
-            else
-            {
-                return FALSE;   //not surfing -> cant find hidden water mons
-            }
-            break;
-        default:
-            return FALSE;
-        }
+    //             }
+    //         }
+    //         else
+    //         {
+    //             return FALSE;   //not surfing -> cant find hidden water mons
+    //         }
+    //         break;
+    //     default:
+    //         return FALSE;
+    //     }
         
-        if (species == SPECIES_NONE)
-            return FALSE;
+    //     if (species == SPECIES_NONE)
+    //         return FALSE;
         
-        sDexNavSearchDataPtr = AllocZeroed(sizeof(struct DexNavSearch));
+    //     sDexNavSearchDataPtr = AllocZeroed(sizeof(struct DexNavSearch));
                 
-        // init search data
-        sDexNavSearchDataPtr->isHiddenMon = isHiddenMon;
-        sDexNavSearchDataPtr->species = species;
-        sDexNavSearchDataPtr->hiddenSearch = TRUE;
-        sDexNavSearchDataPtr->environment = environment;  //updated in DexNavTryGenerateMonLevel if hidden mon
-        sDexNavSearchDataPtr->monLevel = DexNavTryGenerateMonLevel(species, environment);
-        if (sDexNavSearchDataPtr->monLevel == MON_LEVEL_NONEXISTENT)
-        {
-            Free(sDexNavSearchDataPtr);
-            return FALSE;
-        }
+    //     // init search data
+    //     sDexNavSearchDataPtr->isHiddenMon = isHiddenMon;
+    //     sDexNavSearchDataPtr->species = species;
+    //     sDexNavSearchDataPtr->hiddenSearch = TRUE;
+    //     sDexNavSearchDataPtr->environment = environment;  //updated in DexNavTryGenerateMonLevel if hidden mon
+    //     sDexNavSearchDataPtr->monLevel = DexNavTryGenerateMonLevel(species, environment);
+    //     if (sDexNavSearchDataPtr->monLevel == MON_LEVEL_NONEXISTENT)
+    //     {
+    //         Free(sDexNavSearchDataPtr);
+    //         return FALSE;
+    //     }
 
-        // find tile for hidden mon and start effect if possible
-        while (1) {
-            if (TryStartHiddenMonFieldEffect(sDexNavSearchDataPtr->environment, 8, 8, TRUE))
-                break;
-            if (++attempts > 20)
-                return FALSE;   //cannot find suitable tile
-        }
+    //     // find tile for hidden mon and start effect if possible
+    //     while (1) {
+    //         if (TryStartHiddenMonFieldEffect(sDexNavSearchDataPtr->environment, 8, 8, TRUE))
+    //             break;
+    //         if (++attempts > 20)
+    //             return FALSE;   //cannot find suitable tile
+    //     }
 
-        // exclamation mark over player
-        gFieldEffectArguments[0] = gSaveBlock1Ptr->pos.x;
-        gFieldEffectArguments[1] = gSaveBlock1Ptr->pos.y;
-        gFieldEffectArguments[2] = gSprites[gPlayerAvatar.spriteId].subpriority - 1;
-        gFieldEffectArguments[3] = 2;
-        ObjectEventGetLocalIdAndMap(&gObjectEvents[gPlayerAvatar.objectEventId], &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
-        FieldEffectStart(FLDEFF_EXCLAMATION_MARK_ICON);
+    //     // exclamation mark over player
+    //     gFieldEffectArguments[0] = gSaveBlock1Ptr->pos.x;
+    //     gFieldEffectArguments[1] = gSaveBlock1Ptr->pos.y;
+    //     gFieldEffectArguments[2] = gSprites[gPlayerAvatar.spriteId].subpriority - 1;
+    //     gFieldEffectArguments[3] = 2;
+    //     ObjectEventGetLocalIdAndMap(&gObjectEvents[gPlayerAvatar.objectEventId], &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
+    //     FieldEffectStart(FLDEFF_EXCLAMATION_MARK_ICON);
         
-        PlayCry_Script(species, 0);
-        taskId = CreateTask(Task_SetUpDexNavSearch, 0);
-        gTasks[taskId].tSpecies = sDexNavSearchDataPtr->species;
-        gTasks[taskId].tEnvironment = sDexNavSearchDataPtr->environment;
-        gTasks[taskId].tRevealed = FALSE;
-        HideMapNamePopUpWindow();
-        ChangeBgY_ScreenOff(0, 0, 0);
-        return FALSE;   //we dont actually want to enable the script context or the game will freeze
-    }
+    //     PlayCry_Script(species, 0);
+    //     taskId = CreateTask(Task_SetUpDexNavSearch, 0);
+    //     gTasks[taskId].tSpecies = sDexNavSearchDataPtr->species;
+    //     gTasks[taskId].tEnvironment = sDexNavSearchDataPtr->environment;
+    //     gTasks[taskId].tRevealed = FALSE;
+    //     HideMapNamePopUpWindow();
+    //     ChangeBgY_ScreenOff(0, 0, 0);
+    //     return FALSE;   //we dont actually want to enable the script context or the game will freeze
+    // }
     
     return FALSE;
 }
