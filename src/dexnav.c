@@ -1257,70 +1257,71 @@ static void CreateDexNavWildMon(u16 species, u8 potential, u8 level, u8 abilityN
 static u8 DexNavTryGenerateMonLevel(u16 species, u8 environment)
 {
     u8 levelBase = GetEncounterLevelFromMapData(species, environment);
-    u8 levelBonus = gSaveBlock1Ptr->dexNavChain / 5;
+    // u8 levelBonus = gSaveBlock1Ptr->dexNavChain / 5;
 
     if (levelBase == MON_LEVEL_NONEXISTENT)
         return MON_LEVEL_NONEXISTENT;   //species not found in the area
     
-    if (Random() % 100 < 4)
-        levelBonus += 10; //4% chance of having a +10 level
+    // if (Random() % 100 < 4)
+    //     levelBonus += 10; //4% chance of having a +10 level
 
-    if (levelBase + levelBonus > MAX_LEVEL)
-        return MAX_LEVEL;
-    else
-        return levelBase + levelBonus;
+    // if (levelBase + levelBonus > MAX_LEVEL)
+    //     return MAX_LEVEL;
+    // else
+    //     return levelBase + levelBonus;
+    return levelBase;
 }
 
 static void DexNavGenerateMoveset(u16 species, u8 searchLevel, u8 encounterLevel, u16* moveDst)
 {
-    bool8 genMove = FALSE;
-    u16 randVal = Random() % 100;
+    // bool8 genMove = FALSE;
+    // u16 randVal = Random() % 100;
     u16 i;
-    u16 eggMoveBuffer[EGG_MOVES_ARRAY_COUNT];
+    // u16 eggMoveBuffer[EGG_MOVES_ARRAY_COUNT];
 
-    // see if first move slot should be an egg move
-    if (searchLevel < 5)
-    {
-        #if (SEARCHLEVEL0_MOVECHANCE != 0)
-        if (randVal < SEARCHLEVEL0_MOVECHANCE)
-            genMove = TRUE;
-        #endif
-    }
-    else if (searchLevel < 10)
-    {
-        #if (SEARCHLEVEL5_MOVECHANCE != 0)
-        if (randVal < SEARCHLEVEL5_MOVECHANCE)
-            genMove = TRUE;
-        #endif
-    }
-    else if (searchLevel < 25)
-    {
-        #if (SEARCHLEVEL10_MOVECHANCE != 0)
-        if (randVal < SEARCHLEVEL10_MOVECHANCE)
-            genMove = TRUE;
-        #endif
-    }
-    else if (searchLevel < 50)
-    {
-        #if (SEARCHLEVEL25_MOVECHANCE != 0)
-        if (randVal < SEARCHLEVEL25_MOVECHANCE)
-            genMove = TRUE;
-        #endif
-    }
-    else if (searchLevel < 100)
-    {
-        #if (SEARCHLEVEL50_MOVECHANCE != 0)
-        if (randVal < SEARCHLEVEL50_MOVECHANCE)
-            genMove = TRUE;
-        #endif
-    }
-    else
-    {
-        #if (SEARCHLEVEL100_MOVECHANCE != 0)
-        if (randVal < SEARCHLEVEL100_MOVECHANCE)
-            genMove = TRUE;
-        #endif
-    }
+    // // see if first move slot should be an egg move
+    // if (searchLevel < 5)
+    // {
+    //     #if (SEARCHLEVEL0_MOVECHANCE != 0)
+    //     if (randVal < SEARCHLEVEL0_MOVECHANCE)
+    //         genMove = TRUE;
+    //     #endif
+    // }
+    // else if (searchLevel < 10)
+    // {
+    //     #if (SEARCHLEVEL5_MOVECHANCE != 0)
+    //     if (randVal < SEARCHLEVEL5_MOVECHANCE)
+    //         genMove = TRUE;
+    //     #endif
+    // }
+    // else if (searchLevel < 25)
+    // {
+    //     #if (SEARCHLEVEL10_MOVECHANCE != 0)
+    //     if (randVal < SEARCHLEVEL10_MOVECHANCE)
+    //         genMove = TRUE;
+    //     #endif
+    // }
+    // else if (searchLevel < 50)
+    // {
+    //     #if (SEARCHLEVEL25_MOVECHANCE != 0)
+    //     if (randVal < SEARCHLEVEL25_MOVECHANCE)
+    //         genMove = TRUE;
+    //     #endif
+    // }
+    // else if (searchLevel < 100)
+    // {
+    //     #if (SEARCHLEVEL50_MOVECHANCE != 0)
+    //     if (randVal < SEARCHLEVEL50_MOVECHANCE)
+    //         genMove = TRUE;
+    //     #endif
+    // }
+    // else
+    // {
+    //     #if (SEARCHLEVEL100_MOVECHANCE != 0)
+    //     if (randVal < SEARCHLEVEL100_MOVECHANCE)
+    //         genMove = TRUE;
+    //     #endif
+    // }
 
     // Generate a wild mon just to get the initial moveset (later overwritten by CreateDexNavWildMon)
     CreateWildMon(species, encounterLevel);
@@ -1329,39 +1330,39 @@ static void DexNavGenerateMoveset(u16 species, u8 searchLevel, u8 encounterLevel
     for (i = 0; i < MAX_MON_MOVES; i++)
         moveDst[i] = GetMonData(&gEnemyParty[0], MON_DATA_MOVE1 + i, NULL);
 
-    // set first move slot to a random egg move if search level is good enough    
-    if (genMove)
-    {
-        u8 numEggMoves = GetEggMoves(&gEnemyParty[0], eggMoveBuffer);
-        if (numEggMoves != 0)
-            moveDst[0] = eggMoveBuffer[Random() % numEggMoves];
-    }
+    // // set first move slot to a random egg move if search level is good enough    
+    // if (genMove)
+    // {
+    //     u8 numEggMoves = GetEggMoves(&gEnemyParty[0], eggMoveBuffer);
+    //     if (numEggMoves != 0)
+    //         moveDst[0] = eggMoveBuffer[Random() % numEggMoves];
+    // }
 }
 
 static u16 DexNavGenerateHeldItem(u16 species, u8 searchLevel)
 {
-    u16 randVal = Random() % 100;
-    u8 searchLevelInfluence = searchLevel >> 1;
-    u16 item1 = gBaseStats[species].item1;
-    u16 item2 = gBaseStats[species].item2;
+    // u16 randVal = Random() % 100;
+    // u8 searchLevelInfluence = searchLevel >> 1;
+    // u16 item1 = gBaseStats[species].item1;
+    // u16 item2 = gBaseStats[species].item2;
     
-    // if both are the same, 100% to hold
-    if (item1 == item2)
-        return item1;
+    // // if both are the same, 100% to hold
+    // if (item1 == item2)
+    //     return item1;
 
-    // if no items can be held, then yeah...no items
-    if (item2 == ITEM_NONE && item1 == ITEM_NONE)
-        return ITEM_NONE;
+    // // if no items can be held, then yeah...no items
+    // if (item2 == ITEM_NONE && item1 == ITEM_NONE)
+    //     return ITEM_NONE;
 
-    // if only one entry, 50% chance
-    if (item2 == ITEM_NONE && item1 != ITEM_NONE)
-        return (randVal < 50) ? item1 : ITEM_NONE;
+    // // if only one entry, 50% chance
+    // if (item2 == ITEM_NONE && item1 != ITEM_NONE)
+    //     return (randVal < 50) ? item1 : ITEM_NONE;
 
-    // if both are distinct item1 = 50% + srclvl/2; item2 = 5% + srchlvl/2
-    if (randVal < (50 + searchLevelInfluence + 5 + searchLevel))
-        return (randVal > 5 + searchLevelInfluence) ? item1 : item2;
-    else
-        return ITEM_NONE;
+    // // if both are distinct item1 = 50% + srclvl/2; item2 = 5% + srchlvl/2
+    // if (randVal < (50 + searchLevelInfluence + 5 + searchLevel))
+    //     return (randVal > 5 + searchLevelInfluence) ? item1 : item2;
+    // else
+    //     return ITEM_NONE;
 
     return ITEM_NONE;
 }
