@@ -72,6 +72,15 @@
             25,
             25
           ]
+        },
+        {
+          "type": "hidden_mons",
+          "encounter_rates": [
+            25,
+            25,
+            25,
+            25
+          ]
         }
       ],
       "encounters": [
@@ -140,6 +149,31 @@
                 "min_level": 2,
                 "max_level": 4,
                 "species": "SPECIES_ZIGZAGOON_GALARIAN"
+              }
+            ]
+          },
+          "hidden_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_HAPPINY"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_TOGEPI"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_SNIVY"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_TEPIG"
               }
             ]
           }
@@ -1535,6 +1569,31 @@
                 "species": "SPECIES_TRAPINCH"
               }
             ]
+          },
+          "hidden_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_HAPPINY"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_TOGEPI"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_SNIVY"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_TEPIG"
+              }
+            ]
           }
         },
         {
@@ -2363,31 +2422,6 @@
                 "min_level": 26,
                 "max_level": 28,
                 "species": "SPECIES_TRUBBISH"
-              }
-            ]
-          },
-          "water_mons": {
-            "encounter_rate": 4,
-            "mons": [
-              {
-                "min_level": 28,
-                "max_level": 30,
-                "species": "SPECIES_BINACLE"
-              },
-              {
-                "min_level": 28,
-                "max_level": 30,
-                "species": "SPECIES_CHINCHOU"
-              },
-              {
-                "min_level": 28,
-                "max_level": 30,
-                "species": "SPECIES_CLAMPERL"
-              },
-              {
-                "min_level": 28,
-                "max_level": 30,
-                "species": "SPECIES_DHELMISE"
               }
             ]
           }
