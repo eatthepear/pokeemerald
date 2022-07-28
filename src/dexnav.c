@@ -684,11 +684,22 @@ static bool8 DexNavPickTile(u8 environment, u8 areaX, u8 areaY, bool8 smallScan)
             case ENCOUNTER_TYPE_WATER:
                 if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehaviour))
                 {
-                    u8 scale = 320 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2);
-                    if (IsElevationMismatchAt(gObjectEvents[gPlayerAvatar.spriteId].currentElevation, topX, topY))
-                        break;
+                    if (currMapType == MAP_TYPE_UNDERWATER)
+                    { // underwater
+                        if (MetatileBehavior_IsSeaweed(tileBehaviour))
+                        {
+                            scale = 100 - (GetPlayerDistance(topX, topY) * 2);
+                            weight = (Random() % scale <= 5) && !MapGridIsImpassableAt(topX, topY);
+                        }
+                    }
+                    else
+                    { // outdoor surfing
+                        u8 scale = 320 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2);
+                        if (IsElevationMismatchAt(gObjectEvents[gPlayerAvatar.spriteId].currentElevation, topX, topY))
+                            break;
 
-                    weight = (Random() % scale <= 1) && !MapGridIsImpassableAt(topX, topY);
+                        weight = (Random() % scale <= 1) && !MapGridIsImpassableAt(topX, topY);
+                    }
                 }
                 break;
             default:
@@ -741,7 +752,7 @@ static bool8 TryStartHiddenMonFieldEffect(u8 environment, u8 xSize, u8 ySize, bo
                 else
                     fldEffId = FLDEFF_CAVE_DUST;
             }
-            else //outdoor, underwater
+            else //outdoor
             {
                 if (MetatileBehavior_IsTallGrass(metatileBehaviour)) //Regular grass
                     fldEffId = FLDEFF_SHAKING_GRASS;
@@ -756,7 +767,10 @@ static bool8 TryStartHiddenMonFieldEffect(u8 environment, u8 xSize, u8 ySize, bo
             }
             break;
         case ENCOUNTER_TYPE_WATER:
-            fldEffId = FLDEFF_WATER_SURFACING;
+            if (currMapType == MAP_TYPE_UNDERWATER)
+                fldEffId = FLDEFF_BERRY_TREE_GROWTH_SPARKLE;
+            else
+                fldEffId = FLDEFF_WATER_SURFACING;
             break;
         default:
             return FALSE;
