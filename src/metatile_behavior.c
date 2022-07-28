@@ -832,20 +832,14 @@ bool8 MetatileBehavior_IsLandWildEncounter(u8 metatileBehavior)
      && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
         return TRUE;
     else
-        if (metatileBehavior == MB_SEAWEED_NO_SURFACING) 
-            return TRUE;
-        else
-            return FALSE;
+        return FALSE;
 }
 
 bool8 MetatileBehavior_IsWaterWildEncounter(u8 metatileBehavior)
 {
     if (MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior) == TRUE
      && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
-        if (metatileBehavior == MB_SEAWEED_NO_SURFACING) 
-            return FALSE;
-        else
-            return TRUE;
+        return TRUE;
     else
         return FALSE;
 }
