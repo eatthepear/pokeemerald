@@ -14,6 +14,7 @@
 #include "field_message_box.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
+#include "field_weather.h"
 #include "fieldmap.h"
 #include "gpu_regs.h"
 #include "graphics.h"
@@ -57,6 +58,7 @@
 #include "constants/abilities.h"
 #include "constants/rgb.h"
 #include "constants/region_map_sections.h"
+#include "constants/weather.h"
 #include "constants/wild_encounter.h"
 #include "gba/m4a_internal.h"
 
@@ -881,6 +883,15 @@ static void Task_InitDexNavSearch(u8 taskId)
         Free(sDexNavSearchDataPtr);
         FreeMonIconPalettes();
         ScriptContext1_SetupScript(EventScript_TooDark);
+        DestroyTask(taskId);
+        return;
+    }
+
+    if (GetCurrentWeather() == WEATHER_SNOW)
+    {
+        Free(sDexNavSearchDataPtr);
+        FreeMonIconPalettes();
+        ScriptContext1_SetupScript(EventScript_SnowInterference);
         DestroyTask(taskId);
         return;
     }

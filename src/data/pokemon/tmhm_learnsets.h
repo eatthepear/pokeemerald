@@ -4286,6 +4286,8 @@ static const u8 sFurretTMHMLearnset[] =
 static const u8 sHoothootTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM23_PLUCK),
+    // TMHM(TM20_DUAL_WINGBEAT),
     TMHM(TM39_RETURN),
     TMHM(TM13_THIEF),
     // TMHM(TM08_SUBSTITUTE),
@@ -4301,12 +4303,15 @@ static const u8 sHoothootTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     TMHM(TM19_AMNESIA),
     // TMHM(TM00_AGILITY),
+    TMHM(TM16_STEEL_WING),
     0xFF,
 };
 
 static const u8 sNoctowlTMHMLearnset[] =
 {
     TMHM(TM01_PROTECT),
+    TMHM(TM23_PLUCK),
+    // TMHM(TM20_DUAL_WINGBEAT),
     TMHM(TM39_RETURN),
     TMHM(TM13_THIEF),
     // TMHM(TM08_SUBSTITUTE),
@@ -4322,6 +4327,7 @@ static const u8 sNoctowlTMHMLearnset[] =
     // TMHM(TM50_TOXIC),
     TMHM(TM19_AMNESIA),
     // TMHM(TM00_AGILITY),
+    TMHM(TM16_STEEL_WING),
     0xFF,
 };
 

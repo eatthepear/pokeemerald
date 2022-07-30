@@ -1106,8 +1106,11 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_NOCTOWL]       = TUTOR_LEARNSET(TUTOR(MOVE_SLEEP_TALK)
                                             | TUTOR(MOVE_ZEN_HEADBUTT)
+                                            | TUTOR(MOVE_DEFOG)
                                             | TUTOR(MOVE_ROOST)
-                                            | TUTOR(MOVE_TAILWIND)),
+                                            | TUTOR(MOVE_TAILWIND)
+                                            | TUTOR(MOVE_HEAT_WAVE)
+                                            | TUTOR(MOVE_NASTY_PLOT)),
 
     [SPECIES_LEDYBA]        = TUTOR_LEARNSET(TUTOR(MOVE_KNOCK_OFF)
                                             | TUTOR(MOVE_SLEEP_TALK)

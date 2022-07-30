@@ -648,7 +648,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_PACHIRISU"
+                "species": "SPECIES_VENIPEDE"
               },
               {
                 "min_level": 8,
@@ -742,7 +742,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_PACHIRISU"
+                "species": "SPECIES_VENIPEDE"
               },
               {
                 "min_level": 8,
@@ -836,7 +836,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_PACHIRISU"
+                "species": "SPECIES_VENIPEDE"
               },
               {
                 "min_level": 8,
@@ -930,7 +930,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_PACHIRISU"
+                "species": "SPECIES_VENIPEDE"
               },
               {
                 "min_level": 8,
@@ -1049,7 +1049,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_PACHIRISU"
+                "species": "SPECIES_VENIPEDE"
               },
               {
                 "min_level": 8,
@@ -1292,12 +1292,12 @@
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_CORSOLA_GALARIAN"
+                "species": "SPECIES_OSHAWOTT"
               },
               {
                 "min_level": 12,
                 "max_level": 14,
-                "species": "SPECIES_OSHAWOTT"
+                "species": "SPECIES_PIPLUP"
               },
               {
                 "min_level": 12,
@@ -2273,17 +2273,17 @@
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_DEDENNE"
-              },
-              {
-                "min_level": 23,
-                "max_level": 25,
                 "species": "SPECIES_MORPEKO"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_MORPEKO"
+                "species": "SPECIES_PACHIRISU"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_PACHIRISU"
               }
             ]
           }
@@ -2500,22 +2500,22 @@
               {
                 "min_level": 26,
                 "max_level": 28,
-                "species": "SPECIES_MAWILE"
+                "species": "SPECIES_CUBCHOO"
               },
               {
                 "min_level": 26,
                 "max_level": 28,
-                "species": "SPECIES_MAWILE"
+                "species": "SPECIES_DARUMAKA_GALARIAN"
               },
               {
                 "min_level": 26,
                 "max_level": 28,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 26,
                 "max_level": 28,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_SWINUB"
               }
             ]
           }
@@ -2582,100 +2582,6 @@
                 "species": "SPECIES_NONE"
               }
             ]
-          },
-          "hidden_mons": {
-            "encounter_rate": 1,
-            "mons": [
-              {
-                "min_level": 27,
-                "max_level": 29,
-                "species": "SPECIES_LAPRAS"
-              },
-              {
-                "min_level": 27,
-                "max_level": 29,
-                "species": "SPECIES_LAPRAS"
-              },
-              {
-                "min_level": 27,
-                "max_level": 29,
-                "species": "SPECIES_PIPLUP"
-              },
-              {
-                "min_level": 27,
-                "max_level": 29,
-                "species": "SPECIES_PIPLUP"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_ZONE17A",
-          "base_label": "gZone17A",
-          "land_mons": {
-            "encounter_rate": 5,
-            "mons": [
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_ABSOL"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_BALTOY"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_GOLETT"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_KLEFKI"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_SANDYGAST"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_SINISTEA"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_SPIRITOMB"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_YAMASK"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_YAMASK"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_YAMASK_GALARIAN"
-              },
-              {
-                "min_level": 29,
-                "max_level": 31,
-                "species": "SPECIES_YAMASK_GALARIAN"
-              }
-            ]
           }
         },
         {
@@ -2687,7 +2593,12 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_GRIMER"
+                "species": "SPECIES_CORSOLA_GALARIAN"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_DITTO"
               },
               {
                 "min_level": 30,
@@ -2702,7 +2613,32 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_GRIMER_ALOLAN"
+                "species": "SPECIES_KLEFKI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_MR_MIME_GALARIAN"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_SANDYGAST"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_SINISTEA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_SINISTEA"
               },
               {
                 "min_level": 30,
@@ -2713,36 +2649,6 @@
                 "min_level": 30,
                 "max_level": 32,
                 "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_VENIPEDE"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_VENIPEDE"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_GRIMER"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_GRIMER_ALOLAN"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_VENIPEDE"
               }
             ]
           },
@@ -3147,6 +3053,11 @@
               {
                 "min_level": 37,
                 "max_level": 39,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 39,
                 "species": "SPECIES_CUBCHOO"
               },
               {
@@ -3158,11 +3069,6 @@
                 "min_level": 37,
                 "max_level": 39,
                 "species": "SPECIES_MIMIKYU"
-              },
-              {
-                "min_level": 37,
-                "max_level": 39,
-                "species": "SPECIES_MR_MIME_GALARIAN"
               },
               {
                 "min_level": 37,

@@ -45,3 +45,10 @@ EventScript_TooDark::
     end
 sText_TooDark:
     .string "It's too dark to search\nfor a Pokémon!$"
+
+EventScript_SnowInterference::
+    msgbox sText_SnowInterference, MSGBOX_SIGN
+    end
+sText_SnowInterference:
+    .string "The snow is interfering with the\nDexNav's search function!$"
+

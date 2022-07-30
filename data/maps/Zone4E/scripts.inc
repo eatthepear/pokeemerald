@@ -19,6 +19,7 @@ Zone4E_EventScript_Exit::
 	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_7
 Zone4E_EventScript_Exit_5:
+	setflag FLAG_RECEIVED_ZONE4A_GEM
 	warp MAP_ZONE4SANCTUARY, 255, 22, 7
 	waitstate
 Zone4E_EventScript_Exit_1:

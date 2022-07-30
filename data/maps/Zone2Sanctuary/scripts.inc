@@ -70,4 +70,4 @@ Zone2Sanctuary_EventScript_Intro_Text_0:
 	.string "{PLAYER} received the {COLOR RED}DexNav{COLOR DARK_GRAY}!$"
 
 Zone2Sanctuary_Text_Reward::
-	.string "A Normal Gem!$"
+	.string "The DexNav$"

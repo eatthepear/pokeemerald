@@ -1571,7 +1571,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Zone15BMirageBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
-        .shouldShuffle = TRUE,
     },
 
     [TRAINER_ANGUS] =
