@@ -1507,7 +1507,7 @@
 #define FLAG_UNUSED_0x908                           (SYSTEM_FLAGS + 0xA8)
 #define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9)
 #define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA)
-#define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB)
+#define FLAG_DISABLE_PREVIEW                        (SYSTEM_FLAGS + 0xAB)
 #define FLAG_SYS_DETECTOR_MODE                      (SYSTEM_FLAGS + 0xAC)
 #define FLAG_SYS_DEXNAV_GET                         (SYSTEM_FLAGS + 0xAD)
 #define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0xAE)

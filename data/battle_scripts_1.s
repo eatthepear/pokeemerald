@@ -9313,6 +9313,10 @@ BattleScript_ActionSelectionItemsCantBeUsed::
 	printselectionstring STRINGID_ITEMSCANTBEUSEDNOW
 	endselectionscript
 
+BattleScript_ActionSelectionPreviewCantBeUsed::
+	printselectionstring STRINGID_PKMNTRANSFERREDSOMEONESPC
+	endselectionscript
+
 BattleScript_FlushMessageBox::
 	printstring STRINGID_EMPTYSTRING3
 	return

@@ -4161,7 +4161,15 @@ static void HandleTurnActionSelectionState(void)
                     }
                     break;
                 case B_ACTION_VIEW_ENEMY_PARTY:
-                    if (TRUE)
+                    if (FlagGet(FLAG_DISABLE_PREVIEW)) {
+                        RecordedBattle_ClearBattlerAction(gActiveBattler, 1);
+                        gSelectionBattleScripts[gActiveBattler] = BattleScript_ActionSelectionPreviewCantBeUsed;
+                        gBattleCommunication[gActiveBattler] = STATE_SELECTION_SCRIPT;
+                        *(gBattleStruct->selectionScriptFinished + gActiveBattler) = FALSE;
+                        *(gBattleStruct->stateIdAfterSelScript + gActiveBattler) = STATE_BEFORE_ACTION_CHOSEN;
+                        return;
+                    }
+                    else
                     {
                         for (i = 0; i < PARTY_SIZE; i++)
                         {

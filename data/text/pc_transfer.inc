@@ -1,8 +1,5 @@
 gText_PkmnTransferredSomeonesPC::
-	.string "{STR_VAR_2} was transferred to\n"
-	.string "Someone's PC.\p"
-	.string "It was placed in \n"
-	.string "Box “{STR_VAR_1}.”$"
+	.string "A mysterious force blocks Surveil!{PAUSE 64}$"
 
 gText_PkmnTransferredLanettesPC::
 	.string "{STR_VAR_2} was transferred to\n"
