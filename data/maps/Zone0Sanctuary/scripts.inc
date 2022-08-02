@@ -761,8 +761,6 @@ Zone0Sanctuary_EventScript_EndIntro::
 Zone0Sanctuary_EventScript_EndIntro_1:
 	setflag FLAG_EXP_ALL_ON
 	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_SYS_NATIONAL_DEX
-	special EnableNationalPokedex
 	special SetUnlockedPokedexFlags
 	callnative SetStarterFatefulEncounter
 	callnative StartSetModeAndPokedex
