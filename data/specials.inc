@@ -551,3 +551,4 @@ gSpecials::
 	def_special GetNumChests
 	def_special GetNumHiddenItemsFound
 	def_special GetNumHiddenItems
+	def_special NewGameSetup

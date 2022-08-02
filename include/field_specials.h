@@ -38,5 +38,6 @@ u16 GetNumChestsFound(void);
 u16 GetNumChests(void);
 u16 GetNumHiddenItemsFound(void);
 u16 GetNumHiddenItems(void);
+void NewGameSetup(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

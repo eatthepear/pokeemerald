@@ -9936,12 +9936,6 @@ void DeleteFaintedPartyPokemon(void)
     CompactPartySlots();
 }
 
-void SetStarterFatefulEncounter(void)
-{
-    u8 metLocation = METLOC_FATEFUL_ENCOUNTER;
-    SetMonData(&gPlayerParty[0], MON_DATA_MET_LOCATION, &metLocation);
-}
-
 void SetEeveeGivenAtEncounter(void)
 {
     u8 i;

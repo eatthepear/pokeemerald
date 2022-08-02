@@ -762,8 +762,7 @@ Zone0Sanctuary_EventScript_EndIntro_1:
 	setflag FLAG_EXP_ALL_ON
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
-	callnative SetStarterFatefulEncounter
-	callnative StartSetModeAndPokedex
+	special NewGameSetup
 	initclock 1, 1
 	callnative ReturnFromStartWallClock
 	setvar VAR_ZONE, 1
