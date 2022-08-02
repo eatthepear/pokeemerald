@@ -1105,9 +1105,9 @@
 #define FLAG_ITEM_ZONE15A_DAWN_STONE                                0x427
 #define FLAG_ITEM_ZONE15A_TM26                                      0x428
 #define FLAG_ITEM_ZONE15A_GLALITITE                                 0x429
-#define FLAG_ITEM_ZONE16A_DIVE_BALL                                 0x42A
+#define FLAG_ITEM_ZONE16A_TM27                                      0x42A
 #define FLAG_ITEM_ZONE16A_WATER_STONE                               0x42B
-#define FLAG_ITEM_ZONE16A_TM19                                      0x42C
+#define FLAG_ITEM_ZONE16A_DIVE_BALL                                 0x42C
 #define FLAG_ITEM_ZONE16A_TIMER_BALL                                0x42D
 #define FLAG_ITEM_ZONE18A_EXPERT_BELT                               0x42E
 #define FLAG_ITEM_ZONE18A_TM23                                      0x42F

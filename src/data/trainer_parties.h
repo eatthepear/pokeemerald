@@ -1912,7 +1912,7 @@ static const struct TrainerMon sParty_Romulus[] = {
     }
 };
 
-static const struct TrainerMon sParty_Julie[] = {// Random lead
+static const struct TrainerMon sParty_Julie[] = {
     {
     .iv = 20,
     .lvl = 24,
@@ -2592,78 +2592,162 @@ static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Batt
 
 /* ------------------- Zone 16 ------------------- */
 
-static const struct TrainerMon sParty_Angus[] = {
+static const struct TrainerMon sParty_Iona[] = {// Random lead
     {
     .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_MAREANIE,
+    .lvl = 30,
+    .species = SPECIES_BASCULIN_WHITE_STRIPED,
     },
     {
     .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_CLAUNCHER,
+    .lvl = 30,
+    .species = SPECIES_EELEKTRIK,
     },
     {
     .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_PRINPLUP,
+    .lvl = 30,
+    .species = SPECIES_QWILFISH_HISUIAN,
     }
 };
 
-static const struct TrainerMon sParty_Iona[] = {
+static const struct TrainerMon sParty_Berke[] = {// Random lead
     {
     .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_OMANYTE,
+    .lvl = 30,
+    .species = SPECIES_CORSOLA_GALARIAN,
     },
     {
     .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_KABUTO,
+    .lvl = 30,
+    .species = SPECIES_POLIWHIRL,
     },
     {
     .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_TIRTOUGA,
+    .lvl = 30,
+    .species = SPECIES_BIBAREL,
     }
 };
 
-static const struct TrainerMon sParty_Tanisha[] = {
+static const struct TrainerMon sParty_Tanisha[] = {// Random lead
     {
     .iv = 10,
-    .lvl = 27,
-    .species = SPECIES_PYUKUMUKU,
+    .lvl = 30,
+    .species = SPECIES_CHANSEY,
+    },
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_AUDINO,
     }
 };
+
+static const struct TrainerMon sParty_Robert[] = {// Fought in a double battle with Chris
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_GRAVELER,
+    },
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_SANDSLASH_ALOLAN,
+    }
+};
+
+static const struct TrainerMon sParty_Chris[] = {// Fought in a double battle with Robert
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_GRAVELER_ALOLAN,
+    },
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_SANDSLASH,
+    }
+};
+
+static const struct TrainerMon sParty_Angus[] = {// Random lead
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_STUNFISK_GALARIAN,
+    },
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_PINCURCHIN,
+    },
+    {
+    .iv = 10,
+    .lvl = 30,
+    .species = SPECIES_PALPITOAD,
+    }
+};
+
+// You fight Katie then immediately fight Michael afterwards.
+// On Default, your party is fully healed in between fights, while on Brutal your party is not
+static const struct TrainerMon sParty_Katie[] = {
+    {
+    .iv = 20,
+    .lvl = 32,
+    .ability = ABILITY_SLOT_2, //Sniper
+    .species = SPECIES_SEADRA,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_BRINE, MOVE_AURORA_BEAM, MOVE_CLEAR_SMOG, MOVE_FOCUS_ENERGY}
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .ability = ABILITY_SLOT_1, //Water Absorb
+    .species = SPECIES_MANTINE,
+    .heldItem = ITEM_WACAN_BERRY,
+    .moves = {MOVE_AIR_SLASH, MOVE_WATER_PULSE, MOVE_ICY_WIND, MOVE_ROOST}
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .ability = ABILITY_SLOT_1, //Volt Absorb
+    .species = SPECIES_LANTURN,
+    .heldItem = ITEM_RINDO_BERRY,
+    .moves = {MOVE_DISCHARGE, MOVE_BUBBLE_BEAM, MOVE_SIGNAL_BEAM, MOVE_VOLT_SWITCH}
+    }
+};
+
+static const struct TrainerMon sParty_Michael[] = {
+    {
+    .iv = 20,
+    .lvl = 32,
+    .ability = ABILITY_SLOT_1, //Thick Fat
+    .species = SPECIES_SEALEO,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_FREEZE_DRY, MOVE_WATER_PULSE, MOVE_REST, MOVE_SLEEP_TALK}
+    },
+    {
+    .ivs = {21, 21, 21, 21, 20, 21},
+    .lvl = 32,
+    .ability = ABILITY_SLOT_2, //Shell Armor
+    .species = SPECIES_GASTRODON,
+    .heldItem = ITEM_RINDO_BERRY,
+    .moves = {MOVE_MUDDY_WATER, MOVE_EARTH_POWER, MOVE_ANCIENT_POWER, MOVE_HIDDEN_POWER} //Hidden Power Electric
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .ability = ABILITY_SLOT_1, //Technician
+    .species = SPECIES_FLOATZEL,
+    .heldItem = ITEM_WACAN_BERRY,
+    .moves = {MOVE_FLIP_TURN, MOVE_ICE_FANG, MOVE_TAIL_SLAP, MOVE_AQUA_JET}
+    }
+};
+
+/* ------------------- Zone 17 ------------------- */
 
 static const struct TrainerMon sParty_Rafael[] = {
     {
     .iv = 10,
     .lvl = 27,
     .species = SPECIES_PINCURCHIN,
-    }
-};
-
-static const struct TrainerMon sParty_Berke[] = {
-    {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_STARYU,
-    },
-    {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_SEEL,
-    },
-    {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_CORSOLA_GALARIAN,
-    },
-    {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_ALOMOMOLA,
     }
 };
 
@@ -2682,49 +2766,6 @@ static const struct TrainerMon sParty_Georgina[] = {
     .iv = 10,
     .lvl = 26,
     .species = SPECIES_MARSHTOMP,
-    }
-};
-
-static const struct TrainerMon sParty_Sophia[] = {//Leviathan 10, Default
-    {
-    .iv = 31,
-    .lvl = 29,
-    .nature = NATURE_NAIVE,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_SLOT_1, //Torrent
-    .species = SPECIES_DRIZZILE,
-    .heldItem = ITEM_WACAN_BERRY,
-    .moves = {MOVE_SCALD, MOVE_U_TURN, MOVE_MUD_SHOT, MOVE_AIR_SLASH}
-    },
-    {
-    .iv = 31,
-    .lvl = 29,
-    .nature = NATURE_ADAMANT,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Strong Jaw
-    .species = SPECIES_CROCONAW,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_FLIP_TURN, MOVE_AQUA_JET, MOVE_CRUNCH, MOVE_ICE_FANG}
-    },
-    {
-    .ivs = {31, 31, 31, 30, 30, 30},
-    .lvl = 29,
-    .nature = NATURE_TIMID,
-    .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_HIDDEN, //Swift Swim
-    .species = SPECIES_PALPITOAD,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_MUDDY_WATER, MOVE_MUD_SHOT, MOVE_HIDDEN_POWER, MOVE_RAIN_DANCE} //Hidden Power Flying
-    },
-    {
-    .iv = 31,
-    .lvl = 30,
-    .nature = NATURE_MODEST,
-    .gender = TRAINER_MON_FEMALE,
-    .ability = ABILITY_SLOT_2, //Shell Armor
-    .species = SPECIES_LAPRAS,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_SPARKLING_ARIA, MOVE_FREEZE_DRY, MOVE_BODY_PRESS, MOVE_REST}
     }
 };
 
