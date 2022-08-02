@@ -259,6 +259,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BackpackerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Worker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IceWorker;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roughneck;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -517,6 +518,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BIRD_KEEPER] =              &gObjectEventGraphicsInfo_BirdKeeper,
     [OBJ_EVENT_GFX_WORKER] =                   &gObjectEventGraphicsInfo_Worker,
     [OBJ_EVENT_GFX_ICE_WORKER] =               &gObjectEventGraphicsInfo_IceWorker,
+    [OBJ_EVENT_GFX_ROUGHNECK] =                &gObjectEventGraphicsInfo_Roughneck,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

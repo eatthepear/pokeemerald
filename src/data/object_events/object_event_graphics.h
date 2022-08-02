@@ -426,6 +426,8 @@ const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/peo
 const u16 gObjectEventPal_Worker[] = INCBIN_U16("graphics/object_events/pics/people/worker.gbapal");
 const u32 gObjectEventPic_IceWorker[] = INCBIN_U32("graphics/object_events/pics/people/ice_worker.4bpp");
 const u16 gObjectEventPal_IceWorker[] = INCBIN_U16("graphics/object_events/pics/people/ice_worker.gbapal");
+const u32 gObjectEventPic_Roughneck[] = INCBIN_U32("graphics/object_events/pics/people/roughneck.4bpp");
+const u16 gObjectEventPal_Roughneck[] = INCBIN_U16("graphics/object_events/pics/people/roughneck.gbapal");
 
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
