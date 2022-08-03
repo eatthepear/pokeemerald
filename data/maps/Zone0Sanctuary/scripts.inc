@@ -13,6 +13,7 @@ Zone0Sanctuary_EventScript_Intro::
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_PC_LANETTE
+	setflag FLAG_BOOSTED_IVS
 	call EventScript_MoveCameraUp
 	applymovement 1, Common_Movement_ExclamationMark
 	playse SE_PIN
@@ -323,10 +324,8 @@ Zone0Sanctuary_EventScript_Intro_72:
 
 Zone0Sanctuary_EventScript_Intro_74:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_27
-	setflag FLAG_BOOSTED_IVS
 	special ChooseStarter
 	waitstate
-	clearflag FLAG_BOOSTED_IVS
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_28, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_85
@@ -450,9 +449,7 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_28:
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_32
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_31:
-	setflag FLAG_BOOSTED_IVS
 	givemon VAR_TEMP_3, 5, ITEM_NONE
-	clearflag FLAG_BOOSTED_IVS
 	hidemonpic
 	playfanfare MUS_OBTAIN_ITEM
 	message Zone0Sanctuary_EventScript_Intro_Text_25

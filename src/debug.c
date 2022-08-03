@@ -327,7 +327,7 @@ static const u8 gDebugText_Flags_Flags[] =                  _("Set Flag XXXX");
 static const u8 gDebugText_Flags_SetPokedexFlags[] =        _("Brutal ON/OFF");
 static const u8 gDebugText_Flags_SwitchDex[] =              _("Nuzlocke ON/OFF");
 static const u8 gDebugText_Flags_SwitchNationalDex[] =      _("Randomizer ON/OFF");
-static const u8 gDebugText_Flags_SwitchPokeNav[] =          _("PokéNav ON/OFF");
+static const u8 gDebugText_Flags_SwitchPokeNav[] =          _("Full Pokedex");
 static const u8 gDebugText_Flags_ToggleFlyFlags[] =         _("Fly Flags ON/OFF");
 static const u8 gDebugText_Flags_ToggleAllBadges[] =        _("All badges ON/OFF");
 static const u8 gDebugText_Flags_SwitchCollision[] =        _("Collision ON/OFF");
@@ -1381,6 +1381,14 @@ static void DebugAction_Flags_SwitchNatDex(u8 taskId)
 }
 static void DebugAction_Flags_SwitchPokeNav(u8 taskId)
 {
+    u16 i;
+    for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    {
+        GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
+        GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+    }
+    Debug_DestroyMenu(taskId);
+    EnableBothScriptContexts();
     // if(FlagGet(FLAG_SYS_POKENAV_GET))
     // {
     //     FlagClear(FLAG_SYS_POKENAV_GET);

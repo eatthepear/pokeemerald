@@ -27,7 +27,7 @@ script Zone16A_EventScript_Michael {
 	lock
 	if (var(VAR_ZONE_16_STATE) != 0) {
 		faceplayer
-		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}:"))
+		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: You're amazingingly skilled!"))
 		release
 		end
 	}
@@ -47,7 +47,7 @@ script Zone16A_EventScript_Katie {
 	lock
 	if (var(VAR_ZONE_16_STATE) != 0) {
 		faceplayer
-		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}:"))
+		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Treat that Lapras right!"))
 		release
 		end
 	}
@@ -65,28 +65,73 @@ script Zone16A_EventScript_Katie {
 
 script Zone16A_EventScript_InitiateKatieMichaelBattles {
 	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: Hello! We're the dynamic swimming duo!"))
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: The thing is, my friend to the south of here is looking for a trainer skilled enough to take care of a Lapras."))
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: "), MSGBOX_YESNO)
+	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Listen up, 'cause we've got a challenge for you!"))
+	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: Our friend is a Pokémon Ranger and she's looking for someone to take care of a rehabilitated Lapras."))
+	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: But she wants to make sure the person is a skilled trainer!"))
+	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both back-to-back in battle, I'll let her know to give the Lapras to you!"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
-		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Oh! How cowardly."))
+		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: I guess Lapras may never find the right home…"))
 		release
 		end
 	}
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Well then, I'm up first! Better hope luck is on your side!"))
-	trainerbattle_no_intro(TRAINER_KATIE, format("Katie: The critical hits didn't come through!"))
+	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Alright! Let's get started, then!"))
+	trainerbattle_no_intro(TRAINER_KATIE, format("Katie: You made quite the splash!"))
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
 		special(HealPlayerParty)
 	}
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: Next up is me! I won't need any crits to beat you!"))
-	trainerbattle_no_intro(TRAINER_MICHAEL, format("Michael: You won even without landing a critical hit!"))
+	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: I hope you're ready for this battle!"))
+	trainerbattle_no_intro(TRAINER_MICHAEL, format("Michael: You're too quick!"))
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: You got us! We'll let you cross the river."))
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: We'll even give you this item, too!"))
+	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: You got us! You're an amazing trainer!\pWe'll put in the good word with our friend."))
+	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: I think she's somewhere in the shallows to the south of us right now."))
+	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Treat that Lapras right!"))
 	setvar(VAR_ZONE_16_STATE, 1)
 	release
 	end
 }
+
+script Zone16A_EventScript_PokemonRanger {
+	lock
+	faceplayer
+	if (var(VAR_ZONE_16_STATE) == 0) {
+		msgbox(format("You look like a skilled trainer!\pI have here a Lapras that's been rehabilitated from a boating collision.\pIt's not fit to live in the wild anymore, so I've been looking for skilled trainers to take care of it.\pIf you want to show me your skills, go find {COLOR BLUE}Katie{COLOR DARK_GRAY} and {COLOR BLUE}Michael{COLOR DARK_GRAY} to the north of here."))
+		release
+		end
+	}
+	if (var(VAR_ZONE_16_STATE) == 1) {
+		msgbox(format("You look like a skilled trainer!\pI have here a Lapras that's been rehabilitated from a boating collision.\pI heard from {COLOR BLUE}Katie{COLOR DARK_GRAY} and {COLOR BLUE}Michael{COLOR DARK_GRAY} that you're a skilled trainer.\pWould you be willing to take care of Lapras?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			msgbox(format("I'm worried that no one will be able to take care of this rare Pokémon.\pIf you change your mind, let me know."))
+			release
+			end
+		}
+		specialvar(VAR_TEMP_0, CalculatePlayerPartyCount)
+		if (var(VAR_TEMP_0) == PARTY_SIZE) {
+			msgbox(format("It looks like your party is full. Come back with space in your party, yeah?"))
+			release
+			end
+		}
+		givemon(SPECIES_LAPRAS, 30, ITEM_NONE)
+		setmonmetlocation(VAR_TEMP_0, 249)
+		setvar(VAR_TEMP_1, SPECIES_LAPRAS)
+		playfanfare(MUS_OBTAIN_ITEM)
+		message("Received Lapras!")
+		waitmessage
+		waitfanfare
+		bufferspeciesname(0, SPECIES_LAPRAS)
+		msgbox(format("Would you like to give a nickname to Lapras?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			call(Common_EventScript_GetGiftMonPartySlot)
+			call(Common_EventScript_NameReceivedPartyMon)
+		}
+		setvar(VAR_ZONE_16_STATE, 2)
+	}
+	msgbox(format("Thank you, trainer, for taking care of Lapras."), MSGBOX_DEFAULT)
+	release
+	end
+}
+
 
 script Zone16A_EventScript_Exit {
     lockall

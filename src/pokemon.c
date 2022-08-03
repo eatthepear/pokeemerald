@@ -645,22 +645,30 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(TENTACOOL),
     SPECIES_TO_HOENN(TENTACRUEL),
     SPECIES_TO_HOENN(LAPRAS),
-    SPECIES_TO_HOENN(ABSOL),
+    SPECIES_TO_HOENN(SPIRITOMB),
     SPECIES_TO_HOENN(BALTOY),
     SPECIES_TO_HOENN(CLAYDOL),
     SPECIES_TO_HOENN(GOLETT),
     SPECIES_TO_HOENN(GOLURK),
+    SPECIES_TO_HOENN(YAMASK),
+    SPECIES_TO_HOENN(COFAGRIGUS),
+    SPECIES_TO_HOENN(RUNERIGUS),
+    SPECIES_TO_HOENN(CORSOLA),
+    SPECIES_TO_HOENN(CURSOLA),
+    SPECIES_TO_HOENN(DITTO),
+    SPECIES_TO_HOENN(GRIMER),
+    SPECIES_TO_HOENN(MUK),
     SPECIES_TO_HOENN(KLEFKI),
+    SPECIES_TO_HOENN(MR_MIME),
+    SPECIES_TO_HOENN(MR_RIME),
     SPECIES_TO_HOENN(SANDYGAST),
     SPECIES_TO_HOENN(PALOSSAND),
     SPECIES_TO_HOENN(SHUPPET),
     SPECIES_TO_HOENN(BANETTE),
     SPECIES_TO_HOENN(SINISTEA),
     SPECIES_TO_HOENN(POLTEAGEIST),
-    SPECIES_TO_HOENN(YAMASK),
-    SPECIES_TO_HOENN(COFAGRIGUS),
-    SPECIES_TO_HOENN(RUNERIGUS),
-    SPECIES_TO_HOENN(SPIRITOMB),
+    SPECIES_TO_HOENN(TRUBBISH),
+    SPECIES_TO_HOENN(GARBODOR),
     SPECIES_TO_HOENN(ALOMOMOLA),
     SPECIES_TO_HOENN(CLAUNCHER),
     SPECIES_TO_HOENN(CLAWITZER),
@@ -669,43 +677,37 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(KINGDRA),
     SPECIES_TO_HOENN(WAILMER),
     SPECIES_TO_HOENN(WAILORD),
-    SPECIES_TO_HOENN(CORSOLA),
-    SPECIES_TO_HOENN(CURSOLA),
-    SPECIES_TO_HOENN(GRIMER),
-    SPECIES_TO_HOENN(MUK),
-    SPECIES_TO_HOENN(TRUBBISH),
-    SPECIES_TO_HOENN(GARBODOR),
     SPECIES_TO_HOENN(CHINCHOU),
     SPECIES_TO_HOENN(LANTURN),
     SPECIES_TO_HOENN(CLAMPERL),
     SPECIES_TO_HOENN(HUNTAIL),
     SPECIES_TO_HOENN(GOREBYSS),
     SPECIES_TO_HOENN(DHELMISE),
+    SPECIES_TO_HOENN(RELICANTH),
     SPECIES_TO_HOENN(INKAY),
     SPECIES_TO_HOENN(MALAMAR),
-    SPECIES_TO_HOENN(PINCURCHIN),
-    SPECIES_TO_HOENN(PYUKUMUKU),
-    SPECIES_TO_HOENN(RELICANTH),
     SPECIES_TO_HOENN(SKRELP),
     SPECIES_TO_HOENN(DRAGALGE),
     SPECIES_TO_HOENN(WIMPOD),
     SPECIES_TO_HOENN(GOLISOPOD),
+    SPECIES_TO_HOENN(PINCURCHIN),
+    SPECIES_TO_HOENN(PYUKUMUKU),
     SPECIES_TO_HOENN(DRUDDIGON),
     SPECIES_TO_HOENN(DURANT),
     SPECIES_TO_HOENN(HEATMOR),
+    SPECIES_TO_HOENN(KOFFING),
+    SPECIES_TO_HOENN(WEEZING),
+    SPECIES_TO_HOENN(LARVESTA),
+    SPECIES_TO_HOENN(VOLCARONA),
     SPECIES_TO_HOENN(MAGBY),
     SPECIES_TO_HOENN(MAGMAR),
     SPECIES_TO_HOENN(MAGMORTAR),
     SPECIES_TO_HOENN(NUMEL),
     SPECIES_TO_HOENN(CAMERUPT),
-    SPECIES_TO_HOENN(KOFFING),
-    SPECIES_TO_HOENN(WEEZING),
-    SPECIES_TO_HOENN(TORKOAL),
-    SPECIES_TO_HOENN(TURTONATOR),
     SPECIES_TO_HOENN(SALANDIT),
     SPECIES_TO_HOENN(SALAZZLE),
-    SPECIES_TO_HOENN(LARVESTA),
-    SPECIES_TO_HOENN(VOLCARONA),
+    SPECIES_TO_HOENN(TORKOAL),
+    SPECIES_TO_HOENN(TURTONATOR),
     SPECIES_TO_HOENN(BOUFFALANT),
     SPECIES_TO_HOENN(DRAMPA),
     SPECIES_TO_HOENN(HAWLUCHA),
@@ -728,11 +730,10 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(DREEPY),
     SPECIES_TO_HOENN(DRAKLOAK),
     SPECIES_TO_HOENN(DRAGAPULT),
+    SPECIES_TO_HOENN(ABSOL),
     SPECIES_TO_HOENN(CUBCHOO),
     SPECIES_TO_HOENN(BEARTIC),
     SPECIES_TO_HOENN(MIMIKYU),
-    SPECIES_TO_HOENN(MR_MIME),
-    SPECIES_TO_HOENN(MR_RIME),
     SPECIES_TO_HOENN(SNEASEL),
     SPECIES_TO_HOENN(WEAVILE),
     SPECIES_TO_HOENN(SNEASLER),
@@ -798,6 +799,10 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(TOGEPI),
     SPECIES_TO_HOENN(TOGETIC),
     SPECIES_TO_HOENN(TOGEKISS),
+    SPECIES_TO_HOENN(DRACOZOLT),
+    SPECIES_TO_HOENN(ARCTOZOLT),
+    SPECIES_TO_HOENN(DRACOVISH),
+    SPECIES_TO_HOENN(ARCTOVISH),
     SPECIES_TO_HOENN(PORYGON),
     SPECIES_TO_HOENN(PORYGON2),
     SPECIES_TO_HOENN(PORYGON_Z),
@@ -2646,22 +2651,30 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(TENTACOOL),
     HOENN_TO_NATIONAL(TENTACRUEL),
     HOENN_TO_NATIONAL(LAPRAS),
-    HOENN_TO_NATIONAL(ABSOL),
+    HOENN_TO_NATIONAL(SPIRITOMB),
     HOENN_TO_NATIONAL(BALTOY),
     HOENN_TO_NATIONAL(CLAYDOL),
     HOENN_TO_NATIONAL(GOLETT),
     HOENN_TO_NATIONAL(GOLURK),
+    HOENN_TO_NATIONAL(YAMASK),
+    HOENN_TO_NATIONAL(COFAGRIGUS),
+    HOENN_TO_NATIONAL(RUNERIGUS),
+    HOENN_TO_NATIONAL(CORSOLA),
+    HOENN_TO_NATIONAL(CURSOLA),
+    HOENN_TO_NATIONAL(DITTO),
+    HOENN_TO_NATIONAL(GRIMER),
+    HOENN_TO_NATIONAL(MUK),
     HOENN_TO_NATIONAL(KLEFKI),
+    HOENN_TO_NATIONAL(MR_MIME),
+    HOENN_TO_NATIONAL(MR_RIME),
     HOENN_TO_NATIONAL(SANDYGAST),
     HOENN_TO_NATIONAL(PALOSSAND),
     HOENN_TO_NATIONAL(SHUPPET),
     HOENN_TO_NATIONAL(BANETTE),
     HOENN_TO_NATIONAL(SINISTEA),
     HOENN_TO_NATIONAL(POLTEAGEIST),
-    HOENN_TO_NATIONAL(YAMASK),
-    HOENN_TO_NATIONAL(COFAGRIGUS),
-    HOENN_TO_NATIONAL(RUNERIGUS),
-    HOENN_TO_NATIONAL(SPIRITOMB),
+    HOENN_TO_NATIONAL(TRUBBISH),
+    HOENN_TO_NATIONAL(GARBODOR),
     HOENN_TO_NATIONAL(ALOMOMOLA),
     HOENN_TO_NATIONAL(CLAUNCHER),
     HOENN_TO_NATIONAL(CLAWITZER),
@@ -2670,43 +2683,37 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(KINGDRA),
     HOENN_TO_NATIONAL(WAILMER),
     HOENN_TO_NATIONAL(WAILORD),
-    HOENN_TO_NATIONAL(CORSOLA),
-    HOENN_TO_NATIONAL(CURSOLA),
-    HOENN_TO_NATIONAL(GRIMER),
-    HOENN_TO_NATIONAL(MUK),
-    HOENN_TO_NATIONAL(TRUBBISH),
-    HOENN_TO_NATIONAL(GARBODOR),
     HOENN_TO_NATIONAL(CHINCHOU),
     HOENN_TO_NATIONAL(LANTURN),
     HOENN_TO_NATIONAL(CLAMPERL),
     HOENN_TO_NATIONAL(HUNTAIL),
     HOENN_TO_NATIONAL(GOREBYSS),
     HOENN_TO_NATIONAL(DHELMISE),
+    HOENN_TO_NATIONAL(RELICANTH),
     HOENN_TO_NATIONAL(INKAY),
     HOENN_TO_NATIONAL(MALAMAR),
-    HOENN_TO_NATIONAL(PINCURCHIN),
-    HOENN_TO_NATIONAL(PYUKUMUKU),
-    HOENN_TO_NATIONAL(RELICANTH),
     HOENN_TO_NATIONAL(SKRELP),
     HOENN_TO_NATIONAL(DRAGALGE),
     HOENN_TO_NATIONAL(WIMPOD),
     HOENN_TO_NATIONAL(GOLISOPOD),
+    HOENN_TO_NATIONAL(PINCURCHIN),
+    HOENN_TO_NATIONAL(PYUKUMUKU),
     HOENN_TO_NATIONAL(DRUDDIGON),
     HOENN_TO_NATIONAL(DURANT),
     HOENN_TO_NATIONAL(HEATMOR),
+    HOENN_TO_NATIONAL(KOFFING),
+    HOENN_TO_NATIONAL(WEEZING),
+    HOENN_TO_NATIONAL(LARVESTA),
+    HOENN_TO_NATIONAL(VOLCARONA),
     HOENN_TO_NATIONAL(MAGBY),
     HOENN_TO_NATIONAL(MAGMAR),
     HOENN_TO_NATIONAL(MAGMORTAR),
     HOENN_TO_NATIONAL(NUMEL),
     HOENN_TO_NATIONAL(CAMERUPT),
-    HOENN_TO_NATIONAL(KOFFING),
-    HOENN_TO_NATIONAL(WEEZING),
-    HOENN_TO_NATIONAL(TORKOAL),
-    HOENN_TO_NATIONAL(TURTONATOR),
     HOENN_TO_NATIONAL(SALANDIT),
     HOENN_TO_NATIONAL(SALAZZLE),
-    HOENN_TO_NATIONAL(LARVESTA),
-    HOENN_TO_NATIONAL(VOLCARONA),
+    HOENN_TO_NATIONAL(TORKOAL),
+    HOENN_TO_NATIONAL(TURTONATOR),
     HOENN_TO_NATIONAL(BOUFFALANT),
     HOENN_TO_NATIONAL(DRAMPA),
     HOENN_TO_NATIONAL(HAWLUCHA),
@@ -2729,11 +2736,10 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(DREEPY),
     HOENN_TO_NATIONAL(DRAKLOAK),
     HOENN_TO_NATIONAL(DRAGAPULT),
+    HOENN_TO_NATIONAL(ABSOL),
     HOENN_TO_NATIONAL(CUBCHOO),
     HOENN_TO_NATIONAL(BEARTIC),
     HOENN_TO_NATIONAL(MIMIKYU),
-    HOENN_TO_NATIONAL(MR_MIME),
-    HOENN_TO_NATIONAL(MR_RIME),
     HOENN_TO_NATIONAL(SNEASEL),
     HOENN_TO_NATIONAL(WEAVILE),
     HOENN_TO_NATIONAL(SNEASLER),
@@ -2799,6 +2805,10 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(TOGEPI),
     HOENN_TO_NATIONAL(TOGETIC),
     HOENN_TO_NATIONAL(TOGEKISS),
+    HOENN_TO_NATIONAL(DRACOZOLT),
+    HOENN_TO_NATIONAL(ARCTOZOLT),
+    HOENN_TO_NATIONAL(DRACOVISH),
+    HOENN_TO_NATIONAL(ARCTOVISH),
     HOENN_TO_NATIONAL(PORYGON),
     HOENN_TO_NATIONAL(PORYGON2),
     HOENN_TO_NATIONAL(PORYGON_Z),
@@ -4988,49 +4998,47 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         iv = (value & (MAX_IV_MASK << 10)) >> 10;
         SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
 
-        #if P_LEGENDARY_PERFECT_IVS >= GEN_6
-            if ((gBaseStats[species].flags & (FLAG_LEGENDARY | FLAG_MYTHICAL | FLAG_ULTRA_BEAST)) || FlagGet(FLAG_BOOSTED_IVS))
+        if ((gBaseStats[species].flags & (FLAG_LEGENDARY | FLAG_MYTHICAL | FLAG_ULTRA_BEAST)) || FlagGet(FLAG_BOOSTED_IVS))
+        {
+            // Initialize a list of IV indices.
+            for (i = 0; i < NUM_STATS; i++)
             {
-                iv = MAX_PER_STAT_IVS;
-                // Initialize a list of IV indices.
-                for (i = 0; i < NUM_STATS; i++)
-                {
-                    availableIVs[i] = i;
-                }
+                availableIVs[i] = i;
+            }
 
-                // Select the 3 IVs that will be perfected.
-                for (i = 0; i < LEGENDARY_PERFECT_IV_COUNT; i++)
+            // Select the 3 IVs that will be perfected.
+            for (i = 0; i < LEGENDARY_PERFECT_IV_COUNT; i++)
+            {
+                u8 index = Random() % (NUM_STATS - i);
+                selectedIvs[i] = availableIVs[index];
+                RemoveIVIndexFromList(availableIVs, index);
+            }
+            for (i = 0; i < LEGENDARY_PERFECT_IV_COUNT; i++)
+            {
+                iv = MAX_PER_STAT_IVS - (Random() % 2);
+                switch (selectedIvs[i])
                 {
-                    u8 index = Random() % (NUM_STATS - i);
-                    selectedIvs[i] = availableIVs[index];
-                    RemoveIVIndexFromList(availableIVs, index);
-                }
-                for (i = 0; i < LEGENDARY_PERFECT_IV_COUNT; i++)
-                {
-                    switch (selectedIvs[i])
-                    {
-                        case STAT_HP:
-                            SetBoxMonData(boxMon, MON_DATA_HP_IV, &iv);
-                            break;
-                        case STAT_ATK:
-                            SetBoxMonData(boxMon, MON_DATA_ATK_IV, &iv);
-                            break;
-                        case STAT_DEF:
-                            SetBoxMonData(boxMon, MON_DATA_DEF_IV, &iv);
-                            break;
-                        case STAT_SPEED:
-                            SetBoxMonData(boxMon, MON_DATA_SPEED_IV, &iv);
-                            break;
-                        case STAT_SPATK:
-                            SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &iv);
-                            break;
-                        case STAT_SPDEF:
-                            SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
-                            break;
-                    }
+                    case STAT_HP:
+                        SetBoxMonData(boxMon, MON_DATA_HP_IV, &iv);
+                        break;
+                    case STAT_ATK:
+                        SetBoxMonData(boxMon, MON_DATA_ATK_IV, &iv);
+                        break;
+                    case STAT_DEF:
+                        SetBoxMonData(boxMon, MON_DATA_DEF_IV, &iv);
+                        break;
+                    case STAT_SPEED:
+                        SetBoxMonData(boxMon, MON_DATA_SPEED_IV, &iv);
+                        break;
+                    case STAT_SPATK:
+                        SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &iv);
+                        break;
+                    case STAT_SPDEF:
+                        SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
+                        break;
                 }
             }
-        #endif
+        }
         
     }
 

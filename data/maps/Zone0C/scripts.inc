@@ -12,9 +12,7 @@ Zone0C_EventScript_EeveeGirl_4:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq Zone0C_EventScript_EeveeGirl_13
 	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
-	setflag FLAG_BOOSTED_IVS
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
-	clearflag FLAG_BOOSTED_IVS
 	callnative SetEeveeGivenAtEncounter
 	setvar VAR_TEMP_1, SPECIES_EEVEE
 	playfanfare MUS_OBTAIN_ITEM

@@ -10,6 +10,7 @@ script Zone0Sanctuary_EventScript_Intro {
 	setflag(FLAG_SYS_B_DASH)
 	setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_SYS_PC_LANETTE)
+	setflag(FLAG_BOOSTED_IVS)
 	call(EventScript_MoveCameraUp)
 	applymovement(1, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
@@ -276,10 +277,8 @@ script Zone0Sanctuary_EventScript_Intro {
 		msgbox(format("As a new challenger, you will receive a starter Pokémon.\p"
 		"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
 		"Choose carefully as these Pokémon are very rare."))
-		setflag(FLAG_BOOSTED_IVS)
 		special(ChooseStarter)
 		waitstate
-		clearflag(FLAG_BOOSTED_IVS)
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for this wonderful Pokémon?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			setvar(VAR_0x8004, 0)
@@ -519,9 +518,7 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 	if (var(VAR_RESULT) == NO) {
 		goto(Zone0Sanctuary_EventScript_HandleStarterSelectionDefault)
 	}
-	setflag(FLAG_BOOSTED_IVS)
 	givemon(VAR_TEMP_3, 5, ITEM_NONE)
-	clearflag(FLAG_BOOSTED_IVS)
 	hidemonpic
 	playfanfare(MUS_OBTAIN_ITEM)
 	message(format("{PLAYER} received the {STR_VAR_1}!"))

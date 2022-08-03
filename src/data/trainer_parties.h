@@ -10,8 +10,8 @@
  * Abilities are by default set to the first ability. See base_stats.h for more details.
  * EVs are by default set to 0.
  * Natures are by default set to Serious.
- * Some trainers have tailored movesets which are documented in this file. Otherwise, they use level up movesets.
- * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
+ * Some Pokémon have tailored movesets which are documented in this file. Otherwise, they use level up movesets.
+ * .iv determines the IVs of a given Pokémon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
  * Many trainers have a shuffled party, i.e. they lead with a random Pokémon from their party.
@@ -32,6 +32,7 @@ static const struct TrainerMon sParty_Nina[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_PIDGEY,
+    .moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -218,7 +219,7 @@ static const struct TrainerMon sParty_Jemma[] = {
     }
 };
 
-static const struct TrainerMon sParty_Patrick[] = {//Uses level up movesets on Default difficulty
+static const struct TrainerMon sParty_Patrick[] = {
     {
     .iv = 0,
     .lvl = 9,
@@ -2216,12 +2217,12 @@ static const struct TrainerMon sParty_JennyDefault[] = {//Leviathan, Default
     {
     .iv = 20,
     .lvl = 30,
-    .nature = NATURE_LONELY,
+    .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_HIDDEN, //Sheer Force
-    .species = SPECIES_FERALIGATR,
+    .ability = ABILITY_HIDDEN, //Moxie
+    .species = SPECIES_GYARADOS,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_LIQUIDATION, MOVE_ICE_PUNCH, MOVE_SUPERPOWER, MOVE_NONE}
+    .moves = {MOVE_AQUA_TAIL, MOVE_ICE_FANG, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -2229,12 +2230,12 @@ static const struct TrainerMon sParty_JennyBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 30,
-    .nature = NATURE_LONELY,
+    .nature = NATURE_CAREFUL,
     .gender = TRAINER_MON_MALE,
-    .ability = ABILITY_HIDDEN, //Sheer Force
-    .species = SPECIES_FERALIGATR,
+    .ability = ABILITY_HIDDEN, //Moxie
+    .species = SPECIES_GYARADOS,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_LIQUIDATION, MOVE_ICE_PUNCH, MOVE_SUPERPOWER, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_AQUA_TAIL, MOVE_ICE_FANG, MOVE_POWER_WHIP, MOVE_DRAGON_DANCE}
     }
 };
 

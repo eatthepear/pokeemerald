@@ -2009,9 +2009,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[k].heldItem);
 
             if ((partyData[k].moves[0] != '\0') && (FlagGet(FLAG_BRUTAL_MODE_ON)
-                                                    || (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER)
-                                                    || (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL)
-                                                    || (VarGet(VAR_ZONE) > 10)))
+                                                    || (gTrainers[trainerNum].trainerClass != TRAINER_CLASS_WINSTRATE)))
             {
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {
