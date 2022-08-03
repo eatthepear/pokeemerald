@@ -314,3 +314,6 @@ const u32 gTrainerPalette_Worker[] = INCBIN_U32("graphics/trainers/palettes/work
 
 const u32 gTrainerFrontPic_IceWorker[] = INCBIN_U32("graphics/trainers/front_pics/ice_worker_front_pic.4bpp.lz");
 const u32 gTrainerPalette_IceWorker[] = INCBIN_U32("graphics/trainers/palettes/ice_worker.gbapal.lz");
+
+const u32 gTrainerFrontPic_Roughneck[] = INCBIN_U32("graphics/trainers/front_pics/roughneck_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Roughneck[] = INCBIN_U32("graphics/trainers/palettes/roughneck.gbapal.lz");

@@ -406,6 +406,10 @@ static const union AnimCmd *const sAnims_IceWorker[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_Roughneck[] ={
+    sAnim_GeneralFrame0,
+};
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -510,4 +514,5 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_BACKPACKER_F] = sAnims_BackpackerF,
     [TRAINER_PIC_WORKER] = sAnims_Worker,
     [TRAINER_PIC_ICE_WORKER] = sAnims_IceWorker,
+    [TRAINER_PIC_ROUGHNECK] = sAnims_Roughneck,
 };

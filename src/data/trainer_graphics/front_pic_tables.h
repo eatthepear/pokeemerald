@@ -102,6 +102,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_BACKPACKER_F] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_WORKER] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_ICE_WORKER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROUGHNECK] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -210,6 +211,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(BACKPACKER_F, gTrainerFrontPic_BackpackerF, 0x800),
     TRAINER_SPRITE(WORKER, gTrainerFrontPic_Worker, 0x800),
     TRAINER_SPRITE(ICE_WORKER, gTrainerFrontPic_IceWorker, 0x800),
+    TRAINER_SPRITE(ROUGHNECK, gTrainerFrontPic_Roughneck, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -318,4 +320,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(BACKPACKER_F, gTrainerPalette_BackpackerF),
     TRAINER_PAL(WORKER, gTrainerPalette_Worker),
     TRAINER_PAL(ICE_WORKER, gTrainerPalette_IceWorker),
+    TRAINER_PAL(ROUGHNECK, gTrainerPalette_Roughneck),
 };
