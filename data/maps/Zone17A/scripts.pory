@@ -1,298 +1,275 @@
-Zone17A_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone17A_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
-	.byte 0
+mapscripts Zone17A_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE_17_STATE, 0: Zone17A_EventScript_Intro
+	]
+}
 
-Zone17A_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_ZONE_17_STATE, 0, Zone17A_EventScript_Intro
-	.2byte 0
-
-
-Zone17A_EventScript_Intro::
+script Zone17A_EventScript_Intro {
 	lockall
-	delay 48
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 32
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 48
-	msgbox Zone17A_EventScript_Intro_Text_0, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE_17_STATE, 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 8
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 8
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 8
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 8
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 8
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 8
+	delay(48)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	waitmovement(0)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(32)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(48)
+	msgbox("Release us… Please…\p""Fourteen souls…\n""Trapped here…\p""Inscripted in the stones…",MSGBOX_AUTOCLOSE)
+	setvar(VAR_ZONE_17_STATE, 1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(8)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(8)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(8)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(8)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(8)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(8)
 	releaseall
 	end
+}
 
-
-Zone17A_EventScript_CheckLeave::
+script Zone17A_EventScript_CheckLeave {
 	lockall
-	compare VAR_ZONE_17_STATE, 30
-	goto_if_eq Zone17A_EventScript_CheckLeave_2
-	warp MAP_ZONE17A, 255, 11, 39
-	waitstate
-Zone17A_EventScript_CheckLeave_1:
+	if (var(VAR_ZONE_17_STATE) == 30) {
+		if (var(VAR_ZONE) > 17) {
+			call(EventScript_WarpZone0)
+		} else {
+			specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
+			if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
+				goto(EventScript_BrutalExitNotSatisfied)
+			}
+			warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
+			waitstate
+		}
+	} else {
+		warp(MAP_ZONE17A, 255, 11, 39)
+		waitstate
+	}
 	releaseall
 	end
+}
 
-Zone17A_EventScript_CheckLeave_2:
-	compare VAR_ZONE, 17
-	goto_if_gt Zone17A_EventScript_CheckLeave_5
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone17A_EventScript_CheckLeave_10
-Zone17A_EventScript_CheckLeave_8:
-	warp MAP_ZONE17SANCTUARY, 255, 22, 7
-	waitstate
-	goto Zone17A_EventScript_CheckLeave_1
-
-Zone17A_EventScript_CheckLeave_5:
-	call EventScript_WarpZone0
-	goto Zone17A_EventScript_CheckLeave_1
-
-Zone17A_EventScript_CheckLeave_9:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone17A_EventScript_CheckLeave_8
-
-Zone17A_EventScript_CheckLeave_10:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone17A_EventScript_CheckLeave_9
-	goto Zone17A_EventScript_CheckLeave_8
-
-
-Zone17A_EventScript_RiddleSign::
+script Zone17A_EventScript_RiddleSign {
 	lock
-	checkitem ITEM_ODD_KEYSTONE, 1
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone17A_EventScript_RiddleSign_2
-Zone17A_EventScript_RiddleSign_1:
-	compare VAR_ZONE_17_STATE, 29
-	goto_if_eq Zone17A_EventScript_RiddleSign_5
-	msgbox Zone17A_Text_RiddleSign, MSGBOX_SIGN
-Zone17A_EventScript_RiddleSign_4:
+	checkitem(ITEM_ODD_KEYSTONE, 1)
+	if (var(VAR_RESULT) == TRUE) {
+		msgbox("There is a spot that looks like it\ncan fit the Odd Keystone.\pWould you like to place the\nOdd Keystone?", MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			goto(Zone17A_StartSpiritombBattle)
+		}
+	}
+	if (var(VAR_ZONE_17_STATE) == 29) {
+		goto(Zone17A_EventScript_InitiateLeviathanBattle)
+	} else {
+		msgbox(Zone17A_Text_RiddleSign, MSGBOX_SIGN)
+	}
 	release
 	end
 
-Zone17A_EventScript_RiddleSign_2:
-	msgbox Zone17A_EventScript_RiddleSign_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone17A_EventScript_RiddleSign_8
-	goto Zone17A_EventScript_RiddleSign_1
+}
 
-Zone17A_EventScript_RiddleSign_5:
-	goto Zone17A_EventScript_InitiateLeviathanBattle
-	goto Zone17A_EventScript_RiddleSign_4
+text Zone17A_Text_RiddleSign {
+	"We celebrate the day of life\n"
+	"With boundless splurge and wonder,\p"
+	"We celebrate the day of death\n"
+	"With rain, lightning, and thunder,\p"
+	"Bring peace to those who still\n"
+	"remember every cherished date,\p"
+	"Another year of special days,\n"
+	"They number twenty-eight."
+}
 
-Zone17A_EventScript_RiddleSign_8:
-	goto Zone17A_StartSpiritombBattle
-	goto Zone17A_EventScript_RiddleSign_1
-
-
-Zone17A_EventScript_InitiateLeviathanBattle::
-	delay 48
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 32
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_BEAT_LEVIATHAN_14
-	addobject 2
-	delay 48
-	fadeoutbgm 1
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_0
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone17A_EventScript_InitiateLeviathanBattle_2
-	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat
-Zone17A_EventScript_InitiateLeviathanBattle_1:
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_0
-	setflag FLAG_BEAT_LEVIATHAN_14
-	removeobject 2
-	delay 48
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_1
-	setvar VAR_ZONE_17_STATE, 30
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 16
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 8
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 8
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	delay 8
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 8
-	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	addobject 1
-	setobjectxy 1, 11, 7
-	delay 8
-	removeobject 1
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 8
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_2
-	giveitem ITEM_TM28
+script Zone17A_EventScript_InitiateLeviathanBattle {
+	delay(48)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	waitmovement(0)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(32)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_BEAT_LEVIATHAN_14)
+	addobject(2)
+	delay(48)
+	fadeoutbgm(1)
+	msgbox("")
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat)
+	} else {
+		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox("")
+	setflag(FLAG_BEAT_LEVIATHAN_14)
+	removeobject(2)
+	delay(48)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	msgbox("Thank you…\nFinally, we may know peace…")
+	setvar(VAR_ZONE_17_STATE, 30)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(16)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(16)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(8)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(8)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	delay(8)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(8)
+	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	addobject(1)
+	setobjectxy(1, 11, 7)
+	delay(8)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+	delay(8)
+	msgbox("There's something shimmering on the\nground by your feet!")
+	giveitem(ITEM_TM28)
 	release
 	end
+}
 
-Zone17A_EventScript_InitiateLeviathanBattle_2:
-	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat
-	goto Zone17A_EventScript_InitiateLeviathanBattle_1
-
-
-Zone17A_StartSpiritombBattle::
-	removeitem ITEM_ODD_KEYSTONE
-	msgbox Zone17A_StartSpiritombBattle_Text_0, MSGBOX_AUTOCLOSE
-	delay 48
-	setwildbattle SPECIES_SPIRITOMB, 45, ITEM_NONE
-	playmoncry SPECIES_SPIRITOMB, 2
-	delay 40
+script Zone17A_StartSpiritombBattle {
+	removeitem(ITEM_ODD_KEYSTONE)
+	msgbox("{PLAYER} placed the Odd Keystone.", MSGBOX_AUTOCLOSE)
+	delay(48)
+	setwildbattle(SPECIES_SPIRITOMB, 45, ITEM_NONE)
+	playmoncry(SPECIES_SPIRITOMB, 2)
+	delay(40)
 	waitmoncry
 	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq Zone17A_StartSpiritombBattle_2
-Zone17A_StartSpiritombBattle_1:
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq Zone17A_StartSpiritombBattle_5
-Zone17A_StartSpiritombBattle_4:
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if (var(VAR_RESULT) == B_OUTCOME_RAN) {
+		msgbox("Spiritomb disappeared…")
+	}
+	if (var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED) {
+		msgbox("Spiritomb disappeared…")
+	}
 	release
 	end
+}
 
-Zone17A_StartSpiritombBattle_2:
-	msgbox Zone17A_StartSpiritombBattle_Text_1
-	goto Zone17A_StartSpiritombBattle_1
-
-Zone17A_StartSpiritombBattle_5:
-	msgbox Zone17A_StartSpiritombBattle_Text_1
-	goto Zone17A_StartSpiritombBattle_4
-
-
+raw `
 Zone17A_EventScript_Sign1::
 	lock
 	msgbox Zone17A_Text_Sign1, MSGBOX_SIGN
@@ -802,37 +779,4 @@ Zone17A_Text_Sign13:
 Zone17A_Text_Sign14:
 	.string "Piell Wei\n"
 	.string "May 12, '62 - September 26, '17$"
-
-Zone17A_EventScript_Intro_Text_0:
-	.string "Release us… Please…\p"
-	.string "Fourteen souls…\n"
-	.string "Trapped here…\p"
-	.string "Inscripted in the stones…$"
-
-Zone17A_EventScript_RiddleSign_Text_0:
-	.string "There is a spot that looks like it\ncan fit the Odd Keystone.\pWould you like to place the\nOdd Keystone?$"
-
-Zone17A_EventScript_InitiateLeviathanBattle_Text_0:
-	.string "$"
-
-Zone17A_EventScript_InitiateLeviathanBattle_Text_1:
-	.string "Thank you…\nFinally, we may know peace…$"
-
-Zone17A_EventScript_InitiateLeviathanBattle_Text_2:
-	.string "There's something shimmering on the\nground by your feet!$"
-
-Zone17A_StartSpiritombBattle_Text_0:
-	.string "{PLAYER} placed the Odd Keystone.$"
-
-Zone17A_StartSpiritombBattle_Text_1:
-	.string "Spiritomb disappeared…$"
-
-Zone17A_Text_RiddleSign::
-	.string "We celebrate the day of life\n"
-	.string "With boundless splurge and wonder,\p"
-	.string "We celebrate the day of death\n"
-	.string "With rain, lightning, and thunder,\p"
-	.string "Bring peace to those who still\n"
-	.string "remember every cherished date,\p"
-	.string "Another year of special days,\n"
-	.string "They number twenty-eight.$"
+`
