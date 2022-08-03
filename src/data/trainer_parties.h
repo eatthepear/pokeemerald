@@ -14,7 +14,8 @@
  * .iv determines the IVs of a given Pokemon. all IVs are set to the .iv value.
  * Some trainers have a .ivs value instead, which specifies their IVs in the order HP, Atk, Def, Spe, SpA, SpD. For Hidden Power purposes, this is commented next to their movesets.
  * 
- * Many trainers will randomly lead with one of their party Pokemon. This will be included in the comments next to the trainer.
+ * Many trainers have a shuffled party, i.e. they lead with a random Pokémon from their party.
+ * These are commented as such.
  * 
  * The trainer AI has been significantly improved from vanilla Emerald. 
  * On Brutal, the trainer AI knows your moveset, abilities, and held item. */
@@ -711,7 +712,7 @@ static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, De
 
 /* ------------------- Zone 6 ------------------- */
 
-static const struct TrainerMon sParty_Zack[] = {// Random lead
+static const struct TrainerMon sParty_Zack[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 14,
@@ -734,7 +735,7 @@ static const struct TrainerMon sParty_Zack[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Melanie[] = {// Random lead
+static const struct TrainerMon sParty_Melanie[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 14,
@@ -757,7 +758,7 @@ static const struct TrainerMon sParty_Melanie[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Constance[] = {// Random lead
+static const struct TrainerMon sParty_Constance[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 14,
@@ -780,7 +781,7 @@ static const struct TrainerMon sParty_Constance[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Frank[] = {// Random lead
+static const struct TrainerMon sParty_Frank[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 14,
@@ -803,7 +804,7 @@ static const struct TrainerMon sParty_Frank[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Dudley[] = {// Random lead
+static const struct TrainerMon sParty_Dudley[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 14,
@@ -826,7 +827,7 @@ static const struct TrainerMon sParty_Dudley[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Daisy[] = {// Random lead
+static const struct TrainerMon sParty_Daisy[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 14,
@@ -906,7 +907,7 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
 
 /* ------------------- Zones 7 & 8 ------------------- */
 
-static const struct TrainerMon sParty_Millie[] = {// Random lead
+static const struct TrainerMon sParty_Millie[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 15,
@@ -934,7 +935,7 @@ static const struct TrainerMon sParty_Millie[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Paige[] = {// Random lead
+static const struct TrainerMon sParty_Paige[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -957,7 +958,7 @@ static const struct TrainerMon sParty_Paige[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Seth[] = {// Random lead
+static const struct TrainerMon sParty_Seth[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -980,7 +981,7 @@ static const struct TrainerMon sParty_Seth[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Jamal[] = {// Random lead
+static const struct TrainerMon sParty_Jamal[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -1057,7 +1058,7 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battl
     }
 };
 
-static const struct TrainerMon sParty_Jimmy[] = {// Random lead
+static const struct TrainerMon sParty_Jimmy[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -1080,7 +1081,7 @@ static const struct TrainerMon sParty_Jimmy[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Emiliano[] = {// Random lead
+static const struct TrainerMon sParty_Emiliano[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -1111,7 +1112,7 @@ static const struct TrainerMon sParty_Karen[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jayden[] = {// Random lead
+static const struct TrainerMon sParty_Jayden[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -1134,7 +1135,7 @@ static const struct TrainerMon sParty_Jayden[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Neil[] = {// Random lead
+static const struct TrainerMon sParty_Neil[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -1157,7 +1158,7 @@ static const struct TrainerMon sParty_Neil[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Tamara[] = {// Random lead
+static const struct TrainerMon sParty_Tamara[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 16,
@@ -1291,7 +1292,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
 
 /* ------------------- Zone 9 ------------------- */
 
-static const struct TrainerMon sParty_Cooper[] = {// Random lead
+static const struct TrainerMon sParty_Cooper[] = {// Shuffled Party
     {
     .iv = 0,
     .lvl = 19,
@@ -1406,7 +1407,7 @@ static const struct TrainerMon sParty_Erica[] = {//Uses level up movesets on Def
 
 /* ------------------- Zone 10 ------------------- */
 
-static const struct TrainerMon sParty_Kyle[] = {// Random lead, Battle starts with permanent Sand
+static const struct TrainerMon sParty_Kyle[] = {// Shuffled Party, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1424,7 +1425,7 @@ static const struct TrainerMon sParty_Kyle[] = {// Random lead, Battle starts wi
     }
 };
 
-static const struct TrainerMon sParty_Belle[] = {// Random lead, Battle starts with permanent Sand
+static const struct TrainerMon sParty_Belle[] = {// Shuffled Party, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1447,7 +1448,7 @@ static const struct TrainerMon sParty_Belle[] = {// Random lead, Battle starts w
     }
 };
 
-static const struct TrainerMon sParty_Dewey[] = {// Random lead, Battle starts with permanent Sand
+static const struct TrainerMon sParty_Dewey[] = {// Shuffled Party, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1478,7 +1479,7 @@ static const struct TrainerMon sParty_Pearlie[] = {// Battle starts with permane
     }
 };
 
-static const struct TrainerMon sParty_Ernest[] = {// Random lead, Battle starts with permanent Sand
+static const struct TrainerMon sParty_Ernest[] = {// Shuffled Party, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1501,7 +1502,7 @@ static const struct TrainerMon sParty_Ernest[] = {// Random lead, Battle starts 
     }
 };
 
-static const struct TrainerMon sParty_Alana[] = {// Random lead, Battle starts with permanent Sand
+static const struct TrainerMon sParty_Alana[] = {// Shuffled Party, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1527,7 +1528,7 @@ static const struct TrainerMon sParty_Susan[] = {// Battle starts with permanent
     }
 };
 
-static const struct TrainerMon sParty_Conrad[] = {// Random lead, Battle starts with permanent Sand
+static const struct TrainerMon sParty_Conrad[] = {// Shuffled Party, Battle starts with permanent Sand
     {
     .iv = 0,
     .lvl = 21,
@@ -1662,7 +1663,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
 
 /* ------------------- Zone 11 ------------------- */
 
-static const struct TrainerMon sParty_Jeanette[] = {// Random lead
+static const struct TrainerMon sParty_Jeanette[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 22,
@@ -1698,7 +1699,7 @@ static const struct TrainerMon sParty_EmmaAndLeo[] = {//Double Battle
     }
 };
 
-static const struct TrainerMon sParty_Joel[] = {// Random lead
+static const struct TrainerMon sParty_Joel[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 22,
@@ -1716,7 +1717,7 @@ static const struct TrainerMon sParty_Joel[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Marion[] = {// Random lead
+static const struct TrainerMon sParty_Marion[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 22,
@@ -1734,7 +1735,7 @@ static const struct TrainerMon sParty_Marion[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Regina[] = {// Random lead
+static const struct TrainerMon sParty_Regina[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 22,
@@ -1842,7 +1843,7 @@ static const struct TrainerMon sParty_NewtonBrutal[] = {//Leviathan, Double Batt
 
 /* ------------------- Zone 12 ------------------- */
 
-static const struct TrainerMon sParty_Essence[] = {// Random lead
+static const struct TrainerMon sParty_Essence[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -1860,7 +1861,7 @@ static const struct TrainerMon sParty_Essence[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Dolores[] = {// Random lead
+static const struct TrainerMon sParty_Dolores[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -1939,7 +1940,7 @@ static const struct TrainerMon sParty_Julie[] = {
     }
 };
 
-static const struct TrainerMon sParty_Trevor[] = {// Random lead
+static const struct TrainerMon sParty_Trevor[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -1957,7 +1958,7 @@ static const struct TrainerMon sParty_Trevor[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Federico[] = {// Random lead
+static const struct TrainerMon sParty_Federico[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -1980,7 +1981,7 @@ static const struct TrainerMon sParty_Federico[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Genie[] = {// Random lead
+static const struct TrainerMon sParty_Genie[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -2003,7 +2004,7 @@ static const struct TrainerMon sParty_Genie[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Hilda[] = {// Random lead
+static const struct TrainerMon sParty_Hilda[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -2021,7 +2022,7 @@ static const struct TrainerMon sParty_Hilda[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Kinley[] = {// Random lead
+static const struct TrainerMon sParty_Kinley[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 23,
@@ -2042,7 +2043,7 @@ static const struct TrainerMon sParty_Kinley[] = {// Random lead
 
 /* ------------------- Zones 13 & 14 ------------------- */
 
-static const struct TrainerMon sParty_Violet[] = {// Random lead
+static const struct TrainerMon sParty_Violet[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 25,
@@ -2060,7 +2061,7 @@ static const struct TrainerMon sParty_Violet[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Wanda[] = {// Random lead
+static const struct TrainerMon sParty_Wanda[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 25,
@@ -2114,7 +2115,7 @@ static const struct TrainerMon sParty_JanAndErin[] = {//Double Battle
     }
 };
 
-static const struct TrainerMon sParty_Steve[] = {// Random lead
+static const struct TrainerMon sParty_Steve[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 25,
@@ -2137,7 +2138,7 @@ static const struct TrainerMon sParty_Steve[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Gould[] = {// Random lead
+static const struct TrainerMon sParty_Gould[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 25,
@@ -2165,7 +2166,7 @@ static const struct TrainerMon sParty_Gould[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Mendel[] = {// Random lead
+static const struct TrainerMon sParty_Mendel[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 25,
@@ -2193,7 +2194,7 @@ static const struct TrainerMon sParty_Mendel[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Darwin[] = {// Random lead
+static const struct TrainerMon sParty_Darwin[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 25,
@@ -2237,7 +2238,7 @@ static const struct TrainerMon sParty_JennyBrutal[] = {//Leviathan, Brutal
     }
 };
 
-static const struct TrainerMon sParty_Bart[] = {// Random lead
+static const struct TrainerMon sParty_Bart[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 26,
@@ -2255,7 +2256,7 @@ static const struct TrainerMon sParty_Bart[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Nigel[] = {// Random lead
+static const struct TrainerMon sParty_Nigel[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 26,
@@ -2299,7 +2300,7 @@ static const struct TrainerMon sParty_Charlie[] = {//Fought in a double battle w
     }
 };
 
-static const struct TrainerMon sParty_Randolph[] = {// Random lead
+static const struct TrainerMon sParty_Randolph[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 26,
@@ -2322,7 +2323,7 @@ static const struct TrainerMon sParty_Randolph[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Todd[] = {// Random lead
+static const struct TrainerMon sParty_Todd[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 26,
@@ -2345,7 +2346,7 @@ static const struct TrainerMon sParty_Todd[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Russell[] = {// Random lead
+static const struct TrainerMon sParty_Russell[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 26,
@@ -2363,7 +2364,7 @@ static const struct TrainerMon sParty_Russell[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Otis[] = {// Random lead
+static const struct TrainerMon sParty_Otis[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 26,
@@ -2592,7 +2593,7 @@ static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Batt
 
 /* ------------------- Zone 16 ------------------- */
 
-static const struct TrainerMon sParty_Iona[] = {// Random lead
+static const struct TrainerMon sParty_Iona[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 30,
@@ -2610,7 +2611,7 @@ static const struct TrainerMon sParty_Iona[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Berke[] = {// Random lead
+static const struct TrainerMon sParty_Berke[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 30,
@@ -2628,7 +2629,7 @@ static const struct TrainerMon sParty_Berke[] = {// Random lead
     }
 };
 
-static const struct TrainerMon sParty_Tanisha[] = {// Random lead
+static const struct TrainerMon sParty_Tanisha[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 30,
@@ -2667,7 +2668,7 @@ static const struct TrainerMon sParty_Chris[] = {// Fought in a double battle wi
     }
 };
 
-static const struct TrainerMon sParty_Angus[] = {// Random lead
+static const struct TrainerMon sParty_Angus[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 30,
