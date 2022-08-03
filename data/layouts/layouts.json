@@ -4854,7 +4854,7 @@
     {
       "id": "LAYOUT_ZONE18A",
       "name": "Zone18A_Layout",
-      "width": 40,
+      "width": 56,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
