@@ -1,6 +1,7 @@
 // If you're interested in changes in typing, base stats, or ability, you can Ctrl+F for comments (the lines start with //).
 // The old typing/stat/ability is commented out.
 // Some species may just have SPECIES_BASE_STAT, you can just search for this.
+// Some species have different forms but share the same base stats. These are found at the top of the document.
 
 // Maximum value for a female Pokémon is 254 (MON_FEMALE) which is 100% female.
 // 255 (MON_GENDERLESS) is reserved for genderless Pokémon.
@@ -3163,6 +3164,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 170,
         .evYield_HP        = 1,
         .evYield_Attack    = 1,
+        .itemRare = ITEM_BLACK_SLUDGE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 0,
         .friendship = 70,
@@ -24832,6 +24834,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 170,
         .evYield_HP        = 1,
         .evYield_Attack    = 1,
+        .itemRare = ITEM_BLACK_SLUDGE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 0,
         .friendship = 70,
