@@ -1897,7 +1897,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 monsCount;
     u8 nickname[POKEMON_NAME_LENGTH + 1];
     u8 trainerName[(PLAYER_NAME_LENGTH * 3) + 1];
-    u8 ability, gender, friendship;
+    u8 ability, gender;
+    u32 status;
     u16 randomizedIndices[monsCount];
 
     if (trainerNum == TRAINER_SECRET_BASE)
@@ -1978,13 +1979,23 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 // CreateMon(&party[i], partyData[k].species, partyData[k].lvl, fixedIV, TRUE, personalityValue, partyData[k].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
             }
 
-            if (partyData[k].friendship > 0)
+            // if (partyData[k].friendship > 0)
+            // {
+            //     if (partyData[k].friendship == TRAINER_MON_UNFRIENDLY)
+            //         friendship = 0;
+            //     else if (partyData[k].friendship == TRAINER_MON_FRIENDLY)
+            //         friendship = MAX_FRIENDSHIP;
+            //     SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
+            // }
+            if (partyData[k].status > 0)
             {
-                if (partyData[k].friendship == TRAINER_MON_UNFRIENDLY)
-                    friendship = 0;
-                else if (partyData[k].friendship == TRAINER_MON_FRIENDLY)
-                    friendship = MAX_FRIENDSHIP;
-                SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
+                if (partyData[k].status == TRAINER_MON_BURNED)
+                    status = STATUS1_BURN;
+                else if (partyData[k].status == TRAINER_MON_POISONED)
+                    status = STATUS1_POISON;
+                else if (partyData[k].status == TRAINER_MON_PARALYZED)
+                    status = STATUS1_PARALYSIS;
+                SetMonData(&party[i], MON_DATA_STATUS, &status);
             }
 
             if (partyData[k].nickname[0] != '\0')

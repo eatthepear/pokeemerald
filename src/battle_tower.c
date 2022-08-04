@@ -3002,6 +3002,7 @@ static void FillPartnerParty(u16 trainerId)
     u32 ivs, level;
     u16 monId;
     u32 otID;
+    u32 status;
     u8 trainerName[(PLAYER_NAME_LENGTH * 3) + 1];
     SetFacilityPtrsGetLevel();
 
@@ -3080,13 +3081,23 @@ static void FillPartnerParty(u16 trainerId)
                 CreateMon(&gPlayerParty[i + 3], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
             }
 
-            if (partyData[i].friendship > 0)
+            // if (partyData[i].friendship > 0)
+            // {
+            //     if (partyData[i].friendship == TRAINER_MON_UNFRIENDLY)
+            //         friendship = 0;
+            //     else if (partyData[i].friendship == TRAINER_MON_FRIENDLY)
+            //         friendship = MAX_FRIENDSHIP;
+            //     SetMonData(&gPlayerParty[i + 3], MON_DATA_FRIENDSHIP, &friendship);
+            // }
+            if (partyData[i].status > 0)
             {
-                if (partyData[i].friendship == TRAINER_MON_UNFRIENDLY)
-                    friendship = 0;
-                else if (partyData[i].friendship == TRAINER_MON_FRIENDLY)
-                    friendship = MAX_FRIENDSHIP;
-                SetMonData(&gPlayerParty[i + 3], MON_DATA_FRIENDSHIP, &friendship);
+                if (partyData[i].status == TRAINER_MON_BURNED)
+                    status = STATUS1_BURN;
+                else if (partyData[i].status == TRAINER_MON_POISONED)
+                    status = STATUS1_POISON;
+                else if (partyData[i].status == TRAINER_MON_PARALYZED)
+                    status = STATUS1_PARALYSIS;
+                SetMonData(&gPlayerParty[i + 3], MON_DATA_STATUS, &status);
             }
 
             if (partyData[i].nickname[0] != '\0')
