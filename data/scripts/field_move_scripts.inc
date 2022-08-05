@@ -91,7 +91,7 @@ EventScript_Headbutt_10:
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_11:
-	compare VAR_ZONE, 4
+	compare VAR_ZONE, 8
 	goto_if_gt EventScript_Headbutt_18
 	goto EventScript_Headbutt_4
 

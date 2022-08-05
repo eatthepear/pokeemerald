@@ -38,8 +38,7 @@ script EventScript_Shop_General {
 	lock
 	faceplayer
 	if (flag(FLAG_TIM_INTRO) == false) {
-		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\nThe name's Tim Johnson.\p{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\nPokémart Incorporated.\lYou can find all sorts of general\lsupplies for your travels.\pHere's a free sample, as a first time\ncustomer!")
-		giveitem(ITEM_REPEL)
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\nThe name's Tim Johnson.\p{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\nPokémart Incorporated.\lYou can find all sorts of general\lsupplies for your travels.")
 		setflag(FLAG_TIM_INTRO)
 	}
 	if ((var(VAR_ZONE) > 20) && (flag(FLAG_TIM_SUPER_POTION_INTRO) == false)) {

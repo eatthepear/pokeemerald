@@ -75,7 +75,6 @@ EventScript_Shop_General_9:
 
 EventScript_Shop_General_2:
 	msgbox EventScript_Shop_General_Text_0
-	giveitem ITEM_REPEL
 	setflag FLAG_TIM_INTRO
 	goto EventScript_Shop_General_1
 
@@ -3970,7 +3969,7 @@ EventScript_HealingSign::
 	end
 
 EventScript_Shop_General_Text_0:
-	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\nThe name's Tim Johnson.\p{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\nPokémart Incorporated.\lYou can find all sorts of general\lsupplies for your travels.\pHere's a free sample, as a first time\ncustomer!$"
+	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: New challenger, huh?\nThe name's Tim Johnson.\p{COLOR BLUE}Tim{COLOR DARK_GRAY}: I run this store, sponsored by\nPokémart Incorporated.\lYou can find all sorts of general\lsupplies for your travels.$"
 
 EventScript_Shop_General_Text_1:
 	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Hey! I just wanted to let you know\n"

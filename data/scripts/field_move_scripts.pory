@@ -53,7 +53,7 @@ script EventScript_Headbutt {
 			case 26:
 			case 27:
 			case 28:
-				if (var(VAR_ZONE) > 4) {
+				if (var(VAR_ZONE) > 8) {
 					msgbox(format("A Berry fell from the tree!"))
 					finditem(ITEM_SITRUS_BERRY, 1)
 				}

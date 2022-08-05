@@ -4473,7 +4473,7 @@ u16 GetNumChestsFound(void)
     case 3:
         count += FlagGet(FLAG_ITEM_ZONE3A_HYPER_POTION);
         count += FlagGet(FLAG_ITEM_ZONE3A_PARALYZE_HEAL);
-        count += FlagGet(FLAG_ITEM_ZONE3A_POTION_X2);
+        count += FlagGet(FLAG_ITEM_ZONE3A_REPEL);
         count += FlagGet(FLAG_ITEM_ZONE3A_SUPER_POTION);
         break;
     case 4:

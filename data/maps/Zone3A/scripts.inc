@@ -6,7 +6,7 @@ Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME:
 	goto_if_set FLAG_ITEM_ZONE3A_SUPER_POTION, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_2
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
 Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
-	goto_if_set FLAG_ITEM_ZONE3A_POTION_X2, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	goto_if_set FLAG_ITEM_ZONE3A_REPEL, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_6
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
 Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 	goto_if_set FLAG_ITEM_ZONE3A_PARALYZE_HEAL, Zone3A_MapScripts_MAP_SCRIPT_ON_RESUME_10
@@ -223,19 +223,19 @@ Zone3A_EventScript_ItemSuperPotion_2:
 	end
 
 
-Zone3A_EventScript_ItemPotion::
+Zone3A_EventScript_ItemRepel::
 	lock
-	goto_if_set FLAG_ITEM_ZONE3A_POTION_X2, Zone3A_EventScript_ItemPotion_2
+	goto_if_set FLAG_ITEM_ZONE3A_REPEL, Zone3A_EventScript_ItemRepel_2
 	waitse
 	removeobject VAR_LAST_TALKED
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE3A_POTION_X2
+	setflag FLAG_ITEM_ZONE3A_REPEL
 	addobject VAR_LAST_TALKED
-	finditem ITEM_POTION, 2
+	finditem ITEM_REPEL, 1
 	release
 	end
 
-Zone3A_EventScript_ItemPotion_2:
+Zone3A_EventScript_ItemRepel_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end
