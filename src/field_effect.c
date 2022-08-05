@@ -2599,7 +2599,7 @@ bool8 FldEff_FieldMoveShowMon(void)
     else
         taskId = CreateTask(Task_FieldMoveShowMonIndoors, 0xff);
 
-    gTasks[taskId].tMonSpriteId = InitFieldMoveMonSprite(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    gTasks[taskId].tMonSpriteId = InitFieldMoveMonSprite(gSaveBlock1Ptr->itemArg, gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
@@ -2607,8 +2607,8 @@ bool8 FldEff_FieldMoveShowMon(void)
 
 bool8 FldEff_FieldMoveShowMonInit(void)
 {
-    bool32 noDucking = gSaveBlock2Ptr->ItemArg & SHOW_MON_CRY_NO_DUCKING;
-    gSaveBlock2Ptr->ItemArg |= noDucking;
+    bool32 noDucking = gSaveBlock1Ptr->itemArg & SHOW_MON_CRY_NO_DUCKING;
+    gSaveBlock1Ptr->itemArg |= noDucking;
     /*struct Pokemon *pokemon;
     bool32 noDucking = gFieldEffectArguments[0] & SHOW_MON_CRY_NO_DUCKING;
     pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];

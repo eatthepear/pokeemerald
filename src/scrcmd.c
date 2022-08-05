@@ -2349,7 +2349,7 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
 
 void ScrCmd_SetItemArg(void)
 {
-    gSaveBlock2Ptr->ItemArg = gSpecialVar_0x8000;
+    gSaveBlock1Ptr->itemArg = gSpecialVar_0x8000;
 }
 
 bool8 ScrCmd_givecustommon(struct ScriptContext *ctx)

@@ -523,8 +523,6 @@ struct SaveBlock2
     /*0xAC*/ u32 encryptionKey;
     /*0xB0*/ struct PlayersApprentice playerApprentice;
     /*0xDC*/ struct Apprentice apprentices[APPRENTICE_COUNT];
-              u16 ItemArg;
-    /*0xF2C*/ bool8 autoRun;
               u8 filler[1000];
     // /*0x1EC*/ struct BerryCrush berryCrush;
     // /*0x1FC*/ struct PokemonJumpRecords pokeJump;
@@ -1001,8 +999,17 @@ struct SaveBlock1
     /*0x1270*/ u8 flags[NUM_FLAG_BYTES];
     /*0x139C*/ u16 vars[VARS_COUNT];
     /*0x159C*/ u32 gameStats[NUM_GAME_STATS];
+    /*0x3???*/ u8 dexSeen[NUM_DEX_FLAG_BYTES];
+    /*0x3???*/ u8 dexCaught[NUM_DEX_FLAG_BYTES];
     /*0x169C*/ struct BerryTree berryTrees[BERRY_TREES_COUNT];
     /*0x1A9C*/ struct SecretBase secretBases[SECRET_BASES_COUNT];
+    /*0x3030*/ struct DayCare daycare;
+    /*0x31DC*/ struct Roamer roamer;
+    /*0x3D88*/ u8 NuzlockeEncounterFlags[10];
+               u8 dexNavChain;
+               u8 gDexNavSearchLevel;
+               u16 itemArg;
+               bool8 autoRun;
     /*0x271C*/ u8 playerRoomDecorations[DECOR_MAX_PLAYERS_HOUSE];
     /*0x2728*/ u8 playerRoomDecorationPositions[DECOR_MAX_PLAYERS_HOUSE];
     /*0x2734*/ u8 decorationDesks[10];
@@ -1013,6 +1020,10 @@ struct SaveBlock1
     /*0x278E*/ u8 decorationPosters[10];
     /*0x2798*/ u8 decorationDolls[40];
     /*0x27C0*/ u8 decorationCushions[10];
+    /*0x31F8*/ struct EnigmaBerry enigmaBerry;
+    /*0x3???*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
+    /*0x3???*/ struct TrainerHillSave trainerHill;
+               u8 filler[3000];
     // /*0x27CC*/ TVShow tvShows[TV_SHOWS_COUNT];
     // /*0x2B50*/ PokeNews pokeNews[POKE_NEWS_COUNT];
     // /*0x2B90*/ u16 outbreakPokemonSpecies;
@@ -1035,29 +1046,18 @@ struct SaveBlock1
     // /*0x2E28*/ OldMan oldMan;
     // /*0x2e64*/ struct DewfordTrend dewfordTrends[SAVED_TRENDS_COUNT];
     // /*0x2e90*/ struct ContestWinner contestWinners[NUM_CONTEST_WINNERS]; // see CONTEST_WINNER_*
-    /*0x3030*/ struct DayCare daycare;
     // /*0x3150*/ struct LinkBattleRecords linkBattleRecords;
     // /*0x31A8*/ u8 giftRibbons[GIFT_RIBBONS_COUNT];
     // /*0x31B3*/ struct ExternalEventData externalEventData;
     // /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
-    /*0x31DC*/ struct Roamer roamer;
-    /*0x31F8*/ struct EnigmaBerry enigmaBerry;
     // /*0x322C*/ struct MysteryGiftSave mysteryGift;
-    /*0x3???*/ u8 dexSeen[NUM_DEX_FLAG_BYTES];
-    /*0x3???*/ u8 dexCaught[NUM_DEX_FLAG_BYTES];
-    /*0x3???*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
     // struct RamScript ramScript;
     // /*0x3???*/ struct RecordMixingGift recordMixingGift;
     // /*0x3???*/ LilycoveLady lilycoveLady;
     // /*0x3???*/ struct TrainerNameRecord trainerNameRecords[20];
     // /*0x3???*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
-    /*0x3???*/ struct TrainerHillSave trainerHill;
     // /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
-    /*0x3D88*/ u8 NuzlockeEncounterFlags[9];
-               u8 dexNavChain;
-               u8 gDexNavSearchLevel;
-               u8 filler[3000];
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

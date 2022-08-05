@@ -1104,14 +1104,14 @@ static bool8 EnableAutoRun(void)
         return FALSE;   //auto run unusable until you get running shoes
     
     PlaySE(SE_SELECT);
-    if (gSaveBlock2Ptr->autoRun)
+    if (gSaveBlock1Ptr->autoRun)
     {
-        gSaveBlock2Ptr->autoRun = FALSE;
+        gSaveBlock1Ptr->autoRun = FALSE;
         ScriptContext1_SetupScript(EventScript_DisableAutoRun);
     }
     else
     {
-        gSaveBlock2Ptr->autoRun = TRUE;
+        gSaveBlock1Ptr->autoRun = TRUE;
         ScriptContext1_SetupScript(EventScript_EnableAutoRun);
     }
     
