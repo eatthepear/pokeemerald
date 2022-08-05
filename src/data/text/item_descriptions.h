@@ -3608,7 +3608,7 @@ static const u8 sMachBikeDesc[] = _(
 
 static const u8 sAcroBikeDesc[] = _(
     "A 2-in-1 folding\n"
-    "bicycle. Use {L_BUTTON} to\n"
+    "bicycle. Use {R_BUTTON} to\n"
     "switch modes.");
 
 static const u8 sOldRodDesc[] = _(

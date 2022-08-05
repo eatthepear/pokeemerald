@@ -203,30 +203,33 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
-    if (input->pressedRButton && EnableAutoRun())
-        return TRUE;
+    if (input->pressedRButton)
+    {
+        if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_BIKE)) {
+            ObjectEventClearHeldMovementIfActive(&gObjectEvents[gPlayerAvatar.objectEventId]);
+            if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+            {
+                gPlayerAvatar.flags -= PLAYER_AVATAR_FLAG_MACH_BIKE;
+                gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_ACRO_BIKE;
+                SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+                PlaySE(SE_BIKE_HOP);
+            }
+            else
+            {
+                gPlayerAvatar.flags -= PLAYER_AVATAR_FLAG_ACRO_BIKE;
+                gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_MACH_BIKE;
+                SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
+                PlaySE(SE_BIKE_BELL);
+            }
+        }
+        else if (EnableAutoRun())
+        {
+            return TRUE;
+        }
+    }
 
     if (input->pressedLButton && TryStartDexnavSearch())
         return TRUE;
-    
-    if (input->pressedLButton && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
-    {
-        ObjectEventClearHeldMovementIfActive(&gObjectEvents[gPlayerAvatar.objectEventId]);
-        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
-        {
-            gPlayerAvatar.flags -= PLAYER_AVATAR_FLAG_MACH_BIKE;
-            gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_ACRO_BIKE;
-            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
-            PlaySE(SE_BIKE_HOP);
-        }
-        else
-        {
-            gPlayerAvatar.flags -= PLAYER_AVATAR_FLAG_ACRO_BIKE;
-            gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_MACH_BIKE;
-            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
-            PlaySE(SE_BIKE_BELL);
-        }
-    }
 
     return FALSE;
 }
