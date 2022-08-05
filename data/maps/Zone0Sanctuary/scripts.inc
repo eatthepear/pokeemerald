@@ -44,6 +44,7 @@ Zone0Sanctuary_EventScript_Intro_13:
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_31
 	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
 Zone0Sanctuary_EventScript_Intro_7:
+	delay 16
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_8, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_11
@@ -59,6 +60,7 @@ Zone0Sanctuary_EventScript_Intro_25:
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_58
 	call Zone0Sanctuary_EventScript_DisableRandomizer
 Zone0Sanctuary_EventScript_Intro_16:
+	delay 16
 Zone0Sanctuary_EventScript_Intro_23:
 	compare VAR_TEMP_2, 1
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_40
@@ -70,8 +72,10 @@ Zone0Sanctuary_EventScript_Intro_39:
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_67
 	call Zone0Sanctuary_EventScript_DisableNuzlocke
 Zone0Sanctuary_EventScript_Intro_22:
+	delay 16
 	goto_if_unset FLAG_RANDOMIZER_ON, Zone0Sanctuary_EventScript_Intro_36
 Zone0Sanctuary_EventScript_Intro_34:
+	delay 16
 	compare VAR_TEMP_0, 1
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_50
 Zone0Sanctuary_EventScript_Intro_49:
@@ -84,7 +88,6 @@ Zone0Sanctuary_EventScript_Intro_61:
 
 Zone0Sanctuary_EventScript_Intro_2:
 	setvar VAR_TEMP_0, 1
-	delay 96
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_2
 	delay 96
 	goto Zone0Sanctuary_EventScript_Intro_1
@@ -94,13 +97,13 @@ Zone0Sanctuary_EventScript_Intro_5:
 	goto Zone0Sanctuary_EventScript_Intro_4
 
 Zone0Sanctuary_EventScript_Intro_11:
-	msgbox gText_Colress_GameModes
+	msgbox gText_Colress_GameModes, MSGBOX_DEFAULT
 	setvar VAR_TEMP_2, 1
 	goto Zone0Sanctuary_EventScript_Intro_10
 
 Zone0Sanctuary_EventScript_Intro_14:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_4
-	msgbox gText_Colress_DefaultExplained
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_4, MSGBOX_DEFAULT
+	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	msgbox gText_Colress_BrutalExplained
 	delay 96
 	goto Zone0Sanctuary_EventScript_Intro_13
@@ -112,7 +115,7 @@ Zone0Sanctuary_EventScript_Intro_19:
 	goto Zone0Sanctuary_EventScript_Intro_7
 
 Zone0Sanctuary_EventScript_Intro_26:
-	msgbox gText_Colress_RandomizerExplanation
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
 	goto Zone0Sanctuary_EventScript_Intro_25
 
 Zone0Sanctuary_EventScript_Intro_28:
@@ -128,7 +131,7 @@ Zone0Sanctuary_EventScript_Intro_31:
 	goto Zone0Sanctuary_EventScript_Intro_8
 
 Zone0Sanctuary_EventScript_Intro_35:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_15
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_15, MSGBOX_DEFAULT
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_16, MSGBOX_DEFAULT
 	waitse
@@ -140,7 +143,7 @@ Zone0Sanctuary_EventScript_Intro_36:
 	goto Zone0Sanctuary_EventScript_Intro_34
 
 Zone0Sanctuary_EventScript_Intro_40:
-	msgbox gText_Colress_NuzlockeExplained
+	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
 	goto Zone0Sanctuary_EventScript_Intro_39
 
 Zone0Sanctuary_EventScript_Intro_42:
@@ -774,17 +777,17 @@ Zone0Sanctuary_EventScript_EndIntro_1:
 Zone0Sanctuary_EventScript_EndIntro_2:
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_0
 	delay 96
-	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_1
+	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_1, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 15
 	giveitem ITEM_POTION, 10
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_2, MSGBOX_DEFAULT
 	waitfanfare
-	closemessage
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_3, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
+	delay 16
 	goto Zone0Sanctuary_EventScript_EndIntro_1
 
 
@@ -1229,8 +1232,8 @@ Zone0Sanctuary_EventScript_Intro_Text_18:
 Zone0Sanctuary_EventScript_Intro_Text_19:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph\n"
 	.string "Unique Item Shop{COLOR DARK_GRAY}.\p"
-	.string "They sell a wide variety of held items\n"
-	.string "and single use items such as Pokéball\l"
+	.string "They sell a variety of held items and\n"
+	.string "single use items such as Pokéball\l"
 	.string "variations, evolution items, Berries,\l"
 	.string "and so on.$"
 
@@ -1248,16 +1251,16 @@ Zone0Sanctuary_EventScript_Intro_Text_21:
 	.string "right price.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_22:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you will have\n"
-	.string "access to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\p"
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you have access\n"
+	.string "to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\p"
 	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY}, you\n"
 	.string "can access it from any Sanctuary using\l"
 	.string "this warp.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_23:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
-	.string "These four shops will be available at\n"
-	.string "every Sanctuary.\p"
+	.string "These shops will be available at every\n"
+	.string "Sanctuary.\p"
 	.string "As you progress through more Zones,\n"
 	.string "more items and services will unlock.\p"
 	.string "Also, it is highly recommended you stock\n"
