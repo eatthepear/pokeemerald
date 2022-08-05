@@ -49,6 +49,7 @@
 #include "constants/items.h"
 #include "constants/layouts.h"
 #include "constants/moves.h"
+#include "constants/party_menu.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
 #include "constants/species.h"
@@ -5986,6 +5987,27 @@ void BoxMonToMon(const struct BoxPokemon *src, struct Pokemon *dest)
     CALC_STAT(baseSpDefense, spDefenseIV, spDefenseEV, STAT_SPDEF, MON_DATA_SPDEF)
 
     SetMonData(mon, MON_DATA_HP, &currentHP);
+    switch (currentStatus)
+    {
+    case AILMENT_PSN:
+        currentStatus = STATUS1_POISON;
+        break;
+    case AILMENT_PRZ:
+        currentStatus = STATUS1_PARALYSIS;
+        break;
+    case AILMENT_SLP:
+        currentStatus = STATUS1_SLEEP;
+        break;
+    case AILMENT_FRZ:
+        currentStatus = STATUS1_FREEZE;
+        break;
+    case AILMENT_BRN:
+        currentStatus = STATUS1_BURN;
+        break;
+    default:
+        currentStatus = 0;
+        break;
+    }
     SetMonData(mon, MON_DATA_STATUS, &currentStatus);
 }
 
@@ -6366,7 +6388,7 @@ u32 GetMonData(struct Pokemon *mon, s32 field, u8* data)
     switch (field)
     {
     case MON_DATA_STATUS:
-        ret = mon->box.status;
+        ret = mon->status;
         break;
     case MON_DATA_LEVEL:
         ret = mon->level;
@@ -6645,8 +6667,9 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     switch (field)
     {
     case MON_DATA_STATUS:
-        // SET32(mon->status);
-        SET32(mon->box.status);
+        SET32(mon->status);
+        mon->box.status = GetMonAilment(mon);
+        // SET32(mon->box.status);
         break;
     case MON_DATA_LEVEL:
         SET8(mon->level);

@@ -31,7 +31,7 @@ struct BoxPokemon
     u16 metLevel:7;
 
     u32 experience:21;
-    u32 status;
+    u32 status:3; // keeps track of major status conditions only
     u16 hp;
     u8 ppBonuses;
     u8 friendship;
@@ -58,7 +58,7 @@ struct BoxPokemon
 struct Pokemon
 {
     /*0x00*/ struct BoxPokemon box;
-    // /*0x50*/ u32 status;
+    /*0x50*/ u32 status;
     /*0x54*/ u8 level;
     // /*0x56*/ u16 hp;
     /*0x58*/ u16 maxHP;
