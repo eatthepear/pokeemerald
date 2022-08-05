@@ -70,6 +70,59 @@ Zone0C_EventScript_EeveeUnique::
 	return
 
 
+Zone0C_EventScript_BreederM::
+	lock
+	faceplayer
+	goto_if_set FLAG_ZONE0C_SHOWN_POKEDEX_ENTRIES, Zone0C_EventScript_BreederM_2
+	msgbox Zone0C_EventScript_BreederM_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0C_EventScript_BreederM_5
+Zone0C_EventScript_BreederM_4:
+	msgbox Zone0C_Text_Pokedex, MSGBOX_DEFAULT
+	release
+	end
+
+Zone0C_EventScript_BreederM_2:
+	msgbox Zone0C_Text_Pokedex, MSGBOX_DEFAULT
+	release
+	end
+
+Zone0C_EventScript_BreederM_5:
+	msgbox Zone0C_EventScript_BreederM_Text_1
+	delay 32
+	msgbox Zone0C_EventScript_BreederM_Text_2
+	fadescreen FADE_TO_BLACK
+	setseenmon SPECIES_BULBASAUR
+	setseenmon SPECIES_CHARMANDER
+	setseenmon SPECIES_SQUIRTLE
+	setseenmon SPECIES_CHIKORITA
+	setseenmon SPECIES_CYNDAQUIL
+	setseenmon SPECIES_TOTODILE
+	setseenmon SPECIES_TREECKO
+	setseenmon SPECIES_TORCHIC
+	setseenmon SPECIES_MUDKIP
+	setseenmon SPECIES_TURTWIG
+	setseenmon SPECIES_CHIMCHAR
+	setseenmon SPECIES_PIPLUP
+	setseenmon SPECIES_SNIVY
+	setseenmon SPECIES_TEPIG
+	setseenmon SPECIES_OSHAWOTT
+	setseenmon SPECIES_CHESPIN
+	setseenmon SPECIES_FENNEKIN
+	setseenmon SPECIES_FROAKIE
+	setseenmon SPECIES_ROWLET
+	setseenmon SPECIES_LITTEN
+	setseenmon SPECIES_POPPLIO
+	setseenmon SPECIES_GROOKEY
+	setseenmon SPECIES_SCORBUNNY
+	setseenmon SPECIES_SOBBLE
+	delay 48
+	fadescreen FADE_FROM_BLACK
+	msgbox Zone0C_EventScript_BreederM_Text_3, MSGBOX_DEFAULT
+	setflag FLAG_ZONE0C_SHOWN_POKEDEX_ENTRIES
+	goto Zone0C_EventScript_BreederM_4
+
+
 Zone0C_MapScripts::
 	.byte 0
 
@@ -393,3 +446,22 @@ Zone0C_PokemonDayCare_Text_YoullBeLeftWithJustOne:
 	.string "me, you'll be left with just one.\p"
 	.string "You will be better off if you catch\n"
 	.string "some more, I dare say.$"
+
+Zone0C_EventScript_BreederM_Text_0:
+	.string "Hey there! Would you like to see some\n"
+	.string "Pokémon in my sketchbook?\p"
+	.string "They could be useful for your Pokédex!$"
+
+Zone0C_EventScript_BreederM_Text_1:
+	.string "Here you go…$"
+
+Zone0C_EventScript_BreederM_Text_2:
+	.string "{PLAYER} started entering in the\n"
+	.string "information into the Pokédex…$"
+
+Zone0C_EventScript_BreederM_Text_3:
+	.string "{PLAYER}'s Pokédex was filled with\n"
+	.string "entries of starter Pokémon!$"
+
+Zone0C_Text_Pokedex::
+	.string "Good luck completing your Pokédex.$"

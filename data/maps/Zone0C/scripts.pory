@@ -50,6 +50,58 @@ script Zone0C_EventScript_EeveeUnique {
 	release
 }
 
+script Zone0C_EventScript_BreederM {
+	lock
+	faceplayer
+	if (flag(FLAG_ZONE0C_SHOWN_POKEDEX_ENTRIES) == TRUE) {
+		msgbox(Zone0C_Text_Pokedex, MSGBOX_DEFAULT)
+		release
+		end
+	}
+	msgbox(format("Hey there! Would you like to see some Pokémon in my sketchbook?\pThey could be useful for your Pokédex!"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		msgbox(format("Here you go…"))
+		delay(32)
+		msgbox(format("{PLAYER} started entering in the information into the Pokédex…"))
+		fadescreen(FADE_TO_BLACK)
+		setseenmon(SPECIES_BULBASAUR)
+		setseenmon(SPECIES_CHARMANDER)
+		setseenmon(SPECIES_SQUIRTLE)
+		setseenmon(SPECIES_CHIKORITA)
+		setseenmon(SPECIES_CYNDAQUIL)
+		setseenmon(SPECIES_TOTODILE)
+		setseenmon(SPECIES_TREECKO)
+		setseenmon(SPECIES_TORCHIC)
+		setseenmon(SPECIES_MUDKIP)
+		setseenmon(SPECIES_TURTWIG)
+		setseenmon(SPECIES_CHIMCHAR)
+		setseenmon(SPECIES_PIPLUP)
+		setseenmon(SPECIES_SNIVY)
+		setseenmon(SPECIES_TEPIG)
+		setseenmon(SPECIES_OSHAWOTT)
+		setseenmon(SPECIES_CHESPIN)
+		setseenmon(SPECIES_FENNEKIN)
+		setseenmon(SPECIES_FROAKIE)
+		setseenmon(SPECIES_ROWLET)
+		setseenmon(SPECIES_LITTEN)
+		setseenmon(SPECIES_POPPLIO)
+		setseenmon(SPECIES_GROOKEY)
+		setseenmon(SPECIES_SCORBUNNY)
+		setseenmon(SPECIES_SOBBLE)
+		delay(48)
+		fadescreen(FADE_FROM_BLACK)
+		msgbox(format("{PLAYER}'s Pokédex was filled with entries of starter Pokémon!"), MSGBOX_DEFAULT)
+		setflag(FLAG_ZONE0C_SHOWN_POKEDEX_ENTRIES)
+	}
+	msgbox(Zone0C_Text_Pokedex, MSGBOX_DEFAULT)
+	release
+	end
+}
+
+text Zone0C_Text_Pokedex {
+	format("Good luck completing your Pokédex.")
+}
+
 raw `
 Zone0C_MapScripts::
 	.byte 0
