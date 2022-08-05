@@ -1055,9 +1055,9 @@ struct SaveBlock1
     // /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
     /*0x3D88*/ u8 NuzlockeEncounterFlags[9];
-               u8 filler[1800];
-               u8 dexNavSearchLevels[NUM_SPECIES];
                u8 dexNavChain;
+               u8 gDexNavSearchLevel;
+               u8 filler[3000];
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

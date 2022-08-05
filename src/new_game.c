@@ -209,8 +209,8 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     gSaveBlock2Ptr->autoRun = TRUE;
     memset(&gSaveBlock2Ptr->follower, 0, sizeof(gSaveBlock2Ptr->follower));
-    memset(gSaveBlock1Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock1Ptr->dexNavSearchLevels));
     gSaveBlock1Ptr->dexNavChain = 0;
+    gSaveBlock1Ptr->gDexNavSearchLevel = 0;
 }
 
 static void ResetMiniGamesRecords(void)

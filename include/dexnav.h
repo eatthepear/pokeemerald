@@ -7,6 +7,7 @@
 #define MAX_PROXIMITY                   20
 
 #define DEXNAV_CHAIN_MAX                100
+#define DEXNAV_SEARCH_LEVEL_MAX         255
 
 //hidden pokemon options - no info so I just guessed at values
 #define HIDDEN_MON_STEP_COUNT       100  //look for hidden pokemon every x steps
