@@ -65,7 +65,6 @@ Zone0D_EventScript_WarpBack_1:
 	return
 
 Zone0D_EventScript_WarpBack_2:
-	setflag FLAG_ZONE0B_ABILITY_CHANGE_USED
 	setvar VAR_ZONE_0_STATE, 4
 	goto Zone0D_EventScript_WarpBack_1
 

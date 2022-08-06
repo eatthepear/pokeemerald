@@ -187,7 +187,7 @@ Zone5A_EventScript_BuyPikaClone_2:
 	end
 
 Zone5A_EventScript_BuyPikaClone_4:
-	goto_if_set FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE, Zone5A_EventScript_BuyPikaClone_2
+	goto_if_set FLAG_ZONE5A_NUZLOCKE_BOUGHT_PIKACLONE, Zone5A_EventScript_BuyPikaClone_2
 	goto Zone5A_EventScript_BuyPikaClone_3
 
 Zone5A_EventScript_BuyPikaClone_7:
@@ -215,7 +215,7 @@ Zone5A_EventScript_BuyPikaClone_17:
 	case 2, Zone5A_EventScript_BuyPikaClone_24
 	case 3, Zone5A_EventScript_BuyPikaClone_25
 Zone5A_EventScript_BuyPikaClone_20:
-	setflag FLAG_NUZLOCKE_ZONE5A_BOUGHT_PIKACLONE
+	setflag FLAG_ZONE5A_NUZLOCKE_BOUGHT_PIKACLONE
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_22:

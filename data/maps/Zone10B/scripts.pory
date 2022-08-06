@@ -59,12 +59,12 @@ script Zone10B_EventScript_AdaminaStuff {
 script Zone10B_EventScript_SideQuestLuckyEgg {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE10B_LUCKY_EGG) == false) {
+	if (flag(FLAG_ZONE10B_RECEIVED_LUCKY_EGG) == false) {
 		msgbox("You know what would make a\nCollector like me happy? Meeting\lsomeone who has caught 50 different\lspecies of Pokémon. Now, that\lperson is someone I'd like to meet!")
 		specialvar(VAR_RESULT, GetCaughtSpeciesCount)
 		if (var(VAR_RESULT) > 49) {
 			msgbox("Whoah, you've caught 50 species of\nPokémon? That's amazing.\pI aspire to be like you. Here, I\nwant you to have this.")
-			setflag(FLAG_RECEIVED_ZONE10B_LUCKY_EGG)
+			setflag(FLAG_ZONE10B_RECEIVED_LUCKY_EGG)
 			giveitem(ITEM_LUCKY_EGG, 1)
 		} else {
 			applymovement(3, Common_Movement_FaceRight)
@@ -82,7 +82,7 @@ script Zone10B_EventScript_SideQuestLuckyEgg {
 script Zone10B_EventScript_SideQuestTeleport {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE10B_TM21_TELEPORT) == false) {
+	if (flag(FLAG_ZONE10B_RECEIVED_TM21) == false) {
 		msgbox("Greetings, young one. In my\npossession, I hold a useful TM for\lyour Pokémon, but only if you have\lproven yourself in battle.\pYou must have defeated all\nTrainers available thus far.")
 		if (!defeated(TRAINER_JEREMIAH) ||
 			!defeated(TRAINER_HARPER) ||
@@ -132,7 +132,7 @@ script Zone10B_EventScript_SideQuestTeleport {
 			release
 			end
 		} else {
-			setflag(FLAG_RECEIVED_ZONE10B_TM21_TELEPORT)
+			setflag(FLAG_ZONE10B_RECEIVED_TM21)
 			msgbox("Impressive, young one. I see you\nhave defeated all those trainers.\pHere is the TM21 - Teleport.$")
 			giveitem(ITEM_TM21)
 		}

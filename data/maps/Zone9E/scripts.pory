@@ -3,7 +3,7 @@ mapscripts Zone9E_MapScripts {}
 script Zone9E_EventScript_BuyGrassStarter {
 	lock
 	faceplayer
-	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER) == true) {
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_TEMP_1) == true) {
 		msgbox(format("The rest of these Grass starters aren't for sale anymore. Sorry about that!"))
 		release
 		end
@@ -114,7 +114,7 @@ script Zone9E_EventScript_BuyGrassStarter {
                                 setvar(VAR_TEMP_2, SPECIES_TURTWIG)
                         }
                     }
-					setflag(FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER)
+					setflag(FLAG_TEMP_1)
 				} else {
 					msgbox(format("Choose which starter you would like."), MSGBOX_DEFAULT)
 					multichoice2(21, 0, Zone9E_Text_StarterMultichoice, TRUE)

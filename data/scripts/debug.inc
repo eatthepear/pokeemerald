@@ -39,12 +39,9 @@ Debug_CheatStart::
 	additem ITEM_DARK_GEM
 	additem ITEM_GRASS_GEM
 	additem ITEM_ICE_GEM
-	additem ITEM_FAIRY_GEM
-	setflag FLAG_RECEIVED_ZONE4A_GEM
-	setflag FLAG_BOOSTED_IVS
+	setflag FLAG_ZONE4A_RECEIVED_GEM
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
-	clearflag FLAG_BOOSTED_IVS
-	setflag FLAG_RECEIVED_ZONE0C_EEVEE
+	setflag FLAG_ZONE0C_RECEIVED_EEVEE
 	random 20
 	switch VAR_RESULT
 	case 0, Debug_CheatStart_3

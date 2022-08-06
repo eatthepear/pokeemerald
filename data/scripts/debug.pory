@@ -43,8 +43,7 @@ script Debug_CheatStart {
 	additem(ITEM_DARK_GEM)
 	additem(ITEM_GRASS_GEM)
 	additem(ITEM_ICE_GEM)
-	additem(ITEM_FAIRY_GEM)
-	setflag(FLAG_RECEIVED_ZONE4A_GEM)
+	setflag(FLAG_ZONE4A_RECEIVED_GEM)
 	// random(24)
 	// switch (var(VAR_RESULT)) {
 	// 	case 0:
@@ -96,11 +95,9 @@ script Debug_CheatStart {
 	// 	case 23:
 	// 		setvar(VAR_TEMP_0, SPECIES_SOBBLE)
 	// }
-	setflag(FLAG_BOOSTED_IVS)
 	// givemon(VAR_TEMP_0, 5, ITEM_NONE)
 	givemon(SPECIES_EEVEE, 5, ITEM_NONE)
-	clearflag(FLAG_BOOSTED_IVS)
-	setflag(FLAG_RECEIVED_ZONE0C_EEVEE)
+	setflag(FLAG_ZONE0C_RECEIVED_EEVEE)
 	random(20)
 	switch (var(VAR_RESULT)) {
 		case 0:

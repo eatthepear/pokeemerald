@@ -206,7 +206,7 @@ Zone10A_EventScript_HeavyDutyBoots_2:
 Zone10A_EventScript_Ranger::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES, Zone10A_EventScript_Ranger_2
+	goto_if_unset FLAG_ZONE10A_RECEIVED_SAFETY_GOGGLES, Zone10A_EventScript_Ranger_2
 Zone10A_EventScript_Ranger_1:
 	msgbox Zone10A_EventScript_Ranger_Text_1
 	release
@@ -215,7 +215,7 @@ Zone10A_EventScript_Ranger_1:
 Zone10A_EventScript_Ranger_2:
 	msgbox Zone10A_EventScript_Ranger_Text_0, MSGBOX_DEFAULT
 	giveitem ITEM_SAFETY_GOGGLES
-	setflag FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES
+	setflag FLAG_ZONE10A_RECEIVED_SAFETY_GOGGLES
 	goto Zone10A_EventScript_Ranger_1
 
 

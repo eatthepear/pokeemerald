@@ -4694,7 +4694,7 @@
     {
       "id": "LAYOUT_ZONE0A",
       "name": "Zone0A_Layout",
-      "width": 82,
+      "width": 66,
       "height": 15,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",

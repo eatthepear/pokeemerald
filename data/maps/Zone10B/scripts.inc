@@ -84,7 +84,7 @@ Zone10B_EventScript_AdaminaStuff_12:
 Zone10B_EventScript_SideQuestLuckyEgg::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_ZONE10B_LUCKY_EGG, Zone10B_EventScript_SideQuestLuckyEgg_2
+	goto_if_unset FLAG_ZONE10B_RECEIVED_LUCKY_EGG, Zone10B_EventScript_SideQuestLuckyEgg_2
 Zone10B_EventScript_SideQuestLuckyEgg_1:
 	msgbox Zone10B_EventScript_SideQuestLuckyEgg_Text_2
 	applymovement 3, Common_Movement_FaceRight
@@ -104,7 +104,7 @@ Zone10B_EventScript_SideQuestLuckyEgg_2:
 
 Zone10B_EventScript_SideQuestLuckyEgg_4:
 	msgbox Zone10B_EventScript_SideQuestLuckyEgg_Text_1
-	setflag FLAG_RECEIVED_ZONE10B_LUCKY_EGG
+	setflag FLAG_ZONE10B_RECEIVED_LUCKY_EGG
 	giveitem ITEM_LUCKY_EGG, 1
 	goto Zone10B_EventScript_SideQuestLuckyEgg_1
 
@@ -112,7 +112,7 @@ Zone10B_EventScript_SideQuestLuckyEgg_4:
 Zone10B_EventScript_SideQuestTeleport::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_ZONE10B_TM21_TELEPORT, Zone10B_EventScript_SideQuestTeleport_2
+	goto_if_unset FLAG_ZONE10B_RECEIVED_TM21, Zone10B_EventScript_SideQuestTeleport_2
 Zone10B_EventScript_SideQuestTeleport_1:
 	msgbox Zone10B_EventScript_SideQuestTeleport_Text_3
 	applymovement 4, Common_Movement_FaceLeft
@@ -204,7 +204,7 @@ Zone10B_EventScript_SideQuestTeleport_2:
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
 	checktrainerflag TRAINER_CONRAD
 	goto_if 0, Zone10B_EventScript_SideQuestTeleport_4
-	setflag FLAG_RECEIVED_ZONE10B_TM21_TELEPORT
+	setflag FLAG_ZONE10B_RECEIVED_TM21
 	msgbox Zone10B_EventScript_SideQuestTeleport_Text_2
 	giveitem ITEM_TM21
 	goto Zone10B_EventScript_SideQuestTeleport_1

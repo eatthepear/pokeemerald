@@ -77,7 +77,7 @@ text Zone2B_Text_Leviathan2Defeat {
 script Zone2B_EventScript_BuyBug {
 	lock
 	faceplayer
-	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG) == true) {
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG) == true) {
 		msgbox(format("Scram! I'm out of bugs for you to buy right now.\pCome back later."))
 		release
 		end
@@ -118,7 +118,7 @@ script Zone2B_EventScript_BuyBug {
 						case 3:
 							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
 					}
-					setflag(FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG)
+					setflag(FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG)
 				} else {
 					msgbox(format("Choose which Bug you would like."), MSGBOX_DEFAULT)
 					multichoice2(21, 0, Zone2B_Text_BugMultichoice, TRUE)

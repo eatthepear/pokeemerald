@@ -1,7 +1,7 @@
 script Zone0C_EventScript_EeveeGirl {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE) == true) {
+	if (flag(FLAG_ZONE0C_RECEIVED_EEVEE) == true) {
 		goto(Zone0C_EventScript_EeveeUnique)
 	}
 	if ((flag(FLAG_RANDOMIZER_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true)) {
@@ -41,7 +41,7 @@ script Zone0C_EventScript_EeveeGirl {
 		call(Common_EventScript_GetGiftMonPartySlot)
 		call(Common_EventScript_NameReceivedPartyMon)
 	}
-	setflag(FLAG_RECEIVED_ZONE0C_EEVEE)
+	setflag(FLAG_ZONE0C_RECEIVED_EEVEE)
 	goto(Zone0C_EventScript_EeveeUnique)
 }
 

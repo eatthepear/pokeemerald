@@ -223,10 +223,10 @@ script Zone10A_EventScript_HeavyDutyBoots {
 script Zone10A_EventScript_Ranger {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES) == false) {
+	if (flag(FLAG_ZONE10A_RECEIVED_SAFETY_GOGGLES) == false) {
 		msgbox(format("Excuse me! I'm a member of the Pokémon Ranger Corps, working to protect both people and Pokémon.\pIt's not safe to be out in the sandstorm for long periods of time, so take this!"), MSGBOX_DEFAULT)
 		giveitem(ITEM_SAFETY_GOGGLES)
-		setflag(FLAG_RECEIVED_ZONE10A_SAFETY_GOGGLES)
+		setflag(FLAG_ZONE10A_RECEIVED_SAFETY_GOGGLES)
 	}
 	msgbox(format("Remember kids, safety first!"))
 	release

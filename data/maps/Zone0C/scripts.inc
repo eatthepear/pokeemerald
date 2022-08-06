@@ -1,7 +1,7 @@
 Zone0C_EventScript_EeveeGirl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_ZONE0C_EEVEE, Zone0C_EventScript_EeveeGirl_2
+	goto_if_set FLAG_ZONE0C_RECEIVED_EEVEE, Zone0C_EventScript_EeveeGirl_2
 Zone0C_EventScript_EeveeGirl_1:
 	goto_if_unset FLAG_RANDOMIZER_ON, Zone0C_EventScript_EeveeGirl_6
 Zone0C_EventScript_EeveeGirl_4:
@@ -24,7 +24,7 @@ Zone0C_EventScript_EeveeGirl_4:
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0C_EventScript_EeveeGirl_16
 Zone0C_EventScript_EeveeGirl_15:
-	setflag FLAG_RECEIVED_ZONE0C_EEVEE
+	setflag FLAG_ZONE0C_RECEIVED_EEVEE
 	goto Zone0C_EventScript_EeveeUnique
 	return
 

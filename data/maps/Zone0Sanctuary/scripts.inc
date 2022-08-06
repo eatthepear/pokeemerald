@@ -291,7 +291,6 @@ Zone0Sanctuary_EventScript_Intro_58:
 
 Zone0Sanctuary_EventScript_Intro_62:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_24
-	setflag FLAG_ZONE0B_ABILITY_CHANGE_USED
 	callnative GiveRandomStarter
 	playfanfare MUS_OBTAIN_ITEM
 	bufferleadmonspeciesname 0

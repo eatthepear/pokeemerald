@@ -11,7 +11,7 @@ mapscripts Zone4A_MapScripts {
 script Zone4A_EventScript_Breeder {
 	lock
 	faceplayer
-	if (flag(FLAG_RECEIVED_ZONE0C_EEVEE) == false) {
+	if (flag(FLAG_ZONE0C_RECEIVED_EEVEE) == false) {
 		msgbox(format("Hello, {PLAYER}!\nI work at the Pokémon Day-Care.\pThere's a special Eevee giveaway at the Day-Care, so go check that out!"))
 		release
 		end
@@ -91,7 +91,7 @@ script Zone4A_EventScript_Breeder {
 	msgbox(format("Well, I'm off to help other trainers.\pSee you!"), MSGBOX_DEFAULT)
 	fadescreen(FADE_TO_BLACK)
 	removeobject(3)
-	setflag(FLAG_RECEIVED_ZONE4A_GEM)
+	setflag(FLAG_ZONE4A_RECEIVED_GEM)
 	fadescreen(FADE_FROM_BLACK)
 	release
 }

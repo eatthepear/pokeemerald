@@ -22,7 +22,7 @@ Zone13A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 Zone13A_EventScript_ParasolLady::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA, Zone13A_EventScript_ParasolLady_2
+	goto_if_unset FLAG_ZONE13A_RECEIVED_UTILITY_UMBRELLA, Zone13A_EventScript_ParasolLady_2
 Zone13A_EventScript_ParasolLady_1:
 	msgbox Zone13A_EventScript_ParasolLady_Text_1
 	release
@@ -31,7 +31,7 @@ Zone13A_EventScript_ParasolLady_1:
 Zone13A_EventScript_ParasolLady_2:
 	msgbox Zone13A_EventScript_ParasolLady_Text_0, MSGBOX_DEFAULT
 	giveitem ITEM_UTILITY_UMBRELLA
-	setflag FLAG_RECEIVED_ZONE13A_UTILITY_UMBRELLA
+	setflag FLAG_ZONE13A_RECEIVED_UTILITY_UMBRELLA
 	goto Zone13A_EventScript_ParasolLady_1
 
 

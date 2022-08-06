@@ -19,7 +19,8 @@ Zone4E_EventScript_Exit::
 	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_7
 Zone4E_EventScript_Exit_5:
-	setflag FLAG_RECEIVED_ZONE4A_GEM
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_11
+Zone4E_EventScript_Exit_10:
 	warp MAP_ZONE4SANCTUARY, 255, 22, 7
 	waitstate
 Zone4E_EventScript_Exit_1:
@@ -38,6 +39,10 @@ Zone4E_EventScript_Exit_7:
 	compare VAR_NUM_TRAINERS_REMAINING, 0
 	goto_if_ne Zone4E_EventScript_Exit_6
 	goto Zone4E_EventScript_Exit_5
+
+Zone4E_EventScript_Exit_11:
+	setflag FLAG_ZONE4A_RECEIVED_GEM
+	goto Zone4E_EventScript_Exit_10
 
 
 Zone4E_EventScript_LeviathanBattle::

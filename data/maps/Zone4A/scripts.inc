@@ -15,7 +15,7 @@ Zone4A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 Zone4A_EventScript_Breeder::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_ZONE0C_EEVEE, Zone4A_EventScript_Breeder_2
+	goto_if_unset FLAG_ZONE0C_RECEIVED_EEVEE, Zone4A_EventScript_Breeder_2
 	msgbox Zone4A_EventScript_Breeder_Text_1, MSGBOX_DEFAULT
 Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1
@@ -27,7 +27,7 @@ Zone4A_EventScript_Breeder_8:
 	msgbox Zone4A_EventScript_Breeder_Text_14, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	removeobject 3
-	setflag FLAG_RECEIVED_ZONE4A_GEM
+	setflag FLAG_ZONE4A_RECEIVED_GEM
 	fadescreen FADE_FROM_BLACK
 	release
 	return

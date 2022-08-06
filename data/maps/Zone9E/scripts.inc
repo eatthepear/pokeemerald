@@ -50,7 +50,7 @@ Zone9E_EventScript_BuyGrassStarter_2:
 	end
 
 Zone9E_EventScript_BuyGrassStarter_4:
-	goto_if_set FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER, Zone9E_EventScript_BuyGrassStarter_2
+	goto_if_set FLAG_TEMP_1, Zone9E_EventScript_BuyGrassStarter_2
 	goto Zone9E_EventScript_BuyGrassStarter_3
 
 Zone9E_EventScript_BuyGrassStarter_7:
@@ -74,7 +74,7 @@ Zone9E_EventScript_BuyGrassStarter_17:
 Zone9E_EventScript_BuyGrassStarter_21:
 	compare VAR_TEMP_2, 0
 	goto_if_eq Zone9E_EventScript_BuyGrassStarter_22
-	setflag FLAG_NUZLOCKE_ZONE9E_BOUGHT_GRASS_STARTER
+	setflag FLAG_TEMP_1
 	goto Zone9E_EventScript_BuyGrassStarter_16
 
 Zone9E_EventScript_BuyGrassStarter_22:

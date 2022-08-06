@@ -126,7 +126,7 @@ Zone2B_EventScript_BuyBug_2:
 	end
 
 Zone2B_EventScript_BuyBug_4:
-	goto_if_set FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG, Zone2B_EventScript_BuyBug_2
+	goto_if_set FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG, Zone2B_EventScript_BuyBug_2
 	goto Zone2B_EventScript_BuyBug_3
 
 Zone2B_EventScript_BuyBug_7:
@@ -154,7 +154,7 @@ Zone2B_EventScript_BuyBug_17:
 	case 2, Zone2B_EventScript_BuyBug_24
 	case 3, Zone2B_EventScript_BuyBug_25
 Zone2B_EventScript_BuyBug_20:
-	setflag FLAG_NUZLOCKE_ZONE2B_BOUGHT_BUG
+	setflag FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_22:

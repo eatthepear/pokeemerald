@@ -262,7 +262,6 @@ script Zone0Sanctuary_EventScript_Intro {
 	}
 	if (flag(FLAG_RANDOMIZER_ON) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on, you get a random starter."))
-		setflag(FLAG_ZONE0B_ABILITY_CHANGE_USED)
 		callnative(GiveRandomStarter)
 		playfanfare(MUS_OBTAIN_ITEM)
 		bufferleadmonspeciesname(0)
