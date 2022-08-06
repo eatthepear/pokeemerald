@@ -462,6 +462,10 @@ static void DoStandardWildBattle(bool32 isDouble)
 
 void BattleSetup_StartRoamerBattle(void)
 {
+    if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH))
+    {
+        ShouldSkipEncounterNuzlocke = IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
+    }
     ScriptContext2_Enable();
     FreezeObjectEvents();
     StopPlayerAvatar();
@@ -530,6 +534,10 @@ void StartWallyTutorialBattle(void)
 
 void BattleSetup_StartScriptedWildBattle(void)
 {
+    if (NuzlockeFlagGet(GLOBAL_NUZLOCKE_SWITCH))
+    {
+        ShouldSkipEncounterNuzlocke = IsCaptureBlockedBySpeciesClause(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
+    }
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = 0;
@@ -1963,10 +1971,13 @@ u16 CountBattledRematchTeams(u16 trainerId)
 u8 IsCaptureBlockedBySpeciesClause(u16 species)
 {
     u8 i;
+    if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
+        return TRUE;
+    
     for (i = 0; i < EVOS_PER_LINE; i++)
     {
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gEvolutionLines[species][i]), FLAG_GET_CAUGHT))
-            return 1;
+            return TRUE;
     }
-    return 0;
+    return FALSE;
 }
