@@ -121,7 +121,7 @@
 
 #define WORST_IVS                1
 
-#define ABILITY_SLOT_1 3
+#define ABILITY_SLOT_1 0
 #define ABILITY_SLOT_2 1
 #define ABILITY_HIDDEN 2
 

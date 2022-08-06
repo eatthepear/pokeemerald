@@ -1895,7 +1895,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 trainerName[(PLAYER_NAME_LENGTH * 3) + 1];
     u8 ability, gender;
     u32 status;
-    u16 randomizedIndices[monsCount];
+    u16 randomizedIndices[PARTY_SIZE];
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
@@ -1904,8 +1904,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                                                                         | BATTLE_TYPE_EREADER_TRAINER
                                                                         | BATTLE_TYPE_TRAINER_HILL)))
     {
-        const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
-
         if (firstTrainer == TRUE)
             ZeroEnemyPartyMons();
 
@@ -1932,10 +1930,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
         for (i = 0; i < monsCount; i++)
         {
-            if (gTrainers[trainerNum].shouldShuffle == FALSE) {
-                k = i;
-            } else {
+            const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
+            
+            if (gTrainers[trainerNum].shouldShuffle == TRUE) {
                 k = randomizedIndices[i];
+            } else {
+                k = i;
             }
 
 // Comment out the following line if you have changed .iv to go 0-31, instead of 0-255 as in vanilla.
@@ -2001,8 +2001,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             {
                 ability = partyData[k].ability;
 
-                if (partyData[k].ability == ABILITY_SLOT_1)
-                    ability = 0;
+                // if (partyData[k].ability == ABILITY_SLOT_1)
+                //     ability = 0;
 
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
             }
