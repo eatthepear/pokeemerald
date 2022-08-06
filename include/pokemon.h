@@ -401,7 +401,6 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum);
 void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature);
 void DeletePartyMon(u8 position);
 void DeleteFaintedPartyPokemon(void);
-void SetEeveeGivenAtEncounter(void);
 void GiveRandomStarter(void);
 u16 GetRandomSpecies(u8 wildMonLevel);
 u16 GetFormSpeciesId(u16 speciesId, u8 formId);

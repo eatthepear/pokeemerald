@@ -1695,6 +1695,8 @@ bool8 ScrCmd_givemon(struct ScriptContext *ctx)
 
     if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
     {
+        if (FlagGet(FLAG_NUZLOCKE_ON))
+            FlagSet(FLAG_SHOULD_CHECK_SPECIES_CLAUSE);
         species = GetRandomSpecies(level);
     }
     gSpecialVar_Result = ScriptGiveMon(species, level, item, unkParam1, unkParam2, unkParam3);
@@ -2384,6 +2386,8 @@ bool8 ScrCmd_givecustommon(struct ScriptContext *ctx)
     
     if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
     {
+        if (FlagGet(FLAG_NUZLOCKE_ON))
+            FlagSet(FLAG_SHOULD_CHECK_SPECIES_CLAUSE);
         species = GetRandomSpecies(level);
     }
 

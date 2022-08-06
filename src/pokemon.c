@@ -10293,18 +10293,6 @@ void DeleteFaintedPartyPokemon(void)
     CompactPartySlots();
 }
 
-void SetEeveeGivenAtEncounter(void)
-{
-    u8 i;
-    u8 metLocation = METLOC_DAYCARE_GIVEAWAY;
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        if ((GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_EEVEE) && (GetMonData(&gPlayerParty[i], MON_DATA_MET_LOCATION, NULL) == MAPSEC_ZONE_0))
-           break;
-    }
-    SetMonData(&gPlayerParty[i], MON_DATA_MET_LOCATION, &metLocation);
-}
-
 void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature)
 {
     u32 personality;
@@ -10442,11 +10430,25 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
 u16 GetRandomSpecies(u8 wildMonLevel)
 {
     u16 species;
+
     memcpy(sRandomSpecies, sSpeciesToRandomize, sizeof(sSpeciesToRandomize));
     ShuffleList(sRandomSpecies, RANDOM_SPECIES_COUNT);
 
     // sRandomSpecies only contains the base form Pokemon
     species = sRandomSpecies[0];
+
+    if (FlagGet(FLAG_SHOULD_CHECK_SPECIES_CLAUSE))
+    {
+        while (IsCaptureBlockedBySpeciesClause(species))
+        {
+            memcpy(sRandomSpecies, sSpeciesToRandomize, sizeof(sSpeciesToRandomize));
+            ShuffleList(sRandomSpecies, RANDOM_SPECIES_COUNT);
+
+            // sRandomSpecies only contains the base form Pokemon
+            species = sRandomSpecies[0];
+        }
+        FlagClear(FLAG_SHOULD_CHECK_SPECIES_CLAUSE);
+    }
 
     // Only level evolutions are factored in, and only the first one (so third stage evolutions never appear)
     if (gEvolutionTable[species][0].method == EVO_LEVEL)

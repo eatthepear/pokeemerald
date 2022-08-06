@@ -54,6 +54,8 @@ Zone5A_EventScript_LeviathanBattle::
 	compare VAR_TEMP_0, 27
 	goto_if_eq Zone5A_EventScript_LeviathanBattle_3
 Zone5A_EventScript_LeviathanBattle_1:
+	setvar VAR_TEMP_0, 0
+	setvar VAR_TEMP_1, 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone5A_EventScript_LeviathanBattle_7
@@ -151,32 +153,32 @@ Zone5A_EventScript_BuyPikaClone_3:
 	checkmoney 3000, 0
 	compare VAR_RESULT, FALSE
 	goto_if_eq Zone5A_EventScript_BuyPikaClone_10
-	specialvar VAR_TEMP_3, CalculatePlayerPartyCount
-	compare VAR_TEMP_3, PARTY_SIZE
+	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
+	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone5A_EventScript_BuyPikaClone_14
-	removemoney 3000, 0
+	removemoney 3000
 	updatemoneybox
 	msgbox Zone5A_EventScript_BuyPikaClone_Text_5
 	closemessage
 	hidemoneybox
 	goto_if_set FLAG_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_17
-	msgbox Zone5A_EventScript_BuyPikaClone_Text_6, MSGBOX_DEFAULT
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_7, MSGBOX_DEFAULT
 	multichoice2 21, 0, Zone5A_Text_PikaCloneMultichoice, TRUE
 	switch VAR_RESULT
-	case 0, Zone5A_EventScript_BuyPikaClone_27
-	case 1, Zone5A_EventScript_BuyPikaClone_28
-	case 2, Zone5A_EventScript_BuyPikaClone_29
-	case 3, Zone5A_EventScript_BuyPikaClone_30
+	case 0, Zone5A_EventScript_BuyPikaClone_25
+	case 1, Zone5A_EventScript_BuyPikaClone_26
+	case 2, Zone5A_EventScript_BuyPikaClone_27
+	case 3, Zone5A_EventScript_BuyPikaClone_28
 Zone5A_EventScript_BuyPikaClone_16:
-	givemon VAR_TEMP_2, 10, ITEM_NONE
-	setmonmetlocation VAR_TEMP_3, 250
-	bufferspeciesname 0, VAR_TEMP_2
-	msgbox Zone5A_EventScript_BuyPikaClone_Text_7, MSGBOX_DEFAULT
+	givemon VAR_TEMP_1, 10, ITEM_NONE
+	setmonmetlocation VAR_TEMP_2, 250
+	bufferspeciesname 0, VAR_TEMP_1
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_8, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone5A_EventScript_BuyPikaClone_Text_8
+	message Zone5A_EventScript_BuyPikaClone_Text_9
 	waitmessage
 	waitfanfare
-	msgbox Zone5A_EventScript_BuyPikaClone_Text_9
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_10
 Zone5A_EventScript_BuyPikaClone_1:
 	release
 	end
@@ -208,47 +210,123 @@ Zone5A_EventScript_BuyPikaClone_14:
 	end
 
 Zone5A_EventScript_BuyPikaClone_17:
-	random 4
-	switch VAR_RESULT
-	case 0, Zone5A_EventScript_BuyPikaClone_22
-	case 1, Zone5A_EventScript_BuyPikaClone_23
-	case 2, Zone5A_EventScript_BuyPikaClone_24
-	case 3, Zone5A_EventScript_BuyPikaClone_25
+	goto_if_set FLAG_RANDOMIZER_ON, Zone5A_EventScript_BuyPikaClone_21
+	setvar VAR_TEMP_3, 0
+	checkspeciesclause SPECIES_DEDENNE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_30
+Zone5A_EventScript_BuyPikaClone_29:
+	checkspeciesclause SPECIES_EMOLGA
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_33
+Zone5A_EventScript_BuyPikaClone_32:
+	checkspeciesclause SPECIES_MORPEKO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_36
+Zone5A_EventScript_BuyPikaClone_35:
+	checkspeciesclause SPECIES_PACHIRISU
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_39
+Zone5A_EventScript_BuyPikaClone_38:
+	compare VAR_TEMP_3, 4
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_42
+Zone5A_EventScript_BuyPikaClone_44:
+	compare VAR_TEMP_1, 0
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_45
 Zone5A_EventScript_BuyPikaClone_20:
 	setflag FLAG_ZONE5A_NUZLOCKE_BOUGHT_PIKACLONE
 	goto Zone5A_EventScript_BuyPikaClone_16
 
-Zone5A_EventScript_BuyPikaClone_22:
-	setvar VAR_TEMP_2, SPECIES_DEDENNE
-	goto Zone5A_EventScript_BuyPikaClone_20
-
-Zone5A_EventScript_BuyPikaClone_23:
-	setvar VAR_TEMP_2, SPECIES_EMOLGA
-	goto Zone5A_EventScript_BuyPikaClone_20
-
-Zone5A_EventScript_BuyPikaClone_24:
-	setvar VAR_TEMP_2, SPECIES_MORPEKO
+Zone5A_EventScript_BuyPikaClone_21:
+	setvar VAR_TEMP_1, SPECIES_DEDENNE
 	goto Zone5A_EventScript_BuyPikaClone_20
 
 Zone5A_EventScript_BuyPikaClone_25:
-	setvar VAR_TEMP_2, SPECIES_PACHIRISU
-	goto Zone5A_EventScript_BuyPikaClone_20
+	setvar VAR_TEMP_1, SPECIES_DEDENNE
+	goto Zone5A_EventScript_BuyPikaClone_16
+
+Zone5A_EventScript_BuyPikaClone_26:
+	setvar VAR_TEMP_1, SPECIES_EMOLGA
+	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_27:
-	setvar VAR_TEMP_2, SPECIES_DEDENNE
+	setvar VAR_TEMP_1, SPECIES_MORPEKO
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_28:
-	setvar VAR_TEMP_2, SPECIES_EMOLGA
-	goto Zone5A_EventScript_BuyPikaClone_16
-
-Zone5A_EventScript_BuyPikaClone_29:
-	setvar VAR_TEMP_2, SPECIES_MORPEKO
+	setvar VAR_TEMP_1, SPECIES_PACHIRISU
 	goto Zone5A_EventScript_BuyPikaClone_16
 
 Zone5A_EventScript_BuyPikaClone_30:
-	setvar VAR_TEMP_2, SPECIES_PACHIRISU
-	goto Zone5A_EventScript_BuyPikaClone_16
+	addvar VAR_TEMP_3, 1
+	goto Zone5A_EventScript_BuyPikaClone_29
+
+Zone5A_EventScript_BuyPikaClone_33:
+	addvar VAR_TEMP_3, 1
+	goto Zone5A_EventScript_BuyPikaClone_32
+
+Zone5A_EventScript_BuyPikaClone_36:
+	addvar VAR_TEMP_3, 1
+	goto Zone5A_EventScript_BuyPikaClone_35
+
+Zone5A_EventScript_BuyPikaClone_39:
+	addvar VAR_TEMP_3, 1
+	goto Zone5A_EventScript_BuyPikaClone_38
+
+Zone5A_EventScript_BuyPikaClone_42:
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_6
+	addmoney 3000
+	release
+	end
+
+Zone5A_EventScript_BuyPikaClone_45:
+	random 4
+	switch VAR_RESULT
+	case 0, Zone5A_EventScript_BuyPikaClone_48
+	case 1, Zone5A_EventScript_BuyPikaClone_49
+	case 2, Zone5A_EventScript_BuyPikaClone_50
+	case 3, Zone5A_EventScript_BuyPikaClone_51
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_48:
+	checkspeciesclause SPECIES_DEDENNE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_53
+	setvar VAR_TEMP_1, SPECIES_DEDENNE
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_49:
+	checkspeciesclause SPECIES_EMOLGA
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_56
+	setvar VAR_TEMP_1, SPECIES_EMOLGA
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_50:
+	checkspeciesclause SPECIES_MORPEKO
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_59
+	setvar VAR_TEMP_1, SPECIES_MORPEKO
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_51:
+	checkspeciesclause SPECIES_PACHIRISU
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone5A_EventScript_BuyPikaClone_62
+	setvar VAR_TEMP_1, SPECIES_PACHIRISU
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_53:
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_56:
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_59:
+	goto Zone5A_EventScript_BuyPikaClone_44
+
+Zone5A_EventScript_BuyPikaClone_62:
+	goto Zone5A_EventScript_BuyPikaClone_44
 
 
 Zone5A_EventScript_ItemQuickBall::
@@ -517,17 +595,22 @@ Zone5A_EventScript_BuyPikaClone_Text_5:
 	.string "I appreciate it!$"
 
 Zone5A_EventScript_BuyPikaClone_Text_6:
+	.string "Unfortunately, you have already\n"
+	.string "obtained a Pokémon in each of these\l"
+	.string "evolution lines.$"
+
+Zone5A_EventScript_BuyPikaClone_Text_7:
 	.string "Choose which Pikachu clone you would\n"
 	.string "like.$"
 
-Zone5A_EventScript_BuyPikaClone_Text_7:
+Zone5A_EventScript_BuyPikaClone_Text_8:
 	.string "Here's your {STR_VAR_1}.$"
 
-Zone5A_EventScript_BuyPikaClone_Text_8:
+Zone5A_EventScript_BuyPikaClone_Text_9:
 	.string "{PLAYER} received the\n"
 	.string "{STR_VAR_1}!$"
 
-Zone5A_EventScript_BuyPikaClone_Text_9:
+Zone5A_EventScript_BuyPikaClone_Text_10:
 	.string "Take good care of your new\n"
 	.string "Electric-type, small mammal-like\l"
 	.string "Pokémon!$"

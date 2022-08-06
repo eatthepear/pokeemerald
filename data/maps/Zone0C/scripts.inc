@@ -8,13 +8,14 @@ Zone0C_EventScript_EeveeGirl_4:
 	msgbox Zone0C_Text_EeveeGiveaway, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Zone0C_EventScript_EeveeGirl_10
-	getpartysize
-	compare VAR_RESULT, PARTY_SIZE
+	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
+	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone0C_EventScript_EeveeGirl_13
 	msgbox Zone0C_Text_SureThing, MSGBOX_DEFAULT
+	goto_if_set FLAG_NUZLOCKE_ON, Zone0C_EventScript_EeveeGirl_17
+Zone0C_EventScript_EeveeGirl_15:
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
-	callnative SetEeveeGivenAtEncounter
-	setvar VAR_TEMP_1, SPECIES_EEVEE
+	setmonmetlocation VAR_TEMP_2, 252
 	playfanfare MUS_OBTAIN_ITEM
 	message Zone0C_Text_ReceivedEevee
 	waitmessage
@@ -22,8 +23,8 @@ Zone0C_EventScript_EeveeGirl_4:
 	bufferspeciesname 0, SPECIES_EEVEE
 	msgbox Zone0C_Text_HowBoutNickname, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0C_EventScript_EeveeGirl_16
-Zone0C_EventScript_EeveeGirl_15:
+	goto_if_eq Zone0C_EventScript_EeveeGirl_21
+Zone0C_EventScript_EeveeGirl_20:
 	setflag FLAG_ZONE0C_RECEIVED_EEVEE
 	goto Zone0C_EventScript_EeveeUnique
 	return
@@ -54,14 +55,30 @@ Zone0C_EventScript_EeveeGirl_10:
 	end
 
 Zone0C_EventScript_EeveeGirl_13:
-	msgbox Zone0C_Text_CantGive
+	msgbox Zone0C_EventScript_EeveeGirl_Text_0
+	hidemoneybox
 	release
 	end
 
 Zone0C_EventScript_EeveeGirl_16:
+	checkspeciesclause SPECIES_EEVEE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone0C_EventScript_EeveeGirl_23
+	goto Zone0C_EventScript_EeveeGirl_15
+
+Zone0C_EventScript_EeveeGirl_17:
+	goto_if_unset FLAG_RANDOMIZER_ON, Zone0C_EventScript_EeveeGirl_16
+	goto Zone0C_EventScript_EeveeGirl_15
+
+Zone0C_EventScript_EeveeGirl_21:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0C_EventScript_EeveeGirl_15
+	goto Zone0C_EventScript_EeveeGirl_20
+
+Zone0C_EventScript_EeveeGirl_23:
+	msgbox Zone0C_EventScript_EeveeGirl_Text_1
+	release
+	end
 
 
 Zone0C_EventScript_EeveeUnique::
@@ -125,10 +142,6 @@ Zone0C_EventScript_BreederM_5:
 
 Zone0C_MapScripts::
 	.byte 0
-
-Zone0C_Text_CantGive:
-	.string "Looks like you've got a full party.\n"
-	.string "Make some space, then come back!$"
 
 Zone0C_Text_EeveeGiveaway:
 	.string "Hiya!\p"
@@ -446,6 +459,15 @@ Zone0C_PokemonDayCare_Text_YoullBeLeftWithJustOne:
 	.string "me, you'll be left with just one.\p"
 	.string "You will be better off if you catch\n"
 	.string "some more, I dare say.$"
+
+Zone0C_EventScript_EeveeGirl_Text_0:
+	.string "Looks like you've got a full party.\n"
+	.string "Make some space, then come back!$"
+
+Zone0C_EventScript_EeveeGirl_Text_1:
+	.string "Unfortunately, you have already\n"
+	.string "obtained a Pokémon in Eevee's\l"
+	.string "evolution lines.$"
 
 Zone0C_EventScript_BreederM_Text_0:
 	.string "Hey there! Would you like to see some\n"

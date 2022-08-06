@@ -94,8 +94,8 @@ script Zone2B_EventScript_BuyBug {
 				msgbox("You don't have enough money.")
 				hidemoneybox
 			} else {
-				specialvar(VAR_TEMP_1, CalculatePlayerPartyCount)
-				if (var(VAR_TEMP_1) == PARTY_SIZE) {
+				specialvar(VAR_TEMP_2, CalculatePlayerPartyCount)
+				if (var(VAR_TEMP_2) == PARTY_SIZE) {
 					msgbox(format("Your party is full. Clear a party slot, then come back."))
 					hidemoneybox
 					release
@@ -107,80 +107,80 @@ script Zone2B_EventScript_BuyBug {
 				closemessage
 				hidemoneybox
 				if (flag(FLAG_NUZLOCKE_ON) == true) {
-					while (var(VAR_TEMP_0) == 0) {
-						if (flag(FLAG_RANDOMIZER_ON) == true) {
-							setvar(VAR_TEMP_0, SPECIES_BULBASAUR) // gets randomized anyways
-							continue
-						}
-						setvar(VAR_TEMP_2, 0)
+					if (flag(FLAG_RANDOMIZER_ON) == true) {
+						setvar(VAR_TEMP_1, SPECIES_BLIPBUG) // gets randomized anyways
+					} else {
+						setvar(VAR_TEMP_3, 0)
 						checkspeciesclause(SPECIES_BLIPBUG)
 						if (var(VAR_RESULT) == TRUE) {
-							addvar(VAR_TEMP_2, 1)
+							addvar(VAR_TEMP_3, 1)
 						}
 						checkspeciesclause(SPECIES_GRUBBIN)
 						if (var(VAR_RESULT) == TRUE) {
-							addvar(VAR_TEMP_2, 1)
+							addvar(VAR_TEMP_3, 1)
 						}
 						checkspeciesclause(SPECIES_SEWADDLE)
 						if (var(VAR_RESULT) == TRUE) {
-							addvar(VAR_TEMP_2, 1)
+							addvar(VAR_TEMP_3, 1)
 						}
 						checkspeciesclause(SPECIES_VENIPEDE)
 						if (var(VAR_RESULT) == TRUE) {
-							addvar(VAR_TEMP_2, 1)
+							addvar(VAR_TEMP_3, 1)
 						}
-						if (var(VAR_TEMP_2) == 4) {
+						if (var(VAR_TEMP_3) == 4) {
 							msgbox(format("Unfortunately, you have already obtained a Pokémon in each of these evolution lines."))
 							addmoney(1000)
 							release
 							end
 						}
-                        random(4)
-                        switch (var(VAR_RESULT)) {
-                            case 0:
-								checkspeciesclause(SPECIES_BLIPBUG)
-								if (var(VAR_RESULT) == TRUE) {
-									continue
-								}
-								setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
-                            case 1:
-								checkspeciesclause(SPECIES_GRUBBIN)
-								if (var(VAR_RESULT) == TRUE) {
-									continue
-								}
-								setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
-                            case 2:
-								checkspeciesclause(SPECIES_SEWADDLE)
-								if (var(VAR_RESULT) == TRUE) {
-									continue
-								}
-								setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
-                            case 3:
-								checkspeciesclause(SPECIES_VENIPEDE)
-								if (var(VAR_RESULT) == TRUE) {
-									continue
-								}
-								setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
-                        }
-                    }
+						while (var(VAR_TEMP_1) == 0) {
+							random(4)
+							switch (var(VAR_RESULT)) {
+								case 0:
+									checkspeciesclause(SPECIES_BLIPBUG)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_BLIPBUG)
+								case 1:
+									checkspeciesclause(SPECIES_GRUBBIN)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_GRUBBIN)
+								case 2:
+									checkspeciesclause(SPECIES_SEWADDLE)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_SEWADDLE)
+								case 3:
+									checkspeciesclause(SPECIES_VENIPEDE)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_VENIPEDE)
+							}
+						}
+					}
 					setflag(FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG)
 				} else {
 					msgbox(format("Choose which Bug you would like."), MSGBOX_DEFAULT)
 					multichoice2(21, 0, Zone2B_Text_BugMultichoice, TRUE)
 					switch (var(VAR_RESULT)) {
 						case 0:
-							setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
+							setvar(VAR_TEMP_1, SPECIES_BLIPBUG)
 						case 1:
-							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
+							setvar(VAR_TEMP_1, SPECIES_GRUBBIN)
 						case 2:
-							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
+							setvar(VAR_TEMP_1, SPECIES_SEWADDLE)
 						case 3:
-							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
+							setvar(VAR_TEMP_1, SPECIES_VENIPEDE)
 					}
 				}
-				givemon(VAR_TEMP_0, 5, ITEM_NONE)
-				setmonmetlocation(VAR_TEMP_1, 251)
-				bufferspeciesname(0, VAR_TEMP_0)
+				givemon(VAR_TEMP_1, 5, ITEM_NONE)
+				setmonmetlocation(VAR_TEMP_2, 251)
+				bufferspeciesname(0, VAR_TEMP_1)
 				msgbox("Here's your {STR_VAR_1}.")
 				playfanfare(MUS_OBTAIN_ITEM)
 				message(format("{PLAYER} received the {STR_VAR_1}!"))

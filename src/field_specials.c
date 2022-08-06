@@ -4748,5 +4748,5 @@ void NewGameSetup(void)
 
 bool8 CheckSpeciesClause(void)
 {
-    return IsCaptureBlockedBySpeciesClause(VarGet(VAR_TEMP_1));
+    return IsCaptureBlockedBySpeciesClause(VarGet(VAR_TEMP_0));
 }

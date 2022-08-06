@@ -2238,6 +2238,6 @@
     @ Checks if it is a blocked Pokemon under Species Clause
     @ The result is stored in VAR_RESULT
     .macro checkspeciesclause species:req
-    setvar VAR_TEMP_1, \species
+    setvar VAR_TEMP_0, \species
     specialvar VAR_RESULT, CheckSpeciesClause
     .endm

@@ -21,16 +21,24 @@ script Zone0C_EventScript_EeveeGirl {
 		release
 		end
 	}
-	getpartysize
-	if (var(VAR_RESULT) == PARTY_SIZE) {
-		msgbox(Zone0C_Text_CantGive)
+	specialvar(VAR_TEMP_2, CalculatePlayerPartyCount)
+	if (var(VAR_TEMP_2) == PARTY_SIZE) {
+		msgbox("Looks like you've got a full party.\n""Make some space, then come back!")
+		hidemoneybox
 		release
 		end
 	}
 	msgbox(Zone0C_Text_SureThing, MSGBOX_DEFAULT)
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_RANDOMIZER_ON) == false) {
+		checkspeciesclause(SPECIES_EEVEE)
+		if (var(VAR_RESULT) == TRUE) {
+			msgbox(format("Unfortunately, you have already obtained a Pokémon in Eevee's evolution lines."))
+			release
+			end
+		}
+	}
 	givemon(SPECIES_EEVEE, 5, ITEM_NONE)
-	callnative(SetEeveeGivenAtEncounter)
-	setvar(VAR_TEMP_1, SPECIES_EEVEE)
+	setmonmetlocation(VAR_TEMP_2, 252)
 	playfanfare(MUS_OBTAIN_ITEM)
 	message(Zone0C_Text_ReceivedEevee)
 	waitmessage
@@ -105,10 +113,6 @@ text Zone0C_Text_Pokedex {
 raw `
 Zone0C_MapScripts::
 	.byte 0
-
-Zone0C_Text_CantGive:
-	.string "Looks like you've got a full party.\n"
-	.string "Make some space, then come back!$"
 
 Zone0C_Text_EeveeGiveaway:
 	.string "Hiya!\p"
