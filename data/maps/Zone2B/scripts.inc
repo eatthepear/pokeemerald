@@ -93,29 +93,29 @@ Zone2B_EventScript_BuyBug_3:
 	specialvar VAR_TEMP_1, CalculatePlayerPartyCount
 	compare VAR_TEMP_1, PARTY_SIZE
 	goto_if_eq Zone2B_EventScript_BuyBug_14
-	removemoney 1000, 0
+	removemoney 1000
 	updatemoneybox
 	msgbox Zone2B_EventScript_BuyBug_Text_5
 	closemessage
 	hidemoneybox
 	goto_if_set FLAG_NUZLOCKE_ON, Zone2B_EventScript_BuyBug_17
-	msgbox Zone2B_EventScript_BuyBug_Text_6, MSGBOX_DEFAULT
+	msgbox Zone2B_EventScript_BuyBug_Text_7, MSGBOX_DEFAULT
 	multichoice2 21, 0, Zone2B_Text_BugMultichoice, TRUE
 	switch VAR_RESULT
-	case 0, Zone2B_EventScript_BuyBug_27
-	case 1, Zone2B_EventScript_BuyBug_28
-	case 2, Zone2B_EventScript_BuyBug_29
-	case 3, Zone2B_EventScript_BuyBug_30
+	case 0, Zone2B_EventScript_BuyBug_25
+	case 1, Zone2B_EventScript_BuyBug_26
+	case 2, Zone2B_EventScript_BuyBug_27
+	case 3, Zone2B_EventScript_BuyBug_28
 Zone2B_EventScript_BuyBug_16:
 	givemon VAR_TEMP_0, 5, ITEM_NONE
 	setmonmetlocation VAR_TEMP_1, 251
 	bufferspeciesname 0, VAR_TEMP_0
-	msgbox Zone2B_EventScript_BuyBug_Text_7
+	msgbox Zone2B_EventScript_BuyBug_Text_8
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone2B_EventScript_BuyBug_Text_8
+	message Zone2B_EventScript_BuyBug_Text_9
 	waitmessage
 	waitfanfare
-	msgbox Zone2B_EventScript_BuyBug_Text_9
+	msgbox Zone2B_EventScript_BuyBug_Text_10
 Zone2B_EventScript_BuyBug_1:
 	release
 	end
@@ -147,47 +147,122 @@ Zone2B_EventScript_BuyBug_14:
 	end
 
 Zone2B_EventScript_BuyBug_17:
-	random 4
-	switch VAR_RESULT
-	case 0, Zone2B_EventScript_BuyBug_22
-	case 1, Zone2B_EventScript_BuyBug_23
-	case 2, Zone2B_EventScript_BuyBug_24
-	case 3, Zone2B_EventScript_BuyBug_25
-Zone2B_EventScript_BuyBug_20:
+Zone2B_EventScript_BuyBug_21:
+	compare VAR_TEMP_0, 0
+	goto_if_eq Zone2B_EventScript_BuyBug_22
 	setflag FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_22:
-	setvar VAR_TEMP_0, SPECIES_BLIPBUG
-	goto Zone2B_EventScript_BuyBug_20
-
-Zone2B_EventScript_BuyBug_23:
-	setvar VAR_TEMP_0, SPECIES_GRUBBIN
-	goto Zone2B_EventScript_BuyBug_20
-
-Zone2B_EventScript_BuyBug_24:
-	setvar VAR_TEMP_0, SPECIES_SEWADDLE
-	goto Zone2B_EventScript_BuyBug_20
+	goto_if_set FLAG_RANDOMIZER_ON, Zone2B_EventScript_BuyBug_30
+	setvar VAR_TEMP_2, 0
+	checkspeciesclause SPECIES_BLIPBUG
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_33
+Zone2B_EventScript_BuyBug_32:
+	checkspeciesclause SPECIES_GRUBBIN
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_36
+Zone2B_EventScript_BuyBug_35:
+	checkspeciesclause SPECIES_SEWADDLE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_39
+Zone2B_EventScript_BuyBug_38:
+	checkspeciesclause SPECIES_VENIPEDE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_42
+Zone2B_EventScript_BuyBug_41:
+	compare VAR_TEMP_2, 4
+	goto_if_eq Zone2B_EventScript_BuyBug_45
+	random 4
+	switch VAR_RESULT
+	case 0, Zone2B_EventScript_BuyBug_48
+	case 1, Zone2B_EventScript_BuyBug_49
+	case 2, Zone2B_EventScript_BuyBug_50
+	case 3, Zone2B_EventScript_BuyBug_51
+	goto Zone2B_EventScript_BuyBug_21
 
 Zone2B_EventScript_BuyBug_25:
-	setvar VAR_TEMP_0, SPECIES_VENIPEDE
-	goto Zone2B_EventScript_BuyBug_20
+	setvar VAR_TEMP_0, SPECIES_BLIPBUG
+	goto Zone2B_EventScript_BuyBug_16
+
+Zone2B_EventScript_BuyBug_26:
+	setvar VAR_TEMP_0, SPECIES_GRUBBIN
+	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_27:
-	setvar VAR_TEMP_0, SPECIES_BLIPBUG
+	setvar VAR_TEMP_0, SPECIES_SEWADDLE
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_28:
-	setvar VAR_TEMP_0, SPECIES_GRUBBIN
-	goto Zone2B_EventScript_BuyBug_16
-
-Zone2B_EventScript_BuyBug_29:
-	setvar VAR_TEMP_0, SPECIES_SEWADDLE
+	setvar VAR_TEMP_0, SPECIES_VENIPEDE
 	goto Zone2B_EventScript_BuyBug_16
 
 Zone2B_EventScript_BuyBug_30:
+	setvar VAR_TEMP_0, SPECIES_BULBASAUR
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_33:
+	addvar VAR_TEMP_2, 1
+	goto Zone2B_EventScript_BuyBug_32
+
+Zone2B_EventScript_BuyBug_36:
+	addvar VAR_TEMP_2, 1
+	goto Zone2B_EventScript_BuyBug_35
+
+Zone2B_EventScript_BuyBug_39:
+	addvar VAR_TEMP_2, 1
+	goto Zone2B_EventScript_BuyBug_38
+
+Zone2B_EventScript_BuyBug_42:
+	addvar VAR_TEMP_2, 1
+	goto Zone2B_EventScript_BuyBug_41
+
+Zone2B_EventScript_BuyBug_45:
+	msgbox Zone2B_EventScript_BuyBug_Text_6
+	addmoney 1000
+	release
+	end
+
+Zone2B_EventScript_BuyBug_48:
+	checkspeciesclause SPECIES_BLIPBUG
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_53
+	setvar VAR_TEMP_0, SPECIES_BLIPBUG
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_49:
+	checkspeciesclause SPECIES_GRUBBIN
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_56
+	setvar VAR_TEMP_0, SPECIES_GRUBBIN
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_50:
+	checkspeciesclause SPECIES_SEWADDLE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_59
+	setvar VAR_TEMP_0, SPECIES_SEWADDLE
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_51:
+	checkspeciesclause SPECIES_VENIPEDE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone2B_EventScript_BuyBug_62
 	setvar VAR_TEMP_0, SPECIES_VENIPEDE
-	goto Zone2B_EventScript_BuyBug_16
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_53:
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_56:
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_59:
+	goto Zone2B_EventScript_BuyBug_21
+
+Zone2B_EventScript_BuyBug_62:
+	goto Zone2B_EventScript_BuyBug_21
 
 
 Zone2B_EventScript_ItemPotion::
@@ -286,16 +361,21 @@ Zone2B_EventScript_BuyBug_Text_5:
 	.string "Ehehehe, thank you…$"
 
 Zone2B_EventScript_BuyBug_Text_6:
-	.string "Choose which Bug you would like.$"
+	.string "Unfortunately, you have already\n"
+	.string "obtained a Pokémon in each of these\l"
+	.string "evolution lines.$"
 
 Zone2B_EventScript_BuyBug_Text_7:
-	.string "Here's your {STR_VAR_1}.$"
+	.string "Choose which Bug you would like.$"
 
 Zone2B_EventScript_BuyBug_Text_8:
+	.string "Here's your {STR_VAR_1}.$"
+
+Zone2B_EventScript_BuyBug_Text_9:
 	.string "{PLAYER} received the\n"
 	.string "{STR_VAR_1}!$"
 
-Zone2B_EventScript_BuyBug_Text_9:
+Zone2B_EventScript_BuyBug_Text_10:
 	.string "Pleasure doing business with you.$"
 
 Zone2B_Text_Leviathan2WantBattle::

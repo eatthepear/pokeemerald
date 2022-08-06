@@ -4745,3 +4745,8 @@ void NewGameSetup(void)
     SetMonData(&gPlayerParty[0], MON_DATA_MET_LOCATION, &metLocation);
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
 }
+
+bool8 CheckSpeciesClause(void)
+{
+    return IsCaptureBlockedBySpeciesClause(VarGet(VAR_TEMP_1));
+}

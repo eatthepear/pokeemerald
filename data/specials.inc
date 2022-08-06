@@ -552,3 +552,4 @@ gSpecials::
 	def_special GetNumHiddenItemsFound
 	def_special GetNumHiddenItems
 	def_special NewGameSetup
+	def_special CheckSpeciesClause

@@ -101,23 +101,68 @@ script Zone2B_EventScript_BuyBug {
 					release
 					end
 				}
-				removemoney(1000, 0)
+				removemoney(1000)
 				updatemoneybox
 				msgbox("Ehehehe, thank you…")
 				closemessage
 				hidemoneybox
 				if (flag(FLAG_NUZLOCKE_ON) == true) {
-					random(4)
-					switch (var(VAR_RESULT)) {
-						case 0:
-							setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
-						case 1:
-							setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
-						case 2:
-							setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
-						case 3:
-							setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
-					}
+					while (var(VAR_TEMP_0) == 0) {
+						if (flag(FLAG_RANDOMIZER_ON) == true) {
+							setvar(VAR_TEMP_0, SPECIES_BULBASAUR) // gets randomized anyways
+							continue
+						}
+						setvar(VAR_TEMP_2, 0)
+						checkspeciesclause(SPECIES_BLIPBUG)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_2, 1)
+						}
+						checkspeciesclause(SPECIES_GRUBBIN)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_2, 1)
+						}
+						checkspeciesclause(SPECIES_SEWADDLE)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_2, 1)
+						}
+						checkspeciesclause(SPECIES_VENIPEDE)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_2, 1)
+						}
+						if (var(VAR_TEMP_2) == 4) {
+							msgbox(format("Unfortunately, you have already obtained a Pokémon in each of these evolution lines."))
+							addmoney(1000)
+							release
+							end
+						}
+                        random(4)
+                        switch (var(VAR_RESULT)) {
+                            case 0:
+								checkspeciesclause(SPECIES_BLIPBUG)
+								if (var(VAR_RESULT) == TRUE) {
+									continue
+								}
+								setvar(VAR_TEMP_0, SPECIES_BLIPBUG)
+                            case 1:
+								checkspeciesclause(SPECIES_GRUBBIN)
+								if (var(VAR_RESULT) == TRUE) {
+									continue
+								}
+								setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
+                            case 2:
+								checkspeciesclause(SPECIES_SEWADDLE)
+								if (var(VAR_RESULT) == TRUE) {
+									continue
+								}
+								setvar(VAR_TEMP_0, SPECIES_SEWADDLE)
+                            case 3:
+								checkspeciesclause(SPECIES_VENIPEDE)
+								if (var(VAR_RESULT) == TRUE) {
+									continue
+								}
+								setvar(VAR_TEMP_0, SPECIES_VENIPEDE)
+                        }
+                    }
 					setflag(FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG)
 				} else {
 					msgbox(format("Choose which Bug you would like."), MSGBOX_DEFAULT)
