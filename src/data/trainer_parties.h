@@ -25,32 +25,33 @@
 static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 4,
     .species = SPECIES_POOCHYENA,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 4,
     .nature = NATURE_CALM,
     .species = SPECIES_PIDGEY,
-    .moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
 static const struct TrainerMon sParty_Mariam[] = {
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 4,
+    .nature = NATURE_BOLD,
     .species = SPECIES_SENTRET,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 4,
     .species = SPECIES_YAMPER,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 4,
+    .nature = NATURE_CALM,
     .species = SPECIES_ZIGZAGOON_GALARIAN,
     }
 };
@@ -64,6 +65,7 @@ static const struct TrainerMon sParty_Oscar[] = {
     {
     .iv = 0,
     .lvl = 5,
+    .nature = NATURE_BOLD,
     .species = SPECIES_FLETCHLING,
     },
     {
@@ -78,7 +80,7 @@ static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
     {
     .iv = 20,
     .lvl = 7,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_CAREFUL,
     .ability = ABILITY_HIDDEN, //Gluttony
     .species = SPECIES_SKWOVET,
     .heldItem = ITEM_ORAN_BERRY,
@@ -90,7 +92,7 @@ static const struct TrainerMon sParty_CoreyBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 7,
-    .nature = NATURE_BRAVE,
+    .nature = NATURE_CAREFUL,
     .ability = ABILITY_SLOT_1, //Cheek Pouch
     .species = SPECIES_SKWOVET,
     .heldItem = ITEM_ORAN_BERRY,
@@ -139,18 +141,17 @@ static const struct TrainerMon sParty_Harper[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_NIDORAN_M,
+    .species = SPECIES_PSYDUCK,
     },
     {
     .iv = 0,
     .lvl = 7,
-    .nature = NATURE_CALM,
     .species = SPECIES_LILLIPUP,
     },
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_PSYDUCK,
+    .species = SPECIES_NIDORAN_M,
     }
 };
 

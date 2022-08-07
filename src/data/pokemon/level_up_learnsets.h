@@ -276,7 +276,7 @@ static const struct LevelUpMove sBeedrillLevelUpLearnset[] = {
 
 static const struct LevelUpMove sPidgeyLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-	LEVEL_UP_MOVE( 4, MOVE_GUST),
+	LEVEL_UP_MOVE( 5, MOVE_GUST),
 	LEVEL_UP_MOVE( 7, MOVE_QUICK_ATTACK),
 	LEVEL_UP_MOVE( 9, MOVE_WING_ATTACK),
 	LEVEL_UP_MOVE(11, MOVE_SWIFT),
@@ -296,7 +296,7 @@ static const struct LevelUpMove sPidgeyLevelUpLearnset[] = {
 
 static const struct LevelUpMove sPidgeottoLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-	LEVEL_UP_MOVE( 4, MOVE_GUST),
+	LEVEL_UP_MOVE( 5, MOVE_GUST),
 	LEVEL_UP_MOVE( 7, MOVE_QUICK_ATTACK),
 	LEVEL_UP_MOVE( 9, MOVE_WING_ATTACK),
 	LEVEL_UP_MOVE(11, MOVE_SWIFT),
@@ -319,7 +319,7 @@ static const struct LevelUpMove sPidgeotLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_HEAT_WAVE),
 	LEVEL_UP_MOVE( 1, MOVE_OMINOUS_WIND),
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-	LEVEL_UP_MOVE( 4, MOVE_GUST),
+	LEVEL_UP_MOVE( 5, MOVE_GUST),
 	LEVEL_UP_MOVE( 7, MOVE_QUICK_ATTACK),
 	LEVEL_UP_MOVE( 9, MOVE_WING_ATTACK),
 	LEVEL_UP_MOVE(11, MOVE_SWIFT),
