@@ -217,7 +217,7 @@ Zone0A_Text_DayCareSign:
 	.string "8 Generations and counting!$"
 
 Zone0A_Text_TPISign:
-	.string "Teleport Institue\n"
+	.string "Teleport Institute\n"
 	.string "Getting around, easy peasy.$"
 
 Zone0A_EventScript_Porygon_Text_0:

@@ -18,7 +18,7 @@ gText_Birch_MainSpeech::
 	.string "I've designed a simulated\n"
 	.string "environment for trainers at the\l"
 	.string "highest skill level, called the\l"
-	.string "{COLOR RED}Pokémon Battle Labyrinth!{COLOR DARK_GRAY}\p"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}!\p"
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: This simulation is meant to\n"
 	.string "analyze the will, resourcefulness,\l"
 	.string "and courage of all trainers who\l"
