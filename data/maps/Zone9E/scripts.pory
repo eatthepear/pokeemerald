@@ -1,143 +1,118 @@
 mapscripts Zone9E_MapScripts {}
 
-script Zone9E_EventScript_BuyGrassStarter {
+script Zone9E_EventScript_BuyFarmAnimal {
 	lock
 	faceplayer
-	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_TEMP_1) == true) {
-		msgbox(format("The rest of these Grass starters aren't for sale anymore. Sorry about that!"))
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_ZONE9E_NUZLOCKE_BOUGHT_FARM_ANIMAL) == true) {
+		msgbox(format("Sorry, honey. The rest of these Pokémon aren't for sale anymore."))
 		release
 		end
 	} else {
 		showmoneybox(0, 0, 0)
-		msgbox(format("Hello! I work with the Pokémon Day-Care.\pWe're looking for trainers to adopt starter Pokémon.\pI have here Bulbasaur, Grookey, Treecko, or Turtwig, and the adoption fee is ¥5000!"), MSGBOX_YESNO)
+		msgbox(format("Howdy! There ain't many farms 'round these parts, so I have an offer for you.\pI'll give you a Miltank, Tauros, or Indeedee, for only ¥5000!"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == NO) {
 			closemessage
 			hidemoneybox
-			msgbox(format("Well, I'll be here if you do decide to adopt a starter."))
+			msgbox(format("Well, aren't you a downer."))
 		} else {
 			checkmoney(5000, 0)
 			if (var(VAR_RESULT) == FALSE) {
 				msgbox("You don't have enough money.")
 				hidemoneybox
 			} else {
-				specialvar(VAR_TEMP_0, CalculatePlayerPartyCount)
-				if (var(VAR_TEMP_0) == PARTY_SIZE) {
+				specialvar(VAR_TEMP_2, CalculatePlayerPartyCount)
+				if (var(VAR_TEMP_2) == PARTY_SIZE) {
 					msgbox(format("Your party is full. Clear a party slot, then come back."))
 					hidemoneybox
 					release
 					end
 				}
-				removemoney(5000, 0)
+				removemoney(5000)
 				updatemoneybox
-				msgbox("All right, forms signed, and… voila!", MSGBOX_DEFAULT)
+				msgbox("Thanks for supporting us farm folk.", MSGBOX_DEFAULT)
 				closemessage
 				hidemoneybox
 				if (flag(FLAG_NUZLOCKE_ON) == true) {
-                    while (var(VAR_TEMP_2) == 0) {
-                        random(4)
-                        switch (var(VAR_RESULT)) {
-                            case 0:
-                                if (flag(FLAG_RANDOMIZER_ON) == false) {
-                                    setvar(VAR_TEMP_1, SPECIES_BULBASAUR)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_IVYSAUR)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_VENUSAUR)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                }
-                                setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
-                            case 1:
-                                if (flag(FLAG_RANDOMIZER_ON) == false) {
-                                    setvar(VAR_TEMP_1, SPECIES_GROOKEY)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                }
-                                    setvar(VAR_TEMP_1, SPECIES_THWACKEY)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_RILLABOOM)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                setvar(VAR_TEMP_2, SPECIES_GROOKEY)
-                            case 2:
-                                if (flag(FLAG_RANDOMIZER_ON) == false) {
-                                    setvar(VAR_TEMP_1, SPECIES_TREECKO)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_GROVYLE)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_SCEPTILE)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                }
-                                setvar(VAR_TEMP_2, SPECIES_TREECKO)
-                            case 3:
-                                if (flag(FLAG_RANDOMIZER_ON) == false) {
-                                    setvar(VAR_TEMP_1, SPECIES_TURTWIG)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_GROTLE)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                    setvar(VAR_TEMP_1, SPECIES_TORTERRA)
-                                    specialvar(VAR_RESULT, GetCaughtMon)
-                                    if (var(VAR_RESULT) == TRUE) {
-                                        continue
-                                    }
-                                }
-                                setvar(VAR_TEMP_2, SPECIES_TURTWIG)
-                        }
-                    }
-					setflag(FLAG_TEMP_1)
+					if (flag(FLAG_RANDOMIZER_ON) == true) {
+						setvar(VAR_TEMP_1, SPECIES_MILTANK) // gets randomized anyways
+					} else {
+						setvar(VAR_TEMP_3, 0)
+						checkspeciesclause(SPECIES_MILTANK)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						checkspeciesclause(SPECIES_TAUROS)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						checkspeciesclause(SPECIES_INDEEDEE_FEMALE)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						checkspeciesclause(SPECIES_INDEEDEE)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						if (var(VAR_TEMP_3) == 4) {
+							msgbox(format("Unfortunately, you have already obtained a Pokémon in each of these evolution lines."))
+							addmoney(3000)
+							release
+							end
+						}
+						while (var(VAR_TEMP_1) == 0) {
+							random(4)
+							switch (var(VAR_RESULT)) {
+								case 0:
+									checkspeciesclause(SPECIES_MILTANK)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_MILTANK)
+								case 1:
+									checkspeciesclause(SPECIES_TAUROS)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_TAUROS)
+								case 2:
+									checkspeciesclause(SPECIES_INDEEDEE_FEMALE)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_INDEEDEE_FEMALE)
+								case 3:
+									checkspeciesclause(SPECIES_INDEEDEE)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_INDEEDEE)
+							}
+						}
+					}
+					setflag(FLAG_ZONE9E_NUZLOCKE_BOUGHT_FARM_ANIMAL)
 				} else {
-					msgbox(format("Choose which starter you would like."), MSGBOX_DEFAULT)
-					multichoice2(21, 0, Zone9E_Text_StarterMultichoice, TRUE)
+					msgbox(format("Choose which of these you would like."), MSGBOX_DEFAULT)
+					multichoice2(21, 0, Zone9E_Text_FarmAnimalMultichoice, TRUE)
 					switch (var(VAR_RESULT)) {
 						case 0:
-							setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+							setvar(VAR_TEMP_1, SPECIES_MILTANK)
 						case 1:
-							setvar(VAR_TEMP_2, SPECIES_GROOKEY)
+							setvar(VAR_TEMP_1, SPECIES_TAUROS)
 						case 2:
-							setvar(VAR_TEMP_2, SPECIES_TREECKO)
+							setvar(VAR_TEMP_1, SPECIES_INDEEDEE_FEMALE)
 						case 3:
-							setvar(VAR_TEMP_2, SPECIES_TURTWIG)
+							setvar(VAR_TEMP_1, SPECIES_INDEEDEE)
 					}
 				}
-				givemon(VAR_TEMP_2, 5, ITEM_NONE)
-				setmonmetlocation(VAR_TEMP_0, 249)
-				bufferspeciesname(0, VAR_TEMP_2)
+				givemon(VAR_TEMP_1, 20, ITEM_NONE)
+				setmonmetlocation(VAR_TEMP_2, 249)
+				bufferspeciesname(0, VAR_TEMP_1)
 				msgbox("Here's your {STR_VAR_1}.", MSGBOX_DEFAULT)
 				playfanfare(MUS_OBTAIN_ITEM)
 				message(format("{PLAYER} received the {STR_VAR_1}!"))
 				waitmessage
 				waitfanfare
-				msgbox(format("Take good care of that starter Pokémon!"))
+				msgbox(format("Take care of {STR_VAR_1} as well as it takes care of you!"), MSGBOX_DEFAULT)
 			}
 		}
 	}
@@ -146,10 +121,10 @@ script Zone9E_EventScript_BuyGrassStarter {
 }
 
 raw `
-Zone9E_Text_StarterMultichoice:
-    .string "Bulbasaur$"
-    .string "Grookey$"
-    .string "Treecko$"
-    .string "Turtwig$"
+Zone9E_Text_FarmAnimalMultichoice:
+    .string "Miltank$"
+    .string "Tauros$"
+    .string "Indeedee-F$"
+    .string "Indeedee-M$"
     .string "$"
 `

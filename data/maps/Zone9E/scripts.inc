@@ -2,271 +2,240 @@ Zone9E_MapScripts::
 	.byte 0
 
 
-Zone9E_EventScript_BuyGrassStarter::
+Zone9E_EventScript_BuyFarmAnimal::
 	lock
 	faceplayer
-	goto_if_set FLAG_NUZLOCKE_ON, Zone9E_EventScript_BuyGrassStarter_4
-Zone9E_EventScript_BuyGrassStarter_3:
+	goto_if_set FLAG_NUZLOCKE_ON, Zone9E_EventScript_BuyFarmAnimal_4
+Zone9E_EventScript_BuyFarmAnimal_3:
 	showmoneybox 0, 0, 0
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_1, MSGBOX_YESNO
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_7
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_7
 	checkmoney 5000, 0
 	compare VAR_RESULT, FALSE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_10
-	specialvar VAR_TEMP_0, CalculatePlayerPartyCount
-	compare VAR_TEMP_0, PARTY_SIZE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_14
-	removemoney 5000, 0
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_10
+	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
+	compare VAR_TEMP_2, PARTY_SIZE
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_14
+	removemoney 5000
 	updatemoneybox
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_5, MSGBOX_DEFAULT
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_5, MSGBOX_DEFAULT
 	closemessage
 	hidemoneybox
-	goto_if_set FLAG_NUZLOCKE_ON, Zone9E_EventScript_BuyGrassStarter_17
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_6, MSGBOX_DEFAULT
-	multichoice2 21, 0, Zone9E_Text_StarterMultichoice, TRUE
+	goto_if_set FLAG_NUZLOCKE_ON, Zone9E_EventScript_BuyFarmAnimal_17
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_7, MSGBOX_DEFAULT
+	multichoice2 21, 0, Zone9E_Text_FarmAnimalMultichoice, TRUE
 	switch VAR_RESULT
-	case 0, Zone9E_EventScript_BuyGrassStarter_25
-	case 1, Zone9E_EventScript_BuyGrassStarter_26
-	case 2, Zone9E_EventScript_BuyGrassStarter_27
-	case 3, Zone9E_EventScript_BuyGrassStarter_28
-Zone9E_EventScript_BuyGrassStarter_16:
-	givemon VAR_TEMP_2, 5, ITEM_NONE
-	setmonmetlocation VAR_TEMP_0, 249
-	bufferspeciesname 0, VAR_TEMP_2
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_7, MSGBOX_DEFAULT
+	case 0, Zone9E_EventScript_BuyFarmAnimal_25
+	case 1, Zone9E_EventScript_BuyFarmAnimal_26
+	case 2, Zone9E_EventScript_BuyFarmAnimal_27
+	case 3, Zone9E_EventScript_BuyFarmAnimal_28
+Zone9E_EventScript_BuyFarmAnimal_16:
+	givemon VAR_TEMP_1, 20, ITEM_NONE
+	setmonmetlocation VAR_TEMP_2, 249
+	bufferspeciesname 0, VAR_TEMP_1
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_8, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone9E_EventScript_BuyGrassStarter_Text_8
+	message Zone9E_EventScript_BuyFarmAnimal_Text_9
 	waitmessage
 	waitfanfare
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_9
-Zone9E_EventScript_BuyGrassStarter_1:
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_10, MSGBOX_DEFAULT
+Zone9E_EventScript_BuyFarmAnimal_1:
 	release
 	end
 
-Zone9E_EventScript_BuyGrassStarter_2:
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_0
+Zone9E_EventScript_BuyFarmAnimal_2:
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_0
 	release
 	end
 
-Zone9E_EventScript_BuyGrassStarter_4:
-	goto_if_set FLAG_TEMP_1, Zone9E_EventScript_BuyGrassStarter_2
-	goto Zone9E_EventScript_BuyGrassStarter_3
+Zone9E_EventScript_BuyFarmAnimal_4:
+	goto_if_set FLAG_ZONE9E_NUZLOCKE_BOUGHT_FARM_ANIMAL, Zone9E_EventScript_BuyFarmAnimal_2
+	goto Zone9E_EventScript_BuyFarmAnimal_3
 
-Zone9E_EventScript_BuyGrassStarter_7:
+Zone9E_EventScript_BuyFarmAnimal_7:
 	closemessage
 	hidemoneybox
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_2
-	goto Zone9E_EventScript_BuyGrassStarter_1
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_2
+	goto Zone9E_EventScript_BuyFarmAnimal_1
 
-Zone9E_EventScript_BuyGrassStarter_10:
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_3
+Zone9E_EventScript_BuyFarmAnimal_10:
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_3
 	hidemoneybox
-	goto Zone9E_EventScript_BuyGrassStarter_1
+	goto Zone9E_EventScript_BuyFarmAnimal_1
 
-Zone9E_EventScript_BuyGrassStarter_14:
-	msgbox Zone9E_EventScript_BuyGrassStarter_Text_4
+Zone9E_EventScript_BuyFarmAnimal_14:
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_4
 	hidemoneybox
 	release
 	end
 
-Zone9E_EventScript_BuyGrassStarter_17:
-Zone9E_EventScript_BuyGrassStarter_21:
-	compare VAR_TEMP_2, 0
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_22
-	setflag FLAG_TEMP_1
-	goto Zone9E_EventScript_BuyGrassStarter_16
+Zone9E_EventScript_BuyFarmAnimal_17:
+	goto_if_set FLAG_RANDOMIZER_ON, Zone9E_EventScript_BuyFarmAnimal_21
+	setvar VAR_TEMP_3, 0
+	checkspeciesclause SPECIES_MILTANK
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_30
+Zone9E_EventScript_BuyFarmAnimal_29:
+	checkspeciesclause SPECIES_TAUROS
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_33
+Zone9E_EventScript_BuyFarmAnimal_32:
+	checkspeciesclause SPECIES_INDEEDEE_FEMALE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_36
+Zone9E_EventScript_BuyFarmAnimal_35:
+	checkspeciesclause SPECIES_INDEEDEE
+	compare VAR_RESULT, TRUE
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_39
+Zone9E_EventScript_BuyFarmAnimal_38:
+	compare VAR_TEMP_3, 4
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_42
+Zone9E_EventScript_BuyFarmAnimal_44:
+	compare VAR_TEMP_1, 0
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_45
+Zone9E_EventScript_BuyFarmAnimal_20:
+	setflag FLAG_ZONE9E_NUZLOCKE_BOUGHT_FARM_ANIMAL
+	goto Zone9E_EventScript_BuyFarmAnimal_16
 
-Zone9E_EventScript_BuyGrassStarter_22:
+Zone9E_EventScript_BuyFarmAnimal_21:
+	setvar VAR_TEMP_1, SPECIES_MILTANK
+	goto Zone9E_EventScript_BuyFarmAnimal_20
+
+Zone9E_EventScript_BuyFarmAnimal_25:
+	setvar VAR_TEMP_1, SPECIES_MILTANK
+	goto Zone9E_EventScript_BuyFarmAnimal_16
+
+Zone9E_EventScript_BuyFarmAnimal_26:
+	setvar VAR_TEMP_1, SPECIES_TAUROS
+	goto Zone9E_EventScript_BuyFarmAnimal_16
+
+Zone9E_EventScript_BuyFarmAnimal_27:
+	setvar VAR_TEMP_1, SPECIES_INDEEDEE_FEMALE
+	goto Zone9E_EventScript_BuyFarmAnimal_16
+
+Zone9E_EventScript_BuyFarmAnimal_28:
+	setvar VAR_TEMP_1, SPECIES_INDEEDEE
+	goto Zone9E_EventScript_BuyFarmAnimal_16
+
+Zone9E_EventScript_BuyFarmAnimal_30:
+	addvar VAR_TEMP_3, 1
+	goto Zone9E_EventScript_BuyFarmAnimal_29
+
+Zone9E_EventScript_BuyFarmAnimal_33:
+	addvar VAR_TEMP_3, 1
+	goto Zone9E_EventScript_BuyFarmAnimal_32
+
+Zone9E_EventScript_BuyFarmAnimal_36:
+	addvar VAR_TEMP_3, 1
+	goto Zone9E_EventScript_BuyFarmAnimal_35
+
+Zone9E_EventScript_BuyFarmAnimal_39:
+	addvar VAR_TEMP_3, 1
+	goto Zone9E_EventScript_BuyFarmAnimal_38
+
+Zone9E_EventScript_BuyFarmAnimal_42:
+	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_6
+	addmoney 3000
+	release
+	end
+
+Zone9E_EventScript_BuyFarmAnimal_45:
 	random 4
 	switch VAR_RESULT
-	case 0, Zone9E_EventScript_BuyGrassStarter_30
-	case 1, Zone9E_EventScript_BuyGrassStarter_31
-	case 2, Zone9E_EventScript_BuyGrassStarter_32
-	case 3, Zone9E_EventScript_BuyGrassStarter_33
-	goto Zone9E_EventScript_BuyGrassStarter_21
+	case 0, Zone9E_EventScript_BuyFarmAnimal_48
+	case 1, Zone9E_EventScript_BuyFarmAnimal_49
+	case 2, Zone9E_EventScript_BuyFarmAnimal_50
+	case 3, Zone9E_EventScript_BuyFarmAnimal_51
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
-Zone9E_EventScript_BuyGrassStarter_25:
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
-	goto Zone9E_EventScript_BuyGrassStarter_16
-
-Zone9E_EventScript_BuyGrassStarter_26:
-	setvar VAR_TEMP_2, SPECIES_GROOKEY
-	goto Zone9E_EventScript_BuyGrassStarter_16
-
-Zone9E_EventScript_BuyGrassStarter_27:
-	setvar VAR_TEMP_2, SPECIES_TREECKO
-	goto Zone9E_EventScript_BuyGrassStarter_16
-
-Zone9E_EventScript_BuyGrassStarter_28:
-	setvar VAR_TEMP_2, SPECIES_TURTWIG
-	goto Zone9E_EventScript_BuyGrassStarter_16
-
-Zone9E_EventScript_BuyGrassStarter_30:
-	goto_if_unset FLAG_RANDOMIZER_ON, Zone9E_EventScript_BuyGrassStarter_35
-Zone9E_EventScript_BuyGrassStarter_34:
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_31:
-	goto_if_unset FLAG_RANDOMIZER_ON, Zone9E_EventScript_BuyGrassStarter_38
-Zone9E_EventScript_BuyGrassStarter_37:
-	setvar VAR_TEMP_1, SPECIES_THWACKEY
-	specialvar VAR_RESULT, GetCaughtMon
+Zone9E_EventScript_BuyFarmAnimal_48:
+	checkspeciesclause SPECIES_MILTANK
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_50
-	setvar VAR_TEMP_1, SPECIES_RILLABOOM
-	specialvar VAR_RESULT, GetCaughtMon
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_53
+	setvar VAR_TEMP_1, SPECIES_MILTANK
+	goto Zone9E_EventScript_BuyFarmAnimal_44
+
+Zone9E_EventScript_BuyFarmAnimal_49:
+	checkspeciesclause SPECIES_TAUROS
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_64
-	setvar VAR_TEMP_2, SPECIES_GROOKEY
-	goto Zone9E_EventScript_BuyGrassStarter_21
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_56
+	setvar VAR_TEMP_1, SPECIES_TAUROS
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
-Zone9E_EventScript_BuyGrassStarter_32:
-	goto_if_unset FLAG_RANDOMIZER_ON, Zone9E_EventScript_BuyGrassStarter_41
-Zone9E_EventScript_BuyGrassStarter_40:
-	setvar VAR_TEMP_2, SPECIES_TREECKO
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_33:
-	goto_if_unset FLAG_RANDOMIZER_ON, Zone9E_EventScript_BuyGrassStarter_44
-Zone9E_EventScript_BuyGrassStarter_43:
-	setvar VAR_TEMP_2, SPECIES_TURTWIG
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_35:
-	setvar VAR_TEMP_1, SPECIES_BULBASAUR
-	specialvar VAR_RESULT, GetCaughtMon
+Zone9E_EventScript_BuyFarmAnimal_50:
+	checkspeciesclause SPECIES_INDEEDEE_FEMALE
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_47
-	setvar VAR_TEMP_1, SPECIES_IVYSAUR
-	specialvar VAR_RESULT, GetCaughtMon
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_59
+	setvar VAR_TEMP_1, SPECIES_INDEEDEE_FEMALE
+	goto Zone9E_EventScript_BuyFarmAnimal_44
+
+Zone9E_EventScript_BuyFarmAnimal_51:
+	checkspeciesclause SPECIES_INDEEDEE
 	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_61
-	setvar VAR_TEMP_1, SPECIES_VENUSAUR
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_72
-	goto Zone9E_EventScript_BuyGrassStarter_34
+	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_62
+	setvar VAR_TEMP_1, SPECIES_INDEEDEE
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
-Zone9E_EventScript_BuyGrassStarter_38:
-	setvar VAR_TEMP_1, SPECIES_GROOKEY
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_52
-	goto Zone9E_EventScript_BuyGrassStarter_37
+Zone9E_EventScript_BuyFarmAnimal_53:
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
-Zone9E_EventScript_BuyGrassStarter_41:
-	setvar VAR_TEMP_1, SPECIES_TREECKO
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_55
-	setvar VAR_TEMP_1, SPECIES_GROVYLE
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_67
-	setvar VAR_TEMP_1, SPECIES_SCEPTILE
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_74
-	goto Zone9E_EventScript_BuyGrassStarter_40
+Zone9E_EventScript_BuyFarmAnimal_56:
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
-Zone9E_EventScript_BuyGrassStarter_44:
-	setvar VAR_TEMP_1, SPECIES_TURTWIG
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_58
-	setvar VAR_TEMP_1, SPECIES_GROTLE
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_70
-	setvar VAR_TEMP_1, SPECIES_TORTERRA
-	specialvar VAR_RESULT, GetCaughtMon
-	compare VAR_RESULT, TRUE
-	goto_if_eq Zone9E_EventScript_BuyGrassStarter_76
-	goto Zone9E_EventScript_BuyGrassStarter_43
+Zone9E_EventScript_BuyFarmAnimal_59:
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
-Zone9E_EventScript_BuyGrassStarter_47:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_50:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_52:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_55:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_58:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_61:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_64:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_67:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_70:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_72:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_74:
-	goto Zone9E_EventScript_BuyGrassStarter_21
-
-Zone9E_EventScript_BuyGrassStarter_76:
-	goto Zone9E_EventScript_BuyGrassStarter_21
+Zone9E_EventScript_BuyFarmAnimal_62:
+	goto Zone9E_EventScript_BuyFarmAnimal_44
 
 
-Zone9E_Text_StarterMultichoice:
-    .string "Bulbasaur$"
-    .string "Grookey$"
-    .string "Treecko$"
-    .string "Turtwig$"
+Zone9E_Text_FarmAnimalMultichoice:
+    .string "Miltank$"
+    .string "Tauros$"
+    .string "Indeedee-F$"
+    .string "Indeedee-M$"
     .string "$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_0:
-	.string "The rest of these Grass starters aren't\n"
-	.string "for sale anymore. Sorry about that!$"
+Zone9E_EventScript_BuyFarmAnimal_Text_0:
+	.string "Sorry, honey. The rest of these Pokémon\n"
+	.string "aren't for sale anymore.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_1:
-	.string "Hello! I work with the Pokémon\n"
-	.string "Day-Care.\p"
-	.string "We're looking for trainers to adopt\n"
-	.string "starter Pokémon.\p"
-	.string "I have here Bulbasaur, Grookey,\n"
-	.string "Treecko, or Turtwig, and the adoption\l"
-	.string "fee is ¥5000!$"
+Zone9E_EventScript_BuyFarmAnimal_Text_1:
+	.string "Howdy! There ain't many farms 'round\n"
+	.string "these parts, so I have an offer for\l"
+	.string "you.\p"
+	.string "I'll give you a Miltank, Tauros, or\n"
+	.string "Indeedee, for only ¥5000!$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_2:
-	.string "Well, I'll be here if you do decide to\n"
-	.string "adopt a starter.$"
+Zone9E_EventScript_BuyFarmAnimal_Text_2:
+	.string "Well, aren't you a downer.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_3:
+Zone9E_EventScript_BuyFarmAnimal_Text_3:
 	.string "You don't have enough money.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_4:
+Zone9E_EventScript_BuyFarmAnimal_Text_4:
 	.string "Your party is full. Clear a party slot,\n"
 	.string "then come back.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_5:
-	.string "All right, forms signed, and… voila!$"
+Zone9E_EventScript_BuyFarmAnimal_Text_5:
+	.string "Thanks for supporting us farm folk.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_6:
-	.string "Choose which starter you would like.$"
+Zone9E_EventScript_BuyFarmAnimal_Text_6:
+	.string "Unfortunately, you have already\n"
+	.string "obtained a Pokémon in each of these\l"
+	.string "evolution lines.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_7:
+Zone9E_EventScript_BuyFarmAnimal_Text_7:
+	.string "Choose which of these you would like.$"
+
+Zone9E_EventScript_BuyFarmAnimal_Text_8:
 	.string "Here's your {STR_VAR_1}.$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_8:
+Zone9E_EventScript_BuyFarmAnimal_Text_9:
 	.string "{PLAYER} received the\n"
 	.string "{STR_VAR_1}!$"
 
-Zone9E_EventScript_BuyGrassStarter_Text_9:
-	.string "Take good care of that starter\n"
-	.string "Pokémon!$"
+Zone9E_EventScript_BuyFarmAnimal_Text_10:
+	.string "Take care of {STR_VAR_1} as well as\n"
+	.string "it takes care of you!$"

@@ -1236,7 +1236,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Trace
     .species = SPECIES_KIRLIA,
     .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_GROWL}
+    .moves = {MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_LIFE_DEW, MOVE_PROTECT}
     },
     {
     .iv = 20,
@@ -1245,7 +1245,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Flame Body
     .species = SPECIES_FLETCHINDER,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AERIAL_ACE, MOVE_FLAME_CHARGE, MOVE_ROOST, MOVE_FEATHER_DANCE}
+    .moves = {MOVE_AERIAL_ACE, MOVE_FLAME_CHARGE, MOVE_ROOST, MOVE_PROTECT}
     },
     {
     .iv = 20,
@@ -1254,7 +1254,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_AZUMARILL,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AQUA_JET, MOVE_AQUA_TAIL, MOVE_COVET, MOVE_CHARM}
+    .moves = {MOVE_AQUA_JET, MOVE_AQUA_TAIL, MOVE_COVET, MOVE_PROTECT}
     }
 };
 

@@ -115,7 +115,7 @@ Zone2B_EventScript_BuyBug_16:
 	message Zone2B_EventScript_BuyBug_Text_9
 	waitmessage
 	waitfanfare
-	msgbox Zone2B_EventScript_BuyBug_Text_10
+	msgbox Zone2B_EventScript_BuyBug_Text_10, MSGBOX_DEFAULT
 Zone2B_EventScript_BuyBug_1:
 	release
 	end

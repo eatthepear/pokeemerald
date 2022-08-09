@@ -257,7 +257,7 @@ script Zone5A_EventScript_BuyPikaClone {
 				message(format("{PLAYER} received the {STR_VAR_1}!"))
 				waitmessage
 				waitfanfare
-				msgbox(format("Take good care of your new Electric-type, small mammal-like Pokémon!"))
+				msgbox(format("Take good care of your new Electric-type, small mammal-like Pokémon!"), MSGBOX_DEFAULT)
 			}
 		}
 	}

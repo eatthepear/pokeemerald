@@ -221,7 +221,8 @@
 #define MAPSEC_SAFARI_ZONE_AREA4            0xD9
 
 
-#define METLOC_ADOPTED                      0xF9
+#define METLOC_ADOPTED                      0xF8
+#define METLOC_BOUGHT_FARM                  0xF9
 #define METLOC_BOUGHT_PIKA_CLONE            0xFA
 #define METLOC_BOUGHT_BUG                   0xFB
 #define METLOC_DAYCARE_GIVEAWAY             0xFC

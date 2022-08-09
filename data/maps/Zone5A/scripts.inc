@@ -178,7 +178,7 @@ Zone5A_EventScript_BuyPikaClone_16:
 	message Zone5A_EventScript_BuyPikaClone_Text_9
 	waitmessage
 	waitfanfare
-	msgbox Zone5A_EventScript_BuyPikaClone_Text_10
+	msgbox Zone5A_EventScript_BuyPikaClone_Text_10, MSGBOX_DEFAULT
 Zone5A_EventScript_BuyPikaClone_1:
 	release
 	end
