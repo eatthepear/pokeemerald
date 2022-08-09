@@ -257,9 +257,10 @@
 #define OBJ_EVENT_GFX_WORKER                     253
 #define OBJ_EVENT_GFX_ICE_WORKER                 254
 #define OBJ_EVENT_GFX_ROUGHNECK                  255
+#define OBJ_EVENT_GFX_COWGIRL                    256
 
 
-#define NUM_OBJ_EVENT_GFX                        256
+#define NUM_OBJ_EVENT_GFX                        257
 
 
 // These are dynamic object gfx ids.
