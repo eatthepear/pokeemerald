@@ -114,16 +114,9 @@ Zone8D_EventScript_InitiateLeviathan8_1:
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 Zone8D_EventScript_InitiateLeviathan8_8:
 	msgbox gText_PleasePick3Mons
-	special SavePlayerParty
-	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	waitstate
-	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_InitiateLeviathan8_16
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MIRAGE_LEVIATHAN_8, 0, NULL, Zone8D_EventScript_InitiateLeviathan8_Text_6
+	choose_mons
 	compare VAR_RESULT, 0
-	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_23
-	special LoadPlayerParty
+	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_16
 	goto Zone8D_EventScript_InitiateLeviathan8_8
 
 Zone8D_EventScript_InitiateLeviathan8_2:
@@ -147,17 +140,10 @@ Zone8D_EventScript_InitiateLeviathan8_3:
 	goto Zone8D_EventScript_InitiateLeviathan8_1
 
 Zone8D_EventScript_InitiateLeviathan8_7:
-	special ReducePlayerPartyToSelectedMons
-	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	setvar VAR_0x8004, SPECIAL_BATTLE_MULTI
-	setvar VAR_0x8005, MULTI_BATTLE_2_VS_1 | MULTI_BATTLE_CHOOSE_MONS
-	setvar VAR_0x8006, TRAINER_WALLY_ZONE8D
-	setvar VAR_0x8007, TRAINER_BACK_PIC_WALLY
-	special DoSpecialTrainerBattle
-	waitstate
-	frontier_saveparty
-	special LoadPlayerParty
-	compare VAR_RESULT, 1
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
+	multi_2_vs_1 TRAINER_MIRAGE_LEVIATHAN_8, Zone8D_EventScript_InitiateLeviathan8_Text_6, TRAINER_WALLY_ZONE8D, TRAINER_BACK_PIC_WALLY
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_14
 Zone8D_EventScript_InitiateLeviathan8_13:
 	applymovement 3, Common_Movement_FaceLeft
@@ -229,16 +215,6 @@ Zone8D_EventScript_InitiateLeviathan8_14:
 	goto Zone8D_EventScript_InitiateLeviathan8_13
 
 Zone8D_EventScript_InitiateLeviathan8_16:
-	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_MIRAGE_LEVIATHAN_8_BRUTAL, 0, NULL, Zone8D_EventScript_InitiateLeviathan8_Text_6
-	compare VAR_RESULT, 0
-	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_20
-	special LoadPlayerParty
-	goto Zone8D_EventScript_InitiateLeviathan8_8
-
-Zone8D_EventScript_InitiateLeviathan8_20:
-	goto Zone8D_EventScript_InitiateLeviathan8_7
-
-Zone8D_EventScript_InitiateLeviathan8_23:
 	goto Zone8D_EventScript_InitiateLeviathan8_7
 
 
