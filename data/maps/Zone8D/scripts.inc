@@ -116,7 +116,7 @@ Zone8D_EventScript_InitiateLeviathan8_8:
 	msgbox gText_PleasePick3Mons
 	choose_mons
 	compare VAR_RESULT, 0
-	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_16
+	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_17
 	goto Zone8D_EventScript_InitiateLeviathan8_8
 
 Zone8D_EventScript_InitiateLeviathan8_2:
@@ -141,11 +141,13 @@ Zone8D_EventScript_InitiateLeviathan8_3:
 
 Zone8D_EventScript_InitiateLeviathan8_7:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_InitiateLeviathan8_14
 	multi_2_vs_1 TRAINER_MIRAGE_LEVIATHAN_8, Zone8D_EventScript_InitiateLeviathan8_Text_6, TRAINER_WALLY_ZONE8D, TRAINER_BACK_PIC_WALLY
+Zone8D_EventScript_InitiateLeviathan8_13:
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_14
-Zone8D_EventScript_InitiateLeviathan8_13:
+	goto_if_ne Zone8D_EventScript_InitiateLeviathan8_20
+Zone8D_EventScript_InitiateLeviathan8_19:
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_7
@@ -209,13 +211,17 @@ Zone8D_EventScript_InitiateLeviathan8_10:
 	goto Zone8D_EventScript_InitiateLeviathan8_1
 
 Zone8D_EventScript_InitiateLeviathan8_14:
+	multi_2_vs_1 TRAINER_MIRAGE_LEVIATHAN_8_BRUTAL, Zone8D_EventScript_InitiateLeviathan8_Text_6, TRAINER_WALLY_ZONE8D, TRAINER_BACK_PIC_WALLY
+	goto Zone8D_EventScript_InitiateLeviathan8_13
+
+Zone8D_EventScript_InitiateLeviathan8_17:
+	goto Zone8D_EventScript_InitiateLeviathan8_7
+
+Zone8D_EventScript_InitiateLeviathan8_20:
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
 	waitstate
-	goto Zone8D_EventScript_InitiateLeviathan8_13
-
-Zone8D_EventScript_InitiateLeviathan8_16:
-	goto Zone8D_EventScript_InitiateLeviathan8_7
+	goto Zone8D_EventScript_InitiateLeviathan8_19
 
 
 Zone8D_EventScript_Exit::
