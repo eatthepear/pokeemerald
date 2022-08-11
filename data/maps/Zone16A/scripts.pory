@@ -132,7 +132,6 @@ script Zone16A_EventScript_PokemonRanger {
 	end
 }
 
-
 script Zone16A_EventScript_Exit {
     lockall
     if (var(VAR_ZONE) > 16) {
@@ -147,6 +146,45 @@ script Zone16A_EventScript_Exit {
     }
     releaseall
     end
+}
+
+script Zone16A_EventScript_SandPile {
+	lockall
+	random(5)
+	if (var(VAR_RESULT) == 0) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+		msgbox(format("There was a Pokémon in the sand pile!"), MSGBOX_DEFAULT)
+		waitmovement(0)
+		closemessage
+		random(4)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				setwildbattle(SPECIES_PINCURCHIN, 28, ITEM_NONE)
+				playmoncry(SPECIES_PINCURCHIN, 2)
+				delay(40)
+				waitmoncry
+			case 1:
+				setwildbattle(SPECIES_PYUKUMUKU, 28, ITEM_NONE)
+				playmoncry(SPECIES_PYUKUMUKU, 2)
+				delay(40)
+				waitmoncry
+			case 2:
+				setwildbattle(SPECIES_SANDYGAST, 28, ITEM_NONE)
+				playmoncry(SPECIES_SANDYGAST, 2)
+				delay(40)
+				waitmoncry
+			case 3:
+				setwildbattle(SPECIES_WIMPOD, 28, ITEM_NONE)
+				playmoncry(SPECIES_WIMPOD, 2)
+				delay(40)
+				waitmoncry
+		}
+		dowildbattle
+	} else {
+		msgbox("It's a pile of sand.")
+	}
+	releaseall
+	end
 }
 
 script Zone16A_EventScript_TM27 {
@@ -224,8 +262,9 @@ Zone16A_EventScript_Sign::
 	end
 
 Zone16A_Text_Sign:
-	.string "The sea is teeming with life.\n"
-	.string "Don't litter!$"
+	.string "Sand piles may contain Pokémon.\p"
+	.string "Be cautious!\n"
+	.string "They don't like being disturbed!$"
 
 Zone16A_EventScript_Iona::
 	trainerbattle_single TRAINER_IONA, Zone16A_Text_IonaIntro, Zone16A_Text_IonaDefeat

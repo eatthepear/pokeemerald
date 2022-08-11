@@ -202,6 +202,60 @@ Zone16A_EventScript_Exit_7:
 	goto Zone16A_EventScript_Exit_5
 
 
+Zone16A_EventScript_SandPile::
+	lockall
+	random 5
+	compare VAR_RESULT, 0
+	goto_if_eq Zone16A_EventScript_SandPile_2
+	msgbox Zone16A_EventScript_SandPile_Text_1
+Zone16A_EventScript_SandPile_1:
+	releaseall
+	end
+
+Zone16A_EventScript_SandPile_2:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	msgbox Zone16A_EventScript_SandPile_Text_0, MSGBOX_DEFAULT
+	waitmovement 0
+	closemessage
+	random 4
+	switch VAR_RESULT
+	case 0, Zone16A_EventScript_SandPile_7
+	case 1, Zone16A_EventScript_SandPile_8
+	case 2, Zone16A_EventScript_SandPile_9
+	case 3, Zone16A_EventScript_SandPile_10
+Zone16A_EventScript_SandPile_5:
+	dowildbattle
+	goto Zone16A_EventScript_SandPile_1
+
+Zone16A_EventScript_SandPile_7:
+	setwildbattle SPECIES_PINCURCHIN, 28, ITEM_NONE
+	playmoncry SPECIES_PINCURCHIN, 2
+	delay 40
+	waitmoncry
+	goto Zone16A_EventScript_SandPile_5
+
+Zone16A_EventScript_SandPile_8:
+	setwildbattle SPECIES_PYUKUMUKU, 28, ITEM_NONE
+	playmoncry SPECIES_PYUKUMUKU, 2
+	delay 40
+	waitmoncry
+	goto Zone16A_EventScript_SandPile_5
+
+Zone16A_EventScript_SandPile_9:
+	setwildbattle SPECIES_SANDYGAST, 28, ITEM_NONE
+	playmoncry SPECIES_SANDYGAST, 2
+	delay 40
+	waitmoncry
+	goto Zone16A_EventScript_SandPile_5
+
+Zone16A_EventScript_SandPile_10:
+	setwildbattle SPECIES_WIMPOD, 28, ITEM_NONE
+	playmoncry SPECIES_WIMPOD, 2
+	delay 40
+	waitmoncry
+	goto Zone16A_EventScript_SandPile_5
+
+
 Zone16A_EventScript_TM27::
 	lock
 	goto_if_set FLAG_ITEM_ZONE16A_TM27, Zone16A_EventScript_TM27_2
@@ -279,8 +333,9 @@ Zone16A_EventScript_Sign::
 	end
 
 Zone16A_Text_Sign:
-	.string "The sea is teeming with life.\n"
-	.string "Don't litter!$"
+	.string "Sand piles may contain Pokémon.\p"
+	.string "Be cautious!\n"
+	.string "They don't like being disturbed!$"
 
 Zone16A_EventScript_Iona::
 	trainerbattle_single TRAINER_IONA, Zone16A_Text_IonaIntro, Zone16A_Text_IonaDefeat
@@ -468,3 +523,9 @@ Zone16A_EventScript_PokemonRanger_Text_5:
 Zone16A_EventScript_PokemonRanger_Text_6:
 	.string "Thank you, trainer, for taking care of\n"
 	.string "Lapras.$"
+
+Zone16A_EventScript_SandPile_Text_0:
+	.string "There was a Pokémon in the sand pile!$"
+
+Zone16A_EventScript_SandPile_Text_1:
+	.string "It's a pile of sand.$"
