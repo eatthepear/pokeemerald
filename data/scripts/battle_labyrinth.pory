@@ -2015,6 +2015,7 @@ text gText_Colress_BrutalExplained {
 	"Many helpful NPCs are unavailable.\p"
 	"Some moves use more PP than normal and opponents do not use PP.\p"
 	"Some items are more expensive than normal.\p"
+	"Pokémon only gain experience while in a new Zone.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }

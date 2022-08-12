@@ -312,7 +312,7 @@ static const u8 gDebugText_Util_WarpToMap_SelectMapGroup[] =_("Group: {STR_VAR_1
 static const u8 gDebugText_Util_WarpToMap_SelectMap[] =     _("Map: {STR_VAR_1}            \nMapSec:          \n{STR_VAR_2}                       \n{STR_VAR_3}     ");
 static const u8 gDebugText_Util_WarpToMap_SelectWarp[] =    _("Warp:             \n{STR_VAR_1}                \n                                  \n{STR_VAR_3}     ");
 static const u8 gDebugText_Util_WarpToMap_SelMax[] =        _("{STR_VAR_1} / {STR_VAR_2}");
-static const u8 gDebugText_Util_RunningShoes[] =            _("Toggle Running Shoes");
+static const u8 gDebugText_Util_RunningShoes[] =            _("Shuffle Music");
 static const u8 gDebugText_Util_PoisonMons[] =              _("Poison all mons");
 static const u8 gDebugText_Util_SaveBlockSpace[] =          _("SaveBlock Space");
 static const u8 gDebugText_Util_CheckWallClock[] =          _("Check Wall Clock");
@@ -1082,16 +1082,12 @@ static void DebugAction_Util_Warp_SelectWarp(u8 taskId)
 
 static void DebugAction_Util_RunningShoes(u8 taskId)
 {
-    if (FlagGet(FLAG_SYS_B_DASH))
-    {
-        FlagClear(FLAG_SYS_B_DASH);
-        PlaySE(SE_PC_OFF);
-    }
-    else
-    {
-        FlagSet(FLAG_SYS_B_DASH);
-        PlaySE(SE_PC_LOGIN);
-    }
+    u16 wildMusic = Random() % 5;
+    u16 trainerMusic = Random() % 6;
+    u16 leviathanMusic = Random() % 5;
+    VarSet(VAR_WILD_MUSIC, wildMusic);
+    VarSet(VAR_TRAINER_MUSIC, trainerMusic);
+    VarSet(VAR_LEVIATHAN_MUSIC, leviathanMusic);
 }
 
 static void DebugAction_Util_PoisonMons(u8 taskId)

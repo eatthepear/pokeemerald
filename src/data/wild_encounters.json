@@ -1013,12 +1013,12 @@
             "mons": [
               {
                 "min_level": 8,
-                "max_level": 10,
+                "max_level": 8,
                 "species": "SPECIES_PETILIL"
               },
               {
                 "min_level": 8,
-                "max_level": 10,
+                "max_level": 8,
                 "species": "SPECIES_COTTONEE"
               },
               {

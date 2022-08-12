@@ -36,14 +36,6 @@ Debug_Script_8::
 script Debug_CheatStart {
 	lockall
 	additem(ITEM_RARE_CANDY, 999)
-	additem(ITEM_FIRE_GEM)
-	additem(ITEM_WATER_GEM)
-	additem(ITEM_ELECTRIC_GEM)
-	additem(ITEM_PSYCHIC_GEM)
-	additem(ITEM_DARK_GEM)
-	additem(ITEM_GRASS_GEM)
-	additem(ITEM_ICE_GEM)
-	setflag(FLAG_ZONE4A_RECEIVED_GEM)
 	// random(24)
 	// switch (var(VAR_RESULT)) {
 	// 	case 0:
@@ -101,69 +93,79 @@ script Debug_CheatStart {
 	random(20)
 	switch (var(VAR_RESULT)) {
 		case 0:
-			setvar(VAR_TEMP_0, SPECIES_ABRA)
+			setvar(VAR_TEMP_0, SPECIES_AZURILL)
 		case 1:
-			setvar(VAR_TEMP_0, SPECIES_ABRA)
+			setvar(VAR_TEMP_0, SPECIES_AZURILL)
 		case 2:
-			setvar(VAR_TEMP_0, SPECIES_MARILL)
+			setvar(VAR_TEMP_0, SPECIES_BIDOOF)
 		case 3:
-			setvar(VAR_TEMP_0, SPECIES_MARILL)
+			setvar(VAR_TEMP_0, SPECIES_BIDOOF)
 		case 4:
 			setvar(VAR_TEMP_0, SPECIES_BUDEW)
 		case 5:
 			setvar(VAR_TEMP_0, SPECIES_BUDEW)
 		case 6:
-			setvar(VAR_TEMP_0, SPECIES_CLEFFA)
+			setvar(VAR_TEMP_0, SPECIES_BUNEARY)
 		case 7:
-			setvar(VAR_TEMP_0, SPECIES_CLEFFA)
+			setvar(VAR_TEMP_0, SPECIES_BUNEARY)
 		case 8:
 			setvar(VAR_TEMP_0, SPECIES_FLETCHLING)
 		case 9:
 			setvar(VAR_TEMP_0, SPECIES_FLETCHLING)
 		case 10:
-			setvar(VAR_TEMP_0, SPECIES_LILLIPUP)
+			setvar(VAR_TEMP_0, SPECIES_MAREEP)
 		case 11:
-			setvar(VAR_TEMP_0, SPECIES_LILLIPUP)
+			setvar(VAR_TEMP_0, SPECIES_MAREEP)
 		case 12:
-			setvar(VAR_TEMP_0, SPECIES_MAREEP)
+			setvar(VAR_TEMP_0, SPECIES_PIDGEY)
 		case 13:
-			setvar(VAR_TEMP_0, SPECIES_MAREEP)
+			setvar(VAR_TEMP_0, SPECIES_PIDGEY)
 		case 14:
-			setvar(VAR_TEMP_0, SPECIES_STARLY)
+			setvar(VAR_TEMP_0, SPECIES_PSYDUCK)
 		case 15:
-			setvar(VAR_TEMP_0, SPECIES_STARLY)
+			setvar(VAR_TEMP_0, SPECIES_PSYDUCK)
+		case 16:
+			setvar(VAR_TEMP_0, SPECIES_SHINX)
+		case 17:
+			setvar(VAR_TEMP_0, SPECIES_SHINX)
+		case 18:
+			setvar(VAR_TEMP_0, SPECIES_ZIGZAGOON_GALARIAN)
+		case 19:
+			setvar(VAR_TEMP_0, SPECIES_ZIGZAGOON_GALARIAN)
 	}
-	givemon(VAR_TEMP_0, 5, ITEM_NONE)
+	givemon(VAR_TEMP_0, 4, ITEM_NONE)
+	bufferspeciesname(0, VAR_TEMP_0)
+	msgbox(gText_ObtainedDebugMon)
 	random(20)
 	switch (var(VAR_RESULT)) {
 		case 0:
-			setvar(VAR_TEMP_0, SPECIES_PHANPY)
+			setvar(VAR_TEMP_0, SPECIES_LILLIPUP)
 		case 1:
-			setvar(VAR_TEMP_0, SPECIES_PHANPY)
+			setvar(VAR_TEMP_0, SPECIES_LILLIPUP)
 		case 2:
-			setvar(VAR_TEMP_0, SPECIES_POOCHYENA)
+			setvar(VAR_TEMP_0, SPECIES_PHANPY)
 		case 3:
-			setvar(VAR_TEMP_0, SPECIES_POOCHYENA)
+			setvar(VAR_TEMP_0, SPECIES_PHANPY)
 		case 4:
-			setvar(VAR_TEMP_0, SPECIES_RATTATA)
+			setvar(VAR_TEMP_0, SPECIES_POOCHYENA)
 		case 5:
-			setvar(VAR_TEMP_0, SPECIES_RATTATA)
+			setvar(VAR_TEMP_0, SPECIES_POOCHYENA)
 		case 6:
-			setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+			setvar(VAR_TEMP_0, SPECIES_RATTATA)
 		case 7:
-			setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+			setvar(VAR_TEMP_0, SPECIES_RATTATA)
 		case 8:
 			setvar(VAR_TEMP_0, SPECIES_SENTRET)
 		case 9:
 			setvar(VAR_TEMP_0, SPECIES_SENTRET)
 		case 10:
-			setvar(VAR_TEMP_0, SPECIES_SHINX)
+			setvar(VAR_TEMP_0, SPECIES_SPEAROW)
 		case 11:
-			setvar(VAR_TEMP_0, SPECIES_SHINX)
+			setvar(VAR_TEMP_0, SPECIES_SPEAROW)
 		case 12:
-			setvar(VAR_TEMP_0, SPECIES_PIDGEY)
+			setvar(VAR_TEMP_0, SPECIES_TEDDIURSA)
 		case 13:
-			setvar(VAR_TEMP_0, SPECIES_PIDGEY)
+			setvar(VAR_TEMP_0, SPECIES_TEDDIURSA)
 		case 14:
 			setvar(VAR_TEMP_0, SPECIES_WOOLOO)
 		case 15:
@@ -178,6 +180,8 @@ script Debug_CheatStart {
 			setvar(VAR_TEMP_0, SPECIES_NIDORAN_M)
 	}
 	givemon(VAR_TEMP_0, 4, ITEM_NONE)
+	bufferspeciesname(0, VAR_TEMP_0)
+	msgbox(gText_ObtainedDebugMon)
 	random(20)
 	switch (var(VAR_RESULT)) {
 		case 0:
@@ -185,199 +189,265 @@ script Debug_CheatStart {
 		case 1:
 			setvar(VAR_TEMP_0, SPECIES_BONSLY)
 		case 2:
-			setvar(VAR_TEMP_0, SPECIES_CATERPIE)
+			setvar(VAR_TEMP_0, SPECIES_HOOTHOOT)
 		case 3:
-			setvar(VAR_TEMP_0, SPECIES_CATERPIE)
+			setvar(VAR_TEMP_0, SPECIES_HOOTHOOT)
 		case 4:
 			setvar(VAR_TEMP_0, SPECIES_MANKEY)
 		case 5:
 			setvar(VAR_TEMP_0, SPECIES_MANKEY)
 		case 6:
-			setvar(VAR_TEMP_0, SPECIES_PETILIL)
+			setvar(VAR_TEMP_0, SPECIES_PANCHAM)
 		case 7:
-			setvar(VAR_TEMP_0, SPECIES_PETILIL)
+			setvar(VAR_TEMP_0, SPECIES_PANCHAM)
 		case 8:
-			setvar(VAR_TEMP_0, SPECIES_COTTONEE)
+			setvar(VAR_TEMP_0, SPECIES_PICHU)
 		case 9:
-			setvar(VAR_TEMP_0, SPECIES_COTTONEE)
+			setvar(VAR_TEMP_0, SPECIES_PICHU)
 		case 10:
-			setvar(VAR_TEMP_0, SPECIES_PICHU)
+			setvar(VAR_TEMP_0, SPECIES_PIKIPEK)
 		case 11:
-			setvar(VAR_TEMP_0, SPECIES_PICHU)
+			setvar(VAR_TEMP_0, SPECIES_PIKIPEK)
 		case 12:
-			setvar(VAR_TEMP_0, SPECIES_PANCHAM)
+			setvar(VAR_TEMP_0, SPECIES_SEEDOT)
 		case 13:
-			setvar(VAR_TEMP_0, SPECIES_PANCHAM)
+			setvar(VAR_TEMP_0, SPECIES_SEEDOT)
 		case 14:
-			setvar(VAR_TEMP_0, SPECIES_VOLTORB_HISUIAN)
+			setvar(VAR_TEMP_0, SPECIES_SKWOVET)
 		case 15:
-			setvar(VAR_TEMP_0, SPECIES_VOLTORB_HISUIAN)
+			setvar(VAR_TEMP_0, SPECIES_SKWOVET)
 		case 16:
-			setvar(VAR_TEMP_0, SPECIES_BUNEARY)
+			setvar(VAR_TEMP_0, SPECIES_STUNKY)
 		case 17:
-			setvar(VAR_TEMP_0, SPECIES_BUNEARY)
+			setvar(VAR_TEMP_0, SPECIES_STUNKY)
 		case 18:
-			setvar(VAR_TEMP_0, SPECIES_WEEDLE)
+			setvar(VAR_TEMP_0, SPECIES_VOLTORB_HISUIAN)
 		case 19:
-			setvar(VAR_TEMP_0, SPECIES_WEEDLE)
+			setvar(VAR_TEMP_0, SPECIES_VOLTORB_HISUIAN)
 	}
 	givemon(VAR_TEMP_0, 6, ITEM_NONE)
-	random(20)
-	switch (var(VAR_RESULT)) {
-		case 0:
-			setvar(VAR_TEMP_0, SPECIES_BIDOOF)
-		case 1:
-			setvar(VAR_TEMP_0, SPECIES_BIDOOF)
-		case 2:
-			setvar(VAR_TEMP_0, SPECIES_BUIZEL)
-		case 3:
-			setvar(VAR_TEMP_0, SPECIES_BUIZEL)
-		case 4:
-			setvar(VAR_TEMP_0, SPECIES_CRABRAWLER)
-		case 5:
-			setvar(VAR_TEMP_0, SPECIES_CRABRAWLER)
-		case 6:
-			setvar(VAR_TEMP_0, SPECIES_EKANS)
-		case 7:
-			setvar(VAR_TEMP_0, SPECIES_EKANS)
-		case 8:
-			setvar(VAR_TEMP_0, SPECIES_ELECTRIKE)
-		case 9:
-			setvar(VAR_TEMP_0, SPECIES_ELECTRIKE)
-		case 10:
-			setvar(VAR_TEMP_0, SPECIES_PSYDUCK)
-		case 11:
-			setvar(VAR_TEMP_0, SPECIES_PSYDUCK)
-		case 12:
-			setvar(VAR_TEMP_0, SPECIES_SNUBBULL)
-		case 13:
-			setvar(VAR_TEMP_0, SPECIES_SNUBBULL)
-		case 14:
-			setvar(VAR_TEMP_0, SPECIES_STUFFUL)
-		case 15:
-			setvar(VAR_TEMP_0, SPECIES_STUFFUL)
-		case 16:
-			setvar(VAR_TEMP_0, SPECIES_VULPIX)
-		case 17:
-			setvar(VAR_TEMP_0, SPECIES_VULPIX)
-		case 18:
-			setvar(VAR_TEMP_0, SPECIES_WINGULL)
-		case 19:
-			setvar(VAR_TEMP_0, SPECIES_WINGULL)
+	bufferspeciesname(0, VAR_TEMP_0)
+	msgbox(gText_ObtainedDebugMon)
+	msgbox("Would you like a water encounter?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		random(4)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				setvar(VAR_TEMP_0, SPECIES_CHEWTLE)
+			case 1:
+				setvar(VAR_TEMP_0, SPECIES_DEWPIDER)
+			case 2:
+				setvar(VAR_TEMP_0, SPECIES_SURSKIT)
+			case 3:
+				setvar(VAR_TEMP_0, SPECIES_WISHIWASHI)
+		}
+	} else {
+		random(20)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				setvar(VAR_TEMP_0, SPECIES_BUIZEL)
+			case 1:
+				setvar(VAR_TEMP_0, SPECIES_BUIZEL)
+			case 2:
+				setvar(VAR_TEMP_0, SPECIES_CRABRAWLER)
+			case 3:
+				setvar(VAR_TEMP_0, SPECIES_CRABRAWLER)
+			case 4:
+				setvar(VAR_TEMP_0, SPECIES_EKANS)
+			case 5:
+				setvar(VAR_TEMP_0, SPECIES_EKANS)
+			case 6:
+				setvar(VAR_TEMP_0, SPECIES_GLAMEOW)
+			case 7:
+				setvar(VAR_TEMP_0, SPECIES_GLAMEOW)
+			case 8:
+				setvar(VAR_TEMP_0, SPECIES_LITLEO)
+			case 9:
+				setvar(VAR_TEMP_0, SPECIES_LITLEO)
+			case 10:
+				setvar(VAR_TEMP_0, SPECIES_LOTAD)
+			case 11:
+				setvar(VAR_TEMP_0, SPECIES_LOTAD)
+			case 12:
+				setvar(VAR_TEMP_0, SPECIES_MEDITITE)
+			case 13:
+				setvar(VAR_TEMP_0, SPECIES_MEDITITE)
+			case 14:
+				setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+			case 15:
+				setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+			case 16:
+				setvar(VAR_TEMP_0, SPECIES_VULPIX)
+			case 17:
+				setvar(VAR_TEMP_0, SPECIES_VULPIX)
+			case 18:
+				setvar(VAR_TEMP_0, SPECIES_WOOPER)
+			case 19:
+				setvar(VAR_TEMP_0, SPECIES_WOOPER)
+		}
 	}
 	givemon(VAR_TEMP_0, 8, ITEM_NONE)
-	random(20)
-	switch (var(VAR_RESULT)) {
-		case 0:
-			setvar(VAR_TEMP_0, SPECIES_HATENNA)
-		case 1:
-			setvar(VAR_TEMP_0, SPECIES_HATENNA)
-		case 2:
-			setvar(VAR_TEMP_0, SPECIES_PONYTA_GALARIAN)
-		case 3:
-			setvar(VAR_TEMP_0, SPECIES_PONYTA_GALARIAN)
-		case 4:
-			setvar(VAR_TEMP_0, SPECIES_HOOTHOOT)
-		case 5:
-			setvar(VAR_TEMP_0, SPECIES_HOOTHOOT)
-		case 6:
-			setvar(VAR_TEMP_0, SPECIES_HOUNDOUR)
-		case 7:
-			setvar(VAR_TEMP_0, SPECIES_HOUNDOUR)
-		case 8:
-			setvar(VAR_TEMP_0, SPECIES_IMPIDIMP)
-		case 9:
-			setvar(VAR_TEMP_0, SPECIES_IMPIDIMP)
-		case 10:
-			setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
-		case 11:
-			setvar(VAR_TEMP_0, SPECIES_GRUBBIN)
-		case 12:
-			setvar(VAR_TEMP_0, SPECIES_PHANTUMP)
-		case 13:
-			setvar(VAR_TEMP_0, SPECIES_PHANTUMP)
-		case 14:
-			setvar(VAR_TEMP_0, SPECIES_STUNKY)
-		case 15:
-			setvar(VAR_TEMP_0, SPECIES_STUNKY)
-		case 16:
-			setvar(VAR_TEMP_0, SPECIES_GOTHITA)
-		case 17:
-			setvar(VAR_TEMP_0, SPECIES_GOTHITA)
-		case 18:
-			setvar(VAR_TEMP_0, SPECIES_SOLOSIS)
-		case 19:
-			setvar(VAR_TEMP_0, SPECIES_SOLOSIS)
+	bufferspeciesname(0, VAR_TEMP_0)
+	msgbox(gText_ObtainedDebugMon)
+	msgbox("Would you like a golden tree encounter?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		random(4)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				setvar(VAR_TEMP_0, SPECIES_PETILIL)
+			case 1:
+				setvar(VAR_TEMP_0, SPECIES_COTTONEE)
+			case 2:
+				setvar(VAR_TEMP_0, SPECIES_CATERPIE)
+			case 3:
+				setvar(VAR_TEMP_0, SPECIES_WEEDLE)
+		}
+		givemon(VAR_TEMP_0, 8, ITEM_NONE)
+
+	} else {
+		random(20)
+		switch (var(VAR_RESULT)) {
+			case 0:
+				setvar(VAR_TEMP_0, SPECIES_HOUNDOUR)
+			case 1:
+				setvar(VAR_TEMP_0, SPECIES_HOUNDOUR)
+			case 2:
+				setvar(VAR_TEMP_0, SPECIES_MORELULL)
+			case 3:
+				setvar(VAR_TEMP_0, SPECIES_MORELULL)
+			case 4:
+				setvar(VAR_TEMP_0, SPECIES_PHANTUMP)
+			case 5:
+				setvar(VAR_TEMP_0, SPECIES_PHANTUMP)
+			case 6:
+				setvar(VAR_TEMP_0, SPECIES_PONYTA_GALARIAN)
+			case 7:
+				setvar(VAR_TEMP_0, SPECIES_PONYTA_GALARIAN)
+			case 8:
+				setvar(VAR_TEMP_0, SPECIES_HATENNA)
+			case 9:
+				setvar(VAR_TEMP_0, SPECIES_HATENNA)
+			case 10:
+				setvar(VAR_TEMP_0, SPECIES_IMPIDIMP)
+			case 11:
+				setvar(VAR_TEMP_0, SPECIES_IMPIDIMP)
+			case 12:
+				setvar(VAR_TEMP_0, SPECIES_GOTHITA)
+			case 13:
+				setvar(VAR_TEMP_0, SPECIES_GOTHITA)
+			case 14:
+				setvar(VAR_TEMP_0, SPECIES_SOLOSIS)
+			case 15:
+				setvar(VAR_TEMP_0, SPECIES_SOLOSIS)
+			case 16:
+				setvar(VAR_TEMP_0, SPECIES_SPRITZEE)
+			case 17:
+				setvar(VAR_TEMP_0, SPECIES_SPRITZEE)
+			case 18:
+				setvar(VAR_TEMP_0, SPECIES_SWIRLIX)
+			case 19:
+				setvar(VAR_TEMP_0, SPECIES_SWIRLIX)
+		}
+		givemon(VAR_TEMP_0, 10, ITEM_NONE)
 	}
-	givemon(VAR_TEMP_0, 10, ITEM_NONE)
-	random(20)
+	bufferspeciesname(0, VAR_TEMP_0)
+	msgbox(gText_ObtainedDebugMon)
+	msgbox("Choose an Eevee evo item.", MSGBOX_DEFAULT)
+	scrollingmultichoice(1, 0, 0, 5, 1)
 	switch (var(VAR_RESULT)) {
 		case 0:
-			setvar(VAR_TEMP_0, SPECIES_AXEW)
+			additem(ITEM_WATER_GEM)
 		case 1:
-			setvar(VAR_TEMP_0, SPECIES_AXEW)
+			additem(ITEM_ELECTRIC_GEM)
 		case 2:
-			setvar(VAR_TEMP_0, SPECIES_ELEKID)
+			additem(ITEM_FIRE_GEM)
 		case 3:
-			setvar(VAR_TEMP_0, SPECIES_ELEKID)
+			additem(ITEM_PSYCHIC_GEM)
 		case 4:
-			setvar(VAR_TEMP_0, SPECIES_GROWLITHE)
+			additem(ITEM_DARK_GEM)
 		case 5:
-			setvar(VAR_TEMP_0, SPECIES_GROWLITHE)
+			additem(ITEM_GRASS_GEM)
 		case 6:
-			setvar(VAR_TEMP_0, SPECIES_MAGBY)
+			additem(ITEM_ICE_GEM)
+	}
+	setflag(FLAG_ZONE4A_RECEIVED_GEM)
+	random(18)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_TEMP_0, SPECIES_ABRA)
+		case 1:
+			setvar(VAR_TEMP_0, SPECIES_ABRA)
+		case 2:
+			setvar(VAR_TEMP_0, SPECIES_GROWLITHE)
+		case 3:
+			setvar(VAR_TEMP_0, SPECIES_GROWLITHE)
+		case 4:
+			setvar(VAR_TEMP_0, SPECIES_MAGNEMITE)
+		case 5:
+			setvar(VAR_TEMP_0, SPECIES_MAGNEMITE)
+		case 6:
+			setvar(VAR_TEMP_0, SPECIES_RALTS)
 		case 7:
-			setvar(VAR_TEMP_0, SPECIES_MAGBY)
+			setvar(VAR_TEMP_0, SPECIES_RALTS)
 		case 8:
-			setvar(VAR_TEMP_0, SPECIES_MAGNEMITE)
+			setvar(VAR_TEMP_0, SPECIES_ROOKIDEE)
 		case 9:
-			setvar(VAR_TEMP_0, SPECIES_MAGNEMITE)
+			setvar(VAR_TEMP_0, SPECIES_ROOKIDEE)
 		case 10:
-			setvar(VAR_TEMP_0, SPECIES_PAWNIARD)
+			setvar(VAR_TEMP_0, SPECIES_SNUBBULL)
 		case 11:
-			setvar(VAR_TEMP_0, SPECIES_PAWNIARD)
+			setvar(VAR_TEMP_0, SPECIES_SNUBBULL)
 		case 12:
-			setvar(VAR_TEMP_0, SPECIES_ROOKIDEE)
+			setvar(VAR_TEMP_0, SPECIES_STARLY)
 		case 13:
-			setvar(VAR_TEMP_0, SPECIES_ROOKIDEE)
+			setvar(VAR_TEMP_0, SPECIES_STARLY)
 		case 14:
-			setvar(VAR_TEMP_0, SPECIES_SLOWPOKE)
+			setvar(VAR_TEMP_0, SPECIES_STUFFUL)
 		case 15:
-			setvar(VAR_TEMP_0, SPECIES_SLOWPOKE)
+			setvar(VAR_TEMP_0, SPECIES_STUFFUL)
 		case 16:
 			setvar(VAR_TEMP_0, SPECIES_TAILLOW)
 		case 17:
 			setvar(VAR_TEMP_0, SPECIES_TAILLOW)
-		case 18:
-			setvar(VAR_TEMP_0, SPECIES_TIMBURR)
-		case 19:
-			setvar(VAR_TEMP_0, SPECIES_TIMBURR)
 	}
 	givemon(VAR_TEMP_0, 12, ITEM_NONE)
+	bufferspeciesname(0, VAR_TEMP_0)
+	msgbox(gText_ObtainedDebugMon)
 	setvar(VAR_ZONE, 5)
 	additem(ITEM_REPEL)
 	setflag(FLAG_TIM_INTRO)
-	additem(ITEM_ORAN_BERRY, 3)
 	additem(ITEM_EXP_SHARE)
-	additem(ITEM_ROCKY_HELMET)
 	additem(ITEM_SILK_SCARF)
-	additem(ITEM_PARALYZE_HEAL)
-	additem(ITEM_ANTIDOTE)
 	additem(ITEM_GOOD_ROD)
 	additem(ITEM_HEAL_BALL, 7)
 	removeitem(ITEM_POKE_BALL, 10)
-	removemoney(2000)
-	additem(ITEM_TM02_HIDDEN_POWER)
+	removemoney(1000)
+	additem(ITEM_TM02)
 	additem(ITEM_BURN_HEAL)
 	additem(ITEM_AWAKENING)
 	additem(ITEM_MUSCLE_BAND)
 	additem(ITEM_WISE_GLASSES)
 	additem(ITEM_SUPER_POTION, 2)
+	additem(ITEM_PARALYZE_HEAL, 2)
+	additem(ITEM_ANTIDOTE, 2)
 	additem(ITEM_TM03)
 	additem(ITEM_TM04)
 	additem(ITEM_QUICK_BALL)
 	setflag(FLAG_FULL_PREVIEW_ON)
+	setflag(FLAG_SYS_DEXNAV_GET)
+	setflag(FLAG_JOY_INTRO)
+	setflag(FLAG_MAX_INTRO)
+	setflag(FLAG_TIM_INTRO)
+	setflag(FLAG_VARRICK_INTRO)
+	setflag(FLAG_LELOUCH_INTRO)
+	setvar(VAR_ZONE_0_STATE, 3)
+	additem(ITEM_TM21)
     warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
+	waitstate
 	release
 	end
+}
+
+text gText_ObtainedDebugMon {
+	format("Obtained {STR_VAR_1}!")
 }

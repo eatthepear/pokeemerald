@@ -1197,7 +1197,7 @@ static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan, fough
     .ability = ABILITY_SLOT_1, //Receiver
     .species = SPECIES_PASSIMIAN,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_DRAIN_PUNCH, MOVE_KNOCK_OFF, MOVE_FACADE, MOVE_ROCK_SLIDE}
+    .moves = {MOVE_DRAIN_PUNCH, MOVE_KNOCK_OFF, MOVE_FACADE, MOVE_ACROBATICS}
     },
     {
     .iv = 31,

@@ -2001,8 +2001,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             {
                 ability = partyData[k].ability;
 
-                // if (partyData[k].ability == ABILITY_SLOT_1)
-                //     ability = 0;
+                if (partyData[k].ability == ABILITY_SLOT_1)
+                    ability = 0;
 
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
             }

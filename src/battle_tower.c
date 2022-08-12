@@ -3115,8 +3115,8 @@ static void FillPartnerParty(u16 trainerId)
             {
                 ability = partyData[i].ability;
 
-                // if (partyData[i].ability == ABILITY_SLOT_1)
-                //     ability = 0;
+                if (partyData[i].ability == ABILITY_SLOT_1)
+                    ability = 0;
 
                 SetMonData(&gPlayerParty[i + 3], MON_DATA_ABILITY_NUM, &ability);
             }

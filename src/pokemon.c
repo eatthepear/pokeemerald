@@ -9335,22 +9335,10 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
+        case TRAINER_CLASS_WINSTRATE:
+            return MUS_VS_TRAINER; // RSE Trainer music
         case TRAINER_CLASS_LEADER:
-            switch (VarGet(VAR_LEVIATHAN_MUSIC))
-            {
-            case 1:
-                return MUS_RG_VS_GYM_LEADER;
-            case 2:
-                return MUS_DP_SEQ_BA_GYM;
-            case 3:
-                return MUS_HG_SEQ_GS_VS_GYMREADER;
-            case 4:
-                return MUS_HG_SEQ_GS_VS_GYMREADER_KANTO;
-            case 5:
-                return MUS_BW_SEQ_BGM_VS_GYMLEADER;
-            default:
-                return MUS_VS_GYM_LEADER;
-            }
+            return MUS_HG_SEQ_GS_VS_LUGIA; // HGSS Lugia music
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
@@ -9370,20 +9358,38 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            switch (VarGet(VAR_TRAINER_MUSIC))
-            {
-            case 1:
-                return MUS_RG_VS_TRAINER;
-            case 2:
-                return MUS_DP_SEQ_BA_TRAIN;
-            case 3:
-                return MUS_HG_SEQ_GS_VS_TRAINER;
-            case 4:
-                return MUS_HG_SEQ_GS_VS_TRAINER_KANTO;
-            case 5:
-                return MUS_BW_SEQ_BGM_VS_TRAINER;
-            default:
-                return MUS_VS_TRAINER;
+            if (gTrainers[gTrainerBattleOpponent_A].hasCustomTransition == TRUE) {
+                switch (VarGet(VAR_LEVIATHAN_MUSIC))
+                {
+                case 1:
+                    return MUS_RG_VS_GYM_LEADER;
+                case 2:
+                    return MUS_DP_SEQ_BA_GYM;
+                case 3:
+                    return MUS_HG_SEQ_GS_VS_GYMREADER;
+                case 4:
+                    return MUS_HG_SEQ_GS_VS_GYMREADER_KANTO;
+                case 5:
+                    return MUS_BW_SEQ_BGM_VS_GYMLEADER;
+                default:
+                    return MUS_VS_GYM_LEADER;
+                }
+            } else {
+                switch (VarGet(VAR_TRAINER_MUSIC))
+                {
+                case 1:
+                    return MUS_RG_VS_TRAINER;
+                case 2:
+                    return MUS_DP_SEQ_BA_TRAIN;
+                case 3:
+                    return MUS_HG_SEQ_GS_VS_TRAINER;
+                case 4:
+                    return MUS_HG_SEQ_GS_VS_TRAINER_KANTO;
+                case 5:
+                    return MUS_BW_SEQ_BGM_VS_TRAINER;
+                default:
+                    return MUS_VS_TRAINER;
+                }
             }
         }
     }

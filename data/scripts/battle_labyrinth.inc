@@ -4529,6 +4529,8 @@ gText_Colress_BrutalExplained::
 	.string "opponents do not use PP.\p"
 	.string "Some items are more expensive than\n"
 	.string "normal.\p"
+	.string "Pokémon only gain experience while in a\n"
+	.string "new Zone.\p"
 	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
