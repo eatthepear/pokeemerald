@@ -98,6 +98,131 @@ text Zone11A_Text_Leviathan10Post {
 	format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Unfortunately, I'm afraid the path ahead is blocked off until my experiments finish.\pPerhaps come back far in the future, when I've finished here.")
 }
 
+script Zone11A_EventScript_BuyRuin {
+	lock
+	faceplayer
+	if (flag(FLAG_NUZLOCKE_ON) == true && flag(FLAG_ZONE11A_NUZLOCKE_BOUGHT_RUIN) == true) {
+		msgbox(format("I'm not offering any of these other Pokémon for sale anymore."))
+		release
+		end
+	} else {
+		showmoneybox(0, 0, 0)
+		msgbox(format("Hello, traveler! I search the world for ruins. It looks like there aren't any here, but I do have some rare Pokémon to offer you.\pFor ¥4000, you can have one of Baltoy, Golett, Yamask, or Yamask-G!"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			closemessage
+			hidemoneybox
+			msgbox(format("I promise it won't ruin you!"))
+		} else {
+			checkmoney(4000, 0)
+			if (var(VAR_RESULT) == FALSE) {
+				msgbox("You don't have enough money.")
+				hidemoneybox
+			} else {
+				specialvar(VAR_TEMP_2, CalculatePlayerPartyCount)
+				if (var(VAR_TEMP_2) == PARTY_SIZE) {
+					msgbox(format("Your party is full. Clear a party slot, then come back."))
+					hidemoneybox
+					release
+					end
+				}
+				removemoney(4000)
+				updatemoneybox
+				msgbox("Alrighty, I hope this won't ruin you!")
+				closemessage
+				hidemoneybox
+				if (flag(FLAG_NUZLOCKE_ON) == true) {
+					if (flag(FLAG_RANDOMIZER_ON) == true) {
+						setvar(VAR_TEMP_1, SPECIES_BALTOY) // gets randomized anyways
+					} else {
+						setvar(VAR_TEMP_3, 0)
+						checkspeciesclause(SPECIES_BALTOY)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						checkspeciesclause(SPECIES_GOLETT)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						checkspeciesclause(SPECIES_YAMASK)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						checkspeciesclause(SPECIES_YAMASK_GALARIAN)
+						if (var(VAR_RESULT) == TRUE) {
+							addvar(VAR_TEMP_3, 1)
+						}
+						if (var(VAR_TEMP_3) == 4) {
+							msgbox(format("Unfortunately, you have already obtained a Pokémon in each of these evolution lines."))
+							addmoney(4000)
+							release
+							end
+						}
+						while (var(VAR_TEMP_1) == 0) {
+							random(4)
+							switch (var(VAR_RESULT)) {
+								case 0:
+									checkspeciesclause(SPECIES_BALTOY)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_BALTOY)
+								case 1:
+									checkspeciesclause(SPECIES_GOLETT)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_GOLETT)
+								case 2:
+									checkspeciesclause(SPECIES_YAMASK)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_YAMASK)
+								case 3:
+									checkspeciesclause(SPECIES_YAMASK_GALARIAN)
+									if (var(VAR_RESULT) == TRUE) {
+										continue
+									}
+									setvar(VAR_TEMP_1, SPECIES_YAMASK_GALARIAN)
+							}
+						}
+					}
+					setflag(FLAG_ZONE11A_NUZLOCKE_BOUGHT_RUIN)
+				} else {
+					msgbox(format("Choose which Pokémon you would like."), MSGBOX_DEFAULT)
+					multichoice2(21, 0, Zone11A_Text_RuinMultichoice, TRUE)
+					switch (var(VAR_RESULT)) {
+						case 0:
+							setvar(VAR_TEMP_1, SPECIES_BALTOY)
+						case 1:
+							setvar(VAR_TEMP_1, SPECIES_GOLETT)
+						case 2:
+							setvar(VAR_TEMP_1, SPECIES_YAMASK)
+						case 3:
+							setvar(VAR_TEMP_1, SPECIES_YAMASK_GALARIAN)
+					}
+				}
+				givemon(VAR_TEMP_1, 20, ITEM_NONE)
+				setmonmetlocation(VAR_TEMP_2, 246)
+				bufferspeciesname(0, VAR_TEMP_1)
+				msgbox("Here's your {STR_VAR_1}.")
+				playfanfare(MUS_OBTAIN_ITEM)
+				message(format("{PLAYER} received the {STR_VAR_1}!"))
+				waitmessage
+				waitfanfare
+				msgbox(format("Would you like to give a nickname to {STR_VAR_1}?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Common_EventScript_GetGiftMonPartySlot)
+					call(Common_EventScript_NameReceivedPartyMon)
+				}
+				msgbox(format("I know these Pokémon are a little spooky, but they're quite endearing after a while!"), MSGBOX_DEFAULT)
+			}
+		}
+	}
+	release
+	end
+}
+
 script Zone11A_EventScript_TM22 {
 	lock
 	if (flag(FLAG_ITEM_ZONE11A_TM22)) {
@@ -150,6 +275,13 @@ script Zone11A_EventScript_TimerBall {
 }
 
 raw `
+Zone11A_Text_RuinMultichoice:
+    .string "Baltoy$"
+    .string "Golett$"
+    .string "Yamask$"
+    .string "Yamask-G$"
+    .string "$"
+
 Zone11A_EventScript_CelebiIntro::
 	lockall
 	goto Zone11A_EventScript_NoCelebi

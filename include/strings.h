@@ -1108,6 +1108,7 @@ extern const u8 gText_XNatureBoughtPikaClone[];
 extern const u8 gText_XNatureBoughtFarm[];
 extern const u8 gText_XNatureAdopted[];
 extern const u8 gText_XNatureRevived[];
+extern const u8 gText_XNatureBoughtRuin[];
 
 extern const u8 gText_EmptyString5[];
 extern const u8 gText_EggWillTakeALongTime[];

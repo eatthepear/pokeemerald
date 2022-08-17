@@ -535,6 +535,7 @@ const u8 gText_XNatureBoughtPikaClone[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{D
 const u8 gText_XNatureBoughtFarm[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nbought from a Cowgirl\nat {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNatureAdopted[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nadopted from a Breeder\nat {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNatureRevived[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nrevived from a fossil\nat {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
+const u8 gText_XNatureBoughtRuin[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\nbought from a Ruin Maniac\nat {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNature[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature");
 const u8 gText_XNatureMetSomewhereAt[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\ngiven by Colress as a\nStarter Pokémon at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");
 const u8 gText_XNatureGivenAt[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1}{DYNAMIC 5} nature,\ngiven by the Pokémon\nDay-Care at {LV_2}{DYNAMIC 0}{DYNAMIC 3}{DYNAMIC 1}.");

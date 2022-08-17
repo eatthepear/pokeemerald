@@ -3246,6 +3246,9 @@ static void BufferMonTrainerMemo(void)
             case METLOC_REVIVED_FOSSIL:
                 text = gText_XNatureRevived;
                 break;
+            case METLOC_BOUGHT_RUIN:
+                text = gText_XNatureBoughtRuin;
+                break;
             default:
                 text = gText_XNatureMetAtYZ;
                 break;

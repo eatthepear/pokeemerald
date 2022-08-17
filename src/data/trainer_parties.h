@@ -1550,7 +1550,6 @@ static const struct TrainerMon sParty_AdaminaDefault[] = {//Leviathan, Battle st
     .nature = NATURE_CAREFUL,
     .ability = ABILITY_SLOT_1, //Overcoat
     .species = SPECIES_VULLABY,
-    .heldItem = ITEM_EVIOLITE,
     .moves = {MOVE_PLUCK, MOVE_KNOCK_OFF, MOVE_TOXIC, MOVE_ROOST}
     },
     {
@@ -1595,7 +1594,6 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
     .nature = NATURE_CAREFUL,
     .ability = ABILITY_SLOT_1, //Overcoat
     .species = SPECIES_VULLABY,
-    .heldItem = ITEM_EVIOLITE,
     .moves = {MOVE_PLUCK, MOVE_KNOCK_OFF, MOVE_TOXIC, MOVE_ROOST}
     },
     {
