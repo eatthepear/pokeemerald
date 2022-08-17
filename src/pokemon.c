@@ -4150,7 +4150,7 @@ static const struct SpriteTemplate sSpriteTemplate_64x64 =
 };
 
 // code
-const u32 gEvolutionLines[NUM_SPECIES][EVOS_PER_LINE] =
+const u16 gEvolutionLines[NUM_SPECIES][EVOS_PER_LINE] =
 {
     [SPECIES_BULBASAUR ... SPECIES_VENUSAUR]                = {SPECIES_BULBASAUR, SPECIES_IVYSAUR, SPECIES_VENUSAUR},
     [SPECIES_CHARMANDER ... SPECIES_CHARIZARD]              = {SPECIES_CHARMANDER, SPECIES_CHARMELEON, SPECIES_CHARIZARD},

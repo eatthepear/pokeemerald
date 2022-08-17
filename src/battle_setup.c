@@ -1976,8 +1976,14 @@ u8 IsCaptureBlockedBySpeciesClause(u16 species)
     
     for (i = 0; i < EVOS_PER_LINE; i++)
     {
-        if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gEvolutionLines[species][i]), FLAG_GET_CAUGHT))
-            return TRUE;
+        u16 mon = gEvolutionLines[species][i];
+        if (mon != SPECIES_NONE)
+        {
+            if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(mon), FLAG_GET_CAUGHT))
+            {
+                return TRUE;
+            }
+        }
     }
     return FALSE;
 }
