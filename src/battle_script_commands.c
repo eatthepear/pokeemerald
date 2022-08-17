@@ -3685,7 +3685,7 @@ static void Cmd_dofaintanimation(void)
     if (gBattleControllerExecFlags == 0)
     {
         gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
-        if ((GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER) && (FlagGet(FLAG_NUZLOCKE_ON)))
+        if (FlagGet(FLAG_NUZLOCKE_ON) && !IsBattlerAIControlled(gActiveBattler))
         {
             VarSet(VAR_NUZLOCKE_DEATHS, VarGet(VAR_NUZLOCKE_DEATHS) + 1);
         }
