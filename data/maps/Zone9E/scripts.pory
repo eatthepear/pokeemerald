@@ -112,6 +112,11 @@ script Zone9E_EventScript_BuyFarmAnimal {
 				message(format("{PLAYER} received the {STR_VAR_1}!"))
 				waitmessage
 				waitfanfare
+				msgbox(format("Would you like to give a nickname to {STR_VAR_1}?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Common_EventScript_GetGiftMonPartySlot)
+					call(Common_EventScript_NameReceivedPartyMon)
+				}
 				msgbox(format("Take care of {STR_VAR_1} as well as it takes care of you!"), MSGBOX_DEFAULT)
 			}
 		}

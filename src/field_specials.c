@@ -68,6 +68,8 @@
 #include "constants/metatile_labels.h"
 #include "palette.h"
 #include "pokedex.h"
+#include "item.h"
+#include "item_menu.h"
 
 EWRAM_DATA bool8 gBikeCyclingChallenge = FALSE;
 EWRAM_DATA u8 gBikeCollisions = 0;
@@ -4748,5 +4750,23 @@ void NewGameSetup(void)
 
 bool8 CheckSpeciesClause(void)
 {
-    return IsCaptureBlockedBySpeciesClause(VarGet(VAR_TEMP_0));
+    return !IsCaptureBlockedBySpeciesClause(VarGet(VAR_TEMP_0));
+}
+
+void ChooseItemFromBag(void)
+{
+    switch (VarGet(VAR_TEMP_1))
+    {
+    case MEDICINE_POCKET:
+    case BATTLEITEMS_POCKET:
+    case CONSUMABLES_POCKET:
+    case BERRIES_POCKET:
+    case BALLS_POCKET:
+    case TMHM_POCKET:
+    case TREASURES_POCKET:
+    case KEYITEMS_POCKET:
+        GoToBagMenu(ITEMMENULOCATION_CHOOSE_ITEM, VarGet(VAR_TEMP_1), CB2_ReturnToFieldContinueScript);
+    default:
+        break;
+    }
 }

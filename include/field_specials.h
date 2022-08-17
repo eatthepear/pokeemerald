@@ -40,5 +40,6 @@ u16 GetNumHiddenItemsFound(void);
 u16 GetNumHiddenItems(void);
 void NewGameSetup(void);
 bool8 CheckSpeciesClause(void);
+void ChooseItemFromBag(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

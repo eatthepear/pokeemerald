@@ -257,6 +257,11 @@ script Zone5A_EventScript_BuyPikaClone {
 				message(format("{PLAYER} received the {STR_VAR_1}!"))
 				waitmessage
 				waitfanfare
+				msgbox(format("Would you like to give a nickname to {STR_VAR_1}?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT) == YES) {
+					call(Common_EventScript_GetGiftMonPartySlot)
+					call(Common_EventScript_NameReceivedPartyMon)
+				}
 				msgbox(format("Take good care of your new Electric-type, small mammal-like Pokémon!"), MSGBOX_DEFAULT)
 			}
 		}

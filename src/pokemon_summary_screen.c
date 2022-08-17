@@ -3243,6 +3243,9 @@ static void BufferMonTrainerMemo(void)
             case METLOC_ADOPTED:
                 text = gText_XNatureAdopted;
                 break;
+            case METLOC_REVIVED_FOSSIL:
+                text = gText_XNatureRevived;
+                break;
             default:
                 text = gText_XNatureMetAtYZ;
                 break;

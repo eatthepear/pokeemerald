@@ -553,3 +553,4 @@ gSpecials::
 	def_special GetNumHiddenItems
 	def_special NewGameSetup
 	def_special CheckSpeciesClause
+	def_special ChooseItemFromBag
