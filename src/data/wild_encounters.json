@@ -1316,11 +1316,6 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_BRONZOR"
-              },
-              {
-                "min_level": 14,
-                "max_level": 16,
                 "species": "SPECIES_CUBONE"
               },
               {
@@ -1356,6 +1351,11 @@
               {
                 "min_level": 14,
                 "max_level": 16,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
                 "species": "SPECIES_TYROGUE"
               },
               {
@@ -1372,6 +1372,31 @@
                 "min_level": 14,
                 "max_level": 16,
                 "species": "SPECIES_VULLABY"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_AIPOM"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_SLAKOTH"
               }
             ]
           },
@@ -1767,11 +1792,6 @@
               {
                 "min_level": 17,
                 "max_level": 19,
-                "species": "SPECIES_AIPOM"
-              },
-              {
-                "min_level": 17,
-                "max_level": 19,
                 "species": "SPECIES_BELLSPROUT"
               },
               {
@@ -1782,12 +1802,22 @@
               {
                 "min_level": 17,
                 "max_level": 19,
+                "species": "SPECIES_CROAGUNK"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
                 "species": "SPECIES_CUFANT"
               },
               {
                 "min_level": 17,
                 "max_level": 19,
                 "species": "SPECIES_KOMALA"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_LICKITUNG"
               },
               {
                 "min_level": 17,
@@ -1807,12 +1837,7 @@
               {
                 "min_level": 17,
                 "max_level": 19,
-                "species": "SPECIES_SLAKOTH"
-              },
-              {
-                "min_level": 17,
-                "max_level": 19,
-                "species": "SPECIES_SLAKOTH"
+                "species": "SPECIES_PASSIMIAN"
               },
               {
                 "min_level": 17,
