@@ -329,8 +329,7 @@ static const u8 sContextMenuItems_BallsPocket[] = {
 };
 
 static const u8 sContextMenuItems_TmHmPocket[] = {
-    ACTION_USE,         ACTION_GIVE,
-    ACTION_DUMMY,       ACTION_CANCEL
+    ACTION_USE,         ACTION_CANCEL
 };
 
 static const u8 sContextMenuItems_BerriesPocket[] = {
@@ -1672,13 +1671,6 @@ static void OpenContextMenu(u8 taskId)
         {
             switch (gBagPosition.pocket)
             {
-            case TREASURES_POCKET:
-                gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
-                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
-                // memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_ItemsPocket, sizeof(sContextMenuItems_ItemsPocket));
-                // if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
-                //     gBagMenu->contextMenuItemsBuffer[0] = ACTION_CHECK;
-                break;
             case KEYITEMS_POCKET:
                 gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItemsPocket);
@@ -1708,10 +1700,14 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
                 break;
             case BATTLEITEMS_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_Give;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Give);
+                break;
+            case CONSUMABLES_POCKET:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_ItemsPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
                 break;
-            case CONSUMABLES_POCKET:
+            case TREASURES_POCKET:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_ItemsPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
                 break;

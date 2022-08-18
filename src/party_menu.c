@@ -421,7 +421,6 @@ static void CB2_ChoosePartyMonForTraining(void);
 static void DisplayShouldTrainMessage(struct Pokemon *mon, bool8 keepOpen);
 static void DisplayReachedLevelCapMessage(struct Pokemon *mon, bool8 keepOpen);
 static void Task_WaitForTextTrainingEvolution(u8 taskId);
-static void TryDoTrainingToSelectedMon(u8 taskId);
 static void Task_DoTrainingToSelectedMonYesNo(u8 taskId);
 static void Task_HandleTrainingYesNoInput(u8 taskId);
 
@@ -7192,7 +7191,7 @@ static void DisplayReachedLevelCapMessage(struct Pokemon *mon, bool8 keepOpen)
     ScheduleBgCopyTilemapToVram(2);
 }
 
-static void TryDoTrainingToSelectedMon(u8 taskId)
+void TryDoTrainingToSelectedMon(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u32 currentLevel = GetMonData(mon, MON_DATA_LEVEL);

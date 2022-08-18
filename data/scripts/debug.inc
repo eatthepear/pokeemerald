@@ -31,7 +31,12 @@ Debug_Script_8::
 
 Debug_CheatStart::
 	lockall
-	additem ITEM_RARE_CANDY, 999
+	additem ITEM_RARE_CANDY, 100
+	additem ITEM_RARE_CANDY, 100
+	additem ITEM_RARE_CANDY, 100
+	additem ITEM_RARE_CANDY, 100
+	additem ITEM_RARE_CANDY, 100
+	additem ITEM_RARE_CANDY, 100
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	setflag FLAG_ZONE0C_RECEIVED_EEVEE
 	random 20
@@ -236,6 +241,7 @@ Debug_CheatStart_138:
 	setflag FLAG_LELOUCH_INTRO
 	setvar VAR_ZONE_0_STATE, 3
 	additem ITEM_TM21
+	callnative DisableBattleAnimationSetting
 	warp MAP_ZONE5SANCTUARY, 255, 22, 7
 	waitstate
 	release

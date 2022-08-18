@@ -102,6 +102,7 @@ void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 void ChooseSendMonToPC(void);
 void DisplaySendMonToPCMessage(struct Pokemon* mon);
+void TryDoTrainingToSelectedMon(u8 taskId);
 
 bool8 CanLearnTutorMove(u16, u8);
 

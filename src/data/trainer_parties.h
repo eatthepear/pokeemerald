@@ -1245,7 +1245,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Huge Power
     .species = SPECIES_AZUMARILL,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AQUA_JET, MOVE_AQUA_TAIL, MOVE_COVET, MOVE_PROTECT}
+    .moves = {MOVE_AQUA_JET, MOVE_AQUA_TAIL, MOVE_COVET, MOVE_CHARM}
     },
     {
     .iv = 31,
@@ -1254,7 +1254,7 @@ static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     .ability = ABILITY_SLOT_1, //Flame Body
     .species = SPECIES_FLETCHINDER,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AERIAL_ACE, MOVE_FLAME_CHARGE, MOVE_ROOST, MOVE_PROTECT}
+    .moves = {MOVE_AERIAL_ACE, MOVE_FLAME_CHARGE, MOVE_ROOST, MOVE_FEATHER_DANCE}
     }
 };
 

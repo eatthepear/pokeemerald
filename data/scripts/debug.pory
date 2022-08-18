@@ -35,7 +35,12 @@ Debug_Script_8::
 
 script Debug_CheatStart {
 	lockall
-	additem(ITEM_RARE_CANDY, 999)
+	additem(ITEM_RARE_CANDY, 100)
+	additem(ITEM_RARE_CANDY, 100)
+	additem(ITEM_RARE_CANDY, 100)
+	additem(ITEM_RARE_CANDY, 100)
+	additem(ITEM_RARE_CANDY, 100)
+	additem(ITEM_RARE_CANDY, 100)
 	// random(24)
 	// switch (var(VAR_RESULT)) {
 	// 	case 0:
@@ -442,6 +447,7 @@ script Debug_CheatStart {
 	setflag(FLAG_LELOUCH_INTRO)
 	setvar(VAR_ZONE_0_STATE, 3)
 	additem(ITEM_TM21)
+	callnative(DisableBattleAnimationSetting)
     warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
 	waitstate
 	release

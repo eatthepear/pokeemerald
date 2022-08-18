@@ -124,7 +124,6 @@ Zone9A_EventScript_Ari::
 	applymovement 4, Zone9A_Movement_WinstrateEnterHouse
 	waitmovement 0
 	removeobject 4
-	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Zone9A_Movement_WaitForNextWinstrate
 	waitmovement 0
 	addobject 5

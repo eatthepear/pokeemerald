@@ -679,3 +679,8 @@ static void DrawBgWindowFrames(void)
 
     CopyBgTilemapBufferToVram(1);
 }
+
+void DisableBattleAnimationSetting(void)
+{
+    gSaveBlock2Ptr->optionsBattleSceneOff = TRUE;
+}
