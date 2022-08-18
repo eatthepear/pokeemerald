@@ -4311,7 +4311,7 @@ u16 GetNumTrainersRemaining(void)
     else if (FlagGet(FLAG_IS_REVISITING_ZONE))
         zone = VarGet(VAR_REVISITING_ZONE);
     else
-        return 1000; //In a Sanctuary, for no opponents msg
+        return 200; //In a Sanctuary, for no opponents msg
     switch (zone)
     {
     case 1:
