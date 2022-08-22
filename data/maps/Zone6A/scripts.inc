@@ -254,9 +254,8 @@ Zone6A_EventScript_Sign::
 
 Zone6A_Text_Sign:
 	.string "Trainer Tips!\p"
-	.string "While you are on the Pokémon stats\n"
-	.string "screen, you can press {A_BUTTON} to switch\l"
-	.string "between stats, IVs, or EVs.$"
+	.string "You can sort items in the Bag\n"
+	.string "using {START_BUTTON}.$"
 
 Zone6A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!$"

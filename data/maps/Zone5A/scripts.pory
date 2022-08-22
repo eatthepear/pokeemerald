@@ -431,9 +431,9 @@ Zone5A_Text_ClintonDefeat:
 
 Zone5A_Text_ClintonPostBattle:
 	.string "Such cheapskates!$"
-
-Zone5A_Text_Sign:
-	.string "Trainer Tips!\p"
-	.string "You can sort items in the Bag\n"
-	.string "using {START_BUTTON}.$"
 `
+text Zone5A_Text_Sign {
+	format("Trainer Tips!\p"
+	"You can view the current level cap as well as how the number of remaining foes and items in an area by looking at your Trainer Card.\p"
+	"This information changes accordingly based on which Zone you are in.")
+}

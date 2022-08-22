@@ -329,13 +329,13 @@ static void BuildSanctuaryStartMenu(void)
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
         
-    AddStartMenuAction(MENU_ACTION_MISC);
+    // AddStartMenuAction(MENU_ACTION_MISC);
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
     // }
     AddStartMenuAction(MENU_ACTION_SAVE);
-    // AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_OPTION);
 
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
         AddStartMenuAction(MENU_ACTION_DEBUG);
@@ -357,10 +357,10 @@ static void BuildNewZoneStartMenu(void)
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
         
-    AddStartMenuAction(MENU_ACTION_MISC);
+    // AddStartMenuAction(MENU_ACTION_MISC);
 
     AddStartMenuAction(MENU_ACTION_SAVE);
-    // AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_OPTION);
 
     if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
         AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
@@ -385,14 +385,14 @@ static void BuildRevisitingZoneStartMenu(void)
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
         
-    AddStartMenuAction(MENU_ACTION_MISC);
+    // AddStartMenuAction(MENU_ACTION_MISC);
     
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
     // }
     AddStartMenuAction(MENU_ACTION_SAVE);
-    // AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_OPTION);
 
     AddStartMenuAction(MENU_ACTION_RETURN_TO_ZONE_0);
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)

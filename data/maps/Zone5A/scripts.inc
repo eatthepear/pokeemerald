@@ -501,11 +501,6 @@ Zone5A_Text_ClintonDefeat:
 Zone5A_Text_ClintonPostBattle:
 	.string "Such cheapskates!$"
 
-Zone5A_Text_Sign:
-	.string "Trainer Tips!\p"
-	.string "You can sort items in the Bag\n"
-	.string "using {START_BUTTON}.$"
-
 Zone5A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome\n"
 	.string "Foursome.\p"
@@ -630,3 +625,12 @@ Zone5A_EventScript_BuyPikaClone_Text_11:
 
 Zone5A_Text_Leviathan5Defeat::
 	.string "But how?! My Bugs!$"
+
+Zone5A_Text_Sign::
+	.string "Trainer Tips!\p"
+	.string "You can view the current level cap as\n"
+	.string "well as how the number of remaining\l"
+	.string "foes and items in an area by looking at\l"
+	.string "your Trainer Card.\p"
+	.string "This information changes accordingly\n"
+	.string "based on which Zone you are in.$"
