@@ -67,7 +67,6 @@ enum
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
     MENU_ACTION_RETIRE_ZONE,
-    MENU_ACTION_MISC,
     MENU_ACTION_DEXNAV
 };
 
@@ -111,7 +110,6 @@ static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
 static bool8 StartMenuZoneRetireCallback(void);
-static bool8 StartMenuZoneMiscCallback(void);
 static bool8 StartMenuDexNavCallback(void);
 
 // Menu callbacks
@@ -165,7 +163,6 @@ static const struct WindowTemplate sPyramidFloorWindowTemplate_2 = {0, 1, 1, 0xA
 static const struct WindowTemplate sPyramidFloorWindowTemplate_1 = {0, 1, 1, 0xC, 4, 0xF, 8};
 
 static const u8 gText_MenuDebug[] = _("DEBUG");
-static const u8 gText_MenuMisc[] = _("Misc");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -184,7 +181,6 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}},
     {gText_MenuDebug, {.u8_void = StartMenuDebugCallback}},
     {gText_MenuRetire, {.u8_void = StartMenuZoneRetireCallback}},
-    {gText_MenuMisc, {.u8_void = StartMenuZoneMiscCallback}},
     {gText_MenuDexNav, {.u8_void = StartMenuDexNavCallback}}
 };
 
@@ -329,7 +325,6 @@ static void BuildSanctuaryStartMenu(void)
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
         
-    // AddStartMenuAction(MENU_ACTION_MISC);
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
     //     AddStartMenuAction(MENU_ACTION_POKENAV);
@@ -357,7 +352,6 @@ static void BuildNewZoneStartMenu(void)
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
         
-    // AddStartMenuAction(MENU_ACTION_MISC);
 
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -384,8 +378,6 @@ static void BuildRevisitingZoneStartMenu(void)
 
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
-        
-    // AddStartMenuAction(MENU_ACTION_MISC);
     
     // if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     // {
@@ -684,8 +676,7 @@ static bool8 HandleStartMenuInput(void)
             && gMenuCallback != StartMenuDebugCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
             && gMenuCallback != StartMenuBattlePyramidRetireCallback
-            && gMenuCallback != StartMenuZoneRetireCallback
-            && gMenuCallback != StartMenuZoneMiscCallback)
+            && gMenuCallback != StartMenuZoneRetireCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -845,15 +836,6 @@ static bool8 StartMenuZoneRetireCallback(void)
     RemoveExtraStartMenuWindows();
     HideStartMenu();
     ZoneRetirePrompt();
-
-    return TRUE;
-}
-
-static bool8 StartMenuZoneMiscCallback(void)
-{
-    RemoveExtraStartMenuWindows();
-    HideStartMenu();
-    CreateMiscMenu();
 
     return TRUE;
 }

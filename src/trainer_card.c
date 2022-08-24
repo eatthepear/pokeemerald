@@ -731,7 +731,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     trainerCard->zonesCompleted = VarGet(VAR_ZONE) - 1;
     trainerCard->levelCap = GetCurrentLevelCap();
     trainerCard->trainersRemaining = GetNumTrainersRemaining();
-    trainerCard->itemsRemaining = GetNumChestsFound();
+    trainerCard->itemsRemaining = GetNumItemsRemaining();
 
     // for (i = 0; i < TRAINER_CARD_PROFILE_LENGTH; i++)
     //     trainerCard->easyChatProfile[i] = gSaveBlock1Ptr->easyChatProfile[i];

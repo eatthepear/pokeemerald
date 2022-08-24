@@ -3878,76 +3878,6 @@ Zone_EventScript_RetirePrompt_27:
 	goto Zone_EventScript_RetirePrompt_4
 
 
-Zone_EventScript_MiscMenu::
-	lockall
-	multichoice 21, 0, MULTI_INFO, FALSE
-	switch VAR_RESULT
-	case 0, Zone_EventScript_MiscMenu_3
-	case 1, Zone_EventScript_MiscMenu_4
-	case 2, Zone_EventScript_MiscMenu_5
-Zone_EventScript_MiscMenu_1:
-	releaseall
-	end
-
-Zone_EventScript_MiscMenu_3:
-	specialvar VAR_RESULT, GetCurrentLevelCap
-	buffernumberstring 0, VAR_RESULT
-	msgbox Zone_EventScript_MiscMenu_Text_0
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_4:
-	specialvar VAR_RESULT, GetNumTrainersRemaining
-	buffernumberstring 0, VAR_RESULT
-	switch VAR_RESULT
-	case 0, Zone_EventScript_MiscMenu_7
-	case 1, Zone_EventScript_MiscMenu_8
-	case 1000, Zone_EventScript_MiscMenu_9
-	msgbox gText_MultipleOpponentsRemaining
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_5:
-	specialvar VAR_RESULT, GetNumChests
-	buffernumberstring 0, VAR_RESULT
-	compare VAR_RESULT, 0
-	goto_if_eq Zone_EventScript_MiscMenu_12
-	specialvar VAR_RESULT, GetNumChestsFound
-	buffernumberstring 1, VAR_RESULT
-	msgbox Zone_EventScript_MiscMenu_Text_4
-Zone_EventScript_MiscMenu_11:
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone_EventScript_MiscMenu_15
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_7:
-	msgbox Zone_EventScript_MiscMenu_Text_1
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_8:
-	msgbox gText_OneOpponentRemaining
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_9:
-	msgbox Zone_EventScript_MiscMenu_Text_2
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_12:
-	msgbox Zone_EventScript_MiscMenu_Text_3
-	goto Zone_EventScript_MiscMenu_11
-
-Zone_EventScript_MiscMenu_15:
-	specialvar VAR_RESULT, GetNumHiddenItems
-	buffernumberstring 0, VAR_RESULT
-	compare VAR_RESULT, 0
-	goto_if_eq Zone_EventScript_MiscMenu_17
-	specialvar VAR_RESULT, GetNumHiddenItemsFound
-	buffernumberstring 1, VAR_RESULT
-	msgbox Zone_EventScript_MiscMenu_Text_6
-	goto Zone_EventScript_MiscMenu_1
-
-Zone_EventScript_MiscMenu_17:
-	msgbox Zone_EventScript_MiscMenu_Text_5
-	goto Zone_EventScript_MiscMenu_1
-
-
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
@@ -4421,28 +4351,6 @@ Zone_EventScript_RetirePrompt_Text_0:
 
 Zone_EventScript_RetirePrompt_Text_1:
 	.string "Warping now…$"
-
-Zone_EventScript_MiscMenu_Text_0:
-	.string "The current level cap is {STR_VAR_1}.$"
-
-Zone_EventScript_MiscMenu_Text_1:
-	.string "There are no opponents remaining\n"
-	.string "in this area.$"
-
-Zone_EventScript_MiscMenu_Text_2:
-	.string "There are no opponents in this area.$"
-
-Zone_EventScript_MiscMenu_Text_3:
-	.string "There are no item chests in this area.$"
-
-Zone_EventScript_MiscMenu_Text_4:
-	.string "You have found {STR_VAR_2}/{STR_VAR_1} item chests\nin this area.$"
-
-Zone_EventScript_MiscMenu_Text_5:
-	.string "There are no hidden items in this area.$"
-
-Zone_EventScript_MiscMenu_Text_6:
-	.string "You have found {STR_VAR_2}/{STR_VAR_1} hidden items\nin this area.$"
 
 gText_Lelouch_NotEnoughColor::
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\nof that color.$"

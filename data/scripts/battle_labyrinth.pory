@@ -2699,53 +2699,6 @@ script Zone_EventScript_RetirePrompt {
 	end
 }
 
-script Zone_EventScript_MiscMenu {
-	lockall
-	multichoice(21, 0, MULTI_INFO, FALSE)
-	switch (var(VAR_RESULT)) {
-		case 0:
-			specialvar(VAR_RESULT, GetCurrentLevelCap)
-			buffernumberstring(0, VAR_RESULT)
-			msgbox("The current level cap is {STR_VAR_1}.")
-		case 1:
-			specialvar(VAR_RESULT, GetNumTrainersRemaining)
-			buffernumberstring(0, VAR_RESULT)
-			switch(var(VAR_RESULT)) {
-				case 0:
-					msgbox(format("There are no opponents remaining\nin this area."))
-				case 1:
-					msgbox(gText_OneOpponentRemaining)
-				case 1000:
-					msgbox(format("There are no opponents in this area."))
-				default:
-					msgbox(gText_MultipleOpponentsRemaining)
-			}
-		case 2:
-			specialvar(VAR_RESULT, GetNumChests)
-			buffernumberstring(0, VAR_RESULT)
-			if (var(VAR_RESULT) == 0) {
-				msgbox(format("There are no item chests in this area."))
-			} else {
-				specialvar(VAR_RESULT, GetNumChestsFound)
-				buffernumberstring(1, VAR_RESULT)
-				msgbox("You have found {STR_VAR_2}/{STR_VAR_1} item chests\nin this area.")
-			}
-			if (flag(FLAG_BRUTAL_MODE_ON) == false) {
-				specialvar(VAR_RESULT, GetNumHiddenItems)
-				buffernumberstring(0, VAR_RESULT)
-				if (var(VAR_RESULT) == 0) {
-					msgbox(format("There are no hidden items in this area."))
-				} else {
-					specialvar(VAR_RESULT, GetNumHiddenItemsFound)
-					buffernumberstring(1, VAR_RESULT)
-					msgbox("You have found {STR_VAR_2}/{STR_VAR_1} hidden items\nin this area.")
-				}
-			}
-	}
-	releaseall
-	end
-}
-
 text gText_OneOpponentRemaining {
 	format("There is 1 opponent remaining in this area.")
 }

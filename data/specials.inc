@@ -547,10 +547,7 @@ gSpecials::
 	def_special ReverseHiddenItemFlags
 	def_special GetNumTrainersRemaining
 	def_special GetCurrentLevelCap
-	def_special GetNumChestsFound
-	def_special GetNumChests
-	def_special GetNumHiddenItemsFound
-	def_special GetNumHiddenItems
+	def_special GetNumItemsRemaining
 	def_special NewGameSetup
 	def_special CheckSpeciesClause
 	def_special ChooseItemFromBag
