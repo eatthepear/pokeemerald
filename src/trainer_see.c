@@ -121,7 +121,7 @@ static const struct OamData sOamData_Icons =
     .y = 0,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = 0,
+    .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(16x16),
     .x = 0,
@@ -237,8 +237,8 @@ bool8 CheckForTrainersWantingBattle(void)
         
         gSelectedObjectEvent = objectEventId;
         gSpecialVar_LastTalked = gObjectEvents[objectEventId].localId;
-        ScriptContext1_SetupScript(EventScript_ObjectApproachPlayer);
-        ScriptContext2_Enable();
+        ScriptContext_SetupScript(EventScript_ObjectApproachPlayer);
+        LockPlayerFieldControls();
         return TRUE;
     }
 
@@ -703,7 +703,7 @@ void DoTrainerApproach(void)
 static void Task_EndTrainerApproach(u8 taskId)
 {
     DestroyTask(taskId);
-    EnableBothScriptContexts();
+    ScriptContext_Enable();
 }
 
 void TryPrepareSecondApproachingTrainer(void)

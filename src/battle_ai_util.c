@@ -3363,9 +3363,7 @@ static const u16 sRecycleEncouragedItems[] =
     ITEM_MICLE_BERRY,
     ITEM_CUSTAP_BERRY,
     ITEM_MENTAL_HERB,
-    #ifdef ITEM_EXPANSION
     ITEM_FOCUS_SASH,
-    #endif
     // TODO expand this
 };
 
@@ -3381,9 +3379,7 @@ bool32 IsStatBoostingBerry(u16 item)
     case ITEM_APICOT_BERRY:
     //case ITEM_LANSAT_BERRY:
     case ITEM_STARF_BERRY:
-    #ifdef ITEM_EXPANSION
     case ITEM_MICLE_BERRY:
-    #endif
         return TRUE;
     default:
         return FALSE;
@@ -3625,12 +3621,10 @@ bool32 ShouldUseZMove(u8 battlerAtk, u8 battlerDef, u16 chosenMove)
     {
         u8 effectiveness;
         
-        #ifdef POKEMON_EXPANSION
         if (gBattleMons[battlerDef].ability == ABILITY_DISGUISE && gBattleMons[battlerDef].species == SPECIES_MIMIKYU)
             return FALSE; // Don't waste a Z-Move busting disguise
         if (gBattleMons[battlerDef].ability == ABILITY_ICE_FACE && gBattleMons[battlerDef].species == SPECIES_EISCUE && IS_MOVE_PHYSICAL(chosenMove))
             return FALSE; // Don't waste a Z-Move busting Ice Face
-        #endif
         
         if (IS_MOVE_STATUS(chosenMove) && !IS_MOVE_STATUS(gBattleStruct->zmove.chosenZMove))
             return FALSE;

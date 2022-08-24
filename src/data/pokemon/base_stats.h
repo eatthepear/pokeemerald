@@ -3164,7 +3164,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 170,
         .evYield_HP        = 1,
         .evYield_Attack    = 1,
-        .itemRare = ITEM_BLACK_SLUDGE,
+        .itemCommon = ITEM_BLACK_SLUDGE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 0,
         .friendship = 70,
@@ -4255,6 +4255,7 @@ const struct BaseStats gBaseStats[] =
         .catchRate = 35,
         .expYield = 100,
         .evYield_HP        = 1,
+        .itemCommon = ITEM_QUICK_POWDER,
         .itemRare = ITEM_METAL_POWDER,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 0,
@@ -10695,6 +10696,7 @@ const struct BaseStats gBaseStats[] =
         .flags = FLAG_MYTHICAL,
     },
 
+#if P_NEW_POKEMON == TRUE
     [SPECIES_TURTWIG] =
     {
         .baseHP        = 55,
@@ -20354,6 +20356,7 @@ const struct BaseStats gBaseStats[] =
         .catchRate = 45,
         .expYield = 270,
         .evYield_Defense   = 3,
+        .itemCommon = ITEM_RAZOR_CLAW,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 0,
         .friendship = 70,
@@ -25814,7 +25817,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_PIKACHU_WORLD_CAP]    = CAP_PIKACHU_BASE_STATS(FLIP),
 
     [SPECIES_PICHU_SPIKY_EARED] = PICHU_BASE_STATS(NO_FLIP),
-
+#endif
     [SPECIES_UNOWN_B] = UNOWN_BASE_STATS(NO_FLIP),
     [SPECIES_UNOWN_C] = UNOWN_BASE_STATS(NO_FLIP),
     [SPECIES_UNOWN_D] = UNOWN_BASE_STATS(NO_FLIP),
@@ -25921,6 +25924,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
     },
 
+#if P_NEW_POKEMON == TRUE
     [SPECIES_BURMY_SANDY_CLOAK] = BURMY_BASE_STATS(BODY_COLOR_BROWN),
     [SPECIES_BURMY_TRASH_CLOAK] = BURMY_BASE_STATS(BODY_COLOR_RED),
 
@@ -27121,4 +27125,5 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
+#endif
 };

@@ -454,6 +454,7 @@ extern const u32 gMonFrontPic_Groudon[];
 extern const u32 gMonFrontPic_Rayquaza[];
 extern const u32 gMonFrontPic_Jirachi[];
 extern const u32 gMonFrontPic_Deoxys[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonFrontPic_Turtwig[];
 extern const u32 gMonFrontPic_Grotle[];
 extern const u32 gMonFrontPic_Torterra[];
@@ -1105,6 +1106,7 @@ extern const u32 gMonFrontPic_PikachuAlolaCap[];
 extern const u32 gMonFrontPic_PikachuPartnerCap[];
 extern const u32 gMonFrontPic_PikachuWorldCap[];
 extern const u32 gMonFrontPic_PichuSpikyEared[];
+#endif
 extern const u32 gMonFrontPic_UnownB[];
 extern const u32 gMonFrontPic_UnownC[];
 extern const u32 gMonFrontPic_UnownD[];
@@ -1138,6 +1140,7 @@ extern const u32 gMonFrontPic_CastformSnowy[];
 extern const u32 gMonFrontPic_DeoxysAttack[];
 extern const u32 gMonFrontPic_DeoxysDefense[];
 extern const u32 gMonFrontPic_DeoxysSpeed[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonFrontPic_BurmySandyCloak[];
 extern const u32 gMonFrontPic_BurmyTrashCloak[];
 extern const u32 gMonFrontPic_WormadamSandyCloak[];
@@ -1244,6 +1247,7 @@ extern const u32 gMonFrontPic_UrshifuRapidStrikeStyle[];
 extern const u32 gMonFrontPic_ZarudeDada[];
 extern const u32 gMonFrontPic_CalyrexIceRider[];
 extern const u32 gMonFrontPic_CalyrexShadowRider[];
+#endif
 extern const u32 gMonFrontPic_Egg[];
 
 extern const u32 gMonBackPic_CircledQuestionMark[];
@@ -1635,6 +1639,7 @@ extern const u32 gMonBackPic_Groudon[];
 extern const u32 gMonBackPic_Rayquaza[];
 extern const u32 gMonBackPic_Jirachi[];
 extern const u32 gMonBackPic_Deoxys[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonBackPic_Turtwig[];
 extern const u32 gMonBackPic_Grotle[];
 extern const u32 gMonBackPic_Torterra[];
@@ -2285,6 +2290,7 @@ extern const u32 gMonBackPic_PikachuAlolaCap[];
 extern const u32 gMonBackPic_PikachuPartnerCap[];
 extern const u32 gMonBackPic_PikachuWorldCap[];
 extern const u32 gMonBackPic_PichuSpikyEared[];
+#endif
 extern const u32 gMonBackPic_UnownB[];
 extern const u32 gMonBackPic_UnownC[];
 extern const u32 gMonBackPic_UnownD[];
@@ -2318,6 +2324,7 @@ extern const u32 gMonBackPic_CastformSnowy[];
 extern const u32 gMonBackPic_DeoxysAttack[];
 extern const u32 gMonBackPic_DeoxysDefense[];
 extern const u32 gMonBackPic_DeoxysSpeed[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonBackPic_BurmySandyCloak[];
 extern const u32 gMonBackPic_BurmyTrashCloak[];
 extern const u32 gMonBackPic_WormadamSandyCloak[];
@@ -2424,6 +2431,7 @@ extern const u32 gMonBackPic_UrshifuRapidStrikeStyle[];
 extern const u32 gMonBackPic_ZarudeDada[];
 extern const u32 gMonBackPic_CalyrexIceRider[];
 extern const u32 gMonBackPic_CalyrexShadowRider[];
+#endif
 
 extern const u32 gMonPalette_CircledQuestionMark[];
 extern const u32 gMonPalette_DoubleQuestionMark[];
@@ -2813,6 +2821,7 @@ extern const u32 gMonPalette_Groudon[];
 extern const u32 gMonPalette_Rayquaza[];
 extern const u32 gMonPalette_Jirachi[];
 extern const u32 gMonPalette_Deoxys[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonPalette_Turtwig[];
 extern const u32 gMonPalette_Grotle[];
 extern const u32 gMonPalette_Torterra[];
@@ -3457,12 +3466,14 @@ extern const u32 gMonPalette_PikachuAlolaCap[];
 extern const u32 gMonPalette_PikachuPartnerCap[];
 extern const u32 gMonPalette_PikachuWorldCap[];
 extern const u32 gMonPalette_PichuSpikyEared[];
+#endif
 extern const u32 gMonPalette_CastformSunny[];
 extern const u32 gMonPalette_CastformRainy[];
 extern const u32 gMonPalette_CastformSnowy[];
 extern const u32 gMonPalette_DeoxysAttack[];
 extern const u32 gMonPalette_DeoxysDefense[];
 extern const u32 gMonPalette_DeoxysSpeed[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonPalette_BurmySandyCloak[];
 extern const u32 gMonPalette_BurmyTrashCloak[];
 extern const u32 gMonPalette_WormadamSandyCloak[];
@@ -3622,6 +3633,7 @@ extern const u32 gMonPalette_UrshifuRapidStrikeStyle[];
 extern const u32 gMonPalette_ZarudeDada[];
 extern const u32 gMonPalette_CalyrexIceRider[];
 extern const u32 gMonPalette_CalyrexShadowRider[];
+#endif
 extern const u32 gMonPalette_Egg[];
 
 extern const u32 gMonShinyPalette_CircledQuestionMark[];
@@ -4012,6 +4024,7 @@ extern const u32 gMonShinyPalette_Groudon[];
 extern const u32 gMonShinyPalette_Rayquaza[];
 extern const u32 gMonShinyPalette_Jirachi[];
 extern const u32 gMonShinyPalette_Deoxys[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonShinyPalette_Turtwig[];
 extern const u32 gMonShinyPalette_Grotle[];
 extern const u32 gMonShinyPalette_Torterra[];
@@ -4657,12 +4670,14 @@ extern const u32 gMonShinyPalette_PikachuAlolaCap[];
 extern const u32 gMonShinyPalette_PikachuPartnerCap[];
 extern const u32 gMonShinyPalette_PikachuWorldCap[];
 extern const u32 gMonShinyPalette_PichuSpikyEared[];
+#endif
 extern const u32 gMonShinyPalette_CastformSunny[];
 extern const u32 gMonShinyPalette_CastformRainy[];
 extern const u32 gMonShinyPalette_CastformSnowy[];
 extern const u32 gMonShinyPalette_DeoxysAttack[];
 extern const u32 gMonShinyPalette_DeoxysDefense[];
 extern const u32 gMonShinyPalette_DeoxysSpeed[];
+#if P_NEW_POKEMON == TRUE
 extern const u32 gMonShinyPalette_BurmySandyCloak[];
 extern const u32 gMonShinyPalette_BurmyTrashCloak[];
 extern const u32 gMonShinyPalette_WormadamSandyCloak[];
@@ -4816,6 +4831,7 @@ extern const u32 gMonShinyPalette_UrshifuRapidStrikeStyle[];
 extern const u32 gMonShinyPalette_ZarudeDada[];
 extern const u32 gMonShinyPalette_CalyrexIceRider[];
 extern const u32 gMonShinyPalette_CalyrexShadowRider[];
+#endif
 
 extern const u8 gMonIcon_QuestionMark[];
 extern const u8 gMonIcon_Bulbasaur[];
@@ -5204,6 +5220,7 @@ extern const u8 gMonIcon_Groudon[];
 extern const u8 gMonIcon_Rayquaza[];
 extern const u8 gMonIcon_Jirachi[];
 extern const u8 gMonIcon_Deoxys[];
+#if P_NEW_POKEMON == TRUE
 extern const u8 gMonIcon_Turtwig[];
 extern const u8 gMonIcon_Grotle[];
 extern const u8 gMonIcon_Torterra[];
@@ -5845,6 +5862,7 @@ extern const u8 gMonIcon_PikachuKalosCap[];
 extern const u8 gMonIcon_PikachuAlolaCap[];
 extern const u8 gMonIcon_PikachuPartnerCap[];
 extern const u8 gMonIcon_PichuSpikyEared[];
+#endif
 extern const u8 gMonIcon_UnownB[];
 extern const u8 gMonIcon_UnownC[];
 extern const u8 gMonIcon_UnownD[];
@@ -5878,6 +5896,7 @@ extern const u8 gMonIcon_CastformSnowy[];
 extern const u8 gMonIcon_DeoxysAttack[];
 extern const u8 gMonIcon_DeoxysDefense[];
 extern const u8 gMonIcon_DeoxysSpeed[];
+#if P_NEW_POKEMON == TRUE
 extern const u8 gMonIcon_BurmySandyCloak[];
 extern const u8 gMonIcon_BurmyTrashCloak[];
 extern const u8 gMonIcon_WormadamSandyCloak[];
@@ -5998,6 +6017,7 @@ extern const u8 gMonIcon_EternatusEternamax[];
 extern const u8 gMonIcon_ZarudeDada[];
 extern const u8 gMonIcon_CalyrexIceRider[];
 extern const u8 gMonIcon_CalyrexShadowRider[];
+#endif
 extern const u8 gMonIcon_Egg[];
 
 extern const u8 gMonFootprint_QuestionMark[];
@@ -6387,6 +6407,7 @@ extern const u8 gMonFootprint_Latios[];
 extern const u8 gMonFootprint_Jirachi[];
 extern const u8 gMonFootprint_Deoxys[];
 extern const u8 gMonFootprint_Chimecho[];
+#if P_NEW_POKEMON == TRUE
 extern const u8 gMonFootprint_Turtwig[];
 extern const u8 gMonFootprint_Grotle[];
 extern const u8 gMonFootprint_Torterra[];
@@ -6906,6 +6927,7 @@ extern const u8 gMonFootprint_Calyrex[];
 //extern const u8 gMonFootprint_Sneasler[];
 //extern const u8 gMonFootprint_Overqwil[];
 //extern const u8 gMonFootprint_Enamorus[];
+#endif
 
 // trainer sprites
 extern const u32 gTrainerFrontPic_Hiker[];
@@ -8968,18 +8990,24 @@ extern const u16 gBattleInterface_BallStatusBarPal[];
 extern const u16 gBattleInterface_BallDisplayPal[];
 extern const u8 gHealthboxElementsGfxTable[][32];
 
-extern const u16 gNamingScreenMenu_Pal[];
+extern const u16 gNamingScreenMenu_Pal[6][16];
 extern const u32 gNamingScreenMenu_Gfx[];
 extern const u32 gNamingScreenBackground_Tilemap[];
 extern const u8 gNamingScreenKeyboardUpper_Tilemap[];
 extern const u8 gNamingScreenKeyboardLower_Tilemap[];
 extern const u8 gNamingScreenKeyboardSymbols_Tilemap[];
-extern const u8 gNamingScreenRWindow_Gfx[];
-extern const u8 gNamingScreenPageButton_Gfx[];
-extern const u8 gNamingScreenROptions_Gfx[];
-extern const u8 gNamingScreenCursor_Gfx[];
-extern const u8 gNamingScreenInputArrow_Gfx[];
-extern const u8 gNamingScreenUnderscore_Gfx[];
+extern const u32 gNamingScreenPageSwapFrame_Gfx[];
+extern const u32 gNamingScreenBackButton_Gfx[];
+extern const u32 gNamingScreenOKButton_Gfx[];
+extern const u32 gNamingScreenPageSwapButton_Gfx[];
+extern const u32 gNamingScreenPageSwapUpper_Gfx[];
+extern const u32 gNamingScreenPageSwapLower_Gfx[];
+extern const u32 gNamingScreenPageSwapOthers_Gfx[];
+extern const u32 gNamingScreenCursor_Gfx[];
+extern const u32 gNamingScreenCursorSquished_Gfx[];
+extern const u32 gNamingScreenCursorFilled_Gfx[];
+extern const u32 gNamingScreenInputArrow_Gfx[];
+extern const u32 gNamingScreenUnderscore_Gfx[];
 
 extern const u32 gPokeblockFeedBg_Tilemap[];
 

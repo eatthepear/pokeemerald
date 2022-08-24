@@ -19915,6 +19915,7 @@ static const struct LevelUpMove sDeoxysSpeedLevelUpLearnset[] = {
 	LEVEL_UP_END
 };
 
+#if P_NEW_POKEMON == TRUE
 static const struct LevelUpMove sWormadamSandyCloakLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 0, MOVE_QUIVER_DANCE),
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
@@ -20267,3 +20268,4 @@ static const struct LevelUpMove sCalyrexShadowRiderLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(88, MOVE_FUTURE_SIGHT),
 	LEVEL_UP_END
 };
+#endif
