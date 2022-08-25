@@ -21,260 +21,263 @@ script Zone0Sanctuary_EventScript_Intro {
 	applymovement(1, Common_Movement_Colress_WalkDown)
 	call(EventScript_MoveCameraDown)
 	waitmovement(0)
-	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}.\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
-	if (var(VAR_RESULT) == YES) {
-		setvar(VAR_TEMP_0, 1)
-		msgbox(format("The Pokémon Battle Labyrinth is comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
-		"In these Zones, you might encounter wild Pokémon, great treasures, tough trainers, and more.\p"
-		"Each Zone typically contains a {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
-		"At the end of each Zone and before the next Zone begins, you will find a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to purchase supplies, heal your Pokémon, and other benefits.\p"
-		"Once you enter a new Zone, you will not be able to access a Sanctuary until you exit that Zone.\p"
-		"In order to win, you must progress through all Zones without losing a battle."))
-		delay(96)
-	}
-	msgbox(format("Would you like to listen to the difficulty options explanation?"), MSGBOX_YESNO)
-	if (var(VAR_RESULT) == YES) {
-		setvar(VAR_TEMP_1, 1)
-	}
-	while {
-		if (var(VAR_TEMP_1) == 1) {
-			msgbox(format("There are two game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
-			msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-			msgbox(gText_Colress_BrutalExplained)
-			delay(96)
-		}
-		msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
-		multichoice(2, 5, MULTI_DEFAULT_BRUTAL, 1)
-		if (var(VAR_RESULT) == 0) {
-			if (var(VAR_TEMP_1) == 1) {
-				msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-				break
-			}
-		} else {
-			if (var(VAR_TEMP_1) == 1) {
-				msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-				break
-			}
-		}
-	}
-	delay(16)
-	msgbox(format("Would you like to listen to the game mode options explanations?"), MSGBOX_YESNO)
-	if (var(VAR_RESULT) == YES) {
-		msgbox(gText_Colress_GameModes, MSGBOX_DEFAULT)
-		setvar(VAR_TEMP_2, 1)
-	}
-	while {
-		if (var(VAR_TEMP_2) == 1) {
-			msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
-		}
-		msgbox(format("Would you like to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == NO) {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to enable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_EnableRandomizer)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_EnableRandomizer)
-				break
-			}
-		} else {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_DisableRandomizer)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_DisableRandomizer)
-				break
-			}
-		}
-	}
-	delay(16)
-	while {
-		if (var(VAR_TEMP_2) == 1) {
-			msgbox(gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT)
-		}
-		msgbox(format("Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == NO) {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to enable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_EnableNuzlocke)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_EnableNuzlocke)
-				break
-			}
-		} else {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to disable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_DisableNuzlocke)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_DisableNuzlocke)
-				break
-			}
-		}
-	}
-	delay(16)
-	if (flag(FLAG_RANDOMIZER_ON) == false && flag(FLAG_NUZLOCKE_ON) == false) {
-		msgbox(format("You have chosen to disable all optional game modes."), MSGBOX_DEFAULT)
-		playse(SE_PC_LOGIN)
-		msgbox(format("{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
-		waitse
-		closemessage
-	}
-	delay(16)
-	if (var(VAR_TEMP_0)==1) {
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each of the shops."))
-		applymovement(1, Zone0Sanctuary_Movement_Colress_FirstShop)
-		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop)
-		waitmovement(0)
-		special(SpawnCameraObject)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
-		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is {COLOR RED}Tim's General Purpose Shop{COLOR DARK_GRAY}.\p"
-		"Healing supplies, basic Pokéballs, and other common items are sold here."))
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		special(RemoveCameraObject)
-		applymovement(1, Zone0Sanctuary_Movement_Colress_SecondShop)
-		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_SecondShop)
-		waitmovement(0)
-		special(SpawnCameraObject)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
-		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph Unique Item Shop{COLOR DARK_GRAY}.\p"
-		"They sell a variety of held items and single use items such as Pokéball variations, evolution items, Berries, and so on."))
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		special(RemoveCameraObject)
-		applymovement(1, Zone0Sanctuary_Movement_Colress_ThirdShop)
-		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_ThirdShop)
-		waitmovement(0)
-		special(SpawnCameraObject)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
-		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
-		"At the low cost of ¥1000, they will heal your entire party."))
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		special(RemoveCameraObject)
-		applymovement(1, Zone0Sanctuary_Movement_Colress_FourthShop)
-		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FourthShop)
-		waitmovement(0)
-		special(SpawnCameraObject)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
-		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is {COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
-		"They offer a range of Pokémon services, but only to customers who can pay the right price."))
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		special(RemoveCameraObject)
-		applymovement(1, Zone0Sanctuary_Movement_Colress_ToWarp)
-		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_ToWarp)
-		waitmovement(0)
-		special(SpawnCameraObject)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you have access to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\pIf you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY}, you can access it from any Sanctuary using this warp."))
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-		waitmovement(0)
-		special(RemoveCameraObject)
-		applymovement(1, Zone0Sanctuary_Movement_Colress_BackMid)
-		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_BackMid)
-		waitmovement(0)
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
-		"These shops will be available at every Sanctuary.\p"
-		"As you progress through more Zones, more items and services will unlock.\p"
-		"Also, it is highly recommended you stock up on any supplies before entering the next Zone."))
-		delay(96)
-	}
-	if (flag(FLAG_RANDOMIZER_ON) == true) {
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on, you get a random starter."))
-		callnative(GiveRandomStarter)
-		playfanfare(MUS_OBTAIN_ITEM)
-		bufferleadmonspeciesname(0)
-		message(format("{PLAYER} received the {STR_VAR_1}!"))
-		waitmessage
-		waitfanfare
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for your {STR_VAR_1}?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == YES) {
-			setvar(VAR_0x8004, 0)
-			call(Common_EventScript_NameReceivedPartyMon)
-		}
-		goto(Zone0Sanctuary_EventScript_EndIntro)
-	}
+	call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
+	call(Zone0Sanctuary_EventScript_DisableRandomizer)
+	call(Zone0Sanctuary_EventScript_EnableNuzlocke)
+	// msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}.\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
+	// if (var(VAR_RESULT) == YES) {
+	// 	setvar(VAR_TEMP_0, 1)
+	// 	msgbox(format("The Pokémon Battle Labyrinth is comprised of many {COLOR RED}Zones{COLOR DARK_GRAY} you must traverse.\p"
+	// 	"In these Zones, you might encounter wild Pokémon, great treasures, tough trainers, and more.\p"
+	// 	"Each Zone typically contains a {COLOR RED}Leviathan{COLOR DARK_GRAY}, a boss that yields great rewards if defeated.\p"
+	// 	"At the end of each Zone and before the next Zone begins, you will find a {COLOR RED}Sanctuary{COLOR DARK_GRAY}, like this one, with shops to purchase supplies, heal your Pokémon, and other benefits.\p"
+	// 	"Once you enter a new Zone, you will not be able to access a Sanctuary until you exit that Zone.\p"
+	// 	"In order to win, you must progress through all Zones without losing a battle."))
+	// 	delay(96)
+	// }
+	// msgbox(format("Would you like to listen to the difficulty options explanation?"), MSGBOX_YESNO)
+	// if (var(VAR_RESULT) == YES) {
+	// 	setvar(VAR_TEMP_1, 1)
+	// }
+	// while {
+	// 	if (var(VAR_TEMP_1) == 1) {
+	// 		msgbox(format("There are two game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
+	// 		msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
+	// 		msgbox(gText_Colress_BrutalExplained)
+	// 		delay(96)
+	// 	}
+	// 	msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
+	// 	multichoice(2, 5, MULTI_DEFAULT_BRUTAL, 1)
+	// 	if (var(VAR_RESULT) == 0) {
+	// 		if (var(VAR_TEMP_1) == 1) {
+	// 			msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+	// 			if (var(VAR_RESULT) == YES) {
+	// 				call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
+	// 				break
+	// 			}
+	// 		} else {
+	// 			call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
+	// 			break
+	// 		}
+	// 	} else {
+	// 		if (var(VAR_TEMP_1) == 1) {
+	// 			msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+	// 			if (var(VAR_RESULT) == YES) {
+	// 				call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
+	// 				break
+	// 			}
+	// 		} else {
+	// 			call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
+	// 			break
+	// 		}
+	// 	}
+	// }
+	// delay(16)
+	// msgbox(format("Would you like to listen to the game mode options explanations?"), MSGBOX_YESNO)
+	// if (var(VAR_RESULT) == YES) {
+	// 	msgbox(gText_Colress_GameModes, MSGBOX_DEFAULT)
+	// 	setvar(VAR_TEMP_2, 1)
+	// }
+	// while {
+	// 	if (var(VAR_TEMP_2) == 1) {
+	// 		msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
+	// 	}
+	// 	msgbox(format("Would you like to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
+	// 	if (var(VAR_RESULT) == NO) {
+	// 		if (var(VAR_TEMP_2) == 1) {
+	// 			msgbox(format("Are you sure you want to enable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
+	// 			if (var(VAR_RESULT) == YES) {
+	// 				call(Zone0Sanctuary_EventScript_EnableRandomizer)
+	// 				break
+	// 			}
+	// 		} else {
+	// 			call(Zone0Sanctuary_EventScript_EnableRandomizer)
+	// 			break
+	// 		}
+	// 	} else {
+	// 		if (var(VAR_TEMP_2) == 1) {
+	// 			msgbox(format("Are you sure you want to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
+	// 			if (var(VAR_RESULT) == YES) {
+	// 				call(Zone0Sanctuary_EventScript_DisableRandomizer)
+	// 				break
+	// 			}
+	// 		} else {
+	// 			call(Zone0Sanctuary_EventScript_DisableRandomizer)
+	// 			break
+	// 		}
+	// 	}
+	// }
+	// delay(16)
+	// while {
+	// 	if (var(VAR_TEMP_2) == 1) {
+	// 		msgbox(gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT)
+	// 	}
+	// 	msgbox(format("Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
+	// 	if (var(VAR_RESULT) == NO) {
+	// 		if (var(VAR_TEMP_2) == 1) {
+	// 			msgbox(format("Are you sure you want to enable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
+	// 			if (var(VAR_RESULT) == YES) {
+	// 				call(Zone0Sanctuary_EventScript_EnableNuzlocke)
+	// 				break
+	// 			}
+	// 		} else {
+	// 			call(Zone0Sanctuary_EventScript_EnableNuzlocke)
+	// 			break
+	// 		}
+	// 	} else {
+	// 		if (var(VAR_TEMP_2) == 1) {
+	// 			msgbox(format("Are you sure you want to disable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
+	// 			if (var(VAR_RESULT) == YES) {
+	// 				call(Zone0Sanctuary_EventScript_DisableNuzlocke)
+	// 				break
+	// 			}
+	// 		} else {
+	// 			call(Zone0Sanctuary_EventScript_DisableNuzlocke)
+	// 			break
+	// 		}
+	// 	}
+	// }
+	// delay(16)
+	// if (flag(FLAG_RANDOMIZER_ON) == false && flag(FLAG_NUZLOCKE_ON) == false) {
+	// 	msgbox(format("You have chosen to disable all optional game modes."), MSGBOX_DEFAULT)
+	// 	playse(SE_PC_LOGIN)
+	// 	msgbox(format("{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
+	// 	waitse
+	// 	closemessage
+	// }
+	// delay(16)
+	// if (var(VAR_TEMP_0)==1) {
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each of the shops."))
+	// 	applymovement(1, Zone0Sanctuary_Movement_Colress_FirstShop)
+	// 	applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop)
+	// 	waitmovement(0)
+	// 	special(SpawnCameraObject)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
+	// 	waitmovement(0)
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is {COLOR RED}Tim's General Purpose Shop{COLOR DARK_GRAY}.\p"
+	// 	"Healing supplies, basic Pokéballs, and other common items are sold here."))
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	special(RemoveCameraObject)
+	// 	applymovement(1, Zone0Sanctuary_Movement_Colress_SecondShop)
+	// 	applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_SecondShop)
+	// 	waitmovement(0)
+	// 	special(SpawnCameraObject)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
+	// 	waitmovement(0)
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph Unique Item Shop{COLOR DARK_GRAY}.\p"
+	// 	"They sell a variety of held items and single use items such as Pokéball variations, evolution items, Berries, and so on."))
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	special(RemoveCameraObject)
+	// 	applymovement(1, Zone0Sanctuary_Movement_Colress_ThirdShop)
+	// 	applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_ThirdShop)
+	// 	waitmovement(0)
+	// 	special(SpawnCameraObject)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
+	// 	waitmovement(0)
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's Healing Shop{COLOR DARK_GRAY}.\p"
+	// 	"At the low cost of ¥1000, they will heal your entire party."))
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	special(RemoveCameraObject)
+	// 	applymovement(1, Zone0Sanctuary_Movement_Colress_FourthShop)
+	// 	applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FourthShop)
+	// 	waitmovement(0)
+	// 	special(SpawnCameraObject)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
+	// 	waitmovement(0)
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is {COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
+	// 	"They offer a range of Pokémon services, but only to customers who can pay the right price."))
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	special(RemoveCameraObject)
+	// 	applymovement(1, Zone0Sanctuary_Movement_Colress_ToWarp)
+	// 	applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_ToWarp)
+	// 	waitmovement(0)
+	// 	special(SpawnCameraObject)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	// 	waitmovement(0)
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you have access to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\pIf you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY}, you can access it from any Sanctuary using this warp."))
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	// 	waitmovement(0)
+	// 	special(RemoveCameraObject)
+	// 	applymovement(1, Zone0Sanctuary_Movement_Colress_BackMid)
+	// 	applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_BackMid)
+	// 	waitmovement(0)
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
+	// 	"These shops will be available at every Sanctuary.\p"
+	// 	"As you progress through more Zones, more items and services will unlock.\p"
+	// 	"Also, it is highly recommended you stock up on any supplies before entering the next Zone."))
+	// 	delay(96)
+	// }
+	// if (flag(FLAG_RANDOMIZER_ON) == true) {
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on, you get a random starter."))
+	// 	callnative(GiveRandomStarter)
+	// 	playfanfare(MUS_OBTAIN_ITEM)
+	// 	bufferleadmonspeciesname(0)
+	// 	message(format("{PLAYER} received the {STR_VAR_1}!"))
+	// 	waitmessage
+	// 	waitfanfare
+	// 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for your {STR_VAR_1}?"), MSGBOX_YESNO)
+	// 	if (var(VAR_RESULT) == YES) {
+	// 		setvar(VAR_0x8004, 0)
+	// 		call(Common_EventScript_NameReceivedPartyMon)
+	// 	}
+	// 	goto(Zone0Sanctuary_EventScript_EndIntro)
+	// }
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
 		msgbox(format("As a new challenger, you will receive a starter Pokémon.\p"
 		"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
