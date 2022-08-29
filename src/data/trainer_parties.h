@@ -1612,7 +1612,7 @@ static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle sta
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_SUDOWOODO,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ROCK_TOMB, MOVE_NEEDLE_ARM, MOVE_STOMPING_TANTRUM, MOVE_DRAIN_PUNCH}
+    .moves = {MOVE_ROCK_TOMB, MOVE_STOMPING_TANTRUM, MOVE_DRAIN_PUNCH, MOVE_CURSE}
     }
 };
 

@@ -3865,7 +3865,6 @@ static const struct LevelUpMove sAzumarillLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sSudowoodoLevelUpLearnset[] = {
-	LEVEL_UP_MOVE( 0, MOVE_NEEDLE_ARM),
 	LEVEL_UP_MOVE( 1, MOVE_WOOD_HAMMER),
 	LEVEL_UP_MOVE( 1, MOVE_LOW_KICK),
 	LEVEL_UP_MOVE( 4, MOVE_COPYCAT),
