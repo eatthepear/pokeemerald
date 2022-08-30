@@ -309,7 +309,18 @@ static const u16 sSlowkingFormSpeciesIdTable[] = {
     SPECIES_SLOWKING_GALARIAN,
     FORM_SPECIES_END,
 };
-#endif
+
+static const u16 sQwilfishFormSpeciesIdTable[] = {
+    SPECIES_QWILFISH,
+    SPECIES_QWILFISH_HISUIAN,
+    FORM_SPECIES_END,
+};
+
+static const u16 sSneaselFormSpeciesIdTable[] = {
+    SPECIES_SNEASEL,
+    SPECIES_SNEASEL_HISUIAN,
+    FORM_SPECIES_END,
+};
 
 static const u16 sUnownFormSpeciesIdTable[] = {
     SPECIES_UNOWN,
@@ -343,16 +354,9 @@ static const u16 sUnownFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
-#if P_NEW_POKEMON == TRUE
 static const u16 sSteelixFormSpeciesIdTable[] = {
     SPECIES_STEELIX,
     SPECIES_STEELIX_MEGA,
-    FORM_SPECIES_END,
-};
-
-static const u16 sQwilfishFormSpeciesIdTable[] = {
-    SPECIES_QWILFISH,
-    SPECIES_QWILFISH_HISUIAN,
     FORM_SPECIES_END,
 };
 
@@ -365,12 +369,6 @@ static const u16 sScizorFormSpeciesIdTable[] = {
 static const u16 sHeracrossFormSpeciesIdTable[] = {
     SPECIES_HERACROSS,
     SPECIES_HERACROSS_MEGA,
-    FORM_SPECIES_END,
-};
-
-static const u16 sSneaselFormSpeciesIdTable[] = {
-    SPECIES_SNEASEL,
-    SPECIES_SNEASEL_HISUIAN,
     FORM_SPECIES_END,
 };
 
@@ -625,6 +623,18 @@ static const u16 sRotomFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
+static const u16 sDialgaFormSpeciesIdTable[] = {
+    SPECIES_DIALGA,
+    SPECIES_DIALGA_ORIGIN,
+    FORM_SPECIES_END,
+};
+
+static const u16 sPalkiaFormSpeciesIdTable[] = {
+    SPECIES_PALKIA,
+    SPECIES_PALKIA_ORIGIN,
+    FORM_SPECIES_END,
+};
+
 static const u16 sGiratinaFormSpeciesIdTable[] = {
     SPECIES_GIRATINA,
     SPECIES_GIRATINA_ORIGIN,
@@ -680,6 +690,7 @@ static const u16 sLilligantFormSpeciesIdTable[] = {
 static const u16 sBasculinFormSpeciesIdTable[] = {
     SPECIES_BASCULIN,
     SPECIES_BASCULIN_BLUE_STRIPED,
+    SPECIES_BASCULIN_WHITE_STRIPED,
     FORM_SPECIES_END,
 };
 
@@ -758,6 +769,12 @@ static const u16 sThundurusFormSpeciesIdTable[] = {
 static const u16 sLandorusFormSpeciesIdTable[] = {
     SPECIES_LANDORUS,
     SPECIES_LANDORUS_THERIAN,
+    FORM_SPECIES_END,
+};
+
+static const u16 sEnamorusFormSpeciesIdTable[] = {
+    SPECIES_ENAMORUS,
+    SPECIES_ENAMORUS_THERIAN,
     FORM_SPECIES_END,
 };
 

@@ -135,7 +135,7 @@ static EWRAM_DATA u16 sLastSelectedPokemon = 0;
 static EWRAM_DATA u8 sPokeBallRotation = 0;
 static EWRAM_DATA struct PokedexListItem *sPokedexListItem = NULL;
 //Pokedex Plus HGSS_Ui
-#define MOVES_COUNT_TOTAL (EGG_MOVES_ARRAY_COUNT + MAX_LEVEL_UP_MOVES + NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES + TUTOR_MOVE_COUNT)
+#define MOVES_COUNT_TOTAL (EGG_MOVES_ARRAY_COUNT + MAX_LEVEL_UP_MOVES + NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES + 32)
 EWRAM_DATA static u16 sStatsMoves[MOVES_COUNT_TOTAL] = {0};
 EWRAM_DATA static u16 sStatsMovesTMHM_ID[NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES] = {0};
 
@@ -5367,64 +5367,64 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
     }
 
     // Search by move
-    if (move != 0xFFFF)
-    {
-        //Calc tutor move ID
-        tutorMoveId = 0xFF;
-        for (i = 0; i < TUTOR_MOVE_COUNT; i++)
-        {
-            if (move == gTutorMoves[i])
-            {
-                tutorMoveId = i;
-                break;
-            }
-        }
-        //Calc tm move ID
-        tmMoveId = 0xFF;
-        for (i = 0; i < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; i++)
-        {
-            if (move == ItemIdToBattleMoveId(ITEM_TM01_PROTECT + i))
-            {
-                tmMoveId = (ITEM_TM01_PROTECT + i);
-                break;
-            }
-        }
+    // if (move != 0xFFFF)
+    // {
+    //     //Calc tutor move ID
+    //     tutorMoveId = 0xFF;
+    //     for (i = 0; i < 32; i++)
+    //     {
+    //         if (move == gTutorMoves[i])
+    //         {
+    //             tutorMoveId = i;
+    //             break;
+    //         }
+    //     }
+    //     //Calc tm move ID
+    //     tmMoveId = 0xFF;
+    //     for (i = 0; i < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; i++)
+    //     {
+    //         if (move == ItemIdToBattleMoveId(ITEM_TM01_PROTECT + i))
+    //         {
+    //             tmMoveId = (ITEM_TM01_PROTECT + i);
+    //             break;
+    //         }
+    //     }
         
-        for (i = 0, resultsCount = 0; i < sPokedexView->pokemonListCount; i++)
-        {
-            species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
+    //     for (i = 0, resultsCount = 0; i < sPokedexView->pokemonListCount; i++)
+    //     {
+    //         species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
 
-            //LevelUp
-            if (SpeciesCanLearnLvlUpMove(species, move))
-            {
-                sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
-                resultsCount++;
-                continue;
-            }
-            //TMHM
-            if (CanSpeciesLearnTMHM(species, tmMoveId))
-            {
-                sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
-                resultsCount++;
-                continue;
-            }
-            //Tutor
-            if (CanLearnTutorMove(species, tutorMoveId))
-            {
-                sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
-                resultsCount++;
-                continue;
-            }
-            //EGGs
-            if (SpeciesCanLearnEggMove(species, move))
-            {
-                sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
-                resultsCount++;
-                continue;
-            }
-        }
-        sPokedexView->pokemonListCount = resultsCount;
-    }
+    //         //LevelUp
+    //         if (SpeciesCanLearnLvlUpMove(species, move))
+    //         {
+    //             sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
+    //             resultsCount++;
+    //             continue;
+    //         }
+    //         //TMHM
+    //         if (CanSpeciesLearnTMHM(species, tmMoveId))
+    //         {
+    //             sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
+    //             resultsCount++;
+    //             continue;
+    //         }
+    //         //Tutor
+    //         if (CanLearnTutorMove(species, tutorMoveId))
+    //         {
+    //             sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
+    //             resultsCount++;
+    //             continue;
+    //         }
+    //         //EGGs
+    //         if (SpeciesCanLearnEggMove(species, move))
+    //         {
+    //             sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
+    //             resultsCount++;
+    //             continue;
+    //         }
+    //     }
+    //     sPokedexView->pokemonListCount = resultsCount;
+    // }
 
     if (sPokedexView->pokemonListCount != 0)
     {
@@ -6702,11 +6702,10 @@ static bool8 CalculateMoves(void)
     u16 statsMovesEgg[EGG_MOVES_ARRAY_COUNT] = {0};
     u16 statsMovesLevelUp[MAX_LEVEL_UP_MOVES] = {0};
     u16 statsMovesTMHM[NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES] = {0};
-    u16 statsMovesTutor[TUTOR_MOVE_COUNT] = {0};
 
     u8 numEggMoves = GetEggMovesSpecies(species, statsMovesEgg);
     u8 numLevelUpMoves = GetLevelUpMovesBySpecies(species, statsMovesLevelUp);
-    u8 numTMHMMoves = 0;
+    u8 numTeachableMoves = 0;
     u8 numTutorMoves = 0;
     u16 movesTotal = 0;
     u8 i,j;
@@ -6726,32 +6725,38 @@ static bool8 CalculateMoves(void)
     }
 
     //TMHM moves
-    for (j = 0; j < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; j++)
-    {
-        if (CanSpeciesLearnTMHM(species, j))
-        {
-            sStatsMoves[movesTotal] = ItemIdToBattleMoveId(ITEM_TM01_PROTECT + j);
-            movesTotal++;
-            sStatsMovesTMHM_ID[numTMHMMoves] = (ITEM_TM01_PROTECT + j);
-            numTMHMMoves++;
-        }
-    }
+    // for (j = 0; j < NUM_TECHNICAL_MACHINES + 32; j++)
+    // {
+    //     if (CanSpeciesLearnTMHM(species, j))
+    //     {
+    //         sStatsMoves[movesTotal] = ItemIdToBattleMoveId(ITEM_TM01_PROTECT + j);
+    //         movesTotal++;
+    //         sStatsMovesTMHM_ID[numTMHMMoves] = (ITEM_TM01_PROTECT + j);
+    //         numTMHMMoves++;
+    //     }
+    // }
 
-    //Tutor moves
-    for (i=0; i < TUTOR_MOVE_COUNT; i++)
+    // //Tutor moves
+    // for (i=0; i < 32; i++)
+    // {
+    //     if (CanLearnTutorMove(species, i)) //if (sTutorLearnsets[species] & (1 << i))
+    //     {
+    //         sStatsMoves[movesTotal] = gTutorMoves[i];
+    //         numTutorMoves++;
+    //         movesTotal++;
+    //     }
+    // }
+    for (i = 0; gTeachableLearnsets[species][i] != MOVE_UNAVAILABLE; i++)
     {
-        if (CanLearnTutorMove(species, i)) //if (sTutorLearnsets[species] & (1 << i))
-        {
-            sStatsMoves[movesTotal] = gTutorMoves[i];
-            numTutorMoves++;
-            movesTotal++;
-        }
+        sStatsMoves[movesTotal] = gTeachableLearnsets[species][i];
+        numTeachableMoves++;
+        movesTotal++;
     }
 
     sPokedexView->numEggMoves = numEggMoves;
     sPokedexView->numLevelUpMoves = numLevelUpMoves;
-    sPokedexView->numTMHMMoves = numTMHMMoves;
-    sPokedexView->numTutorMoves = numTutorMoves;
+    sPokedexView->numTMHMMoves = numTutorMoves;
+    sPokedexView->numTutorMoves = numTeachableMoves;
     sPokedexView->movesTotal = movesTotal;
 
     return TRUE;

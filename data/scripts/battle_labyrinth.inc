@@ -1565,162 +1565,162 @@ EventScript_Shop_Lelouch_MoveTutor_15:
 
 EventScript_Shop_Lelouch_MoveTutor_18:
 	setvar VAR_TEMP_0, MOVE_ICY_WIND
-	setvar VAR_0x8005, TUTOR_MOVE_ICY_WIND
+	setvar VAR_0x8005, MOVE_ICY_WIND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_19:
 	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
-	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
+	setvar VAR_0x8005, MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_20:
 	setvar VAR_TEMP_0, MOVE_LOW_KICK
-	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
+	setvar VAR_0x8005, MOVE_LOW_KICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_21:
 	setvar VAR_TEMP_0, MOVE_HEAL_BELL
-	setvar VAR_0x8005, TUTOR_MOVE_HEAL_BELL
+	setvar VAR_0x8005, MOVE_HEAL_BELL
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_22:
 	setvar VAR_TEMP_0, MOVE_HELPING_HAND
-	setvar VAR_0x8005, TUTOR_MOVE_HELPING_HAND
+	setvar VAR_0x8005, MOVE_HELPING_HAND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_23:
 	setvar VAR_TEMP_0, MOVE_SLEEP_TALK
-	setvar VAR_0x8005, TUTOR_MOVE_SLEEP_TALK
+	setvar VAR_0x8005, MOVE_SLEEP_TALK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_24:
 	setvar VAR_TEMP_0, MOVE_STEALTH_ROCK
-	setvar VAR_0x8005, TUTOR_MOVE_STEALTH_ROCK
+	setvar VAR_0x8005, MOVE_STEALTH_ROCK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_25:
 	setvar VAR_TEMP_0, MOVE_TAUNT
-	setvar VAR_0x8005, TUTOR_MOVE_TAUNT
+	setvar VAR_0x8005, MOVE_TAUNT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_26:
 	setvar VAR_TEMP_0, MOVE_FIRE_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_FIRE_PUNCH
+	setvar VAR_0x8005, MOVE_FIRE_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_27:
 	setvar VAR_TEMP_0, MOVE_ICE_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_ICE_PUNCH
+	setvar VAR_0x8005, MOVE_ICE_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_28:
 	setvar VAR_TEMP_0, MOVE_THUNDER_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_THUNDER_PUNCH
+	setvar VAR_0x8005, MOVE_THUNDER_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_29:
 	setvar VAR_TEMP_0, MOVE_FLIP_TURN
-	setvar VAR_0x8005, TUTOR_MOVE_FLIP_TURN
+	setvar VAR_0x8005, MOVE_FLIP_TURN
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_30:
 	setvar VAR_TEMP_0, MOVE_U_TURN
-	setvar VAR_0x8005, TUTOR_MOVE_U_TURN
+	setvar VAR_0x8005, MOVE_U_TURN
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_31:
 	setvar VAR_TEMP_0, MOVE_DEFOG
-	setvar VAR_0x8005, TUTOR_MOVE_DEFOG
+	setvar VAR_0x8005, MOVE_DEFOG
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_32:
 	setvar VAR_TEMP_0, MOVE_PAIN_SPLIT
-	setvar VAR_0x8005, TUTOR_MOVE_PAIN_SPLIT
+	setvar VAR_0x8005, MOVE_PAIN_SPLIT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_33:
 	setvar VAR_TEMP_0, MOVE_TRICK
-	setvar VAR_0x8005, TUTOR_MOVE_TRICK
+	setvar VAR_0x8005, MOVE_TRICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_34:
 	setvar VAR_TEMP_0, MOVE_BOUNCE
-	setvar VAR_0x8005, TUTOR_MOVE_BOUNCE
+	setvar VAR_0x8005, MOVE_BOUNCE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_35:
 	setvar VAR_TEMP_0, MOVE_IRON_HEAD
-	setvar VAR_0x8005, TUTOR_MOVE_IRON_HEAD
+	setvar VAR_0x8005, MOVE_IRON_HEAD
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_36:
 	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
-	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	setvar VAR_0x8005, MOVE_KNOCK_OFF
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_37:
 	setvar VAR_TEMP_0, MOVE_VOLT_SWITCH
-	setvar VAR_0x8005, TUTOR_MOVE_VOLT_SWITCH
+	setvar VAR_0x8005, MOVE_VOLT_SWITCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_38:
 	setvar VAR_TEMP_0, MOVE_ZEN_HEADBUTT
-	setvar VAR_0x8005, TUTOR_MOVE_ZEN_HEADBUTT
+	setvar VAR_0x8005, MOVE_ZEN_HEADBUTT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_39:
 	setvar VAR_TEMP_0, MOVE_ROOST
-	setvar VAR_0x8005, TUTOR_MOVE_ROOST
+	setvar VAR_0x8005, MOVE_ROOST
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_40:
 	setvar VAR_TEMP_0, MOVE_SYNTHESIS
-	setvar VAR_0x8005, TUTOR_MOVE_SYNTHESIS
+	setvar VAR_0x8005, MOVE_SYNTHESIS
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_41:
 	setvar VAR_TEMP_0, MOVE_TAILWIND
-	setvar VAR_0x8005, TUTOR_MOVE_TAILWIND
+	setvar VAR_0x8005, MOVE_TAILWIND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_42:
 	setvar VAR_TEMP_0, MOVE_DRACO_METEOR
-	setvar VAR_0x8005, TUTOR_MOVE_DRACO_METEOR
+	setvar VAR_0x8005, MOVE_DRACO_METEOR
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_43:
 	setvar VAR_TEMP_0, MOVE_EXPANDING_FORCE
-	setvar VAR_0x8005, TUTOR_MOVE_EXPANDING_FORCE
+	setvar VAR_0x8005, MOVE_EXPANDING_FORCE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_44:
 	setvar VAR_TEMP_0, MOVE_HEAT_WAVE
-	setvar VAR_0x8005, TUTOR_MOVE_HEAT_WAVE
+	setvar VAR_0x8005, MOVE_HEAT_WAVE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_45:
 	setvar VAR_TEMP_0, MOVE_POLTERGEIST
-	setvar VAR_0x8005, TUTOR_MOVE_POLTERGEIST
+	setvar VAR_0x8005, MOVE_POLTERGEIST
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_46:
 	setvar VAR_TEMP_0, MOVE_POWER_WHIP
-	setvar VAR_0x8005, TUTOR_MOVE_POWER_WHIP
+	setvar VAR_0x8005, MOVE_POWER_WHIP
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_47:
 	setvar VAR_TEMP_0, MOVE_SUPERPOWER
-	setvar VAR_0x8005, TUTOR_MOVE_SUPERPOWER
+	setvar VAR_0x8005, MOVE_SUPERPOWER
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_48:
 	setvar VAR_TEMP_0, MOVE_SWORDS_DANCE
-	setvar VAR_0x8005, TUTOR_MOVE_SWORDS_DANCE
+	setvar VAR_0x8005, MOVE_SWORDS_DANCE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_49:
 	setvar VAR_TEMP_0, MOVE_NASTY_PLOT
-	setvar VAR_0x8005, TUTOR_MOVE_NASTY_PLOT
+	setvar VAR_0x8005, MOVE_NASTY_PLOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_50:
@@ -1728,122 +1728,122 @@ EventScript_Shop_Lelouch_MoveTutor_50:
 
 EventScript_Shop_Lelouch_MoveTutor_52:
 	setvar VAR_TEMP_0, MOVE_ICY_WIND
-	setvar VAR_0x8005, TUTOR_MOVE_ICY_WIND
+	setvar VAR_0x8005, MOVE_ICY_WIND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_53:
 	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
-	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
+	setvar VAR_0x8005, MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_54:
 	setvar VAR_TEMP_0, MOVE_LOW_KICK
-	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
+	setvar VAR_0x8005, MOVE_LOW_KICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_55:
 	setvar VAR_TEMP_0, MOVE_HEAL_BELL
-	setvar VAR_0x8005, TUTOR_MOVE_HEAL_BELL
+	setvar VAR_0x8005, MOVE_HEAL_BELL
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_56:
 	setvar VAR_TEMP_0, MOVE_HELPING_HAND
-	setvar VAR_0x8005, TUTOR_MOVE_HELPING_HAND
+	setvar VAR_0x8005, MOVE_HELPING_HAND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_57:
 	setvar VAR_TEMP_0, MOVE_SLEEP_TALK
-	setvar VAR_0x8005, TUTOR_MOVE_SLEEP_TALK
+	setvar VAR_0x8005, MOVE_SLEEP_TALK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_58:
 	setvar VAR_TEMP_0, MOVE_STEALTH_ROCK
-	setvar VAR_0x8005, TUTOR_MOVE_STEALTH_ROCK
+	setvar VAR_0x8005, MOVE_STEALTH_ROCK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_59:
 	setvar VAR_TEMP_0, MOVE_TAUNT
-	setvar VAR_0x8005, TUTOR_MOVE_TAUNT
+	setvar VAR_0x8005, MOVE_TAUNT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_60:
 	setvar VAR_TEMP_0, MOVE_FIRE_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_FIRE_PUNCH
+	setvar VAR_0x8005, MOVE_FIRE_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_61:
 	setvar VAR_TEMP_0, MOVE_ICE_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_ICE_PUNCH
+	setvar VAR_0x8005, MOVE_ICE_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_62:
 	setvar VAR_TEMP_0, MOVE_THUNDER_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_THUNDER_PUNCH
+	setvar VAR_0x8005, MOVE_THUNDER_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_63:
 	setvar VAR_TEMP_0, MOVE_FLIP_TURN
-	setvar VAR_0x8005, TUTOR_MOVE_FLIP_TURN
+	setvar VAR_0x8005, MOVE_FLIP_TURN
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_64:
 	setvar VAR_TEMP_0, MOVE_U_TURN
-	setvar VAR_0x8005, TUTOR_MOVE_U_TURN
+	setvar VAR_0x8005, MOVE_U_TURN
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_65:
 	setvar VAR_TEMP_0, MOVE_DEFOG
-	setvar VAR_0x8005, TUTOR_MOVE_DEFOG
+	setvar VAR_0x8005, MOVE_DEFOG
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_66:
 	setvar VAR_TEMP_0, MOVE_PAIN_SPLIT
-	setvar VAR_0x8005, TUTOR_MOVE_PAIN_SPLIT
+	setvar VAR_0x8005, MOVE_PAIN_SPLIT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_67:
 	setvar VAR_TEMP_0, MOVE_TRICK
-	setvar VAR_0x8005, TUTOR_MOVE_TRICK
+	setvar VAR_0x8005, MOVE_TRICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_68:
 	setvar VAR_TEMP_0, MOVE_BOUNCE
-	setvar VAR_0x8005, TUTOR_MOVE_BOUNCE
+	setvar VAR_0x8005, MOVE_BOUNCE
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_69:
 	setvar VAR_TEMP_0, MOVE_IRON_HEAD
-	setvar VAR_0x8005, TUTOR_MOVE_IRON_HEAD
+	setvar VAR_0x8005, MOVE_IRON_HEAD
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_70:
 	setvar VAR_TEMP_0, MOVE_KNOCK_OFF
-	setvar VAR_0x8005, TUTOR_MOVE_KNOCK_OFF
+	setvar VAR_0x8005, MOVE_KNOCK_OFF
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_71:
 	setvar VAR_TEMP_0, MOVE_VOLT_SWITCH
-	setvar VAR_0x8005, TUTOR_MOVE_VOLT_SWITCH
+	setvar VAR_0x8005, MOVE_VOLT_SWITCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_72:
 	setvar VAR_TEMP_0, MOVE_ZEN_HEADBUTT
-	setvar VAR_0x8005, TUTOR_MOVE_ZEN_HEADBUTT
+	setvar VAR_0x8005, MOVE_ZEN_HEADBUTT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_73:
 	setvar VAR_TEMP_0, MOVE_ROOST
-	setvar VAR_0x8005, TUTOR_MOVE_ROOST
+	setvar VAR_0x8005, MOVE_ROOST
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_74:
 	setvar VAR_TEMP_0, MOVE_SYNTHESIS
-	setvar VAR_0x8005, TUTOR_MOVE_SYNTHESIS
+	setvar VAR_0x8005, MOVE_SYNTHESIS
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_75:
 	setvar VAR_TEMP_0, MOVE_TAILWIND
-	setvar VAR_0x8005, TUTOR_MOVE_TAILWIND
+	setvar VAR_0x8005, MOVE_TAILWIND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_76:
@@ -1851,82 +1851,82 @@ EventScript_Shop_Lelouch_MoveTutor_76:
 
 EventScript_Shop_Lelouch_MoveTutor_78:
 	setvar VAR_TEMP_0, MOVE_ICY_WIND
-	setvar VAR_0x8005, TUTOR_MOVE_ICY_WIND
+	setvar VAR_0x8005, MOVE_ICY_WIND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_79:
 	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
-	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
+	setvar VAR_0x8005, MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_80:
 	setvar VAR_TEMP_0, MOVE_LOW_KICK
-	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
+	setvar VAR_0x8005, MOVE_LOW_KICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_81:
 	setvar VAR_TEMP_0, MOVE_HEAL_BELL
-	setvar VAR_0x8005, TUTOR_MOVE_HEAL_BELL
+	setvar VAR_0x8005, MOVE_HEAL_BELL
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_82:
 	setvar VAR_TEMP_0, MOVE_HELPING_HAND
-	setvar VAR_0x8005, TUTOR_MOVE_HELPING_HAND
+	setvar VAR_0x8005, MOVE_HELPING_HAND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_83:
 	setvar VAR_TEMP_0, MOVE_SLEEP_TALK
-	setvar VAR_0x8005, TUTOR_MOVE_SLEEP_TALK
+	setvar VAR_0x8005, MOVE_SLEEP_TALK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_84:
 	setvar VAR_TEMP_0, MOVE_STEALTH_ROCK
-	setvar VAR_0x8005, TUTOR_MOVE_STEALTH_ROCK
+	setvar VAR_0x8005, MOVE_STEALTH_ROCK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_85:
 	setvar VAR_TEMP_0, MOVE_TAUNT
-	setvar VAR_0x8005, TUTOR_MOVE_TAUNT
+	setvar VAR_0x8005, MOVE_TAUNT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_86:
 	setvar VAR_TEMP_0, MOVE_FIRE_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_FIRE_PUNCH
+	setvar VAR_0x8005, MOVE_FIRE_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_87:
 	setvar VAR_TEMP_0, MOVE_ICE_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_ICE_PUNCH
+	setvar VAR_0x8005, MOVE_ICE_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_88:
 	setvar VAR_TEMP_0, MOVE_THUNDER_PUNCH
-	setvar VAR_0x8005, TUTOR_MOVE_THUNDER_PUNCH
+	setvar VAR_0x8005, MOVE_THUNDER_PUNCH
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_89:
 	setvar VAR_TEMP_0, MOVE_FLIP_TURN
-	setvar VAR_0x8005, TUTOR_MOVE_FLIP_TURN
+	setvar VAR_0x8005, MOVE_FLIP_TURN
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_90:
 	setvar VAR_TEMP_0, MOVE_U_TURN
-	setvar VAR_0x8005, TUTOR_MOVE_U_TURN
+	setvar VAR_0x8005, MOVE_U_TURN
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_91:
 	setvar VAR_TEMP_0, MOVE_DEFOG
-	setvar VAR_0x8005, TUTOR_MOVE_DEFOG
+	setvar VAR_0x8005, MOVE_DEFOG
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_92:
 	setvar VAR_TEMP_0, MOVE_PAIN_SPLIT
-	setvar VAR_0x8005, TUTOR_MOVE_PAIN_SPLIT
+	setvar VAR_0x8005, MOVE_PAIN_SPLIT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_93:
 	setvar VAR_TEMP_0, MOVE_TRICK
-	setvar VAR_0x8005, TUTOR_MOVE_TRICK
+	setvar VAR_0x8005, MOVE_TRICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_94:
@@ -1934,42 +1934,42 @@ EventScript_Shop_Lelouch_MoveTutor_94:
 
 EventScript_Shop_Lelouch_MoveTutor_96:
 	setvar VAR_TEMP_0, MOVE_ICY_WIND
-	setvar VAR_0x8005, TUTOR_MOVE_ICY_WIND
+	setvar VAR_0x8005, MOVE_ICY_WIND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_97:
 	setvar VAR_TEMP_0, MOVE_GRASS_KNOT
-	setvar VAR_0x8005, TUTOR_MOVE_GRASS_KNOT
+	setvar VAR_0x8005, MOVE_GRASS_KNOT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_98:
 	setvar VAR_TEMP_0, MOVE_LOW_KICK
-	setvar VAR_0x8005, TUTOR_MOVE_LOW_KICK
+	setvar VAR_0x8005, MOVE_LOW_KICK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_99:
 	setvar VAR_TEMP_0, MOVE_HEAL_BELL
-	setvar VAR_0x8005, TUTOR_MOVE_HEAL_BELL
+	setvar VAR_0x8005, MOVE_HEAL_BELL
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_100:
 	setvar VAR_TEMP_0, MOVE_HELPING_HAND
-	setvar VAR_0x8005, TUTOR_MOVE_HELPING_HAND
+	setvar VAR_0x8005, MOVE_HELPING_HAND
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_101:
 	setvar VAR_TEMP_0, MOVE_SLEEP_TALK
-	setvar VAR_0x8005, TUTOR_MOVE_SLEEP_TALK
+	setvar VAR_0x8005, MOVE_SLEEP_TALK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_102:
 	setvar VAR_TEMP_0, MOVE_STEALTH_ROCK
-	setvar VAR_0x8005, TUTOR_MOVE_STEALTH_ROCK
+	setvar VAR_0x8005, MOVE_STEALTH_ROCK
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_103:
 	setvar VAR_TEMP_0, MOVE_TAUNT
-	setvar VAR_0x8005, TUTOR_MOVE_TAUNT
+	setvar VAR_0x8005, MOVE_TAUNT
 	goto EventScript_Shop_Lelouch_MoveTutor_6
 
 EventScript_Shop_Lelouch_MoveTutor_104:
