@@ -223,6 +223,7 @@ const u8 gText_Var1IsSelected[] = _("{STR_VAR_1} is\nselected.");
 const u8 gText_CantWriteMail[] = _("You can't write\nmail here.");
 const u8 gText_NoPokemon[] = _("There is no\nPokémon.");
 const u8 gText_MoveVar1Where[] = _("Move the\n{STR_VAR_1}\nwhere?");
+const u8 gText_Var1CantBeUsed[] = _("The {STR_VAR_1} can't be used.");
 const u8 gText_Var1CantBeHeld[] = _("The {STR_VAR_1} can't be held.");
 const u8 gText_Var1CantBeHeldHere[] = _("The {STR_VAR_1} can't be held\nhere.");
 const u8 gText_DepositHowManyVar1[] = _("Deposit how many\n{STR_VAR_1}(s)?");

@@ -3271,16 +3271,49 @@ static void CB2_UseItem(void)
 
 static void Task_UseItem(u8 taskId)
 {
-    u16 item;
+    u16 item = gSpecialVar_ItemId;
 
     if (!gPaletteFade.active)
     {
-        ItemUseFunc func = ItemId_GetFieldFunc(gSpecialVar_ItemId);
+        // ItemUseFunc func = ItemId_GetFieldFunc(item);
         // DisplayGaveHeldItemMessage(&gPlayerParty[gPartyMenu.slotId], item, FALSE, 0);
         // GiveItemToMon(&gPlayerParty[gPartyMenu.slotId], item);
         // RemoveBagItem(item, 1);
-        if (CheckIfItemUsableFromPartyMenu(gSpecialVar_ItemId))
-            AddBagItem(ITEM_MASTER_BALL, 1);
+        switch (CheckIfItemUsableFromPartyMenu(item))
+        {
+            case ITEM_USE_TMHM:
+                ItemUseCB_TMHM(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_EVO_STONE:
+                ItemUseCB_EvolutionStone(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_MEDICINE:
+                ItemUseCB_Medicine(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_REDUCE_EV:
+                ItemUseCB_ReduceEV(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_PP_RECOVERY:
+                ItemUseCB_PPRecovery(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_PP_UP:
+                ItemUseCB_PPUp(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_RARE_CANDY:
+                ItemUseCB_RareCandy(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_FORM_CHANGE:
+                ItemUseCB_FormChange(taskId, gPartyMenu.task);
+                break;
+            case ITEM_USE_FORM_CHANGE_2:
+                ItemUseCB_FormChange_ConsumedOnUse(taskId, gPartyMenu.task);
+                break;
+            default:
+                break;
+        }
+        // ItemUseCB_Medicine(taskId, gPartyMenu.task);
+        // if (CheckIfItemUsableFromPartyMenu(gSpecialVar_ItemId))
+        //     AddBagItem(ITEM_MASTER_BALL, 1);
             // func(taskId);
         gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
     }
@@ -4591,6 +4624,7 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
                 AnimatePartySlot(gPartyMenu.slotId, 1);
             PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(mon, MON_DATA_HP) - hp, Task_DisplayHPRestoredMessage);
             ResetHPTaskData(taskId, 0, hp);
+            AddBagItem(ITEM_MASTER_BALL, 1);
             return;
         }
         else

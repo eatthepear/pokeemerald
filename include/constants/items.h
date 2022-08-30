@@ -987,6 +987,7 @@
 #define ITEM_USE_FIELD       2
 #define ITEM_USE_PBLOCK_CASE 3
 #define ITEM_USE_BAG_MENU    4 // No exit callback, stays in bag menu
+#define ITEM_USE_FROM_PARTY_MENU    5 // Custom: Use item from the Party menu, exits into party menu
 
 // Item battle usage IDs (only checked to see if nonzero)
 #define ITEM_B_USE_MEDICINE 1
@@ -994,5 +995,15 @@
 
 // Check if the item is one that can be used on a Pokemon.
 #define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX)
+
+#define ITEM_USE_TMHM           1
+#define ITEM_USE_EVO_STONE      2
+#define ITEM_USE_MEDICINE       3
+#define ITEM_USE_REDUCE_EV      4
+#define ITEM_USE_PP_RECOVERY    5
+#define ITEM_USE_PP_UP          6
+#define ITEM_USE_RARE_CANDY     7
+#define ITEM_USE_FORM_CHANGE    8
+#define ITEM_USE_FORM_CHANGE_2  9
 
 #endif  // GUARD_CONSTANTS_ITEMS_H

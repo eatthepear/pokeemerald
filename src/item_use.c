@@ -92,6 +92,7 @@ static const MainCallback sItemUseCallbacks[] =
     [ITEM_USE_PARTY_MENU - 1]  = CB2_ShowPartyMenuForItemUse,
     [ITEM_USE_FIELD - 1]       = CB2_ReturnToField,
     [ITEM_USE_PBLOCK_CASE - 1] = NULL,
+    [ITEM_USE_FROM_PARTY_MENU - 1] = NULL,
 };
 
 static const u8 sClockwiseDirections[] = {DIR_NORTH, DIR_EAST, DIR_SOUTH, DIR_WEST};
@@ -199,31 +200,23 @@ u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId)
 u8 CheckIfItemUsableFromPartyMenu(u16 itemId)
 {
     if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_TMHM)
-        return 1;
+        return ITEM_USE_TMHM;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_EvolutionStone)
-        return 2;
+        return ITEM_USE_EVO_STONE;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_Medicine)
-        return 3;
-    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_AbilityCapsule)
-        return 4;
-    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_AbilityPatch)
-        return 5;
+        return ITEM_USE_MEDICINE;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_ReduceEV)
-        return 6;
-    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_SacredAsh)
-        return 7;
+        return ITEM_USE_REDUCE_EV;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_PPRecovery)
-        return 8;
+        return ITEM_USE_PP_RECOVERY;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_PPUp)
-        return 9;
+        return ITEM_USE_PP_UP;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_RareCandy)
-        return 10;
-    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_SacredAsh)
-        return 11;
+        return ITEM_USE_RARE_CANDY;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_FormChange)
-        return 12;
+        return ITEM_USE_FORM_CHANGE;
     else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_FormChange_ConsumedOnUse)
-        return 13;
+        return ITEM_USE_FORM_CHANGE_2;
     else
         return 0;
 }
