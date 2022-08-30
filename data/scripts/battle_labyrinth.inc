@@ -3878,6 +3878,23 @@ Zone_EventScript_RetirePrompt_27:
 	goto Zone_EventScript_RetirePrompt_4
 
 
+EventScript_NuzlockeVerifyGift::
+	goto_if_set FLAG_NUZLOCKE_ON, EventScript_NuzlockeVerifyGift_2
+EventScript_NuzlockeVerifyGift_1:
+	return
+
+EventScript_NuzlockeVerifyGift_2:
+	msgbox EventScript_NuzlockeVerifyGift_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_NuzlockeVerifyGift_4
+	goto EventScript_NuzlockeVerifyGift_1
+
+EventScript_NuzlockeVerifyGift_4:
+	hidemoneybox
+	release
+	end
+
+
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
 	end
@@ -4351,6 +4368,11 @@ Zone_EventScript_RetirePrompt_Text_0:
 
 Zone_EventScript_RetirePrompt_Text_1:
 	.string "Warping now…$"
+
+EventScript_NuzlockeVerifyGift_Text_0:
+	.string "On Nuzlocke mode, you will randomly\n"
+	.string "receive one of the possible Pokémon.\p"
+	.string "Is this ok?$"
 
 gText_Lelouch_NotEnoughColor::
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You don't have any Shards\nof that color.$"

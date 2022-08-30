@@ -176,6 +176,7 @@ script Zone5A_EventScript_BuyPikaClone {
 					release
 					end
 				}
+				call(EventScript_NuzlockeVerifyGift)
 				removemoney(3000)
 				updatemoneybox
 				msgbox("I appreciate it!")

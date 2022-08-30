@@ -162,6 +162,7 @@ Zone5A_EventScript_BuyPikaClone_3:
 	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
 	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone5A_EventScript_BuyPikaClone_14
+	call EventScript_NuzlockeVerifyGift
 	removemoney 3000
 	updatemoneybox
 	msgbox Zone5A_EventScript_BuyPikaClone_Text_5

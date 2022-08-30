@@ -93,6 +93,7 @@ Zone2B_EventScript_BuyBug_3:
 	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
 	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone2B_EventScript_BuyBug_14
+	call EventScript_NuzlockeVerifyGift
 	removemoney 1000
 	updatemoneybox
 	msgbox Zone2B_EventScript_BuyBug_Text_5

@@ -125,6 +125,7 @@ script Zone11A_EventScript_BuyRuin {
 					release
 					end
 				}
+				call(EventScript_NuzlockeVerifyGift)
 				removemoney(4000)
 				updatemoneybox
 				msgbox("Alrighty, I hope this won't ruin you!")

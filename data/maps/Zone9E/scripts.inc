@@ -17,6 +17,7 @@ Zone9E_EventScript_BuyFarmAnimal_3:
 	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
 	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone9E_EventScript_BuyFarmAnimal_14
+	call EventScript_NuzlockeVerifyGift
 	removemoney 5000
 	updatemoneybox
 	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_5, MSGBOX_DEFAULT

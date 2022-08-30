@@ -129,6 +129,7 @@ Zone11A_EventScript_BuyRuin_3:
 	specialvar VAR_TEMP_2, CalculatePlayerPartyCount
 	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone11A_EventScript_BuyRuin_14
+	call EventScript_NuzlockeVerifyGift
 	removemoney 4000
 	updatemoneybox
 	msgbox Zone11A_EventScript_BuyRuin_Text_5

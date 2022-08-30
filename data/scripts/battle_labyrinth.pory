@@ -2707,6 +2707,18 @@ text gText_MultipleOpponentsRemaining {
 	"There are still {STR_VAR_1} opponents\nremaining in the area."
 }
 
+script EventScript_NuzlockeVerifyGift {
+	if (flag(FLAG_NUZLOCKE_ON) == true) {
+		msgbox(format("On Nuzlocke mode, you will randomly receive one of the possible Pokémon.\pIs this ok?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == NO) {
+			hidemoneybox
+			release
+			end
+		}
+	}
+	return
+}
+
 raw `
 EventScript_ExitSign::
 	msgbox gText_ExitSign, MSGBOX_SIGN
