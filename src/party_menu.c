@@ -5236,7 +5236,7 @@ static void CB2_ShowSummaryScreenToForgetMove(void)
 
 static void CB2_ReturnToPartyMenuWhileLearningMove(void)
 {
-    SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_LEVEL, &sFinalLevel); // to avoid displaying incorrect level
+    // SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_LEVEL, &sFinalLevel); // to avoid displaying incorrect level
     if (gSpecialVar_ItemId == ITEM_RARE_CANDY && gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD && CheckBagHasItem(gSpecialVar_ItemId, 1))
         InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_USE_ITEM, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
     else
@@ -7307,12 +7307,14 @@ static void Task_HandleTrainingYesNoInput(u8 taskId)
     u32 nextLevelExperience;
     struct PartyMenuInternal *ptr = sPartyMenuInternal;
     s16 *arrayPtr = ptr->data;
+    sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
     case 0: // Yes
         nextLevelExperience = gExperienceTables[gBaseStats[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
         SetMonData(mon, MON_DATA_EXP, &nextLevelExperience);
         CalculateMonStats(mon);
+        sFinalLevel = GetMonData(mon, MON_DATA_LEVEL, NULL);
         BufferMonStatsToTaskData(mon, arrayPtr);
         BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
         gPartyMenuUseExitCallback = TRUE;
