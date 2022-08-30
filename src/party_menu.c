@@ -144,7 +144,7 @@ struct PartyMenuInternal
     u32 spriteIdCancelPokeball:7;
     u32 messageId:14;
     u8 windowId[3];
-    u8 actions[8];
+    u8 actions[10];
     u8 numActions;
     // In vanilla Emerald, only the first 0xB0 hwords (0x160 bytes) are actually used.
     // However, a full 0x100 hwords (0x200 bytes) are allocated.
@@ -299,6 +299,9 @@ static void SlidePartyMenuBoxOneStep(u8);
 static void Task_SlideSelectedSlotsOffscreen(u8);
 static void SwitchPartyMon(void);
 static void Task_SlideSelectedSlotsOnscreen(u8);
+static void CB2_SelectBagItemToUse(void);
+static void CB2_UseItem(void);
+static void Task_UseItem(u8);
 static void CB2_SelectBagItemToGive(void);
 static void CB2_GiveHoldItem(void);
 static void CB2_WriteMailToGiveMon(void);
@@ -418,6 +421,7 @@ static void CursorCb_Nickname(u8);
 static void CursorCb_Switch(u8);
 static void CursorCb_Cancel1(u8);
 static void CursorCb_Item(u8);
+static void CursorCb_UseItem(u8);
 static void CursorCb_Give(u8);
 static void CursorCb_TakeItem(u8);
 static void CursorCb_MoveItem(u8);
@@ -3217,6 +3221,69 @@ static void CursorCb_Item(u8 taskId)
     DisplayPartyMenuStdMessage(PARTY_MSG_DO_WHAT_WITH_ITEM);
     gTasks[taskId].data[0] = 0xFF;
     gTasks[taskId].func = Task_HandleSelectionMenuInput;
+}
+
+static void CursorCb_UseItem(u8 taskId)
+{
+    PlaySE(SE_SELECT);
+    sPartyMenuInternal->exitCallback = CB2_SelectBagItemToUse;
+    Task_ClosePartyMenu(taskId);
+}
+
+static void CB2_SelectBagItemToUse(void)
+{
+    if (InBattlePyramid() == FALSE)
+        GoToBagMenu(ITEMMENULOCATION_PARTY_USE_ITEM, POCKETS_COUNT, CB2_UseItem);
+    else
+        GoToBattlePyramidBagMenu(PYRAMIDBAG_LOC_PARTY, CB2_UseItem);
+}
+
+static void CB2_UseItem(void)
+{
+    if (gSpecialVar_ItemId == ITEM_NONE)
+    {
+        InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_TryCreateSelectionWindow, gPartyMenu.exitCallback);
+    }
+    else
+    {
+        InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_UseItem, gPartyMenu.exitCallback);
+        // sPartyMenuItemId = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HELD_ITEM);
+
+        // // Already holding item
+        // if (sPartyMenuItemId != ITEM_NONE)
+        // {
+        //     InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_SwitchHoldItemsPrompt, gPartyMenu.exitCallback);
+        // }
+        // // Give mail
+        // else if (ItemIsMail(gSpecialVar_ItemId))
+        // {
+        //     RemoveBagItem(gSpecialVar_ItemId, 1);
+        //     GiveItemToMon(&gPlayerParty[gPartyMenu.slotId], gSpecialVar_ItemId);
+        //     CB2_WriteMailToGiveMon();
+        // }
+        // // Give item
+        // else
+        // {
+        //     InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_GiveHoldItem, gPartyMenu.exitCallback);
+        // }
+    }
+}
+
+static void Task_UseItem(u8 taskId)
+{
+    u16 item;
+
+    if (!gPaletteFade.active)
+    {
+        ItemUseFunc func = ItemId_GetFieldFunc(gSpecialVar_ItemId);
+        // DisplayGaveHeldItemMessage(&gPlayerParty[gPartyMenu.slotId], item, FALSE, 0);
+        // GiveItemToMon(&gPlayerParty[gPartyMenu.slotId], item);
+        // RemoveBagItem(item, 1);
+        if (CheckIfItemUsableFromPartyMenu(gSpecialVar_ItemId))
+            AddBagItem(ITEM_MASTER_BALL, 1);
+            // func(taskId);
+        gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+    }
 }
 
 static void CursorCb_Give(u8 taskId)

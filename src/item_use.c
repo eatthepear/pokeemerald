@@ -196,7 +196,38 @@ u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId)
         return 0;
 }
 
-// Mail in the bag menu can't have a message but it can be checked (view the mail background, no message)
+u8 CheckIfItemUsableFromPartyMenu(u16 itemId)
+{
+    if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_TMHM)
+        return 1;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_EvolutionStone)
+        return 2;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_Medicine)
+        return 3;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_AbilityCapsule)
+        return 4;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_AbilityPatch)
+        return 5;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_ReduceEV)
+        return 6;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_SacredAsh)
+        return 7;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_PPRecovery)
+        return 8;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_PPUp)
+        return 9;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_RareCandy)
+        return 10;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_SacredAsh)
+        return 11;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_FormChange)
+        return 12;
+    else if (ItemId_GetFieldFunc(itemId) == ItemUseOutOfBattle_FormChange_ConsumedOnUse)
+        return 13;
+    else
+        return 0;
+}
+
 static void CB2_CheckMail(void)
 {
     struct Mail mail;
