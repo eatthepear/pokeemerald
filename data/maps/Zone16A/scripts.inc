@@ -92,32 +92,38 @@ Zone16A_EventScript_InitiateKatieMichaelBattles::
 	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_1
 	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_2
 	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_3
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_4, MSGBOX_YESNO
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_InitiateKatieMichaelBattles_2
+	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_5, MSGBOX_YESNO
+Zone16A_EventScript_InitiateKatieMichaelBattles_1:
 	compare VAR_RESULT, NO
-	goto_if_eq Zone16A_EventScript_InitiateKatieMichaelBattles_2
+	goto_if_eq Zone16A_EventScript_InitiateKatieMichaelBattles_6
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_6
-	trainerbattle_no_intro TRAINER_KATIE, Zone16A_EventScript_InitiateKatieMichaelBattles_Text_7
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_InitiateKatieMichaelBattles_5
-Zone16A_EventScript_InitiateKatieMichaelBattles_4:
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_8
-	trainerbattle_no_intro TRAINER_MICHAEL, Zone16A_EventScript_InitiateKatieMichaelBattles_Text_9
+	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_7
+	trainerbattle_no_intro TRAINER_KATIE, Zone16A_EventScript_InitiateKatieMichaelBattles_Text_8
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_InitiateKatieMichaelBattles_9
+Zone16A_EventScript_InitiateKatieMichaelBattles_8:
+	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_9
+	trainerbattle_no_intro TRAINER_MICHAEL, Zone16A_EventScript_InitiateKatieMichaelBattles_Text_10
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_10
 	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_11
+	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_12
 	msgbox Zone16A_EventScript_Katie_Text_0
 	setvar VAR_ZONE_16_STATE, 1
 	release
 	end
 
 Zone16A_EventScript_InitiateKatieMichaelBattles_2:
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_5
+	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_4, MSGBOX_YESNO
+	goto Zone16A_EventScript_InitiateKatieMichaelBattles_1
+
+Zone16A_EventScript_InitiateKatieMichaelBattles_6:
+	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_6
 	release
 	end
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_5:
+Zone16A_EventScript_InitiateKatieMichaelBattles_9:
 	special HealPlayerParty
-	goto Zone16A_EventScript_InitiateKatieMichaelBattles_4
+	goto Zone16A_EventScript_InitiateKatieMichaelBattles_8
 
 
 Zone16A_EventScript_PokemonRanger::
@@ -455,32 +461,39 @@ Zone16A_EventScript_InitiateKatieMichaelBattles_Text_3:
 Zone16A_EventScript_InitiateKatieMichaelBattles_Text_4:
 	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both\n"
 	.string "back-to-back in battle, I'll let her\l"
-	.string "know to give the Lapras to you!$"
+	.string "know to give the Lapras to you! You\l"
+	.string "won't be healed in between battles.$"
 
 Zone16A_EventScript_InitiateKatieMichaelBattles_Text_5:
+	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both\n"
+	.string "back-to-back in battle, I'll let her\l"
+	.string "know to give the Lapras to you! You will\l"
+	.string "be healed in between battles.$"
+
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_6:
 	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: I guess Lapras may never find\n"
 	.string "the right home…$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_6:
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_7:
 	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: Alright! Let's get started, then!$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_7:
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_8:
 	.string "Katie: You made quite the splash!$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_8:
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_9:
 	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: I hope you're ready for this\n"
 	.string "battle!$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_9:
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_10:
 	.string "Michael: You're too quick!$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_10:
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_11:
 	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: You got us! You're an amazing\n"
 	.string "trainer!\p"
 	.string "We'll put in the good word with our\n"
 	.string "friend.$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_11:
+Zone16A_EventScript_InitiateKatieMichaelBattles_Text_12:
 	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: I think she's somewhere in the\n"
 	.string "shallows to the south of us right now.$"
 

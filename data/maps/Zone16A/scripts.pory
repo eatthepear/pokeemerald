@@ -68,7 +68,11 @@ script Zone16A_EventScript_InitiateKatieMichaelBattles {
 	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Listen up, 'cause we've got a challenge for you!"))
 	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: Our friend is a Pokémon Ranger and she's looking for someone to take care of a rehabilitated Lapras."))
 	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: But she wants to make sure the person is a skilled trainer!"))
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both back-to-back in battle, I'll let her know to give the Lapras to you!"), MSGBOX_YESNO)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both back-to-back in battle, I'll let her know to give the Lapras to you! You won't be healed in between battles."), MSGBOX_YESNO)
+	} else {
+		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both back-to-back in battle, I'll let her know to give the Lapras to you! You will be healed in between battles."), MSGBOX_YESNO)
+	}
 	if (var(VAR_RESULT) == NO) {
 		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: I guess Lapras may never find the right home…"))
 		release

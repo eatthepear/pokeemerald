@@ -50,7 +50,7 @@ script Zone9A_EventScript_Man {
 script Zone9A_EventScript_Ari {
 	lock
 	faceplayer
-	msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row.\lWhat do you say to my little wager?", MSGBOX_YESNO)
+	msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row,\lwithout being healed in between\lbattles.\pWhat do you say to my little wager?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
 		msgbox("Ah, so you're a chicken. Well, if\nyou change your mind, I'll be here.", MSGBOX_DEFAULT)
 		release

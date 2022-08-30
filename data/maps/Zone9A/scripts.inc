@@ -266,7 +266,7 @@ Zone9A_EventScript_Man_Text_0:
 	.string "Why don't you go spar with them?$"
 
 Zone9A_EventScript_Ari_Text_0:
-	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row.\lWhat do you say to my little wager?$"
+	.string "{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row,\lwithout being healed in between\lbattles.\pWhat do you say to my little wager?$"
 
 Zone9A_EventScript_Ari_Text_1:
 	.string "Ah, so you're a chicken. Well, if\nyou change your mind, I'll be here.$"

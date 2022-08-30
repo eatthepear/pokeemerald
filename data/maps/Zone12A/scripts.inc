@@ -70,21 +70,23 @@ Zone12A_EventScript_InitiateRomulusJulieBattles::
 	waitmovement 0
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_0
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_1
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_2, MSGBOX_YESNO
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_InitiateRomulusJulieBattles_2
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_3, MSGBOX_YESNO
+Zone12A_EventScript_InitiateRomulusJulieBattles_1:
 	compare VAR_RESULT, NO
-	goto_if_eq Zone12A_EventScript_InitiateRomulusJulieBattles_2
+	goto_if_eq Zone12A_EventScript_InitiateRomulusJulieBattles_6
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_4
-	trainerbattle_no_intro TRAINER_ROMULUS, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_5
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_InitiateRomulusJulieBattles_5
-Zone12A_EventScript_InitiateRomulusJulieBattles_4:
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_6
-	trainerbattle_no_intro TRAINER_JULIE, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_7
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_5
+	trainerbattle_no_intro TRAINER_ROMULUS, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_6
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_InitiateRomulusJulieBattles_9
+Zone12A_EventScript_InitiateRomulusJulieBattles_8:
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_7
+	trainerbattle_no_intro TRAINER_JULIE, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9
-	giveitem ITEM_SCOPE_LENS
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10
+	giveitem ITEM_SCOPE_LENS
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_11
 	applymovement 1, Zone12A_Movement_Right
 	applymovement 2, Zone12A_Movement_Right
 	waitmovement 0
@@ -96,7 +98,11 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_4:
 	end
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_2:
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_3
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_2, MSGBOX_YESNO
+	goto Zone12A_EventScript_InitiateRomulusJulieBattles_1
+
+Zone12A_EventScript_InitiateRomulusJulieBattles_6:
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_4
 	applymovement 1, Zone12A_Movement_Right
 	applymovement 2, Zone12A_Movement_Right
 	waitmovement 0
@@ -105,9 +111,9 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_2:
 	releaseall
 	end
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_5:
+Zone12A_EventScript_InitiateRomulusJulieBattles_9:
 	special HealPlayerParty
-	goto Zone12A_EventScript_InitiateRomulusJulieBattles_4
+	goto Zone12A_EventScript_InitiateRomulusJulieBattles_8
 
 
 Zone12A_Movement_Left:
@@ -376,35 +382,42 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_Text_1:
 	.string "river!$"
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_Text_2:
-	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: Well, trainer, would you like to\n"
-	.string "face our trial? You'll have to beat the\l"
-	.string "two of us in a row!$"
+	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face\n"
+	.string "our trial? We'll battle you one after\l"
+	.string "the other, and you won't be healed in\l"
+	.string "between battles!$"
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_Text_3:
-	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Oh! How cowardly.$"
+	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face\n"
+	.string "our trial? We'll battle you one after\l"
+	.string "the other, and you'll be healed in\l"
+	.string "between battles!$"
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_Text_4:
+	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Oh! How cowardly.$"
+
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_5:
 	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Well then, I'm up first! Better\n"
 	.string "hope luck is on your side!$"
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_Text_5:
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_6:
 	.string "Romulus: The critical hits didn't come\n"
 	.string "through!$"
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_Text_6:
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_7:
 	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: Next up is me! I won't need any\n"
 	.string "crits to beat you!$"
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_Text_7:
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8:
 	.string "Julie: You won even without landing a\n"
 	.string "critical hit!$"
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8:
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9:
 	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross\n"
 	.string "the river.$"
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9:
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10:
 	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: We'll even give you this item, too!$"
 
-Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10:
+Zone12A_EventScript_InitiateRomulusJulieBattles_Text_11:
 	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Au revoir!$"

@@ -56,7 +56,11 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Well, well well. Look what we have here!"))
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: A trainer! Trying to cross the river!"))
-	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Well, trainer, would you like to face our trial? You'll have to beat the two of us in a row!"), MSGBOX_YESNO)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face our trial? We'll battle you one after the other, and you won't be healed in between battles!"), MSGBOX_YESNO)
+	} else {
+		msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face our trial? We'll battle you one after the other, and you'll be healed in between battles!"), MSGBOX_YESNO)
+	}
 	if (var(VAR_RESULT) == NO) {
 		msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Oh! How cowardly."))
 		applymovement(1, Zone12A_Movement_Right)

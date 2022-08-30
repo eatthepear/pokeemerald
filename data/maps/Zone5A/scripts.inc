@@ -56,24 +56,26 @@ Zone5A_EventScript_LeviathanBattle::
 Zone5A_EventScript_LeviathanBattle_1:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_TEMP_1, 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_7
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_1, MSGBOX_YESNO
+Zone5A_EventScript_LeviathanBattle_6:
 	compare VAR_RESULT, NO
-	goto_if_eq Zone5A_EventScript_LeviathanBattle_7
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_2
+	goto_if_eq Zone5A_EventScript_LeviathanBattle_11
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_3
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	trainerbattle_no_intro TRAINER_KEVIN, Zone5A_EventScript_LeviathanBattle_Text_3
+	trainerbattle_no_intro TRAINER_KEVIN, Zone5A_EventScript_LeviathanBattle_Text_4
 	applymovement 10, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_4
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_5
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_5
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_6
 	fadeoutbgm 1
 	applymovement 4, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_6
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_7
 	applymovement 4, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement 4, Common_Movement_FaceLeft
@@ -82,9 +84,9 @@ Zone5A_EventScript_LeviathanBattle_1:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_7
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_10
-Zone5A_EventScript_LeviathanBattle_9:
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_8
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_14
+Zone5A_EventScript_LeviathanBattle_13:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -92,20 +94,20 @@ Zone5A_EventScript_LeviathanBattle_9:
 	waitmovement 0
 	applymovement 10, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_8
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_9
 	applymovement 4, Common_Movement_FaceUp
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_9
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_10
 	delay 64
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_10
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_11
 	giveitem ITEM_TM04, 1
 	closemessage
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_11
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_12
 	applymovement 4, Common_Movement_FaceUp
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_12
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_13
 	fadescreen FADE_TO_BLACK
 	removeobject 4
 	setflag FLAG_BEAT_LEVIATHAN_5
@@ -130,15 +132,19 @@ Zone5A_EventScript_LeviathanBattle_3:
 	goto Zone5A_EventScript_LeviathanBattle_1
 
 Zone5A_EventScript_LeviathanBattle_7:
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_1
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
+	goto Zone5A_EventScript_LeviathanBattle_6
+
+Zone5A_EventScript_LeviathanBattle_11:
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	releaseall
 	end
 
-Zone5A_EventScript_LeviathanBattle_10:
+Zone5A_EventScript_LeviathanBattle_14:
 	special HealPlayerParty
-	goto Zone5A_EventScript_LeviathanBattle_9
+	goto Zone5A_EventScript_LeviathanBattle_13
 
 
 Zone5A_EventScript_BuyPikaClone::
@@ -506,22 +512,31 @@ Zone5A_EventScript_LeviathanBattle_Text_0:
 	.string "Foursome.\p"
 	.string "Well then. Would you like to face our\n"
 	.string "club in battle? You'll have to beat\l"
-	.string "both of us in a row!$"
+	.string "both of us in a row, and you won't be\l"
+	.string "healed in between battles!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?$"
+	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome\n"
+	.string "Foursome.\p"
+	.string "Well then. Would you like to face our\n"
+	.string "club in battle? You'll have to beat\l"
+	.string "both of us in a row, and you'll be healed\l"
+	.string "in between battles!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?$"
+
+Zone5A_EventScript_LeviathanBattle_Text_3:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Finally! My Bugs are writhing\n"
 	.string "with excitement!$"
 
-Zone5A_EventScript_LeviathanBattle_Text_3:
+Zone5A_EventScript_LeviathanBattle_Text_4:
 	.string "It can't be!$"
 
-Zone5A_EventScript_LeviathanBattle_Text_4:
+Zone5A_EventScript_LeviathanBattle_Text_5:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!$"
 
-Zone5A_EventScript_LeviathanBattle_Text_5:
+Zone5A_EventScript_LeviathanBattle_Text_6:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"
 	.string "…\l"
 	.string "I told you already, Kevin.\p"
@@ -529,10 +544,10 @@ Zone5A_EventScript_LeviathanBattle_Text_5:
 	.string "The Bug Maniacs, not\l"
 	.string "The Bug Enjoyers.$"
 
-Zone5A_EventScript_LeviathanBattle_Text_6:
+Zone5A_EventScript_LeviathanBattle_Text_7:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Huh? Oh!$"
 
-Zone5A_EventScript_LeviathanBattle_Text_7:
+Zone5A_EventScript_LeviathanBattle_Text_8:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Want to join our club? The\n"
 	.string "name: The Bug Maniacs!\p"
 	.string "…\n"
@@ -541,7 +556,7 @@ Zone5A_EventScript_LeviathanBattle_Text_7:
 	.string "You'll change your mind after I beat you\n"
 	.string "with my fabulous Bug Pokémon!$"
 
-Zone5A_EventScript_LeviathanBattle_Text_8:
+Zone5A_EventScript_LeviathanBattle_Text_9:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, it's just a name.\p"
 	.string "Maybe it doesn't have the right ring or\n"
 	.string "something.\p"
@@ -549,10 +564,10 @@ Zone5A_EventScript_LeviathanBattle_Text_8:
 	.string "Maybe we can beat this trainer next\l"
 	.string "time.$"
 
-Zone5A_EventScript_LeviathanBattle_Text_9:
+Zone5A_EventScript_LeviathanBattle_Text_10:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You're right, you're right.$"
 
-Zone5A_EventScript_LeviathanBattle_Text_10:
+Zone5A_EventScript_LeviathanBattle_Text_11:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh! Right. I forgot you're here.\p"
 	.string "…\n"
 	.string "…\l"
@@ -566,10 +581,10 @@ Zone5A_EventScript_LeviathanBattle_Text_10:
 	.string "All right, fine. Take this TM and leave\n"
 	.string "me alone!$"
 
-Zone5A_EventScript_LeviathanBattle_Text_11:
+Zone5A_EventScript_LeviathanBattle_Text_12:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Sheesh. Harsh, much?$"
 
-Zone5A_EventScript_LeviathanBattle_Text_12:
+Zone5A_EventScript_LeviathanBattle_Text_13:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh, shut it. Let's just get out\n"
 	.string "of here.$"
 

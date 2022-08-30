@@ -45,7 +45,11 @@ script Zone5A_EventScript_LeviathanBattle {
 	}
 	setvar(VAR_TEMP_0, 0)
 	setvar(VAR_TEMP_1, 0)
-	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome Foursome.\pWell then. Would you like to face our club in battle? You'll have to beat both of us in a row!"), MSGBOX_YESNO)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome Foursome.\pWell then. Would you like to face our club in battle? You'll have to beat both of us in a row, and you won't be healed in between battles!"), MSGBOX_YESNO)
+	} else {
+		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome Foursome.\pWell then. Would you like to face our club in battle? You'll have to beat both of us in a row, and you'll be healed in between battles!"), MSGBOX_YESNO)
+	}
 	if (var(VAR_RESULT) == NO) {
 		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?"))
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
