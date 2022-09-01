@@ -6765,7 +6765,7 @@ static bool32 AtLeastThreeUsableMons(void)
             count++;
     }
 
-    if (count >= 3)
+    if (count >= 1)
         return TRUE;
 
     // Check PC for usable Pokémon
@@ -6775,7 +6775,7 @@ static bool32 AtLeastThreeUsableMons(void)
         {
             if (CheckBoxMonSanityAt(i, j))
             {
-                if (++count >= 3)
+                if (++count >= 1)
                     return TRUE;
             }
         }
@@ -6800,48 +6800,48 @@ static s8 RunCanReleaseMon(void)
         for (i = 0; i < PARTY_SIZE; i++)
         {
             // Make sure party Pokémon isn't the one we're releasing first
-            if (sStorage->releaseBoxId != TOTAL_BOXES_COUNT || sStorage->releaseBoxPos != i)
-            {
-                knownMoves = GetMonData(&gPlayerParty[i], MON_DATA_KNOWN_MOVES, (u8 *)sStorage->restrictedMoveList);
-                sStorage->restrictedReleaseMonMoves &= ~(knownMoves);
-            }
+            // if (sStorage->releaseBoxId != TOTAL_BOXES_COUNT || sStorage->releaseBoxPos != i)
+            // {
+            //     knownMoves = GetMonData(&gPlayerParty[i], MON_DATA_KNOWN_MOVES, (u8 *)sStorage->restrictedMoveList);
+            //     sStorage->restrictedReleaseMonMoves &= ~(knownMoves);
+            // }
         }
-        if (sStorage->restrictedReleaseMonMoves == 0)
-        {
-            // No restricted moves on release Pokémon that
-            // aren't resolved by the party, it can be released.
-            sStorage->releaseStatusResolved = TRUE;
-            sStorage->canReleaseMon = TRUE;
-        }
-        else
-        {
-            // Release Pokémon has restricted moves not resolved by the party.
-            // Continue and check the PC next
-            sStorage->releaseCheckBoxId = 0;
-            sStorage->releaseCheckBoxPos = 0;
-            sStorage->releaseCheckState++;
-        }
+        // if (sStorage->restrictedReleaseMonMoves == 0)
+        // {
+        //     // No restricted moves on release Pokémon that
+        //     // aren't resolved by the party, it can be released.
+        sStorage->releaseStatusResolved = TRUE;
+        sStorage->canReleaseMon = TRUE;
+        // }
+        // else
+        // {
+        //     // Release Pokémon has restricted moves not resolved by the party.
+        //     // Continue and check the PC next
+        //     sStorage->releaseCheckBoxId = 0;
+        //     sStorage->releaseCheckBoxPos = 0;
+        //     sStorage->releaseCheckState++;
+        // }
         break;
     case 1:
         // Check PC for other Pokémon that know any restricted
         // moves the release Pokémon knows
         for (i = 0; i < IN_BOX_COUNT; i++)
         {
-            knownMoves = GetAndCopyBoxMonDataAt(sStorage->releaseCheckBoxId, sStorage->releaseCheckBoxPos, MON_DATA_KNOWN_MOVES, (u8 *)sStorage->restrictedMoveList);
-            if (knownMoves != 0 && !(sStorage->releaseBoxId == sStorage->releaseCheckBoxId
-                                  && sStorage->releaseBoxPos == sStorage->releaseCheckBoxPos))
-            {
-                // Found PC Pokémon with restricted move, clear move from list
-                sStorage->restrictedReleaseMonMoves &= ~(knownMoves);
-                if (sStorage->restrictedReleaseMonMoves == 0)
-                {
-                    // No restricted moves on release Pokémon that
-                    // aren't resolved, it can be released.
-                    sStorage->releaseStatusResolved = TRUE;
-                    sStorage->canReleaseMon = TRUE;
-                    break;
-                }
-            }
+            // knownMoves = GetAndCopyBoxMonDataAt(sStorage->releaseCheckBoxId, sStorage->releaseCheckBoxPos, MON_DATA_KNOWN_MOVES, (u8 *)sStorage->restrictedMoveList);
+            // if (knownMoves != 0 && !(sStorage->releaseBoxId == sStorage->releaseCheckBoxId
+            //                       && sStorage->releaseBoxPos == sStorage->releaseCheckBoxPos))
+            // {
+            //     // Found PC Pokémon with restricted move, clear move from list
+            //     sStorage->restrictedReleaseMonMoves &= ~(knownMoves);
+            //     if (sStorage->restrictedReleaseMonMoves == 0)
+            //     {
+            //         // No restricted moves on release Pokémon that
+            //         // aren't resolved, it can be released.
+            //         sStorage->releaseStatusResolved = TRUE;
+            //         sStorage->canReleaseMon = TRUE;
+            //         break;
+            //     }
+            // }
             if (++sStorage->releaseCheckBoxPos >= IN_BOX_COUNT)
             {
                 sStorage->releaseCheckBoxPos = 0;
