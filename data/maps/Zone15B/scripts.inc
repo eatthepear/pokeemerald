@@ -55,10 +55,10 @@ Zone15B_EventScript_LeviathanBattle::
 	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat
 Zone15B_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone15B_EventScript_LeviathanBattle_Text_3
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_2
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone15B_EventScript_LeviathanBattle_Text_4
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_3
 	fadescreenswapbuffers FADE_TO_BLACK
 	playmoncry SPECIES_PORYGON, 2
 	delay 40
@@ -68,19 +68,14 @@ Zone15B_EventScript_LeviathanBattle_1:
 	special CheckLeadMonTough
 	setflag FLAG_BEAT_LEVIATHAN_13
 	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox Zone15B_EventScript_LeviathanBattle_Text_5
+	msgbox Zone15B_EventScript_LeviathanBattle_Text_4
 	giveitem ITEM_RED_SHARD, 20
 	setvar VAR_ZONE_15_STATE, 1
 	releaseall
 	end
 
 Zone15B_EventScript_LeviathanBattle_2:
-	setweather WEATHER_DROUGHT
-	doweather
-	msgbox Zone15B_EventScript_LeviathanBattle_Text_2
 	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat
-	resetweather
-	doweather
 	goto Zone15B_EventScript_LeviathanBattle_1
 
 
@@ -97,16 +92,13 @@ Zone15B_EventScript_LeviathanBattle_Text_1:
 	.string "fight!$"
 
 Zone15B_EventScript_LeviathanBattle_Text_2:
-	.string "Harsh sunlight suddenly appeared!$"
-
-Zone15B_EventScript_LeviathanBattle_Text_3:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It seems I was mistaken.\nYou're no ordinary AI.$"
 
-Zone15B_EventScript_LeviathanBattle_Text_4:
+Zone15B_EventScript_LeviathanBattle_Text_3:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the\n"
 	.string "assignment. Requesting immediate evac.$"
 
-Zone15B_EventScript_LeviathanBattle_Text_5:
+Zone15B_EventScript_LeviathanBattle_Text_4:
 	.string "It looks like a bag was left behind!\pInside are… Shards?$"
 
 Zone15B_Text_Leviathan13Defeat::

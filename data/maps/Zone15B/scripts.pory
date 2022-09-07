@@ -38,12 +38,7 @@ script Zone15B_EventScript_LeviathanBattle {
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-		setweather(WEATHER_DROUGHT)
-		doweather
-		msgbox("Harsh sunlight suddenly appeared!")
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat)
-		resetweather
-		doweather
 	} else {
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat)
 	}

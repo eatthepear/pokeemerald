@@ -847,7 +847,7 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
     .iv = 20,
     .lvl = 16,
     .nature = NATURE_TIMID,
-    .ability = ABILITY_HIDDEN, //Swift Swim
+    .ability = ABILITY_SLOT_1, //Swift Swim
     .species = SPECIES_FINNEON,
     .moves = {MOVE_WATER_PULSE, MOVE_AIR_CUTTER, MOVE_AQUA_RING, MOVE_CHARM}
     },
@@ -1291,8 +1291,9 @@ static const struct TrainerMon sParty_Carmine[] = {
     }
 };
 
-// You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row without healing
-static const struct TrainerMon sParty_Ari[] = {//Uses level up movesets on Default difficulty
+// You fight Ari, Bertha, Cassandra, Dominic, and Erica in a row.
+// On Default, your party is fully healed in between fights, while on Brutal your party is not
+static const struct TrainerMon sParty_Ari[] = {
     {
     .iv = 10,
     .lvl = 19,
@@ -1307,7 +1308,7 @@ static const struct TrainerMon sParty_Ari[] = {//Uses level up movesets on Defau
     }
 };
 
-static const struct TrainerMon sParty_Bertha[] = {//Uses level up movesets on Default difficulty
+static const struct TrainerMon sParty_Bertha[] = {
     {
     .iv = 10,
     .lvl = 19,
@@ -1322,7 +1323,7 @@ static const struct TrainerMon sParty_Bertha[] = {//Uses level up movesets on De
     }
 };
 
-static const struct TrainerMon sParty_Cassandra[] = {//Uses level up movesets on Default difficulty
+static const struct TrainerMon sParty_Cassandra[] = {
     {
     .iv = 10,
     .lvl = 20,
@@ -1343,7 +1344,7 @@ static const struct TrainerMon sParty_Cassandra[] = {//Uses level up movesets on
     }
 };
 
-static const struct TrainerMon sParty_Dominic[] = {//Uses level up movesets on Default difficulty
+static const struct TrainerMon sParty_Dominic[] = {
     {
     .iv = 10,
     .lvl = 21,
@@ -1352,7 +1353,7 @@ static const struct TrainerMon sParty_Dominic[] = {//Uses level up movesets on D
     }
 };
 
-static const struct TrainerMon sParty_Erica[] = {//Uses level up movesets on Default difficulty
+static const struct TrainerMon sParty_Erica[] = {
     {
     .iv = 10,
     .lvl = 20,
@@ -2456,15 +2457,6 @@ static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Def
     {
     .iv = 30,
     .lvl = 30,
-    .nature = NATURE_TIMID,
-    .ability = ABILITY_HIDDEN, //Solar Power
-    .species = SPECIES_HELIOLISK,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_VOICE, MOVE_VOLT_SWITCH, MOVE_NONE}
-    },
-    {
-    .iv = 30,
-    .lvl = 30,
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
     .species = SPECIES_HOUNDOOM,
@@ -2473,7 +2465,7 @@ static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Def
     }
 };
 
-static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Battle starts with permanent Sun, Brutal
+static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 30,
