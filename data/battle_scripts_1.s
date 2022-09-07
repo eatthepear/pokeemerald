@@ -1,3 +1,4 @@
+#include "config.h"
 #include "constants/global.h"
 #include "constants/battle.h"
 #include "constants/pokemon.h"
@@ -8082,11 +8083,11 @@ BattleScript_AbilityRaisesDefenderStat::
 	return
 
 BattleScript_AbilityPopUp:
-	.if B_ABILITY_POP_UP == TRUE
+.if B_ABILITY_POP_UP == TRUE
 	showabilitypopup BS_ABILITY_BATTLER
 	recordability BS_ABILITY_BATTLER
 	pause 40
-	.endif
+.endif
 	sethword sABILITY_OVERWRITE, 0
 	return
 
