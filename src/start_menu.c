@@ -815,11 +815,11 @@ static bool8 StartMenuDebugCallback(void)
     RemoveExtraStartMenuWindows();
     HideStartMenuDebug(); // Hide start menu without enabling movement
 
-    #ifdef TX_DEBUGGING
-        Debug_ShowMainMenu();
-    #endif
+#if DEBUG_SYSTEM_ENABLE == TRUE
+    Debug_ShowMainMenu();
+#endif
 
-    return TRUE;
+return TRUE;
 }
 
 static bool8 StartMenuSafariZoneRetireCallback(void)

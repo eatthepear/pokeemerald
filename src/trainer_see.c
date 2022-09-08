@@ -1,6 +1,5 @@
 #include "global.h"
 #include "battle_setup.h"
-#include "debug.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "field_effect.h"
@@ -199,10 +198,8 @@ bool8 CheckForTrainersWantingBattle(void)
     u8 i;
     u8 numTrainers;
 
-    #ifdef TX_DEBUGGING //DEBUG
-        if (FlagGet(FLAG_SYS_NO_TRAINER_SEE))
-            return FALSE;
-    #endif //
+    if (FlagGet(OW_FLAG_NO_TRAINER_SEE))
+        return FALSE;
 
     gNoOfApproachingTrainers = 0;
     gApproachingTrainerId = 0;

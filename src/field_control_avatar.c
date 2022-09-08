@@ -755,10 +755,8 @@ void RestartWildEncounterImmunitySteps(void)
 
 static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 {
-    #ifdef TX_DEBUGGING
-    if (FlagGet(FLAG_SYS_NO_ENCOUNTER)) //DEBUG
-        return FALSE;//
-    #endif
+    if (FlagGet(OW_FLAG_NO_ENCOUNTER))
+        return FALSE;
 
     if (sWildEncounterImmunitySteps < 4)
     {
@@ -775,7 +773,7 @@ static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
     }
 
     sPreviousPlayerMetatileBehavior = metatileBehavior;
-    return FALSE;   
+    return FALSE;
 }
 
 static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8 direction)

@@ -16,7 +16,6 @@
 #include "berry.h"
 #include "bg.h"
 #include "data.h"
-#include "debug.h"
 #include "decompress.h"
 #include "dexnav.h"
 #include "dma3.h"
@@ -4142,7 +4141,8 @@ static void HandleTurnActionSelectionState(void)
                     }
                     break;
                 case B_ACTION_USE_ITEM:
-                    if ((FlagGet(FLAG_BRUTAL_MODE_ON) && (gBattleTypeFlags & BATTLE_TYPE_TRAINER)) 
+                    if ((FlagGet(FLAG_BRUTAL_MODE_ON) && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+                                            || FlagGet(B_FLAG_NO_BAG_USE)
                                             || (gBattleTypeFlags & (BATTLE_TYPE_LINK
                                             | BATTLE_TYPE_FRONTIER_NO_PYRAMID
                                             | BATTLE_TYPE_EREADER_TRAINER
@@ -4150,14 +4150,6 @@ static void HandleTurnActionSelectionState(void)
                                             // Or if currently held by Sky Drop
                                             || gStatuses3[gActiveBattler] & STATUS3_SKY_DROPPED)
                     {
-                        RecordedBattle_ClearBattlerAction(gActiveBattler, 1);
-                        gSelectionBattleScripts[gActiveBattler] = BattleScript_ActionSelectionItemsCantBeUsed;
-                        gBattleCommunication[gActiveBattler] = STATE_SELECTION_SCRIPT;
-                        *(gBattleStruct->selectionScriptFinished + gActiveBattler) = FALSE;
-                        *(gBattleStruct->stateIdAfterSelScript + gActiveBattler) = STATE_BEFORE_ACTION_CHOSEN;
-                        return;
-                    }
-                    else if (FlagGet(FLAG_DISABLE_BAG)) {
                         RecordedBattle_ClearBattlerAction(gActiveBattler, 1);
                         gSelectionBattleScripts[gActiveBattler] = BattleScript_ActionSelectionItemsCantBeUsed;
                         gBattleCommunication[gActiveBattler] = STATE_SELECTION_SCRIPT;

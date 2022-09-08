@@ -101,6 +101,7 @@
 #define B_OBLIVIOUS_TAUNT           GEN_LATEST // In Gen6+, Pokémon with Oblivious can't be taunted.
 #define B_STURDY                    GEN_LATEST // In Gen5+, Sturdy causes the Pokémon to have 1 HP remaining if another Pokémon's attack or confusion damage would have brought it from full health to 0 HP.
 #define B_PLUS_MINUS_INTERACTION    GEN_LATEST // In Gen5+, Plus and Minus can be activated with themselves and the opposite ability. Before, only the opposing ability could activate it.
+#define B_WEATHER_FORMS             GEN_LATEST // In Gen5+, Castform and Cherrim revert to their base form upon losing their respective ability. Cherrim needs Flower Gift to swap forms.
 
 // Item settings
 #define B_HP_BERRIES                GEN_LATEST // In Gen4+, berries which restore hp activate immediately after HP drops to half. In Gen3, the effect occurs at the end of the turn.
@@ -127,8 +128,10 @@
 // To use the following features in scripting, replace the 0s with the flag ID you're assigning it to.
 // Eg: Replace with FLAG_UNUSED_0x264 so you can use that flag to toggle the feature.
 #define B_FLAG_INVERSE_BATTLE       0     // If this flag is set, the battle's type effectiveness are inversed. For example, fire is super effective against water.
-#define B_FLAG_FORCE_DOUBLE_WILD    FLAG_FORCE_DOUBLE_WILD     // If this flag is set, all land and surfing wild battles will be double battles.
+#define B_FLAG_FORCE_DOUBLE_WILD    FLAG_FORCE_DOUBLE_WILD    // If this flag is set, all land and surfing wild battles will be double battles.
 #define B_SMART_WILD_AI_FLAG        FLAG_SMART_WILD_AI_ON     // If not 0, you can set this flag in a script to enable smart wild pokemon
+#define B_FLAG_NO_BAG_USE           FLAG_DISABLE_BAG          // If this flag is set, the ability to use the bag in battle is disabled.
+#define B_FLAG_NO_CATCHING          FLAG_SYS_NO_CATCHING      // If this flag is set, the ability to catch wild Pokémon is disabled.
 
 // Var Settings
 // To use the following features in scripting, replace the 0s with the var ID you're assigning it to.

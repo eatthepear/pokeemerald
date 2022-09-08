@@ -810,8 +810,8 @@ static void CB2_GoToResetRtcScreen(void)
 
 static void CB2_GoToSoundCheckScreen(void)
 {
-    if (!UpdatePaletteFade())
-        SetMainCallback2(CB2_StartSoundCheckMenu);
+    // if (!UpdatePaletteFade())
+    //     SetMainCallback2(CB2_StartSoundCheckMenu);
     AnimateSprites();
     BuildOamBuffer();
 }
