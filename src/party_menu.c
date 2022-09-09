@@ -2715,7 +2715,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SWITCH);
         if (ItemIsMail(GetMonData(&mons[slotId], MON_DATA_HELD_ITEM)))
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_MAIL);
-        else
+        else if (!((VarGet(VAR_ZONE) == 12) && FlagGet(FLAG_IN_NEW_ZONE)))
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
     }
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_NICKNAME);
@@ -3215,6 +3215,8 @@ static void CursorCb_Item(u8 taskId)
 static void CursorCb_UseItem(u8 taskId)
 {
     PlaySE(SE_SELECT);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
     sPartyMenuInternal->exitCallback = CB2_SelectBagItemToUse;
     Task_ClosePartyMenu(taskId);
 }

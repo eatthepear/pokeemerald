@@ -15,9 +15,10 @@ Zone11Sanctuary_EventScript_Intro::
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_RewardClear
-	msgbox Zone11Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	msgbox Zone11Sanctuary_Text_Reward
 	giveitem ITEM_TM23
 	setvar VAR_ZONE, 12
+	msgbox Zone11Sanctuary_EventScript_Intro_Text_0
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
@@ -60,6 +61,12 @@ Zone11Sanctuary_EventScript_NextZone_6:
 	waitstate
 	goto Zone11Sanctuary_EventScript_NextZone_1
 
+
+Zone11Sanctuary_EventScript_Intro_Text_0:
+	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next zone, {COLOR RED}Zone 12{COLOR DARK_GRAY},\n"
+	.string "restricts the use of your bag.\p"
+	.string "You will not be able to use your bag at\n"
+	.string "all.$"
 
 Zone11Sanctuary_Text_Reward::
 	.string "TM23 - Pluck!$"

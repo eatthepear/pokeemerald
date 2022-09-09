@@ -12,9 +12,10 @@ script Zone11Sanctuary_EventScript_Intro {
 	waitfanfare
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_RewardClear)
-	msgbox(Zone11Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE)
+	msgbox(Zone11Sanctuary_Text_Reward)
 	giveitem(ITEM_TM23)
 	setvar(VAR_ZONE, 12)
+	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next zone, {COLOR RED}Zone 12{COLOR DARK_GRAY}, restricts the use of your bag.\pYou will not be able to use your bag at all."))
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)
