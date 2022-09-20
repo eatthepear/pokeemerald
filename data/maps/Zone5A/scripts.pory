@@ -439,6 +439,6 @@ Zone5A_Text_ClintonPostBattle:
 `
 text Zone5A_Text_Sign {
 	format("Trainer Tips!\p"
-	"You can view the current level cap as well as how the number of remaining foes and items in an area by looking at your Trainer Card.\p"
+	"You can view the current level cap as well as the number of remaining foes and items in an area by looking at your Trainer Card.\p"
 	"This information changes accordingly based on which Zone you are in.")
 }

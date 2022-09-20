@@ -2643,7 +2643,7 @@ static void Task_WaitFadeAccessPC(u8 taskId)
     {
         DestroyTask(taskId);
         FlagSet(DEBUG_FLAG_PC_FROM_DEBUG_MENU);
-        EnterPokeStorage(2);
+        EnterPokeStorage(0);
     }
 }
 

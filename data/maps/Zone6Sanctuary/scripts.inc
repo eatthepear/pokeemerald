@@ -18,7 +18,7 @@ Zone6Sanctuary_EventScript_Intro::
 	msgbox Zone6Sanctuary_Text_Reward
 	giveitem ITEM_SLEDGEHAMMER
 	setvar VAR_ZONE, 7
-	msgbox Zone6Sanctuary_Text_Colress_Explain
+	msgbox Zone6Sanctuary_Text_Colress_Explain, MSGBOX_DEFAULT
 	msgbox Zone6Sanctuary_Text_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0

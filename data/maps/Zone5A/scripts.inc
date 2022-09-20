@@ -645,8 +645,8 @@ Zone5A_Text_Leviathan5Defeat::
 Zone5A_Text_Sign::
 	.string "Trainer Tips!\p"
 	.string "You can view the current level cap as\n"
-	.string "well as how the number of remaining\l"
-	.string "foes and items in an area by looking at\l"
-	.string "your Trainer Card.\p"
+	.string "well as the number of remaining foes\l"
+	.string "and items in an area by looking at your\l"
+	.string "Trainer Card.\p"
 	.string "This information changes accordingly\n"
 	.string "based on which Zone you are in.$"
