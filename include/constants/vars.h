@@ -273,8 +273,8 @@
 #define VAR_CYCLING_ROAD_RECORD_TIME_L       0x40FE
 #define VAR_CYCLING_ROAD_RECORD_TIME_H       0x40FF
 
-#define VARS_END                             0x40FF
-#define VARS_COUNT                           (VARS_END - VARS_START + 1)
+#define VARS_END                                         0x40FF
+#define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000
 // special vars
