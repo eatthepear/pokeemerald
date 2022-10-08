@@ -340,7 +340,7 @@ static void HandleInputChooseAction(void)
         SwapHpBarsWithHpText();
     }
 #if B_ENABLE_DEBUG == TRUE
-    else if (gMain.newKeys & SELECT_BUTTON && FlagGet(FLAG_IS_DEBUGGING_SAVEFILE))
+    else if (JOY_NEW(SELECT_BUTTON) && FlagGet(FLAG_IS_DEBUGGING_SAVEFILE))
     {
         BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_DEBUG, 0);
         PlayerBufferExecCompleted();
@@ -552,7 +552,7 @@ static void HandleInputShowEntireFieldTargets(void)
         HideMegaTriggerSprite();
         PlayerBufferExecCompleted();
     }
-    else if (gMain.newKeys & B_BUTTON || gPlayerDpadHoldFrames > 59)
+    else if (JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
     {
         PlaySE(SE_SELECT);
         HideAllTargets();
@@ -581,7 +581,7 @@ static void HandleInputShowTargets(void)
         TryHideLastUsedBall();
         PlayerBufferExecCompleted();
     }
-    else if (gMain.newKeys & B_BUTTON || gPlayerDpadHoldFrames > 59)
+    else if (JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
     {
         PlaySE(SE_SELECT);
         HideShownTargets();
@@ -606,12 +606,12 @@ static void HandleInputChooseMove(void)
     u32 canSelectTarget = 0;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[gActiveBattler][4]);
 
-    if (gMain.heldKeys & DPAD_ANY && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_L_EQUALS_A)
+    if (JOY_HELD(DPAD_ANY) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_L_EQUALS_A)
         gPlayerDpadHoldFrames++;
     else
         gPlayerDpadHoldFrames = 0;
 
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
         if (moveInfo->moves[gMoveSelectionCursor[gActiveBattler]] == MOVE_CURSE)

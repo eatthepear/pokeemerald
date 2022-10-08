@@ -2,7 +2,8 @@
 #define GUARD_CONSTANTS_POKEDEX_H
 
 #include "constants/pokemon_config.h"
-// National Pokedex order. Gen 4+ mons and forms are not disabled by P_NEW_POKEMON to keep pokedex_orders.h clean.
+// National Pokedex order.
+// These constants are NOT disabled by P_GEN_X_POKEMON to keep pokedex_orders.h clean.
 enum {
     NATIONAL_DEX_NONE,
     // Kanto
@@ -923,11 +924,21 @@ enum {
 
 #define KANTO_DEX_COUNT     NATIONAL_DEX_MEW
 #define JOHTO_DEX_COUNT     NATIONAL_DEX_CELEBI
-#if P_NEW_POKEMON == TRUE
-#define NATIONAL_DEX_COUNT  NATIONAL_DEX_ENAMORUS
+
+#if P_GEN_8_POKEMON == TRUE
+    #define NATIONAL_DEX_COUNT  NATIONAL_DEX_ENAMORUS
+#elif P_GEN_7_POKEMON == TRUE
+    #define NATIONAL_DEX_COUNT  NATIONAL_DEX_MELMETAL
+#elif P_GEN_6_POKEMON == TRUE
+    #define NATIONAL_DEX_COUNT  NATIONAL_DEX_VOLCANION
+#elif P_GEN_5_POKEMON == TRUE
+    #define NATIONAL_DEX_COUNT  NATIONAL_DEX_GENESECT
+#elif P_GEN_4_POKEMON == TRUE
+    #define NATIONAL_DEX_COUNT  NATIONAL_DEX_ARCEUS
 #else
-#define NATIONAL_DEX_COUNT  NATIONAL_DEX_DEOXYS
+    #define NATIONAL_DEX_COUNT  NATIONAL_DEX_DEOXYS
 #endif
+
 #define POKEMON_SLOTS_NUMBER (NATIONAL_DEX_COUNT + 1)
 
 // Hoenn Pokedex order
@@ -1453,7 +1464,7 @@ enum {
     HOENN_DEX_FROSMOTH,
     HOENN_DEX_SNORUNT,
     HOENN_DEX_GLALIE,
-#if P_NEW_POKEMON == TRUE
+#if P_GEN_4_POKEMON == TRUE
     HOENN_DEX_FROSLASS,
 #endif
     HOENN_DEX_SPHEAL,

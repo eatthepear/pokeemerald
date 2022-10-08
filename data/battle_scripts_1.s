@@ -706,6 +706,7 @@ BattleScript_EffectFlingConsumeBerry:
 	restorebattleritem BS_TARGET
 BattleScript_FlingEnd:
 	tryfaintmon BS_TARGET
+	trysymbiosis
 	goto BattleScript_MoveEnd
 
 BattleScript_FlingFlameOrb:
@@ -1392,6 +1393,7 @@ BattleScript_MoveEffectBugBite::
 	consumeberry BS_ATTACKER, TRUE  @ consume the berry, then restore the item from changedItems
 	bicword gHitMarker, HITMARKER_NO_ANIMATIONS
 	setbyte sBERRY_OVERRIDE, FALSE
+	trysymbiosis
 	return
 
 BattleScript_EffectCoreEnforcer:
@@ -1763,6 +1765,7 @@ BattleScript_EffectBestow:
 	waitanimation
 	printstring STRINGID_BESTOWITEMGIVING
 	waitmessage B_WAIT_TIME_LONG
+	trysymbiosis
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectAfterYou:
@@ -5173,7 +5176,14 @@ BattleScript_EffectTeleport:
 	attackcanceler
 	attackstring
 	ppreduce
-	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_TeleportTrainer @BattleScript_ButItFailed
+.if B_TELEPORT_BEHAVIOR >= GEN_7
+	canteleport BS_ATTACKER
+	jumpifbyte CMP_EQUAL, gBattleCommunication, TRUE, BattleScript_EffectTeleportNew
+	goto BattleScript_ButItFailed
+.else
+	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_ButItFailed
+.endif
+BattleScript_EffectTeleportTryToRunAway:
 	getifcantrunfrombattle BS_ATTACKER
 	jumpifbyte CMP_EQUAL, gBattleCommunication, BATTLE_RUN_FORBIDDEN, BattleScript_ButItFailed
 	jumpifbyte CMP_EQUAL, gBattleCommunication, BATTLE_RUN_FAILURE, BattleScript_PrintAbilityMadeIneffective
@@ -5184,11 +5194,12 @@ BattleScript_EffectTeleport:
 	setoutcomeonteleport BS_ATTACKER
 	goto BattleScript_MoveEnd
 
-@ Custom stuff
-BattleScript_TeleportTrainer:
-	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_TeleportEnd
-	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_TeleportEnd
-	openpartyscreen BS_ATTACKER, BattleScript_TeleportEnd
+BattleScript_EffectTeleportNew:
+	getbattlerside BS_ATTACKER
+	jumpifbyte CMP_EQUAL, gBattleCommunication, B_SIDE_OPPONENT, BattleScript_EffectTeleportTryToRunAway
+	attackanimation
+	waitanimation
+	openpartyscreen BS_ATTACKER, BattleScript_EffectTeleportNewEnd
 	switchoutabilities BS_ATTACKER
 	waitstate
 	switchhandleorder BS_ATTACKER, 2
@@ -5203,9 +5214,8 @@ BattleScript_TeleportTrainer:
 	switchinanim BS_ATTACKER, TRUE
 	waitstate
 	switchineffects BS_ATTACKER
-BattleScript_TeleportEnd:
-	end
-@ Custom Stuff
+BattleScript_EffectTeleportNewEnd:
+	goto BattleScript_MoveEnd
 
 BattleScript_EffectBeatUp::
 	attackcanceler
@@ -9867,4 +9877,10 @@ BattleScript_NeutralizingGasExitsLoop:
 BattleScript_MagicianActivates::
 	call BattleScript_AbilityPopUp
 	call BattleScript_ItemSteal
+	return
+
+BattleScript_SymbiosisActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_SYMBIOSISITEMPASS
+	waitmessage B_WAIT_TIME_LONG
 	return

@@ -1,4 +1,3 @@
-#if P_NEW_POKEMON == TRUE
 static const u16 sVenusaurFormSpeciesIdTable[] = {
     SPECIES_VENUSAUR,
     SPECIES_VENUSAUR_MEGA,
@@ -473,7 +472,7 @@ static const u16 sAltariaFormSpeciesIdTable[] = {
     SPECIES_ALTARIA_MEGA,
     FORM_SPECIES_END,
 };
-#endif
+
 static const u16 sCastformFormSpeciesIdTable[] = {
     SPECIES_CASTFORM,
     SPECIES_CASTFORM_SUNNY,
@@ -482,7 +481,6 @@ static const u16 sCastformFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
-#if P_NEW_POKEMON == TRUE
 static const u16 sBanetteFormSpeciesIdTable[] = {
     SPECIES_BANETTE,
     SPECIES_BANETTE_MEGA,
@@ -542,7 +540,7 @@ static const u16 sRayquazaFormSpeciesIdTable[] = {
     SPECIES_RAYQUAZA_MEGA,
     FORM_SPECIES_END,
 };
-#endif
+
 static const u16 sDeoxysFormSpeciesIdTable[] = {
     SPECIES_DEOXYS,
     SPECIES_DEOXYS_ATTACK,
@@ -550,7 +548,7 @@ static const u16 sDeoxysFormSpeciesIdTable[] = {
     SPECIES_DEOXYS_SPEED,
     FORM_SPECIES_END,
 };
-#if P_NEW_POKEMON == TRUE
+
 static const u16 sBurmyFormSpeciesIdTable[] = {
     SPECIES_BURMY,
     SPECIES_BURMY_SANDY_CLOAK,
@@ -769,12 +767,6 @@ static const u16 sThundurusFormSpeciesIdTable[] = {
 static const u16 sLandorusFormSpeciesIdTable[] = {
     SPECIES_LANDORUS,
     SPECIES_LANDORUS_THERIAN,
-    FORM_SPECIES_END,
-};
-
-static const u16 sEnamorusFormSpeciesIdTable[] = {
-    SPECIES_ENAMORUS,
-    SPECIES_ENAMORUS_THERIAN,
     FORM_SPECIES_END,
 };
 
@@ -1137,4 +1129,9 @@ static const u16 sCalyrexFormSpeciesIdTable[] = {
     SPECIES_CALYREX_SHADOW_RIDER,
     FORM_SPECIES_END,
 };
-#endif
+
+static const u16 sEnamorusFormSpeciesIdTable[] = {
+    SPECIES_ENAMORUS,
+    SPECIES_ENAMORUS_THERIAN,
+    FORM_SPECIES_END,
+};
