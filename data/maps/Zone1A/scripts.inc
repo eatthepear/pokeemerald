@@ -110,6 +110,15 @@ Zone1A_EventScript_ItemQuickClaw_2:
 	end
 
 
+Zone1A_EventScript_Sign::
+	msgbox Zone1A_EventScript_Sign_Text_0, MSGBOX_DEFAULT
+	showmonpic SPECIES_PORYGON, 10, 3
+	waitbuttonpress
+	hidemonpic
+	release
+	end
+
+
 Zone1A_EventScript_Nina::
 	trainerbattle_single TRAINER_NINA, Zone1A_Text_NinaIntro, Zone1A_Text_NinaDefeat
 	msgbox Zone1A_Text_NinaPostBattle, MSGBOX_AUTOCLOSE
@@ -152,9 +161,9 @@ Zone1A_Text_OscarDefeat:
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor…$"
 
-Zone1A_EventScript_Sign::
-	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
-	end
+@ Zone1A_EventScript_Sign::
+@ 	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
+@ 	end
 
 Zone1A_Text_Sign:
 	.string "Trainer Tips!\p"
@@ -172,6 +181,11 @@ Zone1A_EventScript_LeviathanBattle_Text_1:
 	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run\n"
 	.string "now.\p"
 	.string "Bye bye!$"
+
+Zone1A_EventScript_Sign_Text_0:
+	.string "Every Zone has its own challenges.\n"
+	.string "In order to reach the Sanctuary and\l"
+	.string "clear a Zone, you must find {COLOR RED}Porygon{COLOR DARK_GRAY}.$"
 
 Zone1A_Text_Leviathan1Intro::
 	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: Hi! My name's Corey.\n"

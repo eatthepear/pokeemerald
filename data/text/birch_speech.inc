@@ -9,11 +9,6 @@ gText_Birch_Welcome::
 	.string "technological marvel.\p"
 	.string "$"
 
-gText_Birch_Pokemon::
-	.string "Using Rotom's limitless potential,”\p"
-	.string "\n"
-	.string "$"
-
 gText_Birch_MainSpeech::
 	.string "I've designed a simulated\n"
 	.string "environment for trainers at the\l"
