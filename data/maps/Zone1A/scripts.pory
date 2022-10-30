@@ -101,7 +101,7 @@ script Zone1A_EventScript_ItemQuickClaw {
 	end
 }
 
-script Zone1A_EventScript_Sign {
+script Zone1A_EventScript_PorygonSign {
 	msgbox(format("Every Zone has its own challenges.\nIn order to reach the Sanctuary and clear a Zone, you must find {COLOR RED}Porygon{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
 	showmonpic(SPECIES_PORYGON, 10, 3)
 	waitbuttonpress
@@ -153,9 +153,9 @@ Zone1A_Text_OscarDefeat:
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor…$"
 
-@ Zone1A_EventScript_Sign::
-@ 	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
-@ 	end
+Zone1A_EventScript_Sign::
+	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
+	end
 
 Zone1A_Text_Sign:
 	.string "Trainer Tips!\p"

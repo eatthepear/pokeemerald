@@ -110,8 +110,8 @@ Zone1A_EventScript_ItemQuickClaw_2:
 	end
 
 
-Zone1A_EventScript_Sign::
-	msgbox Zone1A_EventScript_Sign_Text_0, MSGBOX_DEFAULT
+Zone1A_EventScript_PorygonSign::
+	msgbox Zone1A_EventScript_PorygonSign_Text_0, MSGBOX_DEFAULT
 	showmonpic SPECIES_PORYGON, 10, 3
 	waitbuttonpress
 	hidemonpic
@@ -161,9 +161,9 @@ Zone1A_Text_OscarDefeat:
 Zone1A_Text_OscarPostBattle:
 	.string "I must reclaim my honor…$"
 
-@ Zone1A_EventScript_Sign::
-@ 	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
-@ 	end
+Zone1A_EventScript_Sign::
+	msgbox Zone1A_Text_Sign, MSGBOX_SIGN
+	end
 
 Zone1A_Text_Sign:
 	.string "Trainer Tips!\p"
@@ -182,7 +182,7 @@ Zone1A_EventScript_LeviathanBattle_Text_1:
 	.string "now.\p"
 	.string "Bye bye!$"
 
-Zone1A_EventScript_Sign_Text_0:
+Zone1A_EventScript_PorygonSign_Text_0:
 	.string "Every Zone has its own challenges.\n"
 	.string "In order to reach the Sanctuary and\l"
 	.string "clear a Zone, you must find {COLOR RED}Porygon{COLOR DARK_GRAY}.$"
