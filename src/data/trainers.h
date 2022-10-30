@@ -251,7 +251,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Phillipa"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_KNOWLEDGABLE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_ACE_POKEMON | AI_FLAG_KNOWLEDGABLE,
         .partySize = ARRAY_COUNT(sParty_PhillipaBrutal),
         .party = {.TrainerMon = sParty_PhillipaBrutal},
         .hasCustomTransition = TRUE,

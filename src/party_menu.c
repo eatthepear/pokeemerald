@@ -4617,7 +4617,6 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
                 AnimatePartySlot(gPartyMenu.slotId, 1);
             PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(mon, MON_DATA_HP) - hp, Task_DisplayHPRestoredMessage);
             ResetHPTaskData(taskId, 0, hp);
-            AddBagItem(ITEM_MASTER_BALL, 1);
             return;
         }
         else

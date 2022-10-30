@@ -289,7 +289,7 @@ static const struct TrainerMon sParty_Richard[] = {
 static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     {
     .iv = 20,
-    .lvl = 10,
+    .lvl = 11,
     .nature = NATURE_SASSY,
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
@@ -297,7 +297,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     },
     {
     .iv = 20,
-    .lvl = 10,
+    .lvl = 11,
     .nature = NATURE_RELAXED,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
@@ -309,27 +309,26 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ROLLOUT, MOVE_ICE_BALL, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
 static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
-    .lvl = 10,
+    .lvl = 11,
     .nature = NATURE_SASSY,
     .ability = ABILITY_SLOT_1, //Unaware
     .species = SPECIES_BIDOOF,
-    .moves = {MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_GROWL, MOVE_DEFENSE_CURL}
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 31,
-    .lvl = 10,
+    .lvl = 11,
     .nature = NATURE_RELAXED,
     .ability = ABILITY_SLOT_1, //Sturdy
     .species = SPECIES_PHANPY,
-    .moves = {MOVE_ROLLOUT, MOVE_HEADBUTT, MOVE_BULLDOZE, MOVE_DEFENSE_CURL}
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 31,
@@ -337,8 +336,15 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Aftermath
     .species = SPECIES_VOLTORB_HISUIAN,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ICE_BALL, MOVE_ROLLOUT, MOVE_LEAFAGE, MOVE_THUNDER_SHOCK}
+    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 31,
+    .lvl = 15,
+    .nature = NATURE_CAREFUL,
+    .ability = ABILITY_HIDDEN, //Simple
+    .species = SPECIES_BIBAREL,
+    .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
     }
 };
 
