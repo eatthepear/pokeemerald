@@ -84,15 +84,15 @@ Zone3A_EventScript_LeviathanBattle::
 	waitmovement 0
 	msgbox Zone3A_Text_Leviathan3Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA
 	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone3A_EventScript_LeviathanBattle_2
 Zone3A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_0
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_1
 	applymovement 10, Zone3A_Movement_Phillipa_RunAway
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_1
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
@@ -101,42 +101,42 @@ Zone3A_EventScript_LeviathanBattle_1:
 	clearflag FLAG_HIDE_ZONE3A_REMI
 	applymovement 4, Common_Movement_WalkDown
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_2
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_3
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	delay 32
 	applymovement 4, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_3
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_4
 	applymovement 4, Zone3A_Movement_Remi_WalkToPhillipa
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_4
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_5
 	applymovement 10, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_5
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_6
-	delay 32
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_7
+	delay 32
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_8
 	applymovement 4, Zone3A_Movement_Remi_WalkBack
 	applymovement 10, Zone3A_Movement_Phillipa_WalkBack
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_8
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_9
 	msgbox Zone3A_EventScript_LeviathanBattle_Text_10
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_11
 	applymovement 4, Zone3A_Movement_Remi_WalkToPlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_11
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_12
 	giveitem ITEM_GOOD_ROD, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement 4, Zone3A_Movement_Remi_WalkBackToPhillipa
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_12
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_13
 	applymovement 10, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone3A_EventScript_LeviathanBattle_Text_13
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_14
 	closemessage
 	applymovement 10, Common_Movement_WalkUp
 	waitmovement 0
@@ -153,7 +153,7 @@ Zone3A_EventScript_LeviathanBattle_1:
 	end
 
 Zone3A_EventScript_LeviathanBattle_2:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA
+	msgbox Zone3A_EventScript_LeviathanBattle_Text_0
 	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3_BRUTAL, Zone3A_Text_Leviathan3Defeat
 	goto Zone3A_EventScript_LeviathanBattle_1
 
@@ -351,55 +351,61 @@ Zone3A_Text_RichardPostBattle:
 	.string "with my money?$"
 
 Zone3A_EventScript_LeviathanBattle_Text_0:
-	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!$"
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: No way! No fair! This isn't\n"
+	.string "right!\p"
+	.string "I'll just have to beat you with my dad's\n"
+	.string "strongest Pokémon!$"
 
 Zone3A_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Phillipa? Are you ok?$"
+	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!$"
 
 Zone3A_EventScript_LeviathanBattle_Text_2:
-	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Oh!$"
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Phillipa? Are you ok?$"
 
 Zone3A_EventScript_LeviathanBattle_Text_3:
+	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Oh!$"
+
+Zone3A_EventScript_LeviathanBattle_Text_4:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: I see.\p"
 	.string "You must have defeated my daughter in\n"
 	.string "battle.\p"
 	.string "Don't worry, I'll go talk to her.$"
 
-Zone3A_EventScript_LeviathanBattle_Text_4:
+Zone3A_EventScript_LeviathanBattle_Text_5:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Hey, kiddo.$"
 
-Zone3A_EventScript_LeviathanBattle_Text_5:
+Zone3A_EventScript_LeviathanBattle_Text_6:
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! Daddy! I lost!$"
 
-Zone3A_EventScript_LeviathanBattle_Text_6:
+Zone3A_EventScript_LeviathanBattle_Text_7:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: I know, love, but sometimes we\n"
 	.string "lose, and that's life. We have to face\l"
 	.string "our losses with honor, right?$"
 
-Zone3A_EventScript_LeviathanBattle_Text_7:
+Zone3A_EventScript_LeviathanBattle_Text_8:
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff…\p"
 	.string "Okay…$"
 
-Zone3A_EventScript_LeviathanBattle_Text_8:
+Zone3A_EventScript_LeviathanBattle_Text_9:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: What do you say?$"
 
-Zone3A_EventScript_LeviathanBattle_Text_9:
+Zone3A_EventScript_LeviathanBattle_Text_10:
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff… Thank you very much\n"
 	.string "for the battle!$"
 
-Zone3A_EventScript_LeviathanBattle_Text_10:
+Zone3A_EventScript_LeviathanBattle_Text_11:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: I'm proud of you, kiddo.$"
 
-Zone3A_EventScript_LeviathanBattle_Text_11:
+Zone3A_EventScript_LeviathanBattle_Text_12:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Thanks for being a good sport.\p"
 	.string "Here, I want you to have this.$"
 
-Zone3A_EventScript_LeviathanBattle_Text_12:
+Zone3A_EventScript_LeviathanBattle_Text_13:
 	.string "{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement\n"
 	.string "for one day.\p"
 	.string "It's dinner time.$"
 
-Zone3A_EventScript_LeviathanBattle_Text_13:
+Zone3A_EventScript_LeviathanBattle_Text_14:
 	.string "{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Food!$"
 
 Zone3A_Text_Leviathan3Intro::

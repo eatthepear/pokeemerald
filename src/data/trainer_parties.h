@@ -286,9 +286,11 @@ static const struct TrainerMon sParty_Richard[] = {
     }
 };
 
-static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
+// On Default, you just fight Phillipa's normal party.
+// On Brutal, you fight Phillipa's normal party, then immediately fight Phillipa's Brutal party.
+static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Brutal
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 11,
     .nature = NATURE_SASSY,
     .ability = ABILITY_SLOT_1, //Unaware
@@ -296,7 +298,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 11,
     .nature = NATURE_RELAXED,
     .ability = ABILITY_SLOT_1, //Sturdy
@@ -304,7 +306,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 11,
     .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Aftermath
@@ -315,33 +317,9 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
 
 static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
-    .iv = 31,
-    .lvl = 11,
-    .nature = NATURE_SASSY,
-    .ability = ABILITY_SLOT_1, //Unaware
-    .species = SPECIES_BIDOOF,
-    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 31,
-    .lvl = 11,
-    .nature = NATURE_RELAXED,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .species = SPECIES_PHANPY,
-    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 31,
-    .lvl = 11,
-    .nature = NATURE_HASTY,
-    .ability = ABILITY_HIDDEN, //Aftermath
-    .species = SPECIES_VOLTORB_HISUIAN,
-    .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    },
-    {
-    .iv = 31,
+    .iv = 0,
     .lvl = 15,
-    .nature = NATURE_CAREFUL,
+    .nature = NATURE_MODEST,
     .ability = ABILITY_HIDDEN, //Simple
     .species = SPECIES_BIBAREL,
     .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
