@@ -13,14 +13,16 @@ Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 
 
 Zone2B_EventScript_Exit::
-	lockall
+	lock
+	faceplayer
 	compare VAR_ZONE, 2
 	goto_if_gt Zone2B_EventScript_Exit_2
 	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone2B_EventScript_Exit_7
 Zone2B_EventScript_Exit_5:
-	warp MAP_ZONE2SANCTUARY, 255, 22, 7
-	waitstate
+	msgbox gText_PorygonCheckExit, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone2B_EventScript_Exit_10
 Zone2B_EventScript_Exit_1:
 	releaseall
 	end
@@ -37,6 +39,11 @@ Zone2B_EventScript_Exit_7:
 	compare VAR_NUM_TRAINERS_REMAINING, 0
 	goto_if_ne Zone2B_EventScript_Exit_6
 	goto Zone2B_EventScript_Exit_5
+
+Zone2B_EventScript_Exit_10:
+	warp MAP_ZONE2SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone2B_EventScript_Exit_1
 
 
 Zone2B_EventScript_LeviathanBattle::

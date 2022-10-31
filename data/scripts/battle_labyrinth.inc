@@ -2306,8 +2306,6 @@ EventScript_BrutalExitNotSatisfied::
 	case 1, EventScript_BrutalExitNotSatisfied_3
 	msgbox gText_MultipleOpponentsRemaining
 EventScript_BrutalExitNotSatisfied_1:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
 	releaseall
 	return
 

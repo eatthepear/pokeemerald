@@ -9,7 +9,8 @@ mapscripts Zone2B_MapScripts {
 }
 
 script Zone2B_EventScript_Exit {
-    lockall
+    lock
+	faceplayer
     if (var(VAR_ZONE) > 2) {
 		call(EventScript_WarpZone0)
     } else {
@@ -17,8 +18,11 @@ script Zone2B_EventScript_Exit {
 		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
 			goto(EventScript_BrutalExitNotSatisfied)
 		}
-        warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
-		waitstate
+		msgbox(gText_PorygonCheckExit, MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
+			waitstate
+		}
     }
     releaseall
     end

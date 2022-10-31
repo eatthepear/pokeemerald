@@ -1732,8 +1732,6 @@ script EventScript_BrutalExitNotSatisfied {
 		default:
 			msgbox(gText_MultipleOpponentsRemaining)
 	}
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
-	waitmovement(0)
 	releaseall
 }
 
