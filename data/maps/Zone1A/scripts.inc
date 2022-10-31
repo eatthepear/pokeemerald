@@ -20,14 +20,16 @@ Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 
 
 Zone1A_EventScript_Exit::
-	lockall
+	lock
+	faceplayer
 	compare VAR_ZONE, 1
 	goto_if_gt Zone1A_EventScript_Exit_2
 	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone1A_EventScript_Exit_7
 Zone1A_EventScript_Exit_5:
-	warp MAP_ZONE1SANCTUARY, 255, 22, 7
-	waitstate
+	msgbox gText_PorygonCheckExit, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone1A_EventScript_Exit_10
 Zone1A_EventScript_Exit_1:
 	releaseall
 	end
@@ -45,10 +47,32 @@ Zone1A_EventScript_Exit_7:
 	goto_if_ne Zone1A_EventScript_Exit_6
 	goto Zone1A_EventScript_Exit_5
 
+Zone1A_EventScript_Exit_10:
+	warp MAP_ZONE1SANCTUARY, 255, 22, 7
+	waitstate
+	goto Zone1A_EventScript_Exit_1
 
-Zone1A_EventScript_LeviathanBattle::
+
+Zone1A_EventScript_TalkToLeviathan::
 	lock
 	faceplayer
+	setvar VAR_ZONE_1_STATE, 1
+	goto Zone1A_EventScript_LeviathanBattle
+	return
+
+
+Zone1A_EventScript_TriggerLeviathan::
+	lockall
+	applymovement 6, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	setvar VAR_ZONE_1_STATE, 1
+	goto Zone1A_EventScript_LeviathanBattle
+	return
+
+
+Zone1A_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone1A_Text_Leviathan1Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -113,6 +137,7 @@ Zone1A_EventScript_ItemQuickClaw_2:
 Zone1A_EventScript_PorygonSign::
 	msgbox Zone1A_EventScript_PorygonSign_Text_0, MSGBOX_DEFAULT
 	showmonpic SPECIES_PORYGON, 10, 3
+	setseenmon SPECIES_PORYGON
 	waitbuttonpress
 	hidemonpic
 	release

@@ -3256,6 +3256,8 @@ EventScript_Surveillance_7:
 
 
 EventScript_WarpZone0::
+	playmoncry SPECIES_PORYGON, 0
+	waitmoncry
 	clearflag FLAG_IS_REVISITING_ZONE
 	switch VAR_REVISITING_ZONE
 	case 1, EventScript_WarpZone0_2
@@ -4514,3 +4516,6 @@ gText_OneOpponentRemaining::
 
 gText_MultipleOpponentsRemaining::
 	.string "There are still {STR_VAR_1} opponents\nremaining in the area.$"
+
+gText_PorygonCheckExit::
+	.string "{COLOR GREEN}Proceed to the Sanctuary?$"

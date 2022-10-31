@@ -2294,6 +2294,8 @@ script EventScript_Surveillance {
 }
 
 script EventScript_WarpZone0 {
+	playmoncry(SPECIES_PORYGON, 0)
+	waitmoncry
 	clearflag(FLAG_IS_REVISITING_ZONE)
 	switch(var(VAR_REVISITING_ZONE)) {
 		case 1:
@@ -2717,6 +2719,10 @@ script EventScript_NuzlockeVerifyGift {
 		}
 	}
 	return
+}
+
+text gText_PorygonCheckExit {
+	format("{COLOR GREEN}Proceed to the Sanctuary?")
 }
 
 raw `
