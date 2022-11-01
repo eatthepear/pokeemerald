@@ -4170,7 +4170,7 @@ EventScript_Shop_Joy_Text_6:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: See you next time.$"
 
 EventScript_BrutalExitNotSatisfied_Text_0:
-	.string "You haven't defeated all the opponents\n"
+	.string "{COLOR RED}You haven't defeated all the opponents\n"
 	.string "in the area yet.$"
 
 EventScript_Max_Text_0:
@@ -4509,11 +4509,11 @@ gText_ItemChestIsEmpty::
 	.string "The item chest is empty.$"
 
 gText_OneOpponentRemaining::
-	.string "There is 1 opponent remaining in this\n"
+	.string "{COLOR RED}There is 1 opponent remaining in this\n"
 	.string "area.$"
 
 gText_MultipleOpponentsRemaining::
-	.string "There are still {STR_VAR_1} opponents\nremaining in the area.$"
+	.string "{COLOR RED}There are still {STR_VAR_1} opponents\nremaining in the area.$"
 
 gText_PorygonCheckExit::
 	.string "{COLOR GREEN}Proceed to the Sanctuary?$"

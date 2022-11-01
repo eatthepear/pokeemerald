@@ -172,17 +172,23 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 29,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE3B",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
     {
       "type": "trigger",
       "x": 29,
-      "y": 5,
+      "y": 6,
       "elevation": 0,
-      "var": "VAR_GENERIC",
+      "var": "VAR_ZONE_3_STATE",
       "var_value": "0",
-      "script": "Zone3A_EventScript_Exit"
+      "script": "Zone3A_EventScript_TriggerLeviathan"
     }
   ],
   "bg_events": [

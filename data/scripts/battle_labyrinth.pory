@@ -1725,7 +1725,7 @@ script EventScript_Shop_Joy {
 
 script EventScript_BrutalExitNotSatisfied {
 	buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
-	msgbox(format("You haven't defeated all the opponents in the area yet."))
+	msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."))
 	switch(var(VAR_NUM_TRAINERS_REMAINING)) {
 		case 1:
 			msgbox(gText_OneOpponentRemaining)
@@ -2700,11 +2700,11 @@ script Zone_EventScript_RetirePrompt {
 }
 
 text gText_OneOpponentRemaining {
-	format("There is 1 opponent remaining in this area.")
+	format("{COLOR RED}There is 1 opponent remaining in this area.")
 }
 
 text gText_MultipleOpponentsRemaining {
-	"There are still {STR_VAR_1} opponents\nremaining in the area."
+	"{COLOR RED}There are still {STR_VAR_1} opponents\nremaining in the area."
 }
 
 script EventScript_NuzlockeVerifyGift {

@@ -23,27 +23,20 @@ mapscripts Zone3A_MapScripts {
 	}
 }
 
-script Zone3A_EventScript_Exit {
-    lockall
-	if (flag(FLAG_BEAT_LEVIATHAN_3) == false) {
-		goto(Zone3A_EventScript_LeviathanBattle)
+script Zone3A_EventScript_TriggerLeviathan {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	waitmovement(0)
+	msgbox("This looks like someone's home!\nGo inside?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		releaseall
+		end
 	}
-    if (var(VAR_ZONE) > 3) {
-		call(EventScript_WarpZone0)
-    } else {
-		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-			goto(EventScript_BrutalExitNotSatisfied)
-		}
-		setflag(FLAG_HIDE_ZONE3A_MAX)
-        warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
-		waitstate
-    }
-    releaseall
-    end
-}
-
-script Zone3A_EventScript_LeviathanBattle {
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+	waitmovement(0)
 	fadeoutbgm(1)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
@@ -127,7 +120,8 @@ script Zone3A_EventScript_LeviathanBattle {
 	setflag(FLAG_HIDE_ZONE3A_REMI)
 	removeobject(4)
 	setflag(FLAG_BEAT_LEVIATHAN_3)
-	release
+	setvar(VAR_ZONE_3_STATE, 1)
+	releaseall
 	end
 }
 

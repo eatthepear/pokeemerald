@@ -5170,6 +5170,16 @@
       "secondary_tileset": "gTileset_JungleTemple",
       "border_filepath": "data/layouts/Zone28A/border.bin",
       "blockdata_filepath": "data/layouts/Zone28A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE3B",
+      "name": "Zone3B_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone3B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone3B/map.bin"
     }
   ]
 }
