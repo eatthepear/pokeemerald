@@ -175,7 +175,6 @@ static void AskTossItems(u8);
 static void Task_RemoveItemFromBag(u8);
 static void ItemMenu_Cancel(u8);
 static void HandleErrorMessage(u8);
-static void PrintItemCantBeUsed(u8);
 static void PrintItemCantBeHeld(u8);
 static void DisplayCurrentMoneyWindow(void);
 static void DisplaySellItemPriceAndConfirm(u8);
@@ -2026,13 +2025,6 @@ static void PrintThereIsNoPokemon(u8 taskId)
     DisplayItemMessage(taskId, FONT_NORMAL, gText_NoPokemon, HandleErrorMessage);
 }
 
-static void PrintItemCantBeUsed(u8 taskId)
-{
-    CopyItemName(gSpecialVar_ItemId, gStringVar1);
-    StringExpandPlaceholders(gStringVar4, gText_Var1CantBeUsed);
-    DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, HandleErrorMessage);
-}
-
 static void PrintItemCantBeHeld(u8 taskId)
 {
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
@@ -2107,7 +2099,7 @@ static void Task_ItemContext_UseOnParty(u8 taskId)
 {
     if (!CheckIfItemUsableFromPartyMenu(gSpecialVar_ItemId))
     {
-        PrintItemCantBeUsed(taskId);
+        PrintItemCantBeHeld(taskId);
     }
     else
     {
