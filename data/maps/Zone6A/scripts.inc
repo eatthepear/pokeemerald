@@ -26,34 +26,6 @@ Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
 	return
 
 
-Zone6A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 6
-	goto_if_gt Zone6A_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_Exit_7
-Zone6A_EventScript_Exit_5:
-	setflag FLAG_HIDE_ZONE6A_MAX
-	warp MAP_ZONE6SANCTUARY, 255, 22, 7
-	waitstate
-Zone6A_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone6A_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone6A_EventScript_Exit_1
-
-Zone6A_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone6A_EventScript_Exit_5
-
-Zone6A_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone6A_EventScript_Exit_6
-	goto Zone6A_EventScript_Exit_5
-
-
 Zone6A_EventScript_LeviathanBattle::
 	lock
 	faceplayer

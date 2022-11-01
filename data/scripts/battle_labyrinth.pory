@@ -2696,12 +2696,14 @@ script EventScript_PorygonExit {
 				case 2:
 					warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
 				case 3:
+					setflag(FLAG_HIDE_ZONE3A_MAX)
 					warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
 				case 4:
 					warp(MAP_ZONE4SANCTUARY, 255, 22, 7)
 				case 5:
 					warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
 				case 6:
+					setflag(FLAG_HIDE_ZONE6A_MAX)
 					warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
 				case 7:
 					warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
