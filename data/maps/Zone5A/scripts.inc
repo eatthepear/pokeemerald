@@ -19,54 +19,41 @@ Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 	return
 
 
-Zone5A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 5
-	goto_if_gt Zone5A_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_Exit_7
-Zone5A_EventScript_Exit_5:
-	warp MAP_ZONE5SANCTUARY, 255, 22, 7
-	waitstate
-Zone5A_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone5A_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone5A_EventScript_Exit_1
-
-Zone5A_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone5A_EventScript_Exit_5
-
-Zone5A_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone5A_EventScript_Exit_6
-	goto Zone5A_EventScript_Exit_5
-
-
 Zone5A_EventScript_LeviathanBattle::
 	lockall
+	applymovement 10, Common_Movement_WalkDown
+	waitmovement 0
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 29
+	compare VAR_TEMP_0, 31
 	goto_if_eq Zone5A_EventScript_LeviathanBattle_2
-	compare VAR_TEMP_0, 27
+	compare VAR_TEMP_0, 30
 	goto_if_eq Zone5A_EventScript_LeviathanBattle_3
+	compare VAR_TEMP_0, 29
+	goto_if_eq Zone5A_EventScript_LeviathanBattle_4
+	compare VAR_TEMP_0, 28
+	goto_if_eq Zone5A_EventScript_LeviathanBattle_5
+	compare VAR_TEMP_0, 27
+	goto_if_eq Zone5A_EventScript_LeviathanBattle_6
 Zone5A_EventScript_LeviathanBattle_1:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_TEMP_1, 0
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_7
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_13
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_1, MSGBOX_YESNO
-Zone5A_EventScript_LeviathanBattle_6:
+Zone5A_EventScript_LeviathanBattle_12:
 	compare VAR_RESULT, NO
-	goto_if_eq Zone5A_EventScript_LeviathanBattle_11
+	goto_if_eq Zone5A_EventScript_LeviathanBattle_17
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_3
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_KEVIN, Zone5A_EventScript_LeviathanBattle_Text_4
 	applymovement 10, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_5
+	applymovement 4, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 4, Common_Movement_WalkDown
+	waitmovement 0
 	applymovement 4, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_6
@@ -85,8 +72,8 @@ Zone5A_EventScript_LeviathanBattle_6:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_8
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_14
-Zone5A_EventScript_LeviathanBattle_13:
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_20
+Zone5A_EventScript_LeviathanBattle_19:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -120,31 +107,58 @@ Zone5A_EventScript_LeviathanBattle_13:
 Zone5A_EventScript_LeviathanBattle_2:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto Zone5A_EventScript_LeviathanBattle_1
 
 Zone5A_EventScript_LeviathanBattle_3:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone5A_EventScript_LeviathanBattle_1
+
+Zone5A_EventScript_LeviathanBattle_4:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone5A_EventScript_LeviathanBattle_1
+
+Zone5A_EventScript_LeviathanBattle_5:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto Zone5A_EventScript_LeviathanBattle_1
 
-Zone5A_EventScript_LeviathanBattle_7:
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
-	goto Zone5A_EventScript_LeviathanBattle_6
+Zone5A_EventScript_LeviathanBattle_6:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone5A_EventScript_LeviathanBattle_1
 
-Zone5A_EventScript_LeviathanBattle_11:
+Zone5A_EventScript_LeviathanBattle_13:
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
+	goto Zone5A_EventScript_LeviathanBattle_12
+
+Zone5A_EventScript_LeviathanBattle_17:
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 10, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement 10, Common_Movement_FaceDown
 	waitmovement 0
 	releaseall
 	end
 
-Zone5A_EventScript_LeviathanBattle_14:
+Zone5A_EventScript_LeviathanBattle_20:
 	special HealPlayerParty
-	goto Zone5A_EventScript_LeviathanBattle_13
+	goto Zone5A_EventScript_LeviathanBattle_19
 
 
 Zone5A_EventScript_BuyPikaClone::
@@ -535,7 +549,9 @@ Zone5A_EventScript_LeviathanBattle_Text_4:
 	.string "It can't be!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_5:
-	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!$"
+	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!\p"
+	.string "It's your turn to show off the power of\n"
+	.string "the Bug Enjoyers Club!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_6:
 	.string "{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"

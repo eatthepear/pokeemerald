@@ -13,31 +13,34 @@ mapscripts Zone5A_MapScripts {
 	}
 }
 
-script Zone5A_EventScript_Exit {
-    lockall
-    if (var(VAR_ZONE) > 5) {
-		call(EventScript_WarpZone0)
-    } else {
-		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-			goto(EventScript_BrutalExitNotSatisfied)
-		}
-        warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
-		waitstate
-    }
-    releaseall
-    end
-}
-
 script Zone5A_EventScript_LeviathanBattle {
 	lockall
+	applymovement(10, Common_Movement_WalkDown)
+	waitmovement(0)
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
-	if (var(VAR_TEMP_0) == 29) {
+	if (var(VAR_TEMP_0) == 31) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 30) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 29) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 28) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
 	} elif (var(VAR_TEMP_0) == 27) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
 		waitmovement(0)
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
@@ -54,6 +57,10 @@ script Zone5A_EventScript_LeviathanBattle {
 		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?"))
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 		waitmovement(0)
+		applymovement(10, Common_Movement_WalkUp)
+		waitmovement(0)
+		applymovement(10, Common_Movement_FaceDown)
+		waitmovement(0)
 		releaseall
 		end
 	}
@@ -62,7 +69,13 @@ script Zone5A_EventScript_LeviathanBattle {
 	trainerbattle_no_intro(TRAINER_KEVIN, format("It can't be!"))
 	applymovement(10, Common_Movement_FaceRight)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!"))
+	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!\pIt's your turn to show off the power of the Bug Enjoyers Club!"))
+	applymovement(4, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(4, Common_Movement_WalkDown)
+	waitmovement(0)
+	applymovement(4, Common_Movement_WalkDown)
+	waitmovement(0)
 	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox(
