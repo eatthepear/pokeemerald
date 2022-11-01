@@ -214,7 +214,6 @@ static void Task_ItemContext_GiveToParty(u8);
 static void Task_ItemContext_Sell(u8);
 static void Task_ItemContext_Deposit(u8);
 static void Task_ItemContext_GiveToPC(u8);
-static void Task_ItemContext_UseOnParty(u8);
 static void ConfirmToss(u8);
 static void CancelToss(u8);
 static void ConfirmSell(u8);
@@ -380,8 +379,7 @@ static const TaskFunc sContextMenuFuncs[] = {
     [ITEMMENULOCATION_APPRENTICE] =             Task_ItemContext_Normal,
     [ITEMMENULOCATION_WALLY] =                  NULL,
     [ITEMMENULOCATION_PCBOX] =                  Task_ItemContext_GiveToPC,
-    [ITEMMENULOCATION_CHOOSE_ITEM] =            Task_FadeAndCloseBagMenu,
-    [ITEMMENULOCATION_PARTY_USE_ITEM] =         Task_ItemContext_UseOnParty,
+    [ITEMMENULOCATION_CHOOSE_ITEM] =            Task_FadeAndCloseBagMenu
 };
 
 static const struct YesNoFuncTable sYesNoTossFunctions = {ConfirmToss, CancelToss};
@@ -2092,18 +2090,6 @@ static void Task_ItemContext_GiveToParty(u8 taskId)
     else
     {
         PrintItemCantBeHeld(taskId);
-    }
-}
-
-static void Task_ItemContext_UseOnParty(u8 taskId)
-{
-    if (!CheckIfItemUsableFromPartyMenu(gSpecialVar_ItemId))
-    {
-        PrintItemCantBeHeld(taskId);
-    }
-    else
-    {
-        Task_FadeAndCloseBagMenu(taskId);
     }
 }
 
