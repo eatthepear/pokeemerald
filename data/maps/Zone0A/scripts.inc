@@ -221,5 +221,5 @@ Zone0A_Text_TPISign:
 	.string "Getting around, easy peasy.$"
 
 Zone0A_EventScript_Porygon_Text_0:
-	.string "There seemed to be some noise, but it's\n"
-	.string "gone now.$"
+	.string "There seemed to be a Pokémon's cry, but\n"
+	.string "it's gone now.$"

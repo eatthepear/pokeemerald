@@ -18,7 +18,7 @@ script Zone0A_EventScript_Porygon {
 	delay(40)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
 	waitmovement(0)
-    msgbox(format("There seemed to be some noise, but it's gone now."))
+    msgbox(format("There seemed to be a Pokémon's cry, but it's gone now."))
     setvar(VAR_ZONE_0_STATE, 2)
     fadeinbgm(1)
     releaseall
