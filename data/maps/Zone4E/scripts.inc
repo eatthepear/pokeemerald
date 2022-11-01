@@ -12,42 +12,43 @@ Zone4E_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 	return
 
 
-Zone4E_EventScript_Exit::
+Zone4E_EventScript_LeviathanBattleLeft::
 	lockall
-	compare VAR_ZONE, 4
-	goto_if_gt Zone4E_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_7
-Zone4E_EventScript_Exit_5:
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_Exit_11
-Zone4E_EventScript_Exit_10:
-	warp MAP_ZONE4SANCTUARY, 255, 22, 7
-	waitstate
-Zone4E_EventScript_Exit_1:
-	releaseall
-	end
+	applymovement 2, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 2, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone4E_EventScript_LeviathanBattle
+	return
 
-Zone4E_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone4E_EventScript_Exit_1
 
-Zone4E_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone4E_EventScript_Exit_5
+Zone4E_EventScript_LeviathanBattleMiddle::
+	lockall
+	applymovement 2, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 2, Common_Movement_WalkDown
+	waitmovement 0
+	goto Zone4E_EventScript_LeviathanBattle
+	return
 
-Zone4E_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone4E_EventScript_Exit_6
-	goto Zone4E_EventScript_Exit_5
 
-Zone4E_EventScript_Exit_11:
-	setflag FLAG_ZONE4A_RECEIVED_GEM
-	goto Zone4E_EventScript_Exit_10
+Zone4E_EventScript_LeviathanBattleRight::
+	lockall
+	applymovement 2, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 2, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone4E_EventScript_LeviathanBattle
+	return
 
 
 Zone4E_EventScript_LeviathanBattle::
-	lock
-	faceplayer
 	fadeoutbgm 1
 	msgbox Zone4E_Text_Leviathan4Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -63,11 +64,13 @@ Zone4E_EventScript_LeviathanBattle_1:
 	fadescreen FADE_TO_BLACK
 	removeobject 2
 	setflag FLAG_BEAT_LEVIATHAN_4
+	setvar VAR_ZONE_4_STATE, 1
 	fadescreen FADE_FROM_BLACK
-	release
+	releaseall
 	end
 
 Zone4E_EventScript_LeviathanBattle_2:
+	setflag FLAG_ZONE4A_RECEIVED_GEM
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat
 	goto Zone4E_EventScript_LeviathanBattle_1
