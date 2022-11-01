@@ -331,11 +331,11 @@ static const u8 sDebugText_Util_Trainer_Gender[] =           _("Toggle T. Gender
 static const u8 sDebugText_Util_Trainer_Id[] =               _("New Trainer Id");
 // Flags Menu
 static const u8 sDebugText_Flags_Flags[] =              _("Set Flag XXXX");
-static const u8 sDebugText_Flags_SetPokedexFlags[] =    _("All Pokédex Flags");
-static const u8 sDebugText_Flags_SwitchDex[] =          _("Brutal ON/OFF");
-static const u8 sDebugText_Flags_SwitchNationalDex[] =  _("Nuzlocke ON/OFF");
-static const u8 sDebugText_Flags_SwitchPokeNav[] =      _("Randomizer ON/OFF");
-static const u8 sDebugText_Flags_ToggleFlyFlags[] =     _("Full Pokedex");
+static const u8 sDebugText_Flags_SetPokedexFlags[] =    _("Brutal ON/OFF");
+static const u8 sDebugText_Flags_SwitchDex[] =          _("Nuzlocke ON/OFF");
+static const u8 sDebugText_Flags_SwitchNationalDex[] =  _("Randomizer ON/OFF");
+static const u8 sDebugText_Flags_SwitchPokeNav[] =      _("Full Pokedex");
+static const u8 sDebugText_Flags_ToggleFlyFlags[] =     _("Nada");
 static const u8 sDebugText_Flags_ToggleAllBadges[] =    _("All badges ON/OFF");
 static const u8 sDebugText_Flags_ToggleFrontierPass[] = _("Frontier Pass ON/OFF");
 static const u8 sDebugText_Flags_SwitchCollision[] =    _("Collision ON/OFF");
