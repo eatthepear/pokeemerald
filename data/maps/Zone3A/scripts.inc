@@ -129,6 +129,7 @@ Zone3A_EventScript_TriggerLeviathan_4:
 	end
 
 Zone3A_EventScript_TriggerLeviathan_2:
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	releaseall

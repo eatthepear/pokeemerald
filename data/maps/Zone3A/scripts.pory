@@ -29,6 +29,7 @@ script Zone3A_EventScript_TriggerLeviathan {
 	waitmovement(0)
 	msgbox("This looks like someone's home!\nGo inside?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
+		closemessage
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 		waitmovement(0)
 		releaseall
