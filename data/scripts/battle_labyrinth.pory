@@ -2297,210 +2297,162 @@ script EventScript_WarpZone0 {
 	clearflag(FLAG_IS_REVISITING_ZONE)
 	switch(var(VAR_REVISITING_ZONE)) {
 		case 1:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 15, 32)
 			waitstate
 		case 2:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 19, 32)
 			waitstate
 		case 3:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 23, 32)
 			waitstate
 		case 4:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 27, 32)
 			waitstate
 		case 5:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 31, 32)
 			waitstate
 		case 6:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 35, 32)
 			waitstate
 		case 7:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 39, 32)
 			waitstate
 		case 8:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 43, 32)
 			waitstate
 		case 9:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 47, 32)
 			waitstate
 		case 10:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 51, 32)
 			waitstate
 		case 11:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 15, 25)
 			waitstate
 		case 12:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 19, 25)
 			waitstate
 		case 13:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 23, 25)
 			waitstate
 		case 14:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 27, 25)
 			waitstate
 		case 15:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 31, 25)
 			waitstate
 		case 16:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 35, 25)
 			waitstate
 		case 17:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 39, 25)
 			waitstate
 		case 18:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 43, 25)
 			waitstate
 		case 19:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 47, 25)
 			waitstate
 		case 20:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 51, 25)
 			waitstate
 		case 21:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 15, 18)
 			waitstate
 		case 22:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 19, 18)
 			waitstate
 		case 23:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 23, 18)
 			waitstate
 		case 24:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 27, 18)
 			waitstate
 		case 25:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 31, 18)
 			waitstate
 		case 26:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 35, 18)
 			waitstate
 		case 27:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 39, 18)
 			waitstate
 		case 28:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 43, 18)
 			waitstate
 		case 29:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 47, 18)
 			waitstate
 		case 30:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 51, 18)
 			waitstate
 		case 31:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 15, 11)
 			waitstate
 		case 32:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 19, 11)
 			waitstate
 		case 33:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 23, 11)
 			waitstate
 		case 34:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 27, 11)
 			waitstate
 		case 35:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 31, 11)
 			waitstate
 		case 36:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 35, 11)
 			waitstate
 		case 37:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 39, 11)
 			waitstate
 		case 38:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 43, 11)
 			waitstate
 		case 39:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 47, 11)
 			waitstate
 		case 40:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 51, 11)
 			waitstate
 		case 41:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 15, 4)
 			waitstate
 		case 42:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 19, 4)
 			waitstate
 		case 43:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 23, 4)
 			waitstate
 		case 44:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 27, 4)
 			waitstate
 		case 45:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 31, 4)
 			waitstate
 		case 46:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 35, 4)
 			waitstate
 		case 47:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 39, 4)
 			waitstate
 		case 48:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 43, 4)
 			waitstate
 		case 49:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 47, 4)
 			waitstate
 		case 50:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 51, 4)
 			waitstate
 		case 51:
-			setvar(VAR_REVISITING_ZONE, 0)
 			warpteleport(MAP_ZONE0D, 255, 2, 25)
 			waitstate
 	}
+	setvar(VAR_REVISITING_ZONE, 0)
+	releaseall
+	end
 }
 
 text gText_ItemChestIsEmpty {
@@ -2719,8 +2671,65 @@ script EventScript_NuzlockeVerifyGift {
 	return
 }
 
-text gText_PorygonCheckExit {
-	format("{COLOR GREEN}Proceed to the Sanctuary?")
+script EventScript_PorygonExit {
+    lock
+	faceplayer
+	if (var(VAR_REVISITING_ZONE) != 0) {
+		goto(EventScript_WarpZone0)
+	}
+	specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
+	if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
+		buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
+		msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."))
+		switch(var(VAR_NUM_TRAINERS_REMAINING)) {
+			case 1:
+				msgbox(gText_OneOpponentRemaining)
+			default:
+				msgbox(gText_MultipleOpponentsRemaining)
+		}
+	} else {
+		msgbox(format("{COLOR GREEN}Proceed to the Sanctuary?"), MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			switch (var(VAR_ZONE)) {
+				case 1:
+					warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
+				case 2:
+					warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
+				case 3:
+					warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
+				case 4:
+					warp(MAP_ZONE4SANCTUARY, 255, 22, 7)
+				case 5:
+					warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
+				case 6:
+					warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
+				case 7:
+					warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
+				case 9:
+					warp(MAP_ZONE9SANCTUARY, 255, 22, 7)
+				case 10:
+					warp(MAP_ZONE10SANCTUARY, 255, 22, 7)
+				case 11:
+					warp(MAP_ZONE11SANCTUARY, 255, 22, 7)
+				case 12:
+				case 13:
+				case 15:
+				case 16:
+				case 17:
+				case 18:
+				case 20:
+				case 21:
+				case 22:
+				case 23:
+				case 24:
+				case 25:
+					warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
+			}
+			waitstate
+		}
+	}
+    release
+    end
 }
 
 raw `

@@ -13,26 +13,6 @@ mapscripts Zone1A_MapScripts {
 	}
 }
 
-script Zone1A_EventScript_Exit {
-    lock
-	faceplayer
-    if (var(VAR_ZONE) > 1) {
-		call(EventScript_WarpZone0)
-    } else {
-		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-			goto(EventScript_BrutalExitNotSatisfied)
-		}
-		msgbox(gText_PorygonCheckExit, MSGBOX_YESNO)
-		if (var(VAR_RESULT) == YES) {
-			warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
-			waitstate
-		}
-    }
-    releaseall
-    end
-}
-
 script Zone1A_EventScript_TalkToLeviathan {
 	lock
 	faceplayer
