@@ -7800,7 +7800,7 @@ const struct Item gItems[] =
     {
         .name = _("TM01"),
         .itemId = ITEM_TM01_PROTECT,
-        .price = 3000,
+        .price = 2500,
         .description = sTM01Desc,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

@@ -290,7 +290,7 @@ static const struct TrainerMon sParty_Richard[] = {
 // On Brutal, you fight Phillipa's normal party, then immediately fight Phillipa's Brutal party.
 static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Brutal
     {
-    .iv = 31,
+    .iv = 20,
     .lvl = 11,
     .nature = NATURE_SASSY,
     .ability = ABILITY_SLOT_1, //Unaware
@@ -298,7 +298,7 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Bru
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 31,
+    .iv = 20,
     .lvl = 11,
     .nature = NATURE_RELAXED,
     .ability = ABILITY_SLOT_1, //Sturdy
@@ -306,7 +306,7 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Bru
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 31,
+    .iv = 20,
     .lvl = 11,
     .nature = NATURE_HASTY,
     .ability = ABILITY_HIDDEN, //Aftermath

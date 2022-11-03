@@ -58309,6 +58309,7 @@ static const u16 sDedenneTeachableLearnset[] = {
     MOVE_DIG,
     MOVE_DISCHARGE,
     MOVE_DOUBLE_TEAM,
+    MOVE_DRAINING_KISS,
     MOVE_EERIE_IMPULSE,
     MOVE_ELECTRIC_TERRAIN,
     MOVE_ELECTRO_BALL,
