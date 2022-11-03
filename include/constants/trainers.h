@@ -371,6 +371,8 @@
 #define TRAINER_CLASS_WORKER         0x48
 #define TRAINER_CLASS_ROUGHNECK      0x49
 
+#define TRAINER_CLASS_COUNT          0x4A
+
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
 #define TRAINER_ENCOUNTER_MUSIC_GIRL         2 // used for male Tubers and Young Couples too

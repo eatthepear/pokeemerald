@@ -430,6 +430,8 @@ extern const u8 BattleScript_DefDownSpeedUp[];
 extern const u8 BattleScript_AffectionBasedStatusHeal[];
 extern const u8 BattleScript_AffectionBasedEndurance[];
 extern const u8 BattleScript_SymbiosisActivates[];
+extern const u8 BattleScript_MultiHitPrintStrings[];
+extern const u8 BattleScript_BurnUpRemoveType[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];

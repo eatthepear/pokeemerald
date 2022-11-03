@@ -2447,7 +2447,7 @@ bool8 ScrCmd_multichoice2(struct ScriptContext *ctx){
 		    if(columns > 1)
 			    ScriptMenu_MultichoiceGridCustom(x, y, defaultChoice, ignoreBPress, columns, menuItems, count);
 		    else
-			    DrawMultichoiceMenuCustom(x, y, 0, ignoreBPress, defaultChoice, menuItems, count);
+			    DrawMultichoiceMenuInternal(x, y, 0, ignoreBPress, defaultChoice, menuItems, count);
             ScriptContext_Stop();
             return TRUE;
 	    }
