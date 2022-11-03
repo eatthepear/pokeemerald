@@ -1001,7 +1001,7 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan, Double Batt
 
 static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battle, Brutal
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 19,
     .nature = NATURE_CALM,
     .ability = ABILITY_SLOT_1, //Cheek Pouch
@@ -1010,7 +1010,7 @@ static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battl
     .moves = {MOVE_PARABOLIC_CHARGE, MOVE_DRAINING_KISS, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 19,
     .nature = NATURE_BOLD,
     .ability = ABILITY_HIDDEN, //Berserk

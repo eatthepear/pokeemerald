@@ -335,7 +335,7 @@ static const u8 sDebugText_Flags_SetPokedexFlags[] =    _("Brutal ON/OFF");
 static const u8 sDebugText_Flags_SwitchDex[] =          _("Nuzlocke ON/OFF");
 static const u8 sDebugText_Flags_SwitchNationalDex[] =  _("Randomizer ON/OFF");
 static const u8 sDebugText_Flags_SwitchPokeNav[] =      _("Full Pokedex");
-static const u8 sDebugText_Flags_ToggleFlyFlags[] =     _("Nada");
+static const u8 sDebugText_Flags_ToggleFlyFlags[] =     _("Surveil ON/OFF");
 static const u8 sDebugText_Flags_ToggleAllBadges[] =    _("All badges ON/OFF");
 static const u8 sDebugText_Flags_ToggleFrontierPass[] = _("Frontier Pass ON/OFF");
 static const u8 sDebugText_Flags_SwitchCollision[] =    _("Collision ON/OFF");
@@ -1530,6 +1530,14 @@ static void DebugAction_Flags_SwitchPokeNav(u8 taskId)
 }
 static void DebugAction_Flags_ToggleFlyFlags(u8 taskId)
 {
+    if(FlagGet(FLAG_FULL_PREVIEW_ON))
+    {
+        FlagClear(FLAG_FULL_PREVIEW_ON);
+        PlaySE(SE_PC_OFF);
+    }else{
+        FlagSet(FLAG_FULL_PREVIEW_ON);
+        PlaySE(SE_PC_LOGIN);
+    }
     // Sound effect
 }
 static void DebugAction_Flags_ToggleBadgeFlags(u8 taskId)
