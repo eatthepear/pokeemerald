@@ -5341,9 +5341,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && moveType == TYPE_DARK
              && CompareStat(battler, STAT_ATK, MAX_STAT_STAGE, CMP_LESS_THAN))
             {
+                gEffectBattler = battler;
                 SET_STATCHANGER(STAT_ATK, 1, FALSE);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseOnMoveEnd;
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
@@ -5354,9 +5355,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && (moveType == TYPE_DARK || moveType == TYPE_BUG || moveType == TYPE_GHOST)
              && CompareStat(battler, STAT_SPEED, MAX_STAT_STAGE, CMP_LESS_THAN))
             {
+                gEffectBattler = battler;
                 SET_STATCHANGER(STAT_SPEED, 1, FALSE);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseOnMoveEnd;
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
@@ -5367,9 +5369,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && moveType == TYPE_WATER
              && CompareStat(battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN))
             {
+                gEffectBattler = battler;
                 SET_STATCHANGER(STAT_DEF, 2, FALSE);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseOnMoveEnd;
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
@@ -5379,9 +5382,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && IsBattlerAlive(battler)
              && CompareStat(battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN))
             {
+                gEffectBattler = battler;
                 SET_STATCHANGER(STAT_DEF, 1, FALSE);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseOnMoveEnd;
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
@@ -5396,9 +5400,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && !(TestSheerForceFlag(gBattlerAttacker, gCurrentMove))
              && CompareStat(battler, STAT_SPATK, MAX_STAT_STAGE, CMP_LESS_THAN))
             {
+                gEffectBattler = battler;
                 SET_STATCHANGER(STAT_SPATK, 1, FALSE);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseOnMoveEnd;
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
@@ -5736,9 +5741,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && CompareStat(battler, STAT_SPEED, MAX_STAT_STAGE, CMP_LESS_THAN)
              && (moveType == TYPE_FIRE || moveType == TYPE_WATER))
             {
+                gEffectBattler = battler;
                 SET_STATCHANGER(STAT_SPEED, 6, FALSE);
                 BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseOnMoveEnd;
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
