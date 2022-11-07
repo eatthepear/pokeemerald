@@ -2680,7 +2680,7 @@ script EventScript_PorygonExit {
 	specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
 	if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
 		buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
-		msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."))
+		msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."), MSGBOX_DEFAULT)
 		switch(var(VAR_NUM_TRAINERS_REMAINING)) {
 			case 1:
 				msgbox(gText_OneOpponentRemaining)

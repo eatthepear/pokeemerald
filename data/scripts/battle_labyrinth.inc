@@ -3869,7 +3869,7 @@ EventScript_PorygonExit_2:
 
 EventScript_PorygonExit_5:
 	buffernumberstring 0, VAR_NUM_TRAINERS_REMAINING
-	msgbox EventScript_BrutalExitNotSatisfied_Text_0
+	msgbox EventScript_BrutalExitNotSatisfied_Text_0, MSGBOX_DEFAULT
 	switch VAR_NUM_TRAINERS_REMAINING
 	case 1, EventScript_PorygonExit_11
 	msgbox gText_MultipleOpponentsRemaining
