@@ -178,7 +178,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default
     .iv = 20,
     .lvl = 9,
     .nature = NATURE_LONELY,
-    .ability = ABILITY_HIDDEN, //Run Away
+    .ability = ABILITY_HIDDEN, //Hustle
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
     .moves = {MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_NONE, MOVE_NONE}
@@ -189,8 +189,8 @@ static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 9,
-    .nature = NATURE_LONELY,
-    .ability = ABILITY_SLOT_1, //Hustle
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_HIDDEN, //Hustle
     .species = SPECIES_RATTATA,
     .heldItem = ITEM_SILK_SCARF,
     .moves = {MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_HONE_CLAWS, MOVE_NONE}
@@ -317,9 +317,9 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Bru
 
 static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
-    .iv = 0,
+    .iv = 31,
     .lvl = 15,
-    .nature = NATURE_MODEST,
+    .nature = NATURE_CAREFUL,
     .ability = ABILITY_HIDDEN, //Simple
     .species = SPECIES_BIBAREL,
     .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}

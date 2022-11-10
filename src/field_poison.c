@@ -116,39 +116,39 @@ void TryFieldPoisonWhiteOut(void)
 
 s32 DoPoisonFieldEffect(void)
 {
-    int i;
-    u32 hp;
-    struct Pokemon *pokemon = gPlayerParty;
-    u32 numPoisoned = 0;
-    u32 numFainted = 0;
+    // int i;
+    // u32 hp;
+    // struct Pokemon *pokemon = gPlayerParty;
+    // u32 numPoisoned = 0;
+    // u32 numFainted = 0;
 
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && GetAilmentFromStatus(GetMonData(pokemon, MON_DATA_STATUS)) == AILMENT_PSN
-           && GetMonAbility(pokemon) != ABILITY_POISON_HEAL
-           && GetMonAbility(pokemon) != ABILITY_MAGIC_GUARD
-           && GetMonAbility(pokemon) != ABILITY_IMMUNITY)
-        {
-            // Apply poison damage
-            hp = GetMonData(pokemon, MON_DATA_HP);
-            if (hp == 0 || --hp == 0)
-                numFainted++;
+    // for (i = 0; i < PARTY_SIZE; i++)
+    // {
+    //     if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && GetAilmentFromStatus(GetMonData(pokemon, MON_DATA_STATUS)) == AILMENT_PSN
+    //        && GetMonAbility(pokemon) != ABILITY_POISON_HEAL
+    //        && GetMonAbility(pokemon) != ABILITY_MAGIC_GUARD
+    //        && GetMonAbility(pokemon) != ABILITY_IMMUNITY)
+    //     {
+    //         // Apply poison damage
+    //         hp = GetMonData(pokemon, MON_DATA_HP);
+    //         if (hp == 0 || --hp == 0)
+    //             numFainted++;
 
-            SetMonData(pokemon, MON_DATA_HP, &hp);
-            numPoisoned++;
-        }
-        pokemon++;
-    }
+    //         SetMonData(pokemon, MON_DATA_HP, &hp);
+    //         numPoisoned++;
+    //     }
+    //     pokemon++;
+    // }
 
-    // Do screen flash effect
-    if (numFainted != 0 || numPoisoned != 0)
-        FldEffPoison_Start();
+    // // Do screen flash effect
+    // if (numFainted != 0 || numPoisoned != 0)
+    //     FldEffPoison_Start();
 
-    if (numFainted != 0)
-        return FLDPSN_FNT;
+    // if (numFainted != 0)
+    //     return FLDPSN_FNT;
 
-    if (numPoisoned != 0)
-        return FLDPSN_PSN;
+    // if (numPoisoned != 0)
+    //     return FLDPSN_PSN;
 
     return FLDPSN_NONE;
 }
