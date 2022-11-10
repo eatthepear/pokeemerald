@@ -211,7 +211,7 @@
 #define OBJ_EVENT_GFX_RAYQUAZA                   207
 #define OBJ_EVENT_GFX_ZIGZAGOON_2                208
 #define OBJ_EVENT_GFX_PIKACHU                    209
-#define OBJ_EVENT_GFX_PORYGON                    210
+#define OBJ_EVENT_GFX_COWGIRL                    210
 #define OBJ_EVENT_GFX_WINGULL                    211
 #define OBJ_EVENT_GFX_KECLEON_BRIDGE_SHADOW      212
 #define OBJ_EVENT_GFX_TUBER_M_SWIMMING           213
@@ -257,10 +257,11 @@
 #define OBJ_EVENT_GFX_WORKER                     253
 #define OBJ_EVENT_GFX_ICE_WORKER                 254
 #define OBJ_EVENT_GFX_ROUGHNECK                  255
-#define OBJ_EVENT_GFX_COWGIRL                    256
+#define OBJ_EVENT_GFX_PORYGON                    256
+#define OBJ_EVENT_GFX_SHINY_PORYGON              257
 
 
-#define NUM_OBJ_EVENT_GFX                        257
+#define NUM_OBJ_EVENT_GFX                        258
 
 
 // These are dynamic object gfx ids.

@@ -472,6 +472,9 @@ $(OBJEVENTGFXDIR)/people/cowgirl.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/pokemon/porygon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/pokemon/shiny_porygon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/pokemon/azurill.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
