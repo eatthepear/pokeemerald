@@ -46,8 +46,8 @@
 #define FLAG_VARRICK_INTRO                                0x21
 #define FLAG_LELOUCH_INTRO                                0x22
 #define FLAG_JOY_INTRO                                    0x23
-#define FLAG_ZONE0C_SHOWN_POKEDEX_ENTRIES                 0x24
-#define FLAG_ZONE0C_RECEIVED_EEVEE                        0x25
+#define FLAG_ZONE0B_SHOWN_POKEDEX_ENTRIES                 0x24
+#define FLAG_ZONE0B_RECEIVED_EEVEE                        0x25
 #define FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG                   0x26
 #define FLAG_MAX_INTRO                                    0x27
 #define FLAG_HIDE_ZONE3A_MAX                              0x28

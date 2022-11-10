@@ -2,7 +2,7 @@
   "id": "MAP_ZONE0C",
   "name": "Zone0C",
   "layout": "LAYOUT_ZONE0C",
-  "music": "MUS_HG_SEQ_GS_C_KUCHIBA",
+  "music": "MUS_DP_SEQ_CITY07_D",
   "region_map_section": "MAPSEC_ZONE_0",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,68 +10,536 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": false,
+  "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 2,
-      "y": 2,
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 10,
+      "y": 32,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone0C_PokemonDayCare_EventScript_DaycareWoman",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 4,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone0C_EventScript_EeveeGirl",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
-      "x": 9,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone0C_EventScript_BreederM",
+      "script": "Zone0C_EventScript_Scientist",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 2,
-      "y": 8,
+      "x": 9,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_ZONE0A",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     },
     {
-      "x": 3,
-      "y": 8,
+      "x": 10,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_ZONE0A",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone1"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone2"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone3"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone4"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone5"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone6"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone7"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone8"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone9"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone10"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpBack"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone11"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone12"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone13"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone14"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone15"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone16"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone17"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone18"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone19"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone20"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZoneB1"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_DenyWarp"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_DenyWarp"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_DenyWarp"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone21"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone22"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone23"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone24"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone25"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone26"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone27"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone28"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone29"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone30"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone31"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone32"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone33"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone34"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone35"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone36"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone37"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone38"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone39"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone40"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone41"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone42"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone43"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone44"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone45"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone46"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone47"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone48"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone49"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone0C_EventScript_WarpZone50"
+    }
   ],
   "bg_events": [
 

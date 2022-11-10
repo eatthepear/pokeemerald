@@ -94,7 +94,7 @@ script Debug_CheatStart {
 	// }
 	// givemon(VAR_TEMP_0, 5, ITEM_NONE)
 	givemon(SPECIES_EEVEE, 5, ITEM_NONE)
-	setflag(FLAG_ZONE0C_RECEIVED_EEVEE)
+	setflag(FLAG_ZONE0B_RECEIVED_EEVEE)
 	random(20)
 	switch (var(VAR_RESULT)) {
 		case 0:

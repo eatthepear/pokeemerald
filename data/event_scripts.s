@@ -1093,6 +1093,8 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/Zone5A/scripts.inc"
 
+	.include "data/maps/Zone5B/scripts.inc"
+
 	.include "data/maps/Zone5Sanctuary/scripts.inc"
 
 	.include "data/maps/Zone5Shops/scripts.inc"
@@ -1150,8 +1152,6 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Zone0B/scripts.inc"
 
 	.include "data/maps/Zone0C/scripts.inc"
-
-	.include "data/maps/Zone0D/scripts.inc"
 
 	.include "data/maps/Zone11A/scripts.inc"
 

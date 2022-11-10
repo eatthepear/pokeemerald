@@ -38,7 +38,7 @@ Debug_CheatStart::
 	additem ITEM_RARE_CANDY, 100
 	additem ITEM_RARE_CANDY, 100
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
-	setflag FLAG_ZONE0C_RECEIVED_EEVEE
+	setflag FLAG_ZONE0B_RECEIVED_EEVEE
 	random 20
 	switch VAR_RESULT
 	case 0, Debug_CheatStart_3

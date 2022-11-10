@@ -15,7 +15,7 @@ Zone4A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 Zone4A_EventScript_Breeder::
 	lock
 	faceplayer
-	goto_if_unset FLAG_ZONE0C_RECEIVED_EEVEE, Zone4A_EventScript_Breeder_2
+	goto_if_unset FLAG_ZONE0B_RECEIVED_EEVEE, Zone4A_EventScript_Breeder_2
 	msgbox Zone4A_EventScript_Breeder_Text_1, MSGBOX_DEFAULT
 Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1

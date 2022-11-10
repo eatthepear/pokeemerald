@@ -3315,257 +3315,257 @@ EventScript_WarpZone0_1:
 	end
 
 EventScript_WarpZone0_3:
-	warpteleport MAP_ZONE0D, 255, 15, 32
+	warpteleport MAP_ZONE0C, 255, 15, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_4:
-	warpteleport MAP_ZONE0D, 255, 19, 32
+	warpteleport MAP_ZONE0C, 255, 19, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_5:
-	warpteleport MAP_ZONE0D, 255, 23, 32
+	warpteleport MAP_ZONE0C, 255, 23, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_6:
-	warpteleport MAP_ZONE0D, 255, 27, 32
+	warpteleport MAP_ZONE0C, 255, 27, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_7:
-	warpteleport MAP_ZONE0D, 255, 31, 32
+	warpteleport MAP_ZONE0C, 255, 31, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_8:
-	warpteleport MAP_ZONE0D, 255, 35, 32
+	warpteleport MAP_ZONE0C, 255, 35, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_9:
-	warpteleport MAP_ZONE0D, 255, 39, 32
+	warpteleport MAP_ZONE0C, 255, 39, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_10:
-	warpteleport MAP_ZONE0D, 255, 43, 32
+	warpteleport MAP_ZONE0C, 255, 43, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_11:
-	warpteleport MAP_ZONE0D, 255, 47, 32
+	warpteleport MAP_ZONE0C, 255, 47, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_12:
-	warpteleport MAP_ZONE0D, 255, 51, 32
+	warpteleport MAP_ZONE0C, 255, 51, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_13:
-	warpteleport MAP_ZONE0D, 255, 15, 25
+	warpteleport MAP_ZONE0C, 255, 15, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_14:
-	warpteleport MAP_ZONE0D, 255, 19, 25
+	warpteleport MAP_ZONE0C, 255, 19, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_15:
-	warpteleport MAP_ZONE0D, 255, 23, 25
+	warpteleport MAP_ZONE0C, 255, 23, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_16:
-	warpteleport MAP_ZONE0D, 255, 27, 25
+	warpteleport MAP_ZONE0C, 255, 27, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_17:
-	warpteleport MAP_ZONE0D, 255, 31, 25
+	warpteleport MAP_ZONE0C, 255, 31, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_18:
-	warpteleport MAP_ZONE0D, 255, 35, 25
+	warpteleport MAP_ZONE0C, 255, 35, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_19:
-	warpteleport MAP_ZONE0D, 255, 39, 25
+	warpteleport MAP_ZONE0C, 255, 39, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_20:
-	warpteleport MAP_ZONE0D, 255, 43, 25
+	warpteleport MAP_ZONE0C, 255, 43, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_21:
-	warpteleport MAP_ZONE0D, 255, 47, 25
+	warpteleport MAP_ZONE0C, 255, 47, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_22:
-	warpteleport MAP_ZONE0D, 255, 51, 25
+	warpteleport MAP_ZONE0C, 255, 51, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_23:
-	warpteleport MAP_ZONE0D, 255, 15, 18
+	warpteleport MAP_ZONE0C, 255, 15, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_24:
-	warpteleport MAP_ZONE0D, 255, 19, 18
+	warpteleport MAP_ZONE0C, 255, 19, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_25:
-	warpteleport MAP_ZONE0D, 255, 23, 18
+	warpteleport MAP_ZONE0C, 255, 23, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_26:
-	warpteleport MAP_ZONE0D, 255, 27, 18
+	warpteleport MAP_ZONE0C, 255, 27, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_27:
-	warpteleport MAP_ZONE0D, 255, 31, 18
+	warpteleport MAP_ZONE0C, 255, 31, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_28:
-	warpteleport MAP_ZONE0D, 255, 35, 18
+	warpteleport MAP_ZONE0C, 255, 35, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_29:
-	warpteleport MAP_ZONE0D, 255, 39, 18
+	warpteleport MAP_ZONE0C, 255, 39, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_30:
-	warpteleport MAP_ZONE0D, 255, 43, 18
+	warpteleport MAP_ZONE0C, 255, 43, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_31:
-	warpteleport MAP_ZONE0D, 255, 47, 18
+	warpteleport MAP_ZONE0C, 255, 47, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_32:
-	warpteleport MAP_ZONE0D, 255, 51, 18
+	warpteleport MAP_ZONE0C, 255, 51, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_33:
-	warpteleport MAP_ZONE0D, 255, 15, 11
+	warpteleport MAP_ZONE0C, 255, 15, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_34:
-	warpteleport MAP_ZONE0D, 255, 19, 11
+	warpteleport MAP_ZONE0C, 255, 19, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_35:
-	warpteleport MAP_ZONE0D, 255, 23, 11
+	warpteleport MAP_ZONE0C, 255, 23, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_36:
-	warpteleport MAP_ZONE0D, 255, 27, 11
+	warpteleport MAP_ZONE0C, 255, 27, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_37:
-	warpteleport MAP_ZONE0D, 255, 31, 11
+	warpteleport MAP_ZONE0C, 255, 31, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_38:
-	warpteleport MAP_ZONE0D, 255, 35, 11
+	warpteleport MAP_ZONE0C, 255, 35, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_39:
-	warpteleport MAP_ZONE0D, 255, 39, 11
+	warpteleport MAP_ZONE0C, 255, 39, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_40:
-	warpteleport MAP_ZONE0D, 255, 43, 11
+	warpteleport MAP_ZONE0C, 255, 43, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_41:
-	warpteleport MAP_ZONE0D, 255, 47, 11
+	warpteleport MAP_ZONE0C, 255, 47, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_42:
-	warpteleport MAP_ZONE0D, 255, 51, 11
+	warpteleport MAP_ZONE0C, 255, 51, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_43:
-	warpteleport MAP_ZONE0D, 255, 15, 4
+	warpteleport MAP_ZONE0C, 255, 15, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_44:
-	warpteleport MAP_ZONE0D, 255, 19, 4
+	warpteleport MAP_ZONE0C, 255, 19, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_45:
-	warpteleport MAP_ZONE0D, 255, 23, 4
+	warpteleport MAP_ZONE0C, 255, 23, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_46:
-	warpteleport MAP_ZONE0D, 255, 27, 4
+	warpteleport MAP_ZONE0C, 255, 27, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_47:
-	warpteleport MAP_ZONE0D, 255, 31, 4
+	warpteleport MAP_ZONE0C, 255, 31, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_48:
-	warpteleport MAP_ZONE0D, 255, 35, 4
+	warpteleport MAP_ZONE0C, 255, 35, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_49:
-	warpteleport MAP_ZONE0D, 255, 39, 4
+	warpteleport MAP_ZONE0C, 255, 39, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_50:
-	warpteleport MAP_ZONE0D, 255, 43, 4
+	warpteleport MAP_ZONE0C, 255, 43, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_51:
-	warpteleport MAP_ZONE0D, 255, 47, 4
+	warpteleport MAP_ZONE0C, 255, 47, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_52:
-	warpteleport MAP_ZONE0D, 255, 51, 4
+	warpteleport MAP_ZONE0C, 255, 51, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_53:
-	warpteleport MAP_ZONE0D, 255, 2, 25
+	warpteleport MAP_ZONE0C, 255, 2, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 

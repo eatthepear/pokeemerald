@@ -4532,6 +4532,16 @@
       "blockdata_filepath": "data/layouts/Zone5A/map.bin"
     },
     {
+      "id": "LAYOUT_ZONE5B",
+      "name": "Zone5B_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Zone5B/border.bin",
+      "blockdata_filepath": "data/layouts/Zone5B/map.bin"
+    },
+    {
       "id": "LAYOUT_ZONE6A",
       "name": "Zone6A_Layout",
       "width": 65,
@@ -4704,32 +4714,22 @@
     {
       "id": "LAYOUT_ZONE0B",
       "name": "Zone0B_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonDayCare",
       "border_filepath": "data/layouts/Zone0B/border.bin",
       "blockdata_filepath": "data/layouts/Zone0B/map.bin"
     },
     {
       "id": "LAYOUT_ZONE0C",
       "name": "Zone0C_Layout",
-      "width": 12,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonDayCare",
-      "border_filepath": "data/layouts/Zone0C/border.bin",
-      "blockdata_filepath": "data/layouts/Zone0C/map.bin"
-    },
-    {
-      "id": "LAYOUT_ZONE0D",
-      "name": "Zone0D_Layout",
       "width": 54,
       "height": 36,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/Zone0D/border.bin",
-      "blockdata_filepath": "data/layouts/Zone0D/map.bin"
+      "border_filepath": "data/layouts/Zone0C/border.bin",
+      "blockdata_filepath": "data/layouts/Zone0C/map.bin"
     },
     {
       "id": "LAYOUT_ZONE11A",
