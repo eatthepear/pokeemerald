@@ -395,6 +395,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_AQUA_LEADER, 20},
     {TRAINER_CLASS_GENTLEMAN, 20},
     {TRAINER_CLASS_LEADER, 20},
+    {TRAINER_CLASS_MIRAGE, 20},
     {TRAINER_CLASS_MAGMA_ADMIN, 20},
     {TRAINER_CLASS_MAGMA_LEADER, 20},
     {TRAINER_CLASS_SOCIALITE, 20},
@@ -470,6 +471,7 @@ static const u16 sTrainerBallTable[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_BACKPACKER] = ITEM_GREAT_BALL,
     [TRAINER_CLASS_WORKER] = ITEM_HEAVY_BALL,
     [TRAINER_CLASS_ROUGHNECK] = ITEM_NEST_BALL,
+    [TRAINER_CLASS_MIRAGE] = ITEM_MASTER_BALL,
 };
 
 #include "data/text/abilities.h"
@@ -5189,6 +5191,9 @@ static void HandleEndTurn_BattleWon(void)
             break;
         case TRAINER_CLASS_LEADER:
             PlayBGM(MUS_VICTORY_GYM_LEADER);
+            break;
+        case TRAINER_CLASS_MIRAGE:
+            PlayBGM(MUS_BW_SEQ_BGM_WIN6);
             break;
         default:
             PlayBGM(MUS_VICTORY_TRAINER);

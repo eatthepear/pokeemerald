@@ -9450,7 +9450,7 @@ u16 GetBattleBGM(void)
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_WINSTRATE:
             return MUS_VS_TRAINER; // RSE Trainer music
-        case TRAINER_CLASS_LEADER:
+        case TRAINER_CLASS_MIRAGE:
             return MUS_HG_SEQ_GS_VS_LUGIA; // HGSS Lugia music
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;

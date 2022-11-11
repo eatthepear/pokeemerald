@@ -3850,6 +3850,7 @@ EventScript_NuzlockeVerifyGift_4:
 EventScript_PorygonExit::
 	lock
 	faceplayer
+	setseenmon SPECIES_PORYGON
 	compare VAR_REVISITING_ZONE, 0
 	goto_if_ne EventScript_PorygonExit_2
 EventScript_PorygonExit_1:

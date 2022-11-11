@@ -2674,6 +2674,7 @@ script EventScript_NuzlockeVerifyGift {
 script EventScript_PorygonExit {
     lock
 	faceplayer
+	setseenmon(SPECIES_PORYGON)
 	if (var(VAR_REVISITING_ZONE) != 0) {
 		goto(EventScript_WarpZone0)
 	}

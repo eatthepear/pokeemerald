@@ -370,8 +370,9 @@
 #define TRAINER_CLASS_BACKPACKER     0x47
 #define TRAINER_CLASS_WORKER         0x48
 #define TRAINER_CLASS_ROUGHNECK      0x49
+#define TRAINER_CLASS_MIRAGE         0x4a
 
-#define TRAINER_CLASS_COUNT          0x4A
+#define TRAINER_CLASS_COUNT          0x4b
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

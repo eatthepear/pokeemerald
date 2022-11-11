@@ -3128,6 +3128,10 @@ static const u8 *BattleStringGetOpponentClassByTrainerId(u16 trainerId)
         toCpy = gTrainerClassNames[GetTrainerHillOpponentClass(trainerId)];
     else if (gBattleTypeFlags & BATTLE_TYPE_EREADER_TRAINER)
         toCpy = gTrainerClassNames[GetEreaderTrainerClassId()];
+    else if (gTrainers[trainerId].trainerPic == TRAINER_PIC_MIRAGES)
+        toCpy = gTrainerClassNames[TRAINER_CLASS_MIRAGE];
+    else if (gTrainers[trainerId].trainerPic == TRAINER_PIC_DOME_ACE_TUCKER)
+        toCpy = gTrainerClassNames[TRAINER_CLASS_MIRAGE];
     else if (gTrainers[trainerId].hasCustomTransition == TRUE)
         toCpy = gTrainerClassNames[TRAINER_CLASS_LEADER];
     else
