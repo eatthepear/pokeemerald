@@ -2691,6 +2691,9 @@ script EventScript_PorygonExit {
 	} else {
 		msgbox(format("{COLOR GREEN}Proceed to the Sanctuary?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
+			closemessage
+			playmoncry(SPECIES_PORYGON, 0)
+			waitmoncry
 			switch (var(VAR_ZONE)) {
 				case 1:
 					warp(MAP_ZONE1SANCTUARY, 255, 22, 7)

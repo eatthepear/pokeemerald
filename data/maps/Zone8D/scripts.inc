@@ -17,16 +17,16 @@ Zone8D_EventScript_WallyIntro::
 	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
 	msgbox Zone8D_EventScript_WallyIntro_Text_0
+	delay 40
+	msgbox Zone8D_EventScript_WallyIntro_Text_1
 	applymovement 4, Common_Movement_FaceUp
 	waitmovement 0
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoUp
 	waitmovement 0
 	special RemoveCameraObject
-	msgbox Zone8D_EventScript_WallyIntro_Text_1
+	msgbox Zone8D_EventScript_WallyIntro_Text_2
 	setvar VAR_ZONE_8_STATE, 1
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoDown
@@ -88,7 +88,7 @@ Zone8D_EventScript_InitiateLeviathan8::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 Zone8D_EventScript_InitiateLeviathan8_1:
-	applymovement 4, Zone8D_Movement_Wally_WalkUp
+	applymovement 4, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Zone8D_Movement_Player_WalkUp
 	waitmovement 0
 	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_2
@@ -129,7 +129,7 @@ Zone8D_EventScript_InitiateLeviathan8_2:
 	goto Zone8D_EventScript_InitiateLeviathan8_1
 
 Zone8D_EventScript_InitiateLeviathan8_3:
-	compare VAR_TEMP_1, 10
+	compare VAR_TEMP_1, 11
 	goto_if_eq Zone8D_EventScript_InitiateLeviathan8_10
 	applymovement 4, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
@@ -164,39 +164,39 @@ Zone8D_EventScript_InitiateLeviathan8_19:
 	setflag FLAG_BEAT_LEVIATHAN_8
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadescreenswapbuffers FADE_FROM_BLACK
-	applymovement 4, Common_Movement_WalkUp
 	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_9
-	waitmovement 0
-	applymovement 4, Common_Movement_WalkDown
-	waitmovement 0
+	delay 32
 	applymovement 4, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_10
-	applymovement 4, Common_Movement_FaceUp
-	waitmovement 0
-	delay 32
-	applymovement 4, Common_Movement_FaceRight
-	waitmovement 0
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_11
-	delay 96
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_12
 	giveitem ITEM_EVIOLITE, 1
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_13
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_11
 	applymovement 4, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement 4, Common_Movement_WalkUp
-	waitmovement 0
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 4, Zone8D_Movement_Wally_WalkUp
 	waitmovement 0
+	special RemoveCameraObject
 	applymovement 4, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_14
-	applymovement 4, Common_Movement_WalkUp
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_12
+	delay 40
+	applymovement 4, Common_Movement_FaceUp
 	waitmovement 0
+	fadescreenswapbuffers FADE_TO_BLACK
+	playmoncry SPECIES_PORYGON, 0
+	waitmoncry
 	setflag FLAG_HIDE_ZONE8D_WALLY
 	removeobject 4
+	fadescreenswapbuffers FADE_FROM_BLACK
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoDown
+	waitmovement 0
+	special RemoveCameraObject
 	setvar VAR_ZONE_8_STATE, 2
 	releaseall
 	end
@@ -257,13 +257,9 @@ Zone8D_Movement_Camera_GoUp:
 	walk_up
 	walk_up
 	walk_up
-	walk_up
-	walk_up
 	step_end
 
 Zone8D_Movement_Camera_GoDown:
-	walk_down
-	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -277,36 +273,42 @@ Zone8D_Movement_Wally_WalkUp:
 
 Zone8D_Movement_Player_WalkUp:
 	walk_up
-	walk_up
-	walk_up
 	walk_right
 	walk_up
 	step_end
 
 Zone8D_EventScript_WallyIntro_Text_0:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Um… E-excuse me…\p"
-	.string "I'm Wally… and I…$"
+	.string "I'm {COLOR BLUE}Wally{COLOR DARK_GRAY}…{PAUSE_UNTIL_PRESS} N-nice to meet you…{PAUSE_UNTIL_PRESS} Um…$"
 
 Zone8D_EventScript_WallyIntro_Text_1:
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Are you taking on the {COLOR RED}Pokémon\n"
+	.string "Battle Labyrinth{COLOR DARK_GRAY} too?\l"
+	.string "These two Zones have b-been quite a\l"
+	.string "challenge for me so far.\p"
+	.string "I'm s-sure the exit is just a little\n"
+	.string "ahead.$"
+
+Zone8D_EventScript_WallyIntro_Text_2:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: I need to pass through, b-but\n"
-	.string "they've been blocking the passage.\p"
-	.string "I tried to beat them in b-battle, but I\n"
-	.string "wasn't strong enough to beat even one\l"
-	.string "of them.$"
+	.string "they've been blocking the way.\p"
+	.string "They look really strong though…\n"
+	.string "I'm worried I w-won't be able to defeat\l"
+	.string "them alone.$"
 
 Zone8D_EventScript_GoWithWally_Text_0:
-	.string "You don't want to battle without Wally.\n"
+	.string "You don't want to battle without {COLOR BLUE}Wally{COLOR DARK_GRAY}.\n"
 	.string "His aid will be invaluable.$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_0:
 	.string "Thank you. What's your name?$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_1:
-	.string "{PLAYER}. I'll remember that.$"
+	.string "{COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}. I'll remember that.$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_2:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: E-excuse me! I would like to pass\n"
-	.string "through!$"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: E-excuse me! We would like to\n"
+	.string "pass through!$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_3:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: It is back again.\n"
@@ -329,28 +331,21 @@ Zone8D_EventScript_InitiateLeviathan8_Text_8:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. It's done.$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_9:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Where did they go?$"
+	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Who were those p-people?\n"
+	.string "And what was with that Pokémon they\l"
+	.string "had with them?\p"
+	.string "That was a Shiny {COLOR BLUE}Porygon{COLOR DARK_GRAY}, w-wasn't it?$"
 
 Zone8D_EventScript_InitiateLeviathan8_Text_10:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: I d-don't understand.\p"
-	.string "How could they have just vanished?$"
-
-Zone8D_EventScript_InitiateLeviathan8_Text_11:
-	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Did you see that Pokémon with\n"
-	.string "them?\p"
-	.string "I'm not sure what that was about,\n"
-	.string "either.$"
-
-Zone8D_EventScript_InitiateLeviathan8_Text_12:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: Um… anyways, thanks for your\n"
 	.string "help, {PLAYER}.\p"
 	.string "I um… I want you to have this.$"
 
-Zone8D_EventScript_InitiateLeviathan8_Text_13:
+Zone8D_EventScript_InitiateLeviathan8_Text_11:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: It's not… the flashiest item, but\n"
 	.string "I'm sure it'll be useful.$"
 
-Zone8D_EventScript_InitiateLeviathan8_Text_14:
+Zone8D_EventScript_InitiateLeviathan8_Text_12:
 	.string "{COLOR BLUE}Wally{COLOR DARK_GRAY}: I hope we meet again.\p"
 	.string "Goodbye, {PLAYER}.$"
 

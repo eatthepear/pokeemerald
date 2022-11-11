@@ -14,16 +14,16 @@ script Zone8D_EventScript_WallyIntro {
 	waitse
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 	waitmovement(0)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
-	waitmovement(0)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Um… E-excuse me…\pI'm Wally… and I…"))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Um… E-excuse me…\pI'm {COLOR BLUE}Wally{COLOR DARK_GRAY}…{PAUSE_UNTIL_PRESS} N-nice to meet you…{PAUSE_UNTIL_PRESS} Um…"))
+	delay(40)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Are you taking on the {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} too?\lThese two Zones have b-been quite a challenge for me so far.\pI'm s-sure the exit is just a little ahead."))
 	applymovement(4, Common_Movement_FaceUp)
 	waitmovement(0)
 	special(SpawnCameraObject)
 	applymovement(OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoUp)
 	waitmovement(0)
 	special(RemoveCameraObject)
-	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I need to pass through, b-but they've been blocking the passage.\pI tried to beat them in b-battle, but I wasn't strong enough to beat even one of them."))
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I need to pass through, b-but they've been blocking the way.\pThey look really strong though…\nI'm worried I w-won't be able to defeat them alone."))
 	setvar(VAR_ZONE_8_STATE, 1)
 	special(SpawnCameraObject)
 	applymovement(OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoDown)
@@ -63,7 +63,7 @@ text Zone8D_Text_Wally_Preparations {
 
 script Zone8D_EventScript_GoWithWally {
 	lockall
-	msgbox(format("You don't want to battle without Wally. His aid will be invaluable."))
+	msgbox(format("You don't want to battle without {COLOR BLUE}Wally{COLOR DARK_GRAY}. His aid will be invaluable."))
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 	waitmovement(0)
 	releaseall
@@ -73,7 +73,7 @@ script Zone8D_EventScript_GoWithWally {
 script Zone8D_EventScript_InitiateLeviathan8 {
 	msgbox(format("Thank you. What's your name?"))
 	delay(48)
-	msgbox(format("{PLAYER}. I'll remember that."))
+	msgbox(format("{COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}. I'll remember that."))
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
 	if (var(VAR_TEMP_0) == 6) {
 		applymovement(4, Common_Movement_WalkUp)
@@ -83,7 +83,7 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 		waitmovement(0)
 	} elif (var(VAR_TEMP_0) == 7) {
-		if (var(VAR_TEMP_1) == 10) {
+		if (var(VAR_TEMP_1) == 11) {
 			applymovement(4, Common_Movement_WalkUp)
 			applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 			waitmovement(0)
@@ -106,10 +106,10 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 		waitmovement(0)
 	}
-	applymovement(4, Zone8D_Movement_Wally_WalkUp)
+	applymovement(4, Common_Movement_WalkUp)
 	applymovement(OBJ_EVENT_ID_PLAYER, Zone8D_Movement_Player_WalkUp)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: E-excuse me! I would like to pass through!"))
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: E-excuse me! We would like to pass through!"))
 	applymovement(2, Common_Movement_ExclamationMark)
 	applymovement(3, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
@@ -165,39 +165,39 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 	setflag(FLAG_BEAT_LEVIATHAN_8)
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	fadescreenswapbuffers(FADE_FROM_BLACK)
-	applymovement(4, Common_Movement_WalkUp)
-	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Where did they go?"))
-	waitmovement(0)
-	applymovement(4, Common_Movement_WalkDown)
-	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Who were those p-people?\nAnd what was with that Pokémon they had with them?\pThat was a Shiny {COLOR BLUE}Porygon{COLOR DARK_GRAY}, w-wasn't it?"))
+	delay(32)
 	applymovement(4, Common_Movement_FaceRight)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I d-don't understand.\pHow could they have just vanished?"))
-	applymovement(4, Common_Movement_FaceUp)
-	waitmovement(0)
-	delay(32)
-	applymovement(4, Common_Movement_FaceRight)
-	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Did you see that Pokémon with them?\pI'm not sure what that was about, either."))
-	delay(96)
 	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: Um… anyways, thanks for your help, {PLAYER}.\pI um… I want you to have this."))
 	giveitem(ITEM_EVIOLITE, 1)
 	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: It's not… the flashiest item, but I'm sure it'll be useful."))
 	applymovement(4, Common_Movement_WalkUp)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
 	waitmovement(0)
-	applymovement(4, Common_Movement_WalkUp)
-	waitmovement(0)
+	special(SpawnCameraObject)
+	applymovement(OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoUp)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	applymovement(4, Zone8D_Movement_Wally_WalkUp)
 	waitmovement(0)
+	special(RemoveCameraObject)
 	applymovement(4, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Wally{COLOR DARK_GRAY}: I hope we meet again.\pGoodbye, {PLAYER}."))
-	applymovement(4, Common_Movement_WalkUp)
+	delay(40)
+	applymovement(4, Common_Movement_FaceUp)
 	waitmovement(0)
+	fadescreenswapbuffers(FADE_TO_BLACK)
+	playmoncry(SPECIES_PORYGON, 0)
+	waitmoncry
 	setflag(FLAG_HIDE_ZONE8D_WALLY)
 	removeobject(4)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
+	special(SpawnCameraObject)
+	applymovement(OBJ_EVENT_ID_CAMERA, Zone8D_Movement_Camera_GoDown)
+	waitmovement(0)
+	special(RemoveCameraObject)
 	setvar(VAR_ZONE_8_STATE, 2)
 	releaseall
 	end
@@ -222,18 +222,19 @@ script Zone8D_EventScript_Exit {
 }
 
 movement Zone8D_Movement_Camera_GoUp {
-	walk_up * 5
+	walk_up * 3
 }
 
 movement Zone8D_Movement_Camera_GoDown {
-	walk_down * 5
+	walk_down * 3
 }
 
 movement Zone8D_Movement_Wally_WalkUp {
 	walk_up * 3
 }
+
 movement Zone8D_Movement_Player_WalkUp {
-	walk_up * 3
+	walk_up
 	walk_right
 	walk_up
 }

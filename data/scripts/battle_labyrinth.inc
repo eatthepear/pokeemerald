@@ -3886,6 +3886,9 @@ EventScript_PorygonExit_11:
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_13:
+	closemessage
+	playmoncry SPECIES_PORYGON, 0
+	waitmoncry
 	switch VAR_ZONE
 	case 1, EventScript_PorygonExit_17
 	case 2, EventScript_PorygonExit_18
