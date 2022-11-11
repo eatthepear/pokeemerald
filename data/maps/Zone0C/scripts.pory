@@ -4,7 +4,7 @@ mapscripts Zone0C_MapScripts {
 		// VAR_ZONE_B1_STATE, 1: Zone0C_EventScript_B1WarpIntro
 	]
 }
-
+ 
 script Zone0C_EventScript_Intro {
 	lockall
 	applymovement(1, Common_Movement_ExclamationMark)
