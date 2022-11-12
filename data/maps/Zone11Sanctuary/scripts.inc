@@ -14,11 +14,11 @@ Zone11Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear
-	msgbox Zone11Sanctuary_Text_Reward
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone11Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_TM23
 	setvar VAR_ZONE, 12
-	msgbox Zone11Sanctuary_EventScript_Intro_Text_0
+	msgbox Zone11Sanctuary_EventScript_Intro_Text_0, MSGBOX_DEFAULT
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp

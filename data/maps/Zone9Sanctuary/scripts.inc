@@ -14,8 +14,8 @@ Zone9Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear
-	msgbox Zone9Sanctuary_Text_Reward
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone9Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_TM15
 	setvar VAR_ZONE, 10
 	buffernumberstring 0, VAR_ZONE

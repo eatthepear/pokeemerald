@@ -14,8 +14,8 @@ Zone4Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear
-	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone4Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_REVIVE, 3
 	setvar VAR_ZONE, 5
 	buffernumberstring 0, VAR_ZONE

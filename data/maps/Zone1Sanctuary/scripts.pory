@@ -11,8 +11,8 @@ script Zone1Sanctuary_EventScript_Intro {
 	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
 	waitfanfare
 	buffernumberstring(0, VAR_ZONE)
-	msgbox(gText_RewardClear)
-	msgbox(Zone1Sanctuary_Text_Reward)
+	msgbox(gText_RewardClear, MSGBOX_DEFAULT)
+	msgbox(Zone1Sanctuary_Text_Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_EXP_SHARE)
 	setvar(VAR_ZONE, 2)
 	buffernumberstring(0, VAR_ZONE)

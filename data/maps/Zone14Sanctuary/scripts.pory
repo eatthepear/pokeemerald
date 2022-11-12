@@ -9,11 +9,11 @@ script Zone14Sanctuary_EventScript_Intro {
 	call(EventScript_EnterSanctuary)
 	msgbox(Zone14Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT)
 	waitfanfare
-	msgbox(Zone14Sanctuary_Text_RewardClear13)
-	msgbox(Zone14Sanctuary_Text_13Reward)
+	msgbox(Zone14Sanctuary_Text_RewardClear13, MSGBOX_DEFAULT)
+	msgbox(Zone14Sanctuary_Text_13Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_ACRO_BIKE)
-	msgbox(Zone14Sanctuary_Text_RewardClear14)
-	msgbox(Zone14Sanctuary_Text_14Reward)
+	msgbox(Zone14Sanctuary_Text_RewardClear14, MSGBOX_DEFAULT)
+	msgbox(Zone14Sanctuary_Text_14Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_TM25)
 	closemessage
 	setvar(VAR_ZONE, 15)

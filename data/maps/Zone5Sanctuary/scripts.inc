@@ -14,10 +14,10 @@ Zone5Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear
-	msgbox Zone5Sanctuary_Text_Reward
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone5Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_RED_SHARD, 5
-	msgbox gText_Colress_Unlocked
+	msgbox gText_Colress_Unlocked, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedUnique, MSGBOX_DEFAULT
 	waitfanfare

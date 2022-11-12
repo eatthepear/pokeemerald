@@ -14,8 +14,8 @@ Zone6Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear
-	msgbox Zone6Sanctuary_Text_Reward
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone6Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_SLEDGEHAMMER
 	setvar VAR_ZONE, 7
 	msgbox Zone6Sanctuary_Text_Colress_Explain, MSGBOX_DEFAULT

@@ -11,10 +11,10 @@ script Zone15Sanctuary_EventScript_Intro {
 	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
 	waitfanfare
 	buffernumberstring(0, VAR_ZONE)
-	msgbox(gText_RewardClear)
-	msgbox(Zone15Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE)
+	msgbox(gText_RewardClear, MSGBOX_DEFAULT)
+	msgbox(Zone15Sanctuary_Text_Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_SURFBOARD)
-	msgbox(gText_Colress_Unlocked)
+	msgbox(gText_Colress_Unlocked, MSGBOX_DEFAULT)
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox(gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT)
 	waitfanfare

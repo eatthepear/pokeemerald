@@ -14,10 +14,10 @@ Zone3Sanctuary_EventScript_Intro::
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear
-	msgbox Zone3Sanctuary_Text_Reward
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone3Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_HEAL_BALL, 10
-	msgbox gText_Colress_Unlocked
+	msgbox gText_Colress_Unlocked, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
 	waitfanfare

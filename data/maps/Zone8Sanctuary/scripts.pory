@@ -9,15 +9,14 @@ script Zone8Sanctuary_EventScript_Intro {
 	call(EventScript_EnterSanctuary)
 	msgbox(Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT)
 	waitfanfare
-	msgbox(Zone8Sanctuary_Text_RewardClear7)
-	msgbox(Zone8Sanctuary_Text_7Reward)
+	msgbox(Zone8Sanctuary_Text_RewardClear7, MSGBOX_DEFAULT)
+	msgbox(Zone8Sanctuary_Text_7Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_BLUE_SHARD, 3)
-	msgbox(Zone8Sanctuary_Text_RewardClear8)
-	msgbox(Zone8Sanctuary_Text_8Reward)
+	msgbox(Zone8Sanctuary_Text_RewardClear8, MSGBOX_DEFAULT)
+	msgbox(Zone8Sanctuary_Text_8Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_TM12)
-	closemessage
 	setvar(VAR_ZONE, 9)
-	msgbox(gText_Colress_Unlocked)
+	msgbox(gText_Colress_Unlocked, MSGBOX_DEFAULT)
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox(gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT)
 	waitfanfare
