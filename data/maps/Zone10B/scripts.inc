@@ -9,12 +9,15 @@ Zone10B_EventScript_Adamina::
 	return
 
 
-Zone10B_EventScript_Kirlia::
+Zone10B_EventScript_Porygon::
 	lock
+	compare VAR_ZONE_10_STATE, 2
+	goto_if_eq Zone10B_EventScript_Porygon_2
+Zone10B_EventScript_Porygon_1:
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 7
-	goto_if_eq Zone10B_EventScript_Kirlia_2
-Zone10B_EventScript_Kirlia_1:
+	goto_if_eq Zone10B_EventScript_Porygon_5
+Zone10B_EventScript_Porygon_4:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -22,63 +25,34 @@ Zone10B_EventScript_Kirlia_1:
 	goto Zone10B_EventScript_AdaminaStuff
 	return
 
-Zone10B_EventScript_Kirlia_2:
+Zone10B_EventScript_Porygon_2:
+	goto EventScript_PorygonExit
+	goto Zone10B_EventScript_Porygon_1
+
+Zone10B_EventScript_Porygon_5:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	goto Zone10B_EventScript_Kirlia_1
+	goto Zone10B_EventScript_Porygon_4
 
 
 Zone10B_EventScript_AdaminaStuff::
 	compare VAR_ZONE_10_STATE, 2
 	goto_if_eq Zone10B_EventScript_AdaminaStuff_2
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_4
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_1
 	giveitem ITEM_TM20
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_5, MSGBOX_DEFAULT
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_2, MSGBOX_DEFAULT
 	delay 96
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_6
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_3
 	setvar VAR_ZONE_10_STATE, 2
 	release
 	return
 
 Zone10B_EventScript_AdaminaStuff_2:
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone10B_EventScript_AdaminaStuff_5
-Zone10B_EventScript_AdaminaStuff_4:
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_3
+	msgbox Zone10B_EventScript_AdaminaStuff_Text_0
 	release
 	end
-
-Zone10B_EventScript_AdaminaStuff_5:
-	compare VAR_ZONE, 10
-	goto_if_gt Zone10B_EventScript_AdaminaStuff_7
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone10B_EventScript_AdaminaStuff_12
-Zone10B_EventScript_AdaminaStuff_10:
-	setflag FLAG_HIDE_ZONE10A_MAX
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_1
-	delay 96
-	playmoncry SPECIES_KIRLIA, 0
-	msgbox Zone10B_EventScript_AdaminaStuff_Text_2
-	waitmoncry
-	warp MAP_ZONE10SANCTUARY, 255, 22, 7
-	waitstate
-	goto Zone10B_EventScript_AdaminaStuff_4
-
-Zone10B_EventScript_AdaminaStuff_7:
-	call EventScript_WarpZone0
-	goto Zone10B_EventScript_AdaminaStuff_4
-
-Zone10B_EventScript_AdaminaStuff_11:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone10B_EventScript_AdaminaStuff_10
-
-Zone10B_EventScript_AdaminaStuff_12:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone10B_EventScript_AdaminaStuff_11
-	goto Zone10B_EventScript_AdaminaStuff_10
 
 
 Zone10B_EventScript_SideQuestLuckyEgg::
@@ -535,25 +509,20 @@ Zone10B_EventScript_WaterNotEnough::
 
 
 Zone10B_EventScript_AdaminaStuff_Text_0:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Are you leaving here?$"
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: You'll find some people here\n"
+	.string "are looking to trade or provide service\l"
+	.string "in exchange for goods.\p"
+	.string "Perhaps they'll be helpful in your\n"
+	.string "travels.$"
 
 Zone10B_EventScript_AdaminaStuff_Text_1:
-	.string "Safe travels.$"
-
-Zone10B_EventScript_AdaminaStuff_Text_2:
-	.string "Kirlia, use Teleport!$"
-
-Zone10B_EventScript_AdaminaStuff_Text_3:
-	.string "Come speak to me when you're ready.$"
-
-Zone10B_EventScript_AdaminaStuff_Text_4:
 	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: You…\n…\pLook.\nI said some harsh words earlier.\lConsider this part of my apology.$"
 
-Zone10B_EventScript_AdaminaStuff_Text_5:
+Zone10B_EventScript_AdaminaStuff_Text_2:
 	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: This is my tavern.\nIt's my safe space.\pAll the people from around here\ngather for shelter from the\lsandstorm.\pI just… feel defensive around\noutsiders. Because it feels like\lfamily here, you know?$"
 
-Zone10B_EventScript_AdaminaStuff_Text_6:
-	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Tell you what, you can\nstay as long as you like to chat\lwith the people here.\pWhen you're ready to leave,\ncome speak to me.$"
+Zone10B_EventScript_AdaminaStuff_Text_3:
+	.string "{COLOR BLUE}Adamina{COLOR DARK_GRAY}: Tell you what, you can\nstay as long as you like to chat\lwith the people here.\pIt's kind of nice to just spend time\nwith other people, isn't it?$"
 
 Zone10B_EventScript_SideQuestLuckyEgg_Text_0:
 	.string "You know what would make a\nCollector like me happy? Meeting\lsomeone who has caught 50 different\lspecies of Pokémon. Now, that\lperson is someone I'd like to meet!$"

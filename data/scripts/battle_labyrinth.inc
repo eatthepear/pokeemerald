@@ -3953,6 +3953,7 @@ EventScript_PorygonExit_24:
 	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_25:
+	setflag FLAG_HIDE_ZONE10A_MAX
 	warp MAP_ZONE10SANCTUARY, 255, 22, 7
 	goto EventScript_PorygonExit_15
 
