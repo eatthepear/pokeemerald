@@ -100,17 +100,14 @@ Zone5B_EventScript_Intro::
 Zone5B_Porygon_AnimateRight:
 	walk_in_place_slow_right
 	walk_in_place_slow_right
-	walk_in_place_slow_right
 	step_end
 
 Zone5B_Porygon_AnimateDown:
 	walk_in_place_slow_down
 	walk_in_place_slow_down
-	walk_in_place_slow_down
 	step_end
 
 Zone5B_Porygon_AnimateLeft:
-	walk_in_place_slow_left
 	walk_in_place_slow_left
 	walk_in_place_slow_left
 	step_end

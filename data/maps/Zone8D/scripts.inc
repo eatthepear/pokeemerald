@@ -224,35 +224,6 @@ Zone8D_EventScript_InitiateLeviathan8_20:
 	goto Zone8D_EventScript_InitiateLeviathan8_19
 
 
-Zone8D_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 8
-	goto_if_gt Zone8D_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone8D_EventScript_Exit_7
-Zone8D_EventScript_Exit_5:
-	setflag FLAG_HIDE_ZONE7A_MAX
-	setflag FLAG_ZONE7B_HEAL_USED
-	warp MAP_ZONE8SANCTUARY, 255, 22, 7
-	waitstate
-Zone8D_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone8D_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone8D_EventScript_Exit_1
-
-Zone8D_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone8D_EventScript_Exit_5
-
-Zone8D_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone8D_EventScript_Exit_6
-	goto Zone8D_EventScript_Exit_5
-
-
 Zone8D_Movement_Camera_GoUp:
 	walk_up
 	walk_up

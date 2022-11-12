@@ -94,13 +94,13 @@ script Zone5B_EventScript_Intro {
 }
 
 movement Zone5B_Porygon_AnimateRight {
-	walk_in_place_slow_right * 3
+	walk_in_place_slow_right * 2
 }
 
 movement Zone5B_Porygon_AnimateDown {
-	walk_in_place_slow_down * 3
+	walk_in_place_slow_down * 2
 }
 
 movement Zone5B_Porygon_AnimateLeft {
-	walk_in_place_slow_left * 3
+	walk_in_place_slow_left * 2
 }

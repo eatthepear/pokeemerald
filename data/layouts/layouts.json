@@ -5180,6 +5180,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Zone3B/border.bin",
       "blockdata_filepath": "data/layouts/Zone3B/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZONE9H",
+      "name": "Zone9H_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Zone9H/border.bin",
+      "blockdata_filepath": "data/layouts/Zone9H/map.bin"
     }
   ]
 }
