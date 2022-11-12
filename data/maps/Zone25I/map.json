@@ -47,28 +47,28 @@
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_ZONE25H",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 10,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_ZONE25H",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 12,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_ZONE25J",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 18,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_ZONE25J",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

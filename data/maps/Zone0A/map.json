@@ -201,14 +201,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ZONE0B",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 37,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ZONE0C",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

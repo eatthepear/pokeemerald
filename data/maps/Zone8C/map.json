@@ -99,21 +99,21 @@
       "y": 24,
       "elevation": 0,
       "dest_map": "MAP_ZONE7A",
-      "dest_warp_id": 4
+      "dest_warp_id": "4"
     },
     {
       "x": 35,
       "y": 23,
       "elevation": 0,
       "dest_map": "MAP_ZONE7A",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 33,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_ZONE8B",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

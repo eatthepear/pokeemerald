@@ -112,28 +112,28 @@
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_ZONE13A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_ZONE13A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_ZONE13C",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_ZONE14A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

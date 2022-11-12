@@ -242,518 +242,518 @@
       "y": 202,
       "elevation": 3,
       "dest_map": "MAP_ZONE18A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 202,
       "elevation": 3,
       "dest_map": "MAP_ZONE18A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 1,
       "y": 196,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 7,
       "y": 196,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 6
+      "dest_warp_id": "6"
     },
     {
       "x": 6,
       "y": 189,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 7,
       "y": 189,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 1,
       "y": 176,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 2,
       "y": 176,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 1,
       "y": 183,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 13
+      "dest_warp_id": "13"
     },
     {
       "x": 7,
       "y": 183,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 14
+      "dest_warp_id": "14"
     },
     {
       "x": 1,
       "y": 170,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 17
+      "dest_warp_id": "17"
     },
     {
       "x": 7,
       "y": 170,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 18
+      "dest_warp_id": "18"
     },
     {
       "x": 6,
       "y": 163,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     },
     {
       "x": 7,
       "y": 163,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     },
     {
       "x": 1,
       "y": 150,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 9
+      "dest_warp_id": "9"
     },
     {
       "x": 2,
       "y": 150,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 9
+      "dest_warp_id": "9"
     },
     {
       "x": 6,
       "y": 150,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 10
+      "dest_warp_id": "10"
     },
     {
       "x": 7,
       "y": 150,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 10
+      "dest_warp_id": "10"
     },
     {
       "x": 1,
       "y": 137,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 11
+      "dest_warp_id": "11"
     },
     {
       "x": 2,
       "y": 137,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 11
+      "dest_warp_id": "11"
     },
     {
       "x": 1,
       "y": 157,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 27
+      "dest_warp_id": "27"
     },
     {
       "x": 7,
       "y": 157,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 28
+      "dest_warp_id": "28"
     },
     {
       "x": 1,
       "y": 144,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 31
+      "dest_warp_id": "31"
     },
     {
       "x": 7,
       "y": 144,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 32
+      "dest_warp_id": "32"
     },
     {
       "x": 1,
       "y": 131,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 35
+      "dest_warp_id": "35"
     },
     {
       "x": 7,
       "y": 131,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 36
+      "dest_warp_id": "36"
     },
     {
       "x": 6,
       "y": 124,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 20
+      "dest_warp_id": "20"
     },
     {
       "x": 7,
       "y": 124,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 20
+      "dest_warp_id": "20"
     },
     {
       "x": 1,
       "y": 111,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 21
+      "dest_warp_id": "21"
     },
     {
       "x": 2,
       "y": 111,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 21
+      "dest_warp_id": "21"
     },
     {
       "x": 6,
       "y": 111,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 22
+      "dest_warp_id": "22"
     },
     {
       "x": 7,
       "y": 111,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 22
+      "dest_warp_id": "22"
     },
     {
       "x": 1,
       "y": 98,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 23
+      "dest_warp_id": "23"
     },
     {
       "x": 2,
       "y": 98,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 23
+      "dest_warp_id": "23"
     },
     {
       "x": 6,
       "y": 98,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 24
+      "dest_warp_id": "24"
     },
     {
       "x": 7,
       "y": 98,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 24
+      "dest_warp_id": "24"
     },
     {
       "x": 1,
       "y": 85,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 25
+      "dest_warp_id": "25"
     },
     {
       "x": 2,
       "y": 85,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 25
+      "dest_warp_id": "25"
     },
     {
       "x": 7,
       "y": 118,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 44
+      "dest_warp_id": "44"
     },
     {
       "x": 1,
       "y": 105,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 47
+      "dest_warp_id": "47"
     },
     {
       "x": 7,
       "y": 105,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 48
+      "dest_warp_id": "48"
     },
     {
       "x": 1,
       "y": 92,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 50
+      "dest_warp_id": "50"
     },
     {
       "x": 7,
       "y": 92,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 52
+      "dest_warp_id": "52"
     },
     {
       "x": 1,
       "y": 79,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 54
+      "dest_warp_id": "54"
     },
     {
       "x": 1,
       "y": 72,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 38
+      "dest_warp_id": "38"
     },
     {
       "x": 2,
       "y": 72,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 38
+      "dest_warp_id": "38"
     },
     {
       "x": 6,
       "y": 72,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 39
+      "dest_warp_id": "39"
     },
     {
       "x": 7,
       "y": 72,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 39
+      "dest_warp_id": "39"
     },
     {
       "x": 1,
       "y": 59,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 40
+      "dest_warp_id": "40"
     },
     {
       "x": 2,
       "y": 59,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 40
+      "dest_warp_id": "40"
     },
     {
       "x": 7,
       "y": 59,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 41
+      "dest_warp_id": "41"
     },
     {
       "x": 6,
       "y": 59,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 41
+      "dest_warp_id": "41"
     },
     {
       "x": 1,
       "y": 46,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 42
+      "dest_warp_id": "42"
     },
     {
       "x": 2,
       "y": 46,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 42
+      "dest_warp_id": "42"
     },
     {
       "x": 7,
       "y": 46,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 43
+      "dest_warp_id": "43"
     },
     {
       "x": 6,
       "y": 46,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 43
+      "dest_warp_id": "43"
     },
     {
       "x": 7,
       "y": 66,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 60
+      "dest_warp_id": "60"
     },
     {
       "x": 1,
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 63
+      "dest_warp_id": "63"
     },
     {
       "x": 7,
       "y": 53,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 64
+      "dest_warp_id": "64"
     },
     {
       "x": 1,
       "y": 40,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 67
+      "dest_warp_id": "67"
     },
     {
       "x": 1,
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 56
+      "dest_warp_id": "56"
     },
     {
       "x": 2,
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 56
+      "dest_warp_id": "56"
     },
     {
       "x": 6,
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 57
+      "dest_warp_id": "57"
     },
     {
       "x": 7,
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 57
+      "dest_warp_id": "57"
     },
     {
       "x": 1,
       "y": 20,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 58
+      "dest_warp_id": "58"
     },
     {
       "x": 2,
       "y": 20,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 58
+      "dest_warp_id": "58"
     },
     {
       "x": 6,
       "y": 20,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 59
+      "dest_warp_id": "59"
     },
     {
       "x": 7,
       "y": 20,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 59
+      "dest_warp_id": "59"
     },
     {
       "x": 7,
       "y": 27,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 71
+      "dest_warp_id": "71"
     },
     {
       "x": 1,
       "y": 14,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 72
+      "dest_warp_id": "72"
     },
     {
       "x": 2,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 68
+      "dest_warp_id": "68"
     },
     {
       "x": 1,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 68
+      "dest_warp_id": "68"
     },
     {
       "x": 7,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 69
+      "dest_warp_id": "69"
     },
     {
       "x": 6,
       "y": 7,
       "elevation": 3,
       "dest_map": "MAP_ZONE18B",
-      "dest_warp_id": 69
+      "dest_warp_id": "69"
     }
   ],
   "coord_events": [

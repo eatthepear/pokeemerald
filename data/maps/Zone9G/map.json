@@ -34,14 +34,14 @@
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ZONE9A",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 4,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ZONE9A",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [

@@ -73,56 +73,56 @@
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 18,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 19,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 3,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 4,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 18,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 19,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ZONE6SANCTUARY",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

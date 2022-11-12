@@ -112,14 +112,14 @@
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_ZONE10A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_ZONE10A",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

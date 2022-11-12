@@ -346,7 +346,7 @@
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_ZONE21B",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
