@@ -885,10 +885,10 @@ static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal,
     .iv = 20,
     .lvl = 17,
     .nature = NATURE_CALM,
-    .ability = ABILITY_SLOT_1, //Innards Out
+    .ability = ABILITY_SLOT_2, //Unaware
     .species = SPECIES_PYUKUMUKU,
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PAIN_SPLIT, MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_TAUNT}
+    .moves = {MOVE_PAIN_SPLIT, MOVE_SWAGGER, MOVE_TAUNT, MOVE_TOXIC}
     }
 };
 
