@@ -286,9 +286,7 @@ static const struct TrainerMon sParty_Richard[] = {
     }
 };
 
-// On Default, you just fight Phillipa's normal party.
-// On Brutal, you fight Phillipa's normal party, then immediately fight Phillipa's Brutal party.
-static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Brutal
+static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     {
     .iv = 20,
     .lvl = 11,
@@ -300,17 +298,17 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Bru
     {
     .iv = 20,
     .lvl = 11,
-    .nature = NATURE_RELAXED,
-    .ability = ABILITY_SLOT_1, //Sturdy
-    .species = SPECIES_PHANPY,
+    .nature = NATURE_HASTY,
+    .ability = ABILITY_HIDDEN, //Aftermath
+    .species = SPECIES_VOLTORB_HISUIAN,
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 20,
     .lvl = 11,
-    .nature = NATURE_HASTY,
-    .ability = ABILITY_HIDDEN, //Aftermath
-    .species = SPECIES_VOLTORB_HISUIAN,
+    .nature = NATURE_RELAXED,
+    .ability = ABILITY_SLOT_1, //Sturdy
+    .species = SPECIES_PHANPY,
     .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
@@ -318,10 +316,34 @@ static const struct TrainerMon sParty_Phillipa[] = {//Leviathan, Default and Bru
 static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
     {
     .iv = 31,
-    .lvl = 15,
-    .nature = NATURE_CAREFUL,
-    .ability = ABILITY_HIDDEN, //Simple
-    .species = SPECIES_BIBAREL,
+    .lvl = 11,
+    .nature = NATURE_SASSY,
+    .ability = ABILITY_SLOT_1, //Unaware
+    .species = SPECIES_BIDOOF,
+    .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_HASTY,
+    .ability = ABILITY_HIDDEN, //Aftermath
+    .species = SPECIES_VOLTORB_HISUIAN,
+    .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_RELAXED,
+    .ability = ABILITY_SLOT_1, //Sturdy
+    .species = SPECIES_PHANPY,
+    .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 31,
+    .lvl = 11,
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Thick Fat
+    .species = SPECIES_MUNCHLAX,
     .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
     }
 };

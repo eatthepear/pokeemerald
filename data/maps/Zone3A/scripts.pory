@@ -54,11 +54,12 @@ script Zone3A_EventScript_TriggerLeviathan {
 	waitmovement(0)
 	msgbox(Zone3A_Text_Leviathan3Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	setvar(VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA)
-	trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-		msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: No way! No fair! This isn't right!\pI'll just have to beat you with my dad's strongest Pokémon!"))
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA)
 		trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3_BRUTAL, Zone3A_Text_Leviathan3Defeat)
+	} else {
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA)
+		trainerbattle_no_intro(TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!"))
