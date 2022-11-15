@@ -27,19 +27,56 @@ Zone1A_EventScript_TalkToLeviathan::
 	return
 
 
-Zone1A_EventScript_TriggerLeviathan::
+Zone1A_Corey_WalkLeft:
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+Zone1A_Corey_WalkLeft2:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+Zone1A_EventScript_TriggerLeviathanBottom::
 	lockall
-	applymovement 6, Common_Movement_FaceDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
+	fadeoutbgm 1
 	setvar VAR_ZONE_1_STATE, 1
+	applymovement 6, Zone1A_Corey_WalkLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_WalkDown
+	waitmovement 0
+	goto Zone1A_EventScript_LeviathanBattle
+	return
+
+
+Zone1A_EventScript_TriggerLeviathanMiddle::
+	lockall
+	fadeoutbgm 1
+	setvar VAR_ZONE_1_STATE, 1
+	applymovement 6, Zone1A_Corey_WalkLeft
+	waitmovement 0
+	goto Zone1A_EventScript_LeviathanBattle
+	return
+
+
+Zone1A_EventScript_TriggerLeviathanTop::
+	lockall
+	fadeoutbgm 1
+	setvar VAR_ZONE_1_STATE, 1
+	applymovement 6, Zone1A_Corey_WalkLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_WalkUp
+	waitmovement 0
 	goto Zone1A_EventScript_LeviathanBattle
 	return
 
 
 Zone1A_EventScript_LeviathanBattle::
-	fadeoutbgm 1
+	applymovement 6, Zone1A_Corey_WalkLeft2
+	waitmovement 0
 	msgbox Zone1A_Text_Leviathan1Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone1A_EventScript_LeviathanBattle_2

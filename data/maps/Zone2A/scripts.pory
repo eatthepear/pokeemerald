@@ -64,5 +64,5 @@ Zone2A_Text_Sign:
 	.string "You may find hidden items by\n"
 	.string "checking certain tiles with {A_BUTTON}.\p"
 	.string "However, you won't find many hidden\n"
-	.string "items on Brutal mode.$"
+	.string "items on Brutal difficulty.$"
 `
