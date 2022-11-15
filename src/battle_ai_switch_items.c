@@ -681,6 +681,39 @@ static bool8 ShouldSwitchIfOnlyAttackingStatLowered(void)
     return FALSE;
 }
 
+static bool8 ShouldSwitchIfYawned(void)
+{
+    u8 opposingPosition;
+    u8 opposingBattler;
+    s32 i;
+    u16 move;
+
+    // Brutal mode only, only 50% chance of triggering
+    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE || Random() & 1)
+        return FALSE;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        return FALSE;
+
+    opposingPosition = BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler));
+
+    // Check if Pokemon has a super effective move.
+    for (opposingBattler = GetBattlerAtPosition(opposingPosition), i = 0; i < MAX_MON_MOVES; i++)
+    {
+        move = gBattleMons[gActiveBattler].moves[i];
+        if (move != MOVE_NONE)
+        {
+            if (AI_GetTypeEffectiveness(move, gActiveBattler, opposingBattler) >= UQ_4_12(2.0))
+                return FALSE;
+        }
+    }
+
+    if (gStatuses3[gActiveBattler] & (STATUS3_YAWN))
+        return TRUE;
+
+    return FALSE;
+}
+
 bool32 ShouldSwitch(void)
 {
     u8 battlerIn1, battlerIn2;
@@ -778,6 +811,8 @@ bool32 ShouldSwitch(void)
         || FindMonWithFlagsAndSuperEffective(MOVE_RESULT_NOT_VERY_EFFECTIVE, 3))
         return TRUE;
     if (ShouldSwitchIfOnlyAttackingStatLowered())
+        return TRUE;
+    if (ShouldSwitchIfYawned())
         return TRUE;
 
     return FALSE;
