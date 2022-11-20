@@ -2010,10 +2010,10 @@ text gText_Colress_BrutalExplained {
 	"Pokémon cannot gain EVs.\p"
 	"TMs are single use.\p"
 	"Trainer battles give less money.\p"
+	"Wild Pokémon do not give any experience.\p"
 	"Items cannot be farmed from wild Pokémon or any other means.\p"
 	"Many helpful NPCs are unavailable.\p"
 	"Some moves use more PP than normal and opponents do not use PP.\p"
-	"Pokémon only gain experience while in a new Zone.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }
