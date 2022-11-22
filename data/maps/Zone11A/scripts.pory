@@ -34,6 +34,11 @@ script Zone11A_EventScript_Exit {
     end
 }
 
+script Zone11A_EventScript_LeviathanIntroUp {
+	lockall
+	goto(Zone11A_EventScript_LeviathanIntro)
+}
+
 script Zone11A_EventScript_LeviathanIntro {
 	lockall
 	applymovement(6, Common_Movement_FaceLeft)

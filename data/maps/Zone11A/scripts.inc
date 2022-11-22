@@ -53,6 +53,12 @@ Zone11A_EventScript_Exit_7:
 	goto Zone11A_EventScript_Exit_5
 
 
+Zone11A_EventScript_LeviathanIntroUp::
+	lockall
+	goto Zone11A_EventScript_LeviathanIntro
+	return
+
+
 Zone11A_EventScript_LeviathanIntro::
 	lockall
 	applymovement 6, Common_Movement_FaceLeft

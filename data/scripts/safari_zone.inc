@@ -6,6 +6,7 @@ SafariZone_EventScript_OutOfBallsMidBattle::
 
 SafariZone_EventScript_Exit::
 	clearflag FLAG_IS_REVISITING_ZONE
+	setvar VAR_REVISITING_ZONE, 0
 	goto EventScript_WarpZone0
 	end
 

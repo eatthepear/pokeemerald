@@ -168,14 +168,6 @@
       "elevation": 3,
       "item": "ITEM_RED_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_ZONE8B_RED_SHARD"
-    },
-    {
-      "type": "sign",
-      "x": 38,
-      "y": 4,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EventScript_ExitSign"
     }
   ]
 }
