@@ -26,39 +26,6 @@ Zone11A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
 	return
 
 
-Zone11A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 11
-	goto_if_gt Zone11A_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone11A_EventScript_Exit_7
-Zone11A_EventScript_Exit_5:
-	warp MAP_ZONE11SANCTUARY, 255, 22, 7
-	waitstate
-Zone11A_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone11A_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone11A_EventScript_Exit_1
-
-Zone11A_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone11A_EventScript_Exit_5
-
-Zone11A_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone11A_EventScript_Exit_6
-	goto Zone11A_EventScript_Exit_5
-
-
-Zone11A_EventScript_LeviathanIntroUp::
-	lockall
-	goto Zone11A_EventScript_LeviathanIntro
-	return
-
-
 Zone11A_EventScript_LeviathanIntro::
 	lockall
 	applymovement 6, Common_Movement_FaceLeft

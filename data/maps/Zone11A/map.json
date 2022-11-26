@@ -81,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
-      "x": 24,
+      "x": 23,
       "y": 60,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
@@ -195,21 +195,25 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone11A_EventScript_BuyRuin",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PORYGON",
+      "x": 24,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_PorygonExit",
+      "flag": "0"
     }
   ],
   "warp_events": [
 
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 19,
-      "y": 61,
-      "elevation": 0,
-      "var": "VAR_ZONE_11_STATE",
-      "var_value": "0",
-      "script": "Zone11A_EventScript_LeviathanIntroUp"
-    },
     {
       "type": "trigger",
       "x": 19,
@@ -221,14 +225,6 @@
     }
   ],
   "bg_events": [
-    {
-      "type": "sign",
-      "x": 25,
-      "y": 28,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EventScript_ExitSign"
-    },
     {
       "type": "hidden_item",
       "x": 43,
