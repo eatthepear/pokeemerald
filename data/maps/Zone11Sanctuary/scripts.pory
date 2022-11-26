@@ -15,13 +15,17 @@ script Zone11Sanctuary_EventScript_Intro {
 	msgbox(Zone11Sanctuary_Text_Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_TM23)
 	setvar(VAR_ZONE, 12)
-	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next zone, {COLOR RED}Zone 12{COLOR DARK_GRAY}, restricts the use of your bag.\pYou will not be able to use your bag at all."), MSGBOX_DEFAULT)
+	msgbox(Zone11Sanctuary_Text_NoBagAccessInNextZone, MSGBOX_DEFAULT)
 	buffernumberstring(0, VAR_ZONE)
 	msgbox(gText_Colress_WhenUReady)
 	applymovement(1, Common_Movement_Colress_WalkUp)
 	waitmovement(0)
 	releaseall
 	end
+}
+
+text Zone11Sanctuary_Text_NoBagAccessInNextZone {
+	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next zone, {COLOR RED}Zone 12{COLOR DARK_GRAY}, restricts the use of your Bag.\pYou will not be able to use items from your Bag outside of battle.")
 }
 
 script Zone11Sanctuary_EventScript_NextZone {
@@ -31,6 +35,7 @@ script Zone11Sanctuary_EventScript_NextZone {
 	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
 	switch (var(VAR_RESULT)) {
 		case 0:
+			msgbox(Zone11Sanctuary_Text_NoBagAccessInNextZone, MSGBOX_DEFAULT)
 			buffernumberstring(0, VAR_ZONE)
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {

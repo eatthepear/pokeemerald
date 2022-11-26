@@ -80,7 +80,8 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Next up is me! I won't need any crits to beat you!"))
 	trainerbattle_no_intro(TRAINER_JULIE, format("Julie: You won even without landing a critical hit!"))
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross the river."))
+	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross the river, and heal your Pokémon to boot!"))
+	special(HealPlayerParty)
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: We'll even give you this item, too!"))
 	giveitem(ITEM_SCOPE_LENS)
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Au revoir!"))
@@ -101,22 +102,6 @@ movement Zone12A_Movement_Left {
 
 movement Zone12A_Movement_Right {
 	walk_right * 7
-}
-
-script Zone12A_EventScript_Exit {
-    lockall
-    if (var(VAR_ZONE) > 12) {
-		call(EventScript_WarpZone0)
-    } else {
-		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-			goto(EventScript_BrutalExitNotSatisfied)
-		}
-        warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
-		waitstate
-    }
-    releaseall
-    end
 }
 
 script Zone12A_EventScript_TM24 {

@@ -1165,7 +1165,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Dolores),
         .party = {.TrainerMon = sParty_Dolores},
-        .shouldShuffle = TRUE,
     },
 
     [TRAINER_ROMULUS] =

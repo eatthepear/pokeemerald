@@ -84,6 +84,7 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_8:
 	trainerbattle_no_intro TRAINER_JULIE, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9
+	special HealPlayerParty
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10
 	giveitem ITEM_SCOPE_LENS
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_11
@@ -414,7 +415,8 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8:
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9:
 	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross\n"
-	.string "the river.$"
+	.string "the river, and heal your Pokémon to\l"
+	.string "boot!$"
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10:
 	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: We'll even give you this item, too!$"

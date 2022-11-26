@@ -1797,6 +1797,8 @@ static const struct TrainerMon sParty_NewtonBrutal[] = {//Leviathan, Double Batt
 
 /* ------------------- Zone 12 ------------------- */
 
+// Note you cannot access your Bag in this Zone. You can still swap around held items (including Berries).
+
 static const struct TrainerMon sParty_Essence[] = {// Shuffled Party
     {
     .iv = 10,
@@ -1815,7 +1817,7 @@ static const struct TrainerMon sParty_Essence[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_Dolores[] = {// Shuffled Party
+static const struct TrainerMon sParty_Dolores[] = {
     {
     .iv = 10,
     .lvl = 23,
@@ -1838,7 +1840,7 @@ static const struct TrainerMon sParty_Dolores[] = {// Shuffled Party
     }
 };
 
-// You fight Romulus then immediately fight Julie afterwards.
+// You fight Romulus then immediately fight Julie afterwards. You are fully healed after both battles finish.
 // On Default, your party is fully healed in between fights, while on Brutal your party is not
 static const struct TrainerMon sParty_Romulus[] = {
     {
