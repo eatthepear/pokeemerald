@@ -1256,7 +1256,10 @@ bool8 CheckLeadMonTough(void)
 {
     // if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_TOUGH) < 200)
     //     return FALSE;
-    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_PORYGON), FLAG_SET_SEEN);
+    u16 nature = NATURE_SERIOUS;
+    SetMonData(&gPlayerParty[VarGet(VAR_TEMP_1)], MON_DATA_NATURE, &nature);
+
+    CalculateMonStats(&gPlayerParty[VarGet(VAR_TEMP_1)]);
 
     return FALSE;
 }

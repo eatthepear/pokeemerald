@@ -80,9 +80,9 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Next up is me! I won't need any crits to beat you!"))
 	trainerbattle_no_intro(TRAINER_JULIE, format("Julie: You won even without landing a critical hit!"))
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross the river, and heal your Pokémon to boot!"))
+	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: You got us! We'll let you cross the river, and heal your Pokémon to boot!"), MSGBOX_DEFAULT)
 	special(HealPlayerParty)
-	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: We'll even give you this item, too!"))
+	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: We'll even give you this item, too!"), MSGBOX_DEFAULT)
 	giveitem(ITEM_SCOPE_LENS)
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Au revoir!"))
 	applymovement(1, Zone12A_Movement_Right)
@@ -102,6 +102,55 @@ movement Zone12A_Movement_Left {
 
 movement Zone12A_Movement_Right {
 	walk_right * 7
+}
+
+script Zone12A_EventScript_BreederM {
+	lock
+	faceplayer
+	showmoneybox(0, 0, 0)
+	msgbox(format("I'll change a Pokémon's nature to Serious for the price of ¥1000."), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		closemessage
+		hidemoneybox
+		msgbox(format("Why so serious?"))
+	} else {
+		checkmoney(1000, 0)
+		if (var(VAR_RESULT) == FALSE) {
+			msgbox("You don't have enough money.")
+			hidemoneybox
+		} else {
+			msgbox(format("Which Pokémon would you like to change the nature?"), MSGBOX_DEFAULT)
+			special(ChoosePartyMon)
+			waitstate
+			faceplayer
+			showmoneybox(0, 0, 0)
+			if (var(VAR_0x8004) != PARTY_NOTHING_CHOSEN) {
+				specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+				if (var(VAR_RESULT) == SPECIES_EGG) {
+					msgbox(format("I can't change the nature of an egg."))
+				} else {
+					specialvar(VAR_TEMP_1, ScriptGetPartyMonSpecies)
+					bufferspeciesname(0, VAR_TEMP_1)
+					copyvar(VAR_TEMP_1, VAR_0x8004)
+					msgbox(format("Are you sure you want your {STR_VAR_1} to have a Serious nature?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						removemoney(1000)
+						updatemoneybox
+						special(CheckLeadMonTough) // sets the nature to serious
+						msgbox(format("It's done."))
+						closemessage
+						hidemoneybox
+					} else {
+						closemessage
+						hidemoneybox
+						msgbox(format("Why so serious?"))
+					}
+				}
+			}
+		}
+	}
+	release
+	end
 }
 
 script Zone12A_EventScript_TM24 {

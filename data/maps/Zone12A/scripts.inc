@@ -83,9 +83,9 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_8:
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_7
 	trainerbattle_no_intro TRAINER_JULIE, Zone12A_EventScript_InitiateRomulusJulieBattles_Text_8
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_9, MSGBOX_DEFAULT
 	special HealPlayerParty
-	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10
+	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10, MSGBOX_DEFAULT
 	giveitem ITEM_SCOPE_LENS
 	msgbox Zone12A_EventScript_InitiateRomulusJulieBattles_Text_11
 	applymovement 1, Zone12A_Movement_Right
@@ -137,31 +137,65 @@ Zone12A_Movement_Right:
 	walk_right
 	step_end
 
-Zone12A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 12
-	goto_if_gt Zone12A_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone12A_EventScript_Exit_7
-Zone12A_EventScript_Exit_5:
-	warp MAP_ZONE12SANCTUARY, 255, 22, 7
+Zone12A_EventScript_BreederM::
+	lock
+	faceplayer
+	showmoneybox 0, 0, 0
+	msgbox Zone12A_EventScript_BreederM_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone12A_EventScript_BreederM_2
+	checkmoney 1000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone12A_EventScript_BreederM_5
+	msgbox Zone12A_EventScript_BreederM_Text_3, MSGBOX_DEFAULT
+	special ChoosePartyMon
 	waitstate
-Zone12A_EventScript_Exit_1:
-	releaseall
+	faceplayer
+	showmoneybox 0, 0, 0
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_ne Zone12A_EventScript_BreederM_8
+Zone12A_EventScript_BreederM_1:
+	release
 	end
 
-Zone12A_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone12A_EventScript_Exit_1
+Zone12A_EventScript_BreederM_2:
+	closemessage
+	hidemoneybox
+	msgbox Zone12A_EventScript_BreederM_Text_1
+	goto Zone12A_EventScript_BreederM_1
 
-Zone12A_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone12A_EventScript_Exit_5
+Zone12A_EventScript_BreederM_5:
+	msgbox Zone12A_EventScript_BreederM_Text_2
+	hidemoneybox
+	goto Zone12A_EventScript_BreederM_1
 
-Zone12A_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone12A_EventScript_Exit_6
-	goto Zone12A_EventScript_Exit_5
+Zone12A_EventScript_BreederM_8:
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	compare VAR_RESULT, SPECIES_EGG
+	goto_if_eq Zone12A_EventScript_BreederM_10
+	specialvar VAR_TEMP_1, ScriptGetPartyMonSpecies
+	bufferspeciesname 0, VAR_TEMP_1
+	copyvar VAR_TEMP_1, VAR_0x8004
+	msgbox Zone12A_EventScript_BreederM_Text_5, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone12A_EventScript_BreederM_13
+	closemessage
+	hidemoneybox
+	msgbox Zone12A_EventScript_BreederM_Text_1
+	goto Zone12A_EventScript_BreederM_1
+
+Zone12A_EventScript_BreederM_10:
+	msgbox Zone12A_EventScript_BreederM_Text_4
+	goto Zone12A_EventScript_BreederM_1
+
+Zone12A_EventScript_BreederM_13:
+	removemoney 1000
+	updatemoneybox
+	special CheckLeadMonTough
+	msgbox Zone12A_EventScript_BreederM_Text_6
+	closemessage
+	hidemoneybox
+	goto Zone12A_EventScript_BreederM_1
 
 
 Zone12A_EventScript_TM24::
@@ -423,3 +457,28 @@ Zone12A_EventScript_InitiateRomulusJulieBattles_Text_10:
 
 Zone12A_EventScript_InitiateRomulusJulieBattles_Text_11:
 	.string "{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Au revoir!$"
+
+Zone12A_EventScript_BreederM_Text_0:
+	.string "I'll change a Pokémon's nature to\n"
+	.string "Serious for the price of ¥1000.$"
+
+Zone12A_EventScript_BreederM_Text_1:
+	.string "Why so serious?$"
+
+Zone12A_EventScript_BreederM_Text_2:
+	.string "You don't have enough money.$"
+
+Zone12A_EventScript_BreederM_Text_3:
+	.string "Which Pokémon would you like to change\n"
+	.string "the nature?$"
+
+Zone12A_EventScript_BreederM_Text_4:
+	.string "I can't change the nature of an egg.$"
+
+Zone12A_EventScript_BreederM_Text_5:
+	.string "Are you sure you want your\n"
+	.string "{STR_VAR_1} to have a Serious\l"
+	.string "nature?$"
+
+Zone12A_EventScript_BreederM_Text_6:
+	.string "It's done.$"
