@@ -57,6 +57,7 @@ Zone11Sanctuary_EventScript_NextZone_5:
 
 Zone11Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
+	setflag FLAG_SYS_NO_BAG_START_MENU
 	warp MAP_ZONE12A, 255, 9, 17
 	waitstate
 	goto Zone11Sanctuary_EventScript_NextZone_1

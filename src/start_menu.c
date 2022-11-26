@@ -319,7 +319,8 @@ static void BuildSanctuaryStartMenu(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     
-    AddStartMenuAction(MENU_ACTION_BAG);
+    if (FlagGet(FLAG_SYS_NO_BAG_START_MENU) == FALSE)
+        AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
 
     if (FlagGet(FLAG_SYS_DEXNAV_GET))
@@ -346,7 +347,7 @@ static void BuildNewZoneStartMenu(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     
-    if (VarGet(VAR_ZONE) != 12)
+    if (FlagGet(FLAG_SYS_NO_BAG_START_MENU) == FALSE)
         AddStartMenuAction(MENU_ACTION_BAG);
     
     AddStartMenuAction(MENU_ACTION_PLAYER);
@@ -375,7 +376,8 @@ static void BuildRevisitingZoneStartMenu(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     
-    AddStartMenuAction(MENU_ACTION_BAG);
+    if (FlagGet(FLAG_SYS_NO_BAG_START_MENU) == FALSE)
+        AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
 
     if (FlagGet(FLAG_SYS_DEXNAV_GET))

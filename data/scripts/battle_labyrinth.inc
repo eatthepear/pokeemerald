@@ -3901,17 +3901,17 @@ EventScript_PorygonExit_13:
 	case 10, EventScript_PorygonExit_25
 	case 11, EventScript_PorygonExit_26
 	case 12, EventScript_PorygonExit_27
-	case 13, EventScript_PorygonExit_27
-	case 15, EventScript_PorygonExit_27
-	case 16, EventScript_PorygonExit_27
-	case 17, EventScript_PorygonExit_27
-	case 18, EventScript_PorygonExit_27
-	case 20, EventScript_PorygonExit_27
-	case 21, EventScript_PorygonExit_27
-	case 22, EventScript_PorygonExit_27
-	case 23, EventScript_PorygonExit_27
-	case 24, EventScript_PorygonExit_27
-	case 25, EventScript_PorygonExit_27
+	case 13, EventScript_PorygonExit_28
+	case 15, EventScript_PorygonExit_28
+	case 16, EventScript_PorygonExit_28
+	case 17, EventScript_PorygonExit_28
+	case 18, EventScript_PorygonExit_28
+	case 20, EventScript_PorygonExit_28
+	case 21, EventScript_PorygonExit_28
+	case 22, EventScript_PorygonExit_28
+	case 23, EventScript_PorygonExit_28
+	case 24, EventScript_PorygonExit_28
+	case 25, EventScript_PorygonExit_28
 EventScript_PorygonExit_15:
 	waitstate
 	goto EventScript_PorygonExit_4
@@ -3962,6 +3962,11 @@ EventScript_PorygonExit_26:
 	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_27:
+	clearflag FLAG_SYS_NO_BAG_START_MENU
+	warp MAP_ZONE12SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_28:
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
 	goto EventScript_PorygonExit_15
 

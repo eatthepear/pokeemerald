@@ -2721,6 +2721,8 @@ script EventScript_PorygonExit {
 				case 11:
 					warp(MAP_ZONE11SANCTUARY, 255, 22, 7)
 				case 12:
+					clearflag(FLAG_SYS_NO_BAG_START_MENU)
+					warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
 				case 13:
 				case 15:
 				case 16:

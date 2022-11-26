@@ -35,6 +35,7 @@ script Zone11Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
+				setflag(FLAG_SYS_NO_BAG_START_MENU)
 				warp(MAP_ZONE12A, 255, 9, 17)
 				waitstate
 			}

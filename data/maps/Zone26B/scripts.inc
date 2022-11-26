@@ -188,11 +188,11 @@ Zone26B_EventScript_RemoveSmartWildAI:
 	return
 
 Zone26B_EventScript_DisableBag:
-	setflag FLAG_DISABLE_BAG
+	setflag FLAG_SYS_NO_BAG_USE_IN_BATTLE
 	return
 
 Zone26B_EventScript_EnableBag:
-	clearflag FLAG_DISABLE_BAG
+	clearflag FLAG_SYS_NO_BAG_USE_IN_BATTLE
 	return
 
 Zone26B_Text_RotomBoxes:
