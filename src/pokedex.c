@@ -8249,6 +8249,7 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
         case EVO_LEVEL_NATURE_AMPED:
             ConvertIntToDecimalStringN(gStringVar2, gEvolutionTable[species][i].param, STR_CONV_MODE_LEADING_ZEROS, EVO_SCREEN_LVL_DIGITS); //level
             StringExpandPlaceholders(gStringVar4, gText_EVO_LEVEL_NATURE_AMPED );
+            break;
         default:
             StringExpandPlaceholders(gStringVar4, gText_EVO_UNKNOWN );
             break;
