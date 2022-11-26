@@ -3254,6 +3254,7 @@ EventScript_Surveillance_7:
 
 
 EventScript_WarpZone0::
+	closemessage
 	playmoncry SPECIES_PORYGON, 0
 	waitmoncry
 	clearflag FLAG_IS_REVISITING_ZONE
@@ -3310,261 +3311,311 @@ EventScript_WarpZone0::
 	case 50, EventScript_WarpZone0_52
 	case 51, EventScript_WarpZone0_53
 EventScript_WarpZone0_1:
-	setvar VAR_REVISITING_ZONE, 0
 	releaseall
 	end
 
 EventScript_WarpZone0_3:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 15, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_4:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 19, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_5:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 23, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_6:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 27, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_7:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 31, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_8:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 35, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_9:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 39, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_10:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 43, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_11:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 47, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_12:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 51, 32
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_13:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 15, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_14:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 19, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_15:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 23, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_16:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 27, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_17:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 31, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_18:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 35, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_19:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 39, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_20:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 43, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_21:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 47, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_22:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 51, 25
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_23:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 15, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_24:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 19, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_25:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 23, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_26:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 27, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_27:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 31, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_28:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 35, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_29:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 39, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_30:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 43, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_31:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 47, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_32:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 51, 18
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_33:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 15, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_34:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 19, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_35:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 23, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_36:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 27, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_37:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 31, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_38:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 35, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_39:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 39, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_40:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 43, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_41:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 47, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_42:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 51, 11
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_43:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 15, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_44:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 19, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_45:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 23, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_46:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 27, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_47:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 31, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_48:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 35, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_49:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 39, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_50:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 43, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_51:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 47, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_52:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 51, 4
 	waitstate
 	goto EventScript_WarpZone0_1
 
 EventScript_WarpZone0_53:
+	setvar VAR_REVISITING_ZONE, 0
 	warpteleport MAP_ZONE0C, 255, 2, 25
 	waitstate
 	goto EventScript_WarpZone0_1
