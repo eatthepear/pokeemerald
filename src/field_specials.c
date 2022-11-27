@@ -4552,8 +4552,8 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE13A_LEAF_STONE);
         count += !FlagGet(FLAG_ITEM_ZONE13A_SHINY_STONE);
         count += !FlagGet(FLAG_ITEM_ZONE14A_FULL_HEAL);
-        count += !FlagGet(FLAG_ITEM_ZONE14B_DUSK_STONE);
         count += !FlagGet(FLAG_ITEM_ZONE14B_HYPER_POTION);
+        count += !FlagGet(FLAG_ITEM_ZONE14C_DUSK_STONE);
         if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE13A_LUM_BERRY);

@@ -4,51 +4,17 @@ Zone14B_MapScripts::
 	.byte 0
 
 Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME:
-	goto_if_set FLAG_ITEM_ZONE14B_HYPER_POTION, Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	goto_if_set FLAG_ITEM_ZONE14B_HYPER_POTION, Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_1
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
-Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_1:
-	goto_if_set FLAG_ITEM_ZONE14B_DUSK_STONE, Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_5
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
 	return
 
-Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	goto Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_1
-
-Zone14B_MapScripts_MAP_SCRIPT_ON_RESUME_5:
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	return
 
 Zone14B_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setflashlevel 4
 	return
-
-
-Zone14B_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 14
-	goto_if_gt Zone14B_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone14B_EventScript_Exit_7
-Zone14B_EventScript_Exit_5:
-	warp MAP_ZONE14SANCTUARY, 255, 22, 7
-	waitstate
-Zone14B_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone14B_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone14B_EventScript_Exit_1
-
-Zone14B_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone14B_EventScript_Exit_5
-
-Zone14B_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone14B_EventScript_Exit_6
-	goto Zone14B_EventScript_Exit_5
 
 
 Zone14B_EventScript_LeviathanBattle::
@@ -112,24 +78,6 @@ Zone14B_EventScript_HyperPotion::
 	end
 
 Zone14B_EventScript_HyperPotion_2:
-	msgbox gText_ItemChestIsEmpty
-	release
-	end
-
-
-Zone14B_EventScript_DuskStone::
-	lock
-	goto_if_set FLAG_ITEM_ZONE14B_DUSK_STONE, Zone14B_EventScript_DuskStone_2
-	waitse
-	removeobject VAR_LAST_TALKED
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE14B_DUSK_STONE
-	addobject VAR_LAST_TALKED
-	finditem ITEM_DUSK_STONE, 1
-	release
-	end
-
-Zone14B_EventScript_DuskStone_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end

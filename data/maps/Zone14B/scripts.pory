@@ -5,31 +5,10 @@ mapscripts Zone14B_MapScripts {
 		} else {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
-		if (flag(FLAG_ITEM_ZONE14B_DUSK_STONE)) {
-			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-		} else {
-			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
-		}
 	}
     MAP_SCRIPT_ON_TRANSITION {
 		setflashlevel(4)
     }
-}
-
-script Zone14B_EventScript_Exit {
-    lockall
-    if (var(VAR_ZONE) > 14) {
-		call(EventScript_WarpZone0)
-    } else {
-		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-			goto(EventScript_BrutalExitNotSatisfied)
-		}
-        warp(MAP_ZONE14SANCTUARY, 255, 22, 7)
-		waitstate
-    }
-    releaseall
-    end
 }
 
 script Zone14B_EventScript_LeviathanBattle {
@@ -99,23 +78,6 @@ script Zone14B_EventScript_HyperPotion {
 	setflag(FLAG_ITEM_ZONE14B_HYPER_POTION)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_HYPER_POTION, 1)
-	release
-	end
-}
-
-script Zone14B_EventScript_DuskStone {
-	lock
-	if (flag(FLAG_ITEM_ZONE14B_DUSK_STONE)) {
-		msgbox(gText_ItemChestIsEmpty)
-		release
-		end
-	}
-	waitse
-	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
-	setflag(FLAG_ITEM_ZONE14B_DUSK_STONE)
-	addobject(VAR_LAST_TALKED)
-	finditem(ITEM_DUSK_STONE, 1)
 	release
 	end
 }

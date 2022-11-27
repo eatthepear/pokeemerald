@@ -2546,7 +2546,7 @@ static const struct TrainerMon sParty_Berke[] = {// Shuffled Party
     {
     .iv = 10,
     .lvl = 30,
-    .species = SPECIES_BIBAREL,
+    .species = SPECIES_RELICANTH,
     }
 };
 

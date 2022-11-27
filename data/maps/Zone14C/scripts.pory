@@ -1,5 +1,29 @@
 mapscripts Zone14C_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if (flag(FLAG_ITEM_ZONE14C_DUSK_STONE)) {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+	}
     MAP_SCRIPT_ON_TRANSITION {
 		setflashlevel(4)
     }
+}
+
+script Zone14C_EventScript_DuskStone {
+	lock
+	if (flag(FLAG_ITEM_ZONE14C_DUSK_STONE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE14C_DUSK_STONE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_DUSK_STONE, 1)
+	release
+	end
 }

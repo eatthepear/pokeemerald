@@ -1096,7 +1096,7 @@
 #define FLAG_ITEM_ZONE13A_SHINY_STONE                               0x41E
 #define FLAG_ITEM_ZONE14A_FULL_HEAL                                 0x41F
 #define FLAG_ITEM_ZONE14B_HYPER_POTION                              0x420
-#define FLAG_ITEM_ZONE14B_DUSK_STONE                                0x421
+#define FLAG_ITEM_ZONE14C_DUSK_STONE                                0x421
 #define FLAG_ITEM_ZONE15A_DUSK_BALL                                 0x422
 #define FLAG_ITEM_ZONE15A_TIMER_BALL                                0x423
 #define FLAG_ITEM_ZONE15A_ICE_STONE                                 0x424
