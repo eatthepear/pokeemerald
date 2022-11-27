@@ -4795,7 +4795,7 @@
       "id": "LAYOUT_ZONE14B",
       "name": "Zone14B_Layout",
       "width": 40,
-      "height": 33,
+      "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Zone14B/border.bin",
@@ -4804,7 +4804,7 @@
     {
       "id": "LAYOUT_ZONE14C",
       "name": "Zone14C_Layout",
-      "width": 15,
+      "width": 30,
       "height": 15,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
