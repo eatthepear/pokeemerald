@@ -2777,6 +2777,7 @@ script EventScript_PorygonExit {
 				case 13:
 					warp(MAP_ZONE14SANCTUARY, 255, 22, 7)
 				case 15:
+					warp(MAP_ZONE15SANCTUARY, 255, 22, 7)
 				case 16:
 				case 17:
 				case 18:

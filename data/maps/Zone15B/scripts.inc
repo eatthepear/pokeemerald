@@ -7,33 +7,6 @@ Zone15B_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	.2byte 0
 
 
-Zone15B_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 15
-	goto_if_gt Zone15B_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone15B_EventScript_Exit_7
-Zone15B_EventScript_Exit_5:
-	warp MAP_ZONE15SANCTUARY, 255, 22, 7
-	waitstate
-Zone15B_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone15B_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone15B_EventScript_Exit_1
-
-Zone15B_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone15B_EventScript_Exit_5
-
-Zone15B_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone15B_EventScript_Exit_6
-	goto Zone15B_EventScript_Exit_5
-
-
 Zone15B_EventScript_LeviathanBattle::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -59,13 +32,14 @@ Zone15B_EventScript_LeviathanBattle_1:
 	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone15B_EventScript_LeviathanBattle_Text_3
+	applymovement 1, Common_Movement_FaceUp
+	waitmovement 0
 	fadescreenswapbuffers FADE_TO_BLACK
 	playmoncry SPECIES_PORYGON, 2
 	delay 40
 	waitmoncry
 	removeobject 1
 	removeobject 2
-	special CheckLeadMonTough
 	setflag FLAG_BEAT_LEVIATHAN_13
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone15B_EventScript_LeviathanBattle_Text_4
@@ -96,7 +70,7 @@ Zone15B_EventScript_LeviathanBattle_Text_2:
 
 Zone15B_EventScript_LeviathanBattle_Text_3:
 	.string "{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the\n"
-	.string "assignment. Requesting immediate evac.$"
+	.string "assignment. Will relocate immediately.$"
 
 Zone15B_EventScript_LeviathanBattle_Text_4:
 	.string "It looks like a bag was left behind!\pInside are… Shards?$"

@@ -2,7 +2,7 @@
   "id": "MAP_ZONE15B",
   "name": "Zone15B",
   "layout": "LAYOUT_ZONE15B",
-  "music": "MUS_HG_SEQ_GS_D_KOORINONUKE",
+  "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_ZONE_15",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -28,17 +28,30 @@
       "flag": "FLAG_BEAT_LEVIATHAN_13"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PORYGON",
+      "graphics_id": "OBJ_EVENT_GFX_SHINY_PORYGON",
       "x": 7,
       "y": 72,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_BEAT_LEVIATHAN_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PORYGON",
+      "x": 7,
+      "y": 67,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_PorygonExit",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -51,15 +64,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 67,
-      "elevation": 0,
-      "var": "VAR_GENERIC",
-      "var_value": "0",
-      "script": "Zone15B_EventScript_Exit"
-    }
+
   ],
   "bg_events": [
 
