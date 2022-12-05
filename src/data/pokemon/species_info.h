@@ -11,7 +11,7 @@
 #define FLIP    0
 #define NO_FLIP 1
 
-#define PIKACHU_BASE_STATS(gender, flip)                                   \
+#define PIKACHU_SPECIES_INFO(gender, flip)                                 \
     {                                                                      \
         .baseHP        = 35,                                               \
         .baseAttack    = 55,                                               \
@@ -24,7 +24,7 @@
         .catchRate = 190,                                                  \
         .expYield = 110,                                                   \
         .evYield_Speed     = 2,                                            \
-        .itemRare = ITEM_LIGHT_BALL,                                          \
+        .itemRare = ITEM_LIGHT_BALL,                                       \
         .genderRatio = gender,                                             \
         .eggCycles = 0,                                                    \
         .friendship = 70,                                                  \
@@ -38,7 +38,10 @@
         // .abilities = {ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD},
         // .baseSpAttack  = 50,                                               
 
-#define PICHU_BASE_STATS(flip)                                             \
+#define COSPLAY_PIKACHU_SPECIES_INFO(flip) PIKACHU_SPECIES_INFO(MON_FEMALE, flip)
+#define CAP_PIKACHU_SPECIES_INFO(flip)     PIKACHU_SPECIES_INFO(MON_MALE, flip)
+
+#define PICHU_SPECIES_INFO(flip)                                           \
     {                                                                      \
         .baseHP        = 20,                                               \
         .baseAttack    = 40,                                               \
@@ -63,7 +66,7 @@
     }
         // .abilities = {ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD},
 
-#define SHELLOS_BASE_STATS(color)                                                   \
+#define SHELLOS_SPECIES_INFO(color)                                                   \
     {                                                                               \
         .baseHP        = 76,                                                        \
         .baseAttack    = 48,                                                        \
@@ -88,7 +91,7 @@
     }
         // .abilities = {ABILITY_STICKY_HOLD, ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE},
 
-#define GASTRODON_BASE_STATS(color)                                                 \
+#define GASTRODON_SPECIES_INFO(color)                                                 \
     {                                                                               \
         .baseHP        = 111,                                                       \
         .baseAttack    = 83,                                                        \
@@ -113,7 +116,7 @@
     }
         // .abilities = {ABILITY_STICKY_HOLD, ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE},
 
-#define DEERLING_BASE_STATS(color)                                                   \
+#define DEERLING_SPECIES_INFO(color)                                                   \
     {                                                                                \
         .baseHP        = 60,                                                         \
         .baseAttack    = 60,                                                         \
@@ -137,7 +140,7 @@
         .noFlip = FALSE,                                                             \
     }
 
-#define SAWSBUCK_BASE_STATS                                                          \
+#define SAWSBUCK_SPECIES_INFO                                                          \
     {                                                                                \
         .baseHP        = 80,                                                         \
         .baseAttack    = 100,                                                        \
@@ -161,7 +164,7 @@
         .noFlip = FALSE,                                                             \
     }
 
-#define FLABEBE_BASE_STATS                                                          \
+#define FLABEBE_SPECIES_INFO                                                          \
     {                                                                               \
         .baseHP        = 44,                                                        \
         .baseAttack    = 38,                                                        \
@@ -186,7 +189,7 @@
     }
         // .abilities = {ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS},
 
-#define FLOETTE_BASE_STATS                                                          \
+#define FLOETTE_SPECIES_INFO                                                          \
     {                                                                               \
         .baseHP        = 54,                                                        \
         .baseAttack    = 45,                                                        \
@@ -211,7 +214,7 @@
     }
         // .abilities = {ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS},
 
-#define FLORGES_BASE_STATS                                                          \
+#define FLORGES_SPECIES_INFO                                                          \
     {                                                                               \
         .baseHP        = 78,                                                        \
         .baseAttack    = 65,                                                        \
@@ -236,7 +239,7 @@
     }
         // .abilities = {ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS},
 
-#define FURFROU_BASE_STATS(flip)                      \
+#define FURFROU_SPECIES_INFO(flip)                      \
     {                                                 \
         .baseHP        = 75,                          \
         .baseAttack    = 80,                          \
@@ -260,7 +263,7 @@
         .noFlip = flip,                               \
     }
 
-#define ORICORIO_BASE_STATS(type, color)            \
+#define ORICORIO_SPECIES_INFO(type, color)            \
 {                                                   \
         .baseHP        = 75,                        \
         .baseAttack    = 70,                        \
@@ -285,7 +288,7 @@
         .noFlip = FALSE,                            \
     }
 
-#define ROCKRUFF_BASE_STATS(ability1, ability2, hiddenAbility)\
+#define ROCKRUFF_SPECIES_INFO(ability1, ability2, hiddenAbility)\
     {                                                         \
         .baseHP        = 45,                                  \
         .baseAttack    = 65,                                  \
@@ -309,7 +312,7 @@
         .noFlip = FALSE,                                      \
     }
 
-#define MIMIKYU_BASE_STATS                            \
+#define MIMIKYU_SPECIES_INFO                            \
     {                                                 \
         .baseHP        = 55,                          \
         .baseAttack    = 90,                          \
@@ -334,7 +337,7 @@
         .noFlip = FALSE,                              \
     }
 
-#define CRAMORANT_BASE_STATS                              \
+#define CRAMORANT_SPECIES_INFO                              \
     {                                                     \
         .baseHP        = 70,                              \
         .baseAttack    = 85,                              \
@@ -358,7 +361,7 @@
         .noFlip = FALSE,                                  \
     }
 
-#define TOXTRICITY_BASE_STATS                                              \
+#define TOXTRICITY_SPECIES_INFO                                              \
     {                                                                      \
         .baseHP        = 75,                                               \
         .baseAttack    = 98,                                               \
@@ -383,7 +386,7 @@
     }
         // .abilities = {ABILITY_PUNK_ROCK, ABILITY_PLUS/ABILITY_MINUS, ABILITY_TECHNICIAN},
 
-#define SINISTEA_BASE_STATS                                                  \
+#define SINISTEA_SPECIES_INFO                                                  \
     {                                                                        \
         .baseHP        = 40,                                                 \
         .baseAttack    = 45,                                                 \
@@ -408,7 +411,7 @@
     }
         // .abilities = {ABILITY_WEAK_ARMOR, ABILITY_NONE, ABILITY_CURSED_BODY},
 
-#define POLTEAGEIST_BASE_STATS                                               \
+#define POLTEAGEIST_SPECIES_INFO                                               \
     {                                                                        \
         .baseHP        = 60,                                                 \
         .baseAttack    = 65,                                                 \
@@ -433,7 +436,7 @@
     }
         // .abilities = {ABILITY_WEAK_ARMOR, ABILITY_NONE, ABILITY_CURSED_BODY},
 
-#define ALCREMIE_BASE_STATS(color)                                          \
+#define ALCREMIE_SPECIES_INFO(color)                                          \
     {                                                                       \
         .baseHP        = 65,                                                \
         .baseAttack    = 60,                                                \
@@ -458,7 +461,7 @@
     }
         // .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE, ABILITY_AROMA_VEIL},
 
-#define MORPEKO_BASE_STATS                                 \
+#define MORPEKO_SPECIES_INFO                                 \
     {                                                      \
         .baseHP        = 58,                               \
         .baseAttack    = 95,                               \
@@ -482,10 +485,10 @@
         .noFlip = FALSE,                                   \
     }
 
-#define COSPLAY_PIKACHU_BASE_STATS(flip) PIKACHU_BASE_STATS(MON_FEMALE, flip)
-#define CAP_PIKACHU_BASE_STATS(flip)     PIKACHU_BASE_STATS(MON_MALE, flip)
+#define COSPLAY_PIKACHU_SPECIES_INFO(flip) PIKACHU_SPECIES_INFO(MON_FEMALE, flip)
+#define CAP_PIKACHU_SPECIES_INFO(flip)     PIKACHU_SPECIES_INFO(MON_MALE, flip)
 
-#define UNOWN_BASE_STATS(flip)                        \
+#define UNOWN_SPECIES_INFO(flip)                      \
     {                                                 \
         .baseHP        = 48,                          \
         .baseAttack    = 72,                          \
@@ -510,7 +513,7 @@
         .noFlip = flip,                               \
     }
 
-#define CASTFORM_BASE_STATS(type, color)              \
+#define CASTFORM_SPECIES_INFO(type, color)            \
     {                                                 \
         .baseHP        = 70,                          \
         .baseAttack    = 70,                          \
@@ -523,8 +526,8 @@
         .catchRate = 45,                              \
         .expYield = 147,                              \
         .evYield_HP        = 1,                       \
-        .itemCommon = ITEM_MYSTIC_WATER,                   \
-        .itemRare = ITEM_MYSTIC_WATER,                   \
+        .itemCommon = ITEM_MYSTIC_WATER,              \
+        .itemRare = ITEM_MYSTIC_WATER,                \
         .genderRatio = PERCENT_FEMALE(50),            \
         .eggCycles = 25,                              \
         .friendship = 70,                             \
@@ -536,7 +539,7 @@
         .noFlip = FALSE,                              \
     }
 
-#define BURMY_BASE_STATS(color)                                          \
+#define BURMY_SPECIES_INFO(color)                                        \
     {                                                                    \
         .baseHP        = 40,                                             \
         .baseAttack    = 29,                                             \
@@ -560,7 +563,7 @@
         .noFlip = FALSE,                                                 \
     }
 
-#define CHERRIM_BASE_STATS(color)                        \
+#define CHERRIM_SPECIES_INFO(color)                      \
     {                                                    \
         .baseHP        = 70,                             \
         .baseAttack    = 60,                             \
@@ -573,7 +576,7 @@
         .catchRate = 75,                                 \
         .expYield = 158,                                 \
         .evYield_SpAttack  = 2,                          \
-        .itemRare = ITEM_MIRACLE_SEED,                      \
+        .itemRare = ITEM_MIRACLE_SEED,                   \
         .genderRatio = PERCENT_FEMALE(50),               \
         .eggCycles = 20,                                 \
         .friendship = 70,                                \
@@ -585,8 +588,7 @@
         .noFlip = FALSE,                                 \
     }
 
-
-#define ROTOM_FORM_BASE_STATS(type, flip)             \
+#define ROTOM_FORM_SPECIES_INFO(type, flip)           \
     {                                                 \
         .baseHP        = 50,                          \
         .baseAttack    = 65,                          \
@@ -611,7 +613,7 @@
         .noFlip = flip,                               \
     }
 
-#define ARCEUS_BASE_STATS(type)                        \
+#define ARCEUS_SPECIES_INFO(type)                      \
     {                                                  \
         .baseHP        = 120,                          \
         .baseAttack    = 120,                          \
@@ -636,7 +638,7 @@
         .flags = SPECIES_FLAG_MYTHICAL,                \
     }
 
-#define GENESECT_BASE_STATS                           \
+#define GENESECT_SPECIES_INFO                           \
     {                                                 \
         .baseHP        = 71,                          \
         .baseAttack    = 120,                         \
@@ -663,7 +665,7 @@
         .flags = SPECIES_FLAG_MYTHICAL,               \
     }
 
-#define VIVILLON_BASE_STATS(color)                                                      \
+#define VIVILLON_SPECIES_INFO(color)                                                    \
     {                                                                                   \
         .baseHP        = 80,                                                            \
         .baseAttack    = 52,                                                            \
@@ -689,7 +691,7 @@
         .noFlip = FALSE,                                                                \
     }
 
-#define PUMKPABOO_MISC_STATS                                           \
+#define PUMKPABOO_MISC_INFO                                            \
         .type1 = TYPE_GHOST,                                           \
         .type2 = TYPE_GRASS,                                           \
         .catchRate = 120,                                              \
@@ -705,7 +707,7 @@
         .bodyColor = BODY_COLOR_BROWN,                                 \
         .noFlip = FALSE
 
-#define GOURGEIST_MISC_STATS                                           \
+#define GOURGEIST_MISC_INFO                                            \
         .type1 = TYPE_GHOST,                                           \
         .type2 = TYPE_GRASS,                                           \
         .catchRate = 60,                                               \
@@ -721,7 +723,7 @@
         .bodyColor = BODY_COLOR_BROWN,                                 \
         .noFlip = FALSE
 
-#define XERNEAS_BASE_STATS                              \
+#define XERNEAS_SPECIES_INFO                            \
     {                                                   \
         .baseHP        = 126,                           \
         .baseAttack    = 131,                           \
@@ -746,7 +748,7 @@
         .flags = SPECIES_FLAG_LEGENDARY,                \
     }
 
-#define ZYGARDE_50_BASE_STATS(ability)       \
+#define ZYGARDE_50_SPECIES_INFO(ability)     \
     {                                        \
         .baseHP        = 108,                \
         .baseAttack    = 100,                \
@@ -771,7 +773,7 @@
         .flags = SPECIES_FLAG_LEGENDARY,     \
     }
 
-#define ZYGARDE_10_BASE_STATS(ability)       \
+#define ZYGARDE_10_SPECIES_INFO(ability)     \
     {                                        \
         .baseHP        = 54,                 \
         .baseAttack    = 100,                \
@@ -787,7 +789,7 @@
         .genderRatio = MON_GENDERLESS,       \
         .eggCycles = 120,                    \
         .friendship = 0,                     \
-        .growthRate = GROWTH_MEDIUM_FAST,           \
+        .growthRate = GROWTH_MEDIUM_FAST,    \
         .eggGroup1 = EGG_GROUP_UNDISCOVERED, \
         .eggGroup2 = EGG_GROUP_UNDISCOVERED, \
         .abilities = {ability, ABILITY_NONE},\
@@ -796,7 +798,7 @@
         .flags = SPECIES_FLAG_LEGENDARY,     \
     }
 
-#define SILVALLY_BASE_STATS(type)                       \
+#define SILVALLY_SPECIES_INFO(type)                     \
     {                                                   \
         .baseHP        = 95,                            \
         .baseAttack    = 95,                            \
@@ -812,7 +814,7 @@
         .genderRatio = MON_GENDERLESS,                  \
         .eggCycles = 120,                               \
         .friendship = 0,                                \
-        .growthRate = GROWTH_MEDIUM_FAST,                      \
+        .growthRate = GROWTH_MEDIUM_FAST,               \
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,            \
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,            \
         .abilities = {ABILITY_RKS_SYSTEM, ABILITY_NONE},\
@@ -837,14 +839,14 @@
         .baseSpAttack  = 100, \
         .baseSpDefense = 60
 
-#define MINIOR_MISC_STATS(color)                          \
+#define MINIOR_MISC_INFO(color)                          \
         .type1 = TYPE_ROCK,                               \
         .type2 = TYPE_FLYING,                             \
         .catchRate = 30,                                  \
         .expYield = 154,                                  \
         .evYield_Defense   = 1,                           \
         .evYield_SpDefense = 1,                           \
-        .itemRare = ITEM_STAR_PIECE,                         \
+        .itemRare = ITEM_STAR_PIECE,                      \
         .genderRatio = MON_GENDERLESS,                    \
         .eggCycles = 25,                                  \
         .friendship = 70,                                 \
@@ -855,21 +857,21 @@
         .bodyColor = color,                               \
         .noFlip = TRUE
 
-#define MINIOR_METEOR_BASE_STATS            \
+#define MINIOR_METEOR_SPECIES_INFO          \
     {                                       \
         MINIOR_METEOR_ATTRIBUTES,           \
-        MINIOR_MISC_STATS(BODY_COLOR_BROWN),\
+        MINIOR_MISC_INFO(BODY_COLOR_BROWN), \
     }
 
 
-#define MINIOR_CORE_BASE_STATS(color)\
-    {                                \
-        MINIOR_CORE_ATTRIBUTES,      \
-        MINIOR_MISC_STATS(color),    \
+#define MINIOR_CORE_SPECIES_INFO(color) \
+    {                                   \
+        MINIOR_CORE_ATTRIBUTES,         \
+        MINIOR_MISC_INFO(color),        \
     }
 
 
-#define MAGEARNA_BASE_STATS(color)                      \
+#define MAGEARNA_SPECIES_INFO(color)                    \
     {                                                   \
         .baseHP        = 80,                            \
         .baseAttack    = 95,                            \
@@ -885,7 +887,7 @@
         .genderRatio = MON_GENDERLESS,                  \
         .eggCycles = 120,                               \
         .friendship = 0,                                \
-        .growthRate = GROWTH_MEDIUM_FAST,                      \
+        .growthRate = GROWTH_MEDIUM_FAST,               \
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,            \
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,            \
         .abilities = {ABILITY_SOUL_HEART, ABILITY_NONE},\
@@ -894,7 +896,7 @@
         .flags = SPECIES_FLAG_MYTHICAL,                 \
     }
     
-#define ZARUDE_BASE_STATS                               \
+#define ZARUDE_SPECIES_INFO                             \
     {                                                   \
         .baseHP        = 105,                           \
         .baseAttack    = 120,                           \
@@ -910,7 +912,7 @@
         .genderRatio = MON_GENDERLESS,                  \
         .eggCycles = 120,                               \
         .friendship = 0,                                \
-        .growthRate = GROWTH_MEDIUM_FAST,                      \
+        .growthRate = GROWTH_MEDIUM_FAST,               \
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,            \
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,            \
         .abilities = {ABILITY_LEAF_GUARD, ABILITY_NONE},\
@@ -919,7 +921,7 @@
         .flags = SPECIES_FLAG_MYTHICAL,                 \
     }
 
-const struct BaseStats gBaseStats[] =
+const struct SpeciesInfo gSpeciesInfo[] =
 {
     [SPECIES_NONE] = {0},
 
@@ -1546,7 +1548,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_PIKACHU] = PIKACHU_BASE_STATS(PERCENT_FEMALE(50), FLIP),
+    [SPECIES_PIKACHU] = PIKACHU_SPECIES_INFO(PERCENT_FEMALE(50), FLIP),
 
     [SPECIES_RAICHU] =
     {
@@ -5266,7 +5268,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_PICHU] = PICHU_BASE_STATS(FLIP),
+    [SPECIES_PICHU] = PICHU_SPECIES_INFO(FLIP),
 
     [SPECIES_CLEFFA] =
     {
@@ -5971,7 +5973,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_UNOWN] = UNOWN_BASE_STATS(FLIP),
+    [SPECIES_UNOWN] = UNOWN_SPECIES_INFO(FLIP),
 
     [SPECIES_WOBBUFFET] =
     {
@@ -9780,7 +9782,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CASTFORM] = CASTFORM_BASE_STATS(TYPE_NORMAL, BODY_COLOR_GRAY),
+    [SPECIES_CASTFORM] = CASTFORM_SPECIES_INFO(TYPE_NORMAL, BODY_COLOR_GRAY),
 
     [SPECIES_KECLEON] =
     {
@@ -11328,7 +11330,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_BURMY] = BURMY_BASE_STATS(BODY_COLOR_GREEN),
+    [SPECIES_BURMY] = BURMY_SPECIES_INFO(BODY_COLOR_GREEN),
 
     [SPECIES_WORMADAM] =
     {
@@ -11539,11 +11541,11 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CHERRIM] = CHERRIM_BASE_STATS(BODY_COLOR_PURPLE),
+    [SPECIES_CHERRIM] = CHERRIM_SPECIES_INFO(BODY_COLOR_PURPLE),
 
-    [SPECIES_SHELLOS] = SHELLOS_BASE_STATS(BODY_COLOR_PURPLE),
+    [SPECIES_SHELLOS] = SHELLOS_SPECIES_INFO(BODY_COLOR_PURPLE),
 
-    [SPECIES_GASTRODON] = GASTRODON_BASE_STATS(BODY_COLOR_PURPLE),
+    [SPECIES_GASTRODON] = GASTRODON_SPECIES_INFO(BODY_COLOR_PURPLE),
 
     [SPECIES_AMBIPOM] =
     {
@@ -15662,9 +15664,9 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_DEERLING] = DEERLING_BASE_STATS(BODY_COLOR_PINK),
+    [SPECIES_DEERLING] = DEERLING_SPECIES_INFO(BODY_COLOR_PINK),
 
-    [SPECIES_SAWSBUCK] = SAWSBUCK_BASE_STATS,
+    [SPECIES_SAWSBUCK] = SAWSBUCK_SPECIES_INFO,
 
     [SPECIES_EMOLGA] =
     {
@@ -17238,7 +17240,7 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_MYTHICAL,
     },
 
-    [SPECIES_GENESECT] = GENESECT_BASE_STATS,
+    [SPECIES_GENESECT] = GENESECT_SPECIES_INFO,
 
     [SPECIES_CHESPIN] =
     {
@@ -17634,7 +17636,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_VIVILLON] = VIVILLON_BASE_STATS(BODY_COLOR_WHITE),
+    [SPECIES_VIVILLON] = VIVILLON_SPECIES_INFO(BODY_COLOR_WHITE),
 
     [SPECIES_LITLEO] =
     {
@@ -17687,11 +17689,11 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_GENDER_DIFFERENCE,
     },
 
-    [SPECIES_FLABEBE] = FLABEBE_BASE_STATS,
+    [SPECIES_FLABEBE] = FLABEBE_SPECIES_INFO,
 
-    [SPECIES_FLOETTE] = FLOETTE_BASE_STATS,
+    [SPECIES_FLOETTE] = FLOETTE_SPECIES_INFO,
 
-    [SPECIES_FLORGES] = FLORGES_BASE_STATS,
+    [SPECIES_FLORGES] = FLORGES_SPECIES_INFO,
 
     [SPECIES_SKIDDO] =
     {
@@ -17798,7 +17800,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_FURFROU] = FURFROU_BASE_STATS(FLIP),
+    [SPECIES_FURFROU] = FURFROU_SPECIES_INFO(FLIP),
 
     [SPECIES_ESPURR] =
     {
@@ -18639,7 +18641,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 66,
         // .baseSpAttack  = 44,
         .baseSpDefense = 55,
-        PUMKPABOO_MISC_STATS,
+        PUMKPABOO_MISC_INFO,
     },
 
     [SPECIES_GOURGEIST] =
@@ -18652,7 +18654,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 90,
         // .baseSpAttack  = 58,
         .baseSpDefense = 75,
-        GOURGEIST_MISC_STATS,
+        GOURGEIST_MISC_INFO,
     },
 
     [SPECIES_BERGMITE] =
@@ -18755,7 +18757,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_XERNEAS] = XERNEAS_BASE_STATS,
+    [SPECIES_XERNEAS] = XERNEAS_SPECIES_INFO,
 
     [SPECIES_YVELTAL] =
     {
@@ -18782,7 +18784,7 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_LEGENDARY,
     },
 
-    [SPECIES_ZYGARDE] = ZYGARDE_50_BASE_STATS(ABILITY_AURA_BREAK),
+    [SPECIES_ZYGARDE] = ZYGARDE_50_SPECIES_INFO(ABILITY_AURA_BREAK),
 
     [SPECIES_DIANCIE] =
     {
@@ -19342,7 +19344,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ORICORIO] = ORICORIO_BASE_STATS(TYPE_FIRE, BODY_COLOR_RED),
+    [SPECIES_ORICORIO] = ORICORIO_SPECIES_INFO(TYPE_FIRE, BODY_COLOR_RED),
 
     [SPECIES_CUTIEFLY] =
     {
@@ -19397,8 +19399,8 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ROCKRUFF] = ROCKRUFF_BASE_STATS(ABILITY_VITAL_SPIRIT, ABILITY_NONE, ABILITY_STEADFAST),
-    // [SPECIES_ROCKRUFF] = ROCKRUFF_BASE_STATS(ABILITY_KEEN_EYE, ABILITY_VITAL_SPIRIT, ABILITY_STEADFAST),
+    [SPECIES_ROCKRUFF] = ROCKRUFF_SPECIES_INFO(ABILITY_VITAL_SPIRIT, ABILITY_NONE, ABILITY_STEADFAST),
+    // [SPECIES_ROCKRUFF] = ROCKRUFF_SPECIES_INFO(ABILITY_KEEN_EYE, ABILITY_VITAL_SPIRIT, ABILITY_STEADFAST),
 
     [SPECIES_LYCANROC] =
     {
@@ -20125,9 +20127,9 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_LEGENDARY,
     },
 
-    [SPECIES_SILVALLY] = SILVALLY_BASE_STATS(TYPE_NORMAL),
+    [SPECIES_SILVALLY] = SILVALLY_SPECIES_INFO(TYPE_NORMAL),
 
-    [SPECIES_MINIOR] = MINIOR_METEOR_BASE_STATS,
+    [SPECIES_MINIOR] = MINIOR_METEOR_SPECIES_INFO,
 
     [SPECIES_KOMALA] =
     {
@@ -20204,7 +20206,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MIMIKYU] = MIMIKYU_BASE_STATS,
+    [SPECIES_MIMIKYU] = MIMIKYU_SPECIES_INFO,
 
     [SPECIES_BRUXISH] =
     {
@@ -20765,7 +20767,7 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_LEGENDARY,
     },
 
-    [SPECIES_MAGEARNA] = MAGEARNA_BASE_STATS(BODY_COLOR_GRAY),
+    [SPECIES_MAGEARNA] = MAGEARNA_SPECIES_INFO(BODY_COLOR_GRAY),
 
     [SPECIES_MARSHADOW] =
     {
@@ -21836,7 +21838,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CRAMORANT] = CRAMORANT_BASE_STATS,
+    [SPECIES_CRAMORANT] = CRAMORANT_SPECIES_INFO,
 
     [SPECIES_ARROKUDA] =
     {
@@ -21913,7 +21915,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_TOXTRICITY] = TOXTRICITY_BASE_STATS,
+    [SPECIES_TOXTRICITY] = TOXTRICITY_SPECIES_INFO,
 
     [SPECIES_SIZZLIPEDE] =
     {
@@ -22015,9 +22017,9 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_SINISTEA] = SINISTEA_BASE_STATS,
+    [SPECIES_SINISTEA] = SINISTEA_SPECIES_INFO,
 
-    [SPECIES_POLTEAGEIST] = POLTEAGEIST_BASE_STATS,
+    [SPECIES_POLTEAGEIST] = POLTEAGEIST_SPECIES_INFO,
 
     [SPECIES_HATENNA] =
     {
@@ -22343,7 +22345,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ALCREMIE] = ALCREMIE_BASE_STATS(BODY_COLOR_WHITE),
+    [SPECIES_ALCREMIE] = ALCREMIE_SPECIES_INFO(BODY_COLOR_WHITE),
 
     [SPECIES_FALINKS] =
     {
@@ -22519,7 +22521,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MORPEKO] = MORPEKO_BASE_STATS,
+    [SPECIES_MORPEKO] = MORPEKO_SPECIES_INFO,
 
     [SPECIES_CUFANT] =
     {
@@ -22894,7 +22896,7 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_LEGENDARY,
     },
 
-    [SPECIES_ZARUDE] = ZARUDE_BASE_STATS,
+    [SPECIES_ZARUDE] = ZARUDE_SPECIES_INFO,
 
     [SPECIES_REGIELEKI] =
     {
@@ -25836,55 +25838,55 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_HISUIAN_FORM,
     },
 
-    [SPECIES_PIKACHU_COSPLAY]   = COSPLAY_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_ROCK_STAR] = COSPLAY_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_BELLE]     = COSPLAY_PIKACHU_BASE_STATS(NO_FLIP),
-    [SPECIES_PIKACHU_POP_STAR]  = COSPLAY_PIKACHU_BASE_STATS(NO_FLIP),
-    [SPECIES_PIKACHU_PH_D]      = COSPLAY_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_LIBRE]     = COSPLAY_PIKACHU_BASE_STATS(FLIP),
+    [SPECIES_PIKACHU_COSPLAY]   = COSPLAY_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_ROCK_STAR] = COSPLAY_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_BELLE]     = COSPLAY_PIKACHU_SPECIES_INFO(NO_FLIP),
+    [SPECIES_PIKACHU_POP_STAR]  = COSPLAY_PIKACHU_SPECIES_INFO(NO_FLIP),
+    [SPECIES_PIKACHU_PH_D]      = COSPLAY_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_LIBRE]     = COSPLAY_PIKACHU_SPECIES_INFO(FLIP),
 
-    [SPECIES_PIKACHU_ORIGINAL_CAP] = CAP_PIKACHU_BASE_STATS(NO_FLIP),
-    [SPECIES_PIKACHU_HOENN_CAP]    = CAP_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_SINNOH_CAP]   = CAP_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_UNOVA_CAP]    = CAP_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_KALOS_CAP]    = CAP_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_ALOLA_CAP]    = CAP_PIKACHU_BASE_STATS(FLIP),
-    [SPECIES_PIKACHU_PARTNER_CAP]  = CAP_PIKACHU_BASE_STATS(NO_FLIP),
-    [SPECIES_PIKACHU_WORLD_CAP]    = CAP_PIKACHU_BASE_STATS(FLIP),
+    [SPECIES_PIKACHU_ORIGINAL_CAP] = CAP_PIKACHU_SPECIES_INFO(NO_FLIP),
+    [SPECIES_PIKACHU_HOENN_CAP]    = CAP_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_SINNOH_CAP]   = CAP_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_UNOVA_CAP]    = CAP_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_KALOS_CAP]    = CAP_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_ALOLA_CAP]    = CAP_PIKACHU_SPECIES_INFO(FLIP),
+    [SPECIES_PIKACHU_PARTNER_CAP]  = CAP_PIKACHU_SPECIES_INFO(NO_FLIP),
+    [SPECIES_PIKACHU_WORLD_CAP]    = CAP_PIKACHU_SPECIES_INFO(FLIP),
 
-    [SPECIES_PICHU_SPIKY_EARED] = PICHU_BASE_STATS(NO_FLIP),
+    [SPECIES_PICHU_SPIKY_EARED] = PICHU_SPECIES_INFO(NO_FLIP),
 
-    [SPECIES_UNOWN_B] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_C] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_D] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_E] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_F] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_G] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_H] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_I] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_J] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_K] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_L] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_M] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_N] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_O] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_P] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_Q] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_R] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_S] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_T] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_U] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_V] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_W] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_X] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_Y] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_Z] = UNOWN_BASE_STATS(NO_FLIP),
-    [SPECIES_UNOWN_EMARK] = UNOWN_BASE_STATS(FLIP),
-    [SPECIES_UNOWN_QMARK] = UNOWN_BASE_STATS(NO_FLIP),
+    [SPECIES_UNOWN_B] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_C] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_D] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_E] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_F] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_G] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_H] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_I] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_J] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_K] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_L] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_M] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_N] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_O] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_P] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_Q] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_R] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_S] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_T] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_U] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_V] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_W] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_X] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_Y] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_Z] = UNOWN_SPECIES_INFO(NO_FLIP),
+    [SPECIES_UNOWN_EMARK] = UNOWN_SPECIES_INFO(FLIP),
+    [SPECIES_UNOWN_QMARK] = UNOWN_SPECIES_INFO(NO_FLIP),
 
-    [SPECIES_CASTFORM_SUNNY] = CASTFORM_BASE_STATS(TYPE_FIRE, BODY_COLOR_RED),
-    [SPECIES_CASTFORM_RAINY] = CASTFORM_BASE_STATS(TYPE_WATER, BODY_COLOR_BLUE),
-    [SPECIES_CASTFORM_SNOWY] = CASTFORM_BASE_STATS(TYPE_ICE, BODY_COLOR_WHITE),
+    [SPECIES_CASTFORM_SUNNY] = CASTFORM_SPECIES_INFO(TYPE_FIRE, BODY_COLOR_RED),
+    [SPECIES_CASTFORM_RAINY] = CASTFORM_SPECIES_INFO(TYPE_WATER, BODY_COLOR_BLUE),
+    [SPECIES_CASTFORM_SNOWY] = CASTFORM_SPECIES_INFO(TYPE_ICE, BODY_COLOR_WHITE),
 
     [SPECIES_DEOXYS_ATTACK] =
     {
@@ -25960,8 +25962,8 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
     },
 
-    [SPECIES_BURMY_SANDY_CLOAK] = BURMY_BASE_STATS(BODY_COLOR_BROWN),
-    [SPECIES_BURMY_TRASH_CLOAK] = BURMY_BASE_STATS(BODY_COLOR_RED),
+    [SPECIES_BURMY_SANDY_CLOAK] = BURMY_SPECIES_INFO(BODY_COLOR_BROWN),
+    [SPECIES_BURMY_TRASH_CLOAK] = BURMY_SPECIES_INFO(BODY_COLOR_RED),
 
     [SPECIES_WORMADAM_SANDY_CLOAK] =
     {
@@ -26014,17 +26016,17 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CHERRIM_SUNSHINE] = CHERRIM_BASE_STATS(BODY_COLOR_PINK),
+    [SPECIES_CHERRIM_SUNSHINE] = CHERRIM_SPECIES_INFO(BODY_COLOR_PINK),
 
-    [SPECIES_SHELLOS_EAST_SEA] = SHELLOS_BASE_STATS(BODY_COLOR_BLUE),
+    [SPECIES_SHELLOS_EAST_SEA] = SHELLOS_SPECIES_INFO(BODY_COLOR_BLUE),
 
-    [SPECIES_GASTRODON_EAST_SEA] = GASTRODON_BASE_STATS(BODY_COLOR_BLUE),
+    [SPECIES_GASTRODON_EAST_SEA] = GASTRODON_SPECIES_INFO(BODY_COLOR_BLUE),
 
-    [SPECIES_ROTOM_HEAT]  = ROTOM_FORM_BASE_STATS(TYPE_FIRE, FLIP),
-    [SPECIES_ROTOM_WASH]  = ROTOM_FORM_BASE_STATS(TYPE_WATER, NO_FLIP),
-    [SPECIES_ROTOM_FROST] = ROTOM_FORM_BASE_STATS(TYPE_ICE, FLIP),
-    [SPECIES_ROTOM_FAN]   = ROTOM_FORM_BASE_STATS(TYPE_FLYING, FLIP),
-    [SPECIES_ROTOM_MOW]   = ROTOM_FORM_BASE_STATS(TYPE_GRASS, FLIP),
+    [SPECIES_ROTOM_HEAT]  = ROTOM_FORM_SPECIES_INFO(TYPE_FIRE, FLIP),
+    [SPECIES_ROTOM_WASH]  = ROTOM_FORM_SPECIES_INFO(TYPE_WATER, NO_FLIP),
+    [SPECIES_ROTOM_FROST] = ROTOM_FORM_SPECIES_INFO(TYPE_ICE, FLIP),
+    [SPECIES_ROTOM_FAN]   = ROTOM_FORM_SPECIES_INFO(TYPE_FLYING, FLIP),
+    [SPECIES_ROTOM_MOW]   = ROTOM_FORM_SPECIES_INFO(TYPE_GRASS, FLIP),
 
     [SPECIES_DIALGA_ORIGIN] =
     {
@@ -26126,23 +26128,23 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
     },
 
-    [SPECIES_ARCEUS_FIGHTING] = ARCEUS_BASE_STATS(TYPE_FIGHTING),
-    [SPECIES_ARCEUS_FLYING]   = ARCEUS_BASE_STATS(TYPE_FLYING),
-    [SPECIES_ARCEUS_POISON]   = ARCEUS_BASE_STATS(TYPE_POISON),
-    [SPECIES_ARCEUS_GROUND]   = ARCEUS_BASE_STATS(TYPE_GROUND),
-    [SPECIES_ARCEUS_ROCK]     = ARCEUS_BASE_STATS(TYPE_ROCK),
-    [SPECIES_ARCEUS_BUG]      = ARCEUS_BASE_STATS(TYPE_BUG),
-    [SPECIES_ARCEUS_GHOST]    = ARCEUS_BASE_STATS(TYPE_GHOST),
-    [SPECIES_ARCEUS_STEEL]    = ARCEUS_BASE_STATS(TYPE_STEEL),
-    [SPECIES_ARCEUS_FIRE]     = ARCEUS_BASE_STATS(TYPE_FIRE),
-    [SPECIES_ARCEUS_WATER]    = ARCEUS_BASE_STATS(TYPE_WATER),
-    [SPECIES_ARCEUS_GRASS]    = ARCEUS_BASE_STATS(TYPE_GRASS),
-    [SPECIES_ARCEUS_ELECTRIC] = ARCEUS_BASE_STATS(TYPE_ELECTRIC),
-    [SPECIES_ARCEUS_PSYCHIC]  = ARCEUS_BASE_STATS(TYPE_PSYCHIC),
-    [SPECIES_ARCEUS_ICE]      = ARCEUS_BASE_STATS(TYPE_ICE),
-    [SPECIES_ARCEUS_DRAGON]   = ARCEUS_BASE_STATS(TYPE_DRAGON),
-    [SPECIES_ARCEUS_DARK]     = ARCEUS_BASE_STATS(TYPE_DARK),
-    [SPECIES_ARCEUS_FAIRY]    = ARCEUS_BASE_STATS(TYPE_FAIRY),
+    [SPECIES_ARCEUS_FIGHTING] = ARCEUS_SPECIES_INFO(TYPE_FIGHTING),
+    [SPECIES_ARCEUS_FLYING]   = ARCEUS_SPECIES_INFO(TYPE_FLYING),
+    [SPECIES_ARCEUS_POISON]   = ARCEUS_SPECIES_INFO(TYPE_POISON),
+    [SPECIES_ARCEUS_GROUND]   = ARCEUS_SPECIES_INFO(TYPE_GROUND),
+    [SPECIES_ARCEUS_ROCK]     = ARCEUS_SPECIES_INFO(TYPE_ROCK),
+    [SPECIES_ARCEUS_BUG]      = ARCEUS_SPECIES_INFO(TYPE_BUG),
+    [SPECIES_ARCEUS_GHOST]    = ARCEUS_SPECIES_INFO(TYPE_GHOST),
+    [SPECIES_ARCEUS_STEEL]    = ARCEUS_SPECIES_INFO(TYPE_STEEL),
+    [SPECIES_ARCEUS_FIRE]     = ARCEUS_SPECIES_INFO(TYPE_FIRE),
+    [SPECIES_ARCEUS_WATER]    = ARCEUS_SPECIES_INFO(TYPE_WATER),
+    [SPECIES_ARCEUS_GRASS]    = ARCEUS_SPECIES_INFO(TYPE_GRASS),
+    [SPECIES_ARCEUS_ELECTRIC] = ARCEUS_SPECIES_INFO(TYPE_ELECTRIC),
+    [SPECIES_ARCEUS_PSYCHIC]  = ARCEUS_SPECIES_INFO(TYPE_PSYCHIC),
+    [SPECIES_ARCEUS_ICE]      = ARCEUS_SPECIES_INFO(TYPE_ICE),
+    [SPECIES_ARCEUS_DRAGON]   = ARCEUS_SPECIES_INFO(TYPE_DRAGON),
+    [SPECIES_ARCEUS_DARK]     = ARCEUS_SPECIES_INFO(TYPE_DARK),
+    [SPECIES_ARCEUS_FAIRY]    = ARCEUS_SPECIES_INFO(TYPE_FAIRY),
 
     [SPECIES_BASCULIN_BLUE_STRIPED] =
     {
@@ -26243,13 +26245,13 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_GALARIAN_FORM,
     },
 
-    [SPECIES_DEERLING_SUMMER] = DEERLING_BASE_STATS(BODY_COLOR_GREEN),
-    [SPECIES_DEERLING_AUTUMN] = DEERLING_BASE_STATS(BODY_COLOR_RED),
-    [SPECIES_DEERLING_WINTER] = DEERLING_BASE_STATS(BODY_COLOR_BROWN),
+    [SPECIES_DEERLING_SUMMER] = DEERLING_SPECIES_INFO(BODY_COLOR_GREEN),
+    [SPECIES_DEERLING_AUTUMN] = DEERLING_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_DEERLING_WINTER] = DEERLING_SPECIES_INFO(BODY_COLOR_BROWN),
 
-    [SPECIES_SAWSBUCK_SUMMER] = SAWSBUCK_BASE_STATS,
-    [SPECIES_SAWSBUCK_AUTUMN] = SAWSBUCK_BASE_STATS,
-    [SPECIES_SAWSBUCK_WINTER] = SAWSBUCK_BASE_STATS,
+    [SPECIES_SAWSBUCK_SUMMER] = SAWSBUCK_SPECIES_INFO,
+    [SPECIES_SAWSBUCK_AUTUMN] = SAWSBUCK_SPECIES_INFO,
+    [SPECIES_SAWSBUCK_WINTER] = SAWSBUCK_SPECIES_INFO,
 
     [SPECIES_TORNADUS_THERIAN] =
     {
@@ -26430,10 +26432,10 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_MYTHICAL,
     },
 
-    [SPECIES_GENESECT_DOUSE_DRIVE] = GENESECT_BASE_STATS,
-    [SPECIES_GENESECT_SHOCK_DRIVE] = GENESECT_BASE_STATS,
-    [SPECIES_GENESECT_BURN_DRIVE] = GENESECT_BASE_STATS,
-    [SPECIES_GENESECT_CHILL_DRIVE] = GENESECT_BASE_STATS,
+    [SPECIES_GENESECT_DOUSE_DRIVE] = GENESECT_SPECIES_INFO,
+    [SPECIES_GENESECT_SHOCK_DRIVE] = GENESECT_SPECIES_INFO,
+    [SPECIES_GENESECT_BURN_DRIVE] = GENESECT_SPECIES_INFO,
+    [SPECIES_GENESECT_CHILL_DRIVE] = GENESECT_SPECIES_INFO,
 
     [SPECIES_GRENINJA_BATTLE_BOND] =
     {
@@ -26483,35 +26485,35 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
     },
 
-    [SPECIES_VIVILLON_POLAR]       = VIVILLON_BASE_STATS(BODY_COLOR_BLUE),
-    [SPECIES_VIVILLON_TUNDRA]      = VIVILLON_BASE_STATS(BODY_COLOR_BLUE),
-    [SPECIES_VIVILLON_CONTINENTAL] = VIVILLON_BASE_STATS(BODY_COLOR_YELLOW),
-    [SPECIES_VIVILLON_GARDEN]      = VIVILLON_BASE_STATS(BODY_COLOR_GREEN),
-    [SPECIES_VIVILLON_ELEGANT]     = VIVILLON_BASE_STATS(BODY_COLOR_PURPLE),
-    [SPECIES_VIVILLON_MEADOW]      = VIVILLON_BASE_STATS(BODY_COLOR_PINK),
-    [SPECIES_VIVILLON_MODERN]      = VIVILLON_BASE_STATS(BODY_COLOR_RED),
-    [SPECIES_VIVILLON_MARINE]      = VIVILLON_BASE_STATS(BODY_COLOR_BLUE),
-    [SPECIES_VIVILLON_ARCHIPELAGO] = VIVILLON_BASE_STATS(BODY_COLOR_BROWN),
-    [SPECIES_VIVILLON_HIGH_PLAINS] = VIVILLON_BASE_STATS(BODY_COLOR_BROWN),
-    [SPECIES_VIVILLON_SANDSTORM]   = VIVILLON_BASE_STATS(BODY_COLOR_BROWN),
-    [SPECIES_VIVILLON_RIVER]       = VIVILLON_BASE_STATS(BODY_COLOR_BROWN),
-    [SPECIES_VIVILLON_MONSOON]     = VIVILLON_BASE_STATS(BODY_COLOR_GRAY),
-    [SPECIES_VIVILLON_SAVANNA]     = VIVILLON_BASE_STATS(BODY_COLOR_GREEN),
-    [SPECIES_VIVILLON_SUN]         = VIVILLON_BASE_STATS(BODY_COLOR_RED),
-    [SPECIES_VIVILLON_OCEAN]       = VIVILLON_BASE_STATS(BODY_COLOR_RED),
-    [SPECIES_VIVILLON_JUNGLE]      = VIVILLON_BASE_STATS(BODY_COLOR_GREEN),
-    [SPECIES_VIVILLON_FANCY]       = VIVILLON_BASE_STATS(BODY_COLOR_PINK),
-    [SPECIES_VIVILLON_POKE_BALL]   = VIVILLON_BASE_STATS(BODY_COLOR_RED),
+    [SPECIES_VIVILLON_POLAR]       = VIVILLON_SPECIES_INFO(BODY_COLOR_BLUE),
+    [SPECIES_VIVILLON_TUNDRA]      = VIVILLON_SPECIES_INFO(BODY_COLOR_BLUE),
+    [SPECIES_VIVILLON_CONTINENTAL] = VIVILLON_SPECIES_INFO(BODY_COLOR_YELLOW),
+    [SPECIES_VIVILLON_GARDEN]      = VIVILLON_SPECIES_INFO(BODY_COLOR_GREEN),
+    [SPECIES_VIVILLON_ELEGANT]     = VIVILLON_SPECIES_INFO(BODY_COLOR_PURPLE),
+    [SPECIES_VIVILLON_MEADOW]      = VIVILLON_SPECIES_INFO(BODY_COLOR_PINK),
+    [SPECIES_VIVILLON_MODERN]      = VIVILLON_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_VIVILLON_MARINE]      = VIVILLON_SPECIES_INFO(BODY_COLOR_BLUE),
+    [SPECIES_VIVILLON_ARCHIPELAGO] = VIVILLON_SPECIES_INFO(BODY_COLOR_BROWN),
+    [SPECIES_VIVILLON_HIGH_PLAINS] = VIVILLON_SPECIES_INFO(BODY_COLOR_BROWN),
+    [SPECIES_VIVILLON_SANDSTORM]   = VIVILLON_SPECIES_INFO(BODY_COLOR_BROWN),
+    [SPECIES_VIVILLON_RIVER]       = VIVILLON_SPECIES_INFO(BODY_COLOR_BROWN),
+    [SPECIES_VIVILLON_MONSOON]     = VIVILLON_SPECIES_INFO(BODY_COLOR_GRAY),
+    [SPECIES_VIVILLON_SAVANNA]     = VIVILLON_SPECIES_INFO(BODY_COLOR_GREEN),
+    [SPECIES_VIVILLON_SUN]         = VIVILLON_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_VIVILLON_OCEAN]       = VIVILLON_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_VIVILLON_JUNGLE]      = VIVILLON_SPECIES_INFO(BODY_COLOR_GREEN),
+    [SPECIES_VIVILLON_FANCY]       = VIVILLON_SPECIES_INFO(BODY_COLOR_PINK),
+    [SPECIES_VIVILLON_POKE_BALL]   = VIVILLON_SPECIES_INFO(BODY_COLOR_RED),
 
-    [SPECIES_FLABEBE_YELLOW_FLOWER] = FLABEBE_BASE_STATS,
-    [SPECIES_FLABEBE_ORANGE_FLOWER] = FLABEBE_BASE_STATS,
-    [SPECIES_FLABEBE_BLUE_FLOWER]   = FLABEBE_BASE_STATS,
-    [SPECIES_FLABEBE_WHITE_FLOWER]  = FLABEBE_BASE_STATS,
+    [SPECIES_FLABEBE_YELLOW_FLOWER] = FLABEBE_SPECIES_INFO,
+    [SPECIES_FLABEBE_ORANGE_FLOWER] = FLABEBE_SPECIES_INFO,
+    [SPECIES_FLABEBE_BLUE_FLOWER]   = FLABEBE_SPECIES_INFO,
+    [SPECIES_FLABEBE_WHITE_FLOWER]  = FLABEBE_SPECIES_INFO,
 
-    [SPECIES_FLOETTE_YELLOW_FLOWER] = FLOETTE_BASE_STATS,
-    [SPECIES_FLOETTE_ORANGE_FLOWER] = FLOETTE_BASE_STATS,
-    [SPECIES_FLOETTE_BLUE_FLOWER]   = FLOETTE_BASE_STATS,
-    [SPECIES_FLOETTE_WHITE_FLOWER]  = FLOETTE_BASE_STATS,
+    [SPECIES_FLOETTE_YELLOW_FLOWER] = FLOETTE_SPECIES_INFO,
+    [SPECIES_FLOETTE_ORANGE_FLOWER] = FLOETTE_SPECIES_INFO,
+    [SPECIES_FLOETTE_BLUE_FLOWER]   = FLOETTE_SPECIES_INFO,
+    [SPECIES_FLOETTE_WHITE_FLOWER]  = FLOETTE_SPECIES_INFO,
 
     [SPECIES_FLOETTE_ETERNAL_FLOWER] =
     {
@@ -26537,20 +26539,20 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_FLORGES_YELLOW_FLOWER] = FLORGES_BASE_STATS,
-    [SPECIES_FLORGES_ORANGE_FLOWER] = FLORGES_BASE_STATS,
-    [SPECIES_FLORGES_BLUE_FLOWER]   = FLORGES_BASE_STATS,
-    [SPECIES_FLORGES_WHITE_FLOWER]  = FLORGES_BASE_STATS,
+    [SPECIES_FLORGES_YELLOW_FLOWER] = FLORGES_SPECIES_INFO,
+    [SPECIES_FLORGES_ORANGE_FLOWER] = FLORGES_SPECIES_INFO,
+    [SPECIES_FLORGES_BLUE_FLOWER]   = FLORGES_SPECIES_INFO,
+    [SPECIES_FLORGES_WHITE_FLOWER]  = FLORGES_SPECIES_INFO,
 
-    [SPECIES_FURFROU_HEART_TRIM]     = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_STAR_TRIM]      = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_DIAMOND_TRIM]   = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_DEBUTANTE_TRIM] = FURFROU_BASE_STATS(NO_FLIP),
-    [SPECIES_FURFROU_MATRON_TRIM]    = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_DANDY_TRIM]     = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_LA_REINE_TRIM]  = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_KABUKI_TRIM]    = FURFROU_BASE_STATS(FLIP),
-    [SPECIES_FURFROU_PHARAOH_TRIM]   = FURFROU_BASE_STATS(FLIP),
+    [SPECIES_FURFROU_HEART_TRIM]     = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_STAR_TRIM]      = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_DIAMOND_TRIM]   = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_DEBUTANTE_TRIM] = FURFROU_SPECIES_INFO(NO_FLIP),
+    [SPECIES_FURFROU_MATRON_TRIM]    = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_DANDY_TRIM]     = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_LA_REINE_TRIM]  = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_KABUKI_TRIM]    = FURFROU_SPECIES_INFO(FLIP),
+    [SPECIES_FURFROU_PHARAOH_TRIM]   = FURFROU_SPECIES_INFO(FLIP),
 
     [SPECIES_MEOWSTIC_FEMALE] =
     {
@@ -26611,7 +26613,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 56,
         .baseSpAttack  = 44,
         .baseSpDefense = 55,
-        PUMKPABOO_MISC_STATS,
+        PUMKPABOO_MISC_INFO,
     },
 
     [SPECIES_PUMPKABOO_LARGE] =
@@ -26622,7 +26624,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 46,
         .baseSpAttack  = 44,
         .baseSpDefense = 55,
-        PUMKPABOO_MISC_STATS,
+        PUMKPABOO_MISC_INFO,
     },
 
     [SPECIES_PUMPKABOO_SUPER] =
@@ -26635,7 +26637,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 55,
         .itemCommon = ITEM_MIRACLE_SEED,
         .itemRare = ITEM_MIRACLE_SEED,
-        PUMKPABOO_MISC_STATS,
+        PUMKPABOO_MISC_INFO,
     },
 
     [SPECIES_GOURGEIST_SMALL] =
@@ -26646,7 +26648,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 99,
         .baseSpAttack  = 58,
         .baseSpDefense = 75,
-        GOURGEIST_MISC_STATS,
+        GOURGEIST_MISC_INFO,
     },
 
     [SPECIES_GOURGEIST_LARGE] =
@@ -26657,7 +26659,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 69,
         .baseSpAttack  = 58,
         .baseSpDefense = 75,
-        GOURGEIST_MISC_STATS,
+        GOURGEIST_MISC_INFO,
     },
 
     [SPECIES_GOURGEIST_SUPER] =
@@ -26670,14 +26672,14 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 75,
         .itemCommon = ITEM_MIRACLE_SEED,
         .itemRare = ITEM_MIRACLE_SEED,
-        GOURGEIST_MISC_STATS,
+        GOURGEIST_MISC_INFO,
     },
 
-    [SPECIES_XERNEAS_ACTIVE] = XERNEAS_BASE_STATS,
+    [SPECIES_XERNEAS_ACTIVE] = XERNEAS_SPECIES_INFO,
 
-    [SPECIES_ZYGARDE_10] = ZYGARDE_10_BASE_STATS(ABILITY_AURA_BREAK),
-    [SPECIES_ZYGARDE_10_POWER_CONSTRUCT] = ZYGARDE_50_BASE_STATS(ABILITY_POWER_CONSTRUCT),
-    [SPECIES_ZYGARDE_50_POWER_CONSTRUCT] = ZYGARDE_50_BASE_STATS(ABILITY_POWER_CONSTRUCT),
+    [SPECIES_ZYGARDE_10] = ZYGARDE_10_SPECIES_INFO(ABILITY_AURA_BREAK),
+    [SPECIES_ZYGARDE_10_POWER_CONSTRUCT] = ZYGARDE_50_SPECIES_INFO(ABILITY_POWER_CONSTRUCT),
+    [SPECIES_ZYGARDE_50_POWER_CONSTRUCT] = ZYGARDE_50_SPECIES_INFO(ABILITY_POWER_CONSTRUCT),
 
     [SPECIES_ZYGARDE_COMPLETE] =
     {
@@ -26729,11 +26731,11 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_MYTHICAL,
     },
 
-    [SPECIES_ORICORIO_POM_POM] = ORICORIO_BASE_STATS(TYPE_ELECTRIC, BODY_COLOR_YELLOW),
-    [SPECIES_ORICORIO_PAU]     = ORICORIO_BASE_STATS(TYPE_PSYCHIC, BODY_COLOR_PINK),
-    [SPECIES_ORICORIO_SENSU]   = ORICORIO_BASE_STATS(TYPE_GHOST, BODY_COLOR_PURPLE),
+    [SPECIES_ORICORIO_POM_POM] = ORICORIO_SPECIES_INFO(TYPE_ELECTRIC, BODY_COLOR_YELLOW),
+    [SPECIES_ORICORIO_PAU]     = ORICORIO_SPECIES_INFO(TYPE_PSYCHIC, BODY_COLOR_PINK),
+    [SPECIES_ORICORIO_SENSU]   = ORICORIO_SPECIES_INFO(TYPE_GHOST, BODY_COLOR_PURPLE),
 
-    [SPECIES_ROCKRUFF_OWN_TEMPO] = ROCKRUFF_BASE_STATS(ABILITY_OWN_TEMPO, ABILITY_NONE, ABILITY_NONE),
+    [SPECIES_ROCKRUFF_OWN_TEMPO] = ROCKRUFF_SPECIES_INFO(ABILITY_OWN_TEMPO, ABILITY_NONE, ABILITY_NONE),
 
     [SPECIES_LYCANROC_MIDNIGHT] =
     {
@@ -26808,40 +26810,40 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_SILVALLY_FIGHTING] = SILVALLY_BASE_STATS(TYPE_FIGHTING),
-    [SPECIES_SILVALLY_FLYING]   = SILVALLY_BASE_STATS(TYPE_FLYING),
-    [SPECIES_SILVALLY_POISON]   = SILVALLY_BASE_STATS(TYPE_POISON),
-    [SPECIES_SILVALLY_GROUND]   = SILVALLY_BASE_STATS(TYPE_GROUND),
-    [SPECIES_SILVALLY_ROCK]     = SILVALLY_BASE_STATS(TYPE_ROCK),
-    [SPECIES_SILVALLY_BUG]      = SILVALLY_BASE_STATS(TYPE_BUG),
-    [SPECIES_SILVALLY_GHOST]    = SILVALLY_BASE_STATS(TYPE_GHOST),
-    [SPECIES_SILVALLY_STEEL]    = SILVALLY_BASE_STATS(TYPE_STEEL),
-    [SPECIES_SILVALLY_FIRE]     = SILVALLY_BASE_STATS(TYPE_FIRE),
-    [SPECIES_SILVALLY_WATER]    = SILVALLY_BASE_STATS(TYPE_WATER),
-    [SPECIES_SILVALLY_GRASS]    = SILVALLY_BASE_STATS(TYPE_GRASS),
-    [SPECIES_SILVALLY_ELECTRIC] = SILVALLY_BASE_STATS(TYPE_ELECTRIC),
-    [SPECIES_SILVALLY_PSYCHIC]  = SILVALLY_BASE_STATS(TYPE_PSYCHIC),
-    [SPECIES_SILVALLY_ICE]      = SILVALLY_BASE_STATS(TYPE_ICE),
-    [SPECIES_SILVALLY_DRAGON]   = SILVALLY_BASE_STATS(TYPE_DRAGON),
-    [SPECIES_SILVALLY_DARK]     = SILVALLY_BASE_STATS(TYPE_DARK),
-    [SPECIES_SILVALLY_FAIRY]    = SILVALLY_BASE_STATS(TYPE_FAIRY),
+    [SPECIES_SILVALLY_FIGHTING] = SILVALLY_SPECIES_INFO(TYPE_FIGHTING),
+    [SPECIES_SILVALLY_FLYING]   = SILVALLY_SPECIES_INFO(TYPE_FLYING),
+    [SPECIES_SILVALLY_POISON]   = SILVALLY_SPECIES_INFO(TYPE_POISON),
+    [SPECIES_SILVALLY_GROUND]   = SILVALLY_SPECIES_INFO(TYPE_GROUND),
+    [SPECIES_SILVALLY_ROCK]     = SILVALLY_SPECIES_INFO(TYPE_ROCK),
+    [SPECIES_SILVALLY_BUG]      = SILVALLY_SPECIES_INFO(TYPE_BUG),
+    [SPECIES_SILVALLY_GHOST]    = SILVALLY_SPECIES_INFO(TYPE_GHOST),
+    [SPECIES_SILVALLY_STEEL]    = SILVALLY_SPECIES_INFO(TYPE_STEEL),
+    [SPECIES_SILVALLY_FIRE]     = SILVALLY_SPECIES_INFO(TYPE_FIRE),
+    [SPECIES_SILVALLY_WATER]    = SILVALLY_SPECIES_INFO(TYPE_WATER),
+    [SPECIES_SILVALLY_GRASS]    = SILVALLY_SPECIES_INFO(TYPE_GRASS),
+    [SPECIES_SILVALLY_ELECTRIC] = SILVALLY_SPECIES_INFO(TYPE_ELECTRIC),
+    [SPECIES_SILVALLY_PSYCHIC]  = SILVALLY_SPECIES_INFO(TYPE_PSYCHIC),
+    [SPECIES_SILVALLY_ICE]      = SILVALLY_SPECIES_INFO(TYPE_ICE),
+    [SPECIES_SILVALLY_DRAGON]   = SILVALLY_SPECIES_INFO(TYPE_DRAGON),
+    [SPECIES_SILVALLY_DARK]     = SILVALLY_SPECIES_INFO(TYPE_DARK),
+    [SPECIES_SILVALLY_FAIRY]    = SILVALLY_SPECIES_INFO(TYPE_FAIRY),
 
-    [SPECIES_MINIOR_METEOR_ORANGE] = MINIOR_METEOR_BASE_STATS,
-    [SPECIES_MINIOR_METEOR_YELLOW] = MINIOR_METEOR_BASE_STATS,
-    [SPECIES_MINIOR_METEOR_GREEN]  = MINIOR_METEOR_BASE_STATS,
-    [SPECIES_MINIOR_METEOR_BLUE]   = MINIOR_METEOR_BASE_STATS,
-    [SPECIES_MINIOR_METEOR_INDIGO] = MINIOR_METEOR_BASE_STATS,
-    [SPECIES_MINIOR_METEOR_VIOLET] = MINIOR_METEOR_BASE_STATS,
+    [SPECIES_MINIOR_METEOR_ORANGE] = MINIOR_METEOR_SPECIES_INFO,
+    [SPECIES_MINIOR_METEOR_YELLOW] = MINIOR_METEOR_SPECIES_INFO,
+    [SPECIES_MINIOR_METEOR_GREEN]  = MINIOR_METEOR_SPECIES_INFO,
+    [SPECIES_MINIOR_METEOR_BLUE]   = MINIOR_METEOR_SPECIES_INFO,
+    [SPECIES_MINIOR_METEOR_INDIGO] = MINIOR_METEOR_SPECIES_INFO,
+    [SPECIES_MINIOR_METEOR_VIOLET] = MINIOR_METEOR_SPECIES_INFO,
 
-    [SPECIES_MINIOR_CORE_RED]    = MINIOR_CORE_BASE_STATS(BODY_COLOR_RED),
-    [SPECIES_MINIOR_CORE_ORANGE] = MINIOR_CORE_BASE_STATS(BODY_COLOR_RED),
-    [SPECIES_MINIOR_CORE_YELLOW] = MINIOR_CORE_BASE_STATS(BODY_COLOR_YELLOW),
-    [SPECIES_MINIOR_CORE_GREEN]  = MINIOR_CORE_BASE_STATS(BODY_COLOR_GREEN),
-    [SPECIES_MINIOR_CORE_BLUE]   = MINIOR_CORE_BASE_STATS(BODY_COLOR_BLUE),
-    [SPECIES_MINIOR_CORE_INDIGO] = MINIOR_CORE_BASE_STATS(BODY_COLOR_BLUE),
-    [SPECIES_MINIOR_CORE_VIOLET] = MINIOR_CORE_BASE_STATS(BODY_COLOR_PURPLE),
+    [SPECIES_MINIOR_CORE_RED]    = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_MINIOR_CORE_ORANGE] = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_MINIOR_CORE_YELLOW] = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_YELLOW),
+    [SPECIES_MINIOR_CORE_GREEN]  = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_GREEN),
+    [SPECIES_MINIOR_CORE_BLUE]   = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_BLUE),
+    [SPECIES_MINIOR_CORE_INDIGO] = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_BLUE),
+    [SPECIES_MINIOR_CORE_VIOLET] = MINIOR_CORE_SPECIES_INFO(BODY_COLOR_PURPLE),
 
-    [SPECIES_MIMIKYU_BUSTED] = MIMIKYU_BASE_STATS,
+    [SPECIES_MIMIKYU_BUSTED] = MIMIKYU_SPECIES_INFO,
 
     [SPECIES_NECROZMA_DUSK_MANE] =
     {
@@ -26920,25 +26922,25 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_LEGENDARY,
     },
 
-    [SPECIES_MAGEARNA_ORIGINAL_COLOR] = MAGEARNA_BASE_STATS(BODY_COLOR_RED),
+    [SPECIES_MAGEARNA_ORIGINAL_COLOR] = MAGEARNA_SPECIES_INFO(BODY_COLOR_RED),
 
-    [SPECIES_CRAMORANT_GULPING] = CRAMORANT_BASE_STATS,
-    [SPECIES_CRAMORANT_GORGING] = CRAMORANT_BASE_STATS,
+    [SPECIES_CRAMORANT_GULPING] = CRAMORANT_SPECIES_INFO,
+    [SPECIES_CRAMORANT_GORGING] = CRAMORANT_SPECIES_INFO,
 
-    [SPECIES_TOXTRICITY_LOW_KEY] = TOXTRICITY_BASE_STATS,
+    [SPECIES_TOXTRICITY_LOW_KEY] = TOXTRICITY_SPECIES_INFO,
 
-    [SPECIES_SINISTEA_ANTIQUE] = SINISTEA_BASE_STATS,
+    [SPECIES_SINISTEA_ANTIQUE] = SINISTEA_SPECIES_INFO,
 
-    [SPECIES_POLTEAGEIST_ANTIQUE] = POLTEAGEIST_BASE_STATS,
+    [SPECIES_POLTEAGEIST_ANTIQUE] = POLTEAGEIST_SPECIES_INFO,
 
-    [SPECIES_ALCREMIE_RUBY_CREAM]    = ALCREMIE_BASE_STATS(BODY_COLOR_PINK),
-    [SPECIES_ALCREMIE_MATCHA_CREAM]  = ALCREMIE_BASE_STATS(BODY_COLOR_GREEN),
-    [SPECIES_ALCREMIE_MINT_CREAM]    = ALCREMIE_BASE_STATS(BODY_COLOR_BLUE),
-    [SPECIES_ALCREMIE_LEMON_CREAM]   = ALCREMIE_BASE_STATS(BODY_COLOR_YELLOW),
-    [SPECIES_ALCREMIE_SALTED_CREAM]  = ALCREMIE_BASE_STATS(BODY_COLOR_WHITE),
-    [SPECIES_ALCREMIE_RUBY_SWIRL]    = ALCREMIE_BASE_STATS(BODY_COLOR_YELLOW),
-    [SPECIES_ALCREMIE_CARAMEL_SWIRL] = ALCREMIE_BASE_STATS(BODY_COLOR_BROWN),
-    [SPECIES_ALCREMIE_RAINBOW_SWIRL] = ALCREMIE_BASE_STATS(BODY_COLOR_YELLOW),
+    [SPECIES_ALCREMIE_RUBY_CREAM]    = ALCREMIE_SPECIES_INFO(BODY_COLOR_PINK),
+    [SPECIES_ALCREMIE_MATCHA_CREAM]  = ALCREMIE_SPECIES_INFO(BODY_COLOR_GREEN),
+    [SPECIES_ALCREMIE_MINT_CREAM]    = ALCREMIE_SPECIES_INFO(BODY_COLOR_BLUE),
+    [SPECIES_ALCREMIE_LEMON_CREAM]   = ALCREMIE_SPECIES_INFO(BODY_COLOR_YELLOW),
+    [SPECIES_ALCREMIE_SALTED_CREAM]  = ALCREMIE_SPECIES_INFO(BODY_COLOR_WHITE),
+    [SPECIES_ALCREMIE_RUBY_SWIRL]    = ALCREMIE_SPECIES_INFO(BODY_COLOR_YELLOW),
+    [SPECIES_ALCREMIE_CARAMEL_SWIRL] = ALCREMIE_SPECIES_INFO(BODY_COLOR_BROWN),
+    [SPECIES_ALCREMIE_RAINBOW_SWIRL] = ALCREMIE_SPECIES_INFO(BODY_COLOR_YELLOW),
 
     [SPECIES_EISCUE_NOICE_FACE] =
     {
@@ -26988,7 +26990,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MORPEKO_HANGRY] = MORPEKO_BASE_STATS,
+    [SPECIES_MORPEKO_HANGRY] = MORPEKO_SPECIES_INFO,
 
     [SPECIES_ZACIAN_CROWNED_SWORD] =
     {
@@ -27090,7 +27092,7 @@ const struct BaseStats gBaseStats[] =
         .flags = SPECIES_FLAG_LEGENDARY,
     },
 
-    [SPECIES_ZARUDE_DADA] = ZARUDE_BASE_STATS,
+    [SPECIES_ZARUDE_DADA] = ZARUDE_SPECIES_INFO,
 
     [SPECIES_CALYREX_ICE_RIDER] =
     {

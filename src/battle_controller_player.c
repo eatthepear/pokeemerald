@@ -30,7 +30,6 @@
 #include "util.h"
 #include "window.h"
 #include "constants/battle_anim.h"
-#include "constants/battle_config.h"
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
@@ -339,7 +338,7 @@ static void HandleInputChooseAction(void)
     {
         SwapHpBarsWithHpText();
     }
-#if B_ENABLE_DEBUG == TRUE
+#if DEBUG_BATTLE_MENU == TRUE
     else if (JOY_NEW(SELECT_BUTTON) && FlagGet(FLAG_IS_DEBUGGING_SAVEFILE))
     {
         BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_DEBUG, 0);
@@ -1394,7 +1393,7 @@ static void Task_GiveExpToMon(u8 taskId)
         u16 species = GetMonData(mon, MON_DATA_SPECIES);
         u8 level = GetMonData(mon, MON_DATA_LEVEL);
         u32 currExp = GetMonData(mon, MON_DATA_EXP);
-        u32 nextLvlExp = gExperienceTables[gBaseStats[species].growthRate][level + 1];
+        u32 nextLvlExp = gExperienceTables[gSpeciesInfo[species].growthRate][level + 1];
 
         if (currExp + gainedExp >= nextLvlExp)
         {
@@ -1437,11 +1436,11 @@ static void Task_PrepareToGiveExpWithExpBar(u8 taskId)
     u8 level = GetMonData(mon, MON_DATA_LEVEL);
     u16 species = GetMonData(mon, MON_DATA_SPECIES);
     u32 exp = GetMonData(mon, MON_DATA_EXP);
-    u32 currLvlExp = gExperienceTables[gBaseStats[species].growthRate][level];
+    u32 currLvlExp = gExperienceTables[gSpeciesInfo[species].growthRate][level];
     u32 expToNextLvl;
 
     exp -= currLvlExp;
-    expToNextLvl = gExperienceTables[gBaseStats[species].growthRate][level + 1] - currLvlExp;
+    expToNextLvl = gExperienceTables[gSpeciesInfo[species].growthRate][level + 1] - currLvlExp;
     SetBattleBarStruct(battlerId, gHealthboxSpriteIds[battlerId], expToNextLvl, exp, -gainedExp);
     PlaySE(SE_EXP);
     gTasks[taskId].func = Task_GiveExpWithExpBar;
@@ -1473,7 +1472,7 @@ static void Task_GiveExpWithExpBar(u8 taskId)
             level = GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL);
             currExp = GetMonData(&gPlayerParty[monId], MON_DATA_EXP);
             species = GetMonData(&gPlayerParty[monId], MON_DATA_SPECIES);
-            expOnNextLvl = gExperienceTables[gBaseStats[species].growthRate][level + 1];
+            expOnNextLvl = gExperienceTables[gSpeciesInfo[species].growthRate][level + 1];
 
             if (currExp + gainedExp >= expOnNextLvl)
             {

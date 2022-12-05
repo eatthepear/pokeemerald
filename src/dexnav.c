@@ -1371,8 +1371,8 @@ static u16 DexNavGenerateHeldItem(u16 species, u8 searchLevel)
 {
     // u16 randVal = Random() % 100;
     // u8 searchLevelInfluence = searchLevel >> 1;
-    // u16 item1 = gBaseStats[species].item1;
-    // u16 item2 = gBaseStats[species].item2;
+    // u16 item1 = gSpeciesInfo[species].item1;
+    // u16 item2 = gSpeciesInfo[species].item2;
     
     // // if both are the same, 100% to hold
     // if (item1 == item2)
@@ -1445,9 +1445,9 @@ static u8 DexNavGetAbilityNum(u16 species, u8 searchLevel)
     }
     
     #ifdef BATTLE_ENGINE    // if using RHH, the base stats abilities field is expanded
-    if (genAbility && gBaseStats[species].abilities[2] != ABILITY_NONE && GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
+    if (genAbility && gSpeciesInfo[species].abilities[2] != ABILITY_NONE && GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
     #else
-    if (genAbility && gBaseStats[species].abilityHidden != ABILITY_NONE && GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
+    if (genAbility && gSpeciesInfo[species].abilityHidden != ABILITY_NONE && GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
     #endif
     {
         //Only give hidden ability if Pokemon has been caught before
@@ -1456,7 +1456,7 @@ static u8 DexNavGetAbilityNum(u16 species, u8 searchLevel)
     else
     {
         //Pick a normal ability of that Pokemon
-        if (gBaseStats[species].abilities[1] != ABILITY_NONE)
+        if (gSpeciesInfo[species].abilities[1] != ABILITY_NONE)
             abilityNum = Random() & 1;
         else
             abilityNum = 0;
@@ -2169,8 +2169,8 @@ static void PrintCurrentSpeciesInfo(void)
         AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, SPECIES_INFO_Y, sFontColor_Black, 0, gSpeciesNames[species]);
     
     //type icon(s)
-    type1 = gBaseStats[species].type1;
-    type2 = gBaseStats[species].type2;
+    type1 = gSpeciesInfo[species].type1;
+    type2 = gSpeciesInfo[species].type2;
     if (species == SPECIES_NONE)
         type1 = type2 = TYPE_MYSTERY;
     
@@ -2204,11 +2204,11 @@ static void PrintCurrentSpeciesInfo(void)
     else if (GetSetPokedexFlag(dexNum, FLAG_GET_CAUGHT))
     {
         #ifdef BATTLE_ENGINE
-        if (gBaseStats[species].abilities[2] != ABILITY_NONE)
-            AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilityNames[gBaseStats[species].abilities[2]]);
+        if (gSpeciesInfo[species].abilities[2] != ABILITY_NONE)
+            AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilityNames[gSpeciesInfo[species].abilities[2]]);
         #else
-        if (gBaseStats[species].abilityHidden != ABILITY_NONE)           
-            AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilityNames[gBaseStats[species].abilityHidden]);
+        if (gSpeciesInfo[species].abilityHidden != ABILITY_NONE)           
+            AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilityNames[gSpeciesInfo[species].abilityHidden]);
         #endif
         else
             AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, HA_INFO_Y, sFontColor_Black, 0, gText_None);
