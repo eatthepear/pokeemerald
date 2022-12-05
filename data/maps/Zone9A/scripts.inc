@@ -41,17 +41,23 @@ Zone9A_EventScript_Man::
 
 Zone9A_EventScript_Ari::
 	lock
-	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_2
-	msgbox Zone9A_EventScript_Ari_Text_1, MSGBOX_YESNO
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 17
+	goto_if_eq Zone9A_EventScript_Ari_2
+	compare VAR_TEMP_0, 19
+	goto_if_eq Zone9A_EventScript_Ari_3
 Zone9A_EventScript_Ari_1:
+	faceplayer
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_7
+	msgbox Zone9A_EventScript_Ari_Text_1, MSGBOX_YESNO
+Zone9A_EventScript_Ari_6:
 	compare VAR_RESULT, NO
-	goto_if_eq Zone9A_EventScript_Ari_5
+	goto_if_eq Zone9A_EventScript_Ari_10
 	msgbox Zone9A_EventScript_Ari_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_ARI, Zone9A_EventScript_Ari_Text_4
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_9
-Zone9A_EventScript_Ari_8:
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_14
+Zone9A_EventScript_Ari_13:
 	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_5, MSGBOX_DEFAULT
@@ -66,8 +72,8 @@ Zone9A_EventScript_Ari_8:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_6, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BERTHA, Zone9A_EventScript_Ari_Text_7
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_12
-Zone9A_EventScript_Ari_11:
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_17
+Zone9A_EventScript_Ari_16:
 	applymovement 2, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_8, MSGBOX_DEFAULT
@@ -82,8 +88,8 @@ Zone9A_EventScript_Ari_11:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_9, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CASSANDRA, Zone9A_EventScript_Ari_Text_10
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_15
-Zone9A_EventScript_Ari_14:
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_20
+Zone9A_EventScript_Ari_19:
 	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_11, MSGBOX_DEFAULT
@@ -98,8 +104,8 @@ Zone9A_EventScript_Ari_14:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_12, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_DOMINIC, Zone9A_EventScript_Ari_Text_13
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_18
-Zone9A_EventScript_Ari_17:
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_23
+Zone9A_EventScript_Ari_22:
 	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_DEFAULT
 	closemessage
 	applymovement 4, Common_Movement_WalkInPlaceFasterUp
@@ -129,29 +135,47 @@ Zone9A_EventScript_Ari_17:
 	end
 
 Zone9A_EventScript_Ari_2:
-	msgbox Zone9A_EventScript_Ari_Text_0, MSGBOX_YESNO
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
 	goto Zone9A_EventScript_Ari_1
 
-Zone9A_EventScript_Ari_5:
+Zone9A_EventScript_Ari_3:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone9A_EventScript_Ari_1
+
+Zone9A_EventScript_Ari_7:
+	msgbox Zone9A_EventScript_Ari_Text_0, MSGBOX_YESNO
+	goto Zone9A_EventScript_Ari_6
+
+Zone9A_EventScript_Ari_10:
 	msgbox Zone9A_EventScript_Ari_Text_2, MSGBOX_DEFAULT
 	release
 	end
 
-Zone9A_EventScript_Ari_9:
+Zone9A_EventScript_Ari_14:
 	special HealPlayerParty
-	goto Zone9A_EventScript_Ari_8
+	goto Zone9A_EventScript_Ari_13
 
-Zone9A_EventScript_Ari_12:
+Zone9A_EventScript_Ari_17:
 	special HealPlayerParty
-	goto Zone9A_EventScript_Ari_11
+	goto Zone9A_EventScript_Ari_16
 
-Zone9A_EventScript_Ari_15:
+Zone9A_EventScript_Ari_20:
 	special HealPlayerParty
-	goto Zone9A_EventScript_Ari_14
+	goto Zone9A_EventScript_Ari_19
 
-Zone9A_EventScript_Ari_18:
+Zone9A_EventScript_Ari_23:
 	special HealPlayerParty
-	goto Zone9A_EventScript_Ari_17
+	goto Zone9A_EventScript_Ari_22
 
 
 Zone9A_Movement_WinstrateEnterHouse:

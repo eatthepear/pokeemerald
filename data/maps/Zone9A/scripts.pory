@@ -33,6 +33,22 @@ script Zone9A_EventScript_Man {
 
 script Zone9A_EventScript_Ari {
 	lock
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 17) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 19) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	}
 	faceplayer
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
 		msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row,\lwithout being healed in between\lbattles.\pWhat do you say to my little wager?", MSGBOX_YESNO)
