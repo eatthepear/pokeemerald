@@ -35,6 +35,9 @@ script Zone16Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
+				setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
+				setflag(FLAG_HIDE_ZONE17A_PORYGON)
+				setflag(FLAG_BEAT_LEVIATHAN_15)
 				warp(MAP_ZONE17A, 255, 13, 38)
 				waitstate
 			}

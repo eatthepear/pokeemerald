@@ -57,6 +57,9 @@ Zone16Sanctuary_EventScript_NextZone_5:
 
 Zone16Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
+	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
+	setflag FLAG_HIDE_ZONE17A_PORYGON
+	setflag FLAG_BEAT_LEVIATHAN_15
 	warp MAP_ZONE17A, 255, 13, 38
 	waitstate
 	goto Zone16Sanctuary_EventScript_NextZone_1

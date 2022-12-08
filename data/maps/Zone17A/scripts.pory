@@ -41,7 +41,7 @@ script Zone17A_EventScript_Intro {
 	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
 	addobject(1)
 	delay(48)
-	msgbox("Release us… Please…\p""Fourteen souls…\n""Trapped here…\p""Inscripted in the stones…",MSGBOX_AUTOCLOSE)
+	msgbox("Release us… Please…\pFourteen souls…\nTrapped here…\pInscripted in the stones…", MSGBOX_AUTOCLOSE)
 	setvar(VAR_ZONE_17_STATE, 1)
 	delay(16)
 	removeobject(1)
@@ -87,23 +87,11 @@ script Zone17A_EventScript_Intro {
 	end
 }
 
-script Zone17A_EventScript_CheckLeave {
+script Zone17A_EventScript_StopLeave {
 	lockall
-	if (var(VAR_ZONE_17_STATE) == 30) {
-		if (var(VAR_ZONE) > 17) {
-			call(EventScript_WarpZone0)
-		} else {
-			specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-			if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-				goto(EventScript_BrutalExitNotSatisfied)
-			}
-			warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
-			waitstate
-		}
-	} else {
-		warp(MAP_ZONE17A, 255, 13, 38)
-		waitstate
-	}
+	msgbox(format("The woods ahead are too thick to traverse…"))
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+	waitmovement(0)
 	releaseall
 	end
 }
@@ -139,12 +127,33 @@ text Zone17A_Text_RiddleSign {
 }
 
 script Zone17A_EventScript_InitiateLeviathanBattle {
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 12) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 14) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_1) == 7) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+	}
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+	waitmovement(0)
 	delay(48)
 	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
 	addobject(1)
 	setobjectxy(1, 11, 7)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-	waitmovement(0)
 	removeobject(1)
 	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
 	delay(32)
@@ -176,11 +185,11 @@ script Zone17A_EventScript_InitiateLeviathanBattle {
 	removeobject(1)
 	setflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
 	delay(16)
-	clearflag(FLAG_BEAT_LEVIATHAN_14)
+	clearflag(FLAG_BEAT_LEVIATHAN_15)
 	addobject(2)
 	delay(48)
 	fadeoutbgm(1)
-	msgbox("")
+	msgbox("BOOOO!")
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
@@ -190,7 +199,7 @@ script Zone17A_EventScript_InitiateLeviathanBattle {
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox("")
-	setflag(FLAG_BEAT_LEVIATHAN_14)
+	setflag(FLAG_BEAT_LEVIATHAN_15)
 	removeobject(2)
 	delay(48)
 	clearflag(FLAG_HIDE_ZONE17A_HEX_MANIAC)
@@ -245,6 +254,7 @@ script Zone17A_EventScript_InitiateLeviathanBattle {
 	delay(8)
 	msgbox("There's something shimmering on the\nground by your feet!")
 	giveitem(ITEM_TM28)
+	clearflag(FLAG_HIDE_ZONE17A_PORYGON)
 	release
 	end
 }

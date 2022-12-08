@@ -90,38 +90,13 @@ Zone17A_EventScript_Intro::
 	end
 
 
-Zone17A_EventScript_CheckLeave::
+Zone17A_EventScript_StopLeave::
 	lockall
-	compare VAR_ZONE_17_STATE, 30
-	goto_if_eq Zone17A_EventScript_CheckLeave_2
-	warp MAP_ZONE17A, 255, 13, 38
-	waitstate
-Zone17A_EventScript_CheckLeave_1:
+	msgbox Zone17A_EventScript_StopLeave_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
 	releaseall
 	end
-
-Zone17A_EventScript_CheckLeave_2:
-	compare VAR_ZONE, 17
-	goto_if_gt Zone17A_EventScript_CheckLeave_5
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone17A_EventScript_CheckLeave_10
-Zone17A_EventScript_CheckLeave_8:
-	warp MAP_ZONE17SANCTUARY, 255, 22, 7
-	waitstate
-	goto Zone17A_EventScript_CheckLeave_1
-
-Zone17A_EventScript_CheckLeave_5:
-	call EventScript_WarpZone0
-	goto Zone17A_EventScript_CheckLeave_1
-
-Zone17A_EventScript_CheckLeave_9:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone17A_EventScript_CheckLeave_8
-
-Zone17A_EventScript_CheckLeave_10:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone17A_EventScript_CheckLeave_9
-	goto Zone17A_EventScript_CheckLeave_8
 
 
 Zone17A_EventScript_RiddleSign::
@@ -153,12 +128,20 @@ Zone17A_EventScript_RiddleSign_8:
 
 
 Zone17A_EventScript_InitiateLeviathanBattle::
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_0, 12
+	goto_if_eq Zone17A_EventScript_InitiateLeviathanBattle_2
+	compare VAR_TEMP_0, 14
+	goto_if_eq Zone17A_EventScript_InitiateLeviathanBattle_3
+	compare VAR_TEMP_1, 7
+	goto_if_eq Zone17A_EventScript_InitiateLeviathanBattle_4
+Zone17A_EventScript_InitiateLeviathanBattle_1:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
 	delay 48
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
 	setobjectxy 1, 11, 7
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 32
@@ -190,25 +173,25 @@ Zone17A_EventScript_InitiateLeviathanBattle::
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
-	clearflag FLAG_BEAT_LEVIATHAN_14
+	clearflag FLAG_BEAT_LEVIATHAN_15
 	addobject 2
 	delay 48
 	fadeoutbgm 1
 	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_0
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIRAGE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone17A_EventScript_InitiateLeviathanBattle_2
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone17A_EventScript_InitiateLeviathanBattle_9
 	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat
-Zone17A_EventScript_InitiateLeviathanBattle_1:
+Zone17A_EventScript_InitiateLeviathanBattle_8:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_0
-	setflag FLAG_BEAT_LEVIATHAN_14
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_1
+	setflag FLAG_BEAT_LEVIATHAN_15
 	removeobject 2
 	delay 48
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
 	setobjectxy 1, 11, 7
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_1
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_2
 	setvar VAR_ZONE_17_STATE, 30
 	delay 16
 	removeobject 1
@@ -255,14 +238,40 @@ Zone17A_EventScript_InitiateLeviathanBattle_1:
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 8
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_2
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_3
 	giveitem ITEM_TM28
+	clearflag FLAG_HIDE_ZONE17A_PORYGON
 	release
 	end
 
 Zone17A_EventScript_InitiateLeviathanBattle_2:
-	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
 	goto Zone17A_EventScript_InitiateLeviathanBattle_1
+
+Zone17A_EventScript_InitiateLeviathanBattle_3:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	goto Zone17A_EventScript_InitiateLeviathanBattle_1
+
+Zone17A_EventScript_InitiateLeviathanBattle_4:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	goto Zone17A_EventScript_InitiateLeviathanBattle_1
+
+Zone17A_EventScript_InitiateLeviathanBattle_9:
+	trainerbattle_no_intro TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat
+	goto Zone17A_EventScript_InitiateLeviathanBattle_8
 
 
 Zone17A_StartSpiritombBattle::
@@ -804,21 +813,25 @@ Zone17A_Text_Sign14:
 	.string "May 12, '62 - September 26, '17$"
 
 Zone17A_EventScript_Intro_Text_0:
-	.string "Release us… Please…\p"
-	.string "Fourteen souls…\n"
-	.string "Trapped here…\p"
-	.string "Inscripted in the stones…$"
+	.string "Release us… Please…\pFourteen souls…\nTrapped here…\pInscripted in the stones…$"
+
+Zone17A_EventScript_StopLeave_Text_0:
+	.string "The woods ahead are too thick to\n"
+	.string "traverse…$"
 
 Zone17A_EventScript_RiddleSign_Text_0:
 	.string "There is a spot that looks like it\ncan fit the Odd Keystone.\pWould you like to place the\nOdd Keystone?$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_0:
-	.string "$"
+	.string "BOOOO!$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_1:
-	.string "Thank you…\nFinally, we may know peace…$"
+	.string "$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_2:
+	.string "Thank you…\nFinally, we may know peace…$"
+
+Zone17A_EventScript_InitiateLeviathanBattle_Text_3:
 	.string "There's something shimmering on the\nground by your feet!$"
 
 Zone17A_StartSpiritombBattle_Text_0:
