@@ -1667,6 +1667,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_LilyDefault},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
+        .shouldShuffle = TRUE,
     },
     
     [TRAINER_LILY_LEVIATHAN_14_BRUTAL] =
@@ -1682,6 +1683,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_LilyBrutal},
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
+        .shouldShuffle = TRUE,
     },
 
     [TRAINER_RAFAEL] =
