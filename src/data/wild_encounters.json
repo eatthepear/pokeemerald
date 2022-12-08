@@ -2686,18 +2686,18 @@
                 "species": "SPECIES_FRILLISH"
               },
               {
-                "min_level": 24,
-                "max_level": 26,
+                "min_level": 27,
+                "max_level": 29,
                 "species": "SPECIES_MAREANIE"
               },
               {
-                "min_level": 24,
-                "max_level": 26,
+                "min_level": 27,
+                "max_level": 29,
                 "species": "SPECIES_STARYU"
               },
               {
-                "min_level": 24,
-                "max_level": 26,
+                "min_level": 27,
+                "max_level": 29,
                 "species": "SPECIES_TENTACOOL"
               }
             ]
@@ -2711,18 +2711,18 @@
                 "species": "SPECIES_FRILLISH"
               },
               {
-                "min_level": 24,
-                "max_level": 26,
+                "min_level": 27,
+                "max_level": 29,
                 "species": "SPECIES_MAREANIE"
               },
               {
-                "min_level": 24,
-                "max_level": 26,
+                "min_level": 27,
+                "max_level": 29,
                 "species": "SPECIES_STARYU"
               },
               {
-                "min_level": 24,
-                "max_level": 26,
+                "min_level": 27,
+                "max_level": 29,
                 "species": "SPECIES_TENTACOOL"
               },
               {
@@ -2734,6 +2734,75 @@
                 "min_level": 1,
                 "max_level": 1,
                 "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ZONE17A",
+          "base_label": "gZone17A",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_KLEFKI"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SINISTEA"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SIGILYPH"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_GOTHORITA"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_DUOSION"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SPRITZEE"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SWIRLIX"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SWIRLIX"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_NIDORINA"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_NIDORINO"
               }
             ]
           }
