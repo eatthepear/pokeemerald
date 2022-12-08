@@ -2696,6 +2696,14 @@ static const struct TrainerMon sParty_LilyBrutal[] = {//Leviathan, Brutal, Shuff
 
 /* ------------------- Zone 17 ------------------- */
 
+static const struct TrainerMon sParty_Axle[] = {
+    {
+    .iv = 10,
+    .lvl = 27,
+    .species = SPECIES_PINCURCHIN,
+    }
+};
+
 static const struct TrainerMon sParty_Rafael[] = {
     {
     .iv = 10,
@@ -2719,6 +2727,30 @@ static const struct TrainerMon sParty_Georgina[] = {
     .iv = 10,
     .lvl = 26,
     .species = SPECIES_MARSHTOMP,
+    }
+};
+
+static const struct TrainerMon sParty_MiaDefault[] = {//Leviathan, Default, No Surveil
+    {
+    .iv = 30,
+    .lvl = 32,
+    .nature = NATURE_MODEST,
+    .ability = ABILITY_SLOT_1, //Own Tempo
+    .species = SPECIES_LILLIGANT,
+    .heldItem = ITEM_COBA_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_QUIVER_DANCE, MOVE_AROMATHERAPY}
+    }
+};
+
+static const struct TrainerMon sParty_MiaBrutal[] = {//Leviathan, Brutal, No Surveil, Shuffled Party
+    {
+    .iv = 31,
+    .lvl = 32,
+    .nature = NATURE_BOLD,
+    .ability = ABILITY_SLOT_1, //Harvest
+    .species = SPECIES_TROPIUS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_DRAGON_BREATH, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_SUBSTITUTE}
     }
 };
 

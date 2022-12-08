@@ -43,6 +43,7 @@ Zone16A_EventScript_LilyLeft::
 
 Zone16A_EventScript_LilyRight::
 	lockall
+	fadeoutbgm 1
 	applymovement 7, Zone16A_Movement_LilyWalkDown
 	waitmovement 0
 	msgbox Zone16A_Text_Leviathan14Intro1, MSGBOX_DEFAULT

@@ -812,6 +812,54 @@ Zone17A_Text_Sign14:
 	.string "Piell Wei\n"
 	.string "May 12, '62 - September 26, '17$"
 
+Zone17A_EventScript_Axle::
+	trainerbattle_single TRAINER_AXLE, Zone17A_Text_AxleIntro, Zone17A_Text_AxleDefeat
+	msgbox Zone17A_Text_AxlePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone17A_Text_AxleIntro:
+	.string "Fishing isn't just a hobby.\n"
+	.string "It's a lifestyle!$"
+
+Zone17A_Text_AxleDefeat:
+	.string "I've fished up defeat!$"
+
+Zone17A_Text_AxlePostBattle:
+	.string "Dive Balls can help capture\n"
+	.string "Pokémon while fishing.$"
+
+Zone17A_EventScript_Rafael::
+	trainerbattle_single TRAINER_RAFAEL, Zone17A_Text_RafaelIntro, Zone17A_Text_RafaelDefeat
+	msgbox Zone17A_Text_RafaelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone17A_Text_RafaelIntro:
+	.string "Fishing isn't just a hobby.\n"
+	.string "It's a lifestyle!$"
+
+Zone17A_Text_RafaelDefeat:
+	.string "I've fished up defeat!$"
+
+Zone17A_Text_RafaelPostBattle:
+	.string "Dive Balls can help capture\n"
+	.string "Pokémon while fishing.$"
+
+Zone17A_EventScript_Georgina::
+	trainerbattle_single TRAINER_GEORGINA, Zone17A_Text_GeorginaIntro, Zone17A_Text_GeorginaDefeat
+	msgbox Zone17A_Text_GeorginaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone17A_Text_GeorginaIntro:
+	.string "Fishing isn't just a hobby.\n"
+	.string "It's a lifestyle!$"
+
+Zone17A_Text_GeorginaDefeat:
+	.string "I've fished up defeat!$"
+
+Zone17A_Text_GeorginaPostBattle:
+	.string "Dive Balls can help capture\n"
+	.string "Pokémon while fishing.$"
+
 Zone17A_EventScript_Intro_Text_0:
 	.string "Release us… Please…\pFourteen souls…\nTrapped here…\pInscripted in the stones…$"
 
