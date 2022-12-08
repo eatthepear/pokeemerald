@@ -2171,7 +2171,7 @@ static const struct TrainerMon sParty_JennyDefault[] = {//Leviathan, Default
     .ability = ABILITY_HIDDEN, //Moxie
     .species = SPECIES_GYARADOS,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_AQUA_TAIL, MOVE_ICE_FANG, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_WATERFALL, MOVE_ICE_FANG, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -2183,7 +2183,7 @@ static const struct TrainerMon sParty_JennyBrutal[] = {//Leviathan, Brutal
     .ability = ABILITY_HIDDEN, //Moxie
     .species = SPECIES_GYARADOS,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_AQUA_TAIL, MOVE_ICE_FANG, MOVE_POWER_WHIP, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_WATERFALL, MOVE_ICE_FANG, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE}
     }
 };
 
