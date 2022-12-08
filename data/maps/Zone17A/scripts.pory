@@ -101,7 +101,7 @@ script Zone17A_EventScript_CheckLeave {
 			waitstate
 		}
 	} else {
-		warp(MAP_ZONE17A, 255, 11, 39)
+		warp(MAP_ZONE17A, 255, 13, 38)
 		waitstate
 	}
 	releaseall

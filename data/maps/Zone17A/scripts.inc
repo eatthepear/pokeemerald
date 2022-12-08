@@ -94,7 +94,7 @@ Zone17A_EventScript_CheckLeave::
 	lockall
 	compare VAR_ZONE_17_STATE, 30
 	goto_if_eq Zone17A_EventScript_CheckLeave_2
-	warp MAP_ZONE17A, 255, 11, 39
+	warp MAP_ZONE17A, 255, 13, 38
 	waitstate
 Zone17A_EventScript_CheckLeave_1:
 	releaseall

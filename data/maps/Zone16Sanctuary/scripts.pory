@@ -1,0 +1,51 @@
+mapscripts Zone16Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 16: Zone16Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone16Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_RewardClear, MSGBOX_DEFAULT)
+	msgbox(Zone16Sanctuary_Text_Reward, MSGBOX_DEFAULT)
+	giveitem(ITEM_ABSORB_BULB, 3)
+	giveitem(ITEM_LUMINOUS_MOSS, 3)
+	setvar(VAR_ZONE, 17)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script Zone16Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			buffernumberstring(0, VAR_ZONE)
+			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				warp(MAP_ZONE17A, 255, 13, 38)
+				waitstate
+			}
+		case 1:
+			goto(EventScript_Settings)
+		case 2:
+			goto(EventScript_Documentation)
+	}
+	goto(EventScript_WhenUReady)
+}
+
+text Zone16Sanctuary_Text_Reward {
+	format("3 Absorb Bulbs and 3 Luminous Mosses!")
+}

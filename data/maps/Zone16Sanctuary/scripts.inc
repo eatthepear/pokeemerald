@@ -1,42 +1,31 @@
 Zone16Sanctuary_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone16Sanctuary_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Zone16Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-Zone16Sanctuary_OnFrame:
+Zone16Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_ZONE, 16, Zone16Sanctuary_EventScript_Intro
 	.2byte 0
 
-Zone16Sanctuary_EventScript_Intro:
+
+Zone16Sanctuary_EventScript_Intro::
 	lockall
-	call EventScript_MoveCameraUp
-	applymovement 1, Common_Movement_ExclamationMark
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	call EventScript_MoveCameraDown
-	applymovement 1, Common_Movement_Colress_WalkDown
-	waitmovement 0
-	playfanfare MUS_OBTAIN_BADGE
+	call EventScript_EnterSanctuary
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_RewardClear, MSGBOX_AUTOCLOSE
-	msgbox Zone16Sanctuary_Text_Reward, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM20
-	closemessage
-	msgbox gText_Colress_Unlocked, MSGBOX_AUTOCLOSE
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox gText_Colress_UnlockedGeneral, MSGBOX_DEFAULT
-	waitfanfare
+	msgbox gText_RewardClear, MSGBOX_DEFAULT
+	msgbox Zone16Sanctuary_Text_Reward, MSGBOX_DEFAULT
+	giveitem ITEM_ABSORB_BULB, 3
+	giveitem ITEM_LUMINOUS_MOSS, 3
 	setvar VAR_ZONE, 17
 	buffernumberstring 0, VAR_ZONE
-	msgbox gText_Colress_WhenUReady, MSGBOX_AUTOCLOSE
+	msgbox gText_Colress_WhenUReady
 	applymovement 1, Common_Movement_Colress_WalkUp
 	waitmovement 0
 	releaseall
 	end
+
 
 Zone16Sanctuary_EventScript_NextZone::
 	lock
@@ -44,27 +33,34 @@ Zone16Sanctuary_EventScript_NextZone::
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
-	case 0, Zone16Sanctuary_EventScript_NextZoneCheck
-	case 1, EventScript_Documentation
-	case 2, EventScript_Settings
-	case 3, EventScript_WhenUReady
-	case MULTI_B_PRESSED, EventScript_WhenUReady
-	end
+	case 0, Zone16Sanctuary_EventScript_NextZone_3
+	case 1, Zone16Sanctuary_EventScript_NextZone_4
+	case 2, Zone16Sanctuary_EventScript_NextZone_5
+Zone16Sanctuary_EventScript_NextZone_1:
+	goto EventScript_WhenUReady
+	return
 
-Zone16Sanctuary_EventScript_NextZoneCheck:
+Zone16Sanctuary_EventScript_NextZone_3:
 	buffernumberstring 0, VAR_ZONE
 	msgbox gText_Colress_SureReadyToLeave, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone16Sanctuary_EventScript_Leave
-	goto EventScript_WhenUReady
-	end
+	goto_if_eq Zone16Sanctuary_EventScript_NextZone_6
+	goto Zone16Sanctuary_EventScript_NextZone_1
 
-Zone16Sanctuary_EventScript_Leave:
+Zone16Sanctuary_EventScript_NextZone_4:
+	goto EventScript_Settings
+	goto Zone16Sanctuary_EventScript_NextZone_1
+
+Zone16Sanctuary_EventScript_NextZone_5:
+	goto EventScript_Documentation
+	goto Zone16Sanctuary_EventScript_NextZone_1
+
+Zone16Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
-	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	warp MAP_ZONE17A, 255, 11, 39
-	release
-	end
+	warp MAP_ZONE17A, 255, 13, 38
+	waitstate
+	goto Zone16Sanctuary_EventScript_NextZone_1
 
-Zone16Sanctuary_Text_Reward:
-	.string "TM20 - Dual Wingbeat!$"
+
+Zone16Sanctuary_Text_Reward::
+	.string "3 Absorb Bulbs and 3 Luminous Mosses!$"
