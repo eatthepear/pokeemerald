@@ -256,14 +256,14 @@ Zone16A_EventScript_Tanisha::
 	end
 
 Zone16A_Text_TanishaIntro:
-	.string "Have you ever been to a\n"
-	.string "Lazy River?$"
+	.string "Training Pokémon is hard work!$"
 
 Zone16A_Text_TanishaDefeat:
-	.string "It's the best place for Tubers!$"
+	.string "It seems I've succeeded in training\n"
+	.string "your Pokémon!$"
 
 Zone16A_Text_TanishaPostBattle:
-	.string "Lazy River is the best!$"
+	.string "You're welcome, by the way!$"
 
 Zone16A_EventScript_Robert::
 	trainerbattle_single TRAINER_ROBERT, Zone16A_Text_RobertIntro, Zone16A_Text_RobertDefeat
@@ -271,14 +271,14 @@ Zone16A_EventScript_Robert::
 	end
 
 Zone16A_Text_RobertIntro:
-	.string "Have you ever been to a\n"
-	.string "Lazy River?$"
+	.string "Hey there!\n"
+	.string "How do you do?$"
 
 Zone16A_Text_RobertDefeat:
-	.string "It's the best place for Tubers!$"
+	.string "We're the rhyming Hiker pair!$"
 
 Zone16A_Text_RobertPostBattle:
-	.string "Lazy River is the best!$"
+	.string "Rhyming is easy…$"
 
 Zone16A_EventScript_Chris::
 	trainerbattle_single TRAINER_CHRIS, Zone16A_Text_ChrisIntro, Zone16A_Text_ChrisDefeat
@@ -286,14 +286,14 @@ Zone16A_EventScript_Chris::
 	end
 
 Zone16A_Text_ChrisIntro:
-	.string "Have you ever been to a\n"
-	.string "Lazy River?$"
+	.string "Hey there!\n"
+	.string "What's hip, hopping, and new?$"
 
 Zone16A_Text_ChrisDefeat:
-	.string "It's the best place for Tubers!$"
+	.string "You beat us fair and square!$"
 
 Zone16A_Text_ChrisPostBattle:
-	.string "Lazy River is the best!$"
+	.string "Battling makes me queasy…$"
 
 Zone16A_EventScript_Angus::
 	trainerbattle_single TRAINER_ANGUS, Zone16A_Text_AngusIntro, Zone16A_Text_AngusDefeat
