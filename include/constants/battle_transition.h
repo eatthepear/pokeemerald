@@ -22,7 +22,7 @@
 #define MUGSHOT_COREY       18
 #define MUGSHOT_JOEY        19
 #define MUGSHOT_PHILLIPA    20
-#define MUGSHOT_ISABELLA    21
+#define MUGSHOT_MIA         21
 #define MUGSHOT_BETTY       22
 #define MUGSHOT_MINA        23
 #define MUGSHOT_NEWTON      24

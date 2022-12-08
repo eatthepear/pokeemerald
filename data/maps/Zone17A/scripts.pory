@@ -191,11 +191,13 @@ script Zone17A_EventScript_InitiateLeviathanBattle {
 	fadeoutbgm(1)
 	msgbox("BOOOO!")
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIA)
 	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat)
+		setflag(FLAG_DISABLE_PREVIEW)
+		trainerbattle_no_intro(TRAINER_MIA_LEVIATHAN_15_BRUTAL, Zone15B_Text_Leviathan13Defeat)
+		clearflag(FLAG_DISABLE_PREVIEW)
 	} else {
-		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat)
+		trainerbattle_no_intro(TRAINER_MIA_LEVIATHAN_15, Zone15B_Text_Leviathan13Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox("")
@@ -735,60 +737,60 @@ Zone17A_Text_PaidRespects:
 	.string "{PLAYER} paid respects to the dead.$"
 
 Zone17A_Text_Sign1:
-	.string "Undulli Holmes\n"
-	.string "July 27, '40 - September 14, '02$"
+	.string "July 27, '40 - September 14, '02\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign2:
-	.string "Koon Olafsson\n"
-	.string "November 9, '03 - May 24, '95$"
+	.string "November 9, '03 - May 24, '95\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign3:
-	.string "Fisto Zhang\n"
-	.string "December 13, '66 - July 5, '20$"
+	.string "December 13, '66 - July 5, '20\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign4:
-	.string "Topal Lee\n"
-	.string "February 25, '47 - June 22, '15$"
+	.string "February 25, '47 - June 22, '15\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign5:
-	.string "Gallia Martez\n"
-	.string "April 28, '50 - October 1, '03$"
+	.string "April 28, '50 - October 1, '03\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign6:
-	.string "Windu Jackson\n"
-	.string "January 4, '60 - August 10, '19$"
+	.string "January 4, '60 - August 10, '19\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign7:
-	.string "Jinn Neelson\n"
-	.string "October 11, '44 - February 16, '08$"
+	.string "October 11, '44 - February 16, '08\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign8:
-	.string "Secura Vogelzang\n"
-	.string "March 2, '45 - November 21, '04$"
+	.string "March 2, '45 - November 21, '04\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign9:
-	.string "Mundi Suzuki\n"
-	.string "August 20, '39 - January 6, '98$"
+	.string "August 20, '39 - January 6, '98\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign10:
-	.string "Billaba Sina\n"
-	.string "June 7, '48 - June 23, '15$"
+	.string "June 7, '48 - June 23, '15\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign11:
-	.string "Tiplar Rodriguez\n"
-	.string "December 29, '36 - June 17, '94$"
+	.string "December 29, '36 - June 17, '94\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign12:
-	.string "Tinn Smith\n"
-	.string "September 19, '49 - March 15, '00$"
+	.string "September 19, '49 - March 15, '00\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign13:
-	.string "Kolar Dali\n"
-	.string "December 3, '33 - June 18, '89$"
+	.string "December 3, '33 - June 18, '89\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_Text_Sign14:
-	.string "Piell Wei\n"
-	.string "May 12, '62 - September 26, '17$"
+	.string "May 12, '62 - September 26, '17\n"
+	.string "The name has been eroded off…$"
 
 Zone17A_EventScript_Axle::
 	trainerbattle_single TRAINER_AXLE, Zone17A_Text_AxleIntro, Zone17A_Text_AxleDefeat
@@ -796,15 +798,15 @@ Zone17A_EventScript_Axle::
 	end
 
 Zone17A_Text_AxleIntro:
-	.string "Fishing isn't just a hobby.\n"
-	.string "It's a lifestyle!$"
+	.string "Leave me alone!$"
 
 Zone17A_Text_AxleDefeat:
-	.string "I've fished up defeat!$"
+	.string "I… I…$"
 
 Zone17A_Text_AxlePostBattle:
-	.string "Dive Balls can help capture\n"
-	.string "Pokémon while fishing.$"
+	.string "He was my friend.\p"
+	.string "I come here on the day it happened\n"
+	.string "every year.$"
 
 Zone17A_EventScript_Rafael::
 	trainerbattle_single TRAINER_RAFAEL, Zone17A_Text_RafaelIntro, Zone17A_Text_RafaelDefeat
@@ -812,15 +814,18 @@ Zone17A_EventScript_Rafael::
 	end
 
 Zone17A_Text_RafaelIntro:
-	.string "Fishing isn't just a hobby.\n"
-	.string "It's a lifestyle!$"
+	.string "Dear child, it can be hard to\n"
+	.string "handle grief sometimes.\p"
+	.string "May we have this battle to get my\n"
+	.string "mind off of things?$"
 
 Zone17A_Text_RafaelDefeat:
-	.string "I've fished up defeat!$"
+	.string "Thank you, my friend.$"
 
 Zone17A_Text_RafaelPostBattle:
-	.string "Dive Balls can help capture\n"
-	.string "Pokémon while fishing.$"
+	.string "I come here a few times a year,\n"
+	.string "to celebrate birthdays as well as\l"
+	.string "the day of passing.$"
 
 Zone17A_EventScript_Georgina::
 	trainerbattle_single TRAINER_GEORGINA, Zone17A_Text_GeorginaIntro, Zone17A_Text_GeorginaDefeat
@@ -828,13 +833,15 @@ Zone17A_EventScript_Georgina::
 	end
 
 Zone17A_Text_GeorginaIntro:
-	.string "Fishing isn't just a hobby.\n"
-	.string "It's a lifestyle!$"
+	.string "I can sense the souls of the passed…\n"
+	.string "But there's something else, lurking…$"
 
 Zone17A_Text_GeorginaDefeat:
-	.string "I've fished up defeat!$"
+	.string "There's fourteen… no…\n"
+	.string "No… fifteen?$"
 
 Zone17A_Text_GeorginaPostBattle:
-	.string "Dive Balls can help capture\n"
-	.string "Pokémon while fishing.$"
+	.string "The fourteen souls must be paid\n"
+	.string "respects…\p"
+	.string "The fifteenth soul must be calmed…$"
 `
