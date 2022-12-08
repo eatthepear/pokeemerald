@@ -7750,6 +7750,7 @@ static const struct LevelUpMove sGorebyssLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sRelicanthLevelUpLearnset[] = {
+	LEVEL_UP_MOVE( 1, MOVE_HEAD_SMASH),
 	LEVEL_UP_MOVE( 1, MOVE_BODY_PRESS),
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_MOVE( 4, MOVE_HARDEN),
