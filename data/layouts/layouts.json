@@ -4844,7 +4844,7 @@
     {
       "id": "LAYOUT_ZONE17A",
       "name": "Zone17A_Layout",
-      "width": 29,
+      "width": 32,
       "height": 49,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",

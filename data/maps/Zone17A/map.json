@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
-      "x": 11,
-      "y": 35,
+      "x": 13,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAIRY_TALE_GIRL",
-      "x": 11,
-      "y": 7,
+      "x": 13,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROUGHNECK",
-      "x": 21,
-      "y": 40,
+      "x": 23,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 8,
-      "y": 31,
+      "x": 10,
+      "y": 30,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -68,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_F",
-      "x": 16,
-      "y": 24,
+      "x": 18,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -86,26 +86,26 @@
   "coord_events": [
     {
       "type": "trigger",
+      "x": 14,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone17A_EventScript_CheckLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_GENERIC",
+      "var_value": "0",
+      "script": "Zone17A_EventScript_CheckLeave"
+    },
+    {
+      "type": "trigger",
       "x": 12,
-      "y": 41,
-      "elevation": 0,
-      "var": "VAR_GENERIC",
-      "var_value": "0",
-      "script": "Zone17A_EventScript_CheckLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 41,
-      "elevation": 0,
-      "var": "VAR_GENERIC",
-      "var_value": "0",
-      "script": "Zone17A_EventScript_CheckLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 41,
+      "y": 43,
       "elevation": 0,
       "var": "VAR_GENERIC",
       "var_value": "0",
@@ -115,120 +115,120 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 11,
-      "y": 9,
+      "x": 13,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_RiddleSign"
     },
     {
       "type": "sign",
-      "x": 9,
-      "y": 14,
+      "x": 11,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign1"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 18,
+      "x": 10,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign2"
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 22,
+      "x": 9,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign3"
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 26,
+      "x": 8,
+      "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign4"
     },
     {
       "type": "sign",
-      "x": 5,
-      "y": 30,
+      "x": 7,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign5"
     },
     {
       "type": "sign",
-      "x": 4,
-      "y": 34,
+      "x": 6,
+      "y": 33,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign6"
     },
     {
       "type": "sign",
-      "x": 3,
-      "y": 38,
+      "x": 5,
+      "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign7"
     },
     {
       "type": "sign",
-      "x": 13,
-      "y": 14,
+      "x": 15,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign8"
     },
     {
       "type": "sign",
-      "x": 14,
-      "y": 18,
+      "x": 16,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign9"
     },
     {
       "type": "sign",
-      "x": 15,
-      "y": 22,
+      "x": 17,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign10"
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 26,
+      "x": 18,
+      "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign11"
     },
     {
       "type": "sign",
-      "x": 17,
-      "y": 30,
+      "x": 19,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign12"
     },
     {
       "type": "sign",
-      "x": 18,
-      "y": 34,
+      "x": 20,
+      "y": 33,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign13"
     },
     {
       "type": "sign",
-      "x": 19,
-      "y": 38,
+      "x": 21,
+      "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Zone17A_EventScript_Sign14"
