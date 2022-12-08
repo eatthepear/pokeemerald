@@ -23,133 +23,60 @@ mapscripts Zone16A_MapScripts {
 	}
 }
 
-script Zone16A_EventScript_Michael {
-	lock
-	if (var(VAR_ZONE_16_STATE) != 0) {
-		faceplayer
-		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: You're amazingingly skilled!"))
-		release
-		end
-	}
-	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
-	if (var(VAR_TEMP_0) == 66) {
-		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-		waitmovement(0)
-	}
-	goto(Zone16A_EventScript_InitiateKatieMichaelBattles)
+script Zone16A_EventScript_LilyLeft {
+	lockall
+	applymovement(7, Common_Movement_WalkLeft)
+	waitmovement(0)
+	goto(Zone16A_EventScript_LilyRight)
 }
 
-script Zone16A_EventScript_Katie {
-	lock
-	if (var(VAR_ZONE_16_STATE) != 0) {
-		faceplayer
-		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Treat that Lapras right!"))
-		release
-		end
-	}
-	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
-	if (var(VAR_TEMP_0) == 69) {
-		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-		waitmovement(0)
-	}
-	goto(Zone16A_EventScript_InitiateKatieMichaelBattles)
-}
-
-script Zone16A_EventScript_InitiateKatieMichaelBattles {
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: Hello! We're the dynamic swimming duo!"))
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Listen up, 'cause we've got a challenge for you!"))
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: Our friend is a Pokémon Ranger and she's looking for someone to take care of a rehabilitated Lapras."))
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: But she wants to make sure the person is a skilled trainer!"))
-	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
-		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both back-to-back in battle, I'll let her know to give the Lapras to you! You won't be healed in between battles."), MSGBOX_YESNO)
-	} else {
-		msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both back-to-back in battle, I'll let her know to give the Lapras to you! You will be healed in between battles."), MSGBOX_YESNO)
-	}
-	if (var(VAR_RESULT) == NO) {
-		msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: I guess Lapras may never find the right home…"))
-		release
-		end
-	}
+script Zone16A_EventScript_LilyRight {
+	lockall
+	applymovement(7, Zone16A_Movement_LilyWalkDown)
+	waitmovement(0)
+	msgbox(Zone16A_Text_Leviathan14Intro1, MSGBOX_DEFAULT)
+	setweather(WEATHER_RAIN)
+	doweather
+	msgbox("It suddenly began to rain!", MSGBOX_DEFAULT)
+	msgbox(Zone16A_Text_Leviathan14Intro2)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Alright! Let's get started, then!"))
-	trainerbattle_no_intro(TRAINER_KATIE, format("Katie: You made quite the splash!"))
-	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
-		special(HealPlayerParty)
+	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_LILY)
+		trainerbattle_no_intro(TRAINER_LILY_LEVIATHAN_14_BRUTAL, Zone16A_Text_Leviathan14Defeat)
+	} else {
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_LILY)
+		trainerbattle_no_intro(TRAINER_LILY_LEVIATHAN_14, Zone16A_Text_Leviathan14Defeat)
 	}
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: I hope you're ready for this battle!"))
-	trainerbattle_no_intro(TRAINER_MICHAEL, format("Michael: You're too quick!"))
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: You got us! You're an amazing trainer!\pWe'll put in the good word with our friend."))
-	msgbox(format("{COLOR BLUE}Michael{COLOR DARK_GRAY}: I think she's somewhere in the shallows to the south of us right now."))
-	msgbox(format("{COLOR BLUE}Katie{COLOR DARK_GRAY}: Treat that Lapras right!"))
+	msgbox(format("{COLOR BLUE}Lily{COLOR DARK_GRAY}: Well then. I suppose you'll be wanting your reward.\pHere you go."), MSGBOX_DEFAULT)
+	giveitem(ITEM_TM28)
+	resetweather
+	doweather
+	msgbox(format("{COLOR BLUE}Lily{COLOR DARK_GRAY}: It seems the rain has stopped.\pI'll be enjoying the rest of my day with a nice dip in the water.\lGoodbye."))
+	closemessage
+	fadescreen(FADE_TO_BLACK)
+	removeobject(7)
+	setflag(FLAG_BEAT_LEVIATHAN_14)
+	fadescreen(FADE_FROM_BLACK)
 	setvar(VAR_ZONE_16_STATE, 1)
 	release
 	end
 }
 
-script Zone16A_EventScript_PokemonRanger {
-	lock
-	faceplayer
-	if (var(VAR_ZONE_16_STATE) == 0) {
-		msgbox(format("You look like a skilled trainer!\pI have here a Lapras that's been rehabilitated from a boating collision.\pIt's not fit to live in the wild anymore, so I've been looking for skilled trainers to take care of it.\pIf you want to show me your skills, go find {COLOR BLUE}Katie{COLOR DARK_GRAY} and {COLOR BLUE}Michael{COLOR DARK_GRAY} to the north of here."))
-		release
-		end
-	}
-	if (var(VAR_ZONE_16_STATE) == 1) {
-		msgbox(format("You look like a skilled trainer!\pI have here a Lapras that's been rehabilitated from a boating collision.\pI heard from {COLOR BLUE}Katie{COLOR DARK_GRAY} and {COLOR BLUE}Michael{COLOR DARK_GRAY} that you're a skilled trainer.\pWould you be willing to take care of Lapras?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == NO) {
-			msgbox(format("I'm worried that no one will be able to take care of this rare Pokémon.\pIf you change your mind, let me know."))
-			release
-			end
-		}
-		specialvar(VAR_TEMP_0, CalculatePlayerPartyCount)
-		if (var(VAR_TEMP_0) == PARTY_SIZE) {
-			msgbox(format("It looks like your party is full. Come back with space in your party, yeah?"))
-			release
-			end
-		}
-		givemon(SPECIES_LAPRAS, 30, ITEM_NONE)
-		setmonmetlocation(VAR_TEMP_0, 249)
-		setvar(VAR_TEMP_1, SPECIES_LAPRAS)
-		playfanfare(MUS_OBTAIN_ITEM)
-		message("Received Lapras!")
-		waitmessage
-		waitfanfare
-		bufferspeciesname(0, SPECIES_LAPRAS)
-		msgbox(format("Would you like to give a nickname to Lapras?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == YES) {
-			call(Common_EventScript_GetGiftMonPartySlot)
-			call(Common_EventScript_NameReceivedPartyMon)
-		}
-		setvar(VAR_ZONE_16_STATE, 2)
-	}
-	msgbox(format("Thank you, trainer, for taking care of Lapras."), MSGBOX_DEFAULT)
-	release
-	end
+movement Zone16A_Movement_LilyWalkDown {
+	walk_down * 5
 }
 
-script Zone16A_EventScript_Exit {
-    lockall
-    if (var(VAR_ZONE) > 16) {
-		call(EventScript_WarpZone0)
-    } else {
-		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-			goto(EventScript_BrutalExitNotSatisfied)
-		}
-        warp(MAP_ZONE16SANCTUARY, 255, 22, 7)
-		waitstate
-    }
-    releaseall
-    end
+text Zone16A_Text_Leviathan14Intro1 {
+	format("{COLOR BLUE}Lily{COLOR DARK_GRAY}: Did you know that you can smell plants better right before a storm?")
+}
+
+text Zone16A_Text_Leviathan14Intro2 {
+	format("{COLOR BLUE}Lily{COLOR DARK_GRAY}: Oh, would you look at that.\pNo wonder I could smell the flowers so well!\pDon't you know the rain just makes my flowers stronger?")
+}
+
+text Zone16A_Text_Leviathan14Defeat {
+	format("Woe is me…")
 }
 
 script Zone16A_EventScript_SandPile {

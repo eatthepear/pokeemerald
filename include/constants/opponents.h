@@ -121,8 +121,8 @@
 #define TRAINER_ROBERT                       	117
 #define TRAINER_CHRIS                         	118
 #define TRAINER_ANGUS                         	119
-#define TRAINER_KATIE                         	120
-#define TRAINER_MICHAEL                       	121
+#define TRAINER_LILY_LEVIATHAN_14              	120
+#define TRAINER_LILY_LEVIATHAN_14_BRUTAL       	121
 #define TRAINER_RAFAEL                        	122
 #define TRAINER_GEORGINA                      	123
 #define TRAINER_JAY                           	124

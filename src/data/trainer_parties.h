@@ -2431,13 +2431,13 @@ static const struct TrainerMon sParty_MiguelBrutal[] = {//Leviathan, Brutal
     .moves = {MOVE_POWER_GEM, MOVE_BODY_PRESS, MOVE_THUNDER_WAVE, MOVE_MIRROR_SHOT}
     },
     {
-    .iv = 31,
+    .ivs = {31, 31, 31, 31, 30, 30},
     .lvl = 29,
-    .nature = NATURE_MILD,
-    .ability = ABILITY_SLOT_1, //Infiltrator
-    .species = SPECIES_JUMPLUFF,
-    .heldItem = ITEM_YACHE_BERRY,
-    .moves = {MOVE_MEGA_DRAIN, MOVE_AIR_CUTTER, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS}
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1, //Gulp Missile
+    .species = SPECIES_CRAMORANT,
+    .heldItem = ITEM_WACAN_BERRY,
+    .moves = {MOVE_DRILL_PECK, MOVE_SURF, MOVE_ROOST, MOVE_HIDDEN_POWER} //Hidden Power Ground
     }
 };
 
@@ -2607,59 +2607,90 @@ static const struct TrainerMon sParty_Angus[] = {// Shuffled Party
     }
 };
 
-// You fight Katie then immediately fight Michael afterwards.
-// On Default, your party is fully healed in between fights, while on Brutal your party is not
-static const struct TrainerMon sParty_Katie[] = {
+static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default
     {
-    .iv = 20,
+    .ivs = {21, 21, 20, 20, 21, 20},
     .lvl = 32,
-    .ability = ABILITY_SLOT_2, //Sniper
-    .species = SPECIES_SEADRA,
-    .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_BRINE, MOVE_AURORA_BEAM, MOVE_CLEAR_SMOG, MOVE_FOCUS_ENERGY}
+    .nature = NATURE_QUIET,
+    .ability = ABILITY_SLOT_1, //Dancer
+    .species = SPECIES_BELLOSSOM,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LEAF_STORM, MOVE_GIGA_DRAIN, MOVE_MOONLIGHT, MOVE_HIDDEN_POWER} //Hidden Power Rock
     },
     {
     .iv = 20,
     .lvl = 32,
-    .ability = ABILITY_SLOT_1, //Water Absorb
-    .species = SPECIES_MANTINE,
-    .heldItem = ITEM_WACAN_BERRY,
-    .moves = {MOVE_AIR_SLASH, MOVE_WATER_PULSE, MOVE_ICY_WIND, MOVE_ROOST}
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1, //Swarm
+    .species = SPECIES_LEAVANNY,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LEAF_BLADE, MOVE_BUG_BITE, MOVE_AERIAL_ACE, MOVE_HONE_CLAWS}
     },
     {
     .iv = 20,
     .lvl = 32,
-    .ability = ABILITY_SLOT_1, //Volt Absorb
-    .species = SPECIES_LANTURN,
-    .heldItem = ITEM_RINDO_BERRY,
-    .moves = {MOVE_DISCHARGE, MOVE_BUBBLE_BEAM, MOVE_SIGNAL_BEAM, MOVE_VOLT_SWITCH}
+    .nature = NATURE_LONELY,
+    .ability = ABILITY_SLOT_1, //Infiltrator
+    .species = SPECIES_JUMPLUFF,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_ACROBATICS, MOVE_U_TURN, MOVE_BULLET_SEED, MOVE_SLEEP_POWDER}
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .nature = NATURE_RASH,
+    .ability = ABILITY_SLOT_1, //Own Tempo
+    .species = SPECIES_LILLIGANT,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_QUIVER_DANCE, MOVE_AROMATHERAPY}
     }
 };
 
-static const struct TrainerMon sParty_Michael[] = {
+static const struct TrainerMon sParty_LilyBrutal[] = {//Leviathan, Brutal
     {
-    .iv = 20,
+    .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 32,
-    .ability = ABILITY_SLOT_1, //Thick Fat
-    .species = SPECIES_SEALEO,
-    .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_FREEZE_DRY, MOVE_WATER_PULSE, MOVE_REST, MOVE_SLEEP_TALK}
+    .nature = NATURE_QUIET,
+    .ability = ABILITY_SLOT_1, //Dancer
+    .species = SPECIES_BELLOSSOM,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LEAF_STORM, MOVE_GIGA_DRAIN, MOVE_MOONLIGHT, MOVE_HIDDEN_POWER} //Hidden Power Rock
     },
     {
-    .ivs = {21, 21, 21, 21, 20, 21},
+    .iv = 31,
     .lvl = 32,
-    .ability = ABILITY_SLOT_2, //Shell Armor
-    .species = SPECIES_GASTRODON,
-    .heldItem = ITEM_RINDO_BERRY,
-    .moves = {MOVE_MUDDY_WATER, MOVE_EARTH_POWER, MOVE_ANCIENT_POWER, MOVE_HIDDEN_POWER} //Hidden Power Electric
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1, //Swarm
+    .species = SPECIES_LEAVANNY,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LEAF_BLADE, MOVE_BUG_BITE, MOVE_AERIAL_ACE, MOVE_HONE_CLAWS}
     },
     {
-    .iv = 20,
+    .iv = 31,
     .lvl = 32,
-    .ability = ABILITY_SLOT_1, //Technician
-    .species = SPECIES_FLOATZEL,
-    .heldItem = ITEM_WACAN_BERRY,
-    .moves = {MOVE_FLIP_TURN, MOVE_ICE_FANG, MOVE_TAIL_SLAP, MOVE_AQUA_JET}
+    .nature = NATURE_LONELY,
+    .ability = ABILITY_SLOT_1, //Infiltrator
+    .species = SPECIES_JUMPLUFF,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_ACROBATICS, MOVE_U_TURN, MOVE_BULLET_SEED, MOVE_SLEEP_POWDER}
+    },
+    {
+    .iv = 31,
+    .lvl = 32,
+    .nature = NATURE_RASH,
+    .ability = ABILITY_SLOT_1, //Own Tempo
+    .species = SPECIES_LILLIGANT,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_QUIVER_DANCE, MOVE_AROMATHERAPY}
+    },
+    {
+    .iv = 31,
+    .lvl = 32,
+    .nature = NATURE_BOLD,
+    .ability = ABILITY_SLOT_1, //Harvest
+    .species = SPECIES_TROPIUS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_DRAGON_BREATH, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_SUBSTITUTE}
     }
 };
 

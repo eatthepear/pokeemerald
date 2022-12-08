@@ -33,180 +33,56 @@ Zone16A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
 	return
 
 
-Zone16A_EventScript_Michael::
-	lock
-	compare VAR_ZONE_16_STATE, 0
-	goto_if_ne Zone16A_EventScript_Michael_2
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 66
-	goto_if_eq Zone16A_EventScript_Michael_5
-Zone16A_EventScript_Michael_4:
-	goto Zone16A_EventScript_InitiateKatieMichaelBattles
+Zone16A_EventScript_LilyLeft::
+	lockall
+	applymovement 7, Common_Movement_WalkLeft
+	waitmovement 0
+	goto Zone16A_EventScript_LilyRight
 	return
 
-Zone16A_EventScript_Michael_2:
-	faceplayer
-	msgbox Zone16A_EventScript_Michael_Text_0
-	release
-	end
 
-Zone16A_EventScript_Michael_5:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+Zone16A_EventScript_LilyRight::
+	lockall
+	applymovement 7, Zone16A_Movement_LilyWalkDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto Zone16A_EventScript_Michael_4
-
-
-Zone16A_EventScript_Katie::
-	lock
-	compare VAR_ZONE_16_STATE, 0
-	goto_if_ne Zone16A_EventScript_Katie_2
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 69
-	goto_if_eq Zone16A_EventScript_Katie_5
-Zone16A_EventScript_Katie_4:
-	goto Zone16A_EventScript_InitiateKatieMichaelBattles
-	return
-
-Zone16A_EventScript_Katie_2:
-	faceplayer
-	msgbox Zone16A_EventScript_Katie_Text_0
-	release
-	end
-
-Zone16A_EventScript_Katie_5:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto Zone16A_EventScript_Katie_4
-
-
-Zone16A_EventScript_InitiateKatieMichaelBattles::
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_0
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_1
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_2
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_3
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_InitiateKatieMichaelBattles_2
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_5, MSGBOX_YESNO
-Zone16A_EventScript_InitiateKatieMichaelBattles_1:
-	compare VAR_RESULT, NO
-	goto_if_eq Zone16A_EventScript_InitiateKatieMichaelBattles_6
+	msgbox Zone16A_Text_Leviathan14Intro1, MSGBOX_DEFAULT
+	setweather WEATHER_RAIN
+	doweather
+	msgbox Zone16A_EventScript_LilyRight_Text_0, MSGBOX_DEFAULT
+	msgbox Zone16A_Text_Leviathan14Intro2
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_7
-	trainerbattle_no_intro TRAINER_KATIE, Zone16A_EventScript_InitiateKatieMichaelBattles_Text_8
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_InitiateKatieMichaelBattles_9
-Zone16A_EventScript_InitiateKatieMichaelBattles_8:
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_9
-	trainerbattle_no_intro TRAINER_MICHAEL, Zone16A_EventScript_InitiateKatieMichaelBattles_Text_10
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_LilyRight_2
+	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	trainerbattle_no_intro TRAINER_LILY_LEVIATHAN_14, Zone16A_Text_Leviathan14Defeat
+Zone16A_EventScript_LilyRight_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_11
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_12
-	msgbox Zone16A_EventScript_Katie_Text_0
+	msgbox Zone16A_EventScript_LilyRight_Text_1, MSGBOX_DEFAULT
+	giveitem ITEM_TM28
+	resetweather
+	doweather
+	msgbox Zone16A_EventScript_LilyRight_Text_2
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject 7
+	setflag FLAG_BEAT_LEVIATHAN_14
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ZONE_16_STATE, 1
 	release
 	end
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_2:
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_4, MSGBOX_YESNO
-	goto Zone16A_EventScript_InitiateKatieMichaelBattles_1
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_6:
-	msgbox Zone16A_EventScript_InitiateKatieMichaelBattles_Text_6
-	release
-	end
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_9:
-	special HealPlayerParty
-	goto Zone16A_EventScript_InitiateKatieMichaelBattles_8
+Zone16A_EventScript_LilyRight_2:
+	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	trainerbattle_no_intro TRAINER_LILY_LEVIATHAN_14_BRUTAL, Zone16A_Text_Leviathan14Defeat
+	goto Zone16A_EventScript_LilyRight_1
 
 
-Zone16A_EventScript_PokemonRanger::
-	lock
-	faceplayer
-	compare VAR_ZONE_16_STATE, 0
-	goto_if_eq Zone16A_EventScript_PokemonRanger_2
-	compare VAR_ZONE_16_STATE, 1
-	goto_if_eq Zone16A_EventScript_PokemonRanger_5
-Zone16A_EventScript_PokemonRanger_4:
-	msgbox Zone16A_EventScript_PokemonRanger_Text_6, MSGBOX_DEFAULT
-	release
-	end
-
-Zone16A_EventScript_PokemonRanger_2:
-	msgbox Zone16A_EventScript_PokemonRanger_Text_0
-	release
-	end
-
-Zone16A_EventScript_PokemonRanger_5:
-	msgbox Zone16A_EventScript_PokemonRanger_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone16A_EventScript_PokemonRanger_8
-	specialvar VAR_TEMP_0, CalculatePlayerPartyCount
-	compare VAR_TEMP_0, PARTY_SIZE
-	goto_if_eq Zone16A_EventScript_PokemonRanger_11
-	givemon SPECIES_LAPRAS, 30, ITEM_NONE
-	setmonmetlocation VAR_TEMP_0, 249
-	setvar VAR_TEMP_1, SPECIES_LAPRAS
-	playfanfare MUS_OBTAIN_ITEM
-	message Zone16A_EventScript_PokemonRanger_Text_4
-	waitmessage
-	waitfanfare
-	bufferspeciesname 0, SPECIES_LAPRAS
-	msgbox Zone16A_EventScript_PokemonRanger_Text_5, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone16A_EventScript_PokemonRanger_14
-Zone16A_EventScript_PokemonRanger_13:
-	setvar VAR_ZONE_16_STATE, 2
-	goto Zone16A_EventScript_PokemonRanger_4
-
-Zone16A_EventScript_PokemonRanger_8:
-	msgbox Zone16A_EventScript_PokemonRanger_Text_2
-	release
-	end
-
-Zone16A_EventScript_PokemonRanger_11:
-	msgbox Zone16A_EventScript_PokemonRanger_Text_3
-	release
-	end
-
-Zone16A_EventScript_PokemonRanger_14:
-	call Common_EventScript_GetGiftMonPartySlot
-	call Common_EventScript_NameReceivedPartyMon
-	goto Zone16A_EventScript_PokemonRanger_13
-
-
-Zone16A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 16
-	goto_if_gt Zone16A_EventScript_Exit_2
-	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone16A_EventScript_Exit_7
-Zone16A_EventScript_Exit_5:
-	warp MAP_ZONE16SANCTUARY, 255, 22, 7
-	waitstate
-Zone16A_EventScript_Exit_1:
-	releaseall
-	end
-
-Zone16A_EventScript_Exit_2:
-	call EventScript_WarpZone0
-	goto Zone16A_EventScript_Exit_1
-
-Zone16A_EventScript_Exit_6:
-	goto EventScript_BrutalExitNotSatisfied
-	goto Zone16A_EventScript_Exit_5
-
-Zone16A_EventScript_Exit_7:
-	compare VAR_NUM_TRAINERS_REMAINING, 0
-	goto_if_ne Zone16A_EventScript_Exit_6
-	goto Zone16A_EventScript_Exit_5
-
+Zone16A_Movement_LilyWalkDown:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 Zone16A_EventScript_SandPile::
 	lockall
@@ -435,110 +311,36 @@ Zone16A_Text_AngusPostBattle:
 	.string "Dive Balls can help capture\n"
 	.string "Pokémon while fishing.$"
 
-Zone16A_EventScript_Michael_Text_0:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: You're amazingingly skilled!$"
+Zone16A_EventScript_LilyRight_Text_0:
+	.string "It suddenly began to rain!$"
 
-Zone16A_EventScript_Katie_Text_0:
-	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: Treat that Lapras right!$"
+Zone16A_EventScript_LilyRight_Text_1:
+	.string "{COLOR BLUE}Lily{COLOR DARK_GRAY}: Well then. I suppose you'll be\n"
+	.string "wanting your reward.\p"
+	.string "Here you go.$"
 
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_0:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: Hello! We're the dynamic\n"
-	.string "swimming duo!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_1:
-	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: Listen up, 'cause we've got a\n"
-	.string "challenge for you!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_2:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: Our friend is a Pokémon Ranger\n"
-	.string "and she's looking for someone to take\l"
-	.string "care of a rehabilitated Lapras.$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_3:
-	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: But she wants to make sure the\n"
-	.string "person is a skilled trainer!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_4:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both\n"
-	.string "back-to-back in battle, I'll let her\l"
-	.string "know to give the Lapras to you! You\l"
-	.string "won't be healed in between battles.$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_5:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: If you beat us both\n"
-	.string "back-to-back in battle, I'll let her\l"
-	.string "know to give the Lapras to you! You will\l"
-	.string "be healed in between battles.$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_6:
-	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: I guess Lapras may never find\n"
-	.string "the right home…$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_7:
-	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: Alright! Let's get started, then!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_8:
-	.string "Katie: You made quite the splash!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_9:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: I hope you're ready for this\n"
-	.string "battle!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_10:
-	.string "Michael: You're too quick!$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_11:
-	.string "{COLOR BLUE}Katie{COLOR DARK_GRAY}: You got us! You're an amazing\n"
-	.string "trainer!\p"
-	.string "We'll put in the good word with our\n"
-	.string "friend.$"
-
-Zone16A_EventScript_InitiateKatieMichaelBattles_Text_12:
-	.string "{COLOR BLUE}Michael{COLOR DARK_GRAY}: I think she's somewhere in the\n"
-	.string "shallows to the south of us right now.$"
-
-Zone16A_EventScript_PokemonRanger_Text_0:
-	.string "You look like a skilled trainer!\p"
-	.string "I have here a Lapras that's been\n"
-	.string "rehabilitated from a boating collision.\p"
-	.string "It's not fit to live in the wild anymore,\n"
-	.string "so I've been looking for skilled\l"
-	.string "trainers to take care of it.\p"
-	.string "If you want to show me your skills, go\n"
-	.string "find {COLOR BLUE}Katie{COLOR DARK_GRAY} and {COLOR BLUE}Michael{COLOR DARK_GRAY} to the north of\l"
-	.string "here.$"
-
-Zone16A_EventScript_PokemonRanger_Text_1:
-	.string "You look like a skilled trainer!\p"
-	.string "I have here a Lapras that's been\n"
-	.string "rehabilitated from a boating collision.\p"
-	.string "I heard from {COLOR BLUE}Katie{COLOR DARK_GRAY} and {COLOR BLUE}Michael{COLOR DARK_GRAY} that\n"
-	.string "you're a skilled trainer.\p"
-	.string "Would you be willing to take care of\n"
-	.string "Lapras?$"
-
-Zone16A_EventScript_PokemonRanger_Text_2:
-	.string "I'm worried that no one will be able to\n"
-	.string "take care of this rare Pokémon.\p"
-	.string "If you change your mind, let me know.$"
-
-Zone16A_EventScript_PokemonRanger_Text_3:
-	.string "It looks like your party is full. Come\n"
-	.string "back with space in your party, yeah?$"
-
-Zone16A_EventScript_PokemonRanger_Text_4:
-	.string "Received Lapras!$"
-
-Zone16A_EventScript_PokemonRanger_Text_5:
-	.string "Would you like to give a nickname to\n"
-	.string "Lapras?$"
-
-Zone16A_EventScript_PokemonRanger_Text_6:
-	.string "Thank you, trainer, for taking care of\n"
-	.string "Lapras.$"
+Zone16A_EventScript_LilyRight_Text_2:
+	.string "{COLOR BLUE}Lily{COLOR DARK_GRAY}: It seems the rain has stopped.\p"
+	.string "I'll be enjoying the rest of my day with\n"
+	.string "a nice dip in the water.\l"
+	.string "Goodbye.$"
 
 Zone16A_EventScript_SandPile_Text_0:
 	.string "There was a Pokémon in the sand pile!$"
 
 Zone16A_EventScript_SandPile_Text_1:
 	.string "It's a pile of sand.$"
+
+Zone16A_Text_Leviathan14Intro1::
+	.string "{COLOR BLUE}Lily{COLOR DARK_GRAY}: Did you know that you can smell\n"
+	.string "plants better right before a storm?$"
+
+Zone16A_Text_Leviathan14Intro2::
+	.string "{COLOR BLUE}Lily{COLOR DARK_GRAY}: Oh, would you look at that.\p"
+	.string "No wonder I could smell the flowers so\n"
+	.string "well!\p"
+	.string "Don't you know the rain just makes my\n"
+	.string "flowers stronger?$"
+
+Zone16A_Text_Leviathan14Defeat::
+	.string "Woe is me…$"

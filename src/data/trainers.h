@@ -1654,30 +1654,34 @@ const struct Trainer gTrainers[] = {
         .shouldShuffle = TRUE,
     },
 
-    [TRAINER_KATIE] =
+    [TRAINER_LILY_LEVIATHAN_14] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("Katie"),
+        .trainerClass = TRAINER_CLASS_AROMA_LADY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerName = _("Lily"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Katie),
-        .party = {.TrainerMon = sParty_Katie},
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_LilyDefault),
+        .party = {.TrainerMon = sParty_LilyDefault},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
     },
     
-    [TRAINER_MICHAEL] =
+    [TRAINER_LILY_LEVIATHAN_14_BRUTAL] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_M,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_M,
-        .trainerName = _("Michael"),
+        .trainerClass = TRAINER_CLASS_AROMA_LADY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerName = _("Lily"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Michael),
-        .party = {.TrainerMon = sParty_Michael},
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_LilyBrutal),
+        .party = {.TrainerMon = sParty_LilyBrutal},
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
     },
 
     [TRAINER_RAFAEL] =
