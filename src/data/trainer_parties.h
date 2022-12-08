@@ -2516,17 +2516,17 @@ static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Brut
 
 static const struct TrainerMon sParty_Iona[] = {// Shuffled Party
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_BASCULIN_WHITE_STRIPED,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_EELEKTRIK,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_QWILFISH_HISUIAN,
     }
@@ -2534,17 +2534,17 @@ static const struct TrainerMon sParty_Iona[] = {// Shuffled Party
 
 static const struct TrainerMon sParty_Berke[] = {// Shuffled Party
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_CORSOLA_GALARIAN,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_POLIWHIRL,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_RELICANTH,
     }
@@ -2552,12 +2552,12 @@ static const struct TrainerMon sParty_Berke[] = {// Shuffled Party
 
 static const struct TrainerMon sParty_Tanisha[] = {// Shuffled Party
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_CHANSEY,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_AUDINO,
     }
@@ -2565,12 +2565,12 @@ static const struct TrainerMon sParty_Tanisha[] = {// Shuffled Party
 
 static const struct TrainerMon sParty_Robert[] = {// Fought in a double battle with Chris
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_GRAVELER,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_SANDSLASH_ALOLAN,
     }
@@ -2578,12 +2578,12 @@ static const struct TrainerMon sParty_Robert[] = {// Fought in a double battle w
 
 static const struct TrainerMon sParty_Chris[] = {// Fought in a double battle with Robert
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_GRAVELER_ALOLAN,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_SANDSLASH,
     }
@@ -2591,17 +2591,17 @@ static const struct TrainerMon sParty_Chris[] = {// Fought in a double battle wi
 
 static const struct TrainerMon sParty_Angus[] = {// Shuffled Party
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_STUNFISK_GALARIAN,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_PINCURCHIN,
     },
     {
-    .iv = 10,
+    .iv = 20,
     .lvl = 30,
     .species = SPECIES_PALPITOAD,
     }
@@ -2609,7 +2609,7 @@ static const struct TrainerMon sParty_Angus[] = {// Shuffled Party
 
 static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shuffled Party
     {
-    .ivs = {21, 21, 20, 20, 21, 20},
+    .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 32,
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Dancer
@@ -2618,7 +2618,7 @@ static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shu
     .moves = {MOVE_PETAL_DANCE, MOVE_GIGA_DRAIN, MOVE_QUIVER_DANCE, MOVE_HIDDEN_POWER} //Hidden Power Rock
     },
     {
-    .iv = 20,
+    .iv = 30,
     .lvl = 32,
     .nature = NATURE_JOLLY,
     .ability = ABILITY_SLOT_1, //Swarm
@@ -2627,7 +2627,7 @@ static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shu
     .moves = {MOVE_LEAF_BLADE, MOVE_X_SCISSOR, MOVE_AERIAL_ACE, MOVE_HONE_CLAWS}
     },
     {
-    .iv = 20,
+    .iv = 30,
     .lvl = 32,
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1, //Infiltrator
@@ -2636,7 +2636,7 @@ static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shu
     .moves = {MOVE_ACROBATICS, MOVE_U_TURN, MOVE_BULLET_SEED, MOVE_SLEEP_POWDER}
     },
     {
-    .iv = 20,
+    .iv = 30,
     .lvl = 32,
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_1, //Own Tempo
