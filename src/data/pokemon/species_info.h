@@ -485,9 +485,6 @@
         .noFlip = FALSE,                                   \
     }
 
-#define COSPLAY_PIKACHU_SPECIES_INFO(flip) PIKACHU_SPECIES_INFO(MON_FEMALE, flip)
-#define CAP_PIKACHU_SPECIES_INFO(flip)     PIKACHU_SPECIES_INFO(MON_MALE, flip)
-
 #define UNOWN_SPECIES_INFO(flip)                      \
     {                                                 \
         .baseHP        = 48,                          \
