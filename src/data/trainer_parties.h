@@ -2604,7 +2604,7 @@ static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shu
     .ability = ABILITY_SLOT_1, //Dancer
     .species = SPECIES_BELLOSSOM,
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PETAL_DANCE, MOVE_GIGA_DRAIN, MOVE_STUN_SPORE, MOVE_HIDDEN_POWER} //Hidden Power Rock
+    .moves = {MOVE_PETAL_DANCE, MOVE_WEATHER_BALL, MOVE_STUN_SPORE, MOVE_HIDDEN_POWER} //Hidden Power Rock
     },
     {
     .iv = 30,
@@ -2643,7 +2643,7 @@ static const struct TrainerMon sParty_LilyBrutal[] = {//Leviathan, Brutal, Shuff
     .ability = ABILITY_SLOT_1, //Dancer
     .species = SPECIES_BELLOSSOM,
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_PETAL_DANCE, MOVE_GIGA_DRAIN, MOVE_STUN_SPORE, MOVE_HIDDEN_POWER} //Hidden Power Rock
+    .moves = {MOVE_PETAL_DANCE, MOVE_WEATHER_BALL, MOVE_STUN_SPORE, MOVE_HIDDEN_POWER} //Hidden Power Rock
     },
     {
     .iv = 31,
@@ -2685,37 +2685,57 @@ static const struct TrainerMon sParty_LilyBrutal[] = {//Leviathan, Brutal, Shuff
 
 /* ------------------- Zone 17 ------------------- */
 
-static const struct TrainerMon sParty_Axle[] = {
+static const struct TrainerMon sParty_Axle[] = {// Shuffled Party
     {
-    .iv = 10,
-    .lvl = 27,
-    .species = SPECIES_PINCURCHIN,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_ABSOL,
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_GRANBULL,
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_ARBOK,
     }
 };
 
-static const struct TrainerMon sParty_Rafael[] = {
+static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party
     {
-    .iv = 10,
-    .lvl = 27,
-    .species = SPECIES_PINCURCHIN,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_RATICATE,
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_GREEDENT,
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_PURUGLY,
     }
 };
 
-static const struct TrainerMon sParty_Georgina[] = {
+static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party
     {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_SPHEAL,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_MR_MIME_GALARIAN,
     },
     {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_HORSEA,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_HATTREM,
     },
     {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_MARSHTOMP,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_SWOOBAT,
     }
 };
 

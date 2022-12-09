@@ -1818,7 +1818,8 @@ script EventScript_WhenUReady {
 		msgbox(Zone12Sanctuary_Text_Colress_WhenUReady)
 		release
 	} elif (var(VAR_ZONE) == 18) {
-		goto(Zone17Sanctuary_EventScript_WhenUReady)
+		msgbox(Zone17Sanctuary_Text_Colress_WhenUReady)
+		release
 	} elif (var(VAR_ZONE) == 24) {
 		goto(Zone23Sanctuary_EventScript_WhenUReady)
 	} else {
@@ -2781,6 +2782,7 @@ script EventScript_PorygonExit {
 				case 16:
 					warp(MAP_ZONE16SANCTUARY, 255, 22, 7)
 				case 17:
+					warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
 				case 18:
 				case 20:
 				case 21:

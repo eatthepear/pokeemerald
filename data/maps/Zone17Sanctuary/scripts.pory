@@ -1,0 +1,64 @@
+mapscripts Zone17Sanctuary_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_ZONE, 17: Zone17Sanctuary_EventScript_Intro
+	]
+}
+
+script Zone17Sanctuary_EventScript_Intro {
+    lockall
+	call(EventScript_EnterSanctuary)
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_Colress_ReachedZone, MSGBOX_DEFAULT)
+	waitfanfare
+	buffernumberstring(0, VAR_ZONE)
+	msgbox(gText_RewardClear, MSGBOX_DEFAULT)
+	msgbox(Zone17Sanctuary_Text_Reward, MSGBOX_DEFAULT)
+	giveitem(ITEM_TM30)
+	setvar(VAR_ZONE, 18)
+	msgbox(Zone17Sanctuary_Text_Colress_Explain, MSGBOX_DEFAULT)
+	msgbox(Zone17Sanctuary_Text_Colress_WhenUReady)
+	applymovement(1, Common_Movement_Colress_WalkUp)
+	waitmovement(0)
+	releaseall
+}
+
+script Zone17Sanctuary_EventScript_NextZone {
+	lock
+	faceplayer
+	msgbox(gText_Colress_Greetings, MSGBOX_DEFAULT)
+	multichoice(20, 0, MULTI_COLRESS_MENU, 0)
+	switch (var(VAR_RESULT)) {
+		case 0:
+			msgbox(Zone17Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				call(EventScript_LeavingSetup)
+				setflag(FLAG_HIDE_ZONE18B_MAN)
+				warp(MAP_ZONE18A, 255, 28, 19)
+				waitstate
+			}
+		case 1:
+			goto(EventScript_Settings)
+		case 2:
+			goto(EventScript_Documentation)
+	}
+	goto(EventScript_WhenUReady)
+}
+
+text Zone17Sanctuary_Text_Reward {
+	format("TM30 - Shadow Claw!")
+}
+
+text Zone17Sanctuary_Text_Colress_Explain {
+	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The next two zones, {COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}, are combined.\p"
+	"You will not be able to access a Sanctuary in between the Zones.")
+}
+
+text Zone17Sanctuary_Text_Colress_WhenUReady {
+	format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: When you are prepared to enter {COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}, speak to me.")
+}
+
+text Zone17Sanctuary_Text_Colress_ReadyToLeave {
+	"{COLOR BLUE}Colress{COLOR DARK_GRAY}: Are you ready to leave?\n"
+	"You will be entering\l"
+	"{COLOR RED}Zone 18{COLOR DARK_GRAY} and {COLOR RED}Zone 19{COLOR DARK_GRAY}.$"
+}

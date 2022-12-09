@@ -141,57 +141,77 @@ Zone17A_EventScript_InitiateLeviathanBattle_1:
 	delay 48
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 32
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
+	delay 16
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_0
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
-	delay 16
-	clearflag FLAG_BEAT_LEVIATHAN_15
-	addobject 2
 	delay 48
 	fadeoutbgm 1
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_0
+	clearflag FLAG_BEAT_LEVIATHAN_15
+	addobject 2
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	delay 48
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_1
+	delay 48
+	applymovement 2, Common_Movement_FaceRight
+	waitmovement 0
+	delay 48
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_2
+	delay 48
+	applymovement 2, Zone17A_Movement_Mia
+	waitmovement 0
+	delay 48
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_3
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIA
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone17A_EventScript_InitiateLeviathanBattle_9
 	trainerbattle_no_intro TRAINER_MIA_LEVIATHAN_15, Zone15B_Text_Leviathan13Defeat
 Zone17A_EventScript_InitiateLeviathanBattle_8:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_1
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_4
 	setflag FLAG_BEAT_LEVIATHAN_15
 	removeobject 2
 	delay 48
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_2
+	setobjectxy 1, 13, 6
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_5
 	setvar VAR_ZONE_17_STATE, 30
 	delay 16
 	removeobject 1
@@ -199,28 +219,28 @@ Zone17A_EventScript_InitiateLeviathanBattle_8:
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 16
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 16
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 8
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
@@ -233,13 +253,13 @@ Zone17A_EventScript_InitiateLeviathanBattle_8:
 	delay 8
 	clearflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	addobject 1
-	setobjectxy 1, 11, 7
+	setobjectxy 1, 13, 6
 	delay 8
 	removeobject 1
 	setflag FLAG_HIDE_ZONE17A_HEX_MANIAC
 	delay 8
-	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_3
-	giveitem ITEM_TM28
+	msgbox Zone17A_EventScript_InitiateLeviathanBattle_Text_6, MSGBOX_DEFAULT
+	giveitem ITEM_TM29
 	clearflag FLAG_HIDE_ZONE17A_PORYGON
 	release
 	end
@@ -275,6 +295,11 @@ Zone17A_EventScript_InitiateLeviathanBattle_9:
 	clearflag FLAG_DISABLE_PREVIEW
 	goto Zone17A_EventScript_InitiateLeviathanBattle_8
 
+
+Zone17A_Movement_Mia:
+	slide_right
+	slide_right
+	step_end
 
 Zone17A_StartSpiritombBattle::
 	removeitem ITEM_ODD_KEYSTONE
@@ -878,15 +903,26 @@ Zone17A_EventScript_RiddleSign_Text_0:
 	.string "There is a spot that looks like it\ncan fit the Odd Keystone.\pWould you like to place the\nOdd Keystone?$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_0:
-	.string "BOOOO!$"
+	.string "Save us from the demon, please…$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_1:
-	.string "$"
+	.string "{COLOR BLUE}Mia{COLOR DARK_GRAY}: There's no one left to play with\n"
+	.string "anymore…$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_2:
-	.string "Thank you…\nFinally, we may know peace…$"
+	.string "{COLOR BLUE}Mia{COLOR DARK_GRAY}: Oh… another toy to play with?$"
 
 Zone17A_EventScript_InitiateLeviathanBattle_Text_3:
+	.string "{COLOR BLUE}Mia{COLOR DARK_GRAY}: You'll join my COLLECTION OF SOULS\n"
+	.string "TO PLAY WITH, WON'T YOU?$"
+
+Zone17A_EventScript_InitiateLeviathanBattle_Text_4:
+	.string "{COLOR BLUE}Mia{COLOR DARK_GRAY}: AH!!!!!$"
+
+Zone17A_EventScript_InitiateLeviathanBattle_Text_5:
+	.string "Thank you…\nThe demon is vanquished…\lFinally, we may know peace…$"
+
+Zone17A_EventScript_InitiateLeviathanBattle_Text_6:
 	.string "There's something shimmering on the\nground by your feet!$"
 
 Zone17A_StartSpiritombBattle_Text_0:
