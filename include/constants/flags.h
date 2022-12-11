@@ -1109,8 +1109,8 @@
 #define FLAG_ITEM_ZONE16A_WATER_STONE                               0x42B
 #define FLAG_ITEM_ZONE16A_DIVE_BALL                                 0x42C
 #define FLAG_ITEM_ZONE16A_TIMER_BALL                                0x42D
-#define FLAG_ITEM_ZONE18A_EXPERT_BELT                               0x42E
-#define FLAG_ITEM_ZONE18A_TM23                                      0x42F
+#define FLAG_ITEM_ZONE18A_SUPER_POTION_2                            0x42E
+#define FLAG_ITEM_ZONE18A_SUPER_REPEL                               0x42F
 #define FLAG_ITEM_ZONE20A_HYPER_POTION                              0x430
 #define FLAG_ITEM_ZONE21A_QUICK_BALL                                0x431
 #define FLAG_ITEM_ZONE21A_ULTRA_BALL                                0x432

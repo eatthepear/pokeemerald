@@ -41,22 +41,9 @@
       "flag": "FLAG_HIDE_ZONE18B_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_KINDLER",
       "x": 4,
       "y": 16,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Doris",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 4,
-      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -67,7 +54,20 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_GUITARIST",
+      "x": 4,
+      "y": 29,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone18B_EventScript_Elton",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
       "x": 4,
       "y": 42,
       "elevation": 3,
@@ -76,26 +76,13 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Anita",
+      "script": "Zone18B_EventScript_Leroy",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_RUIN_MANIAC",
       "x": 4,
       "y": 55,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Desiree",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 4,
-      "y": 68,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -106,35 +93,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 4,
-      "y": 81,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Melinda",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 4,
-      "y": 94,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Emilio",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 4,
-      "y": 107,
+      "y": 68,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -145,9 +106,35 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GUITARIST",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 4,
-      "y": 120,
+      "y": 81,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone18B_EventScript_Emilio",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAIRY_TALE_GIRL",
+      "x": 4,
+      "y": 94,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone18B_EventScript_Melinda",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_DRAGON_TAMER",
+      "x": 4,
+      "y": 107,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -158,9 +145,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
       "x": 4,
-      "y": 133,
+      "y": 120,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -171,9 +158,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_COLLECTOR",
+      "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
       "x": 4,
-      "y": 146,
+      "y": 133,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -184,9 +171,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
       "x": 4,
-      "y": 159,
+      "y": 146,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -197,22 +184,22 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_ROUGHNECK",
       "x": 4,
-      "y": 172,
+      "y": 159,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Blanche",
+      "script": "Zone18B_EventScript_Tyler",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_ICE_WORKER",
       "x": 4,
-      "y": 185,
+      "y": 172,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -223,16 +210,29 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 3,
-      "y": 200,
+      "graphics_id": "OBJ_EVENT_GFX_WORKER",
+      "x": 4,
+      "y": 185,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_EntranceMan",
+      "script": "Zone18B_EventScript_Glenn",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "x": 4,
+      "y": 198,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Zone18B_EventScript_John",
       "flag": "0"
     }
   ],
@@ -766,7 +766,7 @@
       "y": 196,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_CoolRoomDoor"
+      "script": "Zone18B_EventScript_RockRoomDoor"
     },
     {
       "type": "sign",
@@ -774,7 +774,7 @@
       "y": 196,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_CuteRoomDoor"
+      "script": "Zone18B_EventScript_IceRoomDoor"
     },
     {
       "type": "sign",
@@ -782,7 +782,7 @@
       "y": 183,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_StallRoomDoor"
+      "script": "Zone18B_EventScript_DarkRoomDoor"
     },
     {
       "type": "sign",
@@ -790,7 +790,7 @@
       "y": 183,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftBalanceRoomDoor"
+      "script": "Zone18B_EventScript_LeftFlyingRoomDoor"
     },
     {
       "type": "sign",
@@ -798,7 +798,7 @@
       "y": 170,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightBalanceRoomDoor"
+      "script": "Zone18B_EventScript_RightFlyingRoomDoor"
     },
     {
       "type": "sign",
@@ -806,7 +806,7 @@
       "y": 170,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_OffenseRoomDoor"
+      "script": "Zone18B_EventScript_PsychicRoomDoor"
     },
     {
       "type": "sign",
@@ -814,7 +814,7 @@
       "y": 157,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_SwitchRoomDoor"
+      "script": "Zone18B_EventScript_FightingRoomDoor"
     },
     {
       "type": "sign",
@@ -822,7 +822,7 @@
       "y": 157,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftHazardRoomDoor"
+      "script": "Zone18B_EventScript_LeftDragonRoomDoor"
     },
     {
       "type": "sign",
@@ -830,7 +830,7 @@
       "y": 144,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightHazardRoomDoor"
+      "script": "Zone18B_EventScript_RightDragonRoomDoor"
     },
     {
       "type": "sign",
@@ -838,7 +838,7 @@
       "y": 144,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftSetupRoomDoor"
+      "script": "Zone18B_EventScript_LeftFairyRoomDoor"
     },
     {
       "type": "sign",
@@ -846,7 +846,7 @@
       "y": 131,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightSetupRoomDoor"
+      "script": "Zone18B_EventScript_RightFairyRoomDoor"
     },
     {
       "type": "sign",
@@ -854,7 +854,7 @@
       "y": 131,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_HailRoomDoor"
+      "script": "Zone18B_EventScript_GroundRoomDoor"
     },
     {
       "type": "sign",
@@ -862,7 +862,7 @@
       "y": 118,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftBuffRoomDoor"
+      "script": "Zone18B_EventScript_LeftBugRoomDoor"
     },
     {
       "type": "sign",
@@ -870,7 +870,7 @@
       "y": 105,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightBuffRoomDoor"
+      "script": "Zone18B_EventScript_RightBugRoomDoor"
     },
     {
       "type": "sign",
@@ -878,7 +878,7 @@
       "y": 105,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftSpeedRoomDoor"
+      "script": "Zone18B_EventScript_LeftSteelRoomDoor"
     },
     {
       "type": "sign",
@@ -886,7 +886,7 @@
       "y": 92,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightSpeedRoomDoor"
+      "script": "Zone18B_EventScript_RightSteelRoomDoor"
     },
     {
       "type": "sign",
@@ -894,7 +894,7 @@
       "y": 92,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftSupportRoomDoor"
+      "script": "Zone18B_EventScript_LeftPoisonRoomDoor"
     },
     {
       "type": "sign",
@@ -902,7 +902,7 @@
       "y": 79,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightSupportRoomDoor"
+      "script": "Zone18B_EventScript_RightPoisonRoomDoor"
     },
     {
       "type": "sign",
@@ -910,7 +910,7 @@
       "y": 66,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftStatsRoomDoor"
+      "script": "Zone18B_EventScript_LeftElectricRoomDoor"
     },
     {
       "type": "sign",
@@ -918,7 +918,7 @@
       "y": 53,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightStatsRoomDoor"
+      "script": "Zone18B_EventScript_RightElectricRoomDoor"
     },
     {
       "type": "sign",
@@ -926,7 +926,7 @@
       "y": 53,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_LeftAbilityRoomDoor"
+      "script": "Zone18B_EventScript_LeftFireRoomDoor"
     },
     {
       "type": "sign",
@@ -934,7 +934,7 @@
       "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Zone18B_EventScript_RightAbilityRoomDoor"
+      "script": "Zone18B_EventScript_RightFireRoomDoor"
     },
     {
       "type": "sign",

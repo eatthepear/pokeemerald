@@ -1,5 +1,126 @@
 Zone18A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
+
+Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE18A_SUPER_POTION_2, Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE18A_SUPER_REPEL, Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+	return
+
+Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
+
+
+Zone18A_EventScript_SellSodaPop::
+	lock
+	faceplayer
+	showmoneybox 0, 0, 0
+	msgbox Zone18A_EventScript_SellSodaPop_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone18A_EventScript_SellSodaPop_2
+	hidemoneybox
+	msgbox Zone18A_EventScript_SellSodaPop_Text_3
+Zone18A_EventScript_SellSodaPop_1:
+	release
+	end
+
+Zone18A_EventScript_SellSodaPop_2:
+	checkmoney 300, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone18A_EventScript_SellSodaPop_5
+	msgbox Zone18A_EventScript_SellSodaPop_Text_2
+	removemoney 300, 0
+	updatemoneybox
+	giveitem ITEM_SODA_POP
+	hidemoneybox
+	goto Zone18A_EventScript_SellSodaPop_1
+
+Zone18A_EventScript_SellSodaPop_5:
+	msgbox Zone18A_EventScript_SellSodaPop_Text_1
+	hidemoneybox
+	goto Zone18A_EventScript_SellSodaPop_1
+
+
+Zone18A_EventScript_SuperPotion2::
+	lock
+	goto_if_set FLAG_ITEM_ZONE18A_SUPER_POTION_2, Zone18A_EventScript_SuperPotion2_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE18A_SUPER_POTION_2
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUPER_POTION, 2
+	release
+	end
+
+Zone18A_EventScript_SuperPotion2_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone18A_EventScript_SuperRepel::
+	lock
+	goto_if_set FLAG_ITEM_ZONE18A_SUPER_REPEL, Zone18A_EventScript_SuperRepel_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE18A_SUPER_REPEL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUPER_REPEL, 1
+	release
+	end
+
+Zone18A_EventScript_SuperRepel_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone18A_EventScript_Sign::
+	msgbox Zone18A_Text_Sign, MSGBOX_SIGN
+	end
+
+Zone18A_Text_Sign:
+	.string "Trainer's Dojo!\n"
+	.string "All challengers welcome!$"
+
+Zone18A_EventScript_Doris::
+	trainerbattle_single TRAINER_DORIS, Zone18A_Text_DorisIntro, Zone18A_Text_DorisDefeat
+	msgbox Zone18A_Text_DorisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone18A_Text_DorisIntro:
+	.string "$"
+
+Zone18A_Text_DorisDefeat:
+	.string "$"
+
+Zone18A_Text_DorisPostBattle:
+	.string "$"
+
+Zone18A_EventScript_Homer::
+	trainerbattle_single TRAINER_HOMER, Zone18A_Text_HomerIntro, Zone18A_Text_HomerDefeat
+	msgbox Zone18A_Text_HomerPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone18A_Text_HomerIntro:
+	.string "$"
+
+Zone18A_Text_HomerDefeat:
+	.string "$"
+
+Zone18A_Text_HomerPostBattle:
+	.string "$"
+
 
 Zone18A_EventScript_PirateEventRight::
 	lockall
@@ -102,117 +223,14 @@ Zone18A_Movement_WalkAway:
 	walk_up
 	step_end
 
-Zone18A_EventScript_SellSodaPop::
-	lock
-	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18A_EventScript_DontSell
-	showmoneybox 0, 0, 0
-	msgbox Zone18A_Text_WantToBuySodaPop, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone18A_EventScript_BuySodaPop
-	hidemoneybox
-	msgbox Zone18A_Text_DidntLike, MSGBOX_AUTOCLOSE
-	release
-	end
+Zone18A_EventScript_SellSodaPop_Text_0:
+	.string "Want to buy some Soda Pop?\n¥300 for 50 HP a pop!$"
 
-Zone18A_EventScript_DontSell:
-	msgbox Zone18A_Text_DontSell, MSGBOX_AUTOCLOSE
-	releaseall
-	end
-
-Zone18A_Text_DontSell:
-	.string "Sorry, I'm out of stock.$"
-
-Zone18A_Text_WantToBuySodaPop:
-	.string "Want to buy some Soda Pop?\n"
-	.string "¥300 for 50 HP a pop!$"
-
-Zone18A_Text_DidntLike:
-	.string "Aww, did you not like my pun?$"
-
-Zone18A_EventScript_BuySodaPop:
-	checkmoney 300, 0
-	compare VAR_RESULT, FALSE
-	goto_if_eq Zone18A_Text_NotEnoughMoney
-	msgbox Zone18A_Text_HereYouGo, MSGBOX_AUTOCLOSE
-	removemoney 300, 0
-	updatemoneybox
-	giveitem ITEM_SODA_POP
-	hidemoneybox
-	release
-	end
-
-Zone18A_Text_HereYouGo:
-	.string "Here you go!$"
-
-Zone18A_Text_NotEnoughMoney:
-	msgbox Zone18A_Text_NotEnough, MSGBOX_AUTOCLOSE
-	hidemoneybox
-	release
-	end
-
-Zone18A_Text_NotEnough:
+Zone18A_EventScript_SellSodaPop_Text_1:
 	.string "You don't have enough money!$"
 
-Zone18A_EventScript_Marion::
-	trainerbattle_single TRAINER_MARION, Zone18A_Text_MarionIntro, Zone18A_Text_MarionDefeat
-	msgbox Zone18A_Text_MarionPostBattle, MSGBOX_AUTOCLOSE
-	end
+Zone18A_EventScript_SellSodaPop_Text_2:
+	.string "Here you go!$"
 
-Zone18A_Text_MarionIntro:
-	.string "What a relaxing day for a swim.\n"
-	.string "You should get off that Surfboard\l"
-	.string "and join me!$"
-
-Zone18A_Text_MarionDefeat:
-	.string "You're a good swimmer and battler!$"
-
-Zone18A_Text_MarionPostBattle:
-	.string "Sometimes I just like to float\n"
-	.string "in the water, like a Wailmer.$"
-
-Zone18A_EventScript_Clinton::
-	trainerbattle_single TRAINER_CLINTON, Zone18A_Text_ClintonIntro, Zone18A_Text_ClintonDefeat
-	msgbox Zone18A_Text_ClintonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone18A_Text_ClintonIntro:
-	.string "Fishy fishy, come here...$"
-
-Zone18A_Text_ClintonDefeat:
-	.string "Fishy got away!$"
-
-Zone18A_Text_ClintonPostBattle:
-	.string "Fishy fishy fishy...$"
-
-Zone18A_EventScript_Kenneth::
-	trainerbattle_single TRAINER_KENNETH, Zone18A_Text_KennethIntro, Zone18A_Text_KennethDefeat
-	msgbox Zone18A_Text_KennethPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone18A_Text_KennethIntro:
-	.string "Papa said I should wait here\n"
-	.string "while he took care of business!$"
-
-Zone18A_Text_KennethDefeat:
-	.string "Wah!$"
-
-Zone18A_Text_KennethPostBattle:
-	.string "Papa isn't gonna be happy\n"
-	.string "when he finds out I lost...$"
-
-Zone18A_EventScript_Sign::
-	msgbox Zone18A_Text_Sign, MSGBOX_SIGN
-	end
-
-Zone18A_Text_Sign:
-	.string "Trainer's Dojo!\n"
-	.string "All challengers welcome!$"
-
-Zone18A_EventScript_ExpertBelt::
-	finditem ITEM_EXPERT_BELT
-	end
-
-Zone18A_EventScript_TM23::
-	finditem ITEM_TM23
-	end
+Zone18A_EventScript_SellSodaPop_Text_3:
+	.string "Aww, did you not like my pun?$"

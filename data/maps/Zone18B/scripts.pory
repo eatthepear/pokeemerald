@@ -1,0 +1,1268 @@
+mapscripts Zone18B_MapScripts {
+	MAP_SCRIPT_ON_LOAD {
+		if (var(VAR_ZONE_18_STATE) == 0) {
+			setvar(VAR_0x8005, 1)
+			call_if_defeated(TRAINER_JOHN, Zone18B_EventScript_OpenNormalRoomDoors)
+			call_if_defeated(TRAINER_GLENN, Zone18B_EventScript_OpenRockRoomDoors)
+			call_if_defeated(TRAINER_JAY, Zone18B_EventScript_OpenIceRoomDoors)
+			call_if_defeated(TRAINER_TYLER, Zone18B_EventScript_OpenDarkRoomDoors)
+			call_if_defeated(TRAINER_TERRENCE, Zone18B_EventScript_OpenFlyingRoomDoors)
+			call_if_defeated(TRAINER_MARTY, Zone18B_EventScript_OpenPsychicRoomDoors)
+			call_if_defeated(TRAINER_KARI, Zone18B_EventScript_OpenFightingRoomDoors)
+			call_if_defeated(TRAINER_ABRAHAM, Zone18B_EventScript_OpenDragonRoomDoors)
+			call_if_defeated(TRAINER_MELINDA, Zone18B_EventScript_OpenFairyRoomDoors)
+			call_if_defeated(TRAINER_EMILIO, Zone18B_EventScript_OpenGroundRoomDoors)
+			call_if_defeated(TRAINER_REX, Zone18B_EventScript_OpenBugRoomDoors)
+			call_if_defeated(TRAINER_LOUIS, Zone18B_EventScript_OpenSteelRoomDoors)
+			call_if_defeated(TRAINER_LEROY, Zone18B_EventScript_OpenPoisonRoomDoors)
+			call_if_defeated(TRAINER_ELTON, Zone18B_EventScript_OpenElectricRoomDoors)
+			call_if_defeated(TRAINER_WILLIE, Zone18B_EventScript_OpenFireRoomDoors)
+		} elif (var(VAR_ZONE_18_STATE) <= 1) {
+			setvar(VAR_0x8005, 1)
+			call(Zone18B_EventScript_OpenNormalRoomDoors)
+			call(Zone18B_EventScript_OpenRockRoomDoors)
+			call(Zone18B_EventScript_OpenIceRoomDoors)
+			call(Zone18B_EventScript_OpenDarkRoomDoors)
+			call(Zone18B_EventScript_OpenFlyingRoomDoors)
+			call(Zone18B_EventScript_OpenPsychicRoomDoors)
+			call(Zone18B_EventScript_OpenFightingRoomDoors)
+			call(Zone18B_EventScript_OpenDragonRoomDoors)
+			call(Zone18B_EventScript_OpenFairyRoomDoors)
+			call(Zone18B_EventScript_OpenGroundRoomDoors)
+			call(Zone18B_EventScript_OpenBugRoomDoors)
+			call(Zone18B_EventScript_OpenSteelRoomDoors)
+			call(Zone18B_EventScript_OpenPoisonRoomDoors)
+			call(Zone18B_EventScript_OpenElectricRoomDoors)
+			call(Zone18B_EventScript_OpenFireRoomDoors)
+		}
+	}
+}
+
+script Zone18B_EventScript_DoorLocked {
+	msgbox("This door appears to be locked\nright now…", MSGBOX_DEFAULT)
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RockRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_JOHN, Zone18B_EventScript_DoorLocked)
+	msgbox("“Rock Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 5, 7, 189)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_IceRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_JOHN, Zone18B_EventScript_DoorLocked)
+	msgbox("“Ice Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 6, 1, 176)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_DarkRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_GLENN, Zone18B_EventScript_DoorLocked)
+	msgbox("“Dark Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 13, 7, 163)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftFlyingRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_GLENN, Zone18B_EventScript_DoorLocked)
+	msgbox("“Flying Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 14, 1, 150)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightFlyingRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_JAY, Zone18B_EventScript_DoorLocked)
+	msgbox("“Flying Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 17, 7, 150)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_PsychicRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_JAY, Zone18B_EventScript_DoorLocked)
+	msgbox("“Flying Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 18, 1, 137)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_FightingRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_TYLER, Zone18B_EventScript_DoorLocked)
+	msgbox("“Fighting Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 27, 7, 124)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftDragonRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_TYLER, Zone18B_EventScript_DoorLocked)
+	msgbox("“Dragon Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 28, 1, 111)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightDragonRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_TERRENCE, Zone18B_EventScript_DoorLocked)
+	msgbox("“Dragon Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 31, 7, 111)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftFairyRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_TERRENCE, Zone18B_EventScript_DoorLocked)
+	msgbox("“Fairy Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 32, 1, 98)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightFairyRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_MARTY, Zone18B_EventScript_DoorLocked)
+	msgbox("“Fairy Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 35, 7, 98)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_GroundRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_EMILIO, Zone18B_EventScript_DoorLocked)
+	msgbox("“Ground Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 36, 1, 85)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftBugRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_KARI, Zone18B_EventScript_DoorLocked)
+	msgbox("“Bug Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 44, 1, 72)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightBugRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_ABRAHAM, Zone18B_EventScript_DoorLocked)
+	msgbox("“Bug Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 47, 7, 72)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftSteelRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_ABRAHAM, Zone18B_EventScript_DoorLocked)
+	msgbox("“Steel Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 48, 1, 59)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightSteelRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_MELINDA, Zone18B_EventScript_DoorLocked)
+	msgbox("“Steel Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 50, 7, 59)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftPoisonRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_MELINDA, Zone18B_EventScript_DoorLocked)
+	msgbox("“Poison Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 52, 1, 46)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightPoisonRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_EMILIO, Zone18B_EventScript_DoorLocked)
+	msgbox("“Poison Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 54, 7, 46)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftElectricRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_REX, Zone18B_EventScript_DoorLocked)
+	msgbox("“Electric Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 60, 1, 33)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightElectricRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_LOUIS, Zone18B_EventScript_DoorLocked)
+	msgbox("“Electric Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 63, 7, 33)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftFireRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_LOUIS, Zone18B_EventScript_DoorLocked)
+	msgbox("“Fire Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 64, 1, 20)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightFireRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_LEROY, Zone18B_EventScript_DoorLocked)
+	msgbox("“Fire Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 67, 7, 20)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_LeftLeviathanRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_ELTON, Zone18B_EventScript_DoorLocked)
+	msgbox("“Leviathan's Room,”\p“See for yourself what Pokémon await\nyou!” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 71, 1, 7)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_RightLeviathanRoomDoor {
+	lockall
+	goto_if_not_defeated(TRAINER_WILLIE, Zone18B_EventScript_DoorLocked)
+	msgbox("“Leviathan's Room,”\p“See for yourself what Pokémon await\nyou!” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		delay(30)
+		warpdoor(MAP_ZONE18B, 72, 7, 7)
+		waitstate
+	}
+	releaseall
+	end
+}
+
+script Zone18B_EventScript_SlideOpenNormalRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenNormalRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenRockRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenRockRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenIceRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenIceRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenDarkRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenDarkRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenFlyingRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenFlyingRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenPsychicRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenPsychicRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenFightingRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenFightingRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenDragonRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenDragonRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenFairyRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenFairyRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenGroundRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenGroundRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenBugRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenBugRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenSteelRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenSteelRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenPoisonRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenPoisonRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenElectricRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenElectricRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+script Zone18B_EventScript_SlideOpenFireRoomDoors {
+	setvar(VAR_0x8005, 0)
+	call(Zone18B_EventScript_OpenFireRoomDoors)
+	special(DrawWholeMapView)
+	release
+	end
+}
+
+// VAR_0x8004 below is the room number
+// VAR_0x8005 below is 0 when the door should be slid open and 1 when it should be unlocked immediately
+script Zone18B_EventScript_OpenNormalRoomDoors {
+	setvar(VAR_0x8004, 1)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetNormalRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenRockRoomDoors {
+	setvar(VAR_0x8004, 2)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetRockRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenIceRoomDoors {
+	setvar(VAR_0x8004, 3)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetIceRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenDarkRoomDoors {
+	setvar(VAR_0x8004, 4)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetDarkRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenFlyingRoomDoors {
+	setvar(VAR_0x8004, 5)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetFlyingRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenPsychicRoomDoors {
+	setvar(VAR_0x8004, 6)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetPsychicRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenFightingRoomDoors {
+	setvar(VAR_0x8004, 7)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetFightingRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenDragonRoomDoors {
+	setvar(VAR_0x8004, 8)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetDragonRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenFairyRoomDoors {
+	setvar(VAR_0x8004, 9)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetFairyRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenGroundRoomDoors {
+	setvar(VAR_0x8004, 10)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetGroundRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenBugRoomDoors {
+	setvar(VAR_0x8004, 11)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetBugRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenSteelRoomDoors {
+	setvar(VAR_0x8004, 12)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetSteelRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenPoisonRoomDoors {
+	setvar(VAR_0x8004, 13)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetPoisonRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenElectricRoomDoors {
+	setvar(VAR_0x8004, 14)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetElectricRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_OpenFireRoomDoors {
+	setvar(VAR_0x8004, 15)
+	if (var(VAR_0x8005) == 0) {
+		call(Zone18B_EventScript_SlideOpenRoomDoors)
+	} elif (var(VAR_0x8005) == 1) {
+		call(Zone18B_EventScript_UnlockRoomDoors)
+	}
+	call(Zone18B_EventScript_SetFireRoomDoorMetatiles)
+	return
+}
+
+script Zone18B_EventScript_SetNormalRoomDoorMetatiles {
+	setmetatile(6, 189, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 189, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 176, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 176, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetRockRoomDoorMetatiles {
+	setmetatile(6, 163, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 163, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 150, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 150, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetIceRoomDoorMetatiles {
+	setmetatile(6, 150, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 150, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 137, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 137, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetDarkRoomDoorMetatiles {
+	setmetatile(6, 124, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 124, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 111, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 111, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetFlyingRoomDoorMetatiles {
+	setmetatile(6, 111, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 111, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 98, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 98, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetPsychicRoomDoorMetatiles {
+	setmetatile(6, 98, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 98, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 85, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 85, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetFightingRoomDoorMetatiles {
+	setmetatile(1, 72, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 72, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetDragonRoomDoorMetatiles {
+	setmetatile(6, 72, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 72, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 59, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 59, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetFairyRoomDoorMetatiles {
+	setmetatile(6, 59, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 59, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 46, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 46, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetGroundRoomDoorMetatiles {
+	setmetatile(6, 46, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 46, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetBugRoomDoorMetatiles {
+	setmetatile(1, 33, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 33, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetSteelRoomDoorMetatiles {
+	setmetatile(6, 33, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 33, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	setmetatile(1, 20, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 20, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetPoisonRoomDoorMetatiles {
+	setmetatile(6, 20, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 20, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetElectricRoomDoorMetatiles {
+	setmetatile(1, 7, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(2, 7, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SetFireRoomDoorMetatiles {
+	setmetatile(6, 7, METATILE_PetalburgGym_RoomEntrance_Left, 0)
+	setmetatile(7, 7, METATILE_PetalburgGym_RoomEntrance_Right, 0)
+	return
+}
+
+script Zone18B_EventScript_SlideOpenRoomDoors {
+	special(PetalburgGymSlideOpenRoomDoors)
+	waitstate
+	return
+}
+
+script Zone18B_EventScript_UnlockRoomDoors {
+	special(PetalburgGymUnlockRoomDoors)
+	return
+}
+
+script Zone18B_EventScript_Statue {
+	msgbox("Trainer's Dojo\nEstablished 2021", MSGBOX_SIGN)
+	end
+}
+
+raw `
+Zone18B_EventScript_John::
+	trainerbattle_single TRAINER_JOHN, Zone18B_Text_JohnIntro, Zone18B_Text_JohnDefeat, Zone18B_EventScript_SlideOpenNormalRoomDoors
+	msgbox Zone18B_Text_JohnPostBattle
+	end
+
+Zone18B_Text_JohnIntro:
+	.string "Welcome to the Trainer's Dojo!\p"
+	.string "Uh… what else is in this script…\p"
+	.string "Oh! Each room has a particular type\n"
+	.string "associated with it.\p"
+	.string "You can pick and choose which room to\n"
+	.string "challenge.\p"
+	.string "Hmm… Looks like I'm supposed to\n"
+	.string "battle you now.\p"
+	.string "Well, good luck to you, facing my\n"
+	.string "Normal-types in battle!$"
+
+Zone18B_Text_JohnDefeat:
+	.string "I'm not Gatsby!$"
+
+Zone18B_Text_JohnPostBattle:
+	.string "I just like the book because\n"
+	.string "of the social commentary.$"
+
+Zone18B_EventScript_Glenn::
+	trainerbattle_single TRAINER_GLENN, Zone18B_Text_GlennIntro, Zone18B_Text_GlennDefeat, Zone18B_EventScript_SlideOpenRockRoomDoors
+	msgbox Zone18B_Text_GlennPostBattle
+	end
+
+Zone18B_Text_GlennIntro:
+	.string "Welcome to the Cool Room.\n"
+	.string "Speaking of cool, have you\l"
+	.string "ever read the Great Gatsby?$"
+
+Zone18B_Text_GlennDefeat:
+	.string "I'm not Gatsby!$"
+
+Zone18B_Text_GlennPostBattle:
+	.string "I just like the book because\n"
+	.string "of the social commentary.$"
+
+Zone18B_EventScript_Jay::
+	trainerbattle_single TRAINER_JAY, Zone18B_Text_JayIntro, Zone18B_Text_JayDefeat, Zone18B_EventScript_SlideOpenIceRoomDoors
+	msgbox Zone18B_Text_JayPostBattle
+	end
+
+Zone18B_Text_JayIntro:
+	.string "Welcome to the Cool Room.\n"
+	.string "Speaking of cool, have you\l"
+	.string "ever read the Great Gatsby?$"
+
+Zone18B_Text_JayDefeat:
+	.string "I'm not Gatsby!$"
+
+Zone18B_Text_JayPostBattle:
+	.string "I just like the book because\n"
+	.string "of the social commentary.$"
+
+Zone18B_EventScript_Tyler::
+	trainerbattle_single TRAINER_TYLER, Zone18B_Text_TylerIntro, Zone18B_Text_TylerDefeat, Zone18B_EventScript_SlideOpenDarkRoomDoors
+	msgbox Zone18B_Text_TylerPostBattle
+	end
+
+Zone18B_Text_TylerIntro:
+	.string "Cutie walks into the Cute\n"
+	.string "Room. Prepare to battle!$"
+
+Zone18B_Text_TylerDefeat:
+	.string "Awww.$"
+
+Zone18B_Text_TylerPostBattle:
+	.string "I wish I had a Clefairy.$"
+
+Zone18B_EventScript_Terrence::
+	trainerbattle_single TRAINER_TERRENCE, Zone18B_Text_TerrenceIntro, Zone18B_Text_TerrenceDefeat, Zone18B_EventScript_SlideOpenFlyingRoomDoors
+	msgbox Zone18B_Text_TerrencePostBattle
+	end
+
+Zone18B_Text_TerrenceIntro:
+	.string "I like to take things slow,\n"
+	.string "in battle and in life!$"
+
+Zone18B_Text_TerrenceDefeat:
+	.string "I guess stalling you out did\n"
+	.string "no good...$"
+
+Zone18B_Text_TerrencePostBattle:
+	.string "Sometimes my wife gets annoyed\n"
+	.string "that everything I do is so slow.$"
+
+Zone18B_EventScript_Marty::
+	trainerbattle_single TRAINER_MARTY, Zone18B_Text_MartyIntro, Zone18B_Text_MartyDefeat, Zone18B_EventScript_SlideOpenPsychicRoomDoors
+	msgbox Zone18B_Text_MartyPostBattle
+	end
+
+Zone18B_Text_MartyIntro:
+	.string "I've collected a balanced team\n"
+	.string "from across the globe to defeat\l"
+	.string "you in battle!$"
+
+Zone18B_Text_MartyDefeat:
+	.string "Argh! You tipped the scales on me!$"
+
+Zone18B_Text_MartyPostBattle:
+	.string "Maybe I need a more straightforward\n"
+	.string "strategy...$"
+
+Zone18B_EventScript_Kari::
+	trainerbattle_single TRAINER_KARI, Zone18B_Text_KariIntro, Zone18B_Text_KariDefeat, Zone18B_EventScript_SlideOpenFightingRoomDoors
+	msgbox Zone18B_Text_KariPostBattle
+	end
+
+Zone18B_Text_KariIntro:
+	.string "ALL OUT OFFENSE! ATTACK!$"
+
+Zone18B_Text_KariDefeat:
+	.string "DEFEATED! CRY!$"
+
+Zone18B_Text_KariPostBattle:
+	.string "HUSBAND WILL BE DISAPPOINTED!$"
+
+Zone18B_EventScript_Abraham::
+	trainerbattle_single TRAINER_ABRAHAM, Zone18B_Text_AbrahamIntro, Zone18B_Text_AbrahamDefeat, Zone18B_EventScript_SlideOpenDragonRoomDoors
+	msgbox Zone18B_Text_AbrahamPostBattle
+	end
+
+Zone18B_Text_AbrahamIntro:
+	.string "Battle is all about weaving\n"
+	.string "in and out. It's a metaphor\l"
+	.string "for life!$"
+
+Zone18B_Text_AbrahamDefeat:
+	.string "Nice moves, dude.$"
+
+Zone18B_Text_AbrahamPostBattle:
+	.string "Even though I lost, remember\n"
+	.string "that moves like U-Turn are\l"
+	.string "incredibly powerful.$"
+
+Zone18B_EventScript_Melinda::
+	trainerbattle_single TRAINER_MELINDA, Zone18B_Text_MelindaIntro, Zone18B_Text_MelindaDefeat, Zone18B_EventScript_SlideOpenFairyRoomDoors
+	msgbox Zone18B_Text_MelindaPostBattle
+	end
+
+Zone18B_Text_MelindaIntro:
+	.string "Hail is the best weather!$"
+
+Zone18B_Text_MelindaDefeat:
+	.string "Well, not defensively...$"
+
+Zone18B_Text_MelindaPostBattle:
+	.string "My Pokémon just need to learn Blizzard.$"
+
+Zone18B_EventScript_Emilio::
+	trainerbattle_single TRAINER_EMILIO, Zone18B_Text_EmilioIntro, Zone18B_Text_EmilioDefeat, Zone18B_EventScript_SlideOpenGroundRoomDoors
+	msgbox Zone18B_Text_EmilioPostBattle
+	end
+
+Zone18B_Text_EmilioIntro:
+	.string "Setup and sweep. Easy peazy.$"
+
+Zone18B_Text_EmilioDefeat:
+	.string "Hmm. I guess that didn't work.$"
+
+Zone18B_Text_EmilioPostBattle:
+	.string "My Pokémon just need to train more.$"
+
+Zone18B_EventScript_Rex::
+	trainerbattle_single TRAINER_REX, Zone18B_Text_RexIntro, Zone18B_Text_RexDefeat, Zone18B_EventScript_SlideOpenBugRoomDoors
+	msgbox Zone18B_Text_RexPostBattle
+	end
+
+Zone18B_Text_RexIntro:
+	.string "Sneak attack! Hazardous terrain!$"
+
+Zone18B_Text_RexDefeat:
+	.string "I didn't have the element of surprise!$"
+
+Zone18B_Text_RexPostBattle:
+	.string "I usually stack Spikes and\n"
+	.string "hope for the best.$"
+
+Zone18B_EventScript_Louis::
+	trainerbattle_single TRAINER_LOUIS, Zone18B_Text_LouisIntro, Zone18B_Text_LouisDefeat, Zone18B_EventScript_SlideOpenSteelRoomDoors
+	msgbox Zone18B_Text_LouisPostBattle
+	end
+
+Zone18B_Text_LouisIntro:
+	.string "Double Battle! Buff the Absol!$"
+
+Zone18B_Text_LouisDefeat:
+	.string "Absol wasn't buff enough!$"
+
+Zone18B_Text_LouisPostBattle:
+	.string "Stonjourner, you did great.\n"
+	.string "Absol, we gotta work on the\l"
+	.string "execution.$"
+
+Zone18B_EventScript_Leroy::
+	trainerbattle_single TRAINER_LEROY, Zone18B_Text_LeroyIntro, Zone18B_Text_LeroyDefeat, Zone18B_EventScript_SlideOpenPoisonRoomDoors
+	msgbox Zone18B_Text_LeroyPostBattle
+	end
+
+Zone18B_Text_LeroyIntro:
+	.string "Slow you down then spread the pain!$"
+
+Zone18B_Text_LeroyDefeat:
+	.string "The only one in pain is me...$"
+
+Zone18B_Text_LeroyPostBattle:
+	.string "Discharge plus Earthquake is\n"
+	.string "a nice combo.$"
+
+Zone18B_EventScript_Elton::
+	trainerbattle_single TRAINER_ELTON, Zone18B_Text_EltonIntro, Zone18B_Text_EltonDefeat, Zone18B_EventScript_SlideOpenElectricRoomDoors
+	msgbox Zone18B_Text_EltonPostBattle
+	end
+
+Zone18B_Text_EltonIntro:
+	.string "My Pokémon, lend me a Helping Hand!$"
+
+Zone18B_Text_EltonDefeat:
+	.string "Drats.$"
+
+Zone18B_Text_EltonPostBattle:
+	.string "I think I just need more Pokémon.$"
+
+Zone18B_EventScript_Willie::
+	trainerbattle_single TRAINER_WILLIE, Zone18B_Text_WillieIntro, Zone18B_Text_WillieDefeat, Zone18B_EventScript_SlideOpenFireRoomDoors
+	msgbox Zone18B_Text_WilliePostBattle
+	end
+
+Zone18B_Text_WillieIntro:
+	.string "My Pokémon, lend me a Helping Hand!$"
+
+Zone18B_Text_WillieDefeat:
+	.string "Drats.$"
+
+Zone18B_Text_WilliePostBattle:
+	.string "I think I just need more Pokémon.$"
+
+Zone18B_EventScript_Odysseus::
+	lock
+	switch VAR_FACING
+	case DIR_NORTH, Zone18B_EventScript_PlayerBottom
+	case DIR_WEST, Zone18B_EventScript_PlayerRight
+	case DIR_EAST, Zone18B_EventScript_PlayerLeft
+	end
+
+Zone18B_EventScript_PlayerBottom::
+	goto Zone18B_EventScript_LeviathanOptions
+	end
+
+Zone18B_EventScript_PlayerRight::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone18B_EventScript_LeviathanOptions
+	end
+
+Zone18B_EventScript_PlayerLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone18B_EventScript_LeviathanOptions
+	end
+
+Zone18B_EventScript_LeviathanOptions:
+	switch VAR_ZONE_18_STATE
+	case 0, Zone18B_EventScript_InitiatePirateSequence
+	case 2, Zone18B_EventScript_FindPirates
+	case 3, Zone18B_EventScript_ThankForPirates
+	case 4, Zone18B_EventScript_WantBattleOrLeave
+	case 5, Zone18B_EventScript_WantLeave
+	end
+
+Zone18B_EventScript_FindPirates:
+	msgbox Zone18A_Text_Odysseus_FindPirates, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone18B_EventScript_InitiatePirateSequence:
+	msgbox Zone18B_Text_LeviathanCutoff, MSGBOX_AUTOCLOSE
+	delay 40
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	waitmovement 0
+	special RemoveCameraObject
+	playse SE_DOOR
+	delay 10
+	addobject 2
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitse
+	msgbox Zone18B_Text_Sir, MSGBOX_AUTOCLOSE
+	msgbox Zone18B_Text_LeviathanNotAgain, MSGBOX_AUTOCLOSE
+	applymovement 2, Common_Movement_FaceDown
+	playse SE_DOOR
+	delay 10
+	waitmovement 0
+	removeobject 2
+	applymovement 1, Zone18B_Movement_LeviathanLeave
+	waitmovement 0
+	playse SE_DOOR
+	delay 10
+	removeobject 1
+	setflag FLAG_HIDE_ZONE18B_ODYSSEUS
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	waitmovement 0
+	special RemoveCameraObject
+	setvar VAR_ZONE_18_STATE, 1
+	release
+	end
+
+Zone18B_Text_LeviathanCutoff:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Hello, {PLAYER}.\p"
+	.string "You're making quite the impression,\n"
+	.string "defeating all of my hand-selected\l"
+	.string "trainers.\p"
+	.string "Now is the time to battle.\p"
+	.string "I, {COLOR BLUE}Leviathan Odysseus{COLOR DARK_GRAY}, challenge-$"
+
+Zone18B_Text_Sir:
+	.string "Sir!\n"
+	.string "The pirates are raiding the beach!$"
+
+Zone18B_Text_LeviathanNotAgain:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Not again!$"
+
+Zone18B_Movement_LeviathanLeave:
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	step_end
+
+Zone18B_EventScript_ThankForPirates:
+	msgbox Zone18B_Odysseus_ThankYou, MSGBOX_AUTOCLOSE
+	giveitem ITEM_FOCUS_SASH, 1
+	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
+	setvar VAR_ZONE_18_STATE, 4
+	goto Zone18B_EventScript_WantBattleOrLeave
+	release
+	end
+
+Zone18B_Odysseus_ThankYou:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: You defeated the pirates?\p"
+	.string "Thank you, {PLAYER}, for finding\n"
+	.string "their hideout. I want you to have\l"
+	.string "this as a reward.$"
+
+Zone18B_Text_Odysseus_ExplainItem:
+	.string "A Focus Sash allows your Pokémon to\n"
+	.string "tank a hit from full HP that would\l"
+	.string "have otherwise knocked it out.\p"
+	.string "However, it is only single use.$"
+
+Zone18B_EventScript_WantBattleOrLeave:
+	msgbox Zone18B_Odysseus_WantBattle, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone18B_EventScript_OdysseusBattle
+	compare VAR_RESULT, NO
+	goto_if_eq Zone18B_EventScript_WantLeave
+	end
+
+Zone18B_Odysseus_WantBattle:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: If you'd like, we can\n"
+	.string "have a battle.$"
+
+Zone18B_EventScript_OdysseusBattle:
+	setweather WEATHER_RAIN
+	doweather
+	msgbox Zone18B_Text_Raining, MSGBOX_AUTOCLOSE
+	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
+	trainerbattle_no_intro TRAINER_REX, Zone18B_Text_LeviathanDefeat
+	goto Zone18B_EventScript_Leviathan11Defeated
+	end
+
+Zone18B_Text_Raining:
+	.string "It suddenly began to rain!$"
+
+Zone18B_EventScript_OdysseusBrutal:
+	totemboost_atk1 B_POSITION_OPPONENT_LEFT
+	totemboost_spatk1 B_POSITION_OPPONENT_RIGHT
+	trainerbattle_no_intro TRAINER_REX, Zone18B_Text_LeviathanDefeat
+	goto Zone18B_EventScript_Leviathan11Defeated
+	end
+
+Zone18B_OdysseusBattleIntro:
+	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Let this be a match for\n"
+	.string "the ages!$"
+
+Zone18B_Text_LeviathanDefeat:
+	.string "Well met. Congratulations.$"
+
+Zone18B_EventScript_Leviathan11Defeated:
+	setflag FLAG_BEAT_LEVIATHAN_11
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM25
+	msgbox Zone18B_Text_Odysseus_ExplainItem2, MSGBOX_AUTOCLOSE
+	setvar VAR_ZONE_18_STATE, 5
+	resetweather
+	doweather
+	msgbox Zone18B_Text_StoppedRaining, MSGBOX_AUTOCLOSE
+	goto Zone18B_EventScript_WantLeave
+	end
+
+Zone18B_Text_StoppedRaining:
+	.string "The rain stopped.$"
+
+Zone18B_Text_Odysseus_PostBattle:
+	.string "What a stunning battle. You must be\n"
+	.string "proud of your Pokémon.\p"
+	.string "Here, I want you to have this.$"
+
+Zone18B_Text_Odysseus_ExplainItem2:
+	.string "Waterfall is a strong, physical\n"
+	.string "Water move.$"
+
+Zone18B_EventScript_WantLeave:
+	msgbox Zone18B_Odysseus_WantLeave, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone18B_EventScript_Leave
+	msgbox Zone18B_Odysseus_Stay, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone18B_Odysseus_WantLeave:
+	.string "I can arrange travel for you,\n"
+	.string "if you want.$"
+
+Zone18B_Odysseus_Stay:
+	.string "You're more than welcome to stay as\n"
+	.string "long as you wish on this island.\p"
+	.string "Come to me if you need anything.$"
+
+Zone18B_EventScript_Leave:
+	compare VAR_ZONE, 19
+	goto_if_gt EventScript_WarpZone0
+	msgbox Zone18B_Odysseus_Goodbye, MSGBOX_AUTOCLOSE
+	warp MAP_ZONE19SANCTUARY, 255, 22, 7
+	release
+	end
+
+Zone18B_Odysseus_Goodbye:
+	.string "Of course.\p"
+	.string "Thank you for your actions, and\n"
+	.string "know you are always welcome here.\p"
+	.string "Goodbye.$"
+
+
+`

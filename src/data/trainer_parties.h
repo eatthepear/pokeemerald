@@ -76,7 +76,7 @@ static const struct TrainerMon sParty_Oscar[] = {
     }
 };
 
-static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
+static const struct TrainerMon sParty_CoreyDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 7,
@@ -88,7 +88,7 @@ static const struct TrainerMon sParty_CoreyDefault[] = {//Leviathan, Default
     }
 };
 
-static const struct TrainerMon sParty_CoreyBrutal[] = {//Leviathan, Brutal
+static const struct TrainerMon sParty_CoreyBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 7,
@@ -173,7 +173,7 @@ static const struct TrainerMon sParty_Arthur[] = {
     }
 };
 
-static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default
+static const struct TrainerMon sParty_JoeyDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 9,
@@ -185,7 +185,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {//Leviathan, Default
     }
 };
 
-static const struct TrainerMon sParty_JoeyBrutal[] = {//Leviathan, Brutal
+static const struct TrainerMon sParty_JoeyBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 9,
@@ -286,7 +286,7 @@ static const struct TrainerMon sParty_Richard[] = {
     }
 };
 
-static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
+static const struct TrainerMon sParty_PhillipaDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 11,
@@ -313,7 +313,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {//Leviathan, Default
     }
 };
 
-static const struct TrainerMon sParty_PhillipaBrutal[] = {//Leviathan, Brutal
+static const struct TrainerMon sParty_PhillipaBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 11,
@@ -463,7 +463,7 @@ static const struct TrainerMon sParty_Lucia[] = {
     }
 };
 
-static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battle, Default
+static const struct TrainerMon sParty_RitaDefault[] = {// Leviathan, Double Battle, Default
     {
     .iv = 20,
     .lvl = 13,
@@ -482,7 +482,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {//Leviathan, Double Battl
     }
 };
 
-static const struct TrainerMon sParty_RitaBrutal[] = {//Leviathan, Double Battle, Brutal
+static const struct TrainerMon sParty_RitaBrutal[] = {// Leviathan, Double Battle, Brutal
     {
     .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 13,
@@ -666,7 +666,7 @@ static const struct TrainerMon sParty_Kevin[] = {
     }
 };
 
-static const struct TrainerMon sParty_Declan[] = {//Leviathan, Double Battle, Default and Brutal
+static const struct TrainerMon sParty_Declan[] = {// Leviathan, Double Battle, Default and Brutal
     {
     .iv = 20,
     .lvl = 15,
@@ -832,7 +832,7 @@ static const struct TrainerMon sParty_Daisy[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_Mina[] = {//Leviathan, Default and Brutal, Battle starts with permanent Rain on Brutal
+static const struct TrainerMon sParty_Mina[] = {// Leviathan, Default and Brutal, Battle starts with permanent Rain on Brutal
     {
     .iv = 20,
     .lvl = 16,
@@ -984,7 +984,7 @@ static const struct TrainerMon sParty_Connie[] = {
     }
 };
 
-static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan, Double Battle, Default
+static const struct TrainerMon sParty_BettyDefault[] = {// Leviathan, Double Battle, Default
     {
     .iv = 20,
     .lvl = 19,
@@ -1005,7 +1005,7 @@ static const struct TrainerMon sParty_BettyDefault[] = {//Leviathan, Double Batt
     }
 };
 
-static const struct TrainerMon sParty_BettyBrutal[] = {//Leviathan, Double Battle, Brutal
+static const struct TrainerMon sParty_BettyBrutal[] = {// Leviathan, Double Battle, Brutal
     {
     .iv = 31,
     .lvl = 19,
@@ -1149,7 +1149,7 @@ static const struct TrainerMon sParty_Tamara[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a 2v1 tag battle with Zone8DWally, Default
+static const struct TrainerMon sParty_Zone8DMirage[] = {// Leviathan, fought in a 2v1 tag battle with Zone8DWally, Default
     {
     .iv = 30,
     .lvl = 20,
@@ -1179,7 +1179,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {//Leviathan, fought in a
     }
 };
 
-static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {//Leviathan, fought in a 2v1 tag battle with Zone8DWally, Brutal
+static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {// Leviathan, fought in a 2v1 tag battle with Zone8DWally, Brutal
     {
     .iv = 31,
     .lvl = 20,
@@ -1510,7 +1510,7 @@ static const struct TrainerMon sParty_Conrad[] = {// Shuffled Party, Battle star
     }
 };
 
-static const struct TrainerMon sParty_AdaminaDefault[] = {//Leviathan, Battle starts with permanent Sand, Default
+static const struct TrainerMon sParty_AdaminaDefault[] = {// Leviathan, Battle starts with permanent Sand, Default
     {
     .iv = 20,
     .lvl = 22,
@@ -1554,7 +1554,7 @@ static const struct TrainerMon sParty_AdaminaDefault[] = {//Leviathan, Battle st
     }
 };
 
-static const struct TrainerMon sParty_AdaminaBrutal[] = {//Leviathan, Battle starts with permanent Sand, Brutal
+static const struct TrainerMon sParty_AdaminaBrutal[] = {// Leviathan, Battle starts with permanent Sand, Brutal
     {
     .iv = 31,
     .lvl = 22,
@@ -1704,7 +1704,7 @@ static const struct TrainerMon sParty_Regina[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_NewtonDefault[] = {//Leviathan, Double Battle, Default
+static const struct TrainerMon sParty_NewtonDefault[] = {// Leviathan, Double Battle, Default
     {
     .iv = 20,
     .lvl = 23,
@@ -1740,7 +1740,7 @@ static const struct TrainerMon sParty_NewtonDefault[] = {//Leviathan, Double Bat
     }
 };
 
-static const struct TrainerMon sParty_NewtonBrutal[] = {//Leviathan, Double Battle, Brutal
+static const struct TrainerMon sParty_NewtonBrutal[] = {// Leviathan, Double Battle, Brutal
     {
     .iv = 31,
     .lvl = 23,
@@ -2152,7 +2152,7 @@ static const struct TrainerMon sParty_Darwin[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_JennyDefault[] = {//Leviathan, Default
+static const struct TrainerMon sParty_JennyDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 30,
@@ -2164,7 +2164,7 @@ static const struct TrainerMon sParty_JennyDefault[] = {//Leviathan, Default
     }
 };
 
-static const struct TrainerMon sParty_JennyBrutal[] = {//Leviathan, Brutal
+static const struct TrainerMon sParty_JennyBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 30,
@@ -2325,7 +2325,7 @@ static const struct TrainerMon sParty_Otis[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_MiguelDefault[] = {//Leviathan, Default,
+static const struct TrainerMon sParty_MiguelDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 29,
@@ -2373,7 +2373,7 @@ static const struct TrainerMon sParty_MiguelDefault[] = {//Leviathan, Default,
     }
 };
 
-static const struct TrainerMon sParty_MiguelBrutal[] = {//Leviathan, Brutal
+static const struct TrainerMon sParty_MiguelBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 29,
@@ -2432,7 +2432,7 @@ static const struct TrainerMon sParty_MiguelBrutal[] = {//Leviathan, Brutal
 
 /* ------------------- Zone 15 ------------------- */
 
-static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Default
+static const struct TrainerMon sParty_Zone15BMirageDefault[] = {// Leviathan, Default
     {
     .iv = 30,
     .lvl = 30,
@@ -2462,7 +2462,7 @@ static const struct TrainerMon sParty_Zone15BMirageDefault[] = {//Leviathan, Def
     }
 };
 
-static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {//Leviathan, Brutal
+static const struct TrainerMon sParty_Zone15BMirageBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 30,
@@ -2596,7 +2596,7 @@ static const struct TrainerMon sParty_Angus[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shuffled Party
+static const struct TrainerMon sParty_LilyDefault[] = {// Leviathan, Battle starts with permanent Rain, Shuffled Party, Default
     {
     .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 32,
@@ -2635,7 +2635,7 @@ static const struct TrainerMon sParty_LilyDefault[] = {//Leviathan, Default, Shu
     }
 };
 
-static const struct TrainerMon sParty_LilyBrutal[] = {//Leviathan, Brutal, Shuffled Party
+static const struct TrainerMon sParty_LilyBrutal[] = {// Leviathan, Battle starts with permanent Rain, Shuffled Party, Brutal
     {
     .ivs = {31, 31, 30, 30, 31, 30},
     .lvl = 32,
@@ -2685,7 +2685,7 @@ static const struct TrainerMon sParty_LilyBrutal[] = {//Leviathan, Brutal, Shuff
 
 /* ------------------- Zone 17 ------------------- */
 
-static const struct TrainerMon sParty_Axle[] = {// Shuffled Party
+static const struct TrainerMon sParty_Axle[] = {// Shuffled Party, Battle starts with permanent Rain
     {
     .iv = 20,
     .lvl = 32,
@@ -2703,7 +2703,7 @@ static const struct TrainerMon sParty_Axle[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party
+static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party, Battle starts with permanent Rain
     {
     .iv = 20,
     .lvl = 32,
@@ -2721,7 +2721,7 @@ static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party
+static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party, Battle starts with permanent Rain
     {
     .iv = 20,
     .lvl = 32,
@@ -2739,7 +2739,7 @@ static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party
     }
 };
 
-static const struct TrainerMon sParty_MiaDefault[] = {//Leviathan, Default, No Surveil
+static const struct TrainerMon sParty_MiaDefault[] = {// Leviathan, Battle starts with permanent Rain, No Surveil, Default
     {
     .iv = 30,
     .lvl = 33,
@@ -2778,7 +2778,7 @@ static const struct TrainerMon sParty_MiaDefault[] = {//Leviathan, Default, No S
     }
 };
 
-static const struct TrainerMon sParty_MiaBrutal[] = {//Leviathan, Brutal, No Surveil, Shuffled Party
+static const struct TrainerMon sParty_MiaBrutal[] = {// Leviathan, Battle starts with permanent Rain, Shuffled Party, No Surveil, Brutal
     {
     .iv = 31,
     .lvl = 33,
@@ -2817,25 +2817,372 @@ static const struct TrainerMon sParty_MiaBrutal[] = {//Leviathan, Brutal, No Sur
     }
 };
 
-/* ------------------- Zone 18 & 19 ------------------- */
+/* ------------------- Zones 18 & 19 ------------------- */
 
-static const struct TrainerMon sParty_Jay[] = {//Zone 18 Cool Room
+static const struct TrainerMon sParty_Doris[] = {// Shuffled Party
     {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_GOOMY,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_FROGADIER,
     },
     {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_BAGON,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_RABOOT,
     },
     {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_DEINO,
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_SERVINE,
     }
 };
+
+static const struct TrainerMon sParty_Homer[] = {// Shuffled Party
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_MARSHTOMP,
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_THWACKEY,
+    },
+    {
+    .iv = 20,
+    .lvl = 32,
+    .species = SPECIES_PIGNITE,
+    }
+};
+
+static const struct TrainerMon sParty_John[] = {// Zone 18 Normal Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_VIGOROTH,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_LOUDRED,
+    }
+};
+
+static const struct TrainerMon sParty_Glenn[] = {// Zone 18 Rock Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_BOLDORE,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_PUPITAR,
+    }
+};
+
+static const struct TrainerMon sParty_Jay[] = {// Zone 18 Ice Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_VANILLISH,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_PILOSWINE,
+    }
+};
+
+static const struct TrainerMon sParty_Tyler[] = {// Zone 18 Dark Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_MORGREM,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_MIGHTYENA,
+    }
+};
+
+static const struct TrainerMon sParty_Terrence[] = {// Zone 18 Flying Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_CORVISQUIRE,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_PIDGEOTTO,
+    }
+};
+
+static const struct TrainerMon sParty_Marty[] = {// Zone 18 Psychic Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_DUOSION,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_GOTHORITA,
+    }
+};
+
+static const struct TrainerMon sParty_Kari[] = {// Zone 18 Fighting Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_MACHOKE,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_GURDURR,
+    }
+};
+
+static const struct TrainerMon sParty_Abraham[] = {// Zone 18 Dragon Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_DRAGONAIR,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_SHELGON,
+    }
+};
+
+static const struct TrainerMon sParty_Melinda[] = {// Zone 18 Fairy Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_FLOETTE,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_TOGETIC,
+    }
+};
+
+static const struct TrainerMon sParty_Emilio[] = {// Zone 18 Ground Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_KROKOROK,
+    },
+    {
+    .iv = 20,
+    .lvl = 33,
+    .species = SPECIES_RHYDON,
+    }
+};
+
+static const struct TrainerMon sParty_Rex[] = {// Zone 18 Bug Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_CHARJABUG,
+    },
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_SCYTHER,
+    }
+};
+
+static const struct TrainerMon sParty_Louis[] = {// Zone 18 Steel Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_METANG,
+    },
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_KLANG,
+    }
+};
+
+static const struct TrainerMon sParty_Leroy[] = {// Zone 18 Poison Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_SNEASEL_HISUIAN,
+    },
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_HAUNTER,
+    }
+};
+
+static const struct TrainerMon sParty_Elton[] = {// Zone 18 Electric Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_MAGNETON,
+    },
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_ELECTABUZZ,
+    }
+};
+
+static const struct TrainerMon sParty_Willie[] = {// Zone 18 Fire Room, Double Battle
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_LAMPENT,
+    },
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_MAGMAR,
+    }
+};
+
+static const struct TrainerMon sParty_ZoeAndEliDefault[] = {// Leviathan, Default
+    {
+    .iv = 30,
+    .lvl = 36,
+    .nature = NATURE_NAUGHTY,
+    .heldItem = ITEM_RINDO_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_HUNTAIL,
+    .moves = {MOVE_DIVE, MOVE_CRUNCH, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 36,
+    .nature = NATURE_RASH,
+    .heldItem = ITEM_WACAN_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_GOREBYSS,
+    .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 36,
+    .nature = NATURE_QUIET,
+    .heldItem = ITEM_RINDO_BERRY,
+    .ability = ABILITY_SLOT_1, //Storm Drain
+    .species = SPECIES_GASTRODON,
+    .moves = {MOVE_MUDDY_WATER, MOVE_EARTH_POWER, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 36,
+    .nature = NATURE_LONELY,
+    .heldItem = ITEM_WACAN_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_FLOATZEL,
+    .moves = {MOVE_DIVE, MOVE_ICE_PUNCH, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_ZoeAndEliBrutal[] = {// Leviathan, Battle starts with permanent Rain, Brutal
+    {
+    .iv = 31,
+    .lvl = 36,
+    .nature = NATURE_NAUGHTY,
+    .heldItem = ITEM_RINDO_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_HUNTAIL,
+    .moves = {MOVE_DIVE, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_RAIN_DANCE}
+    },
+    {
+    .iv = 31,
+    .lvl = 36,
+    .nature = NATURE_RASH,
+    .heldItem = ITEM_WACAN_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_GOREBYSS,
+    .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_RAIN_DANCE}
+    },
+    {
+    .ivs = {31, 31, 31, 31, 30, 31},
+    .lvl = 36,
+    .nature = NATURE_QUIET,
+    .heldItem = ITEM_RINDO_BERRY,
+    .ability = ABILITY_SLOT_1, //Storm Drain
+    .species = SPECIES_GASTRODON,
+    .moves = {MOVE_MUDDY_WATER, MOVE_EARTH_POWER, MOVE_ANCIENT_POWER, MOVE_HIDDEN_POWER} // Hidden Power Fighting
+    },
+    {
+    .iv = 31,
+    .lvl = 36,
+    .nature = NATURE_LONELY,
+    .heldItem = ITEM_WACAN_BERRY,
+    .ability = ABILITY_HIDDEN, //Swift Swim
+    .species = SPECIES_FLOATZEL,
+    .moves = {MOVE_DIVE, MOVE_ICE_PUNCH, MOVE_CRUNCH, MOVE_LOW_KICK}
+    }
+};
+
+// You fight each of these pirates in a row.
+// On Default, your party is fully healed in between fights, while on Brutal your party is not
+static const struct TrainerMon sParty_Pirate1[] = {
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_OCTILLERY,
+    },
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_GRAPPLOCT,
+    }
+};
+
+static const struct TrainerMon sParty_Pirate2[] = {
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_DHELMISE,
+    },
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_OVERQWIL,
+    }
+};
+
+static const struct TrainerMon sParty_Pirate3[] = {
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_CRABOMINABLE,
+    },
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_KINGLER,
+    }
+};
+
+static const struct TrainerMon sParty_Pirate4[] = {
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_PERRSERKER,
+    },
+    {
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_DREDNAW,
+    }
+};
+
+/* ------------------- Zone 20 ------------------- */
 
 static const struct TrainerMon sParty_Blanche[] = {//Zone 18 Cute Room
     {
@@ -2852,156 +3199,6 @@ static const struct TrainerMon sParty_Blanche[] = {//Zone 18 Cute Room
     .iv = 10,
     .lvl = 28,
     .species = SPECIES_VULPIX_ALOLAN,
-    }
-};
-
-static const struct TrainerMon sParty_Terrence[] = {//Zone 18 Stall Room
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_DUSKULL,
-    },
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_KLEFKI,
-    },
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_COMFEY,
-    }
-};
-
-static const struct TrainerMon sParty_Marty[] = {//Zone 18 Balance Room
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_YAMASK,
-    },
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_SWINUB,
-    },
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_GROTLE,
-    }
-};
-
-static const struct TrainerMon sParty_Kari[] = {//Zone 18 Offense Room
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_LITWICK,
-    },
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_ANORITH,
-    },
-    {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_AERODACTYL,
-    }
-};
-
-static const struct TrainerMon sParty_Abraham[] = {//Zone 18 Switch Room
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_PIKACHU,
-    .moves = {MOVE_VOLT_SWITCH, MOVE_DRAINING_KISS, MOVE_NUZZLE, MOVE_ELECTRO_BALL}
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_YANMA,
-    .moves = {MOVE_U_TURN, MOVE_SILVER_WIND, MOVE_AIR_CUTTER, MOVE_HYPNOSIS}
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_THWACKEY,
-    .moves = {MOVE_U_TURN, MOVE_GRASSY_GLIDE, MOVE_GROWTH, MOVE_KNOCK_OFF}
-    }
-};
-
-static const struct TrainerMon sParty_Rex[] = {//Zone 18 Hazard Room
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_BRONZOR,
-    .moves = {MOVE_STEALTH_ROCK, MOVE_METAL_SOUND, MOVE_FUTURE_SIGHT, MOVE_FEINT_ATTACK}
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_PINECO,
-    .moves = {MOVE_TOXIC_SPIKES, MOVE_SPIKES, MOVE_PIN_MISSILE, MOVE_DRILL_RUN}
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_TRUBBISH,
-    .moves = {MOVE_SPIKES, MOVE_TAKE_DOWN, MOVE_STOCKPILE, MOVE_SLUDGE}
-    }
-};
-
-static const struct TrainerMon sParty_Emilio[] = {//Zone 18 Setup Room
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_KIRLIA,
-    .moves = {MOVE_CALM_MIND, MOVE_PSYBEAM, MOVE_DRAINING_KISS, MOVE_CHARM}
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_LILEEP,
-    .moves = {MOVE_CURSE, MOVE_ROCK_TOMB, MOVE_GIGA_DRAIN, MOVE_RECOVER}
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_ABSOL,
-    .moves = {MOVE_SWORDS_DANCE, MOVE_NIGHT_SLASH, MOVE_SLASH, MOVE_LEER}
-    }
-};
-
-static const struct TrainerMon sParty_Melinda[] = {//Zone 18 Hail Room
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_AMAURA,
-    .ability = ABILITY_SLOT_2, //Snow Warning
-    .heldItem = ITEM_ICY_ROCK,
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_SANDSHREW_ALOLAN,
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_VANILLITE,
-    }
-};
-
-static const struct TrainerMon sParty_Louis[] = {//Zone 18 Buff Room, Double Battle
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_TRANQUILL,
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_CHARJABUG,
     }
 };
 
@@ -3032,122 +3229,6 @@ static const struct TrainerMon sParty_Anita[] = {//Zone 18 Support Room, Double 
     .moves = {MOVE_FAKE_OUT, MOVE_BUBBLE_BEAM, MOVE_MEGA_DRAIN, MOVE_RAIN_DANCE}
     }
 };
-
-static const struct TrainerMon sParty_Willie[] = {//Zone 18 Stats Room
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_MUNCHLAX,
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_NUZLEAF,
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_DURALUDON,
-    }
-};
-
-static const struct TrainerMon sParty_Doris[] = {//Zone 18 Ability Room
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_TYRUNT,
-    .ability = ABILITY_SLOT_1, //Strong Jaw
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_ARCHEN,
-    .ability = ABILITY_SLOT_1, //Defeatist
-    },
-    {
-    .iv = 10,
-    .lvl = 29,
-    .species = SPECIES_FROGADIER,
-    .ability = ABILITY_HIDDEN, //Protean
-    }
-};
-
-//You fight each of these pirates in the order 4, 3, 2, 1 in a row without healing
-static const struct TrainerMon sParty_Pirate1[] = {//Default
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_BARRASKEWDA,
-    },
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_PERRSERKER,
-    }
-};
-
-static const struct TrainerMon sParty_Pirate2[] = {//Default
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_CRABOMINABLE,
-    },
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_KINGLER,
-    }
-};
-
-static const struct TrainerMon sParty_Pirate3[] = {//Default
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_DHELMISE,
-    },
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_DREDNAW,
-    }
-};
-
-static const struct TrainerMon sParty_Pirate4[] = {//Default
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_OCTILLERY,
-    },
-    {
-    .iv = 31,
-    .lvl = 30,
-    .species = SPECIES_CHATOT,
-    }
-};
-
-static const struct TrainerMon sParty_Odysseus[] = {//Leviathan 11, Battle starts with permanent Rain, Double Battle, optional, Default
-    {
-    .iv = 31,
-    .lvl = 33,
-    .nature = NATURE_ADAMANT,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .ability = ABILITY_SLOT_1, //Water Veil
-    .species = SPECIES_HUNTAIL,
-    .moves = {MOVE_AQUA_TAIL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_SLEEP_TALK}
-    },
-    {
-    .iv = 31,
-    .lvl = 33,
-    .nature = NATURE_MODEST,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .ability = ABILITY_SLOT_1, //Hydration
-    .species = SPECIES_GOREBYSS,
-    .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_REST}
-    }
-};
-
-/* ------------------- Zone 20 ------------------- */
-
 
 /* ------------------- Zone 21 ------------------- */
 
@@ -3484,7 +3565,7 @@ static const struct TrainerMon sParty_Audrey[] = {
     }
 };
 
-static const struct TrainerMon sParty_CamAndPam[] = {//Leviathan 13, Battle starts with permanent Hail, Double Battle, Default
+static const struct TrainerMon sParty_CamAndPam[] = {// Leviathan 13, Battle starts with permanent Hail, Double Battle, Default
     {
     .iv = 31,
     .lvl = 37,
@@ -3814,7 +3895,7 @@ static const struct TrainerMon sParty_Sheldon[] = {
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMirages[] = {//Leviathan 14, Double Battle, Default
+static const struct TrainerMon sParty_Zone25LMirages[] = {// Leviathan 14, Double Battle, Default
     {
     .iv = 31,
     .lvl = 42,
@@ -3892,7 +3973,7 @@ static const struct TrainerMon sParty_LelouchExp4[] = {
     }
 };
 
-static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Brutal
+static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {// Leviathan 7, Brutal
     {
     .iv = 31,
     .lvl = 27,
@@ -3922,7 +4003,7 @@ static const struct TrainerMon sParty_KaizenBulkUpBrutal[] = {//Leviathan 7, Bru
     }
 };
 
-static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, Brutal
+static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {// Leviathan 8, Brutal
     {
     .iv = 31,
     .lvl = 27,
@@ -3952,7 +4033,7 @@ static const struct TrainerMon sParty_KaizenCalmMindBrutal[] = {//Leviathan 8, B
     }
 };
 
-static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {//Leviathan 9, Double Battle, Brutal
+static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {// Leviathan 9, Double Battle, Brutal
     {
     .iv = 31,
     .lvl = 27,
@@ -4009,7 +4090,7 @@ static const struct TrainerMon sParty_Zone14CMirageBrutal[] = {//Leviathan 9, Do
     }
 };
 
-static const struct TrainerMon sParty_SophiaBrutal[] = {//Leviathan 10, Brutal
+static const struct TrainerMon sParty_SophiaBrutal[] = {// Leviathan 10, Brutal
     {
     .iv = 31,
     .lvl = 29,
@@ -4057,28 +4138,7 @@ static const struct TrainerMon sParty_SophiaBrutal[] = {//Leviathan 10, Brutal
     }
 };
 
-static const struct TrainerMon sParty_OdysseusBrutal[] = {//Leviathan 11, Battle starts with permanent Rain, Double Battle, Brutal
-    {
-    .iv = 31,
-    .lvl = 33,
-    .nature = NATURE_ADAMANT,
-    .heldItem = ITEM_LUM_BERRY,
-    .ability = ABILITY_HIDDEN, //Swift Swim
-    .species = SPECIES_HUNTAIL, //Starts with aura +1 Attack
-    .moves = {MOVE_AQUA_TAIL, MOVE_CRUNCH, MOVE_ICE_FANG, MOVE_SLEEP_TALK}
-    },
-    {
-    .iv = 31,
-    .lvl = 33,
-    .nature = NATURE_MODEST,
-    .heldItem = ITEM_LUM_BERRY,
-    .ability = ABILITY_HIDDEN, //Swift Swim
-    .species = SPECIES_GOREBYSS, //Starts with aura +1 Special Attack
-    .moves = {MOVE_BRINE, MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_REST}
-    }
-};
-
-static const struct TrainerMon sParty_JulieBrutal[] = {//Leviathan 12, Brutal
+static const struct TrainerMon sParty_JulieBrutal[] = {// Leviathan 12, Brutal
     {
     .iv = 31,
     .lvl = 34,
@@ -4135,7 +4195,7 @@ static const struct TrainerMon sParty_JulieBrutal[] = {//Leviathan 12, Brutal
     }
 };
 
-static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Battle starts with permanent Hail, Double Battle, Brutal
+static const struct TrainerMon sParty_CamAndPamBrutal[] = {// Leviathan 13, Battle starts with permanent Hail, Double Battle, Brutal
     {
     .iv = 31,
     .lvl = 38,
@@ -4174,7 +4234,7 @@ static const struct TrainerMon sParty_CamAndPamBrutal[] = {//Leviathan 13, Battl
     }
 };
 
-static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {//Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Pinsir
+static const struct TrainerMon sParty_Zone25LMiragesBrutal[] = {// Leviathan 14, Double Battle, Brutal. Note they can Mega Evolve both Gengar and Pinsir
     {
     .iv = 31,
     .lvl = 42,
