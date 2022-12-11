@@ -55,7 +55,8 @@ Zone17Sanctuary_EventScript_NextZone_5:
 
 Zone17Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
-	setflag FLAG_HIDE_ZONE18B_MAN
+	setflag FLAG_HIDE_ZONE18A_PIRATES
+	setflag FLAG_HIDE_ZONE18A_ELI
 	warp MAP_ZONE18A, 255, 28, 19
 	waitstate
 	goto Zone17Sanctuary_EventScript_NextZone_1

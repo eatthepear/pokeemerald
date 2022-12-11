@@ -1,40 +1,21 @@
 mapscripts Zone18B_MapScripts {
 	MAP_SCRIPT_ON_LOAD {
-		if (var(VAR_ZONE_18_STATE) == 0) {
-			setvar(VAR_0x8005, 1)
-			call_if_defeated(TRAINER_JOHN, Zone18B_EventScript_OpenNormalRoomDoors)
-			call_if_defeated(TRAINER_GLENN, Zone18B_EventScript_OpenRockRoomDoors)
-			call_if_defeated(TRAINER_JAY, Zone18B_EventScript_OpenIceRoomDoors)
-			call_if_defeated(TRAINER_TYLER, Zone18B_EventScript_OpenDarkRoomDoors)
-			call_if_defeated(TRAINER_TERRENCE, Zone18B_EventScript_OpenFlyingRoomDoors)
-			call_if_defeated(TRAINER_MARTY, Zone18B_EventScript_OpenPsychicRoomDoors)
-			call_if_defeated(TRAINER_KARI, Zone18B_EventScript_OpenFightingRoomDoors)
-			call_if_defeated(TRAINER_ABRAHAM, Zone18B_EventScript_OpenDragonRoomDoors)
-			call_if_defeated(TRAINER_MELINDA, Zone18B_EventScript_OpenFairyRoomDoors)
-			call_if_defeated(TRAINER_EMILIO, Zone18B_EventScript_OpenGroundRoomDoors)
-			call_if_defeated(TRAINER_REX, Zone18B_EventScript_OpenBugRoomDoors)
-			call_if_defeated(TRAINER_LOUIS, Zone18B_EventScript_OpenSteelRoomDoors)
-			call_if_defeated(TRAINER_LEROY, Zone18B_EventScript_OpenPoisonRoomDoors)
-			call_if_defeated(TRAINER_ELTON, Zone18B_EventScript_OpenElectricRoomDoors)
-			call_if_defeated(TRAINER_WILLIE, Zone18B_EventScript_OpenFireRoomDoors)
-		} elif (var(VAR_ZONE_18_STATE) <= 1) {
-			setvar(VAR_0x8005, 1)
-			call(Zone18B_EventScript_OpenNormalRoomDoors)
-			call(Zone18B_EventScript_OpenRockRoomDoors)
-			call(Zone18B_EventScript_OpenIceRoomDoors)
-			call(Zone18B_EventScript_OpenDarkRoomDoors)
-			call(Zone18B_EventScript_OpenFlyingRoomDoors)
-			call(Zone18B_EventScript_OpenPsychicRoomDoors)
-			call(Zone18B_EventScript_OpenFightingRoomDoors)
-			call(Zone18B_EventScript_OpenDragonRoomDoors)
-			call(Zone18B_EventScript_OpenFairyRoomDoors)
-			call(Zone18B_EventScript_OpenGroundRoomDoors)
-			call(Zone18B_EventScript_OpenBugRoomDoors)
-			call(Zone18B_EventScript_OpenSteelRoomDoors)
-			call(Zone18B_EventScript_OpenPoisonRoomDoors)
-			call(Zone18B_EventScript_OpenElectricRoomDoors)
-			call(Zone18B_EventScript_OpenFireRoomDoors)
-		}
+		setvar(VAR_0x8005, 1)
+		call_if_defeated(TRAINER_JOHN, Zone18B_EventScript_OpenNormalRoomDoors)
+		call_if_defeated(TRAINER_GLENN, Zone18B_EventScript_OpenRockRoomDoors)
+		call_if_defeated(TRAINER_JAY, Zone18B_EventScript_OpenIceRoomDoors)
+		call_if_defeated(TRAINER_TYLER, Zone18B_EventScript_OpenDarkRoomDoors)
+		call_if_defeated(TRAINER_TERRENCE, Zone18B_EventScript_OpenFlyingRoomDoors)
+		call_if_defeated(TRAINER_MARTY, Zone18B_EventScript_OpenPsychicRoomDoors)
+		call_if_defeated(TRAINER_KARI, Zone18B_EventScript_OpenFightingRoomDoors)
+		call_if_defeated(TRAINER_ABRAHAM, Zone18B_EventScript_OpenDragonRoomDoors)
+		call_if_defeated(TRAINER_MELINDA, Zone18B_EventScript_OpenFairyRoomDoors)
+		call_if_defeated(TRAINER_EMILIO, Zone18B_EventScript_OpenGroundRoomDoors)
+		call_if_defeated(TRAINER_REX, Zone18B_EventScript_OpenBugRoomDoors)
+		call_if_defeated(TRAINER_LOUIS, Zone18B_EventScript_OpenSteelRoomDoors)
+		call_if_defeated(TRAINER_LEROY, Zone18B_EventScript_OpenPoisonRoomDoors)
+		call_if_defeated(TRAINER_ELTON, Zone18B_EventScript_OpenElectricRoomDoors)
+		call_if_defeated(TRAINER_WILLIE, Zone18B_EventScript_OpenFireRoomDoors)
 	}
 }
 
@@ -1032,237 +1013,67 @@ Zone18B_Text_WillieDefeat:
 
 Zone18B_Text_WilliePostBattle:
 	.string "I think I just need more Pokémon.$"
-
-Zone18B_EventScript_Odysseus::
-	lock
-	switch VAR_FACING
-	case DIR_NORTH, Zone18B_EventScript_PlayerBottom
-	case DIR_WEST, Zone18B_EventScript_PlayerRight
-	case DIR_EAST, Zone18B_EventScript_PlayerLeft
-	end
-
-Zone18B_EventScript_PlayerBottom::
-	goto Zone18B_EventScript_LeviathanOptions
-	end
-
-Zone18B_EventScript_PlayerRight::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto Zone18B_EventScript_LeviathanOptions
-	end
-
-Zone18B_EventScript_PlayerLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto Zone18B_EventScript_LeviathanOptions
-	end
-
-Zone18B_EventScript_LeviathanOptions:
-	switch VAR_ZONE_18_STATE
-	case 0, Zone18B_EventScript_InitiatePirateSequence
-	case 2, Zone18B_EventScript_FindPirates
-	case 3, Zone18B_EventScript_ThankForPirates
-	case 4, Zone18B_EventScript_WantBattleOrLeave
-	case 5, Zone18B_EventScript_WantLeave
-	end
-
-Zone18B_EventScript_FindPirates:
-	msgbox Zone18A_Text_Odysseus_FindPirates, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone18B_EventScript_InitiatePirateSequence:
-	msgbox Zone18B_Text_LeviathanCutoff, MSGBOX_AUTOCLOSE
-	delay 40
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
-	waitmovement 0
-	special RemoveCameraObject
-	playse SE_DOOR
-	delay 10
-	addobject 2
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
-	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 0
-	waitse
-	msgbox Zone18B_Text_Sir, MSGBOX_AUTOCLOSE
-	msgbox Zone18B_Text_LeviathanNotAgain, MSGBOX_AUTOCLOSE
-	applymovement 2, Common_Movement_FaceDown
-	playse SE_DOOR
-	delay 10
-	waitmovement 0
-	removeobject 2
-	applymovement 1, Zone18B_Movement_LeviathanLeave
-	waitmovement 0
-	playse SE_DOOR
-	delay 10
-	removeobject 1
-	setflag FLAG_HIDE_ZONE18B_ODYSSEUS
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	special RemoveCameraObject
-	setvar VAR_ZONE_18_STATE, 1
-	release
-	end
-
-Zone18B_Text_LeviathanCutoff:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Hello, {PLAYER}.\p"
-	.string "You're making quite the impression,\n"
-	.string "defeating all of my hand-selected\l"
-	.string "trainers.\p"
-	.string "Now is the time to battle.\p"
-	.string "I, {COLOR BLUE}Leviathan Odysseus{COLOR DARK_GRAY}, challenge-$"
-
-Zone18B_Text_Sir:
-	.string "Sir!\n"
-	.string "The pirates are raiding the beach!$"
-
-Zone18B_Text_LeviathanNotAgain:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Not again!$"
-
-Zone18B_Movement_LeviathanLeave:
-	walk_faster_left
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_left
-	walk_faster_down
-	walk_faster_down
-	step_end
-
-Zone18B_EventScript_ThankForPirates:
-	msgbox Zone18B_Odysseus_ThankYou, MSGBOX_AUTOCLOSE
-	giveitem ITEM_FOCUS_SASH, 1
-	msgbox Zone18B_Text_Odysseus_ExplainItem, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE_18_STATE, 4
-	goto Zone18B_EventScript_WantBattleOrLeave
-	release
-	end
-
-Zone18B_Odysseus_ThankYou:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: You defeated the pirates?\p"
-	.string "Thank you, {PLAYER}, for finding\n"
-	.string "their hideout. I want you to have\l"
-	.string "this as a reward.$"
-
-Zone18B_Text_Odysseus_ExplainItem:
-	.string "A Focus Sash allows your Pokémon to\n"
-	.string "tank a hit from full HP that would\l"
-	.string "have otherwise knocked it out.\p"
-	.string "However, it is only single use.$"
-
-Zone18B_EventScript_WantBattleOrLeave:
-	msgbox Zone18B_Odysseus_WantBattle, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_OdysseusBattle
-	compare VAR_RESULT, NO
-	goto_if_eq Zone18B_EventScript_WantLeave
-	end
-
-Zone18B_Odysseus_WantBattle:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: If you'd like, we can\n"
-	.string "have a battle.$"
-
-Zone18B_EventScript_OdysseusBattle:
-	setweather WEATHER_RAIN
-	doweather
-	msgbox Zone18B_Text_Raining, MSGBOX_AUTOCLOSE
-	msgbox Zone18B_OdysseusBattleIntro, MSGBOX_AUTOCLOSE
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_ODYSSEUS
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_OdysseusBrutal
-	trainerbattle_no_intro TRAINER_REX, Zone18B_Text_LeviathanDefeat
-	goto Zone18B_EventScript_Leviathan11Defeated
-	end
-
-Zone18B_Text_Raining:
-	.string "It suddenly began to rain!$"
-
-Zone18B_EventScript_OdysseusBrutal:
-	totemboost_atk1 B_POSITION_OPPONENT_LEFT
-	totemboost_spatk1 B_POSITION_OPPONENT_RIGHT
-	trainerbattle_no_intro TRAINER_REX, Zone18B_Text_LeviathanDefeat
-	goto Zone18B_EventScript_Leviathan11Defeated
-	end
-
-Zone18B_OdysseusBattleIntro:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Let this be a match for\n"
-	.string "the ages!$"
-
-Zone18B_Text_LeviathanDefeat:
-	.string "Well met. Congratulations.$"
-
-Zone18B_EventScript_Leviathan11Defeated:
-	setflag FLAG_BEAT_LEVIATHAN_11
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone18B_Text_Odysseus_PostBattle, MSGBOX_AUTOCLOSE
-	giveitem ITEM_TM25
-	msgbox Zone18B_Text_Odysseus_ExplainItem2, MSGBOX_AUTOCLOSE
-	setvar VAR_ZONE_18_STATE, 5
-	resetweather
-	doweather
-	msgbox Zone18B_Text_StoppedRaining, MSGBOX_AUTOCLOSE
-	goto Zone18B_EventScript_WantLeave
-	end
-
-Zone18B_Text_StoppedRaining:
-	.string "The rain stopped.$"
-
-Zone18B_Text_Odysseus_PostBattle:
-	.string "What a stunning battle. You must be\n"
-	.string "proud of your Pokémon.\p"
-	.string "Here, I want you to have this.$"
-
-Zone18B_Text_Odysseus_ExplainItem2:
-	.string "Waterfall is a strong, physical\n"
-	.string "Water move.$"
-
-Zone18B_EventScript_WantLeave:
-	msgbox Zone18B_Odysseus_WantLeave, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone18B_EventScript_Leave
-	msgbox Zone18B_Odysseus_Stay, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone18B_Odysseus_WantLeave:
-	.string "I can arrange travel for you,\n"
-	.string "if you want.$"
-
-Zone18B_Odysseus_Stay:
-	.string "You're more than welcome to stay as\n"
-	.string "long as you wish on this island.\p"
-	.string "Come to me if you need anything.$"
-
-Zone18B_EventScript_Leave:
-	compare VAR_ZONE, 19
-	goto_if_gt EventScript_WarpZone0
-	msgbox Zone18B_Odysseus_Goodbye, MSGBOX_AUTOCLOSE
-	warp MAP_ZONE19SANCTUARY, 255, 22, 7
-	release
-	end
-
-Zone18B_Odysseus_Goodbye:
-	.string "Of course.\p"
-	.string "Thank you for your actions, and\n"
-	.string "know you are always welcome here.\p"
-	.string "Goodbye.$"
-
-
 `
+
+script Zone18B_EventScript_Eli {
+	lock
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 3) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	} elif (var(VAR_TEMP_0) == 5) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+		waitmovement(0)
+	}
+	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hi! I'm {COLOR BLUE}Eli{COLOR DARK_GRAY}!"))
+	delay(40)
+	applymovement(1, Zone18B_Movement_Eli_WalkAround)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hmm… You don't seem so tough!\pI bet I could beat you by myself!"), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: But… {COLOR BLUE}Zoe{COLOR DARK_GRAY} said if anyone came by, they should battle both of us together!\pShe's probaby enjoying the water outside, so I'll meet you there!"))
+	applymovement(1, Zone18B_Movement_Eli_RunOut)
+	waitmovement(0)
+	playse(SE_DOOR)
+	delay(10)
+	removeobject(1)
+	setflag(FLAG_HIDE_ZONE18B_ELI)
+	release
+	end
+}
+
+movement Zone18B_Movement_Eli_WalkAround {
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+}
+
+movement Zone18B_Movement_Eli_RunOut {
+	walk_faster_left
+	walk_faster_down
+	face_right
+	delay_16
+	walk_faster_down
+	walk_faster_right
+	face_up
+	delay_16
+	walk_faster_right
+	walk_faster_up
+	face_left
+	delay_16
+	walk_faster_up
+	walk_faster_left
+	face_down
+	delay_16
+}

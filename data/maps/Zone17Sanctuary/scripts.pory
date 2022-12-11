@@ -32,7 +32,8 @@ script Zone17Sanctuary_EventScript_NextZone {
 			msgbox(Zone17Sanctuary_Text_Colress_ReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				setflag(FLAG_HIDE_ZONE18B_MAN)
+				setflag(FLAG_HIDE_ZONE18A_PIRATES)
+				setflag(FLAG_HIDE_ZONE18A_ELI)
 				warp(MAP_ZONE18A, 255, 28, 19)
 				waitstate
 			}

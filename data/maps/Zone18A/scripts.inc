@@ -19,6 +19,120 @@ Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 	return
 
 
+Zone18A_EventScript_LeviathanBattle::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
+	fadeoutbgm 1
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18A_EventScript_LeviathanBattle_2
+	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18A_Text_Leviathan16Defeat
+Zone18A_EventScript_LeviathanBattle_1:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_5, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_6, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_7, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_8, MSGBOX_DEFAULT
+	giveitem ITEM_TM36
+	playbgm MUS_ENCOUNTER_AQUA, 0
+	clearflag FLAG_HIDE_ZONE18A_PIRATES
+	applymovement 9, Zone18A_Movement_Pirate1_Left
+	applymovement 10, Zone18A_Movement_Pirate2_Left
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_9, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_10, MSGBOX_DEFAULT
+	waitmovement 0
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_11, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_12, MSGBOX_DEFAULT
+	removeobject 8
+	setflag FLAG_HIDE_ZONE18A_DOLL
+	applymovement 9, Zone18A_Movement_Pirate1_Right
+	applymovement 10, Zone18A_Movement_Pirate2_Right
+	waitmovement 0
+	removeobject 9
+	removeobject 10
+	setflag FLAG_HIDE_ZONE18A_PIRATES
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_13, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_14, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_15, MSGBOX_DEFAULT
+	giveitem ITEM_DIVING_GEAR
+	fadedefaultbgm
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_16, MSGBOX_DEFAULT
+	setflag FLAG_BEAT_LEVIATHAN_16
+	setvar VAR_ZONE_18_STATE, 1
+	release
+	end
+
+Zone18A_EventScript_LeviathanBattle_2:
+	setweather WEATHER_RAIN
+	doweather
+	msgbox Zone18A_EventScript_LeviathanBattle_Text_4, MSGBOX_DEFAULT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16_BRUTAL, Zone18A_Text_Leviathan16Defeat
+	resetweather
+	doweather
+	goto Zone18A_EventScript_LeviathanBattle_1
+
+
+Zone18A_Movement_Pirate1_Left:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	step_end
+
+Zone18A_Movement_Pirate2_Left:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_left
+	walk_faster_left
+	step_end
+
+Zone18A_Movement_Pirate1_Right:
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	step_end
+
+Zone18A_Movement_Pirate2_Right:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	step_end
+
+Zone18A_EventScript_AzurillDoll::
+	msgbox Zone18A_EventScript_AzurillDoll_Text_0, MSGBOX_SIGN
+	end
+
+
 Zone18A_EventScript_SellSodaPop::
 	lock
 	faceplayer
@@ -121,107 +235,70 @@ Zone18A_Text_HomerDefeat:
 Zone18A_Text_HomerPostBattle:
 	.string "$"
 
+Zone18A_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Is this the challenger you were\n"
+	.string "telling me about?$"
 
-Zone18A_EventScript_PirateEventRight::
-	lockall
-	goto Zone18A_EventScript_PirateEvent
-	end
+Zone18A_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah yeah!$"
 
-Zone18A_EventScript_PirateEventLeft::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunRight
-	waitmovement 0
-	goto Zone18A_EventScript_PirateEvent
-	end
+Zone18A_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: To truly clear the Trainer's Dojo,\n"
+	.string "you must defeat the two of us in a\l"
+	.string "Double Battle!$"
 
-Zone18A_EventScript_PirateEventMiddle::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunRight
-	waitmovement 0
-	goto Zone18A_EventScript_PirateEvent
-	end
+Zone18A_EventScript_LeviathanBattle_Text_3:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Taste our power!$"
 
-Zone18A_EventScript_PirateEvent:
-	setflag FLAG_HIDE_ZONE19D_PIRATES
-	clearflag FLAG_HIDE_ZONE18B_MAN
-	applymovement OBJ_EVENT_ID_PLAYER, Zone18A_Movement_RunDownToBeach
-	waitmovement 0
-	applymovement 4, Zone18A_Movement_WalkSlowlyRight
-	waitmovement 0
-	msgbox Zone18A_Text_Odysseus_GotAway, MSGBOX_AUTOCLOSE
-	applymovement 4, Common_Movement_FaceLeft
-	waitmovement 0
-	delay 40
-	applymovement 4, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitmovement 0
-	applymovement 4, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement 4, Common_Movement_WalkLeft
-	waitmovement 0
-	msgbox Zone18A_Text_Odysseus_GoAfterPirates, MSGBOX_AUTOCLOSE
-	giveitem ITEM_DIVING_GEAR
-	msgbox Zone18A_Text_Odysseus_FindPirates, MSGBOX_AUTOCLOSE
-	applymovement 4, Zone18A_Movement_WalkAway
-	waitmovement 0
-	removeobject 4
-	clearflag FLAG_HIDE_ZONE18B_ODYSSEUS
-	setflag FLAG_HIDE_ZONE18B_MAN
-	setflag FLAG_HIDE_ZONE19D_PIRATES
-	setvar VAR_ZONE_18_STATE, 2
-	releaseall
-	end
+Zone18A_EventScript_LeviathanBattle_Text_4:
+	.string "It suddenly began to rain!$"
 
-Zone18A_Movement_RunRight:
-	player_run_right
-	step_end
+Zone18A_EventScript_LeviathanBattle_Text_5:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Aww! We lost, sis!$"
 
-Zone18A_Movement_RunDownToBeach:
-	player_run_down
-	player_run_down
-	player_run_down
-	player_run_down
-	player_run_down
-	player_run_down
-	player_run_right
-	walk_right
-	step_end
+Zone18A_EventScript_LeviathanBattle_Text_6:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: That's ok, Eli. We'll learn from this,\n"
+	.string "yeah?$"
 
-Zone18A_Movement_WalkSlowlyRight:
-	walk_slow_right
-	walk_slow_right
-	step_end
+Zone18A_EventScript_LeviathanBattle_Text_7:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah yeah! And we gotta give\n"
+	.string "{PLAYER} the reward!$"
 
-Zone18A_Text_Odysseus_GotAway:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: They're gone...\p"
-	.string "They can't keep getting away like\n"
-	.string "this, but I can't just leave this\l"
-	.string "place unprotected.$"
+Zone18A_EventScript_LeviathanBattle_Text_8:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Right! Here's our little gift for\n"
+	.string "clearing the Trainer's Dojo.$"
 
-Zone18A_Text_Odysseus_GoAfterPirates:
-	.string "Listen, {PLAYER}, you're clearly a\n"
-	.string "capable Trainer. I need you to go\l"
-	.string "after the pirates. Their hideout\l"
-	.string "should be somewhere east of here.\p"
-	.string "Here, take this.$"
+Zone18A_EventScript_LeviathanBattle_Text_9:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: What the?$"
 
-Zone18A_Text_Odysseus_FindPirates:
-	.string "{COLOR BLUE}Odysseus{COLOR DARK_GRAY}: Please, find the pirates!$"
+Zone18A_EventScript_LeviathanBattle_Text_10:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Pirates!$"
 
-Zone18A_Movement_WalkAway:
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	step_end
+Zone18A_EventScript_LeviathanBattle_Text_11:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hey, wait! That's my special doll!\n"
+	.string "Don't take it, please!$"
+
+Zone18A_EventScript_LeviathanBattle_Text_12:
+	.string "It be ours now, laddy!$"
+
+Zone18A_EventScript_LeviathanBattle_Text_13:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Wah!!!$"
+
+Zone18A_EventScript_LeviathanBattle_Text_14:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: It'll be ok, Eli!$"
+
+Zone18A_EventScript_LeviathanBattle_Text_15:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: {PLAYER}! You're stronger than\n"
+	.string "both of us.\p"
+	.string "Can you chase the pirates and recover\n"
+	.string "the doll?\p"
+	.string "Here, this Diving Gear might be helpful.$"
+
+Zone18A_EventScript_LeviathanBattle_Text_16:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Please! Help!$"
+
+Zone18A_EventScript_AzurillDoll_Text_0:
+	.string "It's an Azurill doll.\nIt's clearly been well loved.$"
 
 Zone18A_EventScript_SellSodaPop_Text_0:
 	.string "Want to buy some Soda Pop?\n¥300 for 50 HP a pop!$"
@@ -234,3 +311,7 @@ Zone18A_EventScript_SellSodaPop_Text_2:
 
 Zone18A_EventScript_SellSodaPop_Text_3:
 	.string "Aww, did you not like my pun?$"
+
+Zone18A_Text_Leviathan16Defeat::
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Darn it!\p"
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: It seems you've defeated us.$"

@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
       "x": 4,
       "y": 2,
       "elevation": 3,
@@ -24,21 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone18B_EventScript_Odysseus",
-      "flag": "FLAG_HIDE_ZONE18B_ODYSSEUS"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 1,
-      "y": 7,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_ZONE18B_MAN"
+      "script": "Zone18B_EventScript_Eli",
+      "flag": "FLAG_HIDE_ZONE18B_ELI"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KINDLER",
