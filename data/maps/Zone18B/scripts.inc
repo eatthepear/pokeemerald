@@ -1007,11 +1007,14 @@ Zone18B_Text_JohnIntro:
 	.string "Normal-types in battle!$"
 
 Zone18B_Text_JohnDefeat:
-	.string "I'm not Gatsby!$"
+	.string "You got me! How typical.$"
 
 Zone18B_Text_JohnPostBattle:
-	.string "I just like the book because\n"
-	.string "of the social commentary.$"
+	.string "You can pick between the Rock room\n"
+	.string "and the Ice room.\p"
+	.string "Oh, and in case it wasn't obvious,\n"
+	.string "everyone here battles in\l"
+	.string "Double Battles.$"
 
 Zone18B_EventScript_Glenn::
 	trainerbattle_single TRAINER_GLENN, Zone18B_Text_GlennIntro, Zone18B_Text_GlennDefeat, Zone18B_EventScript_SlideOpenRockRoomDoors
@@ -1019,16 +1022,16 @@ Zone18B_EventScript_Glenn::
 	end
 
 Zone18B_Text_GlennIntro:
-	.string "Welcome to the Cool Room.\n"
-	.string "Speaking of cool, have you\l"
-	.string "ever read the Great Gatsby?$"
+	.string "Rock 'em, sock em!$"
 
 Zone18B_Text_GlennDefeat:
-	.string "I'm not Gatsby!$"
+	.string "You rocked!$"
 
 Zone18B_Text_GlennPostBattle:
-	.string "I just like the book because\n"
-	.string "of the social commentary.$"
+	.string "How many weaknesses do Rock-types\n"
+	.string "have?\p"
+	.string "I'll tell you: none, if you're\n"
+	.string "careful about type matchups!$"
 
 Zone18B_EventScript_Jay::
 	trainerbattle_single TRAINER_JAY, Zone18B_Text_JayIntro, Zone18B_Text_JayDefeat, Zone18B_EventScript_SlideOpenIceRoomDoors
@@ -1044,8 +1047,8 @@ Zone18B_Text_JayDefeat:
 	.string "I'm not Gatsby!$"
 
 Zone18B_Text_JayPostBattle:
-	.string "I just like the book because\n"
-	.string "of the social commentary.$"
+	.string "I just think he's a pretty chill\n"
+	.string "dude.$"
 
 Zone18B_EventScript_Tyler::
 	trainerbattle_single TRAINER_TYLER, Zone18B_Text_TylerIntro, Zone18B_Text_TylerDefeat, Zone18B_EventScript_SlideOpenDarkRoomDoors
@@ -1053,14 +1056,16 @@ Zone18B_EventScript_Tyler::
 	end
 
 Zone18B_Text_TylerIntro:
-	.string "Cutie walks into the Cute\n"
-	.string "Room. Prepare to battle!$"
+	.string "You look tough, kid.\p"
+	.string "Can you beat the toughest\n"
+	.string "Dark-types around?$"
 
 Zone18B_Text_TylerDefeat:
-	.string "Awww.$"
+	.string "I guess you can!$"
 
 Zone18B_Text_TylerPostBattle:
-	.string "I wish I had a Clefairy.$"
+	.string "I know I'm tough because my momma\n"
+	.string "said so!$"
 
 Zone18B_EventScript_Terrence::
 	trainerbattle_single TRAINER_TERRENCE, Zone18B_Text_TerrenceIntro, Zone18B_Text_TerrenceDefeat, Zone18B_EventScript_SlideOpenFlyingRoomDoors
@@ -1068,16 +1073,16 @@ Zone18B_EventScript_Terrence::
 	end
 
 Zone18B_Text_TerrenceIntro:
-	.string "I like to take things slow,\n"
-	.string "in battle and in life!$"
+	.string "Take flight, my Pokémon,\n"
+	.string "and defeat this Trainer!$"
 
 Zone18B_Text_TerrenceDefeat:
-	.string "I guess stalling you out did\n"
-	.string "no good...$"
+	.string "Our wings are clipped and our\n"
+	.string "flight path broken!$"
 
 Zone18B_Text_TerrencePostBattle:
-	.string "Sometimes my wife gets annoyed\n"
-	.string "that everything I do is so slow.$"
+	.string "My favorite board game is Wingspan.\n"
+	.string "You should try it sometime!$"
 
 Zone18B_EventScript_Marty::
 	trainerbattle_single TRAINER_MARTY, Zone18B_Text_MartyIntro, Zone18B_Text_MartyDefeat, Zone18B_EventScript_SlideOpenPsychicRoomDoors
@@ -1085,16 +1090,16 @@ Zone18B_EventScript_Marty::
 	end
 
 Zone18B_Text_MartyIntro:
-	.string "I've collected a balanced team\n"
-	.string "from across the globe to defeat\l"
-	.string "you in battle!$"
+	.string "Through my powers, I see a\n"
+	.string "great battle ahead of us…$"
 
 Zone18B_Text_MartyDefeat:
-	.string "Argh! You tipped the scales on me!$"
+	.string "It wasn't a great battle because\n"
+	.string "I lost!$"
 
 Zone18B_Text_MartyPostBattle:
-	.string "Maybe I need a more straightforward\n"
-	.string "strategy...$"
+	.string "Why don't my visions ever show me\n"
+	.string "winning?$"
 
 Zone18B_EventScript_Kari::
 	trainerbattle_single TRAINER_KARI, Zone18B_Text_KariIntro, Zone18B_Text_KariDefeat, Zone18B_EventScript_SlideOpenFightingRoomDoors
@@ -1102,13 +1107,14 @@ Zone18B_EventScript_Kari::
 	end
 
 Zone18B_Text_KariIntro:
-	.string "ALL OUT OFFENSE! ATTACK!$"
+	.string "Fight me!$"
 
 Zone18B_Text_KariDefeat:
-	.string "DEFEATED! CRY!$"
+	.string "The taste of defeat is bitter!$"
 
 Zone18B_Text_KariPostBattle:
-	.string "HUSBAND WILL BE DISAPPOINTED!$"
+	.string "I'll have to train more for next\n"
+	.string "time!$"
 
 Zone18B_EventScript_Abraham::
 	trainerbattle_single TRAINER_ABRAHAM, Zone18B_Text_AbrahamIntro, Zone18B_Text_AbrahamDefeat, Zone18B_EventScript_SlideOpenDragonRoomDoors
@@ -1116,17 +1122,17 @@ Zone18B_EventScript_Abraham::
 	end
 
 Zone18B_Text_AbrahamIntro:
-	.string "Battle is all about weaving\n"
-	.string "in and out. It's a metaphor\l"
-	.string "for life!$"
+	.string "Dragons can inspire fear or\n"
+	.string "reverence in different cultures.\p"
+	.string "Which one is it for you?$"
 
 Zone18B_Text_AbrahamDefeat:
-	.string "Nice moves, dude.$"
+	.string "Personally, I fear them.\n"
+	.string "Well, when they evolve more.$"
 
 Zone18B_Text_AbrahamPostBattle:
-	.string "Even though I lost, remember\n"
-	.string "that moves like U-Turn are\l"
-	.string "incredibly powerful.$"
+	.string "Evolution won't be for a while,\n"
+	.string "though!$"
 
 Zone18B_EventScript_Melinda::
 	trainerbattle_single TRAINER_MELINDA, Zone18B_Text_MelindaIntro, Zone18B_Text_MelindaDefeat, Zone18B_EventScript_SlideOpenFairyRoomDoors

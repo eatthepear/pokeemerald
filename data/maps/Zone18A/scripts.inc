@@ -213,13 +213,17 @@ Zone18A_EventScript_Doris::
 	end
 
 Zone18A_Text_DorisIntro:
-	.string "$"
+	.string "I've wanted a relaxing vacation for\n"
+	.string "so long, but it's been so boring!\p"
+	.string "How about a battle to spice things up?$"
 
 Zone18A_Text_DorisDefeat:
-	.string "$"
+	.string "Now that was exciting!$"
 
 Zone18A_Text_DorisPostBattle:
-	.string "$"
+	.string "I'll check out the Trainer's Dojo.\n"
+	.string "It'll be more fun than just\l"
+	.string "lounging around, right?$"
 
 Zone18A_EventScript_Homer::
 	trainerbattle_single TRAINER_HOMER, Zone18A_Text_HomerIntro, Zone18A_Text_HomerDefeat
@@ -227,13 +231,17 @@ Zone18A_EventScript_Homer::
 	end
 
 Zone18A_Text_HomerIntro:
-	.string "$"
+	.string "Ah, a lovely day by the beach.\p"
+	.string "What's that? A battle?\p"
+	.string "Say no more! I'm all riled up!$"
 
 Zone18A_Text_HomerDefeat:
-	.string "$"
+	.string "Argh! You ruined my perfect day!$"
 
 Zone18A_Text_HomerPostBattle:
-	.string "$"
+	.string "My day is ruined! How am I supposed\n"
+	.string "to enjoy my day at the beach\l"
+	.string "knowing I've lost to some commoner?$"
 
 Zone18A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Is this the challenger you were\n"
