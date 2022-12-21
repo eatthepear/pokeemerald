@@ -259,9 +259,9 @@
 #define OBJ_EVENT_GFX_ROUGHNECK                  255
 #define OBJ_EVENT_GFX_PORYGON                    256
 #define OBJ_EVENT_GFX_SHINY_PORYGON              257
+#define OBJ_EVENT_GFX_SWIMMER_F_WALKING          258
 
-
-#define NUM_OBJ_EVENT_GFX                        258
+#define NUM_OBJ_EVENT_GFX                        259
 
 
 // These are dynamic object gfx ids.

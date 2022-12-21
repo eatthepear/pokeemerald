@@ -482,12 +482,13 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x113D
 #define OBJ_EVENT_PAL_TAG_BEAUTY                  0x113E
 #define OBJ_EVENT_PAL_TAG_MAN_4                   0x113F
-#define OBJ_EVENT_PAL_TAG_WOMAN_4                 0x114A
-#define OBJ_EVENT_PAL_TAG_WORKER                  0x114B
-#define OBJ_EVENT_PAL_TAG_ICE_WORKER              0x114C
-#define OBJ_EVENT_PAL_TAG_ROUGHNECK               0x114D
-#define OBJ_EVENT_PAL_TAG_PORYGON                 0x114E
-#define OBJ_EVENT_PAL_TAG_SHINY_PORYGON           0x114F
+#define OBJ_EVENT_PAL_TAG_WOMAN_4                 0x1140
+#define OBJ_EVENT_PAL_TAG_WORKER                  0x1141
+#define OBJ_EVENT_PAL_TAG_ICE_WORKER              0x1142
+#define OBJ_EVENT_PAL_TAG_ROUGHNECK               0x1143
+#define OBJ_EVENT_PAL_TAG_PORYGON                 0x1144
+#define OBJ_EVENT_PAL_TAG_SHINY_PORYGON           0x1145
+#define OBJ_EVENT_PAL_TAG_SWIMMER_F_WALKING       0x1146
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -568,6 +569,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Cowgirl,               OBJ_EVENT_PAL_TAG_COWGIRL},
     {gObjectEventPal_Porygon,               OBJ_EVENT_PAL_TAG_PORYGON},
     {gObjectEventPal_ShinyPorygon,          OBJ_EVENT_PAL_TAG_SHINY_PORYGON},
+    {gObjectEventPal_SwimmerFWalking,       OBJ_EVENT_PAL_TAG_SWIMMER_F_WALKING},
     {},
 };
 

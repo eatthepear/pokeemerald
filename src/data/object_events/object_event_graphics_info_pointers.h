@@ -262,6 +262,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Worker;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IceWorker;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roughneck;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cowgirl;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFWalking;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -523,6 +524,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ROUGHNECK] =                &gObjectEventGraphicsInfo_Roughneck,
     [OBJ_EVENT_GFX_PORYGON] =                  &gObjectEventGraphicsInfo_Porygon,
     [OBJ_EVENT_GFX_SHINY_PORYGON] =            &gObjectEventGraphicsInfo_ShinyPorygon,
+    [OBJ_EVENT_GFX_SWIMMER_F_WALKING] =        &gObjectEventGraphicsInfo_SwimmerFWalking,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
