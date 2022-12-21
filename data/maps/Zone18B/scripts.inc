@@ -437,6 +437,7 @@ Zone18B_EventScript_LeftLeviathanRoomDoor_1:
 Zone18B_EventScript_LeftLeviathanRoomDoor_2:
 	closemessage
 	delay 30
+	setvar VAR_ZONE_18_STATE, 1
 	warpdoor MAP_ZONE18B, 71, 1, 7
 	waitstate
 	goto Zone18B_EventScript_LeftLeviathanRoomDoor_1
@@ -455,6 +456,7 @@ Zone18B_EventScript_RightLeviathanRoomDoor_1:
 Zone18B_EventScript_RightLeviathanRoomDoor_2:
 	closemessage
 	delay 30
+	setvar VAR_ZONE_18_STATE, 2
 	warpdoor MAP_ZONE18B, 72, 7, 7
 	waitstate
 	goto Zone18B_EventScript_RightLeviathanRoomDoor_1
@@ -1140,13 +1142,14 @@ Zone18B_EventScript_Melinda::
 	end
 
 Zone18B_Text_MelindaIntro:
-	.string "Hail is the best weather!$"
+	.string "Momma… where are you?$"
 
 Zone18B_Text_MelindaDefeat:
-	.string "Well, not defensively...$"
+	.string "She'll be with me soon…$"
 
 Zone18B_Text_MelindaPostBattle:
-	.string "My Pokémon just need to learn Blizzard.$"
+	.string "We'll be together again,\n"
+	.string "like we were meant to be…$"
 
 Zone18B_EventScript_Emilio::
 	trainerbattle_single TRAINER_EMILIO, Zone18B_Text_EmilioIntro, Zone18B_Text_EmilioDefeat, Zone18B_EventScript_SlideOpenGroundRoomDoors
@@ -1154,13 +1157,14 @@ Zone18B_EventScript_Emilio::
 	end
 
 Zone18B_Text_EmilioIntro:
-	.string "Setup and sweep. Easy peazy.$"
+	.string "Rock 'em, sock 'em!$"
 
 Zone18B_Text_EmilioDefeat:
-	.string "Hmm. I guess that didn't work.$"
+	.string "Our boulders have been reduced to\n"
+	.string "pebbles!$"
 
 Zone18B_Text_EmilioPostBattle:
-	.string "My Pokémon just need to train more.$"
+	.string "We gotta be more solid next time.$"
 
 Zone18B_EventScript_Rex::
 	trainerbattle_single TRAINER_REX, Zone18B_Text_RexIntro, Zone18B_Text_RexDefeat, Zone18B_EventScript_SlideOpenBugRoomDoors
@@ -1168,14 +1172,15 @@ Zone18B_EventScript_Rex::
 	end
 
 Zone18B_Text_RexIntro:
-	.string "Sneak attack! Hazardous terrain!$"
+	.string "Bugs, Bugs, I love Bugs.\n"
+	.string "Don't you?$"
 
 Zone18B_Text_RexDefeat:
-	.string "I didn't have the element of surprise!$"
+	.string "Ah! My poor Bugs!$"
 
 Zone18B_Text_RexPostBattle:
-	.string "I usually stack Spikes and\n"
-	.string "hope for the best.$"
+	.string "My sweet, lovely, creepy-crawlies,\n"
+	.string "I'll work harder for you next time!$"
 
 Zone18B_EventScript_Louis::
 	trainerbattle_single TRAINER_LOUIS, Zone18B_Text_LouisIntro, Zone18B_Text_LouisDefeat, Zone18B_EventScript_SlideOpenSteelRoomDoors
@@ -1183,15 +1188,17 @@ Zone18B_EventScript_Louis::
 	end
 
 Zone18B_Text_LouisIntro:
-	.string "Double Battle! Buff the Absol!$"
+	.string "I'm a researcher studying rare\n"
+	.string "metal artifacts. Do you have any?$"
 
 Zone18B_Text_LouisDefeat:
-	.string "Absol wasn't buff enough!$"
+	.string "Perhaps I should study Pokémon\n"
+	.string "battling as well.$"
 
 Zone18B_Text_LouisPostBattle:
-	.string "Stonjourner, you did great.\n"
-	.string "Absol, we gotta work on the\l"
-	.string "execution.$"
+	.string "I've heard there is a great ruin\n"
+	.string "in a dense jungle somewhere, and\l"
+	.string "deep within lies a powerful item.$"
 
 Zone18B_EventScript_Leroy::
 	trainerbattle_single TRAINER_LEROY, Zone18B_Text_LeroyIntro, Zone18B_Text_LeroyDefeat, Zone18B_EventScript_SlideOpenPoisonRoomDoors
@@ -1199,14 +1206,14 @@ Zone18B_EventScript_Leroy::
 	end
 
 Zone18B_Text_LeroyIntro:
-	.string "Slow you down then spread the pain!$"
+	.string "Sneak attack! Poison Powder!$"
 
 Zone18B_Text_LeroyDefeat:
-	.string "The only one in pain is me...$"
+	.string "I forgot about the powder!$"
 
 Zone18B_Text_LeroyPostBattle:
-	.string "Discharge plus Earthquake is\n"
-	.string "a nice combo.$"
+	.string "I didn't really sneak up on you\n"
+	.string "either, did I.$"
 
 Zone18B_EventScript_Elton::
 	trainerbattle_single TRAINER_ELTON, Zone18B_Text_EltonIntro, Zone18B_Text_EltonDefeat, Zone18B_EventScript_SlideOpenElectricRoomDoors
@@ -1214,13 +1221,13 @@ Zone18B_EventScript_Elton::
 	end
 
 Zone18B_Text_EltonIntro:
-	.string "My Pokémon, lend me a Helping Hand!$"
+	.string "My music will shock you!$"
 
 Zone18B_Text_EltonDefeat:
-	.string "Drats.$"
+	.string "You don't like Electric beats?$"
 
 Zone18B_Text_EltonPostBattle:
-	.string "I think I just need more Pokémon.$"
+	.string "I just like the smooth current!$"
 
 Zone18B_EventScript_Willie::
 	trainerbattle_single TRAINER_WILLIE, Zone18B_Text_WillieIntro, Zone18B_Text_WillieDefeat, Zone18B_EventScript_SlideOpenFireRoomDoors
@@ -1228,83 +1235,158 @@ Zone18B_EventScript_Willie::
 	end
 
 Zone18B_Text_WillieIntro:
-	.string "My Pokémon, lend me a Helping Hand!$"
+	.string "Hot, hot hot hot!$"
 
 Zone18B_Text_WillieDefeat:
-	.string "Drats.$"
+	.string "Sorry, I had a hot potato in my hands.$"
 
 Zone18B_Text_WilliePostBattle:
-	.string "I think I just need more Pokémon.$"
+	.string "You should be careful while\n"
+	.string "cooking something hot!$"
 
-Zone18B_EventScript_Eli::
+Zone18B_EventScript_LeviathanBattle::
 	lock
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 3
-	goto_if_eq Zone18B_EventScript_Eli_2
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_2
 	compare VAR_TEMP_0, 5
-	goto_if_eq Zone18B_EventScript_Eli_3
-Zone18B_EventScript_Eli_1:
-	msgbox Zone18B_EventScript_Eli_Text_0
-	delay 40
-	applymovement 1, Zone18B_Movement_Eli_WalkAround
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_3
+Zone18B_EventScript_LeviathanBattle_1:
+	applymovement 2, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone18B_EventScript_Eli_Text_1, MSGBOX_DEFAULT
-	msgbox Zone18B_EventScript_Eli_Text_2
-	applymovement 1, Zone18B_Movement_Eli_RunOut
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
+	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_1
+	fadeoutbgm 1
+	applymovement 1, Common_Movement_FaceDown
+	applymovement 2, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_LeviathanBattle_7
+	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18B_Text_Leviathan16Defeat
+Zone18B_EventScript_LeviathanBattle_6:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	applymovement 1, Common_Movement_FaceRight
+	applymovement 2, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_5, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_6, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_7, MSGBOX_DEFAULT
+	applymovement 1, Common_Movement_FaceDown
+	applymovement 2, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_8, MSGBOX_DEFAULT
+	giveitem ITEM_TM36
+	applymovement 1, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_9, MSGBOX_DEFAULT
+	applymovement 2, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_10, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_11, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_12
+	setflag FLAG_BEAT_LEVIATHAN_16
+	compare VAR_ZONE_18_STATE, 1
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_11
+	compare VAR_ZONE_18_STATE, 2
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_12
+Zone18B_EventScript_LeviathanBattle_10:
 	playse SE_DOOR
 	delay 10
 	removeobject 1
+	removeobject 2
 	setflag FLAG_HIDE_ZONE18B_ELI
+	setflag FLAG_HIDE_ZONE18B_ZOE
+	clearflag FLAG_HIDE_ZONE18A_ELI
+	clearflag FLAG_HIDE_ZONE18A_ZOE
+	clearflag FLAG_HIDE_ZONE18A_BOAT
+	setvar VAR_ZONE_18_STATE, 3
 	release
 	end
 
-Zone18B_EventScript_Eli_2:
+Zone18B_EventScript_LeviathanBattle_2:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	goto Zone18B_EventScript_Eli_1
+	goto Zone18B_EventScript_LeviathanBattle_1
 
-Zone18B_EventScript_Eli_3:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
+Zone18B_EventScript_LeviathanBattle_3:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	goto Zone18B_EventScript_Eli_1
+	goto Zone18B_EventScript_LeviathanBattle_1
+
+Zone18B_EventScript_LeviathanBattle_7:
+	setweather WEATHER_RAIN
+	doweather
+	msgbox Zone18B_EventScript_LeviathanBattle_Text_4, MSGBOX_DEFAULT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16_BRUTAL, Zone18B_Text_Leviathan16Defeat
+	resetweather
+	doweather
+	goto Zone18B_EventScript_LeviathanBattle_6
+
+Zone18B_EventScript_LeviathanBattle_11:
+	applymovement 1, Zone18B_Movement_Eli_RunOutLeft
+	applymovement 2, Zone18B_Movement_Zoe_RunOutLeft
+	waitmovement 0
+	goto Zone18B_EventScript_LeviathanBattle_10
+
+Zone18B_EventScript_LeviathanBattle_12:
+	applymovement 2, Zone18B_Movement_Zoe_RunOutRight
+	applymovement 1, Zone18B_Movement_Eli_RunOutRight
+	waitmovement 0
+	goto Zone18B_EventScript_LeviathanBattle_10
 
 
-Zone18B_Movement_Eli_WalkAround:
-	walk_fast_left
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_down
-	walk_fast_down
+Zone18B_Movement_Eli_RunOutLeft:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
 	step_end
 
-Zone18B_Movement_Eli_RunOut:
-	walk_faster_left
-	walk_faster_down
-	face_right
-	delay_16
-	walk_faster_down
-	walk_faster_right
-	face_up
-	delay_16
-	walk_faster_right
-	walk_faster_up
-	face_left
-	delay_16
-	walk_faster_up
-	walk_faster_left
-	face_down
-	delay_16
+Zone18B_Movement_Eli_RunOutRight:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+Zone18B_Movement_Zoe_RunOutLeft:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+Zone18B_Movement_Zoe_RunOutRight:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
 	step_end
 
 Zone18B_EventScript_DoorLocked_Text_0:
@@ -1355,16 +1437,53 @@ Zone18B_EventScript_LeftLeviathanRoomDoor_Text_0:
 Zone18B_EventScript_Statue_Text_0:
 	.string "Trainer's Dojo\nEstablished 2021$"
 
-Zone18B_EventScript_Eli_Text_0:
-	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hi! I'm {COLOR BLUE}Eli{COLOR DARK_GRAY}!$"
+Zone18B_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Is this the challenger you were\n"
+	.string "telling me about?$"
 
-Zone18B_EventScript_Eli_Text_1:
-	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hmm… You don't seem so tough!\p"
-	.string "I bet I could beat you by myself!$"
+Zone18B_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah yeah! They've been beating all\n"
+	.string "the other Trainers!$"
 
-Zone18B_EventScript_Eli_Text_2:
-	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: But… {COLOR BLUE}Zoe{COLOR DARK_GRAY} said if anyone came by,\n"
-	.string "they should battle both of us\l"
-	.string "together!\p"
-	.string "She's probaby enjoying the water\n"
-	.string "outside, so I'll meet you there!$"
+Zone18B_EventScript_LeviathanBattle_Text_2:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: To truly clear the Trainer's Dojo,\n"
+	.string "you must defeat the two of us in a\l"
+	.string "Double Battle!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_3:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Taste our power!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_4:
+	.string "It suddenly began to rain!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_5:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Aww! We lost, sis!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_6:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: That's ok, Eli. We'll learn from this,\n"
+	.string "yeah?$"
+
+Zone18B_EventScript_LeviathanBattle_Text_7:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah yeah! And we gotta give\n"
+	.string "{PLAYER} the reward!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_8:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Right! Here's our little gift for\n"
+	.string "clearing the Trainer's Dojo.$"
+
+Zone18B_EventScript_LeviathanBattle_Text_9:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Ah! I just remembered!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_10:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: What? What is it?$"
+
+Zone18B_EventScript_LeviathanBattle_Text_11:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: I left my Azurill doll at the beach!\p"
+	.string "I gotta go get it!$"
+
+Zone18B_EventScript_LeviathanBattle_Text_12:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Oh! I'll come with you, I guess.$"
+
+Zone18B_Text_Leviathan16Defeat::
+	.string "Eli: Darn it!\p"
+	.string "Zoe: It seems you've defeated us.$"
