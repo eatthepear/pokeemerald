@@ -1703,7 +1703,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_RAFAEL] =
     {
         .trainerClass = TRAINER_CLASS_POKEFAN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_POKEFAN_M,
         .trainerName = _("Rafael"),
         .items = {},

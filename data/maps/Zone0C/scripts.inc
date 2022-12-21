@@ -479,7 +479,7 @@ Zone0C_EventScript_WarpZone17_1:
 	buffernumberstring 0, 17
 	call Zone0C_EventScript_VerifyDestination
 	setvar VAR_REVISITING_ZONE, 17
-	warpteleport MAP_ZONE17A, 255, 13, 38
+	warpteleport MAP_ZONE17A, 255, 13, 40
 	waitstate
 	return
 

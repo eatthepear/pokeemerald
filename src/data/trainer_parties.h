@@ -2685,7 +2685,7 @@ static const struct TrainerMon sParty_LilyBrutal[] = {// Leviathan, Battle start
 
 /* ------------------- Zone 17 ------------------- */
 
-static const struct TrainerMon sParty_Axle[] = {// Shuffled Party, Battle starts with permanent Rain
+static const struct TrainerMon sParty_Axle[] = {// Shuffled Party
     {
     .iv = 20,
     .lvl = 32,
@@ -2703,7 +2703,7 @@ static const struct TrainerMon sParty_Axle[] = {// Shuffled Party, Battle starts
     }
 };
 
-static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party, Battle starts with permanent Rain
+static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party
     {
     .iv = 20,
     .lvl = 32,
@@ -2721,7 +2721,7 @@ static const struct TrainerMon sParty_Rafael[] = {// Shuffled Party, Battle star
     }
 };
 
-static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party, Battle starts with permanent Rain
+static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party
     {
     .iv = 20,
     .lvl = 32,
@@ -2739,7 +2739,7 @@ static const struct TrainerMon sParty_Georgina[] = {// Shuffled Party, Battle st
     }
 };
 
-static const struct TrainerMon sParty_MiaDefault[] = {// Leviathan, Battle starts with permanent Rain, No Surveil, Default
+static const struct TrainerMon sParty_MiaDefault[] = {// Leviathan, No Surveil, Default
     {
     .iv = 30,
     .lvl = 33,
@@ -2778,7 +2778,7 @@ static const struct TrainerMon sParty_MiaDefault[] = {// Leviathan, Battle start
     }
 };
 
-static const struct TrainerMon sParty_MiaBrutal[] = {// Leviathan, Battle starts with permanent Rain, Shuffled Party, No Surveil, Brutal
+static const struct TrainerMon sParty_MiaBrutal[] = {// Leviathan, Shuffled Party, No Surveil, Brutal
     {
     .iv = 31,
     .lvl = 33,
