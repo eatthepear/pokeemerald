@@ -1030,7 +1030,7 @@ Zone18B_Text_WilliePostBattle:
 
 `
 
-script Zone18B_EventScript_LeviathanBattle {
+script Zone18B_EventScript_EliZoe {
 	lock
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
 	if (var(VAR_TEMP_0) == 3) {
@@ -1046,6 +1046,18 @@ script Zone18B_EventScript_LeviathanBattle {
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 		waitmovement(0)
 	}
+	if (var(VAR_ZONE_18_STATE) < 3) {
+		goto(Zone18B_EventScript_LeviathanBattle)
+	} elif (var(VAR_ZONE_18_STATE) == 5) {
+		msgbox("THANKS")
+		giveitem(ITEM_MASTER_BALL, 1)
+		setvar(VAR_ZONE_18_STATE, 6)
+	} else {
+		msgbox("BLESS")
+	}
+}
+
+script Zone18B_EventScript_LeviathanBattle {
 	applymovement(2, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Is this the challenger you were telling me about?"), MSGBOX_DEFAULT)

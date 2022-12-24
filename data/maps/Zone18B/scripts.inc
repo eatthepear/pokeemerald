@@ -1244,14 +1244,49 @@ Zone18B_Text_WilliePostBattle:
 	.string "You should be careful while\n"
 	.string "cooking something hot!$"
 
-Zone18B_EventScript_LeviathanBattle::
+Zone18B_EventScript_EliZoe::
 	lock
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 3
-	goto_if_eq Zone18B_EventScript_LeviathanBattle_2
+	goto_if_eq Zone18B_EventScript_EliZoe_2
 	compare VAR_TEMP_0, 5
-	goto_if_eq Zone18B_EventScript_LeviathanBattle_3
-Zone18B_EventScript_LeviathanBattle_1:
+	goto_if_eq Zone18B_EventScript_EliZoe_3
+Zone18B_EventScript_EliZoe_1:
+	compare VAR_ZONE_18_STATE, 3
+	goto_if_lt Zone18B_EventScript_EliZoe_6
+	compare VAR_ZONE_18_STATE, 5
+	goto_if_eq Zone18B_EventScript_EliZoe_7
+	msgbox Zone18B_EventScript_EliZoe_Text_1
+	return
+
+Zone18B_EventScript_EliZoe_2:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone18B_EventScript_EliZoe_1
+
+Zone18B_EventScript_EliZoe_3:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto Zone18B_EventScript_EliZoe_1
+
+Zone18B_EventScript_EliZoe_6:
+	goto Zone18B_EventScript_LeviathanBattle
+	return
+
+Zone18B_EventScript_EliZoe_7:
+	msgbox Zone18B_EventScript_EliZoe_Text_0
+	giveitem ITEM_MASTER_BALL, 1
+	setvar VAR_ZONE_18_STATE, 6
+	return
+
+
+Zone18B_EventScript_LeviathanBattle::
 	applymovement 2, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
@@ -1265,10 +1300,10 @@ Zone18B_EventScript_LeviathanBattle_1:
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_LeviathanBattle_7
+	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
 	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18B_Text_Leviathan16Defeat
-Zone18B_EventScript_LeviathanBattle_6:
+Zone18B_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	applymovement 1, Common_Movement_FaceRight
 	applymovement 2, Common_Movement_FaceLeft
@@ -1291,10 +1326,10 @@ Zone18B_EventScript_LeviathanBattle_6:
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_12
 	setflag FLAG_BEAT_LEVIATHAN_16
 	compare VAR_ZONE_18_STATE, 1
-	goto_if_eq Zone18B_EventScript_LeviathanBattle_11
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_6
 	compare VAR_ZONE_18_STATE, 2
-	goto_if_eq Zone18B_EventScript_LeviathanBattle_12
-Zone18B_EventScript_LeviathanBattle_10:
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_7
+Zone18B_EventScript_LeviathanBattle_5:
 	playse SE_DOOR
 	delay 10
 	removeobject 1
@@ -1309,22 +1344,6 @@ Zone18B_EventScript_LeviathanBattle_10:
 	end
 
 Zone18B_EventScript_LeviathanBattle_2:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto Zone18B_EventScript_LeviathanBattle_1
-
-Zone18B_EventScript_LeviathanBattle_3:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
-	goto Zone18B_EventScript_LeviathanBattle_1
-
-Zone18B_EventScript_LeviathanBattle_7:
 	setweather WEATHER_RAIN
 	doweather
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_4, MSGBOX_DEFAULT
@@ -1332,19 +1351,19 @@ Zone18B_EventScript_LeviathanBattle_7:
 	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16_BRUTAL, Zone18B_Text_Leviathan16Defeat
 	resetweather
 	doweather
-	goto Zone18B_EventScript_LeviathanBattle_6
+	goto Zone18B_EventScript_LeviathanBattle_1
 
-Zone18B_EventScript_LeviathanBattle_11:
+Zone18B_EventScript_LeviathanBattle_6:
 	applymovement 1, Zone18B_Movement_Eli_RunOutLeft
 	applymovement 2, Zone18B_Movement_Zoe_RunOutLeft
 	waitmovement 0
-	goto Zone18B_EventScript_LeviathanBattle_10
+	goto Zone18B_EventScript_LeviathanBattle_5
 
-Zone18B_EventScript_LeviathanBattle_12:
+Zone18B_EventScript_LeviathanBattle_7:
 	applymovement 2, Zone18B_Movement_Zoe_RunOutRight
 	applymovement 1, Zone18B_Movement_Eli_RunOutRight
 	waitmovement 0
-	goto Zone18B_EventScript_LeviathanBattle_10
+	goto Zone18B_EventScript_LeviathanBattle_5
 
 
 Zone18B_Movement_Eli_RunOutLeft:
@@ -1436,6 +1455,12 @@ Zone18B_EventScript_LeftLeviathanRoomDoor_Text_0:
 
 Zone18B_EventScript_Statue_Text_0:
 	.string "Trainer's Dojo\nEstablished 2021$"
+
+Zone18B_EventScript_EliZoe_Text_0:
+	.string "THANKS$"
+
+Zone18B_EventScript_EliZoe_Text_1:
+	.string "BLESS$"
 
 Zone18B_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Is this the challenger you were\n"

@@ -66,21 +66,29 @@ Zone19D_EventScript_InitiatePirateBattles::
 	waitmovement 0
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_PIRATE_4, Zone19D_Text_PirateDefeat
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_InitiatePirateBattles_2
+Zone19D_EventScript_InitiatePirateBattles_1:
 	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_4
 	trainerbattle_no_intro TRAINER_PIRATE_3, Zone19D_Text_PirateDefeat
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_InitiatePirateBattles_5
+Zone19D_EventScript_InitiatePirateBattles_4:
 	applymovement 2, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_5
 	trainerbattle_no_intro TRAINER_PIRATE_2, Zone19D_Text_PirateDefeat
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_InitiatePirateBattles_8
+Zone19D_EventScript_InitiatePirateBattles_7:
 	applymovement 1, Common_Movement_WalkInPlaceFasterDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_6
 	trainerbattle_no_intro TRAINER_PIRATE_1, Zone19D_Text_PirateDefeat
+	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone19D_EventScript_InitiatePirateBattles_11
+Zone19D_EventScript_InitiatePirateBattles_10:
 	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_7
 	giveitem ITEM_TM24
 	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_8
@@ -97,7 +105,7 @@ Zone19D_EventScript_InitiatePirateBattles::
 	setflag FLAG_HIDE_ZONE19D_PIRATES
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	fadedefaultbgm
-	setvar VAR_ZONE_18_STATE, 3
+	setvar VAR_ZONE_18_STATE, 5
 	setvar VAR_ZONE_19_STATE, 1
 	setflag FLAG_HIDE_ZONE18A_ZOE
 	setflag FLAG_HIDE_ZONE18A_ELI
@@ -109,6 +117,22 @@ Zone19D_EventScript_InitiatePirateBattles::
 	waitstate
 	releaseall
 	end
+
+Zone19D_EventScript_InitiatePirateBattles_2:
+	special HealPlayerParty
+	goto Zone19D_EventScript_InitiatePirateBattles_1
+
+Zone19D_EventScript_InitiatePirateBattles_5:
+	special HealPlayerParty
+	goto Zone19D_EventScript_InitiatePirateBattles_4
+
+Zone19D_EventScript_InitiatePirateBattles_8:
+	special HealPlayerParty
+	goto Zone19D_EventScript_InitiatePirateBattles_7
+
+Zone19D_EventScript_InitiatePirateBattles_11:
+	special HealPlayerParty
+	goto Zone19D_EventScript_InitiatePirateBattles_10
 
 
 Zone19D_Movement_TopPirateWalkUp:
