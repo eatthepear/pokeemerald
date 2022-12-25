@@ -2816,12 +2816,12 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_CORSOLA_GALARIAN"
+                "species": "SPECIES_TOGEDEMARU"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_DITTO"
+                "species": "SPECIES_TRUBBISH"
               },
               {
                 "min_level": 30,
@@ -2836,42 +2836,42 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_KLEFKI"
+                "species": "SPECIES_MIMIKYU"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_MR_MIME_GALARIAN"
+                "species": "SPECIES_ROSELIA"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_SANDYGAST"
+                "species": "SPECIES_FLETCHINDER"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_SKIPLOOM"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_SINISTEA"
+                "species": "SPECIES_FLOETTE"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_SINISTEA"
+                "species": "SPECIES_FLOETTE"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_TRUBBISH"
+                "species": "SPECIES_MARILL"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_TRUBBISH"
+                "species": "SPECIES_MARILL"
               }
             ]
           },
@@ -2999,22 +2999,22 @@
               {
                 "min_level": 32,
                 "max_level": 34,
-                "species": "SPECIES_INKAY"
+                "species": "SPECIES_CHINCHOU"
               },
               {
                 "min_level": 32,
                 "max_level": 34,
-                "species": "SPECIES_QWILFISH_HISUIAN"
+                "species": "SPECIES_CLAMPERL"
               },
               {
                 "min_level": 32,
                 "max_level": 34,
-                "species": "SPECIES_SKRELP"
+                "species": "SPECIES_DHELMISE"
               },
               {
                 "min_level": 32,
                 "max_level": 34,
-                "species": "SPECIES_WIMPOD"
+                "species": "SPECIES_CORSOLA_GALARIAN"
               }
             ]
           },
