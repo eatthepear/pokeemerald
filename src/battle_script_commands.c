@@ -4829,22 +4829,24 @@ static void Cmd_setroost(void)
     {
         gBattleStruct->roostTypes[gBattlerAttacker][0] = TYPE_FLYING;
         gBattleStruct->roostTypes[gBattlerAttacker][1] = TYPE_FLYING;
-        gBattleStruct->roostTypes[gBattlerAttacker][2] = TYPE_FLYING;
+#if B_ROOST_PURE_FLYING >= GEN_5
         SET_BATTLER_TYPE(gBattlerAttacker, TYPE_NORMAL);
+#else
+        SET_BATTLER_TYPE(gBattlerAttacker, TYPE_MYSTERY);
+#endif
     }
-    // Dual Type with Flying Type.
-    else if ((gBattleMons[gBattlerAttacker].type1 == TYPE_FLYING && gBattleMons[gBattlerAttacker].type2 != TYPE_FLYING)
-           ||(gBattleMons[gBattlerAttacker].type2 == TYPE_FLYING && gBattleMons[gBattlerAttacker].type1 != TYPE_FLYING))
+    // Dual type with flying type.
+    else if (gBattleMons[gBattlerAttacker].type1 == TYPE_FLYING || gBattleMons[gBattlerAttacker].type2 == TYPE_FLYING)
     {
         gBattleStruct->roostTypes[gBattlerAttacker][0] = gBattleMons[gBattlerAttacker].type1;
         gBattleStruct->roostTypes[gBattlerAttacker][1] = gBattleMons[gBattlerAttacker].type2;
         if (gBattleMons[gBattlerAttacker].type1 == TYPE_FLYING)
             gBattleMons[gBattlerAttacker].type1 = TYPE_MYSTERY;
-        if (gBattleMons[gBattlerAttacker].type2 == TYPE_FLYING)
+        else if (gBattleMons[gBattlerAttacker].type2 == TYPE_FLYING)
             gBattleMons[gBattlerAttacker].type2 = TYPE_MYSTERY;
     }
     // Non-flying type.
-    else if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_FLYING))
+    else
     {
         gBattleStruct->roostTypes[gBattlerAttacker][0] = gBattleMons[gBattlerAttacker].type1;
         gBattleStruct->roostTypes[gBattlerAttacker][1] = gBattleMons[gBattlerAttacker].type2;
@@ -7903,35 +7905,34 @@ static bool32 HasAttackerFaintedTarget(void)
 static void HandleTerrainMove(u16 move)
 {
     u32 statusFlag = 0;
-    u8 *timer = NULL;
 
     switch (gBattleMoves[move].effect)
     {
     case EFFECT_MISTY_TERRAIN:
-        statusFlag = STATUS_FIELD_MISTY_TERRAIN, timer = &gFieldTimers.terrainTimer;
+        statusFlag = STATUS_FIELD_MISTY_TERRAIN;
         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
         break;
     case EFFECT_GRASSY_TERRAIN:
-        statusFlag = STATUS_FIELD_GRASSY_TERRAIN, timer = &gFieldTimers.terrainTimer;
+        statusFlag = STATUS_FIELD_GRASSY_TERRAIN;
         gBattleCommunication[MULTISTRING_CHOOSER] = 1;
         break;
     case EFFECT_ELECTRIC_TERRAIN:
-        statusFlag = STATUS_FIELD_ELECTRIC_TERRAIN, timer = &gFieldTimers.terrainTimer;
+        statusFlag = STATUS_FIELD_ELECTRIC_TERRAIN;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
         break;
     case EFFECT_PSYCHIC_TERRAIN:
-        statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN, timer = &gFieldTimers.terrainTimer;
+        statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN;
         gBattleCommunication[MULTISTRING_CHOOSER] = 3;
         break;
     case EFFECT_DAMAGE_SET_TERRAIN:
         switch (gBattleMoves[move].argument)
         {
         case 0: //genesis supernova
-            statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN, timer = &gFieldTimers.terrainTimer;
+            statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN;
             gBattleCommunication[MULTISTRING_CHOOSER] = 3;
             break;
         case 1: //splintered stormshards
-            if (!(gFieldStatuses & (STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN)))
+            if (!(gFieldStatuses & STATUS_FIELD_TERRAIN_ANY))
             {
                 //no terrain to remove -> jump to battle script pointer
                 gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
@@ -7939,7 +7940,7 @@ static void HandleTerrainMove(u16 move)
             else
             {
                 // remove all terrain
-                gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN);
+                gFieldStatuses &= ~STATUS_FIELD_TERRAIN_ANY;
                 gBattleCommunication[MULTISTRING_CHOOSER] = 4;
                 gBattlescriptCurrInstr += 7;
             }
@@ -7959,9 +7960,9 @@ static void HandleTerrainMove(u16 move)
         gFieldStatuses &= ~STATUS_FIELD_TERRAIN_ANY;
         gFieldStatuses |= statusFlag;
         if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_TERRAIN_EXTENDER)
-            *timer = 8;
+            gFieldTimers.terrainTimer = 8;
         else
-            *timer = 5;
+            gFieldTimers.terrainTimer = 5;
         gBattlescriptCurrInstr += 7;
     }
 }
