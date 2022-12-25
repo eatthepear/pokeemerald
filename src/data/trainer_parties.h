@@ -2994,7 +2994,7 @@ static const struct TrainerMon sParty_Rex[] = {// Zone 18 Bug Room, Double Battl
     {
     .iv = 20,
     .lvl = 34,
-    .species = SPECIES_SCYTHER,
+    .species = SPECIES_MASQUERAIN,
     }
 };
 
