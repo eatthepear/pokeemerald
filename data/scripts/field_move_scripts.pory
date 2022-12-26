@@ -267,7 +267,45 @@ script EventScript_RockSmash {
 
 }
 
+script EventScript_UseDive {
+	lockall
+	checkitem(ITEM_DIVING_GEAR, 1)
+	if (var(VAR_RESULT) == FALSE) {
+		msgbox("The sea is deep here.", MSGBOX_DEFAULT)
+		releaseall
+		end
+	}
+	msgbox("The sea is deep here.\nUse the Diving Gear?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		releaseall
+		end
+	}
+	setitemarg(ITEM_DIVING_GEAR)
+	setfieldeffectargument(1, 1)
+	dofieldeffect(FLDEFF_USE_DIVE)
+	releaseall
+	end
+}
 
+script EventScript_UseDiveUnderwater {
+	lockall
+	checkitem(ITEM_DIVING_GEAR, 1)
+	if (var(VAR_RESULT) == FALSE) {
+		msgbox("Light is filtering down from above.\nYou may be able to surface…", MSGBOX_DEFAULT)
+		releaseall
+		end
+	}
+	msgbox("Light is filtering down from above.\nWould you like to surface?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		releaseall
+		end
+	}
+	setitemarg(ITEM_DIVING_GEAR)
+	setfieldeffectargument(1, 1)
+	dofieldeffect(FLDEFF_USE_DIVE)
+	releaseall
+	end
+}
 
 raw `
 @ Use rock smash from party menu
@@ -395,70 +433,6 @@ Text_WantToWaterfall:
 
 Text_MonUsedWaterfall:
 	.string "{STR_VAR_1} used WATERFALL.$"
-
-EventScript_UseDive::
-	checkitem ITEM_DIVING_GEAR, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_CantDive
-	msgbox Text_WantToDive, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndDive
-	setitemarg ITEM_DIVING_GEAR
-	setfieldeffectargument 1, 1
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndDive
-	end
-
-EventScript_CantDive::
-	msgbox Text_CantDive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-EventScript_EndDive::
-	releaseall
-	end
-
-EventScript_UseDiveUnderwater::
-	lockall
-	checkitem ITEM_DIVING_GEAR, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_CantSurface
-	msgbox Text_WantToSurface, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndSurface
-	setitemarg ITEM_DIVING_GEAR
-	setfieldeffectargument 1, 1
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndSurface
-	end	
-
-EventScript_CantSurface::
-	lockall
-	msgbox Text_CantSurface, MSGBOX_DEFAULT
-	goto EventScript_EndSurface
-	end
-
-EventScript_EndSurface::
-	releaseall
-	end
-
-Text_CantDive:
-	.string "The sea is deep here.$"
-
-Text_WantToDive:
-	.string "The sea is deep here.\n"
-	.string "Use the Diving Gear?$"
-
-Text_MonUsedDive:
-	.string "{PLAYER} used the Diving Gear.$"
-
-Text_CantSurface:
-	.string "Light is filtering down from above.\n"
-	.string "You may be able to surface..$"
-
-Text_WantToSurface:
-	.string "Light is filtering down from above.\n"
-	.string "Would you like to surface?$"
 
 EventScript_FailSweetScent::
 	msgbox Text_FailSweetScent, MSGBOX_SIGN

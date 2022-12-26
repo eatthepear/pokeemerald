@@ -405,6 +405,54 @@ EventScript_RockSmash_41:
 	goto EventScript_RockSmash_13
 
 
+EventScript_UseDive::
+	lockall
+	checkitem ITEM_DIVING_GEAR, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_UseDive_2
+	msgbox EventScript_UseDive_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_UseDive_5
+	setitemarg ITEM_DIVING_GEAR
+	setfieldeffectargument 1, 1
+	dofieldeffect FLDEFF_USE_DIVE
+	releaseall
+	end
+
+EventScript_UseDive_2:
+	msgbox EventScript_UseDive_Text_0, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_UseDive_5:
+	releaseall
+	end
+
+
+EventScript_UseDiveUnderwater::
+	lockall
+	checkitem ITEM_DIVING_GEAR, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_UseDiveUnderwater_2
+	msgbox EventScript_UseDiveUnderwater_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_UseDiveUnderwater_5
+	setitemarg ITEM_DIVING_GEAR
+	setfieldeffectargument 1, 1
+	dofieldeffect FLDEFF_USE_DIVE
+	releaseall
+	end
+
+EventScript_UseDiveUnderwater_2:
+	msgbox EventScript_UseDiveUnderwater_Text_0, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_UseDiveUnderwater_5:
+	releaseall
+	end
+
+
 @ Use rock smash from party menu
 EventScript_UseRockSmash::
 	lockall
@@ -530,70 +578,6 @@ Text_WantToWaterfall:
 
 Text_MonUsedWaterfall:
 	.string "{STR_VAR_1} used WATERFALL.$"
-
-EventScript_UseDive::
-	checkitem ITEM_DIVING_GEAR, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_CantDive
-	msgbox Text_WantToDive, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndDive
-	setitemarg ITEM_DIVING_GEAR
-	setfieldeffectargument 1, 1
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndDive
-	end
-
-EventScript_CantDive::
-	msgbox Text_CantDive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-EventScript_EndDive::
-	releaseall
-	end
-
-EventScript_UseDiveUnderwater::
-	lockall
-	checkitem ITEM_DIVING_GEAR, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_CantSurface
-	msgbox Text_WantToSurface, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndSurface
-	setitemarg ITEM_DIVING_GEAR
-	setfieldeffectargument 1, 1
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndSurface
-	end	
-
-EventScript_CantSurface::
-	lockall
-	msgbox Text_CantSurface, MSGBOX_DEFAULT
-	goto EventScript_EndSurface
-	end
-
-EventScript_EndSurface::
-	releaseall
-	end
-
-Text_CantDive:
-	.string "The sea is deep here.$"
-
-Text_WantToDive:
-	.string "The sea is deep here.\n"
-	.string "Use the Diving Gear?$"
-
-Text_MonUsedDive:
-	.string "{PLAYER} used the Diving Gear.$"
-
-Text_CantSurface:
-	.string "Light is filtering down from above.\n"
-	.string "You may be able to surface..$"
-
-Text_WantToSurface:
-	.string "Light is filtering down from above.\n"
-	.string "Would you like to surface?$"
 
 EventScript_FailSweetScent::
 	msgbox Text_FailSweetScent, MSGBOX_SIGN
@@ -724,3 +708,15 @@ EventScript_Headbutt_Text_1:
 
 EventScript_Headbutt_Text_2:
 	.string "A Berry fell from the tree!$"
+
+EventScript_UseDive_Text_0:
+	.string "The sea is deep here.$"
+
+EventScript_UseDive_Text_1:
+	.string "The sea is deep here.\nUse the Diving Gear?$"
+
+EventScript_UseDiveUnderwater_Text_0:
+	.string "Light is filtering down from above.\nYou may be able to surface…$"
+
+EventScript_UseDiveUnderwater_Text_1:
+	.string "Light is filtering down from above.\nWould you like to surface?$"
