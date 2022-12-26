@@ -21,85 +21,127 @@ Zone18A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 
 Zone18A_EventScript_PirateEvent::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
 	msgbox Zone18A_EventScript_PirateEvent_Text_0
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_CAMERA, Zone18A_Movement_CameraDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
-	waitmovement 0
-	special RemoveCameraObject
 	playbgm MUS_ENCOUNTER_AQUA, 0
-	clearflag FLAG_HIDE_ZONE18A_PIRATES
 	addobject 7
 	addobject 8
+	clearflag FLAG_HIDE_ZONE18A_PIRATES
+	delay 40
 	applymovement 7, Zone18A_Movement_Pirate1_Left
 	applymovement 8, Zone18A_Movement_Pirate2_Left
+	waitmovement 0
 	msgbox Zone18A_EventScript_PirateEvent_Text_1, MSGBOX_DEFAULT
 	msgbox Zone18A_EventScript_PirateEvent_Text_2, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_PirateEvent_Text_3
+	applymovement 7, Common_Movement_FaceUp
 	waitmovement 0
-	msgbox Zone18A_EventScript_PirateEvent_Text_3, MSGBOX_DEFAULT
-	msgbox Zone18A_EventScript_PirateEvent_Text_4, MSGBOX_DEFAULT
+	msgbox Zone18A_EventScript_PirateEvent_Text_4
+	applymovement 7, Common_Movement_FaceDown
+	waitmovement 0
 	removeobject 6
 	setflag FLAG_HIDE_ZONE18A_DOLL
+	delay 40
 	applymovement 7, Zone18A_Movement_Pirate1_Right
 	applymovement 8, Zone18A_Movement_Pirate2_Right
 	waitmovement 0
 	removeobject 7
 	removeobject 8
 	setflag FLAG_HIDE_ZONE18A_PIRATES
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_CAMERA, Zone18A_Movement_CameraUp
 	waitmovement 0
 	special RemoveCameraObject
 	removeobject 11
 	setflag FLAG_HIDE_ZONE18A_BOAT
+	applymovement 9, Common_Movement_FaceRight
+	waitmovement 0
 	msgbox Zone18A_EventScript_PirateEvent_Text_5, MSGBOX_DEFAULT
+	applymovement 10, Common_Movement_FaceLeft
+	waitmovement 0
 	msgbox Zone18A_EventScript_PirateEvent_Text_6, MSGBOX_DEFAULT
+	applymovement 10, Common_Movement_FaceUp
+	waitmovement 0
 	msgbox Zone18A_EventScript_PirateEvent_Text_7, MSGBOX_DEFAULT
 	giveitem ITEM_DIVING_GEAR
+	applymovement 9, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Zone18A_Text_Eli, MSGBOX_DEFAULT
 	fadedefaultbgm
-	msgbox Zone18A_EventScript_PirateEvent_Text_8, MSGBOX_DEFAULT
 	setvar VAR_ZONE_18_STATE, 4
 	release
 	end
 
 
+Zone18A_Movement_CameraDown:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 Zone18A_Movement_Pirate1_Left:
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	face_down
 	step_end
 
 Zone18A_Movement_Pirate2_Left:
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 Zone18A_Movement_Pirate1_Right:
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Zone18A_Movement_Pirate2_Right:
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
+
+Zone18A_Movement_CameraUp:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Zone18A_EventScript_Eli::
+	lock
+	faceplayer
+	msgbox Zone18A_Text_Eli
+	release
+	end
+
+
+Zone18A_EventScript_Zoe::
+	lock
+	faceplayer
+	msgbox Zone18A_Text_Zoe
+	release
+	end
+
 
 Zone18A_EventScript_AzurillDoll::
 	msgbox Zone18A_EventScript_AzurillDoll_Text_0, MSGBOX_SIGN
@@ -245,9 +287,6 @@ Zone18A_EventScript_PirateEvent_Text_7:
 	.string "the doll?\p"
 	.string "Here, this Diving Gear might be helpful.$"
 
-Zone18A_EventScript_PirateEvent_Text_8:
-	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Please! Help!$"
-
 Zone18A_EventScript_AzurillDoll_Text_0:
 	.string "It's an Azurill doll.\nIt's clearly been well loved.$"
 
@@ -262,3 +301,10 @@ Zone18A_EventScript_SellSodaPop_Text_2:
 
 Zone18A_EventScript_SellSodaPop_Text_3:
 	.string "Aww, did you not like my pun?$"
+
+Zone18A_Text_Eli::
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Please! Help!$"
+
+Zone18A_Text_Zoe::
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Please, recover my brother's\n"
+	.string "Azurill doll from the pirates.$"

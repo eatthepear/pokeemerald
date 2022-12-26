@@ -340,7 +340,9 @@ script Zone18B_EventScript_LeftLeviathanRoomDoor {
 	if (var(VAR_RESULT) == YES) {
 		closemessage
 		delay(30)
-		setvar(VAR_ZONE_18_STATE, 1)
+		if (var(VAR_ZONE_18_STATE) < 3) {
+			setvar(VAR_ZONE_18_STATE, 1)
+		}
 		warpdoor(MAP_ZONE18B, 71, 1, 7)
 		waitstate
 	}
@@ -355,7 +357,9 @@ script Zone18B_EventScript_RightLeviathanRoomDoor {
 	if (var(VAR_RESULT) == YES) {
 		closemessage
 		delay(30)
-		setvar(VAR_ZONE_18_STATE, 2)
+		if (var(VAR_ZONE_18_STATE) < 3) {
+			setvar(VAR_ZONE_18_STATE, 2)
+		}
 		warpdoor(MAP_ZONE18B, 72, 7, 7)
 		waitstate
 	}
@@ -1075,12 +1079,12 @@ script Zone18B_EventScript_LeviathanBattle {
 		setweather(WEATHER_RAIN)
 		doweather
 		msgbox("It suddenly began to rain!", MSGBOX_DEFAULT)
-    	setvar(VAR_MUGSHOT_ID, MUGSHOT_LILY)
+    	setvar(VAR_MUGSHOT_ID, MUGSHOT_ZOE_AND_ELI)
 		trainerbattle_no_intro(TRAINER_ZOE_AND_ELI_LEVIATHAN_16_BRUTAL, Zone18B_Text_Leviathan16Defeat)
 		resetweather
 		doweather
 	} else {
-		setvar(VAR_MUGSHOT_ID, MUGSHOT_LILY)
+		setvar(VAR_MUGSHOT_ID, MUGSHOT_ZOE_AND_ELI)
 		trainerbattle_no_intro(TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18B_Text_Leviathan16Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)

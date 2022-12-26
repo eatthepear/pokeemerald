@@ -437,10 +437,16 @@ Zone18B_EventScript_LeftLeviathanRoomDoor_1:
 Zone18B_EventScript_LeftLeviathanRoomDoor_2:
 	closemessage
 	delay 30
-	setvar VAR_ZONE_18_STATE, 1
+	compare VAR_ZONE_18_STATE, 3
+	goto_if_lt Zone18B_EventScript_LeftLeviathanRoomDoor_5
+Zone18B_EventScript_LeftLeviathanRoomDoor_4:
 	warpdoor MAP_ZONE18B, 71, 1, 7
 	waitstate
 	goto Zone18B_EventScript_LeftLeviathanRoomDoor_1
+
+Zone18B_EventScript_LeftLeviathanRoomDoor_5:
+	setvar VAR_ZONE_18_STATE, 1
+	goto Zone18B_EventScript_LeftLeviathanRoomDoor_4
 
 
 Zone18B_EventScript_RightLeviathanRoomDoor::
@@ -456,10 +462,16 @@ Zone18B_EventScript_RightLeviathanRoomDoor_1:
 Zone18B_EventScript_RightLeviathanRoomDoor_2:
 	closemessage
 	delay 30
-	setvar VAR_ZONE_18_STATE, 2
+	compare VAR_ZONE_18_STATE, 3
+	goto_if_lt Zone18B_EventScript_RightLeviathanRoomDoor_5
+Zone18B_EventScript_RightLeviathanRoomDoor_4:
 	warpdoor MAP_ZONE18B, 72, 7, 7
 	waitstate
 	goto Zone18B_EventScript_RightLeviathanRoomDoor_1
+
+Zone18B_EventScript_RightLeviathanRoomDoor_5:
+	setvar VAR_ZONE_18_STATE, 2
+	goto Zone18B_EventScript_RightLeviathanRoomDoor_4
 
 
 Zone18B_EventScript_SlideOpenNormalRoomDoors::
@@ -1301,7 +1313,7 @@ Zone18B_EventScript_LeviathanBattle::
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_LeviathanBattle_2
-	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ZOE_AND_ELI
 	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18B_Text_Leviathan16Defeat
 Zone18B_EventScript_LeviathanBattle_1:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -1347,7 +1359,7 @@ Zone18B_EventScript_LeviathanBattle_2:
 	setweather WEATHER_RAIN
 	doweather
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_4, MSGBOX_DEFAULT
-	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ZOE_AND_ELI
 	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16_BRUTAL, Zone18B_Text_Leviathan16Defeat
 	resetweather
 	doweather

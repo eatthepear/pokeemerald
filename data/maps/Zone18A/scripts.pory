@@ -15,66 +15,108 @@ mapscripts Zone18A_MapScripts {
 
 script Zone18A_EventScript_PirateEvent {
 	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: There it is! My Azurill doll!"))
 	special(SpawnCameraObject)
-	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
+	applymovement(OBJ_EVENT_ID_CAMERA, Zone18A_Movement_CameraDown)
 	waitmovement(0)
-	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown)
-	waitmovement(0)
-	special(RemoveCameraObject)
 	playbgm(MUS_ENCOUNTER_AQUA, 0)
-	clearflag(FLAG_HIDE_ZONE18A_PIRATES)
 	addobject(7)
 	addobject(8)
+	clearflag(FLAG_HIDE_ZONE18A_PIRATES)
+	delay(40)
 	applymovement(7, Zone18A_Movement_Pirate1_Left)
 	applymovement(8, Zone18A_Movement_Pirate2_Left)
+	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: What the?"), MSGBOX_DEFAULT)
 	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Pirates!"), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hey, wait! That's my special doll! Don't take it, please!"))
+	applymovement(7, Common_Movement_FaceUp)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Hey, wait! That's my special doll! Don't take it, please!"), MSGBOX_DEFAULT)
-	msgbox(format("It be ours now, laddy!"), MSGBOX_DEFAULT)
+	msgbox(format("It be ours now, laddy!"))
+	applymovement(7, Common_Movement_FaceDown)
+	waitmovement(0)
 	removeobject(6)
 	setflag(FLAG_HIDE_ZONE18A_DOLL)
+	delay(40)
 	applymovement(7, Zone18A_Movement_Pirate1_Right)
 	applymovement(8, Zone18A_Movement_Pirate2_Right)
 	waitmovement(0)
 	removeobject(7)
 	removeobject(8)
 	setflag(FLAG_HIDE_ZONE18A_PIRATES)
-	special(SpawnCameraObject)
-	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
-	waitmovement(0)
-	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp)
+	applymovement(OBJ_EVENT_ID_CAMERA, Zone18A_Movement_CameraUp)
 	waitmovement(0)
 	special(RemoveCameraObject)
 	removeobject(11)
 	setflag(FLAG_HIDE_ZONE18A_BOAT)
+	applymovement(9, Common_Movement_FaceRight)
+	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Wah!!!"), MSGBOX_DEFAULT)
+	applymovement(10, Common_Movement_FaceLeft)
+	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: It'll be ok, Eli!"), MSGBOX_DEFAULT)
+	applymovement(10, Common_Movement_FaceUp)
+	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: {PLAYER}! You're stronger than both of us.\pCan you chase the pirates and recover the doll?\pHere, this Diving Gear might be helpful."), MSGBOX_DEFAULT)
 	giveitem(ITEM_DIVING_GEAR)
+	applymovement(9, Common_Movement_FaceUp)
+	waitmovement(0)
+	msgbox(Zone18A_Text_Eli, MSGBOX_DEFAULT)
 	fadedefaultbgm
-	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Please! Help!"), MSGBOX_DEFAULT)
 	setvar(VAR_ZONE_18_STATE, 4)
 	release
 	end
 }
 
+movement Zone18A_Movement_CameraDown {
+	walk_down * 5
+}
+
 movement Zone18A_Movement_Pirate1_Left {
-	walk_faster_left * 6
+	walk_left * 6
 	face_down
 }
 
 movement Zone18A_Movement_Pirate2_Left {
-	walk_faster_left * 5
+	walk_left * 5
 }
 
 movement Zone18A_Movement_Pirate1_Right {
-	walk_faster_right * 6
+	walk_right * 6
 }
 
 movement Zone18A_Movement_Pirate2_Right {
-	walk_faster_right * 5
+	walk_right * 5
+}
+
+movement Zone18A_Movement_CameraUp {
+	walk_up * 5
+}
+
+text Zone18A_Text_Eli {
+	"{COLOR BLUE}Eli{COLOR DARK_GRAY}: Please! Help!"
+}
+
+text Zone18A_Text_Zoe {
+	format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Please, recover my brother's Azurill doll from the pirates.")
+}
+
+script Zone18A_EventScript_Eli {
+	lock
+	faceplayer
+	msgbox(Zone18A_Text_Eli)
+	release
+	end
+}
+
+script Zone18A_EventScript_Zoe {
+	lock
+	faceplayer
+	msgbox(Zone18A_Text_Zoe)
+	release
+	end
 }
 
 script Zone18A_EventScript_AzurillDoll {
