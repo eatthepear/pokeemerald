@@ -4874,10 +4874,10 @@
     {
       "id": "LAYOUT_ZONE19A",
       "name": "Zone19A_Layout",
-      "width": 50,
-      "height": 60,
+      "width": 56,
+      "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Zone19A/border.bin",
       "blockdata_filepath": "data/layouts/Zone19A/map.bin"
     },
