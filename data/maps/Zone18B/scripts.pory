@@ -1053,11 +1053,22 @@ script Zone18B_EventScript_EliZoe {
 	if (var(VAR_ZONE_18_STATE) < 3) {
 		goto(Zone18B_EventScript_LeviathanBattle)
 	} elif (var(VAR_ZONE_18_STATE) == 5) {
-		msgbox("THANKS")
-		giveitem(ITEM_MASTER_BALL, 1)
+		msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: You really got it back for me?"), MSGBOX_DEFAULT)
+		msgbox(format("{PLAYER} returned the Azurill doll to {COLOR BLUE}Eli{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
+		msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Wow! Thank you so much!"), MSGBOX_DEFAULT)
+		msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Seriously, thank you so much.\pMy brother loves that doll, so we are sincerely in your debt."), MSGBOX_DEFAULT)
+		delay(40)
+		msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: We don't have much in the way of a reward, but maybe you can just keep that Diving Gear we lent you. Thank you again for your help."), MSGBOX_DEFAULT)
+		msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah, thank you thank you thank you!"), MSGBOX_DEFAULT)
 		setvar(VAR_ZONE_18_STATE, 6)
+		clearflag(FLAG_HIDE_ZONE18A_PORYGON)
+		release
+		end
 	} else {
-		msgbox("BLESS")
+		msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Thank you again for your help."), MSGBOX_DEFAULT)
+		msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah, thank you thank you thank you!"), MSGBOX_DEFAULT)
+		release
+		end
 	}
 }
 
@@ -1098,7 +1109,7 @@ script Zone18B_EventScript_LeviathanBattle {
 	applymovement(2, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Right! Here's our little gift for clearing the Trainer's Dojo."), MSGBOX_DEFAULT)
-	giveitem(ITEM_TM36)
+	giveitem(ITEM_TM35)
 	applymovement(1, Common_Movement_FaceRight)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Eli{COLOR DARK_GRAY}: Ah! I just remembered!"), MSGBOX_DEFAULT)

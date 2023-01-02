@@ -3134,12 +3134,12 @@ static const struct TrainerMon sParty_Pirate1[] = {
     {
     .iv = 30,
     .lvl = 35,
-    .species = SPECIES_OCTILLERY,
+    .species = SPECIES_KINGLER,
     },
     {
     .iv = 30,
     .lvl = 35,
-    .species = SPECIES_GRAPPLOCT,
+    .species = SPECIES_CRABOMINABLE,
     }
 };
 
@@ -3160,12 +3160,12 @@ static const struct TrainerMon sParty_Pirate3[] = {
     {
     .iv = 30,
     .lvl = 35,
-    .species = SPECIES_CRABOMINABLE,
+    .species = SPECIES_PERRSERKER,
     },
     {
     .iv = 30,
     .lvl = 35,
-    .species = SPECIES_KINGLER,
+    .species = SPECIES_DREDNAW,
     }
 };
 
@@ -3173,12 +3173,12 @@ static const struct TrainerMon sParty_Pirate4[] = {
     {
     .iv = 30,
     .lvl = 35,
-    .species = SPECIES_PERRSERKER,
+    .species = SPECIES_OCTILLERY,
     },
     {
     .iv = 30,
     .lvl = 35,
-    .species = SPECIES_DREDNAW,
+    .species = SPECIES_GRAPPLOCT,
     }
 };
 

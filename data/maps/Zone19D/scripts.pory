@@ -11,9 +11,16 @@ script Zone19D_EventScript_Sign {
 }
 
 script Zone19D_EventScript_InitiatePirateBattles {
+	fadeoutbgm(1)
 	delay(40)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
-	waitmovement(0)
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	if (var(VAR_TEMP_0) == 10) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+		waitmovement(0)
+	} else {
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+		waitmovement(0)
+	}
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
@@ -59,7 +66,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	msgbox("Ye lily-livered scallywags,\nlet's just get to the battles!")
 	waitmovement(0)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	trainerbattle_no_intro(TRAINER_PIRATE_4, Zone19D_Text_PirateDefeat)
+	trainerbattle_no_intro(TRAINER_PIRATE_1, Zone19D_Text_PirateDefeat)
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
 		special(HealPlayerParty)
 	}
@@ -67,7 +74,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox("I be next. Fire in the hole!")
-	trainerbattle_no_intro(TRAINER_PIRATE_3, Zone19D_Text_PirateDefeat)
+	trainerbattle_no_intro(TRAINER_PIRATE_2, Zone19D_Text_PirateDefeat)
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
 		special(HealPlayerParty)
 	}
@@ -75,7 +82,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox("We give no quarter!")
-	trainerbattle_no_intro(TRAINER_PIRATE_2, Zone19D_Text_PirateDefeat)
+	trainerbattle_no_intro(TRAINER_PIRATE_3, Zone19D_Text_PirateDefeat)
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
 		special(HealPlayerParty)
 	}
@@ -83,12 +90,12 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 	waitmovement(0)
 	msgbox("Son o' a biscuit eater!\nFace the might o' us seadogs!")
-	trainerbattle_no_intro(TRAINER_PIRATE_1, Zone19D_Text_PirateDefeat)
+	trainerbattle_no_intro(TRAINER_PIRATE_4, Zone19D_Text_PirateDefeat)
 	if (flag(FLAG_BRUTAL_MODE_ON) == false) {
 		special(HealPlayerParty)
 	}
-	msgbox("Sink me!\nThis trainer beat all four o' us!\l‘ere be your booty, take it!$")
-	giveitem(ITEM_TM24)
+	msgbox("Sink me!\nThis trainer beat all four o' us!\l‘ere be your booty, take it!")
+	giveitem(ITEM_TM36)
 	msgbox("Me hearties, run!")
 	applymovement(1, Zone19D_Movement_Pirate1Run)
 	applymovement(2, Zone19D_Movement_Pirate2Run)
@@ -109,7 +116,9 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	setflag(FLAG_HIDE_ZONE18A_ELI)
 	clearflag(FLAG_HIDE_ZONE18B_ZOE)
 	clearflag(FLAG_HIDE_ZONE18B_ELI)
-	msgbox("It's time to go back to the Trainer's Dojo.")
+	clearflag(FLAG_HIDE_ZONE18A_PORYGON)
+	delay(100)
+	msgbox(format("It's time to go back to the Trainer's Dojo."))
 	delay(40)
 	warp(MAP_ZONE18B, 255, 4, 4)
 	waitstate
@@ -122,16 +131,16 @@ text Zone19D_Text_PirateDefeat {
 }
 
 movement Zone19D_Movement_TopPirateWalkUp {
-	walk_up * 6
-	walk_right * 2
+	walk_up * 5
+	walk_right
 	walk_up
 	walk_right
 	face_down
 }
 
 movement Zone19D_Movement_LeftPirateWalkUp {
-	walk_up * 5
-	walk_right
+	walk_up * 6
+	walk_right * 2
 }
 
 movement Zone19D_Movement_BottomPirateWalkUp {

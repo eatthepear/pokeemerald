@@ -3958,12 +3958,12 @@ EventScript_PorygonExit_13:
 	case 16, EventScript_PorygonExit_30
 	case 17, EventScript_PorygonExit_31
 	case 18, EventScript_PorygonExit_32
-	case 20, EventScript_PorygonExit_32
-	case 21, EventScript_PorygonExit_32
-	case 22, EventScript_PorygonExit_32
-	case 23, EventScript_PorygonExit_32
-	case 24, EventScript_PorygonExit_32
-	case 25, EventScript_PorygonExit_32
+	case 20, EventScript_PorygonExit_33
+	case 21, EventScript_PorygonExit_33
+	case 22, EventScript_PorygonExit_33
+	case 23, EventScript_PorygonExit_33
+	case 24, EventScript_PorygonExit_33
+	case 25, EventScript_PorygonExit_33
 EventScript_PorygonExit_15:
 	waitstate
 	goto EventScript_PorygonExit_4
@@ -4035,6 +4035,10 @@ EventScript_PorygonExit_31:
 	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_32:
+	warp MAP_ZONE19SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_33:
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
 	goto EventScript_PorygonExit_15
 

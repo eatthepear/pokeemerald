@@ -59,12 +59,13 @@ script Zone18A_EventScript_PirateEvent {
 	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: It'll be ok, Eli!"), MSGBOX_DEFAULT)
 	applymovement(10, Common_Movement_FaceUp)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: {PLAYER}! You're stronger than both of us.\pCan you chase the pirates and recover the doll?\pHere, this Diving Gear might be helpful."), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}Zoe{COLOR DARK_GRAY}: {PLAYER}! You're stronger than both of us.\pCan you chase the pirates and recover the doll?\pHere, you can borrow this Diving Gear; it might be helpful."), MSGBOX_DEFAULT)
 	giveitem(ITEM_DIVING_GEAR)
 	applymovement(9, Common_Movement_FaceUp)
 	waitmovement(0)
 	msgbox(Zone18A_Text_Eli, MSGBOX_DEFAULT)
 	fadedefaultbgm
+	setflag(FLAG_HIDE_ZONE19D_PIRATES)
 	setvar(VAR_ZONE_18_STATE, 4)
 	release
 	end

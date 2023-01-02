@@ -1268,8 +1268,10 @@ Zone18B_EventScript_EliZoe_1:
 	goto_if_lt Zone18B_EventScript_EliZoe_6
 	compare VAR_ZONE_18_STATE, 5
 	goto_if_eq Zone18B_EventScript_EliZoe_7
-	msgbox Zone18B_EventScript_EliZoe_Text_1
-	return
+	msgbox Zone18B_EventScript_EliZoe_Text_6, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_EliZoe_Text_5, MSGBOX_DEFAULT
+	release
+	end
 
 Zone18B_EventScript_EliZoe_2:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
@@ -1292,10 +1294,17 @@ Zone18B_EventScript_EliZoe_6:
 	return
 
 Zone18B_EventScript_EliZoe_7:
-	msgbox Zone18B_EventScript_EliZoe_Text_0
-	giveitem ITEM_MASTER_BALL, 1
+	msgbox Zone18B_EventScript_EliZoe_Text_0, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_EliZoe_Text_1, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_EliZoe_Text_2, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_EliZoe_Text_3, MSGBOX_DEFAULT
+	delay 40
+	msgbox Zone18B_EventScript_EliZoe_Text_4, MSGBOX_DEFAULT
+	msgbox Zone18B_EventScript_EliZoe_Text_5, MSGBOX_DEFAULT
 	setvar VAR_ZONE_18_STATE, 6
-	return
+	clearflag FLAG_HIDE_ZONE18A_PORYGON
+	release
+	end
 
 
 Zone18B_EventScript_LeviathanBattle::
@@ -1327,7 +1336,7 @@ Zone18B_EventScript_LeviathanBattle_1:
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_8, MSGBOX_DEFAULT
-	giveitem ITEM_TM36
+	giveitem ITEM_TM35
 	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_9, MSGBOX_DEFAULT
@@ -1469,10 +1478,32 @@ Zone18B_EventScript_Statue_Text_0:
 	.string "Trainer's Dojo\nEstablished 2021$"
 
 Zone18B_EventScript_EliZoe_Text_0:
-	.string "THANKS$"
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: You really got it back for me?$"
 
 Zone18B_EventScript_EliZoe_Text_1:
-	.string "BLESS$"
+	.string "{PLAYER} returned the Azurill doll to\n"
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}.$"
+
+Zone18B_EventScript_EliZoe_Text_2:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Wow! Thank you so much!$"
+
+Zone18B_EventScript_EliZoe_Text_3:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Seriously, thank you so much.\p"
+	.string "My brother loves that doll, so we are\n"
+	.string "sincerely in your debt.$"
+
+Zone18B_EventScript_EliZoe_Text_4:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: We don't have much in the way of a\n"
+	.string "reward, but maybe you can just keep\l"
+	.string "that Diving Gear we lent you. Thank you\l"
+	.string "again for your help.$"
+
+Zone18B_EventScript_EliZoe_Text_5:
+	.string "{COLOR BLUE}Eli{COLOR DARK_GRAY}: Yeah, thank you thank you thank\n"
+	.string "you!$"
+
+Zone18B_EventScript_EliZoe_Text_6:
+	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Thank you again for your help.$"
 
 Zone18B_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Zoe{COLOR DARK_GRAY}: Is this the challenger you were\n"

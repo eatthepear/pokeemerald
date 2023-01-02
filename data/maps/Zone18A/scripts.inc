@@ -71,6 +71,7 @@ Zone18A_EventScript_PirateEvent::
 	waitmovement 0
 	msgbox Zone18A_Text_Eli, MSGBOX_DEFAULT
 	fadedefaultbgm
+	setflag FLAG_HIDE_ZONE19D_PIRATES
 	setvar VAR_ZONE_18_STATE, 4
 	release
 	end
@@ -285,7 +286,8 @@ Zone18A_EventScript_PirateEvent_Text_7:
 	.string "both of us.\p"
 	.string "Can you chase the pirates and recover\n"
 	.string "the doll?\p"
-	.string "Here, this Diving Gear might be helpful.$"
+	.string "Here, you can borrow this Diving Gear; it\n"
+	.string "might be helpful.$"
 
 Zone18A_EventScript_AzurillDoll_Text_0:
 	.string "It's an Azurill doll.\nIt's clearly been well loved.$"
