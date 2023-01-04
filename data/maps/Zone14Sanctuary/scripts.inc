@@ -31,8 +31,6 @@ Zone14Sanctuary_EventScript_Intro::
 Zone14Sanctuary_EventScript_NextZone::
 	lock
 	faceplayer
-	removeitem ITEM_MACH_BIKE
-	additem ITEM_ACRO_BIKE
 	msgbox gText_Colress_Greetings, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_COLRESS_MENU, 0
 	switch VAR_RESULT
