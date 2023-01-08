@@ -309,7 +309,6 @@ script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
 
 script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
 	setflag(FLAG_BRUTAL_MODE_ON)
-	setflag(FLAG_SMART_WILD_AI_ON)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
 	waitse

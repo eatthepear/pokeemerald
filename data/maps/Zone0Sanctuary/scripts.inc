@@ -365,7 +365,6 @@ Zone0Sanctuary_EventScript_SetDefaultDifficulty::
 
 Zone0Sanctuary_EventScript_SetBrutalDifficulty::
 	setflag FLAG_BRUTAL_MODE_ON
-	setflag FLAG_SMART_WILD_AI_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0, MSGBOX_DEFAULT
 	waitse

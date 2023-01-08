@@ -2862,7 +2862,6 @@ EventScript_Settings_BrutalMode_3:
 	waitse
 	closemessage
 	clearflag FLAG_BRUTAL_MODE_ON
-	clearflag FLAG_SMART_WILD_AI_ON
 	special ReverseHiddenItemFlags
 	return
 

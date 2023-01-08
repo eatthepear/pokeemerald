@@ -1455,11 +1455,9 @@ static void DebugAction_Flags_SetPokedexFlags(u8 taskId)
     if (FlagGet(FLAG_BRUTAL_MODE_ON))
     {
         FlagClear(FLAG_BRUTAL_MODE_ON);
-        FlagClear(FLAG_SMART_WILD_AI_ON);
         PlaySE(SE_PC_OFF);
     } else {
         FlagSet(FLAG_BRUTAL_MODE_ON);
-        FlagSet(FLAG_SMART_WILD_AI_ON);
         PlaySE(SE_PC_LOGIN);
     }
     ReverseHiddenItemFlags();
@@ -1601,12 +1599,12 @@ static void DebugAction_Flags_BagUseOnOff(u8 taskId)
 }
 static void DebugAction_Flags_CatchingOnOff(u8 taskId)
 {
-    if(FlagGet(FLAG_FORCE_DOUBLE_WILD))
+    if(FlagGet(FLAG_SYS_FORCE_DOUBLE_WILD))
     {
-        FlagClear(FLAG_FORCE_DOUBLE_WILD);
+        FlagClear(FLAG_SYS_FORCE_DOUBLE_WILD);
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_FORCE_DOUBLE_WILD);
+        FlagSet(FLAG_SYS_FORCE_DOUBLE_WILD);
         PlaySE(SE_PC_LOGIN);
     }
 }

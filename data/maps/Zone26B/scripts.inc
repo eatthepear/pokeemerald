@@ -46,8 +46,8 @@ Zone26B_Text_Flickering:
 	.string "Would you like to try turning it on?$"
 
 Zone26B_EventScript_StartRotomBattles:
-	setflag FLAG_DISABLE_CATCHING
-	setflag FLAG_SMART_WILD_AI_ON
+	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_SYS_SMART_WILD_AI_ON
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_DisableBag
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
@@ -161,7 +161,7 @@ Zone26B_EventScript_StartRotomBattles:
 	goto_if_eq Zone26B_EventScript_RestartRotomBattles
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq Zone26B_EventScript_RestartRotomBattles
-	clearflag FLAG_DISABLE_CATCHING
+	clearflag FLAG_SYS_NO_CATCHING
 	call_if_unset FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_RemoveSmartWildAI
 	call_if_set FLAG_BRUTAL_MODE_ON, Zone26B_EventScript_EnableBag
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -184,7 +184,7 @@ Zone26B_Text_RotomCalmedDown:
 	.string "It retreated back into the computer…$"
 
 Zone26B_EventScript_RemoveSmartWildAI:
-	clearflag FLAG_SMART_WILD_AI_ON
+	clearflag FLAG_SYS_SMART_WILD_AI_ON
 	return
 
 Zone26B_EventScript_DisableBag:

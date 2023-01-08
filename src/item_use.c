@@ -1035,12 +1035,7 @@ void ItemUseOutOfBattle_EvolutionStone(u8 taskId)
 }
 
 static u32 GetBallThrowableState(void)
-{
-    if (FlagGet(FLAG_DISABLE_CATCHING))
-    {
-        return BALL_THROW_UNABLE_NO_CATCHING_FLAG; // Can't catch the pokemon.
-    }
-    else if (IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
+{if (IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
         && IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT))) // There are two present pokemon.
     {
         return BALL_THROW_UNABLE_TWO_MONS;   // There are two present pokemon.
