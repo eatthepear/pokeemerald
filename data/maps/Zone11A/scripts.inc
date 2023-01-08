@@ -48,6 +48,7 @@ Zone11A_EventScript_LeviathanIntro::
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_NEWTON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone11A_EventScript_LeviathanIntro_6
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone11A_EventScript_LeviathanIntro_6
 	trainerbattle_no_intro TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat
 Zone11A_EventScript_LeviathanIntro_5:
 	applymovement 6, Common_Movement_FaceLeft

@@ -13,6 +13,7 @@ Zone13C_EventScript_LeviathanBattle::
 	msgbox Zone13C_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone13C_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone13C_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JENNY
 	trainerbattle_no_intro TRAINER_JENNY_LEVIATHAN_11, Zone13C_Text_Leviathan11Defeat
 Zone13C_EventScript_LeviathanBattle_7:
@@ -47,32 +48,33 @@ Zone13C_EventScript_Fossil_Scientist::
 	faceplayer
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone13C_EventScript_Fossil_Scientist_2
 	goto_if_set FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_5
+	goto_if_set FLAG_SETTINGS_NO_FARMING, Zone13C_EventScript_Fossil_Scientist_5
 Zone13C_EventScript_Fossil_Scientist_4:
-	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_8
-Zone13C_EventScript_Fossil_Scientist_7:
+	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_10
+Zone13C_EventScript_Fossil_Scientist_9:
 	applymovement 3, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
 	msgbox Zone13C_EventScript_Fossil_Scientist_Text_1
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_11
-Zone13C_EventScript_Fossil_Scientist_10:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_13
+Zone13C_EventScript_Fossil_Scientist_12:
 	setflag FLAG_DAILY_FOSSIL_RECEIVED
 	random 9
 	switch VAR_RESULT
-	case 0, Zone13C_EventScript_Fossil_Scientist_15
-	case 1, Zone13C_EventScript_Fossil_Scientist_16
-	case 2, Zone13C_EventScript_Fossil_Scientist_17
-	case 3, Zone13C_EventScript_Fossil_Scientist_18
-	case 4, Zone13C_EventScript_Fossil_Scientist_19
-	case 5, Zone13C_EventScript_Fossil_Scientist_20
-	case 6, Zone13C_EventScript_Fossil_Scientist_21
-	case 7, Zone13C_EventScript_Fossil_Scientist_22
-	case 8, Zone13C_EventScript_Fossil_Scientist_23
-Zone13C_EventScript_Fossil_Scientist_13:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_25
+	case 0, Zone13C_EventScript_Fossil_Scientist_17
+	case 1, Zone13C_EventScript_Fossil_Scientist_18
+	case 2, Zone13C_EventScript_Fossil_Scientist_19
+	case 3, Zone13C_EventScript_Fossil_Scientist_20
+	case 4, Zone13C_EventScript_Fossil_Scientist_21
+	case 5, Zone13C_EventScript_Fossil_Scientist_22
+	case 6, Zone13C_EventScript_Fossil_Scientist_23
+	case 7, Zone13C_EventScript_Fossil_Scientist_24
+	case 8, Zone13C_EventScript_Fossil_Scientist_25
+Zone13C_EventScript_Fossil_Scientist_15:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_27
 	goto Zone13C_EventScript_Fossil_VanillaReceived
-Zone13C_EventScript_Fossil_Scientist_24:
+Zone13C_EventScript_Fossil_Scientist_26:
 	end
 
 Zone13C_EventScript_Fossil_Scientist_2:
@@ -84,53 +86,53 @@ Zone13C_EventScript_Fossil_Scientist_5:
 	goto Zone13C_EventScript_Fossil_NuzlockeReceived
 	goto Zone13C_EventScript_Fossil_Scientist_4
 
-Zone13C_EventScript_Fossil_Scientist_8:
+Zone13C_EventScript_Fossil_Scientist_10:
 	goto Zone13C_EventScript_Fossil_VanillaReceived
-	goto Zone13C_EventScript_Fossil_Scientist_7
+	goto Zone13C_EventScript_Fossil_Scientist_9
 
-Zone13C_EventScript_Fossil_Scientist_11:
+Zone13C_EventScript_Fossil_Scientist_13:
 	setflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
-	goto Zone13C_EventScript_Fossil_Scientist_10
-
-Zone13C_EventScript_Fossil_Scientist_15:
-	giveitem ITEM_DOME_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
-
-Zone13C_EventScript_Fossil_Scientist_16:
-	giveitem ITEM_HELIX_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	goto Zone13C_EventScript_Fossil_Scientist_12
 
 Zone13C_EventScript_Fossil_Scientist_17:
-	giveitem ITEM_OLD_AMBER
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_DOME_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_18:
-	giveitem ITEM_ROOT_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_HELIX_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_19:
-	giveitem ITEM_CLAW_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_OLD_AMBER
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_20:
-	giveitem ITEM_COVER_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_ROOT_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_21:
-	giveitem ITEM_PLUME_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_CLAW_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_22:
-	giveitem ITEM_JAW_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_COVER_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_23:
-	giveitem ITEM_SAIL_FOSSIL
-	goto Zone13C_EventScript_Fossil_Scientist_13
+	giveitem ITEM_PLUME_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
+
+Zone13C_EventScript_Fossil_Scientist_24:
+	giveitem ITEM_JAW_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
 
 Zone13C_EventScript_Fossil_Scientist_25:
+	giveitem ITEM_SAIL_FOSSIL
+	goto Zone13C_EventScript_Fossil_Scientist_15
+
+Zone13C_EventScript_Fossil_Scientist_27:
 	goto Zone13C_EventScript_Fossil_NuzlockeReceived
-	goto Zone13C_EventScript_Fossil_Scientist_24
+	goto Zone13C_EventScript_Fossil_Scientist_26
 
 
 Zone13C_EventScript_Fossil_VanillaReceived::

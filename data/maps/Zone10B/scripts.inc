@@ -454,51 +454,58 @@ Zone10B_EventScript_FossilDone::
 Zone10B_EventScript_WaterMerchant::
 	lock
 	faceplayer
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone10B_EventScript_WaterMerchant_2
+	goto_if_set FLAG_SETTINGS_REMOVE_HELPER_NPCS, Zone10B_EventScript_WaterMerchant_2
 	showmoneybox 0, 0, 0
-	msgbox Zone10B_EventScript_WaterMerchant_Text_0
+	msgbox Zone10B_EventScript_WaterMerchant_Text_1
 	closemessage
 	multichoice 0, 12, MULTI_FRESH_WATER, 0
 	switch VAR_RESULT
-	case 0, Zone10B_EventScript_WaterMerchant_3
-	case 1, Zone10B_EventScript_WaterMerchant_4
-Zone10B_EventScript_WaterMerchant_1:
+	case 0, Zone10B_EventScript_WaterMerchant_8
+	case 1, Zone10B_EventScript_WaterMerchant_9
+Zone10B_EventScript_WaterMerchant_6:
 	closemessage
 	hidemoneybox
-	msgbox Zone10B_EventScript_WaterMerchant_Text_2
+	msgbox Zone10B_EventScript_WaterMerchant_Text_3
 	release
 	return
 
-Zone10B_EventScript_WaterMerchant_3:
+Zone10B_EventScript_WaterMerchant_2:
+	msgbox Zone10B_EventScript_WaterMerchant_Text_0
+	release
+	end
+
+Zone10B_EventScript_WaterMerchant_8:
 	checkmoney 200, 0
 	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_WaterMerchant_5
+	goto_if_eq Zone10B_EventScript_WaterMerchant_10
 	removemoney 200, 0
 	updatemoneybox
-	msgbox Zone10B_EventScript_WaterMerchant_Text_1
+	msgbox Zone10B_EventScript_WaterMerchant_Text_2
 	giveitem ITEM_FRESH_WATER, 1
 	hidemoneybox
 	release
 	end
 
-Zone10B_EventScript_WaterMerchant_4:
+Zone10B_EventScript_WaterMerchant_9:
 	checkmoney 2000, 0
 	compare VAR_RESULT, FALSE
-	goto_if_eq Zone10B_EventScript_WaterMerchant_8
+	goto_if_eq Zone10B_EventScript_WaterMerchant_13
 	removemoney 2000, 0
 	updatemoneybox
-	msgbox Zone10B_EventScript_WaterMerchant_Text_1
+	msgbox Zone10B_EventScript_WaterMerchant_Text_2
 	giveitem ITEM_FRESH_WATER, 10
 	hidemoneybox
 	release
 	end
 
-Zone10B_EventScript_WaterMerchant_5:
+Zone10B_EventScript_WaterMerchant_10:
 	goto Zone10B_EventScript_WaterNotEnough
-	goto Zone10B_EventScript_WaterMerchant_1
+	goto Zone10B_EventScript_WaterMerchant_6
 
-Zone10B_EventScript_WaterMerchant_8:
+Zone10B_EventScript_WaterMerchant_13:
 	goto Zone10B_EventScript_WaterNotEnough
-	goto Zone10B_EventScript_WaterMerchant_1
+	goto Zone10B_EventScript_WaterMerchant_6
 
 
 Zone10B_EventScript_WaterNotEnough::
@@ -609,12 +616,18 @@ Zone10B_EventScript_FossilDone_Text_0:
 	.string "Ok, back to my drink.$"
 
 Zone10B_EventScript_WaterMerchant_Text_0:
-	.string "In the desert, it's supply and\ndemand. And the demand is water.\p¥200 for Fresh Water.\nRestores 30 HP each.$"
+	.string "In the desert, it's supply and demand.\n"
+	.string "And the demand is water.\p"
+	.string "The Fresh Water I usually sell is in such\n"
+	.string "high demand that I am out of stock.$"
 
 Zone10B_EventScript_WaterMerchant_Text_1:
-	.string "Here you go.$"
+	.string "In the desert, it's supply and\ndemand. And the demand is water.\p¥200 for Fresh Water.\nRestores 30 HP each.$"
 
 Zone10B_EventScript_WaterMerchant_Text_2:
+	.string "Here you go.$"
+
+Zone10B_EventScript_WaterMerchant_Text_3:
 	.string "Ah, fine.$"
 
 Zone10B_EventScript_WaterNotEnough_Text_0:

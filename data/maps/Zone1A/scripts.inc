@@ -80,6 +80,7 @@ Zone1A_EventScript_LeviathanBattle::
 	msgbox Zone1A_Text_Leviathan1Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone1A_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone1A_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_COREY
 	trainerbattle_no_intro TRAINER_COREY_LEVIATHAN_1, Zone1A_Text_Leviathan1Defeat
 Zone1A_EventScript_LeviathanBattle_1:

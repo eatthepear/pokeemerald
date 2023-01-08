@@ -38,10 +38,11 @@ Zone5A_EventScript_LeviathanBattle_1:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone5A_EventScript_LeviathanBattle_13
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone5A_EventScript_LeviathanBattle_13
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_1, MSGBOX_YESNO
 Zone5A_EventScript_LeviathanBattle_12:
 	compare VAR_RESULT, NO
-	goto_if_eq Zone5A_EventScript_LeviathanBattle_17
+	goto_if_eq Zone5A_EventScript_LeviathanBattle_19
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_3
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_KEVIN, Zone5A_EventScript_LeviathanBattle_Text_4
@@ -72,8 +73,8 @@ Zone5A_EventScript_LeviathanBattle_12:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_8
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone5A_EventScript_LeviathanBattle_20
-Zone5A_EventScript_LeviathanBattle_19:
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone5A_EventScript_LeviathanBattle_23
+Zone5A_EventScript_LeviathanBattle_21:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -145,7 +146,7 @@ Zone5A_EventScript_LeviathanBattle_13:
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
 	goto Zone5A_EventScript_LeviathanBattle_12
 
-Zone5A_EventScript_LeviathanBattle_17:
+Zone5A_EventScript_LeviathanBattle_19:
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
@@ -156,9 +157,13 @@ Zone5A_EventScript_LeviathanBattle_17:
 	releaseall
 	end
 
-Zone5A_EventScript_LeviathanBattle_20:
+Zone5A_EventScript_LeviathanBattle_22:
 	special HealPlayerParty
-	goto Zone5A_EventScript_LeviathanBattle_19
+	goto Zone5A_EventScript_LeviathanBattle_21
+
+Zone5A_EventScript_LeviathanBattle_23:
+	goto_if_unset FLAG_SETTINGS_HARD_BATTLES, Zone5A_EventScript_LeviathanBattle_22
+	goto Zone5A_EventScript_LeviathanBattle_21
 
 
 Zone5A_EventScript_BuyPikaClone::

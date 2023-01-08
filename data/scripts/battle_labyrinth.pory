@@ -350,7 +350,7 @@ script EventScript_Shop_Unique_Varrick {
 		case 25:
 			pokemart(Shop_Unique_Varrick_24to25)
 		case 26:
-			if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
+			if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_NO_EVS) == true)) {
 				pokemart(Shop_Unique_Varrick_26to30_Brutal)
 			} else {
 				pokemart(Shop_Unique_Varrick_26to30)
@@ -950,7 +950,7 @@ script EventScript_Shop_Lelouch_Training {
 		return
 	}
 	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.", MSGBOX_DEFAULT)
-	if ((var(VAR_ZONE) < 21) || (flag(FLAG_SETTINGS_BRUTAL_ON) == true)) {
+	if ((var(VAR_ZONE) < 21) || (flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_NO_EVS) == true)) {
 		multichoice(0, 0, MULTI_LELOUCH_EXP_ONLY, 0)
 		switch(var(VAR_RESULT)) {
 			case 0:

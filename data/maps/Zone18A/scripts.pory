@@ -128,6 +128,11 @@ script Zone18A_EventScript_AzurillDoll {
 script Zone18A_EventScript_SellSodaPop {
 	lock
 	faceplayer
+	if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) == true)) {
+		msgbox(format("Soda Pop! I usually sell it, but today I'm out of stock!"))
+		release
+		end
+	}
 	showmoneybox(0, 0, 0)
 	msgbox("Want to buy some Soda Pop?\n¥300 for 50 HP a pop!", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {

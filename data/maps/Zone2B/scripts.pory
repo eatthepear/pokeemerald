@@ -25,7 +25,7 @@ script Zone2B_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(Zone2B_Text_Leviathan2Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
+	if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_JOEY)
 		trainerbattle_no_intro(TRAINER_JOEY_LEVIATHAN_2_BRUTAL, Zone2B_Text_Leviathan2Defeat)
 	} else {

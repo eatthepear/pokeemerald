@@ -1509,8 +1509,8 @@
 #define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA)
 #define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB)
 #define FLAG_UNUSED_0x90C                           (SYSTEM_FLAGS + 0xAC)
-#define FLAG_UNUSED_0x90D                           (SYSTEM_FLAGS + 0xAD)
 
+#define FLAG_SETTINGS_NO_IN_BATTLE_ITEMS            (SYSTEM_FLAGS + 0xAD)
 #define FLAG_SETTINGS_HARD_BATTLES                  (SYSTEM_FLAGS + 0xAE)
 #define FLAG_SETTINGS_MANDATORY_INCREASED           (SYSTEM_FLAGS + 0xAF)
 #define FLAG_SETTINGS_NO_EVS                        (SYSTEM_FLAGS + 0xB0)

@@ -48,7 +48,7 @@ script Zone5A_EventScript_LeviathanBattle {
 	}
 	setvar(VAR_TEMP_0, 0)
 	setvar(VAR_TEMP_1, 0)
-	if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
+	if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
 		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome Foursome.\pWell then. Would you like to face our club in battle? You'll have to beat both of us in a row, and you won't be healed in between battles!"), MSGBOX_YESNO)
 	} else {
 		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome Foursome.\pWell then. Would you like to face our club in battle? You'll have to beat both of us in a row, and you'll be healed in between battles!"), MSGBOX_YESNO)
@@ -105,7 +105,7 @@ script Zone5A_EventScript_LeviathanBattle {
 		"…\l"
 		"You don't?!\p"
 		"You'll change your mind after I beat you with my fabulous Bug Pokémon!"))
-	if (flag(FLAG_SETTINGS_BRUTAL_ON) == false) {	
+	if ((flag(FLAG_SETTINGS_BRUTAL_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {	
 		special(HealPlayerParty)
 	}
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_DECLAN)

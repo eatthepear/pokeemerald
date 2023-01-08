@@ -199,6 +199,7 @@ Zone17A_EventScript_InitiateLeviathanBattle_1:
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIA
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone17A_EventScript_InitiateLeviathanBattle_9
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone17A_EventScript_InitiateLeviathanBattle_9
 	trainerbattle_no_intro TRAINER_MIA_LEVIATHAN_15, Zone15B_Text_Leviathan13Defeat
 Zone17A_EventScript_InitiateLeviathanBattle_8:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON

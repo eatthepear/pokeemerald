@@ -38,11 +38,13 @@ Zone6A_EventScript_LeviathanBattle::
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone6A_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone6A_EventScript_LeviathanBattle_8
 Zone6A_EventScript_LeviathanBattle_7:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MINA
 	trainerbattle_no_intro TRAINER_MINA_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_Text_5
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone6A_EventScript_LeviathanBattle_11
-Zone6A_EventScript_LeviathanBattle_10:
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone6A_EventScript_LeviathanBattle_13
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone6A_EventScript_LeviathanBattle_13
+Zone6A_EventScript_LeviathanBattle_12:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_6, MSGBOX_DEFAULT
 	giveitem ITEM_TM08
@@ -69,10 +71,10 @@ Zone6A_EventScript_LeviathanBattle_8:
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_4
 	goto Zone6A_EventScript_LeviathanBattle_7
 
-Zone6A_EventScript_LeviathanBattle_11:
+Zone6A_EventScript_LeviathanBattle_13:
 	resetweather
 	doweather
-	goto Zone6A_EventScript_LeviathanBattle_10
+	goto Zone6A_EventScript_LeviathanBattle_12
 
 
 Zone6A_EventScript_ItemNetBall::

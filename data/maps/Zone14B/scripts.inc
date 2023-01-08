@@ -24,6 +24,7 @@ Zone14B_EventScript_LeviathanBattle::
 	msgbox Zone14B_Text_Leviathan12Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone14B_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone14B_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MIGUEL
 	trainerbattle_no_intro TRAINER_MIGUEL_LEVIATHAN_12, Zone14B_Text_Leviathan12Defeat
 Zone14B_EventScript_LeviathanBattle_1:

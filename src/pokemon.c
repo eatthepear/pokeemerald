@@ -9886,7 +9886,7 @@ static s32 GetWildMonTableIdInAlteringCave(u16 species)
 
 void SetWildMonHeldItem(void)
 {
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON))
+    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON)) || FlagGet(FLAG_SETTINGS_NO_FARMING))
     {
         return;
     }

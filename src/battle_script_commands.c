@@ -1834,7 +1834,7 @@ static void Cmd_ppreduce(void)
     if (gBattleControllerExecFlags)
         return;
 
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == TRUE)
+    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON) == TRUE) || (FlagGet(FLAG_SETTINGS_NERF_PP) == TRUE))
     {
         if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
         {
@@ -4018,7 +4018,7 @@ static void Cmd_getexp(void)
               | BATTLE_TYPE_BATTLE_TOWER
               | BATTLE_TYPE_EREADER_TRAINER))
               || (!(gBattleTypeFlags &
-             (BATTLE_TYPE_TRAINER)) && FlagGet(FLAG_SETTINGS_BRUTAL_ON)))
+             (BATTLE_TYPE_TRAINER)) && (FlagGet(FLAG_SETTINGS_BRUTAL_ON) || FlagGet(FLAG_SETTINGS_NO_WILD_EXP))))
         {
             gBattleScripting.getexpState = 6; // goto last case
         }
@@ -4117,7 +4117,7 @@ static void Cmd_getexp(void)
                 gBattleScripting.getexpState = 5;
                 gBattleMoveDamage = 0; // used for exp
                 #if B_MAX_LEVEL_EV_GAINS >= GEN_5
-                    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE)
+                    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_NO_EVS) == FALSE))
                     {
                         MonGainEVs(&gPlayerParty[gBattleStruct->expGetterMonId], gBattleMons[gBattlerFainted].species);
                     }
@@ -4214,7 +4214,7 @@ static void Cmd_getexp(void)
 
                         PrepareStringBattle(STRINGID_PKMNGAINEDEXP, gBattleStruct->expGetterBattlerId);
                     }
-                    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE)
+                    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_NO_EVS) == FALSE))
                     {
                         MonGainEVs(&gPlayerParty[gBattleStruct->expGetterMonId], gBattleMons[gBattlerFainted].species);
                     }
@@ -7122,9 +7122,14 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     u32 moneyReward;
     u32 scale = 4;
     
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON))
+    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON)) || FlagGet(FLAG_SETTINGS_DECREASED_REWARDS))
     {
         scale = 2;
+    }
+
+    if (((FlagGet(FLAG_SETTINGS_BRUTAL_ON)) || FlagGet(FLAG_SETTINGS_NO_REVISITING_REWARDS)) && (FlagGet(FLAG_IS_REVISITING_ZONE)))
+    {
+        scale = 0;
     }
 
     if (trainerId == TRAINER_SECRET_BASE)

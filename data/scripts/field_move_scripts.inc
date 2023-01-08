@@ -16,7 +16,7 @@ EventScript_Headbutt::
 	special HeadbuttWildEncounter
 	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_Headbutt_5
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, EventScript_Headbutt_6
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, EventScript_Headbutt_7
 EventScript_Headbutt_4:
 	releaseall
 	end
@@ -33,129 +33,133 @@ EventScript_Headbutt_5:
 EventScript_Headbutt_6:
 	random 100
 	switch VAR_RESULT
-	case 0, EventScript_Headbutt_10
-	case 1, EventScript_Headbutt_10
-	case 2, EventScript_Headbutt_10
-	case 3, EventScript_Headbutt_10
-	case 4, EventScript_Headbutt_10
-	case 5, EventScript_Headbutt_10
-	case 6, EventScript_Headbutt_10
-	case 7, EventScript_Headbutt_10
-	case 8, EventScript_Headbutt_10
-	case 9, EventScript_Headbutt_10
-	case 10, EventScript_Headbutt_10
-	case 11, EventScript_Headbutt_10
-	case 12, EventScript_Headbutt_10
-	case 13, EventScript_Headbutt_10
-	case 14, EventScript_Headbutt_10
-	case 15, EventScript_Headbutt_10
-	case 16, EventScript_Headbutt_10
-	case 17, EventScript_Headbutt_10
-	case 18, EventScript_Headbutt_10
-	case 19, EventScript_Headbutt_10
-	case 20, EventScript_Headbutt_10
-	case 21, EventScript_Headbutt_10
-	case 22, EventScript_Headbutt_10
-	case 23, EventScript_Headbutt_10
-	case 24, EventScript_Headbutt_10
-	case 25, EventScript_Headbutt_11
-	case 26, EventScript_Headbutt_11
-	case 27, EventScript_Headbutt_11
-	case 28, EventScript_Headbutt_11
-	case 29, EventScript_Headbutt_12
-	case 30, EventScript_Headbutt_12
-	case 31, EventScript_Headbutt_12
-	case 32, EventScript_Headbutt_12
-	case 33, EventScript_Headbutt_13
-	case 34, EventScript_Headbutt_13
-	case 35, EventScript_Headbutt_13
-	case 36, EventScript_Headbutt_13
-	case 37, EventScript_Headbutt_14
-	case 38, EventScript_Headbutt_14
-	case 39, EventScript_Headbutt_14
-	case 40, EventScript_Headbutt_14
-	case 41, EventScript_Headbutt_15
-	case 42, EventScript_Headbutt_15
-	case 43, EventScript_Headbutt_15
-	case 44, EventScript_Headbutt_15
-	case 45, EventScript_Headbutt_16
-	case 46, EventScript_Headbutt_16
-	case 47, EventScript_Headbutt_16
-	case 48, EventScript_Headbutt_16
-	case 49, EventScript_Headbutt_17
+	case 0, EventScript_Headbutt_12
+	case 1, EventScript_Headbutt_12
+	case 2, EventScript_Headbutt_12
+	case 3, EventScript_Headbutt_12
+	case 4, EventScript_Headbutt_12
+	case 5, EventScript_Headbutt_12
+	case 6, EventScript_Headbutt_12
+	case 7, EventScript_Headbutt_12
+	case 8, EventScript_Headbutt_12
+	case 9, EventScript_Headbutt_12
+	case 10, EventScript_Headbutt_12
+	case 11, EventScript_Headbutt_12
+	case 12, EventScript_Headbutt_12
+	case 13, EventScript_Headbutt_12
+	case 14, EventScript_Headbutt_12
+	case 15, EventScript_Headbutt_12
+	case 16, EventScript_Headbutt_12
+	case 17, EventScript_Headbutt_12
+	case 18, EventScript_Headbutt_12
+	case 19, EventScript_Headbutt_12
+	case 20, EventScript_Headbutt_12
+	case 21, EventScript_Headbutt_12
+	case 22, EventScript_Headbutt_12
+	case 23, EventScript_Headbutt_12
+	case 24, EventScript_Headbutt_12
+	case 25, EventScript_Headbutt_13
+	case 26, EventScript_Headbutt_13
+	case 27, EventScript_Headbutt_13
+	case 28, EventScript_Headbutt_13
+	case 29, EventScript_Headbutt_14
+	case 30, EventScript_Headbutt_14
+	case 31, EventScript_Headbutt_14
+	case 32, EventScript_Headbutt_14
+	case 33, EventScript_Headbutt_15
+	case 34, EventScript_Headbutt_15
+	case 35, EventScript_Headbutt_15
+	case 36, EventScript_Headbutt_15
+	case 37, EventScript_Headbutt_16
+	case 38, EventScript_Headbutt_16
+	case 39, EventScript_Headbutt_16
+	case 40, EventScript_Headbutt_16
+	case 41, EventScript_Headbutt_17
+	case 42, EventScript_Headbutt_17
+	case 43, EventScript_Headbutt_17
+	case 44, EventScript_Headbutt_17
+	case 45, EventScript_Headbutt_18
+	case 46, EventScript_Headbutt_18
+	case 47, EventScript_Headbutt_18
+	case 48, EventScript_Headbutt_18
+	case 49, EventScript_Headbutt_19
 	goto EventScript_Headbutt_4
 
-EventScript_Headbutt_10:
+EventScript_Headbutt_7:
+	goto_if_unset FLAG_SETTINGS_NO_FARMING, EventScript_Headbutt_6
+	goto EventScript_Headbutt_4
+
+EventScript_Headbutt_12:
 	msgbox EventScript_Headbutt_Text_2
 	finditem ITEM_ORAN_BERRY, 1
 	goto EventScript_Headbutt_4
 
-EventScript_Headbutt_11:
-	compare VAR_ZONE, 8
-	goto_if_gt EventScript_Headbutt_18
-	goto EventScript_Headbutt_4
-
-EventScript_Headbutt_12:
-	compare VAR_ZONE, 5
-	goto_if_gt EventScript_Headbutt_20
-	goto EventScript_Headbutt_4
-
 EventScript_Headbutt_13:
-	compare VAR_ZONE, 5
-	goto_if_gt EventScript_Headbutt_22
+	compare VAR_ZONE, 8
+	goto_if_gt EventScript_Headbutt_20
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_14:
 	compare VAR_ZONE, 5
-	goto_if_gt EventScript_Headbutt_24
+	goto_if_gt EventScript_Headbutt_22
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_15:
 	compare VAR_ZONE, 5
-	goto_if_gt EventScript_Headbutt_26
+	goto_if_gt EventScript_Headbutt_24
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_16:
 	compare VAR_ZONE, 5
-	goto_if_gt EventScript_Headbutt_28
+	goto_if_gt EventScript_Headbutt_26
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_17:
-	compare VAR_ZONE, 20
-	goto_if_gt EventScript_Headbutt_30
+	compare VAR_ZONE, 5
+	goto_if_gt EventScript_Headbutt_28
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_18:
-	msgbox EventScript_Headbutt_Text_2
-	finditem ITEM_SITRUS_BERRY, 1
+	compare VAR_ZONE, 5
+	goto_if_gt EventScript_Headbutt_30
+	goto EventScript_Headbutt_4
+
+EventScript_Headbutt_19:
+	compare VAR_ZONE, 20
+	goto_if_gt EventScript_Headbutt_32
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_20:
 	msgbox EventScript_Headbutt_Text_2
-	finditem ITEM_CHERI_BERRY, 1
+	finditem ITEM_SITRUS_BERRY, 1
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_22:
 	msgbox EventScript_Headbutt_Text_2
-	finditem ITEM_CHESTO_BERRY, 1
+	finditem ITEM_CHERI_BERRY, 1
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_24:
 	msgbox EventScript_Headbutt_Text_2
-	finditem ITEM_PECHA_BERRY, 1
+	finditem ITEM_CHESTO_BERRY, 1
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_26:
 	msgbox EventScript_Headbutt_Text_2
-	finditem ITEM_ASPEAR_BERRY, 1
+	finditem ITEM_PECHA_BERRY, 1
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_28:
 	msgbox EventScript_Headbutt_Text_2
-	finditem ITEM_PERSIM_BERRY, 1
+	finditem ITEM_ASPEAR_BERRY, 1
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_30:
+	msgbox EventScript_Headbutt_Text_2
+	finditem ITEM_PERSIM_BERRY, 1
+	goto EventScript_Headbutt_4
+
+EventScript_Headbutt_32:
 	msgbox EventScript_Headbutt_Text_2
 	finditem ITEM_LUM_BERRY, 1
 	goto EventScript_Headbutt_4
@@ -207,79 +211,80 @@ EventScript_RockSmash::
 	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_RockSmash_8
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_RockSmash_11
+	goto_if_set FLAG_SETTINGS_NO_FARMING, EventScript_RockSmash_11
 	random 100
 	switch VAR_RESULT
-	case 0, EventScript_RockSmash_15
-	case 1, EventScript_RockSmash_15
-	case 2, EventScript_RockSmash_15
-	case 3, EventScript_RockSmash_15
-	case 4, EventScript_RockSmash_15
-	case 5, EventScript_RockSmash_15
-	case 6, EventScript_RockSmash_15
-	case 7, EventScript_RockSmash_15
-	case 8, EventScript_RockSmash_15
-	case 9, EventScript_RockSmash_15
-	case 10, EventScript_RockSmash_15
-	case 11, EventScript_RockSmash_15
-	case 12, EventScript_RockSmash_15
-	case 13, EventScript_RockSmash_15
-	case 14, EventScript_RockSmash_15
-	case 15, EventScript_RockSmash_15
-	case 16, EventScript_RockSmash_15
-	case 17, EventScript_RockSmash_15
-	case 18, EventScript_RockSmash_15
-	case 19, EventScript_RockSmash_15
-	case 20, EventScript_RockSmash_15
-	case 21, EventScript_RockSmash_15
-	case 22, EventScript_RockSmash_16
-	case 23, EventScript_RockSmash_16
-	case 24, EventScript_RockSmash_16
-	case 25, EventScript_RockSmash_16
-	case 26, EventScript_RockSmash_16
-	case 27, EventScript_RockSmash_16
-	case 28, EventScript_RockSmash_16
-	case 29, EventScript_RockSmash_16
-	case 30, EventScript_RockSmash_16
-	case 31, EventScript_RockSmash_16
-	case 32, EventScript_RockSmash_16
-	case 33, EventScript_RockSmash_16
-	case 34, EventScript_RockSmash_16
-	case 35, EventScript_RockSmash_16
-	case 36, EventScript_RockSmash_16
-	case 37, EventScript_RockSmash_17
-	case 38, EventScript_RockSmash_17
-	case 39, EventScript_RockSmash_17
-	case 40, EventScript_RockSmash_17
-	case 41, EventScript_RockSmash_17
-	case 42, EventScript_RockSmash_17
-	case 43, EventScript_RockSmash_17
-	case 44, EventScript_RockSmash_17
-	case 45, EventScript_RockSmash_17
-	case 46, EventScript_RockSmash_17
-	case 47, EventScript_RockSmash_18
-	case 48, EventScript_RockSmash_18
-	case 49, EventScript_RockSmash_18
-	case 50, EventScript_RockSmash_18
-	case 51, EventScript_RockSmash_18
-	case 52, EventScript_RockSmash_19
-	case 53, EventScript_RockSmash_20
-	case 54, EventScript_RockSmash_21
-	case 55, EventScript_RockSmash_22
-	case 56, EventScript_RockSmash_23
-	case 57, EventScript_RockSmash_24
-	case 58, EventScript_RockSmash_25
-	case 59, EventScript_RockSmash_26
-	case 60, EventScript_RockSmash_27
-	case 61, EventScript_RockSmash_28
-	case 62, EventScript_RockSmash_29
-	case 63, EventScript_RockSmash_30
-	case 64, EventScript_RockSmash_31
-	case 65, EventScript_RockSmash_32
-	case 66, EventScript_RockSmash_33
-	case 67, EventScript_RockSmash_34
-	case 68, EventScript_RockSmash_35
-	case 69, EventScript_RockSmash_36
-EventScript_RockSmash_13:
+	case 0, EventScript_RockSmash_17
+	case 1, EventScript_RockSmash_17
+	case 2, EventScript_RockSmash_17
+	case 3, EventScript_RockSmash_17
+	case 4, EventScript_RockSmash_17
+	case 5, EventScript_RockSmash_17
+	case 6, EventScript_RockSmash_17
+	case 7, EventScript_RockSmash_17
+	case 8, EventScript_RockSmash_17
+	case 9, EventScript_RockSmash_17
+	case 10, EventScript_RockSmash_17
+	case 11, EventScript_RockSmash_17
+	case 12, EventScript_RockSmash_17
+	case 13, EventScript_RockSmash_17
+	case 14, EventScript_RockSmash_17
+	case 15, EventScript_RockSmash_17
+	case 16, EventScript_RockSmash_17
+	case 17, EventScript_RockSmash_17
+	case 18, EventScript_RockSmash_17
+	case 19, EventScript_RockSmash_17
+	case 20, EventScript_RockSmash_17
+	case 21, EventScript_RockSmash_17
+	case 22, EventScript_RockSmash_18
+	case 23, EventScript_RockSmash_18
+	case 24, EventScript_RockSmash_18
+	case 25, EventScript_RockSmash_18
+	case 26, EventScript_RockSmash_18
+	case 27, EventScript_RockSmash_18
+	case 28, EventScript_RockSmash_18
+	case 29, EventScript_RockSmash_18
+	case 30, EventScript_RockSmash_18
+	case 31, EventScript_RockSmash_18
+	case 32, EventScript_RockSmash_18
+	case 33, EventScript_RockSmash_18
+	case 34, EventScript_RockSmash_18
+	case 35, EventScript_RockSmash_18
+	case 36, EventScript_RockSmash_18
+	case 37, EventScript_RockSmash_19
+	case 38, EventScript_RockSmash_19
+	case 39, EventScript_RockSmash_19
+	case 40, EventScript_RockSmash_19
+	case 41, EventScript_RockSmash_19
+	case 42, EventScript_RockSmash_19
+	case 43, EventScript_RockSmash_19
+	case 44, EventScript_RockSmash_19
+	case 45, EventScript_RockSmash_19
+	case 46, EventScript_RockSmash_19
+	case 47, EventScript_RockSmash_20
+	case 48, EventScript_RockSmash_20
+	case 49, EventScript_RockSmash_20
+	case 50, EventScript_RockSmash_20
+	case 51, EventScript_RockSmash_20
+	case 52, EventScript_RockSmash_21
+	case 53, EventScript_RockSmash_22
+	case 54, EventScript_RockSmash_23
+	case 55, EventScript_RockSmash_24
+	case 56, EventScript_RockSmash_25
+	case 57, EventScript_RockSmash_26
+	case 58, EventScript_RockSmash_27
+	case 59, EventScript_RockSmash_28
+	case 60, EventScript_RockSmash_29
+	case 61, EventScript_RockSmash_30
+	case 62, EventScript_RockSmash_31
+	case 63, EventScript_RockSmash_32
+	case 64, EventScript_RockSmash_33
+	case 65, EventScript_RockSmash_34
+	case 66, EventScript_RockSmash_35
+	case 67, EventScript_RockSmash_36
+	case 68, EventScript_RockSmash_37
+	case 69, EventScript_RockSmash_38
+EventScript_RockSmash_15:
 	releaseall
 	end
 
@@ -301,108 +306,108 @@ EventScript_RockSmash_11:
 	releaseall
 	end
 
-EventScript_RockSmash_15:
-	finditem ITEM_RED_SHARD, 1
-	goto EventScript_RockSmash_13
-
-EventScript_RockSmash_16:
-	compare VAR_ZONE, 8
-	goto_if_gt EventScript_RockSmash_37
-	goto EventScript_RockSmash_13
-
 EventScript_RockSmash_17:
-	compare VAR_ZONE, 10
-	goto_if_gt EventScript_RockSmash_39
-	goto EventScript_RockSmash_13
+	finditem ITEM_RED_SHARD, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_18:
-	compare VAR_ZONE, 25
-	goto_if_gt EventScript_RockSmash_41
-	goto EventScript_RockSmash_13
+	compare VAR_ZONE, 8
+	goto_if_gt EventScript_RockSmash_39
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_19:
-	finditem ITEM_NORMAL_GEM, 1
-	goto EventScript_RockSmash_13
+	compare VAR_ZONE, 10
+	goto_if_gt EventScript_RockSmash_41
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_20:
-	finditem ITEM_FIRE_GEM, 1
-	goto EventScript_RockSmash_13
+	compare VAR_ZONE, 25
+	goto_if_gt EventScript_RockSmash_43
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_21:
-	finditem ITEM_WATER_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_NORMAL_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_22:
-	finditem ITEM_ELECTRIC_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_FIRE_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_23:
-	finditem ITEM_GRASS_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_WATER_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_24:
-	finditem ITEM_ICE_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_ELECTRIC_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_25:
-	finditem ITEM_FIGHTING_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_GRASS_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_26:
-	finditem ITEM_POISON_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_ICE_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_27:
-	finditem ITEM_GROUND_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_FIGHTING_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_28:
-	finditem ITEM_FLYING_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_POISON_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_29:
-	finditem ITEM_PSYCHIC_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_GROUND_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_30:
-	finditem ITEM_BUG_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_FLYING_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_31:
-	finditem ITEM_ROCK_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_PSYCHIC_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_32:
-	finditem ITEM_GHOST_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_BUG_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_33:
-	finditem ITEM_DRAGON_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_ROCK_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_34:
-	finditem ITEM_DARK_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_GHOST_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_35:
-	finditem ITEM_STEEL_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_DRAGON_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_36:
-	finditem ITEM_FAIRY_GEM, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_DARK_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_37:
-	finditem ITEM_BLUE_SHARD, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_STEEL_GEM, 1
+	goto EventScript_RockSmash_15
+
+EventScript_RockSmash_38:
+	finditem ITEM_FAIRY_GEM, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_39:
-	finditem ITEM_YELLOW_SHARD, 1
-	goto EventScript_RockSmash_13
+	finditem ITEM_BLUE_SHARD, 1
+	goto EventScript_RockSmash_15
 
 EventScript_RockSmash_41:
+	finditem ITEM_YELLOW_SHARD, 1
+	goto EventScript_RockSmash_15
+
+EventScript_RockSmash_43:
 	finditem ITEM_GREEN_SHARD, 1
-	goto EventScript_RockSmash_13
+	goto EventScript_RockSmash_15
 
 
 EventScript_UseDive::

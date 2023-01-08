@@ -152,31 +152,38 @@ Zone18A_EventScript_AzurillDoll::
 Zone18A_EventScript_SellSodaPop::
 	lock
 	faceplayer
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone18A_EventScript_SellSodaPop_2
+	goto_if_set FLAG_SETTINGS_REMOVE_HELPER_NPCS, Zone18A_EventScript_SellSodaPop_2
 	showmoneybox 0, 0, 0
-	msgbox Zone18A_EventScript_SellSodaPop_Text_0, MSGBOX_YESNO
+	msgbox Zone18A_EventScript_SellSodaPop_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone18A_EventScript_SellSodaPop_2
+	goto_if_eq Zone18A_EventScript_SellSodaPop_7
 	hidemoneybox
-	msgbox Zone18A_EventScript_SellSodaPop_Text_3
-Zone18A_EventScript_SellSodaPop_1:
+	msgbox Zone18A_EventScript_SellSodaPop_Text_4
+Zone18A_EventScript_SellSodaPop_6:
 	release
 	end
 
 Zone18A_EventScript_SellSodaPop_2:
+	msgbox Zone18A_EventScript_SellSodaPop_Text_0
+	release
+	end
+
+Zone18A_EventScript_SellSodaPop_7:
 	checkmoney 300, 0
 	compare VAR_RESULT, FALSE
-	goto_if_eq Zone18A_EventScript_SellSodaPop_5
-	msgbox Zone18A_EventScript_SellSodaPop_Text_2
+	goto_if_eq Zone18A_EventScript_SellSodaPop_10
+	msgbox Zone18A_EventScript_SellSodaPop_Text_3
 	removemoney 300, 0
 	updatemoneybox
 	giveitem ITEM_SODA_POP
 	hidemoneybox
-	goto Zone18A_EventScript_SellSodaPop_1
+	goto Zone18A_EventScript_SellSodaPop_6
 
-Zone18A_EventScript_SellSodaPop_5:
-	msgbox Zone18A_EventScript_SellSodaPop_Text_1
+Zone18A_EventScript_SellSodaPop_10:
+	msgbox Zone18A_EventScript_SellSodaPop_Text_2
 	hidemoneybox
-	goto Zone18A_EventScript_SellSodaPop_1
+	goto Zone18A_EventScript_SellSodaPop_6
 
 
 Zone18A_EventScript_SuperPotion2::
@@ -293,15 +300,19 @@ Zone18A_EventScript_AzurillDoll_Text_0:
 	.string "It's an Azurill doll.\nIt's clearly been well loved.$"
 
 Zone18A_EventScript_SellSodaPop_Text_0:
-	.string "Want to buy some Soda Pop?\n¥300 for 50 HP a pop!$"
+	.string "Soda Pop! I usually sell it, but today\n"
+	.string "I'm out of stock!$"
 
 Zone18A_EventScript_SellSodaPop_Text_1:
-	.string "You don't have enough money!$"
+	.string "Want to buy some Soda Pop?\n¥300 for 50 HP a pop!$"
 
 Zone18A_EventScript_SellSodaPop_Text_2:
-	.string "Here you go!$"
+	.string "You don't have enough money!$"
 
 Zone18A_EventScript_SellSodaPop_Text_3:
+	.string "Here you go!$"
+
+Zone18A_EventScript_SellSodaPop_Text_4:
 	.string "Aww, did you not like my pun?$"
 
 Zone18A_Text_Eli::

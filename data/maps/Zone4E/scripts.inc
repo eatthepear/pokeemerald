@@ -53,6 +53,7 @@ Zone4E_EventScript_LeviathanBattle::
 	msgbox Zone4E_Text_Leviathan4Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone4E_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone4E_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat
 Zone4E_EventScript_LeviathanBattle_1:
@@ -66,14 +67,19 @@ Zone4E_EventScript_LeviathanBattle_1:
 	setflag FLAG_BEAT_LEVIATHAN_4
 	setvar VAR_ZONE_4_STATE, 1
 	fadescreen FADE_FROM_BLACK
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone4E_EventScript_LeviathanBattle_8
+Zone4E_EventScript_LeviathanBattle_7:
 	releaseall
 	end
 
 Zone4E_EventScript_LeviathanBattle_2:
-	setflag FLAG_ZONE4A_RECEIVED_GEM
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat
 	goto Zone4E_EventScript_LeviathanBattle_1
+
+Zone4E_EventScript_LeviathanBattle_8:
+	setflag FLAG_ZONE4A_RECEIVED_GEM
+	goto Zone4E_EventScript_LeviathanBattle_7
 
 
 Zone4E_EventScript_ItemSuperPotion::

@@ -48,7 +48,7 @@ script Zone11A_EventScript_LeviathanIntro {
 		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Thank you! The experiment name is: Gravity and its Pokémon battle-winning properties!"))
 		setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 		setvar(VAR_MUGSHOT_ID, MUGSHOT_NEWTON)
-		if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
+		if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
 			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10_BRUTAL, Zone11A_Text_Leviathan10Defeat)
 		} else {
 			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat)

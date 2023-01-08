@@ -103,7 +103,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Zone10B_EventScript_WaterMerchant",
-      "flag": "FLAG_SETTINGS_BRUTAL_ON"
+      "flag": "0"
     }
   ],
   "warp_events": [

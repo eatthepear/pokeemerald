@@ -1605,7 +1605,7 @@ static void ChangeSummaryState (s16 *taskData, u8 taskId)
     switch (taskData[3])
     {
         case 0:
-            if (FlagGet(FLAG_SETTINGS_BRUTAL_ON)) {
+            if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON)) || FlagGet(FLAG_SETTINGS_NO_EVS)) {
                 taskData[3] = 2;
             } else {
                 taskData[3] = 1;

@@ -1322,6 +1322,7 @@ Zone18B_EventScript_LeviathanBattle::
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone18B_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone18B_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZOE_AND_ELI
 	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18B_Text_Leviathan16Defeat
 Zone18B_EventScript_LeviathanBattle_1:
@@ -1347,10 +1348,10 @@ Zone18B_EventScript_LeviathanBattle_1:
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_12
 	setflag FLAG_BEAT_LEVIATHAN_16
 	compare VAR_ZONE_18_STATE, 1
-	goto_if_eq Zone18B_EventScript_LeviathanBattle_6
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_8
 	compare VAR_ZONE_18_STATE, 2
-	goto_if_eq Zone18B_EventScript_LeviathanBattle_7
-Zone18B_EventScript_LeviathanBattle_5:
+	goto_if_eq Zone18B_EventScript_LeviathanBattle_9
+Zone18B_EventScript_LeviathanBattle_7:
 	playse SE_DOOR
 	delay 10
 	removeobject 1
@@ -1374,17 +1375,17 @@ Zone18B_EventScript_LeviathanBattle_2:
 	doweather
 	goto Zone18B_EventScript_LeviathanBattle_1
 
-Zone18B_EventScript_LeviathanBattle_6:
+Zone18B_EventScript_LeviathanBattle_8:
 	applymovement 1, Zone18B_Movement_Eli_RunOutLeft
 	applymovement 2, Zone18B_Movement_Zoe_RunOutLeft
 	waitmovement 0
-	goto Zone18B_EventScript_LeviathanBattle_5
+	goto Zone18B_EventScript_LeviathanBattle_7
 
-Zone18B_EventScript_LeviathanBattle_7:
+Zone18B_EventScript_LeviathanBattle_9:
 	applymovement 2, Zone18B_Movement_Zoe_RunOutRight
 	applymovement 1, Zone18B_Movement_Eli_RunOutRight
 	waitmovement 0
-	goto Zone18B_EventScript_LeviathanBattle_5
+	goto Zone18B_EventScript_LeviathanBattle_7
 
 
 Zone18B_Movement_Eli_RunOutLeft:

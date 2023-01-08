@@ -21,7 +21,7 @@ Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1
 	goto_if_ne Zone4A_EventScript_Breeder_6
 	msgbox Zone4A_EventScript_Breeder_Text_12, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone4A_EventScript_Breeder_9
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone4A_EventScript_Breeder_10
 Zone4A_EventScript_Breeder_8:
 	delay 16
 	msgbox Zone4A_EventScript_Breeder_Text_14, MSGBOX_DEFAULT
@@ -41,116 +41,120 @@ Zone4A_EventScript_Breeder_6:
 	msgbox Zone4A_EventScript_Breeder_Text_2, MSGBOX_DEFAULT
 	scrollingmultichoice 1, 0, 0, 5, 1
 	switch VAR_RESULT
-	case 0, Zone4A_EventScript_Breeder_12
-	case 1, Zone4A_EventScript_Breeder_13
-	case 2, Zone4A_EventScript_Breeder_14
-	case 3, Zone4A_EventScript_Breeder_15
-	case 4, Zone4A_EventScript_Breeder_16
-	case 5, Zone4A_EventScript_Breeder_17
-	case 6, Zone4A_EventScript_Breeder_18
-	case 7, Zone4A_EventScript_Breeder_19
+	case 0, Zone4A_EventScript_Breeder_14
+	case 1, Zone4A_EventScript_Breeder_15
+	case 2, Zone4A_EventScript_Breeder_16
+	case 3, Zone4A_EventScript_Breeder_17
+	case 4, Zone4A_EventScript_Breeder_18
+	case 5, Zone4A_EventScript_Breeder_19
+	case 6, Zone4A_EventScript_Breeder_20
+	case 7, Zone4A_EventScript_Breeder_21
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_9:
 	msgbox Zone4A_EventScript_Breeder_Text_13, MSGBOX_DEFAULT
 	goto Zone4A_EventScript_Breeder_8
 
-Zone4A_EventScript_Breeder_12:
-	msgbox Zone4A_EventScript_Breeder_Text_3, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone4A_EventScript_Breeder_20
-	goto Zone4A_EventScript_Breeder_5
+Zone4A_EventScript_Breeder_10:
+	goto_if_unset FLAG_SETTINGS_NO_FARMING, Zone4A_EventScript_Breeder_9
+	goto Zone4A_EventScript_Breeder_8
 
-Zone4A_EventScript_Breeder_13:
-	msgbox Zone4A_EventScript_Breeder_Text_4, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_14:
+	msgbox Zone4A_EventScript_Breeder_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_22
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_14:
-	msgbox Zone4A_EventScript_Breeder_Text_5, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_15:
+	msgbox Zone4A_EventScript_Breeder_Text_4, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_24
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_15:
-	msgbox Zone4A_EventScript_Breeder_Text_6, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_16:
+	msgbox Zone4A_EventScript_Breeder_Text_5, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_26
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_16:
-	msgbox Zone4A_EventScript_Breeder_Text_7, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_17:
+	msgbox Zone4A_EventScript_Breeder_Text_6, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_28
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_17:
-	msgbox Zone4A_EventScript_Breeder_Text_8, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_18:
+	msgbox Zone4A_EventScript_Breeder_Text_7, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_30
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_18:
-	msgbox Zone4A_EventScript_Breeder_Text_9, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_19:
+	msgbox Zone4A_EventScript_Breeder_Text_8, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_32
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_19:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone4A_EventScript_Breeder_34
-	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_YESNO
+Zone4A_EventScript_Breeder_20:
+	msgbox Zone4A_EventScript_Breeder_Text_9, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone4A_EventScript_Breeder_37
+	goto_if_eq Zone4A_EventScript_Breeder_34
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_20:
+Zone4A_EventScript_Breeder_21:
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone4A_EventScript_Breeder_36
+	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone4A_EventScript_Breeder_39
+	goto Zone4A_EventScript_Breeder_5
+
+Zone4A_EventScript_Breeder_22:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_WATER_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_22:
+Zone4A_EventScript_Breeder_24:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_ELECTRIC_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_24:
+Zone4A_EventScript_Breeder_26:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_FIRE_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_26:
+Zone4A_EventScript_Breeder_28:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_PSYCHIC_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_28:
+Zone4A_EventScript_Breeder_30:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_DARK_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_30:
+Zone4A_EventScript_Breeder_32:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_GRASS_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_32:
+Zone4A_EventScript_Breeder_34:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_ICE_GEM
 	setvar VAR_TEMP_0, 1
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_34:
+Zone4A_EventScript_Breeder_36:
 	msgbox Zone4A_EventScript_Breeder_Text_10, MSGBOX_DEFAULT
 	goto Zone4A_EventScript_Breeder_5
 
-Zone4A_EventScript_Breeder_37:
+Zone4A_EventScript_Breeder_39:
 	msgbox Zone4A_Text_HereGem, MSGBOX_DEFAULT
 	giveitem ITEM_FAIRY_GEM
 	setvar VAR_TEMP_0, 1

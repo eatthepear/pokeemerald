@@ -18,7 +18,7 @@ script Zone13C_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(format("{COLOR BLUE}Jenny{COLOR DARK_GRAY}: My battle style is quite ferocious, despite me having only one Pokémon!"), MSGBOX_DEFAULT)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
+	if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_JENNY)
 		trainerbattle_no_intro(TRAINER_JENNY_LEVIATHAN_11_BRUTAL, Zone13C_Text_Leviathan11Defeat)
 	} else {
@@ -55,7 +55,7 @@ script Zone13C_EventScript_Fossil_Scientist {
 		release
 		end
 	}
-	if (flag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED) == true) {
+	if ((flag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED) == true) || (flag(FLAG_SETTINGS_NO_FARMING) == true)) {
 		goto(Zone13C_EventScript_Fossil_NuzlockeReceived)
 	}
 	if (flag(FLAG_DAILY_FOSSIL_RECEIVED) == true) {

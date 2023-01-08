@@ -23,6 +23,7 @@ Zone2B_EventScript_LeviathanBattle::
 	msgbox Zone2B_Text_Leviathan2Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone2B_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone2B_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOEY
 	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat
 Zone2B_EventScript_LeviathanBattle_7:

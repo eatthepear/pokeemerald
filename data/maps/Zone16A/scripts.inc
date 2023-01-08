@@ -53,6 +53,7 @@ Zone16A_EventScript_LilyRight::
 	msgbox Zone16A_Text_Leviathan14Intro2
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone16A_EventScript_LilyRight_2
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone16A_EventScript_LilyRight_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_LILY
 	trainerbattle_no_intro TRAINER_LILY_LEVIATHAN_14, Zone16A_Text_Leviathan14Defeat
 Zone16A_EventScript_LilyRight_1:
