@@ -2147,7 +2147,7 @@ static void MainMenu_FormatSavegameTime(void)
     u8 str[0x20];
     // u8 *ptr;
 
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == TRUE)
     {   
         StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutal);
         AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
@@ -2184,9 +2184,9 @@ static void MainMenu_FormatSavegameMode(void)
 {
     u8 str[0x20];
     
-    if (FlagGet(FLAG_SETTINGS_NUZLOCKE_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == TRUE)
     {
-        if (FlagGet(FLAG_SETTINGS_RANDOMIZER_ON) == TRUE)
+        if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == TRUE)
         {   
             StringExpandPlaceholders(gStringVar4, gText_ContinueMenuRandomlocke);
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
@@ -2199,7 +2199,7 @@ static void MainMenu_FormatSavegameMode(void)
     }
     else
     {
-        if (FlagGet(FLAG_SETTINGS_RANDOMIZER_ON) == TRUE)
+        if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == TRUE)
         {   
             StringExpandPlaceholders(gStringVar4, gText_ContinueMenuRandomizer);
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);

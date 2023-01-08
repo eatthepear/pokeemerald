@@ -48,7 +48,7 @@ Zone9A_EventScript_Ari::
 	goto_if_eq Zone9A_EventScript_Ari_3
 Zone9A_EventScript_Ari_1:
 	faceplayer
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_7
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone9A_EventScript_Ari_7
 	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone9A_EventScript_Ari_7
 	msgbox Zone9A_EventScript_Ari_Text_1, MSGBOX_YESNO
 Zone9A_EventScript_Ari_6:
@@ -57,7 +57,7 @@ Zone9A_EventScript_Ari_6:
 	msgbox Zone9A_EventScript_Ari_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_ARI, Zone9A_EventScript_Ari_Text_4
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_17
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone9A_EventScript_Ari_17
 Zone9A_EventScript_Ari_15:
 	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -73,7 +73,7 @@ Zone9A_EventScript_Ari_15:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_6, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BERTHA, Zone9A_EventScript_Ari_Text_7
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_22
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone9A_EventScript_Ari_22
 Zone9A_EventScript_Ari_20:
 	applymovement 2, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -89,7 +89,7 @@ Zone9A_EventScript_Ari_20:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_9, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CASSANDRA, Zone9A_EventScript_Ari_Text_10
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_27
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone9A_EventScript_Ari_27
 Zone9A_EventScript_Ari_25:
 	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -105,7 +105,7 @@ Zone9A_EventScript_Ari_25:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_12, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_DOMINIC, Zone9A_EventScript_Ari_Text_13
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_32
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone9A_EventScript_Ari_32
 Zone9A_EventScript_Ari_30:
 	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_DEFAULT
 	closemessage

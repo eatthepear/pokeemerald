@@ -2145,7 +2145,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
                 string = ConvertIntToDecimalStringN(string, GetNationalPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
             else
                 string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);*/
-            if (FlagGet(FLAG_SETTINGS_BRUTAL_ON))
+            if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON))
                 StringCopy(string, gText_SaveMenuBrutal);
             else
                 StringCopy(string, gText_SaveMenuDefault);
@@ -2154,13 +2154,13 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             /*string = ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
             *(string++) = CHAR_COLON;
             ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);*/
-            if (FlagGet(FLAG_SETTINGS_NUZLOCKE_ON))
-                if (FlagGet(FLAG_SETTINGS_RANDOMIZER_ON))
+            if (FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON))
+                if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON))
                     StringCopy(string, gText_SaveMenuRandomlocke);
                 else
                     StringCopy(string, gText_SaveMenuNuzlocke);
             else
-                if (FlagGet(FLAG_SETTINGS_RANDOMIZER_ON))
+                if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON))
                     StringCopy(string, gText_SaveMenuRandomizer);
                 else
                     StringCopy(string, gText_SaveMenuVanilla);

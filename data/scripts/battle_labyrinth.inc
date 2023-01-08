@@ -96,22 +96,22 @@ EventScript_Shop_General_12:
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_13:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Shop_General_17
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_17
 	pokemart Shop_General_9to12
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_14:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Shop_General_20
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_20
 	pokemart Shop_General_13to15
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_15:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Shop_General_23
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_23
 	pokemart Shop_General_16to25
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_16:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Shop_General_26
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_26
 	pokemart Shop_General_26to30
 	goto EventScript_Shop_General_9
 
@@ -414,7 +414,7 @@ EventScript_Shop_Unique_Varrick_13:
 	goto EventScript_Shop_Unique_Varrick_4
 
 EventScript_Shop_Unique_Varrick_14:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Shop_Unique_Varrick_15
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_Unique_Varrick_15
 	goto_if_set FLAG_SETTINGS_NO_EVS, EventScript_Shop_Unique_Varrick_15
 	pokemart Shop_Unique_Varrick_26to30
 	goto EventScript_Shop_Unique_Varrick_4
@@ -1047,7 +1047,7 @@ EventScript_Shop_Lelouch_Training::
 	msgbox EventScript_Shop_Lelouch_Training_Text_0, MSGBOX_DEFAULT
 	compare VAR_ZONE, 21
 	goto_if_lt EventScript_Shop_Lelouch_Training_5
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Shop_Lelouch_Training_5
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_Lelouch_Training_5
 	goto_if_set FLAG_SETTINGS_NO_EVS, EventScript_Shop_Lelouch_Training_5
 	multichoice 0, 0, MULTI_LELOUCH_EXP_AND_EV, 0
 	switch VAR_RESULT
@@ -2479,19 +2479,19 @@ EventScript_Settings_2:
 	return
 
 EventScript_Settings_3:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_43
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_43
 EventScript_Settings_39:
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_38
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_38
 EventScript_Settings_34:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_33
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_33
 EventScript_Settings_29:
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_28
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_28
 EventScript_Settings_24:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_23
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_23
 EventScript_Settings_19:
-	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_18
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_18
 EventScript_Settings_14:
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_Settings_13
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_13
 EventScript_Settings_12:
 	msgbox EventScript_Settings_Text_7, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
@@ -2597,59 +2597,59 @@ EventScript_Settings_11:
 	goto EventScript_Settings_2
 
 EventScript_Settings_13:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_15
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_15
 	goto EventScript_Settings_12
 
 EventScript_Settings_15:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_11
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_11
 	goto EventScript_Settings_12
 
 EventScript_Settings_18:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_20
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_20
 	goto EventScript_Settings_14
 
 EventScript_Settings_20:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_10
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_10
 	goto EventScript_Settings_14
 
 EventScript_Settings_23:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_25
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_25
 	goto EventScript_Settings_19
 
 EventScript_Settings_25:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_9
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_9
 	goto EventScript_Settings_19
 
 EventScript_Settings_28:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_30
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_30
 	goto EventScript_Settings_24
 
 EventScript_Settings_30:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_8
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_8
 	goto EventScript_Settings_24
 
 EventScript_Settings_33:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_35
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_35
 	goto EventScript_Settings_29
 
 EventScript_Settings_35:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_7
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_7
 	goto EventScript_Settings_29
 
 EventScript_Settings_38:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_40
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_40
 	goto EventScript_Settings_34
 
 EventScript_Settings_40:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_6
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_6
 	goto EventScript_Settings_34
 
 EventScript_Settings_43:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, EventScript_Settings_45
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_45
 	goto EventScript_Settings_39
 
 EventScript_Settings_45:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_ON, EventScript_Settings_5
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_5
 	goto EventScript_Settings_39
 
 EventScript_Settings_49:
@@ -2863,7 +2863,7 @@ EventScript_Settings_BrutalMode_3:
 	msgbox EventScript_Settings_BrutalMode_Text_2, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	clearflag FLAG_SETTINGS_BRUTAL_ON
+	clearflag FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON
 	special ReverseHiddenItemFlags
 	return
 
@@ -2889,7 +2889,7 @@ EventScript_Settings_NuzlockeRandomizer_3:
 	msgbox EventScript_Settings_NuzlockeRandomizer_Text_0, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	clearflag FLAG_SETTINGS_NUZLOCKE_ON
+	clearflag FLAG_SETTINGS_NUZLOCKE_MODE_ON
 	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	return
@@ -2915,7 +2915,7 @@ EventScript_Settings_Nuzlocke_3:
 	msgbox EventScript_Settings_Nuzlocke_Text_0, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	clearflag FLAG_SETTINGS_NUZLOCKE_ON
+	clearflag FLAG_SETTINGS_NUZLOCKE_MODE_ON
 	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
 	return
@@ -3884,7 +3884,7 @@ Zone_EventScript_RetirePrompt_27:
 
 
 EventScript_NuzlockeVerifyGift::
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, EventScript_NuzlockeVerifyGift_2
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_NuzlockeVerifyGift_2
 EventScript_NuzlockeVerifyGift_1:
 	return
 
@@ -3908,7 +3908,7 @@ EventScript_PorygonExit::
 	goto_if_ne EventScript_PorygonExit_2
 EventScript_PorygonExit_1:
 	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
-	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_PorygonExit_7
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_PorygonExit_7
 EventScript_PorygonExit_6:
 	msgbox EventScript_PorygonExit_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES

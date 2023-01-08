@@ -6,7 +6,7 @@ mapscripts Zone0Sanctuary_MapScripts {
 
 script Zone0Sanctuary_EventScript_Intro {
     lockall
-	clearflag(FLAG_SETTINGS_NUZLOCKE_ON)
+	clearflag(FLAG_SETTINGS_NUZLOCKE_MODE_ON)
 	setflag(FLAG_SYS_B_DASH)
 	setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_SYS_PC_LANETTE)
@@ -138,7 +138,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		}
 	}
 	delay(16)
-	if (flag(FLAG_SETTINGS_RANDOMIZER_ON) == false && flag(FLAG_SETTINGS_NUZLOCKE_ON) == false) {
+	if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false && flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) {
 		msgbox(format("You have chosen to disable all optional game modes."), MSGBOX_DEFAULT)
 		playse(SE_PC_LOGIN)
 		msgbox(format("{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
@@ -263,7 +263,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		"Also, it is highly recommended you stock up on any supplies before entering the next Zone."))
 		delay(96)
 	}
-	if (flag(FLAG_SETTINGS_RANDOMIZER_ON) == true) {
+	if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on, you get a random starter."))
 		callnative(GiveRandomStarter)
 		playfanfare(MUS_OBTAIN_ITEM)
@@ -278,7 +278,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		}
 		goto(Zone0Sanctuary_EventScript_EndIntro)
 	}
-	if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
+	if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) {
 		msgbox(format("As a new challenger, you will receive a starter Pokémon.\p"
 		"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
 		"Choose carefully as these Pokémon are very rare."))
@@ -308,7 +308,7 @@ script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
 }
 
 script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
-	setflag(FLAG_SETTINGS_BRUTAL_ON)
+	setflag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
 	waitse
@@ -326,7 +326,7 @@ script Zone0Sanctuary_EventScript_DisableRandomizer {
 }
 
 script Zone0Sanctuary_EventScript_EnableRandomizer {
-	setflag(FLAG_SETTINGS_RANDOMIZER_ON)
+	setflag(FLAG_SETTINGS_RANDOMIZER_MODE_ON)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled."), MSGBOX_DEFAULT)
 	waitse
@@ -344,7 +344,7 @@ script Zone0Sanctuary_EventScript_DisableNuzlocke {
 
 script Zone0Sanctuary_EventScript_EnableNuzlocke {
 	callnative(GlobalNuzlockeSet)
-	setflag(FLAG_SETTINGS_NUZLOCKE_ON)
+	setflag(FLAG_SETTINGS_NUZLOCKE_MODE_ON)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
 	waitse

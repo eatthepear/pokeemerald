@@ -1452,12 +1452,12 @@ static void DebugAction_Flags_SetPokedexFlags(u8 taskId)
     // }
     // Debug_DestroyMenu(taskId);
     // ScriptContext_Enable();
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON))
+    if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON))
     {
-        FlagClear(FLAG_SETTINGS_BRUTAL_ON);
+        FlagClear(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON);
         PlaySE(SE_PC_OFF);
     } else {
-        FlagSet(FLAG_SETTINGS_BRUTAL_ON);
+        FlagSet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON);
         PlaySE(SE_PC_LOGIN);
     }
     ReverseHiddenItemFlags();
@@ -1476,13 +1476,13 @@ static void DebugAction_Flags_SwitchDex(u8 taskId)
     //     FlagSet(FLAG_SYS_POKEDEX_GET);
     //     PlaySE(SE_PC_LOGIN);
     // }
-    if(FlagGet(FLAG_SETTINGS_NUZLOCKE_ON))
+    if(FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON))
     {
-        FlagClear(FLAG_SETTINGS_NUZLOCKE_ON);
+        FlagClear(FLAG_SETTINGS_NUZLOCKE_MODE_ON);
         GlobalNuzlockeClear();
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SETTINGS_NUZLOCKE_ON);
+        FlagSet(FLAG_SETTINGS_NUZLOCKE_MODE_ON);
         GlobalNuzlockeSet();
         PlaySE(SE_PC_LOGIN);
     }
@@ -1498,12 +1498,12 @@ static void DebugAction_Flags_SwitchNatDex(u8 taskId)
     //     EnableNationalPokedex();
     //     PlaySE(SE_PC_LOGIN);
     // }
-    if(FlagGet(FLAG_SETTINGS_RANDOMIZER_ON))
+    if(FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON))
     {
-        FlagClear(FLAG_SETTINGS_RANDOMIZER_ON);
+        FlagClear(FLAG_SETTINGS_RANDOMIZER_MODE_ON);
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SETTINGS_RANDOMIZER_ON);
+        FlagSet(FLAG_SETTINGS_RANDOMIZER_MODE_ON);
         PlaySE(SE_PC_LOGIN);
     }
 }

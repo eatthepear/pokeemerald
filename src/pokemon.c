@@ -7777,7 +7777,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                                 itemEffectParam++;
                                 break;
                             }
-                            if (FlagGet(FLAG_SETTINGS_NUZLOCKE_ON) && !FlagGet(FLAG_IS_DEBUGGING_SAVEFILE))
+                            if (FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON) && !FlagGet(FLAG_IS_DEBUGGING_SAVEFILE))
                             {
                                 itemEffectParam++;
                                 break;
@@ -9886,7 +9886,7 @@ static s32 GetWildMonTableIdInAlteringCave(u16 species)
 
 void SetWildMonHeldItem(void)
 {
-    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON)) || FlagGet(FLAG_SETTINGS_NO_FARMING))
+    if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) || FlagGet(FLAG_SETTINGS_NO_FARMING))
     {
         return;
     }
