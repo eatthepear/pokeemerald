@@ -39,7 +39,7 @@ script Zone0Sanctuary_EventScript_Intro {
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_1, 1)
 	}
-	while {
+	while (var(VAR_TEMP_4) == 0) {
 		if (var(VAR_TEMP_1) == 1) {
 			msgbox(format("There are three game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY}, {COLOR RED}Brutal{COLOR DARK_GRAY}, and {COLOR RED}Infinite{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
 			msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
@@ -55,33 +55,33 @@ script Zone0Sanctuary_EventScript_Intro {
 					msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-						break
+						setvar(VAR_TEMP_4, 1)
 					}
 				} else {
 					call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-					break
+					setvar(VAR_TEMP_4, 1)
 				}
 			case 1:
 				if (var(VAR_TEMP_1) == 1) {
 					msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-						break
+						setvar(VAR_TEMP_4, 1)
 					}
 				} else {
 					call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-					break
+					setvar(VAR_TEMP_4, 1)
 				}
 			case 2:
 				if (var(VAR_TEMP_1) == 1) {
 					msgbox(format("Are you sure you want to play on {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						call(Zone0Sanctuary_EventScript_SetInfiniteDifficulty)
-						break
+						setvar(VAR_TEMP_4, 1)
 					}
 				} else {
 					call(Zone0Sanctuary_EventScript_SetInfiniteDifficulty)
-					break
+					setvar(VAR_TEMP_4, 1)
 				}
 		}
 	}

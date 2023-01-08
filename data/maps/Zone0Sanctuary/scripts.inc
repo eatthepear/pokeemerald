@@ -33,16 +33,49 @@ Zone0Sanctuary_EventScript_Intro_1:
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_5
 Zone0Sanctuary_EventScript_Intro_4:
 Zone0Sanctuary_EventScript_Intro_8:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_14
-Zone0Sanctuary_EventScript_Intro_13:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_DEFAULT
-	multichoice 2, 5, MULTI_DIFFICULTY, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_Intro_20
-	case 1, Zone0Sanctuary_EventScript_Intro_21
-	case 2, Zone0Sanctuary_EventScript_Intro_22
-	goto Zone0Sanctuary_EventScript_Intro_8
+	compare VAR_TEMP_4, 0
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_9
+	delay 16
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_12
+Zone0Sanctuary_EventScript_Intro_11:
+Zone0Sanctuary_EventScript_Intro_18:
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_28
+Zone0Sanctuary_EventScript_Intro_27:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_10, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_47
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_65
+	call Zone0Sanctuary_EventScript_DisableRandomizer
+Zone0Sanctuary_EventScript_Intro_17:
+	delay 16
+Zone0Sanctuary_EventScript_Intro_25:
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_45
+Zone0Sanctuary_EventScript_Intro_44:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_13, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_59
+	compare VAR_TEMP_2, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_74
+	call Zone0Sanctuary_EventScript_DisableNuzlocke
+Zone0Sanctuary_EventScript_Intro_24:
+	delay 16
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0Sanctuary_EventScript_Intro_41
+Zone0Sanctuary_EventScript_Intro_39:
+	delay 16
+	compare VAR_TEMP_0, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_57
+Zone0Sanctuary_EventScript_Intro_56:
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0Sanctuary_EventScript_Intro_69
+Zone0Sanctuary_EventScript_Intro_68:
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone0Sanctuary_EventScript_Intro_81
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_30
+	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault
+	return
 
 Zone0Sanctuary_EventScript_Intro_2:
 	setvar VAR_TEMP_0, 1
@@ -54,136 +87,112 @@ Zone0Sanctuary_EventScript_Intro_5:
 	setvar VAR_TEMP_1, 1
 	goto Zone0Sanctuary_EventScript_Intro_4
 
-	delay 16
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_11
-Zone0Sanctuary_EventScript_Intro_10:
-Zone0Sanctuary_EventScript_Intro_17:
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_27
-Zone0Sanctuary_EventScript_Intro_26:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_10, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_46
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_64
-	call Zone0Sanctuary_EventScript_DisableRandomizer
-Zone0Sanctuary_EventScript_Intro_16:
-	delay 16
-Zone0Sanctuary_EventScript_Intro_24:
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_44
-Zone0Sanctuary_EventScript_Intro_43:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_13, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_58
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_73
-	call Zone0Sanctuary_EventScript_DisableNuzlocke
-Zone0Sanctuary_EventScript_Intro_23:
-	delay 16
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0Sanctuary_EventScript_Intro_40
-Zone0Sanctuary_EventScript_Intro_38:
-	delay 16
-	compare VAR_TEMP_0, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_56
-Zone0Sanctuary_EventScript_Intro_55:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0Sanctuary_EventScript_Intro_68
-Zone0Sanctuary_EventScript_Intro_67:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone0Sanctuary_EventScript_Intro_80
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_30
-	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault
-	return
+Zone0Sanctuary_EventScript_Intro_9:
+	compare VAR_TEMP_1, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_15
+Zone0Sanctuary_EventScript_Intro_14:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_DEFAULT
+	multichoice 2, 5, MULTI_DIFFICULTY, 1
+	switch VAR_RESULT
+	case 0, Zone0Sanctuary_EventScript_Intro_21
+	case 1, Zone0Sanctuary_EventScript_Intro_22
+	case 2, Zone0Sanctuary_EventScript_Intro_23
+	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_11:
+Zone0Sanctuary_EventScript_Intro_12:
 	msgbox gText_Colress_GameModes, MSGBOX_DEFAULT
 	setvar VAR_TEMP_2, 1
-	goto Zone0Sanctuary_EventScript_Intro_10
+	goto Zone0Sanctuary_EventScript_Intro_11
 
-Zone0Sanctuary_EventScript_Intro_14:
+Zone0Sanctuary_EventScript_Intro_15:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_4, MSGBOX_DEFAULT
 	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	msgbox gText_Colress_BrutalExplained, MSGBOX_DEFAULT
 	msgbox gText_Colress_InfiniteExplained
 	delay 96
-	goto Zone0Sanctuary_EventScript_Intro_13
-
-Zone0Sanctuary_EventScript_Intro_20:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_29
-	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
-	goto Zone0Sanctuary_EventScript_Intro_8
+	goto Zone0Sanctuary_EventScript_Intro_14
 
 Zone0Sanctuary_EventScript_Intro_21:
 	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_32
-	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_30
+	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
+	setvar VAR_TEMP_4, 1
 	goto Zone0Sanctuary_EventScript_Intro_8
 
 Zone0Sanctuary_EventScript_Intro_22:
 	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_35
-	call Zone0Sanctuary_EventScript_SetInfiniteDifficulty
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_33
+	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
+	setvar VAR_TEMP_4, 1
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_27:
-	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
-	goto Zone0Sanctuary_EventScript_Intro_26
+Zone0Sanctuary_EventScript_Intro_23:
+	compare VAR_TEMP_1, 1
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_36
+	call Zone0Sanctuary_EventScript_SetInfiniteDifficulty
+	setvar VAR_TEMP_4, 1
+	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_29:
+Zone0Sanctuary_EventScript_Intro_28:
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
+	goto Zone0Sanctuary_EventScript_Intro_27
+
+Zone0Sanctuary_EventScript_Intro_30:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_6, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_49
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_50
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_32:
+Zone0Sanctuary_EventScript_Intro_33:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_7, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_51
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_52
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_35:
+Zone0Sanctuary_EventScript_Intro_36:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_8, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_53
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_54
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_39:
+Zone0Sanctuary_EventScript_Intro_40:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_16, MSGBOX_DEFAULT
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_17, MSGBOX_DEFAULT
 	waitse
 	closemessage
-	goto Zone0Sanctuary_EventScript_Intro_38
+	goto Zone0Sanctuary_EventScript_Intro_39
 
-Zone0Sanctuary_EventScript_Intro_40:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0Sanctuary_EventScript_Intro_39
-	goto Zone0Sanctuary_EventScript_Intro_38
+Zone0Sanctuary_EventScript_Intro_41:
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0Sanctuary_EventScript_Intro_40
+	goto Zone0Sanctuary_EventScript_Intro_39
 
-Zone0Sanctuary_EventScript_Intro_44:
+Zone0Sanctuary_EventScript_Intro_45:
 	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
-	goto Zone0Sanctuary_EventScript_Intro_43
+	goto Zone0Sanctuary_EventScript_Intro_44
 
-Zone0Sanctuary_EventScript_Intro_46:
+Zone0Sanctuary_EventScript_Intro_47:
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_61
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_62
 	call Zone0Sanctuary_EventScript_EnableRandomizer
-	goto Zone0Sanctuary_EventScript_Intro_16
+	goto Zone0Sanctuary_EventScript_Intro_17
 
-Zone0Sanctuary_EventScript_Intro_49:
+Zone0Sanctuary_EventScript_Intro_50:
 	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
+	setvar VAR_TEMP_4, 1
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_51:
+Zone0Sanctuary_EventScript_Intro_52:
 	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
+	setvar VAR_TEMP_4, 1
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_53:
+Zone0Sanctuary_EventScript_Intro_54:
 	call Zone0Sanctuary_EventScript_SetInfiniteDifficulty
+	setvar VAR_TEMP_4, 1
 	goto Zone0Sanctuary_EventScript_Intro_8
 
-Zone0Sanctuary_EventScript_Intro_56:
+Zone0Sanctuary_EventScript_Intro_57:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_18
 	applymovement 1, Zone0Sanctuary_Movement_Colress_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop
@@ -292,27 +301,27 @@ Zone0Sanctuary_EventScript_Intro_56:
 	waitmovement 0
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_24
 	delay 96
-	goto Zone0Sanctuary_EventScript_Intro_55
+	goto Zone0Sanctuary_EventScript_Intro_56
 
-Zone0Sanctuary_EventScript_Intro_58:
+Zone0Sanctuary_EventScript_Intro_59:
 	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_70
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_71
 	call Zone0Sanctuary_EventScript_EnableNuzlocke
-	goto Zone0Sanctuary_EventScript_Intro_23
+	goto Zone0Sanctuary_EventScript_Intro_24
 
-Zone0Sanctuary_EventScript_Intro_61:
+Zone0Sanctuary_EventScript_Intro_62:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_11, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_76
-	goto Zone0Sanctuary_EventScript_Intro_17
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_77
+	goto Zone0Sanctuary_EventScript_Intro_18
 
-Zone0Sanctuary_EventScript_Intro_64:
+Zone0Sanctuary_EventScript_Intro_65:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_12, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_78
-	goto Zone0Sanctuary_EventScript_Intro_17
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_79
+	goto Zone0Sanctuary_EventScript_Intro_18
 
-Zone0Sanctuary_EventScript_Intro_68:
+Zone0Sanctuary_EventScript_Intro_69:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_25
 	callnative GiveRandomStarter
 	playfanfare MUS_OBTAIN_ITEM
@@ -322,59 +331,59 @@ Zone0Sanctuary_EventScript_Intro_68:
 	waitfanfare
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_27, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_84
-Zone0Sanctuary_EventScript_Intro_83:
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_85
+Zone0Sanctuary_EventScript_Intro_84:
 	goto Zone0Sanctuary_EventScript_EndIntro
-	goto Zone0Sanctuary_EventScript_Intro_67
+	goto Zone0Sanctuary_EventScript_Intro_68
 
-Zone0Sanctuary_EventScript_Intro_70:
+Zone0Sanctuary_EventScript_Intro_71:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_14, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_86
-	goto Zone0Sanctuary_EventScript_Intro_24
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_87
+	goto Zone0Sanctuary_EventScript_Intro_25
 
-Zone0Sanctuary_EventScript_Intro_73:
+Zone0Sanctuary_EventScript_Intro_74:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_15, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_88
-	goto Zone0Sanctuary_EventScript_Intro_24
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_89
+	goto Zone0Sanctuary_EventScript_Intro_25
 
-Zone0Sanctuary_EventScript_Intro_76:
+Zone0Sanctuary_EventScript_Intro_77:
 	call Zone0Sanctuary_EventScript_EnableRandomizer
-	goto Zone0Sanctuary_EventScript_Intro_16
+	goto Zone0Sanctuary_EventScript_Intro_17
 
-Zone0Sanctuary_EventScript_Intro_78:
+Zone0Sanctuary_EventScript_Intro_79:
 	call Zone0Sanctuary_EventScript_DisableRandomizer
-	goto Zone0Sanctuary_EventScript_Intro_16
+	goto Zone0Sanctuary_EventScript_Intro_17
 
-Zone0Sanctuary_EventScript_Intro_80:
+Zone0Sanctuary_EventScript_Intro_81:
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_28
 	special ChooseStarter
 	waitstate
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_29, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_91
-Zone0Sanctuary_EventScript_Intro_90:
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_92
+Zone0Sanctuary_EventScript_Intro_91:
 	goto Zone0Sanctuary_EventScript_EndIntro
 	return
 
-Zone0Sanctuary_EventScript_Intro_84:
+Zone0Sanctuary_EventScript_Intro_85:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0Sanctuary_EventScript_Intro_83
+	goto Zone0Sanctuary_EventScript_Intro_84
 
-Zone0Sanctuary_EventScript_Intro_86:
+Zone0Sanctuary_EventScript_Intro_87:
 	call Zone0Sanctuary_EventScript_EnableNuzlocke
-	goto Zone0Sanctuary_EventScript_Intro_23
+	goto Zone0Sanctuary_EventScript_Intro_24
 
-Zone0Sanctuary_EventScript_Intro_88:
+Zone0Sanctuary_EventScript_Intro_89:
 	call Zone0Sanctuary_EventScript_DisableNuzlocke
-	goto Zone0Sanctuary_EventScript_Intro_23
+	goto Zone0Sanctuary_EventScript_Intro_24
 
-Zone0Sanctuary_EventScript_Intro_91:
+Zone0Sanctuary_EventScript_Intro_92:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0Sanctuary_EventScript_Intro_90
+	goto Zone0Sanctuary_EventScript_Intro_91
 
 
 Zone0Sanctuary_EventScript_SetDefaultDifficulty::
