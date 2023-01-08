@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Zone2B_EventScript_LeviathanBattle",
+      "script": "Zone2B_EventScript_TalkToLeviathan",
       "flag": "0"
     },
     {
@@ -116,7 +116,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_ZONE_2_STATE",
+      "var_value": "1",
+      "script": "Zone2B_EventScript_TriggerLeviathanLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_ZONE_2_STATE",
+      "var_value": "1",
+      "script": "Zone2B_EventScript_TriggerLeviathanRight"
+    }
   ],
   "bg_events": [
     {

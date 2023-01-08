@@ -8,7 +8,7 @@ mapscripts Zone2B_MapScripts {
 	}
 }
 
-script Zone2B_EventScript_LeviathanBattle {
+script Zone2B_EventScript_TalkToLeviathan {
 	lock
 	faceplayer
 	if (flag(FLAG_BEAT_LEVIATHAN_2) == true) {
@@ -23,7 +23,56 @@ script Zone2B_EventScript_LeviathanBattle {
 		end
 	}
 	fadeoutbgm(1)
-	msgbox(Zone2B_Text_Leviathan2Intro)
+	msgbox(Zone2B_Text_Leviathan2Intro1)
+	goto(Zone2B_EventScript_LeviathanBattle)
+}
+
+text Zone2B_Text_Leviathan2WantBattle {
+	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: My Rattata is in the top percentage of Rattata! Want to see? I'll give you a Silk Scarf if you can beat me!")
+}
+
+text Zone2B_Text_Leviathan2Intro1 {
+	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!")
+}
+
+text Zone2B_Text_Leviathan2DenyBattle {
+	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Oh, all right…")
+}
+
+script Zone2B_EventScript_TriggerLeviathanLeft {
+	lockall
+	goto(Zone2B_EventScript_LeviathanMovement)
+}
+
+script Zone2B_EventScript_TriggerLeviathanRight {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+	waitmovement(0)
+	goto(Zone2B_EventScript_LeviathanMovement)
+}
+
+script Zone2B_EventScript_LeviathanMovement {
+	addobject(5)
+	applymovement(5, Zone2B_Movement_Leviathan)
+	waitmovement(0)
+	fadeoutbgm(1)
+	msgbox(Zone2B_Text_Leviathan2Intro2)
+	goto(Zone2B_EventScript_LeviathanBattle)
+}
+
+movement Zone2B_Movement_Leviathan {
+	walk_down * 2
+	walk_right * 10
+	face_up
+}
+
+text Zone2B_Text_Leviathan2Intro2 {
+	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: My Rattata is in the top percentage of all Rattata!\pLet me show you in battle!")
+}
+
+script Zone2B_EventScript_LeviathanBattle {
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_JOEY)
@@ -38,20 +87,9 @@ script Zone2B_EventScript_LeviathanBattle {
 	msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in order to battle better?\pNo!\nI'm sticking with this one no matter what!"))
 	closemessage
 	setflag(FLAG_BEAT_LEVIATHAN_2)
-	release
+	setvar(VAR_ZONE_2_STATE, 2)
+	releaseall
 	end
-}
-
-text Zone2B_Text_Leviathan2WantBattle {
-	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: My Rattata is in the top percentage of Rattata! Want to see?")
-}
-
-text Zone2B_Text_Leviathan2Intro {
-	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!")
-}
-
-text Zone2B_Text_Leviathan2DenyBattle {
-	format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Oh, all right…")
 }
 
 text Zone2B_Text_Leviathan2Defeat {
