@@ -1799,6 +1799,24 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
+		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
+			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+			switch (var(VAR_RESULT)) {
+				case 0:
+					msgbox(gText_Colress_InfiniteExplained)
+				case 1:
+					call(EventScript_Settings_NuzlockeRandomizer)
+				case 2:
+					call(EventScript_MusicMenu)
+				case 3:
+					call(EventScript_ExpAll)
+				case 4:
+					call(EventScript_Surveillance)
+				case 5:
+				case MULTI_B_PRESSED:
+					setvar(VAR_TEMP_1, 1)
+			}
 		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
@@ -1823,6 +1841,24 @@ script EventScript_Settings {
 			switch (var(VAR_RESULT)) {
 				case 0:
 					call(EventScript_Settings_BrutalMode)
+				case 1:
+					msgbox(gText_Colress_RandomizerExplanation)
+				case 2:
+					call(EventScript_MusicMenu)
+				case 3:
+					call(EventScript_ExpAll)
+				case 4:
+					call(EventScript_Surveillance)
+				case 5:
+				case MULTI_B_PRESSED:
+					setvar(VAR_TEMP_1, 1)
+			}
+		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
+			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+			switch (var(VAR_RESULT)) {
+				case 0:
+					msgbox(gText_Colress_InfiniteExplained)
 				case 1:
 					msgbox(gText_Colress_RandomizerExplanation)
 				case 2:
@@ -1871,6 +1907,24 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
+		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
+			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+			switch (var(VAR_RESULT)) {
+				case 0:
+					msgbox(gText_Colress_InfiniteExplained)
+				case 1:
+					call(EventScript_Settings_Nuzlocke)
+				case 2:
+					call(EventScript_MusicMenu)
+				case 3:
+					call(EventScript_ExpAll)
+				case 4:
+					call(EventScript_Surveillance)
+				case 5:
+				case MULTI_B_PRESSED:
+					setvar(VAR_TEMP_1, 1)
+			}
 		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
@@ -1895,6 +1949,24 @@ script EventScript_Settings {
 			switch (var(VAR_RESULT)) {
 				case 0:
 					call(EventScript_Settings_BrutalMode)
+				case 1:
+					msgbox(gText_Colress_VanillaExplanation)
+				case 2:
+					call(EventScript_MusicMenu)
+				case 3:
+					call(EventScript_ExpAll)
+				case 4:
+					call(EventScript_Surveillance)
+				case 5:
+				case MULTI_B_PRESSED:
+					setvar(VAR_TEMP_1, 1)
+			}
+		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
+			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+			switch (var(VAR_RESULT)) {
+				case 0:
+					msgbox(gText_Colress_InfiniteExplained)
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation)
 				case 2:
@@ -1958,10 +2030,10 @@ text gText_Colress_BrutalExplained {
 }
 
 text gText_Colress_InfiniteExplained {
-	format("{COLOR RED}Infinite{COLOR DARK_GRAY} is the last difficulty option.\p"
+	format("{COLOR RED}Infinite{COLOR DARK_GRAY} is the easiest difficulty option.\p"
 	"It gives you access to unlimited resources that can normally be obtained by grinding, such as money and held items.\p"
 	"This is not the intended game mode, as resource management was designed to be part of the challenges ahead.\p"
-	"Note the {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty cannot be turned off once set.")
+	"Note the {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty cannot be adjusted off once set.")
 }
 
 text gText_Colress_GameModes {

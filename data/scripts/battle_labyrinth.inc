@@ -2424,368 +2424,556 @@ EventScript_Settings_2:
 	return
 
 EventScript_Settings_3:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_43
-EventScript_Settings_39:
-	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_38
-EventScript_Settings_34:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_33
-EventScript_Settings_29:
-	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_28
-EventScript_Settings_24:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_23
-EventScript_Settings_19:
-	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_18
-EventScript_Settings_14:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_13
-EventScript_Settings_12:
-	msgbox EventScript_Settings_Text_7, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_67
+EventScript_Settings_63:
+	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, EventScript_Settings_62
+EventScript_Settings_58:
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_57
+EventScript_Settings_53:
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_52
+EventScript_Settings_48:
+	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, EventScript_Settings_47
+EventScript_Settings_43:
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_42
+EventScript_Settings_38:
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_37
+EventScript_Settings_33:
+	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, EventScript_Settings_32
+EventScript_Settings_28:
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_27
+EventScript_Settings_23:
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Settings_22
+EventScript_Settings_18:
+	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, EventScript_Settings_17
+EventScript_Settings_16:
+	msgbox EventScript_Settings_Text_11, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_98
-	case 1, EventScript_Settings_99
-	case 2, EventScript_Settings_100
-	case 3, EventScript_Settings_101
-	case 4, EventScript_Settings_102
-	case 5, EventScript_Settings_103
-	case MULTI_B_PRESSED, EventScript_Settings_103
+	case 0, EventScript_Settings_150
+	case 1, EventScript_Settings_151
+	case 2, EventScript_Settings_152
+	case 3, EventScript_Settings_153
+	case 4, EventScript_Settings_154
+	case 5, EventScript_Settings_155
+	case MULTI_B_PRESSED, EventScript_Settings_155
 	goto EventScript_Settings_2
 
 EventScript_Settings_5:
 	msgbox EventScript_Settings_Text_0, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_49
-	case 1, EventScript_Settings_50
-	case 2, EventScript_Settings_51
-	case 3, EventScript_Settings_52
-	case 4, EventScript_Settings_53
-	case 5, EventScript_Settings_54
-	case MULTI_B_PRESSED, EventScript_Settings_54
+	case 0, EventScript_Settings_73
+	case 1, EventScript_Settings_74
+	case 2, EventScript_Settings_75
+	case 3, EventScript_Settings_76
+	case 4, EventScript_Settings_77
+	case 5, EventScript_Settings_78
+	case MULTI_B_PRESSED, EventScript_Settings_78
 	goto EventScript_Settings_2
 
 EventScript_Settings_6:
 	msgbox EventScript_Settings_Text_1, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_56
-	case 1, EventScript_Settings_57
-	case 2, EventScript_Settings_58
-	case 3, EventScript_Settings_59
-	case 4, EventScript_Settings_60
-	case 5, EventScript_Settings_61
-	case MULTI_B_PRESSED, EventScript_Settings_61
+	case 0, EventScript_Settings_80
+	case 1, EventScript_Settings_81
+	case 2, EventScript_Settings_82
+	case 3, EventScript_Settings_83
+	case 4, EventScript_Settings_84
+	case 5, EventScript_Settings_85
+	case MULTI_B_PRESSED, EventScript_Settings_85
 	goto EventScript_Settings_2
 
 EventScript_Settings_7:
 	msgbox EventScript_Settings_Text_2, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_63
-	case 1, EventScript_Settings_64
-	case 2, EventScript_Settings_65
-	case 3, EventScript_Settings_66
-	case 4, EventScript_Settings_67
-	case 5, EventScript_Settings_68
-	case MULTI_B_PRESSED, EventScript_Settings_68
+	case 0, EventScript_Settings_87
+	case 1, EventScript_Settings_88
+	case 2, EventScript_Settings_89
+	case 3, EventScript_Settings_90
+	case 4, EventScript_Settings_91
+	case 5, EventScript_Settings_92
+	case MULTI_B_PRESSED, EventScript_Settings_92
 	goto EventScript_Settings_2
 
 EventScript_Settings_8:
 	msgbox EventScript_Settings_Text_3, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_70
-	case 1, EventScript_Settings_71
-	case 2, EventScript_Settings_72
-	case 3, EventScript_Settings_73
-	case 4, EventScript_Settings_74
-	case 5, EventScript_Settings_75
-	case MULTI_B_PRESSED, EventScript_Settings_75
+	case 0, EventScript_Settings_94
+	case 1, EventScript_Settings_95
+	case 2, EventScript_Settings_96
+	case 3, EventScript_Settings_97
+	case 4, EventScript_Settings_98
+	case 5, EventScript_Settings_99
+	case MULTI_B_PRESSED, EventScript_Settings_99
 	goto EventScript_Settings_2
 
 EventScript_Settings_9:
 	msgbox EventScript_Settings_Text_4, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_77
-	case 1, EventScript_Settings_78
-	case 2, EventScript_Settings_79
-	case 3, EventScript_Settings_80
-	case 4, EventScript_Settings_81
-	case 5, EventScript_Settings_82
-	case MULTI_B_PRESSED, EventScript_Settings_82
+	case 0, EventScript_Settings_101
+	case 1, EventScript_Settings_102
+	case 2, EventScript_Settings_103
+	case 3, EventScript_Settings_104
+	case 4, EventScript_Settings_105
+	case 5, EventScript_Settings_106
+	case MULTI_B_PRESSED, EventScript_Settings_106
 	goto EventScript_Settings_2
 
 EventScript_Settings_10:
 	msgbox EventScript_Settings_Text_5, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_84
-	case 1, EventScript_Settings_85
-	case 2, EventScript_Settings_86
-	case 3, EventScript_Settings_87
-	case 4, EventScript_Settings_88
-	case 5, EventScript_Settings_89
-	case MULTI_B_PRESSED, EventScript_Settings_89
+	case 0, EventScript_Settings_108
+	case 1, EventScript_Settings_109
+	case 2, EventScript_Settings_110
+	case 3, EventScript_Settings_111
+	case 4, EventScript_Settings_112
+	case 5, EventScript_Settings_113
+	case MULTI_B_PRESSED, EventScript_Settings_113
 	goto EventScript_Settings_2
 
 EventScript_Settings_11:
 	msgbox EventScript_Settings_Text_6, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_91
-	case 1, EventScript_Settings_92
-	case 2, EventScript_Settings_93
-	case 3, EventScript_Settings_94
-	case 4, EventScript_Settings_95
-	case 5, EventScript_Settings_96
-	case MULTI_B_PRESSED, EventScript_Settings_96
+	case 0, EventScript_Settings_115
+	case 1, EventScript_Settings_116
+	case 2, EventScript_Settings_117
+	case 3, EventScript_Settings_118
+	case 4, EventScript_Settings_119
+	case 5, EventScript_Settings_120
+	case MULTI_B_PRESSED, EventScript_Settings_120
+	goto EventScript_Settings_2
+
+EventScript_Settings_12:
+	msgbox EventScript_Settings_Text_7, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Settings_122
+	case 1, EventScript_Settings_123
+	case 2, EventScript_Settings_124
+	case 3, EventScript_Settings_125
+	case 4, EventScript_Settings_126
+	case 5, EventScript_Settings_127
+	case MULTI_B_PRESSED, EventScript_Settings_127
 	goto EventScript_Settings_2
 
 EventScript_Settings_13:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_15
-	goto EventScript_Settings_12
+	msgbox EventScript_Settings_Text_8, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Settings_129
+	case 1, EventScript_Settings_130
+	case 2, EventScript_Settings_131
+	case 3, EventScript_Settings_132
+	case 4, EventScript_Settings_133
+	case 5, EventScript_Settings_134
+	case MULTI_B_PRESSED, EventScript_Settings_134
+	goto EventScript_Settings_2
+
+EventScript_Settings_14:
+	msgbox EventScript_Settings_Text_9, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Settings_136
+	case 1, EventScript_Settings_137
+	case 2, EventScript_Settings_138
+	case 3, EventScript_Settings_139
+	case 4, EventScript_Settings_140
+	case 5, EventScript_Settings_141
+	case MULTI_B_PRESSED, EventScript_Settings_141
+	goto EventScript_Settings_2
 
 EventScript_Settings_15:
+	msgbox EventScript_Settings_Text_10, MSGBOX_DEFAULT
+	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_Settings_143
+	case 1, EventScript_Settings_144
+	case 2, EventScript_Settings_145
+	case 3, EventScript_Settings_146
+	case 4, EventScript_Settings_147
+	case 5, EventScript_Settings_148
+	case MULTI_B_PRESSED, EventScript_Settings_148
+	goto EventScript_Settings_2
+
+EventScript_Settings_17:
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_19
+	goto EventScript_Settings_16
+
+EventScript_Settings_19:
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_15
+	goto EventScript_Settings_16
+
+EventScript_Settings_22:
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_24
+	goto EventScript_Settings_18
+
+EventScript_Settings_24:
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_14
+	goto EventScript_Settings_18
+
+EventScript_Settings_27:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_29
+	goto EventScript_Settings_23
+
+EventScript_Settings_29:
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_13
+	goto EventScript_Settings_23
+
+EventScript_Settings_32:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_34
+	goto EventScript_Settings_28
+
+EventScript_Settings_34:
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_12
+	goto EventScript_Settings_28
+
+EventScript_Settings_37:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_39
+	goto EventScript_Settings_33
+
+EventScript_Settings_39:
 	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_11
-	goto EventScript_Settings_12
+	goto EventScript_Settings_33
 
-EventScript_Settings_18:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_20
-	goto EventScript_Settings_14
+EventScript_Settings_42:
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_44
+	goto EventScript_Settings_38
 
-EventScript_Settings_20:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_10
-	goto EventScript_Settings_14
+EventScript_Settings_44:
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_10
+	goto EventScript_Settings_38
 
-EventScript_Settings_23:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_25
-	goto EventScript_Settings_19
-
-EventScript_Settings_25:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_9
-	goto EventScript_Settings_19
-
-EventScript_Settings_28:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_30
-	goto EventScript_Settings_24
-
-EventScript_Settings_30:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_8
-	goto EventScript_Settings_24
-
-EventScript_Settings_33:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_35
-	goto EventScript_Settings_29
-
-EventScript_Settings_35:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_7
-	goto EventScript_Settings_29
-
-EventScript_Settings_38:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_40
-	goto EventScript_Settings_34
-
-EventScript_Settings_40:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_6
-	goto EventScript_Settings_34
-
-EventScript_Settings_43:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_45
-	goto EventScript_Settings_39
-
-EventScript_Settings_45:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_5
-	goto EventScript_Settings_39
+EventScript_Settings_47:
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_49
+	goto EventScript_Settings_43
 
 EventScript_Settings_49:
-	call EventScript_Settings_BrutalMode
-	goto EventScript_Settings_2
-
-EventScript_Settings_50:
-	call EventScript_Settings_NuzlockeRandomizer
-	goto EventScript_Settings_2
-
-EventScript_Settings_51:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_2
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_9
+	goto EventScript_Settings_43
 
 EventScript_Settings_52:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_53:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_54
+	goto EventScript_Settings_48
 
 EventScript_Settings_54:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_56:
-	msgbox gText_Colress_DefaultExplained
-	goto EventScript_Settings_2
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_8
+	goto EventScript_Settings_48
 
 EventScript_Settings_57:
-	call EventScript_Settings_NuzlockeRandomizer
-	goto EventScript_Settings_2
-
-EventScript_Settings_58:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_2
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_59
+	goto EventScript_Settings_53
 
 EventScript_Settings_59:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_7
+	goto EventScript_Settings_53
 
-EventScript_Settings_60:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_61:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_63:
-	call EventScript_Settings_BrutalMode
-	goto EventScript_Settings_2
+EventScript_Settings_62:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_64
+	goto EventScript_Settings_58
 
 EventScript_Settings_64:
-	msgbox gText_Colress_RandomizerExplanation
-	goto EventScript_Settings_2
-
-EventScript_Settings_65:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_2
-
-EventScript_Settings_66:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_6
+	goto EventScript_Settings_58
 
 EventScript_Settings_67:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, EventScript_Settings_69
+	goto EventScript_Settings_63
 
-EventScript_Settings_68:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_70:
-	msgbox gText_Colress_DefaultExplained
-	goto EventScript_Settings_2
-
-EventScript_Settings_71:
-	msgbox gText_Colress_RandomizerExplanation
-	goto EventScript_Settings_2
-
-EventScript_Settings_72:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_2
+EventScript_Settings_69:
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, EventScript_Settings_5
+	goto EventScript_Settings_63
 
 EventScript_Settings_73:
-	call EventScript_ExpAll
+	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
 EventScript_Settings_74:
-	call EventScript_Surveillance
+	call EventScript_Settings_NuzlockeRandomizer
 	goto EventScript_Settings_2
 
 EventScript_Settings_75:
-	setvar VAR_TEMP_1, 1
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_76:
+	call EventScript_ExpAll
 	goto EventScript_Settings_2
 
 EventScript_Settings_77:
-	call EventScript_Settings_BrutalMode
+	call EventScript_Surveillance
 	goto EventScript_Settings_2
 
 EventScript_Settings_78:
-	call EventScript_Settings_Nuzlocke
-	goto EventScript_Settings_2
-
-EventScript_Settings_79:
-	call EventScript_MusicMenu
+	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
 EventScript_Settings_80:
-	call EventScript_ExpAll
+	msgbox gText_Colress_InfiniteExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_81:
-	call EventScript_Surveillance
+	call EventScript_Settings_NuzlockeRandomizer
 	goto EventScript_Settings_2
 
 EventScript_Settings_82:
-	setvar VAR_TEMP_1, 1
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_83:
+	call EventScript_ExpAll
 	goto EventScript_Settings_2
 
 EventScript_Settings_84:
-	msgbox gText_Colress_DefaultExplained
+	call EventScript_Surveillance
 	goto EventScript_Settings_2
 
 EventScript_Settings_85:
-	call EventScript_Settings_Nuzlocke
-	goto EventScript_Settings_2
-
-EventScript_Settings_86:
-	call EventScript_MusicMenu
+	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
 EventScript_Settings_87:
-	call EventScript_ExpAll
+	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_88:
-	call EventScript_Surveillance
+	call EventScript_Settings_NuzlockeRandomizer
 	goto EventScript_Settings_2
 
 EventScript_Settings_89:
-	setvar VAR_TEMP_1, 1
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_90:
+	call EventScript_ExpAll
 	goto EventScript_Settings_2
 
 EventScript_Settings_91:
-	call EventScript_Settings_BrutalMode
+	call EventScript_Surveillance
 	goto EventScript_Settings_2
 
 EventScript_Settings_92:
-	msgbox gText_Colress_VanillaExplanation
-	goto EventScript_Settings_2
-
-EventScript_Settings_93:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_2
-
-EventScript_Settings_94:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_95:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_96:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
-EventScript_Settings_98:
-	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
+EventScript_Settings_94:
+	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
-EventScript_Settings_99:
-	msgbox gText_Colress_VanillaExplanation, MSGBOX_DEFAULT
+EventScript_Settings_95:
+	msgbox gText_Colress_RandomizerExplanation
 	goto EventScript_Settings_2
 
-EventScript_Settings_100:
+EventScript_Settings_96:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
-EventScript_Settings_101:
+EventScript_Settings_97:
 	call EventScript_ExpAll
 	goto EventScript_Settings_2
 
-EventScript_Settings_102:
+EventScript_Settings_98:
 	call EventScript_Surveillance
 	goto EventScript_Settings_2
 
+EventScript_Settings_99:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_101:
+	msgbox gText_Colress_InfiniteExplained
+	goto EventScript_Settings_2
+
+EventScript_Settings_102:
+	msgbox gText_Colress_RandomizerExplanation
+	goto EventScript_Settings_2
+
 EventScript_Settings_103:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_104:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_105:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_106:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_108:
+	msgbox gText_Colress_DefaultExplained
+	goto EventScript_Settings_2
+
+EventScript_Settings_109:
+	msgbox gText_Colress_RandomizerExplanation
+	goto EventScript_Settings_2
+
+EventScript_Settings_110:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_111:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_112:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_113:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_115:
+	call EventScript_Settings_BrutalMode
+	goto EventScript_Settings_2
+
+EventScript_Settings_116:
+	call EventScript_Settings_Nuzlocke
+	goto EventScript_Settings_2
+
+EventScript_Settings_117:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_118:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_119:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_120:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_122:
+	msgbox gText_Colress_InfiniteExplained
+	goto EventScript_Settings_2
+
+EventScript_Settings_123:
+	call EventScript_Settings_Nuzlocke
+	goto EventScript_Settings_2
+
+EventScript_Settings_124:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_125:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_126:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_127:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_129:
+	msgbox gText_Colress_DefaultExplained
+	goto EventScript_Settings_2
+
+EventScript_Settings_130:
+	call EventScript_Settings_Nuzlocke
+	goto EventScript_Settings_2
+
+EventScript_Settings_131:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_132:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_133:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_134:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_136:
+	call EventScript_Settings_BrutalMode
+	goto EventScript_Settings_2
+
+EventScript_Settings_137:
+	msgbox gText_Colress_VanillaExplanation
+	goto EventScript_Settings_2
+
+EventScript_Settings_138:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_139:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_140:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_141:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_143:
+	msgbox gText_Colress_InfiniteExplained
+	goto EventScript_Settings_2
+
+EventScript_Settings_144:
+	msgbox gText_Colress_VanillaExplanation
+	goto EventScript_Settings_2
+
+EventScript_Settings_145:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_146:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_147:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_148:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_150:
+	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
+	goto EventScript_Settings_2
+
+EventScript_Settings_151:
+	msgbox gText_Colress_VanillaExplanation, MSGBOX_DEFAULT
+	goto EventScript_Settings_2
+
+EventScript_Settings_152:
+	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_153:
+	call EventScript_ExpAll
+	goto EventScript_Settings_2
+
+EventScript_Settings_154:
+	call EventScript_Surveillance
+	goto EventScript_Settings_2
+
+EventScript_Settings_155:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
@@ -4306,24 +4494,36 @@ EventScript_Settings_Text_0:
 	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_1:
-	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
+	.string "You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_2:
-	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_3:
-	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_4:
-	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+	.string "You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_5:
-	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_6:
-	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_Text_7:
+	.string "You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_8:
+	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_9:
+	.string "You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_10:
+	.string "You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
+
+EventScript_Settings_Text_11:
 	.string "You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.$"
 
 EventScript_Settings_BrutalMode_Text_0:
@@ -4573,7 +4773,8 @@ gText_Colress_BrutalExplained::
 	.string "Battle Labyrinth{COLOR DARK_GRAY} already.$"
 
 gText_Colress_InfiniteExplained::
-	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} is the last difficulty option.\p"
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} is the easiest difficulty\n"
+	.string "option.\p"
 	.string "It gives you access to unlimited\n"
 	.string "resources that can normally be\l"
 	.string "obtained by grinding, such as money\l"
@@ -4582,7 +4783,7 @@ gText_Colress_InfiniteExplained::
 	.string "resource management was designed to\l"
 	.string "be part of the challenges ahead.\p"
 	.string "Note the {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty cannot be\n"
-	.string "turned off once set.$"
+	.string "adjusted off once set.$"
 
 gText_Colress_GameModes::
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
