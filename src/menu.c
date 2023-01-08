@@ -2147,6 +2147,8 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
                 string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);*/
             if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON))
                 StringCopy(string, gText_SaveMenuBrutal);
+            else if (FlagGet(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON))
+                StringCopy(string, gText_SaveMenuInfinite);
             else
                 StringCopy(string, gText_SaveMenuDefault);
             break;

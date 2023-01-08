@@ -2152,6 +2152,11 @@ static void MainMenu_FormatSavegameTime(void)
         StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutal);
         AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
     }
+    else if (FlagGet(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == TRUE)
+    {
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuInfinite);
+        AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    }
     else
     {
         StringExpandPlaceholders(gStringVar4, gText_ContinueMenuDefault);

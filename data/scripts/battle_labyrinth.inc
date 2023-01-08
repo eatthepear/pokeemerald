@@ -2821,11 +2821,11 @@ EventScript_Settings_96:
 	goto EventScript_Settings_2
 
 EventScript_Settings_98:
-	msgbox gText_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_99:
-	msgbox gText_Colress_VanillaExplanation
+	msgbox gText_Colress_VanillaExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_100:
@@ -4586,14 +4586,13 @@ gText_Colress_VanillaExplanation::
 	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\nmodifications.$"
 
 gText_Colress_DefaultExplained::
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two\n"
-	.string "difficulty options.\p"
+	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the standard difficulty\n"
+	.string "option.\p"
 	.string "It is recommended for any first\n"
 	.string "playthroughs.$"
 
 gText_Colress_BrutalExplained::
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the two\n"
-	.string "difficulty options.\p"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder difficulty option.\p"
 	.string "All Leviathans are far more challenging.\p"
 	.string "In addition, there are a number of rules\n"
 	.string "implemented to make this mode even\l"
@@ -4618,6 +4617,18 @@ gText_Colress_BrutalExplained::
 	.string "unless you are familiar with {COLOR RED}Pokémon\l"
 	.string "Battle Labyrinth{COLOR DARK_GRAY} already.$"
 
+gText_Colress_InfiniteExplained::
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} is the last difficulty option.\p"
+	.string "It gives you access to unlimited\n"
+	.string "resources that can normally be\l"
+	.string "obtained by grinding, such as money\l"
+	.string "and held items.\p"
+	.string "This is not the intended game mode, as\n"
+	.string "resource management was designed to\l"
+	.string "be part of the challenges ahead.\p"
+	.string "Note the {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty cannot be\n"
+	.string "turned off once set.$"
+
 gText_Colress_GameModes::
 	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
 	.string "optional game modes.\p"
@@ -4631,7 +4642,7 @@ gText_Colress_RandomizerExplanation::
 	.string "including your starter.\p"
 	.string "Trainer Pokémon are left unchanged.\p"
 	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot\n"
-	.string "be turned off.$"
+	.string "be adjusted once set.$"
 
 gText_Colress_NuzlockeExplained::
 	.string "The {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode completely\n"

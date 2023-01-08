@@ -1101,6 +1101,10 @@ static void PrintPokedexOnCard(void)
     {
         AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 97, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardBrutal);
     }
+    else if (FlagGet(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON))
+    {
+        AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 97, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardInfinite);
+    }
     else
     {
         AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 97, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardDefault);

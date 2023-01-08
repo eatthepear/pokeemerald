@@ -41,35 +41,48 @@ script Zone0Sanctuary_EventScript_Intro {
 	}
 	while {
 		if (var(VAR_TEMP_1) == 1) {
-			msgbox(format("There are two game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY} and {COLOR RED}Brutal{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
+			msgbox(format("There are three game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY}, {COLOR RED}Brutal{COLOR DARK_GRAY}, and {COLOR RED}Infinite{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
 			msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-			msgbox(gText_Colress_BrutalExplained)
+			msgbox(gText_Colress_BrutalExplained, MSGBOX_DEFAULT)
+			msgbox(gText_Colress_InfiniteExplained)
 			delay(96)
 		}
 		msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
-		multichoice(2, 5, MULTI_DEFAULT_BRUTAL, 1)
-		if (var(VAR_RESULT) == 0) {
-			if (var(VAR_TEMP_1) == 1) {
-				msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
+		multichoice(2, 5, MULTI_DIFFICULTY, 1)
+		switch(var(VAR_RESULT)) {
+			case 0:
+				if (var(VAR_TEMP_1) == 1) {
+					msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
+						break
+					}
+				} else {
 					call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
 					break
 				}
-			} else {
-				call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-				break
-			}
-		} else {
-			if (var(VAR_TEMP_1) == 1) {
-				msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
+			case 1:
+				if (var(VAR_TEMP_1) == 1) {
+					msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
+						break
+					}
+				} else {
 					call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
 					break
 				}
-			} else {
-				call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-				break
-			}
+			case 2:
+				if (var(VAR_TEMP_1) == 1) {
+					msgbox(format("Are you sure you want to play on {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						call(Zone0Sanctuary_EventScript_SetInfiniteDifficulty)
+						break
+					}
+				} else {
+					call(Zone0Sanctuary_EventScript_SetInfiniteDifficulty)
+					break
+				}
 		}
 	}
 	delay(16)
@@ -146,7 +159,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		closemessage
 	}
 	delay(16)
-	if (var(VAR_TEMP_0)==1) {
+	if (var(VAR_TEMP_0) == 1) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each of the shops."))
 		applymovement(1, Zone0Sanctuary_Movement_Colress_FirstShop)
 		applymovement(OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop)
@@ -314,6 +327,15 @@ script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
 	waitse
 	closemessage
 	special(ReverseHiddenItemFlags)
+	return
+}
+
+script Zone0Sanctuary_EventScript_SetInfiniteDifficulty {
+	setflag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)
+	playse(SE_PC_LOGIN)
+	msgbox(format("{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
+	waitse
+	closemessage
 	return
 }
 

@@ -1997,12 +1997,12 @@ text gText_Colress_VanillaExplanation {
 }
 
 text gText_Colress_DefaultExplained {
-	format("{COLOR RED}Default{COLOR DARK_GRAY} is the easier of the two difficulty options.\p"
+	format("{COLOR RED}Default{COLOR DARK_GRAY} is the standard difficulty option.\p"
 	"It is recommended for any first playthroughs.")
 }
 
 text gText_Colress_BrutalExplained {
-	format("{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder of the two difficulty options.\p"
+	format("{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder difficulty option.\p"
 	"All Leviathans are far more challenging.\p"
 	"In addition, there are a number of rules implemented to make this mode even more difficult.\p"
 	"Defeating all trainers is required to progress to the Sanctuary.\p"
@@ -2019,6 +2019,13 @@ text gText_Colress_BrutalExplained {
 	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }
 
+text gText_Colress_InfiniteExplained {
+	format("{COLOR RED}Infinite{COLOR DARK_GRAY} is the last difficulty option.\p"
+	"It gives you access to unlimited resources that can normally be obtained by grinding, such as money and held items.\p"
+	"This is not the intended game mode, as resource management was designed to be part of the challenges ahead.\p"
+	"Note the {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty cannot be turned off once set.")
+}
+
 text gText_Colress_GameModes {
 	format("{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers optional game modes.\p"
 	"If you do not choose any of them, you will play on the {COLOR RED}Vanilla{COLOR DARK_GRAY} game mode, which adds no extra modifications.")
@@ -2027,7 +2034,7 @@ text gText_Colress_GameModes {
 text gText_Colress_RandomizerExplanation {
 	format("The {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode randomizes wild encounters and gift Pokémon, including your starter.\p"
 	"Trainer Pokémon are left unchanged.\p"
-	"Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot be turned off.")
+	"Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot be adjusted once set.")
 }
 
 text gText_Colress_NuzlockeExplained {
