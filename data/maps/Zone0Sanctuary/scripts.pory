@@ -312,6 +312,7 @@ script Zone0Sanctuary_EventScript_Intro {
 }
 
 script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
+	setflag(FLAG_SETTINGS_MANDATORY_DECREASED)
 	setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
@@ -322,6 +323,7 @@ script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
 
 script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
 	setflag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)
+	setflag(FLAG_SETTINGS_MANDATORY_INCREASED)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
 	waitse
@@ -332,6 +334,7 @@ script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
 
 script Zone0Sanctuary_EventScript_SetInfiniteDifficulty {
 	setflag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)
+	setflag(FLAG_SETTINGS_MANDATORY_DECREASED)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
 	waitse
