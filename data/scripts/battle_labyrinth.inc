@@ -44,32 +44,12 @@ EventScript_Shop_General_1:
 EventScript_Shop_General_4:
 	message EventScript_Shop_General_Text_2
 	waitmessage
-	switch VAR_ZONE
-	case 1, EventScript_Shop_General_11
-	case 2, EventScript_Shop_General_11
-	case 3, EventScript_Shop_General_11
-	case 4, EventScript_Shop_General_12
-	case 5, EventScript_Shop_General_12
-	case 6, EventScript_Shop_General_12
-	case 7, EventScript_Shop_General_12
-	case 9, EventScript_Shop_General_13
-	case 10, EventScript_Shop_General_13
-	case 11, EventScript_Shop_General_13
-	case 12, EventScript_Shop_General_13
-	case 13, EventScript_Shop_General_14
-	case 15, EventScript_Shop_General_14
-	case 16, EventScript_Shop_General_15
-	case 17, EventScript_Shop_General_15
-	case 18, EventScript_Shop_General_15
-	case 20, EventScript_Shop_General_15
-	case 21, EventScript_Shop_General_15
-	case 22, EventScript_Shop_General_15
-	case 23, EventScript_Shop_General_15
-	case 24, EventScript_Shop_General_15
-	case 25, EventScript_Shop_General_15
-	case 26, EventScript_Shop_General_16
+	multichoice 1, 0, MULTI_TIM, 0
+	switch VAR_RESULT
+	case 0, EventScript_Shop_General_11
+	case 1, EventScript_Shop_General_12
 EventScript_Shop_General_9:
-	msgbox EventScript_Shop_General_Text_3, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_General_Text_5, MSGBOX_DEFAULT
 	release
 	return
 
@@ -88,83 +68,115 @@ EventScript_Shop_General_6:
 	goto EventScript_Shop_General_4
 
 EventScript_Shop_General_11:
-	pokemart Shop_General_1to3
+	message EventScript_Shop_General_Text_3
+	waitmessage
+	switch VAR_ZONE
+	case 1, EventScript_Shop_General_14
+	case 2, EventScript_Shop_General_14
+	case 3, EventScript_Shop_General_14
+	case 4, EventScript_Shop_General_15
+	case 5, EventScript_Shop_General_15
+	case 6, EventScript_Shop_General_15
+	case 7, EventScript_Shop_General_15
+	case 9, EventScript_Shop_General_15
+	case 10, EventScript_Shop_General_15
+	case 11, EventScript_Shop_General_15
+	case 12, EventScript_Shop_General_15
+	case 13, EventScript_Shop_General_16
+	case 15, EventScript_Shop_General_16
+	case 16, EventScript_Shop_General_17
+	case 17, EventScript_Shop_General_17
+	case 18, EventScript_Shop_General_17
+	case 20, EventScript_Shop_General_17
+	case 21, EventScript_Shop_General_17
+	case 22, EventScript_Shop_General_17
+	case 23, EventScript_Shop_General_17
+	case 24, EventScript_Shop_General_17
+	case 25, EventScript_Shop_General_17
+	case 26, EventScript_Shop_General_18
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_12:
-	pokemart Shop_General_4to8
-	goto EventScript_Shop_General_9
-
-EventScript_Shop_General_13:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_17
-	pokemart Shop_General_9to12
+	message EventScript_Shop_General_Text_4
+	waitmessage
+	switch VAR_ZONE
+	case 1, EventScript_Shop_General_20
+	case 2, EventScript_Shop_General_20
+	case 3, EventScript_Shop_General_20
+	case 4, EventScript_Shop_General_20
+	case 5, EventScript_Shop_General_20
+	case 6, EventScript_Shop_General_20
+	case 7, EventScript_Shop_General_20
+	case 9, EventScript_Shop_General_21
+	case 10, EventScript_Shop_General_21
+	case 11, EventScript_Shop_General_21
+	case 12, EventScript_Shop_General_21
+	case 13, EventScript_Shop_General_21
+	case 15, EventScript_Shop_General_21
+	case 16, EventScript_Shop_General_21
+	case 17, EventScript_Shop_General_21
+	case 18, EventScript_Shop_General_21
+	case 20, EventScript_Shop_General_21
+	case 21, EventScript_Shop_General_21
+	case 22, EventScript_Shop_General_21
+	case 23, EventScript_Shop_General_21
+	case 24, EventScript_Shop_General_21
+	case 25, EventScript_Shop_General_21
+	case 26, EventScript_Shop_General_22
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_14:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_20
-	pokemart Shop_General_13to15
+	pokemart Shop_General_Common_1to3
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_15:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_23
-	pokemart Shop_General_16to25
+	pokemart Shop_General_Common_4to12
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_16:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_26
-	pokemart Shop_General_26to30
+	pokemart Shop_General_Common_13to15
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_17:
-	pokemart Shop_General_9to12_Brutal
+	pokemart Shop_General_Common_16to25
+	goto EventScript_Shop_General_9
+
+EventScript_Shop_General_18:
+	pokemart Shop_General_Common_26to30
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_20:
-	pokemart Shop_General_13to15_Brutal
+	pokemart Shop_General_Utility_1to8
+	goto EventScript_Shop_General_9
+
+EventScript_Shop_General_21:
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Shop_General_23
+	goto_if_set FLAG_SETTINGS_NO_IN_BATTLE_ITEMS, EventScript_Shop_General_23
+	pokemart Shop_General_Utility_9to25
+	goto EventScript_Shop_General_9
+
+EventScript_Shop_General_22:
+	pokemart Shop_General_Utility_26to30
 	goto EventScript_Shop_General_9
 
 EventScript_Shop_General_23:
-	pokemart Shop_General_16to25_Brutal
-	goto EventScript_Shop_General_9
-
-EventScript_Shop_General_26:
-	pokemart Shop_General_26to30_Brutal
+	pokemart Shop_General_Utility_9to25_NoXItems
 	goto EventScript_Shop_General_9
 
 
 	.align 2
-Shop_General_1to3:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_NONE
-
-	.align 2
-Shop_General_4to8:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
+Shop_General_Utility_1to8:
 	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_9to12:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
+Shop_General_Utility_9to25_NoXItems:
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_NONE
+
+	.align 2
+Shop_General_Utility_9to25:
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_X_ATTACK
@@ -178,33 +190,7 @@ Shop_General_9to12:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_9to12_Brutal:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_REPEL
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_NONE
-
-	.align 2
-Shop_General_13to15:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
+Shop_General_Utility_26to30:
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_X_ATTACK
@@ -215,102 +201,6 @@ Shop_General_13to15:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_ETHER
-	.2byte ITEM_NONE
-
-	.align 2
-Shop_General_13to15_Brutal:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_REPEL
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_ETHER
-	.2byte ITEM_NONE
-
-	.align 2
-Shop_General_16to25:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_REVIVE
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REPEL
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_X_SP_DEF
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ACCURACY
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_ETHER
-	.2byte ITEM_NONE
-
-	.align 2
-Shop_General_16to25_Brutal:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_REVIVE
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REPEL
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_ETHER
-	.2byte ITEM_NONE
-
-	.align 2
-Shop_General_26to30:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REVIVE
-	.2byte ITEM_REPEL
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_X_SP_DEF
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ACCURACY
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_ETHER
-	.2byte ITEM_ELIXIR
 	.2byte ITEM_HP_UP
 	.2byte ITEM_PROTEIN
 	.2byte ITEM_IRON
@@ -320,7 +210,62 @@ Shop_General_26to30:
 	.2byte ITEM_NONE
 
 	.align 2
-Shop_General_26to30_Brutal:
+Shop_General_Common_1to3:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_NONE
+
+	.align 2
+Shop_General_Common_4to12:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_NONE
+
+	.align 2
+Shop_General_Common_13to15:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ETHER
+	.2byte ITEM_NONE
+
+	.align 2
+Shop_General_Common_16to25:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_ETHER
+	.2byte ITEM_NONE
+
+	.align 2
+Shop_General_Common_26to30:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
@@ -4084,6 +4029,14 @@ EventScript_Shop_General_Text_2:
 	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Welcome to Tim's.\nCan I get you anything?$"
 
 EventScript_Shop_General_Text_3:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Ah, so you're looking for Pokéballs\n"
+	.string "and healing items?$"
+
+EventScript_Shop_General_Text_4:
+	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Ah, so it's field items you're\n"
+	.string "looking for?$"
+
+EventScript_Shop_General_Text_5:
 	.string "{COLOR BLUE}Tim{COLOR DARK_GRAY}: Have a nice day.$"
 
 EventScript_Shop_Unique_Varrick_Text_0:

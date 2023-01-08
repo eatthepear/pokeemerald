@@ -2065,6 +2065,5 @@ const u8 gText_Emolga[] = _("Emolga");
 const u8 gText_Dedenne[] = _("Dedenne");
 const u8 gText_Morpeko[] = _("Morpeko");
 
-const u8 gText_LevelCap[] = _("Level Cap");
-const u8 gText_Opponents[] = _("Opponents");
-const u8 gText_Items[] = _("Items");
+const u8 gText_Common[] = _("Common Items");
+const u8 gText_Field[] = _("Field Items");

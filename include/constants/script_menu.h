@@ -71,7 +71,7 @@
 #define MULTI_LELOUCH_EV_NUMBERS           60
 #define MULTI_LELOUCH_STATS                61
 #define MULTI_LELOUCH_IV_NUMBERS           62
-#define MULTI_INFO                         63
+#define MULTI_TIM                          63
 #define MULTI_SHARDS_RYB                   64
 #define MULTI_SHARDS_G                     65
 #define MULTI_SHARDS_RG                    66
