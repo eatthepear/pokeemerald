@@ -3149,8 +3149,22 @@ extern const u8 gText_Difficulty[];
 extern const u8 gText_Mode[];
 extern const u8 gText_Game[];
 extern const u8 gText_Music[];
+
+extern const u8 gText_MandatoryFoes[];
+extern const u8 gText_BattleDifficulty[];
+extern const u8 gText_InBattleItems[];
+extern const u8 gText_EVs[];
+extern const u8 gText_PPCosts[];
 extern const u8 gText_ExpAll[];
+extern const u8 gText_Farming[];
+extern const u8 gText_Grinding[];
+extern const u8 gText_HelperNPCs[];
+extern const u8 gText_HiddenItems[];
+extern const u8 gText_TMs[];
+extern const u8 gText_RetireZone[];
+extern const u8 gText_TrainerRewards[];
 extern const u8 gText_Surveil[];
+
 extern const u8 gText_WildBattle[];
 extern const u8 gText_TrainerBattle[];
 extern const u8 gText_LeviathanBattle[];

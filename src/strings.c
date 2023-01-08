@@ -1931,8 +1931,22 @@ const u8 gText_Difficulty[] = _("Difficulty");
 const u8 gText_Mode[] = _("Mode");
 const u8 gText_Game[] = _("Game");
 const u8 gText_Music[] = _("Music");
+
+const u8 gText_MandatoryFoes[] = _("Mandatory Foes");
+const u8 gText_BattleDifficulty[] = _("Battle Difficulty");
+const u8 gText_InBattleItems[] = _("In-Battle Items");
+const u8 gText_EVs[] = _("EVs");
+const u8 gText_PPCosts[] = _("PP Costs");
 const u8 gText_ExpAll[] = _("Exp. All");
+const u8 gText_Farming[] = _("Farming");
+const u8 gText_Grinding[] = _("Grinding");
+const u8 gText_HelperNPCs[] = _("Helper NPCs");
+const u8 gText_HiddenItems[] = _("Hidden Items");
+const u8 gText_TMs[] = _("TMs");
+const u8 gText_RetireZone[] = _("Retire");
+const u8 gText_TrainerRewards[] = _("Trainer Rewards");
 const u8 gText_Surveil[] = _("Surveil");
+
 const u8 gText_WildBattle[] = _("Wild Battles");
 const u8 gText_TrainerBattle[] = _("Trainer Battles");
 const u8 gText_LeviathanBattle[] = _("Leviathan Battles");

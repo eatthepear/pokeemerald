@@ -1834,7 +1834,7 @@ static void Cmd_ppreduce(void)
     if (gBattleControllerExecFlags)
         return;
 
-    if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == TRUE) || (FlagGet(FLAG_SETTINGS_NERF_PP) == TRUE))
+    if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == TRUE) || (FlagGet(FLAG_SETTINGS_PP_COSTS) == TRUE))
     {
         if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
         {
@@ -4024,7 +4024,7 @@ static void Cmd_getexp(void)
         }
         else
         {
-            if (FlagGet(FLAG_SETTINGS_EXP_ALL_ON) && ShouldPrintExpAllMsg())
+            if (FlagGet(FLAG_SETTINGS_EXP_ALL) && ShouldPrintExpAllMsg())
                 PrepareStringBattle(STRINGID_COINSSCATTERED, gBattleStruct->expGetterBattlerId);
             gBattleScripting.getexpState++;
             gBattleStruct->givenExpMons |= gBitTable[gBattlerPartyIndexes[gBattlerFainted]];
@@ -4049,7 +4049,7 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
 
-                // if (holdEffect == HOLD_EFFECT_EXP_SHARE && !FlagGet(FLAG_SETTINGS_EXP_ALL_ON))
+                // if (holdEffect == HOLD_EFFECT_EXP_SHARE && !FlagGet(FLAG_SETTINGS_EXP_ALL))
                 //     viaExpShare++;
             }
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
@@ -4080,7 +4080,7 @@ static void Cmd_getexp(void)
                 *exp = calculatedExp;
                 if (*exp == 0)
                     *exp = 1;
-                if (FlagGet(FLAG_SETTINGS_EXP_ALL_ON))
+                if (FlagGet(FLAG_SETTINGS_EXP_ALL))
                     gExpShareExp = calculatedExp / 4;
                 else
                     gExpShareExp = calculatedExp;
@@ -4103,7 +4103,7 @@ static void Cmd_getexp(void)
             else
                 holdEffect = ItemId_GetHoldEffect(item);
 
-            if (!FlagGet(FLAG_SETTINGS_EXP_ALL_ON) && holdEffect != HOLD_EFFECT_EXP_SHARE && !(gBattleStruct->sentInPokes & 1))
+            if (!FlagGet(FLAG_SETTINGS_EXP_ALL) && holdEffect != HOLD_EFFECT_EXP_SHARE && !(gBattleStruct->sentInPokes & 1))
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
@@ -4139,13 +4139,13 @@ static void Cmd_getexp(void)
 
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP))
                 {
-                    if ((gBattleStruct->sentInPokes & 1) || ((holdEffect == HOLD_EFFECT_EXP_SHARE) && FlagGet(FLAG_SETTINGS_EXP_ALL_ON)))
+                    if ((gBattleStruct->sentInPokes & 1) || ((holdEffect == HOLD_EFFECT_EXP_SHARE) && FlagGet(FLAG_SETTINGS_EXP_ALL)))
                         gBattleMoveDamage = *exp;
                     else
                         gBattleMoveDamage = 0;
 
                     // only give exp share bonus in later gens if the mon wasn't sent out
-                    if (((holdEffect == HOLD_EFFECT_EXP_SHARE) || FlagGet(FLAG_SETTINGS_EXP_ALL_ON)) && ((gBattleMoveDamage == 0)))
+                    if (((holdEffect == HOLD_EFFECT_EXP_SHARE) || FlagGet(FLAG_SETTINGS_EXP_ALL)) && ((gBattleMoveDamage == 0)))
                         gBattleMoveDamage += gExpShareExp;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
@@ -4205,7 +4205,7 @@ static void Cmd_getexp(void)
                         gBattleStruct->expGetterBattlerId = 0;
                     }
 
-                    if (FlagGet(FLAG_SETTINGS_EXP_ALL_ON) == FALSE)
+                    if (FlagGet(FLAG_SETTINGS_EXP_ALL) == FALSE)
                     {
                         PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattleStruct->expGetterBattlerId, gBattleStruct->expGetterMonId);
                         // buffer 'gained' or 'gained a boosted'
@@ -7125,11 +7125,6 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) || FlagGet(FLAG_SETTINGS_DECREASED_REWARDS))
     {
         scale = 2;
-    }
-
-    if (((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) || FlagGet(FLAG_SETTINGS_NO_REVISITING_REWARDS)) && (FlagGet(FLAG_IS_REVISITING_ZONE)))
-    {
-        scale = 0;
     }
 
     if (trainerId == TRAINER_SECRET_BASE)

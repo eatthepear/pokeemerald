@@ -2100,8 +2100,360 @@ text gText_Colress_NumDeathsNuzlocke {
 	"So far there have been {STR_VAR_1} death(s)."
 }
 
+text gText_Colress_CannotChangeSetting {
+	format("You cannot change this setting, as you are on Brutal difficulty.")
+}
+
 script EventScript_GameSettings {
-	
+	while {
+		message(format("Which game setting would you like to change?"))
+		waitmessage
+		setvar(VAR_0x8004, SCROLL_MULTI_GAME_SETTINGS)
+		special(ShowScrollableMultichoice)
+		waitstate
+		switch (var(VAR_RESULT)) {
+			case 0:
+				msgbox(format("Many trainers are usually optional, but can be changed to become mandatory, to increase the difficulty of the game."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_MANDATORY_INCREASED) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Many trainers have been changed to become mandatory."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to make it so that these trainers are optional?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Trainers set to optional.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_MANDATORY_INCREASED)
+							setflag(FLAG_SETTINGS_MANDATORY_DECREASED)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Many trainers are optional and can be avoided."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make it so that these trainers are mandatory?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Trainers set to mandatory.", MSGBOX_DEFAULT)
+						waitse
+						clearflag(FLAG_SETTINGS_MANDATORY_DECREASED)
+						setflag(FLAG_SETTINGS_MANDATORY_INCREASED)
+					}
+				}
+			case 1:
+				msgbox(format("Leviathans and other boss battles have two possible difficulties."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_HARD_BATTLES) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Boss battles are currently set to the harder difficulty."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to make it so that these battles are easier?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox(format("Boss battles set to the easier difficulty."), MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_HARD_BATTLES)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Boss battles are currently set to the easier difficulty."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make it so that these battles are more difficult?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox(format("Boss battles set to the harder difficulty."), MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_HARD_BATTLES)
+					}
+				}
+			case 2:
+				msgbox(format("In-battle items, such as healing items or X-items, generally give the player an extreme advantage over opponents, especially when used well.\p{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} does not have opponents use any items."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("The usage of in-battle items is currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable in-battle items?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Enabled in-battle items.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("The usage of in-battle items is currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable in-battle items?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Disabled in-battle items.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS)
+					}
+				}
+			case 3:
+				if (flag(FLAG_SETTINGS_NO_EVS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("EVs are currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable EVs?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Enabled EVs.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_NO_EVS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("EVs are currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable EVs?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Disabled EVs.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_NO_EVS)
+					}
+				}
+			case 4:
+				msgbox(format("PP stalling is an arduous and boring strategy.\pIn addition, some moves are extraordinarily powerful in the hands of a player, such as setup moves or healing moves.\pThis setting both increases the PP cost of the player's usage of strong moves, limiting their overall usage, as well as disables opponents' using PP."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_PP_COSTS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("PP cost changes are currently enabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to disable these PP cost changes?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("PP cost changes reverted to normal.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_PP_COSTS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Would you like to enable these PP cost changes?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("PP cost changes enabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_PP_COSTS)
+					}
+				}
+			case 5:
+				msgbox(format("The Exp. All setting, if turned on, gives members of your party that don't participate in battle 25% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_EXP_ALL) == true) {
+					msgbox(format("The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_OFF)
+						msgbox(format("Turned the Exp. All off."), MSGBOX_DEFAULT)
+						waitse
+						clearflag(FLAG_SETTINGS_EXP_ALL)
+					}
+				} else {
+					msgbox(format("The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox(format("Turned the Exp. All on."), MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_EXP_ALL)
+					}
+				}
+			case 6:
+				msgbox(format("In most Pokémon games, players can farm items and money by growing Berries, Thief, and other means.\pThe ability to 'farm', so to speak, can be disabled by this setting."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_NO_FARMING) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Farming is currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable farming?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Farming enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_NO_FARMING)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Farming is currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable farming?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Farming disabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_NO_FARMING)
+					}
+				}
+			case 7:
+				msgbox(format("In most Pokémon games, players can 'grind' experience by defeating wild Pokémon.\pThis setting can disable wild Pokémon giving experience, to prevent the player from grinding."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_NO_WILD_EXP) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Grinding is currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable grinding on wild Pokémon?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Grinding enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_NO_WILD_EXP)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Grinding is currenlty enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable grinding on wild Pokémon?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Grinding disabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_NO_WILD_EXP)
+					}
+				}
+			case 8:
+				msgbox(format("In some Zones, there are certain helper NPCs that can sell cheap items or heal the player's party.\pThis setting can disable their services."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Helper NPCs are currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable helper NPCs?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Helper NPCs enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_REMOVE_HELPER_NPCS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Helper NPCs are currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable helper NPCs?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Helper NPCs disabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_REMOVE_HELPER_NPCS)
+					}
+				}
+			case 9:
+				msgbox(format("Hidden items can be disabled to limit the supply of available items.\pThis is recommended to be used alongside the disabling farming setting."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Hidden items are curently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable hidden items?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Hidden items enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Hidden items are currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable hidden items?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Hidden items disabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
+					}
+				}
+			case 10:
+				if (flag(FLAG_SETTINGS_SINGLE_USE_TMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("TMs are currently single use."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to make TMs infinite use?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("TMs are now infinite use.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_SINGLE_USE_TMS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("TMs are currently infinite use."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make TMs single use?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("TMs are now single use.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_SINGLE_USE_TMS)
+					}
+				}
+			case 11:
+				msgbox(format("Retiring from a Zone allows one to return to the Sanctuary, at the cost of half of their money as well as losing all progress made thus far in the Zone."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_DISABLE_RETIRE) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Retiring is currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to enable Retiring?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Retiring enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_DISABLE_RETIRE)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Retiring is currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable Retiring?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Retiring disabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_DISABLE_RETIRE)
+					}
+				}
+			case 12:
+				if (flag(FLAG_SETTINGS_DECREASED_REWARDS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("Trainers currently give 1/2 their reward money."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to revert Trainer reward money to its default amount?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Trainer reward money reverted to its default amount.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_DECREASED_REWARDS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Trainers currently give their default reward money."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to decrease trainer reward money by 1/2?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Trainer reward money set to 1/2.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_DECREASED_REWARDS)
+					}
+				}
+			case 13:
+				msgbox(format("In trainer battles, you can Surveil the opposing party to gain more information."))
+				if (flag(FLAG_SETTINGS_FULL_PREVIEW_ON) == true) {
+					msgbox(format("Surveil currently reveals all information about the opposing party.\pWould you like to decrease the amount of information it reveals?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_OFF)
+						msgbox(format("Lowered the power of Surveil.\pYou will only be able to view the opposing team's Pokémon and their health."), MSGBOX_DEFAULT)
+						waitse
+						closemessage
+						clearflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+					}
+				} else {
+					msgbox(format("Surveil currently reveals only the opposing team's Pokémon and their health.\pWould you like to increase the amount of information it reveals?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox(format("Increased the power of Surveil.\pYou will be able to view all information about the opposing party."), MSGBOX_DEFAULT)
+						waitse
+						closemessage
+						setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+					}
+				}
+			case MULTI_B_PRESSED:
+				return
+		}
+	}
 }
 
 script EventScript_MusicMenu {
@@ -2240,30 +2592,6 @@ script EventScript_MusicMenu {
 				return
 		}
 	}
-}
-
-script EventScript_ExpAll {
-	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 25% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
-	if (flag(FLAG_SETTINGS_EXP_ALL_ON) == true) {
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == YES) {
-			playse(SE_PC_OFF)
-			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."), MSGBOX_DEFAULT)
-			waitse
-			closemessage
-			clearflag(FLAG_SETTINGS_EXP_ALL_ON)
-		}
-	} else {
-		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == YES) {
-			playse(SE_PC_ON)
-			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."), MSGBOX_DEFAULT)
-			waitse
-			closemessage
-			setflag(FLAG_SETTINGS_EXP_ALL_ON)
-		}
-	}
-	return
 }
 
 script EventScript_Surveillance {

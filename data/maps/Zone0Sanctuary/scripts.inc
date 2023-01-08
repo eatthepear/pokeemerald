@@ -801,7 +801,7 @@ Zone0Sanctuary_EventScript_EndIntro::
 	additem ITEM_POKE_BALL, 15
 	additem ITEM_POTION, 10
 Zone0Sanctuary_EventScript_EndIntro_1:
-	setflag FLAG_SETTINGS_EXP_ALL_ON
+	setflag FLAG_SETTINGS_EXP_ALL
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	special NewGameSetup

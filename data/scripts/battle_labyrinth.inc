@@ -2997,7 +2997,520 @@ EventScript_Settings_Nuzlocke_3:
 
 
 EventScript_GameSettings::
+EventScript_GameSettings_1:
+	message EventScript_GameSettings_Text_0
+	waitmessage
+	setvar VAR_0x8004, SCROLL_MULTI_GAME_SETTINGS
+	special ShowScrollableMultichoice
+	waitstate
+	switch VAR_RESULT
+	case 0, EventScript_GameSettings_4
+	case 1, EventScript_GameSettings_5
+	case 2, EventScript_GameSettings_6
+	case 3, EventScript_GameSettings_7
+	case 4, EventScript_GameSettings_8
+	case 5, EventScript_GameSettings_9
+	case 6, EventScript_GameSettings_10
+	case 7, EventScript_GameSettings_11
+	case 8, EventScript_GameSettings_12
+	case 9, EventScript_GameSettings_13
+	case 10, EventScript_GameSettings_14
+	case 11, EventScript_GameSettings_15
+	case 12, EventScript_GameSettings_16
+	case 13, EventScript_GameSettings_17
+	case MULTI_B_PRESSED, EventScript_GameSettings_18
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_4:
+	msgbox EventScript_GameSettings_Text_1, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_MANDATORY_INCREASED, EventScript_GameSettings_19
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_19
+	msgbox EventScript_GameSettings_Text_5, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_6, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_88
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_5:
+	msgbox EventScript_GameSettings_Text_8, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, EventScript_GameSettings_24
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_24
+	msgbox EventScript_GameSettings_Text_12, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_13, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_93
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_6:
+	msgbox EventScript_GameSettings_Text_15, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_NO_IN_BATTLE_ITEMS, EventScript_GameSettings_29
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_29
+	msgbox EventScript_GameSettings_Text_19, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_20, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_98
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_7:
+	goto_if_set FLAG_SETTINGS_NO_EVS, EventScript_GameSettings_34
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_34
+	msgbox EventScript_GameSettings_Text_25, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_26, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_103
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_8:
+	msgbox EventScript_GameSettings_Text_28, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_PP_COSTS, EventScript_GameSettings_39
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_39
+	msgbox EventScript_GameSettings_Text_32, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_108
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_9:
+	msgbox EventScript_GameSettings_Text_34, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_EXP_ALL, EventScript_GameSettings_44
+	msgbox EventScript_GameSettings_Text_37, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_112
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_10:
+	msgbox EventScript_GameSettings_Text_39, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_NO_FARMING, EventScript_GameSettings_47
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_47
+	msgbox EventScript_GameSettings_Text_43, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_44, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_117
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_11:
+	msgbox EventScript_GameSettings_Text_46, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_NO_WILD_EXP, EventScript_GameSettings_52
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_52
+	msgbox EventScript_GameSettings_Text_50, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_51, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_122
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_12:
+	msgbox EventScript_GameSettings_Text_53, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_REMOVE_HELPER_NPCS, EventScript_GameSettings_57
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_57
+	msgbox EventScript_GameSettings_Text_57, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_58, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_127
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_13:
+	msgbox EventScript_GameSettings_Text_60, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS, EventScript_GameSettings_62
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_62
+	msgbox EventScript_GameSettings_Text_64, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_65, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_132
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_14:
+	goto_if_set FLAG_SETTINGS_SINGLE_USE_TMS, EventScript_GameSettings_67
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_67
+	msgbox EventScript_GameSettings_Text_70, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_71, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_137
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_15:
+	msgbox EventScript_GameSettings_Text_73, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_DISABLE_RETIRE, EventScript_GameSettings_72
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_72
+	msgbox EventScript_GameSettings_Text_77, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_78, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_142
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_16:
+	goto_if_set FLAG_SETTINGS_DECREASED_REWARDS, EventScript_GameSettings_77
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_77
+	msgbox EventScript_GameSettings_Text_83, MSGBOX_DEFAULT
+	msgbox EventScript_GameSettings_Text_84, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_147
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_17:
+	msgbox EventScript_GameSettings_Text_86
+	goto_if_set FLAG_SETTINGS_FULL_PREVIEW_ON, EventScript_GameSettings_82
+	msgbox EventScript_GameSettings_Text_89, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_151
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_18:
 	return
+
+EventScript_GameSettings_19:
+	msgbox EventScript_GameSettings_Text_2, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_85
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_24:
+	msgbox EventScript_GameSettings_Text_9, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_90
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_29:
+	msgbox EventScript_GameSettings_Text_16, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_95
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_34:
+	msgbox EventScript_GameSettings_Text_22, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_100
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_39:
+	msgbox EventScript_GameSettings_Text_29, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_105
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_44:
+	msgbox EventScript_GameSettings_Text_35, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_110
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_47:
+	msgbox EventScript_GameSettings_Text_40, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_114
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_52:
+	msgbox EventScript_GameSettings_Text_47, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_119
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_57:
+	msgbox EventScript_GameSettings_Text_54, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_124
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_62:
+	msgbox EventScript_GameSettings_Text_61, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_129
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_67:
+	msgbox EventScript_GameSettings_Text_67, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_134
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_72:
+	msgbox EventScript_GameSettings_Text_74, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_139
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_77:
+	msgbox EventScript_GameSettings_Text_80, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_144
+	msgbox gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_82:
+	msgbox EventScript_GameSettings_Text_87, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_149
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_85:
+	msgbox EventScript_GameSettings_Text_3, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_153
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_88:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_7, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_MANDATORY_DECREASED
+	setflag FLAG_SETTINGS_MANDATORY_INCREASED
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_90:
+	msgbox EventScript_GameSettings_Text_10, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_155
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_93:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_14, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_HARD_BATTLES
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_95:
+	msgbox EventScript_GameSettings_Text_17, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_157
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_98:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_21, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_NO_IN_BATTLE_ITEMS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_100:
+	msgbox EventScript_GameSettings_Text_23, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_159
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_103:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_27, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_NO_EVS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_105:
+	msgbox EventScript_GameSettings_Text_30, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_161
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_108:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_33, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_PP_COSTS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_110:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_36, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_EXP_ALL
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_112:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_38, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_EXP_ALL
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_114:
+	msgbox EventScript_GameSettings_Text_41, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_163
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_117:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_45, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_NO_FARMING
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_119:
+	msgbox EventScript_GameSettings_Text_48, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_165
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_122:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_52, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_NO_WILD_EXP
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_124:
+	msgbox EventScript_GameSettings_Text_55, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_167
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_127:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_59, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_REMOVE_HELPER_NPCS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_129:
+	msgbox EventScript_GameSettings_Text_62, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_169
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_132:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_66, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_134:
+	msgbox EventScript_GameSettings_Text_68, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_171
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_137:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_72, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_SINGLE_USE_TMS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_139:
+	msgbox EventScript_GameSettings_Text_75, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_173
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_142:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_79, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_DISABLE_RETIRE
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_144:
+	msgbox EventScript_GameSettings_Text_81, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GameSettings_175
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_147:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_85, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_DECREASED_REWARDS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_149:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_88, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	clearflag FLAG_SETTINGS_FULL_PREVIEW_ON
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_151:
+	playse SE_PC_ON
+	msgbox EventScript_GameSettings_Text_90, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	setflag FLAG_SETTINGS_FULL_PREVIEW_ON
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_153:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_4, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_MANDATORY_INCREASED
+	setflag FLAG_SETTINGS_MANDATORY_DECREASED
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_155:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_11, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_HARD_BATTLES
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_157:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_18, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_NO_IN_BATTLE_ITEMS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_159:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_24, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_NO_EVS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_161:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_31, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_PP_COSTS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_163:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_42, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_NO_FARMING
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_165:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_49, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_NO_WILD_EXP
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_167:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_56, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_REMOVE_HELPER_NPCS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_169:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_63, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_171:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_69, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_SINGLE_USE_TMS
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_173:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_76, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_DISABLE_RETIRE
+	goto EventScript_GameSettings_1
+
+EventScript_GameSettings_175:
+	playse SE_PC_OFF
+	msgbox EventScript_GameSettings_Text_82, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_DECREASED_REWARDS
+	goto EventScript_GameSettings_1
 
 
 EventScript_MusicMenu::
@@ -3268,38 +3781,6 @@ EventScript_MusicMenu_63:
 EventScript_MusicMenu_64:
 	setvar VAR_TEMP_0, 0
 	goto EventScript_MusicMenu_14
-
-
-EventScript_ExpAll::
-	msgbox EventScript_ExpAll_Text_0
-	goto_if_set FLAG_SETTINGS_EXP_ALL_ON, EventScript_ExpAll_2
-	msgbox EventScript_ExpAll_Text_3, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_ExpAll_7
-EventScript_ExpAll_1:
-	return
-
-EventScript_ExpAll_2:
-	msgbox EventScript_ExpAll_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_ExpAll_5
-	goto EventScript_ExpAll_1
-
-EventScript_ExpAll_5:
-	playse SE_PC_OFF
-	msgbox EventScript_ExpAll_Text_2, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_SETTINGS_EXP_ALL_ON
-	goto EventScript_ExpAll_1
-
-EventScript_ExpAll_7:
-	playse SE_PC_ON
-	msgbox EventScript_ExpAll_Text_4, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	setflag FLAG_SETTINGS_EXP_ALL_ON
-	goto EventScript_ExpAll_1
 
 
 EventScript_Surveillance::
@@ -4487,6 +4968,360 @@ EventScript_Settings_NuzlockeRandomizer_Text_0:
 EventScript_Settings_Nuzlocke_Text_0:
 	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.$"
 
+EventScript_GameSettings_Text_0:
+	.string "Which game setting would you like to\n"
+	.string "change?$"
+
+EventScript_GameSettings_Text_1:
+	.string "Many trainers are usually optional, but\n"
+	.string "can be changed to become mandatory,\l"
+	.string "to increase the difficulty of the game.$"
+
+EventScript_GameSettings_Text_2:
+	.string "Many trainers have been changed to\n"
+	.string "become mandatory.$"
+
+EventScript_GameSettings_Text_3:
+	.string "Would you like to make it so that these\n"
+	.string "trainers are optional?$"
+
+EventScript_GameSettings_Text_4:
+	.string "Trainers set to optional.$"
+
+EventScript_GameSettings_Text_5:
+	.string "Many trainers are optional and can be\n"
+	.string "avoided.$"
+
+EventScript_GameSettings_Text_6:
+	.string "Would you like to make it so that these\n"
+	.string "trainers are mandatory?$"
+
+EventScript_GameSettings_Text_7:
+	.string "Trainers set to mandatory.$"
+
+EventScript_GameSettings_Text_8:
+	.string "Leviathans and other boss battles have\n"
+	.string "two possible difficulties.$"
+
+EventScript_GameSettings_Text_9:
+	.string "Boss battles are currently set to the\n"
+	.string "harder difficulty.$"
+
+EventScript_GameSettings_Text_10:
+	.string "Would you like to make it so that these\n"
+	.string "battles are easier?$"
+
+EventScript_GameSettings_Text_11:
+	.string "Boss battles set to the easier\n"
+	.string "difficulty.$"
+
+EventScript_GameSettings_Text_12:
+	.string "Boss battles are currently set to the\n"
+	.string "easier difficulty.$"
+
+EventScript_GameSettings_Text_13:
+	.string "Would you like to make it so that these\n"
+	.string "battles are more difficult?$"
+
+EventScript_GameSettings_Text_14:
+	.string "Boss battles set to the harder\n"
+	.string "difficulty.$"
+
+EventScript_GameSettings_Text_15:
+	.string "In-battle items, such as healing items\n"
+	.string "or X-items, generally give the player\l"
+	.string "an extreme advantage over opponents,\l"
+	.string "especially when used well.\p"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} does not have\n"
+	.string "opponents use any items.$"
+
+EventScript_GameSettings_Text_16:
+	.string "The usage of in-battle items is\n"
+	.string "currently disabled.$"
+
+EventScript_GameSettings_Text_17:
+	.string "Would you like to enable in-battle\n"
+	.string "items?$"
+
+EventScript_GameSettings_Text_18:
+	.string "Enabled in-battle items.$"
+
+EventScript_GameSettings_Text_19:
+	.string "The usage of in-battle items is\n"
+	.string "currently enabled.$"
+
+EventScript_GameSettings_Text_20:
+	.string "Would you like to disable in-battle\n"
+	.string "items?$"
+
+EventScript_GameSettings_Text_21:
+	.string "Disabled in-battle items.$"
+
+EventScript_GameSettings_Text_22:
+	.string "EVs are currently disabled.$"
+
+EventScript_GameSettings_Text_23:
+	.string "Would you like to enable EVs?$"
+
+EventScript_GameSettings_Text_24:
+	.string "Enabled EVs.$"
+
+EventScript_GameSettings_Text_25:
+	.string "EVs are currently enabled.$"
+
+EventScript_GameSettings_Text_26:
+	.string "Would you like to disable EVs?$"
+
+EventScript_GameSettings_Text_27:
+	.string "Disabled EVs.$"
+
+EventScript_GameSettings_Text_28:
+	.string "PP stalling is an arduous and boring\n"
+	.string "strategy.\p"
+	.string "In addition, some moves are\n"
+	.string "extraordinarily powerful in the hands\l"
+	.string "of a player, such as setup moves or\l"
+	.string "healing moves.\p"
+	.string "This setting both increases the PP\n"
+	.string "cost of the player's usage of strong\l"
+	.string "moves, limiting their overall usage, as\l"
+	.string "well as disables opponents' using PP.$"
+
+EventScript_GameSettings_Text_29:
+	.string "PP cost changes are currently enabled.$"
+
+EventScript_GameSettings_Text_30:
+	.string "Would you like to disable these PP cost\n"
+	.string "changes?$"
+
+EventScript_GameSettings_Text_31:
+	.string "PP cost changes reverted to normal.$"
+
+EventScript_GameSettings_Text_32:
+	.string "Would you like to enable these PP cost\n"
+	.string "changes?$"
+
+EventScript_GameSettings_Text_33:
+	.string "PP cost changes enabled.$"
+
+EventScript_GameSettings_Text_34:
+	.string "The Exp. All setting, if turned on, gives\n"
+	.string "members of your party that don't\l"
+	.string "participate in battle 25% experience.\p"
+	.string "The game's experience curve is balanced\n"
+	.string "around the Exp. All being turned on,\l"
+	.string "though you may turn it off if you\l"
+	.string "choose.$"
+
+EventScript_GameSettings_Text_35:
+	.string "The Exp. All is currently on. Would you\n"
+	.string "like to turn it off?$"
+
+EventScript_GameSettings_Text_36:
+	.string "Turned the Exp. All off.$"
+
+EventScript_GameSettings_Text_37:
+	.string "The Exp. All is currently off. Would you\n"
+	.string "like to turn it on?$"
+
+EventScript_GameSettings_Text_38:
+	.string "Turned the Exp. All on.$"
+
+EventScript_GameSettings_Text_39:
+	.string "In most Pokémon games, players can\n"
+	.string "farm items and money by growing\l"
+	.string "Berries, Thief, and other means.\p"
+	.string "The ability to 'farm', so to speak, can\n"
+	.string "be disabled by this setting.$"
+
+EventScript_GameSettings_Text_40:
+	.string "Farming is currently disabled.$"
+
+EventScript_GameSettings_Text_41:
+	.string "Would you like to enable farming?$"
+
+EventScript_GameSettings_Text_42:
+	.string "Farming enabled.$"
+
+EventScript_GameSettings_Text_43:
+	.string "Farming is currently enabled.$"
+
+EventScript_GameSettings_Text_44:
+	.string "Would you like to disable farming?$"
+
+EventScript_GameSettings_Text_45:
+	.string "Farming disabled.$"
+
+EventScript_GameSettings_Text_46:
+	.string "In most Pokémon games, players can\n"
+	.string "'grind' experience by defeating wild\l"
+	.string "Pokémon.\p"
+	.string "This setting can disable wild Pokémon\n"
+	.string "giving experience, to prevent the\l"
+	.string "player from grinding.$"
+
+EventScript_GameSettings_Text_47:
+	.string "Grinding is currently disabled.$"
+
+EventScript_GameSettings_Text_48:
+	.string "Would you like to enable grinding on wild\n"
+	.string "Pokémon?$"
+
+EventScript_GameSettings_Text_49:
+	.string "Grinding enabled.$"
+
+EventScript_GameSettings_Text_50:
+	.string "Grinding is currenlty enabled.$"
+
+EventScript_GameSettings_Text_51:
+	.string "Would you like to disable grinding on\n"
+	.string "wild Pokémon?$"
+
+EventScript_GameSettings_Text_52:
+	.string "Grinding disabled.$"
+
+EventScript_GameSettings_Text_53:
+	.string "In some Zones, there are certain helper\n"
+	.string "NPCs that can sell cheap items or heal\l"
+	.string "the player's party.\p"
+	.string "This setting can disable their services.$"
+
+EventScript_GameSettings_Text_54:
+	.string "Helper NPCs are currently disabled.$"
+
+EventScript_GameSettings_Text_55:
+	.string "Would you like to enable helper NPCs?$"
+
+EventScript_GameSettings_Text_56:
+	.string "Helper NPCs enabled.$"
+
+EventScript_GameSettings_Text_57:
+	.string "Helper NPCs are currently enabled.$"
+
+EventScript_GameSettings_Text_58:
+	.string "Would you like to disable helper NPCs?$"
+
+EventScript_GameSettings_Text_59:
+	.string "Helper NPCs disabled.$"
+
+EventScript_GameSettings_Text_60:
+	.string "Hidden items can be disabled to limit\n"
+	.string "the supply of available items.\p"
+	.string "This is recommended to be used\n"
+	.string "alongside the disabling farming\l"
+	.string "setting.$"
+
+EventScript_GameSettings_Text_61:
+	.string "Hidden items are curently disabled.$"
+
+EventScript_GameSettings_Text_62:
+	.string "Would you like to enable hidden items?$"
+
+EventScript_GameSettings_Text_63:
+	.string "Hidden items enabled.$"
+
+EventScript_GameSettings_Text_64:
+	.string "Hidden items are currently enabled.$"
+
+EventScript_GameSettings_Text_65:
+	.string "Would you like to disable hidden items?$"
+
+EventScript_GameSettings_Text_66:
+	.string "Hidden items disabled.$"
+
+EventScript_GameSettings_Text_67:
+	.string "TMs are currently single use.$"
+
+EventScript_GameSettings_Text_68:
+	.string "Would you like to make TMs infinite use?$"
+
+EventScript_GameSettings_Text_69:
+	.string "TMs are now infinite use.$"
+
+EventScript_GameSettings_Text_70:
+	.string "TMs are currently infinite use.$"
+
+EventScript_GameSettings_Text_71:
+	.string "Would you like to make TMs single use?$"
+
+EventScript_GameSettings_Text_72:
+	.string "TMs are now single use.$"
+
+EventScript_GameSettings_Text_73:
+	.string "Retiring from a Zone allows one to\n"
+	.string "return to the Sanctuary, at the cost\l"
+	.string "of half of their money as well as losing\l"
+	.string "all progress made thus far in the Zone.$"
+
+EventScript_GameSettings_Text_74:
+	.string "Retiring is currently disabled.$"
+
+EventScript_GameSettings_Text_75:
+	.string "Would you like to enable Retiring?$"
+
+EventScript_GameSettings_Text_76:
+	.string "Retiring enabled.$"
+
+EventScript_GameSettings_Text_77:
+	.string "Retiring is currently enabled.$"
+
+EventScript_GameSettings_Text_78:
+	.string "Would you like to disable Retiring?$"
+
+EventScript_GameSettings_Text_79:
+	.string "Retiring disabled.$"
+
+EventScript_GameSettings_Text_80:
+	.string "Trainers currently give 1/2 their\n"
+	.string "reward money.$"
+
+EventScript_GameSettings_Text_81:
+	.string "Would you like to revert Trainer reward\n"
+	.string "money to its default amount?$"
+
+EventScript_GameSettings_Text_82:
+	.string "Trainer reward money reverted to its default amount.$"
+
+EventScript_GameSettings_Text_83:
+	.string "Trainers currently give their default\n"
+	.string "reward money.$"
+
+EventScript_GameSettings_Text_84:
+	.string "Would you like to decrease trainer\n"
+	.string "reward money by 1/2?$"
+
+EventScript_GameSettings_Text_85:
+	.string "Trainer reward money set to 1/2.$"
+
+EventScript_GameSettings_Text_86:
+	.string "In trainer battles, you can Surveil the\n"
+	.string "opposing party to gain more\l"
+	.string "information.$"
+
+EventScript_GameSettings_Text_87:
+	.string "Surveil currently reveals all\n"
+	.string "information about the opposing party.\p"
+	.string "Would you like to decrease the amount\n"
+	.string "of information it reveals?$"
+
+EventScript_GameSettings_Text_88:
+	.string "Lowered the power of Surveil.\p"
+	.string "You will only be able to view the\n"
+	.string "opposing team's Pokémon and their\l"
+	.string "health.$"
+
+EventScript_GameSettings_Text_89:
+	.string "Surveil currently reveals only the\n"
+	.string "opposing team's Pokémon and their\l"
+	.string "health.\p"
+	.string "Would you like to increase the amount\n"
+	.string "of information it reveals?$"
+
+EventScript_GameSettings_Text_90:
+	.string "Increased the power of Surveil.\p"
+	.string "You will be able to view all information\n"
+	.string "about the opposing party.$"
+
 EventScript_MusicMenu_Text_0:
 	.string "Please select a music setting.$"
 
@@ -4549,30 +5384,6 @@ EventScript_MusicMenu_Text_19:
 
 EventScript_MusicMenu_Text_20:
 	.string "The BW Leviathan music is not\nfinished.$"
-
-EventScript_ExpAll_Text_0:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned\n"
-	.string "on, gives members of your party that\l"
-	.string "don't participate in battle 25%\l"
-	.string "experience.\p"
-	.string "The game's experience curve is balanced\n"
-	.string "around the Exp. All being turned on,\l"
-	.string "though you may turn it off if you\l"
-	.string "choose.$"
-
-EventScript_ExpAll_Text_1:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on.\n"
-	.string "Would you like to turn it off?$"
-
-EventScript_ExpAll_Text_2:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off.$"
-
-EventScript_ExpAll_Text_3:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off.\n"
-	.string "Would you like to turn it on?$"
-
-EventScript_ExpAll_Text_4:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on.$"
 
 EventScript_Surveillance_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In trainer battles, you can\n"
@@ -4766,6 +5577,10 @@ gText_Colress_SureTurnOffNuzlocke::
 
 gText_Colress_NumDeathsNuzlocke::
 	.string "So far there have been {STR_VAR_1} death(s).$"
+
+gText_Colress_CannotChangeSetting::
+	.string "You cannot change this setting, as you\n"
+	.string "are on Brutal difficulty.$"
 
 gText_ItemChestIsEmpty::
 	.string "The item chest is empty.$"
