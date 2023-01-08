@@ -21,7 +21,7 @@ Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1
 	goto_if_ne Zone4A_EventScript_Breeder_6
 	msgbox Zone4A_EventScript_Breeder_Text_12, MSGBOX_DEFAULT
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone4A_EventScript_Breeder_9
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone4A_EventScript_Breeder_9
 Zone4A_EventScript_Breeder_8:
 	delay 16
 	msgbox Zone4A_EventScript_Breeder_Text_14, MSGBOX_DEFAULT
@@ -98,7 +98,7 @@ Zone4A_EventScript_Breeder_18:
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_19:
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4A_EventScript_Breeder_34
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone4A_EventScript_Breeder_34
 	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_37

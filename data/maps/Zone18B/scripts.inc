@@ -1321,7 +1321,7 @@ Zone18B_EventScript_LeviathanBattle::
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_2, MSGBOX_DEFAULT
 	msgbox Zone18B_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone18B_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone18B_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZOE_AND_ELI
 	trainerbattle_no_intro TRAINER_ZOE_AND_ELI_LEVIATHAN_16, Zone18B_Text_Leviathan16Defeat
 Zone18B_EventScript_LeviathanBattle_1:

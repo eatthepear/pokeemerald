@@ -48,7 +48,7 @@ Zone9A_EventScript_Ari::
 	goto_if_eq Zone9A_EventScript_Ari_3
 Zone9A_EventScript_Ari_1:
 	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_7
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_7
 	msgbox Zone9A_EventScript_Ari_Text_1, MSGBOX_YESNO
 Zone9A_EventScript_Ari_6:
 	compare VAR_RESULT, NO
@@ -56,7 +56,7 @@ Zone9A_EventScript_Ari_6:
 	msgbox Zone9A_EventScript_Ari_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_ARI, Zone9A_EventScript_Ari_Text_4
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_14
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_14
 Zone9A_EventScript_Ari_13:
 	applymovement 1, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -72,7 +72,7 @@ Zone9A_EventScript_Ari_13:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_6, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BERTHA, Zone9A_EventScript_Ari_Text_7
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_17
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_17
 Zone9A_EventScript_Ari_16:
 	applymovement 2, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -88,7 +88,7 @@ Zone9A_EventScript_Ari_16:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_9, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CASSANDRA, Zone9A_EventScript_Ari_Text_10
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_20
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_20
 Zone9A_EventScript_Ari_19:
 	applymovement 3, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -104,7 +104,7 @@ Zone9A_EventScript_Ari_19:
 	waitmovement 0
 	msgbox Zone9A_EventScript_Ari_Text_12, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_DOMINIC, Zone9A_EventScript_Ari_Text_13
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone9A_EventScript_Ari_23
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone9A_EventScript_Ari_23
 Zone9A_EventScript_Ari_22:
 	msgbox Zone9A_EventScript_Ari_Text_14, MSGBOX_DEFAULT
 	closemessage

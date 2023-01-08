@@ -4169,7 +4169,7 @@ static void HandleTurnActionSelectionState(void)
                     }
                     break;
                 case B_ACTION_USE_ITEM:
-                    if ((FlagGet(FLAG_BRUTAL_MODE_ON) && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+                    if ((FlagGet(FLAG_SETTINGS_BRUTAL_ON) && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
                                             || FlagGet(B_FLAG_NO_BAG_USE)
                                             || (gBattleTypeFlags & (BATTLE_TYPE_LINK
                                             | BATTLE_TYPE_FRONTIER_NO_PYRAMID

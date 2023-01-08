@@ -21,7 +21,7 @@ BerryTree_EventScript_Sparkling::
 BerryTree_EventScript_CheckSoil::
 	lock
 	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, BerryTree_EventScript_BadSoil
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, BerryTree_EventScript_BadSoil
 	specialvar VAR_RESULT, PlayerHasBerries
 	goto_if_eq VAR_RESULT, TRUE, BerryTree_EventScript_WantToPlant
 	message BerryTree_Text_ItsSoftLoamySoil

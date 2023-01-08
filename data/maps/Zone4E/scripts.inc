@@ -52,7 +52,7 @@ Zone4E_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone4E_Text_Leviathan4Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone4E_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone4E_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat
 Zone4E_EventScript_LeviathanBattle_1:

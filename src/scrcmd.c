@@ -1690,9 +1690,9 @@ bool8 ScrCmd_givemon(struct ScriptContext *ctx)
     u32 unkParam2 = ScriptReadWord(ctx);
     u8 unkParam3 = ScriptReadByte(ctx);
 
-    if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_RANDOMIZER_ON) == TRUE)
     {
-        if (FlagGet(FLAG_NUZLOCKE_ON))
+        if (FlagGet(FLAG_SETTINGS_NUZLOCKE_ON))
             FlagSet(FLAG_SHOULD_CHECK_SPECIES_CLAUSE);
         species = GetRandomSpecies(level);
     }
@@ -2377,9 +2377,9 @@ bool8 ScrCmd_givecustommon(struct ScriptContext *ctx)
     u8 ivs[NUM_STATS] = {hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv};
     u16 moves[4] = {move1, move2, move3, move4};
     
-    if (FlagGet(FLAG_RANDOMIZER_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_RANDOMIZER_ON) == TRUE)
     {
-        if (FlagGet(FLAG_NUZLOCKE_ON))
+        if (FlagGet(FLAG_SETTINGS_NUZLOCKE_ON))
             FlagSet(FLAG_SHOULD_CHECK_SPECIES_CLAUSE);
         species = GetRandomSpecies(level);
     }

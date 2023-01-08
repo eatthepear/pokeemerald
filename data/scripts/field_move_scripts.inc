@@ -16,7 +16,7 @@ EventScript_Headbutt::
 	special HeadbuttWildEncounter
 	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_Headbutt_5
-	goto_if_unset FLAG_BRUTAL_MODE_ON, EventScript_Headbutt_6
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, EventScript_Headbutt_6
 EventScript_Headbutt_4:
 	releaseall
 	end
@@ -206,7 +206,7 @@ EventScript_RockSmash::
 	special RockSmashWildEncounter
 	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_RockSmash_8
-	goto_if_set FLAG_BRUTAL_MODE_ON, EventScript_RockSmash_11
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, EventScript_RockSmash_11
 	random 100
 	switch VAR_RESULT
 	case 0, EventScript_RockSmash_15

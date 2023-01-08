@@ -19,7 +19,7 @@ script EventScript_Headbutt {
 	special(HeadbuttWildEncounter)
 	if (var(VAR_RESULT) == TRUE) {
 		waitstate
-	} elif (flag(FLAG_BRUTAL_MODE_ON) == FALSE) {
+	} elif (flag(FLAG_SETTINGS_BRUTAL_ON) == FALSE) {
 		random(100)
 		switch(var(VAR_RESULT)) {
 			case 0:
@@ -157,7 +157,7 @@ script EventScript_RockSmash {
 		releaseall
 		end
 	}
-	if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+	if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
 		releaseall
 		end
 	}

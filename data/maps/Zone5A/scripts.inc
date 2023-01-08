@@ -37,7 +37,7 @@ Zone5A_EventScript_LeviathanBattle::
 Zone5A_EventScript_LeviathanBattle_1:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_TEMP_1, 0
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_13
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone5A_EventScript_LeviathanBattle_13
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_1, MSGBOX_YESNO
 Zone5A_EventScript_LeviathanBattle_12:
 	compare VAR_RESULT, NO
@@ -72,7 +72,7 @@ Zone5A_EventScript_LeviathanBattle_12:
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_8
-	goto_if_unset FLAG_BRUTAL_MODE_ON, Zone5A_EventScript_LeviathanBattle_20
+	goto_if_unset FLAG_SETTINGS_BRUTAL_ON, Zone5A_EventScript_LeviathanBattle_20
 Zone5A_EventScript_LeviathanBattle_19:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat
@@ -164,7 +164,7 @@ Zone5A_EventScript_LeviathanBattle_20:
 Zone5A_EventScript_BuyPikaClone::
 	lock
 	faceplayer
-	goto_if_set FLAG_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_4
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_4
 Zone5A_EventScript_BuyPikaClone_3:
 	showmoneybox 0, 0, 0
 	msgbox Zone5A_EventScript_BuyPikaClone_Text_1, MSGBOX_YESNO
@@ -182,7 +182,7 @@ Zone5A_EventScript_BuyPikaClone_3:
 	msgbox Zone5A_EventScript_BuyPikaClone_Text_5
 	closemessage
 	hidemoneybox
-	goto_if_set FLAG_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_17
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone5A_EventScript_BuyPikaClone_17
 	msgbox Zone5A_EventScript_BuyPikaClone_Text_7, MSGBOX_DEFAULT
 	multichoice2 21, 0, Zone5A_Text_PikaCloneMultichoice, TRUE
 	switch VAR_RESULT
@@ -235,7 +235,7 @@ Zone5A_EventScript_BuyPikaClone_14:
 	end
 
 Zone5A_EventScript_BuyPikaClone_17:
-	goto_if_set FLAG_RANDOMIZER_ON, Zone5A_EventScript_BuyPikaClone_24
+	goto_if_set FLAG_SETTINGS_RANDOMIZER_ON, Zone5A_EventScript_BuyPikaClone_24
 	setvar VAR_TEMP_3, 0
 	checkspeciesclause SPECIES_DEDENNE
 	compare VAR_RESULT, TRUE

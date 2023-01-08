@@ -37,11 +37,11 @@ Zone6A_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone6A_EventScript_LeviathanBattle_8
 Zone6A_EventScript_LeviathanBattle_7:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MINA
 	trainerbattle_no_intro TRAINER_MINA_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_Text_5
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone6A_EventScript_LeviathanBattle_11
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone6A_EventScript_LeviathanBattle_11
 Zone6A_EventScript_LeviathanBattle_10:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone6A_EventScript_LeviathanBattle_Text_6, MSGBOX_DEFAULT

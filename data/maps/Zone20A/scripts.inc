@@ -20,7 +20,7 @@ Zone20A_EventScript_InitiateLeviathanBattle::
 	msgbox Zone20A_Text_Leviathan12Intro, MSGBOX_AUTOCLOSE
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JULIE
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone20A_EventScript_JulieBrutal
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone20A_EventScript_JulieBrutal
 	trainerbattle_no_intro TRAINER_LEVIATHAN12, Zone20A_Text_Leviathan12Defeat
 	goto Zone20A_EventScript_Leviathan12Defeated
 	end

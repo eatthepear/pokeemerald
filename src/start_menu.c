@@ -359,7 +359,7 @@ static void BuildNewZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
 
-    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
+    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE)
         AddStartMenuAction(MENU_ACTION_RETIRE_ZONE);
     if (FlagGet(FLAG_IS_DEBUGGING_SAVEFILE) == TRUE)
         AddStartMenuAction(MENU_ACTION_DEBUG);

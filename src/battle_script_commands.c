@@ -1834,7 +1834,7 @@ static void Cmd_ppreduce(void)
     if (gBattleControllerExecFlags)
         return;
 
-    if (FlagGet(FLAG_BRUTAL_MODE_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == TRUE)
     {
         if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
         {
@@ -3802,7 +3802,7 @@ static void Cmd_dofaintanimation(void)
     if (gBattleControllerExecFlags == 0)
     {
         gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
-        if (FlagGet(FLAG_NUZLOCKE_ON) && !IsBattlerAIControlled(gActiveBattler))
+        if (FlagGet(FLAG_SETTINGS_NUZLOCKE_ON) && !IsBattlerAIControlled(gActiveBattler))
         {
             VarSet(VAR_NUZLOCKE_DEATHS, VarGet(VAR_NUZLOCKE_DEATHS) + 1);
         }
@@ -4018,13 +4018,13 @@ static void Cmd_getexp(void)
               | BATTLE_TYPE_BATTLE_TOWER
               | BATTLE_TYPE_EREADER_TRAINER))
               || (!(gBattleTypeFlags &
-             (BATTLE_TYPE_TRAINER)) && FlagGet(FLAG_BRUTAL_MODE_ON)))
+             (BATTLE_TYPE_TRAINER)) && FlagGet(FLAG_SETTINGS_BRUTAL_ON)))
         {
             gBattleScripting.getexpState = 6; // goto last case
         }
         else
         {
-            if (FlagGet(FLAG_EXP_ALL_ON) && ShouldPrintExpAllMsg())
+            if (FlagGet(FLAG_SETTINGS_EXP_ALL_ON) && ShouldPrintExpAllMsg())
                 PrepareStringBattle(STRINGID_COINSSCATTERED, gBattleStruct->expGetterBattlerId);
             gBattleScripting.getexpState++;
             gBattleStruct->givenExpMons |= gBitTable[gBattlerPartyIndexes[gBattlerFainted]];
@@ -4049,7 +4049,7 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
 
-                // if (holdEffect == HOLD_EFFECT_EXP_SHARE && !FlagGet(FLAG_EXP_ALL_ON))
+                // if (holdEffect == HOLD_EFFECT_EXP_SHARE && !FlagGet(FLAG_SETTINGS_EXP_ALL_ON))
                 //     viaExpShare++;
             }
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
@@ -4080,7 +4080,7 @@ static void Cmd_getexp(void)
                 *exp = calculatedExp;
                 if (*exp == 0)
                     *exp = 1;
-                if (FlagGet(FLAG_EXP_ALL_ON))
+                if (FlagGet(FLAG_SETTINGS_EXP_ALL_ON))
                     gExpShareExp = calculatedExp / 4;
                 else
                     gExpShareExp = calculatedExp;
@@ -4103,7 +4103,7 @@ static void Cmd_getexp(void)
             else
                 holdEffect = ItemId_GetHoldEffect(item);
 
-            if (!FlagGet(FLAG_EXP_ALL_ON) && holdEffect != HOLD_EFFECT_EXP_SHARE && !(gBattleStruct->sentInPokes & 1))
+            if (!FlagGet(FLAG_SETTINGS_EXP_ALL_ON) && holdEffect != HOLD_EFFECT_EXP_SHARE && !(gBattleStruct->sentInPokes & 1))
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
@@ -4117,7 +4117,7 @@ static void Cmd_getexp(void)
                 gBattleScripting.getexpState = 5;
                 gBattleMoveDamage = 0; // used for exp
                 #if B_MAX_LEVEL_EV_GAINS >= GEN_5
-                    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
+                    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE)
                     {
                         MonGainEVs(&gPlayerParty[gBattleStruct->expGetterMonId], gBattleMons[gBattlerFainted].species);
                     }
@@ -4139,13 +4139,13 @@ static void Cmd_getexp(void)
 
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP))
                 {
-                    if ((gBattleStruct->sentInPokes & 1) || ((holdEffect == HOLD_EFFECT_EXP_SHARE) && FlagGet(FLAG_EXP_ALL_ON)))
+                    if ((gBattleStruct->sentInPokes & 1) || ((holdEffect == HOLD_EFFECT_EXP_SHARE) && FlagGet(FLAG_SETTINGS_EXP_ALL_ON)))
                         gBattleMoveDamage = *exp;
                     else
                         gBattleMoveDamage = 0;
 
                     // only give exp share bonus in later gens if the mon wasn't sent out
-                    if (((holdEffect == HOLD_EFFECT_EXP_SHARE) || FlagGet(FLAG_EXP_ALL_ON)) && ((gBattleMoveDamage == 0)))
+                    if (((holdEffect == HOLD_EFFECT_EXP_SHARE) || FlagGet(FLAG_SETTINGS_EXP_ALL_ON)) && ((gBattleMoveDamage == 0)))
                         gBattleMoveDamage += gExpShareExp;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
@@ -4205,7 +4205,7 @@ static void Cmd_getexp(void)
                         gBattleStruct->expGetterBattlerId = 0;
                     }
 
-                    if (FlagGet(FLAG_EXP_ALL_ON) == FALSE)
+                    if (FlagGet(FLAG_SETTINGS_EXP_ALL_ON) == FALSE)
                     {
                         PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattleStruct->expGetterBattlerId, gBattleStruct->expGetterMonId);
                         // buffer 'gained' or 'gained a boosted'
@@ -4214,7 +4214,7 @@ static void Cmd_getexp(void)
 
                         PrepareStringBattle(STRINGID_PKMNGAINEDEXP, gBattleStruct->expGetterBattlerId);
                     }
-                    if (FlagGet(FLAG_BRUTAL_MODE_ON) == FALSE)
+                    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON) == FALSE)
                     {
                         MonGainEVs(&gPlayerParty[gBattleStruct->expGetterMonId], gBattleMons[gBattlerFainted].species);
                     }
@@ -7122,7 +7122,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     u32 moneyReward;
     u32 scale = 4;
     
-    if (FlagGet(FLAG_BRUTAL_MODE_ON))
+    if (FlagGet(FLAG_SETTINGS_BRUTAL_ON))
     {
         scale = 2;
     }

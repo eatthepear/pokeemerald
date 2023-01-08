@@ -61,14 +61,14 @@ script EventScript_Shop_General {
 		case 10:
 		case 11:
 		case 12:
-			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
 				pokemart(Shop_General_9to12_Brutal)
 			} else {
 				pokemart(Shop_General_9to12)
 			}
 		case 13:
 		case 15:
-			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
 				pokemart(Shop_General_13to15_Brutal)
 			} else {
 				pokemart(Shop_General_13to15)
@@ -82,13 +82,13 @@ script EventScript_Shop_General {
 		case 23:
 		case 24:
 		case 25:
-			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
 				pokemart(Shop_General_16to25_Brutal)
 			} else {
 				pokemart(Shop_General_16to25)
 			}
 		case 26:
-			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
 				pokemart(Shop_General_26to30_Brutal)
 			} else {
 				pokemart(Shop_General_26to30)
@@ -350,7 +350,7 @@ script EventScript_Shop_Unique_Varrick {
 		case 25:
 			pokemart(Shop_Unique_Varrick_24to25)
 		case 26:
-			if (flag(FLAG_BRUTAL_MODE_ON) == true) {
+			if (flag(FLAG_SETTINGS_BRUTAL_ON) == true) {
 				pokemart(Shop_Unique_Varrick_26to30_Brutal)
 			} else {
 				pokemart(Shop_Unique_Varrick_26to30)
@@ -950,7 +950,7 @@ script EventScript_Shop_Lelouch_Training {
 		return
 	}
 	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.", MSGBOX_DEFAULT)
-	if ((var(VAR_ZONE) < 21) || (flag(FLAG_BRUTAL_MODE_ON) == true)) {
+	if ((var(VAR_ZONE) < 21) || (flag(FLAG_SETTINGS_BRUTAL_ON) == true)) {
 		multichoice(0, 0, MULTI_LELOUCH_EXP_ONLY, 0)
 		switch(var(VAR_RESULT)) {
 			case 0:
@@ -1843,7 +1843,7 @@ script EventScript_Documentation {
 script EventScript_Settings {
 	setvar(VAR_TEMP_1, 0)
 	while (var(VAR_TEMP_1) == 0) {
-		if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
+		if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == true)) {
 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -1861,7 +1861,7 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
-		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == true)) {
+		} elif ((flag(FLAG_SETTINGS_BRUTAL_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == true)) {
 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -1879,7 +1879,7 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
-		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == true)) {
+		} elif ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == true)) {
 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -1897,7 +1897,7 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
-		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == true)) {
+		} elif ((flag(FLAG_SETTINGS_BRUTAL_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == true)) {
 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -1915,7 +1915,7 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
-		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == false)) {
+		} elif ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == false)) {
 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -1933,7 +1933,7 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
-		} elif ((flag(FLAG_BRUTAL_MODE_ON) == false) && (flag(FLAG_NUZLOCKE_ON) == true) && (flag(FLAG_RANDOMIZER_ON) == false)) {
+		} elif ((flag(FLAG_SETTINGS_BRUTAL_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == false)) {
 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -1951,7 +1951,7 @@ script EventScript_Settings {
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
 			}
-		} elif ((flag(FLAG_BRUTAL_MODE_ON) == true) && (flag(FLAG_NUZLOCKE_ON) == false) && (flag(FLAG_RANDOMIZER_ON) == false)) {
+		} elif ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_ON) == false)) {
 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
@@ -2047,7 +2047,7 @@ script EventScript_Settings_BrutalMode {
 			msgbox("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty turned off.\nDifficulty set to {COLOR RED}Default{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_BRUTAL_MODE_ON)
+			clearflag(FLAG_SETTINGS_BRUTAL_ON)
 			special(ReverseHiddenItemFlags)
 		}
 	}
@@ -2066,7 +2066,7 @@ script EventScript_Settings_NuzlockeRandomizer {
 			msgbox("{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_NUZLOCKE_ON)
+			clearflag(FLAG_SETTINGS_NUZLOCKE_ON)
 			clearflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 			callnative(GlobalNuzlockeClear)
 		}
@@ -2094,7 +2094,7 @@ script EventScript_Settings_Nuzlocke {
 			msgbox("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_NUZLOCKE_ON)
+			clearflag(FLAG_SETTINGS_NUZLOCKE_ON)
 			clearflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 			callnative(GlobalNuzlockeClear)
 		}
@@ -2245,14 +2245,14 @@ script EventScript_MusicMenu {
 
 script EventScript_ExpAll {
 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All setting, if turned on, gives members of your party that don't participate in battle 25% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."))
-	if (flag(FLAG_EXP_ALL_ON) == true) {
+	if (flag(FLAG_SETTINGS_EXP_ALL_ON) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			playse(SE_PC_OFF)
 			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All off."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_EXP_ALL_ON)
+			clearflag(FLAG_SETTINGS_EXP_ALL_ON)
 		}
 	} else {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: The Exp. All is currently off. Would you like to turn it on?"), MSGBOX_YESNO)
@@ -2261,7 +2261,7 @@ script EventScript_ExpAll {
 			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Turned the Exp. All on."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			setflag(FLAG_EXP_ALL_ON)
+			setflag(FLAG_SETTINGS_EXP_ALL_ON)
 		}
 	}
 	return
@@ -2269,14 +2269,14 @@ script EventScript_ExpAll {
 
 script EventScript_Surveillance {
 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: In trainer battles, you can Surveil the opposing party to gain more information."))
-	if (flag(FLAG_FULL_PREVIEW_ON) == true) {
+	if (flag(FLAG_SETTINGS_FULL_PREVIEW_ON) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals all information about the opposing party.\pWould you like to decrease the amount of information it reveals?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			playse(SE_PC_OFF)
 			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Lowered the power of Surveil.\pYou will only be able to view the opposing team's Pokémon and their health."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_FULL_PREVIEW_ON)
+			clearflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
 		}
 	} else {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals only the opposing team's Pokémon and their health.\pWould you like to increase the amount of information it reveals?"), MSGBOX_YESNO)
@@ -2285,7 +2285,7 @@ script EventScript_Surveillance {
 			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Increased the power of Surveil.\pYou will be able to view all information about the opposing party."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			setflag(FLAG_FULL_PREVIEW_ON)
+			setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
 		}
 	}
 	return
@@ -2711,7 +2711,7 @@ text gText_MultipleOpponentsRemaining {
 }
 
 script EventScript_NuzlockeVerifyGift {
-	if (flag(FLAG_NUZLOCKE_ON) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE_ON) == true) {
 		msgbox(format("On Nuzlocke mode, you will randomly receive one of the possible Pokémon.\pIs this ok?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == NO) {
 			hidemoneybox
@@ -2730,7 +2730,7 @@ script EventScript_PorygonExit {
 		goto(EventScript_WarpZone0)
 	}
 	specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-	if ((flag(FLAG_BRUTAL_MODE_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
 		buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
 		msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."), MSGBOX_DEFAULT)
 		switch(var(VAR_NUM_TRAINERS_REMAINING)) {

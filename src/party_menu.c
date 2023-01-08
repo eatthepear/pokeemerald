@@ -2737,7 +2737,7 @@ static u8 GetPartyMenuActionsType(struct Pokemon *mon)
         {
             actionType = GetPartyMenuActionsTypeInBattle(mon);
         }
-        else if (FlagGet(FLAG_FULL_PREVIEW_ON))
+        else if (FlagGet(FLAG_SETTINGS_FULL_PREVIEW_ON))
         {
             actionType = ACTIONS_SUMMARY_ONLY;
         }
@@ -5057,7 +5057,7 @@ static void Task_LearnedMove(u8 taskId)
     if (move[1] == 0)
     {
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
-        if ((item < ITEM_HM01_CUT) && FlagGet(FLAG_BRUTAL_MODE_ON))
+        if ((item < ITEM_HM01_CUT) && FlagGet(FLAG_SETTINGS_BRUTAL_ON))
            RemoveBagItem(item, 1);
     }
     GetMonNickname(mon, gStringVar1);

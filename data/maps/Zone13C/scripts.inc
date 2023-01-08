@@ -12,7 +12,7 @@ Zone13C_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone13C_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone13C_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JENNY
 	trainerbattle_no_intro TRAINER_JENNY_LEVIATHAN_11, Zone13C_Text_Leviathan11Defeat
 Zone13C_EventScript_LeviathanBattle_7:
@@ -45,7 +45,7 @@ Zone13C_EventScript_LeviathanBattle_8:
 Zone13C_EventScript_Fossil_Scientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_BRUTAL_MODE_ON, Zone13C_EventScript_Fossil_Scientist_2
+	goto_if_set FLAG_SETTINGS_BRUTAL_ON, Zone13C_EventScript_Fossil_Scientist_2
 	goto_if_set FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_5
 Zone13C_EventScript_Fossil_Scientist_4:
 	goto_if_set FLAG_DAILY_FOSSIL_RECEIVED, Zone13C_EventScript_Fossil_Scientist_8
@@ -55,7 +55,7 @@ Zone13C_EventScript_Fossil_Scientist_7:
 	waitmovement 0
 	waitse
 	msgbox Zone13C_EventScript_Fossil_Scientist_Text_1
-	goto_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_11
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_11
 Zone13C_EventScript_Fossil_Scientist_10:
 	setflag FLAG_DAILY_FOSSIL_RECEIVED
 	random 9
@@ -70,7 +70,7 @@ Zone13C_EventScript_Fossil_Scientist_10:
 	case 7, Zone13C_EventScript_Fossil_Scientist_22
 	case 8, Zone13C_EventScript_Fossil_Scientist_23
 Zone13C_EventScript_Fossil_Scientist_13:
-	goto_if_set FLAG_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_25
+	goto_if_set FLAG_SETTINGS_NUZLOCKE_ON, Zone13C_EventScript_Fossil_Scientist_25
 	goto Zone13C_EventScript_Fossil_VanillaReceived
 Zone13C_EventScript_Fossil_Scientist_24:
 	end
