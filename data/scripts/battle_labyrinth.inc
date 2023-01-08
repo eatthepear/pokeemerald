@@ -2449,13 +2449,12 @@ EventScript_Settings_16:
 	msgbox EventScript_Settings_Text_11, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_150
-	case 1, EventScript_Settings_151
-	case 2, EventScript_Settings_152
-	case 3, EventScript_Settings_153
-	case 4, EventScript_Settings_154
-	case 5, EventScript_Settings_155
-	case MULTI_B_PRESSED, EventScript_Settings_155
+	case 0, EventScript_Settings_139
+	case 1, EventScript_Settings_140
+	case 2, EventScript_Settings_141
+	case 3, EventScript_Settings_142
+	case 5, EventScript_Settings_143
+	case MULTI_B_PRESSED, EventScript_Settings_143
 	goto EventScript_Settings_2
 
 EventScript_Settings_5:
@@ -2466,139 +2465,128 @@ EventScript_Settings_5:
 	case 1, EventScript_Settings_74
 	case 2, EventScript_Settings_75
 	case 3, EventScript_Settings_76
-	case 4, EventScript_Settings_77
-	case 5, EventScript_Settings_78
-	case MULTI_B_PRESSED, EventScript_Settings_78
+	case 5, EventScript_Settings_77
+	case MULTI_B_PRESSED, EventScript_Settings_77
 	goto EventScript_Settings_2
 
 EventScript_Settings_6:
 	msgbox EventScript_Settings_Text_1, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_80
-	case 1, EventScript_Settings_81
-	case 2, EventScript_Settings_82
-	case 3, EventScript_Settings_83
-	case 4, EventScript_Settings_84
-	case 5, EventScript_Settings_85
-	case MULTI_B_PRESSED, EventScript_Settings_85
+	case 0, EventScript_Settings_79
+	case 1, EventScript_Settings_80
+	case 2, EventScript_Settings_81
+	case 3, EventScript_Settings_82
+	case 5, EventScript_Settings_83
+	case MULTI_B_PRESSED, EventScript_Settings_83
 	goto EventScript_Settings_2
 
 EventScript_Settings_7:
 	msgbox EventScript_Settings_Text_2, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_87
-	case 1, EventScript_Settings_88
-	case 2, EventScript_Settings_89
-	case 3, EventScript_Settings_90
-	case 4, EventScript_Settings_91
-	case 5, EventScript_Settings_92
-	case MULTI_B_PRESSED, EventScript_Settings_92
+	case 0, EventScript_Settings_85
+	case 1, EventScript_Settings_86
+	case 2, EventScript_Settings_87
+	case 3, EventScript_Settings_88
+	case 5, EventScript_Settings_89
+	case MULTI_B_PRESSED, EventScript_Settings_89
 	goto EventScript_Settings_2
 
 EventScript_Settings_8:
 	msgbox EventScript_Settings_Text_3, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_94
-	case 1, EventScript_Settings_95
-	case 2, EventScript_Settings_96
-	case 3, EventScript_Settings_97
-	case 4, EventScript_Settings_98
-	case 5, EventScript_Settings_99
-	case MULTI_B_PRESSED, EventScript_Settings_99
+	case 0, EventScript_Settings_91
+	case 1, EventScript_Settings_92
+	case 2, EventScript_Settings_93
+	case 3, EventScript_Settings_94
+	case 5, EventScript_Settings_95
+	case MULTI_B_PRESSED, EventScript_Settings_95
 	goto EventScript_Settings_2
 
 EventScript_Settings_9:
 	msgbox EventScript_Settings_Text_4, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_101
-	case 1, EventScript_Settings_102
-	case 2, EventScript_Settings_103
-	case 3, EventScript_Settings_104
-	case 4, EventScript_Settings_105
-	case 5, EventScript_Settings_106
-	case MULTI_B_PRESSED, EventScript_Settings_106
+	case 0, EventScript_Settings_97
+	case 1, EventScript_Settings_98
+	case 2, EventScript_Settings_99
+	case 3, EventScript_Settings_100
+	case 5, EventScript_Settings_101
+	case MULTI_B_PRESSED, EventScript_Settings_101
 	goto EventScript_Settings_2
 
 EventScript_Settings_10:
 	msgbox EventScript_Settings_Text_5, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_108
-	case 1, EventScript_Settings_109
-	case 2, EventScript_Settings_110
-	case 3, EventScript_Settings_111
-	case 4, EventScript_Settings_112
-	case 5, EventScript_Settings_113
-	case MULTI_B_PRESSED, EventScript_Settings_113
+	case 0, EventScript_Settings_103
+	case 1, EventScript_Settings_104
+	case 2, EventScript_Settings_105
+	case 3, EventScript_Settings_106
+	case 5, EventScript_Settings_107
+	case MULTI_B_PRESSED, EventScript_Settings_107
 	goto EventScript_Settings_2
 
 EventScript_Settings_11:
 	msgbox EventScript_Settings_Text_6, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_115
-	case 1, EventScript_Settings_116
-	case 2, EventScript_Settings_117
-	case 3, EventScript_Settings_118
-	case 4, EventScript_Settings_119
-	case 5, EventScript_Settings_120
-	case MULTI_B_PRESSED, EventScript_Settings_120
+	case 0, EventScript_Settings_109
+	case 1, EventScript_Settings_110
+	case 2, EventScript_Settings_111
+	case 3, EventScript_Settings_112
+	case 5, EventScript_Settings_113
+	case MULTI_B_PRESSED, EventScript_Settings_113
 	goto EventScript_Settings_2
 
 EventScript_Settings_12:
 	msgbox EventScript_Settings_Text_7, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_122
-	case 1, EventScript_Settings_123
-	case 2, EventScript_Settings_124
-	case 3, EventScript_Settings_125
-	case 4, EventScript_Settings_126
-	case 5, EventScript_Settings_127
-	case MULTI_B_PRESSED, EventScript_Settings_127
+	case 0, EventScript_Settings_115
+	case 1, EventScript_Settings_116
+	case 2, EventScript_Settings_117
+	case 3, EventScript_Settings_118
+	case 5, EventScript_Settings_119
+	case MULTI_B_PRESSED, EventScript_Settings_119
 	goto EventScript_Settings_2
 
 EventScript_Settings_13:
 	msgbox EventScript_Settings_Text_8, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_129
-	case 1, EventScript_Settings_130
-	case 2, EventScript_Settings_131
-	case 3, EventScript_Settings_132
-	case 4, EventScript_Settings_133
-	case 5, EventScript_Settings_134
-	case MULTI_B_PRESSED, EventScript_Settings_134
+	case 0, EventScript_Settings_121
+	case 1, EventScript_Settings_122
+	case 2, EventScript_Settings_123
+	case 3, EventScript_Settings_124
+	case 5, EventScript_Settings_125
+	case MULTI_B_PRESSED, EventScript_Settings_125
 	goto EventScript_Settings_2
 
 EventScript_Settings_14:
 	msgbox EventScript_Settings_Text_9, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_136
-	case 1, EventScript_Settings_137
-	case 2, EventScript_Settings_138
-	case 3, EventScript_Settings_139
-	case 4, EventScript_Settings_140
-	case 5, EventScript_Settings_141
-	case MULTI_B_PRESSED, EventScript_Settings_141
+	case 0, EventScript_Settings_127
+	case 1, EventScript_Settings_128
+	case 2, EventScript_Settings_129
+	case 3, EventScript_Settings_130
+	case 5, EventScript_Settings_131
+	case MULTI_B_PRESSED, EventScript_Settings_131
 	goto EventScript_Settings_2
 
 EventScript_Settings_15:
 	msgbox EventScript_Settings_Text_10, MSGBOX_DEFAULT
 	multichoice 21, 0, MULTI_COLRESS_SETTINGS, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_143
-	case 1, EventScript_Settings_144
-	case 2, EventScript_Settings_145
-	case 3, EventScript_Settings_146
-	case 4, EventScript_Settings_147
-	case 5, EventScript_Settings_148
-	case MULTI_B_PRESSED, EventScript_Settings_148
+	case 0, EventScript_Settings_133
+	case 1, EventScript_Settings_134
+	case 2, EventScript_Settings_135
+	case 3, EventScript_Settings_136
+	case 5, EventScript_Settings_137
+	case MULTI_B_PRESSED, EventScript_Settings_137
 	goto EventScript_Settings_2
 
 EventScript_Settings_17:
@@ -2698,27 +2686,27 @@ EventScript_Settings_74:
 	goto EventScript_Settings_2
 
 EventScript_Settings_75:
-	call EventScript_MusicMenu
+	call EventScript_GameSettings
 	goto EventScript_Settings_2
 
 EventScript_Settings_76:
-	call EventScript_ExpAll
+	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
 EventScript_Settings_77:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_78:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
-EventScript_Settings_80:
+EventScript_Settings_79:
 	msgbox gText_Colress_InfiniteExplained
 	goto EventScript_Settings_2
 
-EventScript_Settings_81:
+EventScript_Settings_80:
 	call EventScript_Settings_NuzlockeRandomizer
+	goto EventScript_Settings_2
+
+EventScript_Settings_81:
+	call EventScript_GameSettings
 	goto EventScript_Settings_2
 
 EventScript_Settings_82:
@@ -2726,107 +2714,103 @@ EventScript_Settings_82:
 	goto EventScript_Settings_2
 
 EventScript_Settings_83:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_84:
-	call EventScript_Surveillance
+	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
 EventScript_Settings_85:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_87:
 	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
-EventScript_Settings_88:
+EventScript_Settings_86:
 	call EventScript_Settings_NuzlockeRandomizer
 	goto EventScript_Settings_2
 
-EventScript_Settings_89:
+EventScript_Settings_87:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_88:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
-EventScript_Settings_90:
-	call EventScript_ExpAll
+EventScript_Settings_89:
+	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
 EventScript_Settings_91:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_92:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_94:
 	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
-EventScript_Settings_95:
+EventScript_Settings_92:
 	msgbox gText_Colress_RandomizerExplanation
 	goto EventScript_Settings_2
 
-EventScript_Settings_96:
+EventScript_Settings_93:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_94:
 	call EventScript_MusicMenu
+	goto EventScript_Settings_2
+
+EventScript_Settings_95:
+	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
 EventScript_Settings_97:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_98:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_99:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_101:
 	msgbox gText_Colress_InfiniteExplained
 	goto EventScript_Settings_2
 
-EventScript_Settings_102:
+EventScript_Settings_98:
 	msgbox gText_Colress_RandomizerExplanation
 	goto EventScript_Settings_2
 
-EventScript_Settings_103:
+EventScript_Settings_99:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_100:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
-EventScript_Settings_104:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_105:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_106:
+EventScript_Settings_101:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
-EventScript_Settings_108:
+EventScript_Settings_103:
 	msgbox gText_Colress_DefaultExplained
 	goto EventScript_Settings_2
 
-EventScript_Settings_109:
+EventScript_Settings_104:
 	msgbox gText_Colress_RandomizerExplanation
 	goto EventScript_Settings_2
 
-EventScript_Settings_110:
+EventScript_Settings_105:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_106:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
+EventScript_Settings_107:
+	setvar VAR_TEMP_1, 1
+	goto EventScript_Settings_2
+
+EventScript_Settings_109:
+	call EventScript_Settings_BrutalMode
+	goto EventScript_Settings_2
+
+EventScript_Settings_110:
+	call EventScript_Settings_Nuzlocke
+	goto EventScript_Settings_2
+
 EventScript_Settings_111:
-	call EventScript_ExpAll
+	call EventScript_GameSettings
 	goto EventScript_Settings_2
 
 EventScript_Settings_112:
-	call EventScript_Surveillance
+	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
 EventScript_Settings_113:
@@ -2834,7 +2818,7 @@ EventScript_Settings_113:
 	goto EventScript_Settings_2
 
 EventScript_Settings_115:
-	call EventScript_Settings_BrutalMode
+	msgbox gText_Colress_InfiniteExplained
 	goto EventScript_Settings_2
 
 EventScript_Settings_116:
@@ -2842,27 +2826,27 @@ EventScript_Settings_116:
 	goto EventScript_Settings_2
 
 EventScript_Settings_117:
-	call EventScript_MusicMenu
+	call EventScript_GameSettings
 	goto EventScript_Settings_2
 
 EventScript_Settings_118:
-	call EventScript_ExpAll
+	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
 EventScript_Settings_119:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_120:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
+EventScript_Settings_121:
+	msgbox gText_Colress_DefaultExplained
+	goto EventScript_Settings_2
+
 EventScript_Settings_122:
-	msgbox gText_Colress_InfiniteExplained
+	call EventScript_Settings_Nuzlocke
 	goto EventScript_Settings_2
 
 EventScript_Settings_123:
-	call EventScript_Settings_Nuzlocke
+	call EventScript_GameSettings
 	goto EventScript_Settings_2
 
 EventScript_Settings_124:
@@ -2870,110 +2854,66 @@ EventScript_Settings_124:
 	goto EventScript_Settings_2
 
 EventScript_Settings_125:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_126:
-	call EventScript_Surveillance
+	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
 EventScript_Settings_127:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_129:
-	msgbox gText_Colress_DefaultExplained
-	goto EventScript_Settings_2
-
-EventScript_Settings_130:
-	call EventScript_Settings_Nuzlocke
-	goto EventScript_Settings_2
-
-EventScript_Settings_131:
-	call EventScript_MusicMenu
-	goto EventScript_Settings_2
-
-EventScript_Settings_132:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_133:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_134:
-	setvar VAR_TEMP_1, 1
-	goto EventScript_Settings_2
-
-EventScript_Settings_136:
 	call EventScript_Settings_BrutalMode
 	goto EventScript_Settings_2
 
-EventScript_Settings_137:
+EventScript_Settings_128:
 	msgbox gText_Colress_VanillaExplanation
 	goto EventScript_Settings_2
 
-EventScript_Settings_138:
+EventScript_Settings_129:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_130:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
-EventScript_Settings_139:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_140:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_141:
+EventScript_Settings_131:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
-EventScript_Settings_143:
+EventScript_Settings_133:
 	msgbox gText_Colress_InfiniteExplained
 	goto EventScript_Settings_2
 
-EventScript_Settings_144:
+EventScript_Settings_134:
 	msgbox gText_Colress_VanillaExplanation
 	goto EventScript_Settings_2
 
-EventScript_Settings_145:
+EventScript_Settings_135:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_136:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
-EventScript_Settings_146:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_147:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_148:
+EventScript_Settings_137:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
-EventScript_Settings_150:
+EventScript_Settings_139:
 	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
-EventScript_Settings_151:
+EventScript_Settings_140:
 	msgbox gText_Colress_VanillaExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
-EventScript_Settings_152:
+EventScript_Settings_141:
+	call EventScript_GameSettings
+	goto EventScript_Settings_2
+
+EventScript_Settings_142:
 	call EventScript_MusicMenu
 	goto EventScript_Settings_2
 
-EventScript_Settings_153:
-	call EventScript_ExpAll
-	goto EventScript_Settings_2
-
-EventScript_Settings_154:
-	call EventScript_Surveillance
-	goto EventScript_Settings_2
-
-EventScript_Settings_155:
+EventScript_Settings_143:
 	setvar VAR_TEMP_1, 1
 	goto EventScript_Settings_2
 
@@ -3053,6 +2993,10 @@ EventScript_Settings_Nuzlocke_3:
 	clearflag FLAG_SETTINGS_NUZLOCKE_MODE_ON
 	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
 	callnative GlobalNuzlockeClear
+	return
+
+
+EventScript_GameSettings::
 	return
 
 

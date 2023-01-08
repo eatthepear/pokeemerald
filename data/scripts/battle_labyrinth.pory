@@ -1790,11 +1790,9 @@ script EventScript_Settings {
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1808,11 +1806,9 @@ script EventScript_Settings {
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1826,11 +1822,9 @@ script EventScript_Settings {
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1844,11 +1838,9 @@ script EventScript_Settings {
 				case 1:
 					msgbox(gText_Colress_RandomizerExplanation)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1862,11 +1854,9 @@ script EventScript_Settings {
 				case 1:
 					msgbox(gText_Colress_RandomizerExplanation)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1880,11 +1870,9 @@ script EventScript_Settings {
 				case 1:
 					msgbox(gText_Colress_RandomizerExplanation)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1898,11 +1886,9 @@ script EventScript_Settings {
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1916,11 +1902,9 @@ script EventScript_Settings {
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1934,11 +1918,9 @@ script EventScript_Settings {
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1952,11 +1934,9 @@ script EventScript_Settings {
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1970,11 +1950,9 @@ script EventScript_Settings {
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -1988,11 +1966,9 @@ script EventScript_Settings {
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
 				case 2:
-					call(EventScript_MusicMenu)
+					call(EventScript_GameSettings)
 				case 3:
-					call(EventScript_ExpAll)
-				case 4:
-					call(EventScript_Surveillance)
+					call(EventScript_MusicMenu)
 				case 5:
 				case MULTI_B_PRESSED:
 					setvar(VAR_TEMP_1, 1)
@@ -2122,6 +2098,10 @@ script EventScript_Settings_Nuzlocke {
 
 text gText_Colress_NumDeathsNuzlocke {
 	"So far there have been {STR_VAR_1} death(s)."
+}
+
+script EventScript_GameSettings {
+	
 }
 
 script EventScript_MusicMenu {

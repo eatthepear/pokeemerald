@@ -3147,6 +3147,7 @@ extern const u8 gText_Beauty3[];
 //custom ones
 extern const u8 gText_Difficulty[];
 extern const u8 gText_Mode[];
+extern const u8 gText_Game[];
 extern const u8 gText_Music[];
 extern const u8 gText_ExpAll[];
 extern const u8 gText_Surveil[];

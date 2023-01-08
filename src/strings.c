@@ -1929,6 +1929,7 @@ const u8 gText_Dex_OWN[]    = _("OWN");
 const u8 gText_Nickname[] = _("Nickname");
 const u8 gText_Difficulty[] = _("Difficulty");
 const u8 gText_Mode[] = _("Mode");
+const u8 gText_Game[] = _("Game");
 const u8 gText_Music[] = _("Music");
 const u8 gText_ExpAll[] = _("Exp. All");
 const u8 gText_Surveil[] = _("Surveil");

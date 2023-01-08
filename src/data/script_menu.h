@@ -811,9 +811,8 @@ static const struct MenuAction MultichoiceList_ColressSettings[] =
 {
     {gText_Difficulty},
     {gText_Mode},
+    {gText_Game},
     {gText_Music},
-    {gText_ExpAll},
-    {gText_Surveil},
     {gText_Exit},
 };
 
