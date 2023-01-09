@@ -10,9 +10,9 @@ mapscripts Zone4E_MapScripts {
 
 script Zone4E_EventScript_LeviathanBattleLeft {
 	lockall
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	waitmovement(0)
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
@@ -22,18 +22,18 @@ script Zone4E_EventScript_LeviathanBattleLeft {
 
 script Zone4E_EventScript_LeviathanBattleMiddle {
 	lockall
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	waitmovement(0)
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	waitmovement(0)
 	goto(Zone4E_EventScript_LeviathanBattle)
 }
 
 script Zone4E_EventScript_LeviathanBattleRight {
 	lockall
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	waitmovement(0)
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
@@ -58,7 +58,7 @@ script Zone4E_EventScript_LeviathanBattle {
 	msgbox(format("{COLOR BLUE}Rita{COLOR DARK_GRAY}: Alright, I'm off to go meet some more friends!\pSee you around!"))
 	closemessage
 	fadescreen(FADE_TO_BLACK)
-	removeobject(2)
+	removeobject(1)
 	setflag(FLAG_BEAT_LEVIATHAN_4)
 	setvar(VAR_ZONE_4_STATE, 1)
 	fadescreen(FADE_FROM_BLACK)

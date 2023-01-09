@@ -14,9 +14,9 @@ Zone4E_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 
 Zone4E_EventScript_LeviathanBattleLeft::
 	lockall
-	applymovement 2, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 2, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -27,9 +27,9 @@ Zone4E_EventScript_LeviathanBattleLeft::
 
 Zone4E_EventScript_LeviathanBattleMiddle::
 	lockall
-	applymovement 2, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 2, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	goto Zone4E_EventScript_LeviathanBattle
 	return
@@ -37,9 +37,9 @@ Zone4E_EventScript_LeviathanBattleMiddle::
 
 Zone4E_EventScript_LeviathanBattleRight::
 	lockall
-	applymovement 2, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 2, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -63,7 +63,7 @@ Zone4E_EventScript_LeviathanBattle_1:
 	msgbox Zone4E_EventScript_LeviathanBattle_Text_1
 	closemessage
 	fadescreen FADE_TO_BLACK
-	removeobject 2
+	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_4
 	setvar VAR_ZONE_4_STATE, 1
 	fadescreen FADE_FROM_BLACK
