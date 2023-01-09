@@ -1802,7 +1802,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained)
+					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
@@ -1818,7 +1818,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
@@ -1836,7 +1836,7 @@ script EventScript_Settings {
 				case 0:
 					call(EventScript_Settings_BrutalMode)
 				case 1:
-					msgbox(gText_Colress_RandomizerExplanation)
+					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
 				case 2:
 					call(EventScript_GameSettings)
 				case 3:
@@ -1850,9 +1850,9 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained)
+					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
 				case 1:
-					msgbox(gText_Colress_RandomizerExplanation)
+					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
 				case 2:
 					call(EventScript_GameSettings)
 				case 3:
@@ -1866,9 +1866,9 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
 				case 1:
-					msgbox(gText_Colress_RandomizerExplanation)
+					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
 				case 2:
 					call(EventScript_GameSettings)
 				case 3:
@@ -1898,7 +1898,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained)
+					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
@@ -1914,7 +1914,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_DefaultExplained)
+					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
@@ -1932,7 +1932,7 @@ script EventScript_Settings {
 				case 0:
 					call(EventScript_Settings_BrutalMode)
 				case 1:
-					msgbox(gText_Colress_VanillaExplanation)
+					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
 				case 2:
 					call(EventScript_GameSettings)
 				case 3:
@@ -1946,9 +1946,9 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained)
+					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
 				case 1:
-					msgbox(gText_Colress_VanillaExplanation)
+					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
 				case 2:
 					call(EventScript_GameSettings)
 				case 3:
@@ -2002,7 +2002,6 @@ text gText_Colress_BrutalExplained {
 	"Many helper NPCs are unavailable.\p"
 	"Hidden items are unavailable.\p"
 	"Some moves use more PP than normal and opponents do not use PP.\p"
-	"Wild Pokémon do not give any experience.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }
@@ -2051,10 +2050,10 @@ script EventScript_Settings_BrutalMode {
 }
 
 script EventScript_Settings_NuzlockeRandomizer {
-	msgbox(gText_Colress_RandomizerExplanation)
-	msgbox(gText_Colress_NuzlockeExplained)
+	msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
+	msgbox(gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT)
 	buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
-	msgbox(gText_Colress_NumDeathsNuzlocke)
+	msgbox(gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT)
 	msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
@@ -2080,9 +2079,9 @@ text gText_Colress_SureTurnOffNuzlocke {
 }
 
 script EventScript_Settings_Nuzlocke {
-	msgbox(gText_Colress_NuzlockeExplained)
+	msgbox(gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT)
 	buffernumberstring(0, VAR_NUZLOCKE_DEATHS)
-	msgbox(gText_Colress_NumDeathsNuzlocke)
+	msgbox(gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT)
 	msgbox(gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		msgbox(gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO)
@@ -2115,9 +2114,9 @@ script EventScript_GameSettings {
 		waitstate
 		switch (var(VAR_RESULT)) {
 			case 0:
-				msgbox(format("Many trainers are usually optional, but can be changed to become mandatory, to increase the difficulty of the game."), MSGBOX_DEFAULT)
+				msgbox(format("Many trainers are usually optional, but can be changed to become mandatory."), MSGBOX_DEFAULT)
 				if (flag(FLAG_SETTINGS_MANDATORY_INCREASED) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("Many trainers have been changed to become mandatory."), MSGBOX_DEFAULT)
+					msgbox(format("Many trainers are currently mandatory."), MSGBOX_DEFAULT)
 					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
 						msgbox(format("Would you like to make it so that these trainers are optional?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
@@ -2132,7 +2131,7 @@ script EventScript_GameSettings {
 					}
 				} else {
 					msgbox(format("Many trainers are optional and can be avoided."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to make it so that these trainers are mandatory?"), MSGBOX_YESNO)
+					msgbox(format("Would you like to make it so that some of these trainers are mandatory?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						playse(SE_PC_ON)
 						msgbox("Trainers set to mandatory.", MSGBOX_DEFAULT)
@@ -2167,7 +2166,7 @@ script EventScript_GameSettings {
 					}
 				}
 			case 2:
-				msgbox(format("In-battle items, such as healing items or X-items, generally give the player an extreme advantage over opponents, especially when used well.\p{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} does not have opponents use any items."), MSGBOX_DEFAULT)
+				msgbox(format("In-battle items, such as healing items or X-items, generally give the player an extreme advantage over opponents, especially when used well.\pPokémon Battle Labyrinth does not have opponents use any items."), MSGBOX_DEFAULT)
 				if (flag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
 					msgbox(format("The usage of in-battle items is currently disabled."), MSGBOX_DEFAULT)
 					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
@@ -2299,7 +2298,7 @@ script EventScript_GameSettings {
 						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
 					}
 				} else {
-					msgbox(format("Grinding is currenlty enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Grinding is currently enabled."), MSGBOX_DEFAULT)
 					msgbox(format("Would you like to disable grinding on wild Pokémon?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						playse(SE_PC_ON)
@@ -2343,6 +2342,7 @@ script EventScript_GameSettings {
 							playse(SE_PC_OFF)
 							msgbox("Hidden items enabled.", MSGBOX_DEFAULT)
 							waitse
+							special(ReverseHiddenItemFlags)
 							clearflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
 						}
 					} else {
@@ -2355,6 +2355,7 @@ script EventScript_GameSettings {
 						playse(SE_PC_ON)
 						msgbox("Hidden items disabled.", MSGBOX_DEFAULT)
 						waitse
+						special(ReverseHiddenItemFlags)
 						setflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
 					}
 				}
@@ -2452,6 +2453,7 @@ script EventScript_GameSettings {
 						setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
 					}
 				}
+			case 14:
 			case MULTI_B_PRESSED:
 				return
 		}

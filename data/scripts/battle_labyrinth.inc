@@ -2698,7 +2698,7 @@ EventScript_Settings_77:
 	goto EventScript_Settings_2
 
 EventScript_Settings_79:
-	msgbox gText_Colress_InfiniteExplained
+	msgbox gText_Colress_InfiniteExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_80:
@@ -2718,7 +2718,7 @@ EventScript_Settings_83:
 	goto EventScript_Settings_2
 
 EventScript_Settings_85:
-	msgbox gText_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_86:
@@ -2742,7 +2742,7 @@ EventScript_Settings_91:
 	goto EventScript_Settings_2
 
 EventScript_Settings_92:
-	msgbox gText_Colress_RandomizerExplanation
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_93:
@@ -2758,11 +2758,11 @@ EventScript_Settings_95:
 	goto EventScript_Settings_2
 
 EventScript_Settings_97:
-	msgbox gText_Colress_InfiniteExplained
+	msgbox gText_Colress_InfiniteExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_98:
-	msgbox gText_Colress_RandomizerExplanation
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_99:
@@ -2778,11 +2778,11 @@ EventScript_Settings_101:
 	goto EventScript_Settings_2
 
 EventScript_Settings_103:
-	msgbox gText_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_104:
-	msgbox gText_Colress_RandomizerExplanation
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_105:
@@ -2818,7 +2818,7 @@ EventScript_Settings_113:
 	goto EventScript_Settings_2
 
 EventScript_Settings_115:
-	msgbox gText_Colress_InfiniteExplained
+	msgbox gText_Colress_InfiniteExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_116:
@@ -2838,7 +2838,7 @@ EventScript_Settings_119:
 	goto EventScript_Settings_2
 
 EventScript_Settings_121:
-	msgbox gText_Colress_DefaultExplained
+	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_122:
@@ -2862,7 +2862,7 @@ EventScript_Settings_127:
 	goto EventScript_Settings_2
 
 EventScript_Settings_128:
-	msgbox gText_Colress_VanillaExplanation
+	msgbox gText_Colress_VanillaExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_129:
@@ -2878,11 +2878,11 @@ EventScript_Settings_131:
 	goto EventScript_Settings_2
 
 EventScript_Settings_133:
-	msgbox gText_Colress_InfiniteExplained
+	msgbox gText_Colress_InfiniteExplained, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_134:
-	msgbox gText_Colress_VanillaExplanation
+	msgbox gText_Colress_VanillaExplanation, MSGBOX_DEFAULT
 	goto EventScript_Settings_2
 
 EventScript_Settings_135:
@@ -2944,10 +2944,10 @@ EventScript_Settings_BrutalMode_3:
 
 
 EventScript_Settings_NuzlockeRandomizer::
-	msgbox gText_Colress_RandomizerExplanation
-	msgbox gText_Colress_NuzlockeExplained
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
+	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
 	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke
+	msgbox gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_NuzlockeRandomizer_1
@@ -2971,9 +2971,9 @@ EventScript_Settings_NuzlockeRandomizer_3:
 
 
 EventScript_Settings_Nuzlocke::
-	msgbox gText_Colress_NuzlockeExplained
+	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
 	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke
+	msgbox gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT
 	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_Nuzlocke_1
@@ -3018,6 +3018,7 @@ EventScript_GameSettings_1:
 	case 11, EventScript_GameSettings_15
 	case 12, EventScript_GameSettings_16
 	case 13, EventScript_GameSettings_17
+	case 14, EventScript_GameSettings_18
 	case MULTI_B_PRESSED, EventScript_GameSettings_18
 	goto EventScript_GameSettings_1
 
@@ -3369,6 +3370,7 @@ EventScript_GameSettings_132:
 	playse SE_PC_ON
 	msgbox EventScript_GameSettings_Text_66, MSGBOX_DEFAULT
 	waitse
+	special ReverseHiddenItemFlags
 	setflag FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS
 	goto EventScript_GameSettings_1
 
@@ -3488,6 +3490,7 @@ EventScript_GameSettings_169:
 	playse SE_PC_OFF
 	msgbox EventScript_GameSettings_Text_63, MSGBOX_DEFAULT
 	waitse
+	special ReverseHiddenItemFlags
 	clearflag FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS
 	goto EventScript_GameSettings_1
 
@@ -4952,12 +4955,10 @@ EventScript_GameSettings_Text_0:
 
 EventScript_GameSettings_Text_1:
 	.string "Many trainers are usually optional, but\n"
-	.string "can be changed to become mandatory,\l"
-	.string "to increase the difficulty of the game.$"
+	.string "can be changed to become mandatory.$"
 
 EventScript_GameSettings_Text_2:
-	.string "Many trainers have been changed to\n"
-	.string "become mandatory.$"
+	.string "Many trainers are currently mandatory.$"
 
 EventScript_GameSettings_Text_3:
 	.string "Would you like to make it so that these\n"
@@ -4971,8 +4972,8 @@ EventScript_GameSettings_Text_5:
 	.string "avoided.$"
 
 EventScript_GameSettings_Text_6:
-	.string "Would you like to make it so that these\n"
-	.string "trainers are mandatory?$"
+	.string "Would you like to make it so that some\n"
+	.string "of these trainers are mandatory?$"
 
 EventScript_GameSettings_Text_7:
 	.string "Trainers set to mandatory.$"
@@ -5010,7 +5011,7 @@ EventScript_GameSettings_Text_15:
 	.string "or X-items, generally give the player\l"
 	.string "an extreme advantage over opponents,\l"
 	.string "especially when used well.\p"
-	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} does not have\n"
+	.string "Pokémon Battle Labyrinth does not have\n"
 	.string "opponents use any items.$"
 
 EventScript_GameSettings_Text_16:
@@ -5149,7 +5150,7 @@ EventScript_GameSettings_Text_49:
 	.string "Grinding enabled.$"
 
 EventScript_GameSettings_Text_50:
-	.string "Grinding is currenlty enabled.$"
+	.string "Grinding is currently enabled.$"
 
 EventScript_GameSettings_Text_51:
 	.string "Would you like to disable grinding on\n"
@@ -5501,8 +5502,6 @@ gText_Colress_BrutalExplained::
 	.string "Hidden items are unavailable.\p"
 	.string "Some moves use more PP than normal and\n"
 	.string "opponents do not use PP.\p"
-	.string "Wild Pokémon do not give any\n"
-	.string "experience.\p"
 	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
 	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
