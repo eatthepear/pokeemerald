@@ -54,8 +54,8 @@ script Zone2B_EventScript_TriggerLeviathanRight {
 }
 
 script Zone2B_EventScript_LeviathanMovement {
-	addobject(5)
-	applymovement(5, Zone2B_Movement_Leviathan)
+	addobject(1)
+	applymovement(1, Zone2B_Movement_Leviathan)
 	waitmovement(0)
 	fadeoutbgm(1)
 	msgbox(Zone2B_Text_Leviathan2Intro2)

@@ -44,9 +44,9 @@ Zone1A_EventScript_TriggerLeviathanBottom::
 	lockall
 	fadeoutbgm 1
 	setvar VAR_ZONE_1_STATE, 1
-	applymovement 6, Zone1A_Corey_WalkLeft
+	applymovement 1, Zone1A_Corey_WalkLeft
 	waitmovement 0
-	applymovement 6, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	goto Zone1A_EventScript_LeviathanBattle
 	return
@@ -56,7 +56,7 @@ Zone1A_EventScript_TriggerLeviathanMiddle::
 	lockall
 	fadeoutbgm 1
 	setvar VAR_ZONE_1_STATE, 1
-	applymovement 6, Zone1A_Corey_WalkLeft
+	applymovement 1, Zone1A_Corey_WalkLeft
 	waitmovement 0
 	goto Zone1A_EventScript_LeviathanBattle
 	return
@@ -66,16 +66,16 @@ Zone1A_EventScript_TriggerLeviathanTop::
 	lockall
 	fadeoutbgm 1
 	setvar VAR_ZONE_1_STATE, 1
-	applymovement 6, Zone1A_Corey_WalkLeft
+	applymovement 1, Zone1A_Corey_WalkLeft
 	waitmovement 0
-	applymovement 6, Common_Movement_WalkUp
+	applymovement 1, Common_Movement_WalkUp
 	waitmovement 0
 	goto Zone1A_EventScript_LeviathanBattle
 	return
 
 
 Zone1A_EventScript_LeviathanBattle::
-	applymovement 6, Zone1A_Corey_WalkLeft2
+	applymovement 1, Zone1A_Corey_WalkLeft2
 	waitmovement 0
 	msgbox Zone1A_Text_Leviathan1Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
@@ -90,7 +90,7 @@ Zone1A_EventScript_LeviathanBattle_1:
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_1
 	closemessage
 	fadescreen FADE_TO_BLACK
-	removeobject 6
+	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_1
 	fadescreen FADE_FROM_BLACK
 	release
