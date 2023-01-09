@@ -50,10 +50,10 @@ Zone3A_EventScript_TriggerLeviathan::
 	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	addobject 10
+	addobject 2
 	clearflag FLAG_HIDE_ZONE3A_PHILLIPA
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	applymovement 10, Common_Movement_WalkDown
+	applymovement 2, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
@@ -66,40 +66,40 @@ Zone3A_EventScript_TriggerLeviathan::
 Zone3A_EventScript_TriggerLeviathan_4:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_1
-	applymovement 10, Zone3A_Movement_Phillipa_RunAway
+	applymovement 2, Zone3A_Movement_Phillipa_RunAway
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
-	addobject 4
+	addobject 1
 	clearflag FLAG_HIDE_ZONE3A_REMI
-	applymovement 4, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_3
-	applymovement 4, Common_Movement_FaceLeft
+	applymovement 1, Common_Movement_FaceLeft
 	waitmovement 0
 	delay 32
-	applymovement 4, Common_Movement_FaceDown
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_4
-	applymovement 4, Zone3A_Movement_Remi_WalkToPhillipa
+	applymovement 1, Zone3A_Movement_Remi_WalkToPhillipa
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_5
-	applymovement 10, Common_Movement_FaceDown
+	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_6
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_7
 	delay 32
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_8
-	applymovement 4, Zone3A_Movement_Remi_WalkBack
-	applymovement 10, Zone3A_Movement_Phillipa_WalkBack
+	applymovement 1, Zone3A_Movement_Remi_WalkBack
+	applymovement 2, Zone3A_Movement_Phillipa_WalkBack
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_9
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_10
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_11
-	applymovement 4, Zone3A_Movement_Remi_WalkToPlayer
+	applymovement 1, Zone3A_Movement_Remi_WalkToPlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -107,23 +107,23 @@ Zone3A_EventScript_TriggerLeviathan_4:
 	giveitem ITEM_GOOD_ROD, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement 4, Zone3A_Movement_Remi_WalkBackToPhillipa
+	applymovement 1, Zone3A_Movement_Remi_WalkBackToPhillipa
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_13
-	applymovement 10, Common_Movement_FaceRight
+	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_14
 	closemessage
-	applymovement 10, Common_Movement_WalkUp
+	applymovement 2, Common_Movement_WalkUp
 	waitmovement 0
 	setflag FLAG_HIDE_ZONE3A_PHILLIPA
-	removeobject 10
-	applymovement 4, Common_Movement_WalkLeft
+	removeobject 2
+	applymovement 1, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement 4, Common_Movement_WalkUp
+	applymovement 1, Common_Movement_WalkUp
 	waitmovement 0
 	setflag FLAG_HIDE_ZONE3A_REMI
-	removeobject 4
+	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_3
 	setvar VAR_ZONE_3_STATE, 1
 	releaseall
