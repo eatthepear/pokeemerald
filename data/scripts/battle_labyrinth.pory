@@ -3056,70 +3056,57 @@ script EventScript_PorygonExit {
 	if (var(VAR_REVISITING_ZONE) != 0) {
 		goto(EventScript_WarpZone0)
 	}
-	specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) && (var(VAR_NUM_TRAINERS_REMAINING) != 0)) {
-		buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
-		msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."), MSGBOX_DEFAULT)
-		switch(var(VAR_NUM_TRAINERS_REMAINING)) {
+	msgbox(format("{COLOR GREEN}Proceed to the Sanctuary?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		closemessage
+		playmoncry(SPECIES_PORYGON, 0)
+		waitmoncry
+		switch (var(VAR_ZONE)) {
 			case 1:
-				msgbox(gText_OneOpponentRemaining)
-			default:
-				msgbox(gText_MultipleOpponentsRemaining)
-		}
-	} else {
-		msgbox(format("{COLOR GREEN}Proceed to the Sanctuary?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == YES) {
-			closemessage
-			playmoncry(SPECIES_PORYGON, 0)
-			waitmoncry
-			switch (var(VAR_ZONE)) {
-				case 1:
-					warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
-				case 2:
-					warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
-				case 3:
-					setflag(FLAG_HIDE_ZONE3A_MAX)
-					warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
-				case 4:
-					warp(MAP_ZONE4SANCTUARY, 255, 22, 7)
-				case 5:
-					warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
-				case 6:
-					setflag(FLAG_HIDE_ZONE6A_MAX)
-					warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
-				case 7:
-					setflag(FLAG_HIDE_ZONE7A_MAX)
-					setflag(FLAG_ZONE7B_HEAL_USED)
-					warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
-				case 9:
-					warp(MAP_ZONE9SANCTUARY, 255, 22, 7)
-				case 10:
-					setflag(FLAG_HIDE_ZONE10A_MAX)
-					warp(MAP_ZONE10SANCTUARY, 255, 22, 7)
-				case 11:
-					warp(MAP_ZONE11SANCTUARY, 255, 22, 7)
-				case 12:
-					clearflag(FLAG_SYS_NO_BAG_START_MENU)
-					warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
-				case 13:
-					warp(MAP_ZONE14SANCTUARY, 255, 22, 7)
-				case 15:
-					warp(MAP_ZONE15SANCTUARY, 255, 22, 7)
-				case 16:
-					warp(MAP_ZONE16SANCTUARY, 255, 22, 7)
-				case 17:
-					warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
-				case 18:
-					warp(MAP_ZONE19SANCTUARY, 255, 22, 7)
-				case 20:
-				case 21:
-				case 22:
-				case 23:
-				case 24:
-				case 25:
-					warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
-			}
-			waitstate
+				warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
+			case 2:
+				warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
+			case 3:
+				setflag(FLAG_HIDE_ZONE3A_MAX)
+				warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
+			case 4:
+				warp(MAP_ZONE4SANCTUARY, 255, 22, 7)
+			case 5:
+				warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
+			case 6:
+				setflag(FLAG_HIDE_ZONE6A_MAX)
+				warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
+			case 7:
+				setflag(FLAG_HIDE_ZONE7A_MAX)
+				setflag(FLAG_ZONE7B_HEAL_USED)
+				warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
+			case 9:
+				warp(MAP_ZONE9SANCTUARY, 255, 22, 7)
+			case 10:
+				setflag(FLAG_HIDE_ZONE10A_MAX)
+				warp(MAP_ZONE10SANCTUARY, 255, 22, 7)
+			case 11:
+				warp(MAP_ZONE11SANCTUARY, 255, 22, 7)
+			case 12:
+				clearflag(FLAG_SYS_NO_BAG_START_MENU)
+				warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
+			case 13:
+				warp(MAP_ZONE14SANCTUARY, 255, 22, 7)
+			case 15:
+				warp(MAP_ZONE15SANCTUARY, 255, 22, 7)
+			case 16:
+				warp(MAP_ZONE16SANCTUARY, 255, 22, 7)
+			case 17:
+				warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
+			case 18:
+				warp(MAP_ZONE19SANCTUARY, 255, 22, 7)
+			case 20:
+			case 21:
+			case 22:
+			case 23:
+			case 24:
+			case 25:
+				warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
 		}
 	}
     release
