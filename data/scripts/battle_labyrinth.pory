@@ -1989,18 +1989,20 @@ text gText_Colress_DefaultExplained {
 
 text gText_Colress_BrutalExplained {
 	format("{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder difficulty option.\p"
-	"All Leviathans are far more challenging.\p"
+	"All boss battles are far more challenging.\p"
 	"In addition, there are a number of rules implemented to make this mode even more difficult.\p"
-	"Defeating all trainers is required to progress to the Sanctuary.\p"
+	"Many optional trainers have been made into mandatory trainers.\p"
 	"Items cannot be used in battle.\p"
 	"Set mode cannot be turned off.\p"
 	"Pokémon cannot gain EVs.\p"
 	"TMs are single use.\p"
 	"Trainer battles give less money.\p"
 	"Wild Pokémon do not give any experience.\p"
-	"Items cannot be farmed from wild Pokémon or any other means.\p"
-	"Many helpful NPCs are unavailable.\p"
+	"Items and money cannot be farmed from wild Pokémon or any other means.\p"
+	"Many helper NPCs are unavailable.\p"
+	"Hidden items are unavailable.\p"
 	"Some moves use more PP than normal and opponents do not use PP.\p"
+	"Wild Pokémon do not give any experience.\p"
 	"If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to {COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
 	"It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY} unless you are familiar with {COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.")
 }
