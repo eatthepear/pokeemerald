@@ -363,9 +363,8 @@ Zone2B_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Even after all that training,\n"
 	.string "Rattata wasn't enough to get across\l"
 	.string "the finish line.\p"
-	.string "That's all right though;\p"
-	.string "I enjoyed our battle so much, I want to\n"
-	.string "give you this!$"
+	.string "That's all right though; I enjoyed our\n"
+	.string "battle so much, I want to give you this!$"
 
 Zone2B_EventScript_BuyBug_Text_0:
 	.string "Scram! I'm out of bugs for you to buy\n"

@@ -2206,7 +2206,7 @@ EventScript_Shop_Joy::
 	faceplayer
 	goto_if_unset FLAG_JOY_INTRO, EventScript_Shop_Joy_2
 EventScript_Shop_Joy_1:
-	msgbox EventScript_Shop_Joy_Text_1
+	msgbox EventScript_Shop_Joy_Text_1, MSGBOX_DEFAULT
 	showmoneybox 0, 0, 0
 	msgbox EventScript_Shop_Joy_Text_2, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -2222,8 +2222,7 @@ EventScript_Shop_Joy_1:
 	waitfanfare
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
-	msgbox EventScript_Shop_Joy_Text_5
-	closemessage
+	msgbox EventScript_Shop_Joy_Text_5, MSGBOX_DEFAULT
 	hidemoneybox
 EventScript_Shop_Joy_4:
 	msgbox EventScript_Shop_Joy_Text_6
@@ -2232,7 +2231,7 @@ EventScript_Shop_Joy_4:
 
 EventScript_Shop_Joy_2:
 	setflag FLAG_JOY_INTRO
-	msgbox EventScript_Shop_Joy_Text_0
+	msgbox EventScript_Shop_Joy_Text_0, MSGBOX_DEFAULT
 	goto EventScript_Shop_Joy_1
 
 EventScript_Shop_Joy_5:

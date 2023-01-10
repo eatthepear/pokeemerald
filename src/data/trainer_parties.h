@@ -265,26 +265,6 @@ static const struct TrainerMon sParty_Patrick[] = {
     }
 };
 
-// Mandatory
-// Youngster Boris
-static const struct TrainerMon sParty_Boris[] = {
-    {
-    .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_PIKIPEK,
-    },
-    {
-    .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_MAREEP,
-    },
-    {
-    .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_MANKEY,
-    }
-};
-
 // Optional/Mandatory
 // Lady Annabelle
 static const struct TrainerMon sParty_Annabelle[] = {
@@ -302,6 +282,26 @@ static const struct TrainerMon sParty_Annabelle[] = {
     .iv = 0,
     .lvl = 9,
     .species = SPECIES_ABRA,
+    }
+};
+
+// Mandatory
+// Youngster Boris
+static const struct TrainerMon sParty_Boris[] = {
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_PIKIPEK,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_MAREEP,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_MANKEY,
     }
 };
 

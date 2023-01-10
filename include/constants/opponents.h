@@ -15,8 +15,8 @@
 #define TRAINER_JOEY_LEVIATHAN_2_BRUTAL        	11
 #define TRAINER_JEMMA                         	12
 #define TRAINER_PATRICK                      	13
-#define TRAINER_BORIS                         	14
-#define TRAINER_ANNABELLE                    	15
+#define TRAINER_ANNABELLE                    	14
+#define TRAINER_BORIS                         	15
 #define TRAINER_RICHARD                      	16
 #define TRAINER_PHILLIPA_LEVIATHAN_3           	17
 #define TRAINER_PHILLIPA_LEVIATHAN_3_BRUTAL    	18

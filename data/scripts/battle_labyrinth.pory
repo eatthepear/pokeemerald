@@ -1629,9 +1629,9 @@ script EventScript_Shop_Joy {
 	faceplayer
 	if (flag(FLAG_JOY_INTRO) == false) {
 		setflag(FLAG_JOY_INTRO)
-		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: Welcome to the Pokémon…\nUgh. Never mind.\p{COLOR BLUE}???{COLOR DARK_GRAY}: My name is Joy. Just Joy.\p{COLOR BLUE}Joy{COLOR DARK_GRAY}: I used to work at the\nPokémon Center, but they gave\lterrible pay.\pSo I've started my own shop,\nJoy's Healing Shop!")
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: Welcome to the Pokémon…\nUgh. Never mind.\p{COLOR BLUE}???{COLOR DARK_GRAY}: My name is Joy. Just Joy.\p{COLOR BLUE}Joy{COLOR DARK_GRAY}: I used to work at the\nPokémon Center, but they gave\lterrible pay.\pSo I've started my own shop,\nJoy's Healing Shop!", MSGBOX_DEFAULT)
 	}
-	msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Welcome to Joy's Healing Shop.\pWe heal your entire party for a\nflat ¥1000 fee.")
+	msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Welcome to Joy's Healing Shop.\pWe heal your entire party for a\nflat ¥1000 fee.", MSGBOX_DEFAULT)
 	showmoneybox(0, 0, 0)
 	msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Should I heal your Pokémon?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == NO) {
@@ -1651,8 +1651,7 @@ script EventScript_Shop_Joy {
 			waitfanfare
 			special(HealPlayerParty)
 			fadescreen(FADE_FROM_BLACK)
-			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.")
-			closemessage
+			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.", MSGBOX_DEFAULT)
 			hidemoneybox
 		}
 	}
