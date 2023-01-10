@@ -620,7 +620,7 @@ static bool8 ShouldSwitchIfOnlyAttackingStatLowered(void)
     u16 move;
 
     // Brutal mode only, only 50% chance of triggering
-    if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) || FlagGet(FLAG_SETTINGS_HARD_BATTLES)) && (Random() & 1))
+    if (((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_HARD_BATTLES) == FALSE)) || (Random() % 2))
         return FALSE;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
@@ -689,7 +689,7 @@ static bool8 ShouldSwitchIfYawned(void)
     u16 move;
 
     // Brutal mode only, only 50% chance of triggering
-    if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) || FlagGet(FLAG_SETTINGS_HARD_BATTLES)) && (Random() & 1))
+    if (((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_HARD_BATTLES) == FALSE)) || (Random() % 2))
         return FALSE;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
@@ -709,7 +709,11 @@ static bool8 ShouldSwitchIfYawned(void)
     }
 
     if (gStatuses3[gActiveBattler] & (STATUS3_YAWN))
+    {
+        *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = PARTY_SIZE;
+        BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_SWITCH, 0);
         return TRUE;
+    }
 
     return FALSE;
 }

@@ -2278,8 +2278,8 @@ EventScript_Max_4:
 	return
 
 EventScript_Max_2:
-	msgbox EventScript_Max_Text_0
-	msgbox EventScript_Max_Text_1
+	msgbox EventScript_Max_Text_0, MSGBOX_DEFAULT
+	msgbox EventScript_Max_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_MAX_INTRO
 	goto EventScript_Max_1
 

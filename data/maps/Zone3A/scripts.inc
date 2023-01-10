@@ -86,30 +86,30 @@ Zone3A_EventScript_TriggerLeviathan_4:
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_4
 	applymovement 1, Zone3A_Movement_Remi_WalkToPhillipa
 	waitmovement 0
-	msgbox Zone3A_EventScript_TriggerLeviathan_Text_5
+	msgbox Zone3A_EventScript_TriggerLeviathan_Text_5, MSGBOX_DEFAULT
 	applymovement 2, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone3A_EventScript_TriggerLeviathan_Text_6
+	msgbox Zone3A_EventScript_TriggerLeviathan_Text_6, MSGBOX_DEFAULT
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_7
 	delay 32
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_8
 	applymovement 1, Zone3A_Movement_Remi_WalkBack
 	applymovement 2, Zone3A_Movement_Phillipa_WalkBack
 	waitmovement 0
-	msgbox Zone3A_EventScript_TriggerLeviathan_Text_9
-	msgbox Zone3A_EventScript_TriggerLeviathan_Text_10
+	msgbox Zone3A_EventScript_TriggerLeviathan_Text_9, MSGBOX_DEFAULT
+	msgbox Zone3A_EventScript_TriggerLeviathan_Text_10, MSGBOX_DEFAULT
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_11
 	applymovement 1, Zone3A_Movement_Remi_WalkToPlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox Zone3A_EventScript_TriggerLeviathan_Text_12
+	msgbox Zone3A_EventScript_TriggerLeviathan_Text_12, MSGBOX_DEFAULT
 	giveitem ITEM_GOOD_ROD, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement 1, Zone3A_Movement_Remi_WalkBackToPhillipa
 	waitmovement 0
-	msgbox Zone3A_EventScript_TriggerLeviathan_Text_13
+	msgbox Zone3A_EventScript_TriggerLeviathan_Text_13, MSGBOX_DEFAULT
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone3A_EventScript_TriggerLeviathan_Text_14
