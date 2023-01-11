@@ -2217,11 +2217,11 @@ EventScript_Shop_Joy_1:
 	removemoney 1000, 0
 	updatemoneybox
 	msgbox EventScript_Shop_Joy_Text_4
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox EventScript_Shop_Joy_Text_5, MSGBOX_DEFAULT
 	hidemoneybox
 EventScript_Shop_Joy_4:

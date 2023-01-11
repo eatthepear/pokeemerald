@@ -140,19 +140,15 @@ script Zone5A_EventScript_LeviathanBattle {
 	))
 	giveitem(ITEM_TM04, 1)
 	closemessage
-	msgbox(format(
-		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Sheesh. Harsh, much?"
-	))
+	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Sheesh. Harsh, much?"))
 	applymovement(1, Common_Movement_FaceUp)
 	waitmovement(0)
-	msgbox(format(
-		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh, shut it. Let's just get out of here."
-	))
-	fadescreen(FADE_TO_BLACK)
+	msgbox(format("{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh, shut it. Let's just get out of here."))
+	fadescreenswapbuffers(FADE_TO_BLACK)
 	removeobject(1)
 	setflag(FLAG_BEAT_LEVIATHAN_5)
 	removeobject(2)
-	fadescreen(FADE_FROM_BLACK)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
 	setvar(VAR_ZONE_5_STATE, 1)
 	release
 	end

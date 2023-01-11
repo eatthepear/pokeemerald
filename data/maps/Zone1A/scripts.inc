@@ -89,10 +89,10 @@ Zone1A_EventScript_LeviathanBattle_1:
 	giveitem ITEM_ORAN_BERRY, 10
 	msgbox Zone1A_EventScript_LeviathanBattle_Text_1
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_1
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

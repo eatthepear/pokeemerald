@@ -76,10 +76,10 @@ script Zone1A_EventScript_LeviathanBattle {
 	giveitem(ITEM_ORAN_BERRY, 10)
 	msgbox(format("{COLOR BLUE}Corey{COLOR DARK_GRAY}: Well, anyways, I've gotta run now.\pBye bye!"))
 	closemessage
-	fadescreen(FADE_TO_BLACK)
+	fadescreenswapbuffers(FADE_TO_BLACK)
 	removeobject(1)
 	setflag(FLAG_BEAT_LEVIATHAN_1)
-	fadescreen(FADE_FROM_BLACK)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
 	release
 	end
 }

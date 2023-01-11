@@ -53,10 +53,10 @@ Zone14B_EventScript_LeviathanBattle_1:
 	waitfanfare
 	msgbox Zone14B_EventScript_LeviathanBattle_Text_2
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 4
 	setflag FLAG_BEAT_LEVIATHAN_12
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

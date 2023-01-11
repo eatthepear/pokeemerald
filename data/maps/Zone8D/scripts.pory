@@ -145,7 +145,7 @@ script Zone8D_EventScript_InitiateLeviathan8 {
 	}
 	specialvar(VAR_RESULT, GetBattleOutcome)
 	if (var(VAR_RESULT) != B_OUTCOME_WON) {
-		fadescreen(FADE_TO_BLACK)
+		fadescreenswapbuffers(FADE_TO_BLACK)
 		special(SetCB2WhiteOut)
 		waitstate
 	}

@@ -64,10 +64,10 @@ Zone16A_EventScript_LilyRight_1:
 	doweather
 	msgbox Zone16A_EventScript_LilyRight_Text_2
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 7
 	setflag FLAG_BEAT_LEVIATHAN_14
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setvar VAR_ZONE_16_STATE, 1
 	release
 	end

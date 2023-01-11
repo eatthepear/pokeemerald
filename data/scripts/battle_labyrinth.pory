@@ -1646,11 +1646,11 @@ script EventScript_Shop_Joy {
 			removemoney(1000, 0)
 			updatemoneybox
 			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: That will be ¥1000, thank you…")
-			fadescreen(FADE_TO_BLACK)
+			fadescreenswapbuffers(FADE_TO_BLACK)
 			playfanfare(MUS_HEAL)
 			waitfanfare
 			special(HealPlayerParty)
-			fadescreen(FADE_FROM_BLACK)
+			fadescreenswapbuffers(FADE_FROM_BLACK)
 			msgbox("{COLOR BLUE}Joy{COLOR DARK_GRAY}: Your party has been restored.", MSGBOX_DEFAULT)
 			hidemoneybox
 		}

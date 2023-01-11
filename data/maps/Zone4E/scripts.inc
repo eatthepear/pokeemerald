@@ -62,11 +62,11 @@ Zone4E_EventScript_LeviathanBattle_1:
 	giveitem ITEM_TM02
 	msgbox Zone4E_EventScript_LeviathanBattle_Text_1
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_4
 	setvar VAR_ZONE_4_STATE, 1
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone4E_EventScript_LeviathanBattle_8
 Zone4E_EventScript_LeviathanBattle_7:
 	releaseall

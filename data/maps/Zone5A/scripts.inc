@@ -96,11 +96,11 @@ Zone5A_EventScript_LeviathanBattle_21:
 	applymovement 1, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_13
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 1
 	setflag FLAG_BEAT_LEVIATHAN_5
 	removeobject 2
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setvar VAR_ZONE_5_STATE, 1
 	release
 	end

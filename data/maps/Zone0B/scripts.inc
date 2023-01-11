@@ -108,7 +108,7 @@ Zone0B_EventScript_BreederM_5:
 	msgbox Zone0B_EventScript_BreederM_Text_1
 	delay 32
 	msgbox Zone0B_EventScript_BreederM_Text_2
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	setseenmon SPECIES_BULBASAUR
 	setseenmon SPECIES_CHARMANDER
 	setseenmon SPECIES_SQUIRTLE
@@ -134,7 +134,7 @@ Zone0B_EventScript_BreederM_5:
 	setseenmon SPECIES_SCORBUNNY
 	setseenmon SPECIES_SOBBLE
 	delay 48
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox Zone0B_EventScript_BreederM_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_ZONE0B_SHOWN_POKEDEX_ENTRIES
 	goto Zone0B_EventScript_BreederM_4

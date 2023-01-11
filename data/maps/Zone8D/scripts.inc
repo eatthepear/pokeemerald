@@ -219,7 +219,7 @@ Zone8D_EventScript_InitiateLeviathan8_19:
 	goto Zone8D_EventScript_InitiateLeviathan8_7
 
 Zone8D_EventScript_InitiateLeviathan8_22:
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	special SetCB2WhiteOut
 	waitstate
 	goto Zone8D_EventScript_InitiateLeviathan8_21

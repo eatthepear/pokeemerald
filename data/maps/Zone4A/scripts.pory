@@ -89,10 +89,10 @@ script Zone4A_EventScript_Breeder {
 	}
 	delay(16)
 	msgbox(format("Well, I'm off to help other trainers.\pSee you!"), MSGBOX_DEFAULT)
-	fadescreen(FADE_TO_BLACK)
-	removeobject(3)
+	fadescreenswapbuffers(FADE_TO_BLACK)
+	removeobject(4)
 	setflag(FLAG_ZONE4A_RECEIVED_GEM)
-	fadescreen(FADE_FROM_BLACK)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
 	release
 }
 
