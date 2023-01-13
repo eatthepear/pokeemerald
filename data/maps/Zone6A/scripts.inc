@@ -1,5 +1,6 @@
 Zone6A_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME
+	map_script MAP_SCRIPT_ON_TRANSITION, Zone6A_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
 Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME:
@@ -25,28 +26,66 @@ Zone6A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
 	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	return
 
+Zone6A_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	return
 
-Zone6A_EventScript_LeviathanBattle::
+Zone6A_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+	setobjectxyperm 2, 35, 18
+	return
+
+
+Zone6A_EventScript_LeviathanBattle2::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_2
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone6A_EventScript_LeviathanBattle_5
+	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle2_2
+Zone6A_EventScript_LeviathanBattle2_1:
+	msgbox Zone6A_EventScript_LeviathanBattle2_Text_0
+	applymovement 2, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 2, Common_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement 2, Common_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	setobjectxyperm 2, 35, 18
+	goto Zone6A_EventScript_LeviathanBattleStart
+	return
+
+Zone6A_EventScript_LeviathanBattle2_2:
+	call Zone6A_EventScript_LeviathanBattleFinished
+	goto Zone6A_EventScript_LeviathanBattle2_1
+
+
+Zone6A_EventScript_LeviathanBattleFinished::
+	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattleFinished_2
+	return
+
+Zone6A_EventScript_LeviathanBattleFinished_2:
+	msgbox Zone6A_Text_Mina_PostBattle
+	closemessage
+	release
+	end
+
+
+Zone6A_EventScript_LeviathanBattleStart::
 	fadeoutbgm 1
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_3, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattleStart_Text_0, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone6A_EventScript_LeviathanBattle_8
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone6A_EventScript_LeviathanBattle_8
-Zone6A_EventScript_LeviathanBattle_7:
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone6A_EventScript_LeviathanBattleStart_2
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone6A_EventScript_LeviathanBattleStart_2
+Zone6A_EventScript_LeviathanBattleStart_1:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MINA
-	trainerbattle_no_intro TRAINER_MINA_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_Text_5
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone6A_EventScript_LeviathanBattle_13
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone6A_EventScript_LeviathanBattle_13
-Zone6A_EventScript_LeviathanBattle_12:
+	trainerbattle_no_intro TRAINER_MINA_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattleStart_Text_2
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone6A_EventScript_LeviathanBattleStart_7
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone6A_EventScript_LeviathanBattleStart_7
+Zone6A_EventScript_LeviathanBattleStart_6:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_6, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattleStart_Text_3, MSGBOX_DEFAULT
 	giveitem ITEM_TM08
 	msgbox Zone6A_Text_Mina_PostBattle
 	closemessage
@@ -54,27 +93,38 @@ Zone6A_EventScript_LeviathanBattle_12:
 	release
 	end
 
-Zone6A_EventScript_LeviathanBattle_2:
-	msgbox Zone6A_Text_Mina_PostBattle
-	closemessage
-	release
-	end
-
-Zone6A_EventScript_LeviathanBattle_5:
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_2
-	release
-	end
-
-Zone6A_EventScript_LeviathanBattle_8:
+Zone6A_EventScript_LeviathanBattleStart_2:
 	setweather WEATHER_RAIN
 	doweather
-	msgbox Zone6A_EventScript_LeviathanBattle_Text_4
-	goto Zone6A_EventScript_LeviathanBattle_7
+	msgbox Zone6A_EventScript_LeviathanBattleStart_Text_1
+	goto Zone6A_EventScript_LeviathanBattleStart_1
 
-Zone6A_EventScript_LeviathanBattle_13:
+Zone6A_EventScript_LeviathanBattleStart_7:
 	resetweather
 	doweather
-	goto Zone6A_EventScript_LeviathanBattle_12
+	goto Zone6A_EventScript_LeviathanBattleStart_6
+
+
+Zone6A_EventScript_LeviathanBattle::
+	lock
+	faceplayer
+	goto_if_set FLAG_BEAT_LEVIATHAN_6, Zone6A_EventScript_LeviathanBattle_2
+Zone6A_EventScript_LeviathanBattle_1:
+	msgbox Zone6A_EventScript_LeviathanBattle2_Text_0, MSGBOX_DEFAULT
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone6A_EventScript_LeviathanBattle_5
+	goto Zone6A_EventScript_LeviathanBattleStart
+	return
+
+Zone6A_EventScript_LeviathanBattle_2:
+	call Zone6A_EventScript_LeviathanBattleFinished
+	goto Zone6A_EventScript_LeviathanBattle_1
+
+Zone6A_EventScript_LeviathanBattle_5:
+	msgbox Zone6A_EventScript_LeviathanBattle_Text_1
+	release
+	end
 
 
 Zone6A_EventScript_ItemNetBall::
@@ -231,30 +281,30 @@ Zone6A_Text_Sign:
 	.string "You can sort items in the Bag\n"
 	.string "using {START_BUTTON}.$"
 
-Zone6A_EventScript_LeviathanBattle_Text_0:
+Zone6A_EventScript_LeviathanBattle2_Text_0:
 	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!$"
 
-Zone6A_EventScript_LeviathanBattle_Text_1:
-	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Hey you! You think you're better\n"
-	.string "than me or something?$"
-
-Zone6A_EventScript_LeviathanBattle_Text_2:
-	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: That's what I thought!$"
-
-Zone6A_EventScript_LeviathanBattle_Text_3:
+Zone6A_EventScript_LeviathanBattleStart_Text_0:
 	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Who do you think you are?\p"
 	.string "I'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!$"
 
-Zone6A_EventScript_LeviathanBattle_Text_4:
+Zone6A_EventScript_LeviathanBattleStart_Text_1:
 	.string "It suddenly began to rain!$"
 
-Zone6A_EventScript_LeviathanBattle_Text_5:
+Zone6A_EventScript_LeviathanBattleStart_Text_2:
 	.string "Rain, rain, go away…$"
 
-Zone6A_EventScript_LeviathanBattle_Text_6:
+Zone6A_EventScript_LeviathanBattleStart_Text_3:
 	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!\p"
 	.string "You're pretty good!\p"
 	.string "Here, take this!$"
+
+Zone6A_EventScript_LeviathanBattle_Text_0:
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: Hey you! You think you're better\n"
+	.string "than me or something?$"
+
+Zone6A_EventScript_LeviathanBattle_Text_1:
+	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: That's what I thought!$"
 
 Zone6A_Text_Mina_PostBattle::
 	.string "{COLOR BLUE}Mina{COLOR DARK_GRAY}: I love leaving footprints in the\n"
