@@ -10,8 +10,14 @@ script Zone8Sanctuary_EventScript_Intro {
 	msgbox(Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT)
 	waitfanfare
 	msgbox(Zone8Sanctuary_Text_RewardClear7, MSGBOX_DEFAULT)
-	msgbox(Zone8Sanctuary_Text_7Reward, MSGBOX_DEFAULT)
-	giveitem(ITEM_BLUE_SHARD, 3)
+	if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+		msgbox("Red Shards and Blue Shards!", MSGBOX_DEFAULT)
+		giveitem(ITEM_RED_SHARD, 900)
+		giveitem(ITEM_BLUE_SHARD, 900)
+	} else {
+		msgbox(Zone8Sanctuary_Text_7Reward, MSGBOX_DEFAULT)
+		giveitem(ITEM_BLUE_SHARD, 3)
+	}
 	msgbox(Zone8Sanctuary_Text_RewardClear8, MSGBOX_DEFAULT)
 	msgbox(Zone8Sanctuary_Text_8Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_TM12)
@@ -61,21 +67,21 @@ script Zone8Sanctuary_EventScript_NextZone {
 
 text Zone8Sanctuary_Text_Colress_ReachedZone {
 	"{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"
-	"You have cleared {COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}.$"
+	"You have cleared {COLOR RED}Zone 7{COLOR DARK_GRAY} and {COLOR RED}Zone 8{COLOR DARK_GRAY}."
 }
 
 text Zone8Sanctuary_Text_RewardClear7 {
-	"Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is…$"
+	"Your reward for clearing {COLOR RED}Zone 7{COLOR DARK_GRAY} is…"
 }
 
 text Zone8Sanctuary_Text_7Reward {
-	"3 Blue Shards!$"
+	"3 Blue Shards!"
 }
 
 text Zone8Sanctuary_Text_RewardClear8 {
-	"Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is…$"
+	"Your reward for clearing {COLOR RED}Zone 8{COLOR DARK_GRAY} is…"
 }
 
 text Zone8Sanctuary_Text_8Reward {
-	"TM12 - Rock Tomb!$"
+	"TM12 - Rock Tomb!"
 }

@@ -1803,7 +1803,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					call(EventScript_Settings_BrutalMode)
+					call(EventScript_Settings_BrutalDifficulty)
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
@@ -1819,7 +1819,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
+					call(EventScript_Settings_InfiniteDifficulty)
 				case 1:
 					call(EventScript_Settings_NuzlockeRandomizer)
 				case 2:
@@ -1851,7 +1851,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					call(EventScript_Settings_BrutalMode)
+					call(EventScript_Settings_BrutalDifficulty)
 				case 1:
 					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
 				case 2:
@@ -1867,7 +1867,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
+					call(EventScript_Settings_InfiniteDifficulty)
 				case 1:
 					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
 				case 2:
@@ -1899,7 +1899,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					call(EventScript_Settings_BrutalMode)
+					call(EventScript_Settings_BrutalDifficulty)
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
@@ -1915,7 +1915,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
+					call(EventScript_Settings_InfiniteDifficulty)
 				case 1:
 					call(EventScript_Settings_Nuzlocke)
 				case 2:
@@ -1947,7 +1947,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					call(EventScript_Settings_BrutalMode)
+					call(EventScript_Settings_BrutalDifficulty)
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
 				case 2:
@@ -1963,7 +1963,7 @@ script EventScript_Settings {
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
 			switch (var(VAR_RESULT)) {
 				case 0:
-					msgbox(gText_Colress_InfiniteExplained, MSGBOX_DEFAULT)
+					call(EventScript_Settings_InfiniteDifficulty)
 				case 1:
 					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
 				case 2:
@@ -2048,7 +2048,7 @@ text gText_Colress_NuzlockeExplained {
 	"It is not recommended to play {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode unless you are familiar with Nuzlockes already.")
 }
 
-script EventScript_Settings_BrutalMode {
+script EventScript_Settings_BrutalDifficulty {
 	msgbox(gText_Colress_BrutalExplained)
 	msgbox(format("Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} and switch to {COLOR RED}Default{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
@@ -2061,6 +2061,17 @@ script EventScript_Settings_BrutalMode {
 			clearflag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)
 			special(ReverseHiddenItemFlags)
 		}
+	}
+}
+
+script EventScript_Settings_InfiniteDifficulty {
+	msgbox(gText_Colress_InfiniteExplained)
+	msgbox(format("Would you like to restock your supply of Full Restores, Max Elixirs, and Max Repels?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		additem(ITEM_FULL_RESTORE, 900)
+		additem(ITEM_MAX_ELIXIR, 900)
+		additem(ITEM_MAX_REPEL, 900)
+		msgbox("Items restocked.", MSGBOX_DEFAULT)
 	}
 }
 
@@ -2116,8 +2127,12 @@ text gText_Colress_NumDeathsNuzlocke {
 	"So far there have been {STR_VAR_1} death(s)."
 }
 
-text gText_Colress_CannotChangeSetting {
+text gText_Colress_CannotChangeSettingBrutal {
 	format("You cannot change this setting, as you are on Brutal difficulty.")
+}
+
+text gText_Colress_CannotChangeSettingInfinite {
+	format("You cannot change this setting, as you are on Infinite difficulty.")
 }
 
 script EventScript_GameSettings {
@@ -2141,7 +2156,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_ALL_MANDATORY)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Some trainers are currently optional."), MSGBOX_DEFAULT)
@@ -2166,7 +2181,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_HARD_BATTLES)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Boss battles are currently set to the easier difficulty."), MSGBOX_DEFAULT)
@@ -2191,7 +2206,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("The usage of in-battle items is currently enabled."), MSGBOX_DEFAULT)
@@ -2215,7 +2230,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_NO_EVS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("EVs are currently enabled."), MSGBOX_DEFAULT)
@@ -2240,7 +2255,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_PP_COSTS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Would you like to enable these PP cost changes?"), MSGBOX_YESNO)
@@ -2283,16 +2298,20 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_NO_FARMING)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Farming is currently enabled."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to disable farming?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("Farming disabled.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_NO_FARMING)
+					if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to disable farming?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_ON)
+							msgbox("Farming disabled.", MSGBOX_DEFAULT)
+							waitse
+							setflag(FLAG_SETTINGS_NO_FARMING)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT)
 					}
 				}
 			case 7:
@@ -2308,7 +2327,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_NO_WILD_EXP)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Grinding is currently enabled."), MSGBOX_DEFAULT)
@@ -2333,7 +2352,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_REMOVE_HELPER_NPCS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Helper NPCs are currently enabled."), MSGBOX_DEFAULT)
@@ -2359,17 +2378,21 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Hidden items are currently enabled."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to disable hidden items?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("Hidden items disabled.", MSGBOX_DEFAULT)
-						waitse
-						special(ReverseHiddenItemFlags)
-						setflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
+					if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == false) {
+						msgbox(format("Would you like to disable hidden items?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_ON)
+							msgbox("Hidden items disabled.", MSGBOX_DEFAULT)
+							waitse
+							special(ReverseHiddenItemFlags)
+							setflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT)
 					}
 				}
 			case 10:
@@ -2384,7 +2407,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_SINGLE_USE_TMS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("TMs are currently infinite use."), MSGBOX_DEFAULT)
@@ -2409,7 +2432,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_DISABLE_RETIRE)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Retiring is currently enabled."), MSGBOX_DEFAULT)
@@ -2433,7 +2456,7 @@ script EventScript_GameSettings {
 							clearflag(FLAG_SETTINGS_DECREASED_REWARDS)
 						}
 					} else {
-						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Trainers currently give their default reward money."), MSGBOX_DEFAULT)

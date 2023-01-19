@@ -17,6 +17,8 @@ Zone10Sanctuary_EventScript_Intro::
 	msgbox gText_RewardClear, MSGBOX_DEFAULT
 	msgbox Zone10Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_MACHETE
+	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone10Sanctuary_EventScript_Intro_2
+Zone10Sanctuary_EventScript_Intro_1:
 	msgbox gText_Colress_Unlocked, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox gText_Colress_UnlockedServices, MSGBOX_DEFAULT
@@ -28,6 +30,11 @@ Zone10Sanctuary_EventScript_Intro::
 	waitmovement 0
 	releaseall
 	end
+
+Zone10Sanctuary_EventScript_Intro_2:
+	msgbox Zone10Sanctuary_EventScript_Intro_Text_0, MSGBOX_DEFAULT
+	giveitem ITEM_YELLOW_SHARD, 900
+	goto Zone10Sanctuary_EventScript_Intro_1
 
 
 Zone10Sanctuary_EventScript_NextZone::
@@ -64,6 +71,9 @@ Zone10Sanctuary_EventScript_NextZone_6:
 	waitstate
 	goto Zone10Sanctuary_EventScript_NextZone_1
 
+
+Zone10Sanctuary_EventScript_Intro_Text_0:
+	.string "You also get Yellow Shards!$"
 
 Zone10Sanctuary_Text_Reward::
 	.string "The Machete!$"

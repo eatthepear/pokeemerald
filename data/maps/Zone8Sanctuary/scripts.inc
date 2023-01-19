@@ -13,8 +13,10 @@ Zone8Sanctuary_EventScript_Intro::
 	msgbox Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox Zone8Sanctuary_Text_RewardClear7, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone8Sanctuary_EventScript_Intro_2
 	msgbox Zone8Sanctuary_Text_7Reward, MSGBOX_DEFAULT
 	giveitem ITEM_BLUE_SHARD, 3
+Zone8Sanctuary_EventScript_Intro_1:
 	msgbox Zone8Sanctuary_Text_RewardClear8, MSGBOX_DEFAULT
 	msgbox Zone8Sanctuary_Text_8Reward, MSGBOX_DEFAULT
 	giveitem ITEM_TM12
@@ -35,6 +37,12 @@ Zone8Sanctuary_EventScript_Intro::
 	waitmovement 0
 	releaseall
 	return
+
+Zone8Sanctuary_EventScript_Intro_2:
+	msgbox Zone8Sanctuary_EventScript_Intro_Text_0, MSGBOX_DEFAULT
+	giveitem ITEM_RED_SHARD, 900
+	giveitem ITEM_BLUE_SHARD, 900
+	goto Zone8Sanctuary_EventScript_Intro_1
 
 
 Zone8Sanctuary_EventScript_NextZone::
@@ -75,6 +83,9 @@ Zone8Sanctuary_EventScript_NextZone_6:
 	waitstate
 	goto Zone8Sanctuary_EventScript_NextZone_1
 
+
+Zone8Sanctuary_EventScript_Intro_Text_0:
+	.string "Red Shards and Blue Shards!$"
 
 Zone8Sanctuary_Text_Colress_ReachedZone::
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Congratulations.\n"

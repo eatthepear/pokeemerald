@@ -564,20 +564,33 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		msgbox(format("Excellent choice.\p"
 		"You can also re-nickname your Pokémon from the party menu."))
 		delay(96)
-		msgbox(format("I also have a beginner's kit with items and cash to get you started."), MSGBOX_DEFAULT)
-		giveitem(ITEM_POKE_BALL, 15)
-		giveitem(ITEM_POTION, 10)
-		playfanfare(MUS_OBTAIN_ITEM)
-		msgbox(format("Received ¥5000!"), MSGBOX_DEFAULT)
-		waitfanfare
+		if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+			msgbox(format("Because you are playing on the infinite difficulty, here are the items you'd need.\pYou can get more by speaking to me about your difficulty setting."), MSGBOX_DEFAULT)
+			giveitem(ITEM_FULL_RESTORE, 900)
+			giveitem(ITEM_MAX_ELIXIR, 900)
+			giveitem(ITEM_MAX_REPEL, 900)
+		} else {
+			msgbox(format("I also have a beginner's kit with items and cash to get you started."), MSGBOX_DEFAULT)
+			giveitem(ITEM_POKE_BALL, 15)
+			giveitem(ITEM_POTION, 10)
+			playfanfare(MUS_OBTAIN_ITEM)
+			msgbox(format("Received ¥5000!"), MSGBOX_DEFAULT)
+			waitfanfare
+		}
 		playfanfare(MUS_OBTAIN_ITEM)
 		msgbox(format("Received the {COLOR RED}Pokédex{COLOR DARK_GRAY}!"), MSGBOX_DEFAULT)
 		waitfanfare
 		closemessage
 		delay(16)
 	} else {
+		if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+			additem(ITEM_FULL_RESTORE, 900)
+			additem(ITEM_MAX_ELIXIR, 900)
+			additem(ITEM_MAX_REPEL, 900)
+		} else {
+			additem(ITEM_POTION, 10)
+		}
 		additem(ITEM_POKE_BALL, 15)
-		additem(ITEM_POTION, 10)
 	}
 	setflag(FLAG_SETTINGS_EXP_ALL)
 	setflag(FLAG_SYS_POKEDEX_GET)
