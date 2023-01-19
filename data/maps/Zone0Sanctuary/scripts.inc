@@ -819,15 +819,15 @@ Zone0Sanctuary_EventScript_EndIntro_2:
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_0
 	delay 96
 	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone0Sanctuary_EventScript_EndIntro_6
-	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_2, MSGBOX_DEFAULT
+	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_3, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 15
 	giveitem ITEM_POTION, 10
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_3, MSGBOX_DEFAULT
+	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_4, MSGBOX_DEFAULT
 	waitfanfare
 Zone0Sanctuary_EventScript_EndIntro_5:
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_4, MSGBOX_DEFAULT
+	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_5, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
 	delay 16
@@ -835,15 +835,66 @@ Zone0Sanctuary_EventScript_EndIntro_5:
 
 Zone0Sanctuary_EventScript_EndIntro_6:
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_1, MSGBOX_DEFAULT
-	giveitem ITEM_FULL_RESTORE, 900
-	giveitem ITEM_MAX_ELIXIR, 900
-	giveitem ITEM_MAX_REPEL, 900
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_2, MSGBOX_DEFAULT
+	waitfanfare
 	goto Zone0Sanctuary_EventScript_EndIntro_5
 
 Zone0Sanctuary_EventScript_EndIntro_10:
-	additem ITEM_FULL_RESTORE, 900
-	additem ITEM_MAX_ELIXIR, 900
-	additem ITEM_MAX_REPEL, 900
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
 	goto Zone0Sanctuary_EventScript_EndIntro_9
 
 
@@ -1404,11 +1455,15 @@ Zone0Sanctuary_EventScript_EndIntro_Text_1:
 	.string "about your difficulty setting.$"
 
 Zone0Sanctuary_EventScript_EndIntro_Text_2:
+	.string "Obtained Full Restores, Max Elixirs, and\n"
+	.string "Max Repels!$"
+
+Zone0Sanctuary_EventScript_EndIntro_Text_3:
 	.string "I also have a beginner's kit with items\n"
 	.string "and cash to get you started.$"
 
-Zone0Sanctuary_EventScript_EndIntro_Text_3:
+Zone0Sanctuary_EventScript_EndIntro_Text_4:
 	.string "Received ¥5000!$"
 
-Zone0Sanctuary_EventScript_EndIntro_Text_4:
+Zone0Sanctuary_EventScript_EndIntro_Text_5:
 	.string "Received the {COLOR RED}Pokédex{COLOR DARK_GRAY}!$"

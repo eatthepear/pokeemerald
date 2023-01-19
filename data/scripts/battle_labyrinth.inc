@@ -2986,9 +2986,33 @@ EventScript_Settings_InfiniteDifficulty::
 	return
 
 EventScript_Settings_InfiniteDifficulty_1:
-	additem ITEM_FULL_RESTORE, 900
-	additem ITEM_MAX_ELIXIR, 900
-	additem ITEM_MAX_REPEL, 900
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
 	msgbox EventScript_Settings_InfiniteDifficulty_Text_1, MSGBOX_DEFAULT
 	return
 
