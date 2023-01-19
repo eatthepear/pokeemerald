@@ -4469,9 +4469,12 @@ EventScript_PorygonExit::
 	compare VAR_REVISITING_ZONE, 0
 	goto_if_ne EventScript_PorygonExit_2
 EventScript_PorygonExit_1:
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_PorygonExit_7
+EventScript_PorygonExit_6:
 	msgbox EventScript_PorygonExit_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_PorygonExit_5
+	goto_if_eq EventScript_PorygonExit_13
 EventScript_PorygonExit_4:
 	release
 	end
@@ -4481,107 +4484,126 @@ EventScript_PorygonExit_2:
 	goto EventScript_PorygonExit_1
 
 EventScript_PorygonExit_5:
+	buffernumberstring 0, VAR_NUM_TRAINERS_REMAINING
+	msgbox EventScript_BrutalExitNotSatisfied_Text_0, MSGBOX_DEFAULT
+	switch VAR_NUM_TRAINERS_REMAINING
+	case 1, EventScript_PorygonExit_11
+	msgbox gText_MultipleOpponentsRemaining
+	goto EventScript_PorygonExit_4
+
+EventScript_PorygonExit_7:
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_ne EventScript_PorygonExit_5
+	goto EventScript_PorygonExit_6
+
+EventScript_PorygonExit_11:
+	msgbox gText_OneOpponentRemaining
+	goto EventScript_PorygonExit_4
+
+EventScript_PorygonExit_13:
 	closemessage
 	playmoncry SPECIES_PORYGON, 0
 	waitmoncry
 	switch VAR_ZONE
-	case 1, EventScript_PorygonExit_8
-	case 2, EventScript_PorygonExit_9
-	case 3, EventScript_PorygonExit_10
-	case 4, EventScript_PorygonExit_11
-	case 5, EventScript_PorygonExit_12
-	case 6, EventScript_PorygonExit_13
-	case 7, EventScript_PorygonExit_14
-	case 9, EventScript_PorygonExit_15
-	case 10, EventScript_PorygonExit_16
-	case 11, EventScript_PorygonExit_17
-	case 12, EventScript_PorygonExit_18
-	case 13, EventScript_PorygonExit_19
-	case 15, EventScript_PorygonExit_20
-	case 16, EventScript_PorygonExit_21
-	case 17, EventScript_PorygonExit_22
-	case 18, EventScript_PorygonExit_23
-	case 20, EventScript_PorygonExit_24
-	case 21, EventScript_PorygonExit_24
-	case 22, EventScript_PorygonExit_24
-	case 23, EventScript_PorygonExit_24
-	case 24, EventScript_PorygonExit_24
-	case 25, EventScript_PorygonExit_24
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_8:
-	warp MAP_ZONE1SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_9:
-	warp MAP_ZONE2SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_10:
-	setflag FLAG_HIDE_ZONE3A_MAX
-	warp MAP_ZONE3SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_11:
-	warp MAP_ZONE4SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_12:
-	warp MAP_ZONE5SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_13:
-	setflag FLAG_HIDE_ZONE6A_MAX
-	warp MAP_ZONE6SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_14:
-	setflag FLAG_HIDE_ZONE7A_MAX
-	setflag FLAG_ZONE7B_HEAL_USED
-	warp MAP_ZONE8SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
+	case 1, EventScript_PorygonExit_17
+	case 2, EventScript_PorygonExit_18
+	case 3, EventScript_PorygonExit_19
+	case 4, EventScript_PorygonExit_20
+	case 5, EventScript_PorygonExit_21
+	case 6, EventScript_PorygonExit_22
+	case 7, EventScript_PorygonExit_23
+	case 9, EventScript_PorygonExit_24
+	case 10, EventScript_PorygonExit_25
+	case 11, EventScript_PorygonExit_26
+	case 12, EventScript_PorygonExit_27
+	case 13, EventScript_PorygonExit_28
+	case 15, EventScript_PorygonExit_29
+	case 16, EventScript_PorygonExit_30
+	case 17, EventScript_PorygonExit_31
+	case 18, EventScript_PorygonExit_32
+	case 20, EventScript_PorygonExit_33
+	case 21, EventScript_PorygonExit_33
+	case 22, EventScript_PorygonExit_33
+	case 23, EventScript_PorygonExit_33
+	case 24, EventScript_PorygonExit_33
+	case 25, EventScript_PorygonExit_33
 EventScript_PorygonExit_15:
-	warp MAP_ZONE9SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
-
-EventScript_PorygonExit_16:
-	setflag FLAG_HIDE_ZONE10A_MAX
-	warp MAP_ZONE10SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_17:
-	warp MAP_ZONE11SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	warp MAP_ZONE1SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_18:
-	clearflag FLAG_SYS_NO_BAG_START_MENU
-	warp MAP_ZONE12SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	warp MAP_ZONE2SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_19:
-	warp MAP_ZONE14SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	setflag FLAG_HIDE_ZONE3A_MAX
+	warp MAP_ZONE3SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_20:
-	warp MAP_ZONE15SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	warp MAP_ZONE4SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_21:
-	warp MAP_ZONE16SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	warp MAP_ZONE5SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_22:
-	warp MAP_ZONE17SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	setflag FLAG_HIDE_ZONE6A_MAX
+	warp MAP_ZONE6SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_23:
-	warp MAP_ZONE19SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	setflag FLAG_HIDE_ZONE7A_MAX
+	setflag FLAG_ZONE7B_HEAL_USED
+	warp MAP_ZONE8SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
 
 EventScript_PorygonExit_24:
+	warp MAP_ZONE9SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_25:
+	setflag FLAG_HIDE_ZONE10A_MAX
+	warp MAP_ZONE10SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_26:
+	warp MAP_ZONE11SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_27:
+	clearflag FLAG_SYS_NO_BAG_START_MENU
+	warp MAP_ZONE12SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_28:
+	warp MAP_ZONE14SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_29:
+	warp MAP_ZONE15SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_30:
+	warp MAP_ZONE16SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_31:
+	warp MAP_ZONE17SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_32:
+	warp MAP_ZONE19SANCTUARY, 255, 22, 7
+	goto EventScript_PorygonExit_15
+
+EventScript_PorygonExit_33:
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
-	goto EventScript_PorygonExit_4
+	goto EventScript_PorygonExit_15
 
 
 EventScript_ExitSign::
