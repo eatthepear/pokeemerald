@@ -2298,6 +2298,7 @@ EventScript_Max_1:
 	case 6, EventScript_Max_7
 	case 7, EventScript_Max_8
 	case 10, EventScript_Max_9
+	case 18, EventScript_Max_10
 EventScript_Max_4:
 	msgbox EventScript_Max_Text_3
 	release
@@ -2325,6 +2326,10 @@ EventScript_Max_9:
 	pokemart Zone10A_Shop_TMShop
 	goto EventScript_Max_4
 
+EventScript_Max_10:
+	pokemart Zone18A_Shop_TMShop
+	goto EventScript_Max_4
+
 
 	.align 2
 Zone3A_Shop_TMShop:
@@ -2349,6 +2354,13 @@ Zone10A_Shop_TMShop:
 	.2byte ITEM_TM17
 	.2byte ITEM_TM18
 	.2byte ITEM_TM19
+	.2byte ITEM_NONE
+
+	.align 2
+Zone18A_Shop_TMShop:
+	.2byte ITEM_TM31
+	.2byte ITEM_TM32
+	.2byte ITEM_TM33
 	.2byte ITEM_NONE
 
 EventScript_LeavingSetup::
@@ -4623,6 +4635,7 @@ EventScript_PorygonExit_22:
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_23:
+	setflag FLAG_HIDE_ZONE18A_MAX
 	warp MAP_ZONE19SANCTUARY, 255, 22, 7
 	goto EventScript_PorygonExit_4
 

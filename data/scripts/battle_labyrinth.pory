@@ -1709,6 +1709,8 @@ script EventScript_Max {
 			pokemart(Zone7A_Shop_TMShop)
 		case 10:
 			pokemart(Zone10A_Shop_TMShop)
+		case 18:
+			pokemart(Zone18A_Shop_TMShop)
 	}
 	msgbox(format("{COLOR BLUE}Max{COLOR DARK_GRAY}: Goodbye!"))
 	release
@@ -1733,6 +1735,12 @@ mart Zone10A_Shop_TMShop {
 	ITEM_TM17
 	ITEM_TM18
 	ITEM_TM19
+}
+
+mart Zone18A_Shop_TMShop {
+	ITEM_TM31
+	ITEM_TM32
+	ITEM_TM33
 }
 
 script EventScript_LeavingSetup {
@@ -3139,6 +3147,7 @@ script EventScript_PorygonExit {
 			case 17:
 				warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
 			case 18:
+				setflag(FLAG_HIDE_ZONE18A_MAX)
 				warp(MAP_ZONE19SANCTUARY, 255, 22, 7)
 			case 20:
 			case 21:
