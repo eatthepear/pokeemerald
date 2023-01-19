@@ -2245,9 +2245,35 @@ EventScript_Shop_Joy_8:
 	goto EventScript_Shop_Joy_4
 
 
+EventScript_MandatoryCheck::
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_MandatoryCheck_2
+	goto_if_set FLAG_SETTINGS_ALL_MANDATORY, EventScript_MandatoryCheck_2
+EventScript_MandatoryCheck_1:
+	return
+
+EventScript_MandatoryCheck_2:
+	compare VAR_NUM_TRAINERS_REMAINING, 0
+	goto_if_gt EventScript_MandatoryCheck_6
+	goto EventScript_MandatoryCheck_1
+
+EventScript_MandatoryCheck_6:
+	buffernumberstring 0, VAR_NUM_TRAINERS_REMAINING
+	msgbox EventScript_MandatoryCheck_Text_0, MSGBOX_DEFAULT
+	switch VAR_NUM_TRAINERS_REMAINING
+	case 1, EventScript_MandatoryCheck_10
+	msgbox gText_MultipleOpponentsRemaining
+EventScript_MandatoryCheck_8:
+	release
+	end
+
+EventScript_MandatoryCheck_10:
+	msgbox gText_OneOpponentRemaining
+	goto EventScript_MandatoryCheck_8
+
+
 EventScript_BrutalExitNotSatisfied::
 	buffernumberstring 0, VAR_NUM_TRAINERS_REMAINING
-	msgbox EventScript_BrutalExitNotSatisfied_Text_0
+	msgbox EventScript_MandatoryCheck_Text_0
 	switch VAR_NUM_TRAINERS_REMAINING
 	case 1, EventScript_BrutalExitNotSatisfied_3
 	msgbox gText_MultipleOpponentsRemaining
@@ -3021,7 +3047,7 @@ EventScript_GameSettings_1:
 
 EventScript_GameSettings_4:
 	msgbox EventScript_GameSettings_Text_1, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_MANDATORY_INCREASED, EventScript_GameSettings_19
+	goto_if_set FLAG_SETTINGS_ALL_MANDATORY, EventScript_GameSettings_19
 	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_GameSettings_19
 	msgbox EventScript_GameSettings_Text_5, MSGBOX_DEFAULT
 	msgbox EventScript_GameSettings_Text_6, MSGBOX_YESNO
@@ -3248,8 +3274,7 @@ EventScript_GameSettings_88:
 	playse SE_PC_ON
 	msgbox EventScript_GameSettings_Text_7, MSGBOX_DEFAULT
 	waitse
-	clearflag FLAG_SETTINGS_MANDATORY_DECREASED
-	setflag FLAG_SETTINGS_MANDATORY_INCREASED
+	setflag FLAG_SETTINGS_ALL_MANDATORY
 	goto EventScript_GameSettings_1
 
 EventScript_GameSettings_90:
@@ -3430,8 +3455,7 @@ EventScript_GameSettings_153:
 	playse SE_PC_OFF
 	msgbox EventScript_GameSettings_Text_4, MSGBOX_DEFAULT
 	waitse
-	clearflag FLAG_SETTINGS_MANDATORY_INCREASED
-	setflag FLAG_SETTINGS_MANDATORY_DECREASED
+	clearflag FLAG_SETTINGS_ALL_MANDATORY
 	goto EventScript_GameSettings_1
 
 EventScript_GameSettings_155:
@@ -4463,10 +4487,10 @@ EventScript_NuzlockeVerifyGift_4:
 EventScript_PorygonExit::
 	lock
 	faceplayer
-	setseenmon SPECIES_PORYGON
 	compare VAR_REVISITING_ZONE, 0
 	goto_if_ne EventScript_PorygonExit_2
 EventScript_PorygonExit_1:
+	call EventScript_MandatoryCheck
 	msgbox EventScript_PorygonExit_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_PorygonExit_5
@@ -4864,7 +4888,7 @@ EventScript_Shop_Joy_Text_5:
 EventScript_Shop_Joy_Text_6:
 	.string "{COLOR BLUE}Joy{COLOR DARK_GRAY}: See you next time.$"
 
-EventScript_BrutalExitNotSatisfied_Text_0:
+EventScript_MandatoryCheck_Text_0:
 	.string "{COLOR RED}You haven't defeated all the opponents\n"
 	.string "in the area yet.$"
 
@@ -4951,29 +4975,28 @@ EventScript_GameSettings_Text_0:
 	.string "change?$"
 
 EventScript_GameSettings_Text_1:
-	.string "Many trainers are usually optional, but\n"
-	.string "can be changed to become mandatory.$"
+	.string "You can choose to make all trainers\n"
+	.string "mandatory before leaving a Zone.$"
 
 EventScript_GameSettings_Text_2:
-	.string "Many trainers are currently mandatory.$"
+	.string "All trainers are currently mandatory.$"
 
 EventScript_GameSettings_Text_3:
-	.string "Would you like to make it so that these\n"
-	.string "trainers are optional?$"
+	.string "Would you like to make trainers no\n"
+	.string "longer all mandatory?$"
 
 EventScript_GameSettings_Text_4:
-	.string "Trainers set to optional.$"
+	.string "Trainers are no longer all mandatory.$"
 
 EventScript_GameSettings_Text_5:
-	.string "Many trainers are optional and can be\n"
-	.string "avoided.$"
+	.string "Some trainers are currently optional.$"
 
 EventScript_GameSettings_Text_6:
-	.string "Would you like to make it so that some\n"
-	.string "of these trainers are mandatory?$"
+	.string "Would you like to make it so that all\n"
+	.string "trainers are mandatory?$"
 
 EventScript_GameSettings_Text_7:
-	.string "Trainers set to mandatory.$"
+	.string "All trainers are now mandatory.$"
 
 EventScript_GameSettings_Text_8:
 	.string "Leviathans and other boss battles have\n"
@@ -5484,8 +5507,7 @@ gText_Colress_BrutalExplained::
 	.string "In addition, there are a number of rules\n"
 	.string "implemented to make this mode even\l"
 	.string "more difficult.\p"
-	.string "Many optional trainers have been made\n"
-	.string "into mandatory trainers.\p"
+	.string "All trainers are now mandatory.\p"
 	.string "Items cannot be used in battle.\p"
 	.string "Set mode cannot be turned off.\p"
 	.string "Pokémon cannot gain EVs.\p"

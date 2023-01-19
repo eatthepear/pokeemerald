@@ -1660,6 +1660,24 @@ script EventScript_Shop_Joy {
 	end
 }
 
+script EventScript_MandatoryCheck {
+	if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) || flag(FLAG_SETTINGS_ALL_MANDATORY)) {
+		if (var(VAR_NUM_TRAINERS_REMAINING) > 0) {
+			buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
+			msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."), MSGBOX_DEFAULT)
+			switch(var(VAR_NUM_TRAINERS_REMAINING)) {
+				case 1:
+					msgbox(gText_OneOpponentRemaining)
+				default:
+					msgbox(gText_MultipleOpponentsRemaining)
+			}
+			release
+			end
+		}
+	}
+	return
+}
+
 script EventScript_BrutalExitNotSatisfied {
 	buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
 	msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."))
@@ -1990,7 +2008,7 @@ text gText_Colress_BrutalExplained {
 	format("{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder difficulty option.\p"
 	"All boss battles are far more challenging.\p"
 	"In addition, there are a number of rules implemented to make this mode even more difficult.\p"
-	"Many optional trainers have been made into mandatory trainers.\p"
+	"All trainers are now mandatory.\p"
 	"Items cannot be used in battle.\p"
 	"Set mode cannot be turned off.\p"
 	"Pokémon cannot gain EVs.\p"
@@ -2111,30 +2129,28 @@ script EventScript_GameSettings {
 		waitstate
 		switch (var(VAR_RESULT)) {
 			case 0:
-				msgbox(format("Many trainers are usually optional, but can be changed to become mandatory."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_MANDATORY_INCREASED) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("Many trainers are currently mandatory."), MSGBOX_DEFAULT)
+				msgbox(format("You can choose to make all trainers mandatory before leaving a Zone."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_ALL_MANDATORY) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+					msgbox(format("All trainers are currently mandatory."), MSGBOX_DEFAULT)
 					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to make it so that these trainers are optional?"), MSGBOX_YESNO)
+						msgbox(format("Would you like to make trainers no longer all mandatory?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							playse(SE_PC_OFF)
-							msgbox("Trainers set to optional.", MSGBOX_DEFAULT)
+							msgbox("Trainers are no longer all mandatory.", MSGBOX_DEFAULT)
 							waitse
-							clearflag(FLAG_SETTINGS_MANDATORY_INCREASED)
-							setflag(FLAG_SETTINGS_MANDATORY_DECREASED)
+							clearflag(FLAG_SETTINGS_ALL_MANDATORY)
 						}
 					} else {
 						msgbox(gText_Colress_CannotChangeSetting, MSGBOX_DEFAULT)
 					}
 				} else {
-					msgbox(format("Many trainers are optional and can be avoided."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to make it so that some of these trainers are mandatory?"), MSGBOX_YESNO)
+					msgbox(format("Some trainers are currently optional."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make it so that all trainers are mandatory?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						playse(SE_PC_ON)
-						msgbox("Trainers set to mandatory.", MSGBOX_DEFAULT)
+						msgbox("All trainers are now mandatory.", MSGBOX_DEFAULT)
 						waitse
-						clearflag(FLAG_SETTINGS_MANDATORY_DECREASED)
-						setflag(FLAG_SETTINGS_MANDATORY_INCREASED)
+						setflag(FLAG_SETTINGS_ALL_MANDATORY)
 					}
 				}
 			case 1:
@@ -3053,10 +3069,10 @@ script EventScript_NuzlockeVerifyGift {
 script EventScript_PorygonExit {
     lock
 	faceplayer
-	setseenmon(SPECIES_PORYGON)
 	if (var(VAR_REVISITING_ZONE) != 0) {
 		goto(EventScript_WarpZone0)
 	}
+	call(EventScript_MandatoryCheck)
 	msgbox(format("{COLOR GREEN}Proceed to the Sanctuary?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		closemessage

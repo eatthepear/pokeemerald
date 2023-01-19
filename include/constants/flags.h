@@ -1508,8 +1508,8 @@
 #define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9)
 #define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA)
 #define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB)
-#define FLAG_SETTINGS_MANDATORY_INCREASED           (SYSTEM_FLAGS + 0xAC) // Trainers that are optional on Default have this
-#define FLAG_SETTINGS_MANDATORY_DECREASED           (SYSTEM_FLAGS + 0xAD) // Trainers that are now mandatory on Brutal have this
+#define FLAG_UNUSED_0x90C                           (SYSTEM_FLAGS + 0xAC)
+#define FLAG_SETTINGS_ALL_MANDATORY                 (SYSTEM_FLAGS + 0xAD)
 #define FLAG_SETTINGS_HARD_BATTLES                  (SYSTEM_FLAGS + 0xAE)
 #define FLAG_SETTINGS_NO_IN_BATTLE_ITEMS            (SYSTEM_FLAGS + 0xAF)
 #define FLAG_SETTINGS_NO_EVS                        (SYSTEM_FLAGS + 0xB0)
