@@ -2,15 +2,12 @@
  * Notes for documentation
  * 
  * Trainers are arranged in the order it is possible to battle them. There are Zone tags that divide up where the trainers are located.
- * For easy identification, the trainer class of each trainer is commented.
- * 
- * Note that some trainers have buffed parties if playing on Brutal/the harder battles setting is enabled.
- * Default/Infinite parties are exactly identical.
+ * Note that some trainers have different parties on Default and Brutal.
  * 
  * Some trainers are battled in different ways, be it double battles, tag battles, gauntlets, or battles that start with certain conditions.
  * These are included in the comments next to each trainer.
  * 
- * Abilities are by default set to the first ability. See species_info.h for more details.
+ * Abilities are by default set to the first ability. See base_stats.h for more details.
  * EVs are by default set to 0.
  * Natures are by default set to Serious.
  * Some Pokémon have tailored movesets which are documented in this file. Otherwise, they use level up movesets.
@@ -20,17 +17,11 @@
  * Many trainers have a shuffled party, i.e. they lead with a random Pokémon from their party.
  * These are commented as such.
  * 
- * Some trainers are optional and can be skipped.
- * If playing on Brutal/the mandatory trainers setting is enabled, some of those trainers may become mandatory.
- * These are commented as Optional, Optional/Mandatory, and Mandatory.
- * 
  * The trainer AI has been significantly improved from vanilla Emerald. 
  * On Brutal, the trainer AI knows your moveset, abilities, and held item. */
 
 /* ------------------- Zone 1 ------------------- */
 
-// Mandatory
-// School Kid F Nina
 static const struct TrainerMon sParty_Nina[] = {
     {
     .iv = 0,
@@ -45,8 +36,6 @@ static const struct TrainerMon sParty_Nina[] = {
     }
 };
 
-// Mandatory
-// Lass Mariam
 static const struct TrainerMon sParty_Mariam[] = {
     {
     .iv = 0,
@@ -67,8 +56,6 @@ static const struct TrainerMon sParty_Mariam[] = {
     }
 };
 
-// Mandatory
-// Youngster Oscar
 static const struct TrainerMon sParty_Oscar[] = {
     {
     .iv = 0,
@@ -89,9 +76,7 @@ static const struct TrainerMon sParty_Oscar[] = {
     }
 };
 
-// Mandatory
-// Leviathan Corey (School Kid M), Default
-static const struct TrainerMon sParty_CoreyDefault[] = {
+static const struct TrainerMon sParty_CoreyDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 7,
@@ -103,9 +88,7 @@ static const struct TrainerMon sParty_CoreyDefault[] = {
     }
 };
 
-// Mandatory
-// Leviathan Corey (School Kid M), Brutal
-static const struct TrainerMon sParty_CoreyBrutal[] = {
+static const struct TrainerMon sParty_CoreyBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 7,
@@ -119,8 +102,6 @@ static const struct TrainerMon sParty_CoreyBrutal[] = {
 
 /* ------------------- Zone 2 ------------------- */
 
-// Mandatory
-// Fairy Tale Girl Polly
 static const struct TrainerMon sParty_Polly[] = {
     {
     .iv = 0,
@@ -138,8 +119,6 @@ static const struct TrainerMon sParty_Polly[] = {
     }
 };
 
-// Mandatory
-// Bug Catcher Jeremiah
 static const struct TrainerMon sParty_Jeremiah[] = {
     {
     .iv = 0,
@@ -158,8 +137,6 @@ static const struct TrainerMon sParty_Jeremiah[] = {
     }
 };
 
-// Mandatory
-// Lass Harper
 static const struct TrainerMon sParty_Harper[] = {
     {
     .iv = 0,
@@ -178,8 +155,6 @@ static const struct TrainerMon sParty_Harper[] = {
     }
 };
 
-// Optional/Mandatory
-// School Kid M Arthur
 static const struct TrainerMon sParty_Arthur[] = {
     {
     .iv = 0,
@@ -198,9 +173,7 @@ static const struct TrainerMon sParty_Arthur[] = {
     }
 };
 
-// Optional/Mandatory
-// Leviathan Joey (Youngster), Default
-static const struct TrainerMon sParty_JoeyDefault[] = {
+static const struct TrainerMon sParty_JoeyDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 9,
@@ -212,9 +185,7 @@ static const struct TrainerMon sParty_JoeyDefault[] = {
     }
 };
 
-// Optional/Mandatory
-// Leviathan Joey (Youngster), Brutal
-static const struct TrainerMon sParty_JoeyBrutal[] = {
+static const struct TrainerMon sParty_JoeyBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 9,
@@ -228,8 +199,6 @@ static const struct TrainerMon sParty_JoeyBrutal[] = {
 
 /* ------------------- Zone 3 ------------------- */
 
-// Mandatory
-// Lass Jemma
 static const struct TrainerMon sParty_Jemma[] = {
     {
     .iv = 0,
@@ -248,8 +217,6 @@ static const struct TrainerMon sParty_Jemma[] = {
     }
 };
 
-// Optional
-// Bug Catcher Patrick
 static const struct TrainerMon sParty_Patrick[] = {
     {
     .iv = 0,
@@ -265,8 +232,6 @@ static const struct TrainerMon sParty_Patrick[] = {
     }
 };
 
-// Mandatory
-// Youngster Boris
 static const struct TrainerMon sParty_Boris[] = {
     {
     .iv = 0,
@@ -285,8 +250,6 @@ static const struct TrainerMon sParty_Boris[] = {
     }
 };
 
-// Optional/Mandatory
-// Lady Annabelle
 static const struct TrainerMon sParty_Annabelle[] = {
     {
     .iv = 0,
@@ -305,8 +268,6 @@ static const struct TrainerMon sParty_Annabelle[] = {
     }
 };
 
-// Optional/Mandatory
-// Rich Boy Richard
 static const struct TrainerMon sParty_Richard[] = {
     {
     .iv = 0,
@@ -325,9 +286,7 @@ static const struct TrainerMon sParty_Richard[] = {
     }
 };
 
-// Mandatory
-// Leviathan Phillipa (School Kid F), Default
-static const struct TrainerMon sParty_PhillipaDefault[] = {
+static const struct TrainerMon sParty_PhillipaDefault[] = {// Leviathan, Default
     {
     .iv = 20,
     .lvl = 11,
@@ -354,9 +313,7 @@ static const struct TrainerMon sParty_PhillipaDefault[] = {
     }
 };
 
-// Mandatory
-// Leviathan Phillipa (School Kid F), Brutal
-static const struct TrainerMon sParty_PhillipaBrutal[] = {
+static const struct TrainerMon sParty_PhillipaBrutal[] = {// Leviathan, Brutal
     {
     .iv = 31,
     .lvl = 11,
@@ -393,8 +350,6 @@ static const struct TrainerMon sParty_PhillipaBrutal[] = {
 
 /* ------------------- Zone 4 ------------------- */
 
-// Optional/Mandatory
-// School Kid M Herman
 static const struct TrainerMon sParty_Herman[] = {
     {
     .iv = 0,
@@ -413,8 +368,6 @@ static const struct TrainerMon sParty_Herman[] = {
     }
 };
 
-// Optional
-// Youngster Ralph
 static const struct TrainerMon sParty_Ralph[] = {
     {
     .iv = 0,
@@ -433,8 +386,6 @@ static const struct TrainerMon sParty_Ralph[] = {
     }
 };
 
-// Optional/Mandatory
-// Bug Catcher Santiago
 static const struct TrainerMon sParty_Santiago[] = {
     {
     .iv = 0,
@@ -453,9 +404,7 @@ static const struct TrainerMon sParty_Santiago[] = {
     }
 };
 
-// Optional
-// Twins Chloe & Kaya
-static const struct TrainerMon sParty_ChloeAndKaya[] = {// Double Battle
+static const struct TrainerMon sParty_ChloeAndKaya[] = {//Double Battle
     {
     .iv = 0,
     .lvl = 10,
@@ -478,8 +427,6 @@ static const struct TrainerMon sParty_ChloeAndKaya[] = {// Double Battle
     }
 };
 
-// Optional/Mandatory
-// Camper Fred
 static const struct TrainerMon sParty_Fred[] = {
     {
     .iv = 0,
@@ -498,8 +445,6 @@ static const struct TrainerMon sParty_Fred[] = {
     }
 };
 
-// Optional/Mandatory
-// Fairy Tale Girl Lucia
 static const struct TrainerMon sParty_Lucia[] = {
     {
     .iv = 0,
@@ -518,9 +463,7 @@ static const struct TrainerMon sParty_Lucia[] = {
     }
 };
 
-// Mandatory
-// Leviathan Rita (Lady), Default
-static const struct TrainerMon sParty_RitaDefault[] = {// Double Battle
+static const struct TrainerMon sParty_RitaDefault[] = {// Leviathan, Double Battle, Default
     {
     .iv = 20,
     .lvl = 13,
@@ -539,9 +482,7 @@ static const struct TrainerMon sParty_RitaDefault[] = {// Double Battle
     }
 };
 
-// Mandatory
-// Leviathan Rita (Lady), Brutal
-static const struct TrainerMon sParty_RitaBrutal[] = {// Double Battle
+static const struct TrainerMon sParty_RitaBrutal[] = {// Leviathan, Double Battle, Brutal
     {
     .ivs = {30, 31, 31, 31, 30, 31},
     .lvl = 13,
@@ -564,8 +505,6 @@ static const struct TrainerMon sParty_RitaBrutal[] = {// Double Battle
 
 /* ------------------- Zone 5 ------------------- */
 
-// Optional
-// Sr. and Jr. Anne and June
 static const struct TrainerMon sParty_AnneAndJune[] = {// Double Battle
     {
     .iv = 0,
@@ -589,8 +528,6 @@ static const struct TrainerMon sParty_AnneAndJune[] = {// Double Battle
     },
 };
 
-// Optional
-// Fisherman Gilbert
 static const struct TrainerMon sParty_Gilbert[] = {
     {
     .iv = 0,
@@ -609,8 +546,6 @@ static const struct TrainerMon sParty_Gilbert[] = {
     }
 };
 
-// Mandatory
-// Pokéfan F Rebecca
 static const struct TrainerMon sParty_Rebecca[] = {
     {
     .iv = 0,
@@ -629,8 +564,6 @@ static const struct TrainerMon sParty_Rebecca[] = {
     }
 };
 
-// Mandatory
-// Pokéfan M Ryan
 static const struct TrainerMon sParty_Ryan[] = {
     {
     .iv = 0,
@@ -649,8 +582,6 @@ static const struct TrainerMon sParty_Ryan[] = {
     }
 };
 
-// Mandatory
-// Picnicker Caitlyn
 static const struct TrainerMon sParty_Caitlyn[] = {
     {
     .iv = 0,
@@ -669,8 +600,6 @@ static const struct TrainerMon sParty_Caitlyn[] = {
     }
 };
 
-// Mandatory
-// Camper Kenneth
 static const struct TrainerMon sParty_Kenneth[] = {
     {
     .iv = 0,
@@ -689,8 +618,6 @@ static const struct TrainerMon sParty_Kenneth[] = {
     }
 };
 
-// Mandatory
-// Rich Boy Clinton
 static const struct TrainerMon sParty_Clinton[] = {
     {
     .iv = 0,
@@ -709,8 +636,6 @@ static const struct TrainerMon sParty_Clinton[] = {
     }
 };
 
-// Mandatory
-// Bug Catcher Kevin
 // You fight Kevin then immediately fight Declan afterwards.
 // On Default, your party is fully healed in between fights, while on Brutal your party is not
 static const struct TrainerMon sParty_Kevin[] = {
@@ -741,9 +666,7 @@ static const struct TrainerMon sParty_Kevin[] = {
     }
 };
 
-// Mandatory
-// Leviathan Declan (Bug Maniac)
-static const struct TrainerMon sParty_Declan[] = {// Double Battle
+static const struct TrainerMon sParty_Declan[] = {// Leviathan, Double Battle, Default and Brutal
     {
     .iv = 20,
     .lvl = 15,

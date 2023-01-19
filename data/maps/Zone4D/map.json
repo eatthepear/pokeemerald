@@ -15,32 +15,6 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 15,
-      "y": 14,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Zone4D_EventScript_Fred",
-      "flag": "FLAG_SETTINGS_MANDATORY_INCREASED"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 16,
-      "y": 7,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Zone4D_EventScript_Fred",
-      "flag": "FLAG_SETTINGS_MANDATORY_DECREASED"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_FAIRY_TALE_GIRL",
       "x": 6,
       "y": 7,
@@ -51,20 +25,20 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Zone4D_EventScript_Lucia",
-      "flag": "FLAG_SETTINGS_MANDATORY_INCREASED"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FAIRY_TALE_GIRL",
-      "x": 8,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 15,
+      "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "Zone4D_EventScript_Lucia",
-      "flag": "FLAG_SETTINGS_MANDATORY_DECREASED"
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Zone4D_EventScript_Fred",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",

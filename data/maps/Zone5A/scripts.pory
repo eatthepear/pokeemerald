@@ -15,7 +15,7 @@ mapscripts Zone5A_MapScripts {
 
 script Zone5A_EventScript_LeviathanBattle {
 	lockall
-	applymovement(2, Common_Movement_WalkDown)
+	applymovement(10, Common_Movement_WalkDown)
 	waitmovement(0)
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
 	if (var(VAR_TEMP_0) == 31) {
@@ -57,9 +57,9 @@ script Zone5A_EventScript_LeviathanBattle {
 		msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Oh, I see how it is. Scared, huh?"))
 		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 		waitmovement(0)
-		applymovement(2, Common_Movement_WalkUp)
+		applymovement(10, Common_Movement_WalkUp)
 		waitmovement(0)
-		applymovement(2, Common_Movement_FaceDown)
+		applymovement(10, Common_Movement_FaceDown)
 		waitmovement(0)
 		releaseall
 		end
@@ -67,16 +67,16 @@ script Zone5A_EventScript_LeviathanBattle {
 	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Finally! My Bugs are writhing with excitement!"))
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	trainerbattle_no_intro(TRAINER_KEVIN, format("It can't be!"))
-	applymovement(2, Common_Movement_FaceRight)
+	applymovement(10, Common_Movement_FaceRight)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Declan, bro, he beat me!\pIt's your turn to show off the power of the Bug Enjoyers Club!"))
-	applymovement(1, Common_Movement_WalkLeft)
+	applymovement(4, Common_Movement_WalkLeft)
 	waitmovement(0)
-	applymovement(1, Common_Movement_WalkDown)
+	applymovement(4, Common_Movement_WalkDown)
 	waitmovement(0)
-	applymovement(1, Common_Movement_WalkDown)
+	applymovement(4, Common_Movement_WalkDown)
 	waitmovement(0)
-	applymovement(1, Common_Movement_FaceLeft)
+	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox(
 		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: …\n"
@@ -86,16 +86,16 @@ script Zone5A_EventScript_LeviathanBattle {
 		"The Bug Maniacs, not\l"
 		"The Bug Enjoyers.")
 	fadeoutbgm(1)
-	applymovement(1, Common_Movement_ExclamationMark)
+	applymovement(4, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
 	msgbox(format("{COLOR BLUE}Declan{COLOR DARK_GRAY}: Huh? Oh!"))
-	applymovement(1, Common_Movement_WalkDown)
+	applymovement(4, Common_Movement_WalkDown)
 	waitmovement(0)
-	applymovement(1, Common_Movement_FaceLeft)
+	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
-	applymovement(2, Common_Movement_FaceDown)
+	applymovement(10, Common_Movement_FaceDown)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
 	waitmovement(0)
@@ -111,20 +111,20 @@ script Zone5A_EventScript_LeviathanBattle {
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_DECLAN)
 	trainerbattle_no_intro(TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat)
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	applymovement(2, Common_Movement_WalkRight)
+	applymovement(10, Common_Movement_WalkRight)
 	waitmovement(0)
-	applymovement(2, Common_Movement_FaceDown)
+	applymovement(10, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format(
 		"{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, it's just a name.\pMaybe it doesn't have the right ring or something.\pBut at least let's train more together. Maybe we can beat this trainer next time."
 	))
-	applymovement(1, Common_Movement_FaceUp)
+	applymovement(4, Common_Movement_FaceUp)
 	waitmovement(0)
 	msgbox(format(
 		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You're right, you're right."
 	))
 	delay(64)
-	applymovement(1, Common_Movement_FaceLeft)
+	applymovement(4, Common_Movement_FaceLeft)
 	waitmovement(0)
 	msgbox(format(
 		"{COLOR BLUE}Declan{COLOR DARK_GRAY}: Oh! Right. I forgot you're here.\p"
