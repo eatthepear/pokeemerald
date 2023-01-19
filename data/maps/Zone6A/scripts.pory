@@ -16,46 +16,24 @@ mapscripts Zone6A_MapScripts {
 			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
 	}
-	MAP_SCRIPT_ON_TRANSITION {
-		if (flag(FLAG_BEAT_LEVIATHAN_6) == true) {
-			setobjectxyperm(2, 35, 18)
-		}
-	}
 }
 
-script Zone6A_EventScript_LeviathanBattle2 {
+script Zone6A_EventScript_LeviathanBattle {
 	lock
 	faceplayer
-	if (flag(FLAG_BEAT_LEVIATHAN_6) == true) {
-		call(Zone6A_EventScript_LeviathanBattleFinished)
-	}
-	msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!"))
-	applymovement(2, Common_Movement_WalkDown)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
-	waitmovement(0)
-	applymovement(2, Common_Movement_WalkDown)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
-	waitmovement(0)
-	applymovement(2, Common_Movement_WalkRight)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
-	waitmovement(0)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
-	waitmovement(0)
-	setobjectxyperm(2, 35, 18)
-	goto(Zone6A_EventScript_LeviathanBattleStart)
-}
-
-script Zone6A_EventScript_LeviathanBattleFinished {
 	if (flag(FLAG_BEAT_LEVIATHAN_6) == true) {
 		msgbox(Zone6A_Text_Mina_PostBattle)
 		closemessage
 		release
 		end
 	}
-	return
-}
-
-script Zone6A_EventScript_LeviathanBattleStart {
+	msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!"), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: Hey you! You think you're better than me or something?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: That's what I thought!"))
+		release
+		end
+	}
 	fadeoutbgm(1)
 	msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: Who do you think you are?\pI'm a {COLOR BLUE}Leviathan{COLOR DARK_GRAY}, you know!"), MSGBOX_DEFAULT)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
@@ -78,22 +56,6 @@ script Zone6A_EventScript_LeviathanBattleStart {
 	setflag(FLAG_BEAT_LEVIATHAN_6)
 	release
 	end
-}
-
-script Zone6A_EventScript_LeviathanBattle {
-	lock
-	faceplayer
-	if (flag(FLAG_BEAT_LEVIATHAN_6) == true) {
-		call(Zone6A_EventScript_LeviathanBattleFinished)
-	}
-	msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: Woah!"), MSGBOX_DEFAULT)
-	msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: Hey you! You think you're better than me or something?"), MSGBOX_YESNO)
-	if (var(VAR_RESULT) == NO) {
-		msgbox(format("{COLOR BLUE}Mina{COLOR DARK_GRAY}: That's what I thought!"))
-		release
-		end
-	}
-	goto(Zone6A_EventScript_LeviathanBattleStart)
 }
 
 text Zone6A_Text_Mina_PostBattle {
