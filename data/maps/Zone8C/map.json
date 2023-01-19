@@ -25,20 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Zone8C_EventScript_Neil",
-      "flag": "FLAG_SETTINGS_MANDATORY_INCREASED"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_RUIN_MANIAC",
-      "x": 5,
-      "y": 24,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
-      "script": "Zone8C_EventScript_Neil",
-      "flag": "FLAG_SETTINGS_MANDATORY_DECREASED"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
@@ -51,20 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Zone8C_EventScript_Tamara",
-      "flag": "FLAG_SETTINGS_MANDATORY_INCREASED"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 17,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Zone8C_EventScript_Tamara",
-      "flag": "FLAG_SETTINGS_MANDATORY_DECREASED"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",

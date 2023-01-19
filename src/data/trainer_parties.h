@@ -766,8 +766,6 @@ static const struct TrainerMon sParty_Declan[] = {// Double Battle
 
 /* ------------------- Zone 6 ------------------- */
 
-// Mandatory
-// Tuber M Zack
 static const struct TrainerMon sParty_Zack[] = {// Shuffled Party
     {
     .iv = 0,
@@ -791,8 +789,6 @@ static const struct TrainerMon sParty_Zack[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Lass Melanie
 static const struct TrainerMon sParty_Melanie[] = {// Shuffled Party
     {
     .iv = 0,
@@ -816,8 +812,6 @@ static const struct TrainerMon sParty_Melanie[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Lady Constance
 static const struct TrainerMon sParty_Constance[] = {// Shuffled Party
     {
     .iv = 0,
@@ -841,8 +835,6 @@ static const struct TrainerMon sParty_Constance[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Youngster Frank
 static const struct TrainerMon sParty_Frank[] = {// Shuffled Party
     {
     .iv = 0,
@@ -866,8 +858,6 @@ static const struct TrainerMon sParty_Frank[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Fisherman Dudley
 static const struct TrainerMon sParty_Dudley[] = {// Shuffled Party
     {
     .iv = 0,
@@ -891,8 +881,6 @@ static const struct TrainerMon sParty_Dudley[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Breeder F Daisy
 static const struct TrainerMon sParty_Daisy[] = {// Shuffled Party
     {
     .iv = 0,
@@ -921,9 +909,7 @@ static const struct TrainerMon sParty_Daisy[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Leviathan Mina (Tuber F)
-static const struct TrainerMon sParty_Mina[] = {// Battle starts with permanent Rain on Brutal
+static const struct TrainerMon sParty_Mina[] = {// Leviathan, Default and Brutal, Battle starts with permanent Rain on Brutal
     {
     .iv = 20,
     .lvl = 16,
@@ -970,8 +956,6 @@ static const struct TrainerMon sParty_Mina[] = {// Battle starts with permanent 
 
 /* ------------------- Zones 7 & 8 ------------------- */
 
-// Optional/Mandatory
-// Breeder F Millie
 static const struct TrainerMon sParty_Millie[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1000,8 +984,6 @@ static const struct TrainerMon sParty_Millie[] = {// Shuffled Party
     }
 };
 
-// Optional
-// Aroma Lady Paige
 static const struct TrainerMon sParty_Paige[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1025,8 +1007,6 @@ static const struct TrainerMon sParty_Paige[] = {// Shuffled Party
     }
 };
 
-// Optional
-// Rich Boy Seth
 static const struct TrainerMon sParty_Seth[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1050,8 +1030,6 @@ static const struct TrainerMon sParty_Seth[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Camper Jamal
 static const struct TrainerMon sParty_Jamal[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1075,8 +1053,6 @@ static const struct TrainerMon sParty_Jamal[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Backpacker F Connie
 static const struct TrainerMon sParty_Connie[] = {
     {
     .iv = 0,
@@ -1085,9 +1061,7 @@ static const struct TrainerMon sParty_Connie[] = {
     }
 };
 
-// Optional/Mandatory
-// Leviathan Betty (Socialite), Default
-static const struct TrainerMon sParty_BettyDefault[] = {// Double Battle
+static const struct TrainerMon sParty_BettyDefault[] = {// Leviathan, Double Battle, Default
     {
     .iv = 20,
     .lvl = 19,
@@ -1108,9 +1082,7 @@ static const struct TrainerMon sParty_BettyDefault[] = {// Double Battle
     }
 };
 
-// Optional/Mandatory
-// Leviathan Betty (Socialite), Brutal
-static const struct TrainerMon sParty_BettyBrutal[] = {// Double Battle
+static const struct TrainerMon sParty_BettyBrutal[] = {// Leviathan, Double Battle, Brutal
     {
     .iv = 31,
     .lvl = 19,
@@ -1131,8 +1103,6 @@ static const struct TrainerMon sParty_BettyBrutal[] = {// Double Battle
     }
 };
 
-// Optional
-// Collector Jimmy
 static const struct TrainerMon sParty_Jimmy[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1156,8 +1126,6 @@ static const struct TrainerMon sParty_Jimmy[] = {// Shuffled Party
     }
 };
 
-// Optional
-// Hiker Emiliano
 static const struct TrainerMon sParty_Emiliano[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1181,8 +1149,6 @@ static const struct TrainerMon sParty_Emiliano[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Backpacker F Karen
 static const struct TrainerMon sParty_Karen[] = {
     {
     .iv = 0,
@@ -1191,8 +1157,6 @@ static const struct TrainerMon sParty_Karen[] = {
     }
 };
 
-// Optional/Mandatory
-// Hiker Jayden
 static const struct TrainerMon sParty_Jayden[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1216,8 +1180,6 @@ static const struct TrainerMon sParty_Jayden[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Ruin Maniac Neil
 static const struct TrainerMon sParty_Neil[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1241,8 +1203,6 @@ static const struct TrainerMon sParty_Neil[] = {// Shuffled Party
     }
 };
 
-// Optional/Mandatory
-// Picnicker Tamara
 static const struct TrainerMon sParty_Tamara[] = {// Shuffled Party
     {
     .iv = 0,
@@ -1266,9 +1226,7 @@ static const struct TrainerMon sParty_Tamara[] = {// Shuffled Party
     }
 };
 
-// Mandatory
-// Leviathan ??? (Mirage), Default
-static const struct TrainerMon sParty_Zone8DMirage[] = {// Fought in a 2v1 tag battle with Zone8DWally
+static const struct TrainerMon sParty_Zone8DMirage[] = {// Leviathan, fought in a 2v1 tag battle with Zone8DWally, Default
     {
     .iv = 30,
     .lvl = 20,
@@ -1298,9 +1256,7 @@ static const struct TrainerMon sParty_Zone8DMirage[] = {// Fought in a 2v1 tag b
     }
 };
 
-// Mandatory
-// Leviathan ??? (Mirage), Brutal
-static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {// Fought in a 2v1 tag battle with Zone8DWally
+static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {// Leviathan, fought in a 2v1 tag battle with Zone8DWally, Brutal
     {
     .iv = 31,
     .lvl = 20,
@@ -1339,9 +1295,7 @@ static const struct TrainerMon sParty_Zone8DMirageBrutal[] = {// Fought in a 2v1
     }
 };
 
-// Ally NPC
-// Pokémon Trainer Wally
-static const struct TrainerMon sParty_Zone8DWally[] = {
+static const struct TrainerMon sParty_Zone8DWally[] = {//Tag Partner
     {
     .iv = 31,
     .lvl = 20,
