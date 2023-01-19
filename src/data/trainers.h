@@ -189,6 +189,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Patrick},
     },
 
+    [TRAINER_BORIS] =
+    {
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Boris"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Boris),
+        .party = {.TrainerMon = sParty_Boris},
+    },
+
     [TRAINER_ANNABELLE] =
     {
         .trainerClass = TRAINER_CLASS_LADY,
@@ -202,19 +215,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Annabelle},
     },
 
-    [TRAINER_BORIS] =
-    {
-        .trainerClass = TRAINER_CLASS_YOUNGSTER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .trainerName = _("Boris"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Boris),
-        .party = {.TrainerMon = sParty_Boris},
-    },
-    
     [TRAINER_RICHARD] =
     {
         .trainerClass = TRAINER_CLASS_RICH_BOY,

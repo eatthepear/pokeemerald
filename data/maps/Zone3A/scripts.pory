@@ -267,20 +267,6 @@ Zone3A_Text_JemmaDefeat:
 Zone3A_Text_JemmaPostBattle:
 	.string "I was scamming people so well too…$"
 
-Zone3A_EventScript_Annabelle::
-	trainerbattle_single TRAINER_ANNABELLE, Zone3A_Text_AnnabelleIntro, Zone3A_Text_AnnabelleDefeat
-	msgbox Zone3A_Text_AnnabellePostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone3A_Text_AnnabelleIntro:
-	.string "I wonder what day it is…$"
-
-Zone3A_Text_AnnabelleDefeat:
-	.string "Apparently it's defeat day!$"
-
-Zone3A_Text_AnnabellePostBattle:
-	.string "Tomorrow will be another day.$"
-
 Zone3A_EventScript_Boris::
 	trainerbattle_single TRAINER_BORIS, Zone3A_Text_BorisIntro, Zone3A_Text_BorisDefeat
 	msgbox Zone3A_Text_BorisPostBattle, MSGBOX_AUTOCLOSE
@@ -294,6 +280,20 @@ Zone3A_Text_BorisDefeat:
 
 Zone3A_Text_BorisPostBattle:
 	.string "I'm a hypocrite, I know.$"
+
+Zone3A_EventScript_Annabelle::
+	trainerbattle_single TRAINER_ANNABELLE, Zone3A_Text_AnnabelleIntro, Zone3A_Text_AnnabelleDefeat
+	msgbox Zone3A_Text_AnnabellePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone3A_Text_AnnabelleIntro:
+	.string "I wonder what day it is…$"
+
+Zone3A_Text_AnnabelleDefeat:
+	.string "Apparently it's defeat day!$"
+
+Zone3A_Text_AnnabellePostBattle:
+	.string "Tomorrow will be another day.$"
 
 Zone3A_EventScript_Richard::
 	trainerbattle_single TRAINER_RICHARD, Zone3A_Text_RichardIntro, Zone3A_Text_RichardDefeat

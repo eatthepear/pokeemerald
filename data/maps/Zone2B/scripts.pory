@@ -82,7 +82,7 @@ script Zone2B_EventScript_LeviathanBattle {
 		trainerbattle_no_intro(TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Even after all that training, Rattata wasn't enough to get across the finish line.\pThat's all right though; I enjoyed our battle so much, I want to give you this!"), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Even after all that training, Rattata wasn't enough to get across the finish line.\pThat's all right though;\pI enjoyed our battle so much, I want to give you this!"), MSGBOX_DEFAULT)
 	giveitem(ITEM_SILK_SCARF, 1)
 	msgbox(format("{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in order to battle better?\pNo!\nI'm sticking with this one no matter what!"))
 	closemessage
