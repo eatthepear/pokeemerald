@@ -387,7 +387,6 @@ Zone0Sanctuary_EventScript_Intro_92:
 
 
 Zone0Sanctuary_EventScript_SetDefaultDifficulty::
-	setflag FLAG_SETTINGS_MANDATORY_DECREASED
 	setflag FLAG_SETTINGS_FULL_PREVIEW_ON
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetDefaultDifficulty_Text_0, MSGBOX_DEFAULT
@@ -398,7 +397,6 @@ Zone0Sanctuary_EventScript_SetDefaultDifficulty::
 
 Zone0Sanctuary_EventScript_SetBrutalDifficulty::
 	setflag FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON
-	setflag FLAG_SETTINGS_MANDATORY_INCREASED
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0, MSGBOX_DEFAULT
 	waitse
@@ -409,7 +407,6 @@ Zone0Sanctuary_EventScript_SetBrutalDifficulty::
 
 Zone0Sanctuary_EventScript_SetInfiniteDifficulty::
 	setflag FLAG_SETTINGS_INFINITE_DIFFICULTY_ON
-	setflag FLAG_SETTINGS_MANDATORY_DECREASED
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetInfiniteDifficulty_Text_0, MSGBOX_DEFAULT
 	waitse

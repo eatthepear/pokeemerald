@@ -9202,3 +9202,4 @@ bool8 PlayerIsUnderWaterfall(struct ObjectEvent *objectEvent)
     
     return FALSE;
 }
+

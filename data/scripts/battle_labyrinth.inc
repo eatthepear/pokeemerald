@@ -2936,8 +2936,6 @@ EventScript_Settings_BrutalMode_3:
 	waitse
 	closemessage
 	clearflag FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON
-	clearflag FLAG_SETTINGS_MANDATORY_INCREASED
-	setflag FLAG_SETTINGS_MANDATORY_DECREASED
 	special ReverseHiddenItemFlags
 	return
 
