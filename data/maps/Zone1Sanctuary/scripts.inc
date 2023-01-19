@@ -56,15 +56,9 @@ Zone1Sanctuary_EventScript_NextZone_5:
 
 Zone1Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
-	goto_if_set FLAG_SETTINGS_MANDATORY_INCREASED, Zone1Sanctuary_EventScript_NextZone_9
-Zone1Sanctuary_EventScript_NextZone_8:
 	warp MAP_ZONE2A, 255, 4, 3
 	waitstate
 	goto Zone1Sanctuary_EventScript_NextZone_1
-
-Zone1Sanctuary_EventScript_NextZone_9:
-	setvar VAR_ZONE_2_STATE, 1
-	goto Zone1Sanctuary_EventScript_NextZone_8
 
 
 Zone1Sanctuary_Text_Reward::

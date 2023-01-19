@@ -34,9 +34,6 @@ script Zone1Sanctuary_EventScript_NextZone {
 			msgbox(gText_Colress_SureReadyToLeave, MSGBOX_YESNO)
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
-				if (flag(FLAG_SETTINGS_MANDATORY_INCREASED)) {
-					setvar(VAR_ZONE_2_STATE, 1)
-				}
 				warp(MAP_ZONE2A, 255, 4, 3)
 				waitstate
 			}

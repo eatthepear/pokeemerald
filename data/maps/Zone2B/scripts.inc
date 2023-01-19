@@ -12,92 +12,44 @@ Zone2B_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 	return
 
 
-Zone2B_EventScript_TalkToLeviathan::
+Zone2B_EventScript_LeviathanBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_BEAT_LEVIATHAN_2, Zone2B_EventScript_TalkToLeviathan_2
+	goto_if_set FLAG_BEAT_LEVIATHAN_2, Zone2B_EventScript_LeviathanBattle_2
 	msgbox Zone2B_Text_Leviathan2WantBattle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Zone2B_EventScript_TalkToLeviathan_5
+	goto_if_eq Zone2B_EventScript_LeviathanBattle_5
 	fadeoutbgm 1
-	msgbox Zone2B_Text_Leviathan2Intro1
-	goto Zone2B_EventScript_LeviathanBattle
-	return
-
-Zone2B_EventScript_TalkToLeviathan_2:
-	msgbox Zone2B_EventScript_TalkToLeviathan_Text_0
+	msgbox Zone2B_Text_Leviathan2Intro
+	setflag FLAG_FORCE_BATTLE_ANIM_ON
+	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone2B_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone2B_EventScript_LeviathanBattle_8
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JOEY
+	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat
+Zone2B_EventScript_LeviathanBattle_7:
+	clearflag FLAG_FORCE_BATTLE_ANIM_ON
+	msgbox Zone2B_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
+	giveitem ITEM_SILK_SCARF, 1
+	msgbox Zone2B_EventScript_LeviathanBattle_Text_0
+	closemessage
+	setflag FLAG_BEAT_LEVIATHAN_2
 	release
 	end
 
-Zone2B_EventScript_TalkToLeviathan_5:
+Zone2B_EventScript_LeviathanBattle_2:
+	msgbox Zone2B_EventScript_LeviathanBattle_Text_0
+	release
+	end
+
+Zone2B_EventScript_LeviathanBattle_5:
 	msgbox Zone2B_Text_Leviathan2DenyBattle
 	release
 	end
 
-
-Zone2B_EventScript_TriggerLeviathanLeft::
-	lockall
-	goto Zone2B_EventScript_LeviathanMovement
-	return
-
-
-Zone2B_EventScript_TriggerLeviathanRight::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
-	goto Zone2B_EventScript_LeviathanMovement
-	return
-
-
-Zone2B_EventScript_LeviathanMovement::
-	addobject 1
-	applymovement 1, Zone2B_Movement_Leviathan
-	waitmovement 0
-	fadeoutbgm 1
-	msgbox Zone2B_Text_Leviathan2Intro2
-	goto Zone2B_EventScript_LeviathanBattle
-	return
-
-
-Zone2B_Movement_Leviathan:
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	face_up
-	step_end
-
-Zone2B_EventScript_LeviathanBattle::
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone2B_EventScript_LeviathanBattle_2
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone2B_EventScript_LeviathanBattle_2
-	setvar VAR_MUGSHOT_ID, MUGSHOT_JOEY
-	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat
-Zone2B_EventScript_LeviathanBattle_1:
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	msgbox Zone2B_EventScript_LeviathanBattle_Text_0, MSGBOX_DEFAULT
-	giveitem ITEM_SILK_SCARF, 1
-	msgbox Zone2B_EventScript_TalkToLeviathan_Text_0
-	closemessage
-	setflag FLAG_BEAT_LEVIATHAN_2
-	setvar VAR_ZONE_2_STATE, 2
-	releaseall
-	end
-
-Zone2B_EventScript_LeviathanBattle_2:
+Zone2B_EventScript_LeviathanBattle_8:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOEY
 	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2_BRUTAL, Zone2B_Text_Leviathan2Defeat
-	goto Zone2B_EventScript_LeviathanBattle_1
+	goto Zone2B_EventScript_LeviathanBattle_7
 
 
 Zone2B_EventScript_BuyBug::
@@ -352,14 +304,14 @@ Zone2B_Text_ArthurDefeat:
 Zone2B_Text_ArthurPostBattle:
 	.string "Sorry about earlier.$"
 
-Zone2B_EventScript_TalkToLeviathan_Text_0:
+Zone2B_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Do I have to have more Pokémon in\n"
 	.string "order to battle better?\p"
 	.string "No!\n"
 	.string "I'm sticking with this one no matter\l"
 	.string "what!$"
 
-Zone2B_EventScript_LeviathanBattle_Text_0:
+Zone2B_EventScript_LeviathanBattle_Text_1:
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Even after all that training,\n"
 	.string "Rattata wasn't enough to get across\l"
 	.string "the finish line.\p"
@@ -417,20 +369,13 @@ Zone2B_EventScript_BuyBug_Text_11:
 
 Zone2B_Text_Leviathan2WantBattle::
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: My Rattata is in the top\n"
-	.string "percentage of Rattata! Want to see?\l"
-	.string "I'll give you a Silk Scarf if you can\l"
-	.string "beat me!$"
+	.string "percentage of Rattata! Want to see?$"
 
-Zone2B_Text_Leviathan2Intro1::
+Zone2B_Text_Leviathan2Intro::
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: All right then, let's battle!$"
 
 Zone2B_Text_Leviathan2DenyBattle::
 	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: Oh, all right…$"
-
-Zone2B_Text_Leviathan2Intro2::
-	.string "{COLOR BLUE}Joey{COLOR DARK_GRAY}: My Rattata is in the top\n"
-	.string "percentage of all Rattata!\p"
-	.string "Let me show you in battle!$"
 
 Zone2B_Text_Leviathan2Defeat::
 	.string "Ack! I lost again!\p"
