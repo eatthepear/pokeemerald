@@ -19,14 +19,6 @@ Zone1A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 	return
 
 
-Zone1A_EventScript_TalkToLeviathan::
-	lock
-	faceplayer
-	setvar VAR_ZONE_1_STATE, 1
-	goto Zone1A_EventScript_LeviathanBattle
-	return
-
-
 Zone1A_Corey_WalkLeft:
 	walk_left
 	walk_left

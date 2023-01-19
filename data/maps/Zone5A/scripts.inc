@@ -21,7 +21,7 @@ Zone5A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
 
 Zone5A_EventScript_LeviathanBattle::
 	lockall
-	applymovement 10, Common_Movement_WalkDown
+	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	compare VAR_TEMP_0, 31
@@ -46,29 +46,29 @@ Zone5A_EventScript_LeviathanBattle_12:
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_3
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	trainerbattle_no_intro TRAINER_KEVIN, Zone5A_EventScript_LeviathanBattle_Text_4
-	applymovement 10, Common_Movement_FaceRight
+	applymovement 1, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_5
-	applymovement 4, Common_Movement_WalkLeft
+	applymovement 2, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement 4, Common_Movement_WalkDown
+	applymovement 2, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 4, Common_Movement_WalkDown
+	applymovement 2, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 4, Common_Movement_FaceLeft
+	applymovement 2, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_6
 	fadeoutbgm 1
-	applymovement 4, Common_Movement_ExclamationMark
+	applymovement 2, Common_Movement_ExclamationMark
 	playse SE_PIN
 	waitmovement 0
 	waitse
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_7
-	applymovement 4, Common_Movement_WalkDown
+	applymovement 2, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 4, Common_Movement_FaceLeft
+	applymovement 2, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement 10, Common_Movement_FaceDown
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
@@ -78,22 +78,22 @@ Zone5A_EventScript_LeviathanBattle_21:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_DECLAN
 	trainerbattle_no_intro TRAINER_DECLAN_LEVIATHAN_5, Zone5A_Text_Leviathan5Defeat
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	applymovement 10, Common_Movement_WalkRight
+	applymovement 1, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement 10, Common_Movement_FaceDown
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_9
-	applymovement 4, Common_Movement_FaceUp
+	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_10
 	delay 64
-	applymovement 4, Common_Movement_FaceLeft
+	applymovement 2, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_11
 	giveitem ITEM_TM04, 1
 	closemessage
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_12
-	applymovement 1, Common_Movement_FaceUp
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_12, MSGBOX_DEFAULT
+	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_13
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -150,9 +150,9 @@ Zone5A_EventScript_LeviathanBattle_19:
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement 10, Common_Movement_WalkUp
+	applymovement 1, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement 10, Common_Movement_FaceDown
+	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
 	releaseall
 	end

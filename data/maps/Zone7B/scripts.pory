@@ -46,6 +46,7 @@ text Zone7B_Text_Leviathan7Defeat {
 text Zone7B_Text_LeviathanPost {
 	format("{COLOR BLUE}Betty{COLOR DARK_GRAY}: I've been staying here at my friend's house while our new mansion gets renovated.\pIsn't that exciting?")
 }
+
 raw `
 
 Zone7B_EventScript_Lady::

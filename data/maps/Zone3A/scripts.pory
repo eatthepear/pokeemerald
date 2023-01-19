@@ -45,10 +45,10 @@ script Zone3A_EventScript_TriggerLeviathan {
 	waitse
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
 	waitmovement(0)
-	addobject(10)
+	addobject(1)
 	clearflag(FLAG_HIDE_ZONE3A_PHILLIPA)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
-	applymovement(10, Common_Movement_WalkDown)
+	applymovement(1, Common_Movement_WalkDown)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 	waitmovement(0)
@@ -63,40 +63,40 @@ script Zone3A_EventScript_TriggerLeviathan {
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah!"))
-	applymovement(10, Zone3A_Movement_Phillipa_RunAway)
+	applymovement(1, Zone3A_Movement_Phillipa_RunAway)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Phillipa? Are you ok?"))
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
-	addobject(4)
+	addobject(2)
 	clearflag(FLAG_HIDE_ZONE3A_REMI)
-	applymovement(4, Common_Movement_WalkDown)
+	applymovement(2, Common_Movement_WalkDown)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Oh!"))
-	applymovement(4, Common_Movement_FaceLeft)
+	applymovement(2, Common_Movement_FaceLeft)
 	waitmovement(0)
 	delay(32)
-	applymovement(4, Common_Movement_FaceDown)
+	applymovement(2, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I see.\pYou must have defeated my daughter in battle.\pDon't worry, I'll go talk to her."))
-	applymovement(4, Zone3A_Movement_Remi_WalkToPhillipa)
+	applymovement(2, Zone3A_Movement_Remi_WalkToPhillipa)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Hey, kiddo."), MSGBOX_DEFAULT)
-	applymovement(2, Common_Movement_FaceDown)
+	applymovement(1, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Wah! Daddy! I lost!"), MSGBOX_DEFAULT)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I know, love, but sometimes we lose, and that's life. We have to face our losses with honor, right?"))
 	delay(32)
 	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff…\pOkay…"))
-	applymovement(4, Zone3A_Movement_Remi_WalkBack)
-	applymovement(10, Zone3A_Movement_Phillipa_WalkBack)
+	applymovement(2, Zone3A_Movement_Remi_WalkBack)
+	applymovement(1, Zone3A_Movement_Phillipa_WalkBack)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: What do you say?"), MSGBOX_DEFAULT)
 	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Sniff… Thank you very much for the battle!"), MSGBOX_DEFAULT)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: I'm proud of you, kiddo."))
-	applymovement(4, Zone3A_Movement_Remi_WalkToPlayer)
+	applymovement(2, Zone3A_Movement_Remi_WalkToPlayer)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
 	waitmovement(0)
@@ -104,23 +104,23 @@ script Zone3A_EventScript_TriggerLeviathan {
 	giveitem(ITEM_GOOD_ROD, 1)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
 	waitmovement(0)
-	applymovement(4, Zone3A_Movement_Remi_WalkBackToPhillipa)
+	applymovement(2, Zone3A_Movement_Remi_WalkBackToPhillipa)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Remi{COLOR DARK_GRAY}: Alright, that's enough excitement for one day.\pIt's dinner time."), MSGBOX_DEFAULT)
-	applymovement(2, Common_Movement_FaceRight)
+	applymovement(1, Common_Movement_FaceRight)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Phillipa{COLOR DARK_GRAY}: Food!"))
 	closemessage
-	applymovement(10, Common_Movement_WalkUp)
+	applymovement(1, Common_Movement_WalkUp)
 	waitmovement(0)
 	setflag(FLAG_HIDE_ZONE3A_PHILLIPA)
-	removeobject(10)
-	applymovement(4, Common_Movement_WalkLeft)
+	removeobject(1)
+	applymovement(2, Common_Movement_WalkLeft)
 	waitmovement(0)
-	applymovement(4, Common_Movement_WalkUp)
+	applymovement(2, Common_Movement_WalkUp)
 	waitmovement(0)
 	setflag(FLAG_HIDE_ZONE3A_REMI)
-	removeobject(4)
+	removeobject(2)
 	setflag(FLAG_BEAT_LEVIATHAN_3)
 	setvar(VAR_ZONE_3_STATE, 1)
 	releaseall
@@ -267,20 +267,6 @@ Zone3A_Text_JemmaDefeat:
 Zone3A_Text_JemmaPostBattle:
 	.string "I was scamming people so well too…$"
 
-Zone3A_EventScript_Boris::
-	trainerbattle_single TRAINER_BORIS, Zone3A_Text_BorisIntro, Zone3A_Text_BorisDefeat
-	msgbox Zone3A_Text_BorisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone3A_Text_BorisIntro:
-	.string "Never give up, never surrender!$"
-
-Zone3A_Text_BorisDefeat:
-	.string "I surrender!$"
-
-Zone3A_Text_BorisPostBattle:
-	.string "I'm a hypocrite, I know.$"
-
 Zone3A_EventScript_Annabelle::
 	trainerbattle_single TRAINER_ANNABELLE, Zone3A_Text_AnnabelleIntro, Zone3A_Text_AnnabelleDefeat
 	msgbox Zone3A_Text_AnnabellePostBattle, MSGBOX_AUTOCLOSE
@@ -294,6 +280,20 @@ Zone3A_Text_AnnabelleDefeat:
 
 Zone3A_Text_AnnabellePostBattle:
 	.string "Tomorrow will be another day.$"
+
+Zone3A_EventScript_Boris::
+	trainerbattle_single TRAINER_BORIS, Zone3A_Text_BorisIntro, Zone3A_Text_BorisDefeat
+	msgbox Zone3A_Text_BorisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone3A_Text_BorisIntro:
+	.string "Never give up, never surrender!$"
+
+Zone3A_Text_BorisDefeat:
+	.string "I surrender!$"
+
+Zone3A_Text_BorisPostBattle:
+	.string "I'm a hypocrite, I know.$"
 
 Zone3A_EventScript_Richard::
 	trainerbattle_single TRAINER_RICHARD, Zone3A_Text_RichardIntro, Zone3A_Text_RichardDefeat

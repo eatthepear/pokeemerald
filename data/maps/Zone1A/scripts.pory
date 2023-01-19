@@ -13,13 +13,6 @@ mapscripts Zone1A_MapScripts {
 	}
 }
 
-script Zone1A_EventScript_TalkToLeviathan {
-	lock
-	faceplayer
-	setvar(VAR_ZONE_1_STATE, 1)
-	goto(Zone1A_EventScript_LeviathanBattle)
-}
-
 movement Zone1A_Corey_WalkLeft {
 	walk_left * 3
 }
