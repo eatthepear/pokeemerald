@@ -4915,7 +4915,7 @@
       "id": "LAYOUT_ZONE20A",
       "name": "Zone20A_Layout",
       "width": 49,
-      "height": 80,
+      "height": 83,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/Zone20A/border.bin",

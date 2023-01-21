@@ -1,88 +1,129 @@
 Zone20A_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME
 	.byte 0
 
-Zone20A_EventScript_Exit::
-	lockall
-	compare VAR_ZONE, 20
-	goto_if_gt EventScript_WarpZone0
-	warp MAP_ZONE20SANCTUARY, 255, 22, 7
-	releaseall
-	end
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_ITEM_ZONE20A_HYPER_POTION, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+	return
 
-Zone20A_EventScript_InitiateLeviathanBattle::
-	lock
-	fadeoutbgm 1
-	applymovement 2, Common_Movement_ExclamationMark
-	playse SE_PIN
-	waitmovement 0
-	waitse
-	faceplayer
-	msgbox Zone20A_Text_Leviathan12Intro, MSGBOX_AUTOCLOSE
-	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	setvar VAR_MUGSHOT_ID, MUGSHOT_JULIE
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone20A_EventScript_JulieBrutal
-	trainerbattle_no_intro TRAINER_LEVIATHAN12, Zone20A_Text_Leviathan12Defeat
-	goto Zone20A_EventScript_Leviathan12Defeated
-	end
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	return
 
-Zone20A_EventScript_JulieBrutal:
-	trainerbattle_no_intro TRAINER_LEVIATHAN12_BRUTAL, Zone20A_Text_Leviathan12Defeat
-	goto Zone20A_EventScript_Leviathan12Defeated
-	end
-
-Zone20A_Text_Leviathan12Intro:
-	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: The terrain in these tunnels\n"
-	.string "is harsh, a perfect training ground\l"
-	.string "for my Pokémon.\p"
-	.string "What Pokémon will you use to defeat\n"
-	.string "me, {COLOR BLUE}Leviathan Julie{COLOR DARK_GRAY}?$"
-
-Zone20A_Text_Leviathan12Defeat:
-	.string "Woe is me...$"
-
-Zone20A_EventScript_Leviathan12Defeated:
-	msgbox Zone20A_Text_Leviathan2StrongWeak, MSGBOX_AUTOCLOSE
-	fadeoutbgm 1
-	delay 96
-	applymovement 2, Common_Movement_FaceRight
-	waitmovement 0
-	delay 48
-	applymovement 2, Common_Movement_FaceLeft
-	waitmovement 0
-	delay 48
-	applymovement 2, Common_Movement_FaceUp
-	waitmovement 0
-	msgbox Zone20A_Text_Leviathan2Karen, MSGBOX_AUTOCLOSE
-	delay 128
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	setflag FLAG_BEAT_LEVIATHAN_12
-	clearflag FLAG_FORCE_BATTLE_ANIM_ON
-	removeobject 2
-	waitmovement 0
-	delay 96
-	msgbox Zone20A_Text_Ground, MSGBOX_AUTOCLOSE
-	finditem ITEM_ODD_KEYSTONE, 1
-	closemessage
-	fadeinbgm 1
-	releaseall
-	end
-
-Zone20A_Text_Leviathan2StrongWeak:
-	.string "{COLOR BLUE}Julie{COLOR DARK_GRAY}: Strong Pokémon.\n"
-	.string "Weak Pokémon.\p"
-	.string "That is only the selfish perception\n"
-	.string "of people. Truly skilled Trainers\l"
-	.string "should try to win with the Pokémon\l"
-	.string "they love best.$"
-
-Zone20A_Text_Leviathan2Karen:
-	.string "...\p"
-	.string "Who... is Karen?\p"
-	.string "Where... where am I?$"
-
-Zone20A_Text_Ground:
-	.string "There's something on the ground!$"
 
 Zone20A_EventScript_HyperPotion::
-	finditem ITEM_HYPER_POTION
+	lock
+	goto_if_set FLAG_ITEM_ZONE20A_HYPER_POTION, Zone20A_EventScript_HyperPotion_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE20A_HYPER_POTION
+	addobject VAR_LAST_TALKED
+	finditem ITEM_HYPER_POTION, 1
+	release
 	end
+
+Zone20A_EventScript_HyperPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone20A_EventScript_Shawn::
+	trainerbattle_single TRAINER_SHAWN, Zone20A_Text_ShawnIntro, Zone20A_Text_ShawnDefeat
+	msgbox Zone20A_Text_ShawnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_ShawnIntro:
+	.string "$"
+
+Zone20A_Text_ShawnDefeat:
+	.string "$"
+
+Zone20A_Text_ShawnPostBattle:
+	.string "$"
+
+Zone20A_EventScript_Fernando::
+	trainerbattle_single TRAINER_FERNANDO, Zone20A_Text_FernandoIntro, Zone20A_Text_FernandoDefeat
+	msgbox Zone20A_Text_FernandoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_FernandoIntro:
+	.string "$"
+
+Zone20A_Text_FernandoDefeat:
+	.string "$"
+
+Zone20A_Text_FernandoPostBattle:
+	.string "$"
+
+Zone20A_EventScript_Kane::
+	trainerbattle_single TRAINER_KANE, Zone20A_Text_KaneIntro, Zone20A_Text_KaneDefeat
+	msgbox Zone20A_Text_KanePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_KaneIntro:
+	.string "$"
+
+Zone20A_Text_KaneDefeat:
+	.string "$"
+
+Zone20A_Text_KanePostBattle:
+	.string "$"
+
+Zone20A_EventScript_Kirk::
+	trainerbattle_single TRAINER_KIRK, Zone20A_Text_KirkIntro, Zone20A_Text_KirkDefeat
+	msgbox Zone20A_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_KirkIntro:
+	.string "$"
+
+Zone20A_Text_KirkDefeat:
+	.string "$"
+
+Zone20A_Text_KirkPostBattle:
+	.string "$"
+
+Zone20A_EventScript_Dalton::
+	trainerbattle_single TRAINER_DALTON, Zone20A_Text_DaltonIntro, Zone20A_Text_DaltonDefeat
+	msgbox Zone20A_Text_DaltonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_DaltonIntro:
+	.string "$"
+
+Zone20A_Text_DaltonDefeat:
+	.string "$"
+
+Zone20A_Text_DaltonPostBattle:
+	.string "$"
+
+Zone20A_EventScript_Lee::
+	trainerbattle_single TRAINER_LEE, Zone20A_Text_LeeIntro, Zone20A_Text_LeeDefeat
+	msgbox Zone20A_Text_LeePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_LeeIntro:
+	.string "$"
+
+Zone20A_Text_LeeDefeat:
+	.string "$"
+
+Zone20A_Text_LeePostBattle:
+	.string "$"
+
+Zone20A_EventScript_Blanche::
+	trainerbattle_single TRAINER_BLANCHE, Zone20A_Text_BlancheIntro, Zone20A_Text_BlancheDefeat
+	msgbox Zone20A_Text_BlanchePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone20A_Text_BlancheIntro:
+	.string "$"
+
+Zone20A_Text_BlancheDefeat:
+	.string "$"
+
+Zone20A_Text_BlanchePostBattle:
+	.string "$"
