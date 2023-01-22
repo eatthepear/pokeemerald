@@ -36,13 +36,15 @@ Zone20A_EventScript_Shawn::
 	end
 
 Zone20A_Text_ShawnIntro:
-	.string "$"
+	.string "Secrets of the past must be\n"
+	.string "uncovered!$"
 
 Zone20A_Text_ShawnDefeat:
-	.string "$"
+	.string "What's your secret?$"
 
 Zone20A_Text_ShawnPostBattle:
-	.string "$"
+	.string "I'm sure there's a secret to\n"
+	.string "winning battles!$"
 
 Zone20A_EventScript_Fernando::
 	trainerbattle_single TRAINER_FERNANDO, Zone20A_Text_FernandoIntro, Zone20A_Text_FernandoDefeat
@@ -50,13 +52,13 @@ Zone20A_EventScript_Fernando::
 	end
 
 Zone20A_Text_FernandoIntro:
-	.string "$"
+	.string "Caw! Caw!$"
 
 Zone20A_Text_FernandoDefeat:
-	.string "$"
+	.string "We're birds of a feather!$"
 
 Zone20A_Text_FernandoPostBattle:
-	.string "$"
+	.string "What's your favorite bird Pokémon?$"
 
 Zone20A_EventScript_Kane::
 	trainerbattle_single TRAINER_KANE, Zone20A_Text_KaneIntro, Zone20A_Text_KaneDefeat
@@ -64,13 +66,15 @@ Zone20A_EventScript_Kane::
 	end
 
 Zone20A_Text_KaneIntro:
-	.string "$"
+	.string "Modesty! Courtesy!\n"
+	.string "Integrity! Compassion!$"
 
 Zone20A_Text_KaneDefeat:
-	.string "$"
+	.string "Gratitude! Self-control!\n"
+	.string "Perseverance! Indomitable spirit!$"
 
 Zone20A_Text_KanePostBattle:
-	.string "$"
+	.string "I hold my values dear to my heart.$"
 
 Zone20A_EventScript_Kirk::
 	trainerbattle_single TRAINER_KIRK, Zone20A_Text_KirkIntro, Zone20A_Text_KirkDefeat
@@ -78,13 +82,15 @@ Zone20A_EventScript_Kirk::
 	end
 
 Zone20A_Text_KirkIntro:
-	.string "$"
+	.string "What's long, clawed, and breathes\n"
+	.string "fire?$"
 
 Zone20A_Text_KirkDefeat:
-	.string "$"
+	.string "Well, a lot of things!$"
 
 Zone20A_Text_KirkPostBattle:
-	.string "$"
+	.string "Dragon-types aren't necessarily\n"
+	.string "just Western dragons.$"
 
 Zone20A_EventScript_Dalton::
 	trainerbattle_single TRAINER_DALTON, Zone20A_Text_DaltonIntro, Zone20A_Text_DaltonDefeat
@@ -92,13 +98,16 @@ Zone20A_EventScript_Dalton::
 	end
 
 Zone20A_Text_DaltonIntro:
-	.string "$"
+	.string "Regional variants are a\n"
+	.string "collector's bane!$"
 
 Zone20A_Text_DaltonDefeat:
-	.string "$"
+	.string "But you have to admit, some of them\n"
+	.string "are really cool!$"
 
 Zone20A_Text_DaltonPostBattle:
-	.string "$"
+	.string "Divergent evolution is quite the\n"
+	.string "idea, isn't it?$"
 
 Zone20A_EventScript_Lee::
 	trainerbattle_single TRAINER_LEE, Zone20A_Text_LeeIntro, Zone20A_Text_LeeDefeat
@@ -106,13 +115,14 @@ Zone20A_EventScript_Lee::
 	end
 
 Zone20A_Text_LeeIntro:
-	.string "$"
+	.string "For love!$"
 
 Zone20A_Text_LeeDefeat:
-	.string "$"
+	.string "For the love of the environment!$"
 
 Zone20A_Text_LeePostBattle:
-	.string "$"
+	.string "We practiced that battle cry for\n"
+	.string "quite a while.$"
 
 Zone20A_EventScript_Blanche::
 	trainerbattle_single TRAINER_BLANCHE, Zone20A_Text_BlancheIntro, Zone20A_Text_BlancheDefeat
@@ -120,10 +130,11 @@ Zone20A_EventScript_Blanche::
 	end
 
 Zone20A_Text_BlancheIntro:
-	.string "$"
+	.string "For the environment!$"
 
 Zone20A_Text_BlancheDefeat:
-	.string "$"
+	.string "For environments of love!$"
 
 Zone20A_Text_BlanchePostBattle:
-	.string "$"
+	.string "Both the environment and love are\n"
+	.string "super important!$"

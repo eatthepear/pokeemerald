@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE20A",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

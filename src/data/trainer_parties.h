@@ -3184,23 +3184,197 @@ static const struct TrainerMon sParty_Pirate4[] = {
 
 /* ------------------- Zone 20 ------------------- */
 
-static const struct TrainerMon sParty_Blanche[] = {//Zone 18 Cute Room
+static const struct TrainerMon sParty_Shawn[] = {// Shuffled Party
     {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_SNOM,
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_LAIRON,
     },
     {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_SMOOCHUM,
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_DOUBLADE,
     },
     {
-    .iv = 10,
-    .lvl = 28,
-    .species = SPECIES_VULPIX_ALOLAN,
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_SKARMORY,
     }
 };
+
+static const struct TrainerMon sParty_Fernando[] = {// Shuffled Party
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_NOCTOWL,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_FEAROW,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_SWELLOW,
+    }
+};
+
+static const struct TrainerMon sParty_Kane[] = {// Shuffled Party
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_HARIYAMA,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_BRELOOM,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_FALINKS,
+    }
+};
+
+static const struct TrainerMon sParty_Kirk[] = {// Shuffled Party
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_HAKAMO_O,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_VIBRAVA,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_GABITE,
+    }
+};
+
+static const struct TrainerMon sParty_Dalton[] = {// Shuffled Party
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_SLIGGOO,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_SLIGGOO_HISUIAN,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_MAROWAK,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_MAROWAK_ALOLAN,
+    }
+};
+
+static const struct TrainerMon sParty_Lee[] = {// Fought in a double battle with Blanche
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_DURANT,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_DRAMPA,
+    }
+};
+
+static const struct TrainerMon sParty_Blanche[] = {// Fought in a double battle with Lee
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_HEATMOR,
+    },
+    {
+    .iv = 20,
+    .lvl = 36,
+    .species = SPECIES_TURTONATOR,
+    }
+};
+
+static const struct TrainerMon sParty_Zone20BMirageDefault[] = {// Leviathan, Default
+    {
+    .iv = 30,
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .ability = ABILITY_HIDDEN, //Drought
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_OVERHEAT, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .ability = ABILITY_HIDDEN, //Chlorophyll
+    .species = SPECIES_VICTREEBEL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_WEATHER_BALL, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_HOUNDOOMINITE,
+    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SCORCHING_SANDS, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_Zone20BMirageBrutal[] = {// Leviathan, Brutal
+    {
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .ability = ABILITY_HIDDEN, //Drought
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_OVERHEAT, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER}
+    },
+    {
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .ability = ABILITY_HIDDEN, //Chlorophyll
+    .species = SPECIES_VICTREEBEL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_WEATHER_BALL, MOVE_GROWTH}
+    },
+    {
+    .ivs = {31, 31, 31, 30, 31, 31},
+    .lvl = 30,
+    .nature = NATURE_TIMID,
+    .ability = ABILITY_HIDDEN, //Solar Power
+    .species = SPECIES_HELIOLISK,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_VOICE, MOVE_VOLT_SWITCH, MOVE_HIDDEN_POWER} //Hidden Power Ice
+    },
+    {
+    .iv = 31,
+    .lvl = 30,
+    .nature = NATURE_MODEST,
+    .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_HOUNDOOMINITE,
+    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SCORCHING_SANDS, MOVE_NASTY_PLOT}
+    }
+};
+
+/* ------------------- Zone 21 ------------------- */
 
 static const struct TrainerMon sParty_Desiree[] = {//Zone 18 Speed Room, Double Battle
     {
@@ -3229,8 +3403,6 @@ static const struct TrainerMon sParty_Anita[] = {//Zone 18 Support Room, Double 
     .moves = {MOVE_FAKE_OUT, MOVE_BUBBLE_BEAM, MOVE_MEGA_DRAIN, MOVE_RAIN_DANCE}
     }
 };
-
-/* ------------------- Zone 21 ------------------- */
 
 static const struct TrainerMon sParty_Howard[] = {
     {
