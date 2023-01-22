@@ -5,6 +5,31 @@ mapscripts Zone20A_MapScripts {
 		} else {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
+		if (flag(FLAG_ITEM_ZONE20A_FULL_HEAL)) {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE20A_CELL_BATTERY_3)) {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE20A_ULTRA_BALL)) {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE20A_REVIVE)) {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
+		if (flag(FLAG_ITEM_ZONE20A_SUPER_REPEL)) {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+		} else {
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST)
+		}
 	}
 }
 
@@ -21,6 +46,91 @@ script Zone20A_EventScript_HyperPotion {
 	setflag(FLAG_ITEM_ZONE20A_HYPER_POTION)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_HYPER_POTION, 1)
+	release
+	end
+}
+
+script Zone20A_EventScript_FullHeal {
+	lock
+	if (flag(FLAG_ITEM_ZONE20A_FULL_HEAL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE20A_FULL_HEAL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_FULL_HEAL, 1)
+	release
+	end
+}
+
+script Zone20A_EventScript_CellBattery3 {
+	lock
+	if (flag(FLAG_ITEM_ZONE20A_CELL_BATTERY_3)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE20A_CELL_BATTERY_3)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_CELL_BATTERY, 3)
+	release
+	end
+}
+
+script Zone20A_EventScript_UltraBall {
+	lock
+	if (flag(FLAG_ITEM_ZONE20A_ULTRA_BALL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE20A_ULTRA_BALL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_ULTRA_BALL, 1)
+	release
+	end
+}
+
+script Zone20A_EventScript_Revive {
+	lock
+	if (flag(FLAG_ITEM_ZONE20A_REVIVE)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE20A_REVIVE)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_REVIVE, 1)
+	release
+	end
+}
+
+script Zone20A_EventScript_SuperRepel {
+	lock
+	if (flag(FLAG_ITEM_ZONE20A_SUPER_REPEL)) {
+		msgbox(gText_ItemChestIsEmpty)
+		release
+		end
+	}
+	waitse
+	removeobject(VAR_LAST_TALKED)
+	setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setflag(FLAG_ITEM_ZONE20A_SUPER_REPEL)
+	addobject(VAR_LAST_TALKED)
+	finditem(ITEM_SUPER_REPEL, 1)
 	release
 	end
 }

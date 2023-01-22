@@ -3,7 +3,7 @@ Zone15A_MapScripts::
 	.byte 0
 
 Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME:
-	goto_if_set FLAG_ITEM_ZONE15A_DUSK_BALL, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_2
+	goto_if_set FLAG_ITEM_ZONE15A_SNOWBALL_3, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_2
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
 Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
 	goto_if_set FLAG_ITEM_ZONE15A_TIMER_BALL, Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_6
@@ -61,19 +61,19 @@ Zone15A_MapScripts_MAP_SCRIPT_ON_RESUME_29:
 	return
 
 
-Zone15A_EventScript_DuskBall::
+Zone15A_EventScript_Snowball3::
 	lock
-	goto_if_set FLAG_ITEM_ZONE15A_DUSK_BALL, Zone15A_EventScript_DuskBall_2
+	goto_if_set FLAG_ITEM_ZONE15A_SNOWBALL_3, Zone15A_EventScript_Snowball3_2
 	waitse
 	removeobject VAR_LAST_TALKED
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
-	setflag FLAG_ITEM_ZONE15A_DUSK_BALL
+	setflag FLAG_ITEM_ZONE15A_SNOWBALL_3
 	addobject VAR_LAST_TALKED
-	finditem ITEM_DUSK_BALL, 1
+	finditem ITEM_SNOWBALL, 3
 	release
 	end
 
-Zone15A_EventScript_DuskBall_2:
+Zone15A_EventScript_Snowball3_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end

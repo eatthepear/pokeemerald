@@ -4590,7 +4590,7 @@ u16 GetNumItemsRemaining(void)
         break;
     case 15:
         count += !FlagGet(FLAG_ITEM_ZONE15A_DAWN_STONE);
-        count += !FlagGet(FLAG_ITEM_ZONE15A_DUSK_BALL);
+        count += !FlagGet(FLAG_ITEM_ZONE15A_SNOWBALL_3);
         count += !FlagGet(FLAG_ITEM_ZONE15A_GLALITITE);
         count += !FlagGet(FLAG_ITEM_ZONE15A_ICE_STONE);
         count += !FlagGet(FLAG_ITEM_ZONE15A_QUICK_BALL);

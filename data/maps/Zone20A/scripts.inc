@@ -3,12 +3,47 @@ Zone20A_MapScripts::
 	.byte 0
 
 Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME:
-	goto_if_set FLAG_ITEM_ZONE20A_HYPER_POTION, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	goto_if_set FLAG_ITEM_ZONE20A_HYPER_POTION, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_2
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	goto_if_set FLAG_ITEM_ZONE20A_FULL_HEAL, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_6
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_5:
+	goto_if_set FLAG_ITEM_ZONE20A_CELL_BATTERY_3, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_10
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_9:
+	goto_if_set FLAG_ITEM_ZONE20A_ULTRA_BALL, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_14
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_13:
+	goto_if_set FLAG_ITEM_ZONE20A_REVIVE, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_18
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_17:
+	goto_if_set FLAG_ITEM_ZONE20A_SUPER_REPEL, Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_21
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST
 	return
 
-Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_2:
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_1
+
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_6:
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_5
+
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_10:
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_9
+
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_14:
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_13
+
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_18:
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	goto Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_17
+
+Zone20A_MapScripts_MAP_SCRIPT_ON_RESUME_21:
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
 	return
 
 
@@ -25,6 +60,96 @@ Zone20A_EventScript_HyperPotion::
 	end
 
 Zone20A_EventScript_HyperPotion_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone20A_EventScript_FullHeal::
+	lock
+	goto_if_set FLAG_ITEM_ZONE20A_FULL_HEAL, Zone20A_EventScript_FullHeal_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE20A_FULL_HEAL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_FULL_HEAL, 1
+	release
+	end
+
+Zone20A_EventScript_FullHeal_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone20A_EventScript_CellBattery3::
+	lock
+	goto_if_set FLAG_ITEM_ZONE20A_CELL_BATTERY_3, Zone20A_EventScript_CellBattery3_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE20A_CELL_BATTERY_3
+	addobject VAR_LAST_TALKED
+	finditem ITEM_CELL_BATTERY, 3
+	release
+	end
+
+Zone20A_EventScript_CellBattery3_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone20A_EventScript_UltraBall::
+	lock
+	goto_if_set FLAG_ITEM_ZONE20A_ULTRA_BALL, Zone20A_EventScript_UltraBall_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE20A_ULTRA_BALL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_ULTRA_BALL, 1
+	release
+	end
+
+Zone20A_EventScript_UltraBall_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone20A_EventScript_Revive::
+	lock
+	goto_if_set FLAG_ITEM_ZONE20A_REVIVE, Zone20A_EventScript_Revive_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE20A_REVIVE
+	addobject VAR_LAST_TALKED
+	finditem ITEM_REVIVE, 1
+	release
+	end
+
+Zone20A_EventScript_Revive_2:
+	msgbox gText_ItemChestIsEmpty
+	release
+	end
+
+
+Zone20A_EventScript_SuperRepel::
+	lock
+	goto_if_set FLAG_ITEM_ZONE20A_SUPER_REPEL, Zone20A_EventScript_SuperRepel_2
+	waitse
+	removeobject VAR_LAST_TALKED
+	setvar VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN
+	setflag FLAG_ITEM_ZONE20A_SUPER_REPEL
+	addobject VAR_LAST_TALKED
+	finditem ITEM_SUPER_REPEL, 1
+	release
+	end
+
+Zone20A_EventScript_SuperRepel_2:
 	msgbox gText_ItemChestIsEmpty
 	release
 	end
