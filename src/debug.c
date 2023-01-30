@@ -1452,12 +1452,12 @@ static void DebugAction_Flags_SetPokedexFlags(u8 taskId)
     // }
     // Debug_DestroyMenu(taskId);
     // ScriptContext_Enable();
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON))
+    if (FlagGet(FLAG_SETTINGS_BRUTAL))
     {
-        FlagClear(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON);
+        FlagClear(FLAG_SETTINGS_BRUTAL);
         PlaySE(SE_PC_OFF);
     } else {
-        FlagSet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON);
+        FlagSet(FLAG_SETTINGS_BRUTAL);
         PlaySE(SE_PC_LOGIN);
     }
     ReverseHiddenItemFlags();
@@ -1476,13 +1476,13 @@ static void DebugAction_Flags_SwitchDex(u8 taskId)
     //     FlagSet(FLAG_SYS_POKEDEX_GET);
     //     PlaySE(SE_PC_LOGIN);
     // }
-    if(FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON))
+    if(FlagGet(FLAG_SETTINGS_NUZLOCKE))
     {
-        FlagClear(FLAG_SETTINGS_NUZLOCKE_MODE_ON);
+        FlagClear(FLAG_SETTINGS_NUZLOCKE);
         GlobalNuzlockeClear();
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SETTINGS_NUZLOCKE_MODE_ON);
+        FlagSet(FLAG_SETTINGS_NUZLOCKE);
         GlobalNuzlockeSet();
         PlaySE(SE_PC_LOGIN);
     }
@@ -1498,12 +1498,12 @@ static void DebugAction_Flags_SwitchNatDex(u8 taskId)
     //     EnableNationalPokedex();
     //     PlaySE(SE_PC_LOGIN);
     // }
-    if(FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON))
+    if(FlagGet(FLAG_SETTINGS_RANDOMIZER))
     {
-        FlagClear(FLAG_SETTINGS_RANDOMIZER_MODE_ON);
+        FlagClear(FLAG_SETTINGS_RANDOMIZER);
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SETTINGS_RANDOMIZER_MODE_ON);
+        FlagSet(FLAG_SETTINGS_RANDOMIZER);
         PlaySE(SE_PC_LOGIN);
     }
 }
@@ -1528,12 +1528,12 @@ static void DebugAction_Flags_SwitchPokeNav(u8 taskId)
 }
 static void DebugAction_Flags_ToggleFlyFlags(u8 taskId)
 {
-    if(FlagGet(FLAG_SETTINGS_FULL_PREVIEW_ON))
+    if(FlagGet(FLAG_SETTINGS_FULL_SURVEIL))
     {
-        FlagClear(FLAG_SETTINGS_FULL_PREVIEW_ON);
+        FlagClear(FLAG_SETTINGS_FULL_SURVEIL);
         PlaySE(SE_PC_OFF);
     }else{
-        FlagSet(FLAG_SETTINGS_FULL_PREVIEW_ON);
+        FlagSet(FLAG_SETTINGS_FULL_SURVEIL);
         PlaySE(SE_PC_LOGIN);
     }
     // Sound effect

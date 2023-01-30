@@ -620,7 +620,7 @@ static bool8 ShouldSwitchIfOnlyAttackingStatLowered(void)
     u16 move;
 
     // Brutal mode only, only 50% chance of triggering
-    if (((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_HARD_BATTLES) == FALSE)) || (Random() % 2))
+    if (((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_CHALLENGE) == FALSE)) || (Random() % 2))
         return FALSE;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
@@ -689,7 +689,7 @@ static bool8 ShouldSwitchIfYawned(void)
     u16 move;
 
     // Brutal mode only, only 50% chance of triggering
-    if (((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_HARD_BATTLES) == FALSE)) || (Random() % 2))
+    if (((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_CHALLENGE) == FALSE)) || (Random() % 2))
         return FALSE;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)

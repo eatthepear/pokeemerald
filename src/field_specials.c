@@ -4253,7 +4253,7 @@ void ReverseHiddenItemFlags(void)
 {
     u16 flag;
 
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_BRUTAL) == TRUE)
     {
         for (flag = FLAG_HIDDEN_ITEM_ZONE2A_CHERI_BERRY; flag <= FLAG_UNUSED_0x2BB; flag++)
         {
@@ -4438,7 +4438,7 @@ u16 GetNumItemsRemaining(void)
     case 2:
         count += !FlagGet(FLAG_ITEM_ZONE2A_ANTIDOTE);
         count += !FlagGet(FLAG_ITEM_ZONE2B_POTION_X2);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE2A_CHERI_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE2B_CHESTO_BERRY);
@@ -4450,7 +4450,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE3A_PARALYZE_HEAL);
         count += !FlagGet(FLAG_ITEM_ZONE3A_REPEL);
         count += !FlagGet(FLAG_ITEM_ZONE3A_SUPER_POTION);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE3A_CHERI_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE3A_PECHA_BERRY);
@@ -4463,7 +4463,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE4D_BEEDRILLITE);
         count += !FlagGet(FLAG_ITEM_ZONE4D_WISE_GLASSES);
         count += !FlagGet(FLAG_ITEM_ZONE4E_SUPER_POTION);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE4A_ORAN_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE4A_PECHA_BERRY);
@@ -4475,7 +4475,7 @@ u16 GetNumItemsRemaining(void)
     case 5:
         count += !FlagGet(FLAG_ITEM_ZONE5A_QUICK_BALL);
         count += !FlagGet(FLAG_ITEM_ZONE5A_TM03);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE5A_ORAN_BERRY);
         }
@@ -4484,7 +4484,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE6A_NEST_BALL);
         count += !FlagGet(FLAG_ITEM_ZONE6A_NET_BALL);
         count += !FlagGet(FLAG_ITEM_ZONE6A_TM07);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_CHESTO_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE6A_PERSIM_BERRY);
@@ -4511,7 +4511,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE8C_FULL_HEAL);
         count += !FlagGet(FLAG_ITEM_ZONE8C_NEVER_MELT_ICE);
         count += !FlagGet(FLAG_ITEM_ZONE8C_SUPER_REPEL);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE7A_ASPEAR_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE7A_PERSIM_BERRY);
@@ -4527,7 +4527,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE9A_MIRACLE_SEED);
         count += !FlagGet(FLAG_ITEM_ZONE9A_TM13);
         count += !FlagGet(FLAG_ITEM_ZONE9G_CHARCOAL);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE9A_LEPPA_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE9A_SITRUS_BERRY);
@@ -4543,7 +4543,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_1);
         count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_2);
         count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_YELLOW_SHARD_3);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE10A_RED_SHARD);
         }
@@ -4552,7 +4552,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE11A_MOON_STONE);
         count += !FlagGet(FLAG_ITEM_ZONE11A_TIMER_BALL);
         count += !FlagGet(FLAG_ITEM_ZONE11A_TM22);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE11A_CHERI_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE11A_PECHA_BERRY);
@@ -4566,7 +4566,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE12A_METRONOME);
         count += !FlagGet(FLAG_ITEM_ZONE12A_THUNDER_STONE);
         count += !FlagGet(FLAG_ITEM_ZONE12A_TM24);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE12A_BLUE_SHARD);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE12A_LEPPA_BERRY);
@@ -4581,7 +4581,7 @@ u16 GetNumItemsRemaining(void)
         count += !FlagGet(FLAG_ITEM_ZONE14A_FULL_HEAL);
         count += !FlagGet(FLAG_ITEM_ZONE14B_HYPER_POTION);
         count += !FlagGet(FLAG_ITEM_ZONE14C_DUSK_STONE);
-        if ((FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (FlagGet(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == FALSE))
+        if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_RED_THUMB) == FALSE))
         {
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE13A_LUM_BERRY);
             count += !FlagGet(FLAG_HIDDEN_ITEM_ZONE14A_RED_SHARD);

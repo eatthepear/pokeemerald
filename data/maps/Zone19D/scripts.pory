@@ -67,7 +67,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	waitmovement(0)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	trainerbattle_no_intro(TRAINER_PIRATE_1, Zone19D_Text_PirateDefeat)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {
 		special(HealPlayerParty)
 	}
 	applymovement(3, Common_Movement_WalkInPlaceFasterUp)
@@ -75,7 +75,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	waitmovement(0)
 	msgbox("I be next. Fire in the hole!")
 	trainerbattle_no_intro(TRAINER_PIRATE_2, Zone19D_Text_PirateDefeat)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {
 		special(HealPlayerParty)
 	}
 	applymovement(2, Common_Movement_WalkInPlaceFasterRight)
@@ -83,7 +83,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	waitmovement(0)
 	msgbox("We give no quarter!")
 	trainerbattle_no_intro(TRAINER_PIRATE_3, Zone19D_Text_PirateDefeat)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {
 		special(HealPlayerParty)
 	}
 	applymovement(1, Common_Movement_WalkInPlaceFasterDown)
@@ -91,7 +91,7 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	waitmovement(0)
 	msgbox("Son o' a biscuit eater!\nFace the might o' us seadogs!")
 	trainerbattle_no_intro(TRAINER_PIRATE_4, Zone19D_Text_PirateDefeat)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {
 		special(HealPlayerParty)
 	}
 	msgbox("Sink me!\nThis trainer beat all four o' us!\l‘ere be your booty, take it!")

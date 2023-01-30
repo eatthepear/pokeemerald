@@ -1097,11 +1097,11 @@ static void PrintPokedexOnCard(void)
     //     AddTextPrinterParameterized3(1, FONT_NORMAL, 20, 88, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardPokedex);
     // else
     //     AddTextPrinterParameterized3(1, FONT_NORMAL, 16, 89, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardPokedex);
-    if (FlagGet(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON))
+    if (FlagGet(FLAG_SETTINGS_BRUTAL))
     {
         AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 97, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardBrutal);
     }
-    else if (FlagGet(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON))
+    else if (FlagGet(FLAG_SETTINGS_INFINITE))
     {
         AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 97, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardInfinite);
     }
@@ -1186,16 +1186,16 @@ static void PrintModeOnCard(void)
     // else
     // AddTextPrinterParameterized3(1, FONT_NORMAL, 144, 121, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardMode);
 
-    if (FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON))
+    if (FlagGet(FLAG_SETTINGS_NUZLOCKE))
     {
-        if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON))
+        if (FlagGet(FLAG_SETTINGS_RANDOMIZER))
             AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 113, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardRandomlocke);
         else
             AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 113, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardNuzlocke);
     }
     else
     {
-        if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON))
+        if (FlagGet(FLAG_SETTINGS_RANDOMIZER))
             AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 113, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardRandomizer);
         else
             AddTextPrinterParameterized3(1, FONT_NORMAL, 160, 113, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardVanilla);

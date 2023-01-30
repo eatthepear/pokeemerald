@@ -22,8 +22,8 @@ Zone2B_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone2B_Text_Leviathan2Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone2B_EventScript_LeviathanBattle_8
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone2B_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone2B_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone2B_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOEY
 	trainerbattle_no_intro TRAINER_JOEY_LEVIATHAN_2, Zone2B_Text_Leviathan2Defeat
 Zone2B_EventScript_LeviathanBattle_7:
@@ -55,7 +55,7 @@ Zone2B_EventScript_LeviathanBattle_8:
 Zone2B_EventScript_BuyBug::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone2B_EventScript_BuyBug_4
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone2B_EventScript_BuyBug_4
 Zone2B_EventScript_BuyBug_3:
 	showmoneybox 0, 0, 0
 	msgbox Zone2B_EventScript_BuyBug_Text_1, MSGBOX_YESNO
@@ -73,7 +73,7 @@ Zone2B_EventScript_BuyBug_3:
 	msgbox Zone2B_EventScript_BuyBug_Text_5
 	closemessage
 	hidemoneybox
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone2B_EventScript_BuyBug_17
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone2B_EventScript_BuyBug_17
 	msgbox Zone2B_EventScript_BuyBug_Text_7, MSGBOX_DEFAULT
 	multichoice2 21, 0, Zone2B_Text_BugMultichoice, TRUE
 	switch VAR_RESULT
@@ -126,7 +126,7 @@ Zone2B_EventScript_BuyBug_14:
 	end
 
 Zone2B_EventScript_BuyBug_17:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone2B_EventScript_BuyBug_24
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, Zone2B_EventScript_BuyBug_24
 	setvar VAR_TEMP_3, 0
 	checkspeciesclause SPECIES_BLIPBUG
 	compare VAR_RESULT, TRUE

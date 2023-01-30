@@ -59,8 +59,8 @@ Zone3A_EventScript_TriggerLeviathan::
 	waitmovement 0
 	msgbox Zone3A_Text_Leviathan3Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone3A_EventScript_TriggerLeviathan_5
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone3A_EventScript_TriggerLeviathan_5
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone3A_EventScript_TriggerLeviathan_5
+	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone3A_EventScript_TriggerLeviathan_5
 	setvar VAR_MUGSHOT_ID, MUGSHOT_PHILLIPA
 	trainerbattle_no_intro TRAINER_PHILLIPA_LEVIATHAN_3, Zone3A_Text_Leviathan3Defeat
 Zone3A_EventScript_TriggerLeviathan_4:

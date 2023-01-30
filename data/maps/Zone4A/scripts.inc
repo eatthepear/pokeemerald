@@ -21,7 +21,7 @@ Zone4A_EventScript_Breeder_5:
 	compare VAR_TEMP_0, 1
 	goto_if_ne Zone4A_EventScript_Breeder_6
 	msgbox Zone4A_EventScript_Breeder_Text_12, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone4A_EventScript_Breeder_10
+	goto_if_unset FLAG_SETTINGS_BRUTAL, Zone4A_EventScript_Breeder_10
 Zone4A_EventScript_Breeder_8:
 	delay 16
 	msgbox Zone4A_EventScript_Breeder_Text_14, MSGBOX_DEFAULT
@@ -56,7 +56,7 @@ Zone4A_EventScript_Breeder_9:
 	goto Zone4A_EventScript_Breeder_8
 
 Zone4A_EventScript_Breeder_10:
-	goto_if_unset FLAG_SETTINGS_NO_FARMING, Zone4A_EventScript_Breeder_9
+	goto_if_unset FLAG_SETTINGS_RED_THUMB, Zone4A_EventScript_Breeder_9
 	goto Zone4A_EventScript_Breeder_8
 
 Zone4A_EventScript_Breeder_14:
@@ -102,7 +102,7 @@ Zone4A_EventScript_Breeder_20:
 	goto Zone4A_EventScript_Breeder_5
 
 Zone4A_EventScript_Breeder_21:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone4A_EventScript_Breeder_36
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone4A_EventScript_Breeder_36
 	msgbox Zone4A_EventScript_Breeder_Text_11, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone4A_EventScript_Breeder_39

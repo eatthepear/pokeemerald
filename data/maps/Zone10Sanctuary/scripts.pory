@@ -14,7 +14,7 @@ script Zone10Sanctuary_EventScript_Intro {
 	msgbox(gText_RewardClear, MSGBOX_DEFAULT)
 	msgbox(Zone10Sanctuary_Text_Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_MACHETE)
-	if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+	if (flag(FLAG_SETTINGS_INFINITE)) {
 		msgbox("You also get Yellow Shards!", MSGBOX_DEFAULT)
 		giveitem(ITEM_YELLOW_SHARD, 900)
 	}

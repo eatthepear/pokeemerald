@@ -232,7 +232,7 @@ Debug_CheatStart_138:
 	additem ITEM_TM03
 	additem ITEM_TM04
 	additem ITEM_QUICK_BALL
-	setflag FLAG_SETTINGS_FULL_PREVIEW_ON
+	setflag FLAG_SETTINGS_FULL_SURVEIL
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_JOY_INTRO
 	setflag FLAG_MAX_INTRO

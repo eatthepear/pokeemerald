@@ -16,7 +16,7 @@ EventScript_Headbutt::
 	special HeadbuttWildEncounter
 	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_Headbutt_5
-	goto_if_unset FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_Headbutt_7
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Headbutt_7
 EventScript_Headbutt_4:
 	releaseall
 	end
@@ -86,7 +86,7 @@ EventScript_Headbutt_6:
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_7:
-	goto_if_unset FLAG_SETTINGS_NO_FARMING, EventScript_Headbutt_6
+	goto_if_unset FLAG_SETTINGS_RED_THUMB, EventScript_Headbutt_6
 	goto EventScript_Headbutt_4
 
 EventScript_Headbutt_12:
@@ -210,8 +210,8 @@ EventScript_RockSmash::
 	special RockSmashWildEncounter
 	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_RockSmash_8
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, EventScript_RockSmash_11
-	goto_if_set FLAG_SETTINGS_NO_FARMING, EventScript_RockSmash_11
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_RockSmash_11
+	goto_if_set FLAG_SETTINGS_RED_THUMB, EventScript_RockSmash_11
 	random 100
 	switch VAR_RESULT
 	case 0, EventScript_RockSmash_17

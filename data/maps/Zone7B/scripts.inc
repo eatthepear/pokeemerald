@@ -12,8 +12,8 @@ Zone7B_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone7B_EventScript_LeviathanBattle_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone7B_EventScript_LeviathanBattle_8
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone7B_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone7B_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone7B_EventScript_LeviathanBattle_8
 	setvar VAR_MUGSHOT_ID, MUGSHOT_BETTY
 	trainerbattle_no_intro TRAINER_BETTY_LEVIATHAN_7, Zone7B_Text_Leviathan7Defeat
 Zone7B_EventScript_LeviathanBattle_7:
@@ -45,8 +45,8 @@ Zone7B_EventScript_LeviathanBattle_8:
 Zone7B_EventScript_Lady::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone7B_EventScript_AlreadyHealed
-	goto_if_set FLAG_SETTINGS_REMOVE_HELPER_NPCS, Zone7B_EventScript_AlreadyHealed
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone7B_EventScript_AlreadyHealed
+	goto_if_set FLAG_SETTINGS_INDEPENDENT, Zone7B_EventScript_AlreadyHealed
 	goto_if_set FLAG_ZONE7B_HEAL_USED, Zone7B_EventScript_AlreadyHealed
 	msgbox Zone7B_Text_WantToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, YES

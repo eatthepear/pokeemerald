@@ -128,7 +128,7 @@ script Zone18A_EventScript_AzurillDoll {
 script Zone18A_EventScript_SellSodaPop {
 	lock
 	faceplayer
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_INDEPENDENT) == true)) {
 		msgbox(format("Soda Pop! I usually sell it, but today I'm out of stock!"))
 		release
 		end

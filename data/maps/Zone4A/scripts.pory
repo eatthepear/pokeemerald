@@ -71,7 +71,7 @@ script Zone4A_EventScript_Breeder {
 					setvar(VAR_TEMP_0, 1)
 				}
 			case 7:
-				if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) {
+				if (flag(FLAG_SETTINGS_BRUTAL) == true) {
 					msgbox(format("Unfortunately, I ran out of Fairy Gems to give out.\pYou'll have to find a way to evolve your Eevee into Sylveon elsewhere."), MSGBOX_DEFAULT)
 				} else {
 					msgbox(format("Oh, so you like Sylveon?"), MSGBOX_YESNO)
@@ -84,7 +84,7 @@ script Zone4A_EventScript_Breeder {
 		}
 	}
 	msgbox(format("I hope you can put that Gem to good use."), MSGBOX_DEFAULT)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_NO_FARMING) == false)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_RED_THUMB) == false)) {
 		msgbox(format("If you want to evolve your Eevee into a different evolution, you can always find Gems by smashing rocks with a Sledgehammer!"), MSGBOX_DEFAULT)
 	}
 	delay(16)

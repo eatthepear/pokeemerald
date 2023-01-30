@@ -53,7 +53,7 @@ script Zone10A_EventScript_Adamina {
 	msgbox(Zone10A_Text_CrushYou)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_ADAMINA)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 		trainerbattle_no_intro(TRAINER_ADAMINA_LEVIATHAN_9_BRUTAL, Zone10A_Text_Leviathan9Defeat)
 	} else {
 		trainerbattle_no_intro(TRAINER_ADAMINA_LEVIATHAN_9, Zone10A_Text_Leviathan9Defeat)

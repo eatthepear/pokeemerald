@@ -210,7 +210,7 @@ script Zone17A_EventScript_InitiateLeviathanBattle {
 	msgbox(format("{COLOR BLUE}Mia{COLOR DARK_GRAY}: You'll join my COLLECTION OF SOULS TO PLAY WITH, WON'T YOU?"))
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIA)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 		setflag(FLAG_DISABLE_PREVIEW)
 		trainerbattle_no_intro(TRAINER_MIA_LEVIATHAN_15_BRUTAL, Zone15B_Text_Leviathan13Defeat)
 		clearflag(FLAG_DISABLE_PREVIEW)

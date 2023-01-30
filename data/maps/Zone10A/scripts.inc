@@ -63,8 +63,8 @@ Zone10A_EventScript_Adamina_1:
 	msgbox Zone10A_Text_CrushYou
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ADAMINA
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone10A_EventScript_Adamina_12
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone10A_EventScript_Adamina_12
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone10A_EventScript_Adamina_12
+	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone10A_EventScript_Adamina_12
 	trainerbattle_no_intro TRAINER_ADAMINA_LEVIATHAN_9, Zone10A_Text_Leviathan9Defeat
 Zone10A_EventScript_Adamina_11:
 	clearflag FLAG_FORCE_BATTLE_ANIM_ON

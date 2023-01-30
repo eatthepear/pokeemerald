@@ -41,7 +41,7 @@ script Zone16A_EventScript_LilyRight {
 	msgbox("It suddenly began to rain!", MSGBOX_DEFAULT)
 	msgbox(Zone16A_Text_Leviathan14Intro2)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_LILY)
 		trainerbattle_no_intro(TRAINER_LILY_LEVIATHAN_14_BRUTAL, Zone16A_Text_Leviathan14Defeat)
 	} else {

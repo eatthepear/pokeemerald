@@ -10,7 +10,7 @@ script Zone8Sanctuary_EventScript_Intro {
 	msgbox(Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT)
 	waitfanfare
 	msgbox(Zone8Sanctuary_Text_RewardClear7, MSGBOX_DEFAULT)
-	if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+	if (flag(FLAG_SETTINGS_INFINITE)) {
 		msgbox("Red Shards and Blue Shards!", MSGBOX_DEFAULT)
 		giveitem(ITEM_RED_SHARD, 900)
 		giveitem(ITEM_BLUE_SHARD, 900)

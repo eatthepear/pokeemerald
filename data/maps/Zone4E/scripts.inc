@@ -52,8 +52,8 @@ Zone4E_EventScript_LeviathanBattle::
 	fadeoutbgm 1
 	msgbox Zone4E_Text_Leviathan4Intro
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone4E_EventScript_LeviathanBattle_2
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone4E_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone4E_EventScript_LeviathanBattle_2
+	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone4E_EventScript_LeviathanBattle_2
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RITA
 	trainerbattle_no_intro TRAINER_RITA_LEVIATHAN_4, Zone4E_Text_Leviathan4Defeat
 Zone4E_EventScript_LeviathanBattle_1:
@@ -67,7 +67,7 @@ Zone4E_EventScript_LeviathanBattle_1:
 	setflag FLAG_BEAT_LEVIATHAN_4
 	setvar VAR_ZONE_4_STATE, 1
 	fadescreenswapbuffers FADE_FROM_BLACK
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone4E_EventScript_LeviathanBattle_8
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone4E_EventScript_LeviathanBattle_8
 Zone4E_EventScript_LeviathanBattle_7:
 	releaseall
 	end

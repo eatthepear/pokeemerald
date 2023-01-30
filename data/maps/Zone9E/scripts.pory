@@ -3,7 +3,7 @@ mapscripts Zone9E_MapScripts {}
 script Zone9E_EventScript_BuyFarmAnimal {
 	lock
 	faceplayer
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true && flag(FLAG_ZONE9E_NUZLOCKE_BOUGHT_FARM_ANIMAL) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true && flag(FLAG_ZONE9E_NUZLOCKE_BOUGHT_FARM_ANIMAL) == true) {
 		msgbox(format("Sorry, honey. The rest of these Pokémon aren't for sale anymore."))
 		release
 		end
@@ -33,8 +33,8 @@ script Zone9E_EventScript_BuyFarmAnimal {
 				msgbox("Thanks for supporting us farm folk.", MSGBOX_DEFAULT)
 				closemessage
 				hidemoneybox
-				if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) {
-					if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true) {
+				if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
+					if (flag(FLAG_SETTINGS_RANDOMIZER) == true) {
 						setvar(VAR_TEMP_1, SPECIES_MILTANK) // gets randomized anyways
 					} else {
 						setvar(VAR_TEMP_3, 0)

@@ -21,7 +21,7 @@ script Zone15B_EventScript_LeviathanBattle {
 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Another AI!\pEven in a place as cold and empty as this?\pNo matter, my blood is boiling for a fight!"))
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone15B_Text_Leviathan13Defeat)
 	} else {
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13, Zone15B_Text_Leviathan13Defeat)

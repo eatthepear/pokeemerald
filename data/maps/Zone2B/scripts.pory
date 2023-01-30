@@ -25,7 +25,7 @@ script Zone2B_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(Zone2B_Text_Leviathan2Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_JOEY)
 		trainerbattle_no_intro(TRAINER_JOEY_LEVIATHAN_2_BRUTAL, Zone2B_Text_Leviathan2Defeat)
 	} else {
@@ -61,7 +61,7 @@ text Zone2B_Text_Leviathan2Defeat {
 script Zone2B_EventScript_BuyBug {
 	lock
 	faceplayer
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true && flag(FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true && flag(FLAG_ZONE2B_NUZLOCKE_BOUGHT_BUG) == true) {
 		msgbox(format("Scram! I'm out of bugs for you to buy right now.\pCome back later."))
 		release
 		end
@@ -91,8 +91,8 @@ script Zone2B_EventScript_BuyBug {
 				msgbox("Ehehehe, thank you…")
 				closemessage
 				hidemoneybox
-				if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) {
-					if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true) {
+				if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
+					if (flag(FLAG_SETTINGS_RANDOMIZER) == true) {
 						setvar(VAR_TEMP_1, SPECIES_BLIPBUG) // gets randomized anyways
 					} else {
 						setvar(VAR_TEMP_3, 0)

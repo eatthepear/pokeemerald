@@ -47,8 +47,8 @@ Zone11A_EventScript_LeviathanIntro::
 	msgbox Zone11A_EventScript_LeviathanIntro_Text_2
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	setvar VAR_MUGSHOT_ID, MUGSHOT_NEWTON
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone11A_EventScript_LeviathanIntro_6
-	goto_if_set FLAG_SETTINGS_HARD_BATTLES, Zone11A_EventScript_LeviathanIntro_6
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone11A_EventScript_LeviathanIntro_6
+	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone11A_EventScript_LeviathanIntro_6
 	trainerbattle_no_intro TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat
 Zone11A_EventScript_LeviathanIntro_5:
 	applymovement 6, Common_Movement_FaceLeft
@@ -91,7 +91,7 @@ Zone11A_EventScript_Leviathan::
 Zone11A_EventScript_BuyRuin::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone11A_EventScript_BuyRuin_4
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone11A_EventScript_BuyRuin_4
 Zone11A_EventScript_BuyRuin_3:
 	showmoneybox 0, 0, 0
 	msgbox Zone11A_EventScript_BuyRuin_Text_1, MSGBOX_YESNO
@@ -109,7 +109,7 @@ Zone11A_EventScript_BuyRuin_3:
 	msgbox Zone11A_EventScript_BuyRuin_Text_5
 	closemessage
 	hidemoneybox
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone11A_EventScript_BuyRuin_17
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone11A_EventScript_BuyRuin_17
 	msgbox Zone11A_EventScript_BuyRuin_Text_7, MSGBOX_DEFAULT
 	multichoice2 21, 0, Zone11A_Text_RuinMultichoice, TRUE
 	switch VAR_RESULT
@@ -162,7 +162,7 @@ Zone11A_EventScript_BuyRuin_14:
 	end
 
 Zone11A_EventScript_BuyRuin_17:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone11A_EventScript_BuyRuin_24
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, Zone11A_EventScript_BuyRuin_24
 	setvar VAR_TEMP_3, 0
 	checkspeciesclause SPECIES_BALTOY
 	compare VAR_RESULT, TRUE

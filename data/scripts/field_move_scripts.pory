@@ -19,7 +19,7 @@ script EventScript_Headbutt {
 	special(HeadbuttWildEncounter)
 	if (var(VAR_RESULT) == TRUE) {
 		waitstate
-	} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == FALSE) && (flag(FLAG_SETTINGS_NO_FARMING) == FALSE)) {
+	} elif ((flag(FLAG_SETTINGS_BRUTAL) == FALSE) && (flag(FLAG_SETTINGS_RED_THUMB) == FALSE)) {
 		random(100)
 		switch(var(VAR_RESULT)) {
 			case 0:
@@ -157,7 +157,7 @@ script EventScript_RockSmash {
 		releaseall
 		end
 	}
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_FARMING) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_RED_THUMB) == true)) {
 		releaseall
 		end
 	}

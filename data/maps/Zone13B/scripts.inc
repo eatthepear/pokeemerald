@@ -93,8 +93,8 @@ Zone13B_Text_Scientist1:
 Zone13B_EventScript_Scientist3::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone13B_EventScript_Scientist3_GaveBall
-	goto_if_set FLAG_SETTINGS_NO_FARMING, Zone13B_EventScript_Scientist3_GaveBall
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone13B_EventScript_Scientist3_GaveBall
+	goto_if_set FLAG_SETTINGS_RED_THUMB, Zone13B_EventScript_Scientist3_GaveBall
 	goto_if_set FLAG_DAILY_ZONE13B_POKEBALL_RECEIVED, Zone13B_EventScript_Scientist3_GaveBall
 	msgbox Zone13B_Text_Scientist3_GivePokeball, MSGBOX_AUTOCLOSE
 	random 7

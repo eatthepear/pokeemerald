@@ -4,7 +4,7 @@ script Zone0B_EventScript_EeveeGirl {
 	if (flag(FLAG_ZONE0B_RECEIVED_EEVEE) == true) {
 		goto(Zone0B_EventScript_EeveeUnique)
 	}
-	if ((flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true)) {
+	if ((flag(FLAG_SETTINGS_RANDOMIZER) == false) && (flag(FLAG_SETTINGS_NUZLOCKE) == true)) {
 		goto_if_mon_caught(SPECIES_EEVEE, Zone0B_EventScript_EeveeUnique)
 		goto_if_mon_caught(SPECIES_VAPOREON, Zone0B_EventScript_EeveeUnique)
 		goto_if_mon_caught(SPECIES_JOLTEON, Zone0B_EventScript_EeveeUnique)
@@ -29,7 +29,7 @@ script Zone0B_EventScript_EeveeGirl {
 		end
 	}
 	msgbox(Zone0B_Text_SureThing, MSGBOX_DEFAULT)
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true && flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true && flag(FLAG_SETTINGS_RANDOMIZER) == false) {
 		checkspeciesclause(SPECIES_EEVEE)
 		if (var(VAR_RESULT) == TRUE) {
 			msgbox(format("Unfortunately, you have already obtained a Pokémon in Eevee's evolution lines."))
@@ -142,7 +142,7 @@ Zone0B_Text_ReceivedEevee:
 Zone0B_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0B_PokemonDayCare_EventScript_Closed
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone0B_PokemonDayCare_EventScript_Closed
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
 	goto_if_eq Zone0B_PokemonDayCare_EventScript_EggWaiting

@@ -330,7 +330,7 @@ script Zone10B_EventScript_FossilDone {
 script Zone10B_EventScript_WaterMerchant {
 	lock
 	faceplayer
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_INDEPENDENT) == true)) {
 		msgbox(format("In the desert, it's supply and demand. And the demand is water.\pThe Fresh Water I usually sell is in such high demand that I am out of stock."))
 		release
 		end

@@ -4,7 +4,7 @@ Zone21C_MapScripts::
 Zone21C_EventScript_Breeder::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone21C_EventScript_BreederNoHappiny
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone21C_EventScript_BreederNoHappiny
 	goto_if_set FLAG_RECEIVED_ZONE21C_HAPPINY, Zone21C_EventScript_SafeTravels
 	msgbox Zone21C_Text_Breeder_Intro, MSGBOX_AUTOCLOSE
 	goto_if_not_defeated TRAINER_HOWARD, Zone21C_EventScript_NoHappiny

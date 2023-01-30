@@ -18,7 +18,7 @@ script Zone13C_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(format("{COLOR BLUE}Jenny{COLOR DARK_GRAY}: My battle style is quite ferocious, despite me having only one Pokémon!"), MSGBOX_DEFAULT)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_JENNY)
 		trainerbattle_no_intro(TRAINER_JENNY_LEVIATHAN_11_BRUTAL, Zone13C_Text_Leviathan11Defeat)
 	} else {
@@ -50,12 +50,12 @@ text Zone13C_Text_Jenny_PostBattle {
 script Zone13C_EventScript_Fossil_Scientist {
 	lock
 	faceplayer
-	if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) {
+	if (flag(FLAG_SETTINGS_BRUTAL) == true) {
 		msgbox("Sorry, I just ran out of fossils.")
 		release
 		end
 	}
-	if ((flag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED) == true) || (flag(FLAG_SETTINGS_NO_FARMING) == true)) {
+	if ((flag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED) == true) || (flag(FLAG_SETTINGS_RED_THUMB) == true)) {
 		goto(Zone13C_EventScript_Fossil_NuzlockeReceived)
 	}
 	if (flag(FLAG_DAILY_FOSSIL_RECEIVED) == true) {
@@ -66,7 +66,7 @@ script Zone13C_EventScript_Fossil_Scientist {
 	waitmovement(0)
 	waitse
 	msgbox("You get a Fossil!\nYou get a Fossil!\lEverybody gets a Fossil!")
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
 		setflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 	}
 	setflag(FLAG_DAILY_FOSSIL_RECEIVED)
@@ -91,7 +91,7 @@ script Zone13C_EventScript_Fossil_Scientist {
 		case 8:
 			giveitem(ITEM_SAIL_FOSSIL)
 	}
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
 		goto(Zone13C_EventScript_Fossil_NuzlockeReceived)
 	} else {
 		goto(Zone13C_EventScript_Fossil_VanillaReceived)

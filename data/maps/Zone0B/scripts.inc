@@ -3,7 +3,7 @@ Zone0B_EventScript_EeveeGirl::
 	faceplayer
 	goto_if_set FLAG_ZONE0B_RECEIVED_EEVEE, Zone0B_EventScript_EeveeGirl_2
 Zone0B_EventScript_EeveeGirl_1:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0B_EventScript_EeveeGirl_6
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER, Zone0B_EventScript_EeveeGirl_6
 Zone0B_EventScript_EeveeGirl_4:
 	msgbox Zone0B_Text_EeveeGiveaway, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -12,7 +12,7 @@ Zone0B_EventScript_EeveeGirl_4:
 	compare VAR_TEMP_2, PARTY_SIZE
 	goto_if_eq Zone0B_EventScript_EeveeGirl_13
 	msgbox Zone0B_Text_SureThing, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0B_EventScript_EeveeGirl_17
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone0B_EventScript_EeveeGirl_17
 Zone0B_EventScript_EeveeGirl_15:
 	givemon SPECIES_EEVEE, 5, ITEM_NONE
 	setmonmetlocation VAR_TEMP_2, 252
@@ -46,7 +46,7 @@ Zone0B_EventScript_EeveeGirl_5:
 	goto Zone0B_EventScript_EeveeGirl_4
 
 Zone0B_EventScript_EeveeGirl_6:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0B_EventScript_EeveeGirl_5
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone0B_EventScript_EeveeGirl_5
 	goto Zone0B_EventScript_EeveeGirl_4
 
 Zone0B_EventScript_EeveeGirl_10:
@@ -67,7 +67,7 @@ Zone0B_EventScript_EeveeGirl_16:
 	goto Zone0B_EventScript_EeveeGirl_15
 
 Zone0B_EventScript_EeveeGirl_17:
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0B_EventScript_EeveeGirl_16
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER, Zone0B_EventScript_EeveeGirl_16
 	goto Zone0B_EventScript_EeveeGirl_15
 
 Zone0B_EventScript_EeveeGirl_21:
@@ -171,7 +171,7 @@ Zone0B_Text_ReceivedEevee:
 Zone0B_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0B_PokemonDayCare_EventScript_Closed
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone0B_PokemonDayCare_EventScript_Closed
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
 	goto_if_eq Zone0B_PokemonDayCare_EventScript_EggWaiting

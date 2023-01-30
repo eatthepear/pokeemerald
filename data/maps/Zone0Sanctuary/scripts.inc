@@ -9,7 +9,7 @@ Zone0Sanctuary_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 Zone0Sanctuary_EventScript_Intro::
 	lockall
-	clearflag FLAG_SETTINGS_NUZLOCKE_MODE_ON
+	clearflag FLAG_SETTINGS_NUZLOCKE
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_PC_LANETTE
@@ -64,15 +64,15 @@ Zone0Sanctuary_EventScript_Intro_44:
 	call Zone0Sanctuary_EventScript_DisableNuzlocke
 Zone0Sanctuary_EventScript_Intro_24:
 	delay 16
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0Sanctuary_EventScript_Intro_41
+	goto_if_unset FLAG_SETTINGS_RANDOMIZER, Zone0Sanctuary_EventScript_Intro_41
 Zone0Sanctuary_EventScript_Intro_39:
 	delay 16
 	compare VAR_TEMP_0, 1
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_57
 Zone0Sanctuary_EventScript_Intro_56:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone0Sanctuary_EventScript_Intro_69
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, Zone0Sanctuary_EventScript_Intro_69
 Zone0Sanctuary_EventScript_Intro_68:
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone0Sanctuary_EventScript_Intro_81
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone0Sanctuary_EventScript_Intro_81
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_30
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault
 	return
@@ -164,7 +164,7 @@ Zone0Sanctuary_EventScript_Intro_40:
 	goto Zone0Sanctuary_EventScript_Intro_39
 
 Zone0Sanctuary_EventScript_Intro_41:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone0Sanctuary_EventScript_Intro_40
+	goto_if_unset FLAG_SETTINGS_NUZLOCKE, Zone0Sanctuary_EventScript_Intro_40
 	goto Zone0Sanctuary_EventScript_Intro_39
 
 Zone0Sanctuary_EventScript_Intro_45:
@@ -387,7 +387,7 @@ Zone0Sanctuary_EventScript_Intro_92:
 
 
 Zone0Sanctuary_EventScript_SetDefaultDifficulty::
-	setflag FLAG_SETTINGS_FULL_PREVIEW_ON
+	setflag FLAG_SETTINGS_FULL_SURVEIL
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetDefaultDifficulty_Text_0, MSGBOX_DEFAULT
 	waitse
@@ -396,7 +396,7 @@ Zone0Sanctuary_EventScript_SetDefaultDifficulty::
 
 
 Zone0Sanctuary_EventScript_SetBrutalDifficulty::
-	setflag FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON
+	setflag FLAG_SETTINGS_BRUTAL
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0, MSGBOX_DEFAULT
 	waitse
@@ -406,7 +406,7 @@ Zone0Sanctuary_EventScript_SetBrutalDifficulty::
 
 
 Zone0Sanctuary_EventScript_SetInfiniteDifficulty::
-	setflag FLAG_SETTINGS_INFINITE_DIFFICULTY_ON
+	setflag FLAG_SETTINGS_INFINITE
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_SetInfiniteDifficulty_Text_0, MSGBOX_DEFAULT
 	waitse
@@ -423,7 +423,7 @@ Zone0Sanctuary_EventScript_DisableRandomizer::
 
 
 Zone0Sanctuary_EventScript_EnableRandomizer::
-	setflag FLAG_SETTINGS_RANDOMIZER_MODE_ON
+	setflag FLAG_SETTINGS_RANDOMIZER
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_EnableRandomizer_Text_0, MSGBOX_DEFAULT
 	waitse
@@ -441,7 +441,7 @@ Zone0Sanctuary_EventScript_DisableNuzlocke::
 
 Zone0Sanctuary_EventScript_EnableNuzlocke::
 	callnative GlobalNuzlockeSet
-	setflag FLAG_SETTINGS_NUZLOCKE_MODE_ON
+	setflag FLAG_SETTINGS_NUZLOCKE
 	playse SE_PC_LOGIN
 	msgbox Zone0Sanctuary_EventScript_EnableNuzlocke_Text_0, MSGBOX_DEFAULT
 	waitse
@@ -795,7 +795,7 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_60:
 Zone0Sanctuary_EventScript_EndIntro::
 	compare VAR_TEMP_0, 1
 	goto_if_eq Zone0Sanctuary_EventScript_EndIntro_2
-	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone0Sanctuary_EventScript_EndIntro_10
+	goto_if_set FLAG_SETTINGS_INFINITE, Zone0Sanctuary_EventScript_EndIntro_10
 	additem ITEM_POTION, 10
 Zone0Sanctuary_EventScript_EndIntro_9:
 	additem ITEM_POKE_BALL, 15
@@ -818,7 +818,7 @@ Zone0Sanctuary_EventScript_EndIntro_1:
 Zone0Sanctuary_EventScript_EndIntro_2:
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_0
 	delay 96
-	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone0Sanctuary_EventScript_EndIntro_6
+	goto_if_set FLAG_SETTINGS_INFINITE, Zone0Sanctuary_EventScript_EndIntro_6
 	msgbox Zone0Sanctuary_EventScript_EndIntro_Text_3, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 15
 	giveitem ITEM_POTION, 10

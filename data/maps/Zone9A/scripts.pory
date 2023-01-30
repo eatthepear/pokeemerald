@@ -50,7 +50,7 @@ script Zone9A_EventScript_Ari {
 		waitmovement(0)
 	}
 	faceplayer
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 		msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row,\lwithout being healed in between\lbattles.\pWhat do you say to my little wager?", MSGBOX_YESNO)
 	} else {
 		msgbox("{COLOR BLUE}Ari{COLOR DARK_GRAY}: Howzit goin?\pOh, you're a traveler!\nYou might be strong enough…\pI bet you can't defeat the five\nmembers of my family in a row.\pYou'll be fully healed in between\nbattles.\pWhat do you say to my little wager?", MSGBOX_YESNO)
@@ -63,7 +63,7 @@ script Zone9A_EventScript_Ari {
 		msgbox(format("Alright, well, best of luck!"), MSGBOX_DEFAULT)
 		setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 		trainerbattle_no_intro(TRAINER_ARI, "What!? How!?\nYou're tougher than I thought!")
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {	
+		if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {	
 			special(HealPlayerParty)
 		}
 		applymovement(1, Common_Movement_WalkInPlaceFasterUp)
@@ -80,7 +80,7 @@ script Zone9A_EventScript_Ari {
 		waitmovement(0)
 		msgbox("{COLOR BLUE}Bertha{COLOR DARK_GRAY}: You beat my brother?\nUgh. Such a brat.\pLet's just get this over with.", MSGBOX_DEFAULT)
 		trainerbattle_no_intro(TRAINER_BERTHA, "Sigh…\nI thought this would happen…")
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {	
+		if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {	
 			special(HealPlayerParty)
 		}
 		applymovement(2, Common_Movement_WalkInPlaceFasterUp)
@@ -97,7 +97,7 @@ script Zone9A_EventScript_Ari {
 		waitmovement(0)
 		msgbox("{COLOR BLUE}Cassandra{COLOR DARK_GRAY}: Oh! I am so excited!\pFinally, a challenger who got past\nboth of my children!\pIt's Momma's time to shine!", MSGBOX_DEFAULT)
 		trainerbattle_no_intro(TRAINER_CASSANDRA, "It was you who shined instead!")
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {	
+		if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {	
 			special(HealPlayerParty)
 		}
 		applymovement(3, Common_Movement_WalkInPlaceFasterUp)
@@ -114,7 +114,7 @@ script Zone9A_EventScript_Ari {
 		waitmovement(0)
 		msgbox("{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Guess what time it is?\nIt's time to take out the trash!", MSGBOX_DEFAULT)
 		trainerbattle_no_intro(TRAINER_DOMINIC, "Sorry, sorry!\nI didn't realize you were so strong!")
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {	
+		if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {	
 			special(HealPlayerParty)
 		}
 		msgbox("{COLOR BLUE}Dominic{COLOR DARK_GRAY}: Kids!\nWake your grandma up!", MSGBOX_DEFAULT)

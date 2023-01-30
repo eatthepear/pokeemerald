@@ -5,7 +5,7 @@ Zone9E_MapScripts::
 Zone9E_EventScript_BuyFarmAnimal::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone9E_EventScript_BuyFarmAnimal_4
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone9E_EventScript_BuyFarmAnimal_4
 Zone9E_EventScript_BuyFarmAnimal_3:
 	showmoneybox 0, 0, 0
 	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_1, MSGBOX_YESNO
@@ -23,7 +23,7 @@ Zone9E_EventScript_BuyFarmAnimal_3:
 	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_5, MSGBOX_DEFAULT
 	closemessage
 	hidemoneybox
-	goto_if_set FLAG_SETTINGS_NUZLOCKE_MODE_ON, Zone9E_EventScript_BuyFarmAnimal_17
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, Zone9E_EventScript_BuyFarmAnimal_17
 	msgbox Zone9E_EventScript_BuyFarmAnimal_Text_7, MSGBOX_DEFAULT
 	multichoice2 21, 0, Zone9E_Text_FarmAnimalMultichoice, TRUE
 	switch VAR_RESULT
@@ -76,7 +76,7 @@ Zone9E_EventScript_BuyFarmAnimal_14:
 	end
 
 Zone9E_EventScript_BuyFarmAnimal_17:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER_MODE_ON, Zone9E_EventScript_BuyFarmAnimal_24
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, Zone9E_EventScript_BuyFarmAnimal_24
 	setvar VAR_TEMP_3, 0
 	checkspeciesclause SPECIES_MILTANK
 	compare VAR_RESULT, TRUE

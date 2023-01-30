@@ -1200,7 +1200,7 @@ void CB2_InitCopyrightScreenAfterBootup(void)
             Sav2_ClearSetDefault();
         SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
         InitHeap(gHeap, HEAP_SIZE);
-        if (FlagGet(FLAG_SETTINGS_NUZLOCKE_MODE_ON))
+        if (FlagGet(FLAG_SETTINGS_NUZLOCKE))
             NuzlockeFlagSet(GLOBAL_NUZLOCKE_SWITCH);
         else
             NuzlockeFlagClear(GLOBAL_NUZLOCKE_SWITCH);

@@ -48,7 +48,7 @@ script Zone11A_EventScript_LeviathanIntro {
 		msgbox(format("{COLOR BLUE}Newton{COLOR DARK_GRAY}: Thank you! The experiment name is: Gravity and its Pokémon battle-winning properties!"))
 		setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 		setvar(VAR_MUGSHOT_ID, MUGSHOT_NEWTON)
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10_BRUTAL, Zone11A_Text_Leviathan10Defeat)
 		} else {
 			trainerbattle_no_intro(TRAINER_NEWTON_LEVIATHAN_10, Zone11A_Text_Leviathan10Defeat)
@@ -85,7 +85,7 @@ text Zone11A_Text_Leviathan10Post {
 script Zone11A_EventScript_BuyRuin {
 	lock
 	faceplayer
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true && flag(FLAG_ZONE11A_NUZLOCKE_BOUGHT_RUIN) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true && flag(FLAG_ZONE11A_NUZLOCKE_BOUGHT_RUIN) == true) {
 		msgbox(format("I'm not offering any of these other Pokémon for sale anymore."))
 		release
 		end
@@ -115,8 +115,8 @@ script Zone11A_EventScript_BuyRuin {
 				msgbox("Alrighty, I hope this won't ruin you!")
 				closemessage
 				hidemoneybox
-				if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) {
-					if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true) {
+				if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
+					if (flag(FLAG_SETTINGS_RANDOMIZER) == true) {
 						setvar(VAR_TEMP_1, SPECIES_BALTOY) // gets randomized anyways
 					} else {
 						setvar(VAR_TEMP_3, 0)

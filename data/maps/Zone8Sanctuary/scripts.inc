@@ -13,7 +13,7 @@ Zone8Sanctuary_EventScript_Intro::
 	msgbox Zone8Sanctuary_Text_Colress_ReachedZone, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox Zone8Sanctuary_Text_RewardClear7, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone8Sanctuary_EventScript_Intro_2
+	goto_if_set FLAG_SETTINGS_INFINITE, Zone8Sanctuary_EventScript_Intro_2
 	msgbox Zone8Sanctuary_Text_7Reward, MSGBOX_DEFAULT
 	giveitem ITEM_BLUE_SHARD, 3
 Zone8Sanctuary_EventScript_Intro_1:

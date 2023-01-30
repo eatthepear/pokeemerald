@@ -379,7 +379,7 @@ void CreateWildMon(u16 species, u8 level)
     ZeroEnemyPartyMons();
     checkCuteCharm = TRUE;
 
-    if (FlagGet(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == TRUE)
+    if (FlagGet(FLAG_SETTINGS_RANDOMIZER) == TRUE)
     {
         species = GetRandomSpecies(level);
     }

@@ -6,7 +6,7 @@ mapscripts Zone0Sanctuary_MapScripts {
 
 script Zone0Sanctuary_EventScript_Intro {
     lockall
-	clearflag(FLAG_SETTINGS_NUZLOCKE_MODE_ON)
+	clearflag(FLAG_SETTINGS_NUZLOCKE)
 	setflag(FLAG_SYS_B_DASH)
 	setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_SYS_PC_LANETTE)
@@ -151,7 +151,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		}
 	}
 	delay(16)
-	if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false && flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) {
+	if (flag(FLAG_SETTINGS_RANDOMIZER) == false && flag(FLAG_SETTINGS_NUZLOCKE) == false) {
 		msgbox(format("You have chosen to disable all optional game modes."), MSGBOX_DEFAULT)
 		playse(SE_PC_LOGIN)
 		msgbox(format("{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
@@ -276,7 +276,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		"Also, it is highly recommended you stock up on any supplies before entering the next Zone."))
 		delay(96)
 	}
-	if (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true) {
+	if (flag(FLAG_SETTINGS_RANDOMIZER) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on, you get a random starter."))
 		callnative(GiveRandomStarter)
 		playfanfare(MUS_OBTAIN_ITEM)
@@ -291,7 +291,7 @@ script Zone0Sanctuary_EventScript_Intro {
 		}
 		goto(Zone0Sanctuary_EventScript_EndIntro)
 	}
-	if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) {
+	if (flag(FLAG_SETTINGS_BRUTAL) == true) {
 		msgbox(format("As a new challenger, you will receive a starter Pokémon.\p"
 		"On Brutal difficulty, your choice is limited from the pool of possible starters to only three options.\p"
 		"Choose carefully as these Pokémon are very rare."))
@@ -312,7 +312,7 @@ script Zone0Sanctuary_EventScript_Intro {
 }
 
 script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
-	setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+	setflag(FLAG_SETTINGS_FULL_SURVEIL)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
 	waitse
@@ -321,7 +321,7 @@ script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
 }
 
 script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
-	setflag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)
+	setflag(FLAG_SETTINGS_BRUTAL)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
 	waitse
@@ -331,7 +331,7 @@ script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
 }
 
 script Zone0Sanctuary_EventScript_SetInfiniteDifficulty {
-	setflag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)
+	setflag(FLAG_SETTINGS_INFINITE)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
 	waitse
@@ -348,7 +348,7 @@ script Zone0Sanctuary_EventScript_DisableRandomizer {
 }
 
 script Zone0Sanctuary_EventScript_EnableRandomizer {
-	setflag(FLAG_SETTINGS_RANDOMIZER_MODE_ON)
+	setflag(FLAG_SETTINGS_RANDOMIZER)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled."), MSGBOX_DEFAULT)
 	waitse
@@ -366,7 +366,7 @@ script Zone0Sanctuary_EventScript_DisableNuzlocke {
 
 script Zone0Sanctuary_EventScript_EnableNuzlocke {
 	callnative(GlobalNuzlockeSet)
-	setflag(FLAG_SETTINGS_NUZLOCKE_MODE_ON)
+	setflag(FLAG_SETTINGS_NUZLOCKE)
 	playse(SE_PC_LOGIN)
 	msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
 	waitse
@@ -564,7 +564,7 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		msgbox(format("Excellent choice.\p"
 		"You can also re-nickname your Pokémon from the party menu."))
 		delay(96)
-		if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+		if (flag(FLAG_SETTINGS_INFINITE)) {
 			msgbox(format("Because you are playing on the infinite difficulty, here are the items you'd need.\pYou can get more by speaking to me about your difficulty setting."), MSGBOX_DEFAULT)
 			additem(ITEM_FULL_RESTORE, 100)
 			additem(ITEM_FULL_RESTORE, 100)
@@ -610,7 +610,7 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		closemessage
 		delay(16)
 	} else {
-		if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON)) {
+		if (flag(FLAG_SETTINGS_INFINITE)) {
 			additem(ITEM_FULL_RESTORE, 100)
 			additem(ITEM_FULL_RESTORE, 100)
 			additem(ITEM_FULL_RESTORE, 100)

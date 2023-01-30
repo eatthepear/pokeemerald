@@ -109,7 +109,7 @@ script EventScript_Shop_General {
 				case 23:
 				case 24:
 				case 25:
-					if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS) == true)) {
+					if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_ANTIDOCTOR) == true)) {
 						pokemart(Shop_General_Utility_9to25_NoXItems)
 					} else {
 						pokemart(Shop_General_Utility_9to25)
@@ -288,7 +288,7 @@ script EventScript_Shop_Unique_Varrick {
 		case 25:
 			pokemart(Shop_Unique_Varrick_24to25)
 		case 26:
-			if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_EVS) == true)) {
+			if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_EFFORTLESS) == true)) {
 				pokemart(Shop_Unique_Varrick_26to30_Brutal)
 			} else {
 				pokemart(Shop_Unique_Varrick_26to30)
@@ -888,7 +888,7 @@ script EventScript_Shop_Lelouch_Training {
 		return
 	}
 	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.", MSGBOX_DEFAULT)
-	if ((var(VAR_ZONE) < 21) || (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_EVS) == true)) {
+	if ((var(VAR_ZONE) < 21) || (flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_EFFORTLESS) == true)) {
 		multichoice(0, 0, MULTI_LELOUCH_EXP_ONLY, 0)
 		switch(var(VAR_RESULT)) {
 			case 0:
@@ -1661,7 +1661,7 @@ script EventScript_Shop_Joy {
 }
 
 script EventScript_MandatoryCheck {
-	if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) || flag(FLAG_SETTINGS_ALL_MANDATORY)) {
+	if (flag(FLAG_SETTINGS_BRUTAL) || flag(FLAG_SETTINGS_GAUNTLET)) {
 		if (var(VAR_NUM_TRAINERS_REMAINING) > 0) {
 			buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
 			msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."), MSGBOX_DEFAULT)
@@ -1803,219 +1803,205 @@ script EventScript_Documentation {
 	goto(EventScript_WhenUReady)
 }
 
-script EventScript_Settings {
-	if (var(VAR_TEMP_1) != 2) {
-		setvar(VAR_TEMP_1, 2)
-		special(SpawnCameraObject)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
-		waitmovement(0)
-		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
-		waitmovement(0)
-		special(RemoveCameraObject)
-	}
-	while (var(VAR_TEMP_1) == 2) {
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
-			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_BrutalDifficulty)
-				case 1:
-					call(EventScript_Settings_NuzlockeRandomizer)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
-			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_InfiniteDifficulty)
-				case 1:
-					call(EventScript_Settings_NuzlockeRandomizer)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
-			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-				case 1:
-					call(EventScript_Settings_NuzlockeRandomizer)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
-			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_BrutalDifficulty)
-				case 1:
-					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
-			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_InfiniteDifficulty)
-				case 1:
-					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
-			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-				case 1:
-					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
-			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_BrutalDifficulty)
-				case 1:
-					call(EventScript_Settings_Nuzlocke)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
-			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_InfiniteDifficulty)
-				case 1:
-					call(EventScript_Settings_Nuzlocke)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
-			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-				case 1:
-					call(EventScript_Settings_Nuzlocke)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
-			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_BrutalDifficulty)
-				case 1:
-					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} elif ((flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == false) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == false)) {
-			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					call(EventScript_Settings_InfiniteDifficulty)
-				case 1:
-					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		} else {
-			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
-			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-				case 1:
-					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
-				case 2:
-					call(EventScript_GameSettings)
-				case 3:
-					call(EventScript_MusicMenu)
-				case 5:
-				case MULTI_B_PRESSED:
-					setvar(VAR_TEMP_1, 1)
-			}
-		}
-	}
-	special(SpawnCameraObject)
-	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
-	waitmovement(0)
-	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
-	waitmovement(0)
-	special(RemoveCameraObject)
-	goto(EventScript_WhenUReady)
-}
+// script EventScript_Settings {
+// 	setvar(VAR_TEMP_1, 2)
+// 	while (var(VAR_TEMP_1) == 2) {
+// 		if ((flag(FLAG_SETTINGS_BRUTAL) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == true) && (flag(FLAG_SETTINGS_RANDOMIZER) == true)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_BrutalDifficulty)
+// 				case 1:
+// 					call(EventScript_Settings_NuzlockeRandomizer)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_INFINITE) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == true) && (flag(FLAG_SETTINGS_RANDOMIZER) == true)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_InfiniteDifficulty)
+// 				case 1:
+// 					call(EventScript_Settings_NuzlockeRandomizer)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_NUZLOCKE) == true) && (flag(FLAG_SETTINGS_RANDOMIZER) == true)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
+// 				case 1:
+// 					call(EventScript_Settings_NuzlockeRandomizer)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_BRUTAL) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == false) && (flag(FLAG_SETTINGS_RANDOMIZER) == true)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_BrutalDifficulty)
+// 				case 1:
+// 					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_INFINITE) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == false) && (flag(FLAG_SETTINGS_RANDOMIZER) == true)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_InfiniteDifficulty)
+// 				case 1:
+// 					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_NUZLOCKE) == false) && (flag(FLAG_SETTINGS_RANDOMIZER) == true)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
+// 				case 1:
+// 					msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_BRUTAL) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == true) && (flag(FLAG_SETTINGS_RANDOMIZER) == false)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_BrutalDifficulty)
+// 				case 1:
+// 					call(EventScript_Settings_Nuzlocke)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_INFINITE) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == true) && (flag(FLAG_SETTINGS_RANDOMIZER) == false)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_InfiniteDifficulty)
+// 				case 1:
+// 					call(EventScript_Settings_Nuzlocke)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_NUZLOCKE) == true) && (flag(FLAG_SETTINGS_RANDOMIZER) == false)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
+// 				case 1:
+// 					call(EventScript_Settings_Nuzlocke)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_BRUTAL) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == false) && (flag(FLAG_SETTINGS_RANDOMIZER) == false)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_BrutalDifficulty)
+// 				case 1:
+// 					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} elif ((flag(FLAG_SETTINGS_INFINITE) == true) && (flag(FLAG_SETTINGS_NUZLOCKE) == false) && (flag(FLAG_SETTINGS_RANDOMIZER) == false)) {
+// 			msgbox("You are currently playing on\n{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					call(EventScript_Settings_InfiniteDifficulty)
+// 				case 1:
+// 					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		} else {
+// 			msgbox("You are currently playing on\n{COLOR RED}Default{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Vanilla{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
+// 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
+// 			switch (var(VAR_RESULT)) {
+// 				case 0:
+// 					msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
+// 				case 1:
+// 					msgbox(gText_Colress_VanillaExplanation, MSGBOX_DEFAULT)
+// 				case 2:
+// 					call(EventScript_GameSettings)
+// 				case 3:
+// 					call(EventScript_MusicMenu)
+// 				case 5:
+// 				case MULTI_B_PRESSED:
+// 					setvar(VAR_TEMP_1, 1)
+// 			}
+// 		}
+// 	}
+// 	goto(EventScript_WhenUReady)
+// }
 
 text gText_Colress_VanillaExplanation {
 	"{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\nmodifications."
@@ -2080,7 +2066,7 @@ script EventScript_Settings_BrutalDifficulty {
 			msgbox("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty turned off.\nDifficulty set to {COLOR RED}Default{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)
+			clearflag(FLAG_SETTINGS_BRUTAL)
 			special(ReverseHiddenItemFlags)
 		}
 	}
@@ -2134,7 +2120,7 @@ script EventScript_Settings_NuzlockeRandomizer {
 			msgbox("{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_SETTINGS_NUZLOCKE_MODE_ON)
+			clearflag(FLAG_SETTINGS_NUZLOCKE)
 			clearflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 			callnative(GlobalNuzlockeClear)
 		}
@@ -2162,7 +2148,7 @@ script EventScript_Settings_Nuzlocke {
 			msgbox("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.", MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_SETTINGS_NUZLOCKE_MODE_ON)
+			clearflag(FLAG_SETTINGS_NUZLOCKE)
 			clearflag(FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED)
 			callnative(GlobalNuzlockeClear)
 		}
@@ -2181,206 +2167,108 @@ text gText_Colress_CannotChangeSettingInfinite {
 	format("You cannot change this setting, as you are on Infinite difficulty.")
 }
 
-script EventScript_GameSettings {
+script EventScript_Settings {
 	while {
-		message(format("Which game setting would you like to change?"))
+		message("Choose a setting.\n{COLOR RED}Red{COLOR DARK_GRAY} means enabled.")
 		waitmessage
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_ALL_MANDATORY) == true)) {
-			dynmultipush("{COLOR RED}All Mandatory Foes", 0)
+		if (flag(FLAG_SETTINGS_BRUTAL) == true) {
+			dynmultipush("{COLOR RED}Brutal", 0)
 		} else {
-			dynmultipush("Not All Mandatory Foes", 0)
+			dynmultipush("Brutal", 0)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
-			dynmultipush("{COLOR RED}Hard Difficulty Battles", 1)
+		if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
+			dynmultipush("{COLOR RED}Nuzlocke", 1)
 		} else {
-			dynmultipush("Normal Difficulty Battles", 1)
+			dynmultipush("Nuzlocke", 1)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS) == true)) {
-			dynmultipush("{COLOR RED}No In-Battle Items", 2)
+		if (flag(FLAG_SETTINGS_RANDOMIZER) == true) {
+			dynmultipush("{COLOR RED}Randomizer", 2)
 		} else {
-			dynmultipush("In-Battle Items", 2)
+			dynmultipush("Randomizer", 2)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_EVS) == true)) {
-			dynmultipush("{COLOR RED}No EV gain", 3)
+		if (flag(FLAG_SETTINGS_INFINITE) == true) {
+			dynmultipush("{COLOR RED}Infinite", 3)
 		} else {
-			dynmultipush("Normal EV gain", 3)
+			dynmultipush("Infinite", 3)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_PP_COSTS) == true)) {
-			dynmultipush("{COLOR RED}PP Costs Changed", 4)
+		if (flag(FLAG_SETTINGS_EXP_ALL) == true) {
+			dynmultipush("{COLOR RED}Exp. All", 4)
 		} else {
-			dynmultipush("Normal PP Costs", 4)
+			dynmultipush("Exp. All", 4)
 		}
-		if (flag(FLAG_SETTINGS_EXP_ALL) == false) {
-			dynmultipush("{COLOR RED}Exp. All Off", 5)
+		if (flag(FLAG_SETTINGS_FULL_SURVEIL) == true) {
+			dynmultipush("{COLOR RED}Full Surveil", 5)
 		} else {
-			dynmultipush("Exp. All On", 5)
+			dynmultipush("Full Surveil", 5)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_FARMING) == true)) {
-			dynmultipush("{COLOR RED}Farming Disabled", 6)
+		dynmultipush("{COLOR GREEN}Music", 6)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
+			dynmultipush("{COLOR RED}Challenge", 7)
 		} else {
-			dynmultipush("Farming Enabled", 6)
+			dynmultipush("Challenge", 7)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_WILD_EXP) == true)) {
-			dynmultipush("{COLOR RED}Grinding Disabled", 7)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_GAUNTLET) == true)) {
+			dynmultipush("{COLOR RED}Gauntlet", 8)
 		} else {
-			dynmultipush("Grinding Enabled", 7)
+			dynmultipush("Gauntlet", 8)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) == true)) {
-			dynmultipush("{COLOR RED}Helper NPCs Disabled", 8)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_ANTIDOCTOR) == true)) {
+			dynmultipush("{COLOR RED}Antidoctor", 9)
 		} else {
-			dynmultipush("Helper NPCs Enabled", 8)
+			dynmultipush("Antidoctor", 9)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == true)) {
-			dynmultipush("{COLOR RED}Hidden Items Disabled", 9)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CLUMSY) == true)) {
+			dynmultipush("{COLOR RED}Clumsy", 10)
 		} else {
-			dynmultipush("Hidden Items Enabled", 9)
+			dynmultipush("Clumsy", 10)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_SINGLE_USE_TMS) == true)) {
-			dynmultipush("{COLOR RED}Single-Use TMs", 10)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_EFFORTLESS) == true)) {
+			dynmultipush("{COLOR RED}Effortless", 11)
 		} else {
-			dynmultipush("Infinite-Use TMs", 10)
+			dynmultipush("Effortless", 11)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_DISABLE_RETIRE) == true)) {
-			dynmultipush("{COLOR RED}Retire Disabled", 11)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_RED_THUMB) == true)) {
+			dynmultipush("{COLOR RED}Red Thumb", 12)
 		} else {
-			dynmultipush("Retire Enabled", 11)
+			dynmultipush("Red Thumb", 12)
 		}
-		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_DECREASED_REWARDS) == true)) {
-			dynmultipush("{COLOR RED}Reward Money Halved", 12)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_LAZY) == true)) {
+			dynmultipush("{COLOR RED}Lazy", 13)
 		} else {
-			dynmultipush("Normal Reward Money", 12)
+			dynmultipush("Lazy", 13)
 		}
-		if (flag(FLAG_SETTINGS_FULL_PREVIEW_ON) == false) {
-			dynmultipush("{COLOR RED}Limited Surveil", 13)
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_SINGLE_USE_TMS) == true)) {
+			dynmultipush("{COLOR RED}Bad Quality", 14)
 		} else {
-			dynmultipush("Full Surveil", 13)
+			dynmultipush("Bad Quality", 14)
 		}
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_POOR) == true)) {
+			dynmultipush("{COLOR RED}Poor", 15)
+		} else {
+			dynmultipush("Poor", 15)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_INDEPENDENT) == true)) {
+			dynmultipush("{COLOR RED}Independent", 16)
+		} else {
+			dynmultipush("Independent", 16)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_WORKAHOLIC) == true)) {
+			dynmultipush("{COLOR RED}Workaholic", 17)
+		} else {
+			dynmultipush("Workaholic", 17)
+		}
+		dynmultipush("Exit", 18)
 		dynmultistack(21, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
 		switch (var(VAR_RESULT)) {
 			case 0:
-				msgbox(format("You can choose to make all trainers mandatory before leaving a Zone."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_ALL_MANDATORY) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("All trainers are currently mandatory."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to make trainers no longer all mandatory?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("Trainers are no longer all mandatory.", MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_ALL_MANDATORY)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("Some trainers are currently optional."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to make it so that all trainers are mandatory?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("All trainers are now mandatory.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_ALL_MANDATORY)
-					}
-				}
+				call(EventScript_Settings_BrutalDifficulty)
 			case 1:
-				msgbox(format("Leviathans and other boss battles have two possible difficulties."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_HARD_BATTLES) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("Boss battles are currently set to the harder difficulty."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to make it so that these battles are easier?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox(format("Boss battles set to the easier difficulty."), MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_HARD_BATTLES)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("Boss battles are currently set to the easier difficulty."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to make it so that these battles are more difficult?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox(format("Boss battles set to the harder difficulty."), MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_HARD_BATTLES)
-					}
-				}
+				call(EventScript_Settings_Nuzlocke)
 			case 2:
-				msgbox(format("In-battle items, such as healing items or X-items, generally give the player an extreme advantage over opponents, especially when used well.\pPokémon Battle Labyrinth does not have opponents use any items."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("The usage of in-battle items is currently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to enable in-battle items?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("Enabled in-battle items.", MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("The usage of in-battle items is currently enabled."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to disable in-battle items?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("Disabled in-battle items.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS)
-					}
-				}
+				call(EventScript_Settings_NuzlockeRandomizer)
 			case 3:
-				if (flag(FLAG_SETTINGS_NO_EVS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("EVs are currently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to enable EVs?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("Enabled EVs.", MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_NO_EVS)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("EVs are currently enabled."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to disable EVs?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("Disabled EVs.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_NO_EVS)
-					}
-				}
+				call(EventScript_Settings_InfiniteDifficulty)
 			case 4:
-				msgbox(format("PP stalling is an arduous and boring strategy.\pIn addition, some moves are extraordinarily powerful in the hands of a player, such as setup moves or healing moves.\pThis setting both increases the PP cost of the player's usage of strong moves, limiting their overall usage, as well as disables opponents' using PP."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_PP_COSTS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("PP cost changes are currently enabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to disable these PP cost changes?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("PP cost changes reverted to normal.", MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_PP_COSTS)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("Would you like to enable these PP cost changes?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("PP cost changes enabled.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_PP_COSTS)
-					}
-				}
-			case 5:
 				msgbox(format("The Exp. All setting, if turned on, gives members of your party that don't participate in battle 25% experience.\pThe game's experience curve is balanced around the Exp. All being turned on, though you may turn it off if you choose."), MSGBOX_DEFAULT)
 				if (flag(FLAG_SETTINGS_EXP_ALL) == true) {
 					msgbox(format("The Exp. All is currently on. Would you like to turn it off?"), MSGBOX_YESNO)
@@ -2399,46 +2287,193 @@ script EventScript_GameSettings {
 						setflag(FLAG_SETTINGS_EXP_ALL)
 					}
 				}
+			case 5:
+				msgbox(format("In trainer battles, you can Surveil the opposing party to gain more information."))
+				if (flag(FLAG_SETTINGS_FULL_SURVEIL) == true) {
+					msgbox(format("Surveil currently reveals all information about the opposing party.\pWould you like to decrease the amount of information it reveals?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_OFF)
+						msgbox(format("Lowered the power of Surveil.\pYou will only be able to view the opposing team's Pokémon and their health."), MSGBOX_DEFAULT)
+						waitse
+						closemessage
+						clearflag(FLAG_SETTINGS_FULL_SURVEIL)
+					}
+				} else {
+					msgbox(format("Surveil currently reveals only the opposing team's Pokémon and their health.\pWould you like to increase the amount of information it reveals?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox(format("Increased the power of Surveil.\pYou will be able to view all information about the opposing party."), MSGBOX_DEFAULT)
+						waitse
+						closemessage
+						setflag(FLAG_SETTINGS_FULL_SURVEIL)
+					}
+				}
 			case 6:
+				call(EventScript_MusicMenu)
+			case 7:
+				msgbox(format("Leviathans and other boss battles have two possible difficulties."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_CHALLENGE) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("Boss battles are currently set to the harder difficulty."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to make it so that these battles are easier?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox(format("Boss battles set to the easier difficulty."), MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_CHALLENGE)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Boss battles are currently set to the easier difficulty."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make it so that these battles are more difficult?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox(format("Boss battles set to the harder difficulty."), MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_CHALLENGE)
+					}
+				}
+			case 8:
+				msgbox(format("You can choose to make all trainers mandatory before leaving a Zone."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_GAUNTLET) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("All trainers are currently mandatory."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to make trainers no longer all mandatory?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Trainers are no longer all mandatory.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_GAUNTLET)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Some trainers are currently optional."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make it so that all trainers are mandatory?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("All trainers are now mandatory.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_GAUNTLET)
+					}
+				}
+			case 9:
+				msgbox(format("In-battle items, such as healing items or X-items, generally give the player an extreme advantage over opponents, especially when used well.\pPokémon Battle Labyrinth does not have opponents use any items."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_ANTIDOCTOR) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("The usage of in-battle items is currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to enable in-battle items?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Enabled in-battle items.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_ANTIDOCTOR)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("The usage of in-battle items is currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable in-battle items?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Disabled in-battle items.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_ANTIDOCTOR)
+					}
+				}
+			case 10:
+				if (flag(FLAG_SETTINGS_CLUMSY) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("Set mode is currently required."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to make it so Set mode is not required?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Set mode is no longer required.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_CLUMSY)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Set mode is currently not required."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to make it so Set mode is required?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Set mode is required.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_CLUMSY)
+					}
+				}
+			case 11:
+				if (flag(FLAG_SETTINGS_EFFORTLESS) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("EVs are currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to enable EVs?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Enabled EVs.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_EFFORTLESS)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("EVs are currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable EVs?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Disabled EVs.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_EFFORTLESS)
+					}
+				}
+				// msgbox(format("PP stalling is an arduous and boring strategy.\pIn addition, some moves are extraordinarily powerful in the hands of a player, such as setup moves or healing moves.\pThis setting both increases the PP cost of the player's usage of strong moves, limiting their overall usage, as well as disables opponents' using PP."), MSGBOX_DEFAULT)
+			case 12:
 				msgbox(format("In most Pokémon games, players can farm items and money by growing Berries, Thief, and other means.\pThe ability to 'farm', so to speak, can be disabled by this setting."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_NO_FARMING) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+				if (flag(FLAG_SETTINGS_RED_THUMB) || flag(FLAG_SETTINGS_BRUTAL)) {
 					msgbox(format("Farming is currently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
 						msgbox(format("Would you like to enable farming?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							playse(SE_PC_OFF)
 							msgbox("Farming enabled.", MSGBOX_DEFAULT)
 							waitse
-							clearflag(FLAG_SETTINGS_NO_FARMING)
+							clearflag(FLAG_SETTINGS_RED_THUMB)
 						}
 					} else {
 						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
 					msgbox(format("Farming is currently enabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == false) {
+					if (flag(FLAG_SETTINGS_INFINITE) == false) {
 						msgbox(format("Would you like to disable farming?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							playse(SE_PC_ON)
 							msgbox("Farming disabled.", MSGBOX_DEFAULT)
 							waitse
-							setflag(FLAG_SETTINGS_NO_FARMING)
+							setflag(FLAG_SETTINGS_RED_THUMB)
 						}
 					} else {
 						msgbox(gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT)
 					}
 				}
-			case 7:
+			case 13:
 				msgbox(format("In most Pokémon games, players can 'grind' experience by defeating wild Pokémon.\pThis setting can disable wild Pokémon giving experience, to prevent the player from grinding."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_NO_WILD_EXP) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+				if (flag(FLAG_SETTINGS_LAZY) || flag(FLAG_SETTINGS_BRUTAL)) {
 					msgbox(format("Grinding is currently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
 						msgbox(format("Would you like to enable grinding on wild Pokémon?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							playse(SE_PC_OFF)
 							msgbox("Grinding enabled.", MSGBOX_DEFAULT)
 							waitse
-							clearflag(FLAG_SETTINGS_NO_WILD_EXP)
+							clearflag(FLAG_SETTINGS_LAZY)
 						}
 					} else {
 						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
@@ -2450,69 +2485,13 @@ script EventScript_GameSettings {
 						playse(SE_PC_ON)
 						msgbox("Grinding disabled.", MSGBOX_DEFAULT)
 						waitse
-						setflag(FLAG_SETTINGS_NO_WILD_EXP)
+						setflag(FLAG_SETTINGS_LAZY)
 					}
 				}
-			case 8:
-				msgbox(format("In some Zones, there are certain helper NPCs that can sell cheap items or heal the player's party.\pThis setting can disable their services."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("Helper NPCs are currently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to enable helper NPCs?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("Helper NPCs enabled.", MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_REMOVE_HELPER_NPCS)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("Helper NPCs are currently enabled."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to disable helper NPCs?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("Helper NPCs disabled.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_REMOVE_HELPER_NPCS)
-					}
-				}
-			case 9:
-				msgbox(format("Hidden items can be disabled to limit the supply of available items.\pThis is recommended to be used alongside the disabling farming setting."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("Hidden items are curently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to enable hidden items?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("Hidden items enabled.", MSGBOX_DEFAULT)
-							waitse
-							special(ReverseHiddenItemFlags)
-							clearflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("Hidden items are currently enabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_INFINITE_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to disable hidden items?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_ON)
-							msgbox("Hidden items disabled.", MSGBOX_DEFAULT)
-							waitse
-							special(ReverseHiddenItemFlags)
-							setflag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT)
-					}
-				}
-			case 10:
-				if (flag(FLAG_SETTINGS_SINGLE_USE_TMS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+			case 14:
+				if (flag(FLAG_SETTINGS_SINGLE_USE_TMS) || flag(FLAG_SETTINGS_BRUTAL)) {
 					msgbox(format("TMs are currently single use."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
 						msgbox(format("Would you like to make TMs infinite use?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							playse(SE_PC_OFF)
@@ -2533,41 +2512,16 @@ script EventScript_GameSettings {
 						setflag(FLAG_SETTINGS_SINGLE_USE_TMS)
 					}
 				}
-			case 11:
-				msgbox(format("Retiring from a Zone allows one to return to the Sanctuary, at the cost of half of their money as well as losing all progress made thus far in the Zone."), MSGBOX_DEFAULT)
-				if (flag(FLAG_SETTINGS_DISABLE_RETIRE) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
-					msgbox(format("Retiring is currently disabled."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
-						msgbox(format("Would you like to enable Retiring?"), MSGBOX_YESNO)
-						if (var(VAR_RESULT) == YES) {
-							playse(SE_PC_OFF)
-							msgbox("Retiring enabled.", MSGBOX_DEFAULT)
-							waitse
-							clearflag(FLAG_SETTINGS_DISABLE_RETIRE)
-						}
-					} else {
-						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
-					}
-				} else {
-					msgbox(format("Retiring is currently enabled."), MSGBOX_DEFAULT)
-					msgbox(format("Would you like to disable Retiring?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_ON)
-						msgbox("Retiring disabled.", MSGBOX_DEFAULT)
-						waitse
-						setflag(FLAG_SETTINGS_DISABLE_RETIRE)
-					}
-				}
-			case 12:
-				if (flag(FLAG_SETTINGS_DECREASED_REWARDS) || flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON)) {
+			case 15:
+				if (flag(FLAG_SETTINGS_POOR) || flag(FLAG_SETTINGS_BRUTAL)) {
 					msgbox(format("Trainers currently give 1/2 their reward money."), MSGBOX_DEFAULT)
-					if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) {
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
 						msgbox(format("Would you like to revert Trainer reward money to its default amount?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == YES) {
 							playse(SE_PC_OFF)
 							msgbox("Trainer reward money reverted to its default amount.", MSGBOX_DEFAULT)
 							waitse
-							clearflag(FLAG_SETTINGS_DECREASED_REWARDS)
+							clearflag(FLAG_SETTINGS_POOR)
 						}
 					} else {
 						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
@@ -2579,33 +2533,63 @@ script EventScript_GameSettings {
 						playse(SE_PC_ON)
 						msgbox("Trainer reward money set to 1/2.", MSGBOX_DEFAULT)
 						waitse
-						setflag(FLAG_SETTINGS_DECREASED_REWARDS)
+						setflag(FLAG_SETTINGS_POOR)
 					}
 				}
-			case 13:
-				msgbox(format("In trainer battles, you can Surveil the opposing party to gain more information."))
-				if (flag(FLAG_SETTINGS_FULL_PREVIEW_ON) == true) {
-					msgbox(format("Surveil currently reveals all information about the opposing party.\pWould you like to decrease the amount of information it reveals?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						playse(SE_PC_OFF)
-						msgbox(format("Lowered the power of Surveil.\pYou will only be able to view the opposing team's Pokémon and their health."), MSGBOX_DEFAULT)
-						waitse
-						closemessage
-						clearflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+			case 16:
+				msgbox(format("In some Zones, there are certain helper NPCs that can sell cheap items or heal the player's party.\pThis setting can disable their services."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_INDEPENDENT) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("Helper NPCs are currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to enable helper NPCs?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Helper NPCs enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_INDEPENDENT)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
 					}
 				} else {
-					msgbox(format("Surveil currently reveals only the opposing team's Pokémon and their health.\pWould you like to increase the amount of information it reveals?"), MSGBOX_YESNO)
+					msgbox(format("Helper NPCs are currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable helper NPCs?"), MSGBOX_YESNO)
 					if (var(VAR_RESULT) == YES) {
 						playse(SE_PC_ON)
-						msgbox(format("Increased the power of Surveil.\pYou will be able to view all information about the opposing party."), MSGBOX_DEFAULT)
+						msgbox("Helper NPCs disabled.", MSGBOX_DEFAULT)
 						waitse
-						closemessage
-						setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+						setflag(FLAG_SETTINGS_INDEPENDENT)
 					}
 				}
-			case 14:
+				// msgbox(format("Hidden items can be disabled to limit the supply of available items.\pThis is recommended to be used alongside the disabling farming setting."), MSGBOX_DEFAULT)
+			case 17:
+				msgbox(format("Retiring from a Zone allows one to return to the Sanctuary, at the cost of half of their money as well as losing all progress made thus far in the Zone."), MSGBOX_DEFAULT)
+				if (flag(FLAG_SETTINGS_WORKAHOLIC) || flag(FLAG_SETTINGS_BRUTAL)) {
+					msgbox(format("Retiring is currently disabled."), MSGBOX_DEFAULT)
+					if (flag(FLAG_SETTINGS_BRUTAL) == false) {
+						msgbox(format("Would you like to enable Retiring?"), MSGBOX_YESNO)
+						if (var(VAR_RESULT) == YES) {
+							playse(SE_PC_OFF)
+							msgbox("Retiring enabled.", MSGBOX_DEFAULT)
+							waitse
+							clearflag(FLAG_SETTINGS_WORKAHOLIC)
+						}
+					} else {
+						msgbox(gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT)
+					}
+				} else {
+					msgbox(format("Retiring is currently enabled."), MSGBOX_DEFAULT)
+					msgbox(format("Would you like to disable Retiring?"), MSGBOX_YESNO)
+					if (var(VAR_RESULT) == YES) {
+						playse(SE_PC_ON)
+						msgbox("Retiring disabled.", MSGBOX_DEFAULT)
+						waitse
+						setflag(FLAG_SETTINGS_WORKAHOLIC)
+					}
+				}
+			case 18:
 			case MULTI_B_PRESSED:
-				return
+				goto(EventScript_WhenUReady)
 		}
 	}
 }
@@ -2750,14 +2734,14 @@ script EventScript_MusicMenu {
 
 script EventScript_Surveillance {
 	msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: In trainer battles, you can Surveil the opposing party to gain more information."))
-	if (flag(FLAG_SETTINGS_FULL_PREVIEW_ON) == true) {
+	if (flag(FLAG_SETTINGS_FULL_SURVEIL) == true) {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals all information about the opposing party.\pWould you like to decrease the amount of information it reveals?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			playse(SE_PC_OFF)
 			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Lowered the power of Surveil.\pYou will only be able to view the opposing team's Pokémon and their health."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			clearflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+			clearflag(FLAG_SETTINGS_FULL_SURVEIL)
 		}
 	} else {
 		msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals only the opposing team's Pokémon and their health.\pWould you like to increase the amount of information it reveals?"), MSGBOX_YESNO)
@@ -2766,7 +2750,7 @@ script EventScript_Surveillance {
 			msgbox(format("{COLOR BLUE}Colress{COLOR DARK_GRAY}: Increased the power of Surveil.\pYou will be able to view all information about the opposing party."), MSGBOX_DEFAULT)
 			waitse
 			closemessage
-			setflag(FLAG_SETTINGS_FULL_PREVIEW_ON)
+			setflag(FLAG_SETTINGS_FULL_SURVEIL)
 		}
 	}
 	return
@@ -3192,7 +3176,7 @@ text gText_MultipleOpponentsRemaining {
 }
 
 script EventScript_NuzlockeVerifyGift {
-	if (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) {
+	if (flag(FLAG_SETTINGS_NUZLOCKE) == true) {
 		msgbox(format("On Nuzlocke mode, you will randomly receive one of the possible Pokémon.\pIs this ok?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT) == NO) {
 			hidemoneybox

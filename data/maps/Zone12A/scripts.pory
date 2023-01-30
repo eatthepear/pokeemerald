@@ -56,7 +56,7 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Well, well well. Look what we have here!"))
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: A trainer! Trying to cross the river!"))
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 		msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face our trial? We'll battle you one after the other, and you won't be healed in between battles!"), MSGBOX_YESNO)
 	} else {
 		msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face our trial? We'll battle you one after the other, and you'll be healed in between battles!"), MSGBOX_YESNO)
@@ -74,7 +74,7 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: Well then, I'm up first! Better hope luck is on your side!"))
 	trainerbattle_no_intro(TRAINER_ROMULUS, format("Romulus: The critical hits didn't come through!"))
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == false) && (flag(FLAG_SETTINGS_HARD_BATTLES) == false)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {
 		special(HealPlayerParty)
 	}
 	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Next up is me! I won't need any crits to beat you!"))

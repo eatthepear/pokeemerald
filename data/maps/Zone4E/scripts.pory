@@ -45,7 +45,7 @@ script Zone4E_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(Zone4E_Text_Leviathan4Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_RITA)
 		trainerbattle_no_intro(TRAINER_RITA_LEVIATHAN_4_BRUTAL, Zone4E_Text_Leviathan4Defeat)
 	} else {
@@ -62,7 +62,7 @@ script Zone4E_EventScript_LeviathanBattle {
 	setflag(FLAG_BEAT_LEVIATHAN_4)
 	setvar(VAR_ZONE_4_STATE, 1)
 	fadescreenswapbuffers(FADE_FROM_BLACK)
-	if (flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) {
+	if (flag(FLAG_SETTINGS_BRUTAL) == true) {
 		setflag(FLAG_ZONE4A_RECEIVED_GEM)
 	}
 	releaseall

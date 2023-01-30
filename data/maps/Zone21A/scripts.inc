@@ -5,7 +5,7 @@ Zone21A_EventScript_Exit::
 	lockall
 	compare VAR_ZONE, 21
 	goto_if_gt EventScript_WarpZone0
-	call_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone21A_EventScript_CheckBrutal
+	call_if_set FLAG_SETTINGS_BRUTAL, Zone21A_EventScript_CheckBrutal
 	warp MAP_ZONE21SANCTUARY, 255, 22, 7
 	releaseall
 	end

@@ -17,7 +17,7 @@ Zone10Sanctuary_EventScript_Intro::
 	msgbox gText_RewardClear, MSGBOX_DEFAULT
 	msgbox Zone10Sanctuary_Text_Reward, MSGBOX_DEFAULT
 	giveitem ITEM_MACHETE
-	goto_if_set FLAG_SETTINGS_INFINITE_DIFFICULTY_ON, Zone10Sanctuary_EventScript_Intro_2
+	goto_if_set FLAG_SETTINGS_INFINITE, Zone10Sanctuary_EventScript_Intro_2
 Zone10Sanctuary_EventScript_Intro_1:
 	msgbox gText_Colress_Unlocked, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM

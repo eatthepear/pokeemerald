@@ -454,8 +454,8 @@ Zone10B_EventScript_FossilDone::
 Zone10B_EventScript_WaterMerchant::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone10B_EventScript_WaterMerchant_2
-	goto_if_set FLAG_SETTINGS_REMOVE_HELPER_NPCS, Zone10B_EventScript_WaterMerchant_2
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone10B_EventScript_WaterMerchant_2
+	goto_if_set FLAG_SETTINGS_INDEPENDENT, Zone10B_EventScript_WaterMerchant_2
 	showmoneybox 0, 0, 0
 	msgbox Zone10B_EventScript_WaterMerchant_Text_1
 	closemessage

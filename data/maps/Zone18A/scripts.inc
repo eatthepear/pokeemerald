@@ -152,8 +152,8 @@ Zone18A_EventScript_AzurillDoll::
 Zone18A_EventScript_SellSodaPop::
 	lock
 	faceplayer
-	goto_if_set FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON, Zone18A_EventScript_SellSodaPop_2
-	goto_if_set FLAG_SETTINGS_REMOVE_HELPER_NPCS, Zone18A_EventScript_SellSodaPop_2
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone18A_EventScript_SellSodaPop_2
+	goto_if_set FLAG_SETTINGS_INDEPENDENT, Zone18A_EventScript_SellSodaPop_2
 	showmoneybox 0, 0, 0
 	msgbox Zone18A_EventScript_SellSodaPop_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, YES

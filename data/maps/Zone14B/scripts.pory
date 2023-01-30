@@ -17,7 +17,7 @@ script Zone14B_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(Zone14B_Text_Leviathan12Intro)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
     	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIGUEL)
 		trainerbattle_no_intro(TRAINER_MIGUEL_LEVIATHAN_12_BRUTAL, Zone14B_Text_Leviathan12Defeat)
 	} else {
