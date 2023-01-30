@@ -4656,8 +4656,8 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
         type1 = GetTypeBySpecies(species, 1);
         type2 = GetTypeBySpecies(species, 2);
     #else
-        type1 = gSpeciesInfo[species].type1;
-        type2 = gSpeciesInfo[species].type2;
+        type1 = gSpeciesInfo[species].types[0];
+        type2 = gSpeciesInfo[species].types[1];
     #endif
     if (species == SPECIES_NONE)
         type1 = type2 = TYPE_MYSTERY;
@@ -6433,8 +6433,8 @@ static void SaveMonDataInStruct(void)
     sPokedexView->sPokemonStats.evYield_SpDefense   = EVs[5];
     sPokedexView->sPokemonStats.catchRate           = gSpeciesInfo[species].catchRate;
     sPokedexView->sPokemonStats.growthRate          = gSpeciesInfo[species].growthRate;
-    sPokedexView->sPokemonStats.eggGroup1           = gSpeciesInfo[species].eggGroup1;
-    sPokedexView->sPokemonStats.eggGroup2           = gSpeciesInfo[species].eggGroup2;
+    sPokedexView->sPokemonStats.eggGroup1           = gSpeciesInfo[species].eggGroups[0];
+    sPokedexView->sPokemonStats.eggGroup2           = gSpeciesInfo[species].eggGroups[1];
     sPokedexView->sPokemonStats.eggCycles           = gSpeciesInfo[species].eggCycles;
     sPokedexView->sPokemonStats.expYield            = gSpeciesInfo[species].expYield;
     sPokedexView->sPokemonStats.friendship          = gSpeciesInfo[species].friendship;
