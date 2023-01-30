@@ -233,6 +233,8 @@ gScriptCmdTable::
     .4byte ScrCmd_facefollower				@ 0xe6
     .4byte ScrCmd_checkfollower				@ 0xe7
 	.4byte ScrCmd_multichoice2              @ 0xe8
+	.4byte ScrCmd_dynmultichoice            @ 0xe9
+	.4byte ScrCmd_dynmultipush              @ 0xea
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop
