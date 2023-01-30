@@ -2999,15 +2999,14 @@ static void Task_ShowDodrioBerryPickingRecords(u8 taskId)
 
 static void PrintRecordsText(u8 windowId, s32 width)
 {
-    s32 i, x, numWidth;
-    s32 recordNums[NUM_RECORD_TYPES];
-<<<<<<< HEAD
+    // s32 i, x, numWidth;
+    // s32 recordNums[NUM_RECORD_TYPES];
     // recordNums[0] = gSaveBlock2Ptr->berryPick.berriesPicked;
     // recordNums[1] = gSaveBlock2Ptr->berryPick.bestScore;
     // recordNums[2] = gSaveBlock2Ptr->berryPick.berriesPickedInRow;
 
-    // LoadUserWindowBorderGfx_(windowId, 0x21D, 0xD0);
-    // DrawTextBorderOuter(windowId, 0x21D, 0xD);
+    // LoadUserWindowBorderGfx_(windowId, 0x21D, BG_PLTT_ID(13));
+    // DrawTextBorderOuter(windowId, 0x21D, 13);
     // FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     // AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_BerryPickingRecords, GetStringCenterAlignXOffset(FONT_NORMAL, gText_BerryPickingRecords, width * 8), 1, TEXT_SKIP_DRAW, NULL);
     // for (i = 0; i < NUM_RECORD_TYPES; i++)
@@ -3019,25 +3018,6 @@ static void PrintRecordsText(u8 windowId, s32 width)
     //     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, sRecordNumYCoords[i][0], TEXT_SKIP_DRAW, NULL);
     // }
     // PutWindowTilemap(windowId);
-=======
-    recordNums[0] = gSaveBlock2Ptr->berryPick.berriesPicked;
-    recordNums[1] = gSaveBlock2Ptr->berryPick.bestScore;
-    recordNums[2] = gSaveBlock2Ptr->berryPick.berriesPickedInRow;
-
-    LoadUserWindowBorderGfx_(windowId, 0x21D, BG_PLTT_ID(13));
-    DrawTextBorderOuter(windowId, 0x21D, 13);
-    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_BerryPickingRecords, GetStringCenterAlignXOffset(FONT_NORMAL, gText_BerryPickingRecords, width * 8), 1, TEXT_SKIP_DRAW, NULL);
-    for (i = 0; i < NUM_RECORD_TYPES; i++)
-    {
-        ConvertIntToDecimalStringN(gStringVar1, recordNums[i], STR_CONV_MODE_LEFT_ALIGN, sRecordNumMaxDigits[i]);
-        numWidth = GetStringWidth(FONT_NORMAL, gStringVar1, -1);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, sRecordsTexts[i], 0, sRecordTextYCoords[i][0], TEXT_SKIP_DRAW, NULL);
-        x = (width * 8) - numWidth;
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, sRecordNumYCoords[i][0], TEXT_SKIP_DRAW, NULL);
-    }
-    PutWindowTilemap(windowId);
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 }
 
 // Debug functions?

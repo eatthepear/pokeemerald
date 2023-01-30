@@ -41,29 +41,29 @@ void WonderNews_SetReward(u32 newsType)
 
 void WonderNews_Reset(void)
 {
-    struct WonderNewsMetadata *data = GetSavedWonderNewsMetadata();
+    // struct WonderNewsMetadata *data = GetSavedWonderNewsMetadata();
 
-    data->newsType = WONDER_NEWS_NONE;
-    data->sentRewardCounter = 0;
-    data->rewardCounter = 0;
-    data->berry = 0;
-    VarSet(VAR_WONDER_NEWS_STEP_COUNTER, 0);
+    // data->newsType = WONDER_NEWS_NONE;
+    // data->sentRewardCounter = 0;
+    // data->rewardCounter = 0;
+    // data->berry = 0;
+    // VarSet(VAR_WONDER_NEWS_STEP_COUNTER, 0);
 }
 
 // Only used in FRLG
 void WonderNews_IncrementStepCounter(void)
 {
-    u16 *stepCounter = GetVarPointer(VAR_WONDER_NEWS_STEP_COUNTER);
-    struct WonderNewsMetadata *data = GetSavedWonderNewsMetadata();
+    // u16 *stepCounter = GetVarPointer(VAR_WONDER_NEWS_STEP_COUNTER);
+    // struct WonderNewsMetadata *data = GetSavedWonderNewsMetadata();
 
-    // If the player has reached the reward limit, start counting steps.
-    // When they reach 500 steps reset the reward counter to allow them to
-    // receive rewards again.
-    if (data->rewardCounter >= MAX_REWARD && ++(*stepCounter) >= 500)
-    {
-        data->rewardCounter = 0;
-        *stepCounter = 0;
-    }
+    // // If the player has reached the reward limit, start counting steps.
+    // // When they reach 500 steps reset the reward counter to allow them to
+    // // receive rewards again.
+    // if (data->rewardCounter >= MAX_REWARD && ++(*stepCounter) >= 500)
+    // {
+    //     data->rewardCounter = 0;
+    //     *stepCounter = 0;
+    // }
 }
 
 // Only used in FRLG

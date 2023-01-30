@@ -535,7 +535,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-<<<<<<< HEAD
     {gObjectEventPal_Colress,               OBJ_EVENT_PAL_TAG_COLRESS},
     {gObjectEventPal_Mirage,                OBJ_EVENT_PAL_TAG_MIRAGE},
     {gObjectEventPal_Ranger,                OBJ_EVENT_PAL_TAG_RANGER},
@@ -571,15 +570,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Porygon,               OBJ_EVENT_PAL_TAG_PORYGON},
     {gObjectEventPal_ShinyPorygon,          OBJ_EVENT_PAL_TAG_SHINY_PORYGON},
     {gObjectEventPal_SwimmerFWalking,       OBJ_EVENT_PAL_TAG_SWIMMER_F_WALKING},
-    {},
-=======
-#ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE}, 
-#else
-    {}, // BUG: FindObjectEventPaletteIndexByTag looks for OBJ_EVENT_PAL_TAG_NONE and not 0x0.
-        // If it's looking for a tag that isn't in this table, the game locks in an infinite loop.
-#endif
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 };
 
 #include "data/object_events/berry_tree_graphics_tables.h"

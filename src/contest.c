@@ -1330,21 +1330,12 @@ static bool8 SetupContestGraphics(u8 *stateVar)
         // DmaCopy32Defvars(3, gContestResources->contestBgTilemaps[2], eContestTempSave.savedJunk, sizeof(eContestTempSave.savedJunk));
         break;
     case 5:
-<<<<<<< HEAD
-        LoadCompressedPalette(gContestInterfaceAudiencePalette, 0, 0x200);
-        CpuCopy32(gPlttBufferUnfaded + 128, tempPalette1, 16 * sizeof(u16));
-        CpuCopy32(gPlttBufferUnfaded + (5 + gContestPlayerMonIndex) * 16, tempPalette2, 16 * sizeof(u16));
-        CpuCopy32(tempPalette2, gPlttBufferUnfaded + 128, 16 * sizeof(u16));
-        CpuCopy32(tempPalette1, gPlttBufferUnfaded + (5 + gContestPlayerMonIndex) * 16, 16 * sizeof(u16));
-        // DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedWindowPalettes, sizeof(eContestTempSave.cachedWindowPalettes));
-=======
         LoadCompressedPalette(gContestInterfaceAudiencePalette, BG_PLTT_OFFSET, BG_PLTT_SIZE);
         CpuCopy32(gPlttBufferUnfaded + BG_PLTT_ID(8), tempPalette1, PLTT_SIZE_4BPP);
         CpuCopy32(gPlttBufferUnfaded + BG_PLTT_ID(5 + gContestPlayerMonIndex), tempPalette2, PLTT_SIZE_4BPP);
         CpuCopy32(tempPalette2, gPlttBufferUnfaded + BG_PLTT_ID(8), PLTT_SIZE_4BPP);
         CpuCopy32(tempPalette1, gPlttBufferUnfaded + BG_PLTT_ID(5 + gContestPlayerMonIndex), PLTT_SIZE_4BPP);
-        DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedWindowPalettes, sizeof(eContestTempSave.cachedWindowPalettes));
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
+        // DmaCopy32Defvars(3, gPlttBufferUnfaded, eContestTempSave.cachedWindowPalettes, sizeof(eContestTempSave.cachedWindowPalettes));
         LoadContestPalettes();
         break;
     case 6:

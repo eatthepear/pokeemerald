@@ -26,15 +26,9 @@ static void IncrementCardStatForNewTrainer(u32, u32, u32 *, int);
 
 void ClearMysteryGift(void)
 {
-<<<<<<< HEAD
-    /*CpuFill32(0, &gSaveBlock1Ptr->mysteryGift, sizeof(gSaveBlock1Ptr->mysteryGift));
-    ClearSavedWonderNewsMetadata(); // Clear is redundant, InitSavedWonderNews would be sufficient
-    InitQuestionnaireWords();*/
-=======
-    CpuFill32(0, &gSaveBlock1Ptr->mysteryGift, sizeof(gSaveBlock1Ptr->mysteryGift));
-    ClearSavedWonderNewsMetadata(); // Clear is redundant, WonderNews_Reset would be sufficient
-    InitQuestionnaireWords();
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
+    // CpuFill32(0, &gSaveBlock1Ptr->mysteryGift, sizeof(gSaveBlock1Ptr->mysteryGift));
+    // ClearSavedWonderNewsMetadata(); // Clear is redundant, WonderNews_Reset would be sufficient
+    // InitQuestionnaireWords();
 }
 
 struct WonderNews *GetSavedWonderNews(void)
@@ -114,13 +108,8 @@ static void ClearSavedWonderNews(void)
 
 static void ClearSavedWonderNewsMetadata(void)
 {
-<<<<<<< HEAD
     // CpuFill32(0, GetSavedWonderNewsMetadata(), sizeof(gSaveBlock1Ptr->mysteryGift.newsMetadata));
-    InitSavedWonderNews();
-=======
-    CpuFill32(0, GetSavedWonderNewsMetadata(), sizeof(gSaveBlock1Ptr->mysteryGift.newsMetadata));
-    WonderNews_Reset();
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
+    // WonderNews_Reset();
 }
 
 bool32 IsWonderNewsSameAsSaved(const u8 *news)

@@ -1207,7 +1207,6 @@ static void LoadMonInfo(s16 partyId, u8 loadId)
 
 static void UpdateMonPic(u8 loadId)
 {
-<<<<<<< HEAD
     // u8 spriteId;
     // struct SpriteTemplate spriteTemplate;
     // struct SpriteSheet spriteSheet;
@@ -1234,50 +1233,14 @@ static void UpdateMonPic(u8 loadId)
     //         gSprites[sMenu->curMonSpriteId].callback = SpriteCB_MonPic;
     //         gSprites[sMenu->curMonSpriteId].y2 -= 34;
     //         sMenu->curMonTileStart = (void *)(OBJ_VRAM0 + (sMenu->curMonSheet * 32));
-    //         sMenu->curMonPalette = (sMenu->curMonPalette * 16) + 0x100;
+    //         sMenu->curMonPalette = OBJ_PLTT_ID(sMenu->curMonPalette);
     //     }
     // }
     // else
     // {
     //     Dma3CopyLarge16_(sMenu->partySheets[loadId], sMenu->curMonTileStart, MON_PIC_SIZE);
-    //     LoadPalette(sMenu->partyPalettes[loadId], sMenu->curMonPalette, 32);
+    //     LoadPalette(sMenu->partyPalettes[loadId], sMenu->curMonPalette, PLTT_SIZE_4BPP);
     // }
-=======
-    u8 spriteId;
-    struct SpriteTemplate spriteTemplate;
-    struct SpriteSheet spriteSheet;
-    struct SpritePalette spritePal;
-
-    if (sMenu->curMonSpriteId == SPRITE_NONE)
-    {
-        LoadConditionMonPicTemplate(&spriteSheet, &spriteTemplate, &spritePal);
-        spriteSheet.data = sMenu->partySheets[loadId];
-        spritePal.data = sMenu->partyPalettes[loadId];
-        sMenu->curMonPalette = LoadSpritePalette(&spritePal);
-        sMenu->curMonSheet = LoadSpriteSheet(&spriteSheet);
-        spriteId = CreateSprite(&spriteTemplate, 38, 104, 0);
-        sMenu->curMonSpriteId = spriteId;
-        if (spriteId == MAX_SPRITES)
-        {
-            FreeSpriteTilesByTag(TAG_CONDITION_MON);
-            FreeSpritePaletteByTag(TAG_CONDITION_MON);
-            sMenu->curMonSpriteId = SPRITE_NONE;
-        }
-        else
-        {
-            sMenu->curMonSpriteId = spriteId;
-            gSprites[sMenu->curMonSpriteId].callback = SpriteCB_MonPic;
-            gSprites[sMenu->curMonSpriteId].y2 -= 34;
-            sMenu->curMonTileStart = (void *)(OBJ_VRAM0 + (sMenu->curMonSheet * 32));
-            sMenu->curMonPalette = OBJ_PLTT_ID(sMenu->curMonPalette);
-        }
-    }
-    else
-    {
-        Dma3CopyLarge16_(sMenu->partySheets[loadId], sMenu->curMonTileStart, MON_PIC_SIZE);
-        LoadPalette(sMenu->partyPalettes[loadId], sMenu->curMonPalette, PLTT_SIZE_4BPP);
-    }
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 }
 
 static void LoadAndCreateSelectionIcons(void)

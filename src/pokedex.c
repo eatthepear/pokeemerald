@@ -2613,37 +2613,27 @@ static bool8 LoadPokedexListPage(u8 page)
 
 static void LoadPokedexBgPalette(bool8 isSearchResults)
 {
-<<<<<<< HEAD
     if (!HGSS_DARK_MODE)
     {
         if (isSearchResults == TRUE)
-            LoadPalette(gPokedexSearchResults_Pal + 1, 1, 0xBE);
+            LoadPalette(gPokedexSearchResults_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
         else if (!IsNationalPokedexEnabled())
-            LoadPalette(gPokedexDefault_Pal + 1, 1, 0xBE);
+            LoadPalette(gPokedexDefault_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
         else
-            LoadPalette(gPokedexNational_Pal + 1, 1, 0xBE);
-        LoadPalette(GetOverworldTextboxPalettePtr(), 0xF0, 32);
+            LoadPalette(gPokedexNational_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+        LoadPalette(GetOverworldTextboxPalettePtr(), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
     }
     else
     {
         if (isSearchResults == TRUE)
-            LoadPalette(gPokedexSearchResults_dark_Pal + 1, 1, 0xBE);
+            LoadPalette(gPokedexSearchResults_dark_Pal + 1, 1, PLTT_SIZEOF(6 * 16 - 1));
         else if (!IsNationalPokedexEnabled())
-            LoadPalette(gPokedexDefault_dark_Pal + 1, 1, 0xBE);
+            LoadPalette(gPokedexDefault_dark_Pal + 1, 1, PLTT_SIZEOF(6 * 16 - 1));
         else
-            LoadPalette(gPokedexNational_dark_Pal + 1, 1, 0xBE);
-        LoadPalette(GetOverworldTextboxPalettePtr(), 0xF0, 32);
+            LoadPalette(gPokedexNational_dark_Pal + 1, 1, PLTT_SIZEOF(6 * 16 - 1));
+        LoadPalette(GetOverworldTextboxPalettePtr(), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
     }
 
-=======
-    if (isSearchResults == TRUE)
-        LoadPalette(gPokedexSearchResults_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
-    else if (!IsNationalPokedexEnabled())
-        LoadPalette(gPokedexBgHoenn_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
-    else
-        LoadPalette(gPokedexBgNational_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
-    LoadPalette(GetOverworldTextboxPalettePtr(), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 }
 
 static void FreeWindowAndBgBuffers(void)
@@ -4537,25 +4527,17 @@ static void Task_HandleCaughtMonPageInput(u8 taskId)
     // Flicker caught screen color
     else if (++gTasks[taskId].tPalTimer & 16)
     {
-<<<<<<< HEAD
         if (!HGSS_DARK_MODE)
-            LoadPalette(gPokedexDefault_Pal + 1, 0x31, 14);
+            LoadPalette(gPokedexDefault_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
         else
-            LoadPalette(gPokedexDefault_dark_Pal + 1, 0x31, 14);
+            LoadPalette(gPokedexDefault_dark_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
     }
     else
     {
         if (!HGSS_DARK_MODE)
-            LoadPalette(gPokedexDefault_Pal + 1, 0x31, 14); //gPokedexCaughtScreen_Pal
+            LoadPalette(gPokedexDefault_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7)); //gPokedexCaughtScreen_Pal
         else
-            LoadPalette(gPokedexDefault_dark_Pal + 1, 0x31, 14);
-=======
-        LoadPalette(gPokedexBgHoenn_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
-    }
-    else
-    {
-        LoadPalette(gPokedexCaughtScreen_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
+            LoadPalette(gPokedexDefault_dark_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
     }
 }
 
@@ -5511,14 +5493,9 @@ static void Task_LoadSearchMenu(u8 taskId)
             else
                 CopyToBgTilemapBuffer(3, gPokedexScreenSearchNational_Tilemap, 0, 0);
             if (!HGSS_DARK_MODE)
-                LoadPalette(gPokedexMenuSearch_Pal + 1, 1, 0x7E);
+                LoadPalette(gPokedexMenuSearch_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
             else
-<<<<<<< HEAD
-                LoadPalette(gPokedexMenuSearch_dark_Pal + 1, 1, 0x7E);
-=======
-                CopyToBgTilemapBuffer(3, gPokedexSearchMenuNational_Tilemap, 0, 0);
-            LoadPalette(gPokedexSearchMenu_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
+                LoadPalette(gPokedexMenuSearch_dark_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
             gMain.state = 1;
         }
         break;

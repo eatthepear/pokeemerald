@@ -301,7 +301,6 @@ static u8 CheckTrainer(u8 objectEventId)
     {
         if (scriptFlag >= TRAINER_TYPE_RUN_SCRIPT)
         {
-<<<<<<< HEAD
             if (!FlagGet(scriptFlag) && scriptPtr != NULL)
             {
                 // TRAINER_TYPE_RUN_SCRIPT
@@ -310,9 +309,6 @@ static u8 CheckTrainer(u8 objectEventId)
             }
             else
             {
-=======
-            if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS)
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
                 return 0;
             }
         }
@@ -322,7 +318,7 @@ static u8 CheckTrainer(u8 objectEventId)
             || scriptPtr[1] == TRAINER_BATTLE_REMATCH_DOUBLE
             || scriptPtr[1] == TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE)
             {
-                if (GetMonsStateToDoubles_2() != 0)
+                if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS)
                     return 0;
 
                 numTrainers = 2;

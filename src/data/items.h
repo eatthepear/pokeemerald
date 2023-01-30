@@ -1385,13 +1385,8 @@ const struct Item gItems[] =
         .itemId = ITEM_EXP_CANDY_S,
         .price = 240,
         .holdEffectParam = EXP_800,
-<<<<<<< HEAD
-        .description = sExpCandyXSDesc,
-        .pocket = POCKET_CONSUMABLES,
-=======
         .description = sExpCandySDesc,
-        .pocket = POCKET_ITEMS,
->>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
+        .pocket = POCKET_CONSUMABLES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .flingPower = 30,
