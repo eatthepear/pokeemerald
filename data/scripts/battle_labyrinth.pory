@@ -1804,8 +1804,16 @@ script EventScript_Documentation {
 }
 
 script EventScript_Settings {
-	setvar(VAR_TEMP_1, 0)
-	while (var(VAR_TEMP_1) == 0) {
+	if (var(VAR_TEMP_1) != 2) {
+		setvar(VAR_TEMP_1, 2)
+		special(SpawnCameraObject)
+		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight)
+		waitmovement(0)
+		special(RemoveCameraObject)
+	}
+	while (var(VAR_TEMP_1) == 2) {
 		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) && (flag(FLAG_SETTINGS_NUZLOCKE_MODE_ON) == true) && (flag(FLAG_SETTINGS_RANDOMIZER_MODE_ON) == true)) {
 			msgbox("You are currently playing on\n{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty,\l{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode.", MSGBOX_DEFAULT)
 			multichoice(21, 0, MULTI_COLRESS_SETTINGS, FALSE)
@@ -2000,6 +2008,12 @@ script EventScript_Settings {
 			}
 		}
 	}
+	special(SpawnCameraObject)
+	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
+	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft)
+	waitmovement(0)
+	special(RemoveCameraObject)
 	goto(EventScript_WhenUReady)
 }
 
@@ -2171,9 +2185,77 @@ script EventScript_GameSettings {
 	while {
 		message(format("Which game setting would you like to change?"))
 		waitmessage
-		setvar(VAR_0x8004, SCROLL_MULTI_GAME_SETTINGS)
-		special(ShowScrollableMultichoice)
-		waitstate
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_ALL_MANDATORY) == true)) {
+			dynmultipush("{COLOR RED}All Mandatory Foes", 0)
+		} else {
+			dynmultipush("Not All Mandatory Foes", 0)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_HARD_BATTLES) == true)) {
+			dynmultipush("{COLOR RED}Hard Difficulty Battles", 1)
+		} else {
+			dynmultipush("Normal Difficulty Battles", 1)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_IN_BATTLE_ITEMS) == true)) {
+			dynmultipush("{COLOR RED}No In-Battle Items", 2)
+		} else {
+			dynmultipush("In-Battle Items", 2)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_EVS) == true)) {
+			dynmultipush("{COLOR RED}No EV gain", 3)
+		} else {
+			dynmultipush("Normal EV gain", 3)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_PP_COSTS) == true)) {
+			dynmultipush("{COLOR RED}PP Costs Changed", 4)
+		} else {
+			dynmultipush("Normal PP Costs", 4)
+		}
+		if (flag(FLAG_SETTINGS_EXP_ALL) == false) {
+			dynmultipush("{COLOR RED}Exp. All Off", 5)
+		} else {
+			dynmultipush("Exp. All On", 5)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_FARMING) == true)) {
+			dynmultipush("{COLOR RED}Farming Disabled", 6)
+		} else {
+			dynmultipush("Farming Enabled", 6)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_NO_WILD_EXP) == true)) {
+			dynmultipush("{COLOR RED}Grinding Disabled", 7)
+		} else {
+			dynmultipush("Grinding Enabled", 7)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HELPER_NPCS) == true)) {
+			dynmultipush("{COLOR RED}Helper NPCs Disabled", 8)
+		} else {
+			dynmultipush("Helper NPCs Enabled", 8)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_REMOVE_HIDDEN_ITEMS) == true)) {
+			dynmultipush("{COLOR RED}Hidden Items Disabled", 9)
+		} else {
+			dynmultipush("Hidden Items Enabled", 9)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_SINGLE_USE_TMS) == true)) {
+			dynmultipush("{COLOR RED}Single-Use TMs", 10)
+		} else {
+			dynmultipush("Infinite-Use TMs", 10)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_DISABLE_RETIRE) == true)) {
+			dynmultipush("{COLOR RED}Retire Disabled", 11)
+		} else {
+			dynmultipush("Retire Enabled", 11)
+		}
+		if ((flag(FLAG_SETTINGS_BRUTAL_DIFFICULTY_ON) == true) || (flag(FLAG_SETTINGS_DECREASED_REWARDS) == true)) {
+			dynmultipush("{COLOR RED}Reward Money Halved", 12)
+		} else {
+			dynmultipush("Normal Reward Money", 12)
+		}
+		if (flag(FLAG_SETTINGS_FULL_PREVIEW_ON) == false) {
+			dynmultipush("{COLOR RED}Limited Surveil", 13)
+		} else {
+			dynmultipush("Full Surveil", 13)
+		}
+		dynmultistack(21, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
 		switch (var(VAR_RESULT)) {
 			case 0:
 				msgbox(format("You can choose to make all trainers mandatory before leaving a Zone."), MSGBOX_DEFAULT)
