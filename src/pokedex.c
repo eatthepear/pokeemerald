@@ -2613,6 +2613,7 @@ static bool8 LoadPokedexListPage(u8 page)
 
 static void LoadPokedexBgPalette(bool8 isSearchResults)
 {
+<<<<<<< HEAD
     if (!HGSS_DARK_MODE)
     {
         if (isSearchResults == TRUE)
@@ -2634,6 +2635,15 @@ static void LoadPokedexBgPalette(bool8 isSearchResults)
         LoadPalette(GetOverworldTextboxPalettePtr(), 0xF0, 32);
     }
 
+=======
+    if (isSearchResults == TRUE)
+        LoadPalette(gPokedexSearchResults_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+    else if (!IsNationalPokedexEnabled())
+        LoadPalette(gPokedexBgHoenn_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+    else
+        LoadPalette(gPokedexBgNational_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(6 * 16 - 1));
+    LoadPalette(GetOverworldTextboxPalettePtr(), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 }
 
 static void FreeWindowAndBgBuffers(void)
@@ -3796,7 +3806,7 @@ static void Task_LoadInfoScreen(u8 taskId)
     case 4:
         PrintMonInfo(sPokedexListItem->dexNum, sPokedexView->dexMode == DEX_MODE_HOENN ? FALSE : TRUE, sPokedexListItem->owned, 0);
         if (!sPokedexListItem->owned)
-            LoadPalette(gPlttBufferUnfaded + 1, 0x31, 0x1E);
+            LoadPalette(gPlttBufferUnfaded + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(16 - 1));
         CopyWindowToVram(WIN_INFO, COPYWIN_FULL);
         CopyBgTilemapBufferToVram(1);
         CopyBgTilemapBufferToVram(2);
@@ -4197,7 +4207,7 @@ static void LoadPlayArrowPalette(bool8 cryPlaying)
         color = RGB(18, 28, 0);
     else
         color = RGB(15, 21, 0);
-    LoadPalette(&color, 0x5D, 2);
+    LoadPalette(&color, BG_PLTT_ID(5) + 13, PLTT_SIZEOF(1));
 }
 
 static void Task_LoadSizeScreen(u8 taskId)
@@ -4250,7 +4260,7 @@ static void Task_LoadSizeScreen(u8 taskId)
         gSprites[spriteId].oam.priority = 0;
         gSprites[spriteId].y2 = gPokedexEntries[sPokedexListItem->dexNum].trainerOffset;
         SetOamMatrix(1, gPokedexEntries[sPokedexListItem->dexNum].trainerScale, 0, 0, gPokedexEntries[sPokedexListItem->dexNum].trainerScale);
-        LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
+        LoadPalette(sSizeScreenSilhouette_Pal, OBJ_PLTT_ID2(gSprites[spriteId].oam.paletteNum), PLTT_SIZE_4BPP);
         gTasks[taskId].tTrainerSpriteId = spriteId;
         gMain.state++;
         break;
@@ -4261,7 +4271,7 @@ static void Task_LoadSizeScreen(u8 taskId)
         gSprites[spriteId].oam.priority = 0;
         gSprites[spriteId].y2 = gPokedexEntries[sPokedexListItem->dexNum].pokemonOffset;
         SetOamMatrix(2, gPokedexEntries[sPokedexListItem->dexNum].pokemonScale, 0, 0, gPokedexEntries[sPokedexListItem->dexNum].pokemonScale);
-        LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
+        LoadPalette(sSizeScreenSilhouette_Pal, OBJ_PLTT_ID2(gSprites[spriteId].oam.paletteNum), PLTT_SIZE_4BPP);
         gTasks[taskId].tMonSpriteId = spriteId;
         CopyWindowToVram(WIN_INFO, COPYWIN_FULL);
         CopyBgTilemapBufferToVram(1);
@@ -4527,6 +4537,7 @@ static void Task_HandleCaughtMonPageInput(u8 taskId)
     // Flicker caught screen color
     else if (++gTasks[taskId].tPalTimer & 16)
     {
+<<<<<<< HEAD
         if (!HGSS_DARK_MODE)
             LoadPalette(gPokedexDefault_Pal + 1, 0x31, 14);
         else
@@ -4538,6 +4549,13 @@ static void Task_HandleCaughtMonPageInput(u8 taskId)
             LoadPalette(gPokedexDefault_Pal + 1, 0x31, 14); //gPokedexCaughtScreen_Pal
         else
             LoadPalette(gPokedexDefault_dark_Pal + 1, 0x31, 14);
+=======
+        LoadPalette(gPokedexBgHoenn_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
+    }
+    else
+    {
+        LoadPalette(gPokedexCaughtScreen_Pal + 1, BG_PLTT_ID(3) + 1, PLTT_SIZEOF(7));
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
     }
 }
 
@@ -4566,7 +4584,7 @@ static void Task_ExitCaughtMonPage(u8 taskId)
         personality = ((u16)gTasks[taskId].tPersonalityHi << 16) | (u16)gTasks[taskId].tPersonalityLo;
         paletteNum = gSprites[gTasks[taskId].tMonSpriteId].oam.paletteNum;
         lzPaletteData = GetMonSpritePalFromSpeciesAndPersonality(species, otId, personality);
-        LoadCompressedPalette(lzPaletteData, 0x100 | paletteNum * 16, 32);
+        LoadCompressedPalette(lzPaletteData, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
         DestroyTask(taskId);
     }
 }
@@ -5321,8 +5339,8 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                 {
                     species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
 
-                    types[0] = gSpeciesInfo[species].type1;
-                    types[1] = gSpeciesInfo[species].type2;
+                    types[0] = gSpeciesInfo[species].types[0];
+                    types[1] = gSpeciesInfo[species].types[1];
                     if (types[0] == type1 || types[1] == type1)
                     {
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
@@ -5339,8 +5357,8 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                 {
                     species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
 
-                    types[0] = gSpeciesInfo[species].type1;
-                    types[1] = gSpeciesInfo[species].type2;
+                    types[0] = gSpeciesInfo[species].types[0];
+                    types[1] = gSpeciesInfo[species].types[1];
                     if ((types[0] == type1 && types[1] == type2) || (types[0] == type2 && types[1] == type1))
                     {
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
@@ -5495,7 +5513,12 @@ static void Task_LoadSearchMenu(u8 taskId)
             if (!HGSS_DARK_MODE)
                 LoadPalette(gPokedexMenuSearch_Pal + 1, 1, 0x7E);
             else
+<<<<<<< HEAD
                 LoadPalette(gPokedexMenuSearch_dark_Pal + 1, 1, 0x7E);
+=======
+                CopyToBgTilemapBuffer(3, gPokedexSearchMenuNational_Tilemap, 0, 0);
+            LoadPalette(gPokedexSearchMenu_Pal + 1, BG_PLTT_ID(0) + 1, PLTT_SIZEOF(4 * 16 - 1));
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
             gMain.state = 1;
         }
         break;

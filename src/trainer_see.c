@@ -224,7 +224,7 @@ bool8 CheckForTrainersWantingBattle(void)
 
         if (gNoOfApproachingTrainers > 1)
             break;
-        if (GetMonsStateToDoubles_2() != 0) // one trainer found and cant have a double battle
+        if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS) // one trainer found and cant have a double battle
             break;
     }
 
@@ -301,6 +301,7 @@ static u8 CheckTrainer(u8 objectEventId)
     {
         if (scriptFlag >= TRAINER_TYPE_RUN_SCRIPT)
         {
+<<<<<<< HEAD
             if (!FlagGet(scriptFlag) && scriptPtr != NULL)
             {
                 // TRAINER_TYPE_RUN_SCRIPT
@@ -309,6 +310,9 @@ static u8 CheckTrainer(u8 objectEventId)
             }
             else
             {
+=======
+            if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS)
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
                 return 0;
             }
         }

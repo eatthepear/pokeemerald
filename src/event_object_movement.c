@@ -535,6 +535,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
+<<<<<<< HEAD
     {gObjectEventPal_Colress,               OBJ_EVENT_PAL_TAG_COLRESS},
     {gObjectEventPal_Mirage,                OBJ_EVENT_PAL_TAG_MIRAGE},
     {gObjectEventPal_Ranger,                OBJ_EVENT_PAL_TAG_RANGER},
@@ -571,6 +572,14 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_ShinyPorygon,          OBJ_EVENT_PAL_TAG_SHINY_PORYGON},
     {gObjectEventPal_SwimmerFWalking,       OBJ_EVENT_PAL_TAG_SWIMMER_F_WALKING},
     {},
+=======
+#ifdef BUGFIX
+    {NULL,                                  OBJ_EVENT_PAL_TAG_NONE}, 
+#else
+    {}, // BUG: FindObjectEventPaletteIndexByTag looks for OBJ_EVENT_PAL_TAG_NONE and not 0x0.
+        // If it's looking for a tag that isn't in this table, the game locks in an infinite loop.
+#endif
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 };
 
 #include "data/object_events/berry_tree_graphics_tables.h"
@@ -1938,7 +1947,12 @@ void LoadObjectEventPalette(u16 paletteTag)
 {
     u16 i = FindObjectEventPaletteIndexByTag(paletteTag);
 
-    if (i != OBJ_EVENT_PAL_TAG_NONE) // always true
+// FindObjectEventPaletteIndexByTag returns 0xFF on failure, not OBJ_EVENT_PAL_TAG_NONE.
+#ifdef BUGFIX
+    if (i != 0xFF)
+#else
+    if (i != OBJ_EVENT_PAL_TAG_NONE)
+#endif
         LoadSpritePaletteIfTagExists(&sObjectEventSpritePalettes[i]);
 }
 
@@ -1961,9 +1975,10 @@ static u8 LoadSpritePaletteIfTagExists(const struct SpritePalette *spritePalette
 
 void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
 {
+    // paletteTag is assumed to exist in sObjectEventSpritePalettes
     u8 paletteIndex = FindObjectEventPaletteIndexByTag(paletteTag);
 
-    LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, 16 * paletteSlot + 0x100, 0x20);
+    LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
 }
 
 void PatchObjectPaletteRange(const u16 *paletteTags, u8 minSlot, u8 maxSlot)

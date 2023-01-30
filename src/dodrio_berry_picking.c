@@ -3001,6 +3001,7 @@ static void PrintRecordsText(u8 windowId, s32 width)
 {
     s32 i, x, numWidth;
     s32 recordNums[NUM_RECORD_TYPES];
+<<<<<<< HEAD
     // recordNums[0] = gSaveBlock2Ptr->berryPick.berriesPicked;
     // recordNums[1] = gSaveBlock2Ptr->berryPick.bestScore;
     // recordNums[2] = gSaveBlock2Ptr->berryPick.berriesPickedInRow;
@@ -3018,6 +3019,25 @@ static void PrintRecordsText(u8 windowId, s32 width)
     //     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, sRecordNumYCoords[i][0], TEXT_SKIP_DRAW, NULL);
     // }
     // PutWindowTilemap(windowId);
+=======
+    recordNums[0] = gSaveBlock2Ptr->berryPick.berriesPicked;
+    recordNums[1] = gSaveBlock2Ptr->berryPick.bestScore;
+    recordNums[2] = gSaveBlock2Ptr->berryPick.berriesPickedInRow;
+
+    LoadUserWindowBorderGfx_(windowId, 0x21D, BG_PLTT_ID(13));
+    DrawTextBorderOuter(windowId, 0x21D, 13);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_BerryPickingRecords, GetStringCenterAlignXOffset(FONT_NORMAL, gText_BerryPickingRecords, width * 8), 1, TEXT_SKIP_DRAW, NULL);
+    for (i = 0; i < NUM_RECORD_TYPES; i++)
+    {
+        ConvertIntToDecimalStringN(gStringVar1, recordNums[i], STR_CONV_MODE_LEFT_ALIGN, sRecordNumMaxDigits[i]);
+        numWidth = GetStringWidth(FONT_NORMAL, gStringVar1, -1);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sRecordsTexts[i], 0, sRecordTextYCoords[i][0], TEXT_SKIP_DRAW, NULL);
+        x = (width * 8) - numWidth;
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, sRecordNumYCoords[i][0], TEXT_SKIP_DRAW, NULL);
+    }
+    PutWindowTilemap(windowId);
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 }
 
 // Debug functions?
@@ -4429,12 +4449,12 @@ static void ResetBerryAndStatusBarSprites(void)
 static void LoadWindowFrameGfx(u8 frameId)
 {
     LoadBgTiles(BG_INTERFACE, GetWindowFrameTilesPal(frameId)->tiles, 0x120, 1);
-    LoadPalette(GetWindowFrameTilesPal(frameId)->pal, 0xA0, 0x20);
+    LoadPalette(GetWindowFrameTilesPal(frameId)->pal, BG_PLTT_ID(10), PLTT_SIZE_4BPP);
 }
 
 static void LoadUserWindowFrameGfx(void)
 {
-    LoadUserWindowBorderGfx_(0, 0xA, 0xB0);
+    LoadUserWindowBorderGfx_(0, 0xA, BG_PLTT_ID(11));
 }
 
 static void ResetGfxState(void)
@@ -5193,7 +5213,7 @@ static bool32 LoadBgGfx(void)
     switch (sGfx->loadState)
     {
     case 0:
-        LoadPalette(sBg_Pal, 0, sizeof(sBg_Pal));
+        LoadPalette(sBg_Pal, BG_PLTT_ID(0), sizeof(sBg_Pal));
         break;
     case 1:
         ResetTempTileDataBuffers();
@@ -5209,7 +5229,7 @@ static bool32 LoadBgGfx(void)
             return FALSE;
         break;
     case 5:
-        LoadPalette(GetTextWindowPalette(3), 0xD0, 0x20);
+        LoadPalette(GetTextWindowPalette(3), BG_PLTT_ID(13), PLTT_SIZE_4BPP);
         break;
     default:
         sGfx->loadState = 0;

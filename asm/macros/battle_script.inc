@@ -1311,6 +1311,13 @@
 	.4byte \ptr
 	.endm
 
+	.macro jumpifholdeffect battler:req, holdEffect:req, ptr:req
+	callnative BS_JumpIfHoldEffect
+	.byte \battler
+	.2byte \holdEffect
+	.4byte \ptr
+	.endm
+
 @ various command changed to more readable macros
 	.macro cancelmultiturnmoves battler:req
 	various \battler, VARIOUS_CANCEL_MULTI_TURN_MOVES
@@ -2037,6 +2044,11 @@
 	various \battler, VARIOUS_ACTIVATE_TERRAIN_CHANGE_ABILITIES
 	.endm
 
+	.macro jumpifnovalidtargets ptr:req
+	various BS_ATTACKER, VARIOUS_JUMP_IF_NO_VALID_TARGETS
+	.4byte \ptr
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER, \stat | \stages << 3 | \down << 7
@@ -2224,4 +2236,9 @@
 		.endif
 	.endif
 	waitmessage B_WAIT_TIME_LONG
+	.endm
+
+	.macro jumpifemergencyexited battler:req, ptr:req
+	various \battler, VARIOUS_JUMP_IF_EMERGENCY_EXITED
+	.4byte \ptr
 	.endm

@@ -515,9 +515,11 @@ void HandleAction_UseMove(void)
     if (gBattleTypeFlags & BATTLE_TYPE_ARENA)
         BattleArena_AddMindPoints(gBattlerAttacker);
 
-    // Record HP of each battler
     for (i = 0; i < MAX_BATTLERS_COUNT; i++)
+    {
         gBattleStruct->hpBefore[i] = gBattleMons[i].hp;
+        gSpecialStatuses[i].emergencyExited = FALSE;
+    }
 
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
@@ -2793,7 +2795,7 @@ u8 DoBattlerEndTurnEffects(void)
             gBattleStruct->turnEffectsTracker++;
             break;
         case ENDTURN_ORBS:
-            if (ItemBattleEffects(ITEMEFFECT_ORBS, gActiveBattler, FALSE))
+            if (IsBattlerAlive(gActiveBattler) && ItemBattleEffects(ITEMEFFECT_ORBS, gActiveBattler, FALSE))
                 effect++;
             gBattleStruct->turnEffectsTracker++;
             break;
@@ -2974,7 +2976,8 @@ u8 DoBattlerEndTurnEffects(void)
         {
             u16 battlerAbility = GetBattlerAbility(gActiveBattler);
             if (gDisableStructs[gActiveBattler].octolock
-             && !(battlerAbility == ABILITY_CLEAR_BODY
+             && !(GetBattlerHoldEffect(gActiveBattler, TRUE) == HOLD_EFFECT_CLEAR_AMULET
+                  || battlerAbility == ABILITY_CLEAR_BODY
                   || battlerAbility == ABILITY_FULL_METAL_BODY
                   || battlerAbility == ABILITY_WHITE_SMOKE))
             {
@@ -3903,6 +3906,7 @@ u8 AtkCanceller_UnableToUseMove(void)
                 {
                     SetRandomMultiHitCounter();
                 }
+                
                 PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
             }
             else if (gBattleMoves[gCurrentMove].flags & FLAG_TWO_STRIKES)
@@ -5541,6 +5545,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 case ABILITY_STANCE_CHANGE:
                     break;
                 default:
+                    if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_ABILITY_SHIELD)
+                    {
+                        RecordItemEffectBattle(gBattlerAttacker, HOLD_EFFECT_ABILITY_SHIELD);
+                        break;
+                    }
+
                     gLastUsedAbility = gBattleMons[gBattlerAttacker].ability = gBattleStruct->overwrittenAbilities[gBattlerAttacker] = gBattleMons[gBattlerTarget].ability;
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_MummyActivates;
@@ -5572,6 +5582,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 case ABILITY_ZEN_MODE:
                     break;
                 default:
+                    if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_ABILITY_SHIELD)
+                    {
+                        RecordItemEffectBattle(gBattlerAttacker, HOLD_EFFECT_ABILITY_SHIELD);
+                        break;
+                    }
+                
                     gLastUsedAbility = gBattleMons[gBattlerAttacker].ability;
                     gBattleMons[gBattlerAttacker].ability = gBattleStruct->overwrittenAbilities[gBattlerAttacker] = gBattleMons[gBattlerTarget].ability;
                     gBattleMons[gBattlerTarget].ability = gBattleStruct->overwrittenAbilities[gBattlerTarget] = gLastUsedAbility;
@@ -5709,7 +5725,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && gBattleMons[gBattlerAttacker].hp != 0
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && TARGET_TURN_DAMAGED
-             && CanBePoisoned(gBattlerAttacker, gBattlerTarget)
+             && CanBePoisoned(gBattlerTarget, gBattlerAttacker)
              && IsMoveMakingContact(move, gBattlerAttacker)
              && (Random() % 3) == 0)
             {
@@ -5948,7 +5964,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && IS_MOVE_PHYSICAL(gCurrentMove)
              && TARGET_TURN_DAMAGED
-             && !(gSideStatuses[gBattlerAttacker] & SIDE_STATUS_TOXIC_SPIKES)
+             && !(gSideStatuses[GetBattlerSide(gBattlerAttacker)] & SIDE_STATUS_TOXIC_SPIKES)
              && IsBattlerAlive(gBattlerTarget))
             {
                 gBattlerTarget = gBattlerAttacker;
@@ -6040,6 +6056,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             switch (GetBattlerAbility(battler))
             {
             case ABILITY_IMMUNITY:
+            case ABILITY_PASTEL_VEIL:
                 if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON | STATUS1_TOXIC_COUNTER))
                 {
                     StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
@@ -7951,7 +7968,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
         switch (battlerHoldEffect)
         {
         case HOLD_EFFECT_TOXIC_ORB:
-            if (IsBattlerAlive(battlerId) && CanBePoisoned(battlerId, battlerId))
+            if (CanBePoisoned(battlerId, battlerId))
             {
                 effect = ITEM_STATUS_CHANGE;
                 gBattleMons[battlerId].status1 = STATUS1_TOXIC_POISON;
@@ -7960,7 +7977,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             }
             break;
         case HOLD_EFFECT_FLAME_ORB:
-            if (IsBattlerAlive(battlerId) && CanBeBurned(battlerId))
+            if (CanBeBurned(battlerId))
             {
                 effect = ITEM_STATUS_CHANGE;
                 gBattleMons[battlerId].status1 = STATUS1_BURN;
@@ -8284,6 +8301,8 @@ u32 GetBattlerHoldEffectParam(u8 battlerId)
 
 bool32 IsMoveMakingContact(u16 move, u8 battlerAtk)
 {
+    u16 atkHoldEffect = GetBattlerHoldEffect(battlerAtk, TRUE);
+
     if (!(gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
     {
         if (gBattleMoves[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->swapDamageCategory)
@@ -8291,11 +8310,9 @@ bool32 IsMoveMakingContact(u16 move, u8 battlerAtk)
         else
             return FALSE;
     }
-    else if (GetBattlerAbility(battlerAtk) == ABILITY_LONG_REACH)
-    {
-        return FALSE;
-    }
-    else if (GetBattlerHoldEffect(battlerAtk, TRUE) == HOLD_EFFECT_PROTECTIVE_PADS)
+    else if ((atkHoldEffect == HOLD_EFFECT_PUNCHING_GLOVE && (gBattleMoves[move].flags & FLAG_IRON_FIST_BOOST))
+           || atkHoldEffect == HOLD_EFFECT_PROTECTIVE_PADS
+           || GetBattlerAbility(battlerAtk) == ABILITY_LONG_REACH)
     {
         return FALSE;
     }
@@ -8337,7 +8354,7 @@ bool32 IsBattlerProtected(u8 battlerId, u16 move)
         return TRUE;
     else if (gProtectStructs[battlerId].banefulBunkered)
         return TRUE;
-    else if (gProtectStructs[battlerId].obstructed && !IS_MOVE_STATUS(move))
+    else if ((gProtectStructs[battlerId].obstructed || gProtectStructs[battlerId].silkTrapped) && !IS_MOVE_STATUS(move))
         return TRUE;
     else if (gProtectStructs[battlerId].spikyShielded)
         return TRUE;
@@ -9170,6 +9187,10 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == ItemId_GetSecondaryId(gBattleMons[battlerAtk].item))
             MulModifier(&modifier, holdEffectModifier);
         break;
+    case HOLD_EFFECT_PUNCHING_GLOVE:
+        if (gBattleMoves[move].flags & FLAG_IRON_FIST_BOOST)
+           MulModifier(&modifier, UQ_4_12(1.1));
+        break;
     }
 
     // move effect
@@ -9984,9 +10005,9 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
 
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
-        MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].type1, 0, FALSE);
-        if (gSpeciesInfo[speciesDef].type2 != gSpeciesInfo[speciesDef].type1)
-            MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].type2, 0, FALSE);
+        MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].types[0], 0, FALSE);
+        if (gSpeciesInfo[speciesDef].types[1] != gSpeciesInfo[speciesDef].types[0])
+            MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].types[1], 0, FALSE);
 
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_LEVITATE && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
@@ -10963,4 +10984,10 @@ static void SetRandomMultiHitCounter()
     else
         gMultiHitCounter += 2;
 #endif
+
+    if (gMultiHitCounter < 4 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LOADED_DICE)
+    {
+        // If roll 4 or 5 Loaded Dice doesn't do anything. Otherwise it rolls the number of hits as 5 minus a random integer from 0 to 1 inclusive.
+        gMultiHitCounter = 5 - (Random() & 1);
+    }
 }

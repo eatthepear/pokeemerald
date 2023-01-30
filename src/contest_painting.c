@@ -194,6 +194,7 @@ static void CB2_QuitContestPainting(void)
 
 static void ShowContestPainting(void)
 {
+<<<<<<< HEAD
     // switch (gMain.state)
     // {
     // case 0:
@@ -232,6 +233,46 @@ static void ShowContestPainting(void)
     //     SetMainCallback2(CB2_HoldContestPainting);
     //     break;
     // }
+=======
+    switch (gMain.state)
+    {
+    case 0:
+        ScanlineEffect_Stop();
+        SetVBlankCallback(NULL);
+        AllocateMonSpritesGfx();
+        gContestPaintingWinner = &gCurContestWinner;
+        InitContestPaintingVars(TRUE);
+        InitContestPaintingBg();
+        gMain.state++;
+        break;
+    case 1:
+        ResetPaletteFade();
+        DmaFillLarge32(3, 0, (void *)VRAM, VRAM_SIZE, 0x1000);
+        ResetSpriteData();
+        gMain.state++;
+        break;
+    case 2:
+        SeedRng(gMain.vblankCounter1);
+        InitKeys();
+        InitContestPaintingWindow();
+        gMain.state++;
+        break;
+    case 3:
+        CreateContestPaintingPicture(gCurContestWinnerSaveIdx, gCurContestWinnerIsForArtist);
+        gMain.state++;
+        break;
+    case 4:
+        PrintContestPaintingCaption(gCurContestWinnerSaveIdx, gCurContestWinnerIsForArtist);
+        SetBackdropFromPalette(sBgPalette);
+        DmaClear32(3, PLTT, PLTT_SIZE);
+        BeginFastPaletteFade(2);
+        SetVBlankCallback(VBlankCB_ContestPainting);
+        sHoldState = 0;
+        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_OBJ_ON);
+        SetMainCallback2(CB2_HoldContestPainting);
+        break;
+    }
+>>>>>>> d7b761f99a6b99752c3e33599161fd6dca253756
 }
 
 static void HoldContestPainting(void)
@@ -418,7 +459,7 @@ static void LoadContestPaintingFrame(u8 contestWinnerId, bool8 isForArtist)
 {
     u8 x, y;
 
-    LoadPalette(sPictureFramePalettes, 0, 0x100);
+    LoadPalette(sPictureFramePalettes, BG_PLTT_ID(0), 8 * PLTT_SIZE_4BPP);
     if (isForArtist == TRUE)
     {
         // Load Artist's frame
@@ -584,7 +625,7 @@ static void DoContestPaintingImageProcessing(u8 imageEffect)
     ApplyImageProcessingEffects(&gImageProcessingContext);
     ApplyImageProcessingQuantization(&gImageProcessingContext);
     ConvertImageProcessingToGBA(&gImageProcessingContext);
-    LoadPalette(gContestPaintingMonPalette, 0x100, 0x200);
+    LoadPalette(gContestPaintingMonPalette, OBJ_PLTT_ID(0), 16 * PLTT_SIZE_4BPP);
 }
 
 static void CreateContestPaintingPicture(u8 contestWinnerId, bool8 isForArtist)
