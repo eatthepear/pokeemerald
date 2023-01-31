@@ -2452,758 +2452,883 @@ EventScript_Documentation::
 	return
 
 
-EventScript_Settings_BrutalDifficulty::
-	msgbox gText_Colress_BrutalExplained
-	msgbox EventScript_Settings_BrutalDifficulty_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_BrutalDifficulty_1
-	return
-
-EventScript_Settings_BrutalDifficulty_1:
-	msgbox EventScript_Settings_BrutalDifficulty_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_BrutalDifficulty_3
-	return
-
-EventScript_Settings_BrutalDifficulty_3:
-	playse SE_PC_OFF
-	msgbox EventScript_Settings_BrutalDifficulty_Text_2, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_SETTINGS_BRUTAL
-	special ReverseHiddenItemFlags
-	return
-
-
-EventScript_Settings_InfiniteDifficulty::
-	msgbox gText_Colress_InfiniteExplained
-	msgbox EventScript_Settings_InfiniteDifficulty_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_InfiniteDifficulty_1
-	return
-
-EventScript_Settings_InfiniteDifficulty_1:
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_FULL_RESTORE, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_ELIXIR, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	additem ITEM_MAX_REPEL, 100
-	msgbox EventScript_Settings_InfiniteDifficulty_Text_1, MSGBOX_DEFAULT
-	return
-
-
-EventScript_Settings_NuzlockeRandomizer::
-	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
-	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
-	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_NuzlockeRandomizer_1
-	return
-
-EventScript_Settings_NuzlockeRandomizer_1:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_NuzlockeRandomizer_3
-	return
-
-EventScript_Settings_NuzlockeRandomizer_3:
-	playse SE_PC_OFF
-	msgbox EventScript_Settings_NuzlockeRandomizer_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_SETTINGS_NUZLOCKE
-	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
-	callnative GlobalNuzlockeClear
-	return
-
-
-EventScript_Settings_Nuzlocke::
-	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
-	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
-	msgbox gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT
-	msgbox gText_Colress_WouldTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_Nuzlocke_1
-	return
-
-EventScript_Settings_Nuzlocke_1:
-	msgbox gText_Colress_SureTurnOffNuzlocke, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_Nuzlocke_3
-	return
-
-EventScript_Settings_Nuzlocke_3:
-	playse SE_PC_OFF
-	msgbox EventScript_Settings_Nuzlocke_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_SETTINGS_NUZLOCKE
-	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
-	callnative GlobalNuzlockeClear
-	return
-
-
 EventScript_Settings::
 EventScript_Settings_1:
 	message EventScript_Settings_Text_0
 	waitmessage
 	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_4
-	dynmultipush EventScript_Settings_Text_2, 0
+	compare VAR_TEMP_9, 1
+	goto_if_eq EventScript_Settings_5
 EventScript_Settings_3:
-	goto_if_set FLAG_SETTINGS_NUZLOCKE, EventScript_Settings_8
-	dynmultipush EventScript_Settings_Text_4, 1
-EventScript_Settings_7:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER, EventScript_Settings_12
-	dynmultipush EventScript_Settings_Text_6, 2
-EventScript_Settings_11:
-	goto_if_set FLAG_SETTINGS_INFINITE, EventScript_Settings_16
-	dynmultipush EventScript_Settings_Text_8, 3
-EventScript_Settings_15:
-	goto_if_set FLAG_SETTINGS_EXP_ALL, EventScript_Settings_20
-	dynmultipush EventScript_Settings_Text_10, 4
-EventScript_Settings_19:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, EventScript_Settings_9
+	compare VAR_TEMP_9, 1
+	goto_if_eq EventScript_Settings_10
+EventScript_Settings_8:
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, EventScript_Settings_14
+	compare VAR_TEMP_9, 1
+	goto_if_eq EventScript_Settings_15
+EventScript_Settings_13:
+	goto_if_set FLAG_SETTINGS_INFINITE, EventScript_Settings_19
+	compare VAR_TEMP_9, 1
+	goto_if_eq EventScript_Settings_20
+EventScript_Settings_18:
 	goto_if_set FLAG_SETTINGS_FULL_SURVEIL, EventScript_Settings_24
-	dynmultipush EventScript_Settings_Text_12, 5
+	dynmultipush EventScript_Settings_Text_10, 4
 EventScript_Settings_23:
-	dynmultipush EventScript_Settings_Text_13, 6
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_28
-	goto_if_set FLAG_SETTINGS_CHALLENGE, EventScript_Settings_28
-	dynmultipush EventScript_Settings_Text_15, 7
+	goto_if_set FLAG_SETTINGS_EXP_ALL, EventScript_Settings_28
+	dynmultipush EventScript_Settings_Text_12, 5
 EventScript_Settings_27:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_34
-	goto_if_set FLAG_SETTINGS_GAUNTLET, EventScript_Settings_34
+	dynmultipush EventScript_Settings_Text_13, 6
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_32
+	goto_if_set FLAG_SETTINGS_CHALLENGE, EventScript_Settings_32
+	dynmultipush EventScript_Settings_Text_15, 7
+EventScript_Settings_31:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_38
+	goto_if_set FLAG_SETTINGS_GAUNTLET, EventScript_Settings_38
 	dynmultipush EventScript_Settings_Text_17, 8
-EventScript_Settings_33:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_40
-	goto_if_set FLAG_SETTINGS_ANTIDOCTOR, EventScript_Settings_40
+EventScript_Settings_37:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_44
+	goto_if_set FLAG_SETTINGS_ANTIDOCTOR, EventScript_Settings_44
 	dynmultipush EventScript_Settings_Text_19, 9
-EventScript_Settings_39:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_46
-	goto_if_set FLAG_SETTINGS_CLUMSY, EventScript_Settings_46
+EventScript_Settings_43:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_50
+	goto_if_set FLAG_SETTINGS_CLUMSY, EventScript_Settings_50
 	dynmultipush EventScript_Settings_Text_21, 10
-EventScript_Settings_45:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_52
-	goto_if_set FLAG_SETTINGS_EFFORTLESS, EventScript_Settings_52
+EventScript_Settings_49:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_56
+	goto_if_set FLAG_SETTINGS_EFFORTLESS, EventScript_Settings_56
 	dynmultipush EventScript_Settings_Text_23, 11
-EventScript_Settings_51:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_58
-	goto_if_set FLAG_SETTINGS_RED_THUMB, EventScript_Settings_58
+EventScript_Settings_55:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_62
+	goto_if_set FLAG_SETTINGS_RED_THUMB, EventScript_Settings_62
 	dynmultipush EventScript_Settings_Text_25, 12
-EventScript_Settings_57:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_64
-	goto_if_set FLAG_SETTINGS_LAZY, EventScript_Settings_64
+EventScript_Settings_61:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_68
+	goto_if_set FLAG_SETTINGS_LAZY, EventScript_Settings_68
 	dynmultipush EventScript_Settings_Text_27, 13
-EventScript_Settings_63:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_70
-	goto_if_set FLAG_SETTINGS_SINGLE_USE_TMS, EventScript_Settings_70
+EventScript_Settings_67:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_74
+	goto_if_set FLAG_SETTINGS_SINGLE_USE, EventScript_Settings_74
 	dynmultipush EventScript_Settings_Text_29, 14
-EventScript_Settings_69:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_76
-	goto_if_set FLAG_SETTINGS_POOR, EventScript_Settings_76
+EventScript_Settings_73:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_80
+	goto_if_set FLAG_SETTINGS_POOR, EventScript_Settings_80
 	dynmultipush EventScript_Settings_Text_31, 15
-EventScript_Settings_75:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_82
-	goto_if_set FLAG_SETTINGS_INDEPENDENT, EventScript_Settings_82
+EventScript_Settings_79:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_86
+	goto_if_set FLAG_SETTINGS_INDEPENDENT, EventScript_Settings_86
 	dynmultipush EventScript_Settings_Text_33, 16
-EventScript_Settings_81:
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_88
-	goto_if_set FLAG_SETTINGS_WORKAHOLIC, EventScript_Settings_88
+EventScript_Settings_85:
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_92
+	goto_if_set FLAG_SETTINGS_WORKAHOLIC, EventScript_Settings_92
 	dynmultipush EventScript_Settings_Text_35, 17
-EventScript_Settings_87:
+EventScript_Settings_91:
 	dynmultipush EventScript_Settings_Text_36, 18
 	dynmultistack 21, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
-	case 0, EventScript_Settings_94
-	case 1, EventScript_Settings_95
-	case 2, EventScript_Settings_96
-	case 3, EventScript_Settings_97
-	case 4, EventScript_Settings_98
-	case 5, EventScript_Settings_99
-	case 6, EventScript_Settings_100
-	case 7, EventScript_Settings_101
-	case 8, EventScript_Settings_102
-	case 9, EventScript_Settings_103
-	case 10, EventScript_Settings_104
-	case 11, EventScript_Settings_105
-	case 12, EventScript_Settings_106
-	case 13, EventScript_Settings_107
-	case 14, EventScript_Settings_108
-	case 15, EventScript_Settings_109
-	case 16, EventScript_Settings_110
-	case 17, EventScript_Settings_111
-	case 18, EventScript_Settings_112
-	case MULTI_B_PRESSED, EventScript_Settings_112
+	case 0, EventScript_Settings_98
+	case 1, EventScript_Settings_99
+	case 2, EventScript_Settings_100
+	case 3, EventScript_Settings_101
+	case 4, EventScript_Settings_102
+	case 5, EventScript_Settings_103
+	case 6, EventScript_Settings_104
+	case 7, EventScript_Settings_105
+	case 8, EventScript_Settings_106
+	case 9, EventScript_Settings_107
+	case 10, EventScript_Settings_108
+	case 11, EventScript_Settings_109
+	case 12, EventScript_Settings_110
+	case 13, EventScript_Settings_111
+	case 14, EventScript_Settings_112
+	case 15, EventScript_Settings_113
+	case 16, EventScript_Settings_114
+	case 17, EventScript_Settings_115
+	case 18, EventScript_Settings_116
+	case MULTI_B_PRESSED, EventScript_Settings_116
 	goto EventScript_Settings_1
 
 EventScript_Settings_4:
 	dynmultipush EventScript_Settings_Text_1, 0
 	goto EventScript_Settings_3
 
-EventScript_Settings_8:
+EventScript_Settings_5:
+	dynmultipush EventScript_Settings_Text_2, 0
+	goto EventScript_Settings_3
+
+EventScript_Settings_9:
 	dynmultipush EventScript_Settings_Text_3, 1
-	goto EventScript_Settings_7
+	goto EventScript_Settings_8
 
-EventScript_Settings_12:
+EventScript_Settings_10:
+	dynmultipush EventScript_Settings_Text_4, 1
+	goto EventScript_Settings_8
+
+EventScript_Settings_14:
 	dynmultipush EventScript_Settings_Text_5, 2
-	goto EventScript_Settings_11
+	goto EventScript_Settings_13
 
-EventScript_Settings_16:
+EventScript_Settings_15:
+	dynmultipush EventScript_Settings_Text_6, 2
+	goto EventScript_Settings_13
+
+EventScript_Settings_19:
 	dynmultipush EventScript_Settings_Text_7, 3
-	goto EventScript_Settings_15
+	goto EventScript_Settings_18
 
 EventScript_Settings_20:
-	dynmultipush EventScript_Settings_Text_9, 4
-	goto EventScript_Settings_19
+	dynmultipush EventScript_Settings_Text_8, 3
+	goto EventScript_Settings_18
 
 EventScript_Settings_24:
-	dynmultipush EventScript_Settings_Text_11, 5
+	dynmultipush EventScript_Settings_Text_9, 4
 	goto EventScript_Settings_23
 
 EventScript_Settings_28:
-	dynmultipush EventScript_Settings_Text_14, 7
+	dynmultipush EventScript_Settings_Text_11, 5
 	goto EventScript_Settings_27
 
-EventScript_Settings_34:
+EventScript_Settings_32:
+	dynmultipush EventScript_Settings_Text_14, 7
+	goto EventScript_Settings_31
+
+EventScript_Settings_38:
 	dynmultipush EventScript_Settings_Text_16, 8
-	goto EventScript_Settings_33
+	goto EventScript_Settings_37
 
-EventScript_Settings_40:
+EventScript_Settings_44:
 	dynmultipush EventScript_Settings_Text_18, 9
-	goto EventScript_Settings_39
+	goto EventScript_Settings_43
 
-EventScript_Settings_46:
+EventScript_Settings_50:
 	dynmultipush EventScript_Settings_Text_20, 10
-	goto EventScript_Settings_45
+	goto EventScript_Settings_49
 
-EventScript_Settings_52:
+EventScript_Settings_56:
 	dynmultipush EventScript_Settings_Text_22, 11
-	goto EventScript_Settings_51
+	goto EventScript_Settings_55
 
-EventScript_Settings_58:
+EventScript_Settings_62:
 	dynmultipush EventScript_Settings_Text_24, 12
-	goto EventScript_Settings_57
+	goto EventScript_Settings_61
 
-EventScript_Settings_64:
+EventScript_Settings_68:
 	dynmultipush EventScript_Settings_Text_26, 13
-	goto EventScript_Settings_63
+	goto EventScript_Settings_67
 
-EventScript_Settings_70:
+EventScript_Settings_74:
 	dynmultipush EventScript_Settings_Text_28, 14
-	goto EventScript_Settings_69
+	goto EventScript_Settings_73
 
-EventScript_Settings_76:
+EventScript_Settings_80:
 	dynmultipush EventScript_Settings_Text_30, 15
-	goto EventScript_Settings_75
+	goto EventScript_Settings_79
 
-EventScript_Settings_82:
+EventScript_Settings_86:
 	dynmultipush EventScript_Settings_Text_32, 16
-	goto EventScript_Settings_81
+	goto EventScript_Settings_85
 
-EventScript_Settings_88:
+EventScript_Settings_92:
 	dynmultipush EventScript_Settings_Text_34, 17
-	goto EventScript_Settings_87
-
-EventScript_Settings_94:
-	call EventScript_Settings_BrutalDifficulty
-	goto EventScript_Settings_1
-
-EventScript_Settings_95:
-	call EventScript_Settings_Nuzlocke
-	goto EventScript_Settings_1
-
-EventScript_Settings_96:
-	call EventScript_Settings_NuzlockeRandomizer
-	goto EventScript_Settings_1
-
-EventScript_Settings_97:
-	call EventScript_Settings_InfiniteDifficulty
-	goto EventScript_Settings_1
+	goto EventScript_Settings_91
 
 EventScript_Settings_98:
-	msgbox EventScript_Settings_Text_37, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_EXP_ALL, EventScript_Settings_113
+	msgbox gText_Colress_BrutalExplained, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_117
+	goto_if_set FLAG_SETTINGS_INFINITE, EventScript_Settings_195
 	msgbox EventScript_Settings_Text_40, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_176
+	goto_if_eq EventScript_Settings_278
 	goto EventScript_Settings_1
 
 EventScript_Settings_99:
-	msgbox EventScript_Settings_Text_42
-	goto_if_set FLAG_SETTINGS_FULL_SURVEIL, EventScript_Settings_116
-	msgbox EventScript_Settings_Text_45, MSGBOX_YESNO
+	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
+	compare VAR_TEMP_9, 0
+	goto_if_eq EventScript_Settings_121
+EventScript_Settings_120:
+	goto_if_set FLAG_SETTINGS_NUZLOCKE, EventScript_Settings_198
+	msgbox EventScript_Settings_Text_46, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_180
+	goto_if_eq EventScript_Settings_282
 	goto EventScript_Settings_1
 
 EventScript_Settings_100:
-	call EventScript_MusicMenu
+	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, EventScript_Settings_123
+	msgbox EventScript_Settings_Text_53, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_204
 	goto EventScript_Settings_1
 
 EventScript_Settings_101:
-	msgbox EventScript_Settings_Text_47, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_CHALLENGE, EventScript_Settings_119
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_119
-	msgbox EventScript_Settings_Text_51, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_52, MSGBOX_YESNO
+	msgbox gText_Colress_InfiniteExplained, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_INFINITE, EventScript_Settings_126
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_209
+	msgbox EventScript_Settings_Text_62, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_185
+	goto_if_eq EventScript_Settings_292
 	goto EventScript_Settings_1
 
 EventScript_Settings_102:
-	msgbox EventScript_Settings_Text_54, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_GAUNTLET, EventScript_Settings_124
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_124
-	msgbox EventScript_Settings_Text_58, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_59, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_65, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_FULL_SURVEIL, EventScript_Settings_129
+	msgbox EventScript_Settings_Text_68, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_190
+	goto_if_eq EventScript_Settings_214
 	goto EventScript_Settings_1
 
 EventScript_Settings_103:
-	msgbox EventScript_Settings_Text_61, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_ANTIDOCTOR, EventScript_Settings_129
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_129
-	msgbox EventScript_Settings_Text_65, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_66, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_70, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_EXP_ALL, EventScript_Settings_132
+	msgbox EventScript_Settings_Text_73, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_195
+	goto_if_eq EventScript_Settings_218
 	goto EventScript_Settings_1
 
 EventScript_Settings_104:
-	goto_if_set FLAG_SETTINGS_CLUMSY, EventScript_Settings_134
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_134
-	msgbox EventScript_Settings_Text_71, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_72, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_200
+	call EventScript_MusicMenu
 	goto EventScript_Settings_1
 
 EventScript_Settings_105:
-	goto_if_set FLAG_SETTINGS_EFFORTLESS, EventScript_Settings_139
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_139
-	msgbox EventScript_Settings_Text_77, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_78, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_75, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_CHALLENGE, EventScript_Settings_135
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_135
+	msgbox EventScript_Settings_Text_79, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_80, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_205
+	goto_if_eq EventScript_Settings_223
 	goto EventScript_Settings_1
 
 EventScript_Settings_106:
-	msgbox EventScript_Settings_Text_80, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_RED_THUMB, EventScript_Settings_144
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_144
-	msgbox EventScript_Settings_Text_84, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_INFINITE, EventScript_Settings_210
-	msgbox gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_82, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_GAUNTLET, EventScript_Settings_140
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_140
+	msgbox EventScript_Settings_Text_86, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_87, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_228
 	goto EventScript_Settings_1
 
 EventScript_Settings_107:
-	msgbox EventScript_Settings_Text_87, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_LAZY, EventScript_Settings_149
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_149
-	msgbox EventScript_Settings_Text_91, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_92, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_89, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_ANTIDOCTOR, EventScript_Settings_145
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_145
+	msgbox EventScript_Settings_Text_93, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_94, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_216
+	goto_if_eq EventScript_Settings_233
 	goto EventScript_Settings_1
 
 EventScript_Settings_108:
-	goto_if_set FLAG_SETTINGS_SINGLE_USE_TMS, EventScript_Settings_154
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_154
-	msgbox EventScript_Settings_Text_97, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_98, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_221
-	goto EventScript_Settings_1
-
-EventScript_Settings_109:
-	goto_if_set FLAG_SETTINGS_POOR, EventScript_Settings_159
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_159
-	msgbox EventScript_Settings_Text_103, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_104, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_226
-	goto EventScript_Settings_1
-
-EventScript_Settings_110:
-	msgbox EventScript_Settings_Text_106, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_INDEPENDENT, EventScript_Settings_164
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_164
-	msgbox EventScript_Settings_Text_110, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_111, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_231
-	goto EventScript_Settings_1
-
-EventScript_Settings_111:
-	msgbox EventScript_Settings_Text_113, MSGBOX_DEFAULT
-	goto_if_set FLAG_SETTINGS_WORKAHOLIC, EventScript_Settings_169
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_169
-	msgbox EventScript_Settings_Text_117, MSGBOX_DEFAULT
-	msgbox EventScript_Settings_Text_118, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_236
-	goto EventScript_Settings_1
-
-EventScript_Settings_112:
-	goto EventScript_WhenUReady
-	goto EventScript_Settings_1
-
-EventScript_Settings_113:
-	msgbox EventScript_Settings_Text_38, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_174
-	goto EventScript_Settings_1
-
-EventScript_Settings_116:
-	msgbox EventScript_Settings_Text_43, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_178
-	goto EventScript_Settings_1
-
-EventScript_Settings_119:
-	msgbox EventScript_Settings_Text_48, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_182
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_124:
-	msgbox EventScript_Settings_Text_55, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_187
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_129:
-	msgbox EventScript_Settings_Text_62, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_192
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_134:
-	msgbox EventScript_Settings_Text_68, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_197
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_139:
-	msgbox EventScript_Settings_Text_74, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_202
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_144:
-	msgbox EventScript_Settings_Text_81, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_207
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_149:
-	msgbox EventScript_Settings_Text_88, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_213
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_154:
-	msgbox EventScript_Settings_Text_94, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_218
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_159:
+	msgbox EventScript_Settings_Text_96, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_CLUMSY, EventScript_Settings_150
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_150
 	msgbox EventScript_Settings_Text_100, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_223
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_164:
-	msgbox EventScript_Settings_Text_107, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_228
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_169:
-	msgbox EventScript_Settings_Text_114, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_233
-	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
-	goto EventScript_Settings_1
-
-EventScript_Settings_174:
-	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_39, MSGBOX_DEFAULT
-	waitse
-	clearflag FLAG_SETTINGS_EXP_ALL
-	goto EventScript_Settings_1
-
-EventScript_Settings_176:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_41, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_EXP_ALL
-	goto EventScript_Settings_1
-
-EventScript_Settings_178:
-	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_44, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_SETTINGS_FULL_SURVEIL
-	goto EventScript_Settings_1
-
-EventScript_Settings_180:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_46, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	setflag FLAG_SETTINGS_FULL_SURVEIL
-	goto EventScript_Settings_1
-
-EventScript_Settings_182:
-	msgbox EventScript_Settings_Text_49, MSGBOX_YESNO
+	msgbox EventScript_Settings_Text_101, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_238
 	goto EventScript_Settings_1
 
-EventScript_Settings_185:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_53, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_CHALLENGE
-	goto EventScript_Settings_1
-
-EventScript_Settings_187:
-	msgbox EventScript_Settings_Text_56, MSGBOX_YESNO
+EventScript_Settings_109:
+	msgbox EventScript_Settings_Text_103, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_EFFORTLESS, EventScript_Settings_155
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_155
+	msgbox EventScript_Settings_Text_107, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_108, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_240
+	goto_if_eq EventScript_Settings_243
 	goto EventScript_Settings_1
 
-EventScript_Settings_190:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_60, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_GAUNTLET
+EventScript_Settings_110:
+	msgbox EventScript_Settings_Text_110, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_RED_THUMB, EventScript_Settings_160
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_160
+	msgbox EventScript_Settings_Text_114, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_INFINITE, EventScript_Settings_248
+	msgbox gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT
 	goto EventScript_Settings_1
 
-EventScript_Settings_192:
-	msgbox EventScript_Settings_Text_63, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_242
-	goto EventScript_Settings_1
-
-EventScript_Settings_195:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_67, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_ANTIDOCTOR
-	goto EventScript_Settings_1
-
-EventScript_Settings_197:
-	msgbox EventScript_Settings_Text_69, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_244
-	goto EventScript_Settings_1
-
-EventScript_Settings_200:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_73, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_CLUMSY
-	goto EventScript_Settings_1
-
-EventScript_Settings_202:
-	msgbox EventScript_Settings_Text_75, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_246
-	goto EventScript_Settings_1
-
-EventScript_Settings_205:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_79, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_EFFORTLESS
-	goto EventScript_Settings_1
-
-EventScript_Settings_207:
-	msgbox EventScript_Settings_Text_82, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_248
-	goto EventScript_Settings_1
-
-EventScript_Settings_210:
-	msgbox EventScript_Settings_Text_85, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_250
-	goto EventScript_Settings_1
-
-EventScript_Settings_213:
-	msgbox EventScript_Settings_Text_89, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_252
-	goto EventScript_Settings_1
-
-EventScript_Settings_216:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_93, MSGBOX_DEFAULT
-	waitse
-	setflag FLAG_SETTINGS_LAZY
-	goto EventScript_Settings_1
-
-EventScript_Settings_218:
-	msgbox EventScript_Settings_Text_95, MSGBOX_YESNO
+EventScript_Settings_111:
+	msgbox EventScript_Settings_Text_117, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_LAZY, EventScript_Settings_165
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_165
+	msgbox EventScript_Settings_Text_121, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_122, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq EventScript_Settings_254
 	goto EventScript_Settings_1
 
-EventScript_Settings_221:
-	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_99, MSGBOX_DEFAULT
+EventScript_Settings_112:
+	msgbox EventScript_Settings_Text_124, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_SINGLE_USE, EventScript_Settings_170
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_170
+	msgbox EventScript_Settings_Text_128, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_129, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_259
+	goto EventScript_Settings_1
+
+EventScript_Settings_113:
+	msgbox EventScript_Settings_Text_131, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_POOR, EventScript_Settings_175
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_175
+	msgbox EventScript_Settings_Text_135, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_136, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_264
+	goto EventScript_Settings_1
+
+EventScript_Settings_114:
+	msgbox EventScript_Settings_Text_138, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_INDEPENDENT, EventScript_Settings_180
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_180
+	msgbox EventScript_Settings_Text_142, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_143, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_269
+	goto EventScript_Settings_1
+
+EventScript_Settings_115:
+	msgbox EventScript_Settings_Text_145, MSGBOX_DEFAULT
+	goto_if_set FLAG_SETTINGS_WORKAHOLIC, EventScript_Settings_185
+	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Settings_185
+	msgbox EventScript_Settings_Text_149, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_150, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_274
+	goto EventScript_Settings_1
+
+EventScript_Settings_116:
+	compare VAR_TEMP_9, 1
+	goto_if_eq EventScript_Settings_190
+	goto EventScript_WhenUReady
+	goto EventScript_Settings_1
+
+EventScript_Settings_117:
+	msgbox EventScript_Settings_Text_37, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_193
+	goto EventScript_Settings_1
+
+EventScript_Settings_121:
+	buffernumberstring 0, VAR_NUZLOCKE_DEATHS
+	msgbox gText_Colress_NumDeathsNuzlocke, MSGBOX_DEFAULT
+	goto EventScript_Settings_120
+
+EventScript_Settings_123:
+	compare VAR_TEMP_9, 0
+	goto_if_eq EventScript_Settings_201
+	msgbox EventScript_Settings_Text_50, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_284
+	goto EventScript_Settings_1
+
+EventScript_Settings_126:
+	compare VAR_TEMP_9, 0
+	goto_if_eq EventScript_Settings_206
+	msgbox EventScript_Settings_Text_59, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_290
+	goto EventScript_Settings_1
+
+EventScript_Settings_129:
+	msgbox EventScript_Settings_Text_66, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_212
+	goto EventScript_Settings_1
+
+EventScript_Settings_132:
+	msgbox EventScript_Settings_Text_71, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_216
+	goto EventScript_Settings_1
+
+EventScript_Settings_135:
+	msgbox EventScript_Settings_Text_76, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_220
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_140:
+	msgbox EventScript_Settings_Text_83, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_225
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_145:
+	msgbox EventScript_Settings_Text_90, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_230
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_150:
+	msgbox EventScript_Settings_Text_97, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_235
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_155:
+	msgbox EventScript_Settings_Text_104, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_240
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_160:
+	msgbox EventScript_Settings_Text_111, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_245
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_165:
+	msgbox EventScript_Settings_Text_118, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_251
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_170:
+	msgbox EventScript_Settings_Text_125, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_256
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_175:
+	msgbox EventScript_Settings_Text_132, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_261
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_180:
+	msgbox EventScript_Settings_Text_139, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_266
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_185:
+	msgbox EventScript_Settings_Text_146, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Settings_271
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_190:
+	return
+
+EventScript_Settings_193:
+	msgbox EventScript_Settings_Text_38, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_276
+	goto EventScript_Settings_1
+
+EventScript_Settings_195:
+	msgbox gText_Colress_CannotChangeSettingInfinite, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_198:
+	msgbox EventScript_Settings_Text_43, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_280
+	goto EventScript_Settings_1
+
+EventScript_Settings_201:
+	msgbox EventScript_Settings_Text_49, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_204:
+	msgbox EventScript_Settings_Text_54, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_286
+	goto EventScript_Settings_1
+
+EventScript_Settings_206:
+	msgbox EventScript_Settings_Text_56, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_57, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_288
+	goto EventScript_Settings_1
+
+EventScript_Settings_209:
+	msgbox gText_Colress_CannotChangeSettingBrutal, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_212:
+	playse SE_PC_OFF
+	msgbox EventScript_Settings_Text_67, MSGBOX_DEFAULT
 	waitse
-	setflag FLAG_SETTINGS_SINGLE_USE_TMS
+	clearflag FLAG_SETTINGS_FULL_SURVEIL
+	goto EventScript_Settings_1
+
+EventScript_Settings_214:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_69, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_FULL_SURVEIL
+	goto EventScript_Settings_1
+
+EventScript_Settings_216:
+	playse SE_PC_OFF
+	msgbox EventScript_Settings_Text_72, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_EXP_ALL
+	goto EventScript_Settings_1
+
+EventScript_Settings_218:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_74, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_EXP_ALL
+	goto EventScript_Settings_1
+
+EventScript_Settings_220:
+	msgbox EventScript_Settings_Text_77, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_294
 	goto EventScript_Settings_1
 
 EventScript_Settings_223:
-	msgbox EventScript_Settings_Text_101, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_256
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_81, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_CHALLENGE
 	goto EventScript_Settings_1
 
-EventScript_Settings_226:
+EventScript_Settings_225:
+	msgbox EventScript_Settings_Text_84, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_296
+	goto EventScript_Settings_1
+
+EventScript_Settings_228:
 	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_105, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_88, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_GAUNTLET
+	goto EventScript_Settings_1
+
+EventScript_Settings_230:
+	msgbox EventScript_Settings_Text_91, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_298
+	goto EventScript_Settings_1
+
+EventScript_Settings_233:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_95, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_ANTIDOCTOR
+	goto EventScript_Settings_1
+
+EventScript_Settings_235:
+	msgbox EventScript_Settings_Text_98, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_300
+	goto EventScript_Settings_1
+
+EventScript_Settings_238:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_102, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_CLUMSY
+	goto EventScript_Settings_1
+
+EventScript_Settings_240:
+	msgbox EventScript_Settings_Text_105, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_302
+	goto EventScript_Settings_1
+
+EventScript_Settings_243:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_109, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_EFFORTLESS
+	goto EventScript_Settings_1
+
+EventScript_Settings_245:
+	msgbox EventScript_Settings_Text_112, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_304
+	goto EventScript_Settings_1
+
+EventScript_Settings_248:
+	msgbox EventScript_Settings_Text_115, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_306
+	goto EventScript_Settings_1
+
+EventScript_Settings_251:
+	msgbox EventScript_Settings_Text_119, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_308
+	goto EventScript_Settings_1
+
+EventScript_Settings_254:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_123, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_LAZY
+	goto EventScript_Settings_1
+
+EventScript_Settings_256:
+	msgbox EventScript_Settings_Text_126, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_310
+	goto EventScript_Settings_1
+
+EventScript_Settings_259:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_130, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_SINGLE_USE
+	goto EventScript_Settings_1
+
+EventScript_Settings_261:
+	msgbox EventScript_Settings_Text_133, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_312
+	goto EventScript_Settings_1
+
+EventScript_Settings_264:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_137, MSGBOX_DEFAULT
 	waitse
 	setflag FLAG_SETTINGS_POOR
 	goto EventScript_Settings_1
 
-EventScript_Settings_228:
-	msgbox EventScript_Settings_Text_108, MSGBOX_YESNO
+EventScript_Settings_266:
+	msgbox EventScript_Settings_Text_140, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_258
+	goto_if_eq EventScript_Settings_314
 	goto EventScript_Settings_1
 
-EventScript_Settings_231:
+EventScript_Settings_269:
 	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_112, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_144, MSGBOX_DEFAULT
 	waitse
 	setflag FLAG_SETTINGS_INDEPENDENT
 	goto EventScript_Settings_1
 
-EventScript_Settings_233:
-	msgbox EventScript_Settings_Text_115, MSGBOX_YESNO
+EventScript_Settings_271:
+	msgbox EventScript_Settings_Text_147, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Settings_260
+	goto_if_eq EventScript_Settings_316
 	goto EventScript_Settings_1
 
-EventScript_Settings_236:
+EventScript_Settings_274:
 	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_119, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_151, MSGBOX_DEFAULT
 	waitse
 	setflag FLAG_SETTINGS_WORKAHOLIC
 	goto EventScript_Settings_1
 
-EventScript_Settings_238:
+EventScript_Settings_276:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_50, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_39, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_BRUTAL
+	special ReverseHiddenItemFlags
+	goto EventScript_Settings_1
+
+EventScript_Settings_278:
+	msgbox EventScript_Settings_Text_41, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_318
+	goto EventScript_Settings_1
+
+EventScript_Settings_280:
+	msgbox EventScript_Settings_Text_44, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_320
+	goto EventScript_Settings_1
+
+EventScript_Settings_282:
+	msgbox EventScript_Settings_Text_47, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_322
+	goto EventScript_Settings_1
+
+EventScript_Settings_284:
+	msgbox EventScript_Settings_Text_51, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_324
+	goto EventScript_Settings_1
+
+EventScript_Settings_286:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_55, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_RANDOMIZER
+	goto EventScript_Settings_1
+
+EventScript_Settings_288:
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_FULL_RESTORE, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_ELIXIR, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	additem ITEM_MAX_REPEL, 100
+	msgbox EventScript_Settings_Text_58, MSGBOX_DEFAULT
+	goto EventScript_Settings_1
+
+EventScript_Settings_290:
+	msgbox EventScript_Settings_Text_60, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_326
+	goto EventScript_Settings_1
+
+EventScript_Settings_292:
+	msgbox EventScript_Settings_Text_63, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Settings_328
+	goto EventScript_Settings_1
+
+EventScript_Settings_294:
+	playse SE_PC_OFF
+	msgbox EventScript_Settings_Text_78, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_CHALLENGE
 	goto EventScript_Settings_1
 
-EventScript_Settings_240:
+EventScript_Settings_296:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_57, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_85, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_GAUNTLET
 	goto EventScript_Settings_1
 
-EventScript_Settings_242:
+EventScript_Settings_298:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_64, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_92, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_ANTIDOCTOR
 	goto EventScript_Settings_1
 
-EventScript_Settings_244:
+EventScript_Settings_300:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_70, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_99, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_CLUMSY
 	goto EventScript_Settings_1
 
-EventScript_Settings_246:
+EventScript_Settings_302:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_76, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_106, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_EFFORTLESS
 	goto EventScript_Settings_1
 
-EventScript_Settings_248:
+EventScript_Settings_304:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_83, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_113, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_RED_THUMB
 	goto EventScript_Settings_1
 
-EventScript_Settings_250:
+EventScript_Settings_306:
 	playse SE_PC_ON
-	msgbox EventScript_Settings_Text_86, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_116, MSGBOX_DEFAULT
 	waitse
 	setflag FLAG_SETTINGS_RED_THUMB
 	goto EventScript_Settings_1
 
-EventScript_Settings_252:
+EventScript_Settings_308:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_90, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_120, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_LAZY
 	goto EventScript_Settings_1
 
-EventScript_Settings_254:
+EventScript_Settings_310:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_96, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_127, MSGBOX_DEFAULT
 	waitse
-	clearflag FLAG_SETTINGS_SINGLE_USE_TMS
+	clearflag FLAG_SETTINGS_SINGLE_USE
 	goto EventScript_Settings_1
 
-EventScript_Settings_256:
+EventScript_Settings_312:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_102, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_134, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_POOR
 	goto EventScript_Settings_1
 
-EventScript_Settings_258:
+EventScript_Settings_314:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_109, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_141, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_INDEPENDENT
 	goto EventScript_Settings_1
 
-EventScript_Settings_260:
+EventScript_Settings_316:
 	playse SE_PC_OFF
-	msgbox EventScript_Settings_Text_116, MSGBOX_DEFAULT
+	msgbox EventScript_Settings_Text_148, MSGBOX_DEFAULT
 	waitse
 	clearflag FLAG_SETTINGS_WORKAHOLIC
+	goto EventScript_Settings_1
+
+EventScript_Settings_318:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_42, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_BRUTAL
+	special ReverseHiddenItemFlags
+	goto EventScript_Settings_1
+
+EventScript_Settings_320:
+	playse SE_PC_OFF
+	msgbox EventScript_Settings_Text_45, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_NUZLOCKE
+	clearflag FLAG_ZONE13C_NUZLOCKE_FOSSIL_RECEIVED
+	callnative GlobalNuzlockeClear
+	goto EventScript_Settings_1
+
+EventScript_Settings_322:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_48, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_NUZLOCKE
+	callnative GlobalNuzlockeSet
+	goto EventScript_Settings_1
+
+EventScript_Settings_324:
+	playse SE_PC_OFF
+	msgbox EventScript_Settings_Text_52, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_RANDOMIZER
+	goto EventScript_Settings_1
+
+EventScript_Settings_326:
+	playse SE_PC_OFF
+	msgbox EventScript_Settings_Text_61, MSGBOX_DEFAULT
+	waitse
+	clearflag FLAG_SETTINGS_INFINITE
+	goto EventScript_Settings_1
+
+EventScript_Settings_328:
+	playse SE_PC_ON
+	msgbox EventScript_Settings_Text_64, MSGBOX_DEFAULT
+	waitse
+	setflag FLAG_SETTINGS_INFINITE
 	goto EventScript_Settings_1
 
 
@@ -3475,38 +3600,6 @@ EventScript_MusicMenu_63:
 EventScript_MusicMenu_64:
 	setvar VAR_TEMP_0, 0
 	goto EventScript_MusicMenu_14
-
-
-EventScript_Surveillance::
-	msgbox EventScript_Surveillance_Text_0
-	goto_if_set FLAG_SETTINGS_FULL_SURVEIL, EventScript_Surveillance_2
-	msgbox EventScript_Surveillance_Text_3, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Surveillance_7
-EventScript_Surveillance_1:
-	return
-
-EventScript_Surveillance_2:
-	msgbox EventScript_Surveillance_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Surveillance_5
-	goto EventScript_Surveillance_1
-
-EventScript_Surveillance_5:
-	playse SE_PC_OFF
-	msgbox EventScript_Surveillance_Text_2, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	clearflag FLAG_SETTINGS_FULL_SURVEIL
-	goto EventScript_Surveillance_1
-
-EventScript_Surveillance_7:
-	playse SE_PC_ON
-	msgbox EventScript_Surveillance_Text_4, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	setflag FLAG_SETTINGS_FULL_SURVEIL
-	goto EventScript_Surveillance_1
 
 
 EventScript_WarpZone0::
@@ -4588,33 +4681,8 @@ EventScript_Max_Text_3:
 EventScript_LeavingSetup_Text_0:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Bring out the strength of you\nand your Pokémon!$"
 
-EventScript_Settings_BrutalDifficulty_Text_0:
-	.string "Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} and\n"
-	.string "switch to {COLOR RED}Default{COLOR DARK_GRAY}?$"
-
-EventScript_Settings_BrutalDifficulty_Text_1:
-	.string "Are you sure you would like to turn off\n"
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} and switch to {COLOR RED}Default{COLOR DARK_GRAY}?$"
-
-EventScript_Settings_BrutalDifficulty_Text_2:
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty turned off.\nDifficulty set to {COLOR RED}Default{COLOR DARK_GRAY}.$"
-
-EventScript_Settings_InfiniteDifficulty_Text_0:
-	.string "Would you like to restock your supply\n"
-	.string "of Full Restores, Max Elixirs, and Max\l"
-	.string "Repels?$"
-
-EventScript_Settings_InfiniteDifficulty_Text_1:
-	.string "Items restocked.$"
-
-EventScript_Settings_NuzlockeRandomizer_Text_0:
-	.string "{COLOR RED}Randomlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Randomizer{COLOR DARK_GRAY}.$"
-
-EventScript_Settings_Nuzlocke_Text_0:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.\nMode set to {COLOR RED}Vanilla{COLOR DARK_GRAY}.$"
-
 EventScript_Settings_Text_0:
-	.string "Choose a setting.\n{COLOR RED}Red{COLOR DARK_GRAY} means enabled.$"
+	.string "Choose a setting to adjust.\n{COLOR RED}Red{COLOR DARK_GRAY} means enabled.$"
 
 EventScript_Settings_Text_1:
 	.string "{COLOR RED}Brutal$"
@@ -4641,19 +4709,19 @@ EventScript_Settings_Text_8:
 	.string "Infinite$"
 
 EventScript_Settings_Text_9:
-	.string "{COLOR RED}Exp. All$"
-
-EventScript_Settings_Text_10:
-	.string "Exp. All$"
-
-EventScript_Settings_Text_11:
 	.string "{COLOR RED}Full Surveil$"
 
-EventScript_Settings_Text_12:
+EventScript_Settings_Text_10:
 	.string "Full Surveil$"
 
+EventScript_Settings_Text_11:
+	.string "{COLOR RED}Exp. All$"
+
+EventScript_Settings_Text_12:
+	.string "Exp. All$"
+
 EventScript_Settings_Text_13:
-	.string "{COLOR GREEN}Music$"
+	.string "{COLOR RED}Music$"
 
 EventScript_Settings_Text_14:
 	.string "{COLOR RED}Challenge$"
@@ -4698,10 +4766,10 @@ EventScript_Settings_Text_27:
 	.string "Lazy$"
 
 EventScript_Settings_Text_28:
-	.string "{COLOR RED}Bad Quality$"
+	.string "{COLOR RED}Single-Use$"
 
 EventScript_Settings_Text_29:
-	.string "Bad Quality$"
+	.string "Single-Use$"
 
 EventScript_Settings_Text_30:
 	.string "{COLOR RED}Poor$"
@@ -4725,7 +4793,137 @@ EventScript_Settings_Text_36:
 	.string "Exit$"
 
 EventScript_Settings_Text_37:
-	.string "The Exp. All setting, if turned on, gives\n"
+	.string "Would you like to turn off {COLOR RED}Brutal{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_38:
+	.string "Are you sure you would like to turn off\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_39:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode turned off.$"
+
+EventScript_Settings_Text_40:
+	.string "Would you like to turn on {COLOR RED}Brutal{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_41:
+	.string "Are you sure you would like to turn on\n"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_42:
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode turned on.$"
+
+EventScript_Settings_Text_43:
+	.string "Would you like to turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
+	.string "mode?$"
+
+EventScript_Settings_Text_44:
+	.string "Are you sure you would like to turn off\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_45:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned off.$"
+
+EventScript_Settings_Text_46:
+	.string "Would you like to turn on {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
+	.string "mode?$"
+
+EventScript_Settings_Text_47:
+	.string "Are you sure you would like to turn on\n"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_48:
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode turned on.$"
+
+EventScript_Settings_Text_49:
+	.string "You cannot turn off {COLOR RED}Randomizer{COLOR DARK_GRAY} mode\n"
+	.string "once set.$"
+
+EventScript_Settings_Text_50:
+	.string "Would you like to turn off {COLOR RED}Randomizer{COLOR DARK_GRAY}\n"
+	.string "mode?$"
+
+EventScript_Settings_Text_51:
+	.string "Are you sure you would like to turn off\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_52:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode turned off.$"
+
+EventScript_Settings_Text_53:
+	.string "Would you like to turn on {COLOR RED}Randomizer{COLOR DARK_GRAY}\n"
+	.string "mode?$"
+
+EventScript_Settings_Text_54:
+	.string "Are you sure you would like to turn on\n"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_55:
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode turned on.$"
+
+EventScript_Settings_Text_56:
+	.string "You cannot turn off {COLOR RED}Infinite{COLOR DARK_GRAY} mode once\n"
+	.string "set.$"
+
+EventScript_Settings_Text_57:
+	.string "Would you like to restock your supply\n"
+	.string "of Full Restores, Max Elixirs, and Max\l"
+	.string "Repels?$"
+
+EventScript_Settings_Text_58:
+	.string "Items restocked.$"
+
+EventScript_Settings_Text_59:
+	.string "Would you like to turn off {COLOR RED}Infinite{COLOR DARK_GRAY}\n"
+	.string "mode?$"
+
+EventScript_Settings_Text_60:
+	.string "Are you sure you would like to turn off\n"
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_61:
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} mode turned off.$"
+
+EventScript_Settings_Text_62:
+	.string "Would you like to turn on {COLOR RED}Infinite{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_63:
+	.string "Are you sure you would like to turn on\n"
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} mode?$"
+
+EventScript_Settings_Text_64:
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} mode turned on.$"
+
+EventScript_Settings_Text_65:
+	.string "In trainer battles, you can {COLOR RED}Surveil{COLOR DARK_GRAY} the\n"
+	.string "opposing party to gain more\l"
+	.string "information.$"
+
+EventScript_Settings_Text_66:
+	.string "{COLOR RED}Surveil{COLOR DARK_GRAY} currently fully reveals all\n"
+	.string "information about the opposing party.\p"
+	.string "Would you like to decrease the amount\n"
+	.string "of information it reveals?$"
+
+EventScript_Settings_Text_67:
+	.string "Lowered the power of {COLOR RED}Surveil{COLOR DARK_GRAY}.\p"
+	.string "You will only be able to view the\n"
+	.string "opposing team's Pokémon and their\l"
+	.string "health.$"
+
+EventScript_Settings_Text_68:
+	.string "{COLOR RED}Surveil{COLOR DARK_GRAY} currently reveals only the\n"
+	.string "opposing team's Pokémon and their\l"
+	.string "health.\p"
+	.string "Would you like to increase the amount\n"
+	.string "of information it reveals?$"
+
+EventScript_Settings_Text_69:
+	.string "Increased the power of {COLOR RED}Surveil{COLOR DARK_GRAY}.\p"
+	.string "You will be able to fully view all\n"
+	.string "information about the opposing party.$"
+
+EventScript_Settings_Text_70:
+	.string "The {COLOR RED}Exp. All{COLOR DARK_GRAY} setting, if turned on, gives\n"
 	.string "members of your party that don't\l"
 	.string "participate in battle 25% experience.\p"
 	.string "The game's experience curve is balanced\n"
@@ -4733,309 +4931,309 @@ EventScript_Settings_Text_37:
 	.string "though you may turn it off if you\l"
 	.string "choose.$"
 
-EventScript_Settings_Text_38:
-	.string "The Exp. All is currently on. Would you\n"
+EventScript_Settings_Text_71:
+	.string "The {COLOR RED}Exp. All{COLOR DARK_GRAY} is currently on. Would you\n"
 	.string "like to turn it off?$"
 
-EventScript_Settings_Text_39:
-	.string "Turned the Exp. All off.$"
+EventScript_Settings_Text_72:
+	.string "Turned the {COLOR RED}Exp. All{COLOR DARK_GRAY} off.$"
 
-EventScript_Settings_Text_40:
-	.string "The Exp. All is currently off. Would you\n"
+EventScript_Settings_Text_73:
+	.string "The {COLOR RED}Exp. All{COLOR DARK_GRAY} is currently off. Would you\n"
 	.string "like to turn it on?$"
 
-EventScript_Settings_Text_41:
-	.string "Turned the Exp. All on.$"
+EventScript_Settings_Text_74:
+	.string "Turned the {COLOR RED}Exp. All{COLOR DARK_GRAY} on.$"
 
-EventScript_Settings_Text_42:
-	.string "In trainer battles, you can Surveil the\n"
-	.string "opposing party to gain more\l"
-	.string "information.$"
+EventScript_Settings_Text_75:
+	.string "The {COLOR RED}Challenge{COLOR DARK_GRAY} setting makes battles\n"
+	.string "more difficult.\p"
+	.string "Special trainers have harder fights and\n"
+	.string "the player is limited in their usage of\l"
+	.string "powerful moves.\p"
+	.string "The AI cannot be PP stalled.$"
 
-EventScript_Settings_Text_43:
-	.string "Surveil currently reveals all\n"
-	.string "information about the opposing party.\p"
-	.string "Would you like to decrease the amount\n"
-	.string "of information it reveals?$"
+EventScript_Settings_Text_76:
+	.string "The {COLOR RED}Challenge{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_44:
-	.string "Lowered the power of Surveil.\p"
-	.string "You will only be able to view the\n"
-	.string "opposing team's Pokémon and their\l"
-	.string "health.$"
+EventScript_Settings_Text_77:
+	.string "Would you like to turn the {COLOR RED}Challenge{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_45:
-	.string "Surveil currently reveals only the\n"
-	.string "opposing team's Pokémon and their\l"
-	.string "health.\p"
-	.string "Would you like to increase the amount\n"
-	.string "of information it reveals?$"
+EventScript_Settings_Text_78:
+	.string "{COLOR RED}Challenge{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_46:
-	.string "Increased the power of Surveil.\p"
-	.string "You will be able to view all information\n"
-	.string "about the opposing party.$"
+EventScript_Settings_Text_79:
+	.string "The {COLOR RED}Challenge{COLOR DARK_GRAY} setting is currently off.$"
 
-EventScript_Settings_Text_47:
-	.string "Leviathans and other boss battles have\n"
-	.string "two possible difficulties.$"
+EventScript_Settings_Text_80:
+	.string "Would you like to turn the {COLOR RED}Challenge{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_48:
-	.string "Boss battles are currently set to the\n"
-	.string "harder difficulty.$"
+EventScript_Settings_Text_81:
+	.string "{COLOR RED}Challenge{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_49:
-	.string "Would you like to make it so that these\n"
-	.string "battles are easier?$"
-
-EventScript_Settings_Text_50:
-	.string "Boss battles set to the easier\n"
-	.string "difficulty.$"
-
-EventScript_Settings_Text_51:
-	.string "Boss battles are currently set to the\n"
-	.string "easier difficulty.$"
-
-EventScript_Settings_Text_52:
-	.string "Would you like to make it so that these\n"
-	.string "battles are more difficult?$"
-
-EventScript_Settings_Text_53:
-	.string "Boss battles set to the harder\n"
-	.string "difficulty.$"
-
-EventScript_Settings_Text_54:
-	.string "You can choose to make all trainers\n"
+EventScript_Settings_Text_82:
+	.string "The {COLOR RED}Gauntlet{COLOR DARK_GRAY} setting makes all trainers\n"
 	.string "mandatory before leaving a Zone.$"
 
-EventScript_Settings_Text_55:
-	.string "All trainers are currently mandatory.$"
+EventScript_Settings_Text_83:
+	.string "The {COLOR RED}Gauntlet{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_56:
-	.string "Would you like to make trainers no\n"
-	.string "longer all mandatory?$"
+EventScript_Settings_Text_84:
+	.string "Would you like to turn the {COLOR RED}Gauntlet{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_57:
-	.string "Trainers are no longer all mandatory.$"
+EventScript_Settings_Text_85:
+	.string "{COLOR RED}Gauntlet{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_58:
-	.string "Some trainers are currently optional.$"
+EventScript_Settings_Text_86:
+	.string "The {COLOR RED}Gauntlet{COLOR DARK_GRAY} setting is currently off.$"
 
-EventScript_Settings_Text_59:
-	.string "Would you like to make it so that all\n"
-	.string "trainers are mandatory?$"
+EventScript_Settings_Text_87:
+	.string "Would you like to turn the {COLOR RED}Gauntlet{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_60:
-	.string "All trainers are now mandatory.$"
+EventScript_Settings_Text_88:
+	.string "{COLOR RED}Gauntlet{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_61:
-	.string "In-battle items, such as healing items\n"
-	.string "or X-items, generally give the player\l"
-	.string "an extreme advantage over opponents,\l"
-	.string "especially when used well.\p"
+EventScript_Settings_Text_89:
+	.string "The {COLOR RED}Antidoctor{COLOR DARK_GRAY} setting prevents\n"
+	.string "in-battle items from being used during\l"
+	.string "trainer battles.\p"
 	.string "Pokémon Battle Labyrinth does not have\n"
 	.string "opponents use any items.$"
 
-EventScript_Settings_Text_62:
-	.string "The usage of in-battle items is\n"
-	.string "currently disabled.$"
+EventScript_Settings_Text_90:
+	.string "The {COLOR RED}Antidoctor{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_63:
-	.string "Would you like to enable in-battle\n"
-	.string "items?$"
+EventScript_Settings_Text_91:
+	.string "Would you like to turn the {COLOR RED}Antidoctor{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_64:
-	.string "Enabled in-battle items.$"
+EventScript_Settings_Text_92:
+	.string "{COLOR RED}Antidoctor{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_65:
-	.string "The usage of in-battle items is\n"
-	.string "currently enabled.$"
+EventScript_Settings_Text_93:
+	.string "The {COLOR RED}Antidoctor{COLOR DARK_GRAY} setting is currently\n"
+	.string "off.$"
 
-EventScript_Settings_Text_66:
-	.string "Would you like to disable in-battle\n"
-	.string "items?$"
+EventScript_Settings_Text_94:
+	.string "Would you like to turn the {COLOR RED}Antidoctor{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_67:
-	.string "Disabled in-battle items.$"
+EventScript_Settings_Text_95:
+	.string "{COLOR RED}Antidoctor{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_68:
-	.string "Set mode is currently required.$"
+EventScript_Settings_Text_96:
+	.string "The {COLOR RED}Clumsy{COLOR DARK_GRAY} setting enforces Set mode.$"
 
-EventScript_Settings_Text_69:
-	.string "Would you like to make it so Set mode is\n"
-	.string "not required?$"
+EventScript_Settings_Text_97:
+	.string "The {COLOR RED}Clumsy{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_70:
-	.string "Set mode is no longer required.$"
+EventScript_Settings_Text_98:
+	.string "Would you like to turn the {COLOR RED}Clumsy{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_71:
-	.string "Set mode is currently not required.$"
+EventScript_Settings_Text_99:
+	.string "{COLOR RED}Clumsy{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_72:
-	.string "Would you like to make it so Set mode is\n"
-	.string "required?$"
+EventScript_Settings_Text_100:
+	.string "The {COLOR RED}Clumsy{COLOR DARK_GRAY} setting is currently off.$"
 
-EventScript_Settings_Text_73:
-	.string "Set mode is required.$"
+EventScript_Settings_Text_101:
+	.string "Would you like to turn the {COLOR RED}Clumsy{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_74:
-	.string "EVs are currently disabled.$"
+EventScript_Settings_Text_102:
+	.string "{COLOR RED}Clumsy{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_75:
-	.string "Would you like to enable EVs?$"
+EventScript_Settings_Text_103:
+	.string "The {COLOR RED}Effortless{COLOR DARK_GRAY} setting prevents\n"
+	.string "Pokémon from gaining EVs.$"
 
-EventScript_Settings_Text_76:
-	.string "Enabled EVs.$"
+EventScript_Settings_Text_104:
+	.string "The {COLOR RED}Effortless{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_77:
-	.string "EVs are currently enabled.$"
+EventScript_Settings_Text_105:
+	.string "Would you like to turn the {COLOR RED}Effortless{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_78:
-	.string "Would you like to disable EVs?$"
+EventScript_Settings_Text_106:
+	.string "{COLOR RED}Effortless{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_79:
-	.string "Disabled EVs.$"
+EventScript_Settings_Text_107:
+	.string "The {COLOR RED}Effortless{COLOR DARK_GRAY} setting is currently\n"
+	.string "off.$"
 
-EventScript_Settings_Text_80:
+EventScript_Settings_Text_108:
+	.string "Would you like to turn the {COLOR RED}Effortless{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
+
+EventScript_Settings_Text_109:
+	.string "{COLOR RED}Effortless{COLOR DARK_GRAY} setting turned on.$"
+
+EventScript_Settings_Text_110:
 	.string "In most Pokémon games, players can\n"
 	.string "farm items and money by growing\l"
 	.string "Berries, Thief, and other means.\p"
-	.string "The ability to 'farm', so to speak, can\n"
-	.string "be disabled by this setting.$"
+	.string "The {COLOR RED}Red Thumb{COLOR DARK_GRAY} setting disables these\n"
+	.string "ways of infinitely obtaining items.$"
 
-EventScript_Settings_Text_81:
-	.string "Farming is currently disabled.$"
+EventScript_Settings_Text_111:
+	.string "The {COLOR RED}Red Thumb{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_82:
-	.string "Would you like to enable farming?$"
+EventScript_Settings_Text_112:
+	.string "Would you like to turn the {COLOR RED}Red Thumb{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_83:
-	.string "Farming enabled.$"
+EventScript_Settings_Text_113:
+	.string "{COLOR RED}Red Thumb{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_84:
-	.string "Farming is currently enabled.$"
+EventScript_Settings_Text_114:
+	.string "The {COLOR RED}Red Thumb{COLOR DARK_GRAY} setting is currently off.$"
 
-EventScript_Settings_Text_85:
-	.string "Would you like to disable farming?$"
+EventScript_Settings_Text_115:
+	.string "Would you like to turn the {COLOR RED}Red Thumb{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_86:
-	.string "Farming disabled.$"
+EventScript_Settings_Text_116:
+	.string "{COLOR RED}Red Thumb{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_87:
+EventScript_Settings_Text_117:
 	.string "In most Pokémon games, players can\n"
 	.string "'grind' experience by defeating wild\l"
 	.string "Pokémon.\p"
-	.string "This setting can disable wild Pokémon\n"
-	.string "giving experience, to prevent the\l"
-	.string "player from grinding.$"
+	.string "The {COLOR RED}Lazy{COLOR DARK_GRAY} setting prevents players from\n"
+	.string "grinding by disabling experience gain\l"
+	.string "from wild Pokémon.$"
 
-EventScript_Settings_Text_88:
-	.string "Grinding is currently disabled.$"
+EventScript_Settings_Text_118:
+	.string "The {COLOR RED}Lazy{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_89:
-	.string "Would you like to enable grinding on wild\n"
-	.string "Pokémon?$"
+EventScript_Settings_Text_119:
+	.string "Would you like to turn the {COLOR RED}Lazy{COLOR DARK_GRAY} setting\n"
+	.string "off?$"
 
-EventScript_Settings_Text_90:
-	.string "Grinding enabled.$"
+EventScript_Settings_Text_120:
+	.string "{COLOR RED}Lazy{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_91:
-	.string "Grinding is currently enabled.$"
+EventScript_Settings_Text_121:
+	.string "The {COLOR RED}Lazy{COLOR DARK_GRAY} setting is currently off.$"
 
-EventScript_Settings_Text_92:
-	.string "Would you like to disable grinding on\n"
-	.string "wild Pokémon?$"
+EventScript_Settings_Text_122:
+	.string "Would you like to turn the {COLOR RED}Lazy{COLOR DARK_GRAY} setting\n"
+	.string "on?$"
 
-EventScript_Settings_Text_93:
-	.string "Grinding disabled.$"
+EventScript_Settings_Text_123:
+	.string "{COLOR RED}Lazy{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_94:
-	.string "TMs are currently single use.$"
+EventScript_Settings_Text_124:
+	.string "The {COLOR RED}Single-Use{COLOR DARK_GRAY} setting makes all TMs\n"
+	.string "single-use.$"
 
-EventScript_Settings_Text_95:
-	.string "Would you like to make TMs infinite use?$"
+EventScript_Settings_Text_125:
+	.string "The {COLOR RED}Single-Use{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_96:
-	.string "TMs are now infinite use.$"
+EventScript_Settings_Text_126:
+	.string "Would you like to turn the {COLOR RED}Single-Use{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_97:
-	.string "TMs are currently infinite use.$"
+EventScript_Settings_Text_127:
+	.string "{COLOR RED}Single-Use{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_98:
-	.string "Would you like to make TMs single use?$"
+EventScript_Settings_Text_128:
+	.string "The {COLOR RED}Single-Use{COLOR DARK_GRAY} setting is currently\n"
+	.string "off.$"
 
-EventScript_Settings_Text_99:
-	.string "TMs are now single use.$"
+EventScript_Settings_Text_129:
+	.string "Would you like to turn the {COLOR RED}Single-Use{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_100:
-	.string "Trainers currently give 1/2 their\n"
-	.string "reward money.$"
+EventScript_Settings_Text_130:
+	.string "{COLOR RED}Single-Use{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_101:
-	.string "Would you like to revert Trainer reward\n"
-	.string "money to its default amount?$"
+EventScript_Settings_Text_131:
+	.string "The {COLOR RED}Poor{COLOR DARK_GRAY} setting halves the reward\n"
+	.string "money from trainers.$"
 
-EventScript_Settings_Text_102:
-	.string "Trainer reward money reverted to its default amount.$"
+EventScript_Settings_Text_132:
+	.string "The {COLOR RED}Poor{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_103:
-	.string "Trainers currently give their default\n"
-	.string "reward money.$"
+EventScript_Settings_Text_133:
+	.string "Would you like to turn the {COLOR RED}Poor{COLOR DARK_GRAY} setting\n"
+	.string "off?$"
 
-EventScript_Settings_Text_104:
-	.string "Would you like to decrease trainer\n"
-	.string "reward money by 1/2?$"
+EventScript_Settings_Text_134:
+	.string "{COLOR RED}Poor{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_105:
-	.string "Trainer reward money set to 1/2.$"
+EventScript_Settings_Text_135:
+	.string "The {COLOR RED}Poor{COLOR DARK_GRAY} setting is currently off.$"
 
-EventScript_Settings_Text_106:
+EventScript_Settings_Text_136:
+	.string "Would you like to turn the {COLOR RED}Poor{COLOR DARK_GRAY} setting\n"
+	.string "on?$"
+
+EventScript_Settings_Text_137:
+	.string "{COLOR RED}Poor{COLOR DARK_GRAY} setting turned on.$"
+
+EventScript_Settings_Text_138:
 	.string "In some Zones, there are certain helper\n"
 	.string "NPCs that can sell cheap items or heal\l"
 	.string "the player's party.\p"
-	.string "This setting can disable their services.$"
+	.string "The {COLOR RED}Independent{COLOR DARK_GRAY} setting disables many\n"
+	.string "of these NPCs.$"
 
-EventScript_Settings_Text_107:
-	.string "Helper NPCs are currently disabled.$"
+EventScript_Settings_Text_139:
+	.string "The {COLOR RED}Independent{COLOR DARK_GRAY} setting is currently\n"
+	.string "on.$"
 
-EventScript_Settings_Text_108:
-	.string "Would you like to enable helper NPCs?$"
+EventScript_Settings_Text_140:
+	.string "Would you like to turn the {COLOR RED}Independent{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_109:
-	.string "Helper NPCs enabled.$"
+EventScript_Settings_Text_141:
+	.string "{COLOR RED}Independent{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_110:
-	.string "Helper NPCs are currently enabled.$"
+EventScript_Settings_Text_142:
+	.string "The {COLOR RED}Independent{COLOR DARK_GRAY} setting is currently\n"
+	.string "off.$"
 
-EventScript_Settings_Text_111:
-	.string "Would you like to disable helper NPCs?$"
+EventScript_Settings_Text_143:
+	.string "Would you like to turn the {COLOR RED}Independent{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_112:
-	.string "Helper NPCs disabled.$"
+EventScript_Settings_Text_144:
+	.string "{COLOR RED}Independent{COLOR DARK_GRAY} setting turned on.$"
 
-EventScript_Settings_Text_113:
+EventScript_Settings_Text_145:
 	.string "Retiring from a Zone allows one to\n"
 	.string "return to the Sanctuary, at the cost\l"
 	.string "of half of their money as well as losing\l"
-	.string "all progress made thus far in the Zone.$"
+	.string "all progress made thus far in the Zone.\p"
+	.string "The {COLOR RED}Workaholic{COLOR DARK_GRAY} setting prevents\n"
+	.string "players from using this option.$"
 
-EventScript_Settings_Text_114:
-	.string "Retiring is currently disabled.$"
+EventScript_Settings_Text_146:
+	.string "The {COLOR RED}Workaholic{COLOR DARK_GRAY} setting is currently on.$"
 
-EventScript_Settings_Text_115:
-	.string "Would you like to enable Retiring?$"
+EventScript_Settings_Text_147:
+	.string "Would you like to turn the {COLOR RED}Workaholic{COLOR DARK_GRAY}\n"
+	.string "setting off?$"
 
-EventScript_Settings_Text_116:
-	.string "Retiring enabled.$"
+EventScript_Settings_Text_148:
+	.string "{COLOR RED}Workaholic{COLOR DARK_GRAY} setting turned off.$"
 
-EventScript_Settings_Text_117:
-	.string "Retiring is currently enabled.$"
+EventScript_Settings_Text_149:
+	.string "The {COLOR RED}Workaholic{COLOR DARK_GRAY} setting is currently\n"
+	.string "off.$"
 
-EventScript_Settings_Text_118:
-	.string "Would you like to disable Retiring?$"
+EventScript_Settings_Text_150:
+	.string "Would you like to turn the {COLOR RED}Workaholic{COLOR DARK_GRAY}\n"
+	.string "setting on?$"
 
-EventScript_Settings_Text_119:
-	.string "Retiring disabled.$"
+EventScript_Settings_Text_151:
+	.string "{COLOR RED}Workaholic{COLOR DARK_GRAY} setting turned on.$"
 
 EventScript_MusicMenu_Text_0:
 	.string "Please select a music setting.$"
@@ -5099,36 +5297,6 @@ EventScript_MusicMenu_Text_19:
 
 EventScript_MusicMenu_Text_20:
 	.string "The BW Leviathan music is not\nfinished.$"
-
-EventScript_Surveillance_Text_0:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In trainer battles, you can\n"
-	.string "Surveil the opposing party to gain more\l"
-	.string "information.$"
-
-EventScript_Surveillance_Text_1:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals all\n"
-	.string "information about the opposing party.\p"
-	.string "Would you like to decrease the amount\n"
-	.string "of information it reveals?$"
-
-EventScript_Surveillance_Text_2:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Lowered the power of Surveil.\p"
-	.string "You will only be able to view the\n"
-	.string "opposing team's Pokémon and their\l"
-	.string "health.$"
-
-EventScript_Surveillance_Text_3:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Surveil currently reveals only\n"
-	.string "the opposing team's Pokémon and their\l"
-	.string "health.\p"
-	.string "Would you like to increase the amount\n"
-	.string "of information it reveals?$"
-
-EventScript_Surveillance_Text_4:
-	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Increased the power of\n"
-	.string "Surveil.\p"
-	.string "You will be able to view all information\n"
-	.string "about the opposing party.$"
 
 Zone_EventScript_RetirePrompt_Text_0:
 	.string "Would you like to retire your attempt at\n"
@@ -5207,100 +5375,70 @@ gText_Lelouch_ChangedNature::
 	.string "{STR_VAR_1}'s nature to the\l"
 	.string "requested nature.$"
 
-gText_Colress_VanillaExplanation::
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode does not add any extra\nmodifications.$"
-
-gText_Colress_DefaultExplained::
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} is the standard difficulty\n"
-	.string "option.\p"
-	.string "It is recommended for any first\n"
-	.string "playthroughs.$"
-
 gText_Colress_BrutalExplained::
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} is the harder difficulty option.\p"
-	.string "All boss battles are far more\n"
-	.string "challenging.\p"
-	.string "In addition, there are a number of rules\n"
-	.string "implemented to make this mode even\l"
-	.string "more difficult.\p"
-	.string "All trainers are now mandatory.\p"
-	.string "Items cannot be used in battle.\p"
-	.string "Set mode cannot be turned off.\p"
-	.string "Pokémon cannot gain EVs.\p"
-	.string "TMs are single use.\p"
-	.string "Trainer battles give less money.\p"
-	.string "Wild Pokémon do not give any\n"
-	.string "experience.\p"
-	.string "Items and money cannot be farmed from\n"
-	.string "wild Pokémon or any other means.\p"
-	.string "Many helper NPCs are unavailable.\p"
-	.string "Hidden items are unavailable.\p"
-	.string "Some moves use more PP than normal and\n"
-	.string "opponents do not use PP.\p"
-	.string "If you play on {COLOR RED}Brutal{COLOR DARK_GRAY}, you can change to\n"
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} at any point by speaking to me.\p"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode enables the following\n"
+	.string "difficulty changes:\p"
+	.string "{COLOR RED}Challenge{COLOR DARK_GRAY},\n"
+	.string "{COLOR RED}Gauntlet{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Antidoctor{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Clumsy{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Effortless{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Red Thumb{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Lazy{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Single-Use{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Poor{COLOR DARK_GRAY},\l"
+	.string "{COLOR RED}Independent{COLOR DARK_GRAY},\l"
+	.string "and {COLOR RED}Workaholic{COLOR DARK_GRAY}.\p"
+	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} mode can only be enabled at the\n"
+	.string "beginning of the game, but can be\l"
+	.string "disabled at any point.\p"
 	.string "It is not recommended to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
-	.string "unless you are familiar with {COLOR RED}Pokémon\l"
-	.string "Battle Labyrinth{COLOR DARK_GRAY} already.$"
-
-gText_Colress_InfiniteExplained::
-	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} is the easiest difficulty\n"
-	.string "option.\p"
-	.string "It gives you access to unlimited\n"
-	.string "resources that can normally be\l"
-	.string "obtained by grinding, such as money\l"
-	.string "and held items.\p"
-	.string "This is not the intended game mode, as\n"
-	.string "resource management was designed to\l"
-	.string "be part of the challenges ahead.\p"
-	.string "Note the {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty cannot be\n"
-	.string "adjusted off once set.$"
-
-gText_Colress_GameModes::
-	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} offers\n"
-	.string "optional game modes.\p"
-	.string "If you do not choose any of them, you\n"
-	.string "will play on the {COLOR RED}Vanilla{COLOR DARK_GRAY} game mode,\l"
-	.string "which adds no extra modifications.$"
+	.string "mode unless you are familiar with\l"
+	.string "{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY} already.$"
 
 gText_Colress_RandomizerExplanation::
-	.string "The {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode randomizes\n"
-	.string "wild encounters and gift Pokémon,\l"
-	.string "including your starter.\p"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode randomizes wild\n"
+	.string "encounters and gift Pokémon, including\l"
+	.string "your starter.\p"
 	.string "Trainer Pokémon are left unchanged.\p"
-	.string "Note the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode cannot\n"
-	.string "be adjusted once set.$"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode can only be altered at\n"
+	.string "the beginning of the game.$"
 
 gText_Colress_NuzlockeExplained::
-	.string "The {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode completely\n"
-	.string "implements all standard Nuzlocke rules,\l"
-	.string "such as permanent death and capture\l"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode completely implements all\n"
+	.string "standard Nuzlocke rules, such as\l"
+	.string "permanent death and capture\l"
 	.string "restrictions.\p"
-	.string "It comes with Species Clause and Shiny\n"
-	.string "Clause.\p"
-	.string "You can turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode at any\n"
-	.string "point by speaking to me.\p"
+	.string "It comes with Species Clause, Shiny\n"
+	.string "Clause, and Gift Clause.\p"
 	.string "It is not recommended to play {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
 	.string "mode unless you are familiar with\l"
-	.string "Nuzlockes already.$"
+	.string "Nuzlockes already.\p"
+	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode can only be enabled at\n"
+	.string "the beginning of the game, but can be\l"
+	.string "disabled at any point.$"
 
-gText_Colress_WouldTurnOffNuzlocke::
-	.string "Would you like to turn off {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\nand switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?$"
-
-gText_Colress_SureTurnOffNuzlocke::
-	.string "Are you sure you would like to turn\n"
-	.string "off {COLOR RED}Nuzlocke{COLOR DARK_GRAY} and switch to {COLOR RED}Vanilla{COLOR DARK_GRAY}?$"
+gText_Colress_InfiniteExplained::
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} mode gives you access to\n"
+	.string "unlimited resources that can normally\l"
+	.string "be obtained by grinding.\p"
+	.string "This is not the intended game mode, as\n"
+	.string "resource management was designed to\l"
+	.string "be part of the game.\p"
+	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} mode can only be altered at\n"
+	.string "the beginning of the game.$"
 
 gText_Colress_NumDeathsNuzlocke::
 	.string "So far there have been {STR_VAR_1} death(s).$"
 
 gText_Colress_CannotChangeSettingBrutal::
-	.string "You cannot change this setting, as you\n"
-	.string "are on Brutal difficulty.$"
+	.string "You cannot change this setting\n"
+	.string "because you are playing on Brutal mode.$"
 
 gText_Colress_CannotChangeSettingInfinite::
-	.string "You cannot change this setting, as you\n"
-	.string "are on Infinite difficulty.$"
+	.string "You cannot change this setting\n"
+	.string "because you are playing on Infinite\l"
+	.string "mode.$"
 
 gText_ItemChestIsEmpty::
 	.string "The item chest is empty.$"

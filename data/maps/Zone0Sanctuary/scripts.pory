@@ -21,9 +21,6 @@ script Zone0Sanctuary_EventScript_Intro {
 	applymovement(1, Common_Movement_Colress_WalkDown)
 	call(EventScript_MoveCameraDown)
 	waitmovement(0)
-	// call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-	// call(Zone0Sanctuary_EventScript_DisableRandomizer)
-	// call(Zone0Sanctuary_EventScript_EnableNuzlocke)
 	msgbox("Welcome to the\n{COLOR RED}Pokémon Battle Labyrinth{COLOR DARK_GRAY}.\pI am your guide for braving the\nchallenges ahead.\pWould you like to listen to the tutorial?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_TEMP_0, 1)
@@ -35,128 +32,20 @@ script Zone0Sanctuary_EventScript_Intro {
 		"In order to win, you must progress through all Zones without losing a battle."))
 		delay(96)
 	}
-	msgbox(format("Would you like to listen to the difficulty options explanation?"), MSGBOX_YESNO)
+	setflag(FLAG_SETTINGS_EXP_ALL)
+	msgbox(format("Pokémon Battle Labyrinth has many settings that are customizable, including {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode,\l{COLOR RED}Randomizer{COLOR DARK_GRAY} mode, and difficulty options.\pWould you like to modify these settings now from the default?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
-		setvar(VAR_TEMP_1, 1)
-	}
-	while (var(VAR_TEMP_4) == 0) {
-		if (var(VAR_TEMP_1) == 1) {
-			msgbox(format("There are three game difficulty options: {COLOR RED}Default{COLOR DARK_GRAY}, {COLOR RED}Brutal{COLOR DARK_GRAY}, and {COLOR RED}Infinite{COLOR DARK_GRAY}."), MSGBOX_DEFAULT)
-			msgbox(gText_Colress_DefaultExplained, MSGBOX_DEFAULT)
-			msgbox(gText_Colress_BrutalExplained, MSGBOX_DEFAULT)
-			msgbox(gText_Colress_InfiniteExplained)
-			delay(96)
-		}
-		msgbox(format("Which difficulty option would you like to play on?"), MSGBOX_DEFAULT)
-		multichoice(2, 5, MULTI_DIFFICULTY, 1)
-		switch(var(VAR_RESULT)) {
-			case 0:
-				if (var(VAR_TEMP_1) == 1) {
-					msgbox(format("Are you sure you want to play on {COLOR RED}Default{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-						setvar(VAR_TEMP_4, 1)
-					}
-				} else {
-					call(Zone0Sanctuary_EventScript_SetDefaultDifficulty)
-					setvar(VAR_TEMP_4, 1)
-				}
-			case 1:
-				if (var(VAR_TEMP_1) == 1) {
-					msgbox(format("Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-						setvar(VAR_TEMP_4, 1)
-					}
-				} else {
-					call(Zone0Sanctuary_EventScript_SetBrutalDifficulty)
-					setvar(VAR_TEMP_4, 1)
-				}
-			case 2:
-				if (var(VAR_TEMP_1) == 1) {
-					msgbox(format("Are you sure you want to play on {COLOR RED}Infinite{COLOR DARK_GRAY} difficulty?"), MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						call(Zone0Sanctuary_EventScript_SetInfiniteDifficulty)
-						setvar(VAR_TEMP_4, 1)
-					}
-				} else {
-					call(Zone0Sanctuary_EventScript_SetInfiniteDifficulty)
-					setvar(VAR_TEMP_4, 1)
-				}
-		}
-	}
-	delay(16)
-	msgbox(format("Would you like to listen to the game mode options explanations?"), MSGBOX_YESNO)
-	if (var(VAR_RESULT) == YES) {
-		msgbox(gText_Colress_GameModes, MSGBOX_DEFAULT)
-		setvar(VAR_TEMP_2, 1)
-	}
-	while {
-		if (var(VAR_TEMP_2) == 1) {
-			msgbox(gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT)
-		}
-		msgbox(format("Would you like to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == NO) {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to enable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_EnableRandomizer)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_EnableRandomizer)
-				break
-			}
-		} else {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to disable the {COLOR RED}Randomizer{COLOR DARK_GRAY}?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_DisableRandomizer)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_DisableRandomizer)
-				break
+		setvar(VAR_TEMP_9, 1) // VAR_TEMP_9 being set to 1 means we do the settings thing
+		msgbox(format("Note that some settings cannot be adjusted once the challenge has started.\pIf you're looking to play the hardest game mode, {COLOR RED}Brutal{COLOR DARK_GRAY} automatically enables most of the difficulty settings.\pOtherwise, information about each individual setting can be found by selecting it."), MSGBOX_DEFAULT)
+		while (var(VAR_TEMP_4) == 0) {
+			call(EventScript_Settings)
+			msgbox(format("Are you sure you are done selecting your settings?"), MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				setvar(VAR_TEMP_4, 1) // VAR_TEMP_4 being set to 1 means we finished looking at settings
 			}
 		}
-	}
-	delay(16)
-	while {
-		if (var(VAR_TEMP_2) == 1) {
-			msgbox(gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT)
-		}
-		msgbox(format("Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY} game mode?"), MSGBOX_YESNO)
-		if (var(VAR_RESULT) == NO) {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to enable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_EnableNuzlocke)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_EnableNuzlocke)
-				break
-			}
-		} else {
-			if (var(VAR_TEMP_2) == 1) {
-				msgbox(format("Are you sure you want to disable {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?"), MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					call(Zone0Sanctuary_EventScript_DisableNuzlocke)
-					break
-				}
-			} else {
-				call(Zone0Sanctuary_EventScript_DisableNuzlocke)
-				break
-			}
-		}
-	}
-	delay(16)
-	if (flag(FLAG_SETTINGS_RANDOMIZER) == false && flag(FLAG_SETTINGS_NUZLOCKE) == false) {
-		msgbox(format("You have chosen to disable all optional game modes."), MSGBOX_DEFAULT)
-		playse(SE_PC_LOGIN)
-		msgbox(format("{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
-		waitse
-		closemessage
+		msgbox(format("Settings saved!"), MSGBOX_DEFAULT)
+		setvar(VAR_TEMP_9, 0)
 	}
 	delay(16)
 	if (var(VAR_TEMP_0) == 1) {
@@ -309,69 +198,6 @@ script Zone0Sanctuary_EventScript_Intro {
 		"Choose carefully as these Pokémon are very rare."))
 		goto(Zone0Sanctuary_EventScript_HandleStarterSelectionDefault)
 	}
-}
-
-script Zone0Sanctuary_EventScript_SetDefaultDifficulty {
-	setflag(FLAG_SETTINGS_FULL_SURVEIL)
-	playse(SE_PC_LOGIN)
-	msgbox(format("{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	return
-}
-
-script Zone0Sanctuary_EventScript_SetBrutalDifficulty {
-	setflag(FLAG_SETTINGS_BRUTAL)
-	playse(SE_PC_LOGIN)
-	msgbox(format("{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	special(ReverseHiddenItemFlags)
-	return
-}
-
-script Zone0Sanctuary_EventScript_SetInfiniteDifficulty {
-	setflag(FLAG_SETTINGS_INFINITE)
-	playse(SE_PC_LOGIN)
-	msgbox(format("{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty enabled."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	return
-}
-
-script Zone0Sanctuary_EventScript_DisableRandomizer {
-	playse(SE_PC_OFF)
-	msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode disabled."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	return
-}
-
-script Zone0Sanctuary_EventScript_EnableRandomizer {
-	setflag(FLAG_SETTINGS_RANDOMIZER)
-	playse(SE_PC_LOGIN)
-	msgbox(format("{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	return
-}
-
-script Zone0Sanctuary_EventScript_DisableNuzlocke {
-	playse(SE_PC_OFF)
-	msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	return
-}
-
-script Zone0Sanctuary_EventScript_EnableNuzlocke {
-	callnative(GlobalNuzlockeSet)
-	setflag(FLAG_SETTINGS_NUZLOCKE)
-	playse(SE_PC_LOGIN)
-	msgbox(format("{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled."), MSGBOX_DEFAULT)
-	waitse
-	closemessage
-	return
 }
 
 script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
@@ -556,7 +382,6 @@ script Zone0Sanctuary_EventScript_HandleStarterSelectionDefault {
 		call(Common_EventScript_NameReceivedPartyMon)
 	}
 	goto(Zone0Sanctuary_EventScript_EndIntro)
-
 }
 
 script Zone0Sanctuary_EventScript_EndIntro {
@@ -643,7 +468,6 @@ script Zone0Sanctuary_EventScript_EndIntro {
 		}
 		additem(ITEM_POKE_BALL, 15)
 	}
-	setflag(FLAG_SETTINGS_EXP_ALL)
 	setflag(FLAG_SYS_POKEDEX_GET)
 	special(SetUnlockedPokedexFlags)
 	special(NewGameSetup)
@@ -682,7 +506,6 @@ script Zone0Sanctuary_EventScript_NextZone {
 }
 
 raw `
-
 Zone0Sanctuary_Movement_Colress_FirstShop:
 	walk_left
 	walk_down

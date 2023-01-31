@@ -28,52 +28,19 @@ Zone0Sanctuary_EventScript_Intro::
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_2
 Zone0Sanctuary_EventScript_Intro_1:
+	setflag FLAG_SETTINGS_EXP_ALL
 	msgbox Zone0Sanctuary_EventScript_Intro_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_Intro_5
 Zone0Sanctuary_EventScript_Intro_4:
-Zone0Sanctuary_EventScript_Intro_8:
-	compare VAR_TEMP_4, 0
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_9
-	delay 16
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_9, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_12
-Zone0Sanctuary_EventScript_Intro_11:
-Zone0Sanctuary_EventScript_Intro_18:
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_28
-Zone0Sanctuary_EventScript_Intro_27:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_10, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_47
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_65
-	call Zone0Sanctuary_EventScript_DisableRandomizer
-Zone0Sanctuary_EventScript_Intro_17:
-	delay 16
-Zone0Sanctuary_EventScript_Intro_25:
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_45
-Zone0Sanctuary_EventScript_Intro_44:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_13, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_59
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_74
-	call Zone0Sanctuary_EventScript_DisableNuzlocke
-Zone0Sanctuary_EventScript_Intro_24:
-	delay 16
-	goto_if_unset FLAG_SETTINGS_RANDOMIZER, Zone0Sanctuary_EventScript_Intro_41
-Zone0Sanctuary_EventScript_Intro_39:
 	delay 16
 	compare VAR_TEMP_0, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_57
-Zone0Sanctuary_EventScript_Intro_56:
-	goto_if_set FLAG_SETTINGS_RANDOMIZER, Zone0Sanctuary_EventScript_Intro_69
-Zone0Sanctuary_EventScript_Intro_68:
-	goto_if_set FLAG_SETTINGS_BRUTAL, Zone0Sanctuary_EventScript_Intro_81
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_30
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_8
+Zone0Sanctuary_EventScript_Intro_7:
+	goto_if_set FLAG_SETTINGS_RANDOMIZER, Zone0Sanctuary_EventScript_Intro_15
+Zone0Sanctuary_EventScript_Intro_14:
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone0Sanctuary_EventScript_Intro_19
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_19
 	goto Zone0Sanctuary_EventScript_HandleStarterSelectionDefault
 	return
 
@@ -84,116 +51,17 @@ Zone0Sanctuary_EventScript_Intro_2:
 	goto Zone0Sanctuary_EventScript_Intro_1
 
 Zone0Sanctuary_EventScript_Intro_5:
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_9, 1
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_4, MSGBOX_DEFAULT
+Zone0Sanctuary_EventScript_Intro_11:
+	compare VAR_TEMP_4, 0
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_12
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_6, MSGBOX_DEFAULT
+	setvar VAR_TEMP_9, 0
 	goto Zone0Sanctuary_EventScript_Intro_4
 
-Zone0Sanctuary_EventScript_Intro_9:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_15
-Zone0Sanctuary_EventScript_Intro_14:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_DEFAULT
-	multichoice 2, 5, MULTI_DIFFICULTY, 1
-	switch VAR_RESULT
-	case 0, Zone0Sanctuary_EventScript_Intro_21
-	case 1, Zone0Sanctuary_EventScript_Intro_22
-	case 2, Zone0Sanctuary_EventScript_Intro_23
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_12:
-	msgbox gText_Colress_GameModes, MSGBOX_DEFAULT
-	setvar VAR_TEMP_2, 1
-	goto Zone0Sanctuary_EventScript_Intro_11
-
-Zone0Sanctuary_EventScript_Intro_15:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_4, MSGBOX_DEFAULT
-	msgbox gText_Colress_DefaultExplained, MSGBOX_DEFAULT
-	msgbox gText_Colress_BrutalExplained, MSGBOX_DEFAULT
-	msgbox gText_Colress_InfiniteExplained
-	delay 96
-	goto Zone0Sanctuary_EventScript_Intro_14
-
-Zone0Sanctuary_EventScript_Intro_21:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_30
-	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
-	setvar VAR_TEMP_4, 1
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_22:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_33
-	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
-	setvar VAR_TEMP_4, 1
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_23:
-	compare VAR_TEMP_1, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_36
-	call Zone0Sanctuary_EventScript_SetInfiniteDifficulty
-	setvar VAR_TEMP_4, 1
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_28:
-	msgbox gText_Colress_RandomizerExplanation, MSGBOX_DEFAULT
-	goto Zone0Sanctuary_EventScript_Intro_27
-
-Zone0Sanctuary_EventScript_Intro_30:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_6, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_50
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_33:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_7, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_52
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_36:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_8, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_54
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_40:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_16, MSGBOX_DEFAULT
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_17, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	goto Zone0Sanctuary_EventScript_Intro_39
-
-Zone0Sanctuary_EventScript_Intro_41:
-	goto_if_unset FLAG_SETTINGS_NUZLOCKE, Zone0Sanctuary_EventScript_Intro_40
-	goto Zone0Sanctuary_EventScript_Intro_39
-
-Zone0Sanctuary_EventScript_Intro_45:
-	msgbox gText_Colress_NuzlockeExplained, MSGBOX_DEFAULT
-	goto Zone0Sanctuary_EventScript_Intro_44
-
-Zone0Sanctuary_EventScript_Intro_47:
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_62
-	call Zone0Sanctuary_EventScript_EnableRandomizer
-	goto Zone0Sanctuary_EventScript_Intro_17
-
-Zone0Sanctuary_EventScript_Intro_50:
-	call Zone0Sanctuary_EventScript_SetDefaultDifficulty
-	setvar VAR_TEMP_4, 1
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_52:
-	call Zone0Sanctuary_EventScript_SetBrutalDifficulty
-	setvar VAR_TEMP_4, 1
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_54:
-	call Zone0Sanctuary_EventScript_SetInfiniteDifficulty
-	setvar VAR_TEMP_4, 1
-	goto Zone0Sanctuary_EventScript_Intro_8
-
-Zone0Sanctuary_EventScript_Intro_57:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_18
+Zone0Sanctuary_EventScript_Intro_8:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_7
 	applymovement 1, Zone0Sanctuary_Movement_Colress_FirstShop
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_FirstShop
 	waitmovement 0
@@ -204,7 +72,7 @@ Zone0Sanctuary_EventScript_Intro_57:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_19
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_8
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -222,7 +90,7 @@ Zone0Sanctuary_EventScript_Intro_57:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_20
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_9
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -240,7 +108,7 @@ Zone0Sanctuary_EventScript_Intro_57:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_21
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_10
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -258,7 +126,7 @@ Zone0Sanctuary_EventScript_Intro_57:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_22
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_11
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -282,7 +150,7 @@ Zone0Sanctuary_EventScript_Intro_57:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_23
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_12
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown
@@ -299,154 +167,56 @@ Zone0Sanctuary_EventScript_Intro_57:
 	applymovement 1, Zone0Sanctuary_Movement_Colress_BackMid
 	applymovement OBJ_EVENT_ID_PLAYER, Zone0Sanctuary_Movement_Player_BackMid
 	waitmovement 0
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_24
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_13
 	delay 96
-	goto Zone0Sanctuary_EventScript_Intro_56
+	goto Zone0Sanctuary_EventScript_Intro_7
 
-Zone0Sanctuary_EventScript_Intro_59:
-	compare VAR_TEMP_2, 1
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_71
-	call Zone0Sanctuary_EventScript_EnableNuzlocke
-	goto Zone0Sanctuary_EventScript_Intro_24
-
-Zone0Sanctuary_EventScript_Intro_62:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_11, MSGBOX_YESNO
+Zone0Sanctuary_EventScript_Intro_12:
+	call EventScript_Settings
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_5, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_77
-	goto Zone0Sanctuary_EventScript_Intro_18
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_17
+	goto Zone0Sanctuary_EventScript_Intro_11
 
-Zone0Sanctuary_EventScript_Intro_65:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_12, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_79
-	goto Zone0Sanctuary_EventScript_Intro_18
-
-Zone0Sanctuary_EventScript_Intro_69:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_25
+Zone0Sanctuary_EventScript_Intro_15:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_14
 	callnative GiveRandomStarter
 	playfanfare MUS_OBTAIN_ITEM
 	bufferleadmonspeciesname 0
-	message Zone0Sanctuary_EventScript_Intro_Text_26
+	message Zone0Sanctuary_EventScript_Intro_Text_15
 	waitmessage
 	waitfanfare
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_27, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_16, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_85
-Zone0Sanctuary_EventScript_Intro_84:
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_23
+Zone0Sanctuary_EventScript_Intro_22:
 	goto Zone0Sanctuary_EventScript_EndIntro
-	goto Zone0Sanctuary_EventScript_Intro_68
+	goto Zone0Sanctuary_EventScript_Intro_14
 
-Zone0Sanctuary_EventScript_Intro_71:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_14, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_87
-	goto Zone0Sanctuary_EventScript_Intro_25
+Zone0Sanctuary_EventScript_Intro_17:
+	setvar VAR_TEMP_4, 1
+	goto Zone0Sanctuary_EventScript_Intro_11
 
-Zone0Sanctuary_EventScript_Intro_74:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_15, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_89
-	goto Zone0Sanctuary_EventScript_Intro_25
-
-Zone0Sanctuary_EventScript_Intro_77:
-	call Zone0Sanctuary_EventScript_EnableRandomizer
-	goto Zone0Sanctuary_EventScript_Intro_17
-
-Zone0Sanctuary_EventScript_Intro_79:
-	call Zone0Sanctuary_EventScript_DisableRandomizer
-	goto Zone0Sanctuary_EventScript_Intro_17
-
-Zone0Sanctuary_EventScript_Intro_81:
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_28
+Zone0Sanctuary_EventScript_Intro_19:
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_17
 	special ChooseStarter
 	waitstate
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_29, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_18, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone0Sanctuary_EventScript_Intro_92
-Zone0Sanctuary_EventScript_Intro_91:
+	goto_if_eq Zone0Sanctuary_EventScript_Intro_26
+Zone0Sanctuary_EventScript_Intro_25:
 	goto Zone0Sanctuary_EventScript_EndIntro
 	return
 
-Zone0Sanctuary_EventScript_Intro_85:
+Zone0Sanctuary_EventScript_Intro_23:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0Sanctuary_EventScript_Intro_84
+	goto Zone0Sanctuary_EventScript_Intro_22
 
-Zone0Sanctuary_EventScript_Intro_87:
-	call Zone0Sanctuary_EventScript_EnableNuzlocke
-	goto Zone0Sanctuary_EventScript_Intro_24
-
-Zone0Sanctuary_EventScript_Intro_89:
-	call Zone0Sanctuary_EventScript_DisableNuzlocke
-	goto Zone0Sanctuary_EventScript_Intro_24
-
-Zone0Sanctuary_EventScript_Intro_92:
+Zone0Sanctuary_EventScript_Intro_26:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto Zone0Sanctuary_EventScript_Intro_91
-
-
-Zone0Sanctuary_EventScript_SetDefaultDifficulty::
-	setflag FLAG_SETTINGS_FULL_SURVEIL
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_SetDefaultDifficulty_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	return
-
-
-Zone0Sanctuary_EventScript_SetBrutalDifficulty::
-	setflag FLAG_SETTINGS_BRUTAL
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	special ReverseHiddenItemFlags
-	return
-
-
-Zone0Sanctuary_EventScript_SetInfiniteDifficulty::
-	setflag FLAG_SETTINGS_INFINITE
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_SetInfiniteDifficulty_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	return
-
-
-Zone0Sanctuary_EventScript_DisableRandomizer::
-	playse SE_PC_OFF
-	msgbox Zone0Sanctuary_EventScript_DisableRandomizer_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	return
-
-
-Zone0Sanctuary_EventScript_EnableRandomizer::
-	setflag FLAG_SETTINGS_RANDOMIZER
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_EnableRandomizer_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	return
-
-
-Zone0Sanctuary_EventScript_DisableNuzlocke::
-	playse SE_PC_OFF
-	msgbox Zone0Sanctuary_EventScript_DisableNuzlocke_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	return
-
-
-Zone0Sanctuary_EventScript_EnableNuzlocke::
-	callnative GlobalNuzlockeSet
-	setflag FLAG_SETTINGS_NUZLOCKE
-	playse SE_PC_LOGIN
-	msgbox Zone0Sanctuary_EventScript_EnableNuzlocke_Text_0, MSGBOX_DEFAULT
-	waitse
-	closemessage
-	return
+	goto Zone0Sanctuary_EventScript_Intro_25
 
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault::
@@ -494,10 +264,10 @@ Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_31:
 	givemon VAR_TEMP_3, 5, ITEM_NONE
 	hidemonpic
 	playfanfare MUS_OBTAIN_ITEM
-	message Zone0Sanctuary_EventScript_Intro_Text_26
+	message Zone0Sanctuary_EventScript_Intro_Text_15
 	waitmessage
 	waitfanfare
-	msgbox Zone0Sanctuary_EventScript_Intro_Text_29, MSGBOX_YESNO
+	msgbox Zone0Sanctuary_EventScript_Intro_Text_18, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_60
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_59:
@@ -800,7 +570,6 @@ Zone0Sanctuary_EventScript_EndIntro::
 Zone0Sanctuary_EventScript_EndIntro_9:
 	additem ITEM_POKE_BALL, 15
 Zone0Sanctuary_EventScript_EndIntro_1:
-	setflag FLAG_SETTINGS_EXP_ALL
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	special NewGameSetup
@@ -1272,75 +1041,44 @@ Zone0Sanctuary_EventScript_Intro_Text_2:
 	.string "battle.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_3:
-	.string "Would you like to listen to the\n"
-	.string "difficulty options explanation?$"
+	.string "Pokémon Battle Labyrinth has many\n"
+	.string "settings that are customizable,\l"
+	.string "including {COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode,\l"
+	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} mode, and difficulty\l"
+	.string "options.\p"
+	.string "Would you like to modify these settings\n"
+	.string "now from the default?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_4:
-	.string "There are three game difficulty\n"
-	.string "options: {COLOR RED}Default{COLOR DARK_GRAY}, {COLOR RED}Brutal{COLOR DARK_GRAY}, and {COLOR RED}Infinite{COLOR DARK_GRAY}.$"
+	.string "Note that some settings cannot be\n"
+	.string "adjusted once the challenge has\l"
+	.string "started.\p"
+	.string "If you're looking to play the hardest\n"
+	.string "game mode, {COLOR RED}Brutal{COLOR DARK_GRAY} automatically\l"
+	.string "enables most of the difficulty\l"
+	.string "settings.\p"
+	.string "Otherwise, information about each\n"
+	.string "individual setting can be found by\l"
+	.string "selecting it.$"
 
 Zone0Sanctuary_EventScript_Intro_Text_5:
-	.string "Which difficulty option would you like\n"
-	.string "to play on?$"
+	.string "Are you sure you are done selecting\n"
+	.string "your settings?$"
 
 Zone0Sanctuary_EventScript_Intro_Text_6:
-	.string "Are you sure you want to play on\n"
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty?$"
+	.string "Settings saved!$"
 
 Zone0Sanctuary_EventScript_Intro_Text_7:
-	.string "Are you sure you want to play on {COLOR RED}Brutal{COLOR DARK_GRAY}\n"
-	.string "difficulty?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_8:
-	.string "Are you sure you want to play on\n"
-	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_9:
-	.string "Would you like to listen to the game\n"
-	.string "mode options explanations?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_10:
-	.string "Would you like to disable the\n"
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_11:
-	.string "Are you sure you want to enable the\n"
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_12:
-	.string "Are you sure you want to disable the\n"
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY}?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_13:
-	.string "Would you like to disable the {COLOR RED}Nuzlocke{COLOR DARK_GRAY}\n"
-	.string "game mode?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_14:
-	.string "Are you sure you want to enable\n"
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_15:
-	.string "Are you sure you want to disable\n"
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode?$"
-
-Zone0Sanctuary_EventScript_Intro_Text_16:
-	.string "You have chosen to disable all optional\n"
-	.string "game modes.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_17:
-	.string "{COLOR RED}Vanilla{COLOR DARK_GRAY} mode enabled.$"
-
-Zone0Sanctuary_EventScript_Intro_Text_18:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Allow me to show you each of\n"
 	.string "the shops.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_19:
+Zone0Sanctuary_EventScript_Intro_Text_8:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top left shop is {COLOR RED}Tim's\n"
 	.string "General Purpose Shop{COLOR DARK_GRAY}.\p"
 	.string "Healing supplies, basic Pokéballs, and\n"
 	.string "other common items are sold here.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_20:
+Zone0Sanctuary_EventScript_Intro_Text_9:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The top right shop is {COLOR RED}Silph\n"
 	.string "Unique Item Shop{COLOR DARK_GRAY}.\p"
 	.string "They sell a variety of held items and\n"
@@ -1348,27 +1086,27 @@ Zone0Sanctuary_EventScript_Intro_Text_20:
 	.string "variations, evolution items, Berries,\l"
 	.string "and so on.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_21:
+Zone0Sanctuary_EventScript_Intro_Text_10:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom right shop is {COLOR RED}Joy's\n"
 	.string "Healing Shop{COLOR DARK_GRAY}.\p"
 	.string "At the low cost of ¥1000, they will heal\n"
 	.string "your entire party.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_22:
+Zone0Sanctuary_EventScript_Intro_Text_11:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: The bottom left shop is\n"
 	.string "{COLOR RED}Lelouch's Special Services Shop{COLOR DARK_GRAY}.\p"
 	.string "They offer a range of Pokémon services,\n"
 	.string "but only to customers who can pay the\l"
 	.string "right price.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_23:
+Zone0Sanctuary_EventScript_Intro_Text_12:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: In addition, you have access\n"
 	.string "to {COLOR RED}Zone 0{COLOR DARK_GRAY}.\p"
 	.string "If you would like to enter {COLOR RED}Zone 0{COLOR DARK_GRAY}, you\n"
 	.string "can access it from any Sanctuary using\l"
 	.string "this warp.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_24:
+Zone0Sanctuary_EventScript_Intro_Text_13:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Our tour has finished.\p"
 	.string "These shops will be available at every\n"
 	.string "Sanctuary.\p"
@@ -1378,19 +1116,19 @@ Zone0Sanctuary_EventScript_Intro_Text_24:
 	.string "up on any supplies before entering the\l"
 	.string "next Zone.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_25:
+Zone0Sanctuary_EventScript_Intro_Text_14:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: Because the {COLOR RED}Randomizer{COLOR DARK_GRAY} is on,\n"
 	.string "you get a random starter.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_26:
+Zone0Sanctuary_EventScript_Intro_Text_15:
 	.string "{PLAYER} received the\n"
 	.string "{STR_VAR_1}!$"
 
-Zone0Sanctuary_EventScript_Intro_Text_27:
+Zone0Sanctuary_EventScript_Intro_Text_16:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for your\n"
 	.string "{STR_VAR_1}?$"
 
-Zone0Sanctuary_EventScript_Intro_Text_28:
+Zone0Sanctuary_EventScript_Intro_Text_17:
 	.string "As a new challenger, you will receive a\n"
 	.string "starter Pokémon.\p"
 	.string "On Brutal difficulty, your choice is\n"
@@ -1399,38 +1137,17 @@ Zone0Sanctuary_EventScript_Intro_Text_28:
 	.string "Choose carefully as these Pokémon are\n"
 	.string "very rare.$"
 
-Zone0Sanctuary_EventScript_Intro_Text_29:
+Zone0Sanctuary_EventScript_Intro_Text_18:
 	.string "{COLOR BLUE}Colress{COLOR DARK_GRAY}: How about a nickname for this\n"
 	.string "wonderful Pokémon?$"
 
-Zone0Sanctuary_EventScript_Intro_Text_30:
+Zone0Sanctuary_EventScript_Intro_Text_19:
 	.string "As a new challenger, you will receive a\n"
 	.string "starter Pokémon.\p"
 	.string "You may have your choice of any of the\n"
 	.string "generation 1-8 starter Pokémon.\p"
 	.string "Choose carefully as these Pokémon are\n"
 	.string "very rare.$"
-
-Zone0Sanctuary_EventScript_SetDefaultDifficulty_Text_0:
-	.string "{COLOR RED}Default{COLOR DARK_GRAY} difficulty enabled.$"
-
-Zone0Sanctuary_EventScript_SetBrutalDifficulty_Text_0:
-	.string "{COLOR RED}Brutal{COLOR DARK_GRAY} difficulty enabled. Good luck.$"
-
-Zone0Sanctuary_EventScript_SetInfiniteDifficulty_Text_0:
-	.string "{COLOR RED}Infinite{COLOR DARK_GRAY} difficulty enabled.$"
-
-Zone0Sanctuary_EventScript_DisableRandomizer_Text_0:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode disabled.$"
-
-Zone0Sanctuary_EventScript_EnableRandomizer_Text_0:
-	.string "{COLOR RED}Randomizer{COLOR DARK_GRAY} game mode enabled.$"
-
-Zone0Sanctuary_EventScript_DisableNuzlocke_Text_0:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode disabled.$"
-
-Zone0Sanctuary_EventScript_EnableNuzlocke_Text_0:
-	.string "{COLOR RED}Nuzlocke{COLOR DARK_GRAY} mode enabled.$"
 
 Zone0Sanctuary_EventScript_HandleStarterSelectionDefault_Text_0:
 	.string "Choose a starter Pokémon.$"
