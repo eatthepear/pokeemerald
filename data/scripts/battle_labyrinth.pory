@@ -312,7 +312,7 @@ mart Shop_Unique_Varrick_4to5 {
 	ITEM_ASPEAR_BERRY
 	ITEM_PERSIM_BERRY
 	ITEM_HEAL_BALL
-}	
+}
 
 mart Shop_Unique_Varrick_6to8 {
 	ITEM_ORAN_BERRY
@@ -327,7 +327,7 @@ mart Shop_Unique_Varrick_6to8 {
 	ITEM_NEST_BALL
 	ITEM_MUSCLE_BAND
 	ITEM_WISE_GLASSES
-}	
+}
 
 mart Shop_Unique_Varrick_9to10 {
 	ITEM_SITRUS_BERRY
@@ -602,7 +602,7 @@ mart Shop_Unique_Varrick_26to30_Brutal {
 	ITEM_DRAGON_FANG
 	ITEM_NEVER_MELT_ICE
 	ITEM_METAL_COAT
-}	
+}
 
 script EventScript_Shop_Unique_ZhuLi {
 	lock
@@ -1175,270 +1175,153 @@ script EventScript_Shop_Lelouch_MoveTutor {
 	}
 	while {
 		msgbox(gText_Lelouch_CostsYellowShards, MSGBOX_DEFAULT)
-		if (var(VAR_ZONE) > 30) {
-			scrollingmultichoice(5, 0, 0, 5, TRUE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
-					setvar(VAR_0x8005, MOVE_ICY_WIND)
-				case 1:
-					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
-					setvar(VAR_0x8005, MOVE_GRASS_KNOT)
-				case 2:
-					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
-					setvar(VAR_0x8005, MOVE_LOW_KICK)
-				case 3:
-					setvar(VAR_TEMP_0, MOVE_HEAL_BELL)
-					setvar(VAR_0x8005, MOVE_HEAL_BELL)
-				case 4:
-					setvar(VAR_TEMP_0, MOVE_HELPING_HAND)
-					setvar(VAR_0x8005, MOVE_HELPING_HAND)
-				case 5:
-					setvar(VAR_TEMP_0, MOVE_SLEEP_TALK)
-					setvar(VAR_0x8005, MOVE_SLEEP_TALK)
-				case 6:
-					setvar(VAR_TEMP_0, MOVE_STEALTH_ROCK)
-					setvar(VAR_0x8005, MOVE_STEALTH_ROCK)
-				case 7:
-					setvar(VAR_TEMP_0, MOVE_TAUNT)
-					setvar(VAR_0x8005, MOVE_TAUNT)
-				case 8:
-					setvar(VAR_TEMP_0, MOVE_FIRE_PUNCH)
-					setvar(VAR_0x8005, MOVE_FIRE_PUNCH)
-				case 9:
-					setvar(VAR_TEMP_0, MOVE_ICE_PUNCH)
-					setvar(VAR_0x8005, MOVE_ICE_PUNCH)
-				case 10:
-					setvar(VAR_TEMP_0, MOVE_THUNDER_PUNCH)
-					setvar(VAR_0x8005, MOVE_THUNDER_PUNCH)
-				case 11:
-					setvar(VAR_TEMP_0, MOVE_FLIP_TURN)
-					setvar(VAR_0x8005, MOVE_FLIP_TURN)
-				case 12:
-					setvar(VAR_TEMP_0, MOVE_U_TURN)
-					setvar(VAR_0x8005, MOVE_U_TURN)
-				case 13:
-					setvar(VAR_TEMP_0, MOVE_DEFOG)
-					setvar(VAR_0x8005, MOVE_DEFOG)
-				case 14:
-					setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
-					setvar(VAR_0x8005, MOVE_PAIN_SPLIT)
-				case 15:
-					setvar(VAR_TEMP_0, MOVE_TRICK)
-					setvar(VAR_0x8005, MOVE_TRICK)
-				case 16:
-					setvar(VAR_TEMP_0, MOVE_BOUNCE)
-					setvar(VAR_0x8005, MOVE_BOUNCE)
-				case 17:
-					setvar(VAR_TEMP_0, MOVE_IRON_HEAD)
-					setvar(VAR_0x8005, MOVE_IRON_HEAD)
-				case 18:
-					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
-					setvar(VAR_0x8005, MOVE_KNOCK_OFF)
-				case 19:
-					setvar(VAR_TEMP_0, MOVE_VOLT_SWITCH)
-					setvar(VAR_0x8005, MOVE_VOLT_SWITCH)
-				case 20:
-					setvar(VAR_TEMP_0, MOVE_ZEN_HEADBUTT)
-					setvar(VAR_0x8005, MOVE_ZEN_HEADBUTT)
-				case 21:
-					setvar(VAR_TEMP_0, MOVE_ROOST)
-					setvar(VAR_0x8005, MOVE_ROOST)
-				case 22:
-					setvar(VAR_TEMP_0, MOVE_SYNTHESIS)
-					setvar(VAR_0x8005, MOVE_SYNTHESIS)
-				case 23:
-					setvar(VAR_TEMP_0, MOVE_TAILWIND)
-					setvar(VAR_0x8005, MOVE_TAILWIND)
-				case 24:
-					setvar(VAR_TEMP_0, MOVE_DRACO_METEOR)
-					setvar(VAR_0x8005, MOVE_DRACO_METEOR)
-				case 25:
-					setvar(VAR_TEMP_0, MOVE_EXPANDING_FORCE)
-					setvar(VAR_0x8005, MOVE_EXPANDING_FORCE)
-				case 26:
-					setvar(VAR_TEMP_0, MOVE_HEAT_WAVE)
-					setvar(VAR_0x8005, MOVE_HEAT_WAVE)
-				case 27:
-					setvar(VAR_TEMP_0, MOVE_POLTERGEIST)
-					setvar(VAR_0x8005, MOVE_POLTERGEIST)
-				case 28:
-					setvar(VAR_TEMP_0, MOVE_POWER_WHIP)
-					setvar(VAR_0x8005, MOVE_POWER_WHIP)
-				case 29:
-					setvar(VAR_TEMP_0, MOVE_SUPERPOWER)
-					setvar(VAR_0x8005, MOVE_SUPERPOWER)
-				case 30:
-					setvar(VAR_TEMP_0, MOVE_SWORDS_DANCE)
-					setvar(VAR_0x8005, MOVE_SWORDS_DANCE)
-				case 31:
-					setvar(VAR_TEMP_0, MOVE_NASTY_PLOT)
-					setvar(VAR_0x8005, MOVE_NASTY_PLOT)
-				case MULTI_B_PRESSED:
-					return
-			}
-		} elif (var(VAR_ZONE) > 20) {
-			scrollingmultichoice(4, 0, 0, 5, TRUE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
-					setvar(VAR_0x8005, MOVE_ICY_WIND)
-				case 1:
-					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
-					setvar(VAR_0x8005, MOVE_GRASS_KNOT)
-				case 2:
-					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
-					setvar(VAR_0x8005, MOVE_LOW_KICK)
-				case 3:
-					setvar(VAR_TEMP_0, MOVE_HEAL_BELL)
-					setvar(VAR_0x8005, MOVE_HEAL_BELL)
-				case 4:
-					setvar(VAR_TEMP_0, MOVE_HELPING_HAND)
-					setvar(VAR_0x8005, MOVE_HELPING_HAND)
-				case 5:
-					setvar(VAR_TEMP_0, MOVE_SLEEP_TALK)
-					setvar(VAR_0x8005, MOVE_SLEEP_TALK)
-				case 6:
-					setvar(VAR_TEMP_0, MOVE_STEALTH_ROCK)
-					setvar(VAR_0x8005, MOVE_STEALTH_ROCK)
-				case 7:
-					setvar(VAR_TEMP_0, MOVE_TAUNT)
-					setvar(VAR_0x8005, MOVE_TAUNT)
-				case 8:
-					setvar(VAR_TEMP_0, MOVE_FIRE_PUNCH)
-					setvar(VAR_0x8005, MOVE_FIRE_PUNCH)
-				case 9:
-					setvar(VAR_TEMP_0, MOVE_ICE_PUNCH)
-					setvar(VAR_0x8005, MOVE_ICE_PUNCH)
-				case 10:
-					setvar(VAR_TEMP_0, MOVE_THUNDER_PUNCH)
-					setvar(VAR_0x8005, MOVE_THUNDER_PUNCH)
-				case 11:
-					setvar(VAR_TEMP_0, MOVE_FLIP_TURN)
-					setvar(VAR_0x8005, MOVE_FLIP_TURN)
-				case 12:
-					setvar(VAR_TEMP_0, MOVE_U_TURN)
-					setvar(VAR_0x8005, MOVE_U_TURN)
-				case 13:
-					setvar(VAR_TEMP_0, MOVE_DEFOG)
-					setvar(VAR_0x8005, MOVE_DEFOG)
-				case 14:
-					setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
-					setvar(VAR_0x8005, MOVE_PAIN_SPLIT)
-				case 15:
-					setvar(VAR_TEMP_0, MOVE_TRICK)
-					setvar(VAR_0x8005, MOVE_TRICK)
-				case 16:
-					setvar(VAR_TEMP_0, MOVE_BOUNCE)
-					setvar(VAR_0x8005, MOVE_BOUNCE)
-				case 17:
-					setvar(VAR_TEMP_0, MOVE_IRON_HEAD)
-					setvar(VAR_0x8005, MOVE_IRON_HEAD)
-				case 18:
-					setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
-					setvar(VAR_0x8005, MOVE_KNOCK_OFF)
-				case 19:
-					setvar(VAR_TEMP_0, MOVE_VOLT_SWITCH)
-					setvar(VAR_0x8005, MOVE_VOLT_SWITCH)
-				case 20:
-					setvar(VAR_TEMP_0, MOVE_ZEN_HEADBUTT)
-					setvar(VAR_0x8005, MOVE_ZEN_HEADBUTT)
-				case 21:
-					setvar(VAR_TEMP_0, MOVE_ROOST)
-					setvar(VAR_0x8005, MOVE_ROOST)
-				case 22:
-					setvar(VAR_TEMP_0, MOVE_SYNTHESIS)
-					setvar(VAR_0x8005, MOVE_SYNTHESIS)
-				case 23:
-					setvar(VAR_TEMP_0, MOVE_TAILWIND)
-					setvar(VAR_0x8005, MOVE_TAILWIND)
-				case MULTI_B_PRESSED:
-					return
-			}
-		} elif (var(VAR_ZONE) > 15) {
-			scrollingmultichoice(3, 0, 0, 5, TRUE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
-					setvar(VAR_0x8005, MOVE_ICY_WIND)
-				case 1:
-					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
-					setvar(VAR_0x8005, MOVE_GRASS_KNOT)
-				case 2:
-					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
-					setvar(VAR_0x8005, MOVE_LOW_KICK)
-				case 3:
-					setvar(VAR_TEMP_0, MOVE_HEAL_BELL)
-					setvar(VAR_0x8005, MOVE_HEAL_BELL)
-				case 4:
-					setvar(VAR_TEMP_0, MOVE_HELPING_HAND)
-					setvar(VAR_0x8005, MOVE_HELPING_HAND)
-				case 5:
-					setvar(VAR_TEMP_0, MOVE_SLEEP_TALK)
-					setvar(VAR_0x8005, MOVE_SLEEP_TALK)
-				case 6:
-					setvar(VAR_TEMP_0, MOVE_STEALTH_ROCK)
-					setvar(VAR_0x8005, MOVE_STEALTH_ROCK)
-				case 7:
-					setvar(VAR_TEMP_0, MOVE_TAUNT)
-					setvar(VAR_0x8005, MOVE_TAUNT)
-				case 8:
-					setvar(VAR_TEMP_0, MOVE_FIRE_PUNCH)
-					setvar(VAR_0x8005, MOVE_FIRE_PUNCH)
-				case 9:
-					setvar(VAR_TEMP_0, MOVE_ICE_PUNCH)
-					setvar(VAR_0x8005, MOVE_ICE_PUNCH)
-				case 10:
-					setvar(VAR_TEMP_0, MOVE_THUNDER_PUNCH)
-					setvar(VAR_0x8005, MOVE_THUNDER_PUNCH)
-				case 11:
-					setvar(VAR_TEMP_0, MOVE_FLIP_TURN)
-					setvar(VAR_0x8005, MOVE_FLIP_TURN)
-				case 12:
-					setvar(VAR_TEMP_0, MOVE_U_TURN)
-					setvar(VAR_0x8005, MOVE_U_TURN)
-				case 13:
-					setvar(VAR_TEMP_0, MOVE_DEFOG)
-					setvar(VAR_0x8005, MOVE_DEFOG)
-				case 14:
-					setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
-					setvar(VAR_0x8005, MOVE_PAIN_SPLIT)
-				case 15:
-					setvar(VAR_TEMP_0, MOVE_TRICK)
-					setvar(VAR_0x8005, MOVE_TRICK)
-				case MULTI_B_PRESSED:
-					return
-			}
-		} else {
-			scrollingmultichoice(2, 0, 0, 5, TRUE)
-			switch (var(VAR_RESULT)) {
-				case 0:
-					setvar(VAR_TEMP_0, MOVE_ICY_WIND)
-					setvar(VAR_0x8005, MOVE_ICY_WIND)
-				case 1:
-					setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
-					setvar(VAR_0x8005, MOVE_GRASS_KNOT)
-				case 2:
-					setvar(VAR_TEMP_0, MOVE_LOW_KICK)
-					setvar(VAR_0x8005, MOVE_LOW_KICK)
-				case 3:
-					setvar(VAR_TEMP_0, MOVE_HEAL_BELL)
-					setvar(VAR_0x8005, MOVE_HEAL_BELL)
-				case 4:
-					setvar(VAR_TEMP_0, MOVE_HELPING_HAND)
-					setvar(VAR_0x8005, MOVE_HELPING_HAND)
-				case 5:
-					setvar(VAR_TEMP_0, MOVE_SLEEP_TALK)
-					setvar(VAR_0x8005, MOVE_SLEEP_TALK)
-				case 6:
-					setvar(VAR_TEMP_0, MOVE_STEALTH_ROCK)
-					setvar(VAR_0x8005, MOVE_STEALTH_ROCK)
-				case 7:
-					setvar(VAR_TEMP_0, MOVE_TAUNT)
-					setvar(VAR_0x8005, MOVE_TAUNT)
-				case MULTI_B_PRESSED:
-					return
-			}
+		if (var(VAR_ZONE) > 10) {
+			dynmultipush("Icy Wind", 1)
+			dynmultipush("Grass Knot", 2)
+			dynmultipush("Low Kick", 3)
+			dynmultipush("Fire Fang", 4)
+			dynmultipush("Ice Fang", 5)
+			dynmultipush("Thunder Fang", 6)
+			dynmultipush("Heal Bell", 7)
+			dynmultipush("Helping Hand", 8)
+			dynmultipush("Sleep Talk", 9)
+			dynmultipush("Taunt", 10)
+		}
+		// if (var(VAR_ZONE) > 15) {
+		// 	dynmultipush("", 1)
+		// 	dynmultipush("", 2)
+		// 	dynmultipush("", 3)
+		// 	dynmultipush("", 4)
+		// 	dynmultipush("", 5)
+		// 	dynmultipush("", 6)
+		// 	dynmultipush("", 7)
+		// 	dynmultipush("", 8)
+		// 	dynmultipush("", 9)
+		// 	dynmultipush("", 0)
+		// }
+		// if (var(VAR_ZONE) > 20) {
+		// 	dynmultipush("", 1)
+		// 	dynmultipush("", 2)
+		// 	dynmultipush("", 3)
+		// 	dynmultipush("", 4)
+		// 	dynmultipush("", 5)
+		// 	dynmultipush("", 6)
+		// 	dynmultipush("", 7)
+		// 	dynmultipush("", 8)
+		// 	dynmultipush("", 9)
+		// 	dynmultipush("", 0)
+		// }
+		dynmultipush("Exit", 50)
+		dynmultistack(0, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
+		switch (var(VAR_RESULT)) {
+			case 1:
+				setvar(VAR_TEMP_0, MOVE_ICY_WIND)
+				setvar(VAR_0x8005, MOVE_ICY_WIND)
+			case 2:
+				setvar(VAR_TEMP_0, MOVE_GRASS_KNOT)
+				setvar(VAR_0x8005, MOVE_GRASS_KNOT)
+			case 3:
+				setvar(VAR_TEMP_0, MOVE_LOW_KICK)
+				setvar(VAR_0x8005, MOVE_LOW_KICK)
+			case 4:
+				setvar(VAR_TEMP_0, MOVE_FIRE_FANG)
+				setvar(VAR_0x8005, MOVE_FIRE_FANG)
+			case 5:
+				setvar(VAR_TEMP_0, MOVE_ICE_FANG)
+				setvar(VAR_0x8005, MOVE_ICE_FANG)
+			case 6:
+				setvar(VAR_TEMP_0, MOVE_THUNDER_FANG)
+				setvar(VAR_0x8005, MOVE_THUNDER_FANG)
+			case 7:
+				setvar(VAR_TEMP_0, MOVE_HEAL_BELL)
+				setvar(VAR_0x8005, MOVE_HEAL_BELL)
+			case 8:
+				setvar(VAR_TEMP_0, MOVE_HELPING_HAND)
+				setvar(VAR_0x8005, MOVE_HELPING_HAND)
+			case 9:
+				setvar(VAR_TEMP_0, MOVE_SLEEP_TALK)
+				setvar(VAR_0x8005, MOVE_SLEEP_TALK)
+			case 10:
+				setvar(VAR_TEMP_0, MOVE_TAUNT)
+				setvar(VAR_0x8005, MOVE_TAUNT)
+			// case 6:
+			// 	setvar(VAR_TEMP_0, MOVE_STEALTH_ROCK)
+			// 	setvar(VAR_0x8005, MOVE_STEALTH_ROCK)
+			// case 8:
+			// 	setvar(VAR_TEMP_0, MOVE_FIRE_PUNCH)
+			// 	setvar(VAR_0x8005, MOVE_FIRE_PUNCH)
+			// case 9:
+			// 	setvar(VAR_TEMP_0, MOVE_ICE_PUNCH)
+			// 	setvar(VAR_0x8005, MOVE_ICE_PUNCH)
+			// case 10:
+			// 	setvar(VAR_TEMP_0, MOVE_THUNDER_PUNCH)
+			// 	setvar(VAR_0x8005, MOVE_THUNDER_PUNCH)
+			// case 11:
+			// 	setvar(VAR_TEMP_0, MOVE_FLIP_TURN)
+			// 	setvar(VAR_0x8005, MOVE_FLIP_TURN)
+			// case 12:
+			// 	setvar(VAR_TEMP_0, MOVE_U_TURN)
+			// 	setvar(VAR_0x8005, MOVE_U_TURN)
+			// case 13:
+			// 	setvar(VAR_TEMP_0, MOVE_DEFOG)
+			// 	setvar(VAR_0x8005, MOVE_DEFOG)
+			// case 14:
+			// 	setvar(VAR_TEMP_0, MOVE_PAIN_SPLIT)
+			// 	setvar(VAR_0x8005, MOVE_PAIN_SPLIT)
+			// case 15:
+			// 	setvar(VAR_TEMP_0, MOVE_TRICK)
+			// 	setvar(VAR_0x8005, MOVE_TRICK)
+			// case 16:
+			// 	setvar(VAR_TEMP_0, MOVE_BOUNCE)
+			// 	setvar(VAR_0x8005, MOVE_BOUNCE)
+			// case 17:
+			// 	setvar(VAR_TEMP_0, MOVE_IRON_HEAD)
+			// 	setvar(VAR_0x8005, MOVE_IRON_HEAD)
+			// case 18:
+			// 	setvar(VAR_TEMP_0, MOVE_KNOCK_OFF)
+			// 	setvar(VAR_0x8005, MOVE_KNOCK_OFF)
+			// case 19:
+			// 	setvar(VAR_TEMP_0, MOVE_VOLT_SWITCH)
+			// 	setvar(VAR_0x8005, MOVE_VOLT_SWITCH)
+			// case 20:
+			// 	setvar(VAR_TEMP_0, MOVE_ZEN_HEADBUTT)
+			// 	setvar(VAR_0x8005, MOVE_ZEN_HEADBUTT)
+			// case 21:
+			// 	setvar(VAR_TEMP_0, MOVE_ROOST)
+			// 	setvar(VAR_0x8005, MOVE_ROOST)
+			// case 22:
+			// 	setvar(VAR_TEMP_0, MOVE_SYNTHESIS)
+			// 	setvar(VAR_0x8005, MOVE_SYNTHESIS)
+			// case 23:
+			// 	setvar(VAR_TEMP_0, MOVE_TAILWIND)
+			// 	setvar(VAR_0x8005, MOVE_TAILWIND)
+			// case 24:
+			// 	setvar(VAR_TEMP_0, MOVE_DRACO_METEOR)
+			// 	setvar(VAR_0x8005, MOVE_DRACO_METEOR)
+			// case 25:
+			// 	setvar(VAR_TEMP_0, MOVE_EXPANDING_FORCE)
+			// 	setvar(VAR_0x8005, MOVE_EXPANDING_FORCE)
+			// case 26:
+			// 	setvar(VAR_TEMP_0, MOVE_HEAT_WAVE)
+			// 	setvar(VAR_0x8005, MOVE_HEAT_WAVE)
+			// case 27:
+			// 	setvar(VAR_TEMP_0, MOVE_POLTERGEIST)
+			// 	setvar(VAR_0x8005, MOVE_POLTERGEIST)
+			// case 28:
+			// 	setvar(VAR_TEMP_0, MOVE_POWER_WHIP)
+			// 	setvar(VAR_0x8005, MOVE_POWER_WHIP)
+			// case 29:
+			// 	setvar(VAR_TEMP_0, MOVE_SUPERPOWER)
+			// 	setvar(VAR_0x8005, MOVE_SUPERPOWER)
+			// case 30:
+			// 	setvar(VAR_TEMP_0, MOVE_SWORDS_DANCE)
+			// 	setvar(VAR_0x8005, MOVE_SWORDS_DANCE)
+			// case 31:
+			// 	setvar(VAR_TEMP_0, MOVE_NASTY_PLOT)
+			// 	setvar(VAR_0x8005, MOVE_NASTY_PLOT)
+			case 50:
+			case MULTI_B_PRESSED:
+				return
 		}
 		buffermovename(0, VAR_TEMP_0)
 		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You want to teach the move\n{STR_VAR_1}?", MSGBOX_YESNO)
@@ -1446,10 +1329,9 @@ script EventScript_Shop_Lelouch_MoveTutor {
 			continue
 		}
 		msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokemon should learn\n{STR_VAR_1}?", MSGBOX_DEFAULT)
-		// setvar(VAR_0x8005, VAR_TEMP_1)
 		call(MoveTutor_EventScript_OpenPartyMenu)
 		if (var(VAR_RESULT) == 0) {
-			return
+			continue
 		}
 		msgbox(gText_Lelouch_PayYellow1, MSGBOX_DEFAULT)
 		removeitem(ITEM_YELLOW_SHARD)
