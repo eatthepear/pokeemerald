@@ -2170,16 +2170,74 @@ static void MainMenu_FormatSavegameZone(void)
 static void MainMenu_FormatSavegamePokedex(void)
 {
     u8 str[0x20];
-    u16 dexCount;
-    
-    if (IsNationalPokedexEnabled())
-        dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
-    else
-        dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
-    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
-    ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    u16 dexCount = 0;
+    if (FlagGet(FLAG_SETTINGS_BRUTAL) == TRUE) {
+        dexCount += 1;
+    } else if (FlagGet(FLAG_SETTINGS_INFINITE) == TRUE) {
+        dexCount += 2;
+    }
+    if (FlagGet(FLAG_SETTINGS_NUZLOCKE) == TRUE) {
+        dexCount += 10;
+    }
+    if (FlagGet(FLAG_SETTINGS_RANDOMIZER) == TRUE) {
+        dexCount += 100;
+    }
+    switch (dexCount) {
+        case 0:
+            if (IsNationalPokedexEnabled())
+                dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
+            else
+                dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+            break;
+        case 1:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutal);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 2:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuInfinite);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 10:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuNuzlocke);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 11:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalNuzlocke);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 12:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuInfiniteNuzlocke);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 100:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuRandomizer);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 101:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalRandomizer);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 102:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuInfiniteRandomizer);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 110:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuRandomlocke);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 111:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBrutalRandomlocke);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+        case 112:
+            StringExpandPlaceholders(gStringVar4, gText_ContinueMenuInfiniteRandomlocke);
+            AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+    }
 }
 
 static void LoadMainMenuWindowFrameTiles(u8 bgId, u16 tileOffset)
