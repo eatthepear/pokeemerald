@@ -954,15 +954,17 @@ EventScript_Shop_Lelouch_Training::
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_Shop_Lelouch_Training_2
 	msgbox EventScript_Shop_Lelouch_Training_Text_0, MSGBOX_DEFAULT
-	compare VAR_ZONE, 21
-	goto_if_lt EventScript_Shop_Lelouch_Training_5
-	goto_if_set FLAG_SETTINGS_BRUTAL, EventScript_Shop_Lelouch_Training_5
-	goto_if_set FLAG_SETTINGS_EFFORTLESS, EventScript_Shop_Lelouch_Training_5
-	multichoice 0, 0, MULTI_LELOUCH_EXP_AND_EV, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_15
-	case 1, EventScript_Shop_Lelouch_Training_16
+	dynmultipush EventScript_Shop_Lelouch_Training_Text_1, 0
+	goto_if_unset FLAG_SETTINGS_BRUTAL, EventScript_Shop_Lelouch_Training_6
 EventScript_Shop_Lelouch_Training_4:
+	dynmultipush EventScript_Shop_Lelouch_Training_Text_3, 2
+	dynmultistack 0, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	switch VAR_RESULT
+	case 0, EventScript_Shop_Lelouch_Training_13
+	case 1, EventScript_Shop_Lelouch_Training_14
+	case 2, EventScript_Shop_Lelouch_Training_15
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_15
+EventScript_Shop_Lelouch_Training_11:
 	return
 
 EventScript_Shop_Lelouch_Training_2:
@@ -970,325 +972,314 @@ EventScript_Shop_Lelouch_Training_2:
 	return
 
 EventScript_Shop_Lelouch_Training_5:
-	multichoice 0, 0, MULTI_LELOUCH_EXP_ONLY, 0
-	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_13
+	dynmultipush EventScript_Shop_Lelouch_Training_Text_2, 1
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_6:
+	goto_if_unset FLAG_SETTINGS_EFFORTLESS, EventScript_Shop_Lelouch_Training_8
+	goto EventScript_Shop_Lelouch_Training_4
+
+EventScript_Shop_Lelouch_Training_8:
+	compare VAR_ZONE, 25
+	goto_if_gt EventScript_Shop_Lelouch_Training_5
 	goto EventScript_Shop_Lelouch_Training_4
 
 EventScript_Shop_Lelouch_Training_13:
 	msgbox gText_Lelouch_Exp, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Shop_Lelouch_Training_17
-	goto EventScript_Shop_Lelouch_Training_4
+	goto_if_eq EventScript_Shop_Lelouch_Training_16
+	goto EventScript_Shop_Lelouch_Training_11
 
-EventScript_Shop_Lelouch_Training_15:
-	msgbox gText_Lelouch_Exp, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_Shop_Lelouch_Training_19
-	goto EventScript_Shop_Lelouch_Training_4
-
-EventScript_Shop_Lelouch_Training_16:
+EventScript_Shop_Lelouch_Training_14:
 	msgbox gText_Lelouch_EV, MSGBOX_YESNO
 	compare VAR_RESULT, YES
+	goto_if_eq EventScript_Shop_Lelouch_Training_18
+	goto EventScript_Shop_Lelouch_Training_11
+
+EventScript_Shop_Lelouch_Training_15:
+	return
+
+EventScript_Shop_Lelouch_Training_16:
+	special ChoosePartyMonForTraining
+	waitstate
+	compare VAR_0x8004, 1
 	goto_if_eq EventScript_Shop_Lelouch_Training_21
-	goto EventScript_Shop_Lelouch_Training_4
-
-EventScript_Shop_Lelouch_Training_17:
-	special ChoosePartyMonForTraining
-	waitstate
-	compare VAR_0x8004, 1
-	goto_if_eq EventScript_Shop_Lelouch_Training_24
 	msgbox gText_Lelouch_DidNotTrain
-EventScript_Shop_Lelouch_Training_23:
+EventScript_Shop_Lelouch_Training_20:
 	return
 
-EventScript_Shop_Lelouch_Training_19:
-	special ChoosePartyMonForTraining
-	waitstate
-	compare VAR_0x8004, 1
-	goto_if_eq EventScript_Shop_Lelouch_Training_28
-	msgbox gText_Lelouch_DidNotTrain
-EventScript_Shop_Lelouch_Training_27:
-	return
-
-EventScript_Shop_Lelouch_Training_21:
+EventScript_Shop_Lelouch_Training_18:
 	special ChoosePartyMon
 	waitstate
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
-	goto_if_eq EventScript_Shop_Lelouch_Training_32
+	goto_if_eq EventScript_Shop_Lelouch_Training_25
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	compare VAR_RESULT, SPECIES_EGG
-	goto_if_eq EventScript_Shop_Lelouch_Training_35
+	goto_if_eq EventScript_Shop_Lelouch_Training_28
 	setvar VAR_TEMP_F, 0
 	specialvar VAR_TEMP_0, ScriptGetPartyMonSpecies
 	bufferspeciesname 0, VAR_TEMP_0
 	msgbox gText_Lelouch_ChooseHPEV, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_EV_NUMBERS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_40
-	case 1, EventScript_Shop_Lelouch_Training_41
-	case 2, EventScript_Shop_Lelouch_Training_42
-	case 3, EventScript_Shop_Lelouch_Training_43
-	case 4, EventScript_Shop_Lelouch_Training_44
-	case 5, EventScript_Shop_Lelouch_Training_45
-	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_45
-EventScript_Shop_Lelouch_Training_38:
+	case 0, EventScript_Shop_Lelouch_Training_33
+	case 1, EventScript_Shop_Lelouch_Training_34
+	case 2, EventScript_Shop_Lelouch_Training_35
+	case 3, EventScript_Shop_Lelouch_Training_36
+	case 4, EventScript_Shop_Lelouch_Training_37
+	case 5, EventScript_Shop_Lelouch_Training_38
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_38
+EventScript_Shop_Lelouch_Training_31:
 	msgbox gText_Lelouch_ChooseAttackEV, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_EV_NUMBERS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_48
-	case 1, EventScript_Shop_Lelouch_Training_49
-	case 2, EventScript_Shop_Lelouch_Training_50
-	case 3, EventScript_Shop_Lelouch_Training_51
-	case 4, EventScript_Shop_Lelouch_Training_52
-	case 5, EventScript_Shop_Lelouch_Training_53
-	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_53
-EventScript_Shop_Lelouch_Training_46:
+	case 0, EventScript_Shop_Lelouch_Training_41
+	case 1, EventScript_Shop_Lelouch_Training_42
+	case 2, EventScript_Shop_Lelouch_Training_43
+	case 3, EventScript_Shop_Lelouch_Training_44
+	case 4, EventScript_Shop_Lelouch_Training_45
+	case 5, EventScript_Shop_Lelouch_Training_46
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_46
+EventScript_Shop_Lelouch_Training_39:
 	msgbox gText_Lelouch_ChooseDefenseEV, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_EV_NUMBERS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_56
-	case 1, EventScript_Shop_Lelouch_Training_57
-	case 2, EventScript_Shop_Lelouch_Training_58
-	case 3, EventScript_Shop_Lelouch_Training_59
-	case 4, EventScript_Shop_Lelouch_Training_60
-	case 5, EventScript_Shop_Lelouch_Training_61
-	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_61
-EventScript_Shop_Lelouch_Training_54:
+	case 0, EventScript_Shop_Lelouch_Training_49
+	case 1, EventScript_Shop_Lelouch_Training_50
+	case 2, EventScript_Shop_Lelouch_Training_51
+	case 3, EventScript_Shop_Lelouch_Training_52
+	case 4, EventScript_Shop_Lelouch_Training_53
+	case 5, EventScript_Shop_Lelouch_Training_54
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_54
+EventScript_Shop_Lelouch_Training_47:
 	msgbox gText_Lelouch_ChooseSpecialAttackEV, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_EV_NUMBERS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_64
-	case 1, EventScript_Shop_Lelouch_Training_65
-	case 2, EventScript_Shop_Lelouch_Training_66
-	case 3, EventScript_Shop_Lelouch_Training_67
-	case 4, EventScript_Shop_Lelouch_Training_68
-	case 5, EventScript_Shop_Lelouch_Training_69
-	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_69
-EventScript_Shop_Lelouch_Training_62:
+	case 0, EventScript_Shop_Lelouch_Training_57
+	case 1, EventScript_Shop_Lelouch_Training_58
+	case 2, EventScript_Shop_Lelouch_Training_59
+	case 3, EventScript_Shop_Lelouch_Training_60
+	case 4, EventScript_Shop_Lelouch_Training_61
+	case 5, EventScript_Shop_Lelouch_Training_62
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_62
+EventScript_Shop_Lelouch_Training_55:
 	msgbox gText_Lelouch_ChooseSpecialDefenseEV, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_EV_NUMBERS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_72
-	case 1, EventScript_Shop_Lelouch_Training_73
-	case 2, EventScript_Shop_Lelouch_Training_74
-	case 3, EventScript_Shop_Lelouch_Training_75
-	case 4, EventScript_Shop_Lelouch_Training_76
-	case 5, EventScript_Shop_Lelouch_Training_77
-	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_77
-EventScript_Shop_Lelouch_Training_70:
+	case 0, EventScript_Shop_Lelouch_Training_65
+	case 1, EventScript_Shop_Lelouch_Training_66
+	case 2, EventScript_Shop_Lelouch_Training_67
+	case 3, EventScript_Shop_Lelouch_Training_68
+	case 4, EventScript_Shop_Lelouch_Training_69
+	case 5, EventScript_Shop_Lelouch_Training_70
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_70
+EventScript_Shop_Lelouch_Training_63:
 	msgbox gText_Lelouch_ChooseSpeedEV, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_LELOUCH_EV_NUMBERS, 0
 	switch VAR_RESULT
-	case 0, EventScript_Shop_Lelouch_Training_80
-	case 1, EventScript_Shop_Lelouch_Training_81
-	case 2, EventScript_Shop_Lelouch_Training_82
-	case 3, EventScript_Shop_Lelouch_Training_83
-	case 4, EventScript_Shop_Lelouch_Training_84
-	case 5, EventScript_Shop_Lelouch_Training_85
-	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_85
-EventScript_Shop_Lelouch_Training_78:
+	case 0, EventScript_Shop_Lelouch_Training_73
+	case 1, EventScript_Shop_Lelouch_Training_74
+	case 2, EventScript_Shop_Lelouch_Training_75
+	case 3, EventScript_Shop_Lelouch_Training_76
+	case 4, EventScript_Shop_Lelouch_Training_77
+	case 5, EventScript_Shop_Lelouch_Training_78
+	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_Training_78
+EventScript_Shop_Lelouch_Training_71:
 	compare VAR_TEMP_F, 510
-	goto_if_gt EventScript_Shop_Lelouch_Training_87
+	goto_if_gt EventScript_Shop_Lelouch_Training_80
 	msgbox gText_Lelouch_CheckEVs, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq EventScript_Shop_Lelouch_Training_90
+	goto_if_eq EventScript_Shop_Lelouch_Training_83
 	special CheckLeadMonCute
 	playse SE_EXP_MAX
 	waitse
-	msgbox gText_Lelouch_ChangedEVs
-	msgbox gText_Lelouch_PayRed
+	msgbox gText_Lelouch_ChangedEVs, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_PayRed, MSGBOX_DEFAULT
 	removeitem ITEM_RED_SHARD, 1
-EventScript_Shop_Lelouch_Training_31:
+EventScript_Shop_Lelouch_Training_24:
 	return
 
-EventScript_Shop_Lelouch_Training_24:
-	msgbox gText_Lelouch_ExpTrainingFinished
-	msgbox gText_Lelouch_PayRed
+EventScript_Shop_Lelouch_Training_21:
+	msgbox gText_Lelouch_ExpTrainingFinished, MSGBOX_DEFAULT
+	msgbox gText_Lelouch_PayRed, MSGBOX_DEFAULT
 	removeitem ITEM_RED_SHARD, 1
-	goto EventScript_Shop_Lelouch_Training_23
+	goto EventScript_Shop_Lelouch_Training_20
+
+EventScript_Shop_Lelouch_Training_25:
+	msgbox gText_Lelouch_DidNotTrain, MSGBOX_DEFAULT
+	goto EventScript_Shop_Lelouch_Training_24
 
 EventScript_Shop_Lelouch_Training_28:
-	msgbox gText_Lelouch_ExpTrainingFinished
-	msgbox gText_Lelouch_PayRed
-	removeitem ITEM_RED_SHARD, 1
-	goto EventScript_Shop_Lelouch_Training_27
+	msgbox EventScript_Shop_Lelouch_Training_Text_4, MSGBOX_DEFAULT
+	goto EventScript_Shop_Lelouch_Training_24
 
-EventScript_Shop_Lelouch_Training_32:
-	msgbox gText_Lelouch_DidNotTrain
+EventScript_Shop_Lelouch_Training_33:
+	setvar VAR_TEMP_9, 252
+	addvar VAR_TEMP_F, 252
+	goto EventScript_Shop_Lelouch_Training_31
+
+EventScript_Shop_Lelouch_Training_34:
+	setvar VAR_TEMP_9, 200
+	addvar VAR_TEMP_F, 200
 	goto EventScript_Shop_Lelouch_Training_31
 
 EventScript_Shop_Lelouch_Training_35:
-	msgbox EventScript_Shop_Lelouch_Training_Text_1
-	goto EventScript_Shop_Lelouch_Training_31
-
-EventScript_Shop_Lelouch_Training_40:
-	setvar VAR_TEMP_9, 252
-	addvar VAR_TEMP_F, 252
-	goto EventScript_Shop_Lelouch_Training_38
-
-EventScript_Shop_Lelouch_Training_41:
-	setvar VAR_TEMP_9, 200
-	addvar VAR_TEMP_F, 200
-	goto EventScript_Shop_Lelouch_Training_38
-
-EventScript_Shop_Lelouch_Training_42:
 	setvar VAR_TEMP_9, 100
 	addvar VAR_TEMP_F, 100
-	goto EventScript_Shop_Lelouch_Training_38
+	goto EventScript_Shop_Lelouch_Training_31
 
-EventScript_Shop_Lelouch_Training_43:
+EventScript_Shop_Lelouch_Training_36:
 	setvar VAR_TEMP_9, 4
 	addvar VAR_TEMP_F, 4
-	goto EventScript_Shop_Lelouch_Training_38
+	goto EventScript_Shop_Lelouch_Training_31
 
-EventScript_Shop_Lelouch_Training_44:
+EventScript_Shop_Lelouch_Training_37:
 	setvar VAR_TEMP_9, 0
-	goto EventScript_Shop_Lelouch_Training_38
+	goto EventScript_Shop_Lelouch_Training_31
 
-EventScript_Shop_Lelouch_Training_45:
+EventScript_Shop_Lelouch_Training_38:
 	return
 
-EventScript_Shop_Lelouch_Training_48:
+EventScript_Shop_Lelouch_Training_41:
 	setvar VAR_TEMP_A, 252
 	addvar VAR_TEMP_F, 252
-	goto EventScript_Shop_Lelouch_Training_46
+	goto EventScript_Shop_Lelouch_Training_39
 
-EventScript_Shop_Lelouch_Training_49:
+EventScript_Shop_Lelouch_Training_42:
 	setvar VAR_TEMP_A, 200
 	addvar VAR_TEMP_F, 200
-	goto EventScript_Shop_Lelouch_Training_46
+	goto EventScript_Shop_Lelouch_Training_39
 
-EventScript_Shop_Lelouch_Training_50:
+EventScript_Shop_Lelouch_Training_43:
 	setvar VAR_TEMP_A, 100
 	addvar VAR_TEMP_F, 100
-	goto EventScript_Shop_Lelouch_Training_46
+	goto EventScript_Shop_Lelouch_Training_39
 
-EventScript_Shop_Lelouch_Training_51:
+EventScript_Shop_Lelouch_Training_44:
 	setvar VAR_TEMP_A, 4
 	addvar VAR_TEMP_F, 4
-	goto EventScript_Shop_Lelouch_Training_46
+	goto EventScript_Shop_Lelouch_Training_39
 
-EventScript_Shop_Lelouch_Training_52:
+EventScript_Shop_Lelouch_Training_45:
 	setvar VAR_TEMP_A, 0
-	goto EventScript_Shop_Lelouch_Training_46
+	goto EventScript_Shop_Lelouch_Training_39
 
-EventScript_Shop_Lelouch_Training_53:
+EventScript_Shop_Lelouch_Training_46:
 	return
 
-EventScript_Shop_Lelouch_Training_56:
+EventScript_Shop_Lelouch_Training_49:
 	setvar VAR_TEMP_B, 252
 	addvar VAR_TEMP_F, 252
-	goto EventScript_Shop_Lelouch_Training_54
+	goto EventScript_Shop_Lelouch_Training_47
 
-EventScript_Shop_Lelouch_Training_57:
+EventScript_Shop_Lelouch_Training_50:
 	setvar VAR_TEMP_B, 200
 	addvar VAR_TEMP_F, 200
-	goto EventScript_Shop_Lelouch_Training_54
+	goto EventScript_Shop_Lelouch_Training_47
 
-EventScript_Shop_Lelouch_Training_58:
+EventScript_Shop_Lelouch_Training_51:
 	setvar VAR_TEMP_B, 100
 	addvar VAR_TEMP_F, 100
-	goto EventScript_Shop_Lelouch_Training_54
+	goto EventScript_Shop_Lelouch_Training_47
 
-EventScript_Shop_Lelouch_Training_59:
+EventScript_Shop_Lelouch_Training_52:
 	setvar VAR_TEMP_B, 4
 	addvar VAR_TEMP_F, 4
-	goto EventScript_Shop_Lelouch_Training_54
+	goto EventScript_Shop_Lelouch_Training_47
 
-EventScript_Shop_Lelouch_Training_60:
+EventScript_Shop_Lelouch_Training_53:
 	setvar VAR_TEMP_B, 0
-	goto EventScript_Shop_Lelouch_Training_54
+	goto EventScript_Shop_Lelouch_Training_47
 
-EventScript_Shop_Lelouch_Training_61:
+EventScript_Shop_Lelouch_Training_54:
 	return
 
-EventScript_Shop_Lelouch_Training_64:
+EventScript_Shop_Lelouch_Training_57:
 	setvar VAR_TEMP_C, 252
 	addvar VAR_TEMP_F, 252
-	goto EventScript_Shop_Lelouch_Training_62
+	goto EventScript_Shop_Lelouch_Training_55
 
-EventScript_Shop_Lelouch_Training_65:
+EventScript_Shop_Lelouch_Training_58:
 	setvar VAR_TEMP_C, 200
 	addvar VAR_TEMP_F, 200
-	goto EventScript_Shop_Lelouch_Training_62
+	goto EventScript_Shop_Lelouch_Training_55
 
-EventScript_Shop_Lelouch_Training_66:
+EventScript_Shop_Lelouch_Training_59:
 	setvar VAR_TEMP_C, 100
 	addvar VAR_TEMP_F, 100
-	goto EventScript_Shop_Lelouch_Training_62
+	goto EventScript_Shop_Lelouch_Training_55
 
-EventScript_Shop_Lelouch_Training_67:
+EventScript_Shop_Lelouch_Training_60:
 	setvar VAR_TEMP_C, 4
 	addvar VAR_TEMP_F, 4
-	goto EventScript_Shop_Lelouch_Training_62
+	goto EventScript_Shop_Lelouch_Training_55
 
-EventScript_Shop_Lelouch_Training_68:
+EventScript_Shop_Lelouch_Training_61:
 	setvar VAR_TEMP_C, 0
-	goto EventScript_Shop_Lelouch_Training_62
+	goto EventScript_Shop_Lelouch_Training_55
 
-EventScript_Shop_Lelouch_Training_69:
+EventScript_Shop_Lelouch_Training_62:
 	return
 
-EventScript_Shop_Lelouch_Training_72:
+EventScript_Shop_Lelouch_Training_65:
 	setvar VAR_TEMP_D, 252
 	addvar VAR_TEMP_F, 252
-	goto EventScript_Shop_Lelouch_Training_70
+	goto EventScript_Shop_Lelouch_Training_63
 
-EventScript_Shop_Lelouch_Training_73:
+EventScript_Shop_Lelouch_Training_66:
 	setvar VAR_TEMP_D, 200
 	addvar VAR_TEMP_F, 200
-	goto EventScript_Shop_Lelouch_Training_70
+	goto EventScript_Shop_Lelouch_Training_63
 
-EventScript_Shop_Lelouch_Training_74:
+EventScript_Shop_Lelouch_Training_67:
 	setvar VAR_TEMP_D, 100
 	addvar VAR_TEMP_F, 100
-	goto EventScript_Shop_Lelouch_Training_70
+	goto EventScript_Shop_Lelouch_Training_63
 
-EventScript_Shop_Lelouch_Training_75:
+EventScript_Shop_Lelouch_Training_68:
 	setvar VAR_TEMP_D, 4
 	addvar VAR_TEMP_F, 4
-	goto EventScript_Shop_Lelouch_Training_70
+	goto EventScript_Shop_Lelouch_Training_63
+
+EventScript_Shop_Lelouch_Training_69:
+	setvar VAR_TEMP_D, 0
+	goto EventScript_Shop_Lelouch_Training_63
+
+EventScript_Shop_Lelouch_Training_70:
+	return
+
+EventScript_Shop_Lelouch_Training_73:
+	setvar VAR_TEMP_E, 252
+	addvar VAR_TEMP_F, 252
+	goto EventScript_Shop_Lelouch_Training_71
+
+EventScript_Shop_Lelouch_Training_74:
+	setvar VAR_TEMP_E, 200
+	addvar VAR_TEMP_F, 200
+	goto EventScript_Shop_Lelouch_Training_71
+
+EventScript_Shop_Lelouch_Training_75:
+	setvar VAR_TEMP_E, 100
+	addvar VAR_TEMP_F, 100
+	goto EventScript_Shop_Lelouch_Training_71
 
 EventScript_Shop_Lelouch_Training_76:
-	setvar VAR_TEMP_D, 0
-	goto EventScript_Shop_Lelouch_Training_70
+	setvar VAR_TEMP_E, 4
+	addvar VAR_TEMP_F, 4
+	goto EventScript_Shop_Lelouch_Training_71
 
 EventScript_Shop_Lelouch_Training_77:
+	setvar VAR_TEMP_E, 0
+	goto EventScript_Shop_Lelouch_Training_71
+
+EventScript_Shop_Lelouch_Training_78:
 	return
 
 EventScript_Shop_Lelouch_Training_80:
-	setvar VAR_TEMP_E, 252
-	addvar VAR_TEMP_F, 252
-	goto EventScript_Shop_Lelouch_Training_78
-
-EventScript_Shop_Lelouch_Training_81:
-	setvar VAR_TEMP_E, 200
-	addvar VAR_TEMP_F, 200
-	goto EventScript_Shop_Lelouch_Training_78
-
-EventScript_Shop_Lelouch_Training_82:
-	setvar VAR_TEMP_E, 100
-	addvar VAR_TEMP_F, 100
-	goto EventScript_Shop_Lelouch_Training_78
+	msgbox gText_Lelouch_TooManyEVs, MSGBOX_DEFAULT
+	return
 
 EventScript_Shop_Lelouch_Training_83:
-	setvar VAR_TEMP_E, 4
-	addvar VAR_TEMP_F, 4
-	goto EventScript_Shop_Lelouch_Training_78
-
-EventScript_Shop_Lelouch_Training_84:
-	setvar VAR_TEMP_E, 0
-	goto EventScript_Shop_Lelouch_Training_78
-
-EventScript_Shop_Lelouch_Training_85:
-	return
-
-EventScript_Shop_Lelouch_Training_87:
-	msgbox gText_Lelouch_TooManyEVs
-	return
-
-EventScript_Shop_Lelouch_Training_90:
 	return
 
 
@@ -1350,7 +1341,7 @@ EventScript_Shop_Lelouch_MoveTutor_4:
 	compare VAR_ZONE, 10
 	goto_if_gt EventScript_Shop_Lelouch_MoveTutor_7
 EventScript_Shop_Lelouch_MoveTutor_6:
-	dynmultipush EventScript_Shop_Lelouch_MoveTutor_Text_10, 50
+	dynmultipush EventScript_Shop_Lelouch_Training_Text_3, 50
 	dynmultistack 0, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 1, EventScript_Shop_Lelouch_MoveTutor_11
@@ -1367,10 +1358,10 @@ EventScript_Shop_Lelouch_MoveTutor_6:
 	case MULTI_B_PRESSED, EventScript_Shop_Lelouch_MoveTutor_21
 EventScript_Shop_Lelouch_MoveTutor_9:
 	buffermovename 0, VAR_TEMP_0
-	msgbox EventScript_Shop_Lelouch_MoveTutor_Text_11, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_MoveTutor_Text_10, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_MoveTutor_23
-	msgbox EventScript_Shop_Lelouch_MoveTutor_Text_12, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_MoveTutor_Text_11, MSGBOX_DEFAULT
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Shop_Lelouch_MoveTutor_26
@@ -1470,7 +1461,7 @@ EventScript_Shop_Lelouch_Other::
 	specialvar VAR_TEMP_1, ScriptGetPartyMonSpecies
 	bufferspeciesname 0, VAR_TEMP_1
 	copyvar VAR_TEMP_1, VAR_0x8004
-	msgbox EventScript_Shop_Lelouch_Other_Text_1, MSGBOX_DEFAULT
+	msgbox EventScript_Shop_Lelouch_Other_Text_2, MSGBOX_DEFAULT
 	scrollingmultichoice 6, 0, 0, 6, TRUE
 	switch VAR_RESULT
 	case 0, EventScript_Shop_Lelouch_Other_13
@@ -1513,152 +1504,152 @@ EventScript_Shop_Lelouch_Other_5:
 	return
 
 EventScript_Shop_Lelouch_Other_8:
-	msgbox EventScript_Shop_Lelouch_Training_Text_1
+	msgbox EventScript_Shop_Lelouch_Other_Text_1
 	goto EventScript_Shop_Lelouch_Other_4
 
 EventScript_Shop_Lelouch_Other_13:
 	setvar VAR_TEMP_0, 1
-	msgbox EventScript_Shop_Lelouch_Other_Text_2, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_35
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_14:
 	setvar VAR_TEMP_0, 3
-	msgbox EventScript_Shop_Lelouch_Other_Text_3, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_4, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_37
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_15:
 	setvar VAR_TEMP_0, 4
-	msgbox EventScript_Shop_Lelouch_Other_Text_4, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_5, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_39
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_16:
 	setvar VAR_TEMP_0, 2
-	msgbox EventScript_Shop_Lelouch_Other_Text_5, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_6, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_41
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_17:
 	setvar VAR_TEMP_0, 5
-	msgbox EventScript_Shop_Lelouch_Other_Text_6, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_7, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_43
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_18:
 	setvar VAR_TEMP_0, 8
-	msgbox EventScript_Shop_Lelouch_Other_Text_7, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_8, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_45
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_19:
 	setvar VAR_TEMP_0, 9
-	msgbox EventScript_Shop_Lelouch_Other_Text_8, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_9, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_47
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_20:
 	setvar VAR_TEMP_0, 7
-	msgbox EventScript_Shop_Lelouch_Other_Text_9, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_10, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_49
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_21:
 	setvar VAR_TEMP_0, 15
-	msgbox EventScript_Shop_Lelouch_Other_Text_10, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_11, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_51
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_22:
 	setvar VAR_TEMP_0, 16
-	msgbox EventScript_Shop_Lelouch_Other_Text_11, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_12, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_53
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_23:
 	setvar VAR_TEMP_0, 19
-	msgbox EventScript_Shop_Lelouch_Other_Text_12, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_13, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_55
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_24:
 	setvar VAR_TEMP_0, 17
-	msgbox EventScript_Shop_Lelouch_Other_Text_13, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_14, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_57
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_25:
 	setvar VAR_TEMP_0, 20
-	msgbox EventScript_Shop_Lelouch_Other_Text_14, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_15, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_59
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_26:
 	setvar VAR_TEMP_0, 21
-	msgbox EventScript_Shop_Lelouch_Other_Text_15, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_16, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_61
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_27:
 	setvar VAR_TEMP_0, 23
-	msgbox EventScript_Shop_Lelouch_Other_Text_16, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_17, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_63
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_28:
 	setvar VAR_TEMP_0, 22
-	msgbox EventScript_Shop_Lelouch_Other_Text_17, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_18, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_65
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_29:
 	setvar VAR_TEMP_0, 10
-	msgbox EventScript_Shop_Lelouch_Other_Text_18, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_19, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_67
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_30:
 	setvar VAR_TEMP_0, 11
-	msgbox EventScript_Shop_Lelouch_Other_Text_19, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_20, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_69
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_31:
 	setvar VAR_TEMP_0, 13
-	msgbox EventScript_Shop_Lelouch_Other_Text_20, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_21, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_71
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_32:
 	setvar VAR_TEMP_0, 14
-	msgbox EventScript_Shop_Lelouch_Other_Text_21, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_22, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_73
 	goto EventScript_Shop_Lelouch_Other_11
 
 EventScript_Shop_Lelouch_Other_33:
 	setvar VAR_TEMP_0, 12
-	msgbox EventScript_Shop_Lelouch_Other_Text_22, MSGBOX_YESNO
+	msgbox EventScript_Shop_Lelouch_Other_Text_23, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_Shop_Lelouch_Other_75
 	goto EventScript_Shop_Lelouch_Other_11
@@ -2052,7 +2043,7 @@ EventScript_Settings_85:
 	goto_if_set FLAG_SETTINGS_WORKAHOLIC, EventScript_Settings_92
 	dynmultipush EventScript_Settings_Text_35, 17
 EventScript_Settings_91:
-	dynmultipush EventScript_Shop_Lelouch_MoveTutor_Text_10, 18
+	dynmultipush EventScript_Shop_Lelouch_Training_Text_3, 18
 	dynmultistack 21, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, EventScript_Settings_98
@@ -4017,7 +4008,16 @@ EventScript_Shop_Lelouch_Training_Text_0:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.$"
 
 EventScript_Shop_Lelouch_Training_Text_1:
-	.string "No eggs!$"
+	.string "Experience Training$"
+
+EventScript_Shop_Lelouch_Training_Text_2:
+	.string "EV Training$"
+
+EventScript_Shop_Lelouch_Training_Text_3:
+	.string "Exit$"
+
+EventScript_Shop_Lelouch_Training_Text_4:
+	.string "I can't train an Egg!$"
 
 EventScript_Shop_Lelouch_MoveReminder_Text_0:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokémon should\nrelearn a move?$"
@@ -4062,12 +4062,9 @@ EventScript_Shop_Lelouch_MoveTutor_Text_9:
 	.string "Taunt$"
 
 EventScript_Shop_Lelouch_MoveTutor_Text_10:
-	.string "Exit$"
-
-EventScript_Shop_Lelouch_MoveTutor_Text_11:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: You want to teach the move\n{STR_VAR_1}?$"
 
-EventScript_Shop_Lelouch_MoveTutor_Text_12:
+EventScript_Shop_Lelouch_MoveTutor_Text_11:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which Pokemon should learn\n{STR_VAR_1}?$"
 
 EventScript_Shop_Lelouch_Other_Text_0:
@@ -4077,110 +4074,113 @@ EventScript_Shop_Lelouch_Other_Text_0:
 	.string "First, choose a Pokémon.$"
 
 EventScript_Shop_Lelouch_Other_Text_1:
+	.string "No eggs!$"
+
+EventScript_Shop_Lelouch_Other_Text_2:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Which nature would you like\n"
 	.string "your {STR_VAR_1} to have?$"
 
-EventScript_Shop_Lelouch_Other_Text_2:
+EventScript_Shop_Lelouch_Other_Text_3:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Lonely, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_3:
+EventScript_Shop_Lelouch_Other_Text_4:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Adamant, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_4:
+EventScript_Shop_Lelouch_Other_Text_5:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Naughty, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_5:
+EventScript_Shop_Lelouch_Other_Text_6:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Brave, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_6:
+EventScript_Shop_Lelouch_Other_Text_7:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Bold, it will\l"
 	.string "cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_7:
+EventScript_Shop_Lelouch_Other_Text_8:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Impish, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_8:
+EventScript_Shop_Lelouch_Other_Text_9:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Lax, it will\l"
 	.string "cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_9:
+EventScript_Shop_Lelouch_Other_Text_10:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Relaxed, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_10:
+EventScript_Shop_Lelouch_Other_Text_11:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Modest, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_11:
+EventScript_Shop_Lelouch_Other_Text_12:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Mild, it will\l"
 	.string "cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_12:
+EventScript_Shop_Lelouch_Other_Text_13:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Rash, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_13:
+EventScript_Shop_Lelouch_Other_Text_14:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Quiet, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_14:
+EventScript_Shop_Lelouch_Other_Text_15:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Calm, it will\l"
 	.string "cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_15:
+EventScript_Shop_Lelouch_Other_Text_16:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Gentle, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_16:
+EventScript_Shop_Lelouch_Other_Text_17:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Careful, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_17:
+EventScript_Shop_Lelouch_Other_Text_18:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Sassy, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_18:
+EventScript_Shop_Lelouch_Other_Text_19:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Timid, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_19:
+EventScript_Shop_Lelouch_Other_Text_20:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Hasty, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_20:
+EventScript_Shop_Lelouch_Other_Text_21:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Jolly, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_21:
+EventScript_Shop_Lelouch_Other_Text_22:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Naive, it\l"
 	.string "will cost one Green Shard.$"
 
-EventScript_Shop_Lelouch_Other_Text_22:
+EventScript_Shop_Lelouch_Other_Text_23:
 	.string "{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: If you'd like to change your\n"
 	.string "{STR_VAR_1}'s nature to Serious, it\l"
 	.string "will cost one Green Shard.$"

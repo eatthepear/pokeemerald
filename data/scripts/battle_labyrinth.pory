@@ -867,203 +867,190 @@ script EventScript_Shop_Lelouch_Training {
 		return
 	}
 	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: Choose which training\nregiment you would like.", MSGBOX_DEFAULT)
-	if ((var(VAR_ZONE) < 21) || (flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_EFFORTLESS) == true)) {
-		multichoice(0, 0, MULTI_LELOUCH_EXP_ONLY, 0)
-		switch(var(VAR_RESULT)) {
-			case 0:
-				msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
-				if (var(VAR_RESULT) == YES) {
-					special(ChoosePartyMonForTraining)
-					waitstate
-					if (var(VAR_0x8004) == 1) {
-						msgbox(gText_Lelouch_ExpTrainingFinished)
-						msgbox(gText_Lelouch_PayRed)
-						removeitem(ITEM_RED_SHARD, 1)
-					} else {
-						msgbox(gText_Lelouch_DidNotTrain)
-					}
-					return
-				}
-		}
-	} else {
-		multichoice(0, 0, MULTI_LELOUCH_EXP_AND_EV, 0)
-			switch(var(VAR_RESULT)) {
-				case 0:
-					msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						special(ChoosePartyMonForTraining)
-						waitstate
-						if (var(VAR_0x8004) == 1) {
-							msgbox(gText_Lelouch_ExpTrainingFinished)
-							msgbox(gText_Lelouch_PayRed)
-							removeitem(ITEM_RED_SHARD, 1)
-						} else {
-							msgbox(gText_Lelouch_DidNotTrain)
-						}
-						return
-					}
-				case 1:
-					msgbox(gText_Lelouch_EV, MSGBOX_YESNO)
-					if (var(VAR_RESULT) == YES) {
-						special(ChoosePartyMon)
-						waitstate
-						if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
-							msgbox(gText_Lelouch_DidNotTrain)
-						} else {
-							specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
-							if (var(VAR_RESULT) == SPECIES_EGG) {
-								msgbox("No eggs!")
-							} else {
-								setvar(VAR_TEMP_F, 0)
-								specialvar(VAR_TEMP_0, ScriptGetPartyMonSpecies)
-								bufferspeciesname(0, VAR_TEMP_0)
-								msgbox(gText_Lelouch_ChooseHPEV, MSGBOX_DEFAULT)
-								multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
-								switch(var(VAR_RESULT)) {
-									case 0:
-										setvar(VAR_TEMP_9, 252)
-										addvar(VAR_TEMP_F, 252)
-									case 1:
-										setvar(VAR_TEMP_9, 200)
-										addvar(VAR_TEMP_F, 200)
-									case 2:
-										setvar(VAR_TEMP_9, 100)
-										addvar(VAR_TEMP_F, 100)
-									case 3:
-										setvar(VAR_TEMP_9, 4)
-										addvar(VAR_TEMP_F, 4)
-									case 4:
-										setvar(VAR_TEMP_9, 0)
-									case 5:
-									case MULTI_B_PRESSED:
-										return
-								}
-								msgbox(gText_Lelouch_ChooseAttackEV, MSGBOX_DEFAULT)
-								multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
-								switch(var(VAR_RESULT)) {
-									case 0:
-										setvar(VAR_TEMP_A, 252)
-										addvar(VAR_TEMP_F, 252)
-									case 1:
-										setvar(VAR_TEMP_A, 200)
-										addvar(VAR_TEMP_F, 200)
-									case 2:
-										setvar(VAR_TEMP_A, 100)
-										addvar(VAR_TEMP_F, 100)
-									case 3:
-										setvar(VAR_TEMP_A, 4)
-										addvar(VAR_TEMP_F, 4)
-									case 4:
-										setvar(VAR_TEMP_A, 0)
-									case 5:
-									case MULTI_B_PRESSED:
-										return
-								}
-								msgbox(gText_Lelouch_ChooseDefenseEV, MSGBOX_DEFAULT)
-								multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
-								switch(var(VAR_RESULT)) {
-									case 0:
-										setvar(VAR_TEMP_B, 252)
-										addvar(VAR_TEMP_F, 252)
-									case 1:
-										setvar(VAR_TEMP_B, 200)
-										addvar(VAR_TEMP_F, 200)
-									case 2:
-										setvar(VAR_TEMP_B, 100)
-										addvar(VAR_TEMP_F, 100)
-									case 3:
-										setvar(VAR_TEMP_B, 4)
-										addvar(VAR_TEMP_F, 4)
-									case 4:
-										setvar(VAR_TEMP_B, 0)
-									case 5:
-									case MULTI_B_PRESSED:
-										return
-								}
-								msgbox(gText_Lelouch_ChooseSpecialAttackEV, MSGBOX_DEFAULT)
-								multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
-								switch(var(VAR_RESULT)) {
-									case 0:
-										setvar(VAR_TEMP_C, 252)
-										addvar(VAR_TEMP_F, 252)
-									case 1:
-										setvar(VAR_TEMP_C, 200)
-										addvar(VAR_TEMP_F, 200)
-									case 2:
-										setvar(VAR_TEMP_C, 100)
-										addvar(VAR_TEMP_F, 100)
-									case 3:
-										setvar(VAR_TEMP_C, 4)
-										addvar(VAR_TEMP_F, 4)
-									case 4:
-										setvar(VAR_TEMP_C, 0)
-									case 5:
-									case MULTI_B_PRESSED:
-										return
-								}
-								msgbox(gText_Lelouch_ChooseSpecialDefenseEV, MSGBOX_DEFAULT)
-								multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
-								switch(var(VAR_RESULT)) {
-									case 0:
-										setvar(VAR_TEMP_D, 252)
-										addvar(VAR_TEMP_F, 252)
-									case 1:
-										setvar(VAR_TEMP_D, 200)
-										addvar(VAR_TEMP_F, 200)
-									case 2:
-										setvar(VAR_TEMP_D, 100)
-										addvar(VAR_TEMP_F, 100)
-									case 3:
-										setvar(VAR_TEMP_D, 4)
-										addvar(VAR_TEMP_F, 4)
-									case 4:
-										setvar(VAR_TEMP_D, 0)
-									case 5:
-									case MULTI_B_PRESSED:
-										return
-								}
-								msgbox(gText_Lelouch_ChooseSpeedEV, MSGBOX_DEFAULT)
-								multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
-								switch(var(VAR_RESULT)) {
-									case 0:
-										setvar(VAR_TEMP_E, 252)
-										addvar(VAR_TEMP_F, 252)
-									case 1:
-										setvar(VAR_TEMP_E, 200)
-										addvar(VAR_TEMP_F, 200)
-									case 2:
-										setvar(VAR_TEMP_E, 100)
-										addvar(VAR_TEMP_F, 100)
-									case 3:
-										setvar(VAR_TEMP_E, 4)
-										addvar(VAR_TEMP_F, 4)
-									case 4:
-										setvar(VAR_TEMP_E, 0)
-									case 5:
-									case MULTI_B_PRESSED:
-										return
-								}
-								if (var(VAR_TEMP_F) > 510) {
-									msgbox(gText_Lelouch_TooManyEVs)
-									return
-								}
-								msgbox(gText_Lelouch_CheckEVs, MSGBOX_YESNO)
-								if (var(VAR_RESULT) == NO) {
-									return
-								}
-								special(CheckLeadMonCute) // Sets the EVs
-								playse(SE_EXP_MAX)
-								waitse
-								msgbox(gText_Lelouch_ChangedEVs)
-								msgbox(gText_Lelouch_PayRed)
-								removeitem(ITEM_RED_SHARD, 1)
-							}
-						}
-						return
-					}
-			}
+	dynmultipush("Experience Training", 0)
+	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_EFFORTLESS) == false) && var(VAR_ZONE) > 25) {
+		dynmultipush("EV Training", 1)
 	}
-
+	dynmultipush("Exit", 2)
+	dynmultistack(0, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
+	switch(var(VAR_RESULT)) {
+		case 0:
+			msgbox(gText_Lelouch_Exp, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				special(ChoosePartyMonForTraining)
+				waitstate
+				if (var(VAR_0x8004) == 1) {
+					msgbox(gText_Lelouch_ExpTrainingFinished, MSGBOX_DEFAULT)
+					msgbox(gText_Lelouch_PayRed, MSGBOX_DEFAULT)
+					removeitem(ITEM_RED_SHARD, 1)
+				} else {
+					msgbox(gText_Lelouch_DidNotTrain)
+				}
+				return
+			}
+		case 1:
+			msgbox(gText_Lelouch_EV, MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES) {
+				special(ChoosePartyMon)
+				waitstate
+				if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
+					msgbox(gText_Lelouch_DidNotTrain, MSGBOX_DEFAULT)
+				} else {
+					specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+					if (var(VAR_RESULT) == SPECIES_EGG) {
+						msgbox("I can't train an Egg!", MSGBOX_DEFAULT)
+					} else {
+						setvar(VAR_TEMP_F, 0)
+						specialvar(VAR_TEMP_0, ScriptGetPartyMonSpecies)
+						bufferspeciesname(0, VAR_TEMP_0)
+						msgbox(gText_Lelouch_ChooseHPEV, MSGBOX_DEFAULT)
+						multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
+						switch(var(VAR_RESULT)) {
+							case 0:
+								setvar(VAR_TEMP_9, 252)
+								addvar(VAR_TEMP_F, 252)
+							case 1:
+								setvar(VAR_TEMP_9, 200)
+								addvar(VAR_TEMP_F, 200)
+							case 2:
+								setvar(VAR_TEMP_9, 100)
+								addvar(VAR_TEMP_F, 100)
+							case 3:
+								setvar(VAR_TEMP_9, 4)
+								addvar(VAR_TEMP_F, 4)
+							case 4:
+								setvar(VAR_TEMP_9, 0)
+							case 5:
+							case MULTI_B_PRESSED:
+								return
+						}
+						msgbox(gText_Lelouch_ChooseAttackEV, MSGBOX_DEFAULT)
+						multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
+						switch(var(VAR_RESULT)) {
+							case 0:
+								setvar(VAR_TEMP_A, 252)
+								addvar(VAR_TEMP_F, 252)
+							case 1:
+								setvar(VAR_TEMP_A, 200)
+								addvar(VAR_TEMP_F, 200)
+							case 2:
+								setvar(VAR_TEMP_A, 100)
+								addvar(VAR_TEMP_F, 100)
+							case 3:
+								setvar(VAR_TEMP_A, 4)
+								addvar(VAR_TEMP_F, 4)
+							case 4:
+								setvar(VAR_TEMP_A, 0)
+							case 5:
+							case MULTI_B_PRESSED:
+								return
+						}
+						msgbox(gText_Lelouch_ChooseDefenseEV, MSGBOX_DEFAULT)
+						multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
+						switch(var(VAR_RESULT)) {
+							case 0:
+								setvar(VAR_TEMP_B, 252)
+								addvar(VAR_TEMP_F, 252)
+							case 1:
+								setvar(VAR_TEMP_B, 200)
+								addvar(VAR_TEMP_F, 200)
+							case 2:
+								setvar(VAR_TEMP_B, 100)
+								addvar(VAR_TEMP_F, 100)
+							case 3:
+								setvar(VAR_TEMP_B, 4)
+								addvar(VAR_TEMP_F, 4)
+							case 4:
+								setvar(VAR_TEMP_B, 0)
+							case 5:
+							case MULTI_B_PRESSED:
+								return
+						}
+						msgbox(gText_Lelouch_ChooseSpecialAttackEV, MSGBOX_DEFAULT)
+						multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
+						switch(var(VAR_RESULT)) {
+							case 0:
+								setvar(VAR_TEMP_C, 252)
+								addvar(VAR_TEMP_F, 252)
+							case 1:
+								setvar(VAR_TEMP_C, 200)
+								addvar(VAR_TEMP_F, 200)
+							case 2:
+								setvar(VAR_TEMP_C, 100)
+								addvar(VAR_TEMP_F, 100)
+							case 3:
+								setvar(VAR_TEMP_C, 4)
+								addvar(VAR_TEMP_F, 4)
+							case 4:
+								setvar(VAR_TEMP_C, 0)
+							case 5:
+							case MULTI_B_PRESSED:
+								return
+						}
+						msgbox(gText_Lelouch_ChooseSpecialDefenseEV, MSGBOX_DEFAULT)
+						multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
+						switch(var(VAR_RESULT)) {
+							case 0:
+								setvar(VAR_TEMP_D, 252)
+								addvar(VAR_TEMP_F, 252)
+							case 1:
+								setvar(VAR_TEMP_D, 200)
+								addvar(VAR_TEMP_F, 200)
+							case 2:
+								setvar(VAR_TEMP_D, 100)
+								addvar(VAR_TEMP_F, 100)
+							case 3:
+								setvar(VAR_TEMP_D, 4)
+								addvar(VAR_TEMP_F, 4)
+							case 4:
+								setvar(VAR_TEMP_D, 0)
+							case 5:
+							case MULTI_B_PRESSED:
+								return
+						}
+						msgbox(gText_Lelouch_ChooseSpeedEV, MSGBOX_DEFAULT)
+						multichoice(0, 0, MULTI_LELOUCH_EV_NUMBERS, 0)
+						switch(var(VAR_RESULT)) {
+							case 0:
+								setvar(VAR_TEMP_E, 252)
+								addvar(VAR_TEMP_F, 252)
+							case 1:
+								setvar(VAR_TEMP_E, 200)
+								addvar(VAR_TEMP_F, 200)
+							case 2:
+								setvar(VAR_TEMP_E, 100)
+								addvar(VAR_TEMP_F, 100)
+							case 3:
+								setvar(VAR_TEMP_E, 4)
+								addvar(VAR_TEMP_F, 4)
+							case 4:
+								setvar(VAR_TEMP_E, 0)
+							case 5:
+							case MULTI_B_PRESSED:
+								return
+						}
+						if (var(VAR_TEMP_F) > 510) {
+							msgbox(gText_Lelouch_TooManyEVs, MSGBOX_DEFAULT)
+							return
+						}
+						msgbox(gText_Lelouch_CheckEVs, MSGBOX_YESNO)
+						if (var(VAR_RESULT) == NO) {
+							return
+						}
+						special(CheckLeadMonCute) // Sets the EVs
+						playse(SE_EXP_MAX)
+						waitse
+						msgbox(gText_Lelouch_ChangedEVs, MSGBOX_DEFAULT)
+						msgbox(gText_Lelouch_PayRed, MSGBOX_DEFAULT)
+						removeitem(ITEM_RED_SHARD, 1)
+					}
+				}
+				return
+			}
+		case 2:
+		case MULTI_B_PRESSED:
+			return
+	}
 	return
 }
 
