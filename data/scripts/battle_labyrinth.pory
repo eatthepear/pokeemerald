@@ -47,91 +47,73 @@ script EventScript_Shop_General {
 	}
 	message("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Welcome to Tim's.\nCan I get you anything?")
 	waitmessage
-	multichoice(1, 0, MULTI_TIM, 0)
-	switch (var(VAR_RESULT)) {
-		case 0:
-			message(format("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Ah, so you're looking for Pokéballs and healing items?"))
-			waitmessage
-			switch (var(VAR_ZONE)) {
-				case 1:
-				case 2:
-				case 3:
-					pokemart(Shop_General_Common_1to3)
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-					pokemart(Shop_General_Common_4to12)
-				case 13:
-				case 15:
-					pokemart(Shop_General_Common_13to15)
-				case 16:
-				case 17:
-				case 18:
-				case 20:
-				case 21:
-				case 22:
-				case 23:
-				case 24:
-				case 25:
-					pokemart(Shop_General_Common_16to25)
-				case 26:
-					pokemart(Shop_General_Common_26to30)
-			}
+	switch (var(VAR_ZONE)) {
 		case 1:
-			message(format("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Ah, so it's field items you're looking for?"))
-			waitmessage
-			switch (var(VAR_ZONE)) {
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-					pokemart(Shop_General_Utility_1to8)
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-				case 13:
-				case 15:
-				case 16:
-				case 17:
-				case 18:
-				case 20:
-				case 21:
-				case 22:
-				case 23:
-				case 24:
-				case 25:
-					if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_ANTIDOCTOR) == true)) {
-						pokemart(Shop_General_Utility_9to25_NoXItems)
-					} else {
-						pokemart(Shop_General_Utility_9to25)
-					}
-				case 26:
-					pokemart(Shop_General_Utility_26to30)
-			}
+		case 2:
+		case 3:
+			pokemart(Shop_General_1to3)
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+			pokemart(Shop_General_4to8)
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+			pokemart(Shop_General_9to12)
+		case 13:
+		case 15:
+			pokemart(Shop_General_13to15)
+		case 16:
+		case 17:
+		case 18:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+			pokemart(Shop_General_16to25)
+		case 26:
+			pokemart(Shop_General_26to30)
 	}
 	msgbox("{COLOR BLUE}Tim{COLOR DARK_GRAY}: Have a nice day.", MSGBOX_DEFAULT)
 	release
 }
 
-mart Shop_General_Utility_1to8 {
+mart Shop_General_1to3 {
+	ITEM_POKE_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+}
+
+mart Shop_General_4to8 {
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_POTION
+	ITEM_SUPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_BURN_HEAL
+	ITEM_ICE_HEAL
 	ITEM_REPEL
 }
 
-mart Shop_General_Utility_9to25_NoXItems {
-	ITEM_REPEL
-	ITEM_SUPER_REPEL
-}
-
-mart Shop_General_Utility_9to25 {
+mart Shop_General_9to12 {
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_POTION
+	ITEM_SUPER_POTION
+	ITEM_REVIVE
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_BURN_HEAL
+	ITEM_ICE_HEAL
+	ITEM_ETHER
 	ITEM_REPEL
 	ITEM_SUPER_REPEL
 	ITEM_X_ATTACK
@@ -144,7 +126,75 @@ mart Shop_General_Utility_9to25 {
 	ITEM_GUARD_SPEC
 }
 
-mart Shop_General_Utility_26to30 {
+mart Shop_General_13to15 {
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_ULTRA_BALL
+	ITEM_POTION
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_BURN_HEAL
+	ITEM_ICE_HEAL
+	ITEM_FULL_HEAL
+	ITEM_ETHER
+	ITEM_REPEL
+	ITEM_SUPER_REPEL
+	ITEM_X_ATTACK
+	ITEM_X_DEFENSE
+	ITEM_X_SP_ATK
+	ITEM_X_SP_DEF
+	ITEM_X_SPEED
+	ITEM_X_ACCURACY
+	ITEM_DIRE_HIT
+	ITEM_GUARD_SPEC
+}
+
+mart Shop_General_16to25 {
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_ULTRA_BALL
+	ITEM_POTION
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_BURN_HEAL
+	ITEM_ICE_HEAL
+	ITEM_FULL_HEAL
+	ITEM_ETHER
+	ITEM_REPEL
+	ITEM_SUPER_REPEL
+	ITEM_X_ATTACK
+	ITEM_X_DEFENSE
+	ITEM_X_SP_ATK
+	ITEM_X_SP_DEF
+	ITEM_X_SPEED
+	ITEM_X_ACCURACY
+	ITEM_DIRE_HIT
+	ITEM_GUARD_SPEC
+}
+
+mart Shop_General_26to30 {
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_ULTRA_BALL
+	ITEM_POTION
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_BURN_HEAL
+	ITEM_ICE_HEAL
+	ITEM_FULL_HEAL
+	ITEM_ETHER
+	ITEM_ELIXIR
 	ITEM_REPEL
 	ITEM_SUPER_REPEL
 	ITEM_X_ATTACK
@@ -161,77 +211,6 @@ mart Shop_General_Utility_26to30 {
 	ITEM_CALCIUM
 	ITEM_ZINC
 	ITEM_CARBOS
-}
-
-mart Shop_General_Common_1to3 {
-	ITEM_POKE_BALL
-	ITEM_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-}
-
-mart Shop_General_Common_4to12 {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_POTION
-	ITEM_SUPER_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_BURN_HEAL
-	ITEM_ICE_HEAL
-}
-
-mart Shop_General_Common_13to15 {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_ULTRA_BALL
-	ITEM_POTION
-	ITEM_SUPER_POTION
-	ITEM_HYPER_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_BURN_HEAL
-	ITEM_ICE_HEAL
-	ITEM_ETHER
-}
-
-mart Shop_General_Common_16to25 {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_ULTRA_BALL
-	ITEM_POTION
-	ITEM_SUPER_POTION
-	ITEM_HYPER_POTION
-	ITEM_REVIVE
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_BURN_HEAL
-	ITEM_ICE_HEAL
-	ITEM_FULL_HEAL
-	ITEM_ETHER
-}
-
-mart Shop_General_Common_26to30 {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_ULTRA_BALL
-	ITEM_POTION
-	ITEM_SUPER_POTION
-	ITEM_HYPER_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_BURN_HEAL
-	ITEM_ICE_HEAL
-	ITEM_FULL_HEAL
-	ITEM_REVIVE
-	ITEM_REPEL
-	ITEM_SUPER_REPEL
-	ITEM_ETHER
-	ITEM_ELIXIR
 }
 
 script EventScript_Shop_Unique_Varrick {
