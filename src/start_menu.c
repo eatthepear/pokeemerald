@@ -1463,14 +1463,17 @@ static void ShowSaveInfoWindow(void)
     xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 0x70);
     AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gStringVar4, xOffset, yOffset, TEXT_SKIP_DRAW, NULL);
 
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
-        // Print pokedex count
-        yOffset += 16;
+    // Print pokedex count
+    yOffset += 16;
+    if ((FlagGet(FLAG_SETTINGS_BRUTAL) == FALSE) && (FlagGet(FLAG_SETTINGS_INFINITE) == FALSE) && (FlagGet(FLAG_SETTINGS_NUZLOCKE) == FALSE) && (FlagGet(FLAG_SETTINGS_RANDOMIZER) == FALSE)) {
         AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gText_SavingPokedex, 0, yOffset, TEXT_SKIP_DRAW, NULL);
         BufferSaveMenuText(SAVE_MENU_CAUGHT, gStringVar4, color);
         xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 0x70);
         AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gStringVar4, xOffset, yOffset, TEXT_SKIP_DRAW, NULL);
+    } else {
+        // AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gText_SavingPokedex, 0, yOffset, TEXT_SKIP_DRAW, NULL);
+        BufferSaveMenuText(SAVE_MENU_MODE, gStringVar4, color);
+        AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gStringVar4, 0, yOffset, TEXT_SKIP_DRAW, NULL);
     }
 
     // Print play time

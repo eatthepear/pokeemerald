@@ -2128,6 +2128,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
     u8 *endOfString;
     u8 *string = dest;
     int zone;
+    u16 mode = 0;
 
     *(string++) = EXT_CTRL_CODE_BEGIN;
     *(string++) = EXT_CTRL_CODE_COLOR;
@@ -2142,31 +2143,15 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             StringCopy(string, gSaveBlock2Ptr->playerName);
             break;
         case SAVE_MENU_CAUGHT:
-            /*if (IsNationalPokedexEnabled())
+            if (IsNationalPokedexEnabled())
                 string = ConvertIntToDecimalStringN(string, GetNationalPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
             else
-                string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);*/
-            if (FlagGet(FLAG_SETTINGS_BRUTAL))
-                StringCopy(string, gText_SaveMenuBrutal);
-            else if (FlagGet(FLAG_SETTINGS_INFINITE))
-                StringCopy(string, gText_SaveMenuInfinite);
-            else
-                StringCopy(string, gText_SaveMenuDefault);
+                string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
             break;
         case SAVE_MENU_PLAY_TIME:
-            /*string = ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+            string = ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
             *(string++) = CHAR_COLON;
-            ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);*/
-            if (FlagGet(FLAG_SETTINGS_NUZLOCKE))
-                if (FlagGet(FLAG_SETTINGS_RANDOMIZER))
-                    StringCopy(string, gText_SaveMenuRandomlocke);
-                else
-                    StringCopy(string, gText_SaveMenuNuzlocke);
-            else
-                if (FlagGet(FLAG_SETTINGS_RANDOMIZER))
-                    StringCopy(string, gText_SaveMenuRandomizer);
-                else
-                    StringCopy(string, gText_SaveMenuVanilla);
+            ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
             break;
         case SAVE_MENU_LOCATION:
             GetMapNameGeneric(string, gMapHeader.regionMapSectionId);
@@ -2175,6 +2160,60 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             zone = VarGet(VAR_ZONE) - 1;
             string = ConvertIntToDecimalStringN(string, zone, STR_CONV_MODE_LEFT_ALIGN, 3);
             *string = EOS;
+            break;
+        case SAVE_MENU_MODE:
+            if (FlagGet(FLAG_SETTINGS_BRUTAL) == TRUE) {
+                mode += 1;
+            } else if (FlagGet(FLAG_SETTINGS_INFINITE) == TRUE) {
+                mode += 2;
+            }
+            if (FlagGet(FLAG_SETTINGS_NUZLOCKE) == TRUE) {
+                mode += 10;
+            }
+            if (FlagGet(FLAG_SETTINGS_RANDOMIZER) == TRUE) {
+                mode += 100;
+            }
+            switch (mode) {
+                case 0:
+                    if (IsNationalPokedexEnabled())
+                        string = ConvertIntToDecimalStringN(string, GetNationalPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
+                    else
+                        string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
+                    break;
+                case 1:
+                    StringCopy(string, gText_ContinueMenuBrutal);
+                    break;
+                case 2:
+                    StringCopy(string, gText_ContinueMenuInfinite);
+                    break;
+                case 10:
+                    StringCopy(string, gText_ContinueMenuNuzlocke);
+                    break;
+                case 11:
+                    StringCopy(string, gText_ContinueMenuBrutalNuzlocke);
+                    break;
+                case 12:
+                    StringCopy(string, gText_ContinueMenuInfiniteNuzlocke);
+                    break;
+                case 100:
+                    StringCopy(string, gText_ContinueMenuRandomizer);
+                    break;
+                case 101:
+                    StringCopy(string, gText_ContinueMenuBrutalRandomizer);
+                    break;
+                case 102:
+                    StringCopy(string, gText_ContinueMenuInfiniteRandomizer);
+                    break;
+                case 110:
+                    StringCopy(string, gText_ContinueMenuRandomlocke);
+                    break;
+                case 111:
+                    StringCopy(string, gText_ContinueMenuBrutalRandomlocke);
+                    break;
+                case 112:
+                    StringCopy(string, gText_ContinueMenuInfiniteRandomlocke);
+                    break;
+            }
             break;
     }
 }
