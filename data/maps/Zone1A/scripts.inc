@@ -23,53 +23,105 @@ Zone1A_Corey_WalkLeft:
 	walk_left
 	walk_left
 	walk_left
+	walk_left
 	step_end
 
-Zone1A_Corey_WalkLeft2:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+Zone1A_Corey_WalkRight:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Zone1A_EventScript_TriggerLeviathanBottom::
 	lockall
-	fadeoutbgm 1
-	setvar VAR_ZONE_1_STATE, 1
-	applymovement 1, Zone1A_Corey_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
+	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
+	applymovement 1, Zone1A_Corey_WalkLeft
+	waitmovement 0
+	msgbox Zone1A_Text_Leviathan1Intro, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone1A_EventScript_TriggerLeviathanBottom_1
+	msgbox Zone1A_Text_Leviathan1Wait
+	applymovement 1, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement 1, Zone1A_Corey_WalkRight
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	return
+
+Zone1A_EventScript_TriggerLeviathanBottom_1:
 	goto Zone1A_EventScript_LeviathanBattle
 	return
 
 
 Zone1A_EventScript_TriggerLeviathanMiddle::
 	lockall
-	fadeoutbgm 1
-	setvar VAR_ZONE_1_STATE, 1
+	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
 	applymovement 1, Zone1A_Corey_WalkLeft
 	waitmovement 0
+	msgbox Zone1A_Text_Leviathan1Intro, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone1A_EventScript_TriggerLeviathanMiddle_1
+	msgbox Zone1A_Text_Leviathan1Wait
+	applymovement 1, Zone1A_Corey_WalkRight
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	return
+
+Zone1A_EventScript_TriggerLeviathanMiddle_1:
 	goto Zone1A_EventScript_LeviathanBattle
 	return
 
 
 Zone1A_EventScript_TriggerLeviathanTop::
 	lockall
-	fadeoutbgm 1
-	setvar VAR_ZONE_1_STATE, 1
-	applymovement 1, Zone1A_Corey_WalkLeft
+	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
 	waitmovement 0
+	waitse
 	applymovement 1, Common_Movement_WalkUp
 	waitmovement 0
+	applymovement 1, Zone1A_Corey_WalkLeft
+	waitmovement 0
+	msgbox Zone1A_Text_Leviathan1Intro, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Zone1A_EventScript_TriggerLeviathanTop_1
+	msgbox Zone1A_Text_Leviathan1Wait
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement 1, Zone1A_Corey_WalkRight
+	waitmovement 0
+	applymovement 1, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	return
+
+Zone1A_EventScript_TriggerLeviathanTop_1:
 	goto Zone1A_EventScript_LeviathanBattle
 	return
 
 
 Zone1A_EventScript_LeviathanBattle::
-	applymovement 1, Zone1A_Corey_WalkLeft2
-	waitmovement 0
-	msgbox Zone1A_Text_Leviathan1Intro
+	fadeoutbgm 1
+	setvar VAR_ZONE_1_STATE, 1
+	msgbox Zone1A_Text_Leviathan1Intro2
 	setflag FLAG_FORCE_BATTLE_ANIM_ON
 	goto_if_set FLAG_SETTINGS_BRUTAL, Zone1A_EventScript_LeviathanBattle_2
 	goto_if_set FLAG_SETTINGS_CHALLENGE, Zone1A_EventScript_LeviathanBattle_2
@@ -213,8 +265,15 @@ Zone1A_Text_Leviathan1Intro::
 	.string "I'm the resident Leviathan around here.\p"
 	.string "If you want to go forward, you'll have\n"
 	.string "to beat me!\p"
-	.string "So, let's get right to it!\p"
-	.string "I challenge you to a battle!$"
+	.string "So, are you ready for our battle?$"
+
+Zone1A_Text_Leviathan1Wait::
+	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: Okay. You just let me know when\n"
+	.string "you're ready.$"
+
+Zone1A_Text_Leviathan1Intro2::
+	.string "{COLOR BLUE}Corey{COLOR DARK_GRAY}: Aww, yeah!\n"
+	.string "This battle is gonna be awesome!$"
 
 Zone1A_Text_Leviathan1Defeat::
 	.string "Drats! Even the Oran Berry wasn't\n"
