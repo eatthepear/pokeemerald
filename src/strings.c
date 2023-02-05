@@ -1986,6 +1986,7 @@ const u8 gText_SavingPlayer[] = _("Player");
 const u8 gText_SavingBadges[] = _("Zones Completed");
 const u8 gText_SavingPokedex[] = _("Pokédex");
 const u8 gText_SavingTime[] = _("Time");
+const u8 gText_SavingMode[] = _("Mode");
 const u8 gText_NextZone[] =_("Next Zone");
 const u8 gText_Settings[] =_("Settings");
 const u8 gText_Documentation[] =_("Docs");
