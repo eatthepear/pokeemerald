@@ -475,20 +475,21 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SOCIALITE               0x1136
 #define OBJ_EVENT_PAL_TAG_LADY                    0x1137
 #define OBJ_EVENT_PAL_TAG_ITEM_CHEST              0x1138
-#define OBJ_EVENT_PAL_TAG_AROMA_LADY              0x1139
-#define OBJ_EVENT_PAL_TAG_BACKPACKER_F            0x113A
-#define OBJ_EVENT_PAL_TAG_POKEMANIAC              0x113B
-#define OBJ_EVENT_PAL_TAG_BIRD_KEEPER             0x113C
-#define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x113D
-#define OBJ_EVENT_PAL_TAG_BEAUTY                  0x113E
-#define OBJ_EVENT_PAL_TAG_MAN_4                   0x113F
-#define OBJ_EVENT_PAL_TAG_WOMAN_4                 0x1140
-#define OBJ_EVENT_PAL_TAG_WORKER                  0x1141
-#define OBJ_EVENT_PAL_TAG_ICE_WORKER              0x1142
-#define OBJ_EVENT_PAL_TAG_ROUGHNECK               0x1143
-#define OBJ_EVENT_PAL_TAG_PORYGON                 0x1144
-#define OBJ_EVENT_PAL_TAG_SHINY_PORYGON           0x1145
-#define OBJ_EVENT_PAL_TAG_SWIMMER_F_WALKING       0x1146
+#define OBJ_EVENT_PAL_TAG_TM_CHEST                0x1139
+#define OBJ_EVENT_PAL_TAG_AROMA_LADY              0x113A
+#define OBJ_EVENT_PAL_TAG_BACKPACKER_F            0x113B
+#define OBJ_EVENT_PAL_TAG_POKEMANIAC              0x113C
+#define OBJ_EVENT_PAL_TAG_BIRD_KEEPER             0x113D
+#define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x113E
+#define OBJ_EVENT_PAL_TAG_BEAUTY                  0x113F
+#define OBJ_EVENT_PAL_TAG_MAN_4                   0x1140
+#define OBJ_EVENT_PAL_TAG_WOMAN_4                 0x1141
+#define OBJ_EVENT_PAL_TAG_WORKER                  0x1142
+#define OBJ_EVENT_PAL_TAG_ICE_WORKER              0x1143
+#define OBJ_EVENT_PAL_TAG_ROUGHNECK               0x1144
+#define OBJ_EVENT_PAL_TAG_PORYGON                 0x1145
+#define OBJ_EVENT_PAL_TAG_SHINY_PORYGON           0x1146
+#define OBJ_EVENT_PAL_TAG_SWIMMER_F_WALKING       0x1147
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -555,6 +556,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Socialite,             OBJ_EVENT_PAL_TAG_SOCIALITE},
     {gObjectEventPal_Lady,                  OBJ_EVENT_PAL_TAG_LADY},
     {gObjectEventPal_ItemChest,             OBJ_EVENT_PAL_TAG_ITEM_CHEST},
+    {gObjectEventPal_TMChest,               OBJ_EVENT_PAL_TAG_TM_CHEST},
     {gObjectEventPal_AromaLady,             OBJ_EVENT_PAL_TAG_AROMA_LADY},
     {gObjectEventPal_BackpackerF,           OBJ_EVENT_PAL_TAG_BACKPACKER_F},
     {gObjectEventPal_Maniac,                OBJ_EVENT_PAL_TAG_POKEMANIAC},

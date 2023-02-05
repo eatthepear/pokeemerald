@@ -6,9 +6,9 @@ mapscripts Zone5A_MapScripts {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE5A_TM03)) {
-			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 		} else {
-			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TM_CHEST)
 		}
 	}
 }
@@ -302,7 +302,7 @@ script Zone5A_EventScript_ItemTM03 {
 	}
 	waitse
 	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 	setflag(FLAG_ITEM_ZONE5A_TM03)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_TM03)

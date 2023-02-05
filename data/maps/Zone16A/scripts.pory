@@ -1,9 +1,9 @@
 mapscripts Zone16A_MapScripts {
 	MAP_SCRIPT_ON_RESUME {
 		if (flag(FLAG_ITEM_ZONE16A_TM27)) {
-			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 		} else {
-			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE16A_WATER_STONE)) {
 			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
@@ -128,7 +128,7 @@ script Zone16A_EventScript_TM27 {
 	}
 	waitse
 	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 	setflag(FLAG_ITEM_ZONE16A_TM27)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_TM27, 1)

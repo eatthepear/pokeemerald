@@ -6,9 +6,9 @@ mapscripts Zone6A_MapScripts {
 			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE6A_TM07)) {
-			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 		} else {
-			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST)
+			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE6A_NEST_BALL)) {
 			setvar(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
@@ -88,7 +88,7 @@ script Zone6A_EventScript_ItemTM07 {
 	}
 	waitse
 	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 	setflag(FLAG_ITEM_ZONE6A_TM07)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_TM07)

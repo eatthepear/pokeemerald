@@ -60,6 +60,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTria
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemChest;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemChestOpen;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMChest;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMChestOpen;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTree;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeEarlyStages;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeLateStages;
@@ -516,6 +519,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SOCIALITE] =                &gObjectEventGraphicsInfo_Socialite,
     [OBJ_EVENT_GFX_ITEM_CHEST] =               &gObjectEventGraphicsInfo_ItemChest,
     [OBJ_EVENT_GFX_ITEM_CHEST_OPEN] =          &gObjectEventGraphicsInfo_ItemChestOpen,
+    [OBJ_EVENT_GFX_TM_CHEST] =                 &gObjectEventGraphicsInfo_TMChest,
+    [OBJ_EVENT_GFX_TM_CHEST_OPEN] =            &gObjectEventGraphicsInfo_TMChestOpen,
     [OBJ_EVENT_GFX_AROMA_LADY] =               &gObjectEventGraphicsInfo_AromaLady,
     [OBJ_EVENT_GFX_BACKPACKER_F] =             &gObjectEventGraphicsInfo_BackpackerF,
     [OBJ_EVENT_GFX_BIRD_KEEPER] =              &gObjectEventGraphicsInfo_BirdKeeper,

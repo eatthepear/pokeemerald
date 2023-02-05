@@ -251,17 +251,19 @@
 #define OBJ_EVENT_GFX_SOCIALITE                  247
 #define OBJ_EVENT_GFX_ITEM_CHEST                 248
 #define OBJ_EVENT_GFX_ITEM_CHEST_OPEN            249
-#define OBJ_EVENT_GFX_AROMA_LADY                 250
-#define OBJ_EVENT_GFX_BACKPACKER_F               251
-#define OBJ_EVENT_GFX_BIRD_KEEPER                252
-#define OBJ_EVENT_GFX_WORKER                     253
-#define OBJ_EVENT_GFX_ICE_WORKER                 254
-#define OBJ_EVENT_GFX_ROUGHNECK                  255
-#define OBJ_EVENT_GFX_PORYGON                    256
-#define OBJ_EVENT_GFX_SHINY_PORYGON              257
-#define OBJ_EVENT_GFX_SWIMMER_F_WALKING          258
+#define OBJ_EVENT_GFX_TM_CHEST                   250
+#define OBJ_EVENT_GFX_TM_CHEST_OPEN              251
+#define OBJ_EVENT_GFX_AROMA_LADY                 252
+#define OBJ_EVENT_GFX_BACKPACKER_F               253
+#define OBJ_EVENT_GFX_BIRD_KEEPER                254
+#define OBJ_EVENT_GFX_WORKER                     255
+#define OBJ_EVENT_GFX_ICE_WORKER                 256
+#define OBJ_EVENT_GFX_ROUGHNECK                  257
+#define OBJ_EVENT_GFX_PORYGON                    258
+#define OBJ_EVENT_GFX_SHINY_PORYGON              259
+#define OBJ_EVENT_GFX_SWIMMER_F_WALKING          260
 
-#define NUM_OBJ_EVENT_GFX                        259
+#define NUM_OBJ_EVENT_GFX                        261
 
 
 // These are dynamic object gfx ids.

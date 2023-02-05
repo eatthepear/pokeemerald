@@ -21,9 +21,9 @@ mapscripts Zone10A_MapScripts {
 			setvar(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_ITEM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE10A_TM16)) {
-			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 		} else {
-			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST)
+			setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_TM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE10A_HEAVY_DUTY_BOOTS)) {
 			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
@@ -195,7 +195,7 @@ script Zone10A_EventScript_TM16 {
 	}
 	waitse
 	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setvar(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 	setflag(FLAG_ITEM_ZONE10A_TM16)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_TM16, 1)

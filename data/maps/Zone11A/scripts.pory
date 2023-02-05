@@ -1,9 +1,9 @@
 mapscripts Zone11A_MapScripts {
 	MAP_SCRIPT_ON_RESUME {
 		if (flag(FLAG_ITEM_ZONE11A_TM22)) {
-			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 		} else {
-			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST)
+			setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TM_CHEST)
 		}
 		if (flag(FLAG_ITEM_ZONE11A_MOON_STONE)) {
 			setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
@@ -217,7 +217,7 @@ script Zone11A_EventScript_TM22 {
 	}
 	waitse
 	removeobject(VAR_LAST_TALKED)
-	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ITEM_CHEST_OPEN)
+	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TM_CHEST_OPEN)
 	setflag(FLAG_ITEM_ZONE11A_TM22)
 	addobject(VAR_LAST_TALKED)
 	finditem(ITEM_TM22, 1)
