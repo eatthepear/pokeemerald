@@ -2,6 +2,7 @@ script Zone0A_EventScript_Porygon {
     lockall
     fadeoutbgm(1)
 	delay(64)
+	message("Beeeouuuuuu zeedeeboo!")
     playmoncry(SPECIES_PORYGON, 2)
 	delay(40)
 	waitmoncry
@@ -9,6 +10,7 @@ script Zone0A_EventScript_Porygon {
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
+	closemessage
 	delay(40)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
 	waitmovement(0)

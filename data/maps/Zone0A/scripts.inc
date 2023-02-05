@@ -2,6 +2,7 @@ Zone0A_EventScript_Porygon::
 	lockall
 	fadeoutbgm 1
 	delay 64
+	message Zone0A_EventScript_Porygon_Text_0
 	playmoncry SPECIES_PORYGON, 2
 	delay 40
 	waitmoncry
@@ -9,6 +10,7 @@ Zone0A_EventScript_Porygon::
 	playse SE_PIN
 	waitmovement 0
 	waitse
+	closemessage
 	delay 40
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
@@ -18,7 +20,7 @@ Zone0A_EventScript_Porygon::
 	delay 40
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone0A_EventScript_Porygon_Text_0
+	msgbox Zone0A_EventScript_Porygon_Text_1
 	setvar VAR_ZONE_0_STATE, 2
 	fadeinbgm 1
 	releaseall
@@ -221,5 +223,8 @@ Zone0A_Text_TPISign:
 	.string "Getting around, easy peasy.$"
 
 Zone0A_EventScript_Porygon_Text_0:
+	.string "Beeeouuuuuu zeedeeboo!$"
+
+Zone0A_EventScript_Porygon_Text_1:
 	.string "There seemed to be a Pokémon's cry, but\n"
 	.string "it's gone now.$"
