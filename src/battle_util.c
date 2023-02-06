@@ -9736,14 +9736,6 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
         if (typeEffectivenessModifier >= UQ_4_12(2.0))
             MulModifier(&finalModifier, UQ_4_12(0.75));
         break;
-    case ABILITY_SAND_VEIL:
-        if (IsBattlerWeatherAffected(battlerDef, B_WEATHER_SANDSTORM))
-            MulModifier(&finalModifier, UQ_4_12(0.9));
-        break;
-    case ABILITY_SNOW_CLOAK:
-        if (IsBattlerWeatherAffected(battlerDef, B_WEATHER_HAIL))
-            MulModifier(&finalModifier, UQ_4_12(0.9));
-        break;
     }
 
     // target's ally's abilities
