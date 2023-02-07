@@ -301,44 +301,47 @@
 #define F_SUMMARY_SCREEN_FLIP_SPRITE 0x80
 
 // Evolution types
-
-#define EVO_MEGA_EVOLUTION   0xffff // Not an actual evolution, used to temporarily mega evolve in battle.
-#define EVO_MOVE_MEGA_EVOLUTION 0xfffe // Mega Evolution that checks for a move instead of held item.
+#define EVO_MEGA_EVOLUTION                0xffff // Not an actual evolution, used to temporarily mega evolve in battle.
+#define EVO_MOVE_MEGA_EVOLUTION           0xfffe // Mega Evolution that checks for a move instead of held item.
 #define EVO_PRIMAL_REVERSION              0xfffd // Not an actual evolution, used to undergo primal reversion in battle.
-#define EVO_FRIENDSHIP       1 // Pokémon levels up with friendship ≥ 220
-#define EVO_LEVEL            2 // Pokémon reaches the specified level
-#define EVO_TRADE            3 // Pokémon is traded
-#define EVO_TRADE_ITEM       4 // Pokémon is traded while it's holding the specified item
-#define EVO_ITEM             5 // specified item is used on Pokémon
-#define EVO_LEVEL_ATK_GT_DEF 6 // Pokémon reaches the specified level with attack > defense
-#define EVO_LEVEL_ATK_EQ_DEF 7 // Pokémon reaches the specified level with attack = defense
-#define EVO_LEVEL_ATK_LT_DEF 8 // Pokémon reaches the specified level with attack < defense
-#define EVO_LEVEL_SILCOON    9 // Pokémon reaches the specified level with a Silcoon personality value
-#define EVO_LEVEL_CASCOON    10 // Pokémon reaches the specified level with a Cascoon personality value
-#define EVO_LEVEL_NINJASK    11 // Pokémon reaches the specified level (special value for Ninjask)
-#define EVO_LEVEL_SHEDINJA   12 // Pokémon reaches the specified level (special value for Shedinja)
-#define EVO_BEAUTY           13 // Pokémon levels up with beauty ≥ specified value
-#define EVO_LEVEL_FEMALE     14 // Pokémon reaches the specified level, is female
-#define EVO_LEVEL_MALE       15 // Pokémon reaches the specified level, is male
-#define EVO_LEVEL_NATURE_MIDDAY     16 // Pokémon reaches the specified level with a Lycanroc-Midday Nature
-#define EVO_LEVEL_NATURE_MIDNIGHT   17 // Pokémon reaches the specified level with a Lycanroc-Midnight Nature
-#define EVO_LEVEL_NATURE_DUSK       18 // Pokémon reaches the specified level with a Lycanroc-Dusk Nature
-#define EVO_ITEM_HOLD        19 // Pokémon levels up, holds specified item at day
-#define EVO_MOVE             20 // Pokémon levels up, knows specified move
-#define EVO_MOVE_TYPE        21 // Pokémon levels up, knows move with specified type
-#define EVO_SPECIFIC_MAP     22 // Pokémon levels up on specified map
-#define EVO_ITEM_MALE        23 // specified item is used on a male Pokémon
-#define EVO_ITEM_FEMALE      24 // specified item is used on a female Pokémon
-#define EVO_LEVEL_RAIN       25 // Pokémon reaches the specified level while it's raining
-#define EVO_SPECIFIC_MON_IN_PARTY  26 // Pokémon levels up with a specified Pokémon in party
-#define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  27 // Pokémon reaches the specified level with a Dark Type Pokémon in party
-#define EVO_MAPSEC                        28     // Pokémon levels up on specified mapsec
-#define EVO_LEVEL_NATURE_AMPED            29     // Pokémon reaches the specified level, it has a Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature.
-#define EVO_LEVEL_NATURE_LOW_KEY          30     // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
-#define EVO_CRITICAL_HITS                 31     // Pokémon performs specified number of critical hits in one battle
-#define EVO_SCRIPT_TRIGGER_DMG            32     // Pokémon has specified HP below max, then player interacts trigger
-#define EVO_DARK_SCROLL                   33     // interacts with Scroll of Darkness
-#define EVO_WATER_SCROLL                  34     // interacts with Scroll of Waters
+#define EVO_FRIENDSHIP                    1      // Pokémon levels up with friendship ≥ 220
+#define EVO_FRIENDSHIP_DAY                2      // Pokémon levels up during the day with friendship ≥ 220
+#define EVO_FRIENDSHIP_NIGHT              3      // Pokémon levels up at night with friendship ≥ 220
+#define EVO_LEVEL                         4      // Pokémon reaches the specified level
+#define EVO_TRADE                         5      // Pokémon is traded
+#define EVO_TRADE_ITEM                    6      // Pokémon is traded while it's holding the specified item
+#define EVO_ITEM                          7      // specified item is used on Pokémon
+#define EVO_LEVEL_ATK_GT_DEF              8      // Pokémon reaches the specified level with attack > defense
+#define EVO_LEVEL_ATK_EQ_DEF              9      // Pokémon reaches the specified level with attack = defense
+#define EVO_LEVEL_ATK_LT_DEF              10     // Pokémon reaches the specified level with attack < defense
+#define EVO_LEVEL_SILCOON                 11     // Pokémon reaches the specified level with a Silcoon personality value
+#define EVO_LEVEL_CASCOON                 12     // Pokémon reaches the specified level with a Cascoon personality value
+#define EVO_LEVEL_NINJASK                 13     // Pokémon reaches the specified level (special value for Ninjask)
+#define EVO_LEVEL_SHEDINJA                14     // Pokémon reaches the specified level (special value for Shedinja)
+#define EVO_BEAUTY                        15     // Pokémon levels up with beauty ≥ specified value
+#define EVO_LEVEL_FEMALE                  16     // Pokémon reaches the specified level, is female
+#define EVO_LEVEL_MALE                    17     // Pokémon reaches the specified level, is male
+#define EVO_LEVEL_MIDNIGHT                18     // Pokémon reaches the specified level with a Midnight personality value
+#define EVO_LEVEL_MIDDAY                  19     // Pokémon reaches the specified level with a Midday personality value
+#define EVO_LEVEL_DUSK                    20     // Pokémon reaches the specified level with a Dusk personality value
+#define EVO_ITEM_HOLD                     21     // Pokémon levels up, holds specified item
+#define EVO_ITEM_HOLD_NIGHT               22     // Pokémon levels up, holds specified item at night
+#define EVO_MOVE                          23     // Pokémon levels up, knows specified move
+#define EVO_MOVE_TYPE                     24     // Pokémon levels up, knows move with specified type
+#define EVO_MAPSEC                        25     // Pokémon levels up on specified mapsec
+#define EVO_ITEM_MALE                     26     // specified item is used on a male Pokémon
+#define EVO_ITEM_FEMALE                   27     // specified item is used on a female Pokémon
+#define EVO_LEVEL_RAIN                    28     // Pokémon reaches the specified level while it's raining
+#define EVO_SPECIFIC_MON_IN_PARTY         29     // Pokémon levels up with a specified Pokémon in party
+#define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  30     // Pokémon reaches the specified level with a Dark Type Pokémon in party
+#define EVO_TRADE_SPECIFIC_MON            31     // Pokémon is traded for a specified Pokémon
+#define EVO_SPECIFIC_MAP                  32     // Pokémon levels up on specified map
+#define EVO_LEVEL_NATURE_AMPED            33     // Pokémon reaches the specified level, it has a Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature.
+#define EVO_LEVEL_NATURE_LOW_KEY          34     // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
+#define EVO_CRITICAL_HITS                 35     // Pokémon performs specified number of critical hits in one battle
+#define EVO_SCRIPT_TRIGGER_DMG            36     // Pokémon has specified HP below max, then player interacts trigger
+#define EVO_DARK_SCROLL                   37     // interacts with Scroll of Darkness
+#define EVO_WATER_SCROLL                  38     // interacts with Scroll of Waters
 
 #define EVOS_PER_MON 10
 #define EVOS_PER_LINE 16

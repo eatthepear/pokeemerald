@@ -8334,64 +8334,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 if (friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
-            case EVO_LEVEL_NATURE_MIDDAY:
-                if (gEvolutionTable[species][i].param <= level)
-                {
-                    u8 nature = GetNature(mon);
-                    switch (nature)
-                    {
-                        case NATURE_BASHFUL:
-                        case NATURE_DOCILE:
-                        case NATURE_LONELY:
-                        case NATURE_MILD:
-                        case NATURE_GENTLE:
-                        case NATURE_HASTY:
-                        case NATURE_NAUGHTY:
-                        case NATURE_RASH:
-                        case NATURE_MODEST:
-                        case NATURE_TIMID:
-                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                            break;
-                    }
-                }
-                break;
-            case EVO_LEVEL_NATURE_MIDNIGHT:
-                if (gEvolutionTable[species][i].param <= level)
-                {
-                    u8 nature = GetNature(mon);
-                    switch (nature)
-                    {
-                        case NATURE_SERIOUS:
-                        case NATURE_QUIRKY:
-                        case NATURE_ADAMANT:
-                        case NATURE_IMPISH:
-                        case NATURE_CAREFUL:
-                        case NATURE_JOLLY:
-                        case NATURE_LAX:
-                        case NATURE_NAIVE:
-                        case NATURE_BOLD:
-                        case NATURE_CALM:
-                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                            break;
-                    }
-                }
-                break;
-            case EVO_LEVEL_NATURE_DUSK:
-                if (gEvolutionTable[species][i].param <= level)
-                {
-                    u8 nature = GetNature(mon);
-                    switch (nature)
-                    {
-                        case NATURE_HARDY:
-                        case NATURE_BRAVE:
-                        case NATURE_RELAXED:
-                        case NATURE_QUIET:
-                        case NATURE_SASSY:
-                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                            break;
-                    }
-                }
-                break;
             case EVO_ITEM_HOLD:
                 if (heldItem == gEvolutionTable[species][i].param)
                 {
@@ -8439,6 +8381,18 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 break;
             case EVO_LEVEL_NINJASK:
                 if (gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_MIDNIGHT:
+                if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) <= 3)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_MIDDAY:
+                if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) <= 7 && (upperPersonality % 10) > 3)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_DUSK:
+                if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) > 7)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_BEAUTY:
