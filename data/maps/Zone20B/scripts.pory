@@ -1,9 +1,4 @@
 mapscripts Zone20B_MapScripts {
-	MAP_SCRIPT_ON_RESUME {
-		if (var(VAR_ZONE_20_STATE) == 0) {
-			fadeoutbgm(1)
-		}
-	}
 	MAP_SCRIPT_ON_FRAME_TABLE [
 		VAR_ZONE_20_STATE, 0: Zone20B_EventScript_LeviathanBattle
 	]
@@ -11,52 +6,48 @@ mapscripts Zone20B_MapScripts {
 
 script Zone20B_EventScript_LeviathanBattle {
     lockall
-// 	fadeoutbgm(1)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 	waitmovement(0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: It appears there's nothing in this Zone, {COLOR RED}Porygon{COLOR DARK_GRAY}.\pWe should head back and report."))
+	applymovement(1, Common_Movement_ExclamationMark)
+	playse(SE_PIN)
+	waitmovement(0)
+	waitse
+	applymovement(1, Common_Movement_FaceDown)
+	waitmovement(0)
+	fadeoutbgm(1)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Another AI!\pEven in a place as cold and empty as this?\pNo matter, my blood is boiling for a fight!"))
+	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
+		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_17_BRUTAL, Zone20B_Text_Leviathan17Defeat)
+	} else {
+		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_17, Zone20B_Text_Leviathan17Defeat)
+	}
+	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+	msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: It seems I was mistaken.\nYou're no ordinary AI.")
+	applymovement(1, Common_Movement_FaceLeft)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the assignment. Will relocate immediately."))
+	applymovement(1, Common_Movement_FaceUp)
+	waitmovement(0)
+	fadescreenswapbuffers(FADE_TO_BLACK)
+	playmoncry(SPECIES_PORYGON, 2)
+	delay(40)
+	waitmoncry
+	removeobject(1)
+	removeobject(2)
+	setflag(FLAG_BEAT_LEVIATHAN_17)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
+	msgbox("It looks like a bag was left behind!\pInside are… Shards?")
+	giveitem(ITEM_RED_SHARD, 20)
 	setvar(VAR_ZONE_20_STATE, 1)
 	releaseall
 	end
 }
-// 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
-// 	waitmovement(0)
-// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: It appears there's nothing in this Zone, {COLOR RED}Porygon{COLOR DARK_GRAY}.\pWe should head back and report."))
-// 	applymovement(1, Common_Movement_ExclamationMark)
-// 	playse(SE_PIN)
-// 	waitmovement(0)
-// 	waitse
-// 	applymovement(1, Common_Movement_FaceDown)
-// 	waitmovement(0)
-// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Another AI!\pEven in a place as cold and empty as this?\pNo matter, my blood is boiling for a fight!"))
-// 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-// 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
-// 	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
-// 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13_BRUTAL, Zone20B_Text_Leviathan13Defeat)
-// 	} else {
-// 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_13, Zone20B_Text_Leviathan13Defeat)
-// 	}
-// 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-// 	msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: It seems I was mistaken.\nYou're no ordinary AI.")
-// 	applymovement(1, Common_Movement_FaceLeft)
-// 	waitmovement(0)
-// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the assignment. Will relocate immediately."))
-// 	applymovement(1, Common_Movement_FaceUp)
-// 	waitmovement(0)
-// 	fadescreenswapbuffers(FADE_TO_BLACK)
-// 	playmoncry(SPECIES_PORYGON, 2)
-// 	delay(40)
-// 	waitmoncry
-// 	removeobject(1)
-// 	removeobject(2)
-// 	setflag(FLAG_BEAT_LEVIATHAN_13)
-// 	fadescreenswapbuffers(FADE_FROM_BLACK)
-// 	msgbox("It looks like a bag was left behind!\pInside are… Shards?")
-// 	giveitem(ITEM_RED_SHARD, 20)
-// 	setvar(VAR_ZONE_15_STATE, 1)
-// 	releaseall
-// 	end
-// }
 
-// text Zone20B_Text_Leviathan13Defeat {
-// 	"…"
-// }
+text Zone20B_Text_Leviathan17Defeat {
+	"…"
+}
