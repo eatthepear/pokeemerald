@@ -300,9 +300,9 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
 
 #if P_GEN_4_POKEMON == TRUE
     // Gens 4-7
-    [SPECIES_TURTWIG]               = {{EVO_LEVEL, 17, SPECIES_GROTLE}},
+    [SPECIES_TURTWIG]               = {{EVO_LEVEL, 16, SPECIES_GROTLE}},
     [SPECIES_GROTLE]                = {{EVO_LEVEL, 32, SPECIES_TORTERRA}},
-    [SPECIES_CHIMCHAR]              = {{EVO_LEVEL, 17, SPECIES_MONFERNO}},
+    [SPECIES_CHIMCHAR]              = {{EVO_LEVEL, 16, SPECIES_MONFERNO}},
     [SPECIES_MONFERNO]              = {{EVO_LEVEL, 36, SPECIES_INFERNAPE}},
     [SPECIES_PIPLUP]                = {{EVO_LEVEL, 16, SPECIES_PRINPLUP}},
     [SPECIES_PRINPLUP]              = {{EVO_LEVEL, 36, SPECIES_EMPOLEON}},
