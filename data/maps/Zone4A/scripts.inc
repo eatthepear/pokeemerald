@@ -26,7 +26,7 @@ Zone4A_EventScript_Breeder_8:
 	delay 16
 	msgbox Zone4A_EventScript_Breeder_Text_14, MSGBOX_DEFAULT
 	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject 4
+	removeobject 3
 	setflag FLAG_ZONE4A_RECEIVED_GEM
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
