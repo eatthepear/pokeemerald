@@ -3308,69 +3308,105 @@ static const struct TrainerMon sParty_Blanche[] = {// Fought in a double battle 
 static const struct TrainerMon sParty_Zone20BMirageDefault[] = {// Leviathan, Default
     {
     .iv = 30,
-    .lvl = 30,
-    .nature = NATURE_TIMID,
-    .ability = ABILITY_HIDDEN, //Drought
-    .species = SPECIES_NINETALES,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_OVERHEAT, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_NONE}
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_2, //Battle Armor
+    .species = SPECIES_DONPHAN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_STEALTH_ROCK, MOVE_SLACK_OFF}
     },
     {
     .iv = 30,
-    .lvl = 30,
-    .nature = NATURE_MODEST,
-    .ability = ABILITY_HIDDEN, //Chlorophyll
-    .species = SPECIES_VICTREEBEL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_WEATHER_BALL, MOVE_NONE}
+    .lvl = 38,
+    .nature = NATURE_IMPISH,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_ARCANINE,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_FLARE_BLITZ, MOVE_WILD_CHARGE, MOVE_WILL_O_WISP, MOVE_MORNING_SUN}
     },
     {
     .iv = 30,
-    .lvl = 30,
-    .nature = NATURE_MODEST,
-    .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
-    .species = SPECIES_HOUNDOOM,
-    .heldItem = ITEM_HOUNDOOMINITE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SCORCHING_SANDS, MOVE_NONE}
+    .lvl = 38,
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Fluffy
+    .species = SPECIES_BEWEAR,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_DRAIN_PUNCH, MOVE_RETURN, MOVE_SHADOW_CLAW, MOVE_BULK_UP}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_CAREFUL,
+    .ability = ABILITY_SLOT_1, //Poison Touch
+    .species = SPECIES_MUK_ALOLAN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_KNOCK_OFF, MOVE_POISON_JAB, MOVE_ICE_PUNCH, MOVE_EXPLOSION}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_CALM,
+    .ability = ABILITY_SLOT_1, //Oblivious, turns into Shell Armor after Mega Evolving
+    .species = SPECIES_SLOWBRO,
+    .heldItem = ITEM_SLOWBRONITE,
+    .moves = {MOVE_SCALD, MOVE_CALM_MIND, MOVE_SLACK_OFF, MOVE_PSYSHOCK}
     }
 };
 
 static const struct TrainerMon sParty_Zone20BMirageBrutal[] = {// Leviathan, Brutal
     {
-    .iv = 31,
-    .lvl = 30,
-    .nature = NATURE_TIMID,
-    .ability = ABILITY_HIDDEN, //Drought
-    .species = SPECIES_NINETALES,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_OVERHEAT, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER}
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_HASTY,
+    .ability = ABILITY_SLOT_1, //Levitate
+    .species = SPECIES_WEEZING,
+    .heldItem = ITEM_MENTAL_HERB,
+    .moves = {MOVE_SLUDGE_BOMB, MOVE_SPIKES, MOVE_TOXIC_SPIKES, MOVE_EXPLOSION}
     },
     {
-    .iv = 31,
-    .lvl = 30,
-    .nature = NATURE_MODEST,
-    .ability = ABILITY_HIDDEN, //Chlorophyll
-    .species = SPECIES_VICTREEBEL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_WEATHER_BALL, MOVE_GROWTH}
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_2, //Battle Armor
+    .species = SPECIES_DONPHAN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_STEALTH_ROCK, MOVE_SLACK_OFF}
     },
     {
-    .ivs = {31, 31, 31, 30, 31, 31},
-    .lvl = 30,
-    .nature = NATURE_TIMID,
-    .ability = ABILITY_HIDDEN, //Solar Power
-    .species = SPECIES_HELIOLISK,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_VOICE, MOVE_VOLT_SWITCH, MOVE_HIDDEN_POWER} //Hidden Power Ice
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_IMPISH,
+    .ability = ABILITY_SLOT_1, //Intimidate
+    .species = SPECIES_ARCANINE,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_FLARE_BLITZ, MOVE_WILD_CHARGE, MOVE_WILL_O_WISP, MOVE_MORNING_SUN}
     },
     {
-    .iv = 31,
-    .lvl = 30,
-    .nature = NATURE_MODEST,
-    .ability = ABILITY_SLOT_1, //Intimidate, turns into Solar Power after Mega Evolving
-    .species = SPECIES_HOUNDOOM,
-    .heldItem = ITEM_HOUNDOOMINITE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SCORCHING_SANDS, MOVE_NASTY_PLOT}
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_BRAVE,
+    .ability = ABILITY_SLOT_1, //Fluffy
+    .species = SPECIES_BEWEAR,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_DRAIN_PUNCH, MOVE_RETURN, MOVE_SHADOW_CLAW, MOVE_BULK_UP}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_CAREFUL,
+    .ability = ABILITY_SLOT_1, //Poison Touch
+    .species = SPECIES_MUK_ALOLAN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_KNOCK_OFF, MOVE_POISON_JAB, MOVE_ICE_PUNCH, MOVE_EXPLOSION}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_CALM,
+    .ability = ABILITY_SLOT_1, //Oblivious, turns into Shell Armor after Mega Evolving
+    .species = SPECIES_SLOWBRO,
+    .heldItem = ITEM_SLOWBRONITE,
+    .moves = {MOVE_SCALD, MOVE_CALM_MIND, MOVE_SLACK_OFF, MOVE_PSYSHOCK}
     }
 };
 

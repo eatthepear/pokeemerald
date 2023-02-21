@@ -10,7 +10,7 @@ script Zone20B_EventScript_LeviathanBattle {
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: It appears there's nothing in this Zone, {COLOR RED}Porygon{COLOR DARK_GRAY}.\pWe should head back and report."))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: We've gone undetected thus far, but we need to hurry.\pThere's no telling when something…"))
 	applymovement(1, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
@@ -18,7 +18,8 @@ script Zone20B_EventScript_LeviathanBattle {
 	applymovement(1, Common_Movement_FaceDown)
 	waitmovement(0)
 	fadeoutbgm(1)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Another AI!\pEven in a place as cold and empty as this?\pNo matter, my blood is boiling for a fight!"))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: How… did you find me?\pHow did he know to send you here?"), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. I'll put you down and be out of here in a second."))
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
 	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
@@ -27,10 +28,11 @@ script Zone20B_EventScript_LeviathanBattle {
 		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_17, Zone20B_Text_Leviathan17Defeat)
 	}
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: It seems I was mistaken.\nYou're no ordinary AI.")
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: That's… not possible.\pAn AI, defeating me?"), MSGBOX_DEFAULT)
+	delay(100)
 	applymovement(1, Common_Movement_FaceLeft)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I've completed the assignment. Will relocate immediately."))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I'm on my way out."))
 	applymovement(1, Common_Movement_FaceUp)
 	waitmovement(0)
 	fadescreenswapbuffers(FADE_TO_BLACK)
@@ -41,8 +43,8 @@ script Zone20B_EventScript_LeviathanBattle {
 	removeobject(2)
 	setflag(FLAG_BEAT_LEVIATHAN_17)
 	fadescreenswapbuffers(FADE_FROM_BLACK)
-	msgbox("It looks like a bag was left behind!\pInside are… Shards?")
-	giveitem(ITEM_RED_SHARD, 20)
+	msgbox(format("There's something glittering on the ground!"), MSGBOX_DEFAULT)
+	giveitem(ITEM_GREEN_SHARD, 1)
 	setvar(VAR_ZONE_20_STATE, 1)
 	releaseall
 	end
