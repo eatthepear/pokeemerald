@@ -149,6 +149,5 @@
 	.include "src/faraway_island.o"
 	.include "src/trainer_hill.o"
 	.include "src/rayquaza_scene.o"
-	.include "src/rhh_copyright.o"
 	.include "src/debug.o"
 	.include "src/dexnav.o"

@@ -10731,3 +10731,8 @@ u32 GetMonFriendshipScore(struct Pokemon *pokemon)
 
     return FRIENDSHIP_NONE;
 }
+
+void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality)
+{
+    boxMon->personality = personality;
+}
