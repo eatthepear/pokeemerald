@@ -1772,6 +1772,7 @@ EventScript_MandatoryCheck_1:
 	return
 
 EventScript_MandatoryCheck_2:
+	specialvar VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining
 	compare VAR_NUM_TRAINERS_REMAINING, 0
 	goto_if_gt EventScript_MandatoryCheck_6
 	goto EventScript_MandatoryCheck_1

@@ -1509,7 +1509,8 @@ script EventScript_Shop_Joy {
 }
 
 script EventScript_MandatoryCheck {
-	if (flag(FLAG_SETTINGS_BRUTAL) || flag(FLAG_SETTINGS_GAUNTLET)) {
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_GAUNTLET) == true)) {
+		specialvar(VAR_NUM_TRAINERS_REMAINING, GetNumTrainersRemaining)
 		if (var(VAR_NUM_TRAINERS_REMAINING) > 0) {
 			buffernumberstring(0, VAR_NUM_TRAINERS_REMAINING)
 			msgbox(format("{COLOR RED}You haven't defeated all the opponents in the area yet."), MSGBOX_DEFAULT)
