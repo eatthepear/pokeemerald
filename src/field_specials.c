@@ -4373,8 +4373,8 @@ u16 GetNumTrainersRemaining(void)
     case 3:
         count += !HasTrainerBeenFought(TRAINER_JEMMA);
         count += !HasTrainerBeenFought(TRAINER_PATRICK);
-        count += !HasTrainerBeenFought(TRAINER_BORIS);
         count += !HasTrainerBeenFought(TRAINER_ANNABELLE);
+        count += !HasTrainerBeenFought(TRAINER_BORIS);
         count += !HasTrainerBeenFought(TRAINER_RICHARD);
         count += !FlagGet(FLAG_BEAT_LEVIATHAN_3);
         break;
@@ -4409,9 +4409,9 @@ u16 GetNumTrainersRemaining(void)
     case 7:
     case 8:
         count += !HasTrainerBeenFought(TRAINER_MILLIE);
+        count += !HasTrainerBeenFought(TRAINER_JAMAL);
         count += !HasTrainerBeenFought(TRAINER_PAIGE);
         count += !HasTrainerBeenFought(TRAINER_SETH);
-        count += !HasTrainerBeenFought(TRAINER_JAMAL);
         count += !HasTrainerBeenFought(TRAINER_CONNIE);
         count += !FlagGet(FLAG_BEAT_LEVIATHAN_7);
         count += !HasTrainerBeenFought(TRAINER_JIMMY);
@@ -4441,8 +4441,9 @@ u16 GetNumTrainersRemaining(void)
     case 11:
         count += !HasTrainerBeenFought(TRAINER_JEANETTE);
         count += !HasTrainerBeenFought(TRAINER_EMMA_AND_LEO);
-        count += !HasTrainerBeenFought(TRAINER_REGINA);
         count += !HasTrainerBeenFought(TRAINER_JOEL);
+        count += !HasTrainerBeenFought(TRAINER_MARION);
+        count += !HasTrainerBeenFought(TRAINER_REGINA);
         count += !FlagGet(FLAG_BEAT_LEVIATHAN_10);
         break;
     case 12:
@@ -4478,6 +4479,53 @@ u16 GetNumTrainersRemaining(void)
         break;
     case 15:
         count += !FlagGet(FLAG_BEAT_LEVIATHAN_13);
+        break;
+    case 16:
+        count += !HasTrainerBeenFought(TRAINER_IONA);
+        count += !HasTrainerBeenFought(TRAINER_BERKE);
+        count += !HasTrainerBeenFought(TRAINER_TANISHA);
+        count += !HasTrainerBeenFought(TRAINER_ROBERT);
+        count += !HasTrainerBeenFought(TRAINER_CHRIS);
+        count += !HasTrainerBeenFought(TRAINER_ANGUS);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_14);
+        break;
+    case 17:
+        count += !HasTrainerBeenFought(TRAINER_AXLE);
+        count += !HasTrainerBeenFought(TRAINER_RAFAEL);
+        count += !HasTrainerBeenFought(TRAINER_GEORGINA);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_15);
+        break;
+    case 18:
+    case 19:
+        count += !HasTrainerBeenFought(TRAINER_DORIS);
+        count += !HasTrainerBeenFought(TRAINER_HOMER);
+        count += !HasTrainerBeenFought(TRAINER_JOHN);
+        count += !HasTrainerBeenFought(TRAINER_GLENN);
+        count += !HasTrainerBeenFought(TRAINER_JAY);
+        count += !HasTrainerBeenFought(TRAINER_TYLER);
+        count += !HasTrainerBeenFought(TRAINER_TERRENCE);
+        count += !HasTrainerBeenFought(TRAINER_MARTY);
+        count += !HasTrainerBeenFought(TRAINER_KARI);
+        count += !HasTrainerBeenFought(TRAINER_ABRAHAM);
+        count += !HasTrainerBeenFought(TRAINER_MELINDA);
+        count += !HasTrainerBeenFought(TRAINER_EMILIO);
+        count += !HasTrainerBeenFought(TRAINER_REX);
+        count += !HasTrainerBeenFought(TRAINER_LOUIS);
+        count += !HasTrainerBeenFought(TRAINER_LEROY);
+        count += !HasTrainerBeenFought(TRAINER_ELTON);
+        count += !HasTrainerBeenFought(TRAINER_WILLIE);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_16);
+        count += 4 * !HasTrainerBeenFought(TRAINER_PIRATE_4);
+        break;
+    case 20:
+        count += !HasTrainerBeenFought(TRAINER_SHAWN);
+        count += !HasTrainerBeenFought(TRAINER_FERNANDO);
+        count += !HasTrainerBeenFought(TRAINER_KANE);
+        count += !HasTrainerBeenFought(TRAINER_KIRK);
+        count += !HasTrainerBeenFought(TRAINER_DALTON);
+        count += !HasTrainerBeenFought(TRAINER_LEE);
+        count += !HasTrainerBeenFought(TRAINER_BLANCHE);
+        count += !FlagGet(FLAG_BEAT_LEVIATHAN_17);
         break;
     default:
         count = 0;
