@@ -54,8 +54,8 @@ script Zone12A_EventScript_InitiateRomulusJulieBattles {
 	applymovement(1, Zone12A_Movement_Left)
 	applymovement(2, Zone12A_Movement_Left)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Well, well well. Look what we have here!"))
-	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: A trainer! Trying to cross the river!"))
+	msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Well, well well. Look what we have here!"), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}Romulus{COLOR DARK_GRAY}: A trainer! Trying to cross the river!"), MSGBOX_DEFAULT)
 	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
 		msgbox(format("{COLOR BLUE}Julie{COLOR DARK_GRAY}: Trainer, would you like to face our trial? We'll battle you one after the other, and you won't be healed in between battles!"), MSGBOX_YESNO)
 	} else {
