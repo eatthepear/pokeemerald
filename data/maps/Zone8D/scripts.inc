@@ -104,8 +104,8 @@ Zone8D_EventScript_InitiateLeviathan8_1:
 	applymovement 2, Common_Movement_FaceRight
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_3
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_4
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_3, MSGBOX_DEFAULT
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_4, MSGBOX_DEFAULT
 	applymovement 3, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_5
@@ -151,7 +151,7 @@ Zone8D_EventScript_InitiateLeviathan8_13:
 Zone8D_EventScript_InitiateLeviathan8_21:
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_7
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_7, MSGBOX_DEFAULT
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_8
@@ -170,9 +170,9 @@ Zone8D_EventScript_InitiateLeviathan8_21:
 	applymovement 4, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_10
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_10, MSGBOX_DEFAULT
 	giveitem ITEM_EVIOLITE, 1
-	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_11
+	msgbox Zone8D_EventScript_InitiateLeviathan8_Text_11, MSGBOX_DEFAULT
 	applymovement 4, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0

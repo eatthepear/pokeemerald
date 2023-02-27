@@ -113,7 +113,7 @@ script Zone5A_EventScript_LeviathanBattle {
 	waitmovement(0)
 	applymovement(1, Common_Movement_FaceDown)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, it's just a name.\pMaybe it doesn't have the right ring or something.\pBut at least let's train more together. Maybe we can beat this trainer next time."))
+	msgbox(format("{COLOR BLUE}Kevin{COLOR DARK_GRAY}: Look, Declan, it's just a name.\pMaybe it doesn't have the right ring or something.\pBut at least let's train more together. Maybe we can beat this trainer next time."), MSGBOX_DEFAULT)
 	applymovement(2, Common_Movement_FaceUp)
 	waitmovement(0)
 	msgbox(format("{COLOR BLUE}Declan{COLOR DARK_GRAY}: Fine. You're right, you're right."))

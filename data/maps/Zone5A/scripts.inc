@@ -82,7 +82,7 @@ Zone5A_EventScript_LeviathanBattle_21:
 	waitmovement 0
 	applymovement 1, Common_Movement_FaceDown
 	waitmovement 0
-	msgbox Zone5A_EventScript_LeviathanBattle_Text_9
+	msgbox Zone5A_EventScript_LeviathanBattle_Text_9, MSGBOX_DEFAULT
 	applymovement 2, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox Zone5A_EventScript_LeviathanBattle_Text_10

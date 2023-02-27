@@ -918,7 +918,7 @@ EventScript_Shop_Lelouch_10:
 EventScript_Shop_Lelouch_2:
 	msgbox EventScript_Shop_Lelouch_Text_0
 	delay 96
-	msgbox EventScript_Shop_Lelouch_Text_1
+	msgbox EventScript_Shop_Lelouch_Text_1, MSGBOX_DEFAULT
 	setflag FLAG_LELOUCH_INTRO
 	goto EventScript_Shop_Lelouch_1
 
@@ -928,7 +928,7 @@ EventScript_Shop_Lelouch_5:
 	end
 
 EventScript_Shop_Lelouch_8:
-	msgbox EventScript_Shop_Lelouch_Text_3
+	msgbox EventScript_Shop_Lelouch_Text_3, MSGBOX_DEFAULT
 	setflag FLAG_LELOUCH_SHARDS_INTRO
 	goto EventScript_Shop_Lelouch_7
 
@@ -3817,77 +3817,94 @@ EventScript_PorygonExit_5:
 
 EventScript_PorygonExit_8:
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_9:
 	warp MAP_ZONE2SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_10:
 	setflag FLAG_HIDE_ZONE3A_MAX
 	warp MAP_ZONE3SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_11:
 	warp MAP_ZONE4SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_12:
 	warp MAP_ZONE5SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_13:
 	setflag FLAG_HIDE_ZONE6A_MAX
 	warp MAP_ZONE6SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_14:
 	setflag FLAG_HIDE_ZONE7A_MAX
 	setflag FLAG_ZONE7B_HEAL_USED
 	warp MAP_ZONE8SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_15:
 	warp MAP_ZONE9SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_16:
 	setflag FLAG_HIDE_ZONE10A_MAX
 	warp MAP_ZONE10SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_17:
 	warp MAP_ZONE11SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_18:
 	clearflag FLAG_SYS_NO_BAG_START_MENU
 	warp MAP_ZONE12SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_19:
 	warp MAP_ZONE14SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_20:
 	warp MAP_ZONE15SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_21:
 	warp MAP_ZONE16SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_22:
 	warp MAP_ZONE17SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_23:
 	setflag FLAG_HIDE_ZONE18A_MAX
 	warp MAP_ZONE19SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 EventScript_PorygonExit_24:
 	warp MAP_ZONE1SANCTUARY, 255, 22, 7
+	waitstate
 	goto EventScript_PorygonExit_4
 
 

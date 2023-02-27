@@ -813,7 +813,7 @@ script EventScript_Shop_Lelouch {
 	if (flag(FLAG_LELOUCH_INTRO) == false) {
 		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: You… What is your name?\p{COLOR BLUE}???{COLOR DARK_GRAY}: {PLAYER}? Now that's a name…\nI haven't heard in…")
 		delay(96)
-		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: You may call me Lelouch.\p{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I provide a variety of\nservices to improve one's Pokémon.")
+		msgbox("{COLOR BLUE}???{COLOR DARK_GRAY}: You may call me Lelouch.\p{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: I provide a variety of\nservices to improve one's Pokémon.", MSGBOX_DEFAULT)
 		setflag(FLAG_LELOUCH_INTRO)
 	}
 	if (var(VAR_ZONE) < 6) {
@@ -833,7 +833,7 @@ script EventScript_Shop_Lelouch {
 				"Move Relearning costs Blue Shards.\p"
 				"Move Tutoring costs Yellow Shards.\p"
 				"Other services cost Green Shards.\p"
-				"I hope they serve you well…")
+				"I hope they serve you well…", MSGBOX_DEFAULT)
 		setflag(FLAG_LELOUCH_SHARDS_INTRO)
 	}
 	msgbox("{COLOR BLUE}Lelouch{COLOR DARK_GRAY}: For the right price…\nWelcome to Lelouch's Special Services.", MSGBOX_DEFAULT)
@@ -2854,43 +2854,59 @@ script EventScript_PorygonExit {
 		switch (var(VAR_ZONE)) {
 			case 1:
 				warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
+				waitstate
 			case 2:
 				warp(MAP_ZONE2SANCTUARY, 255, 22, 7)
+				waitstate
 			case 3:
 				setflag(FLAG_HIDE_ZONE3A_MAX)
 				warp(MAP_ZONE3SANCTUARY, 255, 22, 7)
+				waitstate
 			case 4:
 				warp(MAP_ZONE4SANCTUARY, 255, 22, 7)
+				waitstate
 			case 5:
 				warp(MAP_ZONE5SANCTUARY, 255, 22, 7)
+				waitstate
 			case 6:
 				setflag(FLAG_HIDE_ZONE6A_MAX)
 				warp(MAP_ZONE6SANCTUARY, 255, 22, 7)
+				waitstate
 			case 7:
 				setflag(FLAG_HIDE_ZONE7A_MAX)
 				setflag(FLAG_ZONE7B_HEAL_USED)
 				warp(MAP_ZONE8SANCTUARY, 255, 22, 7)
+				waitstate
 			case 9:
 				warp(MAP_ZONE9SANCTUARY, 255, 22, 7)
+				waitstate
 			case 10:
 				setflag(FLAG_HIDE_ZONE10A_MAX)
 				warp(MAP_ZONE10SANCTUARY, 255, 22, 7)
+				waitstate
 			case 11:
 				warp(MAP_ZONE11SANCTUARY, 255, 22, 7)
+				waitstate
 			case 12:
 				clearflag(FLAG_SYS_NO_BAG_START_MENU)
 				warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
+				waitstate
 			case 13:
 				warp(MAP_ZONE14SANCTUARY, 255, 22, 7)
+				waitstate
 			case 15:
 				warp(MAP_ZONE15SANCTUARY, 255, 22, 7)
+				waitstate
 			case 16:
 				warp(MAP_ZONE16SANCTUARY, 255, 22, 7)
+				waitstate
 			case 17:
 				warp(MAP_ZONE17SANCTUARY, 255, 22, 7)
+				waitstate
 			case 18:
 				setflag(FLAG_HIDE_ZONE18A_MAX)
 				warp(MAP_ZONE19SANCTUARY, 255, 22, 7)
+				waitstate
 			case 20:
 			case 21:
 			case 22:
@@ -2898,6 +2914,7 @@ script EventScript_PorygonExit {
 			case 24:
 			case 25:
 				warp(MAP_ZONE1SANCTUARY, 255, 22, 7)
+				waitstate
 		}
 	}
     release
