@@ -3,6 +3,11 @@ mapscripts Zone9C_MapScripts {}
 script Zone9C_EventScript_Man {
 	lock
 	faceplayer
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_INDEPENDENT) == true)) {
+		msgbox(format("Welcome to my Herb shop.\pUnfortunately, we are out of stock of ingredients to make more herbs."))
+		release
+		end
+	}
 	message("Welcome to my Herb shop.\nAll natural ingredients only.")
 	waitmessage
 	pokemart(Zone9C_Shop_Herbal)
@@ -21,6 +26,11 @@ mart Zone9C_Shop_Herbal {
 script Zone9C_EventScript_Woman {
 	lock
 	faceplayer
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_INDEPENDENT) == true)) {
+		msgbox(format("The fragrance, the aroma…\pUnfortunately, my incense shop is lacking key ingredients and is not open at this time."))
+		release
+		end
+	}
 	message("The fragrance, the aroma…\nWelcome to my Incense shop.")
 	waitmessage
 	pokemart(Zone9C_Shop_Incense)
