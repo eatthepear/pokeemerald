@@ -5733,9 +5733,11 @@ void SetTotemBoost(void)
 
 bool32 IsWildMonSmart(void)
 {
-#if B_SMART_WILD_AI_FLAG != 0
-    return (FlagGet(B_SMART_WILD_AI_FLAG));
-#else
+    if (FlagGet(B_SMART_WILD_AI_FLAG))
+        return TRUE;
+    if (FlagGet(FLAG_SETTINGS_BRUTAL))
+        return TRUE;
+    if (FlagGet(FLAG_SETTINGS_CHALLENGE))
+        return TRUE;
     return FALSE;
-#endif
 }
