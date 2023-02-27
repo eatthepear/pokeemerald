@@ -370,7 +370,7 @@ Zone13C_Text_Leviathan11WantBattle::
 	.string "A battle?$"
 
 Zone13C_Text_Leviathan11Defeat::
-	.string "You did great, Feraligatr!$"
+	.string "You did great, Gyarados!$"
 
 Zone13C_Text_Jenny_PostBattle::
 	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: I guess traveling lightly comes\n"
