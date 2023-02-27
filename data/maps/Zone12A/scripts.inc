@@ -159,6 +159,9 @@ Zone12A_EventScript_BreederM::
 	showmoneybox 0, 0, 0
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_ne Zone12A_EventScript_BreederM_8
+	closemessage
+	hidemoneybox
+	msgbox Zone12A_EventScript_BreederM_Text_1
 Zone12A_EventScript_BreederM_1:
 	release
 	end
@@ -177,23 +180,23 @@ Zone12A_EventScript_BreederM_5:
 Zone12A_EventScript_BreederM_8:
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	compare VAR_RESULT, SPECIES_EGG
-	goto_if_eq Zone12A_EventScript_BreederM_10
+	goto_if_eq Zone12A_EventScript_BreederM_11
 	specialvar VAR_TEMP_1, ScriptGetPartyMonSpecies
 	bufferspeciesname 0, VAR_TEMP_1
 	copyvar VAR_TEMP_1, VAR_0x8004
 	msgbox Zone12A_EventScript_BreederM_Text_5, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq Zone12A_EventScript_BreederM_13
+	goto_if_eq Zone12A_EventScript_BreederM_14
 	closemessage
 	hidemoneybox
 	msgbox Zone12A_EventScript_BreederM_Text_1
 	goto Zone12A_EventScript_BreederM_1
 
-Zone12A_EventScript_BreederM_10:
+Zone12A_EventScript_BreederM_11:
 	msgbox Zone12A_EventScript_BreederM_Text_4
 	goto Zone12A_EventScript_BreederM_1
 
-Zone12A_EventScript_BreederM_13:
+Zone12A_EventScript_BreederM_14:
 	removemoney 1000
 	updatemoneybox
 	special CheckLeadMonTough

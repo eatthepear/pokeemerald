@@ -146,6 +146,10 @@ script Zone12A_EventScript_BreederM {
 						msgbox(format("Why so serious?"))
 					}
 				}
+			} else {
+				closemessage
+				hidemoneybox
+				msgbox(format("Why so serious?"))
 			}
 		}
 	}
