@@ -16427,7 +16427,7 @@ static const struct LevelUpMove sDhelmiseLevelUpLearnset[] = {
 	LEVEL_UP_END
 };
 
-static const struct LevelUpMove sJangmooLevelUpLearnset[] = {
+static const struct LevelUpMove sJangmoOLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_MOVE( 4, MOVE_LEER),
 	LEVEL_UP_MOVE( 7, MOVE_BIDE),
@@ -16447,7 +16447,7 @@ static const struct LevelUpMove sJangmooLevelUpLearnset[] = {
 	LEVEL_UP_END
 };
 
-static const struct LevelUpMove sHakamooLevelUpLearnset[] = {
+static const struct LevelUpMove sHakamoOLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 0, MOVE_SKY_UPPERCUT),
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_MOVE( 4, MOVE_LEER),
@@ -16469,7 +16469,7 @@ static const struct LevelUpMove sHakamooLevelUpLearnset[] = {
 	LEVEL_UP_END
 };
 
-static const struct LevelUpMove sKommooLevelUpLearnset[] = {
+static const struct LevelUpMove sKommoOLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 0, MOVE_CLANGING_SCALES),
 	LEVEL_UP_MOVE( 1, MOVE_BODY_PRESS),
 	LEVEL_UP_MOVE( 1, MOVE_BELLY_DRUM),

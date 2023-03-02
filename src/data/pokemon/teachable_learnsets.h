@@ -57450,7 +57450,7 @@ static const u16 sDhelmiseTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sJangmooTeachableLearnset[] = {
+static const u16 sJangmoOTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AQUA_TAIL,
     MOVE_ATTRACT,
@@ -57516,7 +57516,7 @@ static const u16 sJangmooTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sHakamooTeachableLearnset[] = {
+static const u16 sHakamoOTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AQUA_TAIL,
     MOVE_ATTRACT,
@@ -57590,7 +57590,7 @@ static const u16 sHakamooTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sKommooTeachableLearnset[] = {
+static const u16 sKommoOTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AQUA_TAIL,
     MOVE_ATTRACT,
