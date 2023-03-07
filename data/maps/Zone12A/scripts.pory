@@ -157,6 +157,38 @@ script Zone12A_EventScript_BreederM {
 	end
 }
 
+script Zone12A_EventScript_Nurse {
+	lock
+	faceplayer
+	msgbox("Hey.\pI know you don't have access to your Bag, so…\pI'll heal your entire party for a\nflat ¥2000 fee.", MSGBOX_DEFAULT)
+	showmoneybox(0, 0, 0)
+	msgbox("Should I heal your Pokémon?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == NO) {
+		closemessage
+		hidemoneybox
+	} else {
+		checkmoney(2000, 0)
+		if (var(VAR_RESULT) == FALSE) {
+			msgbox("You don't have enough money.")
+			hidemoneybox
+		} else {
+			removemoney(2000, 0)
+			updatemoneybox
+			msgbox("That will be ¥2000, thank you…")
+			fadescreenswapbuffers(FADE_TO_BLACK)
+			playfanfare(MUS_HEAL)
+			waitfanfare
+			special(HealPlayerParty)
+			fadescreenswapbuffers(FADE_FROM_BLACK)
+			msgbox("Your party has been restored.", MSGBOX_DEFAULT)
+			hidemoneybox
+		}
+	}
+	msgbox("See you next time.")
+	release
+	end
+}
+
 script Zone12A_EventScript_TM24 {
 	lock
 	if (flag(FLAG_ITEM_ZONE12A_TM24)) {

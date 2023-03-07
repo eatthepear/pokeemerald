@@ -206,6 +206,43 @@ Zone12A_EventScript_BreederM_14:
 	goto Zone12A_EventScript_BreederM_1
 
 
+Zone12A_EventScript_Nurse::
+	lock
+	faceplayer
+	msgbox Zone12A_EventScript_Nurse_Text_0, MSGBOX_DEFAULT
+	showmoneybox 0, 0, 0
+	msgbox Zone12A_EventScript_Nurse_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Zone12A_EventScript_Nurse_2
+	checkmoney 2000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq Zone12A_EventScript_Nurse_5
+	removemoney 2000, 0
+	updatemoneybox
+	msgbox Zone12A_EventScript_Nurse_Text_2
+	fadescreenswapbuffers FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox Zone12A_EventScript_Nurse_Text_3, MSGBOX_DEFAULT
+	hidemoneybox
+Zone12A_EventScript_Nurse_1:
+	msgbox Zone12A_EventScript_Nurse_Text_4
+	release
+	end
+
+Zone12A_EventScript_Nurse_2:
+	closemessage
+	hidemoneybox
+	goto Zone12A_EventScript_Nurse_1
+
+Zone12A_EventScript_Nurse_5:
+	msgbox Zone12A_EventScript_BreederM_Text_2
+	hidemoneybox
+	goto Zone12A_EventScript_Nurse_1
+
+
 Zone12A_EventScript_TM24::
 	lock
 	goto_if_set FLAG_ITEM_ZONE12A_TM24, Zone12A_EventScript_TM24_2
@@ -490,3 +527,18 @@ Zone12A_EventScript_BreederM_Text_5:
 
 Zone12A_EventScript_BreederM_Text_6:
 	.string "It's done.$"
+
+Zone12A_EventScript_Nurse_Text_0:
+	.string "Hey.\pI know you don't have access to your Bag, so…\pI'll heal your entire party for a\nflat ¥2000 fee.$"
+
+Zone12A_EventScript_Nurse_Text_1:
+	.string "Should I heal your Pokémon?$"
+
+Zone12A_EventScript_Nurse_Text_2:
+	.string "That will be ¥2000, thank you…$"
+
+Zone12A_EventScript_Nurse_Text_3:
+	.string "Your party has been restored.$"
+
+Zone12A_EventScript_Nurse_Text_4:
+	.string "See you next time.$"

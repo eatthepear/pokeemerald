@@ -3872,6 +3872,7 @@ EventScript_PorygonExit_17:
 
 EventScript_PorygonExit_18:
 	clearflag FLAG_SYS_NO_BAG_START_MENU
+	setflag FLAG_HIDE_ZONE12A_NURSE
 	warp MAP_ZONE12SANCTUARY, 255, 22, 7
 	waitstate
 	goto EventScript_PorygonExit_4

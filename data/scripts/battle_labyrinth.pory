@@ -2889,6 +2889,7 @@ script EventScript_PorygonExit {
 				waitstate
 			case 12:
 				clearflag(FLAG_SYS_NO_BAG_START_MENU)
+				setflag(FLAG_HIDE_ZONE12A_NURSE)
 				warp(MAP_ZONE12SANCTUARY, 255, 22, 7)
 				waitstate
 			case 13:

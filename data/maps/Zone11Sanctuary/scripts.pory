@@ -41,6 +41,9 @@ script Zone11Sanctuary_EventScript_NextZone {
 			if (var(VAR_RESULT) == YES) {
 				call(EventScript_LeavingSetup)
 				setflag(FLAG_SYS_NO_BAG_START_MENU)
+				if (flag(FLAG_SETTINGS_BRUTAL)== true || flag(FLAG_SETTINGS_INDEPENDENT) == true) {
+					setflag(FLAG_HIDE_ZONE12A_NURSE)
+				}
 				warp(MAP_ZONE12A, 255, 9, 17)
 				waitstate
 			}

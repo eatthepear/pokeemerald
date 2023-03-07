@@ -59,9 +59,16 @@ Zone11Sanctuary_EventScript_NextZone_5:
 Zone11Sanctuary_EventScript_NextZone_6:
 	call EventScript_LeavingSetup
 	setflag FLAG_SYS_NO_BAG_START_MENU
+	goto_if_set FLAG_SETTINGS_BRUTAL, Zone11Sanctuary_EventScript_NextZone_9
+	goto_if_set FLAG_SETTINGS_INDEPENDENT, Zone11Sanctuary_EventScript_NextZone_9
+Zone11Sanctuary_EventScript_NextZone_8:
 	warp MAP_ZONE12A, 255, 9, 17
 	waitstate
 	goto Zone11Sanctuary_EventScript_NextZone_1
+
+Zone11Sanctuary_EventScript_NextZone_9:
+	setflag FLAG_HIDE_ZONE12A_NURSE
+	goto Zone11Sanctuary_EventScript_NextZone_8
 
 
 Zone11Sanctuary_Text_NoBagAccessInNextZone::
