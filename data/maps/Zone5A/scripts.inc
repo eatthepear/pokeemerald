@@ -442,6 +442,23 @@ Zone5A_Text_GilbertPostBattle:
 	.string "I can't seem to catch a break!\p"
 	.string "Get it? Catch?$"
 
+Zone5A_EventScript_Clinton::
+	trainerbattle_single TRAINER_CLINTON, Zone5A_Text_ClintonIntro, Zone5A_Text_ClintonDefeat
+	msgbox Zone5A_Text_ClintonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Zone5A_Text_ClintonIntro:
+	.string "Supposedly, item chests that are\n"
+	.string "tinted yellow hold special items.$"
+
+Zone5A_Text_ClintonDefeat:
+	.string "I don't bother checking them\n"
+	.string "though!$"
+
+Zone5A_Text_ClintonPostBattle:
+	.string "I can buy all the TMs I want!\n"
+	.string "I don't need any item chests!$"
+
 Zone5A_EventScript_Rebecca::
 	trainerbattle_single TRAINER_REBECCA, Zone5A_Text_RebeccaIntro, Zone5A_Text_RebeccaDefeat
 	msgbox Zone5A_Text_RebeccaPostBattle, MSGBOX_AUTOCLOSE
@@ -502,30 +519,10 @@ Zone5A_Text_KennethIntro:
 	.string "Face me in battle!$"
 
 Zone5A_Text_KennethDefeat:
-	.string "Well, I guess there's him over\n"
-	.string "there, too…$"
+	.string "You've bested the best of us!$"
 
 Zone5A_Text_KennethPostBattle:
-	.string "Clinton isn't really part of our\n"
-	.string "group because he likes to flaunt\l"
-	.string "how rich he is.$"
-
-Zone5A_EventScript_Clinton::
-	trainerbattle_single TRAINER_CLINTON, Zone5A_Text_ClintonIntro, Zone5A_Text_ClintonDefeat
-	msgbox Zone5A_Text_ClintonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Zone5A_Text_ClintonIntro:
-	.string "Fearsome Fivesome has a nice ring,\n"
-	.string "don't you think?$"
-
-Zone5A_Text_ClintonDefeat:
-	.string "What do you mean they don't want me\n"
-	.string "as part of their group?\l"
-	.string "I can pay to join!$"
-
-Zone5A_Text_ClintonPostBattle:
-	.string "Such cheapskates!$"
+	.string "You're the bestest!$"
 
 Zone5A_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Kevin{COLOR DARK_GRAY}: So… you beat all the Fearsome\n"

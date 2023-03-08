@@ -30,11 +30,11 @@
 #define TRAINER_RITA_LEVIATHAN_4_BRUTAL        	26
 #define TRAINER_ANNE_AND_JUNE                	27
 #define TRAINER_GILBERT                      	28
-#define TRAINER_REBECCA                      	29
-#define TRAINER_RYAN                         	30
-#define TRAINER_CAITLYN                      	31
-#define TRAINER_KENNETH                       	32
-#define TRAINER_CLINTON                       	33
+#define TRAINER_CLINTON                       	29
+#define TRAINER_REBECCA                      	30
+#define TRAINER_RYAN                         	31
+#define TRAINER_CAITLYN                      	32
+#define TRAINER_KENNETH                       	33
 #define TRAINER_KEVIN                        	34
 #define TRAINER_DECLAN_LEVIATHAN_5            	35
 #define TRAINER_ZACK                         	36
