@@ -3074,7 +3074,7 @@ static const struct TrainerMon sParty_ZoeAndEliDefault[] = {// Leviathan, Defaul
     .lvl = 36,
     .nature = NATURE_QUIET,
     .heldItem = ITEM_RINDO_BERRY,
-    .ability = ABILITY_SLOT_1, //Storm Drain
+    .ability = ABILITY_HIDDEN, //Water Absorb
     .species = SPECIES_GASTRODON,
     .moves = {MOVE_MUDDY_WATER, MOVE_EARTH_POWER, MOVE_NONE, MOVE_NONE}
     },
@@ -3113,7 +3113,7 @@ static const struct TrainerMon sParty_ZoeAndEliBrutal[] = {// Leviathan, Battle 
     .lvl = 36,
     .nature = NATURE_QUIET,
     .heldItem = ITEM_RINDO_BERRY,
-    .ability = ABILITY_SLOT_1, //Storm Drain
+    .ability = ABILITY_HIDDEN, //Water Absorb
     .species = SPECIES_GASTRODON,
     .moves = {MOVE_MUDDY_WATER, MOVE_EARTH_POWER, MOVE_ANCIENT_POWER, MOVE_HIDDEN_POWER} // Hidden Power Fighting
     },

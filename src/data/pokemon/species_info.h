@@ -175,7 +175,7 @@
         .friendship = 70,                                                           \
         .growthRate = GROWTH_MEDIUM_FAST,                                           \
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS},                                           \
-        .abilities = {ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE, ABILITY_STICKY_HOLD},\
+        .abilities = {ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE, ABILITY_WATER_ABSORB},\
         .bodyColor = color,                                                         \
         .noFlip = FALSE,                                                            \
     }
@@ -197,7 +197,7 @@
         .friendship = 70,                                                           \
         .growthRate = GROWTH_MEDIUM_FAST,                                           \
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS},                                           \
-        .abilities = {ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE, ABILITY_STICKY_HOLD},\
+        .abilities = {ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE, ABILITY_WATER_ABSORB},\
         .bodyColor = color,                                                         \
         .noFlip = FALSE,                                                            \
     }
