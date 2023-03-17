@@ -383,6 +383,7 @@ Shop_Unique_Varrick_9to10:
 	.2byte ITEM_REPEAT_BALL
 	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_EVIOLITE
 	.2byte ITEM_NORMAL_GEM
 	.2byte ITEM_FIRE_GEM
 	.2byte ITEM_WATER_GEM
@@ -424,6 +425,7 @@ Shop_Unique_Varrick_11to15:
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_BLACK_GLASSES
 	.2byte ITEM_METAL_COAT
+	.2byte ITEM_EVIOLITE
 	.2byte ITEM_NONE
 
 	.align 2
@@ -447,6 +449,7 @@ Shop_Unique_Varrick_16to20:
 	.2byte ITEM_DRAGON_FANG
 	.2byte ITEM_BLACK_GLASSES
 	.2byte ITEM_METAL_COAT
+	.2byte ITEM_EVIOLITE
 	.2byte ITEM_SCOPE_LENS
 	.2byte ITEM_WIDE_LENS
 	.2byte ITEM_ZOOM_LENS
