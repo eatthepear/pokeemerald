@@ -4572,7 +4572,7 @@ u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 curren
 
 static u8 GetVanillaCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction)
 {
-    if (FlagGet(DEBUG_FLAG_NO_COLLISION))
+    if (FlagGet(OW_FLAG_NO_COLLISION))
         return COLLISION_NONE;
     if (IsCoordOutsideObjectEventMovementRange(objectEvent, x, y))
         return COLLISION_OUTSIDE_RANGE;
