@@ -1003,7 +1003,7 @@ static void DebugAction_Util_Warp_SelectMapGroup(u8 taskId)
 
     // if (JOY_NEW(A_BUTTON))
     // {
-    gTasks[taskId].data[5] = gTasks[taskId].data[3];
+    gTasks[taskId].data[5] = 27;
     gTasks[taskId].data[3] = 0;
     gTasks[taskId].data[4] = 0;
 
