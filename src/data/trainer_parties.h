@@ -3133,52 +3133,60 @@ static const struct TrainerMon sParty_ZoeAndEliBrutal[] = {// Leviathan, Battle 
 static const struct TrainerMon sParty_Pirate1[] = {
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_KINGLER,
+    .moves = {MOVE_CRABHAMMER, MOVE_AQUA_JET, MOVE_NIGHT_SLASH, MOVE_SLASH}
     },
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_CRABOMINABLE,
+    .moves = {MOVE_ICE_HAMMER, MOVE_CRABHAMMER, MOVE_MACH_PUNCH, MOVE_DRAIN_PUNCH}
     }
 };
 
 static const struct TrainerMon sParty_Pirate2[] = {
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_DHELMISE,
+    .moves = {MOVE_ANCHOR_SHOT, MOVE_PHANTOM_FORCE, MOVE_GRASSY_GLIDE, MOVE_SHADOW_CLAW}
     },
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_OVERQWIL,
+    .moves = {MOVE_POISON_JAB, MOVE_CRUNCH, MOVE_AQUA_TAIL, MOVE_TOXIC_SPIKES}
     }
 };
 
 static const struct TrainerMon sParty_Pirate3[] = {
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_PERRSERKER,
+    .moves = {MOVE_IRON_HEAD, MOVE_THROAT_CHOP, MOVE_FAKE_OUT, MOVE_HONE_CLAWS}
     },
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_DREDNAW,
+    .moves = {MOVE_LIQUIDATION, MOVE_JAW_LOCK, MOVE_ROCK_TOMB, MOVE_ICE_FANG}
     }
 };
 
 static const struct TrainerMon sParty_Pirate4[] = {
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_OCTILLERY,
+    .moves = {MOVE_WATER_PULSE, MOVE_ICE_BEAM, MOVE_RECOVER, MOVE_MUD_SHOT}
     },
     {
     .iv = 30,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_GRAPPLOCT,
+    .moves = {MOVE_OCTOLOCK, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK, MOVE_SUCKER_PUNCH}
     }
 };
 
