@@ -94,9 +94,9 @@ script Zone19D_EventScript_InitiatePirateBattles {
 	if ((flag(FLAG_SETTINGS_BRUTAL) == false) && (flag(FLAG_SETTINGS_CHALLENGE) == false)) {
 		special(HealPlayerParty)
 	}
-	msgbox("Sink me!\nThis trainer beat all four o' us!\l‘ere be your booty, take it!")
+	msgbox("Sink me!\nThis trainer beat all four o' us!\l‘ere be your booty, take it!", MSGBOX_DEFAULT)
 	giveitem(ITEM_TM36)
-	msgbox("Me hearties, run!")
+	msgbox("Me hearties, run!", MSGBOX_DEFAULT)
 	applymovement(1, Zone19D_Movement_Pirate1Run)
 	applymovement(2, Zone19D_Movement_Pirate2Run)
 	applymovement(3, Zone19D_Movement_Pirate3Run)

@@ -98,7 +98,7 @@ script Zone18B_EventScript_RightFlyingRoomDoor {
 script Zone18B_EventScript_PsychicRoomDoor {
 	lockall
 	goto_if_not_defeated(TRAINER_JAY, Zone18B_EventScript_DoorLocked)
-	msgbox("“Flying Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
+	msgbox("“Psychic Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		closemessage
 		delay(30)
@@ -181,7 +181,7 @@ script Zone18B_EventScript_RightFairyRoomDoor {
 
 script Zone18B_EventScript_GroundRoomDoor {
 	lockall
-	goto_if_not_defeated(TRAINER_EMILIO, Zone18B_EventScript_DoorLocked)
+	goto_if_not_defeated(TRAINER_MARTY, Zone18B_EventScript_DoorLocked)
 	msgbox("“Ground Room,” the sign says.\pDo you want to go through?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		closemessage

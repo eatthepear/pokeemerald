@@ -11,7 +11,7 @@ script Zone19Sanctuary_EventScript_Intro {
 	waitfanfare
 	msgbox(Zone19Sanctuary_Text_RewardClear18, MSGBOX_DEFAULT)
 	msgbox(Zone19Sanctuary_Text_18Reward, MSGBOX_DEFAULT)
-	giveitem(ITEM_ACRO_BIKE)
+	giveitem(ITEM_YELLOW_SHARD, 5)
 	msgbox(Zone19Sanctuary_Text_RewardClear19, MSGBOX_DEFAULT)
 	msgbox(Zone19Sanctuary_Text_19Reward, MSGBOX_DEFAULT)
 	giveitem(ITEM_TM37)

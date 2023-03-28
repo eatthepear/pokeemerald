@@ -121,7 +121,7 @@ Zone18B_EventScript_RightFlyingRoomDoor_2:
 Zone18B_EventScript_PsychicRoomDoor::
 	lockall
 	goto_if_not_defeated TRAINER_JAY, Zone18B_EventScript_DoorLocked
-	msgbox Zone18B_EventScript_LeftFlyingRoomDoor_Text_0, MSGBOX_YESNO
+	msgbox Zone18B_EventScript_PsychicRoomDoor_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone18B_EventScript_PsychicRoomDoor_2
 Zone18B_EventScript_PsychicRoomDoor_1:
@@ -228,7 +228,7 @@ Zone18B_EventScript_RightFairyRoomDoor_2:
 
 Zone18B_EventScript_GroundRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_EMILIO, Zone18B_EventScript_DoorLocked
+	goto_if_not_defeated TRAINER_MARTY, Zone18B_EventScript_DoorLocked
 	msgbox Zone18B_EventScript_GroundRoomDoor_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Zone18B_EventScript_GroundRoomDoor_2
@@ -1444,6 +1444,9 @@ Zone18B_EventScript_DarkRoomDoor_Text_0:
 
 Zone18B_EventScript_LeftFlyingRoomDoor_Text_0:
 	.string "“Flying Room,” the sign says.\pDo you want to go through?$"
+
+Zone18B_EventScript_PsychicRoomDoor_Text_0:
+	.string "“Psychic Room,” the sign says.\pDo you want to go through?$"
 
 Zone18B_EventScript_FightingRoomDoor_Text_0:
 	.string "“Fighting Room,” the sign says.\pDo you want to go through?$"

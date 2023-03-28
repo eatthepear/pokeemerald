@@ -94,9 +94,9 @@ Zone19D_EventScript_InitiatePirateBattles_15:
 	trainerbattle_no_intro TRAINER_PIRATE_4, Zone19D_Text_PirateDefeat
 	goto_if_unset FLAG_SETTINGS_BRUTAL, Zone19D_EventScript_InitiatePirateBattles_22
 Zone19D_EventScript_InitiatePirateBattles_20:
-	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_7
+	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_7, MSGBOX_DEFAULT
 	giveitem ITEM_TM36
-	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_8
+	msgbox Zone19D_EventScript_InitiatePirateBattles_Text_8, MSGBOX_DEFAULT
 	applymovement 1, Zone19D_Movement_Pirate1Run
 	applymovement 2, Zone19D_Movement_Pirate2Run
 	applymovement 3, Zone19D_Movement_Pirate3Run
