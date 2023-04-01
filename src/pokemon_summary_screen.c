@@ -2917,12 +2917,12 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE, gText_BattleMoves, 2, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE, gText_ContestMoves, 2, 1, 0, 1);
 
-    stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_Cancel2, 62);
-    iconXPos = stringXPos - 16;
-    if (iconXPos < 0)
-        iconXPos = 0;
-    PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
-    PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Cancel2, stringXPos, 1, 0, 0);
+    // stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_Swap, 62);
+    // iconXPos = stringXPos - 16;
+    // if (iconXPos < 0)
+    //     iconXPos = 0;
+    // PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
+    // PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Swap, stringXPos, 1, 0, 0);
 
     stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_Info, 62);
     iconXPos = stringXPos - 16;
@@ -3482,22 +3482,22 @@ static void PrintHeldItemName(void)
 
 static void PrintRibbonCount(void)
 {
-    const u8 *text;
-    int x;
+    // const u8 *text;
+    // int x;
 
-    if (sMonSummaryScreen->summary.ribbonCount == 0)
-    {
-        text = gText_None;
-    }
-    else
-    {
-        ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.ribbonCount, STR_CONV_MODE_RIGHT_ALIGN, 2);
-        StringExpandPlaceholders(gStringVar4, gText_RibbonsVar1);
-        text = gStringVar4;
-    }
+    // if (sMonSummaryScreen->summary.ribbonCount == 0)
+    // {
+    //     text = gText_StatsA;
+    // }
+    // else
+    // {
+    //     ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.ribbonCount, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    //     StringExpandPlaceholders(gStringVar4, gText_RibbonsVar1);
+    //     text = gStringVar4;
+    // }
 
-    x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 70) + 6;
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
+    // x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 70) + 6;
+    // PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
 }
 
 static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n)
