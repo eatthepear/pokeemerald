@@ -1,3 +1,18 @@
 Zone9H_MapScripts::
 	.byte 0
 
+
+Zone9H_EventScript_DeveloperEatthepear::
+	lock
+	faceplayer
+	msgbox Zone9H_Text_Eatthepear, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Zone9H_Text_Eatthepear:
+	.string "Hello there! It's {COLOR BLUE}eatthepear{COLOR DARK_GRAY}, the\n"
+	.string "developer of this ROM hack!\p"
+	.string "Thanks for playing and I hope\n"
+	.string "you're enjoying your time.\p"
+	.string "When you beat the game, come back\n"
+	.string "here and let's have a battle!$"

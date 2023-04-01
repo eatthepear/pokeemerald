@@ -282,21 +282,6 @@ Zone13C_Text_Scientist2_GenderRoles:
 	.string "society?\p"
 	.string "Never mind. Google it.$"
 
-Zone13C_EventScript_DeveloperEatthepear::
-	lock
-	faceplayer
-	msgbox Zone13C_Text_Eatthepear, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Zone13C_Text_Eatthepear:
-	.string "Hello there! It's {COLOR BLUE}eatthepear{COLOR DARK_GRAY}, the\n"
-	.string "developer of this ROM hack!\p"
-	.string "Thanks for playing and I hope\n"
-	.string "you're enjoying your time.\p"
-	.string "When you beat the game, come back\n"
-	.string "here and let's have a battle!$"
-
 Zone13C_EventScript_LeviathanBattle_Text_0:
 	.string "{COLOR BLUE}Jenny{COLOR DARK_GRAY}: Nervous about facing me?$"
 
