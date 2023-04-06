@@ -2160,6 +2160,58 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Blanche},
     },
 
+    [TRAINER_TROY] =
+    {
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_WORKER,
+        .trainerName = _("Troy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_TroyDefault),
+        .party = {.TrainerMon = sParty_TroyDefault},
+    },
+
+    [TRAINER_ABED] =
+    {
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_ICE_WORKER,
+        .trainerName = _("Abed"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_AbedDefault),
+        .party = {.TrainerMon = sParty_AbedDefault},
+    },
+
+    [TRAINER_TROY_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_WORKER,
+        .trainerName = _("Troy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_TroyBrutal),
+        .party = {.TrainerMon = sParty_TroyBrutal},
+    },
+
+    [TRAINER_ABED_BRUTAL] =
+    {
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_ICE_WORKER,
+        .trainerName = _("Abed"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_KNOWLEDGABLE,
+        .partySize = ARRAY_COUNT(sParty_AbedBrutal),
+        .party = {.TrainerMon = sParty_AbedBrutal},
+    },
+
     [TRAINER_MIRAGE_LEVIATHAN_17] =
     {
         .trainerClass = TRAINER_CLASS_MIRAGE,

@@ -3313,6 +3313,122 @@ static const struct TrainerMon sParty_Blanche[] = {// Fought in a double battle 
     }
 };
 
+// You fight against both Troy and Abed at the same time in a Double Battle
+// Note they have slightly different parties on Default/Brutal
+static const struct TrainerMon sParty_TroyDefault[] = {// Default
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1, //Swarm
+    .species = SPECIES_DURANT,
+    .moves = {MOVE_IRON_HEAD, MOVE_X_SCISSOR, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Thick Fat
+    .species = SPECIES_HARIYAMA,
+    .moves = {MOVE_FAKE_OUT, MOVE_FORCE_PALM, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Iron Fist
+    .species = SPECIES_GOLURK,
+    .moves = {MOVE_HIGH_HORSEPOWER, MOVE_PHANTOM_FORCE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_AbedDefault[] = {// Default
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1, //Tough Claws
+    .species = SPECIES_HEATMOR,
+    .moves = {MOVE_FIRE_LASH, MOVE_THUNDER_PUNCH, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_QUIET,
+    .ability = ABILITY_HIDDEN, //Fur Coat
+    .species = SPECIES_DEWGONG,
+    .moves = {MOVE_BRINE, MOVE_ICY_WIND, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Pure Power
+    .species = SPECIES_MEDICHAM,
+    .moves = {MOVE_HIGH_JUMP_KICK, MOVE_ICE_PUNCH, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_TroyBrutal[] = {// Brutal
+    {
+    .iv = 31,
+    .lvl = 38,
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1, //Swarm
+    .species = SPECIES_DURANT,
+    .heldItem = ITEM_METAL_COAT,
+    .moves = {MOVE_IRON_HEAD, MOVE_X_SCISSOR, MOVE_FIRST_IMPRESSION, MOVE_ROCK_SLIDE}
+    },
+    {
+    .iv = 31,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Thick Fat
+    .species = SPECIES_HARIYAMA,
+    .heldItem = ITEM_BLACK_BELT,
+    .moves = {MOVE_FAKE_OUT, MOVE_FORCE_PALM, MOVE_THUNDER_PUNCH, MOVE_ICE_PUNCH}
+    },
+    {
+    .iv = 31,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Iron Fist
+    .species = SPECIES_GOLURK,
+    .heldItem = ITEM_SOFT_SAND,
+    .moves = {MOVE_HIGH_HORSEPOWER, MOVE_PHANTOM_FORCE, MOVE_BODY_PRESS, MOVE_FIRE_PUNCH}
+    }
+};
+
+static const struct TrainerMon sParty_AbedBrutal[] = {// Brutal
+    {
+    .iv = 31,
+    .lvl = 38,
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1, //Tough Claws
+    .species = SPECIES_HEATMOR,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = {MOVE_FIRE_LASH, MOVE_THUNDER_PUNCH, MOVE_OVERHEAT, MOVE_LOW_KICK}
+    },
+    {
+    .iv = 31,
+    .lvl = 38,
+    .nature = NATURE_QUIET,
+    .ability = ABILITY_HIDDEN, //Fur Coat
+    .species = SPECIES_DEWGONG,
+    .heldItem = ITEM_NEVER_MELT_ICE,
+    .moves = {MOVE_BRINE, MOVE_ICY_WIND, MOVE_FAKE_OUT, MOVE_FREEZE_DRY}
+    },
+    {
+    .iv = 31,
+    .lvl = 38,
+    .nature = NATURE_ADAMANT,
+    .ability = ABILITY_SLOT_1, //Pure Power
+    .species = SPECIES_MEDICHAM,
+    .heldItem = ITEM_TWISTED_SPOON,
+    .moves = {MOVE_HIGH_JUMP_KICK, MOVE_ICE_PUNCH, MOVE_ZEN_HEADBUTT, MOVE_THUNDER_PUNCH}
+    }
+};
+
 static const struct TrainerMon sParty_Zone20BMirageDefault[] = {// Leviathan, Default
     {
     .iv = 30,
