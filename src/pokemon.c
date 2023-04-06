@@ -9435,6 +9435,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
+            if (FlagGet(FLAG_FORCE_BATTLE_ANIM_ON)) {
+                return MUS_VS_RIVAL;
+            }
             if (gTrainers[gTrainerBattleOpponent_A].hasCustomTransition == TRUE) {
                 switch (VarGet(VAR_LEVIATHAN_MUSIC))
                 {
