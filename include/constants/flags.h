@@ -1489,7 +1489,7 @@
 #define FLAG_SHOULD_CHECK_SPECIES_CLAUSE            (SYSTEM_FLAGS + 0x96)
 #define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x97)
 #define FLAG_BOOSTED_IVS                            (SYSTEM_FLAGS + 0x98)
-#define FLAG_UNUSED_0x8F9                           (SYSTEM_FLAGS + 0x99)
+#define FLAG_SHOULD_1V2                             (SYSTEM_FLAGS + 0x99)
 #define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A)
 #define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B)
 #define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C)

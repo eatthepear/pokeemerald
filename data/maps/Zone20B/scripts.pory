@@ -20,13 +20,12 @@ script Zone20B_EventScript_LeviathanBattle {
 	fadeoutbgm(1)
 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: How… did you find me?\pHow did he know to send you here?"), MSGBOX_DEFAULT)
 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. I'll put you down and be out of here in a second."))
+	trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_NINA, 0, NULL, "ahhh")
+	trainerbattle(TRAINER_BATTLE_SET_TRAINER_B, TRAINER_MARIAM, 0, NULL, "bahhhh")
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
-	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
-		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_17_BRUTAL, Zone20B_Text_Leviathan17Defeat)
-	} else {
-		trainerbattle_no_intro(TRAINER_MIRAGE_LEVIATHAN_17, Zone20B_Text_Leviathan17Defeat)
-	}
+	setflag(FLAG_SHOULD_1V2)
+	dotrainerbattle
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: That's… not possible.\pAn AI, defeating me?"), MSGBOX_DEFAULT)
 	delay(100)
