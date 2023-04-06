@@ -1,54 +1,116 @@
-mapscripts Zone20B_MapScripts {
-	MAP_SCRIPT_ON_FRAME_TABLE [
-		VAR_ZONE_20_STATE, 0: Zone20B_EventScript_LeviathanBattle
-	]
-}
+mapscripts Zone20B_MapScripts {}
 
-script Zone20B_EventScript_LeviathanBattle {
-    lockall
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+script Zone20B_EventScript_InitiateBattle {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
 	waitmovement(0)
-	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: We've gone undetected thus far, but we need to hurry.\pThere's no telling when something…"))
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
 	applymovement(1, Common_Movement_ExclamationMark)
+	applymovement(2, Common_Movement_ExclamationMark)
 	playse(SE_PIN)
 	waitmovement(0)
 	waitse
-	applymovement(1, Common_Movement_FaceDown)
+	applymovement(1, Common_Movement_FaceLeft)
+	applymovement(2, Common_Movement_FaceLeft)
 	waitmovement(0)
-	fadeoutbgm(1)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: How… did you find me?\pHow did he know to send you here?"), MSGBOX_DEFAULT)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. I'll put you down and be out of here in a second."))
-	trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_NINA, 0, NULL, "ahhh")
-	trainerbattle(TRAINER_BATTLE_SET_TRAINER_B, TRAINER_MARIAM, 0, NULL, "bahhhh")
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	applymovement(1, Common_Movement_WalkLeft)
+	applymovement(2, Common_Movement_WalkLeft)
+	waitmovement(0)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+	// setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+	if ((flag(FLAG_SETTINGS_BRUTAL) == true) || (flag(FLAG_SETTINGS_CHALLENGE) == true)) {
+		trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_TROY_BRUTAL, 0, NULL, "ahhh")
+		trainerbattle(TRAINER_BATTLE_SET_TRAINER_B, TRAINER_ABED_BRUTAL, 0, NULL, "bahhhh")
+	} else {
+		trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_TROY, 0, NULL, "ahhh")
+		trainerbattle(TRAINER_BATTLE_SET_TRAINER_B, TRAINER_ABED, 0, NULL, "bahhhh")
+	}
 	setflag(FLAG_SHOULD_1V2)
 	dotrainerbattle
 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: That's… not possible.\pAn AI, defeating me?"), MSGBOX_DEFAULT)
-	delay(100)
-	applymovement(1, Common_Movement_FaceLeft)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	giveitem(ITEM_POKE_BALL, 1)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "), MSGBOX_DEFAULT)
+	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: "))
+	applymovement(2, Common_Movement_WalkUp)
+	applymovement(1, Zone20B_Movement_Leave)
+	waitmovement(2)
+	applymovement(2, Zone20B_Movement_Leave)
 	waitmovement(0)
-	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I'm on my way out."))
-	applymovement(1, Common_Movement_FaceUp)
-	waitmovement(0)
-	fadescreenswapbuffers(FADE_TO_BLACK)
-	playmoncry(SPECIES_PORYGON, 2)
-	delay(40)
-	waitmoncry
+	setflag(FLAG_HIDE_ZONE20B_WORKERS)
 	removeobject(1)
 	removeobject(2)
-	setflag(FLAG_BEAT_LEVIATHAN_17)
-	fadescreenswapbuffers(FADE_FROM_BLACK)
-	msgbox(format("There's something glittering on the ground!"), MSGBOX_DEFAULT)
-	giveitem(ITEM_GREEN_SHARD, 1)
 	setvar(VAR_ZONE_20_STATE, 1)
 	releaseall
 	end
 }
 
-text Zone20B_Text_Leviathan17Defeat {
-	"…"
+movement Zone20B_Movement_Leave {
+	walk_left * 3
+	walk_down
+	walk_left * 2
+	walk_down
+	walk_left * 2
+	walk_down
+	walk_left
+	walk_down * 4
 }
+
+// script Zone20B_EventScript_LeviathanBattle {
+//     lockall
+// 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+// 	waitmovement(0)
+// 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+// 	waitmovement(0)
+// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: We've gone undetected thus far, but we need to hurry.\pThere's no telling when something…"))
+// 	applymovement(1, Common_Movement_ExclamationMark)
+// 	playse(SE_PIN)
+// 	waitmovement(0)
+// 	waitse
+// 	applymovement(1, Common_Movement_FaceDown)
+// 	waitmovement(0)
+// 	fadeoutbgm(1)
+// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: How… did you find me?\pHow did he know to send you here?"), MSGBOX_DEFAULT)
+// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: No matter. I'll put you down and be out of here in a second."))
+// 	trainerbattle(TRAINER_BATTLE_SET_TRAINER_A, TRAINER_NINA, 0, NULL, "ahhh")
+// 	trainerbattle(TRAINER_BATTLE_SET_TRAINER_B, TRAINER_MARIAM, 0, NULL, "bahhhh")
+// 	setflag(FLAG_FORCE_BATTLE_ANIM_ON)
+// 	setvar(VAR_MUGSHOT_ID, MUGSHOT_MIRAGE)
+// 	setflag(FLAG_SHOULD_1V2)
+// 	dotrainerbattle
+// 	clearflag(FLAG_FORCE_BATTLE_ANIM_ON)
+// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: That's… not possible.\pAn AI, defeating me?"), MSGBOX_DEFAULT)
+// 	delay(100)
+// 	applymovement(1, Common_Movement_FaceLeft)
+// 	waitmovement(0)
+// 	msgbox(format("{COLOR BLUE}???{COLOR DARK_GRAY}: Command, I'm on my way out."))
+// 	applymovement(1, Common_Movement_FaceUp)
+// 	waitmovement(0)
+// 	fadescreenswapbuffers(FADE_TO_BLACK)
+// 	playmoncry(SPECIES_PORYGON, 2)
+// 	delay(40)
+// 	waitmoncry
+// 	removeobject(1)
+// 	removeobject(2)
+// 	setflag(FLAG_BEAT_LEVIATHAN_17)
+// 	fadescreenswapbuffers(FADE_FROM_BLACK)
+// 	msgbox(format("There's something glittering on the ground!"), MSGBOX_DEFAULT)
+// 	giveitem(ITEM_GREEN_SHARD, 1)
+// 	setvar(VAR_ZONE_20_STATE, 1)
+// 	releaseall
+// 	end
+// }
+
+// text Zone20B_Text_Leviathan17Defeat {
+// 	"…"
+// }
