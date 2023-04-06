@@ -18,6 +18,8 @@ Zone0C_EventScript_Intro::
 	waitmovement 0
 	applymovement 1, Common_Movement_WalkDown
 	waitmovement 0
+	applymovement 1, Common_Movement_WalkDown
+	waitmovement 0
 	msgbox Zone0C_Text_Intro
 	applymovement 1, Zone0C_Movement_PostIntro
 	waitmovement 0
@@ -1064,6 +1066,7 @@ Zone0C_EventScript_WarpZoneB1_2:
 
 
 Zone0C_Movement_PostIntro:
+	walk_up
 	walk_up
 	walk_up
 	face_down

@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
-      "x": 10,
-      "y": 32,
+      "x": 11,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -30,15 +30,22 @@
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 35,
+      "x": 10,
+      "y": 37,
       "elevation": 0,
       "dest_map": "MAP_ZONE0A",
       "dest_warp_id": "1"
     },
     {
-      "x": 10,
-      "y": 35,
+      "x": 11,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_ZONE0A",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 37,
       "elevation": 0,
       "dest_map": "MAP_ZONE0A",
       "dest_warp_id": "1"
